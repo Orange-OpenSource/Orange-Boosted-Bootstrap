@@ -1,7 +1,17 @@
 // OUDS mod
+@each $weight, $url in $custom-font-cdn-urls {
+  @font-face {
+    font-family: $custom-font-name;
+    font-style: normal;
+    font-weight: $weight;
+    src: url("#{$url}") format("woff2");
+    font-display: swap;
+  }
+}
+
 #{$ouds-root-selector},
 [data-bs-theme] {
-  color: var(--#{$prefix}color-content-default);
+  color: var(--#{$prefix}color-local, var(--#{$prefix}color-content-default));
 
   // Link colors need to be defined here to ensure theme switching capabilities.
   --#{$prefix}link-color: #{$ouds-link-color-content-enabled};
@@ -128,6 +138,10 @@
   --#{$prefix}font-max-width-body-large: #{px-to-rem($ouds-size-max-width-type-body-large-mobile)};
   --#{$prefix}font-max-width-body-medium: #{px-to-rem($ouds-size-max-width-type-body-medium-mobile)};
   --#{$prefix}font-max-width-body-small: #{px-to-rem($ouds-size-max-width-type-body-small-mobile)};
+  --#{$prefix}font-max-width-label-small: #{px-to-rem($ouds-size-max-width-type-label-small-mobile)};
+  --#{$prefix}font-max-width-label-medium: #{px-to-rem($ouds-size-max-width-type-label-medium-mobile)};
+  --#{$prefix}font-max-width-label-large: #{px-to-rem($ouds-size-max-width-type-label-large-mobile)};
+  --#{$prefix}font-max-width-label-xlarge: #{px-to-rem($ouds-size-max-width-type-label-xlarge-mobile)};
 
   @include media-breakpoint-up(md) {
     --#{$prefix}font-size-display-large: #{px-to-rem($ouds-font-size-display-large-tablet)};
@@ -170,6 +184,10 @@
     --#{$prefix}font-max-width-body-large: #{px-to-rem($ouds-size-max-width-type-body-large-tablet)};
     --#{$prefix}font-max-width-body-medium: #{px-to-rem($ouds-size-max-width-type-body-medium-tablet)};
     --#{$prefix}font-max-width-body-small: #{px-to-rem($ouds-size-max-width-type-body-small-tablet)};
+    --#{$prefix}font-max-width-label-small: #{px-to-rem($ouds-size-max-width-type-label-small-tablet)};
+    --#{$prefix}font-max-width-label-medium: #{px-to-rem($ouds-size-max-width-type-label-medium-tablet)};
+    --#{$prefix}font-max-width-label-large: #{px-to-rem($ouds-size-max-width-type-label-large-tablet)};
+    --#{$prefix}font-max-width-label-xlarge: #{px-to-rem($ouds-size-max-width-type-label-xlarge-tablet)};
   }
 
   @include media-breakpoint-up(xl) {
@@ -213,6 +231,10 @@
     --#{$prefix}font-max-width-body-large: #{px-to-rem($ouds-size-max-width-type-body-large-desktop)};
     --#{$prefix}font-max-width-body-medium: #{px-to-rem($ouds-size-max-width-type-body-medium-desktop)};
     --#{$prefix}font-max-width-body-small: #{px-to-rem($ouds-size-max-width-type-body-small-desktop)};
+    --#{$prefix}font-max-width-label-small: #{px-to-rem($ouds-size-max-width-type-label-small-desktop)};
+    --#{$prefix}font-max-width-label-medium: #{px-to-rem($ouds-size-max-width-type-label-medium-desktop)};
+    --#{$prefix}font-max-width-label-large: #{px-to-rem($ouds-size-max-width-type-label-large-desktop)};
+    --#{$prefix}font-max-width-label-xlarge: #{px-to-rem($ouds-size-max-width-type-label-xlarge-desktop)};
   }
   // scss-docs-end root-font-variables-ouds
   // End mod
@@ -523,4 +545,9 @@
     // End mod
     // scss-docs-end root-dark-mode-vars
   }
+}
+
+// Top level modifier for rounded corners on textual inputs
+.use-rounded-corner-inputs {
+  --#{$prefix}text-input-border-radius: #{$ouds-text-input-border-radius-rounded} !important; // stylelint-disable-line declaration-no-important
 }

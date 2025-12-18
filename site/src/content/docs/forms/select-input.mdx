@@ -1,0 +1,408 @@
+---
+title: Select input
+description: Customize the native `<select>`s with custom CSS that changes the element’s initial appearance.
+aliases:
+  - "/docs/forms/select/"
+  - "/docs/forms/select-input/"
+toc: true
+---
+
+import { getVersionedDocsPath } from '@libs/path'
+
+<Callout type="info">
+  You can find here the OUDS [select input design guidelines](https://r.orange.fr/r/S-ouds-doc-select-input).
+</Callout>
+
+## Overview
+
+Use a `.select-input` wrapper to create a select form field with OUDS styles, then wrap a pair of `<select class="select-input-field"></select>` and `<label>` elements in `.select-input-container`. Note that the `<label>` must come before the `<select>`.
+
+An empty placeholder `<option>` with an empty value is required on each `<select>` as our CSS-only floating label implementation relies on it to detect when the select is empty. This one should be disabled so users won't be able to select it.
+
+<Example buttonLabel="default select" code={`<div class="select-input">
+    <div class="select-input-container">
+      <label for="exampleSelect">Default select example</label>
+      <select class="select-input-field" id="exampleSelect">
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>`} />
+
+When there’s a value already defined, `<label>`s will automatically adjust to their floated position.
+
+<Example buttonLabel="selected select" code={`<div class="select-input">
+    <div class="select-input-container">
+      <label for="exampleSelectChecked">Selected select example</label>
+      <select class="select-input-field" id="exampleSelectChecked">
+        <option value="" disabled></option>
+        <option value="1">One</option>
+        <option value="2" selected>Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>`} />
+
+## Variants
+
+### Outlined
+
+Add `.select-input-container-outlined` for a minimalist input with a transparent background and a visible stroke outlining the field. This style may be interesting for contexts other than form pages:
+* When selects need to feel lightweight and unobtrusive
+* In a selection/filtering feature in a product catalog
+
+<Example buttonLabel="outlined select" code={`<div class="select-input">
+    <div class="select-input-container select-input-container-outlined">
+      <label for="exampleOutlinedSelect">Outlined select example</label>
+      <select class="select-input-field" id="exampleOutlinedSelect">
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>`} />
+
+<BrandSpecific brand="orange">
+### Rounded
+
+Rounded corners inputs is a project-wide option therefore all your inputs should either be rounded or not. Add `.use-rounded-corner-inputs` on a top container (for example `<body>`) to use rounded corners.
+
+<Callout type="info">
+  We use a `<div>` as a parent container because we cannot use `<body>` in an example
+</Callout>
+
+<Example buttonLabel="rounded selects" code={`<div class="use-rounded-corner-inputs">
+    <div class="select-input mb-medium">
+      <div class="select-input-container">
+        <label for="exampleRoundedSelect">Rounded select example</label>
+        <select class="select-input-field" id="exampleRoundedSelect">
+          <option value="" disabled selected></option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+    </div>
+    <div class="select-input">
+      <div class="select-input-container select-input-container-outlined">
+        <label for="exampleRoundedOutlinedSelect">Rounded outlined select example</label>
+        <select class="select-input-field" id="exampleRoundedOutlinedSelect">
+          <option value="" disabled selected></option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+    </div>
+  </div>`} />
+</BrandSpecific>
+
+### Leading icon
+
+Add an icon to help indicate the purpose of the input by placing an `<svg>` or `<img>` element inside the `.select-input-container`. The icon is automatically positioned at the left side of the select field.
+
+<Callout type="info" name="info-icons-svg-sprite" />
+
+<Example buttonLabel="selects with leading icon" code={`
+  <div class="select-input mb-medium">
+    <div class="select-input-container">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <label for="exampleLeadingSelect">Select example with leading icon</label>
+      <select class="select-input-field" id="exampleLeadingSelect">
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+  <div class="select-input">
+    <div class="select-input-container select-input-container-outlined">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <label for="exampleLeadingOutlinedSelect">Outlined select example with leading icon</label>
+      <select class="select-input-field" id="exampleLeadingOutlinedSelect">
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>`} />
+
+### Helper text
+
+To display a helper text below inputs, add a `.helper-text` as a sibling of a `.select-input-container`.
+
+<Callout type="warning">
+Helper text should be explicitly associated with the select input it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this helper text when the user focuses or enters the input.
+</Callout>
+
+<Example buttonLabel="select with helper text" code={`<div class="select-input">
+    <div class="select-input-container">
+      <label for="exampleSelectWithHelper">Select example with helper text</label>
+      <select class="select-input-field" id="exampleSelectWithHelper" aria-describedby="selectTextHelper">
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <p id="selectTextHelper" class="helper-text">
+      Helper text.
+    </p>
+  </div>`} />
+
+### Helper link
+
+If the helper text is not sufficient, it’s possible to offer the user an additional help link. The helper link can also be displayed on its own without helper text.
+To display a helper link below selects, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.select-input-container`.
+
+<Callout type="warning">
+If a helper link is used in conjunction with a helper text, the `aria-describedby` attribute should refer to the helper text and the helper link should be referenced by the `aria-labelledby` attribute.
+</Callout>
+
+<Example buttonLabel="selects with helper link" code={`<div class="select-input mb-medium">
+    <div class="select-input-container">
+      <label id="labelSelectWithHelperAndLink" for="exampleSelectWithHelperAndLink">Select example with helper and link texts</label>
+      <select class="select-input-field" id="exampleSelectWithHelperAndLink" aria-describedby="selectTextHelpBlock" aria-labelledby="labelSelectWithHelperAndLink selectTextLinkBlock">
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <p id="selectTextHelpBlock" class="helper-text">
+      Choose a number.
+    </p>
+    <a href="#" id="selectTextLinkBlock" class="link link-small">
+      More information <span class="visually-hidden">about how to choose a number</span>
+    </a>
+  </div>
+  <div class="select-input">
+    <div class="select-input-container">
+      <label id="labelSelectWithLink" for="exampleSelectWithLink">Select example with link text</label>
+      <select class="select-input-field" id="exampleSelectWithLink" aria-labelledby="labelSelectWithLink selectTextLink">
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <a href="#" id="selectTextLink" class="link link-small">
+      More information <span class="visually-hidden">about how to choose a number with a link</span>
+    </a>
+  </div>`} />
+
+## States
+
+### Disabled
+
+Add the `disabled` boolean attribute on a select to give it a grayed out appearance, remove pointer events, and prevent focusing.
+
+<Example buttonLabel="disabled selects" code={`<div class="select-input mb-medium">
+    <div class="select-input-container">
+      <label for="exampleDisabledSelect">Disabled select example</label>
+      <select disabled class="select-input-field" id="exampleDisabledSelect">
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+  <div class="select-input">
+    <div class="select-input-container select-input-container-outlined">
+      <label for="exampleOutlinedDisabledSelect">Disabled outlined select example</label>
+      <select disabled class="select-input-field" id="exampleOutlinedDisabledSelect">
+        <option value="" disabled></option>
+        <option value="1">One</option>
+        <option value="2" selected>Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>`} />
+
+{/* ### Readonly
+
+Add the `readonly` boolean attribute on an input to prevent modification of the input’s value. `readonly` inputs can still be focused and selected, while `disabled` inputs cannot.
+
+<Example code={`<div class="text-input mb-medium">
+    <div class="text-input-container">
+      <label for="exampleTextInputReadonlyEmpty">Firstname</label>
+      <input type="text" class="text-input-field" id="exampleTextInputReadonlyEmpty" placeholder=" " readonly>
+    </div>
+  </div>
+  <div class="text-input mb-medium">
+    <div class="text-input-container">
+      <label for="exampleTextInputReadonly">Lastname</label>
+      <input type="text" class="text-input-field" id="exampleTextInputReadonly" placeholder=" " value="Doe" readonly>
+    </div>
+  </div>
+  <div class="text-input mb-medium">
+    <div class="text-input-container text-input-container-outlined">
+      <label for="exampleTextInputOutlinedReadonlyEmpty">Firstname</label>
+      <input type="text" class="text-input-field" id="exampleTextInputOutlinedReadonlyEmpty" placeholder=" " readonly>
+    </div>
+  </div>
+  <div class="text-input">
+    <div class="text-input-container text-input-container-outlined">
+      <label for="exampleTextInputOutlinedReadonly">Lastname</label>
+      <input type="text" class="text-input-field" id="exampleTextInputOutlinedReadonly" placeholder=" " value="Doe" readonly>
+    </div>
+  </div>`} /> */}
+
+### Invalid
+
+<Callout type="info" name="input-invalid" />
+
+To display an invalid select, add `.is-invalid` to a `.select-input-field` within the `.select-input-container`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
+
+<Callout type="warning">
+For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.select-input-container` and related to it with an `aria-labelledby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error.
+</Callout>
+
+<Example buttonLabel="invalid selects" code={`<div class="select-input mb-medium">
+    <div class="select-input-container">
+      <label id="labelErrorSelect" for="exampleErrorSelect">Select example with error</label>
+      <select class="select-input-field is-invalid" id="exampleErrorSelect" aria-describedby="numberHelpText" aria-labelledby="labelErrorSelect numberFeedback numberLink">
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <p id="numberHelpText" class="helper-text">
+      Choose a number.
+    </p>
+    <p id="numberFeedback" class="error-text">
+      A number is required.
+    </p>
+    <a href="#" id="numberLink" class="link link-small">
+      More information <span class="visually-hidden">about how to choose a number from these three</span>
+    </a>
+  </div>
+  <div class="was-validated">
+    <div class="select-input mb-medium">
+      <div class="select-input-container">
+        <label id="labelErrorValidatedSelect" for="exampleErrorValidatedSelect">Select example with validated error</label>
+        <select class="select-input-field is-invalid" id="exampleErrorValidatedSelect" aria-describedby="validatedNumberHelpText" aria-labelledby="labelErrorValidatedSelect validatedNumberFeedback validatedNumberLink">
+          <option value="" disabled selected></option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <p id="validatedNumberHelpText" class="helper-text">
+        Choose a number.
+      </p>
+      <p id="validatedNumberFeedback" class="error-text">
+        A number is required.
+      </p>
+      <a href="#" id="validatedNumberLink" class="link link-small">
+        More information <span class="visually-hidden">about how to choose a number from the three available options</span>
+      </a>
+    </div>
+  </div>
+  <div class="select-input mb-medium">
+    <div class="select-input-container select-input-container-outlined">
+      <label id="labelErrorSelect2" for="exampleErrorSelect2">Outlined select example with error</label>
+      <select class="select-input-field is-invalid" id="exampleErrorSelect2" aria-describedby="numberHelpText2" aria-labelledby="labelErrorSelect2 numberFeedback2">
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <p id="numberHelpText2" class="helper-text">
+      Choose a number.
+    </p>
+    <p id="numberFeedback2" class="error-text">
+      A number is required.
+    </p>
+  </div>
+  <div class="select-input mb-medium">
+    <div class="select-input-container">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <label id="labelErrorSelect3" for="exampleErrorSelect3">Select example with error and icon</label>
+      <select class="select-input-field is-invalid" id="exampleErrorSelect3" aria-describedby="numberHelpText3" aria-labelledby="labelErrorSelect3 numberFeedback3">
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <p id="numberHelpText3" class="helper-text">
+      Choose a number.
+    </p>
+    <p id="numberFeedback3" class="error-text">
+      A number is required.
+    </p>
+  </div>`} />
+
+{/* ## Specific attributes
+
+### Multiple
+
+The `multiple` attribute is supported:
+
+<Example buttonLabel="select with multiple attribute" code={`<div class="select-input">
+    <div class="select-input-container">
+      <label for="exampleMultipleSelect">Multiple select example</label>
+      <select class="select-input-field" multiple id="exampleMultipleSelect">
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>`} />
+
+### Size
+
+The `size` attribute is supported:
+
+<Example buttonLabel="select with size attribute" code={`<div class="select-input">
+    <div class="select-input-container">
+      <label for="exampleSizeSelect">Sized select example</label>
+      <select size="3" class="select-input-field" id="exampleSizeSelect">
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+      </select>
+    </div>
+  </div>`} /> */}
+
+## Optgroup
+
+Group options with `<optgroup>`:
+
+<Example buttonLabel="select with optgroup" code={`<div class="select-input">
+    <div class="select-input-container">
+      <label for="exampleGroupSelect">Grouped select example</label>
+      <select class="select-input-field" id="exampleGroupSelect">
+        <option value="" disabled selected></option>
+        <optgroup label="First category">
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </optgroup>
+        <optgroup label="Second category">
+          <option value="4">Four</option>
+          <option value="5">Five</option>
+          <option value="6">Six</option>
+        </optgroup>
+      </select>
+    </div>
+  </div>`} />

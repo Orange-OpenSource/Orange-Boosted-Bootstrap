@@ -15,7 +15,7 @@ import { getVersionedDocsPath } from '@libs/path'
 import { getMode } from '@libs/sass-variables'
 
 <Callout type="info">
-  You can find here the [OUDS tag design guidelines](https://unified-design-system.orange.com/472794e18/p/7565ce-tag).
+  You can find the OUDS design guidelines here: [tag guidelines](https://r.orange.fr/r/S-ouds-doc-tag), [input tag guidelines](https://r.orange.fr/r/S-ouds-doc-input-tag).
 </Callout>
 
 ## Overview
@@ -64,7 +64,7 @@ For accessibility reasons, any informative element, must either be a semantic el
 
 Tag and input tag lists must be wrapped in a semantic container (usually a `<ul>` or `<ol>`). *If possible, display a text that semantically describes the purpose of the tags*, otherwise add an `aria-label` to the container that explains the tags' function.
 
-<Example buttonLabel="tags list with a displayed title"  code={`<div class="d-inline-flex align-items-center">
+<Example buttonLabel="tags list with a displayed title" code={`<div class="d-inline-flex align-items-center">
     <h4 id="tagsTitle" class="h6 me-small">Mobile coverage: </h4>
     <div role="group" aria-labelledby="tagsTitle">
       <ul class="list-unstyled d-flex column-gap-xsmall">
@@ -88,7 +88,7 @@ Keep in mind that visually impaired and blind users will lack the visual context
 
 Several examples are provided below, but they need to be adapted for actual use cases.
 
-## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href="/orange/docs/0.5/assets/img/ouds-web-sprite.svg#component-atom" /></svg>Tag
+## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Tag
 
 A tag is a small element that shows short info like a label, keyword, or category. It helps users quickly find, group, or understand content. Tags can include icons or bullets.
 
@@ -414,7 +414,7 @@ Tags can be added side by side. They require horizontal and vertical spacing bet
     <li class="tag">Label 6</li>
   </ul>`} />
 
-## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href="/orange/docs/0.5/assets/img/ouds-web-sprite.svg#component-atom" /></svg>Input tag
+## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Input tag
 
 A input tag is a component that allows users to enter multiple values, each represented as a tag. As users type and submit values (usually by pressing enter, comma, or tab), each value is transformed into a tag. Input tags are often used for adding labels, categories, or participants. They typically support removing individual tags.
 

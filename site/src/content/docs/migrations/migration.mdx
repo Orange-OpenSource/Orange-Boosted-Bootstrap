@@ -8,17 +8,112 @@ aliases:
 toc: true
 ---
 
+## v1.0.0
+
+<hr />
+
+### Core
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> OUDS Web now uses custom fonts loaded from a CDN for consistency in visual rendering across environments. Read more about the [font stack]([[docsref:/content/reboot#font-stack]]).
+
+### Forms
+
+#### Checkboxes
+
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Checkbox component has been updated to 2.4.0. Read more in our [checkbox page]([[docsref:/forms/checkbox]]).
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.control-items-list` and `.control-item-error-message` has been added.
+
+#### Password Input
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> Password input has been implemented. Read more in our [password input page]([[docsref:/forms/password-input]]).
+
+#### Radio buttons
+
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Radio button component has been updated to 1.4.0. Read more in our [radio button page]([[docsref:/forms/radio-button]]).
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.control-items-list` and `.control-item-error-message` has been added.
+
+#### Select input
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> Select Input has been implemented. Read more in our [text area page]([[docsref:/forms/select-input]]).
+
+#### Switches
+
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Switch component has been updated to 1.5.0. Read more in our [switch page]([[docsref:/forms/switch]]).
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.control-items-list`, `.switch-item-container` and `.control-item-error-message` has been added.
+
+#### Text area
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> Text area has been implemented. Read more in our [text area page]([[docsref:/forms/text-area]]).
+
+#### Text input
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.text-input-container-rounded` has been replaced by a global `.use-rounded-corner-inputs`. Read more in our [text input page]([[docsref:/forms/text-input#rounded]]).
+
+### Components
+
+#### Button
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-rounded` has been replaced by a global `.use-rounded-corner-buttons`. Read more in our [buttons page]([[docsref:/components/buttons#rounded]]).
+
+### Reboot
+
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Native `<ul>`, `<ol>` and `<dl>` now have a `max-width` set to the variable `--bs-font-max-width-body-medium`.
+
+### Utilities
+
+#### Background
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Some background utilities have been renamed as follows:
+  - `.bg-brand-primary` is renamed to `.bg-surface-brand-primary`
+  - `.bg-brand-secondary` is renamed to `.bg-surface-brand-secondary`
+  - `.bg-brand-tertiary` is renamed to `.bg-surface-brand-tertiary`
+  - `.bg-status-accent-emphasized` is renamed to `.bg-surface-status-accent-emphasized`
+  - `.bg-status-accent-muted` is renamed to `.bg-surface-status-accent-muted`
+  - `.bg-status-positive-emphasized` is renamed to `.bg-surface-status-positive-emphasized`
+  - `.bg-status-positive-muted` is renamed to `.bg-surface-status-positive-muted`
+  - `.bg-status-negative-emphasized` is renamed to `.bg-surface-status-negative-emphasized`
+  - `.bg-status-negative-muted` is renamed to `.bg-surface-status-negative-muted`
+  - `.bg-status-warning-emphasized` is renamed to `.bg-surface-status-warning-emphasized`
+  - `.bg-status-warning-muted` is renamed to `.bg-surface-status-warning-muted`
+  - `.bg-status-info-emphasized` is renamed to `.bg-surface-status-info-emphasized`
+  - `.bg-status-info-muted` is renamed to `.bg-surface-status-info-muted`
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> New background utilities: `.bg-surface-primary`, `.bg-surface-secondary`, `.bg-surface-tertiary`, `.bg-surface-inverse-high`, `.bg-surface-inverse-low`. Read more in our [background page]([[docsref:/utilities/background]]).
+
+#### Borders
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> Border color `.border-minimal` has been added.
+
+#### Opacity
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.opacity-weakest` is now available.
+
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Opacity levels values have been changed. Read more in our [opacity page]([[docsref:/utilities/opacity]]).
+
 ## v0.6.0
+
+<hr />
+
+### Core
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `[data-bs-theme]` now use a `--bs-color-local` to set the color if it has been defined by a specific `.bg-*` utility.
 
 ### Contents
 
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> The focus-visible polyfill has been removed. So you no longer need it on your side, and you should replace all the calls to `:focus[data-focus-visible-added]` by `:focus-visible`.
 
+### Icons
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> OUDS Web now uses [new functional icons]([[docsref:/extend/icons#functional-icons]]). A new [bicolor accessible warning icon]([[docsref:/extend/icons#accessible-warning-icon]]) has been introduced.
+
 ### Forms
 
 #### Text Input
 
-- <span class="tag tag-sm rounded-none tag-positive">New</span> Text Input has been implemented.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Text input has been implemented. Read more in our [text input page]([[docsref:/forms/text-input]]).
 
 ### Components
 
@@ -36,7 +131,7 @@ toc: true
 
 #### Chips
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> Chips components have been implemented. See more in our [Chips page]([[docsref:/components/chips]]).
+- <span class="tag tag-small rounded-none tag-positive">New</span> Chips components have been implemented. Read more in our [chips page]([[docsref:/components/chips]]).
 
 #### Link
 
@@ -46,7 +141,7 @@ toc: true
 
 #### Tags
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> Tags components have been implemented.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Tags components have been implemented. Read more in our [tags page]([[docsref:/components/tags]]).
 
 ### Helpers
 
@@ -58,7 +153,9 @@ toc: true
 
 #### Background
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> `.bg-opacity-lower` and `.bg-opacity-lowest` background color utilities have been added. Visit our [background page]([[docsref:/utilities/background]]) to see more.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.bg-opacity-lower` and `.bg-opacity-lowest` background color utilities have been added. Visit our [background page]([[docsref:/utilities/background]]) to read more.
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `[data-bs-theme]` now use a `--bs-color-local` to set the color if it has been defined by a specific `.bg-*` utility.
 
 #### Borders
 
@@ -70,9 +167,9 @@ toc: true
 
 #### Shadow
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> `.shadow-sticky` shadow utility have been added. Visit our [shadows page]([[docsref:/utilities/shadows]]) to see more.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.shadow-sticky` shadow utility have been added. Visit our [shadows page]([[docsref:/utilities/shadows]]) to read more.
 
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.shadow-sticky-default`, `.shadow-sticky-emphasized` and `.shadow-sticky-navigation-scrolled` shadow utilities have been removed. Visit our [shadows page]([[docsref:/utilities/shadows]]) to see more.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.shadow-sticky-default`, `.shadow-sticky-emphasized` and `.shadow-sticky-navigation-scrolled` shadow utilities have been removed. Visit our [shadows page]([[docsref:/utilities/shadows]]) to read more.
 
 #### Spacings
 
@@ -104,15 +201,15 @@ toc: true
 
 #### Badges
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> Badges components has been implemented.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Badges components has been implemented. Read more in our [badges page]([[docsref:/components/badges]]).
 
 #### Breadcrumb
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> Breadcrumb component has been implemented.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Breadcrumb component has been implemented. Read more in our [breadcrumb page]([[docsref:/components/breadcrumb]]).
 
 #### Bullet list
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> Bullet list component has been implemented.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Bullet list component has been implemented. Read more in our [bullet list page]([[docsref:/components/bullet-list]]).
 
 ### Extend
 
@@ -171,20 +268,21 @@ toc: true
 
 #### Checkboxes
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> Checkbox component has been implemented.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Checkbox component has been implemented. Read more in our [checkbox page]([[docsref:/forms/checkbox]]).
 
 #### Radio buttons
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> Radio button component has been implemented.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Radio button component has been implemented. Read more in our [radio button page]([[docsref:/forms/radio-button]]).
 
 #### Switches
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> Switch component has been implemented.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Switch component has been implemented. Read more in our [switch page]([[docsref:/forms/switch]]).
 
 ### Helpers
 
 #### Divider
-- <span class="tag tag-small rounded-none tag-positive">New</span> Horizontal and vertical rule helpers to create dividers.
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> Horizontal and vertical rule helpers to create dividers. Read more in our [divider page]([[docsref:/helpers/divider]]).
 
 ### CSS and Sass variables
 
@@ -238,7 +336,7 @@ toc: true
 
 #### Links
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> Link component has been implemented.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Link component has been implemented. Read more in our [links page]([[docsref:/components/links]]).
 
 ### Helpers
 
@@ -315,7 +413,7 @@ toc: true
 
 #### Buttons
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> Button component has been implemented.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Button component has been implemented. Read more in our [buttons page]([[docsref:/components/buttons]]).
 
 ### Examples
 
@@ -475,7 +573,7 @@ toc: true
 
 ### Color modes
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> We provide four brand new themes that are <code>light</code>, <code>dark</code>,  <code>root</code> and <code>root-inverted</code>. See more on our [color modes page]([[docsref:/customize/color-modes]])
+- <span class="tag tag-small rounded-none tag-positive">New</span> We provide four brand new themes that are <code>light</code>, <code>dark</code>,  <code>root</code> and <code>root-inverted</code>. Read more on our [color modes page]([[docsref:/customize/color-modes]])
 
 ### Content styles
 
@@ -515,7 +613,7 @@ toc: true
 
 #### Color background
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> The new color-background color helpers are now available. Visit our [color-bg page]([[docsref:/helpers/color-background]]) to see more.
+- <span class="tag tag-small rounded-none tag-positive">New</span> The new color-background color helpers are now available. Visit our [color-bg page]([[docsref:/helpers/color-background]]) to read more.
 
 #### Icon
 
@@ -538,7 +636,7 @@ toc: true
 
 #### Background
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> The new background color utilities are now available. Visit our [background page]([[docsref:/utilities/background]]) to see more.
+- <span class="tag tag-small rounded-none tag-positive">New</span> The new background color utilities are now available. Visit our [background page]([[docsref:/utilities/background]]) to read more.
 
 #### Border
 
@@ -557,11 +655,11 @@ toc: true
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> Border style utilities: `.border-drag`.
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> The new border color utilities are now available. Visit our [border page]([[docsref:/utilities/borders#color]]) to see more.
+- <span class="tag tag-small rounded-none tag-positive">New</span> The new border color utilities are now available. Visit our [border page]([[docsref:/utilities/borders#color]]) to read more.
 
 #### Colors
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> The new text color utilities are now available. Visit our [color page]([[docsref:/utilities/colors]]) to see more.
+- <span class="tag tag-small rounded-none tag-positive">New</span> The new text color utilities are now available. Visit our [color page]([[docsref:/utilities/colors]]) to read more.
 
 #### Display
 
@@ -688,7 +786,7 @@ toc: true
   - **Display headings**: `.fs-dl`, `.fs-dm`, `.fs-ds`
   - **Headings**: `.fs-hxl`, `.fs-hl`, `.fs-hm`, `.fs-hs`
   - **Body**: `.fs-bl`, `.fs-bm`, `.fs-bs`
-  - **Code**: `.fs-cm`, `.fs-cs`
+  - **Code**: `.fs-cm`
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> Font weight text utilities: `.fw-normal` and `.fw-bold`.
 

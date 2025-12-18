@@ -78,8 +78,9 @@
   pages:
     - title: Overview
     - title: Text input
-    - title: Select
-      draft: true
+    - title: Password input
+    - title: Text area
+    - title: Select input
     - title: Checkbox
     - title: Radio button
     - title: Switch

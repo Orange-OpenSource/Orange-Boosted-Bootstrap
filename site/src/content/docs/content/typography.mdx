@@ -6,11 +6,40 @@ aliases:
 toc: true
 ---
 
+import { allTokens } from '@libs/sass-variables'
+
+export const headingLevel = [
+  "heading-xlarge",
+  "heading-large",
+  "heading-medium",
+  "heading-small",
+  "body-large",
+  "body-medium"
+]
+
+export const displayLevel = [
+  "display-large",
+  "display-medium",
+  "display-small"
+]
+
+export const textLevel = [
+  "body-large",
+  "body-medium",
+  "body-small"
+]
+
+export const screenSize = [
+  "mobile",
+  "tablet",
+  "desktop"
+]
+
 ## Global settings
 
 OUDS Web sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]([[docsref:/utilities/text]]).
 
-- Use a [native font stack]([[docsref:/content/reboot#native-font-stack]]) that selects the best `font-family` for each OS and device.
+- Use a [font stack]([[docsref:/content/reboot#font-stack]]) of a custom font with native fonts fallback that selects the best `font-family` for each OS and device.
 - For a more inclusive and accessible type scale, we use the browser’s default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
 - Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `:root` children.
 - Use `max-width` on all font references for readability reasons. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]).
@@ -27,32 +56,87 @@ If you need need to include a font reference inside a custom component, please r
 
 All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-size` but also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. Here are the associated `font-size`s depending on the breakpoints. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]).
 
-{/* <BsTable>
-| Heading reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
-| --- | --- | --- | --- |
-| Heading xlarge (`<h1></h1>`) | `1.75rem` (28px) | `2.25rem` (36px) | `2.5rem` (40px) |
-| Heading large (`<h2></h2>`) | `1.5rem` (24px) | `1.75rem` (28px) | `2rem` (32px) |
-| Heading medium (`<h3></h3>`) | `1.25rem` (20px) | `1.5rem` (24px) | `1.75rem` (28px) |
-| Heading small (`<h4></h4>`) | `1.125rem` (18px) | `1.25rem` (20px) | `1.5rem` (24px) |
-| Body large (`<h5></h5>`) | `1rem` (16px) | `1.125rem` (18px) | `1.25rem` (20px) |
-| Body medium (`<h6></h6>`) | `1rem` (16px) | `1rem` (16px) | `1.125rem` (18px) |
-</BsTable>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Heading reference</th>
+        <th>Values from `2xs` to `sm`</th>
+        <th>Values from `md` to `lg`</th>
+        <th>Values for `xl` and upper</th>
+      </tr>
+    </thead>
+    <tbody>
+{
+  headingLevel.map((level) => (
+    <tr>
+      <td>
+        {level === 'heading-xlarge' && (<>Heading xlarge (<code>{'<h1></h1>'}</code>)</>)}
+        {level === 'heading-large' && (<>Heading large (<code>{'<h2></h2>'}</code>)</>)}
+        {level === 'heading-medium' && (<>Heading medium (<code>{'<h3></h3>'}</code>)</>)}
+        {level === 'heading-small' && (<>Heading small (<code>{'<h4></h4>'}</code>)</>)}
+        {level === 'body-large' && (<>Body large (<code>{'<h5></h5>'}</code>)</>)}
+        {level === 'body-medium' && (<>Body medium (<code>{'<h6></h6>'}</code>)</>)}
+      </td>
+      {
+          screenSize.map((size) => (
+          <td>
+            <code>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</code> ({allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue})
+          </td>
+        ))
+      }
+    </tr>
+  ))
+}
+    </tbody>
+  </table>
+</div>
+
 
 <details class="mb-medium">
   <summary>See more details about the heading classes</summary>
 
-<BsTable>
-| Heading reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
-| --- | --- | --- | --- |
-| Heading xlarge (`<h1></h1>`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -.0225rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 65rem</li></ul> |
-| Heading large (`<h2></h2>`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 65rem</li></ul> |
-| Heading medium (`<h3></h3>`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 65rem</li></ul> |
-| Heading small (`<h4></h4>`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 45rem</li></ul> |
-| Body large (`<h5></h5>`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 45rem</li></ul> |
-| Body medium (`<h6></h6>`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 45rem</li></ul> |
-</BsTable>
-
-</details> */}
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Heading reference</th>
+        <th>Values from `2xs` to `sm`</th>
+        <th>Values from `md` to `lg`</th>
+        <th>Values for `xl` and upper</th>
+      </tr>
+      </thead>
+      <tbody>
+      {
+        headingLevel.map((level) => (
+          <tr>
+            <td>
+              {level === 'heading-xlarge' && (<>Heading xlarge (<code>{'<h1></h1>'}</code>)</>)}
+              {level === 'heading-large' && (<>Heading large (<code>{'<h2></h2>'}</code>)</>)}
+              {level === 'heading-medium' && (<>Heading medium (<code>{'<h3></h3>'}</code>)</>)}
+              {level === 'heading-small' && (<>Heading small (<code>{'<h4></h4>'}</code>)</>)}
+              {level === 'body-large' && (<>Body large (<code>{'<h5></h5>'}</code>)</>)}
+              {level === 'body-medium' && (<>Body medium (<code>{'<h6></h6>'}</code>)</>)}
+            </td>
+            {
+              screenSize.map((size) => (
+                <td>
+                  <ul class="mb-none ps-medium">
+                    <li><code class="text-default">font-size</code>: <b>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</b></li>
+                    <li><code>line-height</code>: {Math.round(((allTokens.find((token) => token.name === `$ouds-font-line-height-${level}-${size}`).compiledValue.slice(0, -2)) / (allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2))) * 10000) / 10000}</li>
+                    <li><code>letter-spacing</code>: {(allTokens.find((token) => token.name === `$ouds-font-letter-spacing-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
+                    <li><code>max-width</code>: {(allTokens.find((token) => token.name === `$ouds-size-max-width-type-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
+                  </ul>
+                </td>
+              ))
+            }
+          </tr>
+        ))
+      }
+      </tbody>
+    </table>
+  </div>
+</details>
 
 <Example code={`<h1>h1. OUDS Web heading</h1>
   <h2>h2. OUDS Web heading</h2>
@@ -78,26 +162,82 @@ Traditional heading elements are designed to work best in the meat of your page 
 
 We provide `.display-*` from `large` through `small`. Each class sets `font-size` but also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]). Here are the associated `font-size`s depending on the breakpoints.
 
-{/* <BsTable>
-| Display reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
-| --- | --- | --- | --- |
-| Display large (`.display-large`) | `2.5rem` (40px) | `4rem` (64px) | `4.5rem` (72px) |
-| Display medium (`.display-medium`) | `2.25rem` (36px) | `3rem` (48px) | `3.5rem` (56px) |
-| Display small (`.display-small`) | `2rem` (32px) | `2.5rem` (40px) | `3rem` (48px) |
-</BsTable>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Display reference</th>
+        <th>Values from `2xs` to `sm`</th>
+        <th>Values from `md` to `lg`</th>
+        <th>Values for `xl` and upper</th>
+      </tr>
+    </thead>
+    <tbody>
+    {
+      displayLevel.map((level) => (
+      <tr>
+        <td>
+          {level === 'display-large' && (<>Display large (<code>{'.display-large'}</code>)</>)}
+          {level === 'display-medium' && (<>Display medium (<code>{'.display-medium'}</code>)</>)}
+          {level === 'display-small' && (<>Display small (<code>{'.display-small'}</code>)</>)}
+        </td>
+        {
+          screenSize.map((size) => (
+            <td>
+              <code>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</code> ({allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue})
+            </td>
+            ))
+        }
+      </tr>
+      ))
+    }
+    </tbody>
+  </table>
+</div>
+
 
 <details class="mb-medium">
-  <summary>See more details about the `.display` classes</summary>
+  <summary>See more details about the display classes</summary>
 
-<BsTable>
-| Display reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
-| --- | --- | --- | --- |
-| Display large (`.display-large`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>4rem</b></li><li><code>line-height</code>: 1.125</li><li><code>letter-spacing</code>: -0.06rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>4.5rem</b></li><li><code>line-height</code>: 1.1111</li><li><code>letter-spacing</code>: -0.0675rem</li><li><code>max-width</code>: 65rem</li></ul> |
-| Display medium (`.display-medium`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -0.0225rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>3.5rem</b></li><li><code>line-height</code>: 1.1429</li><li><code>letter-spacing</code>: -0.04375rem</li><li><code>max-width</code>: 65rem</li></ul> |
-| Display small (`.display-small`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 65rem</li></ul> |
-</BsTable>
-
-</details> */}
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Display reference</th>
+          <th>Values from `2xs` to `sm`</th>
+          <th>Values from `md` to `lg`</th>
+          <th>Values for `xl` and upper</th>
+        </tr>
+      </thead>
+      <tbody>
+      {
+        displayLevel.map((level) => (
+          <tr>
+            <td>
+              {level === 'display-large' && (<>Display large (<code>{'.display-large'}</code>)</>)}
+              {level === 'display-medium' && (<>Display medium (<code>{'.display-medium'}</code>)</>)}
+              {level === 'display-small' && (<>Display small (<code>{'.display-small'}</code>)</>)}
+            </td>
+            {
+              screenSize.map((size) => (
+                <td>
+                  <ul class="mb-none ps-medium">
+                    <li><code class="text-default">font-size</code>: <b>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</b></li>
+                    <li><code>line-height</code>: {Math.round(((allTokens.find((token) => token.name === `$ouds-font-line-height-${level}-${size}`).compiledValue.slice(0, -2)) / (allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2))) * 10000) / 10000}</li>
+                    <li><code>letter-spacing</code>: {(allTokens.find((token) => token.name === `$ouds-font-letter-spacing-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
+                    <li><code>max-width</code>: {(allTokens.find((token) => token.name === `$ouds-size-max-width-type-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
+                  </ul>
+                </td>
+              ))
+            }
+          </tr>
+        ))
+      }
+      </tbody>
+    </table>
+  </div>
+</details>
 
 <Example code={`<h1 class="display-large">Display large</h1>
   <h1 class="display-medium">Display medium</h1>
@@ -135,26 +275,80 @@ Since only [headings](#headings), [display headings](#display-headings) and `str
 Body medium is set by default on `:root` children but we don’t set the `max-width` property for usability reasons.
 </Callout>
 
-{/* <BsTable>
-| Regular text reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
-| --- | --- | --- | --- |
-| Body large (`.lead`) | `1rem` (16px) | `1rem` (16px) | `1.125rem` (18px) |
-| Body medium (default `<p>`) | `.875rem` (14px) | `.875rem` (14px) | `1rem` (16px) |
-| Body small (`.small`) | `.75rem` (12px) | `.75rem` (12px) | `.875rem` (14px) |
-</BsTable>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Regular text reference</th>
+        <th>Values from `2xs` to `sm`</th>
+        <th>Values from `md` to `lg`</th>
+        <th>Values for `xl` and upper</th>
+      </tr>
+    </thead>
+    <tbody>
+    {
+      textLevel.map((level) => (
+      <tr>
+        <td>
+          {level === 'body-large' && (<>Body large (<code>{'.lead'}</code>)</>)}
+          {level === 'body-medium' && (<>Body medium (default <code>{'<p>'}</code>)</>)}
+          {level === 'body-small' && (<>Body small (<code>{'.small'}</code> or <code>{'<small>'}</code>)</>)}
+        </td>
+        {
+          screenSize.map((size) => (
+            <td>
+              <code>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</code> ({allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue})
+            </td>
+          ))
+        }
+      </tr>
+      ))
+    }
+    </tbody>
+  </table>
+</div>
 
 <details class="mb-medium">
   <summary>See more details about the regular text classes</summary>
-
-<BsTable>
-| Regular text reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
-| --- | --- | --- | --- |
-| Body large (`.lead`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 45rem</li></ul> |
-| Body medium (default) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 45rem</li></ul> |
-| Body small (`.small`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 45rem</li></ul> |
-</BsTable>
-
-</details> */}
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Regular text reference</th>
+          <th>Values from `2xs` to `sm`</th>
+          <th>Values from `md` to `lg`</th>
+          <th>Values for `xl` and upper</th>
+        </tr>
+      </thead>
+      <tbody>
+      {
+        textLevel.map((level) => (
+        <tr>
+          <td>
+            {level === 'body-large' && (<>Body large (<code>{'.lead'}</code>)</>)}
+            {level === 'body-medium' && (<>Body medium (default <code>{'<p>'}</code>)</>)}
+            {level === 'body-small' && (<>Body small (<code>{'.small'}</code> or <code>{'<small>'}</code>)</>)}
+          </td>
+          {
+            screenSize.map((size) => (
+              <td>
+                <ul class="mb-none ps-medium">
+                  <li><code class="text-default">font-size</code>: <b>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</b></li>
+                  <li><code>line-height</code>: {Math.round(((allTokens.find((token) => token.name === `$ouds-font-line-height-${level}-${size}`).compiledValue.slice(0, -2)) / (allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2))) * 10000) / 10000}</li>
+                  <li><code>letter-spacing</code>: {(allTokens.find((token) => token.name === `$ouds-font-letter-spacing-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
+                  <li><code>max-width</code>: {(allTokens.find((token) => token.name === `$ouds-size-max-width-type-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
+                </ul>
+              </td>
+            ))
+          }
+        </tr>
+        ))
+      }
+      </tbody>
+    </table>
+  </div>
+</details>
 
 You can easily add an icon with your font reference using [our icon size utilities]([[docsref:/extend/icons#icons-size]]).
 

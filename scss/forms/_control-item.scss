@@ -1,16 +1,47 @@
 //
+// Control item list
+//
+
+.control-items-list,
+.switch-item-container,
+.checkbox-item-container {
+  @include list-unstyled();
+  margin: 0;
+
+  .control-item-error-message {
+    display: none;
+  }
+
+  // stylelint-disable selector-no-qualifying-type
+  &.was-validated:has(input:invalid) .control-item-error-message,
+  &:has(input.is-invalid) .control-item-error-message {
+    display: block;
+  }
+  // stylelint-enable selector-no-qualifying-type
+}
+
+.control-item-error-message {
+  padding: $ouds-control-item-space-padding-block-top-error-text $ouds-control-item-space-padding-inline 0;
+  color: var(--#{$prefix}color-content-status-negative);
+  @include get-font-size("label-medium");
+}
+
+//
 // Control item
 //
 
 %control-item {
   --#{$prefix}control-item-label-color: #{$ouds-color-content-default};
+  --#{$prefix}control-item-error-icon-offset: #{$ouds-control-item-space-padding-inline + $ouds-control-item-space-padding-inline-error-icon};
+  --#{$prefix}control-item-error-icon-offset-right: var(--#{$prefix}control-item-error-icon-offset);
+  --#{$prefix}control-item-error-icon-offset-left: unset;
 
   position: relative;
   display: flex;
-  gap: px-to-rem($ouds-control-item-space-column-gap);
+  gap: $ouds-control-item-space-column-gap;
   min-width: px-to-rem($ouds-control-item-size-min-width);
   min-height: $form-check-min-height;
-  padding: $ouds-control-item-space-padding-block;
+  padding: $ouds-control-item-space-padding-block-default $ouds-control-item-space-padding-inline;
   @include border-radius($ouds-control-item-border-radius);
 
   // Handle focus
@@ -46,6 +77,16 @@
   // Handle invalid state
   &:has(input.is-invalid) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
+
+    padding-right: #{$ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
+
+    .control-item-assets-container:last-child {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+    }
   }
 
   &:has(input.is-invalid:hover) {
@@ -59,8 +100,53 @@
   &:has(input.is-invalid:active) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
   }
+
+  &::after {
+    position: absolute;
+    top: $ouds-control-item-space-padding-block-default;
+    right: var(--#{$prefix}control-item-error-icon-offset-right);
+    left: var(--#{$prefix}control-item-error-icon-offset-left);
+    width: $ouds-control-item-size-icon - 2 * $ouds-control-item-space-padding-inline-error-icon;
+    height: calc(100% - 2 * $ouds-control-item-space-padding-block-default); // stylelint-disable-line function-disallowed-list
+    max-height: px-to-rem($ouds-control-item-size-max-height-assets-container);
+    font-size: $ouds-control-item-size-icon;
+    line-height: 1;
+    color: var(--#{$prefix}control-item-label-color);
+    background-color: currentcolor;
+    mask: var(--#{$prefix}error-icon) no-repeat center;
+  }
 }
 
+// common invalid state management
+.was-validated .checkbox-item,
+.was-validated .radio-button-item,
+.was-validated .switch-item {
+  &:has(input:invalid) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
+
+    padding-right: #{$ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
+
+    .control-item-assets-container:last-child {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+    }
+  }
+
+  &:has(input:invalid:hover) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
+  }
+
+  &:has(input:invalid:focus-visible) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
+  }
+
+  &:has(input:invalid:active) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
+  }
+}
 
 //
 // Control item containers
@@ -114,8 +200,8 @@
   }
 }
 
-// Helper
-.control-item-helper {
+// Description
+.control-item-description {
   margin: 0;
   color: $ouds-color-content-muted;
   @include get-font-size("label-medium");
@@ -129,6 +215,7 @@
 
   position: relative;
   flex-shrink: 0;
+  forced-color-adjust: none;
   width: $form-check-input-width;
   height: $form-check-input-width;
   overflow: hidden;
@@ -139,6 +226,10 @@
   background-color: transparent;
   border: var(--#{$prefix}control-item-indicator-border-width) solid var(--#{$prefix}control-item-indicator-color);
   print-color-adjust: exact;
+
+  @media (prefers-contrast: more) or (forced-colors: active) {
+    --#{$prefix}control-item-indicator-color: #{$ouds-color-content-default} !important; // stylelint-disable-line declaration-no-important
+  }
 
   &::before {
     position: absolute;
@@ -275,8 +366,14 @@
 
   &:disabled,
   &[role="checkbox"][aria-readonly="true"] {
-    --#{$prefix}control-item-indicator-color: #{$ouds-color-action-disabled};
+    color: $ouds-color-action-disabled;
     pointer-events: none;
+    border-color: $ouds-color-action-disabled;
+  }
+
+  &[role="checkbox"][aria-readonly="true"] {
+    color: $ouds-color-action-read-only-primary;
+    border-color: $ouds-color-action-read-only-secondary;
   }
 }
 
@@ -298,9 +395,13 @@
   }
 }
 
-[role="radiogroup"][aria-readonly="true"] .control-item-indicator[role="radio"] {
-  --#{$prefix}control-item-indicator-color: #{$ouds-color-action-disabled};
+[role="radiogroup"][aria-readonly="true"] {
   pointer-events: none;
+
+  .control-item-indicator[role="radio"] {
+    color: $ouds-color-action-read-only-primary;
+    border-color: $ouds-color-action-read-only-secondary;
+  }
 }
 // stylelint-enable selector-max-attribute
 
@@ -310,12 +411,28 @@
 //
 
 .control-item-divider {
-  padding-bottom: subtract($ouds-control-item-space-padding-block, $ouds-divider-border-width);
+  padding-bottom: calc($ouds-control-item-space-padding-block-default - $ouds-divider-border-width); // stylelint-disable-line function-disallowed-list
   border-bottom: $ouds-divider-border-width solid $ouds-color-border-default;
+
+  &:has(.is-invalid),
+  .was-validated &:has(input:invalid) {
+    border-color: var(--#{$prefix}control-item-label-color);
+  }
 }
 
 .control-item-reverse {
   flex-direction: row-reverse;
+
+  // stylelint-disable selector-no-qualifying-type
+  &:has(input.is-invalid),
+  .was-validated &:has(input:invalid) {
+    --#{$prefix}control-item-error-icon-offset-right: unset;
+    --#{$prefix}control-item-error-icon-offset-left: var(--#{$prefix}control-item-error-icon-offset);
+
+    padding-right: $ouds-control-item-space-padding-inline;
+    padding-left: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap); // stylelint-disable-line function-disallowed-list
+  }
+  // stylelint-enable selector-no-qualifying-type
 }
 
 
@@ -334,11 +451,18 @@
 }
 
 .control-item-indicator[role="switch"] {
+  --#{$prefix}switch-track-color: #{$ouds-switch-color-track-unselected};
+
+  forced-color-adjust: none;
   min-width: $ouds-switch-size-min-width;
   min-height: $ouds-switch-size-min-height;
-  background-color: $ouds-switch-color-track-unselected;
+  background-color: var(--#{$prefix}switch-track-color);
   border: 0;
   @include border-radius($ouds-switch-border-radius-track, $ouds-switch-border-radius-track);
+
+  @media (prefers-contrast: more) or (forced-colors: active) {
+    --#{$prefix}switch-track-color: #{$ouds-color-content-default} !important; // stylelint-disable-line declaration-no-important
+  }
 
   &[type="checkbox"]::before,
   &[aria-readonly="true"]::before {
@@ -360,7 +484,7 @@
   &:hover,
   &:focus-visible,
   &:active {
-    background-color: $ouds-switch-color-track-unselected-interaction;
+    --#{$prefix}switch-track-color: #{$ouds-switch-color-track-unselected-interaction};
   }
 
   &:active::before {
@@ -375,7 +499,7 @@
   // stylelint-disable selector-max-attribute
   &:checked,
   &[aria-readonly="true"][aria-checked="true"] {
-    background-color: $ouds-switch-color-track-selected;
+    --#{$prefix}switch-track-color: #{$ouds-switch-color-track-selected};
 
     &::before {
       left: calc($ouds-switch-size-min-width - $ouds-switch-space-padding-inline-selected - $ouds-switch-size-width-cursor-selected); // stylelint-disable-line function-disallowed-list
@@ -405,7 +529,7 @@
     &:hover,
     &:focus-visible,
     &:active {
-      background-color: $ouds-switch-color-track-selected-interaction;
+      --#{$prefix}switch-track-color: #{$ouds-switch-color-track-selected-interaction};
 
       &::after {
         background-color: $ouds-switch-color-check-interaction;
@@ -417,12 +541,19 @@
       width: $ouds-switch-size-width-cursor-selected-pressed;
     }
 
-    &:disabled,
-    &[aria-readonly="true"] {
+    &:disabled {
       background-color: $ouds-color-action-disabled;
 
       &::after {
         background-color: $ouds-color-action-disabled;
+      }
+    }
+
+    &[aria-readonly="true"] {
+      background-color: $ouds-color-action-read-only-secondary;
+
+      &::after {
+        background-color: $ouds-color-action-read-only-primary;
       }
     }
     // stylelint-enable selector-max-attribute
@@ -455,24 +586,6 @@
   @extend %control-item;
 }
 
-.was-validated .checkbox-item {
-  &:has(input:invalid) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
-  }
-
-  &:has(input:invalid:hover) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
-  }
-
-  &:has(input:invalid:focus-visible) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
-  }
-
-  &:has(input:invalid:active) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
-  }
-}
-
 .checkbox-standalone {
   @extend %control-item-standalone;
 }
@@ -486,29 +599,11 @@
   @extend %control-item;
 }
 
-.was-validated .radio-button-item {
-  &:has(input:invalid) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
-  }
-
-  &:has(input:invalid:hover) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
-  }
-
-  &:has(input:invalid:focus-visible) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
-  }
-
-  &:has(input:invalid:active) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
-  }
-}
-
 .radio-button-standalone {
   @extend %control-item-standalone;
 }
 
-.radio-button-additional-label {
+.radio-button-extra-label {
   margin: 0;
   font-weight: $ouds-font-weight-system-web-strong;
   color: $ouds-color-content-default;
@@ -519,11 +614,18 @@
   &:hover,
   &:active,
   &:has(input:checked) {
-    padding: subtract($ouds-control-item-space-padding-block, $ouds-divider-border-width);
+    padding-block: calc($ouds-control-item-space-padding-block-default - $ouds-divider-border-width); // stylelint-disable-line function-disallowed-list
+    padding-inline: calc($ouds-control-item-space-padding-inline - $ouds-divider-border-width); // stylelint-disable-line function-disallowed-list
     border: $ouds-divider-border-width solid $ouds-color-border-default;
+
+    // stylelint-disable selector-no-qualifying-type
+    &:has(input.is-invalid) {
+      --#{$prefix}control-item-error-icon-offset: #{$ouds-control-item-space-padding-inline + $ouds-control-item-space-padding-inline-error-icon - $ouds-divider-border-width};
+    }
+    // stylelint-enable selector-no-qualifying-type
   }
 
-  &:has(input:checked) {
+  &:has(input:checked:not(.is-invalid, :invalid)) {
     border-color: $ouds-color-action-selected;
 
     &:hover {
@@ -533,24 +635,6 @@
     &:active {
       border-color: $ouds-color-action-pressed;
     }
-
-    // stylelint-disable selector-no-qualifying-type
-    &:has(input.is-invalid) {
-      border-color: $ouds-color-action-negative-enabled;
-    }
-
-    &:has(input.is-invalid:hover) {
-      border-color: $ouds-color-action-negative-hover;
-    }
-
-    &:has(input.is-invalid:focus-visible) {
-      border-color: $ouds-color-action-negative-focus;
-    }
-
-    &:has(input.is-invalid:active) {
-      border-color: $ouds-color-action-negative-pressed;
-    }
-    // stylelint-enable selector-no-qualifying-type
   }
 
   &:hover {
@@ -562,55 +646,19 @@
   }
 
   // stylelint-disable selector-no-qualifying-type
-  &:has(input.is-invalid:hover) {
-    border-color: $ouds-color-action-negative-hover;
+  &:has(input.is-invalid) {
+    border-color: var(--#{$prefix}control-item-label-color);
   }
-
-  &:has(input.is-invalid:focus-visible) {
-    border-color: $ouds-color-action-negative-focus;
-  }
-
-  &:has(input.is-invalid:active) {
-    border-color: $ouds-color-action-negative-pressed;
-  }
-  // stylelint-enable selector-no-qualifying-type
 
   &:has(input:focus-visible) {
-    padding: $ouds-control-item-space-padding-block;
+    padding: $ouds-control-item-space-padding-block-default $ouds-control-item-space-padding-inline;
     border-width: 0;
   }
+  // stylelint-enable selector-no-qualifying-type
 }
 
-.was-validated .radio-button-item-outlined {
-  &:has(input:checked) {
-    &:has(input:invalid) {
-      border-color: $ouds-color-action-negative-enabled;
-    }
-
-    &:has(input:invalid:hover) {
-      border-color: $ouds-color-action-negative-hover;
-    }
-
-    &:has(input:invalid:focus-visible) {
-      border-color: $ouds-color-action-negative-focus;
-    }
-
-    &:has(input:invalid:active) {
-      border-color: $ouds-color-action-negative-pressed;
-    }
-  }
-
-  &:has(input:invalid:hover) {
-    border-color: $ouds-color-action-negative-hover;
-  }
-
-  &:has(input:invalid:focus-visible) {
-    border-color: $ouds-color-action-negative-focus;
-  }
-
-  &:has(input:invalid:active) {
-    border-color: $ouds-color-action-negative-pressed;
-  }
+.was-validated .radio-button-item-outlined:has(input:invalid) {
+  border-color: var(--#{$prefix}control-item-label-color);
 }
 
 
@@ -618,25 +666,33 @@
 // Switch
 //
 
-.switch-item {
+.switch-item,
+.form-switch {
   @extend %control-item;
-}
+  flex-direction: row-reverse;
 
-.was-validated .switch-item {
-  &:has(input:invalid) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
+  // stylelint-disable selector-no-qualifying-type
+  &:has(input.is-invalid) {
+    --#{$prefix}control-item-error-icon-offset-right: unset;
+    --#{$prefix}control-item-error-icon-offset-left: var(--#{$prefix}control-item-error-icon-offset);
+
+    padding-right: $ouds-control-item-space-padding-inline;
+    padding-left: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap); // stylelint-disable-line function-disallowed-list
   }
+  // stylelint-enable selector-no-qualifying-type
 
-  &:has(input:invalid:hover) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
-  }
+  &.control-item-reverse {
+    flex-direction: initial;
 
-  &:has(input:invalid:focus-visible) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
-  }
+    // stylelint-disable selector-no-qualifying-type
+    &:has(input.is-invalid) {
+      --#{$prefix}control-item-error-icon-offset-right: var(--#{$prefix}control-item-error-icon-offset);
+      --#{$prefix}control-item-error-icon-offset-left: unset;
 
-  &:has(input:invalid:active) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
+      padding-right: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap); // stylelint-disable-line function-disallowed-list
+      padding-left: $ouds-control-item-space-padding-inline;
+    }
+    // stylelint-enable selector-no-qualifying-type
   }
 }
 
@@ -671,6 +727,16 @@
   .was-validated .form-check {
     &:has(input:invalid) {
       --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
+
+      padding-right: #{$ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
+
+      .control-item-assets-container:last-child {
+        display: none;
+      }
+
+      &::after {
+        content: "";
+      }
     }
 
     &:has(input:invalid:hover) {

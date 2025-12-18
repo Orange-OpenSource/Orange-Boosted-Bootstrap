@@ -1,0 +1,191 @@
+---
+title: Text area
+description: A text area is a multi-line text area component that allows users to enter and edit longer blocks of text, such as comments, messages, or descriptions.
+aliases:
+  - "/docs/forms/text-area/"
+toc: true
+---
+
+import { getVersionedDocsPath } from '@libs/path'
+
+<Callout type="info">
+  You can find here the OUDS [text area design guidelines](https://r.orange.fr/r/S-ouds-doc-text-area).
+</Callout>
+
+## Overview
+
+Use a `.text-area` wrapper to create a text area with OUDS styles, then wrap a pair of `<textarea class="text-area-field">` and `<label>` elements in `.text-area-container`. Note that the `<label>` must come before the `<textarea>`.
+
+<Example code={`<div class="text-area mb-medium">
+    <div class="text-area-container">
+      <label for="exampleTextArea">Additional comments</label>
+      <textarea class="text-area-field" id="exampleTextArea"></textarea>
+    </div>
+  </div>
+  <div class="text-area">
+    <div class="text-area-container">
+      <label for="exampleTextAreaPlaceholder">Additional comments</label>
+      <textarea class="text-area-field" id="exampleTextAreaPlaceholder" placeholder="Enter your comment here"></textarea>
+    </div>
+  </div>`} />
+
+## Variants
+
+### Outlined
+
+Add `.text-area-container-outlined` for a minimalist text area with a transparent background and a visible stroke outlining the field.
+
+<Example code={`<div class="text-area">
+    <div class="text-area-container text-area-container-outlined">
+      <label for="exampleTextAreaOutlined">Additional comments</label>
+      <textarea class="text-area-field" id="exampleTextAreaOutlined"></textarea>
+    </div>
+  </div>`} />
+
+<BrandSpecific brand="orange">
+### Rounded
+
+Rounded corners inputs is a project-wide option therefore all your inputs should either be rounded or not. Add `.use-rounded-corner-inputs` on a top container (for example `<body>`) to use rounded corners.
+
+<Callout type="info">
+  We use a `<div>` as a parent container because we cannot use `<body>` in an example
+</Callout>
+
+<Example code={`<div class="use-rounded-corner-inputs">
+    <div class="text-area mb-medium">
+      <div class="text-area-container">
+        <label for="exampleTextAreaRounded">Additional comments</label>
+        <textarea class="text-area-field" id="exampleTextAreaRounded"></textarea>
+      </div>
+    </div>
+    <div class="text-area">
+      <div class="text-area-container text-area-container-outlined">
+        <label for="exampleTextAreaRoundedAlt">Additional comments</label>
+        <textarea class="text-area-field" id="exampleTextAreaRoundedAlt"></textarea>
+      </div>
+    </div>
+  </div>`} />
+</BrandSpecific>
+
+### Helper text
+
+To display a helper text below text areas, add a `.helper-text` as a sibling of a `.text-area-container`.
+
+<Callout type="warning">
+Helper text should be explicitly associated with the text area it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this helper text when the user focuses or enters the text area.
+</Callout>
+
+<Example code={`<div class="text-area">
+    <div class="text-area-container">
+      <label for="textAreaWithHelperText">Additional comments</label>
+      <textarea id="textAreaWithHelperText" class="text-area-field" aria-describedby="textAreaWithHelperTextHelpBlock"></textarea>
+    </div>
+    <p id="textAreaWithHelperTextHelpBlock" class="helper-text">
+      Please be concise and limit your comment to <strong>180</strong> characters.
+    </p>
+  </div>`} />
+
+### Helper link
+
+If the helper text is not sufficient, it’s possible to offer the user an additional help link. The helper link can also be displayed on its own without helper text.
+To display a helper link below text areas, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.text-area-container`.
+
+<Callout type="warning">
+If a helper link is used in conjunction with a helper text, the `aria-describedby` attribute should refer to the helper text and the helper link should be referenced by the `aria-labelledby` attribute.
+</Callout>
+
+<Example code={`<div class="text-area mb-medium">
+    <div class="text-area-container">
+      <label id="labelTextAreaWithHelperTextLink" for="textAreaWithHelperTextLink">Additional comments</label>
+      <textarea id="textAreaWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" aria-labelledby="labelTextAreaWithHelperTextLink feedbackTextHelpMore" class="text-area-field"></textarea>
+    </div>
+    <p id="feedbackTextHelpBlock" class="helper-text">
+      Please be concise and limit your comment to <strong>180</strong> characters.
+    </p>
+    <a href="#" id="feedbackTextHelpMore" class="link link-small">
+      More information
+    </a>
+  </div>
+  <div class="text-area">
+    <div class="text-area-container mt-large">
+      <label for="textAreaHelperLink">Additional comments</label>
+      <textarea id="textAreaHelperLink" aria-describedby="feedbackTextHelpLink" class="text-area-field"></textarea>
+    </div>
+    <a href="#" id="feedbackTextHelpLink" class="link link-small">
+      More information
+    </a>
+  </div>`} />
+
+## States
+
+### Disabled
+
+Add the `disabled` boolean attribute on a text area to give it a grayed out appearance, remove pointer events, and prevent focusing.
+
+<Example code={`<div class="text-area mb-medium">
+    <div class="text-area-container">
+      <label for="exampleTextAreaDisabled">Additional comments</label>
+      <textarea disabled class="text-area-field" id="exampleTextAreaDisabled">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+    </div>
+  </div>
+  <div class="text-area">
+    <div class="text-area-container text-area-container-outlined">
+      <label for="exampleTextAreaOutlinedDisabled">Additional comments</label>
+      <textarea disabled class="text-area-field" id="exampleTextAreaOutlinedDisabled">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+    </div>
+  </div>`} />
+
+### Readonly
+
+Add the `readonly` boolean attribute on a text area to prevent modification of the text area’s value. `readonly` text areas can still be focused and selected, while `disabled` text areas cannot.
+
+<Example code={`<div class="text-area mb-medium">
+    <div class="text-area-container">
+      <label for="exampleTextAreaReadonly">Additional comments</label>
+      <textarea readonly class="text-area-field" id="exampleTextAreaReadonly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+    </div>
+  </div>
+  <div class="text-area">
+    <div class="text-area-container text-area-container-outlined">
+      <label for="exampleTextAreaOutlinedReadonly">Additional comments</label>
+      <textarea readonly class="text-area-field" id="exampleTextAreaOutlinedReadonly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+    </div>
+  </div>`} />
+
+### Invalid
+
+<Callout type="info" name="input-invalid" />
+
+To display an invalid text area, add `.is-invalid` to a `.text-area-field` within the `.text-area-container`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
+
+<Callout type="warning">
+For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.text-area-container` and related to it with an `aria-labelledby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error.
+</Callout>
+
+<Example code={`<div class="text-area mb-medium">
+    <div class="text-area-container">
+      <label id="labelTextAreaInvalid" for="exampleTextAreaInvalid">Additional comments</label>
+      <textarea class="text-area-field is-invalid" id="exampleTextAreaInvalid" aria-describedby="commentTextHelpBlock" aria-labelledby="labelTextAreaInvalid commentFeedback"></textarea>
+    </div>
+    <p id="commentTextHelpBlock" class="helper-text">
+      Please be concise and limit your comment to <strong>180</strong> characters.
+    </p>
+    <p id="commentFeedback" class="error-text">
+      This field can’t be empty.
+    </p>
+  </div>
+  <div class="text-area">
+    <div class="text-area-container text-area-container-outlined">
+      <label for="exampleTextAreaOutlinedInvalid">Additional comments</label>
+      <textarea class="text-area-field is-invalid" id="exampleTextAreaOutlinedInvalid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+    </div>
+    <p id="commentTextHelpBlockOutlined" class="helper-text">
+      Please be concise and limit your comment to <strong>180</strong> characters.
+    </p>
+    <p id="commentFeedbackOutlined" class="error-text">
+      Your comment exceeded the limit of <strong>180</strong> characters.
+    </p>
+    <a href="#" id="commentTextHelpLinkOutlined" class="link link-small">
+      More information
+    </a>
+  </div>`} />

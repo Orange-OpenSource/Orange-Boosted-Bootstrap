@@ -20,3 +20,26 @@
     }
   }
 }
+
+@each $color, $value in $ouds-backgrounds-with-color {
+  $text-bg-color: null;
+
+  @if index(("always-black"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-always-on-black);
+  } @else if index(("always-white"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-always-on-white);
+  } @else {
+    $text-bg-color: var(--#{$prefix}color-content-on-#{str-replace($color, "surface-")});
+  }
+
+  .bg-#{$color} {
+    --#{$prefix}color-local: #{$text-bg-color};
+    color: var(--#{$prefix}color-local);
+  }
+}
+
+@each $color, $value in $ouds-backgrounds-without-color {
+  .bg-#{$color} {
+    --#{$prefix}color-local: initial;
+  }
+}

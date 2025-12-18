@@ -8,11 +8,8 @@
   margin-bottom: var(--bs-space-scaled-xsmall); // OUDS mod: instead of `margin: 0 ($bd-gutter-x * -.5) 1rem`
   border: solid var(--bs-color-border-default); // OUDS mod: instead of `var(--bs-border-color)`
   border-width: 1px; // OUDs mod: instead of `border-width: 1px 0`
-
-  @include media-breakpoint-up(md) {
-    // OUDS mod: no margin-right, margin-left, border-width
-    @include border-radius(var(--bs-border-radius));
-  }
+  @include border-radius(var(--bs-border-radius)); // OUDS mod: apply border-radius for all breakpoints
+  // OUDS mod: no margin-right, margin-left, border-width from md breakpoint
 }
 
 .bd-example {
@@ -108,6 +105,11 @@
   // Pagination
   .pagination {
     margin-bottom: 0;
+  }
+
+  // OUDS mod: rounded corners on first child elements when needed (especially for colored backgrounds)
+  &.bd-first-rounded > :first-child {
+    @include border-radius(calc(var(--bs-border-radius) - 1px) calc(var(--bs-border-radius) - 1px) 0 0);
   }
 }
 
@@ -380,6 +382,7 @@
 //
 .highlight-container {
   background-color: var(--bd-pre-bg);
+  @include border-radius(var(--bs-border-radius)); // OUDS mod
 }
 
 .highlight {
@@ -387,11 +390,8 @@
   padding: .75rem .75rem 0; // OUDS mod: instead of ` padding: .75rem ($bd-gutter-x * .5)`
   white-space: nowrap; // OUDS mod
   background-color: var(--bd-pre-bg);
-
-  @include media-breakpoint-up(md) {
-    // OUDS mod: no `padding: .75rem 1.25rem`
-    @include border-radius(calc(var(--bs-border-radius) - 1px));
-  }
+  @include border-radius(var(--bs-border-radius)); // OUDS mod: apply border-radius for all breakpoints
+  // OUDS mod: no `padding: .75rem 1.25rem` from breakpoint md
 
   @include media-breakpoint-up(lg) {
     pre {

@@ -7,14 +7,15 @@ aliases:
   - "/docs/[[config:docs_version]]/components/chip/"
 toc: true
 types:
-  - Chip
+  - Filter chip
+  - Suggestion chip
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
 import { getMode } from '@libs/sass-variables'
 
 <Callout type="info">
-You can find here the [OUDS chip design guidelines](https://unified-design-system.orange.com/472794e18/p/77fdea-chip).
+  You can find the OUDS design guidelines here: [filter chip guidelines](https://r.orange.fr/r/S-ouds-doc-filter-chip), [suggestion chip guidelines](https://r.orange.fr/r/S-ouds-doc-suggestion-chip).
 </Callout>
 
 ## Overview
@@ -84,7 +85,7 @@ Here is a table summarizing the pseudo elements that are used by the different v
 
 {/* | Filter expand chip | Used       | Used      | */}
 
-## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href="/orange/docs/0.5/assets/img/ouds-web-sprite.svg#component-atom" /></svg>Filter chip
+## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Filter chip
 
 Filter chips allow users to filter content by selecting or deselecting specific categories or attributes while keeping the element on the page. They are based on checkbox inputs, but we also have [button based](#using-buttons) or [radio button based](#using-radio-buttons) filter chips. Thus, there is a selected state on this variant of the component.
 
@@ -287,7 +288,7 @@ The following example shows every possible renderings depending on the filter ch
     </li>
   </ul>`} />
 
-## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href="/orange/docs/0.5/assets/img/ouds-web-sprite.svg#component-atom" /></svg>Suggestion chip
+## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Suggestion chip
 
 Suggestion chips show relevant options based on user input or context. They help users quickly choose from dynamic or recommended items. Since this implies a dynamic behavior, these should be implemented using buttons.
 

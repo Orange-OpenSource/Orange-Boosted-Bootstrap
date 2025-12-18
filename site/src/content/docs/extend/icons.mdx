@@ -6,12 +6,62 @@ aliases:
 toc: true
 ---
 
-import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
-import { getMode } from '@libs/sass-variables'
+import { getMode, allTokens } from '@libs/sass-variables'
+
+export const iconHeadingSize = [
+  "heading-xlarge-size-large",
+  "heading-xlarge-size-medium",
+  "heading-xlarge-size-small",
+  "heading-large-size-large",
+  "heading-large-size-medium",
+  "heading-large-size-small",
+  "heading-medium-size-large",
+  "heading-medium-size-medium",
+  "heading-medium-size-small",
+  "heading-small-size-large",
+  "heading-small-size-medium",
+  "heading-small-size-small",
+  "body-large-size-large",
+  "body-large-size-medium",
+  "body-large-size-small",
+  "body-medium-size-large",
+  "body-medium-size-medium",
+  "body-medium-size-small"
+]
+
+export const iconTextSize = [
+  "body-large-size-large",
+  "body-large-size-medium",
+  "body-large-size-small",
+  "body-medium-size-large",
+  "body-medium-size-medium",
+  "body-medium-size-small",
+  "body-small-size-large",
+  "body-small-size-medium",
+  "body-small-size-small"
+]
+
+export const iconDecorativeSize = [
+  "decorative-2xlarge",
+  "decorative-xlarge",
+  "decorative-large",
+  "decorative-medium",
+  "decorative-small",
+  "decorative-xsmall",
+  "decorative-2xsmall",
+  "decorative-3xsmall",
+  "decorative-4xsmall"
+]
+
+export const screenSize = [
+  "mobile",
+  "tablet",
+  "desktop"
+]
 
 <Callout type="info">
-You can find here the [Iconography design guidelines](https://unified-design-system.orange.com/472794e18/p/275963-iconography).
+You can find here the [iconography design guidelines](https://r.orange.fr/r/S-ouds-doc-icon-intro).
 </Callout>
 
 <BrandSpecific brand="orange">
@@ -19,7 +69,7 @@ While OUDS Web doesn’t include an icon set by default, Orange does have its ow
 
 [Solaris icons library]([[config:icons]]) is a growing library of icons that are designed by OUDS design team. It features an icon search tool based on categories and keywords, and allows icons to be downloaded in various formats for use in design and development. They are not open-source though and should only be used for Orange projects. Please refer to the [icons license file]([[config:icons_license]]) for legal information.
 
-If you need guidance to use Solaris icons, please refer to the paragraph [use Solaris icons]([[docsref:extend/icons#use-solaris-icons]]).
+If you need guidance to use Solaris icons, please refer to the paragraph [use Solaris icons](#use-solaris-icons).
 </BrandSpecific>
 
 ## Icons rendering
@@ -46,9 +96,9 @@ For SVGs (SVG sprites, inline SVGs or CSS mask image SVGs), the `fill="currentCo
 
 ### Functional icons
 
-The following color utilities and CSS variables are intended for use only with functional icons, not with text, and icons should not be used on their own, but only alongside text, as functional colors do not provide sufficient contrast to ensure readability.
+The following color utilities and CSS variables are intended for use only with functional icons. The warning icon is an exception as it has two different colors for its internal and external shapes, to ensure accessibility. For this icon, you can use the dedicated [accessible warning icon](#accessible-warning-icon).
 
-Here are [the normal contexts of use of these functional colors](https://unified-design-system.orange.com/472794e18/p/217ac6-colour/t/9b95834c2e).
+Here are [the normal contexts of use of these functional colors](https://r.orange.fr/r/S-ouds-doc-token-color-functional).
 
 <BsTable>
 | Color utility | Color CSS variable | Context of use |
@@ -56,7 +106,7 @@ Here are [the normal contexts of use of these functional colors](https://unified
 | `.text-status-accent` | `--bs-color-content-status-accent` | Used to highlight or draw attention to a specific element. |
 | `.text-status-info` | `--bs-color-content-status-info` | Use to communicate a feedback. It’s more important than a neutral color. |
 | `.text-status-positive` | `--bs-color-content-status-positive` | Use to communicate a positive action, a confirmation or a positive feedback. |
-| `.text-status-warning` | `--bs-color-content-status-warning` | Use to display an information that requires more attention, or an action from the user. |
+| NA | `--bs-icon-color-content-status-warning-external-shape` and `--bs-icon-color-content-status-warning-internal-shape` | Use to display an information that requires more attention, or an action from the user. |
 | `.text-status-negative` | `--bs-color-content-status-negative` | Use to communicate something negative. It can be a destructive action, an error state, or a negative feedback. |
 </BsTable>
 
@@ -69,23 +119,23 @@ Here are [the normal contexts of use of these functional colors](https://unified
       </p>
       <p>
         <svg class="text-status-info decorative-small-icon" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#info')}" />
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-info')}" />
         </svg> Info
       </p>
       <p>
         <svg class="text-status-positive decorative-small-icon" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#tick-confirmation')}" />
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-success')}" />
         </svg> Success
       </p>
       <p>
-        <svg class="text-status-warning decorative-small-icon" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#important')}" />
+        <svg class="decorative-small-icon" aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-warning-accessible')}" />
         </svg> Warning
       </p>
       <p>
         <svg class="text-status-negative decorative-small-icon" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#error-severe')}" />
-        </svg> Danger
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-important')}" />
+        </svg> Important
       </p>
     </div>
     <div class="p-medium bg-always-black border border-default" data-bs-theme="dark">
@@ -96,27 +146,53 @@ Here are [the normal contexts of use of these functional colors](https://unified
       </p>
       <p>
         <svg class="decorative-small-icon" style="color: var(--bs-color-content-status-info)" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#info')}" />
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-info')}" />
         </svg> Info
       </p>
       <p>
         <svg class="decorative-small-icon" style="color: var(--bs-color-content-status-positive)" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#tick-confirmation')}" />
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-success')}" />
         </svg> Success
       </p>
       <p>
-        <svg class="decorative-small-icon" style="color: var(--bs-color-content-status-warning)" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#important')}" />
+        <svg class="decorative-small-icon" aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-warning-accessible')}" />
         </svg> Warning
       </p>
       <p>
         <svg class="decorative-small-icon" style="color: var(--bs-color-content-status-negative)" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#error-severe')}" />
-        </svg> Danger
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-important')}" />
+        </svg> Important
       </p>
     </div>
   </div>`} />
 
+#### Accessible warning icon
+
+To ensure accessibility through sufficient contrast, OUDS provides a dedicated warning icon with two distinct colors for its external and internal shapes. This design choice enhances visibility and clarity, making it easier for users to recognize and understand warning messages.
+
+Here is a SVG symbol to insert into your SVG sprite. It uses the CSS variables `--bs-icon-color-content-status-warning-external-shape` and `--bs-icon-color-content-status-warning-internal-shape` to color the external and internal shapes of the icon respectively, changing according to color mode. See below to know more about [SVG sprites](#svg-sprite).
+
+<BrandSpecific brand="orange">
+<Example lang="svg" showPreview={false} code={`<symbol viewBox="0 0 24 24" id="alert-warning-accessible">
+    <path fill="var(--bs-icon-color-content-status-warning-external-shape)" d="M22.452 16.98 14.805 3.063a2.556 2.556 0 0 0-4.411 0L2.77 16.943l-.001.002-.021.036a2.54 2.54 0 0 0-.009 2.552 2.55 2.55 0 0 0 2.215 1.276h15.292a2.548 2.548 0 0 0 2.215-1.276 2.542 2.542 0 0 0-.01-2.553ZM11.4 8.031c0-1.188.4-1.758 1.2-1.758.8 0 1.2.57 1.2 1.758v4.535c0 1.188-.385 1.774-1.2 1.774-.8 0-1.2-.585-1.2-1.774V8.031Zm1.188 10.119a1.394 1.394 0 0 1-1.388-1.407 1.38 1.38 0 0 1 1.388-1.391 1.39 1.39 0 0 1 1.387 1.39c0 .768-.622 1.408-1.387 1.408Z"/>
+    <path fill="var(--bs-icon-color-content-status-warning-internal-shape)" d="M12.6 6.273c-.8 0-1.2.57-1.2 1.758v4.535c0 1.188.4 1.774 1.2 1.774.816 0 1.2-.586 1.2-1.774V8.031c0-1.188-.4-1.758-1.2-1.758Zm-1.4 10.47c0 .784.622 1.407 1.388 1.407.765 0 1.387-.64 1.387-1.407a1.39 1.39 0 0 0-1.387-1.391 1.38 1.38 0 0 0-1.388 1.39Z"/>
+  </symbol>`} />
+</BrandSpecific>
+<BrandSpecific brand="sosh">
+<Example lang="svg" showPreview={false} code={`<symbol viewBox="0 0 24 24" id="alert-warning-accessible">
+    <path fill="var(--bs-icon-color-content-status-warning-external-shape)" d="M12 3.36c.786 0 1.473.43 1.843 1.072l7.467 12.96c.184.32.29.692.29 1.088 0 1.193-.955 2.16-2.133 2.16H4.533c-1.178 0-2.132-.967-2.133-2.16 0-.396.106-.769.29-1.088l.018-.03.001-.003 7.448-12.927A2.127 2.127 0 0 1 12 3.36Zm0 12.72c-.334 0-.618.12-.85.36-.233.24-.35.52-.35.84 0 .33.117.612.35.847.218.23.528.357.85.353.335 0 .618-.118.85-.353.234-.235.35-.517.35-.847 0-.32-.116-.6-.35-.84a1.142 1.142 0 0 0-.85-.36Zm.001-9.6c-.643 0-1.171.455-1.201 1.025l.24 7.135h1.92l.24-7.135c-.03-.57-.556-1.025-1.199-1.025Z"/>
+    <path fill="var(--bs-icon-color-content-status-warning-internal-shape)" d="M10.8 7.505c.03-.57.558-1.025 1.2-1.025.643 0 1.17.455 1.2 1.025l-.24 7.135h-1.92l-.24-7.135Zm2.05 10.622a1.15 1.15 0 0 1-.85.353 1.15 1.15 0 0 1-.85-.353 1.16 1.16 0 0 1-.35-.847c0-.32.116-.6.35-.84.232-.24.516-.36.85-.36.334 0 .618.12.85.36.234.24.35.52.35.84 0 .33-.116.613-.35.847Z"/>
+  </symbol>`} />
+</BrandSpecific>
+
+Then, you can use it like this:
+
+<Example class="mt-0" code={`<svg class="decorative-small-icon" aria-hidden="true">
+    <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-warning-accessible')}" />
+  </svg>`} />
+
+Please note that this icon cannot be rendered by a Web font, due to its two colors.
 
 ### Other icons
 
@@ -165,33 +241,57 @@ Every icon size utility class presented in here has the common following code:
 
 Here are the rules to follow for headings. These icons’ sizes are responsive.
 
-{/* <details class="mb-medium">
+<details class="mb-medium">
   <summary>See the <strong>sizes</strong> associated to classes</summary>
 
-<BsTable>
-| Icon class | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
-| --- | --- | --- | --- |
-| `.hxl-large-icon` | `3.25rem` (52px) | `4rem` (64px) | `4rem` (64px) |
-| `.hxl-medium-icon` | `3rem` (48px) | `3.5rem` (56px) | `3.75rem` (60px) |
-| `.hxl-small-icon` | `2.75rem` (44px) | `3.25rem` (52px) | `3.5rem` (56px) |
-| `.hl-large-icon` | `3rem` (48px) | `3.25rem` (52px) | `3.5rem` (56px) |
-| `.hl-medium-icon` | `2.75rem` (44px) | `3rem` (48px) | `3.25rem` (52px) |
-| `.hl-small-icon` | `2.5rem` (40px) | `2.75rem` (44px) | `3rem` (48px) |
-| `.hm-large-icon` | `2.75rem` (44px) | `3rem` (48px) | `3.25rem` (52px) |
-| `.hm-medium-icon` | `2.5rem` (40px) | `2.75rem` (44px) | `3rem` (48px) |
-| `.hm-small-icon` | `2rem` (32px) | `2.5rem` (40px) | `2.75rem` (44px) |
-| `.hs-large-icon` | `2.75rem` (44px) | `2.75rem` (44px) | `3rem` (48px) |
-| `.hs-medium-icon` | `2.5rem` (40px) | `2.5rem` (40px) | `2.75rem` (44px) |
-| `.hs-small-icon` | `2rem` (32px) | `2rem` (32px) | `2.5rem` (40px) |
-| `.bl-large-icon` | `1.75rem` (28px) | `1.75rem` (28px) | `2.75rem` (44px) |
-| `.bl-medium-icon` | `1.5rem` (24px) | `1.5rem` (24px) | `2.5rem` (40px) |
-| `.bl-small-icon` | `1.25rem` (20px) | `1.25rem` (20px) | `2rem` (32px) |
-| `.bm-large-icon` | `1.5rem` (24px) | `1.5rem` (24px) | `1.75rem` (28px) |
-| `.bm-medium-icon` | `1.25rem` (20px) | `1.25rem` (20px) | `1.5rem` (24px) |
-| `.bm-small-icon` | `1rem` (16px) | `1rem` (16px) | `1.25rem` (20px) |
-</BsTable>
-
-</details> */}
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Icon class</th>
+          <th>Values from `2xs` to `sm`</th>
+          <th>Values from `md` to `lg`</th>
+          <th>Values for `xl` and upper</th>
+        </tr>
+      </thead>
+      <tbody>
+      {
+        iconHeadingSize.map((level) => (
+          <tr>
+            <td>
+              {level === 'heading-xlarge-size-large' && (<code>{'.hxl-large-icon'}</code>)}
+              {level === 'heading-xlarge-size-medium' && (<code>{'.hxl-medium-icon'}</code>)}
+              {level === 'heading-xlarge-size-small' && (<code>{'.hxl-small-icon'}</code>)}
+              {level === 'heading-large-size-large' && (<code>{'.hl-large-icon'}</code>)}
+              {level === 'heading-large-size-medium' && (<code>{'.hl-medium-icon'}</code>)}
+              {level === 'heading-large-size-small' && (<code>{'.hl-small-icon'}</code>)}
+              {level === 'heading-medium-size-large' && (<code>{'.hm-large-icon'}</code>)}
+              {level === 'heading-medium-size-medium' && (<code>{'.hm-medium-icon'}</code>)}
+              {level === 'heading-medium-size-small' && (<code>{'.hm-small-icon'}</code>)}
+              {level === 'heading-small-size-large' && (<code>{'.hs-large-icon'}</code>)}
+              {level === 'heading-small-size-medium' && (<code>{'.hs-medium-icon'}</code>)}
+              {level === 'heading-small-size-small' && (<code>{'.hs-small-icon'}</code>)}
+              {level === 'body-large-size-large' && (<code>{'.bl-large-icon'}</code>)}
+              {level === 'body-large-size-medium' && (<code>{'.bl-medium-icon'}</code>)}
+              {level === 'body-large-size-small' && (<code>{'.bl-small-icon'}</code>)}
+              {level === 'body-medium-size-large' && (<code>{'.bm-large-icon'}</code>)}
+              {level === 'body-medium-size-medium' && (<code>{'.bm-medium-icon'}</code>)}
+              {level === 'body-medium-size-small' && (<code>{'.bm-small-icon'}</code>)}
+            </td>
+            {
+              screenSize.map((size) => (
+                <td>
+                  <code>{(allTokens.find((token) => token.name === `$ouds-size-icon-with-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</code> ({allTokens.find((token) => token.name === `$ouds-size-icon-with-${level}-${size}`).compiledValue})
+                </td>
+              ))
+            }
+        </tr>
+        ))
+      }
+      </tbody>
+    </table>
+  </div>
+</details>
 
 <Example code={`<!-- h1 uses heading-xlarge font reference like all related classes as \`.h1\`, \`.fs-hxl\`, etc... -->
   <div class="d-flex align-items-center mb-medium">
@@ -331,24 +431,48 @@ You should not use any icon with our `.display-*` font sizes, because we prefer 
 
 Here are the rules to follow for regular texts. These icons’ sizes are responsive.
 
-{/* <details class="mb-medium">
+<details class="mb-medium">
   <summary>See the <strong>sizes</strong> associated to classes</summary>
 
-<BsTable>
-| Icon class | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
-| --- | --- | --- | --- |
-| `.bl-large-icon` | `1.75rem` (28px) | `1.75rem` (28px) | `2.75rem` (44px) |
-| `.bl-medium-icon` | `1.5rem` (24px) | `1.5rem` (24px) | `2.5rem` (40px) |
-| `.bl-small-icon` | `1.25rem` (20px) | `1.25rem` (20px) | `2rem` (32px) |
-| `.bm-large-icon` | `1.5rem` (24px) | `1.5rem` (24px) | `1.75rem` (28px) |
-| `.bm-medium-icon` | `1.25rem` (20px) | `1.25rem` (20px) | `1.5rem` (24px) |
-| `.bm-small-icon` | `1rem` (16px) | `1rem` (16px) | `1.25rem` (20px) |
-| `.bs-large-icon` | `1.25rem` (20px) | `1.25rem` (20px) | `1.5rem` (24px) |
-| `.bs-medium-icon` | `1rem` (16px) | `1rem` (16px) | `1.25rem` (20px) |
-| `.bs-sm-icon` | `.75rem` (12px) | `.75rem` (12px) | `1rem` (16px) |
-</BsTable>
-
-</details> */}
+    <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Icon class</th>
+          <th>Values from `2xs` to `sm`</th>
+          <th>Values from `md` to `lg`</th>
+          <th>Values for `xl` and upper</th>
+        </tr>
+      </thead>
+      <tbody>
+      {
+        iconTextSize.map((level) => (
+          <tr>
+            <td>
+              {level === 'body-large-size-large' && (<code>{'.bl-large-icon'}</code>)}
+              {level === 'body-large-size-medium' && (<code>{'.bl-medium-icon'}</code>)}
+              {level === 'body-large-size-small' && (<code>{'.bl-small-icon'}</code>)}
+              {level === 'body-medium-size-large' && (<code>{'.bm-large-icon'}</code>)}
+              {level === 'body-medium-size-medium' && (<code>{'.bm-medium-icon'}</code>)}
+              {level === 'body-medium-size-small' && (<code>{'.bm-small-icon'}</code>)}
+              {level === 'body-small-size-large' && (<code>{'.bs-large-icon'}</code>)}
+              {level === 'body-small-size-medium' && (<code>{'.bs-medium-icon'}</code>)}
+              {level === 'body-small-size-small' && (<code>{'.bs-small-icon'}</code>)}
+            </td>
+            {
+              screenSize.map((size) => (
+                <td>
+                  <code>{(allTokens.find((token) => token.name === `$ouds-size-icon-with-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</code> ({allTokens.find((token) => token.name === `$ouds-size-icon-with-${level}-${size}`).compiledValue})
+                </td>
+              ))
+            }
+        </tr>
+        ))
+      }
+      </tbody>
+    </table>
+  </div>
+</details>
 
 <Example code={`<!-- .lead uses body-large font reference like all related classes as \`.lead\`, \`.fs-bl\`, etc... -->
   <div class="d-flex align-items-center mb-medium">
@@ -434,102 +558,48 @@ Here are the rules to follow for regular texts. These icons’ sizes are respons
 
 ### Decorative
 
-Here are the rules to follow for decorative icons. Be careful using these icons’ sizes because they are not responsive. Check out for [more information about accessibility in our documentation]([[docsref:/extend/icons#icons-accessibility]]).
+Here are the rules to follow for decorative icons. Be careful using these icons’ sizes because they are not responsive. Check out for [more information about accessibility in our documentation](#icons-accessibility).
 
-{/* <details class="mb-medium">
+<details class="mb-medium">
   <summary>See the <strong>sizes</strong> associated to classes</summary>
 
-<BsTable>
-| Icon class | Value |
-| --- | --- |
-| `.decorative-4xsmall-icon` | `10px` |
-| `.decorative-3xsmall-icon` | `12px` |
-| `.decorative-2xsmall-icon` | `16px` |
-| `.decorative-xsmall-icon` | `24px` |
-| `.decorative-small-icon` | `32px` |
-| `.decorative-medium-icon` | `40px` |
-| `.decorative-large-icon` | `48px` |
-| `.decorative-xlarge-icon` | `56px` |
-| `.decorative-2xlarge-icon` | `72px` |
-</BsTable>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Icon class</th>
+          <th>Values</th>
+        </tr>
+      </thead>
+      <tbody>
+      {
+        iconDecorativeSize.map((level) => (
+          <tr>
+            <td>
+              <code>.{level}-icon</code>
+            </td>
+            {
+              <td>
+                <code>{allTokens.find((token) => token.name === `$ouds-size-icon-${level}`).compiledValue}</code>
+              </td>
+            }
+        </tr>
+        ))
+      }
+      </tbody>
+    </table>
+  </div>
+</details>
 
-</details> */}
-
-<Example showMarkup={false} code={`<div class="d-flex mb-medium">
-    <div class="bg-inverse-low d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-4xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="${getMode('modes-on-bg-inverse-low')}">
-        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}"/>
-      </svg>
-    </div>
-    <div>
-      <p class="lead mb-2xsmall fw-bold">4x-small decorative icon</p>
-      <p class="mb-none">coreGlobalDimensionOutOfSystem250 (<code>10px</code>)</p>
-    </div>
-  </div>
+<Example showMarkup={false} code={`
   <div class="d-flex mb-medium">
     <div class="bg-inverse-low d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-3xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="${getMode('modes-on-bg-inverse-low')}">
+      <svg class="decorative-2xlarge-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="${getMode('modes-on-bg-inverse-low')}">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}"/>
       </svg>
     </div>
-    <div>
-      <p class="lead mb-2xsmall fw-bold">3x-small decorative icon</p>
-      <p class="mb-none">coreGlobalDimension150 (<code>12px</code>)</p>
-    </div>
-  </div>
-  <div class="d-flex mb-medium">
-    <div class="bg-inverse-low d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-2xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="${getMode('modes-on-bg-inverse-low')}">
-        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}"/>
-      </svg>
-    </div>
-    <div>
-      <p class="lead mb-2xsmall fw-bold">2x-small decorative icon</p>
-      <p class="mb-none">coreGlobalDimension200 (<code>16px</code>)</p>
-    </div>
-  </div>
-  <div class="d-flex mb-medium">
-    <div class="bg-inverse-low d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="${getMode('modes-on-bg-inverse-low')}">
-        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}"/>
-      </svg>
-    </div>
-    <div>
-      <p class="lead mb-2xsmall fw-bold">X-small decorative icon</p>
-      <p class="mb-none">coreGlobalDimension300 (<code>24px</code>)</p>
-    </div>
-  </div>
-  <div class="d-flex mb-medium">
-    <div class="bg-inverse-low d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-small-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="${getMode('modes-on-bg-inverse-low')}">
-        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}"/>
-      </svg>
-    </div>
-    <div>
-      <p class="lead mb-2xsmall fw-bold">Small decorative icon</p>
-      <p class="mb-none">coreGlobalDimension400 (<code>32px</code>)</p>
-    </div>
-  </div>
-  <div class="d-flex mb-medium">
-    <div class="bg-inverse-low d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-medium-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="${getMode('modes-on-bg-inverse-low')}">
-        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}"/>
-      </svg>
-    </div>
-    <div>
-      <p class="lead mb-2xsmall fw-bold">Medium decorative icon</p>
-      <p class="mb-none">coreGlobalDimension500 (<code>40px</code>)</p>
-    </div>
-  </div>
-  <div class="d-flex mb-medium">
-    <div class="bg-inverse-low d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-large-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="${getMode('modes-on-bg-inverse-low')}">
-        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}"/>
-      </svg>
-    </div>
-    <div>
-      <p class="lead mb-2xsmall fw-bold">Large decorative icon</p>
-      <p class="mb-none">coreGlobalDimension600 (<code>48px</code>)</p>
+    <div class="align-content-center">
+      <p class="lead mb-2xsmall">2x-large decorative icon</p>
     </div>
   </div>
   <div class="d-flex mb-medium">
@@ -538,33 +608,91 @@ Here are the rules to follow for decorative icons. Be careful using these icons�
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}"/>
       </svg>
     </div>
-    <div>
-      <p class="lead mb-2xsmall fw-bold">X-large decorative icon</p>
-      <p class="mb-none">coreGlobalDimension700 (<code>56px</code>)</p>
+    <div class="align-content-center">
+      <p class="lead mb-2xsmall">X-large decorative icon</p>
     </div>
   </div>
   <div class="d-flex mb-medium">
     <div class="bg-inverse-low d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-2xlarge-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="${getMode('modes-on-bg-inverse-low')}">
+      <svg class="decorative-large-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="${getMode('modes-on-bg-inverse-low')}">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}"/>
       </svg>
     </div>
-    <div>
-      <p class="lead mb-2xsmall fw-bold">2x-large decorative icon</p>
-      <p class="mb-none">coreGlobalDimension900 (<code>72px</code>)</p>
+    <div class="align-content-center">
+      <p class="lead mb-2xsmall">Large decorative icon</p>
+    </div>
+  </div>
+  <div class="d-flex mb-medium">
+    <div class="bg-inverse-low d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
+      <svg class="decorative-medium-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="${getMode('modes-on-bg-inverse-low')}">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}"/>
+      </svg>
+    </div>
+    <div class="align-content-center">
+      <p class="lead mb-2xsmall">Medium decorative icon</p>
+    </div>
+  </div>
+  <div class="d-flex mb-medium">
+    <div class="bg-inverse-low d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
+      <svg class="decorative-small-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="${getMode('modes-on-bg-inverse-low')}">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}"/>
+      </svg>
+    </div>
+    <div class="align-content-center">
+      <p class="lead mb-2xsmall">Small decorative icon</p>
+    </div>
+  </div>
+  <div class="d-flex mb-medium">
+    <div class="bg-inverse-low d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
+      <svg class="decorative-xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="${getMode('modes-on-bg-inverse-low')}">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}"/>
+      </svg>
+    </div>
+    <div class="align-content-center">
+      <p class="lead mb-2xsmall">X-small decorative icon</p>
+    </div>
+  </div>
+  <div class="d-flex mb-medium">
+    <div class="bg-inverse-low d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
+      <svg class="decorative-2xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="${getMode('modes-on-bg-inverse-low')}">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}"/>
+      </svg>
+    </div>
+    <div class="align-content-center">
+      <p class="lead mb-2xsmall">2x-small decorative icon</p>
+    </div>
+  </div>
+  <div class="d-flex mb-medium">
+    <div class="bg-inverse-low d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
+      <svg class="decorative-3xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="${getMode('modes-on-bg-inverse-low')}">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}"/>
+      </svg>
+      </div>
+      <div class="align-content-center">
+        <p class="lead mb-2xsmall">3x-small decorative icon</p>
+    </div>
+  </div>
+  <div class="d-flex mb-medium">
+    <div class="bg-inverse-low d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
+      <svg class="decorative-4xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="${getMode('modes-on-bg-inverse-low')}">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}"/>
+      </svg>
+    </div>
+    <div class="align-content-center">
+      <p class="lead mb-2xsmall">4x-small decorative icon</p>
     </div>
   </div>`} />
 
 ```html
-<svg class="decorative-4xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-3xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-2xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-small-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-medium-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-large-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-xlarge-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
 <svg class="decorative-2xlarge-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-xlarge-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-large-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-medium-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-small-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-2xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-3xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-4xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
 ```
 
 ### Multiple lines
@@ -614,7 +742,6 @@ You can also have the icon above the text block.
 ### `<img>` and font icon
 
 SVG Sprite is the preferred choice for flexibility, performance and accessibility, and this is why all our examples use this method but there are other ways to display icons. They should all behave the same thanks to our CSS. If you are experimenting any trouble, feel free to search or fill in a new [Github discussion](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions) or contact [our team]([[docsref:/about/team]]).
-{/* Check out for more information in [our documentation]([[docsref:/extend/icons]]). */}
 
 <Example code={`<div class="d-flex align-items-center mb-medium">
     <img class="hxl-large-icon me-small" alt="" src="${getVersionedDocsPath('/assets/img/vite.svg')}" />
@@ -643,7 +770,7 @@ If the icon is **meaningful** with no visible adjacent text, e.g. indication in 
 
 The best way to do this is to keep the icon hidden to assistive technologies (see above) and add a visually hidden label which will be perceived by assistive technologies, by using the `.visually-hidden` class. You can also use an `aria-label` on the containing interactive element to provide an accessible name. For external images within the `<img />` tag, you can also fill the `alt` attribute directly.
 
-Remember that you cannot use external images inside interactive elements because the color won’t change with the element’s status (hover, active, focus...), see [SVG external image]([[docsref:extend/icons#svg-external-image]]).
+Remember that you cannot use external images inside interactive elements because the color won’t change with the element’s status (hover, active, focus...), see [SVG external image](#svg-external-image).
 
 {/* todo add tooltip on buttons and explanation when available */}
 <Example class="mt-0 bd-btn-example" code={`<button type="button" class="btn btn-icon btn-default">
@@ -672,12 +799,12 @@ Remember that you cannot use external images inside interactive elements because
 
 There are many ways to use <BrandSpecific brand="orange">Solaris</BrandSpecific> icons in a web page:
 - Bundled, if you have several icons in your project:
-  - [SVG sprite]([[docsref:extend/icons#svg-sprite]]) (preferred choice for flexibility, performance and accessibility)
-  - [Icon font]([[docsref:extend/icons#icon-font]])
+  - [SVG sprite](#svg-sprite) (preferred choice for flexibility, performance and accessibility)
+  - [Icon font](#icon-font)
 - Individually, if you have only few icons to render:
-  - [Inline SVG]([[docsref:extend/icons#inline-svg]])
-  - [SVG external image]([[docsref:extend/icons#svg-external-image]])
-  - [CSS mask image SVG]([[docsref:extend/icons#css-mask-image-svg]])
+  - [Inline SVG](#inline-svg)
+  - [SVG external image](#svg-external-image)
+  - [CSS mask image SVG](#css-mask-image-svg)
 
 <BrandSpecific brand="orange">All icons can be retrieved easily in any of these formats in the Solaris icons finder. See Solaris icons library [develop documentation]([[config:icons_develop]]) for complete development guidelines for the different formats, and their pros and cons.</BrandSpecific>
 
@@ -702,12 +829,12 @@ Please note that if you experience a problem with a cropped SVG, we recommend us
 
   SVG sprite file example:
 
-<Example lang="svg" showPreview={false} code={`<svg xmlns="http://www.w3.org/2000/svg">
+<Example lang="svg" showPreview={false} showToolbar={false} code={`<svg xmlns="http://www.w3.org/2000/svg">
     <symbol id="settings" fill="currentColor" viewBox="0 0 1000 1000">
-      <path d="..." style="fill-rule:evenodd"/>
+      <path d="..." fill-rule="evenodd"/>
     </symbol>
     <symbol id="trash" fill="currentColor" viewBox="0 0 1000 1000">
-      <path d="..." style="fill-rule:evenodd"/>
+      <path d="..." fill-rule="evenodd"/>
     </symbol>
   </svg>`} />
 
@@ -732,9 +859,9 @@ Icon font is not the preferred solution. However, for websites needing more than
 
 <Example code={`<span class="si si-settings" aria-hidden="true" style="font-size: 3rem"></span>`} />
 
-{/* <Callout type="warning">
-Note that with this technique, you cannot have multicolor icons, so you cannot render the [warning icon]([[docsref:extend/icons#warning-icon]]).
-</Callout> */}
+<Callout type="warning">
+Note that with this technique, you cannot have multicolor icons, so you cannot render the [warning icon](#accessible-warning-icon).
+</Callout>
 
 ### Inline SVG
 
@@ -743,7 +870,7 @@ This technique should only be used if you have few icons to render, and if they 
 You can embed your icons directly within the HTML of your page (as opposed to an external image file). This way to use SVGs can benefit of the power of `currentColor` for easy coloring and theming.
 
 <Example class="mt-0" code={`<svg fill="currentColor" class="decorative-small-icon" viewBox="0 0 1000 1000" aria-hidden="true">
-    <path d="M656.7 422.409a229.96 229.96 0 0 1-315.39.008A224.95 224.95 0 0 0 224.064 615H224v210a100 100 0 0 0 100 100h450V620a224.94 224.94 0 0 0-117.3-197.591M679 255A180 180 0 1 1 499 75a180 180 0 0 1 180 180" style="fill-rule:evenodd"/>
+    <path d="M656.7 422.409a229.96 229.96 0 0 1-315.39.008A224.95 224.95 0 0 0 224.064 615H224v210a100 100 0 0 0 100 100h450V620a224.94 224.94 0 0 0-117.3-197.591M679 255A180 180 0 1 1 499 75a180 180 0 0 1 180 180" fill-rule="evenodd"/>
   </svg>`} />
 
 ### SVG external image

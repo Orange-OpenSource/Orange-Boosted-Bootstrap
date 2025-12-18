@@ -42,12 +42,14 @@ From now on, OUDS Web won’t embed Bootstrap elements that are not part of Oran
 
 ## Fonts
 
-OUDS Web doesn’t use the Helvetica Neue font. Instead, it uses the system font stack. This means that the font will be slightly different depending on the operating system and browser being used.
+OUDS Web doesn’t provide Helvetica Neue font files. Instead, it loads the font from a CDN in order to share the cached files between every project using OUDS Web.
 
 Technically, it means that you can get rid of the following things:
 - Helvetica Neue woff2 files: `fonts/HelvNeue55_W1G.woff2`, `fonts/HelvNeue75_W1G.woff2`, `fonts/HelveticaNeueW20-55Roman.woff2`, and `fonts/HelveticaNeueW20-75Bold.woff2`.
 - `orange-helvetica.*.css` file (default, RTL, or minified version).
 - If you were customizing your Sass compilation, you can remove the `@import "orange-helvetica";` line from your Sass files if it was there.
+
+Read more about the [font stack]([[docsref:/content/reboot#font-stack]]) for more details.
 
 ## Content styles
 
@@ -80,6 +82,10 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 - <span class="tag tag-small rounded-none tag-info">Info</span> `.container` and `.container-{breakpoint}` have been removed from the default build but you can still have them using `$enable-bootstrap-compatibility`.
 - <span class="tag tag-small rounded-none tag-info">Info</span> `xxl` breakpoint and thus all related classes (like `.container-xxl`, `.col-xxl-*`) can still be available when `$enable-bootstrap-compatibility` is enabled.
 
+## Icons
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> OUDS Web now uses [new functional icons]([[docsref:/extend/icons#functional-icons]]). A new [bicolor accessible warning icon]([[docsref:/extend/icons#accessible-warning-icon]]) has been introduced.
+
 ## Components
 
 ### Badges
@@ -96,6 +102,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.bullet-list`, `.bullet-list-default-color`, `.bullet-list-tick` and `.bullet-list-bare` classes have been added.
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.bullet-list` is mandatory for a full Bullet list component as defined in OUDS.
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Native `<ul>`, `<ol>` and `<dl>` now have a `max-width` set to the variable `--bs-font-max-width-body-medium`.
 
 ### Close button
 
@@ -105,6 +112,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.btn-default`, `.btn-strong`, `.btn-minimal`, and `.btn-negative` have been added.
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.btn-on-colored-bg` has been added; it can be used with `.btn-default`, `.btn-strong` and `.btn-minimal` to get variants on colored backgrounds (neither primary, nor secondary, nor tertiary, nor emphasized backgrounds).
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.use-rounded-corner-buttons` have been added; it can be added on `<body>` to toggle project-wide rounded corners buttons.
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-primary`, `.btn-secondary`, `.btn-success`, `.btn-danger`, `.btn-warning`, `.btn-info`, `.btn-light`, `.btn-dark` and `btn-dropdown` have been removed. You can still have them using `$enable-bootstrap-compatibility`. Here is the visual correspondence:
   - `.btn-primary` and `.btn-dark` will look as `.btn-strong`
   - `.btn-secondary` and `.btn-success` will look as `.btn-default`
@@ -237,6 +245,42 @@ See [our new Radio button page]([[docsref:/forms/radio-button]]) for more inform
 
 - <span class="tag tag-small rounded-none tag-warning">Warning</span> Links in radio buttons’ labels are now forbidden (they won’t be interactive anyway).
 
+#### Select
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.select-input` has been added.
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.use-rounded-corner-inputs` have been added; it can be added on `<body>` to toggle project-wide rounded corners inputs.
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Select Input is a new component compared to Boosted’s Select, the DOM is therefore very different.
+<div class="ps-xlarge">
+For example, if you used to write:
+
+```html
+<select class="form-select" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+```
+Now you should write:
+
+```html
+<div class="select-input">
+  <div class="select-input-container">
+    <label for="exampleSelect">Default select example</label>
+    <select class="select-input-field" id="exampleSelect">
+      <option value="" disabled selected></option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+</div>
+```
+See [our new Select Input page]([[docsref:/forms/select-input]]) for more information.
+</div>
+
 #### Switch
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.switch-item` and `.switch-standalone` have been added.
@@ -270,9 +314,11 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 - <span class="tag tag-small rounded-none tag-warning">Warning</span> Links in switches’ labels are now forbidden (they won’t be interactive anyway).
 
-#### Text Input
+### Text Input
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.text-input` has been added.
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.use-rounded-corner-inputs` have been added; it can be added on `<body>` to toggle project-wide rounded corners inputs.
 
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> Text Input is a new component compared to Boosted’s Input, the DOM is therefore very different.
 <div class="ps-xl">
@@ -287,14 +333,41 @@ For example, if you used to write:
 Now you should write:
 
 ```html
-<div class="text-input">
+<div class="text-input mb-medium">
   <div class="text-input-container">
-    <label for="exampleTextInput" class="form-label">Email address</label>
+    <label for="exampleTextInput">Email address</label>
     <input type="email" class="text-input-field" id="exampleTextInput" placeholder="name@example.com">
   </div>
 </div>
 ```
 See [our new Text Input page]([[docsref:/forms/text-input]]) for more information.
+</div>
+
+#### Text Area
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.text-area` has been added.
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Text Area is a new component compared to Boosted’s Input, the DOM is therefore very different.
+<div class="ps-xl">
+For example, if you used to write:
+
+```html
+<div class="mb-3">
+  <label for="exampleFormControlTextarea" class="form-label">Example textarea</label>
+  <textarea class="form-control" id="exampleFormControlTextarea" rows="3"></textarea>
+</div>
+```
+Now you should write:
+
+```html
+<div class="text-area">
+  <div class="text-area-container">
+    <label for="exampleTextArea">Example textarea</label>
+    <textarea class="text-area-field" id="exampleTextArea"></textarea>
+  </div>
+</div>
+```
+See [our new Text Area page]([[docsref:/forms/text-area]]) for more information.
 </div>
 
 ## Helpers
@@ -344,6 +417,8 @@ See [our new Text Input page]([[docsref:/forms/text-input]]) for more informatio
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> The new background color utilities are now available. Visit our [background page]([[docsref:/utilities/background]]) to see more.
 
+- <span class="tag tag-small rounded-none tag-positive">New</span> `[data-bs-theme]` now use a `--bs-color-local` to set the color if it has been defined by a specific `.bg-*` utility.
+
 - <details>
     <summary><span class="tag tag-small rounded-none tag-info">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>
 
@@ -354,18 +429,18 @@ See [our new Text Input page]([[docsref:/forms/text-input]]) for more informatio
   1. `.bg-transparent` stays the same
   2. `.bg-white` → `.bg-always-white`
   3. `.bg-black` → `.bg-always-black`
-  4. `.bg-primary` → `.bg-brand-primary`
+  4. `.bg-primary` → `.bg-surface-brand-primary`
   5. `.bg-primary-subtle` (that shouldn’t have been used) → `.bg-tertiary`
   6. `.bg-secondary` → `.bg-emphasized` or in some rare cases `.bg-status-neutral-emphasized`
   7. `.bg-secondary-subtle` (that shouldn’t have been used) → `.bg-secondary`
-  8. `.bg-success` → `.bg-status-positive-emphasized` or in some rare cases `.bg-status-positive-muted`
-  9. `.bg-success-subtle` (that shouldn’t have been used) → `.bg-status-positive-muted`
-  10. `.bg-danger` → `.bg-status-negative-emphasized` or in some rare cases `.bg-status-negative-muted`
-  11. `.bg-danger-subtle` (that shouldn’t have been used) → `.bg-status-negative-muted`
-  12. `.bg-info` → `.bg-status-info-emphasized` or in some rare cases `.bg-status-info-muted`
-  13. `.bg-info-subtle` (that shouldn’t have been used) → `.bg-status-positive-muted`
-  14. `.bg-warning` → `.bg-status-warning-emphasized`, `.bg-status-accent-emphasized` or in some rare cases `.bg-status-warning-muted`, `.bg-status-accent-muted`
-  15. `.bg-warning-subtle` (that shouldn’t have been used) → `.bg-status-warning-muted` or `.bg-status-accent-muted` depending on your context
+  8. `.bg-success` → `.bg-surface-status-positive-emphasized` or in some rare cases `.bg-surface-status-positive-muted`
+  9. `.bg-success-subtle` (that shouldn’t have been used) → `.bg-surface-status-positive-muted`
+  10. `.bg-danger` → `.bg-surface-status-negative-emphasized` or in some rare cases `.bg-surface-status-negative-muted`
+  11. `.bg-danger-subtle` (that shouldn’t have been used) → `.bg-surface-status-negative-muted`
+  12. `.bg-info` → `.bg-surface-status-info-emphasized` or in some rare cases `.bg-surface-status-info-muted`
+  13. `.bg-info-subtle` (that shouldn’t have been used) → `.bg-surface-status-positive-muted`
+  14. `.bg-warning` → `.bg-surface-status-warning-emphasized`, `.bg-surface-status-accent-emphasized` or in some rare cases `.bg-surface-status-warning-muted`, `.bg-surface-status-accent-muted`
+  15. `.bg-warning-subtle` (that shouldn’t have been used) → `.bg-surface-status-warning-muted` or `.bg-surface-status-accent-muted` depending on your context
   16. `.bg-body` → `.bg-primary`
   17. `.bg-body-secondary` → `.bg-secondary` or in some rare cases `.bg-opacity-lower` or `.bg-opacity-lowest`
   18. `.bg-body-tertiary` (that shouldn’t have been used) → `.bg-secondary`
@@ -478,7 +553,7 @@ See [our new Text Input page]([[docsref:/forms/text-input]]) for more informatio
 ### Opacity
 
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.opacity-0`, `.opacity-25`, `.opacity-50`, `.opacity-75` and `.opacity-100` have been removed from the default build. Please check the new [opacity values]([[docsref:/utilities/opacity]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
-- <span class="tag tag-small rounded-none tag-positive">New</span> Opacity utilities: `.opacity-invisible`, `.opacity-weaker`, `.opacity-weak`, `.opacity-medium`, `.opacity-strong` and `.opacity-opaque`.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Opacity utilities: `.opacity-invisible`, `.opacity-weakest`, `.opacity-weaker`, `.opacity-weak`, `.opacity-medium`, `.opacity-strong` and `.opacity-opaque`.
 
 ### Shadow
 
@@ -622,7 +697,7 @@ See [our new Text Input page]([[docsref:/forms/text-input]]) for more informatio
   - **Display headings**: `.fs-dl`, `.fs-dm`, `.fs-ds`
   - **Headings**: `.fs-hxl`, `.fs-hl`, `.fs-hm`, `.fs-hs`
   - **Body**: `.fs-bl`, `.fs-bm`, `.fs-bs`
-  - **Code**: `.fs-cm`, `.fs-cs`
+  - **Code**: `.fs-cm`
 
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> Font weight text utilities `.fw-semibold` and `.fw-medium` have been removed.
 

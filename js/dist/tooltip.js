@@ -1,10 +1,10 @@
 /*!
-  * OUDS Web v0.5.0 (https://web.unified-design-system.orange.com/)
+  * OUDS Web v0.6.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2015-2025 The OUDS Web Authors
   * Copyright 2015-2025 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap tooltip.js v0.5.0 (https://web.unified-design-system.orange.com/)
+  * Bootstrap tooltip.js v0.6.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2011-2025 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -401,6 +401,7 @@
         if (trigger === 'click') {
           EventHandler.on(this._element, this.constructor.eventName(EVENT_CLICK), this._config.selector, event => {
             const context = this._initializeOnDelegatedTarget(event);
+            context._activeTrigger[TRIGGER_CLICK] = !(context._isShown() && context._activeTrigger[TRIGGER_CLICK]);
             context.toggle();
           });
         } else if (trigger !== TRIGGER_MANUAL) {
