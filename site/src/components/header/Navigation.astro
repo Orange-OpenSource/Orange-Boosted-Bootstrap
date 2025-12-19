@@ -93,10 +93,11 @@ const { addedIn, layout, title } = Astro.props
             <GitHubIcon height={16} width={16} />
             <span class="visually-hidden">GitHub</span>
           </LinkItem>
-          <li class="nav-item">
-            <div class="bd-search nav-link nav-icon" id="docsearch" data-bd-docs-version={getConfig().docs_version}>
-            </div>
-          </li>
+          <!-- search deactivated -->
+          <!-- <li class="nav-item">-->
+          <!--  <div class="bd-search nav-link nav-icon" id="docsearch" data-bd-docs-version={getConfig().docs_version}>-->
+          <!--  </div>-->
+          <!--</li>-->
 
           <Versions layout={layout} addedIn={addedIn} />
         </ul>
