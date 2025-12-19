@@ -237,6 +237,22 @@ Put your switches on the opposite side with the `.form-check-reverse` modifier c
   </div>`} />
 </BootstrapCompatibility>
 
+### Max width
+
+By default switches will span the whole width of their parent container, to limit the width of the switch on wider parent container, add a `.component-max-width` to the `.switch-item` container. More information on switch sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-switch-responsiveness).
+
+<Example code={`<div class="switch-item component-max-width">
+    <div class="control-item-assets-container">
+      <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchMaxWidth" checked />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="switchMaxWidth">Checked switch with max width</label>
+    </div>
+    <div class="control-item-assets-container">
+      <span class="icon si si-settings" aria-hidden="true"></span>
+    </div>
+  </div>`} />
+
 ## States
 
 ### Disabled
