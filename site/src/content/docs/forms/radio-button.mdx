@@ -391,9 +391,9 @@ Add the `disabled` attribute to the input, then the radio button and the associa
   </div>`} />
 </BootstrapCompatibility>
 
-### Readonly
+### Read only
 
-To create a readonly radio button, the input should be replaced by a `span` element with `role="radio"` and `aria-disabled="true"` attributes. All the radio buttons in the group must be surrounded by a container with `role="radiogroup"` and `aria-readonly="true"` attributes. This is the only way to be compliant with ARIA specifications. The radio button will be accessible to keyboard navigation and assistive technologies, thanks to `aria-labelledby` and `tabindex`, but other interactions will be prevented.
+To create a read only radio button, the input should be replaced by a `span` element with `role="radio"` and `aria-disabled="true"` attributes. All the radio buttons in the group must be surrounded by a container with `role="radiogroup"` and `aria-readonly="true"` attributes. This is the only way to be compliant with ARIA specifications. The radio button will be accessible to keyboard navigation and assistive technologies, thanks to `aria-labelledby` and `tabindex`, but other interactions will be prevented.
 
 <Example buttonLabel="readonly radio buttons" code={`<fieldset class="control-items-list">
     <div role="radiogroup" aria-readonly="true">
