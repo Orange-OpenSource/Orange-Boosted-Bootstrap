@@ -99,6 +99,10 @@ $alert-icon-warning-internal: url("data:image/svg+xml,<svg xmlns='http://www.w3.
 // icon important-fill v1.4
 $alert-icon-important: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2.4a9.6 9.6 0 1 1 0 19.2 9.6 9.6 0 0 1 0-19.2Zm0 13.2c-.333 0-.617.12-.85.36-.233.24-.35.52-.35.84 0 .33.117.613.35.847.219.23.528.358.85.353.335 0 .618-.117.851-.353a1.16 1.16 0 0 0 .35-.847c0-.32-.117-.6-.35-.84a1.142 1.142 0 0 0-.85-.36Zm.001-9.6c-.642 0-1.17.455-1.2 1.025l.24 7.135h1.92l.24-7.135C13.17 6.455 12.643 6 12 6Z'/></svg>") !default;
 
+// Select input
+$select-input-chevron:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M17.019 7.431c-.015.015.015-.019 0 0l-4.905 5.55-4.811-5.55c-.615-.619-1.388-.506-1.913 0-.019.015.015-.019 0 0-.536.566-.506 1.448.008 2.036l5.812 6.709c.48.551 1.286.506 1.808 0L18.9 9.467c.717-.716.574-1.545.094-2.036-.48-.491-1.339-.652-1.976 0Z'/></svg>") !default;
+$select-input-expanded-chevron: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M7.378 16.142c-.015.018.015-.015 0 0l4.905-5.55 4.811 5.55c.615.618 1.388.506 1.913 0-.015.018.019-.015 0 0 .536-.566.506-1.448-.008-2.037l-5.812-6.708c-.48-.552-1.286-.507-1.808 0l-5.883 6.708c-.717.717-.574 1.545-.094 2.037.48.491 1.339.652 1.976 0Z'/></svg>") !default;
+
 //// SVG used several times
 $svg-as-custom-props: (
   "chevron":          $chevron-icon,
