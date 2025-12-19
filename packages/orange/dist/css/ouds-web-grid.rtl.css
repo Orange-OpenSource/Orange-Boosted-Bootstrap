@@ -1,5 +1,5 @@
 /*!
- * OUDS Web Grid v0.6.0 (https://web.unified-design-system.orange.com/)
+ * OUDS Web Grid v1.0.0 (https://web.unified-design-system.orange.com/)
  * Copyright 2014-2025 The OUDS Web Authors
  * Copyright 2014-2025 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
@@ -24,6 +24,8 @@
   --bs-color-action-negative-loading: #800001;
   --bs-color-action-negative-pressed: #800001;
   --bs-color-action-pressed: #f15e00;
+  --bs-color-action-read-only-primary: rgba(0, 0, 0, 0.68);
+  --bs-color-action-read-only-secondary: rgba(0, 0, 0, 0.2);
   --bs-color-action-selected: #f15e00;
   --bs-color-action-support-disabled: rgba(0, 0, 0, 0.04);
   --bs-color-action-support-enabled: rgba(0, 0, 0, 0.04);
@@ -46,6 +48,7 @@
   --bs-color-border-emphasized: #000;
   --bs-color-border-focus-inset: #fff;
   --bs-color-border-focus: #000;
+  --bs-color-border-minimal: rgba(0, 0, 0, 0.04);
   --bs-color-border-muted: rgba(0, 0, 0, 0.08);
   --bs-color-border-on-brand-primary: #000;
   --bs-color-border-status-accent: #ff7900;
@@ -129,6 +132,8 @@
   --bs-color-action-negative-loading: #ffe5e6;
   --bs-color-action-negative-pressed: #ffe5e6;
   --bs-color-action-pressed: #ff7900;
+  --bs-color-action-read-only-primary: rgba(255, 255, 255, 0.64);
+  --bs-color-action-read-only-secondary: rgba(255, 255, 255, 0.2);
   --bs-color-action-selected: #ff7900;
   --bs-color-action-support-disabled: rgba(255, 255, 255, 0.04);
   --bs-color-action-support-enabled: rgba(255, 255, 255, 0.04);
@@ -147,6 +152,7 @@
   --bs-color-border-emphasized: rgba(255, 255, 255, 0.92);
   --bs-color-border-focus: #eee;
   --bs-color-border-focus-inset: #141414;
+  --bs-color-border-minimal: rgba(255, 255, 255, 0.04);
   --bs-color-border-muted: rgba(255, 255, 255, 0.08);
   --bs-color-border-on-brand-primary: #000;
   --bs-color-border-status-accent: #ff7900;
@@ -266,6 +272,7 @@
   --bs-switch-color-track-unselected-interaction: rgba(0, 0, 0, 0.52);
   --bs-icon-color-content-status-warning-external-shape: #ffd000;
   --bs-icon-color-content-status-warning-internal-shape: #856a00;
+  --bs-icon-color-content-default: #000;
 }
 
 [data-bs-theme=dark],
@@ -321,6 +328,7 @@
   --bs-switch-color-track-unselected-interaction: rgba(255, 255, 255, 0.8);
   --bs-icon-color-content-status-warning-external-shape: #ffe270;
   --bs-icon-color-content-status-warning-internal-shape: rgba(255, 255, 255, 0);
+  --bs-icon-color-content-default: #eee;
 }
 
 .container-fluid {

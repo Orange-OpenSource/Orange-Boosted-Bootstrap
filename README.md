@@ -36,11 +36,11 @@ The theming library have the specific Scss files containing all the tokens to ap
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v0.6.0-ouds-web.zip)
+- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v1.0.0-ouds-web.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git && git switch ouds/main`
-- Install with [npm](https://www.npmjs.com/): `npm install @ouds/web-common@v0.6.0 @ouds/web-orange@v0.6.0`
-- Install with [yarn](https://yarnpkg.com/): `yarn add @ouds/web-common@v0.6.0 @ouds/web-orange@v0.6.0`
-- Install with [Bun](https://bun.sh/): `bun add @ouds/web-common@v0.6.0 @ouds/web-orange@v0.6.0`
+- Install with [npm](https://www.npmjs.com/): `npm install @ouds/web-common@v1.0.0 @ouds/web-orange@v1.0.0`
+- Install with [yarn](https://yarnpkg.com/): `yarn add @ouds/web-common@v1.0.0 @ouds/web-orange@v1.0.0`
+- Install with [Bun](https://bun.sh/): `bun add @ouds/web-common@v1.0.0 @ouds/web-orange@v1.0.0`
 - Install with [Composer](https://getcomposer.org/): `composer require orange-opensource/orange-boosted-bootstrap:dev-ouds/main`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package ouds-web-common ouds-web-orange` Sass: `Install-Package ouds-web-common.sass ouds-web-orange.sass`
 
