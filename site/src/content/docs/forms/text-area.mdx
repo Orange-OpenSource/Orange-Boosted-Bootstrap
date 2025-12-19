@@ -114,6 +114,22 @@ If a helper link is used in conjunction with a helper text, the `aria-describedb
     </a>
   </div>`} />
 
+## Layout
+
+### Max width
+
+By default text areas will span the whole width of their parent container, to limit the width of the text area on wider parent container, add a `.component-max-width` to the `.text-input` container.
+
+<Example code={`<div class="text-area component-max-width">
+    <div class="text-area-container">
+      <label for="textAreaWithMaxWidth">Additional comments</label>
+      <textarea id="textAreaWithMaxWidth" class="text-area-field" aria-describedby="textAreaWithMaxWidthText"></textarea>
+    </div>
+    <p id="textAreaWithMaxWidthText" class="helper-text">
+      Please be concise and limit your comment to <strong>180</strong> characters.
+    </p>
+  </div>`} />
+
 ## States
 
 ### Disabled
