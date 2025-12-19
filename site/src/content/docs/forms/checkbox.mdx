@@ -287,6 +287,30 @@ You can align horizontally up to three checkboxes if their labels are short, add
     </div>
   </fieldset>`} />
 
+### Max width
+
+By default checkboxes will span the whole width of their parent container, to limit the width of the checkbox on wider parent container, add a `.component-max-width` to the `.checkbox-item` container. More information on checkbox sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox-responsiveness).
+
+<Example code={`<fieldset class="control-items-list">
+    <div class="checkbox-item component-max-width">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxMWDescription" id="checkboxWithMaxWidth" value="" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxWithMaxWidth">Default checkbox</label>
+        <p class="control-item-description" id="checkboxMWDescription">Description text</p>
+      </div>
+    </div>
+    <div class="checkbox-item component-max-width">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxWithMaxWidth2Description" id="checkboxWithMaxWidth2" value="" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxWithMaxWidth2">Checked checkbox</label>
+        <p class="control-item-description" id="checkboxWithMaxWidth2Description">Description text</p>
+      </div>
+    </div>
+  </fieldset>`} />
 
 ## Indeterminate
 

@@ -10,7 +10,7 @@ toc: true
 import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="info">
-You can find here the [OUDS select input design guidelines](https://r.orange.fr/r/S-ouds-doc-select-input).
+  You can find here the OUDS [select input design guidelines](https://r.orange.fr/r/S-ouds-doc-select-input).
 </Callout>
 
 ## Overview
@@ -198,6 +198,27 @@ Helper link should be explicitly labelled using the `aria-labelledby` attribute 
     <a href="#" id="selectTextLink" aria-labelledby="selectTextLink labelSelectWithLink" class="link link-small">
       More information <span class="visually-hidden">about the</span>
     </a>
+  </div>`} />
+
+## Layout
+
+### Max width
+
+By default select inputs will span the whole width of their parent container, to limit the width of the select input on wider parent container, add a `.component-max-width` to the `.select-input` container.
+
+<Example code={`<div class="select-input component-max-width">
+    <div class="select-input-container">
+      <label for="exampleSelectMaxWidth">Select example max width</label>
+      <select class="select-input-field" id="exampleSelectMaxWidth" aria-describedby="selectMaxWidthHelper">
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <p id="selectMaxWidthHelper" class="helper-text">
+      Helper text.
+    </p>
   </div>`} />
 
 ## States
