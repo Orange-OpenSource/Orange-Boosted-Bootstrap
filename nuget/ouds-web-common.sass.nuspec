@@ -3,7 +3,7 @@
   <metadata>
     <id>ouds-web-common.sass</id>
     <!-- pulled from release tag -->
-    <version>0</version>
+    <version>1</version>
     <title>OUDS Web Common Sass</title>
     <authors>The OUDS Web Authors, Orange SA</authors>
     <owners>Orange SA</owners>

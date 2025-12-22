@@ -108,6 +108,10 @@ $alert-icon-warning-internal: url("data:image/svg+xml,<svg xmlns='http://www.w3.
 // icon important-fill v1.4
 $alert-icon-important: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2.4A9.6 9.6 0 0 0 2.4 12a9.6 9.6 0 0 0 9.6 9.6 9.6 9.6 0 0 0 9.6-9.6A9.6 9.6 0 0 0 12 2.4Zm-1.2 5.631c0-1.187.4-1.758 1.2-1.758.8 0 1.2.57 1.2 1.758v4.535c0 1.188-.385 1.774-1.2 1.774-.8 0-1.2-.585-1.2-1.774V8.031Zm1.187 10.119a1.394 1.394 0 0 1-1.387-1.407 1.38 1.38 0 0 1 1.387-1.391 1.39 1.39 0 0 1 1.388 1.39c0 .768-.622 1.408-1.388 1.408Z'/></svg>") !default;
 
+// Select input
+$select-input-chevron:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M4.874 9.977 12 17.25l7.125-7.273-2.034-2.079L12 13.095 6.91 7.898 4.874 9.977Z'/></svg>") !default;
+$select-input-expanded-chevron: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19.124 14.023 12 6.75l-7.125 7.273 2.035 2.079L12 10.905l5.088 5.197 2.037-2.079Z'/></svg>") !default;
+
 //// SVG used several times
 $svg-as-custom-props: (
   "chevron":          $chevron-icon,

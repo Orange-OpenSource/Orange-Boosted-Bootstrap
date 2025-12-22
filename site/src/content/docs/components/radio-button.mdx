@@ -13,7 +13,7 @@ import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="info">
-You can find here the [OUDS Radio button design guidelines](https://unified-design-system.orange.com/472794e18/p/90c467-radio-button).
+  You can find here the OUDS [radio button design guidelines](https://r.orange.fr/r/S-ouds-doc-radio-button).
 </Callout>
 
 ## Overview
@@ -323,6 +323,31 @@ You can align horizontally up to three radio buttons if their labels are short, 
         <div class="control-item-text-container">
           <label class="control-item-label" for="radioLayoutRow2">Option 2</label>
         </div>
+      </div>
+    </div>
+  </fieldset>`} />
+
+### Max width
+
+By default radio buttons will span the whole width of their parent container, to limit the width of the radio button on wider parent container, add a `.component-max-width` to the `.radio-button-item` container. More information on radio button sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-radio-button-responsiveness).
+
+<Example code={`<fieldset class="control-items-list">
+    <div class="radio-button-item component-max-width">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="radio" aria-describedby="radioMWDescription" id="radioWithMaxWidth" value="" name="radioMaxWidth" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="radioWithMaxWidth">Default radio</label>
+        <p class="control-item-description" id="radioMWDescription">Description text</p>
+      </div>
+    </div>
+    <div class="radio-button-item component-max-width">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="radio" aria-describedby="radioWithMaxWidth2Description" id="radioWithMaxWidth2" value="" name="radioMaxWidth" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="radioWithMaxWidth2">Checked radio</label>
+        <p class="control-item-description" id="radioWithMaxWidth2Description">Description text</p>
       </div>
     </div>
   </fieldset>`} />

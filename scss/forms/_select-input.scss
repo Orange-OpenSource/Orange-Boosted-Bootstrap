@@ -1,0 +1,294 @@
+// Select
+
+.select-input {
+  @extend %text-item-common;
+  --#{$prefix}text-input-min-width: #{px-to-rem($ouds-select-input-size-min-width)};
+  --#{$prefix}text-input-min-height: #{px-to-rem($ouds-text-input-size-min-height)};
+
+  &.component-max-width {
+    max-width: px-to-rem($ouds-text-input-size-max-width);
+  }
+}
+
+.select-input-field {
+  position: absolute;
+  inset: 0;
+  width: 100%; // Avoid a bug on FF 125 and less
+  padding-top: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-top) + var(--#{$prefix}font-size-label-small) * var(--#{$prefix}font-line-height-label-small)); // stylelint-disable-line function-disallowed-list
+  padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-right) + var(--#{$prefix}text-input-column-gap) + var(--#{$prefix}text-input-trailing-action-width)); // stylelint-disable-line function-disallowed-list
+  padding-bottom: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
+  padding-left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+  font-weight: 500;
+  color: $ouds-color-content-default;
+  appearance: none;
+  background-color: var(--#{$prefix}text-input-background-color);
+  border-color: var(--#{$prefix}text-input-border-color);
+  border-style: solid;
+  border-width: var(--#{$prefix}text-input-border-width-top) var(--#{$prefix}text-input-border-width-right) var(--#{$prefix}text-input-border-width-bottom) var(--#{$prefix}text-input-border-width-left);
+  @include border-radius(var(--#{$prefix}text-input-border-radius), 0);
+
+  &:hover {
+    --#{$prefix}text-input-background-color: #{$ouds-color-action-support-hover};
+    --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-hover};
+  }
+
+  &:focus-visible {
+    --#{$prefix}text-input-border-width-bottom: #{$ouds-text-input-border-width-focus};
+    --#{$prefix}text-input-background-color: #{$ouds-color-action-support-focus};
+    --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-focus};
+
+    // To avoid different behavior between browsers
+    // Chrome considers select as an input and doesn't make any difference between focus and focus-visible
+    // Firefox considers select as an element and does make a difference between focus and focus-visible
+    outline: 0;
+    box-shadow: none;
+  }
+
+  // Forgive Safari's selectors list
+  &:is(:open, :active) {
+    --#{$prefix}text-input-border-width-bottom: #{$ouds-text-input-border-width-focus};
+    --#{$prefix}text-input-background-color: #{$ouds-color-action-support-pressed};
+    --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-focus};
+  }
+
+  &:disabled:where(:not(.loading-indeterminate, .loading-determinate)) {
+    --#{$prefix}text-input-background-color: #{$ouds-color-action-support-disabled};
+    --#{$prefix}text-input-border-color: #{$ouds-color-action-disabled};
+    color: $ouds-color-action-disabled;
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+}
+
+.was-validated .select-input-field:invalid,
+.select-input-field.is-invalid {
+  --#{$prefix}text-input-background-color: #{$ouds-color-surface-status-negative-muted};
+  --#{$prefix}text-input-border-color: #{$ouds-color-action-negative-enabled};
+  padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-right) + var(--#{$prefix}text-input-column-gap) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap-trailing-error) + px-to-rem($ouds-button-size-icon-only)); // stylelint-disable-line function-disallowed-list
+
+  &:hover {
+    --#{$prefix}text-input-border-color: #{$ouds-color-action-negative-hover};
+  }
+
+  &:focus-visible {
+    --#{$prefix}text-input-border-color: #{$ouds-color-action-negative-focus};
+  }
+
+  // Forgive Safari's selectors list
+  &:is(:open, :active) {
+    --#{$prefix}text-input-border-color: #{$ouds-color-action-negative-pressed};
+  }
+}
+
+.select-input-container {
+  position: relative;
+  min-width: var(--#{$prefix}text-input-min-width);
+  min-height: var(--#{$prefix}text-input-min-height);
+  padding-top: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
+  padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
+  padding-bottom: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
+  padding-left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+  color: $ouds-color-content-muted;
+  @include get-font-size("label-large");
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) + $ouds-button-space-inset-icon-only); // stylelint-disable-line function-disallowed-list
+    display: block;
+    width: px-to-rem($ouds-button-size-icon-only);
+    height: px-to-rem($ouds-button-size-icon-only);
+    pointer-events: none;
+    content: "";
+    background-color: var(--#{$prefix}color-content-default);
+    mask: $select-input-chevron no-repeat 50% / px-to-rem($ouds-button-size-icon-only);
+    transform: translate(0, -50%);
+  }
+
+  // Leading icon
+  > img,
+  > svg {
+    position: absolute;
+    top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-icon-size) / 2 - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
+    left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+    z-index: 2;
+    width: var(--#{$prefix}text-input-icon-size);
+    min-width: var(--#{$prefix}text-input-icon-size);
+    height: var(--#{$prefix}text-input-icon-size);
+    color: var(--#{$prefix}color-content-muted);
+    pointer-events: none;
+  }
+
+  > label {
+    position: absolute;
+    top: 50%;
+    max-width: calc(100% - var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-trailing-action-width) - var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
+    max-height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform: translate(0, -50%);
+    @include transition(font-size .15s ease-in-out, top .15s ease-out);
+  }
+
+  &:has(> svg),
+  &:has(> img) {
+    > .select-input-field {
+      padding-left: calc(var(--#{$prefix}text-input-icon-size) + var(--#{$prefix}text-input-column-gap) + var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+    }
+
+    > label {
+      padding-left: calc(var(--#{$prefix}text-input-icon-size) + var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
+    }
+  }
+
+  &:has(:open)::after {
+    mask-image: $select-input-expanded-chevron;
+  }
+
+  &:has(.select-input-field:disabled:where(:not(.loading-indeterminate, .loading-determinate))) {
+    color: $ouds-color-action-disabled;
+
+    &::after {
+      background-color: $ouds-color-content-disabled;
+    }
+  }
+
+  &:has(.select-input-field:disabled) {
+    > label {
+      pointer-events: none;
+    }
+  }
+
+  // Forgive Safari's selectors list
+  &:is(:has(:open), :not(:has(:disabled:checked))) {
+    > label {
+      top: calc(var(--#{$prefix}text-input-padding-y) + .25rem + .5 * (var(--#{$prefix}font-size-label-small) * var(--#{$prefix}font-line-height-label-small))); // stylelint-disable-line function-disallowed-list
+      white-space: nowrap;
+      @include get-font-size("label-small");
+    }
+  }
+
+  .loader {
+    position: absolute;
+    top: 50%;
+    right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) + $ouds-button-space-inset-icon-only); // stylelint-disable-line function-disallowed-list
+    left: auto;
+    display: none;
+    width: px-to-rem($ouds-button-size-icon-only);
+    height: px-to-rem($ouds-button-size-icon-only);
+    pointer-events: none;
+    transform: translate(0, -50%) rotate(-90deg);
+
+    > .loader-inner {
+      fill: none;
+      stroke: var(--#{$prefix}color-content-default);
+      stroke-dasharray: var(--#{$prefix}loading-dasharray);
+      stroke-width: 6;
+      transform-origin: center;
+      animation: var(--#{$prefix}loading-animation);
+    }
+  }
+
+  .loading-message {
+    @include visually-hidden();
+    display: none;
+  }
+
+  &:has(.loading-indeterminate) {
+    --#{$prefix}loading-dasharray: 96;
+    --#{$prefix}loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
+  }
+
+  &:has(.loading-determinate) {
+    --#{$prefix}loading-dasharray: 107;
+    --#{$prefix}loading-animation: var(--#{$prefix}loading-time) infinite linear rotate-determinate;
+  }
+
+  &:has(.loading-indeterminate, .loading-determinate) {
+    .loader {
+      display: block;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    .loading-message {
+      display: block;
+    }
+  }
+
+  ~ .link {
+    @extend %text-input-message;
+  }
+}
+
+.was-validated .select-input-container:has(:invalid),
+.select-input-container:has(.is-invalid) {
+  color: $ouds-color-action-negative-enabled;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-trailing-action-padding-right) + var(--#{$prefix}text-input-column-gap-trailing-error)); // stylelint-disable-line function-disallowed-list
+    display: block;
+    width: px-to-rem($ouds-button-size-icon-only);
+    height: px-to-rem($ouds-button-size-icon-only);
+    pointer-events: none;
+    content: "";
+    background-color: currentcolor;
+    mask: var(--#{$prefix}error-icon) no-repeat 50% / px-to-rem($ouds-button-size-icon-only);
+    transform: translate(0, -50%);
+  }
+
+  &:has(:hover) {
+    color: $ouds-color-action-negative-hover;
+  }
+
+  &:has(:focus-visible) {
+    color: $ouds-color-action-negative-focus;
+  }
+
+  // Forgive Safari's selectors list
+  &:is(:has(:open), :has(:active)) {
+    color: $ouds-color-action-negative-pressed;
+  }
+
+  > label {
+    max-width: calc(100% - var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-trailing-action-width) - var(--#{$prefix}text-input-column-gap) - px-to-rem($ouds-button-size-icon-only) - var(--#{$prefix}text-input-column-gap-trailing-error)); // stylelint-disable-line function-disallowed-list
+  }
+
+  ~ .helper-text {
+    display: none;
+  }
+
+  ~ .error-text {
+    display: block;
+  }
+}
+
+.select-input-container-outlined .select-input-field {
+  --#{$prefix}text-input-background-color: transparent;
+  --#{$prefix}text-input-border-width-top: #{$ouds-text-input-border-width-default};
+  --#{$prefix}text-input-border-width-right: #{$ouds-text-input-border-width-default};
+  --#{$prefix}text-input-border-width-left: #{$ouds-text-input-border-width-default};
+
+  // Forgive Safari's selectors list
+  &:is(:focus-visible, :active, :open) {
+    --#{$prefix}text-input-border-width-top: #{$ouds-text-input-border-width-focus};
+    --#{$prefix}text-input-border-width-right: #{$ouds-text-input-border-width-focus};
+    --#{$prefix}text-input-border-width-left: #{$ouds-text-input-border-width-focus};
+  }
+}
+
+option:disabled[value=""] { // stylelint-disable-line selector-no-qualifying-type
+  display: none;
+}
+
+option,
+optgroup {
+  color: var(--#{$prefix}color-content-default);
+  background-color: var(--#{$prefix}color-bg-primary);
+}

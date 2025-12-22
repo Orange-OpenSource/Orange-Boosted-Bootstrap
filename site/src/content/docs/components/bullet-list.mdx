@@ -9,7 +9,7 @@ toc: true
 import { getConfig } from '@libs/config'
 
 <Callout type="info">
-You can find here the [OUDS Bullet list design guidelines](https://unified-design-system.orange.com/472794e18/p/49e7bf-bullet-list).
+  You can find here the OUDS [bullet list design guidelines](https://r.orange.fr/r/S-ouds-doc-bullet-list).
 </Callout>
 
 ## Overview
@@ -288,7 +288,7 @@ Add `.fw-normal` to the top `ul` to use a normal font weight.
 
 ### Unstyled
 
-Remove the default `list-style` and left margin on list items (immediate children only). **This only applies to immediate children list items**, meaning you will need to add the class for any nested lists as well.
+Remove the default `list-style`, left margin and `max-width` on lists (immediate children only). **This only applies to immediate children list items**, meaning you will need to add the class for any nested lists as well.
 
 <Example code={`<ul class="list-unstyled">
     <li>This is a list.</li>
@@ -321,7 +321,7 @@ Remove a list's bullets and apply some light `margin` with a combination of two 
 Only use this where you can not add a class to `<ul>` and `<ol>`.
 </Callout>
 
-All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 1rem`. Nested lists have no `margin-bottom`. We've also reset the `padding-left` on `<ul>` and `<ol>` elements.
+All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 1rem`, they also have a `max-width` set to `--bs-font-max-width-body-medium`. Nested lists have no `margin-bottom`. We've also reset the `padding-left` on `<ul>` and `<ol>` elements.
 
 <Example showMarkup={false} code={`<ul>
     <li>All lists have their top margin removed</li>

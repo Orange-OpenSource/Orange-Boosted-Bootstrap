@@ -148,8 +148,8 @@
       draft: true
     - title: Scrollspy
       draft: true
-    - title: Select
-      draft: true
+    - title: Select input
+      category: Control
     - title: Spinner
       draft: true
     - title: Stepped process
