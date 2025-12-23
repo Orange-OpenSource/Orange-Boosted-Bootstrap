@@ -2,7 +2,7 @@
 
 // OUDS mod: the entire file is modified and is specific to OUDS Web
 
-:root {
+#{$ouds-root-selector} {
   // All available CSS vars and specific modifications for OUDS Web
   --docsearch-primary-color: var(--bs-color-content-brand-primary);
   --docsearch-text-color: var(--bs-color-content-default);
