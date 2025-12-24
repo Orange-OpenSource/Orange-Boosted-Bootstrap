@@ -57,13 +57,13 @@ let codeToDisplay = filePath
     : code
 
 if (filePath && fileMatch && codeToDisplay) {
-  const match = codeToDisplay.match(new RegExp(fileMatch))
+  const match = codeToDisplay.match(new RegExp(fileMatch, 'g'))
 
   if (!match || !match[0]) {
     throw new Error(`The file at ${filePath} does not contains a match for the regex '${fileMatch}'.`)
   }
 
-  codeToDisplay = match[0]
+  codeToDisplay = match.join('\n\n')
 }
 ---
 
