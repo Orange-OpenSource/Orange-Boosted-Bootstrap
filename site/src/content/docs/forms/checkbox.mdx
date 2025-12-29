@@ -8,7 +8,6 @@ aliases:
 toc: true
 ---
 
-import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="info">
@@ -21,7 +20,7 @@ Checkboxes allow users to select one or more options from a number of choices.
 
 They are implemented using `.checkbox-item` and `.control-item-*` classes, [see below](#control-item). Browser default checkboxes are replaced with the help of the selector `.control-item-indicator[type="checkbox"]`.
 
-<Example code={`<fieldset class="control-items-list">
+<Example buttonLabel="basic checkboxes" code={`<fieldset class="control-items-list">
     <div class="checkbox-item">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault" />
@@ -41,7 +40,7 @@ They are implemented using `.checkbox-item` and `.control-item-*` classes, [see 
   </fieldset>`} />
 
 <BootstrapCompatibility>
-<Example code={`<div class="form-check">
+<Example buttonLabel="Bootstrap compatibility: basic checkboxes" code={`<div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="checkDefault" />
     <label class="form-check-label" for="checkDefault">
       Default checkbox (Bootstrap compatible)
@@ -71,7 +70,7 @@ As checkboxes are almost always grouped in a list, they should be enclosed in a 
 
 To display a divider, add `.control-item-divider` to a `.checkbox-item`.
 
-<Example code={`<fieldset class="control-items-list">
+<Example buttonLabel="checkboxes with divider" code={`<fieldset class="control-items-list">
     <div class="checkbox-item control-item-divider">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="checkbox" value="" id="checkboxDivider" />
@@ -96,7 +95,7 @@ To display a divider, add `.control-item-divider` to a `.checkbox-item`.
 
 To display an icon, add `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside, as a child of a `.checkbox-item`.
 
-<Example code={`<fieldset class="control-items-list">
+<Example buttonLabel="checkboxes with icon" code={`<fieldset class="control-items-list">
     <div class="checkbox-item">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="checkbox" value="" id="checkboxWithSVG" />
@@ -127,7 +126,7 @@ To display an icon, add `.control-item-assets-container` with an icon (SVG or fo
 
 To display a description text, add a `.control-item-description` as a sibling of a `.control-item-label`. Make sure the description is accessible by adding an `aria-describedby` attribute to the input.
 
-<Example code={`<fieldset class="control-items-list">
+<Example buttonLabel="checkboxes with description text" code={`<fieldset class="control-items-list">
     <div class="checkbox-item">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxDescription" id="checkboxWithDescription" value="" />
@@ -154,7 +153,7 @@ To display a description text, add a `.control-item-description` as a sibling of
 
 It's recommended to keep checkbox label to no more than three words. When space is limited or when a long label or description text is required, the text can wrap, as this is preferable to truncation. The checkbox indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
 
-<Example code={`<div class="row">
+<Example buttonLabel="checkboxes with long texts" code={`<div class="row">
     <div class="col-8 col-md-6 col-xl-5">
       <fieldset class="control-items-list">
         <div class="checkbox-item control-item-divider">
@@ -207,7 +206,7 @@ It's recommended to keep checkbox label to no more than three words. When space 
 
 To reverse the component, simply add `.control-item-reverse` to a `.checkbox-item`.
 
-<Example code={`<div class="row">
+<Example buttonLabel="reversed checkboxes" code={`<div class="row">
     <div class="col-8 col-md-6 col-xl-5">
       <fieldset class="control-items-list">
         <div class="checkbox-item control-item-divider control-item-reverse">
@@ -246,7 +245,7 @@ To reverse the component, simply add `.control-item-reverse` to a `.checkbox-ite
 
 Put your checkboxes on the opposite side with the `.form-check-reverse` modifier class.
 
-<Example code={`<div class="form-check form-check-reverse">
+<Example buttonLabel="Bootstrap compatibility: reversed checkboxes" code={`<div class="form-check form-check-reverse">
     <input class="form-check-input" type="checkbox" value="" id="reverseCheck" checked />
     <label class="form-check-label" for="reverseCheck">
       Checked reverse checkbox (Bootstrap compatible)
@@ -258,7 +257,7 @@ Put your checkboxes on the opposite side with the `.form-check-reverse` modifier
 
 You can align horizontally up to three checkboxes if their labels are short, add sufficient space (for example by using `.gap-small`) between the controls to ensure a clear association of each labels with their corresponding indicator.
 
-<Example code={`<fieldset class="control-items-list">
+<Example buttonLabel="horizontal checkboxes" code={`<fieldset class="control-items-list">
     <div class="d-lg-flex flex-row gap-small">
       <div class="checkbox-item flex-fill">
         <div class="control-item-assets-container">
@@ -320,7 +319,7 @@ Users cannot set a checkbox as indeterminate directly. This must be calculated b
 
 Indeterminate state can be used in conjunction with all the other states below.
 
-<Example class="bd-example-indeterminate" addStackblitzJs code={`<fieldset class="control-items-list">
+<Example buttonLabel="indeterminate checkbox" class="bd-example-indeterminate" addStackblitzJs code={`<fieldset class="control-items-list">
     <div class="checkbox-item">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="checkbox" value="" id="checkboxIndeterminate" />
@@ -340,7 +339,7 @@ checkbox.indeterminate = true
 ```
 
 <BootstrapCompatibility>
-  <Example class="bd-example-indeterminate" addStackblitzJs code={`<div class="form-check">
+  <Example buttonLabel="Bootstrap compatibility: indeterminate checkbox" class="bd-example-indeterminate" addStackblitzJs code={`<div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="checkIndeterminate" />
     <label class="form-check-label" for="checkIndeterminate">
       Indeterminate checkbox (Bootstrap compatible)
@@ -354,7 +353,7 @@ checkbox.indeterminate = true
 
 Add the `disabled` attribute to the input, then the checkbox and the associated `<label>` are automatically styled to match with a lighter color to help indicate the input’s state.
 
-<Example class="bd-example-indeterminate" addStackblitzJs code={`<fieldset class="control-items-list">
+<Example buttonLabel="disabled checkboxes" class="bd-example-indeterminate" addStackblitzJs code={`<fieldset class="control-items-list">
     <div class="checkbox-item">
       <div class="control-item-assets-container">
         <input disabled class="control-item-indicator" type="checkbox" value="" id="checkboxDisabled" />
@@ -382,7 +381,7 @@ Add the `disabled` attribute to the input, then the checkbox and the associated 
   </fieldset>`} />
 
 <BootstrapCompatibility>
-<Example class="bd-example-indeterminate" addStackblitzJs code={`
+<Example buttonLabel="Bootstrap compatibility: disabled checkboxes" class="bd-example-indeterminate" addStackblitzJs code={`
   <div class="form-check">
     <input disabled class="form-check-input" type="checkbox" value="" id="checkDisabled" />
     <label class="form-check-label" for="checkDisabled">
@@ -407,7 +406,7 @@ Add the `disabled` attribute to the input, then the checkbox and the associated 
 
 To create a read only checkbox, the input should be replaced by a `span` element with `role="checkbox"`, `aria-readonly="true"` and `aria-disabled="true"` attributes. The checkbox will be accessible to keyboard navigation and assistive technologies, thanks to `aria-labelledby` and `tabindex`, but other interactions will be prevented.
 
-<Example class="bd-example-indeterminate" addStackblitzJs code={`<fieldset class="control-items-list">
+<Example buttonLabel="readonly checkboxes" class="bd-example-indeterminate" addStackblitzJs code={`<fieldset class="control-items-list">
     <div class="checkbox-item">
       <div class="control-item-assets-container">
         <span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="checkboxReadonlyLabel"></span>
@@ -440,7 +439,7 @@ To create a read only checkbox, the input should be replaced by a `span` element
 
 To display an invalid checkbox, add `.is-invalid` to a `.control-item-indicator`. An error icon will be automatically shown, if there is a decorative icon specified it will be hidden. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
 
-<Example class="bd-example-indeterminate" addStackblitzJs code={`<fieldset class="control-items-list">
+<Example buttonLabel="invalid checkboxes" class="bd-example-indeterminate" addStackblitzJs code={`<fieldset class="control-items-list">
     <div class="checkbox-item control-item-divider">
       <div class="control-item-assets-container">
         <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid" aria-describedby="checkboxInvalidDescription checkboxInvalidErrorText" />
@@ -489,7 +488,7 @@ To display an invalid checkbox, add `.is-invalid` to a `.control-item-indicator`
 <BootstrapCompatibility>
 To display an invalid checkbox, add `.is-invalid` to a `.form-check-input`.
 
-<Example class="bd-example-indeterminate" addStackblitzJs code={`<div class="form-check">
+<Example buttonLabel="Bootstrap compatibility: invalid checkboxes" class="bd-example-indeterminate" addStackblitzJs code={`<div class="form-check">
     <input class="form-check-input is-invalid" type="checkbox" value="" id="checkInvalid" />
     <label class="form-check-label" for="checkInvalid">
       Default invalid checkbox (Bootstrap compatible)
@@ -501,7 +500,7 @@ To display an invalid checkbox, add `.is-invalid` to a `.form-check-input`.
 
 If the layout is horizontal, the `<fieldset>` must enclose the flex containers so the error message is displayed under the first item.
 
-<Example code={`<fieldset class="control-items-list">
+<Example buttonLabel="invalid checkboxes in an horizontal layout" code={`<fieldset class="control-items-list">
     <div class="d-flex flex-row gap-small w-50">
       <div class="checkbox-item flex-fill">
         <div class="control-item-assets-container">
@@ -527,7 +526,7 @@ If the layout is horizontal, the `<fieldset>` must enclose the flex containers s
 
 It is possible to use a `<ul>` instead of `<fieldset>` but you will need to handle the error message display as it will not be hidden by default. The error message must be outside of the list as it is not a list item.
 
-<Example class="bd-example-indeterminate" addStackblitzJs code={`<ul class="control-items-list">
+<Example buttonLabel="invalid checkboxes with `<ul>`" class="bd-example-indeterminate" addStackblitzJs code={`<ul class="control-items-list">
     <li class="checkbox-item control-item-divider">
       <div class="control-item-assets-container">
         <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalidUl" aria-describedby="checkboxInvalidUlDescription checkboxInvalidUlErrorText" />
@@ -563,7 +562,7 @@ It is possible to use a `<ul>` instead of `<fieldset>` but you will need to hand
 
 If you have a checkbox that is not part of a group but needs validation control, you can surround it with a `.checkbox-item-container` to hide and display the error text automatically.
 
-<Example code={`<div class="checkbox-item-container">
+<Example buttonLabel="invalid unique checkbox" code={`<div class="checkbox-item-container">
     <div class="checkbox-item">
       <div class="control-item-assets-container">
         <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxUniqueInvalid" aria-describedby="checkboxUniqueInvalidErrorText" />
@@ -579,7 +578,7 @@ If you have a checkbox that is not part of a group but needs validation control,
 
 For accessibility reasons, it is required to provide understandable checkbox labels without relying on visual context. It is also good practice to add a checkbox group title inside a `<legend>` element as the first child of the `<fieldset>` element. Screen readers will read the legend before navigating through the checkboxes; this way, keyboard navigation users have more information on what is expected with the multiple checkboxes element.
 
-<Example code={`<div class="row">
+<Example buttonLabel="checkboxes grouped with fieldset" code={`<div class="row">
     <div class="col-md-6">
       <fieldset class="control-items-list">
         <legend>Checkboxes group example</legend>
@@ -621,7 +620,7 @@ For accessibility reasons, it is required to provide understandable checkbox lab
 
 For the standalone checkbox, we provide a completely different architecture to ease the integration inside your projects.
 
-<Example code={`<label class="checkbox-standalone">
+<Example buttonLabel="standalone checkbox" code={`<label class="checkbox-standalone">
     <input class="control-item-indicator" type="checkbox" value="" />
     <span class="visually-hidden">Standalone checkbox</span>
   </label>`} />
@@ -631,7 +630,7 @@ For the standalone checkbox, we provide a completely different architecture to e
 Be careful when using this, as you must implement the background on hover, focus and active states.
 </Callout>
 
-<Example code={`<div style="position: relative">
+<Example buttonLabel="Bootstrap compatibility: standalone checkbox" code={`<div style="position: relative">
     <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="Standalone checkbox (Bootstrap compatible)" />
   </div>`} />
 </BootstrapCompatibility>
