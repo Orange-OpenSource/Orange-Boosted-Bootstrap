@@ -6,8 +6,6 @@ aliases:
 toc: true
 ---
 
-import { getVersionedDocsPath } from '@libs/path'
-
 <Callout type="info">
   You can find here the OUDS [text area design guidelines](https://r.orange.fr/r/S-ouds-doc-text-area).
 </Callout>
@@ -16,7 +14,7 @@ import { getVersionedDocsPath } from '@libs/path'
 
 Use a `.text-area` wrapper to create a text area with OUDS styles, then wrap a pair of `<textarea class="text-area-field">` and `<label>` elements in `.text-area-container`. Note that the `<label>` must come before the `<textarea>`.
 
-<Example code={`<div class="text-area mb-medium">
+<Example buttonLabel="text areas with and without placeholder" code={`<div class="text-area mb-medium">
     <div class="text-area-container">
       <label for="exampleTextArea">Additional comments</label>
       <textarea class="text-area-field" id="exampleTextArea"></textarea>
@@ -35,7 +33,7 @@ Use a `.text-area` wrapper to create a text area with OUDS styles, then wrap a p
 
 Add `.text-area-container-outlined` for a minimalist text area with a transparent background and a visible stroke outlining the field.
 
-<Example code={`<div class="text-area">
+<Example buttonLabel="outlined text area" code={`<div class="text-area">
     <div class="text-area-container text-area-container-outlined">
       <label for="exampleTextAreaOutlined">Additional comments</label>
       <textarea class="text-area-field" id="exampleTextAreaOutlined"></textarea>
@@ -51,7 +49,7 @@ Rounded corners inputs is a project-wide option therefore all your inputs should
   We use a `<div>` as a parent container because we cannot use `<body>` in an example
 </Callout>
 
-<Example code={`<div class="use-rounded-corner-inputs">
+<Example buttonLabel="rounded text areas" code={`<div class="use-rounded-corner-inputs">
     <div class="text-area mb-medium">
       <div class="text-area-container">
         <label for="exampleTextAreaRounded">Additional comments</label>
@@ -75,7 +73,7 @@ To display a helper text below text areas, add a `.helper-text` as a sibling of 
 Helper text should be explicitly associated with the text area it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this helper text when the user focuses or enters the text area.
 </Callout>
 
-<Example code={`<div class="text-area">
+<Example buttonLabel="text area with helper text" code={`<div class="text-area">
     <div class="text-area-container">
       <label for="textAreaWithHelperText">Additional comments</label>
       <textarea id="textAreaWithHelperText" class="text-area-field" aria-describedby="textAreaWithHelperTextHelpBlock"></textarea>
@@ -94,7 +92,7 @@ To display a helper link below text areas, use a standard small link [with `.lin
 Helper link should be explicitly described using the `aria-labelledby` attribute in which you must combine the helper link id and the related text area label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the text area. We also recommend adding a `.visually-hidden` span inside the link to coordinate the link content and the label.
 </Callout>
 
-<Example code={`<div class="text-area mb-medium">
+<Example buttonLabel="text areas with helper link" code={`<div class="text-area mb-medium">
     <div class="text-area-container">
       <label id="labelTextAreaWithHelperTextLink" for="textAreaWithHelperTextLink">Additional comments</label>
       <textarea id="textAreaWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" class="text-area-field"></textarea>
@@ -138,7 +136,7 @@ By default text areas will span the whole width of their parent container, to li
 
 Add the `disabled` boolean attribute on a text area to give it a grayed out appearance, remove pointer events, and prevent focusing.
 
-<Example code={`<div class="text-area mb-medium">
+<Example buttonLabel="disabled text areas" code={`<div class="text-area mb-medium">
     <div class="text-area-container">
       <label for="exampleTextAreaDisabled">Additional comments</label>
       <textarea disabled class="text-area-field" id="exampleTextAreaDisabled">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
@@ -151,11 +149,11 @@ Add the `disabled` boolean attribute on a text area to give it a grayed out appe
     </div>
   </div>`} />
 
-### Readonly
+### Read only
 
 Add the `readonly` boolean attribute on a text area to prevent modification of the text area’s value. `readonly` text areas can still be focused and selected, while `disabled` text areas cannot.
 
-<Example code={`<div class="text-area mb-medium">
+<Example buttonLabel="readonly text areas" code={`<div class="text-area mb-medium">
     <div class="text-area-container">
       <label for="exampleTextAreaReadonly">Additional comments</label>
       <textarea readonly class="text-area-field" id="exampleTextAreaReadonly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
@@ -178,7 +176,7 @@ To display an invalid text area, add `.is-invalid` to a `.text-area-field` withi
 For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.text-area-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when the text area becomes invalid.
 </Callout>
 
-<Example code={`<div class="text-area mb-medium">
+<Example buttonLabel="invalid text areas" code={`<div class="text-area mb-medium">
     <div class="text-area-container">
       <label id="labelTextAreaInvalid" for="exampleTextAreaInvalid">Additional comments</label>
       <textarea class="text-area-field is-invalid" id="exampleTextAreaInvalid" aria-describedby="commentFeedback"></textarea>
