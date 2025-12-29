@@ -1,9 +1,9 @@
 {
   "name": "@ouds/web-sosh",
   "description": "OUDS Web Sosh is a Bootstrap based, Sosh branded accessible and ergonomic components library.",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "config": {
-    "version_short": "0.6"
+    "version_short": "1.0"
   },
   "sass": "scss/ouds-web.scss",
   "style": "dist/css/ouds-web.css",
