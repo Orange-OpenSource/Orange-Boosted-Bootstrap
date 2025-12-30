@@ -1,0 +1,65 @@
+- title: Getting started
+  icon: book-half
+  icon_color: body-color
+  pages:
+    - title: Introduction
+    - title: Migration from Boosted
+      brand: orange
+    - title: Download
+    - title: Contents
+    - title: Browsers & devices
+    - title: Accessibility
+    - title: Sass
+      draft: true
+    - title: JavaScript
+    - title: Optimize
+      draft: true
+    - title: Contribute
+    - title: Webpack
+      draft: true
+    - title: Parcel
+      draft: true
+    - title: Vite
+      draft: true
+    - title: RFS
+      draft: true
+    - title: RTL
+      draft: true
+    - title: Versioning
+      draft: true
+    - title: Migration
+
+- title: Foundation
+  icon: design-token-figma
+  icon_color: body-color
+  pages:
+    - title: Approach
+    - title: Options
+    - title: Tokens
+      draft: true
+    - title: Color palette
+    - title: Color theme
+      draft: true
+    - title: Color modes
+    - title: CSS variables
+      draft: true
+    - title: Reboot
+    - title: Typography
+    - title: Images # Do we keep the following ?
+      draft: true
+    - title: Figures
+      draft: true
+    - title: Component
+      draft: true
+
+- title: About
+  icon: globe2
+  icon_color: body-color
+  pages:
+    - title: Overview
+      draft: true
+    - title: Team
+    - title: Brand
+      draft: true
+    - title: License
+    - title: Cookies

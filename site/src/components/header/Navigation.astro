@@ -65,11 +65,18 @@ const { addedIn, layout, title } = Astro.props
       <div id="bd-navbar1" class="navbar-collapse collapse me-lg-auto bd-navbar mb-none border-none">
         <ul class="navbar-nav">
           <LinkItem
-            active={layout === 'docs' && !(title === 'Migrating to recent versions' || title === 'Migrating from Boosted' || title === 'Components' || Astro.url.pathname.includes('/components/'))}
+            active={layout === 'docs' && (Astro.url.pathname.includes('/getting-started/') || Astro.url.pathname.includes('/foundation/') || Astro.url.pathname.includes('/about/'))}
             href={getVersionedDocsPath('getting-started/introduction')}
-            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});"
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'getting-started'});"
           >
-            Docs
+            Getting started
+          </LinkItem>
+          <LinkItem
+            active={layout === 'docs' && Astro.url.pathname.includes('/layout/')}
+            href={getVersionedDocsPath('layout/breakpoints')}
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'layout'});"
+          >
+            Layout
           </LinkItem>
           <LinkItem
             active={title === 'Components' || Astro.url.pathname.includes('/components/')}
@@ -79,18 +86,18 @@ const { addedIn, layout, title } = Astro.props
             Components
           </LinkItem>
           <LinkItem
+            active={layout === 'docs' && Astro.url.pathname.includes('/utilities/')}
+            href={getVersionedDocsPath('utilities/api')}
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'utilities'});"
+          >
+            Utilities
+          </LinkItem>
+          <LinkItem
             active={title === 'Examples'}
             href={getVersionedDocsPath('examples')}
             onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});"
           >
             Examples
-          </LinkItem>
-          <LinkItem
-            active={title === 'Customize'}
-            href={getVersionedDocsPath('customize')}
-            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'customize'});"
-          >
-            Customize
           </LinkItem>
           <LinkItem
             active={title === 'Resources'}
