@@ -569,6 +569,20 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 ### Spacings
 
+- <span class="tag tag-small rounded-none tag-info">Info</span> You might be able to transfer your spacing utilities following one of the two proposed methods (while keeping almost the rendering and at least the same proportion between spacings):
+  - Keep the previous behavior and getting one utility for another.
+    1. **0**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)0` → `$1none`
+    2. **1**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)1` → `$12xsmall`
+    3. **2**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)2` → `$1small`
+    4. **3**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)3` → `$1large`
+    5. **4**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)4` → `$12xlarge`
+    6. **5**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)5` → `$14xlarge`
+    7. **All numbers**: Search for `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)\d` and you shouldn’t have Bootstrap spacing utilities anymore
+    {/* Next technique is almost unusable in practice */}
+  - Change all the utilities using more precise utilities
+    1. **Mixing Bootstrap numbers**: Search for `([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?\d`, when you match multiple on one line, consider using one of our [scaled spacing utilities]([[docsref:/utilities/spacing#notation-for-scaled-values]]) (for example, `.mb-1.mb-md-2` → `.mb-scaled-2xsmall`).
+    2. **Remaining standalone classes**: Follow the previous guide going through all the standalone classes.
+
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> The following margin spacing utilities have been removed from the default build (`.m{position}-{breakpoint}-{negative}{value}`). Please check the new [spacing values]([[docsref:/utilities/spacing]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
   - **0**: `.m-0`, `.mx-0`, `.my-0`, `.mt-0`, `.mb-0`, `.ms-0`, `.me-0`, `.m-sm-0`, etc...
   - **1**: `.m-1`, `.mx-1`, `.my-1`, `.mt-1`, `.mb-1`, `.ms-1`, `.me-1`, `.m-sm-1`, etc...
@@ -673,20 +687,6 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
   - **Xlarge**: `.gap-scaled-xlarge`, `.row-gap-scaled-xlarge`, `.column-gap-scaled-xlarge`
   - **2xlarge**: `.gap-scaled-2xlarge`, `.row-gap-scaled-2xlarge`, `.column-gap-scaled-2xlarge`
   - **3xlarge**: `.gap-scaled-3xlarge`, `.row-gap-scaled-3xlarge`, `.column-gap-scaled-3xlarge`
-
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> You might be able to transfer your spacing utilities following one of the two proposed methods (while keeping almost the rendering and at least the same proportion between spacings):
-  - Keep the previous behavior and getting one utility for another.
-    1. **0**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)0` → `$1none`
-    2. **1**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)1` → `$12xsmall`
-    3. **2**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)2` → `$1small`
-    4. **3**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)3` → `$1large`
-    5. **4**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)4` → `$12xlarge`
-    6. **5**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)5` → `$14xlarge`
-    7. **All numbers**: Search for `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)\d` and you shouldn’t have Bootstrap spacing utilities anymore
-    {/* Next technique is almost unusable in practice */}
-  - Change all the utilities using more precise utilities
-    1. **Mixing Bootstrap numbers**: Search for `([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?\d`, when you match multiple on one line, consider using one of our [scaled spacing utilities]([[docsref:/utilities/spacing#notation-for-scaled-values]]) (for example, `.mb-1.mb-md-2` → `.mb-scaled-2xsmall`).
-    2. **Remaining standalone classes**: Follow the previous guide going through all the standalone classes.
 
 ### Text
 

@@ -27,7 +27,7 @@ Even if you don't need a placeholder, <em>you must always define the placeholder
 To be compliant with the WCAG [1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose) criteria, for each input field collecting information about the user, add the appropriate value to the autocomplete attribute (sufficient [technique H98](https://www.w3.org/WAI/WCAG21/Techniques/html/H98)).
 </Callout>
 
-<Example code={`<div class="text-input">
+<Example buttonLabel="text input without placeholder" code={`<div class="text-input">
     <div class="text-input-container">
       <label for="exampleTextInputWithEmptyPlaceholder">Email address</label>
       <input type="email" autocomplete="email" class="text-input-field" id="exampleTextInputWithEmptyPlaceholder" placeholder=" ">
@@ -36,7 +36,7 @@ To be compliant with the WCAG [1.3.5: Identify Input Purpose](https://www.w3.org
 
 If the placeholder text is supplied, `<label>` will automatically adjust to its floated position.
 
-<Example code={`<div class="text-input">
+<Example buttonLabel="text input with placeholder" code={`<div class="text-input">
     <div class="text-input-container">
       <label for="exampleTextInputWithPlaceholder">Email address</label>
       <input type="email" class="text-input-field" id="exampleTextInputWithPlaceholder" placeholder="name@example.com">
@@ -45,7 +45,7 @@ If the placeholder text is supplied, `<label>` will automatically adjust to its 
 
 When there’s a value already defined, `<label>`s will automatically adjust to their floated position.
 
-<Example code={`<div class="text-input">
+<Example buttonLabel="text input with defined value" code={`<div class="text-input">
     <div class="text-input-container">
       <label for="exampleTextInputWithValue">Input with value</label>
       <input type="email" class="text-input-field" id="exampleTextInputWithValue" placeholder="name@example.com" value="test@example.com">
@@ -61,7 +61,7 @@ Add `.text-input-container-outlined` for a minimalist input with a transparent b
 * In a header (search field)
 * In a selection/filtering feature in a product catalog
 
-<Example code={`<div class="text-input">
+<Example buttonLabel="outlined text input" code={`<div class="text-input">
     <div class="text-input-container text-input-container-outlined">
       <label for="exampleTextInputOutlined">Firstname</label>
       <input type="text" class="text-input-field" id="exampleTextInputOutlined" placeholder=" ">
@@ -77,7 +77,7 @@ Rounded corners inputs is a project-wide option therefore all your inputs should
   We use a `<div>` as a parent container because we cannot use `<body>` in an example
 </Callout>
 
-<Example code={`<div class="use-rounded-corner-inputs">
+<Example buttonLabel="rounded text inputs" code={`<div class="use-rounded-corner-inputs">
     <div class="text-input mb-medium">
       <div class="text-input-container">
         <label for="exampleTextInputRounded">Firstname</label>
@@ -99,7 +99,7 @@ Add an icon to help indicate the purpose of the input by placing an `<svg>` or `
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
-<Example code={`<div class="text-input mb-medium">
+<Example buttonLabel="text inputs with leading icon" code={`<div class="text-input mb-medium">
     <div class="text-input-container">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -140,7 +140,7 @@ Add an icon to help indicate the purpose of the input by placing an `<svg>` or `
 
 Trailing actions can be added to the right side of the input field by placing a minimal icon only button (`.btn`, `.btn-minimal` and `.btn-icon`) inside the `.text-input-container`. It can be used to provide actions related to the field: clear input, toggle password visibility, open a date picker, etc.
 
-<Example code={`<div class="text-input mb-medium">
+<Example buttonLabel="text inputs with trailing action" code={`<div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="exampleTextInputEmptyWithAction">Label</label>
       <input type="email" class="text-input-field" id="exampleTextInputEmptyWithAction" placeholder=" ">
@@ -173,7 +173,7 @@ To display a helper text below inputs, add a `.helper-text` as a sibling of a `.
 Helper text should be explicitly associated with the text input it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this helper text when the user focuses or enters the input.
 </Callout>
 
-<Example code={`<div class="text-input">
+<Example buttonLabel="text input with helper text" code={`<div class="text-input">
     <div class="text-input-container">
       <label for="inputTextPassword">Password</label>
       <input type="password" id="inputTextPassword" class="text-input-field" aria-describedby="passwordTextHelpBlock" placeholder=" ">
@@ -192,7 +192,7 @@ To display a helper link below inputs, use a standard small link [with `.link` a
 Helper link should be explicitly described using the `aria-labelledby` attribute in which you must combine the helper link id and the related text input label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the input. We also recommend adding a `.visually-hidden` span inside the link to coordinate the link content and the label.
 </Callout>
 
-<Example code={`<div class="text-input mb-medium">
+<Example buttonLabel="text inputs with helper link" code={`<div class="text-input mb-medium">
     <div class="text-input-container">
       <label id="labelTextWithHelperTextLink" for="inputTextWithHelperTextLink">Send your feedback</label>
       <input type="text" id="inputTextWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" class="text-input-field" placeholder=" ">
@@ -222,7 +222,7 @@ A textual prefix or suffix can be added to an input by wrapping the `<input>` in
 For accessibility purpose the prefix and suffix should be explicitly mentioned in the helper text related to the input by the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce these additional or already existing elements when the user focuses or enters the input.
 </Callout>
 
-<Example code={`<div class="text-input mb-medium">
+<Example buttonLabel="text inputs with prefix and/or suffix" code={`<div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="inputTextWithPrefix">Enter you website URL</label>
       <div class="input-container" data-bs-prefix="https://">
@@ -306,7 +306,7 @@ By default text inputs will span the whole width of their parent container, to l
 
 Add the `disabled` boolean attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.
 
-<Example code={`<div class="text-input mb-medium">
+<Example buttonLabel="disabled text inputs" code={`<div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="exampleTextInputDisabledEmpty">Firstname</label>
       <input type="text" class="text-input-field" id="exampleTextInputDisabledEmpty" placeholder=" " disabled>
@@ -331,11 +331,11 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
     </div>
   </div>`} />
 
-### Readonly
+### Read only
 
 Add the `readonly` boolean attribute on an input to prevent modification of the input’s value. `readonly` inputs can still be focused and selected, while `disabled` inputs cannot.
 
-<Example code={`<div class="text-input mb-medium">
+<Example buttonLabel="readonly text inputs" code={`<div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="exampleTextInputReadonlyEmpty">Firstname</label>
       <input type="text" class="text-input-field" id="exampleTextInputReadonlyEmpty" placeholder=" " readonly>
@@ -370,7 +370,7 @@ To display an invalid input, add `.is-invalid` to a `.text-input-field` within t
 For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.text-input-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when switching the text input to invalid.
 </Callout>
 
-<Example code={`<div class="text-input mb-medium">
+<Example buttonLabel="invalid text inputs" code={`<div class="text-input mb-medium">
     <div class="text-input-container">
       <label id="labelTextInputInvalidEmpty" for="exampleTextInputInvalidEmpty">Username</label>
       <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidEmpty" aria-describedby="usernameFeedback" placeholder=" ">
