@@ -427,6 +427,11 @@
       border: 0;
       box-shadow: none;
 
+      // Disable resize on touch devices
+      @media (pointer: coarse) and (not (any-pointer: fine)) {
+        resize: none;
+      }
+
       @supports (field-sizing: content) {
         field-sizing: content;  // Not yet standard, but supported in some browsers
         min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
