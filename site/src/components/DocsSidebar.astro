@@ -17,7 +17,7 @@ const sidebarMap = {
   'about': 'getting-started',
 }
 
-const sidebar = sidebarMap[slug] ? getData(`sidebar-${sidebarMap[slug]}`) || []
+const sidebar = sidebarMap[slug] ? getData(`sidebar-${sidebarMap[slug]}`) : []
 ---
 
 <nav class="bd-links w-100" id="bd-docs-nav" aria-labelledby="docs-nav">
