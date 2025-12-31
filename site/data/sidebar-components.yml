@@ -4,7 +4,7 @@
   pages:
     - title: Accordion
       draft: true
-    - title: Alert
+    - title: Alerts
       draft: true
     - title: Back to top
       draft: true
@@ -42,7 +42,7 @@
       draft: true
     - title: Input group
       draft: true
-    - title: Link
+    - title: Links
       category: Navigation
     - title: List group
       draft: true
@@ -100,5 +100,3 @@
       draft: true
     - title: Tooltip
       draft: true
-    - title: Validation
-      category: Control

@@ -14,8 +14,7 @@ import fs from 'node:fs'
 
 <ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5">
   {
-    getData('sidebar-components')
-      .filter((group) => group.title === 'Components')[0]
+    getData('sidebar-components')[0]
       .pages.map((page) => {
         if (page.category && !page.draft) {
           return (
@@ -57,9 +56,9 @@ import fs from 'node:fs'
   ['Actions', 'Content display', 'Control', 'Data', 'Dialog', 'Indicator', 'Layout', 'Navigation', 'Visual assets'].map((element) => {
     return (
       <>
-        {getData('sidebar-components').filter((group) => group.title === 'Components')[0].pages.filter((page) => page?.category === element).length > 0 && <h3>{element}</h3>}
+        {getData('sidebar-components')[0].pages.filter((page) => page?.category === element).length > 0 && <h3>{element}</h3>}
         <ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5">
-          {getData('sidebar-components').filter((group) => group.title === 'Components')[0].pages.filter((page) => page?.category === element).map((page) => {
+          {getData('sidebar-components')[0].pages.filter((page) => page?.category === element).map((page) => {
             return (
               <li class="col">
                 <div class="card position-relative h-100">

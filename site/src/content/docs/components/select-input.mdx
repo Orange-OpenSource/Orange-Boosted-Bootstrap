@@ -163,7 +163,7 @@ Helper text should be explicitly associated with the select input it relates to 
 ### Helper link
 
 If the helper text is not sufficient, it’s possible to offer the user an additional help link. The helper link can also be displayed on its own without helper text.
-To display a helper link below selects, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/link#sizes]]) as a sibling of a `.select-input-container`.
+To display a helper link below selects, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.select-input-container`.
 
 <Callout type="warning">
 Helper link should be explicitly labelled using the `aria-labelledby` attribute in which you must combine the helper link id and the related select input label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the select input. We also recommend adding a `.visually-hidden` span inside the link to coordinate the link content and the label.
@@ -284,7 +284,7 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 
 <Callout type="info" name="input-invalid" />
 
-To display an invalid select, add `.is-invalid` to a `.select-input-field` within the `.select-input-container`. Please take a look at our [Validation page to learn more]([[docsref:/components/validation]]).
+To display an invalid select, add `.is-invalid` to a `.select-input-field` within the `.select-input-container`. Please take a look at our [Validation page to learn more]([[docsref:/foundation/form-validation]]).
 
 <Callout type="warning">
 For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.select-input-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when the select input becomes invalid.
