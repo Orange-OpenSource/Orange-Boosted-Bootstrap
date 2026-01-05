@@ -21,8 +21,6 @@
       draft: true
     - title: Vite
       draft: true
-    - title: RFS
-      draft: true
     - title: RTL
       draft: true
     - title: Versioning
@@ -38,14 +36,12 @@
     - title: Tokens
       draft: true
     - title: Color palette
-    - title: Color theme
-      draft: true
     - title: Color modes
     - title: CSS variables
       draft: true
     - title: Reboot
     - title: Typography
-    - title: Images # Do we keep the following ?
+    - title: Images
       draft: true
     - title: Figures
       draft: true

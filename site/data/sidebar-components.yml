@@ -16,8 +16,6 @@
       category: Content display
     - title: Buttons
       category: Actions
-    - title: Button group
-      draft: true
     - title: Card
       draft: true
     - title: Carousel
@@ -34,14 +32,10 @@
       category: Layout
     - title: Dropdown
       draft: true
-    - title: Icon
-      category: Visual assets
-    - title: Floating label
-      draft: true
     - title: Footer
       draft: true
-    - title: Input group
-      draft: true
+    - title: Icon
+      category: Visual assets
     - title: Links
       category: Navigation
     - title: List group
