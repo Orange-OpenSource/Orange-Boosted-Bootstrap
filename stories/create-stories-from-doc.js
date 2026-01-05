@@ -52,8 +52,6 @@ const toPascalCase = str => {
 
 // Get all stories that might be displayed
 const files = fs.readdirSync(path.resolve(__dirname, `../site/src/content/docs/components/`)).map(fileName => [toPascalCase(fileName.replace('.mdx', '')), 'components'])
-  .concat(fs.readdirSync(path.resolve(__dirname, `../site/src/content/docs/forms/`)).map(fileName => [toPascalCase(fileName.replace('.mdx', '')), 'forms']))
-  .concat([['Tables', 'content']]) // Manual adding
 const snippets = fs.readFileSync(path.resolve(__dirname, '../site/src/assets/partials/snippets.js'), { encoding: 'utf8' })
 
 const outputDirectory = `${__dirname}/auto`

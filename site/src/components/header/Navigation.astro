@@ -65,18 +65,32 @@ const { addedIn, layout, title } = Astro.props
       <div id="bd-navbar1" class="navbar-collapse collapse me-lg-auto bd-navbar mb-none border-none">
         <ul class="navbar-nav">
           <LinkItem
-            active={Astro.url.pathname === `/${getConfig().brand}/`}
-            href={`/${getConfig().brand}/`}
-            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});"
+            active={layout === 'docs' && (Astro.url.pathname.includes('/getting-started/') || Astro.url.pathname.includes('/foundation/') || Astro.url.pathname.includes('/about/'))}
+            href={getVersionedDocsPath('getting-started/introduction')}
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'getting-started'});"
           >
-            Home
+            Getting started
           </LinkItem>
           <LinkItem
-            active={layout === 'docs'}
-            href={getVersionedDocsPath('getting-started/introduction')}
-            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});"
+            active={layout === 'docs' && Astro.url.pathname.includes('/layout/')}
+            href={getVersionedDocsPath('layout/breakpoints')}
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'layout'});"
           >
-            Docs
+            Layout
+          </LinkItem>
+          <LinkItem
+            active={title === 'Components' || Astro.url.pathname.includes('/components/')}
+            href={getVersionedDocsPath('components')}
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'components'});"
+          >
+            Components
+          </LinkItem>
+          <LinkItem
+            active={layout === 'docs' && Astro.url.pathname.includes('/utilities/')}
+            href={getVersionedDocsPath('utilities/api')}
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'utilities'});"
+          >
+            Utilities
           </LinkItem>
           <LinkItem
             active={title === 'Examples'}
@@ -84,6 +98,13 @@ const { addedIn, layout, title } = Astro.props
             onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});"
           >
             Examples
+          </LinkItem>
+          <LinkItem
+            active={title === 'Resources'}
+            href="/resources"
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'resources'});"
+          >
+            Resources
           </LinkItem>
         </ul>
       </div>
@@ -116,9 +137,9 @@ const { addedIn, layout, title } = Astro.props
               aria-label={`Toggle brand (${getConfig().brand})`}
             >
               <img src={getVersionedDocsPath(`assets/brand/${getConfig().brand}-logo.svg`)} alt="" loading="lazy" />
-              <span class="d-lg-none ms-2" id="bd-brand-text">Toggle brand</span>
+              <span class="d-lg-none ms-small" id="bd-brand-text">Toggle brand</span>
             </button>
-            <ul class=`dropdown-menu dropdown-menu-end mb-2` aria-labelledby="bd-brand-text">
+            <ul class=`dropdown-menu dropdown-menu-end mb-small` aria-labelledby="bd-brand-text">
               <li>
                 <a
                   href={Astro.url}
