@@ -6,7 +6,8 @@ import {
   zNamedHexColors,
   zPxSizeOrEmpty,
   zVersionMajorMinor,
-  zVersionSemver
+  zVersionSemver,
+  zSidebar
 } from './validation'
 import { capitalizeFirstLetter } from './utils'
 
@@ -59,21 +60,10 @@ const dataDefinitions = {
     })
     .array(),
   grays: zNamedHexColors(9),
-  sidebar: z
-    .object({
-      title: z.string(),
-      icon: z.string().optional(),
-      icon_color: z.string().optional(),
-      pages: z
-        .object({
-          title: z.string(),
-          draft: z.boolean().optional(),
-          brand: z.string().optional()
-        })
-        .array()
-        .optional()
-    })
-    .array(),
+  'sidebar-components': zSidebar,
+  'sidebar-getting-started': zSidebar,
+  'sidebar-layout': zSidebar,
+  'sidebar-utilities': zSidebar,
   'theme-colors': z
     .object({
       name: z.string(),

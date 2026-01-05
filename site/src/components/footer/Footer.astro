@@ -104,6 +104,16 @@ const { title } = Astro.props
                   Getting started
                 </a>
               </li>
+              <li>
+                <a
+                  class:list={['nav-link', { active: Astro.url.pathname.includes('customize') }]}
+                  {...Astro.url.pathname.includes('customize') && { 'aria-current': 'true' }}
+                  href={getVersionedDocsPath('customize')}
+                  aria-describedby="headingLinks"
+                >
+                  Customize
+                </a>
+              </li>
             </ul>
           </div>
         </div>

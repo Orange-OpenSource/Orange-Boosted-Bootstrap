@@ -1,5 +1,5 @@
 ---
-import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
 ---
 
 <details class="mt-medium mb-2xlarge" data-sb-css-bootstrap="true">
@@ -14,7 +14,7 @@ import { getConfig } from '@libs/config'
     <span class="alert-icon"><span class="visually-hidden">Info</span></span>
     <p>
       This part is enabled only when <code>$enable-bootstrap-compatibility</code> is set to <code>true</code>. Read more
-      about <a href={`/${getConfig().brand}/docs/extend/approach/#bootstrap-compatibility`}>Bootstrap compatibility</a>.
+      about <a href={`${getVersionedDocsPath('/foundation/approach/#bootstrap-compatibility')}`}>Bootstrap compatibility</a>.
     </p>
   </div>
 
