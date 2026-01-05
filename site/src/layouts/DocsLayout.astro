@@ -19,7 +19,7 @@ interface Props {
 const { frontmatter, headings, id } = Astro.props
 
 // Extract the directory/section from the ID (format: "directory/filename.mdx")
-const parentDirectory = id.includes('/') ? id.split('/')[0] : ''
+const parentDirectory = id?.includes('/') ? id.split('/')[0] : ''
 
 const bodyProps: LayoutOverridesHTMLAttributes<'body'> = {}
 
@@ -135,7 +135,7 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
         {isComponent && (
           <p class="d-inline"><a class="link" href={getVersionedDocsPath('/getting-started/versioning')} id="componentVersions">Component{`${multipleComponents}`} design version{`${multipleComponents}`}:</a></p>
           <div class="d-inline align-middle" role="group"  aria-labelledby="componentVersions">
-            <ul class="list-unstyled d-inline-flex flex-wrap column-gap-xsmall row-gap-medium mb-0 align-middle">
+            <ul class="list-unstyled d-inline-flex flex-wrap column-gap-xsmall row-gap-medium mb-none align-middle">
               {componentsVersions.map((component) => (
                 <li class="tag tag-info tag-muted">{component.name} v{component.version}</li>
               ))}
