@@ -115,7 +115,9 @@ const { addedIn, layout, title } = Astro.props
               data-bs-display="static"
               aria-label={`Toggle brand (${getConfig().brand})`}
             >
-              <img src={getVersionedDocsPath(`assets/brand/${getConfig().brand}-logo.svg`)} alt="" loading="lazy" />
+              <svg class:list={['bi ms-auto', { 'd-none': getConfig().brand !== 'orange' }]} aria-hidden="true">
+                <use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#theme')}></use>
+              </svg>
               <span class="d-lg-none ms-2" id="bd-brand-text">Toggle brand</span>
             </button>
             <ul class=`dropdown-menu dropdown-menu-end mb-2` aria-labelledby="bd-brand-text">
