@@ -1,0 +1,31 @@
+- title: Utilities
+  icon: braces-asterisk
+  icon_color: body-color
+  pages:
+    - title: API
+    - title: Background
+    - title: Border
+    - title: Clearfix
+    - title: Color & background
+    - title: Colored link
+    - title: Color
+    - title: Display
+    - title: Flex
+    - title: Float
+    - title: Interaction
+    - title: Object fit
+    - title: Opacity
+    - title: Overflow
+    - title: Position
+    - title: Ratio
+    - title: Shadow
+    - title: Sizing
+    - title: Spacing
+    - title: Stack
+    - title: Stretched link
+    - title: Text
+    - title: Text truncation
+    - title: Vertical align
+    - title: Visibility
+    - title: Visually hidden
+    - title: Z-index

@@ -1,0 +1,148 @@
+---
+import SingleLayout from '@layouts/SingleLayout.astro'
+import { getConfig } from '@libs/config'
+
+export function getStaticPaths() {
+  return [
+    {
+      params: { version: getConfig().docs_version }
+    }
+  ]
+}
+---
+
+<SingleLayout title="Resources" description="Quickly get the links of the OUDS Web ecosystem.">
+  <ul class="list-unstyled row gy-large">
+    <li class="col-12 col-sm-6 col-md-4 col-lg-3 col-2xl-2">
+      <div class="card position-relative h-100">
+        <div class="card-top">
+          <img src={`/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`} alt="" class="w-100" />
+        </div>
+        <div class="card-body">
+          <a href="https://unified-design-system.orange.com/" target="_blank" rel="noopener" class="stretched-link">
+            Design guidelines
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="col-12 col-sm-6 col-md-4 col-lg-3 col-2xl-2">
+      <div class="card position-relative h-100">
+        <div class="card-top">
+          <img src={`/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`} alt="" class="w-100" />
+        </div>
+        <div class="card-body">
+          <a href="https://oran.ge/icons" target="_blank" rel="noopener" class="stretched-link">
+            Solaris icons finder
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="col-12 col-sm-6 col-md-4 col-lg-3 col-2xl-2">
+      <div class="card position-relative h-100">
+        <div class="card-top">
+          <img src={`/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`} alt="" class="w-100" />
+        </div>
+        <div class="card-body">
+          <a href="https://a11y-guidelines.orange.com/" target="_blank" rel="noopener" class="stretched-link">
+            Accessibility guidelines
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="col-12 col-sm-6 col-md-4 col-lg-3 col-2xl-2">
+      <div class="card position-relative h-100">
+        <div class="card-top">
+          <img src={`/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`} alt="" class="w-100" />
+        </div>
+        <div class="card-body">
+          <a href="https://ods-charts.netlify.app/" target="_blank" rel="noopener" class="stretched-link">
+            Charts library
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="col-12 col-sm-6 col-md-4 col-lg-3 col-2xl-2">
+      <div class="card position-relative h-100">
+        <div class="card-top">
+          <img src={`/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`} alt="" class="w-100" />
+        </div>
+        <div class="card-body">
+          <a
+            href="https://orange-opensource.github.io/IOT-Map-Component/"
+            target="_blank"
+            rel="noopener"
+            class="stretched-link"
+          >
+            IOT Map component (Leaflet)
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="col-12 col-sm-6 col-md-4 col-lg-3 col-2xl-2">
+      <div class="card position-relative h-100">
+        <div class="card-top">
+          <img src={`/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`} alt="" class="w-100" />
+        </div>
+        <div class="card-body">
+          <a href="https://boosted.ornage.com/" target="_blank" rel="noopener" class="stretched-link"> Boosted 5 </a>
+        </div>
+      </div>
+    </li>
+    <li class="col-12 col-sm-6 col-md-4 col-lg-3 col-2xl-2">
+      <div class="card position-relative h-100">
+        <div class="card-top">
+          <img src={`/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`} alt="" class="w-100" />
+        </div>
+        <div class="card-body">
+          <a href="https://getbootstrap.com/" target="_blank" rel="noopener" class="stretched-link"> Bootstrap 5 </a>
+        </div>
+      </div>
+    </li>
+    <li class="col-12 col-sm-6 col-md-4 col-lg-3 col-2xl-2">
+      <div class="card position-relative h-100">
+        <div class="card-top">
+          <img src={`/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`} alt="" class="w-100" />
+        </div>
+        <div class="card-body">
+          <a
+            href="https://android.unified-design-system.orange.com/"
+            target="_blank"
+            rel="noopener"
+            class="stretched-link"
+          >
+            Android library
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="col-12 col-sm-6 col-md-4 col-lg-3 col-2xl-2">
+      <div class="card position-relative h-100">
+        <div class="card-top">
+          <img src={`/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`} alt="" class="w-100" />
+        </div>
+        <div class="card-body">
+          <a href="https://ios.unified-design-system.orange.com/" target="_blank" rel="noopener" class="stretched-link">
+            IOS library
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="col-12 col-sm-6 col-md-4 col-lg-3 col-2xl-2">
+      <div class="card position-relative h-100">
+        <div class="card-top">
+          <img src={`/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`} alt="" class="w-100" />
+        </div>
+        <div class="card-body">
+          <a
+            href="https://flutter.unified-design-system.orange.com/"
+            target="_blank"
+            rel="noopener"
+            class="stretched-link"
+          >
+            Flutter library
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</SingleLayout>
