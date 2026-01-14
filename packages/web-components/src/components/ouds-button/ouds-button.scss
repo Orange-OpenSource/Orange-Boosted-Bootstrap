@@ -1,0 +1,33 @@
+$ouds-root-selector: ":host" !default;
+
+@import "~@ouds/web-common/scss/mixins/";
+@import "~@ouds/web-common/scss/functions";
+
+@import "~@ouds/web-common/scss/config";
+@import "~@ouds/web-orange/scss/tokens";
+@import "~@ouds/web-common/scss/variables";
+
+@import "~@ouds/web-common/scss/root";
+@import "~@ouds/web-common/scss/reboot";
+@import "~@ouds/web-common/scss/buttons";
+@import "~@ouds/web-common/scss/helpers/visually-hidden";
+
+.btn-rounded {
+  --#{$prefix}btn-border-radius: #{$ouds-button-border-radius-rounded} !important; // stylelint-disable-line declaration-no-important
+}
+
+::slotted(svg),
+::slotted(img),
+::slotted(.icon) {
+  width: 1em;
+  height: 1em;
+  margin-right: var(--#{$prefix}btn-icon-gap);
+  overflow: hidden;
+  font-size: var(--#{$prefix}btn-icon-size);
+  line-height: 1;
+}
+
+.btn-icon-text {
+  --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start};
+  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end};
+}

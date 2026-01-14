@@ -1,0 +1,47 @@
+{
+  "name": "web-components-react",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "homepage": "https://web.unified-design-system.orange.com/packages/web-components-react",
+  "bugs": {
+    "url": "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://louismaximepiton@github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git"
+  },
+  "license": "ISC",
+  "author": "Louis-Maxime Piton <louismaxime.piton@orange.com>",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/web-components-react.test.js",
+    "build": "npm run tsc",
+    "tsc": "tsc -p . --outDir ./dist"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.1",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-scripts": "5.0.1",
+    "web-components": "*",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@stencil/react-output-target": "^1.2.0"
+  }
+}
