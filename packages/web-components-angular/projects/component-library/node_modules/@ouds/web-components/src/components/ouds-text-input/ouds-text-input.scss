@@ -1,0 +1,66 @@
+$ouds-root-selector: ":host" !default;
+
+@import "~@ouds/web-common/scss/mixins/";
+@import "~@ouds/web-common/scss/functions";
+
+@import "~@ouds/web-common/scss/config";
+@import "~@ouds/web-orange/scss/tokens";
+@import "~@ouds/web-common/scss/variables";
+
+@import "~@ouds/web-common/scss/root";
+@import "~@ouds/web-common/scss/reboot";
+@import "~@ouds/web-common/scss/forms/text-input";
+
+::slotted(svg),
+::slotted(img),
+::slotted(.icon) {
+  position: absolute;
+  top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-icon-size) / 2 - var(--#{$prefix}text-input-border-width-top));
+  left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left));
+  z-index: 2;
+  width: var(--#{$prefix}text-input-icon-size);
+  min-width: var(--#{$prefix}text-input-icon-size);
+  height: var(--#{$prefix}text-input-icon-size);
+}
+
+.text-input-container.has-icon {
+  > .text-input-field,
+  > .input-container,
+  > label {
+    padding-left: calc(var(--#{$prefix}text-input-icon-size) + var(--#{$prefix}text-input-column-gap));
+  }
+}
+
+::slotted(ouds-button) {
+  position: absolute;
+  top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-trailing-action-height) / 2 - var(--#{$prefix}text-input-border-width-top));
+  right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
+  z-index: 3;
+}
+
+.text-input-container.has-action {
+  padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
+
+  > .text-input-field,
+  > .input-container,
+  > label {
+    padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
+  }
+}
+
+.text-input-container:has(.text-input-field.is-invalid).has-action {
+  .text-input-field,
+  .input-container,
+  label {
+    padding-right: calc($ouds-button-size-icon-only + var(--#{$prefix}text-input-column-gap-trailing-error) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
+  }
+
+  &::after {
+    right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap-trailing-error) - var(--#{$prefix}text-input-border-width-left));
+    width: px-to-rem($ouds-button-size-icon-only);
+  }
+}
+
+.text-input-container.is-rounded {
+  --#{$prefix}text-input-border-radius: #{$ouds-text-input-border-radius-rounded} !important;
+}

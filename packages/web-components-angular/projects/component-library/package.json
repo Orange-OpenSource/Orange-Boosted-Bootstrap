@@ -2,8 +2,8 @@
   "name": "@ouds/web-angular",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^21.0.0",
-    "@angular/core": "^21.0.0",
+    "@angular/common": "^21.0.8",
+    "@angular/core": "^21.0.8",
     "@ouds/web-components": "*"
   },
   "dependencies": {

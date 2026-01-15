@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/ouds-web-components.esm.js"></script>
+    <script nomodule src="/build/ouds-web-components.js"></script>
+  </head>
+  <body>
+    <ouds-button
+      accessible-text="Test">
+    </ouds-button>
+    <ouds-button
+      accessible-text="Test"
+      href="#">
+    </ouds-button>
+    <ouds-button
+      accessible-text="Test"
+      href="#"
+      variant="brand">
+    </ouds-button>
+    <div class="use-rounded-corner-buttons">
+      <ouds-button
+        accessible-text="Test"
+        href="#"
+        variant="brand">
+      </ouds-button>
+    </div>
+    <ouds-button
+      accessible-text="Test"
+      variant="brand"
+      loading="true">
+    </ouds-button>
+    <ouds-button
+      accessible-text="Test"
+      variant="brand"
+      disabled="true">
+    </ouds-button>
+    <ouds-button
+      accessible-text="Test"
+      variant="brand"
+      loading="true"
+      loading-time="2.5"
+      icon-only="true">
+      <svg slot="icon" aria-hidden="true">
+        <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+    </ouds-button>
+    <ouds-button
+      accessible-text="Test"
+      variant="brand">
+      <svg slot="icon" aria-hidden="true">
+        <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+    </ouds-button>
+    <ouds-button
+      accessible-text="Test"
+      variant="brand"
+      icon-only="true">
+      <svg slot="icon" aria-hidden="true">
+        <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+    </ouds-button>
+
+    <!-- Text input -->
+    <ouds-text-input
+      label="Label">
+      <svg slot="prefix-icon" aria-hidden="true">
+        <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+      <ouds-button
+        slot="trailing-action"
+        accessible-text="Action"
+        variant="minimal"
+        icon-only="true">
+        <svg slot="icon" aria-hidden="true">
+          <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </ouds-button>
+    </ouds-text-input>
+    <div class="use-rounded-corner-inputs">
+      <ouds-text-input
+        label="Label"
+        placeholder="Test">
+        <svg slot="prefix-icon" aria-hidden="true">
+          <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+        <ouds-button
+          slot="trailing-action"
+          accessible-text="Action"
+          variant="minimal"
+          icon-only="true">
+          <svg slot="icon" aria-hidden="true">
+            <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          </svg>
+        </ouds-button>
+      </ouds-text-input>
+    </div>
+    <ouds-text-input
+      label="Label"
+      disabled="true">
+      <svg slot="prefix-icon" aria-hidden="true">
+        <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+      <ouds-button
+        slot="trailing-action"
+        accessible-text="Action"
+        variant="minimal"
+        icon-only="true"
+        disabled="true">
+        <svg slot="icon" aria-hidden="true">
+          <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </ouds-button>
+    </ouds-text-input>
+    <ouds-text-input
+      label="Label"
+      invalid="true">
+      <svg slot="prefix-icon" aria-hidden="true">
+        <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+    </ouds-text-input>
+    <ouds-text-input
+      label="Label"
+      invalid="true">
+      <svg slot="prefix-icon" aria-hidden="true">
+        <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+      <ouds-button
+        slot="trailing-action"
+        accessible-text="Action"
+        variant="minimal"
+        icon-only="true">
+        <svg slot="icon" aria-hidden="true">
+          <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </ouds-button>
+    </ouds-text-input>
+    <ouds-text-input
+      label="Label"
+      bs-prefix="€">
+      <svg slot="prefix-icon" aria-hidden="true">
+        <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+      <ouds-button
+        slot="trailing-action"
+        accessible-text="Action"
+        variant="minimal"
+        icon-only="true">
+        <svg slot="icon" aria-hidden="true">
+          <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </ouds-button>
+    </ouds-text-input>
+    <ouds-text-input
+      label="Label"
+      readonly="true"
+      value="test"
+      bs-suffix="£">
+      <svg slot="prefix-icon" aria-hidden="true">
+        <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+      <ouds-button
+        slot="trailing-action"
+        accessible-text="Action"
+        variant="minimal"
+        icon-only="true">
+        <svg slot="icon" aria-hidden="true">
+          <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </ouds-button>
+    </ouds-text-input>
+    <ouds-text-input
+      label="Label"
+      outlined="true">
+      <svg slot="prefix-icon" aria-hidden="true">
+        <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+      <ouds-button
+        slot="trailing-action"
+        accessible-text="Action"
+        variant="minimal"
+        icon-only="true">
+        <svg slot="icon" aria-hidden="true">
+          <use xlink:href="/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </ouds-button>
+    </ouds-text-input>
+  </body>
+</html>
