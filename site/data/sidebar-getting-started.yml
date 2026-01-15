@@ -4,7 +4,7 @@
   pages:
     - title: Introduction
     - title: Migration from Boosted
-      brand: orange
+      brand: orange,orange-business-tools
     - title: Download
     - title: Contents
     - title: Browsers & devices

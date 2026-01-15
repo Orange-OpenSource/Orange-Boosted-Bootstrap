@@ -149,7 +149,7 @@ Documentation search is powered by [Algolia’s DocSearch](https://docsearch.alg
 1. Run `npm install` to install the Node.js dependencies, including Astro (the site builder).
 2. Run `npm run dist` (or a specific npm script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
 3. From the root `/ouds-web` directory, run `npm run start` in the command line.
-4. Open <http://localhost:9001/orange/> or <http://localhost:9002/sosh/> in your browser, and voilà.
+4. Open <http://localhost:9001/orange/> or <http://localhost:9002/sosh/> or <http://localhost:9003/orange-business-tools/> in your browser, and voilà.
 
 Learn more about using Astro by reading its [documentation](https://docs.astro.build/en/getting-started/).
 

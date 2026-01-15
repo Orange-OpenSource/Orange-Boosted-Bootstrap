@@ -1,11 +1,11 @@
 // OUDS mod
 .bd-masthead {
-  @if ($brand == "orange") {
+  @if ($brand != "sosh") {
     background-color: var(--#{$prefix}color-bg-primary);
   }
 
   @include media-breakpoint-up(md) {
-    @if ($brand == "orange") {
+    @if ($brand != "sosh") {
       background-color: var(--#{$prefix}color-always-black);
     }
   }

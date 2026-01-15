@@ -174,7 +174,7 @@ To ensure accessibility through sufficient contrast, OUDS provides a dedicated w
 
 Here is a SVG symbol to insert into your SVG sprite. It uses the CSS variables `--bs-icon-color-content-status-warning-external-shape` and `--bs-icon-color-content-status-warning-internal-shape` to color the external and internal shapes of the icon respectively, changing according to color mode. See below to know more about [SVG sprites](#svg-sprite).
 
-<BrandSpecific brand="orange">
+<BrandSpecific brand={['orange', 'orange-business-tools']}>
 <Example lang="svg" showPreview={false} code={`<symbol viewBox="0 0 24 24" id="alert-warning-accessible">
     <path fill="var(--bs-icon-color-content-status-warning-external-shape)" d="M22.452 16.98 14.805 3.063a2.556 2.556 0 0 0-4.411 0L2.77 16.943l-.001.002-.021.036a2.54 2.54 0 0 0-.009 2.552 2.55 2.55 0 0 0 2.215 1.276h15.292a2.548 2.548 0 0 0 2.215-1.276 2.542 2.542 0 0 0-.01-2.553ZM11.4 8.031c0-1.188.4-1.758 1.2-1.758.8 0 1.2.57 1.2 1.758v4.535c0 1.188-.385 1.774-1.2 1.774-.8 0-1.2-.585-1.2-1.774V8.031Zm1.188 10.119a1.394 1.394 0 0 1-1.388-1.407 1.38 1.38 0 0 1 1.388-1.391 1.39 1.39 0 0 1 1.387 1.39c0 .768-.622 1.408-1.387 1.408Z"/>
     <path fill="var(--bs-icon-color-content-status-warning-internal-shape)" d="M12.6 6.273c-.8 0-1.2.57-1.2 1.758v4.535c0 1.188.4 1.774 1.2 1.774.816 0 1.2-.586 1.2-1.774V8.031c0-1.188-.4-1.758-1.2-1.758Zm-1.4 10.47c0 .784.622 1.407 1.388 1.407.765 0 1.387-.64 1.387-1.407a1.39 1.39 0 0 0-1.387-1.391 1.38 1.38 0 0 0-1.388 1.39Z"/>

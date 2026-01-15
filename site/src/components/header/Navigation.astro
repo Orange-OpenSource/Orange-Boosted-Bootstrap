@@ -164,6 +164,25 @@ const { addedIn, layout, title } = Astro.props
               <li>
                 <a
                   href={Astro.url}
+                  class:list={['dropdown-item d-flex align-items-center', { active: getConfig().brand === 'orange-business-tools' }]}
+                  data-bs-brand-value="orange-business-tools"
+                  aria-current={getConfig().brand === 'orange-business-tools'}
+                >
+                  <img
+                    class="bi me-small"
+                    src={getVersionedDocsPath('assets/brand/orange-business-tools-logo.svg')}
+                    alt=""
+                    loading="lazy"
+                  />
+                  Orange Business Tools
+                  <svg class:list={['bi ms-auto', { 'd-none': getConfig().brand !== 'orange-buiness-tools' }]} aria-hidden="true"
+                    ><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#check2')}></use></svg
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href={Astro.url}
                   class:list={['dropdown-item d-flex align-items-center', { active: getConfig().brand === 'sosh' }]}
                   data-bs-brand-value="sosh"
                   aria-current={getConfig().brand === 'sosh'}

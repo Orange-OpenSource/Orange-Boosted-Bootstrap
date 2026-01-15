@@ -1,0 +1,67 @@
+@import "@ouds/web-common/scss/mixins/banner";
+@include bsBanner("");
+
+// scss-docs-start import-stack
+// Configuration
+@import "@ouds/web-common/scss/config";
+@import "@ouds/web-common/scss/functions";
+@import "@ouds/web-orange-business-tools/scss/tokens";
+@import "@ouds/web-common/scss/variables";
+@import "@ouds/web-common/scss/variables-dark";
+@import "@ouds/web-common/scss/maps";
+@import "@ouds/web-common/scss/mixins";
+@import "@ouds/web-common/scss/utilities";
+
+// Layout & components
+@import "@ouds/web-common/scss/root";
+@import "@ouds/web-common/scss/reboot";
+@import "@ouds/web-common/scss/type";
+@import "@ouds/web-common/scss/images";
+@import "@ouds/web-common/scss/containers";
+@import "@ouds/web-common/scss/grid";
+@import "@ouds/web-common/scss/tables";
+@import "@ouds/web-common/scss/forms";
+@import "@ouds/web-common/scss/links"; // OUDS mod
+@import "@ouds/web-common/scss/bullet-list"; // OUDS mod
+@import "@ouds/web-common/scss/buttons";
+@import "@ouds/web-common/scss/chips"; // OUDS mod
+@import "@ouds/web-common/scss/transitions";
+@import "@ouds/web-common/scss/dropdown";
+@import "@ouds/web-common/scss/button-group";
+@import "@ouds/web-common/scss/nav";
+@import "@ouds/web-common/scss/navbar";
+@import "@ouds/web-common/scss/card";
+@import "@ouds/web-common/scss/accordion";
+@import "@ouds/web-common/scss/breadcrumb";
+@import "@ouds/web-common/scss/pagination";
+@import "@ouds/web-common/scss/badges";
+@import "@ouds/web-common/scss/tags";
+@import "@ouds/web-common/scss/alert";
+@import "@ouds/web-common/scss/progress";
+@import "@ouds/web-common/scss/list-group";
+@import "@ouds/web-common/scss/close";
+@import "@ouds/web-common/scss/toasts";
+@import "@ouds/web-common/scss/modal";
+@import "@ouds/web-common/scss/tooltip";
+@import "@ouds/web-common/scss/popover";
+@import "@ouds/web-common/scss/carousel";
+@import "@ouds/web-common/scss/spinners";
+@import "@ouds/web-common/scss/offcanvas";
+@import "@ouds/web-common/scss/placeholders";
+
+// OUDS Web
+@import "@ouds/web-common/scss/back-to-top";
+@import "@ouds/web-common/scss/footer";
+@import "@ouds/web-common/scss/local-navigation";
+@import "@ouds/web-common/scss/orange-navbar";
+@import "@ouds/web-common/scss/stepped-process";
+@import "@ouds/web-common/scss/sticker";
+@import "@ouds/web-common/scss/title-bars";
+
+// Helpers
+@import "@ouds/web-common/scss/helpers";
+
+
+// Utilities
+@import "@ouds/web-common/scss/utilities/api";
+// scss-docs-end import-stack

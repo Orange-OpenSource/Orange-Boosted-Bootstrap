@@ -43,7 +43,7 @@ const sidebar = sidebarMap[slug] ? getData(`sidebar-${sidebarMap[slug]}`) : []
               </h2>
               <ul class="list-unstyled fw-normal mt-2xsmall pb-small small">
                 {group.pages
-                  ?.filter((page) => !page.brand || page.brand === getConfig().brand)
+                  ?.filter((page) => !page.brand || page.brand === getConfig().brand || !!page.brand.split(',').find(element => element === getConfig().brand))
                   .map((page) => {
                     const docSlug = getSlug(page.title)
                     const unversionedPageSlug = `${groupSlug}/${docSlug}`
