@@ -23,7 +23,7 @@
   "devDependencies": {
     "@ouds/web-common": "^1.0.0",
     "@ouds/web-orange": "^1.0.0",
-    "@stencil/angular-output-target": "^1.0.0",
+    "@stencil/angular-output-target": "0.10.2",
     "@stencil/core": "^4.41.0",
     "@stencil/react-output-target": "^1.2.0",
     "@stencil/sass": "^3.2.2",

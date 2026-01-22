@@ -1,8 +1,8 @@
 /* tslint:disable */
 /* auto-generated angular directive proxies */
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, Output, NgZone } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, NgZone } from '@angular/core';
 
-import { ProxyCmp } from './angular-component-lib/utils';
+import { ProxyCmp, proxyOutputs } from './angular-component-lib/utils';
 
 import type { Components } from '@ouds/web-components/dist/components';
 
@@ -17,15 +17,15 @@ import { defineCustomElement as defineOudsTextInput } from '@ouds/web-components
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: [{ name: 'accessibleText', required: true }, 'coloredBg', 'disabled', 'href', 'iconOnly', 'loading', 'loadingTime', 'variant', 'wrap'],
-  outputs: ['oudsButtonClick'],
+  inputs: ['accessibleText', 'coloredBg', 'disabled', 'href', 'iconOnly', 'loading', 'loadingTime', 'variant', 'wrap'],
+  standalone: true
 })
 export class OudsButton {
   protected el: HTMLOudsButtonElement;
-  @Output() oudsButtonClick = new EventEmitter<CustomEvent<void>>();
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['oudsButtonClick']);
   }
 }
 
@@ -45,7 +45,8 @@ export declare interface OudsButton extends Components.OudsButton {
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['bsPrefix', 'bsSuffix', 'disabled', 'invalid', { name: 'label', required: true }, 'maxWidth', 'outlined', 'placeholder', 'readonly', 'value'],
+  inputs: ['bsPrefix', 'bsSuffix', 'disabled', 'invalid', 'label', 'maxWidth', 'outlined', 'placeholder', 'readonly', 'value'],
+  standalone: true
 })
 export class OudsTextInput {
   protected el: HTMLOudsTextInputElement;
