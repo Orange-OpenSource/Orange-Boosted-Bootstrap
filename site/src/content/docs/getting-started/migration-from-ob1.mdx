@@ -1,33 +1,29 @@
 ---
-title: Migrating from Boosted
-description: Track and review changes to the OUDS Web source files, documentation, and components to help you migrate from Boosted to OUDS Web.
+title: Migrating from OB1
+description: Track and review changes to the OUDS Web source files, documentation, and components to help you migrate from OB1 to OUDS Web.
 aliases:
-  - "/migration-from-boosted/"
-  - "/docs/migration-from-boosted/"
-  - "/docs/getting-started/migration-from-boosted/"
+  - "/migration-from-ob1/"
+  - "/docs/migration-from-ob1/"
+  - "/docs/getting-started/migration-from-ob1/"
 toc: true
 ---
 
-This guide provides information on how to migrate from Boosted (latest release) to OUDS Web, with Bootstrap compatibility turned off. [Learn more about Bootstrap compatibility]([[docsref:/foundation/approach#bootstrap-compatibility]]).
+This guide provides information on how to migrate from OB1 (latest release of v2) to OUDS Web, with Bootstrap compatibility turned off. [Learn more about Bootstrap compatibility]([[docsref:/foundation/approach#bootstrap-compatibility]]).
 
-Let’s start with the most obvious change you’ll notice: the name. **Boosted is now OUDS Web.**
+Let’s start with the most obvious change you’ll notice: the name. **OB1 is now OUDS Web.**
 
-- The NPM packages are now `@ouds/web-common` and `@ouds/web-orange`.
+- The NPM packages are now `@ouds/web-common` and `@ouds/web-orange` or `@ouds/web-sosh` depending on brand used.
 - The CSS and JS files have been renamed:
-  - `boosted-grid.css` → `ouds-web-grid.css` in `@ouds/web-orange`
-  - `boosted-grid.min.css` → `ouds-web-grid.min.css` in `@ouds/web-orange`
-  - `boosted-reboot.css` → `ouds-web-reboot.css` in `@ouds/web-orange`
-  - `boosted-reboot.min.css` → `ouds-web-reboot.min.css` in `@ouds/web-orange`
-  - `boosted-utilities.css` → `ouds-web-utilities.css` in `@ouds/web-orange`
-  - `boosted-utilities.min.css` → `ouds-web-utilities.min.css` in `@ouds/web-orange`
-  - `boosted.css` → `ouds-web.css` in `@ouds/web-orange`
-  - `boosted.min.css` → `ouds-web.min.css` in `@ouds/web-orange`
-  - `boosted.bundle.js` → `ouds-web.bundle.js` in `@ouds/web-common`
-  - `boosted.bundle.min.js` → `ouds-web.bundle.min.js` in `@ouds/web-common`
-  - `boosted.esm.js` → `ouds-web.esm.js` in `@ouds/web-common`
-  - `boosted.esm.min.js` → `ouds-web.esm.min.js` in `@ouds/web-common`
-  - `boosted.js` → `ouds-web.js` in `@ouds/web-common`
-  - `boosted.min.js` → `ouds-web.min.js` in `@ouds/web-common`
+  - `style.css` → `ouds-web.css` in package related to brand used
+  - `style.min.css` → `ouds-web.min.css` in package related to brand used
+  - `ob1.bundle.js` → `ouds-web.bundle.js` in `@ouds/web-common`
+  - `ob1.bundle.min.js` → `ouds-web.bundle.min.js` in `@ouds/web-common`
+  - `ob1.esm.js` → `ouds-web.esm.js` in `@ouds/web-common`
+  - `ob1.esm.min.js` → `ouds-web.esm.min.js` in `@ouds/web-common`
+  - `ob1.js` → `ouds-web.js` in `@ouds/web-common`
+  - `ob1.min.js` → `ouds-web.min.js` in `@ouds/web-common`
+- The `flags.css` file together with the minified version have been removed, you could directly use the [flag-icons npm package](https://www.npmjs.com/package/flag-icons)
+- All fonts-icons file have been removed, read more about [managing icons](([[docsref:/components/icon]]))
 
 From now on, OUDS Web won’t embed Bootstrap elements that are not part of Orange Unified Design System. However, you can still use our Bootstrap compatibility mode by using `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`.
 
@@ -35,9 +31,9 @@ From now on, OUDS Web won’t embed Bootstrap elements that are not part of Oran
 
 - <span class="tag tag-small rounded-none tag-warning">Warning</span> Orange color has been modified from `#f16e00` to `#f15e00`. It means that under certain circumstances, you might be able to use Orange and light gray items together.
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> We provide two brand new themes that are <code>root</code> and <code>root-inverted</code>. They are complementary to `light` and `dark`. See more on our [color modes page]([[docsref:/foundation/color-modes]])
+- <span class="tag tag-small rounded-none tag-positive">New</span> We provide four color mode allowinf you to handle Dark mode in every situation. See more on our [color modes page]([[docsref:/foundation/color-modes]])
 
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> The root selector have been tweaked for more flexibility on JS frameworks. Please don’t hesitate to contact us if you find any issue with it.
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> The root selector have been tweaked and can be customized for more flexibility on JS frameworks. Please don’t hesitate to contact us if you find any issue with it.
 
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> The focus-visible polyfill has been removed. So you no longer need it on your side, and you should replace all the calls to `:focus[data-focus-visible-added]` by `:focus-visible`.
 
@@ -46,9 +42,8 @@ From now on, OUDS Web won’t embed Bootstrap elements that are not part of Oran
 OUDS Web doesn’t provide Helvetica Neue font files. Instead, it loads the font from a CDN in order to share the cached files between every project using OUDS Web.
 
 Technically, it means that you can get rid of the following things:
-- Helvetica Neue woff2 files: `fonts/HelvNeue55_W1G.woff2`, `fonts/HelvNeue75_W1G.woff2`, `fonts/HelveticaNeueW20-55Roman.woff2`, and `fonts/HelveticaNeueW20-75Bold.woff2`.
-- `orange-helvetica.*.css` file (default, RTL, or minified version).
-- If you were customizing your Sass compilation, you can remove the `@import "orange-helvetica";` line from your Sass files if it was there.
+- Helvetica Neue woff2 files: `fonts/HelvNeue55_W1G.woff2` and `fonts/HelvNeue75_W1G.woff2`.
+- If you were customizing your Sass compilation, you can remove the `@import "boosted/orange-helvetica";` line from your Sass files if it was there.
 
 Read more about the [font stack]([[docsref:/foundation/reboot#font-stack]]) for more details.
 
@@ -56,17 +51,17 @@ Read more about the [font stack]([[docsref:/foundation/reboot#font-stack]]) for 
 
 ### Typography
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> Body fonts’ sizes are now responsive and can change depending on the screen size. See [Typography]([[docsref:/foundation/typography]]) for more details.
+- <span class="tag tag-small rounded-none tag-positive">Warning</span> Body 1, Body 2 and Caption are now named body large, body medium and body small. See [Typography]([[docsref:/foundation/typography/#regular-texts]]) for more details.
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> A `max-width` has been added on all font references for readability reasons. If you want to get rid of the `max-width`, please use our `.mw-none` width utility.
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> Selected text is now styled with a specific text `color` and `background-color`, making it easier to spot and to read.
 
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Display headings classes `.display-{1|2|3|4|5|6}` have been removed and replaced by `.display-{small|medium|large}`. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Display headings classes `.display-{small|medium|large}` have been added.
 
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> Abbreviation class `.initialism` has been removed.
 
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> Default spacing values now use `px`s instead of `em`s for fixed component spacing, to keep as much space as possible for meaningful content on zoom.
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Default spacing values now use `px`s instead of `em`s for fixed component spacing, to keep as much space as possible for meaningful content on zoom. The bottom margin of headings is now set to token `$ouds-space-fixed-medium` (16px on Orange brand)
 
 ## Layout
 
@@ -74,9 +69,9 @@ Read more about the [font stack]([[docsref:/foundation/reboot#font-stack]]) for 
   - `2xs` and `3xl` have been added.
   - `xxl` has been renamed to `2xl`.
   - The breakpoints values have changed. Please refer to the [breakpoints’ documentation]([[docsref:/layout/breakpoints]]).
-  - The default container to use is now `.container-fluid` associated to `.container-max-width` instead of `.container-xxl`. Please refer to the [fluid containers’ documentation]([[docsref:/layout/containers#fluid-containers]]).
-  - Default gutter inside grid has been changed to have a fully responsive behavior. It should be a transparent change for you.
-  - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|3xsmall|2xsmall|xsmall|small|medium|large|xlarge|2xlarge|3xlarge|4xlarge|5xlarge`. Proportional equivalence between `0` → `none`, `1` → `2xsmall`, `2` → `small`, `3` → `large`, `4` → `2xlarge`, `5` → `4xlarge`.
+  - The default container to use is now `.container-fluid` associated to `.container-max-width` instead of using `.site-width` as parent. Please refer to the [fluid containers’ documentation]([[docsref:/layout/containers#fluid-containers]]). The security margin value has changed.
+  - Default gutter inside grid has been changed to have a fully responsive behavior. It should be a pretty transparent change for you.
+  - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|3xsmall|2xsmall|xsmall|small|medium|large|xlarge|2xlarge|3xlarge|4xlarge|5xlarge`. Proportional equivalence between `0` → `none`, `1` → `medium`, `2` → `xlarge`, `3` → `3xlarge`, `4` → `5xlarge`, `5` → no equivalence.
 
 All responsive classes, helpers, and utilities have been updated accordingly to match the new breakpoints.
 
@@ -87,32 +82,13 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> OUDS Web now uses [new functional icons]([[docsref:/components/icon#functional-icons]]). A new [bicolor accessible warning icon]([[docsref:/components/icon#accessible-warning-icon]]) has been introduced.
 
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> OUDS Web doesn't provide any font icon, read more on [icon component]([[docsref:/components/icon]]) to build you own sprite.
+
 ## Components
-
-### Alerts
-
-- <span class="tag tag-small rounded-none tag-positive">New</span> `.alert-message`, `.alert-label`, `.alert-accent`, `.alert-neutral`, `.use-rounded-corner-alert`, `.alert-container`, `.alert-text-container`, `.alert-action-container`, `.alert-positive`, and `.alert-negative` have been added.
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The DOM for alerts has changed a lot so we recommend to read our [new alerts page]([[docsref:/components/alerts]]) first. `.alert-sm`, `.alert-success`, `.alert-danger`, `.alert-dismissible`, `.alert-heading` have been removed.
-    <details class="mb-medium">
-      <summary>See all changing classes</summary>
-
-      - `.alert` → `.alert.alert-message`.
-      - `.alert-sm` → To remove.
-      - `.alert-success` → `.alert-positive`.
-      - `.alert-info` → Stays the same.
-      - `.alert-warning` → Stays the same.
-      - `.alert-danger` → `.alert-negative`.
-      - `.alert-icon` → Stays the same.
-      - `.alert-heading` → `.alert-label`.
-      - `.alert-dismissible` → To remove.
-      - The DOM has been updated to add more containers around in order to ease the future integrations.
-
-    </details>
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> `alert-variant()` mixin has been removed as it was deprecated in Boosted v5.3.0.
 
 ### Badges
 
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Badge has changed a lot in its meaning and usages. It can no longer contain text (use our new [tags]([[docsref:/components/tags]]) for this). It is now either a basic badge (a colored bullet), a badge - count (with a number) or a badge - icon (with an icon).
+- <span class="tag tag-small rounded-none tag-warning">Breaking</span> Badge has changed a lot in its meaning and usages. It can no longer contain text (use our new [tags]([[docsref:/components/tags]]) for this). It is now either a basic badge (a coloured bullet), a badge - count (with a number) or a badge - icon (with an icon).
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> New dedicated classes have been added to handle badges colors, states and sizes.
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> New classes have been added to handle badges icons.
 
@@ -140,7 +116,6 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   - `.btn-secondary` and `.btn-success` will look as `.btn-default`
   - `.btn-danger` and `.btn-warning` will look as `.btn-negative`
   - `.btn-info` and `.btn-light` will look as `.btn-minimal`
-  - `.btn-dropdown` could look as any variant of the button. So replace it with `.btn-strong`, `.btn-default`, `.btn-minimal` or `.btn-negative` depending on your context.
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-no-outline` has been removed. You can use `.btn-minimal` instead.
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-social` and all its variants have been removed.
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-outline-*` have been removed. You can still have them using `$enable-bootstrap-compatibility`. They all look like `.btn-default`.
@@ -393,15 +368,7 @@ Now you should write:
 See [our new Text Area page]([[docsref:/components/text-area]]) for more information.
 </div>
 
-### Validation
-
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.was-validated` and `.is-invalid` have been removed, form validation is now based on `:user-invalid` for browser validation and `aria-invalid=true` for manual validation. See [form validation]([[docsref:/foundation/form-validation]]).
-
 ## Helpers
-
-### Clearfix
-
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Clearfix helper `.clearfix` and Sass mixin `clearfix()` have been removed in favor of display utility `.d-flow-root`. See [display utility for clearfix]([[docsref:/utilities/display#clearfix]]).
 
 ### Color background
 
@@ -434,10 +401,6 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> Responsive sticky helpers: `.sticky-xs-{top|bottom}`, `.sticky-2xl-{top|bottom}` and `.sticky-3xl-{top|bottom}`.
 
-#### Ratio
-
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.ratio` has been replaced by the aspect-ratio based `.ratio-*` utilities. These utilities are applied directly on the target element, a container is no longer needed. Read more about [aspect ratio]([[docsref:/utilities/aspect-ratio]]).
-
 ### Vertical rule
 
 - <span class="tag tag-small rounded-none tag-warning">Warning</span> The vertical rule documentation has been merged into the new [Divider helper]([[docsref:/components/divider]]) documentation.
@@ -458,7 +421,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
     <summary><span class="tag tag-small rounded-none tag-info">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>
 
   <Callout type="info">
-    See more details about [`[data-bs-theme]`]([[docsref:/foundation/color-modes]]).
+  See more details about [`[data-bs-theme]`]([[docsref:/foundation/color-modes]]).
   </Callout>
 
   1. `.bg-transparent` stays the same
@@ -466,7 +429,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
   3. `.bg-black` → `.bg-always-black`
   4. `.bg-primary` → `.bg-surface-brand-primary`
   5. `.bg-primary-subtle` (that shouldn’t have been used) → `.bg-tertiary`
-  6. `.bg-secondary` → `.bg-inverse-high` or in some rare cases `.bg-inverse-low`
+  6. `.bg-secondary` → `.bg-emphasized` or in some rare cases `.bg-status-neutral-emphasized`
   7. `.bg-secondary-subtle` (that shouldn’t have been used) → `.bg-secondary`
   8. `.bg-success` → `.bg-surface-status-positive-emphasized` or in some rare cases `.bg-surface-status-positive-muted`
   9. `.bg-success-subtle` (that shouldn’t have been used) → `.bg-surface-status-positive-muted`
@@ -755,11 +718,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 - <span class="tag tag-small rounded-none tag-warning">Warning</span> `$enable-rounded` option have been set to `true` by default. This option allows you to set rounded corner on components. Please check that it doesn’t impact your website.
 
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> `scss/_close.scss` doesn’t exist anymore. If you were importing it in your project, please make sure to remove it.
-
 - <span class="tag tag-small rounded-none tag-warning">Warning</span> `scss/_color-palette.scss` doesn’t exist anymore. If you were importing it in your project, please make sure to remove it.
-
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> `scss/mixins/_alert.scss` doesn’t exist anymore. If you were importing it in your project, please make sure to remove it.
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
 
@@ -2557,12 +2516,10 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 - <span class="tag tag-small rounded-none tag-warning">Warning</span> Signature of `make-row($gutter, $gutter-sm)` is now `make-row($gutter)`.
 
-## Sass
+## Sass mixins
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]([[docsref:/foundation/typography#sass-mixins]]) for more details.
 
 - <span class="tag tag-small rounded-none tag-warning">Warning</span> `color-mode({mode}, {root}, {inverted-mode})` mixin signature has changed. We now provide an `$inverted-mode` parameter that is set by default to `light` or `dark` depending on the `$mode`. It allows you to precise another mode to be the inverse of a certain mode.
 
 - <span class="tag tag-small rounded-none tag-warning">Warning</span> `button-variant` mixin signature has changed. We now provide extra parameters for focus and loading states colors. We keep it as a warning because we provide default values for these parameters. See more in [our Button documentation]([[docsref:/components/buttons#sass-mixins]]).
-
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `add` and `subtract` functions have been removed use `calc` instead.
