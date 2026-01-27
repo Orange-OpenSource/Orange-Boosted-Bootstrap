@@ -152,7 +152,7 @@
   display: inline-block;
   background-color: var(--#{$prefix}control-bg); // OUDS mod
   @include border-radius(50%, 50%);
-  @include button-icon($carousel-control-icon-bg, $carousel-control-icon-width, $size: $carousel-control-icon-size, $position: subtract(50%, $spacer * .1) 50%); // OUDS mod
+  @include button-icon($carousel-control-icon-bg, $carousel-control-icon-width, $size: $carousel-control-icon-size, $position: calc(50% - $spacer * .1) 50%); // OUDS mod
 }
 
 // OUDS mod
@@ -240,7 +240,7 @@
       background-image: linear-gradient(to right, transparent 50%, color-contrast($carousel-indicator-active-bg) 0);
       // No need to feature test mask-*
       // See https://caniuse.com/mdn-css_properties_mask-image
-      mask-image: radial-gradient(circle at 50%, transparent 33%, $white add(33%, 1px));
+      mask-image: radial-gradient(circle at 50%, transparent 33%, $white calc(33% + 1px));
       transform: scale($carousel-indicator-hover-scale);
 
       &:hover,
@@ -261,7 +261,6 @@
         content: "";
         background-color: inherit;
         transform-origin: left;
-        // stylelint-disable-next-line function-disallowed-list
         animation: carousel-progress calc(#{$carousel-indicator-animation-interval} / 2) linear infinite, carousel-progress-half $carousel-indicator-animation-interval step-end infinite;
         @include border-radius(inspect($carousel-indicator-active-radius), $carousel-indicator-active-radius);
       }

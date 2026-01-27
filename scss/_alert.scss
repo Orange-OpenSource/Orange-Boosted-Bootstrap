@@ -118,7 +118,7 @@
 .alert-icon {
   flex-shrink: 0;
   width: var(--#{$prefix}alert-icon-size);
-  margin: calc(-.5 * var(--#{$prefix}alert-icon-margin-y)) 0; // stylelint-disable-line function-disallowed-list
+  margin: calc(-.5 * var(--#{$prefix}alert-icon-margin-y)) 0;
 
   + * {
     margin: var(--#{$prefix}alert-icon-margin-y) 0 0;

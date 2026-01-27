@@ -37,7 +37,7 @@
   // Another advantage is that this generates less code and makes the selector less specific making it easier to override.
   // stylelint-disable-next-line selector-max-universal
   > :not(caption) > * > * {
-    padding: $table-cell-padding-y $table-cell-padding-x add($table-cell-padding-y, 1px);
+    padding: $table-cell-padding-y $table-cell-padding-x calc($table-cell-padding-y + 1px);
     line-height: $table-line-height;
     // Following the precept of cascades: https://codepen.io/miriamsuzanne/full/vYNgodb
     color: var(--#{$prefix}table-color-state, var(--#{$prefix}table-color-type, var(--#{$prefix}table-color)));
@@ -46,7 +46,7 @@
   }
 
   > thead > tr {
-    border-bottom-width: calc(#{$table-border-width} * 2); // stylelint-disable-line function-disallowed-list
+    border-bottom-width: calc(#{$table-border-width} * 2);
   }
 
   > tbody > th {
@@ -79,7 +79,7 @@
 }
 
 .table-group-divider {
-  border-top: calc(#{$table-border-width} * 2) solid $table-group-separator-color; // stylelint-disable-line function-disallowed-list
+  border-top: calc(#{$table-border-width} * 2) solid $table-group-separator-color;
 }
 
 //
@@ -98,7 +98,7 @@
 .table-sm {
   // stylelint-disable-next-line selector-max-universal
   > :not(caption) > * > * {
-    padding: $table-cell-padding-y-sm $table-cell-padding-x-sm add($table-cell-padding-y-sm, 1px); // OUDS mod
+    padding: $table-cell-padding-y-sm $table-cell-padding-x-sm calc($table-cell-padding-y-sm + 1px); // OUDS mod
   }
 }
 

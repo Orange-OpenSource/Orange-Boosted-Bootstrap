@@ -5,7 +5,7 @@
 .form-control {
   display: block;
   width: 100%;
-  padding: subtract($input-padding-y, 1px) $input-padding-x add($input-padding-y, 1px); // OUDS mod
+  padding: calc($input-padding-y - 1px) $input-padding-x calc($input-padding-y + 1px); // OUDS mod
   font-family: $input-font-family;
   @include font-size($input-font-size);
   font-weight: $input-font-weight;
@@ -94,8 +94,8 @@
 
   // File input buttons theming
   &::file-selector-button {
-    padding: subtract($input-padding-y, 1px) $input-padding-x add($input-padding-y, 1px); // OUDS mod
-    margin: calc(-1 * (#{$input-padding-y} - 1px)) (-$input-padding-x) calc(-1 * (#{$input-padding-y} + 1px)); // stylelint-disable-line function-disallowed-list
+    padding: calc($input-padding-y - 1px) $input-padding-x calc($input-padding-y + 1px); // OUDS mod
+    margin: calc(-1 * (#{$input-padding-y} - 1px)) (-$input-padding-x) calc(-1 * (#{$input-padding-y} + 1px));
     margin-inline-end: $input-padding-x;
     color: $form-file-button-color;
     @include gradient-bg($form-file-button-bg);
@@ -158,14 +158,14 @@
 
 .form-control-sm {
   min-height: $input-height-sm;
-  padding: $input-padding-y-sm $input-padding-x-sm add($input-padding-y-sm, 1px); // OUDS mod
+  padding: $input-padding-y-sm $input-padding-x-sm calc($input-padding-y-sm + 1px); // OUDS mod
   line-height: $line-height-sm; // OUDS mod
   @include font-size($input-font-size-sm);
   @include border-radius($input-border-radius-sm);
 
   &::file-selector-button {
-    padding: add($input-padding-y-sm, 1px) $input-padding-x-sm add($input-padding-y-sm, 3px); // OUDS mod
-    margin: add(-$input-padding-y-sm, -1px) (-$input-padding-x-sm) add(-$input-padding-y-sm, -3px); // OUDS mod
+    padding: calc($input-padding-y-sm + 1px) $input-padding-x-sm calc($input-padding-y-sm + 3px); // OUDS mod
+    margin: calc(-1 * $input-padding-y-sm - 1px) calc(-1 * $input-padding-x-sm) calc(-1 * $input-padding-y-sm - 3px); // OUDS mod
     margin-inline-end: $input-padding-x-sm;
   }
 }
@@ -177,8 +177,8 @@
   @include border-radius($input-border-radius-lg);
 
   &::file-selector-button {
-    padding: subtract($input-padding-y-lg, 1px) $input-padding-x-lg add($input-padding-y-lg, 1px); // OUDS mod
-    margin: calc(-1 * (#{$input-padding-y} - 1px)) (-$input-padding-x) calc(-1 * (#{$input-padding-y} + 1px)); // stylelint-disable-line function-disallowed-list
+    padding: calc($input-padding-y-lg - 1px) $input-padding-x-lg calc($input-padding-y-lg + 1px); // OUDS mod
+    margin: calc(-1 * (#{$input-padding-y} - 1px)) (-$input-padding-x) calc(-1 * (#{$input-padding-y} + 1px));
     margin-inline-end: $input-padding-x-lg;
   }
 }

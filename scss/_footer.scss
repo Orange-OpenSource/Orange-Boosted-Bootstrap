@@ -106,7 +106,7 @@
 
   .footer-service {
     // scss-docs-start footer-service-css-vars
-    --#{$prefix}footer-padding-top: #{subtract($footer-service-padding-y, .0625rem)};
+    --#{$prefix}footer-padding-top: #{calc($footer-service-padding-y - .0625rem)};
     --#{$prefix}footer-padding-bottom: #{$footer-service-padding-y};
     // scss-docs-end footer-service-css-vars
 
@@ -178,7 +178,7 @@
 
     .footer-service {
       // scss-docs-start footer-service-md-css-vars
-      --#{$prefix}footer-padding-top: #{add($footer-service-padding-y-md, .0625rem)};
+      --#{$prefix}footer-padding-top: #{calc($footer-service-padding-y-md + .0625rem)};
       --#{$prefix}footer-padding-bottom: #{$footer-service-padding-y-md};
       // scss-docs-end footer-service-md-css-vars
     }
