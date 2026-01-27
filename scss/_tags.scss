@@ -127,7 +127,7 @@
     height: var(--#{$prefix}tag-size-decorative-asset);
     padding: var(--#{$prefix}tag-icon-padding);
     &::before {
-      font-size: var(--#{$prefix}tag-font-size-icon);
+      font-size: var(--#{$prefix}tag-font-size-icon) !important; // stylelint-disable-line declaration-no-important
     }
   }
 
