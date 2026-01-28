@@ -29,9 +29,9 @@ ouds:
 debug_template:                   "https://codepen.io/louismaximepiton/pen/WbreEwY"
 
 algolia:
-  app_id:                         "F4PKENW3TB"
-  api_key:                        "d04e794979727856a09d53f12ead9069"
-  index_name:                     "boosted-orange"
+  app_id:                         "AKIHKMSEKB"
+  api_key:                        "8863f72a6120798814c9bd8353ba50f5"
+  index_name:                     "Orange crawler"
 
 download:
   source:                         "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v1.0.0-ouds-web.zip"

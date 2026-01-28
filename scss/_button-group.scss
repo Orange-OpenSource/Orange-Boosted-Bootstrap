@@ -104,7 +104,7 @@
 //
 
 .dropdown-toggle-split {
-  min-width: calc($dropdown-padding-x * 2 + calc(#{$caret-width} * 2)); // OUDS mod
+  min-width: calc($dropdown-padding-x * 2 + #{$caret-width} * 2); // OUDS mod
   padding-right: calc($dropdown-padding-x - $btn-border-width); // OUDS mod
   padding-left: calc($dropdown-padding-x - $btn-border-width); // OUDS mod
 
