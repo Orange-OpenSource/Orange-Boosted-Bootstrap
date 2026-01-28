@@ -1,3 +1,8 @@
+@use "../../../scss/config" as *;
+@use "../../../scss/mixins/breakpoints" as *;
+
+$brand: "orange" !default;
+
 // OUDS mod
 .bd-masthead {
   @if ($brand == "orange") {

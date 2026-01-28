@@ -1,3 +1,9 @@
+@use "sass:math";
+@use "../config" as *;
+@use "../variables" as *;
+@use "../maps" as *;
+@use "breakpoints" as *;
+
 // Grid system
 //
 // Generate semantic grid columns with these mixins.
@@ -38,7 +44,7 @@
 @mixin make-col($size: false, $columns: $grid-columns) {
   @if $size {
     flex: 0 0 auto;
-    width: percentage(divide($size, $columns));
+    width: math.percentage(math.div($size, $columns));
 
   } @else {
     flex: 1 1 0;
@@ -52,8 +58,8 @@
 }
 
 @mixin make-col-offset($size, $columns: $grid-columns) {
-  $num: divide($size, $columns);
-  margin-left: if($num == 0, 0, percentage($num));
+  $num: math.div($size, $columns);
+  margin-left: if($num == 0, 0, math.percentage($num));
 }
 
 // Row columns
@@ -64,7 +70,7 @@
 @mixin row-cols($count) {
   > * {
     flex: 0 0 auto;
-    width: percentage(divide(1, $count));
+    width: math.percentage(divide(1, $count));
   }
 }
 

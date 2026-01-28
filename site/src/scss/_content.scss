@@ -1,3 +1,9 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/mixins/breakpoints" as *;
+@use "../../../scss/mixins/fonts" as *;
+
+@use "ouds-tokens" as *;
+
 //
 // Bootstrap docs content theming
 //
@@ -168,7 +174,7 @@
     --bs-btn-active-bg: #{darken(mix($gray-600, $blue-400, 50%), 10%)};
     --bs-btn-active-border-color: #{rgba($white, .5)};
     --bs-btn-focus-border-color: #{rgba($white, .5)};
-    --bs-btn-focus-box-shadow: #{$ouds-elevation-default};
+    --bs-btn-focus-box-shadow: #{ouds-token("ouds-elevation-default")};
   }
 }
 // scss-docs-end custom-color-mode

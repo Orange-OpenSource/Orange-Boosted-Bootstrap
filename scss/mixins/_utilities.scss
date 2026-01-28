@@ -1,3 +1,6 @@
+@use "../config" as *;
+@use "fonts" as *;
+
 // Utility generator
 // Used to generate utilities & print utilities
 @mixin generate-utility($utility, $infix: "", $is-rfs-media-query: false) {

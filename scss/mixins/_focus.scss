@@ -1,3 +1,7 @@
+@use "../config" as *;
+@use "../variables" as *;
+@use "transition" as *;
+
 // scss-docs-start focus-visible
 @mixin focus-visible($color: var(--#{$prefix}color-border-focus), $width: $focus-visible-outer-width, $offset: $focus-visible-outer-offset, $box-width: $focus-visible-inner-width, $box-color: var(--#{$prefix}color-border-focus-inset)) {
   isolation: isolate;

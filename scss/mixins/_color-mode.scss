@@ -1,3 +1,5 @@
+@use "../config" as *;
+
 // Kept it quite simple using only light and dark modes, but you can extend it like in https://codepen.io/louismaximepiton/pen/vYbEvLO for example, to allow more color modes.
 // OUDS mod: add `$invert-mode`, root mode and root-inverted mode
 // scss-docs-start color-mode-mixin

@@ -1,3 +1,14 @@
+@use "mixins" as *;
+@use "variables" as *;
+@use "../../../scss/config" as *;
+@use "../../../scss/variables" as *;
+@use "../../../scss/mixins/breakpoints" as *;
+@use "../../../scss/mixins/buttons" as *;
+@use "../../../scss/mixins/fonts" as *;
+@use "../../../scss/mixins/visually-hidden" as *;
+
+@use "ouds-tokens" as *;
+
 @include tac() {
   position: fixed;
   left: 50%;
@@ -57,8 +68,8 @@
   align-items: center;
   padding: $spacer calc((100% - var(--max-width, 312px)) / 2);
   font-weight: $font-weight-bold;
-  color: $core-ouds-color-functional-white;
-  background: $core-ouds-color-functional-black;
+  color: ouds-token("core-ouds-color-functional-white");
+  background: ouds-token("core-ouds-color-functional-black");
   border-top: var(--bs-border-width) solid var(--bs-color-border-default);
 
   @each $breakpoint in map-keys($grid-breakpoints) {
@@ -162,8 +173,8 @@
   right: $modal-content-padding;
   bottom: calc($spacer * -1.5 + var(--bs-border-width));
   padding: $spacer * .25 $spacer * .5;
-  color: $core-ouds-color-functional-white;
-  background-color: $core-ouds-color-functional-black;
+  color: ouds-token("core-ouds-color-functional-white");
+  background-color: ouds-token("core-ouds-color-functional-black");
 }
 
 @include tac("Allow", true) {

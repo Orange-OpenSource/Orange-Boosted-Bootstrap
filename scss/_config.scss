@@ -1,6 +1,42 @@
 // Configuration file for OUDS Web
 
 $prefix: bs- !default;
-$color-mode-type: data !default; // `data` or `media-query`
 
 $ouds-root-selector: ":root" !default;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret:                    true !default;
+$enable-rounded:                  true !default;
+$enable-shadows:                  false !default;
+$enable-gradients:                false !default;
+$enable-transitions:              true !default;
+$enable-reduced-motion:           true !default;
+$enable-smooth-scroll:            true !default;
+$enable-grid-classes:             true !default;
+$enable-container-classes:        true !default;
+$enable-cssgrid:                  false !default;
+$enable-button-pointers:          true !default;
+$enable-rfs:                      false !default;
+$enable-validation-icons:         true !default;
+$enable-negative-margins:         false !default;
+$enable-deprecation-messages:     false !default;
+$enable-important-utilities:      true !default;
+$enable-fixed-header:             true !default; // OUDS mod: used to apply scroll-padding-top
+$enable-bootstrap-compatibility:  false !default; // OUDS mod: used to enforce Bootstrap compatibility
+$enable-bullet-list-tick:         false !default; // OUDS mod: used to optin in the tick marker
+
+
+$enable-dark-mode:            true !default;
+$color-mode-type: data !default; // `data` or `media-query`
+
+// Characters which are escaped by the escape-svg function
+$escaped-characters: (
+  ("<", "%3c"),
+  (">", "%3e"),
+  ("#", "%23"),
+  ("(", "%28"),
+  (")", "%29"),
+) !default;

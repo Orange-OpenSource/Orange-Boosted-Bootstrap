@@ -1,3 +1,7 @@
+@use "../config" as *;
+@use "../variables" as *;
+@use "../maps" as *;
+
 // All-caps `RGBA()` function used because of this Sass bug: https://github.com/sass/node-sass/issues/2251
 @if $enable-bootstrap-compatibility {
   @each $color, $value in map-remove($utilities-bg-colors, "black", "white", "body") {

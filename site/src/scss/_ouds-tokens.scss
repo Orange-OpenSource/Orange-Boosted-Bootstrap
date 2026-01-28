@@ -1,0 +1,23 @@
+@use "sass:meta";
+@use "../../../scss/ouds-tokens" as o;
+// @use "../../../packages/sosh/scss/tokens" as s;
+
+$brand: "orange" !default;
+$orange-tokens: meta.module-variables("o");
+// $sosh-tokens: meta.module-variables("s");
+
+@function ouds-token($token-name) {
+  // @if $brand == "sosh" {
+  //   @each $token, $value in $sosh-tokens {
+  //     @if $token == $token-name {
+  //       @return $value;
+  //     }
+  //   }
+  // }
+  @each $token, $value in $orange-tokens {
+    @if $token == $token-name {
+      @return $value;
+    }
+  }
+  @return null;
+}

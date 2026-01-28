@@ -1,3 +1,9 @@
+@use "../config" as *;
+@use "../variables" as *;
+@use "../maps" as *;
+
+@use "../ouds-tokens" as *;
+
 // scss-docs-start ouds-font-icon-common
 %icon-size {
   display: inline-block;

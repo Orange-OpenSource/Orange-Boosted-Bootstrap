@@ -63,6 +63,8 @@ export function oudsWeb(): AstroIntegration[] {
         'astro:config:setup': ({ addWatchFile, updateConfig }) => {
           // Reload the config when the integration is modified.
           addWatchFile(path.join(getDocsFsPath(), 'src/libs/astro.ts'))
+          console.log(path.join(process.cwd(), 'scss'))
+          addWatchFile(path.join(process.cwd(), 'scss/**/*.scss'))
 
           // Add the remark and rehype plugins.
           updateConfig({
@@ -96,6 +98,15 @@ export function oudsWeb(): AstroIntegration[] {
         },
         'astro:build:done': ({ dir }) => {
           validateVersionedDocsPaths(dir)
+        },
+        'astro:server:setup': ({ server }) => {
+          const scssPath = path.join(process.cwd(), 'scss');
+          // we want to watch the scss in development mode only.
+          if (server.config.mode !== "development") {
+              return;
+          }
+          // server.watcher.add() accept path which we want to watch.
+          server.watcher.add(scssPath);
         }
       }
     },

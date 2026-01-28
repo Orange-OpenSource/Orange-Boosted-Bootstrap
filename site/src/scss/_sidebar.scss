@@ -1,3 +1,11 @@
+@use "variables" as *;
+@use "../../../scss/config" as *;
+@use "../../../scss/variables" as *;
+@use "../../../scss/mixins/breakpoints" as *;
+@use "../../../scss/mixins/fonts" as *;
+
+@use "ouds-tokens" as *;
+
 .bd-sidebar {
   @include media-breakpoint-up(lg) {
     position: sticky;
@@ -15,7 +23,7 @@
   @include media-breakpoint-down(lg) {
     .offcanvas-lg {
       // OUDS mod: no `border-right-color`
-      box-shadow: $ouds-elevation-emphasized;
+      box-shadow: ouds-token("ouds-elevation-emphasized");
     }
   }
 }

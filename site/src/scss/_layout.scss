@@ -1,3 +1,6 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/mixins/breakpoints" as *;
+
 // OUDS mod: no `.bd-gutter`
 
 .bd-layout {

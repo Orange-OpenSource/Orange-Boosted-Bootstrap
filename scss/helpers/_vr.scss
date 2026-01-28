@@ -1,3 +1,7 @@
+@use "../variables" as *;
+
+@use "../ouds-tokens" as *;
+
 .vr {
   display: inline-block;
   align-self: stretch;

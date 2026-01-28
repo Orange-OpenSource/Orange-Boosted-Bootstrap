@@ -1,3 +1,6 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/mixins/breakpoints" as *;
+
 .bd-navbar {
   // OUDS mod: no padding
   // OUDS mod: no background-color

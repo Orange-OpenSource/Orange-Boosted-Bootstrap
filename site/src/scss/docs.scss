@@ -1,3 +1,5 @@
+@use "sass:meta";
+
 /*!
  * Bootstrap Docs (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -22,41 +24,43 @@
 //
 // Happy Bootstrapping!
 
-// fusv-disable
-$enable-rounded: true;
-// fusv-enable
 
-// fusv-disable
-$enable-grid-classes: false;
-$enable-cssgrid: true;
-$enable-bullet-list-tick: true;
-// fusv-enable
-@import "../../../scss/grid";
-@import "../../../scss/bullet-list";
+$brand: "orange" !default;
+
+// configure oudsToken mixin
+@use "ouds-tokens" with (
+  $brand: $brand
+);
 
 // Load docs components
-@import "variables";
-@import "navbar";
-@import "subnav";
-@import "masthead";
-@import "content";
-@import "skippy";
-@import "sidebar";
-@import "layout";
-@import "toc";
-@import "footer";
-@import "component-examples";
-@import "callouts";
-@import "colors";
-@import "clipboard-js";
-@import "placeholder-img";
-@import "scrolling";
+@use "variables";
+@use "navbar";
+@use "subnav";
+@use "masthead" with (
+  $brand: $brand
+);
+@use "content";
+@use "skippy";
+@use "sidebar";
+@use "layout";
+@use "toc";
+@use "footer";
+@use "component-examples";
+// @use "callouts";
+// @use "colors";
+// @use "clipboard-js";
+// @use "placeholder-img";
+// @use "scrolling";
 
-// Load docs dependencies
-@import "syntax";
-@import "anchor";
+// // Load docs dependencies
+// @use "syntax";
+// @use "anchor";
 
-// OUDS mod
-@import "mixins";
-@import "ouds-web";
-@import "tarteaucitron";
+// // OUDS mod
+// @use "mixins";
+// @use "ouds-web";
+@use "tarteaucitron";
+
+// @use "../../../scss/grid";
+// @use "../../../scss/bullet-list";
+

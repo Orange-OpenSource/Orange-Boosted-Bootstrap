@@ -1,3 +1,12 @@
+@use "variables" as *;
+@use "../../../scss/config" as *;
+@use "../../../scss/mixins/breakpoints" as *;
+@use "../../../scss/mixins/border-radius" as *;
+@use "../../../scss/mixins/fonts" as *;
+@use "../../../scss/mixins/lists" as *;
+
+@use "ouds-tokens" as *;
+
 // stylelint-disable selector-max-type, selector-no-qualifying-type
 
 .bd-toc {
@@ -23,13 +32,13 @@
       ul {
         padding-left: 1rem;
         margin-top: 0; // OUDS mod
-        margin-left: -$ouds-space-fixed-xsmall; // OUDS mod
+        margin-left: -ouds-token("ouds-space-fixed-xsmall"); // OUDS mod
       }
     }
 
     a {
       display: block;
-      padding: $ouds-space-fixed-2xsmall 0 $ouds-space-fixed-2xsmall $ouds-space-fixed-medium; // OUDS mod
+      padding: ouds-token("ouds-space-fixed-2xsmall") 0 ouds-token("ouds-space-fixed-2xsmall") ouds-token("ouds-space-fixed-medium"); // OUDS mod
       @include get-font-size("body-small"); // OUDS mod: instead of `1rem`
       font-weight: 400; // OUDS mod: no 'bold' for the sidebar links
       color: inherit;
@@ -69,7 +78,7 @@
 .bd-toc-collapse {
   @include media-breakpoint-down(md) {
     nav {
-      padding: $ouds-space-fixed-medium; // OUDS mod: instead of `1.25rem 1.25rem 1.25rem 1rem`
+      padding: ouds-token("ouds-space-fixed-medium"); // OUDS mod: instead of `1.25rem 1.25rem 1.25rem 1rem`
       background-color: var(--#{$prefix}color-bg-secondary);
       border: 1px solid var(--bs-color-border-emphasized);
       @include border-radius(var(--bs-border-radius));

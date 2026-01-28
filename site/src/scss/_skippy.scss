@@ -1,3 +1,6 @@
+@use "../../../scss/config" as *;
+@use "variables" as *;
+
 .skippy {
   z-index: $zindex-skippy; // OUDS mod
 

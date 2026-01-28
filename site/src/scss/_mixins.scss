@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 // Tarteaucitron shorthand
 @mixin tac($selector: "", $class: false) {
   @if $class == true {
