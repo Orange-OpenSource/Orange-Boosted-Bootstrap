@@ -1,3 +1,5 @@
+@use "../../../scss/mixins/breakpoints" as *;
+
 // When navigating with the keyboard, prevent focus from landing behind the sticky header
 
 main {

@@ -1,3 +1,9 @@
+@use "variables" as *;
+@use "../../../scss/config" as *;
+@use "../../../scss/variables" as *;
+@use "../../../scss/mixins/breakpoints" as *;
+@use "../../../scss/mixins/fonts" as *;
+
 // stylelint-disable selector-max-id
 #{$ouds-root-selector} {
   scroll-padding-top: $offset-top * .5;

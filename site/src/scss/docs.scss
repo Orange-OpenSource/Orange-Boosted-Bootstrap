@@ -27,40 +27,44 @@
 
 $brand: "orange" !default;
 
+$ouds-root-selector: "[data-bs-brand='orange']" !default;
+
 // configure oudsToken mixin
 @use "ouds-tokens" with (
   $brand: $brand
 );
 
-// Load docs components
 @use "variables";
-@use "navbar";
-@use "subnav";
-@use "masthead" with (
-  $brand: $brand
-);
-@use "content";
-@use "skippy";
-@use "sidebar";
-@use "layout";
-@use "toc";
-@use "footer";
-@use "component-examples";
-// @use "callouts";
-// @use "colors";
-// @use "clipboard-js";
-// @use "placeholder-img";
-// @use "scrolling";
+@use "syntax-color";
 
-// // Load docs dependencies
-// @use "syntax";
-// @use "anchor";
+#{$ouds-root-selector} {
+  @include meta.load-css("navbar");
+  @include meta.load-css("subnav");
+  @include meta.load-css("masthead", $with: (
+    "brand": $brand
+  ));
+  @include meta.load-css("content");
+  @include meta.load-css("skippy");
+  @include meta.load-css("sidebar");
+  @include meta.load-css("layout");
+  @include meta.load-css("toc");
+  @include meta.load-css("footer");
+  @include meta.load-css("component-examples");
+  @include meta.load-css("callouts");
+  @include meta.load-css("colors");
+  @include meta.load-css("clipboard-js");
+  @include meta.load-css("placeholder-img");
+  @include meta.load-css("scrolling");
 
-// // OUDS mod
-// @use "mixins";
-// @use "ouds-web";
-@use "tarteaucitron";
+  // // Load docs dependencies
+  @include meta.load-css("syntax");
+  @include meta.load-css("anchor");
 
-// @use "../../../scss/grid";
-// @use "../../../scss/bullet-list";
+  // // OUDS mod
+  @include meta.load-css("mixins");
+  @include meta.load-css("ouds-web");
+  @include meta.load-css("tarteaucitron");
 
+  // @include meta.load-css("../../../scss/grid");
+  // @include meta.load-css("../../../scss/bullet-list");
+}

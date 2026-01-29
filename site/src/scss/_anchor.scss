@@ -1,3 +1,5 @@
+@use "../../../scss/mixins/transition" as *;
+
 .anchor-link {
   padding: 0 .175rem;
   font-weight: 400;
