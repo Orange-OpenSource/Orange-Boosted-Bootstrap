@@ -20,9 +20,9 @@ import fs from 'node:fs'
           return (
             <li class="col">
               <div class="card position-relative h-100">
-                <div class="card-top ratio ratio-16x9">
+                <div class="card-top">
                   <img
-                    class="w-100 object-fit-cover"
+                    class="w-100 object-fit-cover ratio-16x9"
                     src={fs.existsSync(`${process.cwd()}/site/static/${getConfig().brand}/docs/[version]/assets/img/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}.svg`)
                       ? `/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}.svg`
                       : `/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`}
@@ -62,9 +62,9 @@ import fs from 'node:fs'
             return (
               <li class="col">
                 <div class="card position-relative h-100">
-                  <div class="card-top ratio ratio-16x9">
+                  <div class="card-top">
                     <img
-                      class="w-100 object-fit-cover"
+                      class="w-100 object-fit-cover ratio-16x9"
                       src={fs.existsSync(`${process.cwd()}/site/static/${getConfig().brand}/docs/[version]/assets/img/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}.svg`)
                         ? `/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}.svg`
                         : `/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`}
