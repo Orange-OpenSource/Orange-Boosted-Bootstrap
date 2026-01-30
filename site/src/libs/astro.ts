@@ -63,7 +63,6 @@ export function oudsWeb(): AstroIntegration[] {
         'astro:config:setup': ({ addWatchFile, updateConfig }) => {
           // Reload the config when the integration is modified.
           addWatchFile(path.join(getDocsFsPath(), 'src/libs/astro.ts'))
-          console.log(path.join(process.cwd(), 'scss'))
           addWatchFile(path.join(process.cwd(), 'scss/**/*.scss'))
 
           // Add the remark and rehype plugins.

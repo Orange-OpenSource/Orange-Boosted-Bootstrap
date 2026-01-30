@@ -1,3 +1,11 @@
+@use "../config" as *;
+
+@use "raw" as *;
+@use "semantic" as *;
+@use "semantic-colors-custom-props" as *;
+
+@use "../../../../scss/ouds-tokens/component" as *;
+
 // Component application
 // Depends on semantic applications
 // OUDS Core tokens version 1.9.0

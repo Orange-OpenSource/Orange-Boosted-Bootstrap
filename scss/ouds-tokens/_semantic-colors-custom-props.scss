@@ -1,12 +1,12 @@
-// Semantic custom properties applications
-// OUDS Core tokens version 1.9.0
-// Orange Core tokens version 1.2.0
-// Orange System tokens version 2.3.0
-
 @use "../config" as *;
 @use "../mixins/color-mode" as *;
 
 @use "semantic" as *;
+
+// Semantic custom properties applications
+// OUDS Core tokens version 1.9.0
+// Orange Core tokens version 1.2.0
+// Orange System tokens version 2.3.0
 
 // scss-docs-start ouds-all-semantic-css-color
 // scss-docs-start ouds-semantic-css-color
@@ -220,52 +220,24 @@
 $ouds-color-action-disabled: var(--#{$prefix}color-action-disabled) !default;
 $ouds-color-action-enabled: var(--#{$prefix}color-action-enabled) !default;
 $ouds-color-action-focus: var(--#{$prefix}color-action-focus) !default;
-$ouds-color-action-highlighted: var(
-  --#{$prefix}color-action-highlighted
-) !default;
+$ouds-color-action-highlighted: var(--#{$prefix}color-action-highlighted) !default;
 $ouds-color-action-hover: var(--#{$prefix}color-action-hover) !default;
 $ouds-color-action-loading: var(--#{$prefix}color-action-loading) !default;
-$ouds-color-action-negative-enabled: var(
-  --#{$prefix}color-action-negative-enabled
-) !default;
-$ouds-color-action-negative-focus: var(
-  --#{$prefix}color-action-negative-focus
-) !default;
-$ouds-color-action-negative-hover: var(
-  --#{$prefix}color-action-negative-hover
-) !default;
-$ouds-color-action-negative-loading: var(
-  --#{$prefix}color-action-negative-loading
-) !default;
-$ouds-color-action-negative-pressed: var(
-  --#{$prefix}color-action-negative-pressed
-) !default;
+$ouds-color-action-negative-enabled: var(--#{$prefix}color-action-negative-enabled) !default;
+$ouds-color-action-negative-focus: var(--#{$prefix}color-action-negative-focus) !default;
+$ouds-color-action-negative-hover: var(--#{$prefix}color-action-negative-hover) !default;
+$ouds-color-action-negative-loading: var(--#{$prefix}color-action-negative-loading) !default;
+$ouds-color-action-negative-pressed: var(--#{$prefix}color-action-negative-pressed) !default;
 $ouds-color-action-pressed: var(--#{$prefix}color-action-pressed) !default;
-$ouds-color-action-read-only-primary: var(
-  --#{$prefix}color-action-read-only-primary
-) !default;
-$ouds-color-action-read-only-secondary: var(
-  --#{$prefix}color-action-read-only-secondary
-) !default;
+$ouds-color-action-read-only-primary: var(--#{$prefix}color-action-read-only-primary) !default;
+$ouds-color-action-read-only-secondary: var(--#{$prefix}color-action-read-only-secondary) !default;
 $ouds-color-action-selected: var(--#{$prefix}color-action-selected) !default;
-$ouds-color-action-support-disabled: var(
-  --#{$prefix}color-action-support-disabled
-) !default;
-$ouds-color-action-support-enabled: var(
-  --#{$prefix}color-action-support-enabled
-) !default;
-$ouds-color-action-support-focus: var(
-  --#{$prefix}color-action-support-focus
-) !default;
-$ouds-color-action-support-hover: var(
-  --#{$prefix}color-action-support-hover
-) !default;
-$ouds-color-action-support-loading: var(
-  --#{$prefix}color-action-support-loading
-) !default;
-$ouds-color-action-support-pressed: var(
-  --#{$prefix}color-action-support-pressed
-) !default;
+$ouds-color-action-support-disabled: var(--#{$prefix}color-action-support-disabled) !default;
+$ouds-color-action-support-enabled: var(--#{$prefix}color-action-support-enabled) !default;
+$ouds-color-action-support-focus: var(--#{$prefix}color-action-support-focus) !default;
+$ouds-color-action-support-hover: var(--#{$prefix}color-action-support-hover) !default;
+$ouds-color-action-support-loading: var(--#{$prefix}color-action-support-loading) !default;
+$ouds-color-action-support-pressed: var(--#{$prefix}color-action-support-pressed) !default;
 $ouds-color-action-visited: var(--#{$prefix}color-action-visited) !default;
 $ouds-color-always-black: var(--#{$prefix}color-always-black) !default;
 $ouds-color-always-on-black: var(--#{$prefix}color-always-on-black) !default;
@@ -276,176 +248,84 @@ $ouds-color-bg-inverse-low: var(--#{$prefix}color-bg-inverse-low) !default;
 $ouds-color-bg-primary: var(--#{$prefix}color-bg-primary) !default;
 $ouds-color-bg-secondary: var(--#{$prefix}color-bg-secondary) !default;
 $ouds-color-bg-tertiary: var(--#{$prefix}color-bg-tertiary) !default;
-$ouds-color-border-brand-primary: var(
-  --#{$prefix}color-border-brand-primary
-) !default;
+$ouds-color-border-brand-primary: var(--#{$prefix}color-border-brand-primary) !default;
+$ouds-color-border-brand-secondary: null !default;
+$ouds-color-border-brand-tertiary: null !default;
 $ouds-color-border-default: var(--#{$prefix}color-border-default) !default;
-$ouds-color-border-emphasized: var(
-  --#{$prefix}color-border-emphasized
-) !default;
-$ouds-color-border-focus-inset: var(
-  --#{$prefix}color-border-focus-inset
-) !default;
+$ouds-color-border-emphasized: var(--#{$prefix}color-border-emphasized) !default;
+$ouds-color-border-focus-inset: var(--#{$prefix}color-border-focus-inset) !default;
 $ouds-color-border-focus: var(--#{$prefix}color-border-focus) !default;
 $ouds-color-border-minimal: var(--#{$prefix}color-border-minimal) !default;
 $ouds-color-border-muted: var(--#{$prefix}color-border-muted) !default;
-$ouds-color-border-on-brand-primary: var(
-  --#{$prefix}color-border-on-brand-primary
-) !default;
-$ouds-color-border-status-accent: var(
-  --#{$prefix}color-border-status-accent
-) !default;
-$ouds-color-border-status-info: var(
-  --#{$prefix}color-border-status-info
-) !default;
-$ouds-color-border-status-negative: var(
-  --#{$prefix}color-border-status-negative
-) !default;
-$ouds-color-border-status-positive: var(
-  --#{$prefix}color-border-status-positive
-) !default;
-$ouds-color-border-status-warning: var(
-  --#{$prefix}color-border-status-warning
-) !default;
-$ouds-color-content-brand-primary: var(
-  --#{$prefix}color-content-brand-primary
-) !default;
+$ouds-color-border-on-brand-primary: var(--#{$prefix}color-border-on-brand-primary) !default;
+$ouds-color-border-on-brand-secondary: null !default;
+$ouds-color-border-on-brand-tertiary: null !default;
+$ouds-color-border-status-accent: var(--#{$prefix}color-border-status-accent) !default;
+$ouds-color-border-status-info: var(--#{$prefix}color-border-status-info) !default;
+$ouds-color-border-status-negative: var(--#{$prefix}color-border-status-negative) !default;
+$ouds-color-border-status-positive: var(--#{$prefix}color-border-status-positive) !default;
+$ouds-color-border-status-warning: var(--#{$prefix}color-border-status-warning) !default;
+$ouds-color-content-brand-primary: var(--#{$prefix}color-content-brand-primary) !default;
+$ouds-color-content-brand-secondary: null !default;
+$ouds-color-content-brand-tertiary: null !default;
 $ouds-color-content-default: var(--#{$prefix}color-content-default) !default;
 $ouds-color-content-disabled: var(--#{$prefix}color-content-disabled) !default;
 $ouds-color-content-inverse: var(--#{$prefix}color-content-inverse) !default;
 $ouds-color-content-muted: var(--#{$prefix}color-content-muted) !default;
-$ouds-color-content-on-action-disabled: var(
-  --#{$prefix}color-content-on-action-disabled
-) !default;
-$ouds-color-content-on-action-enabled: var(
-  --#{$prefix}color-content-on-action-enabled
-) !default;
-$ouds-color-content-on-action-focus: var(
-  --#{$prefix}color-content-on-action-focus
-) !default;
-$ouds-color-content-on-action-highlighted: var(
-  --#{$prefix}color-content-on-action-highlighted
-) !default;
-$ouds-color-content-on-action-hover: var(
-  --#{$prefix}color-content-on-action-hover
-) !default;
-$ouds-color-content-on-action-loading: var(
-  --#{$prefix}color-content-on-action-loading
-) !default;
-$ouds-color-content-on-action-pressed: var(
-  --#{$prefix}color-content-on-action-pressed
-) !default;
-$ouds-color-content-on-action-selected: var(
-  --#{$prefix}color-content-on-action-selected
-) !default;
-$ouds-color-content-on-brand-primary: var(
-  --#{$prefix}color-content-on-brand-primary
-) !default;
-$ouds-color-content-on-status-accent-emphasized: var(
-  --#{$prefix}color-content-on-status-accent-emphasized
-) !default;
-$ouds-color-content-on-status-accent-muted: var(
-  --#{$prefix}color-content-on-status-accent-muted
-) !default;
-$ouds-color-content-on-status-info-emphasized: var(
-  --#{$prefix}color-content-on-status-info-emphasized
-) !default;
-$ouds-color-content-on-status-info-muted: var(
-  --#{$prefix}color-content-on-status-info-muted
-) !default;
-$ouds-color-content-on-status-negative-emphasized: var(
-  --#{$prefix}color-content-on-status-negative-emphasized
-) !default;
-$ouds-color-content-on-status-negative-muted: var(
-  --#{$prefix}color-content-on-status-negative-muted
-) !default;
-$ouds-color-content-on-status-positive-emphasized: var(
-  --#{$prefix}color-content-on-status-positive-emphasized
-) !default;
-$ouds-color-content-on-status-positive-muted: var(
-  --#{$prefix}color-content-on-status-positive-muted
-) !default;
-$ouds-color-content-on-status-warning-emphasized: var(
-  --#{$prefix}color-content-on-status-warning-emphasized
-) !default;
-$ouds-color-content-on-status-warning-muted: var(
-  --#{$prefix}color-content-on-status-warning-muted
-) !default;
-$ouds-color-content-status-accent: var(
-  --#{$prefix}color-content-status-accent
-) !default;
-$ouds-color-content-status-info: var(
-  --#{$prefix}color-content-status-info
-) !default;
-$ouds-color-content-status-negative: var(
-  --#{$prefix}color-content-status-negative
-) !default;
-$ouds-color-content-status-positive: var(
-  --#{$prefix}color-content-status-positive
-) !default;
-$ouds-color-content-status-warning: var(
-  --#{$prefix}color-content-status-warning
-) !default;
+$ouds-color-content-on-action-disabled: var(--#{$prefix}color-content-on-action-disabled) !default;
+$ouds-color-content-on-action-enabled: var(--#{$prefix}color-content-on-action-enabled) !default;
+$ouds-color-content-on-action-focus: var(--#{$prefix}color-content-on-action-focus) !default;
+$ouds-color-content-on-action-highlighted: var(--#{$prefix}color-content-on-action-highlighted) !default;
+$ouds-color-content-on-action-hover: var(--#{$prefix}color-content-on-action-hover) !default;
+$ouds-color-content-on-action-loading: var(--#{$prefix}color-content-on-action-loading) !default;
+$ouds-color-content-on-action-pressed: var(--#{$prefix}color-content-on-action-pressed) !default;
+$ouds-color-content-on-action-selected: var(--#{$prefix}color-content-on-action-selected) !default;
+$ouds-color-content-on-brand-primary: var(--#{$prefix}color-content-on-brand-primary) !default;
+$ouds-color-content-on-brand-secondary: null !default;
+$ouds-color-content-on-brand-tertiary: null !default;
+$ouds-color-content-on-status-accent-emphasized: var(--#{$prefix}color-content-on-status-accent-emphasized) !default;
+$ouds-color-content-on-status-accent-muted: var(--#{$prefix}color-content-on-status-accent-muted) !default;
+$ouds-color-content-on-status-info-emphasized: var(--#{$prefix}color-content-on-status-info-emphasized) !default;
+$ouds-color-content-on-status-info-muted: var(--#{$prefix}color-content-on-status-info-muted) !default;
+$ouds-color-content-on-status-negative-emphasized: var(--#{$prefix}color-content-on-status-negative-emphasized) !default;
+$ouds-color-content-on-status-negative-muted: var(--#{$prefix}color-content-on-status-negative-muted) !default;
+$ouds-color-content-on-status-positive-emphasized: var(--#{$prefix}color-content-on-status-positive-emphasized) !default;
+$ouds-color-content-on-status-positive-muted: var(--#{$prefix}color-content-on-status-positive-muted) !default;
+$ouds-color-content-on-status-warning-emphasized: var(--#{$prefix}color-content-on-status-warning-emphasized) !default;
+$ouds-color-content-on-status-warning-muted: var(--#{$prefix}color-content-on-status-warning-muted) !default;
+$ouds-color-content-status-accent: var(--#{$prefix}color-content-status-accent) !default;
+$ouds-color-content-status-info: var(--#{$prefix}color-content-status-info) !default;
+$ouds-color-content-status-negative: var(--#{$prefix}color-content-status-negative) !default;
+$ouds-color-content-status-positive: var(--#{$prefix}color-content-status-positive) !default;
+$ouds-color-content-status-warning: var(--#{$prefix}color-content-status-warning) !default;
 $ouds-color-opacity-lower: var(--#{$prefix}color-opacity-lower) !default;
 $ouds-color-opacity-lowest: var(--#{$prefix}color-opacity-lowest) !default;
-$ouds-color-opacity-transparent: var(
-  --#{$prefix}color-opacity-transparent
-) !default;
+$ouds-color-opacity-transparent: var(--#{$prefix}color-opacity-transparent) !default;
 $ouds-color-overlay-drag: var(--#{$prefix}color-overlay-drag) !default;
 $ouds-color-overlay-dropdown: var(--#{$prefix}color-overlay-dropdown) !default;
 $ouds-color-overlay-modal: var(--#{$prefix}color-overlay-modal) !default;
 $ouds-color-overlay-tooltip: var(--#{$prefix}color-overlay-tooltip) !default;
-$ouds-color-surface-brand-primary: var(
-  --#{$prefix}color-surface-brand-primary
-) !default;
-$ouds-color-surface-inverse-high: var(
-  --#{$prefix}color-surface-inverse-high
-) !default;
-$ouds-color-surface-inverse-low: var(
-  --#{$prefix}color-surface-inverse-low
-) !default;
+$ouds-color-surface-brand-primary: var(--#{$prefix}color-surface-brand-primary) !default;
+$ouds-color-surface-brand-secondary: null !default;
+$ouds-color-surface-brand-tertiary: null !default;
+$ouds-color-surface-inverse-high: var(--#{$prefix}color-surface-inverse-high) !default;
+$ouds-color-surface-inverse-low: var(--#{$prefix}color-surface-inverse-low) !default;
 $ouds-color-surface-primary: var(--#{$prefix}color-surface-primary) !default;
-$ouds-color-surface-secondary: var(
-  --#{$prefix}color-surface-secondary
-) !default;
-$ouds-color-surface-status-accent-emphasized: var(
-  --#{$prefix}color-surface-status-accent-emphasized
-) !default;
-$ouds-color-surface-status-accent-muted: var(
-  --#{$prefix}color-surface-status-accent-muted
-) !default;
-$ouds-color-surface-status-info-emphasized: var(
-  --#{$prefix}color-surface-status-info-emphasized
-) !default;
-$ouds-color-surface-status-info-muted: var(
-  --#{$prefix}color-surface-status-info-muted
-) !default;
-$ouds-color-surface-status-negative-emphasized: var(
-  --#{$prefix}color-surface-status-negative-emphasized
-) !default;
-$ouds-color-surface-status-negative-muted: var(
-  --#{$prefix}color-surface-status-negative-muted
-) !default;
-$ouds-color-surface-status-positive-emphasized: var(
-  --#{$prefix}color-surface-status-positive-emphasized
-) !default;
-$ouds-color-surface-status-positive-muted: var(
-  --#{$prefix}color-surface-status-positive-muted
-) !default;
-$ouds-color-surface-status-warning-emphasized: var(
-  --#{$prefix}color-surface-status-warning-emphasized
-) !default;
-$ouds-color-surface-status-warning-muted: var(
-  --#{$prefix}color-surface-status-warning-muted
-) !default;
+$ouds-color-surface-secondary: var(--#{$prefix}color-surface-secondary) !default;
+$ouds-color-surface-status-accent-emphasized: var(--#{$prefix}color-surface-status-accent-emphasized) !default;
+$ouds-color-surface-status-accent-muted: var(--#{$prefix}color-surface-status-accent-muted) !default;
+$ouds-color-surface-status-info-emphasized: var(--#{$prefix}color-surface-status-info-emphasized) !default;
+$ouds-color-surface-status-info-muted: var(--#{$prefix}color-surface-status-info-muted) !default;
+$ouds-color-surface-status-negative-emphasized: var(--#{$prefix}color-surface-status-negative-emphasized) !default;
+$ouds-color-surface-status-negative-muted: var(--#{$prefix}color-surface-status-negative-muted) !default;
+$ouds-color-surface-status-positive-emphasized: var(--#{$prefix}color-surface-status-positive-emphasized) !default;
+$ouds-color-surface-status-positive-muted: var(--#{$prefix}color-surface-status-positive-muted) !default;
+$ouds-color-surface-status-warning-emphasized: var(--#{$prefix}color-surface-status-warning-emphasized) !default;
+$ouds-color-surface-status-warning-muted: var(--#{$prefix}color-surface-status-warning-muted) !default;
 $ouds-color-surface-tertiary: var(--#{$prefix}color-surface-tertiary) !default;
-$ouds-elevation-color-default: var(
-  --#{$prefix}elevation-color-default
-) !default;
+$ouds-elevation-color-default: var(--#{$prefix}elevation-color-default) !default;
 $ouds-elevation-color-drag: var(--#{$prefix}elevation-color-drag) !default;
-$ouds-elevation-color-emphasized: var(
-  --#{$prefix}elevation-color-emphasized
-) !default;
+$ouds-elevation-color-emphasized: var(--#{$prefix}elevation-color-emphasized) !default;
 $ouds-elevation-color-none: var(--#{$prefix}elevation-color-none) !default;
 $ouds-elevation-color-raised: var(--#{$prefix}elevation-color-raised) !default;
 $ouds-elevation-color-sticky: var(--#{$prefix}elevation-color-sticky) !default;

@@ -2,7 +2,7 @@ import { exporter } from 'sass-export'
 import { getConfig } from './config'
 
 const options = {
-  inputFiles: [`packages/${getConfig().brand}/scss/tokens/_raw.scss`, `packages/${getConfig().brand}/scss/tokens/_semantic.scss`],
+  // inputFiles: [`scss/${getConfig().brand}/scss/tokens/_raw.scss`, `packages/${getConfig().brand}/scss/tokens/_semantic.scss`],
   includePaths: []
 }
 

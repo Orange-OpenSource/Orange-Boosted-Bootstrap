@@ -1,14 +1,14 @@
-// Component application
-// Depends on semantic applications
-// OUDS Core tokens version 1.9.0
-// Orange Core tokens version 1.2.0
-// Orange System tokens version 2.3.0
-
 @use "../config" as *;
 
 @use "raw" as *;
 @use "semantic" as *;
 @use "semantic-colors-custom-props" as *;
+
+// Orange System tokens version 2.3.0
+// Component application
+// Depends on semantic applications
+// OUDS Core tokens version 1.9.0
+// Orange Core tokens version 1.2.0
 
 // Alert
 

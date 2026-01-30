@@ -5,13 +5,6 @@
 <style is:global lang="scss">
   @use 'sass:meta';
   @include meta.load-css(
-    '../../scss/docs',
-    $with: ('brand': 'orange', 'ouds-root-selector': "[data-bs-brand='orange']")
-  );
-</style>
-<style is:global lang="scss">
-  @use 'sass:meta';
-  @include meta.load-css(
     '../../../../scss/ouds-web-bootstrap-sosh.scss',
     $with: (
       'ouds-root-selector': "[data-bs-brand='sosh']",

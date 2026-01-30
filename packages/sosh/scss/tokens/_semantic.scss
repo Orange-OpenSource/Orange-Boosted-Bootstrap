@@ -1,3 +1,7 @@
+@use "raw" as *;
+
+// @use "../../../../scss/ouds-tokens/semantic" as *;
+
 // Semantic applications
 // Depends on raw primitive values
 // OUDS Core tokens version 1.9.0
@@ -5,6 +9,8 @@
 // Sosh System tokens version 2.3.0
 
 // Border
+
+@debug $core-ouds-border-radius-100;
 
 // scss-docs-start ouds-semantic-border
 $ouds-border-radius-default: $core-ouds-border-radius-100 !default;

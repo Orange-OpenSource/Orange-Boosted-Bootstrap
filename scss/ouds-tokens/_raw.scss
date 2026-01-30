@@ -241,6 +241,55 @@ $core-ouds-color-opacity-white-840: rgba(255, 255, 255, .84) !default;
 $core-ouds-color-opacity-white-880: rgba(255, 255, 255, .88) !default;
 $core-ouds-color-opacity-white-920: rgba(255, 255, 255, .92) !default;
 $core-ouds-color-opacity-white-960: rgba(255, 255, 255, .96) !default;
+$core-sosh-color-blue-duck-dark-80: #33b1c1 !default;
+$core-sosh-color-blue-duck-dark-160: #2fa3b1 !default;
+$core-sosh-color-blue-duck-dark-240: #2b94a1 !default;
+$core-sosh-color-blue-duck-dark-320: #26828e !default;
+$core-sosh-color-blue-duck-dark-400: #247a85 !default;
+$core-sosh-color-blue-duck-dark-480: #1e6771 !default;
+$core-sosh-color-blue-duck-dark-560: #1a5961 !default;
+$core-sosh-color-blue-duck-dark-640: #154a51 !default;
+$core-sosh-color-blue-duck-dark-720: #113b40 !default;
+$core-sosh-color-blue-duck-dark-800: #0e2f34 !default;
+$core-sosh-color-blue-duck-dark-880: #0b2428 !default;
+$core-sosh-color-blue-duck-dark-960: #061618 !default;
+$core-sosh-color-blue-duck-light-80: #f0f7fa !default;
+$core-sosh-color-blue-duck-light-160: #dff4f6 !default;
+$core-sosh-color-blue-duck-light-240: #cfeef2 !default;
+$core-sosh-color-blue-duck-light-320: #bfe8ee !default;
+$core-sosh-color-blue-duck-light-400: #aee3ea !default;
+$core-sosh-color-blue-duck-light-480: #9edde5 !default;
+$core-sosh-color-blue-duck-light-560: #8ed8e1 !default;
+$core-sosh-color-blue-duck-light-640: #7ed2dd !default;
+$core-sosh-color-blue-duck-light-720: #6eccd8 !default;
+$core-sosh-color-blue-duck-light-800: #5ec7d4 !default;
+$core-sosh-color-blue-duck-light-880: #4ec1d0 !default;
+$core-sosh-color-blue-duck-light-960: #3ebbcc !default;
+$core-sosh-color-citrine-50: #f6f5ee !default;
+$core-sosh-color-citrine-100: #fff6cc !default;
+$core-sosh-color-citrine-200: #ffec99 !default;
+$core-sosh-color-citrine-300: #ffe366 !default;
+$core-sosh-color-citrine-400: #ffd92e !default;
+$core-sosh-color-citrine-500: #fbcd00 !default;
+$core-sosh-color-citrine-600: #c7a200 !default;
+$core-sosh-color-citrine-700: #997d00 !default;
+$core-sosh-color-citrine-800: #665300 !default;
+$core-sosh-color-citrine-900: #332a00 !default;
+$core-sosh-color-citrine-950: #241d00 !default;
+$core-sosh-color-citrine-1000: #191500 !default;
+$core-sosh-color-magenta-50: #fce9ee !default;
+$core-sosh-color-magenta-100: #f8d3dc !default;
+$core-sosh-color-magenta-200: #f2a6b9 !default;
+$core-sosh-color-magenta-300: #eb7a96 !default;
+$core-sosh-color-magenta-400: #e55277 !default;
+$core-sosh-color-magenta-500: #d5204e !default; // Test for support Figma
+$core-sosh-color-magenta-600: #b61b42 !default;
+$core-sosh-color-magenta-700: #851430 !default;
+$core-sosh-color-magenta-800: #590d20 !default;
+$core-sosh-color-magenta-900: #2c0710 !default;
+$core-sosh-color-magenta-950: #160308 !default;
+$core-sosh-color-opacity-magenta-120: rgba(229, 82, 119, .12) !default; // Test for support Figma
+$core-sosh-color-opacity-magenta-640: rgba(133, 20, 48, .64) !default; // Test for support Figma
 // scss-docs-end ouds-raw-color
 
 // Dimension
@@ -398,6 +447,7 @@ $core-ouds-font-weight-700: 700 !default;
 $core-ouds-font-weight-800: 800 !default;
 $core-ouds-font-weight-900: 900 !default;
 $core-ouds-font-weight-950: 950 !default;
+$core-sosh-font-family-default: "Sosh" !default;
 // scss-docs-end ouds-raw-font
 
 // Grid
@@ -483,3 +533,9 @@ $core-ouds-opacity-920: .92 !default;
 $core-ouds-opacity-960: .96 !default;
 $core-ouds-opacity-1000: 1 !default;
 // scss-docs-end ouds-raw-opacity
+
+// Version: "1.2.0" !default;
+
+// scss-docs-start ouds-raw-version: "1.2.0" !default;
+$core-sosh-version: "1.2.0" !default;
+// scss-docs-end ouds-raw-version: "1.2.0" !default;

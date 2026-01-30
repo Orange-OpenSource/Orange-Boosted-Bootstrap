@@ -1,10 +1,10 @@
+@use "raw" as *;
+
 // Semantic applications
 // Depends on raw primitive values
 // OUDS Core tokens version 1.9.0
 // Orange Core tokens version 1.2.0
 // Orange System tokens version 2.3.0
-
-@use "raw" as *;
 
 // Border
 
@@ -144,6 +144,10 @@ $ouds-color-bg-tertiary-dark: $core-orange-color-warm-gray-900 !default;
 $ouds-color-bg-tertiary-light: $core-orange-color-warm-gray-100 !default;
 $ouds-color-border-brand-primary-dark: $core-orange-color-orange-500 !default;
 $ouds-color-border-brand-primary-light: $core-orange-color-orange-550 !default;
+$ouds-color-border-brand-secondary-dark: null !default;
+$ouds-color-border-brand-secondary-light: null !default;
+$ouds-color-border-brand-tertiary-dark: null !default;
+$ouds-color-border-brand-tertiary-light: null !default;
 $ouds-color-border-default-dark: $core-ouds-color-opacity-white-200 !default;
 $ouds-color-border-default-light: $core-ouds-color-opacity-black-200 !default;
 $ouds-color-border-emphasized-dark: $core-ouds-color-opacity-white-920 !default;
@@ -158,6 +162,10 @@ $ouds-color-border-muted-dark: $core-ouds-color-opacity-white-80 !default;
 $ouds-color-border-muted-light: $core-ouds-color-opacity-black-80 !default;
 $ouds-color-border-on-brand-primary-dark: $core-ouds-color-functional-black !default;
 $ouds-color-border-on-brand-primary-light: $core-ouds-color-functional-black !default;
+$ouds-color-border-on-brand-secondary-dark: null !default;
+$ouds-color-border-on-brand-secondary-light: null !default;
+$ouds-color-border-on-brand-tertiary-dark: null !default;
+$ouds-color-border-on-brand-tertiary-light: null !default;
 $ouds-color-border-status-accent-dark: $core-orange-color-orange-500 !default;
 $ouds-color-border-status-accent-light: $core-orange-color-orange-500 !default;
 $ouds-color-border-status-info-dark: $core-ouds-color-functional-dodger-blue-300 !default;
@@ -170,6 +178,10 @@ $ouds-color-border-status-warning-dark: $core-ouds-color-functional-sun-300 !def
 $ouds-color-border-status-warning-light: $core-ouds-color-functional-sun-500 !default;
 $ouds-color-content-brand-primary-dark: $core-orange-color-orange-500 !default;
 $ouds-color-content-brand-primary-light: $core-orange-color-orange-550 !default; // Test for support Figma
+$ouds-color-content-brand-secondary-dark: null !default;
+$ouds-color-content-brand-secondary-light: null !default;
+$ouds-color-content-brand-tertiary-dark: null !default;
+$ouds-color-content-brand-tertiary-light: null !default;
 $ouds-color-content-default-dark: $core-ouds-color-functional-gray-light-160 !default;
 $ouds-color-content-default-light: $core-ouds-color-functional-black !default;
 $ouds-color-content-disabled-dark: $core-ouds-color-opacity-white-200 !default;
@@ -196,6 +208,10 @@ $ouds-color-content-on-action-selected-dark: $core-ouds-color-functional-black !
 $ouds-color-content-on-action-selected-light: $core-ouds-color-functional-white !default;
 $ouds-color-content-on-brand-primary-dark: $core-ouds-color-functional-black !default;
 $ouds-color-content-on-brand-primary-light: $core-ouds-color-functional-black !default;
+$ouds-color-content-on-brand-secondary-dark: null !default;
+$ouds-color-content-on-brand-secondary-light: null !default;
+$ouds-color-content-on-brand-tertiary-dark: null !default;
+$ouds-color-content-on-brand-tertiary-light: null !default;
 $ouds-color-content-on-status-accent-emphasized-dark: $core-ouds-color-functional-black !default;
 $ouds-color-content-on-status-accent-emphasized-light: $core-ouds-color-functional-black !default;
 $ouds-color-content-on-status-accent-muted-dark: $core-ouds-color-functional-gray-light-160 !default;
@@ -242,6 +258,10 @@ $ouds-color-overlay-tooltip-dark: $core-ouds-color-functional-gray-dark-560 !def
 $ouds-color-overlay-tooltip-light: $core-ouds-color-functional-gray-dark-720 !default;
 $ouds-color-surface-brand-primary-dark: $core-orange-color-orange-500 !default;
 $ouds-color-surface-brand-primary-light: $core-orange-color-orange-500 !default;
+$ouds-color-surface-brand-secondary-dark: null !default;
+$ouds-color-surface-brand-secondary-light: null !default;
+$ouds-color-surface-brand-tertiary-dark: null !default;
+$ouds-color-surface-brand-tertiary-light: null !default;
 $ouds-color-surface-inverse-high-dark: $core-ouds-color-functional-gray-light-160 !default;
 $ouds-color-surface-inverse-high-light: $core-ouds-color-functional-gray-dark-720 !default;
 $ouds-color-surface-inverse-low-dark: $core-ouds-color-opacity-white-120 !default;

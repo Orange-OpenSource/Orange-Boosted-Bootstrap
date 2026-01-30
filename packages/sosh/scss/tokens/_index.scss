@@ -1,6 +1,6 @@
-@import "raw"; // TODO: Make it a tokenator file ?
-@import "semantic";
-@import "semantic-colors-custom-props";
-@import "composite";
-@import "component-colors-custom-props";
-@import "component";
+@forward "raw";
+@forward "semantic";
+@forward "semantic-colors-custom-props";
+@forward "composite";
+@forward "component-colors-custom-props";
+@forward "component";

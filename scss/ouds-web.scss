@@ -1,0 +1,59 @@
+@use "banner";
+
+// At least forward config so we can use the "with" keyword on these variables when @using the lib
+//  maybe we need to forward variables too, or suggest the variable reassignment for it
+//  see https://sass-lang.com/documentation/at-rules/use/#reassigning-variables
+@forward "config";
+
+// Layout & components
+@forward "root";
+@forward "reboot";
+@forward "type";
+@forward "images";
+@forward "containers";
+@forward "grid";
+// @forward "tables";
+// @forward "forms";
+// @forward "links"; // OUDS mod
+// @forward "bullet-list"; // OUDS mod
+@forward "buttons";
+// @forward "chips"; // OUDS mod
+@forward "transitions";
+@forward "dropdown";
+// @forward "button-group";
+@forward "nav";
+@forward "navbar";
+// @forward "card";
+// @forward "accordion";
+// @forward "breadcrumb";
+// @forward "pagination";
+// @forward "badges";
+// @forward "tags";
+// @forward "alert";
+// @forward "progress";
+// @forward "list-group";
+// @forward "close";
+// @forward "toasts";
+// @forward "modal";
+// @forward "tooltip";
+// @forward "popover";
+// @forward "carousel";
+// @forward "spinners";
+// @forward "offcanvas";
+// @forward "placeholders";
+
+// OUDS Web
+// @forward "back-to-top";
+// @forward "footer";
+// @forward "local-navigation";
+@forward "orange-navbar";
+// @forward "stepped-process";
+// @forward "sticker";
+// @forward "title-bars";
+
+// Helpers
+@forward "helpers";
+
+// Utilities
+@forward "utilities/api";
+// scss-docs-end forward-stack
