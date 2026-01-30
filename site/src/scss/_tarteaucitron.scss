@@ -137,9 +137,9 @@
 }
 
 @include tac("Line", true) {
+  display: flow-root;
   margin-bottom: $spacer;
   overflow: visible;
-  @include clearfix();
 }
 
 @include tac("MainLine", true) {

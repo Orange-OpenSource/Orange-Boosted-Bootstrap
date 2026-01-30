@@ -311,13 +311,13 @@ The `.col-*` classes can also be used outside a `.row` to give an element a spec
     .col-sm-9: width of 75% above sm breakpoint
   </div>`} />
 
-The classes can be used together with utilities to create responsive floated images. Make sure to wrap the content in a [`.clearfix`]([[docsref:/utilities/clearfix]]) wrapper to clear the float if the text is shorter.
+The classes can be used together with utilities to create responsive floated images. Make sure to wrap the content in a [`.d-flow-root`]([[docsref:/utilities/display#clearfix]]) wrapper to clear the float if the text is shorter.
 
-<Example code={`<div class="clearfix">
+<Example code={`<div class="d-flow-root">
     <Placeholder width="100%" height="210" class="col-md-6 float-md-end mb-large ms-md-large" text="Responsive floated image" color="#999" />
 
     <p>
-      A paragraph of placeholder text. We’re using it here to show the use of the clearfix class. We’re adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
+      A paragraph of placeholder text. We’re using it here to show the use of the d-flow-root class. We’re adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
     </p>
 
     <p>
