@@ -11,6 +11,13 @@ $utilities: map-merge(
       values: baseline top middle bottom text-bottom text-top
     ),
     // scss-docs-end utils-vertical-align
+    // scss-docs-start utils-aspect-ratio
+    "aspect-ratio": (
+      property: aspect-ratio,
+      class: ratio,
+      values: $aspect-ratios
+    ),
+    // scss-docs-end utils-aspect-ratio
     // scss-docs-start utils-float
     "float": (
       responsive: true,
@@ -76,7 +83,7 @@ $utilities: map-merge(
       print: true,
       property: display,
       class: d,
-      values: inline inline-block block grid inline-grid table table-row table-cell flex inline-flex none
+      values: inline inline-block block grid inline-grid table table-row table-cell flex inline-flex flow-root none
     ),
     // scss-docs-end utils-display
     // scss-docs-start utils-shadow

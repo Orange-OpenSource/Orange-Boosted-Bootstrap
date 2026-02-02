@@ -373,6 +373,10 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 ## Helpers
 
+### Clearfix
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Clearfix helper `.clearfix` and Sass mixin `clearfix()` have been removed in favor of display utility `.d-flow-root`. See [display utility for clearfix]([[docsref:/utilities/display#clearfix]])
+
 ### Color background
 
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> Color-background color helpers have been removed. Classes still exist for Bootstrap compatibility.
@@ -403,6 +407,10 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> Responsive sticky helpers `.sticky-xxl-{top|bottom}` have been removed and replaced by their equivalent `.sticky-2xl-{top|bottom}`. You can still have them using `$enable-bootstrap-compatibility`.
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> Responsive sticky helpers: `.sticky-xs-{top|bottom}`, `.sticky-2xl-{top|bottom}` and `.sticky-3xl-{top|bottom}`.
+
+#### Ratio
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.ratio` has been replaced by the aspect-ratio based `.ratio-*` utilities. These utilities are applied directly on the target element, a container is no longer needed. Read more about [aspect ratio]([[docsref:/utilities/aspect-ratio]]).
 
 ### Vertical rule
 
