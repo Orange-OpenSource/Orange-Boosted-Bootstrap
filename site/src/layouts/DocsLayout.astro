@@ -71,7 +71,7 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
       </div>
     </aside>
 
-    <main class="bd-main order-1">
+    <main role="main" class="bd-main order-1">
       <div class="bd-intro pt-small ps-lg-small">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <div class="mb-large mb-md-none d-flex text-nowrap">
@@ -95,7 +95,7 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
               View on GitHub
             </a>
           </div>
-          <h1 class="bd-title mb-none" id="content">{frontmatter.title}</h1>
+          <h1 class="bd-title mb-none" id="bd-content">{frontmatter.title}</h1>
         </div>
         <div class="bd-subtitle mt-small">
           {frontmatter.description && <Fragment set:html={processMarkdownToHtml(frontmatter.description)} />}
