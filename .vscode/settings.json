@@ -5,6 +5,6 @@
   },
   "editor.renderWhitespace": "all",
   "scss.validate": false,
-  "stylelint.enable": false,
+  "stylelint.enable": true,
   "stylelint.validate": ["scss"]
 }

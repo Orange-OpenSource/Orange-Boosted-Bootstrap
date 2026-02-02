@@ -37,7 +37,7 @@
   .bd-masthead-code {
     @include media-breakpoint-up(md) {
       width: 100%;
-      max-width: 31rem;
+      max-width: fit-content;
     }
 
     .highlight {
