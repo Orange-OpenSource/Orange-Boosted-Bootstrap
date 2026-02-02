@@ -1,0 +1,21 @@
+@import "@ouds/web-common/scss/mixins/banner";
+@include bsBanner(Utilities);
+
+// Configuration
+@import "@ouds/web-common/scss/config";
+@import "@ouds/web-common/scss/functions";
+@import "@ouds/web-orange-business-tools/scss/tokens";
+@import "@ouds/web-common/scss/variables";
+@import "@ouds/web-common/scss/variables-dark";
+@import "@ouds/web-common/scss/maps";
+@import "@ouds/web-common/scss/mixins";
+@import "@ouds/web-common/scss/utilities";
+
+// Layout & components
+@import "@ouds/web-common/scss/root";
+
+// Helpers
+@import "@ouds/web-common/scss/helpers";
+
+// Utilities
+@import "@ouds/web-common/scss/utilities/api";

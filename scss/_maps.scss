@@ -58,7 +58,6 @@ $ouds-dimension-space-scaled: (
   "3xlarge": var(--#{$prefix}space-scaled-3xlarge)
 ) !default;
 
-// stylelint-disable function-disallowed-list
 $ouds-dimension-negative-space-scaled: (
   "n3xsmall": calc(-1 * var(--#{$prefix}space-scaled-3xsmall)),
   "n2xsmall": calc(-1 * var(--#{$prefix}space-scaled-2xsmall)),
@@ -70,7 +69,6 @@ $ouds-dimension-negative-space-scaled: (
   "n2xlarge": calc(-1 * var(--#{$prefix}space-scaled-2xlarge)),
   "n3xlarge": calc(-1 * var(--#{$prefix}space-scaled-3xlarge))
 ) !default;
-// stylelint-enable function-disallowed-list
 
 // scss-docs-start ouds-maps-dimension-fixed
 $ouds-dimension-space-fixed: (

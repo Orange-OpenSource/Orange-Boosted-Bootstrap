@@ -1,0 +1,27 @@
+/*!
+ * Solaris Icons
+ */
+
+@font-face {
+  font-family: solaris-icons;
+  src: url("../assets/fonts/solaris-icons.woff2?6f20fa3dc5b85657bd097bf634024015") format("woff2");
+  font-display: block;
+}
+
+.si::before,
+[class^="si-"]::before,
+[class*="si-"]::before {
+  display: inline-block;
+  font-family: solaris-icons !important; /* stylelint-disable-line declaration-no-important,font-family-no-missing-generic-family-keyword */
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400 !important; /* stylelint-disable-line declaration-no-important */
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+  vertical-align: text-top;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.si-settings::before { content: "\f101"; }
