@@ -164,7 +164,7 @@
   // Forgive Safari's selectors list
   &:is(:has(:open), :not(:has(:disabled:checked))) {
     > label {
-      top: calc(var(--#{$prefix}text-input-padding-y) + .25rem + .5 * (var(--#{$prefix}font-size-label-small) * var(--#{$prefix}font-line-height-label-small)));
+      top: calc(var(--#{$prefix}text-input-padding-y) + .5 * (var(--#{$prefix}font-size-label-small) * var(--#{$prefix}font-line-height-label-small)) + .5 * (var(--#{$prefix}text-input-min-height) - 2 * var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}font-size-label-small) * var(--#{$prefix}font-line-height-label-small) - var(--#{$prefix}font-size-label-large) * var(--#{$prefix}font-line-height-label-large)));
       white-space: nowrap;
       @include get-font-size("label-small");
     }
