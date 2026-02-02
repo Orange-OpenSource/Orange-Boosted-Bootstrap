@@ -36,8 +36,8 @@ export const config: Config = {
     angularOutputTarget({
       componentCorePackage: '@ouds/web-components',
       outputType: 'standalone',
-      directivesProxyFile: '../web-components-angular/projects/component-library/src/lib/stencil/components.ts',
-      directivesArrayFile: '../web-components-angular/projects/component-library/src/lib/stencil/index.ts',
+      directivesProxyFile: '../web-components-angular/lib/stencil-generated/components.ts',
+      directivesArrayFile: '../web-components-angular/lib/stencil-generated/index.ts',
       customElementsDir: 'dist/components',
     }),
     reactOutputTarget({

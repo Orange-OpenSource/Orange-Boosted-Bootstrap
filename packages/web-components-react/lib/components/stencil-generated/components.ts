@@ -7,13 +7,14 @@
 
 /* eslint-disable */
 
+import { type OudsButtonCustomEvent } from "@ouds/web-components";
 import { OudsButton as OudsButtonElement, defineCustomElement as defineOudsButton } from "@ouds/web-components/dist/components/ouds-button.js";
 import { OudsTextInput as OudsTextInputElement, defineCustomElement as defineOudsTextInput } from "@ouds/web-components/dist/components/ouds-text-input.js";
 import type { EventName, StencilReactComponent } from '@stencil/react-output-target/runtime';
 import { createComponent } from '@stencil/react-output-target/runtime';
 import React from 'react';
 
-export type OudsButtonEvents = { onOudsButtonClick: EventName<CustomEvent<void>> };
+export type OudsButtonEvents = { onOudsButtonClick: EventName<OudsButtonCustomEvent<void>> };
 
 export const OudsButton: StencilReactComponent<OudsButtonElement, OudsButtonEvents> = /*@__PURE__*/ createComponent<OudsButtonElement, OudsButtonEvents>({
     tagName: 'ouds-button',

@@ -1,47 +1,50 @@
 {
-  "name": "@ouds/web-angular",
+  "name": "@ouds/web-components-angular",
   "version": "0.0.1",
+  "module": "dist/lib/fesm2022/ouds-web-components-angular.mjs",
+  "typings": "dist/lib/index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./dist/lib/package.json"
+    },
+    ".": {
+      "types": "./dist/lib/index.d.ts",
+      "default": "./dist/lib/fesm2022/ouds-web-components-angular.mjs"
+    }
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "figma:publish": "figma connect publish"
   },
-  "prettier": {
-    "printWidth": 100,
-    "singleQuote": true,
-    "overrides": [
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "angular"
-        }
-      }
-    ]
-  },
-  "private": true,
-  "packageManager": "npm@10.9.2",
   "dependencies": {
-    "@angular/common": "^21.0.8",
-    "@angular/compiler": "^21.0.8",
-    "@angular/core": "^21.0.8",
-    "@angular/forms": "^21.0.8",
-    "@angular/platform-browser": "^21.0.8",
-    "@angular/router": "^21.0.8",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@ouds/web-components": "^0.0.1"
   },
   "devDependencies": {
-    "@angular/build": "^21.0.5",
-    "@angular/cli": "^21.0.5",
-    "@angular/compiler-cli": "^21.0.8",
-    "jsdom": "^27.1.0",
-    "ng-packagr": "^21.0.8",
-    "typescript": "~5.9.2",
-    "vitest": "^4.0.8"
-  },
-  "files": [
-    "dist/component-library/*"
-  ]
+    "@angular/animations": "^19.1.0",
+    "@angular/common": "^19.1.0",
+    "@angular/compiler": "^19.1.0",
+    "@angular/core": "^19.1.0",
+    "@angular/forms": "^19.1.0",
+    "@angular/platform-browser": "^19.1.0",
+    "@angular/platform-browser-dynamic": "^19.1.0",
+    "@angular/router": "^19.1.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0",
+    "@angular-devkit/build-angular": "^19.1.6",
+    "@angular/cli": "^19.1.6",
+    "@angular/compiler-cli": "^19.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-packagr": "^19.1.0",
+    "typescript": "~5.7.2"
+  }
 }

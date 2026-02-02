@@ -138,6 +138,10 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
+          * The `id` of a `<form>` element to associate this element with.
+         */
+        "form"?: string;
+        /**
           * @default false
          */
         "invalid"?: boolean;
@@ -146,6 +150,10 @@ declare namespace LocalJSX {
           * @default false
          */
         "maxWidth"?: boolean;
+        /**
+          * The name of the element, used when submitting an HTML form.
+         */
+        "name"?: string;
         /**
           * @default false
          */

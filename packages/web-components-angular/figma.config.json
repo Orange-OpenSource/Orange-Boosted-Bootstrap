@@ -1,0 +1,12 @@
+{
+  "codeConnect": {
+    "label": "Angular",
+    "include": [
+      "./figma/**/*.figma.ts"
+    ],
+    "exclude": [
+      "**/node_modules/**",
+      "./lib/**"
+    ]
+  }
+}
