@@ -40,7 +40,7 @@
   justify-content: center;
   min-width: $ouds-chip-size-min-width;
   min-height: $ouds-chip-size-min-height;
-  padding: subtract(var(--#{$prefix}chip-padding-block), var(--#{$prefix}chip-border-width)) subtract(var(--#{$prefix}chip-padding-end), var(--#{$prefix}chip-border-width)) subtract(var(--#{$prefix}chip-padding-block), var(--#{$prefix}chip-border-width)) subtract(var(--#{$prefix}chip-padding-start), var(--#{$prefix}chip-border-width));
+  padding: calc(var(--#{$prefix}chip-padding-block) - var(--#{$prefix}chip-border-width)) calc(var(--#{$prefix}chip-padding-end) - var(--#{$prefix}chip-border-width)) calc(var(--#{$prefix}chip-padding-block) - var(--#{$prefix}chip-border-width)) calc(var(--#{$prefix}chip-padding-start) - var(--#{$prefix}chip-border-width));
   @include get-font-size("label-medium");
   font-weight: 700;
   color: var(--#{$prefix}chip-color);

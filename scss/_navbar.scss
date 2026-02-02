@@ -54,7 +54,7 @@
   padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
   // OUDS mod
   font-weight: var(--#{$prefix}navbar-font-weight);
-  box-shadow: inset 0 calc(-1 * var(--#{$prefix}navbar-border-width)) 0 var(--#{$prefix}navbar-border-color); // stylelint-disable-line function-disallowed-list
+  box-shadow: inset 0 calc(-1 * var(--#{$prefix}navbar-border-width)) 0 var(--#{$prefix}navbar-border-color);
   @include gradient-bg(var(--#{$prefix}navbar-bg)); // OUDS mod: instead of `@include gradient-bg()`
   @include transition($navbar-transition);
   // End mod
@@ -105,7 +105,7 @@
     svg {
       width: $spacer;
       height: $spacer;
-      margin: calc(-.5 * (#{$spacer} - (var(--#{$prefix}dropdown-font-size, var(--#{$prefix}btn-font-size)) * var(--#{$prefix}dropdown-line-height, var(--#{$prefix}btn-line-height))))) 0; // stylelint-disable-line function-disallowed-list
+      margin: calc(-.5 * (#{$spacer} - (var(--#{$prefix}dropdown-font-size, var(--#{$prefix}btn-font-size)) * var(--#{$prefix}dropdown-line-height, var(--#{$prefix}btn-line-height))))) 0;
       fill: currentcolor;
     }
 
@@ -173,7 +173,7 @@
   //// Ensure headings variant align consistently
   .title,
   .two-lined {
-    margin: divide(-2em, 7) $spacer divide(-1em, 7) calc(var(--#{$prefix}navbar-brand-logo-size) / 2); // stylelint-disable-line function-disallowed-list
+    margin: divide(-2em, 7) $spacer divide(-1em, 7) calc(var(--#{$prefix}navbar-brand-logo-size) / 2);
     @include font-size(var(--#{$prefix}navbar-brand-font-size));
     line-height: 1;
     letter-spacing: var(--#{$prefix}navbar-brand-letter-spacing);
@@ -218,8 +218,8 @@
   // OUDS mod: Handle .nav-link and .nav-icon slightly differently than Bs
   .nav-link {
     position: relative;
-    padding-top: subtract(var(--#{$prefix}navbar-nav-link-padding-y), var(--#{$prefix}navbar-border-width));
-    margin: 0 calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); // stylelint-disable-line function-disallowed-list
+    padding-top: calc(var(--#{$prefix}navbar-nav-link-padding-y) - var(--#{$prefix}navbar-border-width));
+    margin: 0 calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x));
     word-break: break-all;
 
     &:hover {
@@ -246,7 +246,7 @@
 
     .nav-link.nav-icon {
       padding: var(--#{$prefix}navbar-nav-icon-padding-y) var(--#{$prefix}navbar-nav-icon-padding-x);
-      margin-left: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); // stylelint-disable-line function-disallowed-list
+      margin-left: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x));
       white-space: nowrap;
 
       svg,
@@ -315,7 +315,7 @@
     border-top: var(--#{$prefix}navbar-border-width) solid var(--#{$prefix}navbar-border-color);
 
     @include media-breakpoint-up(md) {
-      margin-bottom: calc(-1 * var(--#{$prefix}navbar-padding-y)); // stylelint-disable-line function-disallowed-list
+      margin-bottom: calc(-1 * var(--#{$prefix}navbar-padding-y));
     }
   }
 
@@ -329,9 +329,7 @@
 
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
-  // stylelint-disable-next-line function-disallowed-list
   padding: var(--#{$prefix}navbar-toggler-padding-y) calc(var(--#{$prefix}navbar-toggler-padding-x) / 2) var(--#{$prefix}navbar-toggler-padding-y) var(--#{$prefix}navbar-toggler-padding-x); // OUDS mod
-  // stylelint-disable-next-line function-disallowed-list
   margin-right: calc(-.5 * var(--#{$prefix}navbar-toggler-padding-x)); // OUDS mod
   @include font-size(var(--#{$prefix}navbar-toggler-font-size));
   line-height: 1;
@@ -392,7 +390,7 @@
 // OUDS mod: Handle the nav-under responsiveness
 .navbar:not(.supra) + .navbar {
   padding: 0;
-  margin-top: calc(-1 * var(--#{$prefix}navbar-border-width)); // stylelint-disable-line function-disallowed-list
+  margin-top: calc(-1 * var(--#{$prefix}navbar-border-width));
 }
 // End mod
 
@@ -424,9 +422,9 @@
             &.active::before {
               position: absolute;
               right: var(--#{$prefix}navbar-nav-link-padding-x);
-              bottom: calc(-1 * var(--#{$prefix}navbar-padding-y)); // stylelint-disable-line function-disallowed-list
+              bottom: calc(-1 * var(--#{$prefix}navbar-padding-y));
               left: var(--#{$prefix}navbar-nav-link-padding-x);
-              height: calc(var(--#{$prefix}navbar-border-width) * 4); // stylelint-disable-line function-disallowed-list
+              height: calc(var(--#{$prefix}navbar-border-width) * 4);
               content: "";
               background-color: currentcolor;
               @include transition($navbar-active-transition);
@@ -437,19 +435,19 @@
             border: 0;
 
             &:first-child > .nav-link {
-              margin-left: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); // stylelint-disable-line function-disallowed-list
+              margin-left: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x));
             }
 
             &:last-child > .nav-link {
-              margin-right: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); // stylelint-disable-line function-disallowed-list
+              margin-right: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x));
             }
 
             &:first-child > .nav-icon {
-              margin-left: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); // stylelint-disable-line function-disallowed-list
+              margin-left: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x));
             }
 
             &:last-child > .nav-icon {
-              margin-right: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); // stylelint-disable-line function-disallowed-list
+              margin-right: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x));
             }
           }
           // End mod
@@ -482,7 +480,7 @@
           margin-top: 0;
 
           .nav-link{
-            padding-bottom: add(var(--#{$prefix}navbar-nav-link-padding-y), .0625rem);
+            padding-bottom: calc(var(--#{$prefix}navbar-nav-link-padding-y) + .0625rem);
 
             &.active::before{
               bottom: 0;

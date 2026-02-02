@@ -111,7 +111,7 @@
     right: var(--#{$prefix}control-item-error-icon-offset-right);
     left: var(--#{$prefix}control-item-error-icon-offset-left);
     width: $ouds-control-item-size-icon - 2 * $ouds-control-item-space-padding-inline-error-icon;
-    height: calc(100% - 2 * $ouds-control-item-space-padding-block-default); // stylelint-disable-line function-disallowed-list
+    height: calc(100% - 2 * $ouds-control-item-space-padding-block-default);
     max-height: px-to-rem($ouds-control-item-size-max-height-assets-container);
     font-size: $ouds-control-item-size-icon;
     line-height: 1;
@@ -237,11 +237,11 @@
 
   &::before {
     position: absolute;
-    top: calc(-1 * var(--#{$prefix}control-item-indicator-border-width)); // stylelint-disable-line function-disallowed-list
-    left: calc(-1 * var(--#{$prefix}control-item-indicator-border-width)); // stylelint-disable-line function-disallowed-list
+    top: calc(-1 * var(--#{$prefix}control-item-indicator-border-width));
+    left: calc(-1 * var(--#{$prefix}control-item-indicator-border-width));
     display: block;
-    width: calc(100% + 2 * var(--#{$prefix}control-item-indicator-border-width)); // stylelint-disable-line function-disallowed-list
-    height: calc(100% + 2 * var(--#{$prefix}control-item-indicator-border-width)); // stylelint-disable-line function-disallowed-list
+    width: calc(100% + 2 * var(--#{$prefix}control-item-indicator-border-width));
+    height: calc(100% + 2 * var(--#{$prefix}control-item-indicator-border-width));
     content: "";
     background-color: transparent;
     mask-repeat: no-repeat;
@@ -415,7 +415,7 @@
 //
 
 .control-item-divider {
-  padding-bottom: calc($ouds-control-item-space-padding-block-default - $ouds-divider-border-width); // stylelint-disable-line function-disallowed-list
+  padding-bottom: calc($ouds-control-item-space-padding-block-default - $ouds-divider-border-width);
   border-bottom: $ouds-divider-border-width solid $ouds-color-border-default;
 
   &:has(.is-invalid),
@@ -434,7 +434,7 @@
     --#{$prefix}control-item-error-icon-offset-left: var(--#{$prefix}control-item-error-icon-offset);
 
     padding-right: $ouds-control-item-space-padding-inline;
-    padding-left: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap); // stylelint-disable-line function-disallowed-list
+    padding-left: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap);
   }
   // stylelint-enable selector-no-qualifying-type
 }
@@ -506,7 +506,7 @@
     --#{$prefix}switch-track-color: #{$ouds-switch-color-track-selected};
 
     &::before {
-      left: calc($ouds-switch-size-min-width - $ouds-switch-space-padding-inline-selected - $ouds-switch-size-width-cursor-selected); // stylelint-disable-line function-disallowed-list
+      left: calc($ouds-switch-size-min-width - $ouds-switch-space-padding-inline-selected - $ouds-switch-size-width-cursor-selected);
       width: $ouds-switch-size-width-cursor-selected;
       height: $ouds-switch-size-height-cursor-selected;
     }
@@ -541,7 +541,7 @@
     }
 
     &:active::before {
-      left: calc($ouds-switch-size-min-width - $ouds-switch-space-padding-inline-selected - $ouds-switch-size-width-cursor-selected-pressed); // stylelint-disable-line function-disallowed-list
+      left: calc($ouds-switch-size-min-width - $ouds-switch-space-padding-inline-selected - $ouds-switch-size-width-cursor-selected-pressed);
       width: $ouds-switch-size-width-cursor-selected-pressed;
     }
 
@@ -618,8 +618,8 @@
   &:hover,
   &:active,
   &:has(input:checked) {
-    padding-block: calc($ouds-control-item-space-padding-block-default - $ouds-divider-border-width); // stylelint-disable-line function-disallowed-list
-    padding-inline: calc($ouds-control-item-space-padding-inline - $ouds-divider-border-width); // stylelint-disable-line function-disallowed-list
+    padding-block: calc($ouds-control-item-space-padding-block-default - $ouds-divider-border-width);
+    padding-inline: calc($ouds-control-item-space-padding-inline - $ouds-divider-border-width);
     border: $ouds-divider-border-width solid $ouds-color-border-default;
 
     // stylelint-disable selector-no-qualifying-type
@@ -681,7 +681,7 @@
     --#{$prefix}control-item-error-icon-offset-left: var(--#{$prefix}control-item-error-icon-offset);
 
     padding-right: $ouds-control-item-space-padding-inline;
-    padding-left: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap); // stylelint-disable-line function-disallowed-list
+    padding-left: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap);
   }
   // stylelint-enable selector-no-qualifying-type
 
@@ -693,7 +693,7 @@
       --#{$prefix}control-item-error-icon-offset-right: var(--#{$prefix}control-item-error-icon-offset);
       --#{$prefix}control-item-error-icon-offset-left: unset;
 
-      padding-right: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap); // stylelint-disable-line function-disallowed-list
+      padding-right: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap);
       padding-left: $ouds-control-item-space-padding-inline;
     }
     // stylelint-enable selector-no-qualifying-type

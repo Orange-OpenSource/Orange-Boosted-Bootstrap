@@ -47,7 +47,6 @@
       content: "";
       @if $direction == down {
         @include caret-down($width);
-        // stylelint-disable-next-line function-disallowed-list
         transform: translateY(calc(var(--#{$prefix}border-width) * .5)); // OUDS mod
       } @else if $direction == up {
         @include caret-up($width);
