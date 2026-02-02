@@ -11,6 +11,14 @@
     @import '../../../../packages/orange/scss/tokens';
     @import '../../scss/docs_prod';
     @import '../../../static/orange/docs/[version]/assets/fonts/solaris-icons';
+  }
+  [data-bs-brand='orange-business-tools'] {
+    $brand: 'orange-business-tools';
+    @import '../../../../scss/config';
+    @import '../../../../scss/functions';
+    @import '../../../../packages/orange-business-tools/scss/tokens';
+    @import '../../scss/docs_prod';
+    @import '../../../static/orange-business-tools/docs/[version]/assets/fonts/solaris-icons';
     @import '../../scss/docs_search';
   }
   [data-bs-brand='sosh'] {
@@ -20,6 +28,6 @@
     @import '../../../../packages/sosh/scss/tokens';
     @import '../../scss/docs_prod';
     @import '../../../static/sosh/docs/[version]/assets/fonts/solaris-icons';
-    @import '../../scss/docs_search';
   }
+  @import '../../scss/docs_search';
 </style>
