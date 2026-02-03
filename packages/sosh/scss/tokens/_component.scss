@@ -1,467 +1,467 @@
-@use "../config" as *;
+// stylelint-disable scss/dollar-variable-default
+@use "@ouds/web-common/scss/config" as *;
 
-@use "raw" as *;
-@use "semantic" as *;
-@use "semantic-colors-custom-props" as *;
+@use "@ouds/web-common/scss/ouds-tokens/raw" as *;
+@use "@ouds/web-common/scss/ouds-tokens/semantic" as *;
+@use "@ouds/web-common/scss/ouds-tokens/semantic-colors-custom-props" as *;
 
-@use "../../../../scss/ouds-tokens/component" as *;
+@use "@ouds/web-common/scss/ouds-tokens/component" as *;
 
 // Component application
 // Depends on semantic applications
 // OUDS Core tokens version 1.9.0
 // Sosh Core tokens version 1.2.0
 // Sosh System tokens version 2.3.0
-
 // Alert
 
 // scss-docs-start ouds-component-alert
-$ouds-alert-border-radius-default: $ouds-border-radius-large !default;
-$ouds-alert-border-radius-rounded: $ouds-border-radius-large !default;
-$ouds-alert-border-width: $ouds-border-width-none !default;
-$ouds-alert-size-icon: $ouds-size-icon-with-label-large-size-small !default;
-$ouds-alert-size-min-height-bottom-action-placement: $core-ouds-dimension-1250 !default;
-$ouds-alert-size-min-height: $ouds-size-min-interactive-area !default;
-$ouds-alert-size-min-width: $core-ouds-dimension-2000 !default;
-$ouds-alert-space-column-gap-action: $ouds-space-column-gap-small !default;
-$ouds-alert-space-column-gap: $ouds-space-column-gap-medium !default;
-$ouds-alert-space-padding-block: $ouds-space-padding-block-medium !default;
-$ouds-alert-space-padding-inline: $ouds-space-padding-inline-large !default;
-$ouds-alert-space-row-gap-action: $ouds-space-row-gap-2xsmall !default;
-$ouds-alert-space-row-gap-bullet: $ouds-space-row-gap-none !default;
-$ouds-alert-space-row-gap: $ouds-space-row-gap-small !default;
+$ouds-alert-border-radius-default: $ouds-border-radius-large;
+$ouds-alert-border-radius-rounded: $ouds-border-radius-large;
+$ouds-alert-border-width: $ouds-border-width-none;
+$ouds-alert-size-icon: $ouds-size-icon-with-label-large-size-small;
+$ouds-alert-size-min-height-bottom-action-placement: $core-ouds-dimension-1250;
+$ouds-alert-size-min-height: $ouds-size-min-interactive-area;
+$ouds-alert-size-min-width: $core-ouds-dimension-2000;
+$ouds-alert-space-column-gap-action: $ouds-space-column-gap-small;
+$ouds-alert-space-column-gap: $ouds-space-column-gap-medium;
+$ouds-alert-space-padding-block: $ouds-space-padding-block-medium;
+$ouds-alert-space-padding-inline: $ouds-space-padding-inline-large;
+$ouds-alert-space-row-gap-action: $ouds-space-row-gap-2xsmall;
+$ouds-alert-space-row-gap-bullet: $ouds-space-row-gap-none;
+$ouds-alert-space-row-gap: $ouds-space-row-gap-small;
 // scss-docs-end ouds-component-alert
 
 // Badge
 
 // scss-docs-start ouds-component-badge
-$ouds-badge-size-large: $ouds-dimension-4xsmall !default;
-$ouds-badge-size-medium: $ouds-dimension-5xsmall !default;
-$ouds-badge-size-small: $ouds-dimension-6xsmall !default;
-$ouds-badge-size-xsmall: $ouds-dimension-8xsmall !default;
-$ouds-badge-space-inset: $core-ouds-dimension-out-of-system-75 !default;
-$ouds-badge-space-padding-inline-large: $ouds-space-padding-inline-2xsmall !default;
-$ouds-badge-space-padding-inline-medium: $ouds-space-padding-inline-3xsmall !default;
+$ouds-badge-size-large: $ouds-dimension-4xsmall;
+$ouds-badge-size-medium: $ouds-dimension-5xsmall;
+$ouds-badge-size-small: $ouds-dimension-6xsmall;
+$ouds-badge-size-xsmall: $ouds-dimension-8xsmall;
+$ouds-badge-space-inset: $core-ouds-dimension-out-of-system-75;
+$ouds-badge-space-padding-inline-large: $ouds-space-padding-inline-2xsmall;
+$ouds-badge-space-padding-inline-medium: $ouds-space-padding-inline-3xsmall;
 // scss-docs-end ouds-component-badge
 
 // Breadcrumb
 
 // scss-docs-start ouds-component-breadcrumb
-$ouds-breadcrumb-size-icon: $ouds-size-icon-with-label-medium-size-small !default;
-$ouds-breadcrumb-space-column-gap-links: $ouds-space-column-gap-2xsmall !default;
+$ouds-breadcrumb-size-icon: $ouds-size-icon-with-label-medium-size-small;
+$ouds-breadcrumb-space-column-gap-links: $ouds-space-column-gap-2xsmall;
 // scss-docs-end ouds-component-breadcrumb
 
 // Bullet
 
 // scss-docs-start ouds-component-bullet
-$ouds-bullet-list-space-column-gap-body-large: $ouds-space-column-gap-small !default;
-$ouds-bullet-list-space-column-gap-body-medium: $ouds-space-column-gap-small !default;
-$ouds-bullet-list-space-padding-block-body-large: $ouds-space-padding-block-2xsmall !default;
-$ouds-bullet-list-space-padding-block-body-medium: $ouds-space-padding-block-2xsmall !default;
-$ouds-bullet-list-space-padding-inline-level-0: $core-ouds-dimension-50 !default;
-$ouds-bullet-list-space-padding-inline-level-1: $core-ouds-dimension-450 !default;
-$ouds-bullet-list-space-padding-inline-level-2: $core-ouds-dimension-850 !default;
+$ouds-bullet-list-space-column-gap-body-large: $ouds-space-column-gap-small;
+$ouds-bullet-list-space-column-gap-body-medium: $ouds-space-column-gap-small;
+$ouds-bullet-list-space-padding-block-body-large: $ouds-space-padding-block-2xsmall;
+$ouds-bullet-list-space-padding-block-body-medium: $ouds-space-padding-block-2xsmall;
+$ouds-bullet-list-space-padding-inline-level-0: $core-ouds-dimension-50;
+$ouds-bullet-list-space-padding-inline-level-1: $core-ouds-dimension-450;
+$ouds-bullet-list-space-padding-inline-level-2: $core-ouds-dimension-850;
 // scss-docs-end ouds-component-bullet
 
 // Button
 
 // scss-docs-start ouds-component-button
-$ouds-button-border-radius-default: $ouds-border-radius-default !default;
-$ouds-button-border-radius-rounded: $ouds-border-radius-default !default;
-$ouds-button-border-radius-social: $ouds-border-radius-pill !default;
-$ouds-button-border-width-default-interaction-mono: $ouds-border-width-none !default;
-$ouds-button-border-width-default-interaction: $ouds-border-width-default !default;
-$ouds-button-border-width-default: $ouds-border-width-default !default;
-$ouds-button-color-bg-brand-enabled: $ouds-color-surface-brand-secondary !default;
-$ouds-button-color-bg-brand-focus: $ouds-color-action-focus !default;
-$ouds-button-color-bg-brand-hover: $ouds-color-action-hover !default;
-$ouds-button-color-bg-brand-loading: var(--#{$prefix}button-color-bg-brand-loading) !default;
-$ouds-button-color-bg-brand-pressed: var(--#{$prefix}button-color-bg-brand-pressed) !default;
-$ouds-button-color-bg-default-disabled: $ouds-color-opacity-transparent !default;
-$ouds-button-color-bg-default-enabled: $ouds-color-opacity-transparent !default;
-$ouds-button-color-bg-default-focus: $ouds-color-opacity-transparent !default;
-$ouds-button-color-bg-default-hover: $ouds-color-opacity-transparent !default;
-$ouds-button-color-bg-default-loading: $ouds-color-opacity-transparent !default;
-$ouds-button-color-bg-default-pressed: $ouds-color-opacity-transparent !default;
-$ouds-button-color-bg-minimal-focus: $ouds-color-action-support-focus !default;
-$ouds-button-color-bg-minimal-hover: $ouds-color-action-support-hover !default;
-$ouds-button-color-bg-minimal-pressed: $ouds-color-action-support-pressed !default;
-$ouds-button-color-border-default-disabled: $ouds-color-action-disabled !default;
-$ouds-button-color-border-default-enabled: $ouds-color-action-enabled !default;
-$ouds-button-color-border-default-focus: $ouds-color-action-focus !default;
-$ouds-button-color-border-default-hover: $ouds-color-action-hover !default;
-$ouds-button-color-border-default-loading: $ouds-color-action-loading !default;
-$ouds-button-color-border-default-pressed: $ouds-color-action-pressed !default;
-$ouds-button-color-content-brand-enabled: $ouds-color-content-on-brand-secondary !default;
-$ouds-button-color-content-brand-focus: $ouds-color-content-on-action-focus !default;
-$ouds-button-color-content-brand-hover: $ouds-color-content-on-action-hover !default;
-$ouds-button-color-content-brand-loading: var(--#{$prefix}button-color-content-brand-loading) !default;
-$ouds-button-color-content-brand-pressed: var(--#{$prefix}button-color-content-brand-pressed) !default;
-$ouds-button-color-content-default-disabled: $ouds-color-action-disabled !default;
-$ouds-button-color-content-default-enabled: $ouds-color-action-enabled !default;
-$ouds-button-color-content-default-focus: $ouds-color-action-focus !default;
-$ouds-button-color-content-default-hover: $ouds-color-action-hover !default;
-$ouds-button-color-content-default-loading: $ouds-color-action-loading !default;
-$ouds-button-color-content-default-pressed: $ouds-color-action-pressed !default;
-$ouds-button-color-content-minimal-disabled: $ouds-color-action-disabled !default;
-$ouds-button-color-content-minimal-enabled: $ouds-color-action-enabled !default;
-$ouds-button-color-content-minimal-focus: $ouds-color-action-focus !default;
-$ouds-button-color-content-minimal-hover: $ouds-color-action-hover !default;
-$ouds-button-color-content-minimal-loading: $ouds-color-action-loading !default;
-$ouds-button-color-content-minimal-pressed: $ouds-color-action-pressed !default;
-$ouds-button-mono-color-bg-default-disabled: $ouds-color-opacity-transparent !default;
-$ouds-button-mono-color-bg-default-enabled: $ouds-color-opacity-transparent !default;
-$ouds-button-mono-color-bg-default-focus: var(--#{$prefix}button-mono-color-bg-default-focus) !default;
-$ouds-button-mono-color-bg-default-hover: var(--#{$prefix}button-mono-color-bg-default-hover) !default;
-$ouds-button-mono-color-bg-default-loading: var(--#{$prefix}button-mono-color-bg-default-loading) !default;
-$ouds-button-mono-color-bg-default-pressed: var(--#{$prefix}button-mono-color-bg-default-pressed) !default;
-$ouds-button-mono-color-bg-minimal-focus: var(--#{$prefix}button-mono-color-bg-minimal-focus) !default;
-$ouds-button-mono-color-bg-minimal-hover: var(--#{$prefix}button-mono-color-bg-minimal-hover) !default;
-$ouds-button-mono-color-bg-minimal-pressed: var(--#{$prefix}button-mono-color-bg-minimal-pressed) !default;
-$ouds-button-mono-color-bg-strong-disabled: var(--#{$prefix}button-mono-color-bg-strong-disabled) !default;
-$ouds-button-mono-color-bg-strong-enabled: var(--#{$prefix}button-mono-color-bg-strong-enabled) !default;
-$ouds-button-mono-color-bg-strong-focus: var(--#{$prefix}button-mono-color-bg-strong-focus) !default;
-$ouds-button-mono-color-bg-strong-hover: var(--#{$prefix}button-mono-color-bg-strong-hover) !default;
-$ouds-button-mono-color-bg-strong-loading: var(--#{$prefix}button-mono-color-bg-strong-loading) !default;
-$ouds-button-mono-color-bg-strong-pressed: var(--#{$prefix}button-mono-color-bg-strong-pressed) !default;
-$ouds-button-mono-color-border-default-disabled: var(--#{$prefix}button-mono-color-border-default-disabled) !default;
-$ouds-button-mono-color-border-default-enabled: var(--#{$prefix}button-mono-color-border-default-enabled) !default;
-$ouds-button-mono-color-border-default-focus: $ouds-color-opacity-transparent !default;
-$ouds-button-mono-color-border-default-hover: $ouds-color-opacity-transparent !default;
-$ouds-button-mono-color-border-default-loading: $ouds-color-opacity-transparent !default;
-$ouds-button-mono-color-border-default-pressed: $ouds-color-opacity-transparent !default;
-$ouds-button-mono-color-content-default-disabled: var(--#{$prefix}button-mono-color-content-default-disabled) !default;
-$ouds-button-mono-color-content-default-enabled: var(--#{$prefix}button-mono-color-content-default-enabled) !default;
-$ouds-button-mono-color-content-default-focus: var(--#{$prefix}button-mono-color-content-default-focus) !default;
-$ouds-button-mono-color-content-default-hover: var(--#{$prefix}button-mono-color-content-default-hover) !default;
-$ouds-button-mono-color-content-default-loading: var(--#{$prefix}button-mono-color-content-default-loading) !default;
-$ouds-button-mono-color-content-default-pressed: var(--#{$prefix}button-mono-color-content-default-pressed) !default;
-$ouds-button-mono-color-content-minimal-disabled: var(--#{$prefix}button-mono-color-content-minimal-disabled) !default;
-$ouds-button-mono-color-content-minimal-enabled: var(--#{$prefix}button-mono-color-content-minimal-enabled) !default;
-$ouds-button-mono-color-content-minimal-focus: var(--#{$prefix}button-mono-color-content-minimal-focus) !default;
-$ouds-button-mono-color-content-minimal-hover: var(--#{$prefix}button-mono-color-content-minimal-hover) !default;
-$ouds-button-mono-color-content-minimal-loading: var(--#{$prefix}button-mono-color-content-minimal-loading) !default;
-$ouds-button-mono-color-content-minimal-pressed: var(--#{$prefix}button-mono-color-content-minimal-pressed) !default;
-$ouds-button-mono-color-content-strong-disabled: var(--#{$prefix}button-mono-color-content-strong-disabled) !default;
-$ouds-button-mono-color-content-strong-enabled: var(--#{$prefix}button-mono-color-content-strong-enabled) !default;
-$ouds-button-mono-color-content-strong-focus: var(--#{$prefix}button-mono-color-content-strong-focus) !default;
-$ouds-button-mono-color-content-strong-hover: var(--#{$prefix}button-mono-color-content-strong-hover) !default;
-$ouds-button-mono-color-content-strong-loading: var(--#{$prefix}button-mono-color-content-strong-loading) !default;
-$ouds-button-mono-color-content-strong-pressed: var(--#{$prefix}button-mono-color-content-strong-pressed) !default;
-$ouds-button-size-icon-only: $ouds-size-icon-with-label-large-size-small !default;
-$ouds-button-size-icon: $ouds-size-icon-with-label-large-size-xsmall !default;
-$ouds-button-size-loader: $ouds-size-icon-with-label-large-size-xsmall !default;
-$ouds-button-size-max-height-icon-only: $ouds-size-min-interactive-area !default;
-$ouds-button-size-min-height: $ouds-size-min-interactive-area !default;
-$ouds-button-size-min-width: $ouds-size-min-interactive-area !default;
-$ouds-button-space-column-gap-chevron: $ouds-space-column-gap-xsmall !default;
-$ouds-button-space-column-gap-icon-chevron: $ouds-space-column-gap-2xsmall !default;
-$ouds-button-space-column-gap-icon: $ouds-space-column-gap-small !default;
-$ouds-button-space-inset-icon-only: $ouds-space-inset-medium !default;
-$ouds-button-space-padding-block: $ouds-space-padding-block-medium !default;
-$ouds-button-space-padding-inline-chevron-end: $ouds-space-padding-inline-large !default;
-$ouds-button-space-padding-inline-chevron-start: $ouds-space-padding-inline-large !default;
-$ouds-button-space-padding-inline-end-icon-start: $ouds-space-padding-inline-3xlarge !default;
-$ouds-button-space-padding-inline-icon-none: $ouds-space-padding-inline-4xlarge !default;
-$ouds-button-space-padding-inline-icon-start: $ouds-space-padding-inline-xlarge !default;
-$ouds-button-space-padding-inline-start-icon-end: $ouds-space-padding-inline-3xlarge !default;
+$ouds-button-border-radius-default: $ouds-border-radius-default;
+$ouds-button-border-radius-rounded: $ouds-border-radius-default;
+$ouds-button-border-radius-social: $ouds-border-radius-pill;
+$ouds-button-border-width-default-interaction-mono: $ouds-border-width-none;
+$ouds-button-border-width-default-interaction: $ouds-border-width-default;
+$ouds-button-border-width-default: $ouds-border-width-default;
+$ouds-button-color-bg-brand-enabled: $ouds-color-surface-brand-secondary;
+$ouds-button-color-bg-brand-focus: $ouds-color-action-focus;
+$ouds-button-color-bg-brand-hover: $ouds-color-action-hover;
+$ouds-button-color-bg-brand-loading: var(--#{$prefix}button-color-bg-brand-loading);
+$ouds-button-color-bg-brand-pressed: var(--#{$prefix}button-color-bg-brand-pressed);
+$ouds-button-color-bg-default-disabled: $ouds-color-opacity-transparent;
+$ouds-button-color-bg-default-enabled: $ouds-color-opacity-transparent;
+$ouds-button-color-bg-default-focus: $ouds-color-opacity-transparent;
+$ouds-button-color-bg-default-hover: $ouds-color-opacity-transparent;
+$ouds-button-color-bg-default-loading: $ouds-color-opacity-transparent;
+$ouds-button-color-bg-default-pressed: $ouds-color-opacity-transparent;
+$ouds-button-color-bg-minimal-focus: $ouds-color-action-support-focus;
+$ouds-button-color-bg-minimal-hover: $ouds-color-action-support-hover;
+$ouds-button-color-bg-minimal-pressed: $ouds-color-action-support-pressed;
+$ouds-button-color-border-default-disabled: $ouds-color-action-disabled;
+$ouds-button-color-border-default-enabled: $ouds-color-action-enabled;
+$ouds-button-color-border-default-focus: $ouds-color-action-focus;
+$ouds-button-color-border-default-hover: $ouds-color-action-hover;
+$ouds-button-color-border-default-loading: $ouds-color-action-loading;
+$ouds-button-color-border-default-pressed: $ouds-color-action-pressed;
+$ouds-button-color-content-brand-enabled: $ouds-color-content-on-brand-secondary;
+$ouds-button-color-content-brand-focus: $ouds-color-content-on-action-focus;
+$ouds-button-color-content-brand-hover: $ouds-color-content-on-action-hover;
+$ouds-button-color-content-brand-loading: var(--#{$prefix}button-color-content-brand-loading);
+$ouds-button-color-content-brand-pressed: var(--#{$prefix}button-color-content-brand-pressed);
+$ouds-button-color-content-default-disabled: $ouds-color-action-disabled;
+$ouds-button-color-content-default-enabled: $ouds-color-action-enabled;
+$ouds-button-color-content-default-focus: $ouds-color-action-focus;
+$ouds-button-color-content-default-hover: $ouds-color-action-hover;
+$ouds-button-color-content-default-loading: $ouds-color-action-loading;
+$ouds-button-color-content-default-pressed: $ouds-color-action-pressed;
+$ouds-button-color-content-minimal-disabled: $ouds-color-action-disabled;
+$ouds-button-color-content-minimal-enabled: $ouds-color-action-enabled;
+$ouds-button-color-content-minimal-focus: $ouds-color-action-focus;
+$ouds-button-color-content-minimal-hover: $ouds-color-action-hover;
+$ouds-button-color-content-minimal-loading: $ouds-color-action-loading;
+$ouds-button-color-content-minimal-pressed: $ouds-color-action-pressed;
+$ouds-button-mono-color-bg-default-disabled: $ouds-color-opacity-transparent;
+$ouds-button-mono-color-bg-default-enabled: $ouds-color-opacity-transparent;
+$ouds-button-mono-color-bg-default-focus: var(--#{$prefix}button-mono-color-bg-default-focus);
+$ouds-button-mono-color-bg-default-hover: var(--#{$prefix}button-mono-color-bg-default-hover);
+$ouds-button-mono-color-bg-default-loading: var(--#{$prefix}button-mono-color-bg-default-loading);
+$ouds-button-mono-color-bg-default-pressed: var(--#{$prefix}button-mono-color-bg-default-pressed);
+$ouds-button-mono-color-bg-minimal-focus: var(--#{$prefix}button-mono-color-bg-minimal-focus);
+$ouds-button-mono-color-bg-minimal-hover: var(--#{$prefix}button-mono-color-bg-minimal-hover);
+$ouds-button-mono-color-bg-minimal-pressed: var(--#{$prefix}button-mono-color-bg-minimal-pressed);
+$ouds-button-mono-color-bg-strong-disabled: var(--#{$prefix}button-mono-color-bg-strong-disabled);
+$ouds-button-mono-color-bg-strong-enabled: var(--#{$prefix}button-mono-color-bg-strong-enabled);
+$ouds-button-mono-color-bg-strong-focus: var(--#{$prefix}button-mono-color-bg-strong-focus);
+$ouds-button-mono-color-bg-strong-hover: var(--#{$prefix}button-mono-color-bg-strong-hover);
+$ouds-button-mono-color-bg-strong-loading: var(--#{$prefix}button-mono-color-bg-strong-loading);
+$ouds-button-mono-color-bg-strong-pressed: var(--#{$prefix}button-mono-color-bg-strong-pressed);
+$ouds-button-mono-color-border-default-disabled: var(--#{$prefix}button-mono-color-border-default-disabled);
+$ouds-button-mono-color-border-default-enabled: var(--#{$prefix}button-mono-color-border-default-enabled);
+$ouds-button-mono-color-border-default-focus: $ouds-color-opacity-transparent;
+$ouds-button-mono-color-border-default-hover: $ouds-color-opacity-transparent;
+$ouds-button-mono-color-border-default-loading: $ouds-color-opacity-transparent;
+$ouds-button-mono-color-border-default-pressed: $ouds-color-opacity-transparent;
+$ouds-button-mono-color-content-default-disabled: var(--#{$prefix}button-mono-color-content-default-disabled);
+$ouds-button-mono-color-content-default-enabled: var(--#{$prefix}button-mono-color-content-default-enabled);
+$ouds-button-mono-color-content-default-focus: var(--#{$prefix}button-mono-color-content-default-focus);
+$ouds-button-mono-color-content-default-hover: var(--#{$prefix}button-mono-color-content-default-hover);
+$ouds-button-mono-color-content-default-loading: var(--#{$prefix}button-mono-color-content-default-loading);
+$ouds-button-mono-color-content-default-pressed: var(--#{$prefix}button-mono-color-content-default-pressed);
+$ouds-button-mono-color-content-minimal-disabled: var(--#{$prefix}button-mono-color-content-minimal-disabled);
+$ouds-button-mono-color-content-minimal-enabled: var(--#{$prefix}button-mono-color-content-minimal-enabled);
+$ouds-button-mono-color-content-minimal-focus: var(--#{$prefix}button-mono-color-content-minimal-focus);
+$ouds-button-mono-color-content-minimal-hover: var(--#{$prefix}button-mono-color-content-minimal-hover);
+$ouds-button-mono-color-content-minimal-loading: var(--#{$prefix}button-mono-color-content-minimal-loading);
+$ouds-button-mono-color-content-minimal-pressed: var(--#{$prefix}button-mono-color-content-minimal-pressed);
+$ouds-button-mono-color-content-strong-disabled: var(--#{$prefix}button-mono-color-content-strong-disabled);
+$ouds-button-mono-color-content-strong-enabled: var(--#{$prefix}button-mono-color-content-strong-enabled);
+$ouds-button-mono-color-content-strong-focus: var(--#{$prefix}button-mono-color-content-strong-focus);
+$ouds-button-mono-color-content-strong-hover: var(--#{$prefix}button-mono-color-content-strong-hover);
+$ouds-button-mono-color-content-strong-loading: var(--#{$prefix}button-mono-color-content-strong-loading);
+$ouds-button-mono-color-content-strong-pressed: var(--#{$prefix}button-mono-color-content-strong-pressed);
+$ouds-button-size-icon-only: $ouds-size-icon-with-label-large-size-small;
+$ouds-button-size-icon: $ouds-size-icon-with-label-large-size-xsmall;
+$ouds-button-size-loader: $ouds-size-icon-with-label-large-size-xsmall;
+$ouds-button-size-max-height-icon-only: $ouds-size-min-interactive-area;
+$ouds-button-size-min-height: $ouds-size-min-interactive-area;
+$ouds-button-size-min-width: $ouds-size-min-interactive-area;
+$ouds-button-space-column-gap-chevron: $ouds-space-column-gap-xsmall;
+$ouds-button-space-column-gap-icon-chevron: $ouds-space-column-gap-2xsmall;
+$ouds-button-space-column-gap-icon: $ouds-space-column-gap-small;
+$ouds-button-space-inset-icon-only: $ouds-space-inset-medium;
+$ouds-button-space-padding-block: $ouds-space-padding-block-medium;
+$ouds-button-space-padding-inline-chevron-end: $ouds-space-padding-inline-large;
+$ouds-button-space-padding-inline-chevron-start: $ouds-space-padding-inline-large;
+$ouds-button-space-padding-inline-end-icon-start: $ouds-space-padding-inline-3xlarge;
+$ouds-button-space-padding-inline-icon-none: $ouds-space-padding-inline-4xlarge;
+$ouds-button-space-padding-inline-icon-start: $ouds-space-padding-inline-xlarge;
+$ouds-button-space-padding-inline-start-icon-end: $ouds-space-padding-inline-3xlarge;
 // scss-docs-end ouds-component-button
 
 // Checkbox
 
 // scss-docs-start ouds-component-checkbox
-$ouds-checkbox-border-radius: $ouds-border-radius-default !default;
-$ouds-checkbox-border-width-selected-focus: $ouds-border-width-none !default;
-$ouds-checkbox-border-width-selected-hover: $ouds-border-width-none !default;
-$ouds-checkbox-border-width-selected-pressed: $ouds-border-width-none !default;
-$ouds-checkbox-border-width-selected: $ouds-border-width-none !default;
-$ouds-checkbox-border-width-unselected-focus: $ouds-border-width-medium !default;
-$ouds-checkbox-border-width-unselected-hover: $ouds-border-width-medium !default;
-$ouds-checkbox-border-width-unselected-pressed: $ouds-border-width-medium !default;
-$ouds-checkbox-border-width-unselected: $ouds-border-width-thin !default;
-$ouds-checkbox-size-indicator: $ouds-size-icon-with-label-large-size-xsmall !default;
-$ouds-checkbox-size-max-height: $ouds-size-min-interactive-area !default;
-$ouds-checkbox-size-min-height: $ouds-size-min-interactive-area !default;
-$ouds-checkbox-size-min-width: $ouds-size-min-interactive-area !default;
+$ouds-checkbox-border-radius: $ouds-border-radius-default;
+$ouds-checkbox-border-width-selected-focus: $ouds-border-width-none;
+$ouds-checkbox-border-width-selected-hover: $ouds-border-width-none;
+$ouds-checkbox-border-width-selected-pressed: $ouds-border-width-none;
+$ouds-checkbox-border-width-selected: $ouds-border-width-none;
+$ouds-checkbox-border-width-unselected-focus: $ouds-border-width-medium;
+$ouds-checkbox-border-width-unselected-hover: $ouds-border-width-medium;
+$ouds-checkbox-border-width-unselected-pressed: $ouds-border-width-medium;
+$ouds-checkbox-border-width-unselected: $ouds-border-width-thin;
+$ouds-checkbox-size-indicator: $ouds-size-icon-with-label-large-size-xsmall;
+$ouds-checkbox-size-max-height: $ouds-size-min-interactive-area;
+$ouds-checkbox-size-min-height: $ouds-size-min-interactive-area;
+$ouds-checkbox-size-min-width: $ouds-size-min-interactive-area;
 // scss-docs-end ouds-component-checkbox
 
 // Chip
 
 // scss-docs-start ouds-component-chip
-$ouds-chip-badge-color-bg: $ouds-color-content-on-action-enabled !default;
-$ouds-chip-badge-color-content: $ouds-color-content-default !default;
-$ouds-chip-border-radius: $ouds-border-radius-pill !default;
-$ouds-chip-border-width-selected: $ouds-border-width-none !default;
-$ouds-chip-border-width-unselected-interaction: $ouds-border-width-default !default;
-$ouds-chip-border-width-unselected: $ouds-border-width-thin !default;
-$ouds-chip-color-bg-selected-disabled: $ouds-color-action-disabled !default;
-$ouds-chip-color-bg-selected-enabled: $ouds-color-action-selected !default;
-$ouds-chip-color-bg-selected-focus: $ouds-color-action-focus !default;
-$ouds-chip-color-bg-selected-hover: $ouds-color-action-hover !default;
-$ouds-chip-color-bg-selected-pressed: $ouds-color-action-pressed !default;
-$ouds-chip-color-bg-unselected-disabled: $ouds-color-opacity-transparent !default;
-$ouds-chip-color-bg-unselected-enabled: $ouds-color-opacity-transparent !default;
-$ouds-chip-color-bg-unselected-focus: $ouds-color-opacity-transparent !default;
-$ouds-chip-color-bg-unselected-hover: $ouds-color-opacity-transparent !default;
-$ouds-chip-color-bg-unselected-pressed: $ouds-color-opacity-transparent !default;
-$ouds-chip-color-border-selected-disabled: $ouds-color-opacity-transparent !default;
-$ouds-chip-color-border-selected-enabled: $ouds-color-opacity-transparent !default;
-$ouds-chip-color-border-selected-focus: $ouds-color-opacity-transparent !default;
-$ouds-chip-color-border-selected-hover: $ouds-color-opacity-transparent !default;
-$ouds-chip-color-border-selected-pressed: $ouds-color-opacity-transparent !default;
-$ouds-chip-color-border-unselected-disabled: $ouds-color-action-disabled !default;
-$ouds-chip-color-border-unselected-enabled: $ouds-color-border-emphasized !default;
-$ouds-chip-color-border-unselected-focus: $ouds-color-action-focus !default;
-$ouds-chip-color-border-unselected-hover: $ouds-color-action-hover !default;
-$ouds-chip-color-border-unselected-pressed: $ouds-color-action-pressed !default;
-$ouds-chip-color-content-selected-disabled: $ouds-color-content-on-action-disabled !default;
-$ouds-chip-color-content-selected-enabled: $ouds-color-content-on-action-selected !default;
-$ouds-chip-color-content-selected-focus: $ouds-color-content-on-action-focus !default;
-$ouds-chip-color-content-selected-hover: $ouds-color-content-on-action-hover !default;
-$ouds-chip-color-content-selected-pressed: $ouds-color-content-on-action-pressed !default;
-$ouds-chip-color-content-selected-tick-enabled: $ouds-color-content-on-action-selected !default;
-$ouds-chip-color-content-unselected-disabled: $ouds-color-action-disabled !default;
-$ouds-chip-color-content-unselected-enabled: $ouds-color-content-default !default;
-$ouds-chip-color-content-unselected-focus: $ouds-color-action-focus !default;
-$ouds-chip-color-content-unselected-hover: $ouds-color-action-hover !default;
-$ouds-chip-color-content-unselected-pressed: $ouds-color-action-pressed !default;
-$ouds-chip-size-icon: $ouds-size-icon-with-label-medium-size-small !default;
-$ouds-chip-size-min-height-interactive-area: $ouds-size-min-interactive-area !default;
-$ouds-chip-size-min-height: $ouds-dimension-xsmall !default;
-$ouds-chip-size-min-width: $ouds-dimension-2xlarge !default;
-$ouds-chip-space-column-gap-badge-chevron: $ouds-space-column-gap-2xsmall !default;
-$ouds-chip-space-column-gap-icon: $ouds-space-column-gap-xsmall !default;
-$ouds-chip-space-padding-block-icon-only: $ouds-space-padding-block-xsmall !default;
-$ouds-chip-space-padding-block: $ouds-space-padding-block-2xsmall !default;
-$ouds-chip-space-padding-inline-badge-start: $ouds-space-padding-inline-4xsmall !default;
-$ouds-chip-space-padding-inline-chevron-end: $ouds-space-padding-inline-xsmall !default;
-$ouds-chip-space-padding-inline-icon-none: $ouds-space-padding-inline-large !default;
-$ouds-chip-space-padding-inline-icon: $ouds-space-padding-inline-small !default;
+$ouds-chip-badge-color-bg: $ouds-color-content-on-action-enabled;
+$ouds-chip-badge-color-content: $ouds-color-content-default;
+$ouds-chip-border-radius: $ouds-border-radius-pill;
+$ouds-chip-border-width-selected: $ouds-border-width-none;
+$ouds-chip-border-width-unselected-interaction: $ouds-border-width-default;
+$ouds-chip-border-width-unselected: $ouds-border-width-thin;
+$ouds-chip-color-bg-selected-disabled: $ouds-color-action-disabled;
+$ouds-chip-color-bg-selected-enabled: $ouds-color-action-selected;
+$ouds-chip-color-bg-selected-focus: $ouds-color-action-focus;
+$ouds-chip-color-bg-selected-hover: $ouds-color-action-hover;
+$ouds-chip-color-bg-selected-pressed: $ouds-color-action-pressed;
+$ouds-chip-color-bg-unselected-disabled: $ouds-color-opacity-transparent;
+$ouds-chip-color-bg-unselected-enabled: $ouds-color-opacity-transparent;
+$ouds-chip-color-bg-unselected-focus: $ouds-color-opacity-transparent;
+$ouds-chip-color-bg-unselected-hover: $ouds-color-opacity-transparent;
+$ouds-chip-color-bg-unselected-pressed: $ouds-color-opacity-transparent;
+$ouds-chip-color-border-selected-disabled: $ouds-color-opacity-transparent;
+$ouds-chip-color-border-selected-enabled: $ouds-color-opacity-transparent;
+$ouds-chip-color-border-selected-focus: $ouds-color-opacity-transparent;
+$ouds-chip-color-border-selected-hover: $ouds-color-opacity-transparent;
+$ouds-chip-color-border-selected-pressed: $ouds-color-opacity-transparent;
+$ouds-chip-color-border-unselected-disabled: $ouds-color-action-disabled;
+$ouds-chip-color-border-unselected-enabled: $ouds-color-border-emphasized;
+$ouds-chip-color-border-unselected-focus: $ouds-color-action-focus;
+$ouds-chip-color-border-unselected-hover: $ouds-color-action-hover;
+$ouds-chip-color-border-unselected-pressed: $ouds-color-action-pressed;
+$ouds-chip-color-content-selected-disabled: $ouds-color-content-on-action-disabled;
+$ouds-chip-color-content-selected-enabled: $ouds-color-content-on-action-selected;
+$ouds-chip-color-content-selected-focus: $ouds-color-content-on-action-focus;
+$ouds-chip-color-content-selected-hover: $ouds-color-content-on-action-hover;
+$ouds-chip-color-content-selected-pressed: $ouds-color-content-on-action-pressed;
+$ouds-chip-color-content-selected-tick-enabled: $ouds-color-content-on-action-selected;
+$ouds-chip-color-content-unselected-disabled: $ouds-color-action-disabled;
+$ouds-chip-color-content-unselected-enabled: $ouds-color-content-default;
+$ouds-chip-color-content-unselected-focus: $ouds-color-action-focus;
+$ouds-chip-color-content-unselected-hover: $ouds-color-action-hover;
+$ouds-chip-color-content-unselected-pressed: $ouds-color-action-pressed;
+$ouds-chip-size-icon: $ouds-size-icon-with-label-medium-size-small;
+$ouds-chip-size-min-height-interactive-area: $ouds-size-min-interactive-area;
+$ouds-chip-size-min-height: $ouds-dimension-xsmall;
+$ouds-chip-size-min-width: $ouds-dimension-2xlarge;
+$ouds-chip-space-column-gap-badge-chevron: $ouds-space-column-gap-2xsmall;
+$ouds-chip-space-column-gap-icon: $ouds-space-column-gap-xsmall;
+$ouds-chip-space-padding-block-icon-only: $ouds-space-padding-block-xsmall;
+$ouds-chip-space-padding-block: $ouds-space-padding-block-2xsmall;
+$ouds-chip-space-padding-inline-badge-start: $ouds-space-padding-inline-4xsmall;
+$ouds-chip-space-padding-inline-chevron-end: $ouds-space-padding-inline-xsmall;
+$ouds-chip-space-padding-inline-icon-none: $ouds-space-padding-inline-large;
+$ouds-chip-space-padding-inline-icon: $ouds-space-padding-inline-small;
 // scss-docs-end ouds-component-chip
 
 // Control
 
 // scss-docs-start ouds-component-control
-$ouds-control-item-border-radius-item-only: $ouds-border-radius-default !default;
-$ouds-control-item-border-radius: $ouds-border-radius-none !default;
-$ouds-control-item-color-bg-focus: $ouds-color-action-support-focus !default;
-$ouds-control-item-color-bg-hover: $ouds-color-action-support-hover !default;
-$ouds-control-item-color-bg-loading: $ouds-color-action-support-loading !default;
-$ouds-control-item-color-bg-pressed: $ouds-color-action-support-pressed !default;
-$ouds-control-item-color-content-loader: $ouds-color-content-default !default;
-$ouds-control-item-size-error-icon: $ouds-size-icon-with-label-large-size-small !default;
-$ouds-control-item-size-icon: $ouds-size-icon-with-label-large-size-medium !default;
-$ouds-control-item-size-loader: $ouds-size-icon-with-label-large-size-small !default;
-$ouds-control-item-size-max-height-assets-container: $core-ouds-dimension-1200 !default;
-$ouds-control-item-size-max-width: $core-ouds-dimension-4000 !default;
-$ouds-control-item-size-min-height: $core-ouds-dimension-650 !default;
-$ouds-control-item-size-min-width: $core-ouds-dimension-2000 !default;
-$ouds-control-item-space-column-gap: $ouds-space-column-gap-medium !default;
-$ouds-control-item-space-padding-block-default: $ouds-space-padding-block-medium !default;
-$ouds-control-item-space-padding-block-top-error-text: $ouds-space-padding-block-xsmall !default;
-$ouds-control-item-space-padding-inline-error-icon: $ouds-space-padding-inline-4xsmall !default;
-$ouds-control-item-space-padding-inline: $ouds-space-padding-inline-large !default;
-$ouds-control-item-space-row-gap: $ouds-space-row-gap-none !default;
+$ouds-control-item-border-radius-item-only: $ouds-border-radius-default;
+$ouds-control-item-border-radius: $ouds-border-radius-none;
+$ouds-control-item-color-bg-focus: $ouds-color-action-support-focus;
+$ouds-control-item-color-bg-hover: $ouds-color-action-support-hover;
+$ouds-control-item-color-bg-loading: $ouds-color-action-support-loading;
+$ouds-control-item-color-bg-pressed: $ouds-color-action-support-pressed;
+$ouds-control-item-color-content-loader: $ouds-color-content-default;
+$ouds-control-item-size-error-icon: $ouds-size-icon-with-label-large-size-small;
+$ouds-control-item-size-icon: $ouds-size-icon-with-label-large-size-medium;
+$ouds-control-item-size-loader: $ouds-size-icon-with-label-large-size-small;
+$ouds-control-item-size-max-height-assets-container: $core-ouds-dimension-1200;
+$ouds-control-item-size-max-width: $core-ouds-dimension-4000;
+$ouds-control-item-size-min-height: $core-ouds-dimension-650;
+$ouds-control-item-size-min-width: $core-ouds-dimension-2000;
+$ouds-control-item-space-column-gap: $ouds-space-column-gap-medium;
+$ouds-control-item-space-padding-block-default: $ouds-space-padding-block-medium;
+$ouds-control-item-space-padding-block-top-error-text: $ouds-space-padding-block-xsmall;
+$ouds-control-item-space-padding-inline-error-icon: $ouds-space-padding-inline-4xsmall;
+$ouds-control-item-space-padding-inline: $ouds-space-padding-inline-large;
+$ouds-control-item-space-row-gap: $ouds-space-row-gap-none;
 // scss-docs-end ouds-component-control
 
 // Divider
 
 // scss-docs-start ouds-component-divider
-$ouds-divider-border-width: $ouds-border-width-thin !default;
+$ouds-divider-border-width: $ouds-border-width-thin;
 // scss-docs-end ouds-component-divider
 
 // Expand
 
 // scss-docs-start ouds-component-expand
-$ouds-expand-link-icon-end: true !default;
-$ouds-expand-link-icon-start: false !default;
+$ouds-expand-link-icon-end: true;
+$ouds-expand-link-icon-start: false;
 // scss-docs-end ouds-component-expand
 
 // Input
 
 // scss-docs-start ouds-component-input
-$ouds-input-tag-border-width-default-interaction: $ouds-border-width-default !default;
-$ouds-input-tag-border-width-default: $ouds-border-width-thin !default;
-$ouds-input-tag-color-bg-enabled: $ouds-color-action-support-enabled !default;
-$ouds-input-tag-color-bg-focus: $ouds-color-action-support-focus !default;
-$ouds-input-tag-color-bg-hover: $ouds-color-action-support-hover !default;
-$ouds-input-tag-color-bg-pressed: $ouds-color-action-support-pressed !default;
-$ouds-input-tag-color-border-enabled: $ouds-color-border-default !default;
-$ouds-input-tag-color-border-focus: $ouds-color-action-focus !default;
-$ouds-input-tag-color-border-hover: $ouds-color-action-hover !default;
-$ouds-input-tag-color-border-pressed: $ouds-color-action-pressed !default;
-$ouds-input-tag-color-content-enabled: $ouds-color-content-default !default;
-$ouds-input-tag-color-content-focus: $ouds-color-action-focus !default;
-$ouds-input-tag-color-content-hover: $ouds-color-action-hover !default;
-$ouds-input-tag-color-content-pressed: $ouds-color-action-pressed !default;
+$ouds-input-tag-border-width-default-interaction: $ouds-border-width-default;
+$ouds-input-tag-border-width-default: $ouds-border-width-thin;
+$ouds-input-tag-color-bg-enabled: $ouds-color-action-support-enabled;
+$ouds-input-tag-color-bg-focus: $ouds-color-action-support-focus;
+$ouds-input-tag-color-bg-hover: $ouds-color-action-support-hover;
+$ouds-input-tag-color-bg-pressed: $ouds-color-action-support-pressed;
+$ouds-input-tag-color-border-enabled: $ouds-color-border-default;
+$ouds-input-tag-color-border-focus: $ouds-color-action-focus;
+$ouds-input-tag-color-border-hover: $ouds-color-action-hover;
+$ouds-input-tag-color-border-pressed: $ouds-color-action-pressed;
+$ouds-input-tag-color-content-enabled: $ouds-color-content-default;
+$ouds-input-tag-color-content-focus: $ouds-color-action-focus;
+$ouds-input-tag-color-content-hover: $ouds-color-action-hover;
+$ouds-input-tag-color-content-pressed: $ouds-color-action-pressed;
 // scss-docs-end ouds-component-input
 
 // Link
 
 // scss-docs-start ouds-component-link
-$ouds-link-color-chevron-enabled: $ouds-color-action-enabled !default;
-$ouds-link-color-chevron-focus: $ouds-color-action-enabled !default;
-$ouds-link-color-chevron-hover: $ouds-color-content-brand-primary !default;
-$ouds-link-color-chevron-pressed: $ouds-color-action-pressed !default;
-$ouds-link-color-content-enabled: $ouds-color-content-default !default;
-$ouds-link-color-content-focus: $ouds-color-action-focus !default;
-$ouds-link-color-content-hover: $ouds-color-action-hover !default;
-$ouds-link-color-content-pressed: $ouds-color-action-pressed !default;
-$ouds-link-mono-color-content-disabled: var(--#{$prefix}link-mono-color-content-disabled) !default;
-$ouds-link-mono-color-content-enabled: var(--#{$prefix}link-mono-color-content-enabled) !default;
-$ouds-link-mono-color-content-focus: var(--#{$prefix}link-mono-color-content-focus) !default;
-$ouds-link-mono-color-content-hover: var(--#{$prefix}link-mono-color-content-hover) !default;
-$ouds-link-mono-color-content-pressed: var(--#{$prefix}link-mono-color-content-pressed) !default;
-$ouds-link-size-icon-default: $ouds-size-icon-with-label-large-size-xsmall !default;
-$ouds-link-size-icon-small: $ouds-size-icon-with-label-medium-size-small !default;
-$ouds-link-size-min-height-default: $ouds-size-min-interactive-area !default;
-$ouds-link-size-min-height-small: $core-ouds-dimension-550 !default;
-$ouds-link-size-min-width-default: $ouds-size-min-interactive-area !default;
-$ouds-link-size-min-width-small: $core-ouds-dimension-550 !default;
-$ouds-link-space-column-gap-chevron-default: $ouds-space-column-gap-2xsmall !default;
-$ouds-link-space-column-gap-chevron-small: $ouds-space-column-gap-2xsmall !default;
-$ouds-link-space-column-gap-icon-default: $ouds-space-column-gap-small !default;
-$ouds-link-space-column-gap-icon-small: $ouds-space-column-gap-xsmall !default;
-$ouds-link-space-padding-block: $ouds-space-padding-block-medium !default;
-$ouds-link-space-padding-inline: $ouds-space-padding-inline-none !default;
+$ouds-link-color-chevron-enabled: $ouds-color-action-enabled;
+$ouds-link-color-chevron-focus: $ouds-color-action-enabled;
+$ouds-link-color-chevron-hover: $ouds-color-content-brand-primary;
+$ouds-link-color-chevron-pressed: $ouds-color-action-pressed;
+$ouds-link-color-content-enabled: $ouds-color-content-default;
+$ouds-link-color-content-focus: $ouds-color-action-focus;
+$ouds-link-color-content-hover: $ouds-color-action-hover;
+$ouds-link-color-content-pressed: $ouds-color-action-pressed;
+$ouds-link-mono-color-content-disabled: var(--#{$prefix}link-mono-color-content-disabled);
+$ouds-link-mono-color-content-enabled: var(--#{$prefix}link-mono-color-content-enabled);
+$ouds-link-mono-color-content-focus: var(--#{$prefix}link-mono-color-content-focus);
+$ouds-link-mono-color-content-hover: var(--#{$prefix}link-mono-color-content-hover);
+$ouds-link-mono-color-content-pressed: var(--#{$prefix}link-mono-color-content-pressed);
+$ouds-link-size-icon-default: $ouds-size-icon-with-label-large-size-xsmall;
+$ouds-link-size-icon-small: $ouds-size-icon-with-label-medium-size-small;
+$ouds-link-size-min-height-default: $ouds-size-min-interactive-area;
+$ouds-link-size-min-height-small: $core-ouds-dimension-550;
+$ouds-link-size-min-width-default: $ouds-size-min-interactive-area;
+$ouds-link-size-min-width-small: $core-ouds-dimension-550;
+$ouds-link-space-column-gap-chevron-default: $ouds-space-column-gap-2xsmall;
+$ouds-link-space-column-gap-chevron-small: $ouds-space-column-gap-2xsmall;
+$ouds-link-space-column-gap-icon-default: $ouds-space-column-gap-small;
+$ouds-link-space-column-gap-icon-small: $ouds-space-column-gap-xsmall;
+$ouds-link-space-padding-block: $ouds-space-padding-block-medium;
+$ouds-link-space-padding-inline: $ouds-space-padding-inline-none;
 // scss-docs-end ouds-component-link
 
 // Pin
 
 // scss-docs-start ouds-component-pin
-$ouds-pin-code-input-size-max-width: $ouds-dimension-3xlarge !default;
-$ouds-pin-code-input-size-min-width: $ouds-dimension-large !default;
-$ouds-pin-code-input-space-column-gap-digit-input: $ouds-space-column-gap-medium !default;
+$ouds-pin-code-input-size-max-width: $ouds-dimension-3xlarge;
+$ouds-pin-code-input-size-min-width: $ouds-dimension-large;
+$ouds-pin-code-input-space-column-gap-digit-input: $ouds-space-column-gap-medium;
 // scss-docs-end ouds-component-pin
 
 // Quantity
 
 // scss-docs-start ouds-component-quantity
-$ouds-quantity-input-size-max-width: $core-ouds-dimension-3000 !default;
-$ouds-quantity-input-size-min-width: $core-ouds-dimension-2225 !default;
-$ouds-quantity-input-space-column-gap-default: $ouds-space-column-gap-xsmall !default;
-$ouds-quantity-input-space-column-gap-leading-icon: $ouds-space-column-gap-medium !default;
-$ouds-quantity-input-space-column-gap-quantity-selector: $core-ouds-dimension-out-of-system-25 !default;
+$ouds-quantity-input-size-max-width: $core-ouds-dimension-3000;
+$ouds-quantity-input-size-min-width: $core-ouds-dimension-2225;
+$ouds-quantity-input-space-column-gap-default: $ouds-space-column-gap-xsmall;
+$ouds-quantity-input-space-column-gap-leading-icon: $ouds-space-column-gap-medium;
+$ouds-quantity-input-space-column-gap-quantity-selector: $core-ouds-dimension-out-of-system-25;
 // scss-docs-end ouds-component-quantity
 
 // Radio
 
 // scss-docs-start ouds-component-radio
-$ouds-radio-button-border-radius: $ouds-border-radius-pill !default;
-$ouds-radio-button-border-width-selected-focus: $ouds-border-width-none !default;
-$ouds-radio-button-border-width-selected-hover: $ouds-border-width-none !default;
-$ouds-radio-button-border-width-selected-pressed: $ouds-border-width-none !default;
-$ouds-radio-button-border-width-selected: $ouds-border-width-none !default;
-$ouds-radio-button-border-width-unselected-focus: $ouds-border-width-medium !default;
-$ouds-radio-button-border-width-unselected-hover: $ouds-border-width-medium !default;
-$ouds-radio-button-border-width-unselected-pressed: $ouds-border-width-medium !default;
-$ouds-radio-button-border-width-unselected: $ouds-border-width-thin !default;
-$ouds-radio-button-size-indicator: $ouds-size-icon-with-label-large-size-xsmall !default;
-$ouds-radio-button-size-max-height: $ouds-size-min-interactive-area !default;
-$ouds-radio-button-size-min-height: $ouds-size-min-interactive-area !default;
-$ouds-radio-button-size-min-width: $ouds-size-min-interactive-area !default;
+$ouds-radio-button-border-radius: $ouds-border-radius-pill;
+$ouds-radio-button-border-width-selected-focus: $ouds-border-width-none;
+$ouds-radio-button-border-width-selected-hover: $ouds-border-width-none;
+$ouds-radio-button-border-width-selected-pressed: $ouds-border-width-none;
+$ouds-radio-button-border-width-selected: $ouds-border-width-none;
+$ouds-radio-button-border-width-unselected-focus: $ouds-border-width-medium;
+$ouds-radio-button-border-width-unselected-hover: $ouds-border-width-medium;
+$ouds-radio-button-border-width-unselected-pressed: $ouds-border-width-medium;
+$ouds-radio-button-border-width-unselected: $ouds-border-width-thin;
+$ouds-radio-button-size-indicator: $ouds-size-icon-with-label-large-size-xsmall;
+$ouds-radio-button-size-max-height: $ouds-size-min-interactive-area;
+$ouds-radio-button-size-min-height: $ouds-size-min-interactive-area;
+$ouds-radio-button-size-min-width: $ouds-size-min-interactive-area;
 // scss-docs-end ouds-component-radio
 
 // Select
 
 // scss-docs-start ouds-component-select
-$ouds-select-input-size-min-width: $ouds-dimension-8xlarge !default;
+$ouds-select-input-size-min-width: $ouds-dimension-8xlarge;
 // scss-docs-end ouds-component-select
 
 // Skeleton
 
 // scss-docs-start ouds-component-skeleton
-$ouds-skeleton-color-bg: $ouds-color-opacity-lowest !default;
-$ouds-skeleton-color-gradient-middle: $ouds-color-opacity-lower !default;
-$ouds-skeleton-color-gradient-start-end: $ouds-color-opacity-transparent !default;
+$ouds-skeleton-color-bg: $ouds-color-opacity-lowest;
+$ouds-skeleton-color-gradient-middle: $ouds-color-opacity-lower;
+$ouds-skeleton-color-gradient-start-end: $ouds-color-opacity-transparent;
 // scss-docs-end ouds-component-skeleton
 
 // Switch
 
 // scss-docs-start ouds-component-switch
-$ouds-switch-border-radius-cursor: $ouds-border-radius-pill !default;
-$ouds-switch-border-radius-track: $ouds-border-radius-pill !default;
-$ouds-switch-color-check-interaction: $ouds-color-content-default !default;
-$ouds-switch-color-check: $ouds-color-content-default !default;
-$ouds-switch-color-cursor: var(--#{$prefix}switch-color-cursor) !default;
-$ouds-switch-color-track-selected-interaction: var(--#{$prefix}switch-color-track-selected-interaction) !default;
-$ouds-switch-color-track-selected: var(--#{$prefix}switch-color-track-selected) !default;
-$ouds-switch-color-track-unselected-interaction: var(--#{$prefix}switch-color-track-unselected-interaction) !default;
-$ouds-switch-color-track-unselected: var(--#{$prefix}switch-color-track-unselected) !default;
-$ouds-switch-opacity-check: $ouds-opacity-opaque !default;
-$ouds-switch-size-height-cursor-selected: $ouds-dimension-3xsmall !default;
-$ouds-switch-size-height-cursor-unselected: $ouds-dimension-5xsmall !default;
-$ouds-switch-size-height-track: $ouds-dimension-xsmall !default;
-$ouds-switch-size-max-height: $ouds-dimension-xsmall !default;
-$ouds-switch-size-min-height-interactive-area: $ouds-size-min-interactive-area !default;
-$ouds-switch-size-min-height: $ouds-dimension-xsmall !default;
-$ouds-switch-size-min-width: $ouds-dimension-3xlarge !default;
-$ouds-switch-size-width-cursor-selected-pressed: $ouds-dimension-xsmall !default;
-$ouds-switch-size-width-cursor-selected: $ouds-dimension-3xsmall !default;
-$ouds-switch-size-width-cursor-unselected-pressed: $ouds-dimension-3xsmall !default;
-$ouds-switch-size-width-cursor-unselected: $ouds-dimension-5xsmall !default;
-$ouds-switch-size-width-track: $ouds-dimension-3xlarge !default;
-$ouds-switch-space-padding-inline-selected: $ouds-space-padding-inline-3xsmall !default;
-$ouds-switch-space-padding-inline-unselected: $ouds-space-padding-inline-xsmall !default;
+$ouds-switch-border-radius-cursor: $ouds-border-radius-pill;
+$ouds-switch-border-radius-track: $ouds-border-radius-pill;
+$ouds-switch-color-check-interaction: $ouds-color-content-default;
+$ouds-switch-color-check: $ouds-color-content-default;
+$ouds-switch-color-cursor: var(--#{$prefix}switch-color-cursor);
+$ouds-switch-color-track-selected-interaction: var(--#{$prefix}switch-color-track-selected-interaction);
+$ouds-switch-color-track-selected: var(--#{$prefix}switch-color-track-selected);
+$ouds-switch-color-track-unselected-interaction: var(--#{$prefix}switch-color-track-unselected-interaction);
+$ouds-switch-color-track-unselected: var(--#{$prefix}switch-color-track-unselected);
+$ouds-switch-opacity-check: $ouds-opacity-opaque;
+$ouds-switch-size-height-cursor-selected: $ouds-dimension-3xsmall;
+$ouds-switch-size-height-cursor-unselected: $ouds-dimension-5xsmall;
+$ouds-switch-size-height-track: $ouds-dimension-xsmall;
+$ouds-switch-size-max-height: $ouds-dimension-xsmall;
+$ouds-switch-size-min-height-interactive-area: $ouds-size-min-interactive-area;
+$ouds-switch-size-min-height: $ouds-dimension-xsmall;
+$ouds-switch-size-min-width: $ouds-dimension-3xlarge;
+$ouds-switch-size-width-cursor-selected-pressed: $ouds-dimension-xsmall;
+$ouds-switch-size-width-cursor-selected: $ouds-dimension-3xsmall;
+$ouds-switch-size-width-cursor-unselected-pressed: $ouds-dimension-3xsmall;
+$ouds-switch-size-width-cursor-unselected: $ouds-dimension-5xsmall;
+$ouds-switch-size-width-track: $ouds-dimension-3xlarge;
+$ouds-switch-space-padding-inline-selected: $ouds-space-padding-inline-3xsmall;
+$ouds-switch-space-padding-inline-unselected: $ouds-space-padding-inline-xsmall;
 // scss-docs-end ouds-component-switch
 
 // Tag
 
 // scss-docs-start ouds-component-tag
-$ouds-tag-border-radius: $ouds-border-radius-pill !default;
-$ouds-tag-size-asset-default: $ouds-size-icon-with-label-medium-size-small !default;
-$ouds-tag-size-asset-small: $ouds-size-icon-with-label-small-size-small !default;
-$ouds-tag-size-min-height-default: $ouds-dimension-xsmall !default;
-$ouds-tag-size-min-height-interactive-area: $ouds-size-min-interactive-area !default;
-$ouds-tag-size-min-height-small: $ouds-dimension-3xsmall !default;
-$ouds-tag-size-min-width-default: $ouds-dimension-xlarge !default;
-$ouds-tag-size-min-width-small: $ouds-dimension-large !default;
-$ouds-tag-space-column-gap-default: $ouds-space-column-gap-2xsmall !default;
-$ouds-tag-space-column-gap-small: $ouds-space-column-gap-2xsmall !default;
-$ouds-tag-space-inset-bullet-default: $core-ouds-dimension-out-of-system-75 !default;
-$ouds-tag-space-inset-bullet-small: $ouds-space-inset-3xsmall !default;
-$ouds-tag-space-inset-icon-default: $ouds-space-inset-4xsmall !default;
-$ouds-tag-space-inset-icon-small: $ouds-space-inset-none !default;
-$ouds-tag-space-inset-loader-default: $ouds-space-inset-3xsmall !default;
-$ouds-tag-space-inset-loader-small: $ouds-space-inset-4xsmall !default;
-$ouds-tag-space-padding-block-default: $ouds-space-padding-block-2xsmall !default;
-$ouds-tag-space-padding-block-small: $ouds-space-padding-block-3xsmall !default;
-$ouds-tag-space-padding-inline-asset-default: $ouds-space-padding-inline-xsmall !default;
-$ouds-tag-space-padding-inline-asset-small: $ouds-space-padding-inline-2xsmall !default;
-$ouds-tag-space-padding-inline-default: $ouds-space-padding-inline-medium !default;
-$ouds-tag-space-padding-inline-small: $ouds-space-padding-inline-small !default;
+$ouds-tag-border-radius: $ouds-border-radius-pill;
+$ouds-tag-size-asset-default: $ouds-size-icon-with-label-medium-size-small;
+$ouds-tag-size-asset-small: $ouds-size-icon-with-label-small-size-small;
+$ouds-tag-size-min-height-default: $ouds-dimension-xsmall;
+$ouds-tag-size-min-height-interactive-area: $ouds-size-min-interactive-area;
+$ouds-tag-size-min-height-small: $ouds-dimension-3xsmall;
+$ouds-tag-size-min-width-default: $ouds-dimension-xlarge;
+$ouds-tag-size-min-width-small: $ouds-dimension-large;
+$ouds-tag-space-column-gap-default: $ouds-space-column-gap-2xsmall;
+$ouds-tag-space-column-gap-small: $ouds-space-column-gap-2xsmall;
+$ouds-tag-space-inset-bullet-default: $core-ouds-dimension-out-of-system-75;
+$ouds-tag-space-inset-bullet-small: $ouds-space-inset-3xsmall;
+$ouds-tag-space-inset-icon-default: $ouds-space-inset-4xsmall;
+$ouds-tag-space-inset-icon-small: $ouds-space-inset-none;
+$ouds-tag-space-inset-loader-default: $ouds-space-inset-3xsmall;
+$ouds-tag-space-inset-loader-small: $ouds-space-inset-4xsmall;
+$ouds-tag-space-padding-block-default: $ouds-space-padding-block-2xsmall;
+$ouds-tag-space-padding-block-small: $ouds-space-padding-block-3xsmall;
+$ouds-tag-space-padding-inline-asset-default: $ouds-space-padding-inline-xsmall;
+$ouds-tag-space-padding-inline-asset-small: $ouds-space-padding-inline-2xsmall;
+$ouds-tag-space-padding-inline-default: $ouds-space-padding-inline-medium;
+$ouds-tag-space-padding-inline-small: $ouds-space-padding-inline-small;
 // scss-docs-end ouds-component-tag
 
 // Text
 
 // scss-docs-start ouds-component-text
-$ouds-text-area-size-max-height-assets-container: $core-ouds-dimension-1100 !default;
-$ouds-text-area-size-max-height-input: $core-ouds-dimension-2500 !default;
-$ouds-text-area-size-max-width: $core-ouds-dimension-6000 !default;
-$ouds-text-area-size-min-height-input: $core-ouds-dimension-900 !default;
-$ouds-text-area-space-padding-block: $ouds-space-padding-block-small !default;
-$ouds-text-input-border-radius-default: $ouds-border-radius-default !default;
-$ouds-text-input-border-radius-rounded: $ouds-border-radius-default !default;
-$ouds-text-input-border-width-default: $ouds-border-width-thin !default;
-$ouds-text-input-border-width-focus: $ouds-border-width-medium !default;
-$ouds-text-input-color-border-enabled: $ouds-color-border-default !default;
-$ouds-text-input-color-border-focus: $ouds-color-border-emphasized !default;
-$ouds-text-input-color-border-hover: $ouds-color-action-hover !default;
-$ouds-text-input-color-border-loading: $ouds-color-border-emphasized !default;
-$ouds-text-input-size-country-selector-flag-height: $ouds-size-icon-with-label-large-size-xsmall !default;
-$ouds-text-input-size-label-max-height: $core-ouds-dimension-600 !default;
-$ouds-text-input-size-leading-icon: $ouds-size-icon-with-label-large-size-small !default;
-$ouds-text-input-size-max-width: $core-ouds-dimension-4000 !default;
-$ouds-text-input-size-min-height: $core-ouds-dimension-750 !default;
-$ouds-text-input-size-min-width: $core-ouds-dimension-2500 !default;
-$ouds-text-input-size-vertical-divider-height: $ouds-dimension-4xsmall !default;
-$ouds-text-input-space-column-gap-default: $ouds-space-column-gap-medium !default;
-$ouds-text-input-space-column-gap-inline-text: $ouds-space-column-gap-xsmall !default;
-$ouds-text-input-space-column-gap-trailing-error-action: $ouds-space-column-gap-xsmall !default;
-$ouds-text-input-space-padding-block-default: $ouds-space-padding-block-2xsmall !default;
-$ouds-text-input-space-padding-block-top-helper-text: $ouds-space-padding-block-xsmall !default;
-$ouds-text-input-space-padding-inline-country-selector-end: $ouds-space-padding-inline-xsmall !default;
-$ouds-text-input-space-padding-inline-country-selector-start: $ouds-space-padding-inline-small !default;
-$ouds-text-input-space-padding-inline-default: $ouds-space-padding-inline-large !default;
-$ouds-text-input-space-padding-inline-trailing-action: $ouds-space-padding-inline-2xsmall !default;
-$ouds-text-input-space-row-gap-label-input: $ouds-space-row-gap-none !default;
+$ouds-text-area-size-max-height-assets-container: $core-ouds-dimension-1100;
+$ouds-text-area-size-max-height-input: $core-ouds-dimension-2500;
+$ouds-text-area-size-max-width: $core-ouds-dimension-6000;
+$ouds-text-area-size-min-height-input: $core-ouds-dimension-900;
+$ouds-text-area-space-padding-block: $ouds-space-padding-block-small;
+$ouds-text-input-border-radius-default: $ouds-border-radius-default;
+$ouds-text-input-border-radius-rounded: $ouds-border-radius-default;
+$ouds-text-input-border-width-default: $ouds-border-width-thin;
+$ouds-text-input-border-width-focus: $ouds-border-width-medium;
+$ouds-text-input-color-border-enabled: $ouds-color-border-default;
+$ouds-text-input-color-border-focus: $ouds-color-border-emphasized;
+$ouds-text-input-color-border-hover: $ouds-color-action-hover;
+$ouds-text-input-color-border-loading: $ouds-color-border-emphasized;
+$ouds-text-input-size-country-selector-flag-height: $ouds-size-icon-with-label-large-size-xsmall;
+$ouds-text-input-size-label-max-height: $core-ouds-dimension-600;
+$ouds-text-input-size-leading-icon: $ouds-size-icon-with-label-large-size-small;
+$ouds-text-input-size-max-width: $core-ouds-dimension-4000;
+$ouds-text-input-size-min-height: $core-ouds-dimension-750;
+$ouds-text-input-size-min-width: $core-ouds-dimension-2500;
+$ouds-text-input-size-vertical-divider-height: $ouds-dimension-4xsmall;
+$ouds-text-input-space-column-gap-default: $ouds-space-column-gap-medium;
+$ouds-text-input-space-column-gap-inline-text: $ouds-space-column-gap-xsmall;
+$ouds-text-input-space-column-gap-trailing-error-action: $ouds-space-column-gap-xsmall;
+$ouds-text-input-space-padding-block-default: $ouds-space-padding-block-2xsmall;
+$ouds-text-input-space-padding-block-top-helper-text: $ouds-space-padding-block-xsmall;
+$ouds-text-input-space-padding-inline-country-selector-end: $ouds-space-padding-inline-xsmall;
+$ouds-text-input-space-padding-inline-country-selector-start: $ouds-space-padding-inline-small;
+$ouds-text-input-space-padding-inline-default: $ouds-space-padding-inline-large;
+$ouds-text-input-space-padding-inline-trailing-action: $ouds-space-padding-inline-2xsmall;
+$ouds-text-input-space-row-gap-label-input: $ouds-space-row-gap-none;
 // scss-docs-end ouds-component-text

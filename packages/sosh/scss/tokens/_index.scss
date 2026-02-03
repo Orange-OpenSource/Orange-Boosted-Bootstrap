@@ -1,6 +1,5 @@
-@forward "raw";
-@forward "semantic";
-@forward "semantic-colors-custom-props";
-@forward "composite";
-@forward "component-colors-custom-props";
-@forward "component";
+@use "semantic";
+@use "semantic-colors-custom-props";
+@use "composite";
+@use "component-colors-custom-props";
+@use "component";
