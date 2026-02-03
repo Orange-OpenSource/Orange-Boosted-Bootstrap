@@ -63,7 +63,7 @@ const mainProps = overrides?.main ?? {}
       Astro.slots.has('main') ? (
         <slot name="main" />
       ) : (
-        <main role="main" {...mainProps}>
+        <main {...mainProps}>
           <slot />
         </main>
       )
