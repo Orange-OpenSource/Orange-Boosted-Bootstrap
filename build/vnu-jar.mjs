@@ -45,8 +45,9 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     'Element “style” not allowed as child of element “div” in this context.*',
     // Allow empty option in select
     'Element “option” without attribute “label” must not be empty.',
-    'The "banner" role is unnecessary for element "header".',
-    'The "contentinfo" role is unnecessary for element "footer".'
+    // Several header / footer inside the documentation
+    'The “banner” role is unnecessary for element “header”.',
+    'The “contentinfo” role is unnecessary for element “footer”.'
     // End mod
   ].join('|')
 
