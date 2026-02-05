@@ -17,15 +17,40 @@ interface Props {
     | 'warning-data-bs-title-vs-title'
     | 'warning-input-support'
   /**
-   * The type of callout to display. One of `info`, `danger`, or `warning`.
+   * The type of alert message to display. One of `info`, `negative`, or `warning`.
    * @default 'info'
    */
-  type?: 'danger' | 'info' | 'warning'
+  type?: 'negative' | 'info' | 'warning'
+  /**
+   * The title of alert message to display. We provide a default title for each
+   * @default type
+   */
+  title?: string
+  /**
+   * The title level of alert message to display.
+   * @default 'p'
+   */
+  titleLevel?: number
+  /**
+   * The label of the action of alert message to display.
+   */
+  action?: string
+  /**
+   * The url of the action of alert message to display.
+   * @default '#'
+   */
+  actionHref?: string
+  /**
+   * The CSS class(es) to be added to the alert message.
+   */
+  class?: string
 }
 
-const { name, type = 'info' } = Astro.props
+const { name, type = 'info', title, titleLevel, action, actionHref = '#', class: className } = Astro.props
 
 let Content: MarkdownInstance<{}>['Content'] | undefined
+let titleToDisplay: string = title
+let titleTag: string
 
 if (name) {
   const callout = await getCalloutByName(name)
@@ -37,8 +62,30 @@ if (name) {
   const namedCallout = await callout.render()
   Content = namedCallout.Content
 }
+
+// Set default title
+switch (type) {
+  case 'negative':
+    titleToDisplay = 'Danger'
+    break
+  case 'warning':
+    titleToDisplay = 'Warning'
+    break
+  case 'info':
+    titleToDisplay = 'Info'
+    break
+}
+
+titleLevel ? titleTag = `h${titleLevel}` : titleTag = 'p'
 ---
 
-<div class={`bd-callout bd-callout-${type}`}>
-  {Content ? <Content /> : <slot />}
+<div class={`alert alert-message alert-${type} ${className ? className : 'my-medium'}`}>
+  <div class="alert-icon">{!!title && <p class="visually-hidden">{titleToDisplay}</p>}</div>
+  <div class="alert-container">
+    <div class="alert-text-container">
+      <Fragment set:html={`<${titleTag} class="alert-label">${title || titleToDisplay}</${titleTag}>`} />
+      {Content ? <Content /> : <slot />}
+    </div>
+    {action && <a href={actionHref} class="link">{action}</a>}
+  </div>
 </div>

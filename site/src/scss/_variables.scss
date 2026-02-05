@@ -11,7 +11,7 @@ $bd-violet:        lighten(saturate($bd-purple, 5%), 15%);
 // OUDS mod: no $bd-accent
 
 $bd-gutter-x: .625rem; // OUDS mod
-$bd-callout-variants: info, warning, danger !default;
+// OUDS mod: no $bd-callout-variants
 
 @include color-mode(light, true) {
   --bd-primary-light: #{$bd-primary-light}; // OUDS mod

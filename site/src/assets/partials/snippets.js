@@ -86,30 +86,33 @@ export default () => {
   function appendAlert(message, type, typeVisuallyHidden) {
     const wrapper = document.createElement('div')
     wrapper.innerHTML = [
-      `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-      '  <span class="alert-icon">',
-      `    <span class="visually-hidden">${typeVisuallyHidden}</span>`,
-      '  </span>',
-      `  <p>${message}</p>`,
-      '  <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">',
-      '    <span class="visually-hidden">Close</span>',
-      '  </button>',
+      `<div class="alert alert-message alert-${type}" ${type === 'negative' ? 'role="alert"' : ''}>`,
+      '  <div class="alert-icon">',
+      `    <p class="visually-hidden">${typeVisuallyHidden} alert</p>`,
+      '  </div>',
+      '  <div class="alert-container">',
+      '    <div class= "alert-text-container">',
+      `      <h5 class="alert-label">${message}</h5>`,
+      '      <p>This is a small paragraph.</p>',
+      '    </div>',
+      '  </div>',
+      '  <div class="alert-action-container">',
+      '    <button class="btn btn-icon btn-minimal" data-bs-dismiss="alert">',
+      '      <svg aria-hidden="true"><use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#expurge"/></svg>',
+      `      <span class="visually-hidden">Close ${type} alert</span>`,
+      '    </button>',
+      '  </div>',
       '</div>'
     ].join('')
 
-    document.getElementById('liveAlertPlaceholder').append(wrapper)
-
-    // Create `.btn-close` tooltip after `innerHTML` has been modified
-    const btnClose = wrapper.querySelector('.btn-close')
-    const tooltip = new oudsWeb.Tooltip(btnClose)
-    btnClose.addEventListener('click', () => {
-      tooltip.hide()
-    })
+    document.getElementById('liveAlertPlaceholder').append(wrapper.firstChild)
   }
 
   if (document.getElementById('liveAlertBtn')) {
+    const functionalArray = ['positive', 'negative', 'info', 'warning']
     document.getElementById('liveAlertBtn').addEventListener('click', () => {
-      appendAlert('Nice, you triggered this alert message!', 'success', 'Success')
+      const type = functionalArray[Math.floor(Math.random() * functionalArray.length)]
+      appendAlert(`Nice, you triggered this ${type} alert message!`, type, type)
     })
   }
   // js-docs-end live-alert

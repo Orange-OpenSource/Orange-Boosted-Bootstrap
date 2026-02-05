@@ -89,9 +89,29 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ## Components
 
+### Alerts
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.alert-message`, `.alert-label`, `.alert-accent`, `.alert-neutral`, `.use-rounded-corner-alert`, `.alert-container`, `.alert-text-container`, `.alert-action-container`, `.alert-positive`, and `.alert-negative` have been added.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Alerts have changed a lot. The DOM has changed a lot and we recommend to read our [new Alerts page]([[docsref:/components/alerts]]) first. `.alert-sm`, `.alert-success`, `.alert-danger`, `.alert-dismissible`, `.alert-heading` have been removed.
+    <details class="mb-medium">
+      <summary>See all changing classes</summary>
+
+      - `.alert` → `.alert.alert-message`.
+      - `.alert-sm` → To remove.
+      - `.alert-success` → `.alert-positive`.
+      - `.alert-info` → Stays the same.
+      - `.alert-warning` → Stays the same.
+      - `.alert-danger` → `.alert-negative`.
+      - `.alert-icon` → Stays the same.
+      - `.alert-heading` → `.alert-label`.
+      - `.alert-dismissible` → To remove.
+      - The DOM has been updated to add more containers around in order to ease the future integrations.
+
+    </details>
+
 ### Badges
 
-- <span class="tag tag-small rounded-none tag-warning">Breaking</span> Badge has changed a lot in its meaning and usages. It can no longer contain text (use our new [tags]([[docsref:/components/tags]]) for this). It is now either a basic badge (a coloured bullet), a badge - count (with a number) or a badge - icon (with an icon).
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Badge has changed a lot in its meaning and usages. It can no longer contain text (use our new [tags]([[docsref:/components/tags]]) for this). It is now either a basic badge (a colored bullet), a badge - count (with a number) or a badge - icon (with an icon).
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> New dedicated classes have been added to handle badges colors, states and sizes.
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> New classes have been added to handle badges icons.
 
@@ -432,7 +452,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
     <summary><span class="tag tag-small rounded-none tag-info">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>
 
   <Callout type="info">
-  See more details about [`[data-bs-theme]`]([[docsref:/foundation/color-modes]]).
+    See more details about [`[data-bs-theme]`]([[docsref:/foundation/color-modes]]).
   </Callout>
 
   1. `.bg-transparent` stays the same
