@@ -22,7 +22,7 @@ Within the download you’ll find the following directories and files, logically
 
   ```text
   @ouds/
-  └── web-orange-business-tools/
+  └── web-orange-compact/
       └── dist/
           └── css/
               ├── ouds-web-bootstrap.css
@@ -79,22 +79,22 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 ## Documentation
 
-OUDS Web’s documentation, included in this repo in the root directory, is built with [Astro](https://astro.build/) and publicly hosted on GitHub Pages at <https://web.unified-design-system.orange.com/orange-business-tools/>. The docs may also be run locally.
+OUDS Web’s documentation, included in this repo in the root directory, is built with [Astro](https://astro.build/) and publicly hosted on GitHub Pages at <https://web.unified-design-system.orange.com/orange-compact/>. The docs may also be run locally.
 
 Documentation search is powered by [Algolia’s DocSearch](https://docsearch.algolia.com/).
 
 ### Running documentation locally
 
 1. Run `npm install` from the root `/ouds-web` directory, to install the Node.js dependencies, including Astro (the site builder).
-2. Run `npm run css` from the brand root `/ouds-web/packages/orange-business-tools` directory, (or a specific npm script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
-3. From the root `/ouds-web/packages/orange-business-tools` directory, run `npm run astro-dev` in the command line.
-4. Open <http://localhost:9003/orange-business-tools/> in your browser, and voilà.
+2. Run `npm run css` from the brand root `/ouds-web/packages/orange-compact` directory, (or a specific npm script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
+3. From the root `/ouds-web/packages/orange-compact` directory, run `npm run astro-dev` in the command line.
+4. Open <http://localhost:9003/orange-compact/> in your browser, and voilà.
 
 Learn more about using Astro by reading its [documentation](https://docs.astro.build/en/getting-started/).
 
 ### Documentation for previous releases
 
-You can find all our previous releases docs on <https://web.unified-design-system.orange.com/orange-business-tools/docs/versions/>.
+You can find all our previous releases docs on <https://web.unified-design-system.orange.com/orange-compact/docs/versions/>.
 
 [Previous releases](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) and their documentation are also available for download.
 
