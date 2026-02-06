@@ -95,7 +95,7 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
               View on GitHub
             </a>
           </div>
-          <h1 class="bd-title mb-none" id="content">{frontmatter.title}</h1>
+          <h1 class="bd-title mb-none" id="bd-content">{frontmatter.title}</h1>
         </div>
         <div class="bd-subtitle mt-small">
           {frontmatter.description && <Fragment set:html={processMarkdownToHtml(frontmatter.description)} />}

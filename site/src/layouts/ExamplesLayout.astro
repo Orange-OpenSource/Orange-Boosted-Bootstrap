@@ -21,7 +21,7 @@ const {
   theme_selector = true
 } = Astro.props
 
-const pageTitle = `${title} · ${getConfig().title} v${getConfig().docs_version}`
+const pageTitle = `${title} example · ${getConfig().title} v${getConfig().docs_version}`
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
 
 const htmlProps: HTMLAttributes<'html'> = direction === 'rtl' ? { lang: 'ar', dir: 'rtl' } : { lang: 'en' }

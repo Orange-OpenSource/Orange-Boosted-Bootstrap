@@ -44,7 +44,10 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     'Attribute “switch” not allowed on element “input” at this point.',
     'Element “style” not allowed as child of element “div” in this context.*',
     // Allow empty option in select
-    'Element “option” without attribute “label” must not be empty.'
+    'Element “option” without attribute “label” must not be empty.',
+    // Several header / footer inside the documentation
+    'The “banner” role is unnecessary for element “header”.',
+    'The “contentinfo” role is unnecessary for element “footer”.'
     // End mod
   ].join('|')
 
