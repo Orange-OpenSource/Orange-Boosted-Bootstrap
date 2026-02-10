@@ -63,7 +63,7 @@ $ouds-button-border-radius-social: $ouds-border-radius-pill !default;
 $ouds-button-border-width-default-interaction-mono: $ouds-border-width-none !default;
 $ouds-button-border-width-default-interaction: $ouds-border-width-default !default;
 $ouds-button-border-width-default: $ouds-border-width-default !default;
-$ouds-button-color-bg-brand-enabled: $ouds-color-surface-brand-secondary !default;
+$ouds-button-color-bg-brand-enabled: var(--#{$prefix}button-color-bg-brand-enabled) !default;
 $ouds-button-color-bg-brand-focus: $ouds-color-action-focus !default;
 $ouds-button-color-bg-brand-hover: $ouds-color-action-hover !default;
 $ouds-button-color-bg-brand-loading: var(--#{$prefix}button-color-bg-brand-loading) !default;
@@ -292,7 +292,7 @@ $ouds-input-tag-color-content-pressed: $ouds-color-action-pressed !default;
 // scss-docs-start ouds-component-link
 $ouds-link-color-chevron-enabled: $ouds-color-action-enabled !default;
 $ouds-link-color-chevron-focus: $ouds-color-action-enabled !default;
-$ouds-link-color-chevron-hover: $ouds-color-content-brand-primary !default;
+$ouds-link-color-chevron-hover: var(--#{$prefix}link-color-chevron-hover) !default;
 $ouds-link-color-chevron-pressed: $ouds-color-action-pressed !default;
 $ouds-link-color-content-enabled: $ouds-color-content-default !default;
 $ouds-link-color-content-focus: $ouds-color-action-focus !default;
