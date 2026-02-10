@@ -20,6 +20,17 @@
   --#{$prefix}link-active-color: #{$ouds-link-color-content-pressed};
   --#{$prefix}link-disabled-color: #{$ouds-color-action-disabled};
   --#{$prefix}link-visited-color: #{$ouds-color-action-visited};
+
+  @each $breakpoint, $gutter in $grid-gutter-widths {
+    @include media-breakpoint-up($breakpoint) {
+      --#{$prefix}grid-gap: #{$gutter};
+    }
+  }
+  @each $breakpoint, $container-fluid-marg in $container-fluid-margin {
+    @include media-breakpoint-up($breakpoint) {
+      --#{$prefix}grid-margin: #{$container-fluid-marg};
+    }
+  }
 }
 
 // Note that some of the following variables in `#{$ouds-root-selector}, [data-bs-theme="light"]` could be extracted into `#{$ouds-root-selector}` only selector since they are not modified by other color modes!
