@@ -462,7 +462,7 @@
   // End mod
 
   // OUDS mod
-  // grid specific spacings
+  // Grid specific spacings
   @each $breakpoint, $gutter in $grid-gutter-widths {
     @include media-breakpoint-up($breakpoint) {
       --#{$prefix}grid-gap: #{$gutter};
