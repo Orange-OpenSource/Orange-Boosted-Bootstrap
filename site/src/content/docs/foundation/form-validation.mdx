@@ -9,6 +9,7 @@ extra_js:
   - src: "[[docsref:/assets/js/validate-forms.js]]"
     async: true
 ---
+import { getDocsRelativePath } from '@libs/path'
 
 ## Accessibility
 
@@ -37,3 +38,171 @@ Here’s how form validation works with OUDS Web:
 - All modern browsers support the [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api), a series of JavaScript methods for validating form controls.
 - Feedback messages may utilize the [browser defaults](#browser-defaults) (different for each browser, and unstylable via CSS) or our custom feedback styles with additional HTML and CSS.
 - You may provide custom validity messages with `setCustomValidity` in JavaScript.
+
+## Custom styles
+
+For custom OUDS Web form validation messages, you’ll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you. When attempting to submit, you’ll see the `:invalid` and `:valid` styles applied to your form controls.
+
+Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for `<select>`s are only available with `.form-select`, and not `.form-control`.
+
+<Example code={`<form class="needs-validation" novalidate>
+    <div class="select-input mb-2xlarge">
+      <div class="select-input-container">
+        <label for="title">Title <span aria-hidden="true">*</span></label>
+        <select class="select-input-field" id="title" aria-describedby="titleFeedback" required>
+          <option value="" disabled selected></option>
+          <option value="1">Miss</option>
+          <option value="2">Mr.</option>
+          <option value="3">Mrs.</option>
+          <option value="3">Ms.</option>
+          <option value="4">Prefer not to say</option>
+        </select>
+      </div>
+      <p id="titleFeedback" class="error-text">
+        Title is required.
+      </p>
+    </div>
+
+    <div class="text-input mb-2xlarge">
+      <div class="text-input-container">
+        <label for="username">Username <span aria-hidden="true">*</span></label>
+        <input type="text" class="text-input-field" id="username" aria-describedby="usernameFeedback"
+               placeholder=" " required>
+      </div>
+      <p id="usernameFeedback" class="error-text">
+        Username is required.
+      </p>
+    </div>
+
+    <div class="text-area mb-2xlarge">
+      <div class="text-area-container">
+        <label for="comments">Comments <span aria-hidden="true">*</span></label>
+        <textarea id="comments" class="text-area-field" aria-describedby="commentsFeedback" required></textarea>
+      </div>
+      <p id="commentsFeedback" class="error-text">
+        Comments is required.
+      </p>
+    </div>
+
+    <fieldset class="control-items-list mb-2xlarge">
+      <div class="checkbox-item control-item-divider">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxInvalid" aria-describedby="checkboxInvalidDescription checkboxInvalidErrorText" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checkboxInvalid">Default invalid checkbox</label>
+          <p class="control-item-description" id="checkboxInvalidDescription">Description text</p>
+        </div>
+        <div class="control-item-assets-container">
+          <svg aria-hidden="true">
+            <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#heart-empty" />
+          </svg>
+        </div>
+      </div>
+      <div class="checkbox-item control-item-divider">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxInvalid2" aria-describedby="checkboxInvalid2Description checkboxInvalidErrorText" checked />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checkboxInvalid2">Checked invalid checkbox</label>
+          <p class="control-item-description" id="checkboxInvalid2Description">Description text</p>
+        </div>
+        <div class="control-item-assets-container">
+          <svg aria-hidden="true">
+            <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#heart-empty" />
+          </svg>
+        </div>
+      </div>
+      <div class="checkbox-item control-item-divider">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxInvalidIndeterminate" aria-describedby="checkboxInvalidIndeterminateDescription checkboxInvalidErrorText" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checkboxInvalidIndeterminate">Indeterminate invalid checkbox</label>
+          <p class="control-item-description" id="checkboxInvalidIndeterminateDescription">Description text</p>
+        </div>
+        <div class="control-item-assets-container">
+          <svg aria-hidden="true">
+            <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#heart-empty" />
+          </svg>
+        </div>
+      </div>
+      <p class="control-item-error-message" id="checkboxInvalidErrorText">Incompatible choices.</p>
+    </fieldset>
+
+    <fieldset class="control-items-list mb-2xlarge">
+      <div class="radio-button-item control-item-divider">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="radio" value="" name="radioInvalid" id="radioInvalid" aria-describedby="radioInvalidExtraLabel radioInvalidDescription radioInvalidErrorText" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="radioInvalid">Default invalid radio button</label>
+          <p class="radio-button-extra-label" id="radioInvalidExtraLabel">Extra label</p>
+          <p class="control-item-description" id="radioInvalidDescription">Description text</p>
+        </div>
+      </div>
+      <div class="radio-button-item control-item-divider">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="radio" value="" name="radioInvalid" id="radioInvalid2" aria-describedby="radioInvalid2Description radioInvalidErrorText" checked />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="radioInvalid2">Checked invalid radio button</label>
+          <p class="control-item-description" id="radioInvalid2Description">Description text</p>
+        </div>
+      </div>
+      <p class="control-item-error-message" id="radioInvalidErrorText">There is an error.</p>
+    </fieldset>
+
+    <ul class="list-unstyled mb-2xlarge">
+      <li class="switch-item-container">
+        <div class="switch-item control-item-divider">
+          <div class="control-item-assets-container">
+            <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchInvalidUl1" aria-describedby="switchInvalidUl1Description switchInvalidErrorTextUl" checked />
+          </div>
+          <div class="control-item-text-container">
+            <label class="control-item-label" for="switchInvalidUl1">Default invalid switch</label>
+            <p class="control-item-description" id="switchInvalidUl1Description">Description text</p>
+          </div>
+        </div>
+        <p class="control-item-error-message mb-xsmall" id="switchInvalidErrorTextUl">Cannot be activated at this time.</p>
+      </li>
+      <li class="switch-item-container">
+        <div class="switch-item control-item-divider">
+          <div class="control-item-assets-container">
+            <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchInvalidUl12" aria-describedby="switchInvalidUl12Description switchInvalidErrorTextUl2" checked />
+          </div>
+          <div class="control-item-text-container">
+            <label class="control-item-label" for="switchInvalidUl12">Default invalid switch</label>
+            <p class="control-item-description" id="switchInvalidUl12Description">Description text</p>
+          </div>
+        </div>
+        <p class="control-item-error-message" id="switchInvalidErrorTextUl2">Cannot be activated at this time.</p>
+      </li>
+    </ul>
+
+    <fieldset class="control-items-list mb-2xlarge">
+      <div class="switch-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchInvalidFieldset" aria-describedby="switchInvalidFieldsetDescription switchInvalidErrorTextGroup" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="switchInvalidFieldset">Default invalid switch</label>
+          <p class="control-item-description" id="switchInvalidFieldsetDescription">Description text</p>
+        </div>
+      </div>
+      <div class="switch-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchInvalidFieldset2" aria-describedby="switchInvalidFieldset2Description switchInvalidErrorTextGroup" checked />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="switchInvalidFieldset2">Checked invalid switch</label>
+          <p class="control-item-description" id="switchInvalidFieldset2Description">Description text</p>
+        </div>
+      </div>
+      <p class="control-item-error-message" id="switchInvalidErrorTextGroup">Incompatible choices.</p>
+    </fieldset>
+
+    <button type="submit" class="btn btn-strong">Submit</button>
+  </form>`} />
+
+<Code containerClass="bd-example-snippet" lang="js" filePath={getDocsRelativePath('/static/[brand]/docs/[version]/assets/js/validate-forms.js')} />
