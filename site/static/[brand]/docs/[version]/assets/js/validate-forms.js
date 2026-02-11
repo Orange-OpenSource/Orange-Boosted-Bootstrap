@@ -13,7 +13,7 @@
     }
   }
 
-  let inputListenersAdded = false;
+  let inputListenersAdded = false
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
   const forms = document.querySelectorAll('.needs-validation')
@@ -29,6 +29,7 @@
         fields.forEach(field => {
           manageFeedbackMessage(field)
 
+          // eslint-disable-next-line max-nested-callbacks
           field.addEventListener('input', () => {
             manageFeedbackMessage(field)
           })
