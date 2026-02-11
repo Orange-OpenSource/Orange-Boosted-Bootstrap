@@ -30,7 +30,7 @@
     @include border-top-end-radius(var(--#{$prefix}alert-border-radius));
   }
 
-  &:not(:has(p:not(.alert-label), .bullet-list, .alert-container .link)) .btn {
+  &:not(:has(.alert-text-container p:not(.alert-label), .bullet-list, .alert-container .link)) .btn {
     @include border-bottom-end-radius(var(--#{$prefix}alert-border-radius));
   }
 }
