@@ -21,7 +21,7 @@ Here are the variables we include (note that the `:root` is required) that can b
 
 These CSS variables are available everywhere, regardless of color mode.
 
-<Code lang="css" filePath={`packages/${getConfig().brand}/dist/css/ouds-web.css`} fileMatch=":(root,\n\[data-bs-theme=light\],\n:root\[data-bs-theme=light\] \[data-bs-theme=root\],\n:root\[data-bs-theme=dark\] \[data-bs-theme=root-inverted\] {[^}]*})" />
+<Code lang="css" filePath={`packages/${getConfig().brand}/dist/css/ouds-web.css`} fileMatch="(:root,\n\[data-bs-theme=light\],\n:root\[data-bs-theme=light\] \[data-bs-theme=root\],\n:root\[data-bs-theme=dark\] \[data-bs-theme=root-inverted\] {[^}]*})" />
 
 ### Dark mode
 
@@ -34,7 +34,7 @@ These variables are scoped to our built-in dark mode.
 OUDS Web is increasingly making use of custom properties as local variables for various components. This way we reduce our compiled CSS, ensure styles aren’t inherited in places like nested tables, and allow some basic restyling and extending of OUDS Web components after Sass compilation.
 
 {/* Have a look at our table documentation for some [insight into how we’re using CSS variables]([[docsref:/content/tables#how-do-the-variants-and-accented-tables-work]]). Our [navbars also use CSS variables]([[docsref:/components/navbar#css]]) as of v5.2.0.  */}
-We’re using CSS variables across our grids—primarily for gutters the [new opt-in CSS grid]([[docsref:/layout/css-grid]])—with more component usage coming in the future.
+We’re using CSS variables across our grids—primarily for gutters in the [new opt-in CSS grid]([[docsref:/layout/css-grid]])—with more component usage coming in the future.
 
 Whenever possible, we’ll assign CSS variables at the base component level (e.g., `.breadcrumb` for breadcrumb and its sub-components). This reduces guessing on where and how to customize, and allows for easy modifications by our team in future updates.
 
@@ -47,7 +47,7 @@ Customize the prefix via the `$prefix` Sass variable. By default, it’s set to 
 {/* OUDS Web mod */}
 ## Deduping embedded SVGs
 
-OUDS Web uses embedded SVGs as data URIs in the wild, which means extremely long strings in CSS. When one of them is used several times in the stylesheet, CSS custom properties allows to factorize its string— thus to decrease output file size.
+OUDS Web uses embedded SVGs as data URIs in the wild, which means extremely long strings in CSS. When one of them is used several times in the stylesheet, CSS custom properties allow to factorize its string—thus decreasing the output file size.
 
 ```css
 :root {
@@ -87,4 +87,4 @@ To completely remove this style, add `outline: 0;` and `box-shadow: none;`.
 
 ## Grid breakpoints
 
-While we include our grid breakpoints as CSS variables (except for `xs`), be aware that **CSS variables do not work in media queries**. This is by design in the CSS spec for variables, but may change in coming years with support for `env()` variables. Check out [this Stack Overflow answer](https://stackoverflow.com/a/47212942) for some helpful links. In the meantime, you can use these variables in other CSS situations, as well as in your JavaScript.
+While we include our grid breakpoints as CSS variables (except for `2xs`), be aware that **CSS variables do not work in media queries**. This is by design in the CSS spec for variables, but may change in coming years with support for `env()` variables. Check out [this Stack Overflow answer](https://stackoverflow.com/a/47212942) for some helpful links. In the meantime, you can use these variables in other CSS situations, as well as in your JavaScript.
