@@ -1,6 +1,6 @@
 ---
 title: Form validation
-description: Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.
+description: Provide valuable, actionable feedback to your users with HTML5 form validation, via custom styles and JavaScript.
 aliases:
   - "/docs/forms/validation/"
   - "/docs/foundation/form-validation/"
@@ -34,39 +34,58 @@ Here’s how form validation works with OUDS Web:
 - OUDS Web scopes the `:invalid` and `:valid` styles to parent `.was-validated` class, usually applied to the `<form>`. Otherwise, any required field without a value shows up as invalid on page load. This way, you may choose when to activate them (typically after form submission is attempted).
 - To reset the appearance of the form (for instance, in the case of dynamic form submissions using Ajax), remove the `.was-validated` class from the `<form>` again after submission.
 {/* for [server-side validation](#server-side) */}
-- As a fallback, `.is-invalid` and `.is-valid` classes may be used instead of the pseudo-classes. They do not require a `.was-validated` parent class.
+- As a fallback, `.is-invalid` class may be used instead of the pseudo-classe `:invalid`. It doesn't require a `.was-validated` parent class.
 - All modern browsers support the [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api), a series of JavaScript methods for validating form controls.
-- Feedback messages may utilize the [browser defaults](#browser-defaults) (different for each browser, and unstylable via CSS) or our custom feedback styles with additional HTML and CSS.
+- Feedback messages shouldn't use the browser defaults (different for each browser, and unstylable via CSS) but our custom feedback styles with additional HTML and CSS.
+- Feedback messages should use our custom feedback styles with additional HTML and CSS, rather than the browser defaults (which differ for each browser and can't be styled via CSS).
 - You may provide custom validity messages with `setCustomValidity` in JavaScript.
+
+With that in mind, consider the following demos for our custom form validation styles and optional server-side classes.
 
 ## Custom styles
 
-For custom OUDS Web form validation messages, you’ll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you. When attempting to submit, you’ll see the `:invalid` and `:valid` styles applied to your form controls.
+For custom OUDS Web form validation messages, you’ll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript.
 
-Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for `<select>`s are only available with `.form-select`, and not `.form-control`.
+Try to submit the form below; our JavaScript will intercept the submit button, add `.was-validated` to the `<form>`, and you’ll see the `:invalid` and `:valid` styles applied to the fields. For invalid fields, it also associates the invalid feedback/error message with the relevant form field using `aria-describedby` (noting that this attribute allows more than one `id` to be referenced, in case the field already points to additional description/helper text).
+
+Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback.
 
 <Example code={`<form class="needs-validation" novalidate>
-    <div class="select-input mb-2xlarge">
-      <div class="select-input-container">
-        <label for="title">Title <span aria-hidden="true">*</span></label>
-        <select class="select-input-field" id="title" aria-describedby="titleFeedback" required>
-          <option value="" disabled selected></option>
-          <option value="1">Miss</option>
-          <option value="2">Mr.</option>
-          <option value="3">Mrs.</option>
-          <option value="3">Ms.</option>
-          <option value="4">Prefer not to say</option>
-        </select>
+    <fieldset class="control-items-list mb-2xlarge">
+     <legend>Title <span aria-hidden="true">*</span></legend>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="radio" value="" name="title" id="mr" data-feedback-id="titleFeedback" required />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="mr">Mr.</label>
+        </div>
       </div>
-      <p id="titleFeedback" class="error-text">
-        Title is required.
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="radio" value="" name="title" id="ms" data-feedback-id="titleFeedback" required />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="ms">Ms.</label>
+        </div>
+      </div>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="radio" value="" name="title" id="other" data-feedback-id="titleFeedback" required />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="other">Other or prefer not to choose</label>
+        </div>
+      </div>
+      <p class="control-item-error-message" id="titleFeedback">
+        You must choose an option for the title.
       </p>
-    </div>
+    </fieldset>
 
     <div class="text-input mb-2xlarge">
       <div class="text-input-container">
         <label for="username">Username <span aria-hidden="true">*</span></label>
-        <input type="text" class="text-input-field" id="username" aria-describedby="usernameFeedback"
+        <input type="text" class="text-input-field" id="username" data-feedback-id="usernameFeedback"
                placeholder=" " required>
       </div>
       <p id="usernameFeedback" class="error-text">
@@ -74,135 +93,202 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
       </p>
     </div>
 
+    <div class="text-input mb-2xlarge">
+      <div class="text-input-container">
+        <label for="inputPassword">Password <span aria-hidden="true">*</span></label>
+        <input type="password" id="inputPassword" class="text-input-field" data-feedback-id="passwordFeedback" placeholder=" " required>
+        <button class="btn btn-minimal btn-icon" id="togglePassword">
+          <svg aria-hidden="true">
+            <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#accessibility-vision"/>
+          </svg>
+          <span class="visually-hidden">Show password</span>
+        </button>
+      </div>
+      <p id="passwordFeedback" class="error-text">
+        Password is required.
+      </p>
+    </div>
+
+    <div class="select-input mb-2xlarge">
+      <div class="select-input-container">
+        <label for="continent">Continent <span aria-hidden="true">*</span></label>
+        <select class="select-input-field" id="continent" data-feedback-id="continentFeedback" required>
+          <option value="" disabled selected></option>
+          <option value="1">Europe</option>
+          <option value="2">Oceania</option>
+          <option value="3">America</option>
+          <option value="3">Asia</option>
+          <option value="4">Africa</option>
+        </select>
+      </div>
+      <p id="continentFeedback" class="error-text">
+        Continent is required.
+      </p>
+    </div>
+
     <div class="text-area mb-2xlarge">
       <div class="text-area-container">
         <label for="comments">Comments <span aria-hidden="true">*</span></label>
-        <textarea id="comments" class="text-area-field" aria-describedby="commentsFeedback" required></textarea>
+        <textarea id="comments" class="text-area-field" data-feedback-id="commentsFeedback" required></textarea>
       </div>
       <p id="commentsFeedback" class="error-text">
         Comments is required.
       </p>
     </div>
 
-    <fieldset class="control-items-list mb-2xlarge">
-      <div class="checkbox-item control-item-divider">
+    <div class="switch-item-container mb-2xlarge">
+      <div class="switch-item control-item-reverse">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checkboxInvalid" aria-describedby="checkboxInvalidDescription checkboxInvalidErrorText" />
+          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="readTermsAndConditions" data-feedback-id="readTermsAndConditionsFeedback" required />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="checkboxInvalid">Default invalid checkbox</label>
-          <p class="control-item-description" id="checkboxInvalidDescription">Description text</p>
-        </div>
-        <div class="control-item-assets-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#heart-empty" />
-          </svg>
+          <label class="control-item-label" for="readTermsAndConditions">I have read the terms and conditions <span aria-hidden="true">*</span></label>
         </div>
       </div>
-      <div class="checkbox-item control-item-divider">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checkboxInvalid2" aria-describedby="checkboxInvalid2Description checkboxInvalidErrorText" checked />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="checkboxInvalid2">Checked invalid checkbox</label>
-          <p class="control-item-description" id="checkboxInvalid2Description">Description text</p>
-        </div>
-        <div class="control-item-assets-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#heart-empty" />
-          </svg>
-        </div>
-      </div>
-      <div class="checkbox-item control-item-divider">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checkboxInvalidIndeterminate" aria-describedby="checkboxInvalidIndeterminateDescription checkboxInvalidErrorText" />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="checkboxInvalidIndeterminate">Indeterminate invalid checkbox</label>
-          <p class="control-item-description" id="checkboxInvalidIndeterminateDescription">Description text</p>
-        </div>
-        <div class="control-item-assets-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#heart-empty" />
-          </svg>
-        </div>
-      </div>
-      <p class="control-item-error-message" id="checkboxInvalidErrorText">Incompatible choices.</p>
-    </fieldset>
+      <p class="control-item-error-message mb-xsmall" id="readTermsAndConditionsFeedback">
+        You must confirm that you have read the terms and conditions.
+      </p>
+    </div>
 
-    <fieldset class="control-items-list mb-2xlarge">
-      <div class="radio-button-item control-item-divider">
+    <div class="checkbox-item-container mb-2xlarge">
+      <div class="checkbox-item">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" name="radioInvalid" id="radioInvalid" aria-describedby="radioInvalidExtraLabel radioInvalidDescription radioInvalidErrorText" />
+          <input class="control-item-indicator" type="checkbox" value="" id="agreeTermsAndConditions"
+                 data-feedback-id="agreeTermsAndConditionsFeedback" required/>
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="radioInvalid">Default invalid radio button</label>
-          <p class="radio-button-extra-label" id="radioInvalidExtraLabel">Extra label</p>
-          <p class="control-item-description" id="radioInvalidDescription">Description text</p>
+          <label class="control-item-label" for="agreeTermsAndConditions">I agree to the terms and conditions <span aria-hidden="true">*</span></label>
         </div>
       </div>
-      <div class="radio-button-item control-item-divider">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" name="radioInvalid" id="radioInvalid2" aria-describedby="radioInvalid2Description radioInvalidErrorText" checked />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="radioInvalid2">Checked invalid radio button</label>
-          <p class="control-item-description" id="radioInvalid2Description">Description text</p>
-        </div>
-      </div>
-      <p class="control-item-error-message" id="radioInvalidErrorText">There is an error.</p>
-    </fieldset>
-
-    <ul class="list-unstyled mb-2xlarge">
-      <li class="switch-item-container">
-        <div class="switch-item control-item-divider">
-          <div class="control-item-assets-container">
-            <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchInvalidUl1" aria-describedby="switchInvalidUl1Description switchInvalidErrorTextUl" checked />
-          </div>
-          <div class="control-item-text-container">
-            <label class="control-item-label" for="switchInvalidUl1">Default invalid switch</label>
-            <p class="control-item-description" id="switchInvalidUl1Description">Description text</p>
-          </div>
-        </div>
-        <p class="control-item-error-message mb-xsmall" id="switchInvalidErrorTextUl">Cannot be activated at this time.</p>
-      </li>
-      <li class="switch-item-container">
-        <div class="switch-item control-item-divider">
-          <div class="control-item-assets-container">
-            <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchInvalidUl12" aria-describedby="switchInvalidUl12Description switchInvalidErrorTextUl2" checked />
-          </div>
-          <div class="control-item-text-container">
-            <label class="control-item-label" for="switchInvalidUl12">Default invalid switch</label>
-            <p class="control-item-description" id="switchInvalidUl12Description">Description text</p>
-          </div>
-        </div>
-        <p class="control-item-error-message" id="switchInvalidErrorTextUl2">Cannot be activated at this time.</p>
-      </li>
-    </ul>
-
-    <fieldset class="control-items-list mb-2xlarge">
-      <div class="switch-item">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchInvalidFieldset" aria-describedby="switchInvalidFieldsetDescription switchInvalidErrorTextGroup" />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="switchInvalidFieldset">Default invalid switch</label>
-          <p class="control-item-description" id="switchInvalidFieldsetDescription">Description text</p>
-        </div>
-      </div>
-      <div class="switch-item">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchInvalidFieldset2" aria-describedby="switchInvalidFieldset2Description switchInvalidErrorTextGroup" checked />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="switchInvalidFieldset2">Checked invalid switch</label>
-          <p class="control-item-description" id="switchInvalidFieldset2Description">Description text</p>
-        </div>
-      </div>
-      <p class="control-item-error-message" id="switchInvalidErrorTextGroup">Incompatible choices.</p>
-    </fieldset>
+      <p class="control-item-error-message" id="agreeTermsAndConditionsFeedback">
+        You must accept the terms and condition to proceed.
+      </p>
+    </div>
 
     <button type="submit" class="btn btn-strong">Submit</button>
   </form>`} />
 
 <Code containerClass="bd-example-snippet" lang="js" filePath={getDocsRelativePath('/static/[brand]/docs/[version]/assets/js/validate-forms.js')} />
+
+## Server-side
+
+We recommend using client-side validation before server-side validation. If server-side validation returns any invalid field, you can indicate it with `.is-invalid`.
+
+For invalid fields, ensure that the invalid feedback/error message is associated with the relevant form field using `aria-describedby` (noting that this attribute allows more than one `id` to be referenced, in case the field already points to additional description/helper text).
+
+
+<Example code={`<form class="needs-validation" novalidate>
+    <fieldset class="control-items-list mb-2xlarge">
+     <legend>Title <span aria-hidden="true">*</span></legend>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="mr" aria-describedby="titleFeedback" required />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="mr">Mr.</label>
+        </div>
+      </div>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="ms" aria-describedby="titleFeedback" required />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="ms">Ms.</label>
+        </div>
+      </div>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="other" aria-describedby="titleFeedback" required />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="other">Other or prefer not to choose</label>
+        </div>
+      </div>
+      <p class="control-item-error-message" id="titleFeedback">
+        You must choose an option for the title.
+      </p>
+    </fieldset>
+
+    <div class="text-input mb-2xlarge">
+      <div class="text-input-container">
+        <label for="username">Username <span aria-hidden="true">*</span></label>
+        <input type="text" class="text-input-field is-invalid" id="username" aria-describedby="usernameFeedback"
+               placeholder=" " required>
+      </div>
+      <p id="usernameFeedback" class="error-text">
+        Username is required.
+      </p>
+    </div>
+
+    <div class="text-input mb-2xlarge">
+      <div class="text-input-container">
+        <label for="inputPassword">Password <span aria-hidden="true">*</span></label>
+        <input type="password" id="inputPassword" class="text-input-field is-invalid" aria-describedby="passwordFeedback" placeholder=" " required>
+        <button class="btn btn-minimal btn-icon" id="togglePassword">
+          <svg aria-hidden="true">
+            <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#accessibility-vision"/>
+          </svg>
+          <span class="visually-hidden">Show password</span>
+        </button>
+      </div>
+      <p id="passwordFeedback" class="error-text">
+        Password is required.
+      </p>
+    </div>
+
+    <div class="select-input mb-2xlarge">
+      <div class="select-input-container">
+        <label for="continent">Continent <span aria-hidden="true">*</span></label>
+        <select class="select-input-field is-invalid" id="continent" aria-describedby="continentFeedback" required>
+          <option value="" disabled selected></option>
+          <option value="1">Europe</option>
+          <option value="2">Oceania</option>
+          <option value="3">America</option>
+          <option value="3">Asia</option>
+          <option value="4">Africa</option>
+        </select>
+      </div>
+      <p id="continentFeedback" class="error-text">
+        Continent is required.
+      </p>
+    </div>
+
+    <div class="text-area mb-2xlarge">
+      <div class="text-area-container">
+        <label for="comments">Comments <span aria-hidden="true">*</span></label>
+        <textarea id="comments" class="text-area-field is-invalid" aria-describedby="commentsFeedback" required></textarea>
+      </div>
+      <p id="commentsFeedback" class="error-text">
+        Comments is required.
+      </p>
+    </div>
+
+    <div class="switch-item-container mb-2xlarge">
+      <div class="switch-item control-item-reverse">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="readTermsAndConditions" aria-describedby="readTermsAndConditionsFeedback" required />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="readTermsAndConditions">I have read the terms and conditions <span aria-hidden="true">*</span></label>
+        </div>
+      </div>
+      <p class="control-item-error-message mb-xsmall" id="readTermsAndConditionsFeedback">
+        You must confirm that you have read the terms and conditions.
+      </p>
+    </div>
+
+    <div class="checkbox-item-container mb-2xlarge">
+      <div class="checkbox-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator is-invalid" type="checkbox" value="" id="agreeTermsAndConditions"
+                 aria-describedby="agreeTermsAndConditionsFeedback" required/>
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="agreeTermsAndConditions">I agree to the terms and conditions <span aria-hidden="true">*</span></label>
+        </div>
+      </div>
+      <p class="control-item-error-message" id="agreeTermsAndConditionsFeedback">
+        You must accept the terms and condition to proceed.
+      </p>
+    </div>
+  </form>`} />
