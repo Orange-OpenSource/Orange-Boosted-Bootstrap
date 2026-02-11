@@ -11,11 +11,11 @@ Any use or displaying shall constitute an infringement under intellectual proper
 nuget/ouds-web.png
 packages/**/nuget/ouds-web.png
 packages/orange/orange-logo.png
-packages/orange/orange-business-tools-logo.png
+packages/orange/orange-compact-logo.png
 packages/sosh/sosh-logo.png
 packages/**/scss/tokens/_composite.scss
 site/static/[brand]/docs/[version]/assets/brand/orange-logo.svg
-site/static/[brand]/docs/[version]/assets/brand/orange-business-tools-logo.svg
+site/static/[brand]/docs/[version]/assets/brand/orange-compact-logo.svg
 site/static/[brand]/docs/[version]/assets/brand/sosh-logo.svg
 site/static/[brand]/docs/[version]/assets/img/navbar-contact.png
 site/static/[brand]/docs/[version]/assets/img/thumbnail.png

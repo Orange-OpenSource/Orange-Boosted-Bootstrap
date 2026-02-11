@@ -2,10 +2,13 @@
 import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
 import Code from '@components/shortcodes/Code.astro'
-
 ---
 
-<div class="bd-masthead position-relative" id="content" {...((getConfig().brand === 'orange' || getConfig().brand === 'orange-business-tools') && { "data-bs-theme": "dark" })}>
+<div
+  class="bd-masthead position-relative"
+  id="content"
+  {...(getConfig().brand === 'orange' || getConfig().brand === 'orange-compact') && { 'data-bs-theme': 'dark' }}
+>
   <div class="bd-masthead-bg position-absolute w-100 h-100"></div>
   <div class="container-fluid container-max-width pt-scaled-xlarge pb-scaled-3xlarge z-1 position-relative">
     <div class="col-md-8">
@@ -18,8 +21,11 @@ import Code from '@components/shortcodes/Code.astro'
       </p>
 
       <div class="bd-masthead-code mb-scaled-xsmall d-none d-md-inline-block">
-        <Code lang="sh" buttonLabel="npm install"
-          code={`npm i @ouds/web-common@${getConfig().current_version} @ouds/web-${getConfig().brand}@${getConfig().current_version}`}/>
+        <Code
+          lang="sh"
+          buttonLabel="npm install"
+          code={`npm i @ouds/web-common@${getConfig().current_version} @ouds/web-${getConfig().brand}@${getConfig().current_version}`}
+        />
       </div>
 
       <div class="d-flex mb-scaled-medium gap-medium">
@@ -30,7 +36,9 @@ import Code from '@components/shortcodes/Code.astro'
           Read the docs
         </a>
         <a href={getVersionedDocsPath('components')} class="btn btn-default">
-          <svg class="bi me-sm" aria-hidden="true"><use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#menu-button-wide-fill')}></use></svg>
+          <svg class="bi me-sm" aria-hidden="true"
+            ><use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#menu-button-wide-fill')}></use></svg
+          >
           Discover components
         </a>
       </div>
