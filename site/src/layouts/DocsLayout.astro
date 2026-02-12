@@ -74,13 +74,13 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
     <main class="bd-main order-1">
       <div class="bd-intro pt-small ps-lg-small">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-large mb-md-none d-flex text-nowrap">
+          <div class="mb-large mb-md-none d-flex gap-small align-items-center text-nowrap">
             {
               // This is needed because we want to show the badge if show_badge isn't present or is set to false
               frontmatter.added &&
                 ((frontmatter.added.show_badge !== undefined && frontmatter.added.show_badge === true) ||
                   frontmatter.added.show_badge === undefined) && (
-                  <p class="mb-none me-small">
+                  <p class="mb-none">
                     <span class="tag tag-small">Added in v{frontmatter.added.version}</span>
                   </p>
                 )

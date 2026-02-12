@@ -8,6 +8,8 @@ toc: true
 types:
   - Alert message
   - Inline alert
+added:
+  version: "1.1"
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
@@ -548,7 +550,7 @@ To display a [bullet list]([[docsref:/components/bullet-list]]) below the alert 
 
 Here are some examples with everything activated and some long texts to see how it should behave. Please note that there are some `max-width` on the texts.
 
-<Example class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-warning">
+<Example buttonLabel="alert message with much text" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-warning">
     <div class="alert-icon"><p class="visually-hidden">Warning alert</p></div>
     <div class="alert-container">
       <div class="alert-text-container">
@@ -606,7 +608,7 @@ Using the alert plugin, it’s possible to dismiss any alert message, here’s h
 
 Click the button below to show an alert (hidden with inline styles to start), then dismiss (and destroy) it with the built-in close button.
 
-<Example addStackblitzJs code={`<div id="liveAlertPlaceholder" role="status" class="use-rounded-corner-alert d-flex flex-column gap-medium mb-medium">
+<Example buttonLabel="alert message with live behavior" addStackblitzJs code={`<div id="liveAlertPlaceholder" role="status" class="use-rounded-corner-alert d-flex flex-column gap-medium mb-medium">
     <div class="alert alert-message alert-positive">
       <div class="alert-icon"></div>
       <div class="alert-container">
