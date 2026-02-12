@@ -23,11 +23,9 @@
   .control-items-list,
   .switch-item-container,
   .checkbox-item-container {
-    // stylelint-disable selector-no-qualifying-type
     &:has(input:invalid) .control-item-error-message {
       display: block;
     }
-    // stylelint-enable selector-no-qualifying-type
   }
 }
 
@@ -733,28 +731,22 @@
   }
 }
 
-.was-validated {
-  .switch-item,
-  .form-switch {
-    // stylelint-disable selector-no-qualifying-type
-    &:has(input:invalid) {
-      --#{$prefix}control-item-error-icon-offset-right: unset;
-      --#{$prefix}control-item-error-icon-offset-left: var(--#{$prefix}control-item-error-icon-offset);
+.was-validated .switch-item,
+.was-validated .form-switch {
+  &:has(input:invalid) {
+    --#{$prefix}control-item-error-icon-offset-right: unset;
+    --#{$prefix}control-item-error-icon-offset-left: var(--#{$prefix}control-item-error-icon-offset);
 
-      padding-right: $ouds-control-item-space-padding-inline;
-      padding-left: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap);
-    }
-    // stylelint-enable selector-no-qualifying-type
+    padding-right: $ouds-control-item-space-padding-inline;
+    padding-left: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap);
+  }
 
-    // stylelint-disable selector-no-qualifying-type
-    &.control-item-reverse:has(input:invalid) {
-      --#{$prefix}control-item-error-icon-offset-right: var(--#{$prefix}control-item-error-icon-offset);
-      --#{$prefix}control-item-error-icon-offset-left: unset;
+  &.control-item-reverse:has(input:invalid) {
+    --#{$prefix}control-item-error-icon-offset-right: var(--#{$prefix}control-item-error-icon-offset);
+    --#{$prefix}control-item-error-icon-offset-left: unset;
 
-      padding-right: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap);
-      padding-left: $ouds-control-item-space-padding-inline;
-    }
-    // stylelint-enable selector-no-qualifying-type
+    padding-right: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap);
+    padding-left: $ouds-control-item-space-padding-inline;
   }
 }
 
