@@ -316,7 +316,7 @@ To create a read only switch, the input should be replaced by a `span` element w
 
 <Callout type="info" name="input-invalid" />
 
-To display an invalid switch, add `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation page to learn more]([[docsref:/foundation/form-validation]]).
+To display an invalid switch, add `.is-invalid` to a `.control-item-indicator` or add a `.was-validated` to any ancestor (`<form>` usually). Please take a look at our [Validation page to learn more]([[docsref:/foundation/form-validation]]).
 
 #### Error text on one switch item
 
@@ -333,6 +333,21 @@ To automatically display an error text on a single switch item, enclose it insid
       </div>
     </div>
     <p class="control-item-error-message" id="switchInvalidErrorText">Cannot be activated at this time.</p>
+  </div>
+
+  <div class="was-validated">
+    <div class="switch-item-container">
+      <div class="switch-item control-item-divider">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchAsyncInvalid" aria-describedby="switchAsyncInvalidDescription switchAsyncInvalidErrorText" required />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="switchAsyncInvalid">Default invalid switch</label>
+          <p class="control-item-description" id="switchAsyncInvalidDescription">Description text</p>
+        </div>
+      </div>
+      <p class="control-item-error-message" id="switchAsyncInvalidErrorText">Cannot be deactivated at this time.</p>
+    </div>
   </div>`} />
 
 <BootstrapCompatibility>
