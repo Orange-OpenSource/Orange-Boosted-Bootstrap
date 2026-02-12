@@ -11,10 +11,12 @@
 
 import sidebarScroll from './partials/sidebar.js'
 import removeBackToTopWhenNotNeeded from './partials/back-to-top.js' // OUDS mod
+import addUserAgent from './partials/user-agent.js' // OUDS mod
 import addTabindex from './partials/tabindex.js' // OUDS mod
 import snippets from './partials/snippets.js'
 
 sidebarScroll()
 removeBackToTopWhenNotNeeded() // OUDS mod
+addUserAgent() // OUDS mod
 addTabindex() // OUDS mod
 snippets()

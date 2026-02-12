@@ -1,0 +1,34 @@
+name: Report a doc issue
+description: Tell us about an issue you may have identified in OUDS Web documentation.
+title: "Provide a general summary of the issue"
+labels: ["🐞 bug", "📖 documentation"]
+assignees: "-"
+body:
+  - type: checkboxes
+    attributes:
+      label: Prerequisites
+      description: Take a couple minutes to help our maintainers work faster.
+      options:
+        - label: I have [searched](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues?utf8=%E2%9C%93&q=is%3Aissue) for duplicate or closed issues and checked on [main](https://https://ouds-main--boosted.netlify.app/) that it still appears.
+          required: true
+        - label: I have read the [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/.github/CONTRIBUTING.md)
+          required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Describe the issue
+      description: Provide a summary of the issue and what you expected to happen, including specific steps to reproduce.
+    validations:
+      required: true
+  - type: input
+    id: user-agent
+    attributes:
+      label: Any information that could help to resolve the issue. (window.navigator.userAgent)
+      placeholder: "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Firefox/140.0"
+  - type: input
+    id: version
+    attributes:
+      label: What version of the documentation are you using?
+      placeholder: "e.g., v0.1.0"
+    validations:
+      required: true
