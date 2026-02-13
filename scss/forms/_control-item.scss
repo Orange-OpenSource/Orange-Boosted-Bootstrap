@@ -13,11 +13,20 @@
   }
 
   // stylelint-disable selector-no-qualifying-type
-  &.was-validated:has(input:invalid) .control-item-error-message,
   &:has(input.is-invalid) .control-item-error-message {
     display: block;
   }
   // stylelint-enable selector-no-qualifying-type
+}
+
+.was-validated {
+  .control-items-list,
+  .switch-item-container,
+  .checkbox-item-container {
+    &:has(input:invalid) .control-item-error-message {
+      display: block;
+    }
+  }
 }
 
 .control-item-error-message {
@@ -149,6 +158,22 @@
 
   &:has(input:invalid:active) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
+  }
+
+  .control-item-indicator:invalid {
+    --#{$prefix}control-item-indicator-color: #{$ouds-color-action-negative-enabled};
+
+    &:hover {
+      --#{$prefix}control-item-indicator-color: #{$ouds-color-action-negative-hover};
+    }
+
+    &:focus-visible {
+      --#{$prefix}control-item-indicator-color: #{$ouds-color-action-negative-focus};
+    }
+
+    &:active {
+      --#{$prefix}control-item-indicator-color: #{$ouds-color-action-negative-pressed};
+    }
   }
 }
 
@@ -417,27 +442,27 @@
 .control-item-divider {
   padding-bottom: calc($ouds-control-item-space-padding-block-default - $ouds-divider-border-width);
   border-bottom: $ouds-divider-border-width solid $ouds-color-border-default;
+}
 
-  &:has(.is-invalid),
-  .was-validated &:has(input:invalid) {
-    border-color: var(--#{$prefix}control-item-label-color);
-  }
+.control-item-divider:has(.is-invalid),
+.was-validated .control-item-divider:has(input:invalid) {
+  border-color: var(--#{$prefix}control-item-label-color);
 }
 
 .control-item-reverse {
   flex-direction: row-reverse;
-
-  // stylelint-disable selector-no-qualifying-type
-  &:has(input.is-invalid),
-  .was-validated &:has(input:invalid) {
-    --#{$prefix}control-item-error-icon-offset-right: unset;
-    --#{$prefix}control-item-error-icon-offset-left: var(--#{$prefix}control-item-error-icon-offset);
-
-    padding-right: $ouds-control-item-space-padding-inline;
-    padding-left: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap);
-  }
-  // stylelint-enable selector-no-qualifying-type
 }
+
+// stylelint-disable selector-no-qualifying-type
+.control-item-reverse:has(input.is-invalid),
+.was-validated .control-item-reverse:has(input:invalid) {
+  --#{$prefix}control-item-error-icon-offset-right: unset;
+  --#{$prefix}control-item-error-icon-offset-left: var(--#{$prefix}control-item-error-icon-offset);
+
+  padding-right: $ouds-control-item-space-padding-inline;
+  padding-left: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap);
+}
+// stylelint-enable selector-no-qualifying-type
 
 
 //
@@ -663,6 +688,12 @@
 
 .was-validated .radio-button-item-outlined:has(input:invalid) {
   border-color: var(--#{$prefix}control-item-label-color);
+
+  &:hover,
+  &:active,
+  &:has(input:checked) {
+    --#{$prefix}control-item-error-icon-offset: #{$ouds-control-item-space-padding-inline + $ouds-control-item-space-padding-inline-error-icon - $ouds-divider-border-width};
+  }
 }
 
 
@@ -697,6 +728,25 @@
       padding-left: $ouds-control-item-space-padding-inline;
     }
     // stylelint-enable selector-no-qualifying-type
+  }
+}
+
+.was-validated .switch-item,
+.was-validated .form-switch {
+  &:has(input:invalid) {
+    --#{$prefix}control-item-error-icon-offset-right: unset;
+    --#{$prefix}control-item-error-icon-offset-left: var(--#{$prefix}control-item-error-icon-offset);
+
+    padding-right: $ouds-control-item-space-padding-inline;
+    padding-left: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap);
+  }
+
+  &.control-item-reverse:has(input:invalid) {
+    --#{$prefix}control-item-error-icon-offset-right: var(--#{$prefix}control-item-error-icon-offset);
+    --#{$prefix}control-item-error-icon-offset-left: unset;
+
+    padding-right: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap);
+    padding-left: $ouds-control-item-space-padding-inline;
   }
 }
 
