@@ -2,6 +2,7 @@ name: Report a doc issue
 description: Tell us about an issue you may have identified in OUDS Web documentation.
 title: "Provide a general summary of the issue"
 labels: ["🐞 bug", "📖 documentation"]
+type: ["bug"]
 assignees: "-"
 body:
   - type: checkboxes

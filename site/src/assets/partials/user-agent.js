@@ -10,7 +10,7 @@
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
-// OUDS mod: Add tabindex to <pre> elements with a class to ensure a proper focus
+// OUDS mod: Add userAgent on GitHub issues link
 export default () => {
   document.querySelectorAll('.add-user-agent').forEach(element => {
     element.href += `&user-agent=${window.navigator.userAgent}`

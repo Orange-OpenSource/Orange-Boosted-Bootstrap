@@ -9,6 +9,7 @@ import { getVersionedDocsPath } from '@libs/path'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import DocsSidebar from '@components/DocsSidebar.astro'
 import TableOfContents from '@components/TableOfContents.astro'
+import GitHubIcon from '@components/icons/GitHubIcon.astro'
 
 interface Props {
   frontmatter: CollectionEntry<'docs'>['data']
@@ -92,18 +93,16 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
               target="_blank"
               rel="noopener"
             >
-              <svg aria-hidden="true">
-                <use xlink:href={`${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}`}></use>
-              </svg>
               <span class="visually-hidden">View this file on GitHub</span>
+              <GitHubIcon class="pe-none" />
             </a>
-            <a href={`${getConfig().repo}/issues/new?template=doc_report.yml&title=[OUDS]+Update+the+${id.slice(0, -4)}+page&version=${getConfig().docs_version}&labels=💪+contribution&what-happened=I+report+a+bug+concerning+${id.slice(0, -4)}+:`} class="btn btn-icon btn-default add-user-agent" title={`Report a bug on the ${id.slice(0, -4)} page`} target="_blank" rel="noopener">
+            <a href={`${getConfig().repo}/issues/new?template=doc_report.yml&title=Update+the+${id.slice(0, -4)}+page+on+${getConfig().brand}&version=${getConfig().docs_version}&labels=💪+contribution&what-happened=I+report+a+bug+concerning+${id.slice(0, -4)}+:`} class="btn btn-icon btn-default add-user-agent" title={`Report a bug on the ${id.slice(0, -4).split('/').pop()} page`} target="_blank" rel="noopener">
               <svg aria-hidden="true">
-                <use xlink:href={`${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#edit')}`}></use>
+                <use xlink:href={`${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#bug')}`}></use>
               </svg>
-              <span class="visually-hidden">Report a bug on the {id.slice(0, -4)} page</span>
+              <span class="visually-hidden">Report a bug on the {id.slice(0, -4).split('/').pop()} page</span>
             </a>
-            <a href={`${getConfig().repo}/discussions/new?category=q-a&title=[OUDS]+Question+about+${id.slice(0, -4).split('/').pop()}&body=I+have+a+question+about+...`} class="btn btn-icon btn-default" title={`Ask a question about ${id.slice(0, -4).split('/').pop()} topic`} target="_blank" rel="noopener">
+            <a href={`${getConfig().repo}/discussions/new?category=q-a&title=Question+about+${id.slice(0, -4).split('/').pop()}+on+${getConfig().brand}&body=I+have+a+question+about+...`} class="btn btn-icon btn-default" title={`Ask a question about ${id.slice(0, -4).split('/').pop()} topic`} target="_blank" rel="noopener">
               <svg aria-hidden="true">
                 <use xlink:href={`${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#message-talk')}`}></use>
               </svg>
