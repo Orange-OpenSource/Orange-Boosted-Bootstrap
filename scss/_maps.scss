@@ -55,7 +55,9 @@ $ouds-dimension-space-scaled: (
   "large": var(--#{$prefix}space-scaled-large),
   "xlarge": var(--#{$prefix}space-scaled-xlarge),
   "2xlarge": var(--#{$prefix}space-scaled-2xlarge),
-  "3xlarge": var(--#{$prefix}space-scaled-3xlarge)
+  "3xlarge": var(--#{$prefix}space-scaled-3xlarge),
+  "gridgap": var(--#{$prefix}grid-gap),
+  "gridmargin": var(--#{$prefix}grid-margin)
 ) !default;
 
 $ouds-dimension-negative-space-scaled: (
@@ -67,7 +69,9 @@ $ouds-dimension-negative-space-scaled: (
   "nlarge": calc(-1 * var(--#{$prefix}space-scaled-large)),
   "nxlarge": calc(-1 * var(--#{$prefix}space-scaled-xlarge)),
   "n2xlarge": calc(-1 * var(--#{$prefix}space-scaled-2xlarge)),
-  "n3xlarge": calc(-1 * var(--#{$prefix}space-scaled-3xlarge))
+  "n3xlarge": calc(-1 * var(--#{$prefix}space-scaled-3xlarge)),
+  "ngridgap": calc(-1 * var(--#{$prefix}grid-gap)),
+  "ngridmargin": calc(-1 * var(--#{$prefix}grid-margin))
 ) !default;
 
 // scss-docs-start ouds-maps-dimension-fixed

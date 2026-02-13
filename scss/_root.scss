@@ -460,6 +460,20 @@
   --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor};
   --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor};
   // End mod
+
+  // OUDS mod
+  // Grid specific spacings
+  @each $breakpoint, $gutter in $grid-gutter-widths {
+    @include media-breakpoint-up($breakpoint) {
+      --#{$prefix}grid-gap: #{$gutter};
+    }
+  }
+  @each $breakpoint, $container-fluid-marg in $container-fluid-margin {
+    @include media-breakpoint-up($breakpoint) {
+      --#{$prefix}grid-margin: #{$container-fluid-marg};
+    }
+  }
+  // End mod
 }
 
 @if $enable-dark-mode {

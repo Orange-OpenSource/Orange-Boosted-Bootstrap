@@ -354,55 +354,13 @@ $enable-bootstrap-compatibility: null !default;
         }
 
         .row {
+          --bs-gutter-x: var(--bs-grid-gap);
           --bs-gutter-y: 0;
           display: flex;
           flex-wrap: wrap;
           margin-top: calc(-1 * var(--bs-gutter-y));
           margin-right: calc(-0.5 * var(--bs-gutter-x)); // stylelint-disable-line @stylistic/number-leading-zero
           margin-left: calc(-0.5 * var(--bs-gutter-x)); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-gutter-x: 8px;
-        }
-
-        @media (min-width: 390px) {
-          .row {
-            --bs-gutter-x: 16px;
-          }
-        }
-
-        @media (min-width: 480px) {
-          .row {
-            --bs-gutter-x: 16px;
-          }
-        }
-
-        @media (min-width: 736px) {
-          .row {
-            --bs-gutter-x: 24px;
-          }
-        }
-
-        @media (min-width: 1024px) {
-          .row {
-            --bs-gutter-x: 24px;
-          }
-        }
-
-        @media (min-width: 1320px) {
-          .row {
-            --bs-gutter-x: 32px;
-          }
-        }
-
-        @media (min-width: 1640px) {
-          .row {
-            --bs-gutter-x: 32px;
-          }
-        }
-
-        @media (min-width: 1880px) {
-          .row {
-            --bs-gutter-x: 40px;
-          }
         }
 
         .row > * {
@@ -2949,161 +2907,21 @@ $enable-bootstrap-compatibility: null !default;
         .container-md,
         .container-sm,
         .container-xs {
+          --bs-container-margin-x: var(--bs-grid-margin);
           width: 100%;
           padding-right: var(--bs-container-margin-x);
           padding-left: var(--bs-container-margin-x);
           margin-right: auto;
           margin-left: auto;
-          --bs-container-margin-x: 16px;
-        }
-
-        @media (min-width: 390px) {
-          .container-fluid,
-          .container-3xl,
-          .container-2xl,
-          .container-xxl,
-          .container-xl,
-          .container-lg,
-          .container-md,
-          .container-sm,
-          .container-xs {
-            --bs-container-margin-x: 24px;
-          }
-        }
-
-        @media (min-width: 480px) {
-          .container-fluid,
-          .container-3xl,
-          .container-2xl,
-          .container-xxl,
-          .container-xl,
-          .container-lg,
-          .container-md,
-          .container-sm,
-          .container-xs {
-            --bs-container-margin-x: 28px;
-          }
-        }
-
-        @media (min-width: 736px) {
-          .container-fluid,
-          .container-3xl,
-          .container-2xl,
-          .container-xxl,
-          .container-xl,
-          .container-lg,
-          .container-md,
-          .container-sm,
-          .container-xs {
-            --bs-container-margin-x: 32px;
-          }
-        }
-
-        @media (min-width: 1024px) {
-          .container-fluid,
-          .container-3xl,
-          .container-2xl,
-          .container-xxl,
-          .container-xl,
-          .container-lg,
-          .container-md,
-          .container-sm,
-          .container-xs {
-            --bs-container-margin-x: 40px;
-          }
-        }
-
-        @media (min-width: 1320px) {
-          .container-fluid,
-          .container-3xl,
-          .container-2xl,
-          .container-xxl,
-          .container-xl,
-          .container-lg,
-          .container-md,
-          .container-sm,
-          .container-xs {
-            --bs-container-margin-x: 56px;
-          }
-        }
-
-        @media (min-width: 1640px) {
-          .container-fluid,
-          .container-3xl,
-          .container-2xl,
-          .container-xxl,
-          .container-xl,
-          .container-lg,
-          .container-md,
-          .container-sm,
-          .container-xs {
-            --bs-container-margin-x: 80px;
-          }
-        }
-
-        @media (min-width: 1880px) {
-          .container-fluid,
-          .container-3xl,
-          .container-2xl,
-          .container-xxl,
-          .container-xl,
-          .container-lg,
-          .container-md,
-          .container-sm,
-          .container-xs {
-            --bs-container-margin-x: 112px;
-          }
         }
 
         .container {
+          --bs-container-margin-x: var(--bs-grid-margin);
           width: 100%;
           padding-right: var(--bs-container-margin-x);
           padding-left: var(--bs-container-margin-x);
           margin-right: auto;
           margin-left: auto;
-          --bs-container-margin-x: 16px;
-        }
-
-        @media (min-width: 390px) {
-          .container {
-            --bs-container-margin-x: 24px;
-          }
-        }
-
-        @media (min-width: 480px) {
-          .container {
-            --bs-container-margin-x: 28px;
-          }
-        }
-
-        @media (min-width: 736px) {
-          .container {
-            --bs-container-margin-x: 32px;
-          }
-        }
-
-        @media (min-width: 1024px) {
-          .container {
-            --bs-container-margin-x: 40px;
-          }
-        }
-
-        @media (min-width: 1320px) {
-          .container {
-            --bs-container-margin-x: 56px;
-          }
-        }
-
-        @media (min-width: 1640px) {
-          .container {
-            --bs-container-margin-x: 80px;
-          }
-        }
-
-        @media (min-width: 1880px) {
-          .container {
-            --bs-container-margin-x: 112px;
-          }
         }
 
         @media (min-width: 390px) {
@@ -3530,54 +3348,12 @@ $enable-bootstrap-compatibility: null !default;
         }
 
         .container-fluid {
+          --bs-container-margin-x: var(--bs-grid-margin);
           width: 100%;
           padding-right: var(--bs-container-margin-x);
           padding-left: var(--bs-container-margin-x);
           margin-right: auto;
           margin-left: auto;
-          --bs-container-margin-x: 16px;
-        }
-
-        @media (min-width: 390px) {
-          .container-fluid {
-            --bs-container-margin-x: 24px;
-          }
-        }
-
-        @media (min-width: 480px) {
-          .container-fluid {
-            --bs-container-margin-x: 28px;
-          }
-        }
-
-        @media (min-width: 736px) {
-          .container-fluid {
-            --bs-container-margin-x: 32px;
-          }
-        }
-
-        @media (min-width: 1024px) {
-          .container-fluid {
-            --bs-container-margin-x: 40px;
-          }
-        }
-
-        @media (min-width: 1320px) {
-          .container-fluid {
-            --bs-container-margin-x: 56px;
-          }
-        }
-
-        @media (min-width: 1640px) {
-          .container-fluid {
-            --bs-container-margin-x: 80px;
-          }
-        }
-
-        @media (min-width: 1880px) {
-          .container-fluid {
-            --bs-container-margin-x: 112px;
-          }
         }
 
         @media (min-width: 1640px) {
@@ -3944,55 +3720,13 @@ $enable-bootstrap-compatibility: null !default;
         }
 
         .row {
+          --bs-gutter-x: var(--bs-grid-gap);
           --bs-gutter-y: 0;
           display: flex;
           flex-wrap: wrap;
           margin-top: calc(-1 * var(--bs-gutter-y));
           margin-right: calc(-0.5 * var(--bs-gutter-x)); // stylelint-disable-line @stylistic/number-leading-zero
           margin-left: calc(-0.5 * var(--bs-gutter-x)); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-gutter-x: 8px;
-        }
-
-        @media (min-width: 390px) {
-          .row {
-            --bs-gutter-x: 16px;
-          }
-        }
-
-        @media (min-width: 480px) {
-          .row {
-            --bs-gutter-x: 16px;
-          }
-        }
-
-        @media (min-width: 736px) {
-          .row {
-            --bs-gutter-x: 24px;
-          }
-        }
-
-        @media (min-width: 1024px) {
-          .row {
-            --bs-gutter-x: 24px;
-          }
-        }
-
-        @media (min-width: 1320px) {
-          .row {
-            --bs-gutter-x: 32px;
-          }
-        }
-
-        @media (min-width: 1640px) {
-          .row {
-            --bs-gutter-x: 32px;
-          }
-        }
-
-        @media (min-width: 1880px) {
-          .row {
-            --bs-gutter-x: 40px;
-          }
         }
 
         .row > * {
