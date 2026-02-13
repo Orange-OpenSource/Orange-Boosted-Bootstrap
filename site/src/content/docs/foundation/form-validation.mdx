@@ -1,6 +1,6 @@
 ---
 title: Form validation
-description: Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.
+description: Provide valuable, actionable feedback to your users with HTML5 form validation, via custom styles and JavaScript.
 aliases:
   - "/docs/forms/validation/"
   - "/docs/foundation/form-validation/"
@@ -9,31 +9,285 @@ extra_js:
   - src: "[[docsref:/assets/js/validate-forms.js]]"
     async: true
 ---
-
-## Accessibility
-
-Ensure that all form components have an appropriate accessible name so that their purpose can be conveyed to users of assistive technologies. The simplest way to achieve this is to use a `<label>` element, or—in the case of buttons—to include sufficiently descriptive text as part of the `<button>...</button>` content.
-
-For situations where it’s not possible to include a visible `<label>` or appropriate text content, there are alternative ways of still providing an accessible name, such as:
-
-- `<label>` elements hidden using the `.visually-hidden` class
-- Pointing to an existing element that can act as a label using `aria-labelledby`
-- Providing a `title` attribute
-- Explicitly setting the accessible name on an element using `aria-label`
-
-If none of these are present, assistive technologies may resort to using the `placeholder` attribute as a fallback for the accessible name on `<input />` and `<textarea>` elements.{/*  The examples in this section provide a few suggested, case-specific approaches. */}
-
-While using visually hidden content (`.visually-hidden`, `aria-label`, and even `placeholder` content, which disappears once a form field has content) will benefit assistive technology users, a lack of visible label text may still be problematic for certain users. Some form of visible label is generally the best approach, both for accessibility and usability.
+import { getDocsRelativePath } from '@libs/path'
 
 ## How it works
+
+OUDS Web provides custom feedback styles that apply custom colors, borders, focus styles, and background icons to better communicate feedback. to use them, you’ll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript.
 
 Here’s how form validation works with OUDS Web:
 
 - HTML form validation is applied via CSS’s two pseudo-classes, `:invalid` and `:valid`. It applies to `<input />`, `<select>`, and `<textarea>` elements.
 - OUDS Web scopes the `:invalid` and `:valid` styles to parent `.was-validated` class, usually applied to the `<form>`. Otherwise, any required field without a value shows up as invalid on page load. This way, you may choose when to activate them (typically after form submission is attempted).
 - To reset the appearance of the form (for instance, in the case of dynamic form submissions using Ajax), remove the `.was-validated` class from the `<form>` again after submission.
-{/* for [server-side validation](#server-side) */}
-- As a fallback, `.is-invalid` and `.is-valid` classes may be used instead of the pseudo-classes. They do not require a `.was-validated` parent class.
-- All modern browsers support the [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api), a series of JavaScript methods for validating form controls.
-- Feedback messages may utilize the [browser defaults](#browser-defaults) (different for each browser, and unstylable via CSS) or our custom feedback styles with additional HTML and CSS.
-- You may provide custom validity messages with `setCustomValidity` in JavaScript.
+- As a fallback, `.is-invalid` class may be used instead of the pseudo-class `:invalid` for [server-side validation](#server-side). It doesn't require a `.was-validated` parent class.
+- All modern browsers support the [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api), a series of JavaScript methods for validating form controls. You may provide custom validity messages with `setCustomValidity` in JavaScript.
+- Feedback messages should use our custom feedback styles with additional HTML and CSS, rather than the browser defaults (which differ for each browser and can't be styled via CSS).
+
+With that in mind, consider the following demos for our custom form validation styles and optional server-side classes.
+
+## Accessibility
+
+OUDS Web's form elements are designed to be accessible in particular by always using a `<label>` linked to a form element (beware though to use the right `id`). This allows assistive technologies to convey the purpose of each form field to users.
+
+You must take care to specify the validation rules for each field using an appropriate attribute like `required`, `pattern`, `min`, `minLength`, etc. This allows assistive technologies to understand the validation requirements for each field and communicate them to users. The form fields will be marked as `:invalid` if the user input doesn't meet the specified validation rules.
+
+To make your form validation accessible, you also have to ensure that any feedback messages are properly associated with the relevant form field using `aria-describedby` when the field becomes invalid. This is important for users of assistive technologies, as it allows them to understand what went wrong and how to fix it.
+
+## Client-side
+
+Try to submit the form below; our JavaScript will intercept the submit button, add `.was-validated` to the `<form>`, and you’ll see the `:invalid` and `:valid` styles applied to the fields. For invalid fields, it also associates the invalid feedback/error message with the relevant form field using `aria-describedby` (noting that this attribute allows more than one `id` to be referenced, in case the field already points to additional description/helper text).
+
+<Example code={`<form class="needs-validation" novalidate>
+    <p>
+      This form uses client-side validation with custom validation styles. Try to submit the form without filling it out to see them in action.
+    </p>
+    <p class="fw-bold">
+      All fields are required.
+    </p>
+    <fieldset class="control-items-list mb-large">
+     <legend>Title <span aria-hidden="true">*</span></legend>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="radio" value="" name="title" id="mr" data-feedback-id="titleFeedback" required />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="mr">Mr.</label>
+        </div>
+      </div>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="radio" value="" name="title" id="ms" data-feedback-id="titleFeedback" required />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="ms">Ms.</label>
+        </div>
+      </div>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="radio" value="" name="title" id="other" data-feedback-id="titleFeedback" required />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="other">Other or prefer not to choose</label>
+        </div>
+      </div>
+      <p class="control-item-error-message" id="titleFeedback">
+        You must choose an option for the title.
+      </p>
+    </fieldset>
+
+    <div class="text-input mb-large">
+      <div class="text-input-container">
+        <label for="username">Username <span aria-hidden="true">*</span></label>
+        <input type="text" class="text-input-field" id="username" data-feedback-id="usernameFeedback"
+               placeholder=" " required>
+      </div>
+      <p id="usernameFeedback" class="error-text">
+        Username is required.
+      </p>
+    </div>
+
+    <div class="text-input mb-large">
+      <div class="text-input-container">
+        <label for="inputPassword">Password <span aria-hidden="true">*</span></label>
+        <input type="password" id="inputPassword" class="text-input-field" data-feedback-id="passwordFeedback" placeholder=" " required>
+        <button class="btn btn-minimal btn-icon">
+          <svg aria-hidden="true">
+            <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#accessibility-vision"/>
+          </svg>
+          <span class="visually-hidden">Show password</span>
+        </button>
+      </div>
+      <p id="passwordFeedback" class="error-text">
+        Password is required.
+      </p>
+    </div>
+
+    <div class="select-input mb-large">
+      <div class="select-input-container">
+        <label for="continent">Continent <span aria-hidden="true">*</span></label>
+        <select class="select-input-field" id="continent" data-feedback-id="continentFeedback" required>
+          <option value="" disabled selected></option>
+          <option value="1">Europe</option>
+          <option value="2">Oceania</option>
+          <option value="3">America</option>
+          <option value="3">Asia</option>
+          <option value="4">Africa</option>
+        </select>
+      </div>
+      <p id="continentFeedback" class="error-text">
+        Continent is required.
+      </p>
+    </div>
+
+    <div class="text-area mb-large">
+      <div class="text-area-container">
+        <label for="comments">Comments <span aria-hidden="true">*</span></label>
+        <textarea id="comments" class="text-area-field" data-feedback-id="commentsFeedback" required></textarea>
+      </div>
+      <p id="commentsFeedback" class="error-text">
+        Comments is required.
+      </p>
+    </div>
+
+    <div class="switch-item-container mb-large">
+      <div class="switch-item control-item-reverse">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="readTermsAndConditions" data-feedback-id="readTermsAndConditionsFeedback" required />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="readTermsAndConditions">I have read the terms and conditions <span aria-hidden="true">*</span></label>
+        </div>
+      </div>
+      <p class="control-item-error-message mb-xsmall" id="readTermsAndConditionsFeedback">
+        You must confirm that you have read the terms and conditions.
+      </p>
+    </div>
+
+    <div class="checkbox-item-container mb-large">
+      <div class="checkbox-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" value="" id="agreeTermsAndConditions"
+                 data-feedback-id="agreeTermsAndConditionsFeedback" required/>
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="agreeTermsAndConditions">I agree to the terms and conditions <span aria-hidden="true">*</span></label>
+        </div>
+      </div>
+      <p class="control-item-error-message" id="agreeTermsAndConditionsFeedback">
+        You must accept the terms and condition to proceed.
+      </p>
+    </div>
+
+    <button type="submit" class="btn btn-strong">Submit</button>
+  </form>`} />
+
+<Code containerClass="bd-example-snippet" lang="js" filePath={getDocsRelativePath('/static/[brand]/docs/[version]/assets/js/validate-forms.js')} />
+
+## Server-side
+
+We recommend using client-side validation before server-side validation. If server-side validation returns any invalid field, you can indicate it with `.is-invalid`.
+
+For invalid fields, ensure that the invalid feedback/error message is associated with the relevant form field using `aria-describedby` (noting that this attribute allows more than one `id` to be referenced, in case the field already points to additional description/helper text).
+
+<Example code={`<form novalidate>
+    <p>
+      This form simulates server-side validation with custom validation styles.
+    </p>
+    <p class="fw-bold">
+      All fields are required.
+    </p>
+    <fieldset class="control-items-list mb-large">
+     <legend>Title <span aria-hidden="true">*</span></legend>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="mr2" aria-describedby="title2Feedback" required />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="mr2">Mr.</label>
+        </div>
+      </div>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="ms2" aria-describedby="title2Feedback" required />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="ms2">Ms.</label>
+        </div>
+      </div>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="other2" aria-describedby="title2Feedback" required />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="other2">Other or prefer not to choose</label>
+        </div>
+      </div>
+      <p class="control-item-error-message" id="title2Feedback">
+        You must choose an option for the title.
+      </p>
+    </fieldset>
+
+    <div class="text-input mb-large">
+      <div class="text-input-container">
+        <label for="username2">Username <span aria-hidden="true">*</span></label>
+        <input type="text" class="text-input-field is-invalid" id="username2" aria-describedby="username2Feedback"
+               placeholder=" " required>
+      </div>
+      <p id="username2Feedback" class="error-text">
+        Username is required.
+      </p>
+    </div>
+
+    <div class="text-input mb-large">
+      <div class="text-input-container">
+        <label for="inputPassword2">Password <span aria-hidden="true">*</span></label>
+        <input type="password" id="inputPassword2" class="text-input-field is-invalid" aria-describedby="password2Feedback" placeholder=" " required>
+        <button class="btn btn-minimal btn-icon">
+          <svg aria-hidden="true">
+            <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#accessibility-vision"/>
+          </svg>
+          <span class="visually-hidden">Show password</span>
+        </button>
+      </div>
+      <p id="password2Feedback" class="error-text">
+        Password is required.
+      </p>
+    </div>
+
+    <div class="select-input mb-large">
+      <div class="select-input-container">
+        <label for="continent2">Continent <span aria-hidden="true">*</span></label>
+        <select class="select-input-field is-invalid" id="continent2" aria-describedby="continent2Feedback" required>
+          <option value="" disabled selected></option>
+          <option value="1">Europe</option>
+          <option value="2">Oceania</option>
+          <option value="3">America</option>
+          <option value="3">Asia</option>
+          <option value="4">Africa</option>
+        </select>
+      </div>
+      <p id="continent2Feedback" class="error-text">
+        Continent is required.
+      </p>
+    </div>
+
+    <div class="text-area mb-large">
+      <div class="text-area-container">
+        <label for="comments2">Comments <span aria-hidden="true">*</span></label>
+        <textarea id="comments2" class="text-area-field is-invalid" aria-describedby="comments2Feedback" required></textarea>
+      </div>
+      <p id="comments2Feedback" class="error-text">
+        Comments is required.
+      </p>
+    </div>
+
+    <div class="switch-item-container mb-large">
+      <div class="switch-item control-item-reverse">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="readTermsAndConditions2" aria-describedby="readTermsAndConditions2Feedback" required />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="readTermsAndConditions2">I have read the terms and conditions <span aria-hidden="true">*</span></label>
+        </div>
+      </div>
+      <p class="control-item-error-message mb-xsmall" id="readTermsAndConditions2Feedback">
+        You must confirm that you have read the terms and conditions.
+      </p>
+    </div>
+
+    <div class="checkbox-item-container mb-large">
+      <div class="checkbox-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator is-invalid" type="checkbox" value="" id="agreeTermsAndConditions2"
+                 aria-describedby="agreeTermsAndConditions2Feedback" required/>
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="agreeTermsAndConditions2">I agree to the terms and conditions <span aria-hidden="true">*</span></label>
+        </div>
+      </div>
+      <p class="control-item-error-message" id="agreeTermsAndConditions2Feedback">
+        You must accept the terms and condition to proceed.
+      </p>
+    </div>
+  </form>`} />
