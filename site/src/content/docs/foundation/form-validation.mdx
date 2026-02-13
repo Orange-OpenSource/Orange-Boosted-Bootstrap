@@ -13,7 +13,7 @@ import { getDocsRelativePath } from '@libs/path'
 
 ## Accessibility
 
-Ensure that all form components have an appropriate accessible name so that their purpose can be conveyed to users of assistive technologies. The simplest way to achieve this is to use a `<label>` element, or—in the case of buttons—to include sufficiently descriptive text as part of the `<button>...</button>` content.
+Ensure that all form components have an appropriate accessible name so that their purpose can be conveyed to users of assistive technologies by using a `<label>` element linked, or—in the case of buttons—to include sufficiently descriptive text as part of the `<button>...</button>` content.
 
 For situations where it’s not possible to include a visible `<label>` or appropriate text content, there are alternative ways of still providing an accessible name, such as:
 
@@ -176,31 +176,31 @@ We recommend using client-side validation before server-side validation. If serv
 
 For invalid fields, ensure that the invalid feedback/error message is associated with the relevant form field using `aria-describedby` (noting that this attribute allows more than one `id` to be referenced, in case the field already points to additional description/helper text).
 
-<Example code={`<form class="needs-validation" novalidate>
+<Example code={`<form novalidate>
     <fieldset class="control-items-list mb-2xlarge">
      <legend>Title <span aria-hidden="true">*</span></legend>
       <div class="radio-button-item">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="mr" aria-describedby="titleFeedback" required />
+          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="mr2" aria-describedby="titleFeedback" required />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="mr">Mr.</label>
+          <label class="control-item-label" for="mr2">Mr.</label>
         </div>
       </div>
       <div class="radio-button-item">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="ms" aria-describedby="titleFeedback" required />
+          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="ms2" aria-describedby="titleFeedback" required />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="ms">Ms.</label>
+          <label class="control-item-label" for="ms2">Ms.</label>
         </div>
       </div>
       <div class="radio-button-item">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="other" aria-describedby="titleFeedback" required />
+          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="other2" aria-describedby="titleFeedback" required />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="other">Other or prefer not to choose</label>
+          <label class="control-item-label" for="other2">Other or prefer not to choose</label>
         </div>
       </div>
       <p class="control-item-error-message" id="titleFeedback">
@@ -210,8 +210,8 @@ For invalid fields, ensure that the invalid feedback/error message is associated
 
     <div class="text-input mb-2xlarge">
       <div class="text-input-container">
-        <label for="username">Username <span aria-hidden="true">*</span></label>
-        <input type="text" class="text-input-field is-invalid" id="username" aria-describedby="usernameFeedback"
+        <label for="username2">Username <span aria-hidden="true">*</span></label>
+        <input type="text" class="text-input-field is-invalid" id="username2" aria-describedby="usernameFeedback"
                placeholder=" " required>
       </div>
       <p id="usernameFeedback" class="error-text">
@@ -221,8 +221,8 @@ For invalid fields, ensure that the invalid feedback/error message is associated
 
     <div class="text-input mb-2xlarge">
       <div class="text-input-container">
-        <label for="inputPassword">Password <span aria-hidden="true">*</span></label>
-        <input type="password" id="inputPassword" class="text-input-field is-invalid" aria-describedby="passwordFeedback" placeholder=" " required>
+        <label for="inputPassword2">Password <span aria-hidden="true">*</span></label>
+        <input type="password" id="inputPassword2" class="text-input-field is-invalid" aria-describedby="passwordFeedback" placeholder=" " required>
         <button class="btn btn-minimal btn-icon" id="togglePassword">
           <svg aria-hidden="true">
             <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#accessibility-vision"/>
@@ -237,8 +237,8 @@ For invalid fields, ensure that the invalid feedback/error message is associated
 
     <div class="select-input mb-2xlarge">
       <div class="select-input-container">
-        <label for="continent">Continent <span aria-hidden="true">*</span></label>
-        <select class="select-input-field is-invalid" id="continent" aria-describedby="continentFeedback" required>
+        <label for="continent2">Continent <span aria-hidden="true">*</span></label>
+        <select class="select-input-field is-invalid" id="continent2" aria-describedby="continentFeedback" required>
           <option value="" disabled selected></option>
           <option value="1">Europe</option>
           <option value="2">Oceania</option>
@@ -254,8 +254,8 @@ For invalid fields, ensure that the invalid feedback/error message is associated
 
     <div class="text-area mb-2xlarge">
       <div class="text-area-container">
-        <label for="comments">Comments <span aria-hidden="true">*</span></label>
-        <textarea id="comments" class="text-area-field is-invalid" aria-describedby="commentsFeedback" required></textarea>
+        <label for="comments2">Comments <span aria-hidden="true">*</span></label>
+        <textarea id="comments2" class="text-area-field is-invalid" aria-describedby="commentsFeedback" required></textarea>
       </div>
       <p id="commentsFeedback" class="error-text">
         Comments is required.
@@ -265,10 +265,10 @@ For invalid fields, ensure that the invalid feedback/error message is associated
     <div class="switch-item-container mb-2xlarge">
       <div class="switch-item control-item-reverse">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="readTermsAndConditions" aria-describedby="readTermsAndConditionsFeedback" required />
+          <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="readTermsAndConditions2" aria-describedby="readTermsAndConditionsFeedback" required />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="readTermsAndConditions">I have read the terms and conditions <span aria-hidden="true">*</span></label>
+          <label class="control-item-label" for="readTermsAndConditions2">I have read the terms and conditions <span aria-hidden="true">*</span></label>
         </div>
       </div>
       <p class="control-item-error-message mb-xsmall" id="readTermsAndConditionsFeedback">
@@ -279,11 +279,11 @@ For invalid fields, ensure that the invalid feedback/error message is associated
     <div class="checkbox-item-container mb-2xlarge">
       <div class="checkbox-item">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator is-invalid" type="checkbox" value="" id="agreeTermsAndConditions"
+          <input class="control-item-indicator is-invalid" type="checkbox" value="" id="agreeTermsAndConditions2"
                  aria-describedby="agreeTermsAndConditionsFeedback" required/>
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="agreeTermsAndConditions">I agree to the terms and conditions <span aria-hidden="true">*</span></label>
+          <label class="control-item-label" for="agreeTermsAndConditions2">I agree to the terms and conditions <span aria-hidden="true">*</span></label>
         </div>
       </div>
       <p class="control-item-error-message" id="agreeTermsAndConditionsFeedback">
