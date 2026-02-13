@@ -247,7 +247,7 @@
     mask-repeat: no-repeat;
   }
 
-  &:indeterminate,
+  &[type="checkbox"]:indeterminate,
   &:checked {
     --#{$prefix}control-item-indicator-color: #{$ouds-color-action-selected};
   }
