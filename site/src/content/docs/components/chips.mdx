@@ -92,7 +92,7 @@ Filter chips allow users to filter content by selecting or deselecting specific 
 To create a filter chip, add `.chip-filter` to the `.chip`.
 
 <Callout type="warning">
-*If possible, display a semantically informative title to describe the chips' list purpose* like in the following example, otherwise an `aria-label` must be added to the `.chips-container` to explain the function of the chips. [Read more about chips accessibility here.](#accessibility)
+  If possible, display a semantically informative title to describe the chips' list purpose like in the following example, otherwise an `aria-label` must be added to the `.chips-container` to explain the function of the chips. [Read more about chips accessibility here.](#accessibility)
 </Callout>
 
 <Example code={`
@@ -153,7 +153,7 @@ If you need to trigger a dynamic interaction directly on the page, `<button>` ma
 
 The style is applied on `[aria-pressed="true"]` to enforce a good level of accessibility.
 
-Make use of our [button JS plugin]([[docsref:/components/chips#button-plugin]]) or handle interactivity on your side, but make sure to use `aria-pressed`.
+Make use of our [button JS plugin]([[docsref:/components/chips#javascript]]) or handle interactivity on your side, but make sure to use `aria-pressed`.
 
 <Example code={`<ul class="chips-container" aria-label="Filter by">
     <li class="chip chip-filter">
@@ -167,42 +167,6 @@ Make use of our [button JS plugin]([[docsref:/components/chips#button-plugin]]) 
       </button>
     </li>
   </ul>`} />
-
-{/* TODO: Redirect to the right page when it will be developed. */}
-
-##### Button plugin
-
-The button plugin allows you to create simple on/off toggle buttons.
-
-###### Toggle states
-
-Add `data-bs-toggle="button"` to toggle a button’s `active` state. If you’re pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to ensure that it is conveyed appropriately to assistive technologies.
-
-###### Methods
-
-You can create a button instance with the button constructor, for example:
-
-```js
-const bsButton = new oudsWeb.Button('#myButton')
-```
-
-<BsTable>
-| Method | Description |
-| --- | --- |
-| `dispose` | Destroys an element’s button. (Removes stored data on the DOM element) |
-| `getInstance` | Static method which allows you to get the button instance associated with a DOM element, you can use it like this: `oudsWeb.Button.getInstance(element)`. |
-| `getOrCreateInstance` | Static method which returns a button instance associated with a DOM element or creates a new one in case it wasn’t initialized. You can use it like this: `oudsWeb.Button.getOrCreateInstance(element)`. |
-| `toggle` | Toggles push state. Gives the button the appearance that it has been activated. |
-</BsTable>
-
-For example, to toggle all chips:
-
-```js
-document.querySelectorAll('.chip-suggestion').forEach(chipElement => {
-  const chip = oudsWeb.Button.getOrCreateInstance(chipElement)
-  chip.toggle()
-})
-```
 
 ### Variants
 
@@ -288,6 +252,40 @@ The following example shows every possible renderings depending on the filter ch
     </li>
   </ul>`} />
 
+### JavaScript
+
+The button plugin allows you to create simple on/off toggle buttons.
+
+#### Toggle states
+
+Add `data-bs-toggle="button"` to toggle a button’s `active` state. If you’re pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to ensure that it is conveyed appropriately to assistive technologies.
+
+#### Methods
+
+You can create a button instance with the button constructor, for example:
+
+```js
+const bsButton = new oudsWeb.Button('#myButton')
+```
+
+<BsTable>
+| Method | Description |
+| --- | --- |
+| `dispose` | Destroys an element’s button. (Removes stored data on the DOM element) |
+| `getInstance` | Static method which allows you to get the button instance associated with a DOM element, you can use it like this: `oudsWeb.Button.getInstance(element)`. |
+| `getOrCreateInstance` | Static method which returns a button instance associated with a DOM element or creates a new one in case it wasn’t initialized. You can use it like this: `oudsWeb.Button.getOrCreateInstance(element)`. |
+| `toggle` | Toggles push state. Gives the button the appearance that it has been activated. |
+</BsTable>
+
+For example, to toggle all chips:
+
+```js
+document.querySelectorAll('.chip-suggestion').forEach(chipElement => {
+  const chip = oudsWeb.Button.getOrCreateInstance(chipElement)
+  chip.toggle()
+})
+```
+
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Suggestion chip
 
 Suggestion chips show relevant options based on user input or context. They help users quickly choose from dynamic or recommended items. Since this implies a dynamic behavior, these should be implemented using buttons.
@@ -295,7 +293,7 @@ Suggestion chips show relevant options based on user input or context. They help
 To create a suggestion chip, add `.chip-suggestion` to the `.chip`.
 
 <Callout type="warning">
-*If possible, display a semantically informative title to describe the chips' list purpose*, otherwise an `aria-label` must be added to the `.chips-container` to explain the function of the chips, like in the following example. [Read more about chips accessibility here.](#accessibility)
+  If possible, display a semantically informative title to describe the chips' list purpose, otherwise an `aria-label` must be added to the `.chips-container` to explain the function of the chips, like in the following example. [Read more about chips accessibility here.](#accessibility)
 </Callout>
 
 <Example code={`<ul class="chips-container" aria-label="Answer with">

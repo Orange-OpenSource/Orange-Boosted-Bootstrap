@@ -1,10 +1,810 @@
 ---
-title: Alert
+title: Alerts
 description: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
 aliases:
   - "/docs/components/alerts/"
   - "/docs/components/alert/"
 toc: true
+types:
+  - Alert message
+  - Inline alert
+added:
+  version: "1.1"
 ---
 
-<CalloutSoon />
+import { getVersionedDocsPath } from '@libs/path'
+import { getMode } from '@libs/sass-variables'
+import { getConfig } from '@libs/config'
+
+<Callout type="info">
+  You can find the OUDS design guidelines here: [alert message guidelines](https://r.orange.fr/r/S-ouds-doc-alert-message), [inline alert guidelines](https://r.orange.fr/r/S-ouds-doc-inline-alert).
+</Callout>
+
+## Overview
+
+### Component types
+
+<ul class="list-unstyled row row-cols-1 row-cols-sm-2">
+  <li class="col">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-inverse-low" aria-hidden="true">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
+          <div class="alert alert-message alert-negative">
+            <div class="alert-icon"><p class="visually-hidden">Negative alert</p></div>
+            <div class="alert-container">
+              <div class="alert-text-container">
+                <h3 class="alert-label">Alert message</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top">
+        <a class="stretched-link" href="#alert-message">Alert message</a> is a prominent, persistent and actionable communication component to display system feedback, status change or required action.
+      </div>
+    </div>
+  </li>
+  <li class="col">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-inverse-low" aria-hidden="true">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
+          <div class="alert alert-info">
+            <div class="alert-icon"><p class="visually-hidden">Positive alert</p></div>
+            <p class="alert-label">Label</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-body border-default border-thin border-top">
+        <a class="stretched-link" href="#inline-alert">Inline alert</a> is a prominent and persistent component displayed in the content flow to display system feedback or status change.
+      </div>
+    </div>
+  </li>
+</ul>
+
+For both types of alert, OUDS Web has a common basic `.alert` class that sets up default styles.
+
+<Example showToolbar={false} code={`<div class="alert alert-message alert-negative">
+    <div class="alert-icon"><p class="visually-hidden">Negative alert</p></div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <h3 class="alert-label">Alert message</h3>
+      </div>
+    </div>
+  </div>`} />
+
+<Example showToolbar={false} code={`<div class="alert alert-info">
+    <div class="alert-icon"><p class="visually-hidden">Positive alert</p></div>
+    <p class="alert-label">Label</p>
+  </div>`} />
+
+### Approach
+
+Alerts are built on `.alert` class. They contain texts such as label, icons, and may also contain actions or close buttons.
+
+`.alert-label` is used to entitle all alerts. Note that this one is **mandatory**.
+
+`.alert-icon` is used to display the icon in all alerts.
+
+Alert messages come with additional layout classes such as `.alert-container`, `.alert-text-container` and `.alert-action-container` to help building some branded alerts.
+
+`.alert-container` is used to align content inside the alert message correctly.
+
+`.alert-text-container` is to space vertically all the textual content of the alert message.
+
+`.alert-action-container` is mainly useful when there is an action next to a close button in alert message. It may be omitted if not needed.
+
+### Accessibility
+
+#### Semantics
+
+For accessibility reasons, any textual element must either be a semantic element itself or be wrapped in an appropriate semantic HTML element. In the examples below, the alert texts appear as `<p>` or `<hn>` elements but adapt the semantic to your context of use. In this documentation, you’ll have several different examples.
+
+For instance there is no need to have a title element if the alert doesn’t have any description or other element inside.
+
+#### Information for visually impaired users
+
+Keep in mind that visually impaired and blind users will lack the visual context (color and icons for instance) that permits to understand the alerts purpose on the page. If alerts’ titles are not self-explanatory, it’s mandatory to add a `.visually-hidden` information to explain what it represents.
+
+Several examples are provided below, but they need to be adapted for actual use cases.
+
+Close buttons should be labelled:
+- Either via a `<span class="visually-hidden">` and a descriptive text inside to know what the associated action is. (**Preferred method**)
+- Or via `aria-labelledby` referencing the action performed by the button and the id of the title of the alert.
+
+#### Dynamic behavior
+
+In case an alert is dynamically added, there are several use cases:
+- The alert is only informational and/or can be accessed in a different way, there is no need for a particular role or vocalization.
+- The alert is informational and needs a user action but isn’t urgent, you can make it appear inside a `<div role="status">`. The dynamic alert message should reference where to find this action. [More information about the `role="status"`](https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/). [See a valid example](#live-example).
+- The alert requires a user action, either add the `role="alert"` directly on the `<div class="alert" role="alert">` and add a way to access to it easily, **or**, focus the newly added alert and once it’s closed, give the focus back to the element that triggered the alert. If the second choice is applied here, you may want to add a focustrap to this alert. [More information about the `role="alert"`](https://a11y-guidelines.orange.com/en/articles/aria-live-alert/).
+
+In case an alert is closed and the focus haven’t been customized, the focus order should stay the same.
+
+## Alert message
+
+Add `.alert-message` at the `.alert` level to display an alert message.
+
+### Variants
+
+#### Status and appearance
+
+Alert message holds status depending on the context of the information they represent. Each status is designed to convey a specific meaning.
+
+##### Functional
+
+Functional alert message communicates specific system statuses, results, or user feedback.
+
+Each variant conveys a clear semantic meaning — such as positive, warning, info, or negative — and must always be paired with its dedicated functional icon to ensure clarity and accessibility.
+
+Other icons should not be substituted, as the semantic pairing between icon, colour, and message is essential for recognition and consistency.
+
+Use functional alerts to inform users about state changes, confirmations, or issues that are directly connected to system logic or user actions. These messages carry functional meaning and help guide user response or acknowledgment.
+
+<Callout type="warning">
+  Keep in mind that color should not be the only way to convey information. If the color has a strong meaning, reflect it in the alert message’s text and if necessary add additional text with the class `.visually-hidden`. [Read more about alert message accessibility here](#accessibility).
+</Callout>
+
+Please note that you shouldn’t add any icon in those alert messages.
+
+Here, only `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-warning` are considered as functional.
+
+<Example buttonLabel="functional alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-negative">
+    <div class="alert-icon"><p class="visually-hidden">Error</p></div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label">Connection failed.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-message alert-positive">
+    <div class="alert-icon"></div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label">Your payment has been successfully received.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-message alert-info">
+    <div class="alert-icon"></div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label">We’re processing your request.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-message alert-warning">
+    <div class="alert-icon"><p class="visually-hidden">Be careful, </p></div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label">Your data allowance is running low.</p>
+      </div>
+    </div>
+  </div>`} />
+
+<BootstrapCompatibility>
+<Example class="d-flex flex-column gap-medium" code={`<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+    </symbol>
+    <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+      <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+    </symbol>
+  </svg>
+
+  <div class="alert alert-success d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+    <div>
+      An example success alert with an icon
+    </div>
+  </div>
+  <div class="alert alert-warning d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+    <div>
+      An example warning alert with an icon
+    </div>
+  </div>
+  <div class="alert alert-danger d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+    <div>
+      An example danger alert with an icon
+    </div>
+  </div>`} />
+</BootstrapCompatibility>
+
+##### Non-functional
+
+Non-functional alerts are informative or decorative. They provide context or highlight content without implying a specific state, system event, or user action. These alerts are not tied to UX patterns such as positive, negative, info, or warning, and may use contextual or brand-related icons to enhance recognition or storytelling.
+
+Here, only `.alert-neutral` and `.alert-accent` are considered as non-functional.
+
+<Example buttonLabel="non-functional alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-neutral">
+    <div class="alert-icon">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <p class="visually-hidden">Emphasized content</p>
+    </div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label">Your data plan includes free calls on weekends.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-message alert-accent">
+    <div class="alert-icon">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <p class="visually-hidden">Emphasized content</p>
+    </div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label">Upgrade your plan and get a free device.</p>
+      </div>
+    </div>
+  </div>`} />
+
+<BootstrapCompatibility>
+<Example class="d-flex flex-column gap-medium" code={`<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="info-fill" viewBox="0 0 16 16">
+      <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+    </symbol>
+  </svg>
+
+  <div class="alert alert-primary d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+    <div>
+      An example alert with an icon
+    </div>
+  </div>`} />
+</BootstrapCompatibility>
+
+###### Icon
+
+For the [non-functional alert messages](#non-functional), know that you can change the icon either by adding a `<svg>`, `<img>` or an `.icon` inside the `.alert-icon` container. It should be colorized automatically via the color attribute.
+
+It can also be made with a `mask-image` applied to `.alert-icon` with a class or inline directly.
+
+You can set the image via `--bs-alert-icon` wherever inside the `.alert`.
+
+<Callout type="info" name="info-icons-svg-sprite" />
+
+<Example buttonLabel="changed icon alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-neutral">
+    <div class="alert-icon">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <p class="visually-hidden">Emphasized content</p>
+    </div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label">Your data plan includes free calls on weekends.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-message alert-accent" style="--bs-alert-icon: ${getConfig().brand === 'orange' || getConfig().brand === 'orange-compact'
+        ? `url(&#34;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill-rule='evenodd' d='M15.474 9.514 10 15.577 4.526 9.514l-.002-.003A2.868 2.868 0 0 1 8.69 5.572l.838.796.472.455.472-.455.838-.796.008-.008a2.868 2.868 0 0 1 4.159 3.947l-.003.003Zm1.251-5.302A4.78 4.78 0 0 0 10 4.18a4.78 4.78 0 0 0-6.815 6.7L10 18.393l6.815-7.514a4.78 4.78 0 0 0-.09-6.667Z'/></svg>&#34;)`
+        : `url(&#34;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 20a.63.63 0 0 1-.462-.2l-8.16-8.754A5.427 5.427 0 0 1 2 7.436C2 4.439 4.449 2 7.46 2c1.846 0 3.543.938 4.54 2.428A5.476 5.476 0 0 1 16.54 2c.349 0 .63.28.63.627a.629.629 0 0 1-.63.627 4.205 4.205 0 0 0-3.947 2.77.63.63 0 0 1-1.186 0 4.205 4.205 0 0 0-3.948-2.77c-2.316 0-4.2 1.876-4.2 4.182 0 1.02.374 2.003 1.052 2.768L12 18.451l7.699-8.258a4.174 4.174 0 0 0 .058-5.446.626.626 0 0 1 .077-.884.632.632 0 0 1 .887.076 5.418 5.418 0 0 1-.088 7.095L12.462 19.8A.63.63 0 0 1 12 20Z'/><path d='M5.274 8.512a.472.472 0 0 1-.465-.394 3.078 3.078 0 0 1 3.04-3.571c.073 0 .145.006.217.014l.054.005a.47.47 0 0 1 .429.51.475.475 0 0 1-.512.427l-.066-.006c-.04-.004-.081-.01-.123-.01a2.134 2.134 0 0 0-2.107 2.478.47.47 0 0 1-.467.547Z'/></svg>&#34;)`
+      }">
+    <div class="alert-icon"><p class="visually-hidden">Emphasized content</p></div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label">Upgrade your plan and get a free device.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-message alert-neutral">
+    <div class="alert-icon">
+      <span class="icon si si-settings" aria-hidden="true"></span>
+      <p class="visually-hidden">Emphasized content</p>
+    </div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label">Your data plan includes free calls on weekends.</p>
+      </div>
+    </div>
+  </div>`} />
+
+Optionally, for the [non-functional alert message](#non-functional), you can remove the `.alert-icon` container.
+
+<Callout type="warning" name="warning-color-assistive-technologies" />
+
+<Example buttonLabel="iconless alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-neutral">
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label"><span class="visually-hidden">Emphasized content: </span>Your data plan includes free calls on weekends.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-message alert-accent">
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label"><span class="visually-hidden">Emphasized content: </span>Upgrade your plan and get a free device.</p>
+      </div>
+    </div>
+  </div>`} />
+
+<BrandSpecific brand="orange">
+#### Rounded
+
+Rounded corners alerts is a project-wide option therefore all your alerts should either be rounded or not. Add `.use-rounded-corner-alert` on a top container (for example `<body>`) to use rounded corners.
+
+<Callout type="warning">
+  Rounded corners could be used in more emotional, immersive contexts or those tied to specific visual identities. **For standard or business-oriented usage, keep the default square corners.**
+</Callout>
+
+<Callout type="info">
+  We use a `<div>` as a parent container because we cannot use `<body>` in an example.
+</Callout>
+
+<Example buttonLabel="rounded alert message" code={`<div class="use-rounded-corner-alert">
+    <div class="alert alert-message alert-neutral mb-medium">
+      <div class="alert-icon">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        <p class="visually-hidden">Emphasized content</p>
+      </div>
+      <div class="alert-container">
+        <div class="alert-text-container">
+          <p class="alert-label">Your data plan includes free calls on weekends.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert alert-message alert-positive">
+      <div class="alert-icon"></div>
+      <div class="alert-container">
+        <div class="alert-text-container">
+          <p class="alert-label">Your payment has been successfully received.</p>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+</BrandSpecific>
+
+#### Close button
+
+If the alert can be removed when its content is acknowledged, you can add a close button inside the `.alert-action-container` with our [button icon]([[docsref:/components/buttons#icon-only]]).
+
+<Callout type="info">
+  If you want the JavaScript behavior presented on the first alert below, please refer to our [JavaScript section](#javascript).
+</Callout>
+
+<Callout type="warning">
+  For accessibility purpose, please provide a comprehensive name for the close button. For example, adding an `aria-labelledby` linking to the title of the alert, or adding a `.visually-hidden` content.
+</Callout>
+
+<Example buttonLabel="closable alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-accent">
+    <div class="alert-icon">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+    </div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label" id="closable-alert-accent">Accent alert</p>
+      </div>
+    </div>
+    <div class="alert-action-container">
+      <button class="btn btn-minimal btn-icon" data-bs-dismiss="alert" aria-labelledby="btn-close-alert closable-alert-accent" id="btn-close-alert">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
+        </svg>
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="alert alert-message alert-info">
+    <div class="alert-icon"><p class="visually-hidden">Info alert</p></div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label">Info alert</p>
+      </div>
+    </div>
+    <div class="alert-action-container">
+      <button class="btn btn-minimal btn-icon">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
+        </svg>
+        <span class="visually-hidden">Close info alert</span>
+      </button>
+    </div>
+  </div>`} />
+
+#### With action
+
+You can add an alternate action [link]([[docsref:/components/links]]) (`<a>` or `<button` depending on the context of use) either after the `.alert-text-container` or inside the `.alert-action-container`.
+
+<Callout type="warning">
+  Please note that only the basic link should be used.
+</Callout>
+
+<Example buttonLabel="alert message with alternate action" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-info">
+    <div class="alert-icon"><p class="visually-hidden">Info alert</p></div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label">Info alert</p>
+      </div>
+      <button class="link">Action</button>
+    </div>
+    <div class="alert-action-container">
+      <button class="btn btn-minimal btn-icon" data-bs-dismiss="alert">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
+        </svg>
+        <span class="visually-hidden">Close info alert</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="alert alert-message alert-info">
+    <div class="alert-icon"><p class="visually-hidden">Info alert</p></div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label">Info alert</p>
+      </div>
+    </div>
+    <div class="alert-action-container">
+      <button class="link">Action</button>
+      <button class="btn btn-minimal btn-icon" data-bs-dismiss="alert">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
+        </svg>
+        <span class="visually-hidden">Close info alert</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="alert alert-message alert-info">
+    <div class="alert-icon"><p class="visually-hidden">Info alert</p></div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label">Info alert</p>
+      </div>
+      <a href="#" class="link">Action</a>
+    </div>
+    <div class="alert-action-container">
+      <button class="btn btn-minimal btn-icon" data-bs-dismiss="alert">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
+        </svg>
+        <span class="visually-hidden">Close info alert</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="alert alert-message alert-info">
+    <div class="alert-icon"><p class="visually-hidden">Info alert</p></div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label">Info alert</p>
+      </div>
+    </div>
+    <div class="alert-action-container">
+      <a href="#" class="link">Action</a>
+      <button class="btn btn-minimal btn-icon" data-bs-dismiss="alert">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
+        </svg>
+        <span class="visually-hidden">Close info alert</span>
+      </button>
+    </div>
+  </div>`} />
+
+#### Description
+
+To display a description text below the alert label, add a `<p>` after `.alert-label`.
+
+<Example buttonLabel="alert message with description" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-neutral">
+    <div class="alert-icon">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+    </div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <h5 class="alert-label">Label</h5>
+        <p>Description</p>
+        <p>Second description</p>
+      </div>
+    </div>
+  </div>`} />
+
+#### With bullet list
+
+To display a [bullet list]([[docsref:/components/bullet-list]]) below the alert label, add a `.bullet-list` after `.alert-label`.
+
+<Callout type="warning">
+  Please note that the `.bullet-list` needs to have `.fs-bm` in order to change its bullet size. {/* TODO: Do we keep this ? */}
+</Callout>
+
+<Example buttonLabel="alert message with description" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-neutral">
+    <div class="alert-icon">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+    </div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <h5 class="alert-label">Label</h5>
+        <ul class="bullet-list fs-bm">
+          <li>Bullet text</li>
+          <li>Bullet text</li>
+          <li>Bullet text</li>
+        </ul>
+      </div>
+    </div>
+  </div>`} />
+
+### Layout
+
+Here are some examples with everything activated and some long texts to see how it should behave. Please note that there are some `max-width` on the texts.
+
+<Example buttonLabel="alert message with much text" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-warning">
+    <div class="alert-icon"><p class="visually-hidden">Warning alert</p></div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <h4 class="alert-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis. Aliquam erat volutpat. Ut quam turpis, interdum non ex at, imperdiet ornare mi. Curabitur eget hendrerit diam. Curabitur id placerat ipsum.</p>
+        <ul class="bullet-list fs-bm">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis. Aliquam erat volutpat. Ut quam turpis, interdum non ex at, imperdiet ornare mi. Curabitur eget hendrerit diam. Curabitur id placerat ipsum.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis.</li>
+        </ul>
+      </div>
+      <a href="#" class="link">Action</a>
+    </div>
+    <div class="alert-action-container">
+      <button class="btn btn-minimal btn-icon">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
+        </svg>
+        <span class="visually-hidden">Close warning alert</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="alert alert-message alert-positive">
+    <div class="alert-icon"><p class="visually-hidden">Positive alert</p></div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <h4 class="alert-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis. Aliquam erat volutpat. Ut quam turpis, interdum non ex at, imperdiet ornare mi. Curabitur eget hendrerit diam. Curabitur id placerat ipsum.</p>
+        <ul class="bullet-list fs-bm">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis. Aliquam erat volutpat. Ut quam turpis, interdum non ex at, imperdiet ornare mi. Curabitur eget hendrerit diam. Curabitur id placerat ipsum.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="alert-action-container">
+      <button class="link">Action</button>
+      <button class="btn btn-minimal btn-icon">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
+        </svg>
+        <span class="visually-hidden">Close positive alert</span>
+      </button>
+    </div>
+  </div>`} />
+
+### JavaScript
+
+Using the alert plugin, it’s possible to dismiss any alert message, here’s how:
+
+- Be sure you’ve loaded the alert plugin, or the compiled OUDS Web JavaScript.
+- Add a [close button](#close-button) using a `<button>` element.
+- On this close button, add the `data-bs-dismiss="alert"` attribute which triggers the JavaScript functionality.
+
+#### Live example
+
+Click the button below to show an alert (hidden with inline styles to start), then dismiss (and destroy) it with the built-in close button.
+
+<Example buttonLabel="alert message with live behavior" addStackblitzJs code={`<div id="liveAlertPlaceholder" role="status" class="use-rounded-corner-alert d-flex flex-column gap-medium mb-medium">
+    <div class="alert alert-message alert-positive">
+      <div class="alert-icon"></div>
+      <div class="alert-container">
+        <div class="alert-text-container">
+          <p class="alert-label">Your payment has been successfully received.</p>
+        </div>
+      </div>
+      <div class="alert-action-container">
+        <button class="btn btn-icon btn-minimal" data-bs-dismiss="alert">
+          <svg aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
+          </svg>
+          <span class="visually-hidden">Close alert</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-brand" id="liveAlertBtn">Add live alert <span class="visually-hidden">just before this button</span></button>`} />
+
+We use the following JavaScript to trigger our live alert demo:
+
+<JsDocs name="live-alert" file="site/src/assets/partials/snippets.js" />
+
+#### Initialize
+
+Initialize elements as alerts
+
+```js
+const alertList = document.querySelectorAll('.alert')
+const alerts = [...alertList].map(element => new oudsWeb.Alert(element))
+```
+
+<Callout type="info">
+  For the sole purpose of dismissing an alert, it isn’t necessary to initialize the component manually via the JS API. By making use of `data-bs-dismiss="alert"`, the component will be initialized automatically and properly dismissed.
+
+  See the [triggers](#triggers) section for more details.
+</Callout>
+
+#### Triggers
+
+<JsDismiss name="alert" />
+
+**Note that closing an alert will remove it from the DOM.**
+
+#### Methods
+
+You can create an alert instance with the alert constructor, for example:
+
+```js
+const bsAlert = new oudsWeb.Alert('#myAlert')
+```
+
+This makes an alert listen for click events on descendant elements which have the `data-bs-dismiss="alert"` attribute. (Not necessary when using the data-api’s auto-initialization.)
+
+<BsTable>
+| Method | Description |
+| --- | --- |
+| `close` | Closes an alert by removing it from the DOM. |
+| `dispose` | Destroys an element’s alert. (Removes stored data on the DOM element) |
+| `getInstance` | Static method which allows you to get the alert instance associated to a DOM element. For example: `oudsWeb.Alert.getInstance(alert)`. |
+| `getOrCreateInstance` | Static method which returns an alert instance associated to a DOM element or create a new one in case it wasn’t initialized. You can use it like this: `oudsWeb.Alert.getOrCreateInstance(element)`. |
+</BsTable>
+
+Basic usage:
+
+```js
+const alert = oudsWeb.Alert.getOrCreateInstance('#myAlert')
+alert.close()
+```
+
+#### Events
+
+OUDS Web’s alert plugin exposes a few events for hooking into alert functionality.
+
+<BsTable>
+| Event | Description |
+| --- | --- |
+| `close.bs.alert` | Fires immediately when the `close` instance method is called. |
+| `closed.bs.alert` | Fired when the alert has been closed and CSS transitions have completed. |
+</BsTable>
+
+```js
+const myAlert = document.getElementById('myAlert')
+myAlert.addEventListener('closed.bs.alert', event => {
+  // do something, for instance, explicitly move focus to the most appropriate element,
+  // so it doesn’t get lost/reset to the start of the page
+  // document.getElementById('...').focus()
+})
+```
+
+## Inline alert
+
+There is no specific class for inline alert right now, only the `.alert` class.
+
+### Variants
+
+#### Status and appearance
+
+Inline alert holds status depending on the context of the information they represent. Each status is designed to convey a specific meaning.
+
+##### Functional
+
+Functional inline alert communicates specific system statuses, or system feedback.
+
+Each variant conveys a clear semantic meaning — such as positive, warning, info, or negative — and must always be paired with its dedicated functional icon to ensure clarity and accessibility.
+
+Other icons should not be substituted, as the semantic pairing between icon, colour, and message is essential for recognition and consistency.
+
+Use functional inline alerts to inform users about state changes, or issues that are directly connected to system logic. These messages carry functional meaning and help guide user response or acknowledgment.
+
+<Callout type="warning">
+  Keep in mind that color should not be the only way to convey information. If the color has a strong meaning, reflect it in the inline alert’s text and if necessary add additional text with the class `.visually-hidden`. [Read more about inline alert accessibility here](#accessibility).
+</Callout>
+
+Please note that you shouldn’t add any icon in those inline alerts.
+
+Here, only `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-warning` are considered as functional.
+
+<Example buttonLabel="functional inline alert" class="d-flex flex-column gap-medium" code={`<div class="alert alert-negative">
+    <div class="alert-icon"><p class="visually-hidden">Error</p></div>
+    <p class="alert-label">Connection failed.</p>
+  </div>
+
+  <div class="alert alert-positive">
+    <div class="alert-icon"></div>
+    <p class="alert-label">Your payment has been successfully received.</p>
+  </div>
+
+  <div class="alert alert-info">
+    <div class="alert-icon"></div>
+    <p class="alert-label">We’re processing your request.</p>
+  </div>
+
+  <div class="alert alert-warning">
+    <div class="alert-icon"><p class="visually-hidden">Be careful, </p></div>
+    <p class="alert-label">Your data allowance is running low.</p>
+  </div>`} />
+
+##### Non-functional
+
+Non-functional alerts are informative or decorative. They provide context or highlight content without implying a specific state, system event, or user action. These alerts are not tied to UX patterns such as positive, negative, info, or warning, and may use contextual or brand-related icons to enhance recognition or storytelling.
+
+Here, only `.alert-neutral` and `.alert-accent` are considered as non-functional.
+
+<Example buttonLabel="non-functional inline alert" class="d-flex flex-column gap-medium" code={`<div class="alert alert-neutral">
+    <div class="alert-icon">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <p class="visually-hidden">Emphasized content</p>
+    </div>
+    <p class="alert-label">Your data plan includes free calls on weekends.</p>
+  </div>
+
+  <div class="alert alert-accent">
+    <div class="alert-icon">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <p class="visually-hidden">Emphasized content</p>
+    </div>
+    <p class="alert-label">Upgrade your plan and get a free device.</p>
+  </div>`} />
+
+###### Icon
+
+For the [non-functional inline alert](#non-functional-1), know that you can change the icon either by adding a `<svg>`, `<img>` or an `.icon` inside the `.alert-icon` container. It should be colorized automatically via the `color` attribute.
+
+It can also be made with a `mask-image` applied to `.alert-icon` with a class or inline directly.
+
+You can set the image via `--bs-alert-icon` wherever inside the `.alert`.
+
+<Callout type="info" name="info-icons-svg-sprite" />
+
+<Example buttonLabel="changed icon inline alert" class="d-flex flex-column gap-medium" code={`<div class="alert alert-neutral">
+    <div class="alert-icon">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <p class="visually-hidden">Emphasized content</p>
+    </div>
+    <p class="alert-label">Your data plan includes free calls on weekends.</p>
+  </div>
+
+  <div class="alert alert-accent" style="--bs-alert-icon: ${getConfig().brand === 'orange' || getConfig().brand === 'orange-compact'
+        ? `url(&#34;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill-rule='evenodd' d='M15.474 9.514 10 15.577 4.526 9.514l-.002-.003A2.868 2.868 0 0 1 8.69 5.572l.838.796.472.455.472-.455.838-.796.008-.008a2.868 2.868 0 0 1 4.159 3.947l-.003.003Zm1.251-5.302A4.78 4.78 0 0 0 10 4.18a4.78 4.78 0 0 0-6.815 6.7L10 18.393l6.815-7.514a4.78 4.78 0 0 0-.09-6.667Z'/></svg>&#34;)`
+        : `url(&#34;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 20a.63.63 0 0 1-.462-.2l-8.16-8.754A5.427 5.427 0 0 1 2 7.436C2 4.439 4.449 2 7.46 2c1.846 0 3.543.938 4.54 2.428A5.476 5.476 0 0 1 16.54 2c.349 0 .63.28.63.627a.629.629 0 0 1-.63.627 4.205 4.205 0 0 0-3.947 2.77.63.63 0 0 1-1.186 0 4.205 4.205 0 0 0-3.948-2.77c-2.316 0-4.2 1.876-4.2 4.182 0 1.02.374 2.003 1.052 2.768L12 18.451l7.699-8.258a4.174 4.174 0 0 0 .058-5.446.626.626 0 0 1 .077-.884.632.632 0 0 1 .887.076 5.418 5.418 0 0 1-.088 7.095L12.462 19.8A.63.63 0 0 1 12 20Z'/><path d='M5.274 8.512a.472.472 0 0 1-.465-.394 3.078 3.078 0 0 1 3.04-3.571c.073 0 .145.006.217.014l.054.005a.47.47 0 0 1 .429.51.475.475 0 0 1-.512.427l-.066-.006c-.04-.004-.081-.01-.123-.01a2.134 2.134 0 0 0-2.107 2.478.47.47 0 0 1-.467.547Z'/></svg>&#34;)`
+      }">
+    <div class="alert-icon"><p class="visually-hidden">Emphasized content</p></div>
+    <p class="alert-label">Upgrade your plan and get a free device.</p>
+  </div>
+
+  <div class="alert alert-neutral">
+    <div class="alert-icon">
+      <span class="icon si si-settings" aria-hidden="true"></span>
+      <p class="visually-hidden">Emphasized content</p>
+    </div>
+    <p class="alert-label">Your data plan includes free calls on weekends.</p>
+  </div>`} />

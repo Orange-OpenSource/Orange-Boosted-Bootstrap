@@ -436,5 +436,3 @@ $gutters: $ouds-dimension-space-fixed !default; // instead of `$spacers`
   $gutters: map-merge($gutters, $spacers);
 }
 // End mod
-
-$alert-colors: map-remove($theme-colors, "primary", "secondary", "light", "dark") !default; // OUDS mod

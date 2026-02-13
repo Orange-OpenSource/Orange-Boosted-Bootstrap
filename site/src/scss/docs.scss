@@ -32,7 +32,11 @@ $enable-cssgrid: true;
 $enable-bullet-list-tick: true;
 // fusv-enable
 @import "../../../scss/grid";
-@import "../../../scss/bullet-list";
+
+// Here to avoid any edge behavior in the docs
+.bd-bullet-list {
+  @import "../../../scss/bullet-list";
+}
 
 // Load docs components
 @import "variables";
@@ -46,7 +50,7 @@ $enable-bullet-list-tick: true;
 @import "toc";
 @import "footer";
 @import "component-examples";
-@import "callouts";
+// OUDS mod: no import "callouts";
 @import "colors";
 @import "clipboard-js";
 @import "placeholder-img";

@@ -1753,41 +1753,8 @@ $modal-scale-transform:             scale(1.02) !default;
 // scss-docs-end modal-variables
 
 // Alerts
-//
-// Define alert colors, border radius, and padding.
 
-// scss-docs-start alert-variables
-$alert-padding-y:                   1rem !default;
-$alert-padding-x:                   $spacer !default;
-$alert-margin-bottom:               $spacer !default;
-$alert-color:                       var(--#{$prefix}body-color) !default; // OUDS mod
-$alert-border-radius:               var(--#{$prefix}border-radius) !default;
-$alert-link-font-weight:            null !default; // OUDS mod
-$alert-heading-font-weight:         $font-weight-bold !default; // OUDS mod
-$alert-border-width:                var(--#{$prefix}border-width) !default;
-
-// OUDS mod
-$alert-padding-sm:                  $spacer * .5 !default;
-$alert-icons: (
-  "success": escape-svg($alert-icon-success),
-  "info":    escape-svg($alert-icon-info),
-  // Create a list for this warning icon to indicate that the mask needs to be replaced by a background image
-  // Be aware that the background of the icon won't change anymore
-  // Note: `true` parameter is only used to create a list, it could be empty (e.g. `(escape-svg($warning-icon),)`)
-  "warning": (escape-svg($alert-icon-warning-external), true),
-  "danger":  escape-svg($alert-icon-important)
-) !default;
-$alert-logo-size:                   calc($spacer * .5 + 1rem) !default;
-$alert-logo-size-sm:                calc(1rem + 1px) !default;
-$alert-icon-size:                   3rem !default;
-$alert-icon-size-sm:                $alert-icon-size * .5 !default;
-$alert-icon-margin-y:               $spacer * .1 !default;
-$alert-btn-close-offset:            .5rem !default;
-$alert-btn-close-offset-sm:         $spacer * .25 !default;
-// End mod
-
-$alert-dismissible-padding-r:       $alert-padding-y * 3 !default; // 3x covers width of x plus default padding on either side
-// scss-docs-end alert-variables
+// OUDS mod: no alert variable
 
 // Progress bars
 

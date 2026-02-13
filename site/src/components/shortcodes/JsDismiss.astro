@@ -1,5 +1,6 @@
 ---
 import Code from '@shortcodes/Code.astro'
+import { getVersionedDocsPath } from '@libs/path'
 
 interface Props {
   name: string
@@ -15,7 +16,7 @@ const { name } = Astro.props
 </p>
 
 <Code
-  code={`<button type="button" class="btn-close" data-bs-dismiss="${name}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">\n  <span class="visually-hidden">Close</span>\n</button>`}
+  code={`<button class="btn btn-icon btn-minimal" data-bs-dismiss="${name}">\n  <svg aria-hidden="true"><use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/></svg>\n  <span class="visually-hidden">Close</span>\n</button>`}
   lang="html"
 />
 
@@ -24,6 +25,6 @@ const { name } = Astro.props
 </p>
 
 <Code
-  code={`<button type="button" class="btn btn-close" data-bs-dismiss="${name}" data-bs-target="#my-${name}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">\n  <span class="visually-hidden">Close</span>\n</button>`}
+  code={`<button class="btn btn-icon btn-minimal" data-bs-dismiss="${name}" data-bs-target="#my-${name}">\n  <svg aria-hidden="true"><use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/></svg>\n  <span class="visually-hidden">Close</span>\n</button>`}
   lang="html"
 />

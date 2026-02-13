@@ -107,8 +107,8 @@ Define a CSS class with the desired SVG inside the `--bs-bullet-list-custom-mark
 
 #### Inline SVG in `ul`
 
-<Callout type="info">
-**Inlined SVG requires properly escaped characters.** Some reserved characters, such as `<`, `>` and `"`, must be URL-encoded or escaped. When customizing the CSS variable, you must handle this yourself.
+<Callout type="info" title="Inlined SVG requires properly escaped characters">
+  Some reserved characters, such as `<`, `>` and `"`, must be URL-encoded or escaped. When customizing the CSS variable, you must handle this yourself.
 </Callout>
 
 <Example code={`<ul class="bullet-list" style="--bs-bullet-list-custom-marker: url(${getConfig().brand === 'orange' || getConfig().brand === 'orange-compact'
@@ -154,7 +154,7 @@ To have a different marker icon for each item on the same level, add the class o
 
 The tick marker is not shipped by default in the OUDS Web CSS, set the [`$enable-bullet-list-tick` variable]([[docsref:/foundation/options]]) to `true` to enable the `.bullet-list-tick` class. Do not forget the `.bullet-list-tick` if you have nested lists.
 
-<Example code={`<!--
+<Example class="bd-bullet-list" code={`<!--
     // in your style.scss file before importing OUDS Web source code
     $enable-bullet-list-tick: true;
   -->
@@ -247,7 +247,7 @@ It's possible to mix ordered and unordered lists, in this case adding the `.bull
 ## Bare lists
 
 <Callout type="warning">
-Do not confuse this style with the `.list-unstyled` utility that removes all styles from the list, see [below](#unstyled)
+  Do not confuse this style with the `.list-unstyled` utility that removes all styles from the list, see [below](#unstyled)
 </Callout>
 
 Bare lists have no markers, but retains indentation for alignment.
@@ -318,7 +318,7 @@ Remove a list's bullets and apply some light `margin` with a combination of two 
 ## Native list
 
 <Callout type="warning">
-Only use this where you can not add a class to `<ul>` and `<ol>`.
+  Only use this where you can not add a class to `<ul>` and `<ol>`.
 </Callout>
 
 All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 1rem`, they also have a `max-width` set to `--bs-font-max-width-body-medium`. Nested lists have no `margin-bottom`. We've also reset the `padding-left` on `<ul>` and `<ol>` elements.

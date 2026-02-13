@@ -5,7 +5,7 @@
     - title: Accordion
       draft: true
     - title: Alerts
-      draft: true
+      category: Dialog
     - title: Back to top
       draft: true
     - title: Badges

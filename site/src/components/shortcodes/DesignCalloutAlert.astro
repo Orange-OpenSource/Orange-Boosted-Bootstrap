@@ -3,31 +3,31 @@ import { getVersionedDocsPath } from '@libs/path'
 
 interface Props {
   /**
-   * The type of callout to display. One of `info`, or `danger`.
-   * @default 'danger'
+   * The type of callout to display. One of `info`, or `negative`.
+   * @default 'negative'
    */
-  level?: 'danger' | 'info'
+  level?: 'negative' | 'info'
 }
 
-const { level = 'danger' } = Astro.props
+const { level = 'negative' } = Astro.props
 ---
 
-<div class:list={['alert', `alert-${level}`]}>
-  <span class="alert-icon"><span class="visually-hidden">{level}</span></span>
-  <div>
-    <p class="alert-heading mb-2xsmall">
-      {
-        level === 'danger' ? (
-          <>
-            <span>Incompatibility with Orange Unified Design System.</span>
-            <a href={getVersionedDocsPath('getting-started/introduction')}>More information</a>
-          </>
-        ) : (
-          <span>Orange Unified Design System recommendation.</span>
-        )
-      }
-    </p>
-    <div>
+<div class:list={['alert alert-message', `alert-${level}`]}>
+  <div class="alert-icon"><p class="visually-hidden">{level}</p></div>
+  <div class="alert-container">
+    <div class="alert-text-container">
+      <p class="alert-label">
+        {
+          level === 'negative' ? (
+            <>
+              <span>Incompatibility with Orange Unified Design System.</span>
+              <a href={getVersionedDocsPath('getting-started/introduction')}>More information</a>
+            </>
+          ) : (
+            <span>Orange Unified Design System recommendation.</span>
+          )
+        }
+      </p>
       <slot />
     </div>
   </div>

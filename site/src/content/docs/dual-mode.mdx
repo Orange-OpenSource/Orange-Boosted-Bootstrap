@@ -53,9 +53,7 @@ This is the preferred scenario and will help you implement the basic concepts of
 
 ##### Maximum of OUDS Web
 
-<Callout type="info">
-**This is the recommended scenario.**
-</Callout>
+<Callout type="info" title="This is the recommended scenario." />
 
 In this scenario, you will have access to all the components available in OUDS Web, the grid, the utilities, the helpers, and fill the missing parts using Boosted and custom CSS.
 
@@ -316,7 +314,6 @@ In this scenario, you will have access to all the components available in OUDS W
           @import "boosted/scss/card";
           @import "boosted/scss/accordion";
           @import "boosted/scss/pagination";
-          @import "boosted/scss/alert";
           @import "boosted/scss/progress";
           @import "boosted/scss/list-group";
           @import "boosted/scss/close";
@@ -357,7 +354,7 @@ In this scenario, you will have access to all the components available in OUDS W
 ##### Minimum of OUDS Web
 
 <Callout type="warning">
-This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to do it.
+  This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to do it.
 </Callout>
 
 In this scenario, you will have access to OUDS Web on the root, but once a Boosted element is encountered, it will be Boosted. It means that once you’ve set `.boosted` on an element, you’ll have access to Boosted only on its children.
@@ -387,7 +384,7 @@ In this scenario, you will have access to OUDS Web on the root, but once a Boost
 #### Boosted as the main framework
 
 <Callout type="warning">
-This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to do it.
+  This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to do it.
 </Callout>
 
 In this scenario, you will have access to OUDS Web on defined elements and children. It means that once you’ve set `.ouds-web` on an element, you’ll have access to OUDS Web.

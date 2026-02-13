@@ -20,11 +20,11 @@ Use a `.text-input` wrapper to create a textual form field with OUDS styles, the
 A `placeholder` attribute is required on each `<input>` as our CSS-only floating label implementation relies on the `:placeholder-shown` pseudo-element to detect when the input is a empty.
 
 <Callout type="info">
-Even if you don't need a placeholder, <em>you must always define the placeholder attribute with a single space character</em>. This ensures the label behaves correctly by preventing it from overlapping the input text when a value is entered.
+  Even if you don't need a placeholder, **you must always define the placeholder attribute with a single space character**. This ensures the label behaves correctly by preventing it from overlapping the input text when a value is entered.
 </Callout>
 
 <Callout type="warning">
-To be compliant with the WCAG [1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose) criteria, for each input field collecting information about the user, add the appropriate value to the autocomplete attribute (sufficient [technique H98](https://www.w3.org/WAI/WCAG21/Techniques/html/H98)).
+  To be compliant with the WCAG [1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose) criteria, for each input field collecting information about the user, add the appropriate value to the autocomplete attribute (sufficient [technique H98](https://www.w3.org/WAI/WCAG21/Techniques/html/H98)).
 </Callout>
 
 <Example buttonLabel="text input without placeholder" code={`<div class="text-input">
@@ -170,7 +170,7 @@ Trailing actions can be added to the right side of the input field by placing a 
 To display a helper text below inputs, add a `.helper-text` as a sibling of a `.text-input-container`.
 
 <Callout type="warning">
-Helper text should be explicitly associated with the text input it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this helper text when the user focuses or enters the input.
+  Helper text should be explicitly associated with the text input it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this helper text when the user focuses or enters the input.
 </Callout>
 
 <Example buttonLabel="text input with helper text" code={`<div class="text-input">
@@ -189,7 +189,7 @@ If the helper text is not sufficient, it's possible to offer the user an additio
 To display a helper link below inputs, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.text-input-container`.
 
 <Callout type="warning">
-Helper link should be explicitly described using the `aria-labelledby` attribute in which you must combine the helper link id and the related text input label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the input. We also recommend adding a `.visually-hidden` span inside the link to coordinate the link content and the label.
+  Helper link should be explicitly described using the `aria-labelledby` attribute in which you must combine the helper link id and the related text input label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the input. We also recommend adding a `.visually-hidden` span inside the link to coordinate the link content and the label.
 </Callout>
 
 <Example buttonLabel="text inputs with helper link" code={`<div class="text-input mb-medium">
@@ -219,7 +219,7 @@ Helper link should be explicitly described using the `aria-labelledby` attribute
 A textual prefix or suffix can be added to an input by wrapping the `<input>` in a `.input-container` and adding `data-bs-prefix` and/or `data-bs-suffix` attributes to it.
 
 <Callout type="warning">
-For accessibility purpose the prefix and suffix should be explicitly mentioned in the helper text related to the input by the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce these additional or already existing elements when the user focuses or enters the input.
+  For accessibility purpose the prefix and suffix should be explicitly mentioned in the helper text related to the input by the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce these additional or already existing elements when the user focuses or enters the input.
 </Callout>
 
 <Example buttonLabel="text inputs with prefix and/or suffix" code={`<div class="text-input mb-medium">
@@ -367,7 +367,7 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 To display an invalid input, add `.is-invalid` to a `.text-input-field` within the `.text-input-container`. Please take a look at our [Validation page to learn more]([[docsref:/foundation/form-validation]]).
 
 <Callout type="warning">
-For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.text-input-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when switching the text input to invalid.
+  For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.text-input-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when switching the text input to invalid.
 </Callout>
 
 <Example buttonLabel="invalid text inputs" code={`<div class="text-input mb-medium">
@@ -487,7 +487,7 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 Block-level or inline-level form text can be created using `.form-text`.
 
 <Callout type="warning">
-Form text should be explicitly associated with the form control it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this form text when the user focuses or enters the control.
+  Form text should be explicitly associated with the form control it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this form text when the user focuses or enters the control.
 </Callout>
 
 Form text below inputs can be styled with `.form-text`. If a block-level element will be used, a top margin is added for easy spacing from the inputs above.
