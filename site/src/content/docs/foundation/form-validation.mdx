@@ -181,7 +181,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
      <legend>Title <span aria-hidden="true">*</span></legend>
       <div class="radio-button-item">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="mr2" aria-describedby="titleFeedback" required />
+          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="mr2" aria-describedby="title2Feedback" required />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="mr2">Mr.</label>
@@ -189,7 +189,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
       </div>
       <div class="radio-button-item">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="ms2" aria-describedby="titleFeedback" required />
+          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="ms2" aria-describedby="title2Feedback" required />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="ms2">Ms.</label>
@@ -197,13 +197,13 @@ For invalid fields, ensure that the invalid feedback/error message is associated
       </div>
       <div class="radio-button-item">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="other2" aria-describedby="titleFeedback" required />
+          <input class="control-item-indicator is-invalid" type="radio" value="" name="title" id="other2" aria-describedby="title2Feedback" required />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="other2">Other or prefer not to choose</label>
         </div>
       </div>
-      <p class="control-item-error-message" id="titleFeedback">
+      <p class="control-item-error-message" id="title2Feedback">
         You must choose an option for the title.
       </p>
     </fieldset>
@@ -211,10 +211,10 @@ For invalid fields, ensure that the invalid feedback/error message is associated
     <div class="text-input mb-large">
       <div class="text-input-container">
         <label for="username2">Username <span aria-hidden="true">*</span></label>
-        <input type="text" class="text-input-field is-invalid" id="username2" aria-describedby="usernameFeedback"
+        <input type="text" class="text-input-field is-invalid" id="username2" aria-describedby="username2Feedback"
                placeholder=" " required>
       </div>
-      <p id="usernameFeedback" class="error-text">
+      <p id="username2Feedback" class="error-text">
         Username is required.
       </p>
     </div>
@@ -222,7 +222,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
     <div class="text-input mb-large">
       <div class="text-input-container">
         <label for="inputPassword2">Password <span aria-hidden="true">*</span></label>
-        <input type="password" id="inputPassword2" class="text-input-field is-invalid" aria-describedby="passwordFeedback" placeholder=" " required>
+        <input type="password" id="inputPassword2" class="text-input-field is-invalid" aria-describedby="password2Feedback" placeholder=" " required>
         <button class="btn btn-minimal btn-icon" id="togglePassword">
           <svg aria-hidden="true">
             <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#accessibility-vision"/>
@@ -230,7 +230,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
           <span class="visually-hidden">Show password</span>
         </button>
       </div>
-      <p id="passwordFeedback" class="error-text">
+      <p id="password2Feedback" class="error-text">
         Password is required.
       </p>
     </div>
@@ -238,7 +238,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
     <div class="select-input mb-large">
       <div class="select-input-container">
         <label for="continent2">Continent <span aria-hidden="true">*</span></label>
-        <select class="select-input-field is-invalid" id="continent2" aria-describedby="continentFeedback" required>
+        <select class="select-input-field is-invalid" id="continent2" aria-describedby="continent2Feedback" required>
           <option value="" disabled selected></option>
           <option value="1">Europe</option>
           <option value="2">Oceania</option>
@@ -247,7 +247,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
           <option value="4">Africa</option>
         </select>
       </div>
-      <p id="continentFeedback" class="error-text">
+      <p id="continent2Feedback" class="error-text">
         Continent is required.
       </p>
     </div>
@@ -255,9 +255,9 @@ For invalid fields, ensure that the invalid feedback/error message is associated
     <div class="text-area mb-large">
       <div class="text-area-container">
         <label for="comments2">Comments <span aria-hidden="true">*</span></label>
-        <textarea id="comments2" class="text-area-field is-invalid" aria-describedby="commentsFeedback" required></textarea>
+        <textarea id="comments2" class="text-area-field is-invalid" aria-describedby="comments2Feedback" required></textarea>
       </div>
-      <p id="commentsFeedback" class="error-text">
+      <p id="comments2Feedback" class="error-text">
         Comments is required.
       </p>
     </div>
@@ -265,13 +265,13 @@ For invalid fields, ensure that the invalid feedback/error message is associated
     <div class="switch-item-container mb-large">
       <div class="switch-item control-item-reverse">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="readTermsAndConditions2" aria-describedby="readTermsAndConditionsFeedback" required />
+          <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="readTermsAndConditions2" aria-describedby="readTermsAndConditions2Feedback" required />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="readTermsAndConditions2">I have read the terms and conditions <span aria-hidden="true">*</span></label>
         </div>
       </div>
-      <p class="control-item-error-message mb-xsmall" id="readTermsAndConditionsFeedback">
+      <p class="control-item-error-message mb-xsmall" id="readTermsAndConditions2Feedback">
         You must confirm that you have read the terms and conditions.
       </p>
     </div>
@@ -280,13 +280,13 @@ For invalid fields, ensure that the invalid feedback/error message is associated
       <div class="checkbox-item">
         <div class="control-item-assets-container">
           <input class="control-item-indicator is-invalid" type="checkbox" value="" id="agreeTermsAndConditions2"
-                 aria-describedby="agreeTermsAndConditionsFeedback" required/>
+                 aria-describedby="agreeTermsAndConditions2Feedback" required/>
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="agreeTermsAndConditions2">I agree to the terms and conditions <span aria-hidden="true">*</span></label>
         </div>
       </div>
-      <p class="control-item-error-message" id="agreeTermsAndConditionsFeedback">
+      <p class="control-item-error-message" id="agreeTermsAndConditions2Feedback">
         You must accept the terms and condition to proceed.
       </p>
     </div>
