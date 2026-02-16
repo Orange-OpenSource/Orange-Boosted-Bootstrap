@@ -4,7 +4,7 @@
   pages:
     - title: Introduction
     - title: Migration from Boosted
-      brand: orange,orange-business-tools
+      brand: orange,orange-compact
     - title: Download
     - title: Contents
     - title: Browsers & devices
@@ -38,7 +38,6 @@
     - title: Color palette
     - title: Color modes
     - title: CSS variables
-      draft: true
     - title: Reboot
     - title: Typography
     - title: Images
@@ -46,7 +45,6 @@
     - title: Figures
       draft: true
     - title: Component
-      draft: true
     - title: Form validation
 
 - title: About

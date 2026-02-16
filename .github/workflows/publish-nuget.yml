@@ -29,15 +29,15 @@ jobs:
           nuget pack "nuget\ouds-web-common.sass.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
           nuget pack "packages\orange\nuget\ouds-web-orange.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
           nuget pack "packages\orange\nuget\ouds-web-orange.sass.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
-          nuget pack "packages\orange-business-tools\nuget\ouds-web-orange-business-tools.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
-          nuget pack "packages\orange-business-tools\nuget\ouds-web-orange-business-tools.sass.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
+          nuget pack "packages\orange-compact\nuget\ouds-web-orange-compact.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
+          nuget pack "packages\orange-compact\nuget\ouds-web-orange-compact.sass.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
           nuget pack "packages\sosh\nuget\ouds-web-sosh.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
           nuget pack "packages\sosh\nuget\ouds-web-sosh.sass.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
           nuget push "ouds-web-common.$bsversion.nupkg" -Verbosity detailed -NonInteractive -Source "https://api.nuget.org/v3/index.json"
           nuget push "ouds-web-common.sass.$bsversion.nupkg" -Verbosity detailed -NonInteractive -Source "https://api.nuget.org/v3/index.json"
           nuget push "ouds-web-orange.$bsversion.nupkg" -Verbosity detailed -NonInteractive -Source "https://api.nuget.org/v3/index.json"
           nuget push "ouds-web-orange.sass.$bsversion.nupkg" -Verbosity detailed -NonInteractive -Source "https://api.nuget.org/v3/index.json"
-          nuget push "ouds-web-orange-business-tools.$bsversion.nupkg" -Verbosity detailed -NonInteractive -Source "https://api.nuget.org/v3/index.json"
-          nuget push "ouds-web-orange-business-tools.sass.$bsversion.nupkg" -Verbosity detailed -NonInteractive -Source "https://api.nuget.org/v3/index.json"
+          nuget push "ouds-web-orange-compact.$bsversion.nupkg" -Verbosity detailed -NonInteractive -Source "https://api.nuget.org/v3/index.json"
+          nuget push "ouds-web-orange-compact.sass.$bsversion.nupkg" -Verbosity detailed -NonInteractive -Source "https://api.nuget.org/v3/index.json"
           nuget push "ouds-web-sosh.$bsversion.nupkg" -Verbosity detailed -NonInteractive -Source "https://api.nuget.org/v3/index.json"
           nuget push "ouds-web-sosh.sass.$bsversion.nupkg" -Verbosity detailed -NonInteractive -Source "https://api.nuget.org/v3/index.json"

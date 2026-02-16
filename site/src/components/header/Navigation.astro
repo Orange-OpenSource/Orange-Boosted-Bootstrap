@@ -65,7 +65,10 @@ const { addedIn, layout, title } = Astro.props
       <div id="bd-navbar1" class="navbar-collapse collapse me-lg-auto bd-navbar mb-none border-none">
         <ul class="navbar-nav">
           <LinkItem
-            active={layout === 'docs' && (Astro.url.pathname.includes('/getting-started/') || Astro.url.pathname.includes('/foundation/') || Astro.url.pathname.includes('/about/'))}
+            active={layout === 'docs' &&
+              (Astro.url.pathname.includes('/getting-started/') ||
+                Astro.url.pathname.includes('/foundation/') ||
+                Astro.url.pathname.includes('/about/'))}
             href={getVersionedDocsPath('getting-started/introduction')}
             onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'getting-started'});"
           >
@@ -164,18 +167,23 @@ const { addedIn, layout, title } = Astro.props
               <li>
                 <a
                   href={Astro.url}
-                  class:list={['dropdown-item d-flex align-items-center', { active: getConfig().brand === 'orange-business-tools' }]}
-                  data-bs-brand-value="orange-business-tools"
-                  aria-current={getConfig().brand === 'orange-business-tools'}
+                  class:list={[
+                    'dropdown-item d-flex align-items-center',
+                    { active: getConfig().brand === 'orange-compact' }
+                  ]}
+                  data-bs-brand-value="orange-compact"
+                  aria-current={getConfig().brand === 'orange-compact'}
                 >
                   <img
                     class="bi me-small"
-                    src={getVersionedDocsPath('assets/brand/orange-business-tools-logo.svg')}
+                    src={getVersionedDocsPath('assets/brand/orange-compact-logo.svg')}
                     alt=""
                     loading="lazy"
                   />
-                  Orange Business Tools
-                  <svg class:list={['bi ms-auto', { 'd-none': getConfig().brand !== 'orange-buiness-tools' }]} aria-hidden="true"
+                  Orange Compact
+                  <svg
+                    class:list={['bi ms-auto', { 'd-none': getConfig().brand !== 'orange-buiness-tools' }]}
+                    aria-hidden="true"
                     ><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#check2')}></use></svg
                   >
                 </a>

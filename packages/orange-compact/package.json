@@ -1,6 +1,6 @@
 {
-  "name": "@ouds/web-orange-business-tools",
-  "description": "OUDS Web Orange Business Tools is a Bootstrap based, Orange Business Tools branded accessible and ergonomic components library.",
+  "name": "@ouds/web-orange-compact",
+  "description": "OUDS Web Orange Compact is a Bootstrap based, Orange Compact branded accessible and ergonomic components library.",
   "version": "1.0.0",
   "config": {
     "version_short": "1.0"
@@ -16,9 +16,9 @@
     "framework",
     "web",
     "bootstrap",
-    "Orange Business Tools"
+    "Orange Compact"
   ],
-  "homepage": "https://web.unified-design-system.orange.com/orange-business-tools/",
+  "homepage": "https://web.unified-design-system.orange.com/orange-compact/",
   "author": "The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)",
   "contributors": [
     "Orange SA"
@@ -33,7 +33,7 @@
   "files": [
     "dist/css/*.{css,map}",
     "scss/**/*.scss",
-    "orange-business-tools-logo.svg",
+    "orange-compact-logo.svg",
     "NOTICE.txt",
     "LICENSE"
   ],
@@ -52,10 +52,10 @@
     "css-minify-rtl": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*rtl.css\" \"!dist/css/*.min.css\"",
     "css-prefix": "npm-run-all --aggregate-output --parallel css-prefix-*",
     "css-prefix-main": "postcss --config ../../build/postcss.config.mjs --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
-    "astro-dev": "cross-env BRAND=orange-business-tools astro dev --root ../../site --port 9003",
-    "astro-build": "cross-env BRAND=orange-business-tools astro build --root ../../site && cd ../../site/dist && cp -r . ../../_site",
-    "astro-preview": "cross-env BRAND=orange-business-tools astro preview --root ../../site --port 9003",
-    "release-zip": "cd ../.. && cross-env-shell \"rm -rf /ouds-web-orange-business-tools-$npm_package_version-dist ouds-web-orange-business-tools-$npm_package_version-dist.zip && cp -r dist/ ouds-web-orange-business-tools-$npm_package_version-dist && cp -r packages/orange-business-tools/dist/ ouds-web-orange-business-tools-$npm_package_version-dist/ && zip -qr9 ouds-web-orange-business-tools-$npm_package_version-dist.zip ouds-web-orange-business-tools-$npm_package_version-dist && rm -rf ouds-web-orange-business-tools-$npm_package_version-dist\""
+    "astro-dev": "cross-env BRAND=orange-compact astro dev --root ../../site --port 9003",
+    "astro-build": "cross-env BRAND=orange-compact astro build --root ../../site && cd ../../site/dist && cp -r . ../../_site",
+    "astro-preview": "cross-env BRAND=orange-compact astro preview --root ../../site --port 9003",
+    "release-zip": "cd ../.. && cross-env-shell \"rm -rf /ouds-web-orange-compact-$npm_package_version-dist ouds-web-orange-compact-$npm_package_version-dist.zip && cp -r dist/ ouds-web-orange-compact-$npm_package_version-dist && cp -r packages/orange-compact/dist/ ouds-web-orange-compact-$npm_package_version-dist/ && zip -qr9 ouds-web-orange-compact-$npm_package_version-dist.zip ouds-web-orange-compact-$npm_package_version-dist && rm -rf ouds-web-orange-compact-$npm_package_version-dist\""
   },
   "license": "MIT"
 }
