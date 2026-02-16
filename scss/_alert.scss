@@ -25,6 +25,10 @@
     min-height: $ouds-alert-size-min-height-bottom-action-placement;
   }
 
+  .alert-label {
+    color: $ouds-color-content-default;
+  }
+
   // To avoid overflow: hidden that hides the focus
   .btn {
     @include border-top-end-radius(var(--#{$prefix}alert-border-radius));
@@ -114,7 +118,7 @@
   margin-bottom: 0;
   @include get-font-size("label-large");
   font-weight: $ouds-font-weight-web-label-moderate;
-  color: $ouds-color-content-default;
+  color: var(--#{$prefix}alert-label-color);
 }
 
 .use-rounded-corner-alert {
@@ -122,18 +126,21 @@
 }
 
 .alert-neutral {
-  --#{$prefix}component-icon-color: #{$ouds-color-content-default};
+  --#{$prefix}alert-label-color: #{$ouds-color-content-default};
+  --#{$prefix}alert-icon-color: #{$ouds-color-content-default};
   --#{$prefix}alert-bg: #{$ouds-color-surface-secondary};
   --#{$prefix}alert-border-color: #{$ouds-color-border-default};
 }
 
 .alert-accent {
+  --#{$prefix}alert-label-color: #{$ouds-color-content-default};
   --#{$prefix}alert-icon-color: #{$ouds-color-content-status-accent};
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-accent-muted};
   --#{$prefix}alert-border-color: #{$ouds-color-border-status-accent};
 }
 
 .alert-negative {
+  --#{$prefix}alert-label-color: #{$ouds-color-content-status-negative};
   --#{$prefix}alert-icon: var(--#{$prefix}error-icon);
   --#{$prefix}alert-icon-color: #{$ouds-color-content-status-negative};
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-negative-muted};
@@ -141,6 +148,7 @@
 }
 
 .alert-positive {
+  --#{$prefix}alert-label-color: #{$ouds-color-content-status-positive};
   --#{$prefix}alert-icon: var(--#{$prefix}success-icon);
   --#{$prefix}alert-icon-color: #{$ouds-color-content-status-positive};
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-positive-muted};
@@ -148,6 +156,7 @@
 }
 
 .alert-info {
+  --#{$prefix}alert-label-color: #{$ouds-color-content-status-info};
   --#{$prefix}alert-icon: var(--#{$prefix}info-icon);
   --#{$prefix}alert-icon-color: #{$ouds-color-content-status-info};
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-info-muted};
@@ -155,6 +164,7 @@
 }
 
 .alert-warning {
+  --#{$prefix}alert-label-color: #{$ouds-color-content-status-warning};
   --#{$prefix}alert-icon: var(--#{$prefix}warning-icon);
   --#{$prefix}alert-icon-color: var(--#{$prefix}icon-color-content-status-warning-external-shape);
   --#{$prefix}alert-icon-internal: var(--#{$prefix}warning-internal-icon);
