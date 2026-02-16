@@ -69,13 +69,17 @@ In this scenario, you will have access to all the components available in OUDS W
         @import "@ouds/web-orange/dist/css/ouds-web";
 
         // 2. Import a custom stack of Boosted and remove already existing elements.
+
+        // Configuration
+        @import "boosted/scss/functions";
+        @import "boosted/scss/variables";
+        @import "boosted/scss/variables-dark";
+        @import "boosted/scss/maps";
+        @import "boosted/scss/mixins";
+        // Please note that if you don’t need any Boosted variables in your custom components,
+        // all the Configuration imports may be scoped inside the .boosted class to avoid side effects
+
         .boosted {
-          // Configuration
-          @import "boosted/scss/functions";
-          @import "boosted/scss/variables";
-          @import "boosted/scss/variables-dark";
-          @import "boosted/scss/maps";
-          @import "boosted/scss/mixins";
           // Don’t import Boosted utilities since they are all defined by OUDS Web already
 
           // Declare a custom _root.scss, inspired from Boosted, but linked to OUDS Web evolutions
