@@ -392,8 +392,8 @@ In case of an invalid select, you may remove the invalid state before the loadin
       </svg>
       <label for="exampleDisabledLoadingSelect">Disabled loading select example</label>
       <select disabled class="select-input-field loading-indeterminate" id="exampleDisabledLoadingSelect" aria-describedby="loading-msg-0">
-        <option value="" disabled selected></option>
-        <option value="1">One</option>
+        <option value="" disabled></option>
+        <option value="1" selected>One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
       </select>
@@ -407,9 +407,9 @@ In case of an invalid select, you may remove the invalid state before the loadin
     <div class="select-input-container" style="--bs-loading-time: 5s;">
       <label for="exampleLoadingSelect">Determinate loading select example</label>
       <select class="select-input-field loading-determinate" id="exampleLoadingSelect" aria-describedby="loading-msg-1">
-        <option value="" disabled selected></option>
+        <option value="" disabled></option>
         <option value="1">One</option>
-        <option value="2">Two</option>
+        <option value="2" selected>Two</option>
         <option value="3">Three</option>
       </select>
       <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
