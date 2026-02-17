@@ -56,8 +56,6 @@ $ouds-dimension-space-scaled: (
   "xlarge": var(--#{$prefix}space-scaled-xlarge),
   "2xlarge": var(--#{$prefix}space-scaled-2xlarge),
   "3xlarge": var(--#{$prefix}space-scaled-3xlarge),
-  "gridgap": var(--#{$prefix}grid-gap),
-  "gridmargin": var(--#{$prefix}grid-margin)
 ) !default;
 
 $ouds-dimension-negative-space-scaled: (
@@ -70,8 +68,6 @@ $ouds-dimension-negative-space-scaled: (
   "nxlarge": calc(-1 * var(--#{$prefix}space-scaled-xlarge)),
   "n2xlarge": calc(-1 * var(--#{$prefix}space-scaled-2xlarge)),
   "n3xlarge": calc(-1 * var(--#{$prefix}space-scaled-3xlarge)),
-  "ngridgap": calc(-1 * var(--#{$prefix}grid-gap)),
-  "ngridmargin": calc(-1 * var(--#{$prefix}grid-margin))
 ) !default;
 
 // scss-docs-start ouds-maps-dimension-fixed
@@ -87,11 +83,30 @@ $ouds-dimension-space-fixed: (
   "2xlarge": $ouds-space-fixed-2xlarge,
   "3xlarge": $ouds-space-fixed-3xlarge,
   "4xlarge": $ouds-space-fixed-4xlarge,
-  "5xlarge": $ouds-space-fixed-5xlarge
+  "5xlarge": $ouds-space-fixed-5xlarge,
 ) !default;
 // scss-docs-end ouds-maps-dimension-fixed
 
-$ouds-dimension-negative-space-fixed: if($enable-negative-margins, negativify-map($ouds-dimension-space-fixed), null) !default;
+// scss-docs-start gutters
+$gutters: $ouds-dimension-space-fixed !default; // instead of `$spacers`
+// scss-docs-end gutters
+
+$ouds-dimension-negative-space-fixed: (
+  "ngridgap": calc(-1 * var(--#{$prefix}grid-gap)),
+  "ngridmargin": calc(-1 * var(--#{$prefix}grid-margin))
+) !default;
+
+$ouds-dimension-negative-space-fixed: if($enable-negative-margins, map-merge(negativify-map($ouds-dimension-space-fixed), $ouds-dimension-negative-space-fixed), $ouds-dimension-negative-space-fixed) !default;
+
+// *gridgap and *gridmargin should always be present and are not compatible with negativify-map as they are custom props
+// stylelint-disable-next-line scss/dollar-variable-default
+$ouds-dimension-space-fixed: map-merge(
+  $ouds-dimension-space-fixed,
+  (
+    "gridgap": var(--#{$prefix}grid-gap),
+    "gridmargin": var(--#{$prefix}grid-margin),
+  )
+);
 // scss-docs-end ouds-maps-dimension
 
 // scss-docs-start ouds-maps-elevations
@@ -430,10 +445,6 @@ $grid-gutter-widths: (
   3xl: $ouds-grid-3xl-column-gap // 40px
 ) !default;
 // scss-docs-end grid-gutters
-
-// scss-docs-start gutters
-$gutters: $ouds-dimension-space-fixed !default; // instead of `$spacers`
-// scss-docs-end gutters
 
 @if $enable-bootstrap-compatibility {
   // Add Bootstrap gutters
