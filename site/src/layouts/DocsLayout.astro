@@ -75,7 +75,7 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
     <main class="bd-main order-1">
       <div class="bd-intro pt-small ps-lg-small">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="d-flex gap-medium mb-large mb-md-none d-flex text-nowrap">
+          <div class="d-flex gap-medium mb-large mb-md-none text-nowrap">
             {
               // This is needed because we want to show the badge if show_badge isn't present or is set to false
               frontmatter.added &&
@@ -96,13 +96,13 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
               <span class="visually-hidden">View this file on GitHub</span>
               <GitHubIcon class="pe-none" />
             </a>
-            <a href={`${getConfig().repo}/issues/new?template=doc_report.yml&title=Update+the+${id.slice(0, -4)}+page+on+${getConfig().brand}&version=${getConfig().docs_version}&labels=💪+contribution&what-happened=I+report+a+bug+concerning+${id.slice(0, -4)}+:`} class="btn btn-icon btn-default add-user-agent" title={`Report a bug on the ${id.slice(0, -4).split('/').pop()} page`} target="_blank" rel="noopener">
+            <a href={`${getConfig().repo}/issues/new?template=doc_report.yml&title=${encodeURIComponent(`Update the ${id.slice(0, -4)} page on ${getConfig().brand}`)}&version=${encodeURIComponent(getConfig().docs_version)}&labels=${encodeURIComponent('💪 contribution')}&what-happened=${encodeURIComponent(`I report a bug concerning ${id.slice(0, -4)} :`)}`} class="btn btn-icon btn-default add-user-agent" title={`Report a bug on the ${id.slice(0, -4).split('/').pop()} page`} target="_blank" rel="noopener">
               <svg aria-hidden="true">
                 <use xlink:href={`${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#bug')}`}></use>
               </svg>
               <span class="visually-hidden">Report a bug on the {id.slice(0, -4).split('/').pop()} page</span>
             </a>
-            <a href={`${getConfig().repo}/discussions/new?category=q-a&title=Question+about+${id.slice(0, -4).split('/').pop()}+on+${getConfig().brand}&body=I+have+a+question+about+...`} class="btn btn-icon btn-default" title={`Ask a question about ${id.slice(0, -4).split('/').pop()} topic`} target="_blank" rel="noopener">
+            <a href={`${getConfig().repo}/discussions/new?category=q-a&title=${encodeURIComponent(`Question about ${id.slice(0, -4).split('/').pop()} on ${getConfig().brand}`)}&body=${encodeURIComponent('I have a question about ...')}`} class="btn btn-icon btn-default" title={`Ask a question about ${id.slice(0, -4).split('/').pop()} topic`} target="_blank" rel="noopener">
               <svg aria-hidden="true">
                 <use xlink:href={`${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#message-talk')}`}></use>
               </svg>
