@@ -352,7 +352,7 @@
     .loader {
       position: absolute;
       top: 50%;
-      right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) + $ouds-button-space-inset-icon-only); // stylelint-disable-line function-disallowed-list
+      right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) + $ouds-button-space-inset-icon-only);
       left: auto;
       display: none;
       width: px-to-rem($ouds-button-size-loader);
