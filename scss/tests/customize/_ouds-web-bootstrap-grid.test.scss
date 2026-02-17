@@ -357,9 +357,9 @@ $enable-bootstrap-compatibility: null !default;
           --bs-gutter-y: 0;
           display: flex;
           flex-wrap: wrap;
-          margin-top: calc(-1 * var(--bs-gutter-y)); // stylelint-disable-line function-disallowed-list
-          margin-right: calc(-0.5 * var(--bs-gutter-x)); // stylelint-disable-line function-disallowed-list, @stylistic/number-leading-zero
-          margin-left: calc(-0.5 * var(--bs-gutter-x)); // stylelint-disable-line function-disallowed-list, @stylistic/number-leading-zero
+          margin-top: calc(-1 * var(--bs-gutter-y));
+          margin-right: calc(-0.5 * var(--bs-gutter-x)); // stylelint-disable-line @stylistic/number-leading-zero
+          margin-left: calc(-0.5 * var(--bs-gutter-x)); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-gutter-x: 8px;
         }
 
@@ -409,8 +409,8 @@ $enable-bootstrap-compatibility: null !default;
           flex-shrink: 0;
           width: 100%;
           max-width: 100%;
-          padding-right: calc(var(--bs-gutter-x) * 0.5); // stylelint-disable-line function-disallowed-list, @stylistic/number-leading-zero
-          padding-left: calc(var(--bs-gutter-x) * 0.5); // stylelint-disable-line function-disallowed-list, @stylistic/number-leading-zero
+          padding-right: calc(var(--bs-gutter-x) * 0.5); // stylelint-disable-line @stylistic/number-leading-zero
+          padding-left: calc(var(--bs-gutter-x) * 0.5); // stylelint-disable-line @stylistic/number-leading-zero
           margin-top: var(--bs-gutter-y);
         }
 
@@ -3947,9 +3947,9 @@ $enable-bootstrap-compatibility: null !default;
           --bs-gutter-y: 0;
           display: flex;
           flex-wrap: wrap;
-          margin-top: calc(-1 * var(--bs-gutter-y)); // stylelint-disable-line function-disallowed-list
-          margin-right: calc(-0.5 * var(--bs-gutter-x)); // stylelint-disable-line function-disallowed-list, @stylistic/number-leading-zero
-          margin-left: calc(-0.5 * var(--bs-gutter-x)); // stylelint-disable-line function-disallowed-list, @stylistic/number-leading-zero
+          margin-top: calc(-1 * var(--bs-gutter-y));
+          margin-right: calc(-0.5 * var(--bs-gutter-x)); // stylelint-disable-line @stylistic/number-leading-zero
+          margin-left: calc(-0.5 * var(--bs-gutter-x)); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-gutter-x: 8px;
         }
 
@@ -3999,8 +3999,8 @@ $enable-bootstrap-compatibility: null !default;
           flex-shrink: 0;
           width: 100%;
           max-width: 100%;
-          padding-right: calc(var(--bs-gutter-x) * 0.5); // stylelint-disable-line function-disallowed-list, @stylistic/number-leading-zero
-          padding-left: calc(var(--bs-gutter-x) * 0.5); // stylelint-disable-line function-disallowed-list, @stylistic/number-leading-zero
+          padding-right: calc(var(--bs-gutter-x) * 0.5); // stylelint-disable-line @stylistic/number-leading-zero
+          padding-left: calc(var(--bs-gutter-x) * 0.5); // stylelint-disable-line @stylistic/number-leading-zero
           margin-top: var(--bs-gutter-y);
         }
 

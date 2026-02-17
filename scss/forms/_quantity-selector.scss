@@ -6,8 +6,8 @@
   .form-control {
     max-width: $quantity-selector-input-max-width;
     // Add 20% security padding so the input's text isn't clipped when focused
-    padding-right: calc(#{$input-padding-x} * .8); // stylelint-disable-line function-disallowed-list
-    padding-left: calc(#{$input-padding-x} * .8); // stylelint-disable-line function-disallowed-list
+    padding-right: calc(#{$input-padding-x} * .8);
+    padding-left: calc(#{$input-padding-x} * .8);
     text-align: center;
     @include transition(none);
     appearance: textfield;
@@ -44,7 +44,7 @@
       @include button-icon($quantity-selector-icon-remove, $size: $quantity-selector-icon-width $quantity-selector-icon-remove-height, $pseudo: "after");
 
       &:focus-visible {
-        padding-right: subtract(#{$quantity-selector-btn-padding-x}, var(--#{$prefix}border-width));
+        padding-right: calc(#{$quantity-selector-btn-padding-x} - var(--#{$prefix}border-width));
         border-right-width: var(--#{$prefix}border-width);
       }
 
@@ -53,7 +53,7 @@
         @include button-icon($quantity-selector-icon-remove-sm, $width: 1rem, $height: 1rem, $size: $quantity-selector-icon-sm-width $quantity-selector-icon-sm-remove-height, $pseudo: "after");
 
         &:focus-visible {
-          padding-right: subtract(#{$quantity-selector-btn-padding-x-sm}, var(--#{$prefix}border-width));
+          padding-right: calc(#{$quantity-selector-btn-padding-x-sm} - var(--#{$prefix}border-width));
         }
       }
     }
@@ -64,7 +64,7 @@
       @include button-icon($quantity-selector-icon-add, $size: $quantity-selector-icon-width $quantity-selector-icon-add-height, $pseudo: "after");
 
       &:focus-visible {
-        padding-left: subtract(#{$quantity-selector-btn-padding-x}, var(--#{$prefix}border-width));
+        padding-left: calc(#{$quantity-selector-btn-padding-x} - var(--#{$prefix}border-width));
         border-left-width: var(--#{$prefix}border-width);
       }
 
@@ -73,7 +73,7 @@
         @include button-icon($quantity-selector-icon-add-sm, $width: 1rem, $height: 1rem, $size: $quantity-selector-icon-sm-width $quantity-selector-icon-sm-add-height, $pseudo: "after");
 
         &:focus-visible {
-          padding-left: subtract(#{$quantity-selector-btn-padding-x-sm}, var(--#{$prefix}border-width));
+          padding-left: calc(#{$quantity-selector-btn-padding-x-sm} - var(--#{$prefix}border-width));
         }
       }
     }
@@ -85,7 +85,7 @@
 
   .form-control {
     max-width: $quantity-selector-input-sm-max-width;
-    padding: subtract($input-padding-y-sm, 1px) 0 $input-padding-y-sm;
+    padding: calc($input-padding-y-sm - 1px) 0 $input-padding-y-sm;
     font-size: $font-size-sm;
   }
 }

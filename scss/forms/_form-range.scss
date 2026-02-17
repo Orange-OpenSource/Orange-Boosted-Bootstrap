@@ -6,7 +6,7 @@
 
 .form-range {
   width: 100%;
-  height: add($form-range-thumb-height, $form-range-thumb-focus-box-shadow-width * 2);
+  height: calc($form-range-thumb-height + $form-range-thumb-focus-box-shadow-width * 2);
   padding: 0; // Need to reset padding
   appearance: none;
   background-color: transparent;
@@ -32,7 +32,6 @@
     box-sizing: content-box; // OUDS mod
     width: $form-range-thumb-width;
     height: $form-range-thumb-height;
-    // stylelint-disable-next-line function-disallowed-list
     margin-top: calc((#{$form-range-track-height} - (#{$form-range-thumb-height} + var(--#{$prefix}border-width) * 2)) * .5); // Webkit specific // OUDS mod
     appearance: none;
     cursor: grab; // OUDS mod

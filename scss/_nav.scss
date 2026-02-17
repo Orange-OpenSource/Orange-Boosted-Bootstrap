@@ -83,8 +83,8 @@
   // End mod
 
   .nav-link {
-    padding: subtract(1rem, var(--#{$prefix}nav-tabs-border-width)) subtract(var(--#{$prefix}nav-tabs-link-padding-x), var(--#{$prefix}nav-tabs-border-width)); // OUDS mod
-    margin-bottom: calc(-1 * var(--#{$prefix}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
+    padding: calc(1rem - var(--#{$prefix}nav-tabs-border-width)) calc(var(--#{$prefix}nav-tabs-link-padding-x) - var(--#{$prefix}nav-tabs-border-width)); // OUDS mod: instead of calc(-1 * var(--#{$prefix}nav-tabs-border-width));
+    margin-bottom: calc(-1 * var(--#{$prefix}nav-tabs-border-width));
     border: var(--#{$prefix}nav-tabs-border-width) solid transparent;
     border-width: var(--#{$prefix}nav-tabs-link-border-width); // OUDS mod
     @include border-top-radius(var(--#{$prefix}nav-tabs-border-radius));
@@ -108,7 +108,7 @@
 
   .dropdown-menu {
     // Make dropdown border overlap tab border
-    margin-top: calc(-1 * var(--#{$prefix}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
+    margin-top: calc(-1 * var(--#{$prefix}nav-tabs-border-width));
     // Remove the top rounded corners here since there is a hard edge above the menu
     @include border-top-radius(0);
   }
@@ -140,7 +140,7 @@
 
   // OUDS mod
   .nav-item + .nav-item {
-    margin-left: calc(var(--#{$prefix}nav-link-padding-y) * .5); // stylelint-disable-line function-disallowed-list
+    margin-left: calc(var(--#{$prefix}nav-link-padding-y) * .5);
   }
   // End mod
 }
@@ -175,8 +175,8 @@
   }
 
   .nav-link {
-    padding: subtract(1rem, var(--#{$prefix}nav-underline-border-width)) subtract(var(--#{$prefix}nav-underline-link-padding-x), var(--#{$prefix}nav-underline-border-width)); // OUDS mod
-    margin-bottom: calc(-1 * var(--#{$prefix}nav-underline-border-width)); // stylelint-disable-line function-disallowed-list
+    padding: calc(1rem - var(--#{$prefix}nav-underline-border-width)) calc(var(--#{$prefix}nav-underline-link-padding-x) - var(--#{$prefix}nav-underline-border-width)); // OUDS mod
+    margin-bottom: calc(-1 * var(--#{$prefix}nav-underline-border-width));
     border: var(--#{$prefix}nav-underline-border-width) solid transparent;
     border-width: var(--#{$prefix}nav-underline-link-border-width);
     @include border-top-radius(var(--#{$prefix}nav-underline-border-radius));
@@ -237,7 +237,7 @@
   // OUDS mod
   // scss-docs-start tab-content-css-vars
   --#{$prefix}tab-content-padding-y: #{$spacer};
-  --#{$prefix}tab-content-padding-x: #{subtract($nav-tabs-link-padding-x, var(--#{$prefix}tab-content-border-width))};
+  --#{$prefix}tab-content-padding-x: #{calc($nav-tabs-link-padding-x - var(--#{$prefix}tab-content-border-width))};
   --#{$prefix}tab-content-border-width: #{$nav-tabs-border-width};
   --#{$prefix}tab-content-border-color: #{$nav-tabs-border-color};
   // scss-docs-end tab-content-css-vars
@@ -255,7 +255,7 @@
   // OUDS mod
   > .tab-pane-with-nested-tab {
     display: none;
-    margin: calc(-1 * var(--#{$prefix}tab-content-padding-y)) calc(-1 * var(--#{$prefix}tab-content-padding-x)); // stylelint-disable-line function-disallowed-list
+    margin: calc(-1 * var(--#{$prefix}tab-content-padding-y)) calc(-1 * var(--#{$prefix}tab-content-padding-x));
   }
   // End mod
 

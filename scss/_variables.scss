@@ -617,7 +617,7 @@ $focus-ring-box-shadow: null !default; // OUDS mod: instead of `0 0 $focus-ring-
 // scss-docs-end focus-ring-variables
 
 // scss-docs-start caret-variables
-$caret-width:                 add($spacer * .25, var(--#{$prefix}border-width)) !default;
+$caret-width:                 calc($spacer * .25 + var(--#{$prefix}border-width)) !default;
 $caret-vertical-align:        center !default;
 $caret-spacing:               $spacer * .5 !default;
 // scss-docs-end caret-variables
@@ -632,17 +632,15 @@ $transition-collapse-width:   width .35s ease !default;
 // scss-docs-end collapse-transition
 $transition-focus:    null !default; // OUDS mod
 
-// stylelint-disable function-disallowed-list
 // scss-docs-start aspect-ratios
 $aspect-ratios: (
-  "1x1": 100%,
-  "4x3": calc(3 / 4 * 100%),
-  "16x9": calc(9 / 16 * 100%),
-  "21x9": calc(9 / 21 * 100%),
-  "9x16": calc(16 / 9 * 100%) // OUDS mod: additional ratio for portrait videos
+  "1x1": #{"1 / 1"},
+  "4x3": #{"4 / 3"},
+  "16x9": #{"16 / 9"},
+  "21x9": #{"21 / 9"},
+  "9x16": #{"9 / 16"} // OUDS mod: additional ratio for portrait videos
 ) !default;
 // scss-docs-end aspect-ratios
-// stylelint-enable function-disallowed-list
 
 // Typography
 //
@@ -822,7 +820,6 @@ $table-hover-bg:                        rgba(var(--#{$prefix}emphasis-color-rgb)
 $table-variant-hover-bg-factor:         .2 !default; // OUDS mod
 
 $table-border-factor:                   .4 !default; // OUDS mod
-// stylelint-disable-next-line function-disallowed-list
 $table-border-width:                    calc(var(--#{$prefix}border-width) * .5) !default;  // OUDS mod
 $table-border-color:                    var(--#{$prefix}color-border-default) !default; // OUDS mod: instead of `var(--#{$prefix}border-color)`
 
@@ -926,7 +923,7 @@ $btn-transition:              $transition-focus !default; // OUDS mod
 // scss-docs-end btn-variables
 
 // OUDS mod: icon button
-$btn-icon-padding-x:          subtract($ouds-button-space-padding-inline-icon-start, var(--#{$prefix}border-width)) !default;
+$btn-icon-padding-x:          calc($ouds-button-space-padding-inline-icon-start - var(--#{$prefix}border-width)) !default;
 
 // Forms
 
@@ -998,7 +995,7 @@ $input-plaintext-color:                 null !default; // OUDS mod: instead of `
 
 // OUDS mod: no $input-height-border
 
-$input-height-inner:                    add($input-line-height * 1em, $input-padding-y * 2) !default;
+$input-height-inner:                    calc($input-line-height * 1em + $input-padding-y * 2) !default;
 $input-height-inner-half:               $spacer !default; // OUDS mod
 $input-height-inner-quarter:            map-get($spacers, 2) !default; // OUDS mod
 
@@ -1105,7 +1102,7 @@ $form-select-bg:                    $input-bg !default;
 $form-select-disabled-color:        $input-disabled-color !default; // OUDS mod: instead of `null`
 $form-select-disabled-bg:           $input-disabled-bg !default;
 $form-select-disabled-border-color: $input-disabled-border-color !default;
-$form-select-bg-position:           right $form-select-padding-x top add(50%, 1px) !default;
+$form-select-bg-position:           right $form-select-padding-x top calc(50% + 1px) !default;
 $form-select-bg-size:               .875rem 1rem !default; // In pixels because image dimensions
 $form-select-indicator:             escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7 0 0h14L7 7z'/></svg>")) !default; // OUDS mod: instead of Bootstrap svg
 $form-select-disabled-indicator:    escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$gray-700}' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // OUDS mod
@@ -1123,7 +1120,7 @@ $form-select-focus-border-color:  $input-color !default; // OUDS mod: handle a F
 // OUDS mod: no $form-select-focus-width
 $form-select-focus-box-shadow:    none !default; // OUDS mod
 
-$form-select-padding-y-sm:        add($input-padding-y-sm, 1px) !default; // OUDS mod
+$form-select-padding-y-sm:        calc($input-padding-y-sm + 1px) !default; // OUDS mod
 $form-select-padding-x-sm:        $input-padding-x-sm !default;
 $form-select-font-size-sm:        $input-font-size-sm !default;
 $form-select-border-radius-sm:    $input-border-radius-sm !default;
@@ -1183,7 +1180,7 @@ $form-feedback-invalid-color:       $danger !default;
 
 $form-feedback-icon-valid:          var(--#{$prefix}success-icon) !default;
 $form-feedback-icon-invalid:        var(--#{$prefix}error-icon) !default;
-$form-feedback-icon-size:           add($spacer * .25, $spacer * .5) !default; // OUDS mod
+$form-feedback-icon-size:           calc($spacer * .25 + $spacer * .5) !default; // OUDS mod
 $form-feedback-line-height:         $line-height-sm !default; // OUDS mod
 $form-feedback-color:               null !default; // OUDS mod
 // scss-docs-end form-feedback-variables
@@ -1277,14 +1274,12 @@ $nav-pills-link-active-bg:          $component-active-bg !default;
 
 $nav-underline-gap:                       0 !default; // OUDS mod: instead of 1rem
 $nav-underline-gap-lg:                    $spacer * .5 !default; // OUDS mod
-// stylelint-disable-next-line function-disallowed-list
 $nav-underline-border-width:              calc(var(--#{$prefix}border-width) * .5) !default; // OUDS mod: instead of `.125rem`
 $nav-underline-border-color:              var(--#{$prefix}color-border-default) !default; // OUDS mod
 $nav-underline-border-radius:             var(--#{$prefix}border-radius) !default; // OUDS mod
 $nav-underline-link-active-color:         var(--#{$prefix}emphasis-color) !default;
 $nav-underline-link-padding-x:            1.8125rem !default; // OUDS mod
 $nav-underline-link-hover-color:          var(--#{$prefix}link-hover-color) !default; // OUDS mod
-// stylelint-disable-next-line function-disallowed-list
 $nav-underline-link-border-width:         0 0 calc(var(--#{$prefix}nav-underline-border-width) * 4) !default; // OUDS mod
 $nav-underline-link-active-bg:            transparent !default; // OUDS mod
 $nav-underline-link-active-border-color:  var(--#{$prefix}primary) !default; // OUDS mod
@@ -1339,21 +1334,21 @@ $navbar-brand-transition:                   margin $navbar-transition-duration $
 $navbar-brand-logo-transition:              width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
 $navbar-active-transition:                  bottom $navbar-transition-duration $navbar-transition-timing-function !default;
 
-$navbar-border-width:                       calc(var(--#{$prefix}border-width) * .5) !default; // stylelint-disable-line function-disallowed-list
+$navbar-border-width:                       calc(var(--#{$prefix}border-width) * .5) !default;
 $navbar-border-color:                       var(--#{$prefix}color-border-default) !default;
 
 $navbar-brand-margin-y-xs:                  $spacer * .5 !default;
 $navbar-brand-logo-size-xs:                 $spacer * 1.5 !default;
 $navbar-brand-font-size-xs:                 1.3125rem !default;
-$navbar-brand-letter-spacing-xs:            calc(#{$letter-spacing-base} * 5) !default; // stylelint-disable-line function-disallowed-list
+$navbar-brand-letter-spacing-xs:            calc(#{$letter-spacing-base} * 5) !default;
 $navbar-brand-font-size-two-lined-xs:       1.0625rem !default;
-$navbar-brand-letter-spacing-two-lined-xs:  calc(#{$letter-spacing-base} * 4) !default; // stylelint-disable-line function-disallowed-list
+$navbar-brand-letter-spacing-two-lined-xs:  calc(#{$letter-spacing-base} * 4) !default;
 
 $navbar-brand-margin-y:                     $spacer * .95 !default;
 $navbar-brand-logo-size:                    $spacer * 2.5 !default;
-$navbar-brand-letter-spacing:               calc(#{$letter-spacing-base} * 10) !default; // stylelint-disable-line function-disallowed-list
+$navbar-brand-letter-spacing:               calc(#{$letter-spacing-base} * 10) !default;
 $navbar-brand-font-size-two-lined:          1.8125rem !default;
-$navbar-brand-letter-spacing-two-lined:     calc(#{$letter-spacing-base} * 8) !default; // stylelint-disable-line function-disallowed-list
+$navbar-brand-letter-spacing-two-lined:     calc(#{$letter-spacing-base} * 8) !default;
 
 $navbar-icon-size-xs:                       $spacer * 1.25 !default;
 $navbar-icon-size:                          $spacer * 1.5 !default;
@@ -1498,9 +1493,9 @@ $pagination-transition:             $transition-focus !default; // OUDS mod: no 
 // OUDS mod
 $pagination-padding-end:            1.125rem !default;
 $pagination-icon:                   var(--#{$prefix}chevron-icon) !default;
-$pagination-icon-size:              subtract($spacer * 2, calc(var(--#{$prefix}border-width) * 2)) !default; // stylelint-disable-line function-disallowed-list
-$pagination-icon-width:             add(.5rem, 1px) !default;
-$pagination-icon-height:            subtract(1rem, 1px) !default;
+$pagination-icon-size:              calc($spacer * 2 - calc(var(--#{$prefix}border-width) * 2)) !default;
+$pagination-icon-width:             calc(.5rem + 1px) !default;
+$pagination-icon-height:            calc(1rem - 1px) !default;
 
 $pagination-active-item-bg:         $component-active-bg !default;
 $pagination-active-item-color:      $black !default;
@@ -1534,8 +1529,8 @@ $card-border-width:                 var(--#{$prefix}border-width) !default;
 $card-border-color:                 var(--#{$prefix}color-border-default) !default; // OUDS mod: instead of `var(--#{$prefix}border-color-translucent)`
 $card-border-radius:                var(--#{$prefix}border-radius) !default;
 $card-box-shadow:                   null !default;
-$card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
-$card-cap-padding-y:                $card-spacer-bottom * .5 !default; // OUDS mod
+$card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width}) !default;
+$card-cap-padding-y:                $card-spacer-bottom * .5 !default; // OUDS mod: instead of $card-spacer-y * .5 !default;
 $card-cap-padding-x:                $card-spacer-x !default;
 $card-cap-bg:                       var(--#{$prefix}highlight-bg) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}body-color-rgb), .03)`
 $card-cap-color:                    var(--#{$prefix}highlight-color) !default; // OUDS mod: instead of `null`
@@ -1555,11 +1550,10 @@ $accordion-padding-y:                     $spacer * .5 !default; // OUDS mod
 $accordion-padding-x:                     0 !default; // OUDS mod
 $accordion-color:                         null !default; // OUDS mod: instead of `var(--#{$prefix}body-color)`
 $accordion-bg:                            transparent !default; // OUDS mod: instead of `var(--#{$prefix}body-bg)`
-// stylelint-disable-next-line function-disallowed-list
 $accordion-border-width:                  calc(var(--#{$prefix}border-width) * .5) !default; // OUDS mod
 $accordion-border-color:                  var(--#{$prefix}color-border-default) !default; // OUDS mod: instead of `var(--#{$prefix}border-color)`
 $accordion-border-radius:                 var(--#{$prefix}border-radius) !default;
-$accordion-inner-border-radius:           subtract($accordion-border-radius, #{$accordion-border-width}) !default;
+$accordion-inner-border-radius:           calc($accordion-border-radius - $accordion-border-width) !default;
 
 $accordion-body-padding-top:              $spacer !default; // OUDS mod
 $accordion-body-padding-end:              0 !default; // OUDS mod
@@ -1602,7 +1596,7 @@ $accordion-button-font-size-sm:           $h5-font-size !default;
 $accordion-button-line-height-sm:         var(--#{$prefix}font-line-height-body-large) !default;
 $accordion-button-letter-spacing-sm:      var(--#{$prefix}font-letter-spacing-body-large) !default;
 $accordion-button-font-size-lg:           $h2-font-size !default;
-$accordion-button-line-height-lg:         calc(40 / 30) !default; // stylelint-disable-line function-disallowed-list
+$accordion-button-line-height-lg:         calc(40 / 30) !default;
 $accordion-button-letter-spacing-lg:      var(--#{$prefix}font-letter-spacing-heading-large) !default;
 // End mod
 // scss-docs-end accordion-variables
@@ -1616,7 +1610,6 @@ $tooltip-line-height:               $line-height-sm !default; // OUDS mod
 $tooltip-max-width:                 $spacer * 10 !default;
 $tooltip-color:                     null !default; // OUDS mod: instead of `var(--#{$prefix}body-bg)`
 $tooltip-bg:                        var(--#{$prefix}body-bg) !default; // OUDS mod: instead of `var(--#{$prefix}emphasis-color)`
-// stylelint-disable-next-line function-disallowed-list
 $tooltip-border-width:              calc(var(--#{$prefix}border-width) * .5) !default; // OUDS mod
 $tooltip-border-color:              var(--#{$prefix}emphasis-color) !default; // OUDS mod
 $tooltip-border-radius:             var(--#{$prefix}border-radius) !default;
@@ -1647,7 +1640,7 @@ $popover-padding-y:                 $spacer !default; // OUDS mod
 $popover-border-width:              var(--#{$prefix}border-width) !default;
 $popover-border-color:              var(--#{$prefix}color-border-default) !default; // OUDS mod: instead of `var(--#{$prefix}border-color-translucent)`
 $popover-border-radius:             var(--#{$prefix}border-radius-lg) !default;
-$popover-inner-border-radius:       calc(#{$popover-border-radius} - #{$popover-border-width}) !default; // stylelint-disable-line function-disallowed-list
+$popover-inner-border-radius:       calc(#{$popover-border-radius} - #{$popover-border-width}) !default;
 $popover-box-shadow:                var(--#{$prefix}box-shadow) !default;
 
 $popover-header-font-size:          $font-size-lg !default; // OUDS mod: instead of `$font-size-base`
@@ -1703,7 +1696,7 @@ $toast-header-border-color:         rgba($black, .05) !default; // OUDS mod: ins
 $modal-inner-padding:               $spacer * .5 $spacer !default;
 
 $modal-footer-margin-between:       $spacer * .5 !default;
-$modal-footer-padding:              $spacer * .5 subtract($spacer, $modal-footer-margin-between * .5) 0 !default; // OUDS mod
+$modal-footer-padding:              $spacer * .5 calc($spacer - $modal-footer-margin-between * .5) 0 !default; // OUDS mod
 
 $modal-dialog-margin:               $spacer * .5 !default;
 $modal-dialog-margin-y-sm-up:       $spacer * 1.5 !default;
@@ -1718,7 +1711,7 @@ $modal-content-bg:                  var(--#{$prefix}body-bg) !default;
 $modal-content-border-color:        var(--#{$prefix}color-border-default) !default; // OUDS mod: instead of `var(--#{$prefix}border-color-translucent)`
 $modal-content-border-width:        var(--#{$prefix}border-width) !default;
 $modal-content-border-radius:       var(--#{$prefix}border-radius-lg) !default;
-$modal-content-inner-border-radius: var(--#{$prefix}border-radius) !default; // OUDS mod: instead of `subtract($modal-content-border-radius, $modal-content-border-width)`
+$modal-content-inner-border-radius: var(--#{$prefix}border-radius) !default; // OUDS mod: instead of `calc(#{$modal-content-border-radius} - #{$modal-content-border-width})`
 $modal-content-box-shadow-xs:       var(--#{$prefix}box-shadow-sm) !default;
 $modal-content-box-shadow-sm-up:    var(--#{$prefix}box-shadow) !default;
 
@@ -1784,8 +1777,8 @@ $alert-icons: (
   "warning": (escape-svg($alert-icon-warning-external), true),
   "danger":  escape-svg($alert-icon-important)
 ) !default;
-$alert-logo-size:                   add($spacer * .5, 1rem) !default;
-$alert-logo-size-sm:                add(1rem, 1px) !default;
+$alert-logo-size:                   calc($spacer * .5 + 1rem) !default;
+$alert-logo-size-sm:                calc(1rem + 1px) !default;
 $alert-icon-size:                   3rem !default;
 $alert-icon-size-sm:                $alert-icon-size * .5 !default;
 $alert-icon-margin-y:               $spacer * .1 !default;
@@ -1832,7 +1825,7 @@ $list-group-divider-size:             map-get($border-widths, 1) !default;
 $list-group-item-padding-y:           10px !default; // OUDS mod: instead of $spacer * .5
 $list-group-item-padding-x:           13px !default; // OUDS mod: instead of $spacer
 $list-group-item-icon-size:           $spacer * .85 !default; // OUDS mod
-$list-group-item-icon-margin-x:       subtract(var(--#{$prefix}list-group-item-padding-x), 5px) !default; // OUDS mod
+$list-group-item-icon-margin-x:       calc(var(--#{$prefix}list-group-item-padding-x) - 5px) !default; // OUDS mod
 
 $list-group-numbered-item-margin-end: 14px !default; // OUDS mod
 
@@ -1890,7 +1883,7 @@ $title-bar-padding-y:               .3333333em !default;
 $title-bar-font-size:               $h2-font-size !default;
 $title-bar-line-height:             $display-line-height !default;
 $title-bar-letter-spacing:          var(--#{$prefix}font-letter-spacing-heading-large) !default;
-$title-bar-border-width:            calc(var(--#{$prefix}border-width) * .5) !default; // stylelint-disable-line function-disallowed-list
+$title-bar-border-width:            calc(var(--#{$prefix}border-width) * .5) !default;
 $title-bar-border-color:            var(--#{$prefix}color-border-default) !default;
 // scss-docs-end title-bars-variables
 // End mod
@@ -1933,7 +1926,7 @@ $carousel-indicator-active-opacity:  null !default;
 $carousel-indicator-transition:      null !default;
 // OUDS mod
 $carousel-indicator-hover-scale:        1.5 !default;
-$carousel-indicator-active-scale:       calc(2 / 3) !default; // stylelint-disable-line function-disallowed-list
+$carousel-indicator-active-scale:       calc(2 / 3) !default;
 $carousel-indicator-active-radius:      0 100% 100% 0 / 50% !default;
 $carousel-indicator-animation-duration: 5000ms !default;
 $carousel-indicator-animation-interval: var(--#{$prefix}carousel-interval, #{$carousel-indicator-animation-duration}) !default;
@@ -1976,18 +1969,15 @@ $spinner-color:           null !default; // OUDS mod
 $spinner-width:           $spacer * 2 !default;
 $spinner-height:          $spinner-width !default;
 $spinner-vertical-align:  -.125em !default;
-// stylelint-disable-next-line function-disallowed-list
 $spinner-border-width:    calc(var(--#{$prefix}border-width) * 3) !default; // OUDS mod
 $spinner-animation-speed: .75s !default;
 
 $spinner-width-sm:        $spacer !default;
 $spinner-height-sm:       $spinner-width-sm !default;
-// stylelint-disable-next-line function-disallowed-list
 $spinner-border-width-sm: calc(var(--#{$prefix}border-width) * 2) !default; // OUDS mod
 
 $spinner-width-lg:        $spacer * 4 !default; // OUDS mod
 $spinner-height-lg:       $spinner-width-lg !default; // OUDS mod
-// stylelint-disable-next-line function-disallowed-list
 $spinner-border-width-lg: calc(var(--#{$prefix}border-width) * 4) !default; // OUDS mod
 // scss-docs-end spinner-variables
 
@@ -2017,7 +2007,7 @@ $btn-close-active-border-color: var(--#{$prefix}color-border-default) !default;
 $btn-close-disabled-color:      var(--#{$prefix}color-content-disabled) !default;
 
 $btn-close-icon-size:           1rem auto !default;
-$btn-close-padding-sm:          subtract($btn-icon-padding-x, $spacer * .25) !default;
+$btn-close-padding-sm:          calc($btn-icon-padding-x - $spacer * .25) !default;
 // End mod
 // scss-docs-end close-variables
 
@@ -2069,16 +2059,16 @@ $back-to-top-target-offset-top:  $scroll-offset-top !default;
 $back-to-top-offset:             $spacer * 1.5 !default;
 $back-to-top-offset-right:       $back-to-top-offset !default;
 $back-to-top-offset-bottom:      $back-to-top-offset !default;
-$back-to-top-link-offset-top:    subtract(100vh, $back-to-top-offset * 4) !default;
-$back-to-top-link-offset-top-xl: subtract(100vh, $spacer * 5) !default;
-$back-to-top-title-offset-right: add(100%, var(--#{$prefix}border-width)) !default;
-$back-to-top-title-padding:      subtract($btn-padding-y, 1px) $btn-padding-x add($btn-padding-y, 1px) !default;
+$back-to-top-link-offset-top:    calc(100vh - $back-to-top-offset * 4) !default;
+$back-to-top-link-offset-top-xl: calc(100vh - $spacer * 5) !default;
+$back-to-top-title-offset-right: calc(100% + var(--#{$prefix}border-width)) !default;
+$back-to-top-title-padding:      calc($btn-padding-y - 1px) $btn-padding-x calc($btn-padding-y + 1px) !default;
 $back-to-top-title-color:        var(--#{$prefix}body-color) !default;
 $back-to-top-title-bg-color:     var(--#{$prefix}body-bg) !default;
 $back-to-top-bg:                 var(--#{$prefix}highlight-color) !default;
 $back-to-top-icon:               var(--#{$prefix}chevron-icon) !default;
-$back-to-top-icon-width:         add(.5rem, 1px) !default;
-$back-to-top-icon-height:        subtract(1rem, 1px) !default;
+$back-to-top-icon-width:         calc(.5rem + 1px) !default;
+$back-to-top-icon-height:        calc(1rem - 1px) !default;
 // scss-docs-end back-to-top
 
 //// Stepped process
@@ -2094,11 +2084,11 @@ $step-item-margin-end:        var(--#{$prefix}border-width) !default;
 $step-item-bg:                var(--#{$prefix}secondary) !default;
 $step-item-active-bg:         $component-active-bg !default;
 $step-item-next-bg:           var(--#{$prefix}color-border-default) !default;
-$step-item-shadow-size:       calc(var(--#{$prefix}border-width) * 1.5) !default; // stylelint-disable-line function-disallowed-list
-$step-item-drop-shadow:       drop-shadow($step-item-shadow-size 0 0 var(--#{$prefix}stepped-process-bg)) #{"/* rtl:"} drop-shadow(calc(-1 * #{$step-item-shadow-size}) 0 0 var(--#{$prefix}stepped-process-bg)) #{"*/"} !default; // stylelint-disable-line function-disallowed-list
+$step-item-shadow-size:       calc(var(--#{$prefix}border-width) * 1.5) !default;
+$step-item-drop-shadow:       drop-shadow($step-item-shadow-size 0 0 var(--#{$prefix}stepped-process-bg)) #{"/* rtl:"} drop-shadow(calc(-1 * #{$step-item-shadow-size}) 0 0 var(--#{$prefix}stepped-process-bg)) #{"*/"} !default;
 
 $step-item-arrow-width:       .8125rem !default;
-$step-item-arrow-shape:       polygon(0% 0%, 1px 0%, subtract(100%, var(--#{$prefix}border-width)) 50%, 1px 100%, 0% 100%) #{"/* rtl:"} polygon(100% 0%, subtract(100%, 1px) 0%, var(--#{$prefix}border-width) 50%, subtract(100%, 1px) 100%, 100% 100%) #{"*/"} !default; // Used in clip-path
+$step-item-arrow-shape:       polygon(0% 0%, 1px 0%, calc(100% - var(--#{$prefix}border-width)) 50%, 1px 100%, 0% 100%) #{"/* rtl:"} polygon(100% 0%, calc(100% - 1px) 0%, var(--#{$prefix}border-width) 50%, calc(100% - 1px) 100%, 100% 100%) #{"*/"} !default; // Used in clip-path
 
 $step-link-width:             1.25ch !default; // Matches width of a single number
 $step-link-color:             var(--#{$prefix}highlight-color) !default;
@@ -2133,8 +2123,8 @@ $sticker-content-max-width-lg:          $sticker-size-lg * .7071067812 !default;
 $quantity-selector-width:                 7.5rem !default;
 $quantity-selector-sm-width:              5.625rem !default;
 
-$quantity-selector-btn-padding-x:         add($btn-icon-padding-x, 2px) !default;
-$quantity-selector-btn-padding-x-sm:      add($btn-icon-padding-x, 2px) !default;
+$quantity-selector-btn-padding-x:         calc($btn-icon-padding-x + 2px) !default;
+$quantity-selector-btn-padding-x-sm:      calc($btn-icon-padding-x + 2px) !default;
 $quantity-selector-btn-bg:                var(--#{$prefix}body-bg) !default;
 $quantity-selector-btn-border:            var(--#{$prefix}border-width) solid var(--#{$prefix}color-border-default) !default;
 
@@ -2213,7 +2203,7 @@ $local-nav-active-color:        var(--#{$prefix}primary) !default;
 $local-nav-active-bg:           var(--#{$prefix}color-action-primary-pressed) !default;
 $local-nav-active-marker-width: $spacer * .2 !default;
 $local-nav-border-color:        var(--#{$prefix}color-border-default) !default;
-$local-nav-border-width:        calc(var(--#{$prefix}border-width) * .5) !default; // stylelint-disable-line function-disallowed-list
+$local-nav-border-width:        calc(var(--#{$prefix}border-width) * .5) !default;
 // scss-docs-end local-nav-variables
 // End mod
 

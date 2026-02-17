@@ -33,21 +33,18 @@ const staticFileAliases = {
 // A list of pages that will be excluded from the sitemap.
 const sitemapExcludes = [
   `/${getConfig().brand}/docs/${getConfig().docs_version}`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/concepts`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/foundation`,
   `/${getConfig().brand}/docs/${getConfig().docs_version}/getting-started`,
   `/${getConfig().brand}/docs/${getConfig().docs_version}/getting-started/build-tools`,
-  `/${getConfig().brand}/docs/${getConfig().docs_version}/customize`,
-  `/${getConfig().brand}/docs/${getConfig().docs_version}/customize/color`,
   `/${getConfig().brand}/docs/${getConfig().docs_version}/layout`,
-  `/${getConfig().brand}/docs/${getConfig().docs_version}/content`,
   `/${getConfig().brand}/docs/${getConfig().docs_version}/components`,
   `/${getConfig().brand}/docs/${getConfig().docs_version}/components/navs`,
   `/${getConfig().brand}/docs/${getConfig().docs_version}/components/chip`,
   `/${getConfig().brand}/docs/${getConfig().docs_version}/forms`,
-  `/${getConfig().brand}/docs/${getConfig().docs_version}/helpers`,
   `/${getConfig().brand}/docs/${getConfig().docs_version}/helpers/screen-readers`,
   `/${getConfig().brand}/docs/${getConfig().docs_version}/migration`,
   `/${getConfig().brand}/docs/${getConfig().docs_version}/utilities`,
-  `/${getConfig().brand}/docs/${getConfig().docs_version}/extend`,
   `/${getConfig().brand}/docs/${getConfig().docs_version}/about`
 ]
 

@@ -42,10 +42,13 @@
   @extend %text-item-common;
   // scss-docs-start text-input-css-vars
   --#{$prefix}text-input-min-width: #{px-to-rem($ouds-text-input-size-min-width)};
-  --#{$prefix}text-input-max-width: #{px-to-rem($ouds-text-input-size-max-width)};
   --#{$prefix}text-input-min-height: #{px-to-rem($ouds-text-input-size-min-height)};
   --#{$prefix}text-input-column-row-gap: #{$ouds-text-input-space-row-gap-label-input};
   // scss-docs-end text-input-css-vars
+
+  &.component-max-width {
+    max-width: px-to-rem($ouds-text-input-size-max-width);
+  }
 
   .text-input-container {
     position: relative;
@@ -54,12 +57,11 @@
     gap: var(--#{$prefix}text-input-column-row-gap);
     justify-content: center;
     min-width: var(--#{$prefix}text-input-min-width);
-    max-width: var(--#{$prefix}text-input-max-width);
     min-height: var(--#{$prefix}text-input-min-height);
-    padding-top: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
-    padding-right: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
-    padding-bottom: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
-    padding-left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+    padding-top: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-top));
+    padding-right: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-right));
+    padding-bottom: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-bottom));
+    padding-left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left));
     background-color: var(--#{$prefix}text-input-background-color);
     background-clip: padding-box;
     border-color: var(--#{$prefix}text-input-border-color);
@@ -93,7 +95,7 @@
     .text-input-field {
       position: absolute;
       top: 50%;
-      left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+      left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left));
       z-index: 3;
       width: 100%;
       padding: 0;
@@ -126,7 +128,7 @@
     .input-container {
       position: absolute;
       top: 50%;
-      left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+      left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left));
       z-index: 1;
       display: flex;
       gap: $ouds-text-input-space-column-gap-inline-text;
@@ -252,8 +254,8 @@
     > img,
     > svg {
       position: absolute;
-      top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-icon-size) / 2 - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
-      left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+      top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-icon-size) / 2 - var(--#{$prefix}text-input-border-width-top));
+      left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left));
       z-index: 2;
       width: var(--#{$prefix}text-input-icon-size);
       min-width: var(--#{$prefix}text-input-icon-size);
@@ -265,26 +267,26 @@
       > .text-input-field,
       > .input-container,
       > label {
-        padding-left: calc(var(--#{$prefix}text-input-icon-size) + var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
+        padding-left: calc(var(--#{$prefix}text-input-icon-size) + var(--#{$prefix}text-input-column-gap));
       }
     }
 
     // Trailing action
     > button {
       position: absolute;
-      top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-trailing-action-height) / 2 - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
-      right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+      top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-trailing-action-height) / 2 - var(--#{$prefix}text-input-border-width-top));
+      right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
       z-index: 3;
     }
 
     &:has(> button),
     &:has(.loading-indeterminate, .loading-determinate) {
-      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
 
       > .text-input-field,
       > .input-container,
       > label {
-        padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
+        padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
       }
     }
 
@@ -293,12 +295,12 @@
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-enabled);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-enabled);
 
-      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
 
       .text-input-field,
       .input-container,
       label {
-        padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
+        padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
       }
 
       &:has(> button),
@@ -306,15 +308,14 @@
         .text-input-field,
         .input-container,
         label {
-          // stylelint-disable-next-line function-disallowed-list
           padding-right: calc($ouds-button-size-icon-only + var(--#{$prefix}text-input-column-gap-trailing-error) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
         }
       }
 
       &::after {
         position: absolute;
-        top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-trailing-action-height) / 2 - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
-        right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+        top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-trailing-action-height) / 2 - var(--#{$prefix}text-input-border-width-top));
+        right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
         width: var(--#{$prefix}text-input-trailing-action-width);
         height: var(--#{$prefix}text-input-trailing-action-height);
         overflow: hidden;
@@ -328,7 +329,6 @@
 
       &:has(> button)::after,
       &:has(.loading-indeterminate, .loading-determinate)::after {
-        // stylelint-disable-next-line function-disallowed-list
         right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap-trailing-error) - var(--#{$prefix}text-input-border-width-left));
         width: px-to-rem($ouds-button-size-icon-only);
       }
@@ -424,14 +424,17 @@
 .text-area {
   @extend %text-item-common;
 
+  &.component-max-width {
+    max-width: px-to-rem($ouds-text-area-size-max-width);
+  }
+
   .text-area-container {
     position: relative;
     display: flex;
     flex-direction: column;
     min-width: var(--#{$prefix}text-input-min-width);
-    max-width: px-to-rem($ouds-text-area-size-max-width);
 
-    padding-top: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
+    padding-top: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-top));
     background-color: var(--#{$prefix}text-input-background-color);
     background-clip: padding-box;
     border-color: var(--#{$prefix}text-input-border-color);
@@ -449,8 +452,8 @@
 
     > label {
       z-index: 2;
-      padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
-      padding-left: calc(#{$ouds-text-input-space-padding-inline-default} - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+      padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right));
+      padding-left: calc(#{$ouds-text-input-space-padding-inline-default} - var(--#{$prefix}text-input-border-width-left));
       color: var(--#{$prefix}text-input-label-color);
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -472,12 +475,12 @@
     .text-area-field {
       z-index: 3;
       width: 100%;
-      min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
+      min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
       max-height: px-to-rem($ouds-text-area-size-max-height-input);
       padding: 0;
-      padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
-      padding-bottom: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
-      padding-left: calc($ouds-text-input-space-padding-inline-default - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+      padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right));
+      padding-bottom: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
+      padding-left: calc($ouds-text-input-space-padding-inline-default - var(--#{$prefix}text-input-border-width-left));
       font-weight: $ouds-font-weight-system-web-moderate;
       color: var(--#{$prefix}text-input-color);
       appearance: none;
@@ -488,8 +491,14 @@
       box-shadow: none;
       field-sizing: content;  // Not yet standard, but supported in some browsers
 
-      @supports not (field-sizing: content) {
-        height: calc(px-to-rem($ouds-text-area-size-min-height-input) * 2 + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
+      // Disable resize on touch devices
+      @media (pointer: coarse) and (not (any-pointer: fine)) {
+        resize: none;
+      }
+
+      @supports (field-sizing: content) {
+        field-sizing: content;  // Not yet standard, but supported in some browsers
+        min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) * 2 + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
       }
 
       &:focus,
@@ -571,13 +580,13 @@
 
       .text-area-field,
       label {
-        padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
+        padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
       }
 
       &::after {
         position: absolute;
-        top: calc(px-to-rem($ouds-text-area-size-max-height-assets-container) / 2 + ($ouds-text-area-space-padding-block) - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
-        right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+        top: calc(px-to-rem($ouds-text-area-size-max-height-assets-container) / 2 + ($ouds-text-area-space-padding-block) - var(--#{$prefix}text-input-border-width-top));
+        right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
         width: var(--#{$prefix}text-input-trailing-action-width);
         height: var(--#{$prefix}text-input-trailing-action-height);
         overflow: hidden;
@@ -633,7 +642,6 @@
 %text-input-message {
   --#{$prefix}text-input-message-margin-top: #{$ouds-text-input-space-padding-block-top-helper-text};
 
-  max-width: var(--#{$prefix}text-input-max-width);
   padding-right: var(--#{$prefix}text-input-padding-x);
   padding-left: var(--#{$prefix}text-input-padding-x);
 }

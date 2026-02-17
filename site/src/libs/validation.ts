@@ -23,3 +23,20 @@ export const zNamedHexColors = (count: number) => {
 export const zPxSizeOrEmpty = z.string().regex(/^(?:\d+px)?$/)
 
 export const zLanguageCode = z.string().regex(/^[a-z]{2}(?:-[a-zA-Z]{2})?$/)
+
+export const zSidebar = z
+  .object({
+    title: z.string(),
+    icon: z.string().optional(),
+    icon_color: z.string().optional(),
+    pages: z
+      .object({
+        title: z.string(),
+        draft: z.boolean().optional(),
+        brand: z.string().optional(),
+        category: z.union([z.literal('Actions'), z.literal('Content display'), z.literal('Control'), z.literal('Data'), z.literal('Dialog'), z.literal('Indicator'), z.literal('Layout'), z.literal('Navigation'), z.literal('Visual assets')]).optional()
+      })
+      .array()
+      .optional()
+  })
+  .array()

@@ -16,11 +16,11 @@
   --bd-example-padding: 1rem;
 
   position: relative;
+  display: flow-root;
   padding: var(--bd-example-padding);
   margin: 0 ($bd-gutter-x * -.5) 1rem;
   border: solid var(--bs-color-border-default); // OUDS mod: instead of `var(--bs-border-color)`
   border-width: 1px 0;
-  @include clearfix();
 
   @include media-breakpoint-up(md) {
     --bd-example-padding: 1.5rem;
@@ -92,13 +92,13 @@
   .fixed-top,
   .sticky-top {
     position: static;
-    margin: calc(-1 * var(--bd-example-padding)) calc(-1 * var(--bd-example-padding)) var(--bd-example-padding); // stylelint-disable-line function-disallowed-list
+    margin: calc(-1 * var(--bd-example-padding)) calc(-1 * var(--bd-example-padding)) var(--bd-example-padding);
   }
 
   .fixed-bottom,
   .sticky-bottom {
     position: static;
-    margin: var(--bd-example-padding) calc(-1 * var(--bd-example-padding)) calc(-1 * var(--bd-example-padding)); // stylelint-disable-line function-disallowed-list
+    margin: var(--bd-example-padding) calc(-1 * var(--bd-example-padding)) calc(-1 * var(--bd-example-padding));
 
   }
 
@@ -205,30 +205,19 @@
 
 // Ratio helpers
 .bd-example-ratios {
-  .ratio {
-    display: inline-block;
-    width: 9rem; // OUDS mod
+  [class*="ratio"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
     font-weight: $font-weight-bold; // OUDS mod
     color: var(--#{$prefix}color-content-muted); // OUDS mod: instead of `var(--bs-secondary-color)`
     background-color: var(--#{$prefix}color-bg-secondary); // OUDS mod: instead of `var(--bs-tertiary-bg)`
     border: var(--bs-border-width) solid var(--bs-color-border-default); // OUDS mod: instead of `var(--bs-border-width) solid var(--bs-border-color)`
-
-    > div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    // OUDS mod no `@include border-radius(var(--bs-border-radius))`
   }
 }
-.bd-example-ratios-breakpoint {
-  .ratio-4x3 {
-    width: 16rem;
 
-    @include media-breakpoint-up(md) {
-      --bs-aspect-ratio: 50%; // 2x1
-    }
-  }
-}
 
 .bd-example-offcanvas {
   .offcanvas {
@@ -461,7 +450,7 @@
 
 .sticker-fs-large {
   font-size: 1.5rem;
-  line-height: calc(26 / 24); // stylelint-disable-line function-disallowed-list
+  line-height: calc(26 / 24);
   letter-spacing: -.03125rem;
 }
 // scss-docs-end sticker-fs-l-3xlarge
@@ -469,7 +458,7 @@
 // scss-docs-start sticker-fs-xlarge
 .sticker-fs-xlarge {
   font-size: 1.875rem;
-  line-height: calc(32 / 30); // stylelint-disable-line function-disallowed-list
+  line-height: calc(32 / 30);
   letter-spacing: -.05rem;
 }
 // scss-docs-end sticker-fs-xlarge
@@ -491,7 +480,7 @@
 .double-figure {
   padding-top: 10px;
   padding-bottom: 10px;
-  background: linear-gradient(to bottom, $core-ouds-color-functional-white, $core-ouds-color-functional-white calc((100% - 1.875rem) * .5), $core-ouds-color-functional-gray-dark-880 calc((100% - 1.875rem) * .5), $core-ouds-color-functional-gray-dark-880 calc(100% - 1.875rem), transparent calc(100% - 1.875rem)); // stylelint-disable-line function-disallowed-list
+  background: linear-gradient(to bottom, $core-ouds-color-functional-white, $core-ouds-color-functional-white calc((100% - 1.875rem) * .5), $core-ouds-color-functional-gray-dark-880 calc((100% - 1.875rem) * .5), $core-ouds-color-functional-gray-dark-880 calc(100% - 1.875rem), transparent calc(100% - 1.875rem));
 
   figcaption {
     height: 1.875rem;

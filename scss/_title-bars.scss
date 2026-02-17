@@ -35,7 +35,7 @@
   }
 
   h1 {
-    padding: calc(var(--#{$prefix}title-bar-padding-y) * 2 - var(--#{$prefix}title-bar-border-width)) 0 var(--#{$prefix}title-bar-padding-y); // stylelint-disable-line function-disallowed-list
+    padding: calc(var(--#{$prefix}title-bar-padding-y) * 2 - var(--#{$prefix}title-bar-border-width)) 0 var(--#{$prefix}title-bar-padding-y);
     margin: 0;
   }
 }

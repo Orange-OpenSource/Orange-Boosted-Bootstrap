@@ -21,16 +21,17 @@ import Code from '@components/shortcodes/Code.astro'
   <div class="col-xl-8">
     <h3 class="h2 mb-scaled-xsmall">Install via package manager</h3>
     <p class="mb-scaled-medium">
-      Install OUDS Web's source Sass and JavaScript files via npm, yarn, Composer, or NuGet. Package-managed installs
-      don't include documentation or our full build scripts.
+      Install OUDS Web's source files via npm, yarn, Composer, or NuGet. Package-managed installs include OUDS Web common Sass and
+      JavaScript files and OUDS Web {getConfig().display_brand} theme (Sass files). They don't include documentation or our full build
+      scripts.
     </p>
     <Code
       code={`npm install @ouds/web-common@${getConfig().current_version} @ouds/web-${getConfig().brand}@${getConfig().current_version}`}
-      lang="sh"
+      lang="sh" buttonLabel="npm install"
     />
     <Code
       code={`yarn add @ouds/web-common@${getConfig().current_version} @ouds/web-${getConfig().brand}@${getConfig().current_version}`}
-      lang="sh"
+      lang="sh" buttonLabel="yarn install"
     />
     <p class="mb-scaled-large">
       <a href={getVersionedDocsPath('getting-started/download')}>Read our installation docs</a> for more info and additional
@@ -52,13 +53,13 @@ import Code from '@components/shortcodes/Code.astro'
         code={`<link href="${getConfig().cdn.css}" rel="stylesheet" integrity="${
           getConfig().cdn.css_hash
         }" crossorigin="anonymous">`}
-        lang="html"
+        lang="html" buttonLabel="link to CSS file on JsDelivr"
       />
       <Code
         code={`<script src="${getConfig().cdn.js_bundle}" integrity="${
           getConfig().cdn.js_bundle_hash
         }" crossorigin="anonymous"></script>`}
-        lang="html"
+        lang="html" buttonLabel="link to JavaScript bundle on JsDelivr"
       />
     </div>
   </div>

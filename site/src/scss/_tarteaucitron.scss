@@ -55,7 +55,7 @@
   left: 0;
   display: none;
   align-items: center;
-  padding: $spacer calc((100% - var(--max-width, 312px)) / 2); // stylelint-disable-line function-disallowed-list
+  padding: $spacer calc((100% - var(--max-width, 312px)) / 2);
   font-weight: $font-weight-bold;
   color: $core-ouds-color-functional-white;
   background: $core-ouds-color-functional-black;
@@ -81,7 +81,7 @@
 @include tac("ClosePanel") {
   position: absolute;
   right: $modal-content-padding;
-  margin: calc($spacer / -2) calc(-1 * #{$btn-close-padding}) calc(-1 * #{$btn-close-padding}) auto; // stylelint-disable-line function-disallowed-list
+  margin: calc($spacer / -2) calc(-1 * #{$btn-close-padding}) calc(-1 * #{$btn-close-padding}) auto;
   overflow: hidden;
   text-indent: 2ch;
   white-space: nowrap;
@@ -137,9 +137,9 @@
 }
 
 @include tac("Line", true) {
+  display: flow-root;
   margin-bottom: $spacer;
   overflow: visible;
-  @include clearfix();
 }
 
 @include tac("MainLine", true) {
@@ -160,7 +160,7 @@
 @include tac("SelfLink", true) {
   position: absolute;
   right: $modal-content-padding;
-  bottom: add($spacer * -1.5, var(--bs-border-width));
+  bottom: calc($spacer * -1.5 + var(--bs-border-width));
   padding: $spacer * .25 $spacer * .5;
   color: $core-ouds-color-functional-white;
   background-color: $core-ouds-color-functional-black;

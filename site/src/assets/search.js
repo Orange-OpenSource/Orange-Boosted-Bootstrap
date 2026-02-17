@@ -29,7 +29,7 @@ import docsearch from '@docsearch/js'
 
   docsearch({
     apiKey: CONFIG.apiKey,
-    indexName: CONFIG.indexName,
+    indices: [CONFIG.indexName],
     appId: CONFIG.appId,
     container: searchElement,
     searchParameters: {

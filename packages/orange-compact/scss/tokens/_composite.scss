@@ -1,0 +1,124 @@
+//// Composite values
+//// Manual insertion of composite values
+
+// Elevation
+
+// scss-docs-start ouds-composite-elevation
+$ouds-elevation-default: $ouds-elevation-x-default $ouds-elevation-y-default $ouds-elevation-blur-default $ouds-elevation-spread-default var(--#{$prefix}elevation-color-default) !default;
+$ouds-elevation-drag: $ouds-elevation-x-drag $ouds-elevation-y-drag $ouds-elevation-blur-drag $ouds-elevation-spread-drag var(--#{$prefix}elevation-color-drag) !default;
+$ouds-elevation-emphasized: $ouds-elevation-x-emphasized $ouds-elevation-y-emphasized $ouds-elevation-blur-emphasized $ouds-elevation-spread-emphasized var(--#{$prefix}elevation-color-emphasized) !default;
+$ouds-elevation-none: $ouds-elevation-x-none $ouds-elevation-y-none $ouds-elevation-blur-none $ouds-elevation-spread-none var(--#{$prefix}elevation-color-none) !default;
+$ouds-elevation-raised: $ouds-elevation-x-raised $ouds-elevation-y-raised $ouds-elevation-blur-raised $ouds-elevation-spread-raised var(--#{$prefix}elevation-color-raised) !default;
+$ouds-elevation-sticky: $ouds-elevation-x-sticky $ouds-elevation-y-sticky $ouds-elevation-blur-sticky $ouds-elevation-spread-sticky var(--#{$prefix}elevation-color-sticky) !default;
+// scss-docs-end ouds-composite-elevation
+
+// Font
+
+// stylelint-disable value-keyword-case, scss/dollar-variable-colon-space-after
+// scss-docs-start ouds-composite-font-sans-serif
+$custom-font-name: "HelvNeueOrange" !default;
+
+// Map of CDN URLs for custom font, with weight as keys
+$custom-font-cdn-urls: (
+  $ouds-font-weight-system-web-default: "https://mastermedia.dam-broadcast.com/pm_12751_490_490071-myaimdgylf--HelveticaNeue-Default.woff2",
+  $ouds-font-weight-system-web-moderate: "https://mastermedia.dam-broadcast.com/pm_12751_490_490074-tqtijgs7e4--HelveticaNeue-Moderate.woff2",
+  $ouds-font-weight-system-web-strong: "https://mastermedia.dam-broadcast.com/pm_12751_490_490077-wejriti88u--HelveticaNeue-Strong.woff2"
+) !default;
+
+$ouds-font-family-sans-serif-stack:
+  // OUDS custom font
+  $custom-font-name,
+  // Older macOS and iOS
+  "Helvetica Neue",
+  // Some Windows
+  Helvetica,
+  // Safari for macOS and iOS
+  "SF Pro",
+  // Android
+  Roboto,
+  // Basic web fallback
+  Arial,
+  "Noto Sans",
+  "Liberation Sans",
+  sans-serif,
+  // Emojis fonts
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Color Emoji" !default;
+// scss-docs-end ouds-composite-font-sans-serif
+// scss-docs-start ouds-composite-font-monospace
+$ouds-font-family-monospace-stack:
+  // Windows
+  Consolas,
+  // Safari for macOS and iOS
+  "SFMono-Regular",
+  // Android
+  "Roboto Mono",
+  // Basic web fallback
+  "Liberation Mono",
+  Menlo,
+  monospace !default;
+// scss-docs-end ouds-composite-font-monospace
+// stylelint-enable value-keyword-case, scss/dollar-variable-colon-space-after
+
+// Icons as data URIs
+
+$chevron-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M597.22 225 402.78 421.43 325 500l77.78 78.57L597.22 775 675 696.43 480.56 500 675 303.57z'/></svg>") !default;
+$cross-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='m15 17.121-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
+$cross-icon-stroke:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='116 116 767 767'><path d='M817.493 676.165a49.977 49.977 0 0 1 0 70.664l-70.664 70.664a49.977 49.977 0 0 1-70.664 0L499.5 640.828 322.835 817.493a49.977 49.977 0 0 1-70.664 0l-70.664-70.664a49.977 49.977 0 0 1 0-70.664L358.172 499.5 181.507 322.835a49.977 49.977 0 0 1 0-70.664l70.664-70.664a49.977 49.977 0 0 1 70.664 0L499.5 358.172l176.665-176.665a49.977 49.977 0 0 1 70.664 0l70.664 70.664a49.977 49.977 0 0 1 0 70.664L640.828 499.5Z'/></svg>") !default;
+$burger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='M28 21v2H2v-2h26Zm0-7v2H2v-2h26Zm0-7v2H2V7h26Z'/></svg>") !default;
+$burger-icon-small:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path d='M2 19h21v-2H2v2Zm0-6h21v-2H2v2Zm0-6h21V5H2v2Z'/></svg>") !default;
+$add-icon:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'><path fill='currentColor' d='M14 6H8V0H6v6H0v2h6v6h2V8h6V6z'/></svg>") !default;
+$remove-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 2'><path fill='currentColor' d='M0 0h14v2H0z'/></svg>") !default;
+$add-icon-sm:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path d='M10 4H6V0H4v4H0v2h4v4h2V6h4V4z'/></svg>") !default;
+$remove-icon-sm:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 2'><path d='M0 0h10v2H0z'/></svg>") !default;
+$play-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M12.138 16.8 3 21.6V2.4l9.138 4.8L21 12z' fill-rule='evenodd'/></svg>") !default;
+$pause-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M10.2 21H3V3h7.2v18ZM21 21h-7.2V3H21v18Z' fill-rule='evenodd'/></svg>") !default;
+$helper-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M500 75C265.277 75 75 265.279 75 500s190.277 425 425 425 425-190.279 425-425S734.721 75 500 75Zm30.8 680.633a54.149 54.149 0 0 1-37.069 14.267 56.1 56.1 0 0 1-37.95-14.085q-16.233-14.079-16.226-39.384 0-22.458 15.679-37.781t38.5-15.324q22.464 0 37.789 15.324t15.324 37.781q-.003 24.951-16.047 39.202Zm133.12-330.046a162.251 162.251 0 0 1-29.23 39.38q-16.92 16.574-60.772 55.785A248.236 248.236 0 0 0 554.5 540.18a79.146 79.146 0 0 0-10.868 15.32 75.1 75.1 0 0 0-5.529 13.9q-1.953 6.954-5.879 24.42-6.762 37.068-42.413 37.069-18.541 0-31.192-12.119t-12.647-36q0-29.945 9.262-51.863a131.346 131.346 0 0 1 24.6-38.491q15.319-16.577 41.35-39.4 22.789-19.946 32.962-30.113a101.987 101.987 0 0 0 17.105-22.632 54.714 54.714 0 0 0 6.955-27.086q0-28.517-21.213-48.119t-54.7-19.6q-39.213 0-57.743 19.783t-31.359 58.272Q401.059 423.8 367.2 423.8q-19.964 0-33.683-14.079T319.8 379.248q0-33.852 21.739-68.606t63.447-57.562q41.7-22.814 97.3-22.813 51.66 0 91.244 19.069 39.549 19.074 61.119 51.856t21.571 71.286q.004 30.297-12.297 53.109Z'/></svg>") !default;
+
+// Breadcrumb
+$breadcrumb-divider:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><path d='M6.651 12.75 11.5 8 6.651 3.25 5.266 4.606 8.73 8l-3.464 3.392z'/></svg>") !default; // OUDS mod
+
+// Bullet list
+$bullet-list-marker-level-0: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M6.25 6.25h7.5v7.5h-7.5z'/></svg>") !default;
+$bullet-list-marker-level-1: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M6.25 8.75h7.5v2.5h-7.5z'/></svg>") !default;
+$bullet-list-marker-level-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M7.813 7.813h4.375v4.375H7.813z'/></svg>") !default;
+$bullet-list-empty-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'></svg>") !default;
+$bullet-list-marker-tick: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill-rule='evenodd' d='m16.615 6.308-7.587 8.75c-.217.25-.55.41-.925.41s-.708-.16-.926-.41l-3.793-4.375a1.038 1.038 0 0 1-.26-.683c0-.302.133-.575.348-.773l.474-.438c.214-.198.51-.32.838-.32.294 0 .564.1.771.263l2.31 2.362 7.013-6.267c.212-.183.498-.296.811-.296.655 0 1.185.49 1.185 1.094 0 .259-.097.496-.26.683Z'/></svg>") !default;
+
+// Chip
+$chip-tick-icon:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='m13.292 5.047-6.07 7a.978.978 0 0 1-.74.328.977.977 0 0 1-.74-.329l-3.035-3.5A.83.83 0 0 1 2.5 8a.84.84 0 0 1 .277-.619l.38-.35a.986.986 0 0 1 .67-.256c.236 0 .451.08.617.21l1.849 1.89 5.61-5.013a.989.989 0 0 1 .648-.237c.524 0 .948.392.948.875a.83.83 0 0 1-.207.547Z'/></svg>") !default;
+
+// Control item
+$form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#000' d='m15.262 7.047-6.034 7a.97.97 0 0 1-.737.328.97.97 0 0 1-.736-.329l-3.017-3.5A.833.833 0 0 1 4.53 10c0-.242.106-.46.276-.619l.378-.35a.978.978 0 0 1 .666-.256c.235 0 .449.08.614.21l1.838 1.89 5.578-5.013a.98.98 0 0 1 .645-.237c.52 0 .943.392.943.875a.833.833 0 0 1-.207.547Z'/></svg>") !default;
+$form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#000' d='M14.0635 10C14.0635 12.2437 12.2446 14.0625 10.001 14.0625C7.75732 14.0625 5.93848 12.2437 5.93848 10C5.93848 7.75634 7.75732 5.9375 10.001 5.9375C12.2446 5.9375 14.0635 7.75634 14.0635 10Z'/></svg>") !default;
+$form-check-input-indeterminate-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#000' d='M4.5 9.375c0-.345.28-.625.625-.625h9.75c.345 0 .625.28.625.625v1.25c0 .345-.28.625-.625.625h-9.75a.625.625 0 0 1-.625-.625v-1.25Z'/></svg>") !default;
+$form-switch-checked-bg-image:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='#000' d='m17.413 8.962-6.207 7.2a.998.998 0 0 1-.758.338.997.997 0 0 1-.757-.338l-3.103-3.6A.857.857 0 0 1 6.375 12c0-.248.109-.473.284-.636l.388-.36c.175-.163.418-.264.686-.264.24 0 .461.082.63.217l1.891 1.943 5.738-5.157c.173-.15.407-.243.663-.243.536 0 .97.403.97.9 0 .213-.08.408-.212.562Z'/></svg>") !default;
+
+// Alert
+// icon tick-confirmation-fill v1.4
+$alert-icon-success: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2.4A9.6 9.6 0 0 0 2.4 12a9.6 9.6 0 0 0 9.6 9.6 9.6 9.6 0 0 0 9.6-9.6A9.6 9.6 0 0 0 12 2.4Zm4.97 8.148-5.408 5.407c-.09.09-.178.171-.265.245-.04.053-.085.105-.136.156a1.27 1.27 0 0 1-.596.336 1.205 1.205 0 0 1-.266.033 1.206 1.206 0 0 1-.263-.033 1.277 1.277 0 0 1-.597-.337 1.47 1.47 0 0 1-.136-.155 4.53 4.53 0 0 1-.265-.245L7.035 13.95c-.853-.852-.997-1.549-.412-2.134.574-.574 1.282-.44 2.134.412l1.543 1.543 4.947-4.947c.853-.853 1.55-.997 2.134-.412.574.574.44 1.282-.411 2.134Z'/></svg>") !default;
+// icon info-fill v1.4
+$alert-icon-info: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2.4A9.6 9.6 0 0 0 2.4 12a9.6 9.6 0 0 0 9.6 9.6 9.6 9.6 0 0 0 9.6-9.6A9.6 9.6 0 0 0 12 2.4Zm1.2 13.994c0 1.188-.4 1.758-1.2 1.758-.8 0-1.2-.57-1.2-1.758v-4.535c0-1.188.384-1.774 1.2-1.774.8 0 1.2.586 1.2 1.774v4.535Zm-1.213-7.32A1.39 1.39 0 0 1 10.6 7.681c0-.768.622-1.407 1.387-1.407.766 0 1.388.624 1.388 1.407a1.38 1.38 0 0 1-1.388 1.391Z'/></svg>") !default;
+// icon warning-external-shape v1.4
+$alert-icon-warning-external: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M21.852 16.98 14.205 3.064a2.556 2.556 0 0 0-4.41 0L2.17 16.942l-.001.002-.021.036a2.54 2.54 0 0 0-.009 2.552 2.55 2.55 0 0 0 2.214 1.276h15.293a2.549 2.549 0 0 0 2.214-1.276 2.542 2.542 0 0 0-.008-2.553ZM10.8 8.031c0-1.187.4-1.758 1.2-1.758.8 0 1.2.57 1.2 1.758v4.535c0 1.188-.384 1.774-1.2 1.774s-1.2-.585-1.2-1.774V8.031Zm1.188 10.119a1.394 1.394 0 0 1-1.388-1.407 1.38 1.38 0 0 1 1.388-1.391 1.39 1.39 0 0 1 1.387 1.39c0 .768-.622 1.408-1.387 1.408Z'/></svg>") !default;
+// icon warning-internal-shape v1.4
+$alert-icon-warning-internal: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10.8 8.031c0-1.187.4-1.758 1.2-1.758.8 0 1.2.57 1.2 1.758v4.535c0 1.188-.384 1.774-1.2 1.774s-1.2-.585-1.2-1.774V8.031Zm1.188 10.119a1.394 1.394 0 0 1-1.388-1.407 1.38 1.38 0 0 1 1.388-1.391 1.39 1.39 0 0 1 1.387 1.39c0 .768-.622 1.408-1.387 1.408Z'/></svg>") !default;
+// icon important-fill v1.4
+$alert-icon-important: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2.4A9.6 9.6 0 0 0 2.4 12a9.6 9.6 0 0 0 9.6 9.6 9.6 9.6 0 0 0 9.6-9.6A9.6 9.6 0 0 0 12 2.4Zm-1.2 5.631c0-1.187.4-1.758 1.2-1.758.8 0 1.2.57 1.2 1.758v4.535c0 1.188-.385 1.774-1.2 1.774-.8 0-1.2-.585-1.2-1.774V8.031Zm1.187 10.119a1.394 1.394 0 0 1-1.387-1.407 1.38 1.38 0 0 1 1.387-1.391 1.39 1.39 0 0 1 1.388 1.39c0 .768-.622 1.408-1.388 1.408Z'/></svg>") !default;
+
+// Select input
+$select-input-chevron:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M4.874 9.977 12 17.25l7.125-7.273-2.034-2.079L12 13.095 6.91 7.898 4.874 9.977Z'/></svg>") !default;
+$select-input-expanded-chevron: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19.124 14.023 12 6.75l-7.125 7.273 2.035 2.079L12 10.905l5.088 5.197 2.037-2.079Z'/></svg>") !default;
+
+//// SVG used several times
+$svg-as-custom-props: (
+  "chevron":          $chevron-icon,
+  "close":            $cross-icon-stroke,
+  "success":          $alert-icon-success,
+  "info":             $alert-icon-info,
+  "warning":          $alert-icon-warning-external,
+  "warning-internal": $alert-icon-warning-internal,
+  "error":            $alert-icon-important
+) !default;

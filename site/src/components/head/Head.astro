@@ -13,10 +13,9 @@ interface Props {
   robots: string | undefined
   thumbnail: string
   title: string
-  brand: string
 }
 
-const { description, direction, layout, robots, thumbnail, title, brand } = Astro.props
+const { description, direction, layout, robots, thumbnail, title } = Astro.props
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
 

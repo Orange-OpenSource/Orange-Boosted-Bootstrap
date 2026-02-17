@@ -1,5 +1,5 @@
 /*!
- * OUDS Web Grid v0.6.0 (https://web.unified-design-system.orange.com/)
+ * OUDS Web Grid v1.0.0 (https://web.unified-design-system.orange.com/)
  * Copyright 2014-2025 The OUDS Web Authors
  * Copyright 2014-2025 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
@@ -24,6 +24,8 @@
   --bs-color-action-negative-loading: #800001;
   --bs-color-action-negative-pressed: #800001;
   --bs-color-action-pressed: #247a85;
+  --bs-color-action-read-only-primary: #000;
+  --bs-color-action-read-only-secondary: rgba(0, 0, 0, 0.2);
   --bs-color-action-selected: #d5204e;
   --bs-color-action-support-disabled: rgba(0, 0, 0, 0.04);
   --bs-color-action-support-enabled: rgba(0, 0, 0, 0.04);
@@ -48,6 +50,7 @@
   --bs-color-border-emphasized: #000;
   --bs-color-border-focus-inset: #fff;
   --bs-color-border-focus: #000;
+  --bs-color-border-minimal: rgba(0, 0, 0, 0.04);
   --bs-color-border-muted: rgba(0, 0, 0, 0.08);
   --bs-color-border-on-brand-primary: #fff;
   --bs-color-border-on-brand-secondary: #fff;
@@ -139,6 +142,8 @@
   --bs-color-action-negative-loading: #ffe5e6;
   --bs-color-action-negative-pressed: #ffe5e6;
   --bs-color-action-pressed: #ffe366;
+  --bs-color-action-read-only-primary: #eee;
+  --bs-color-action-read-only-secondary: rgba(255, 255, 255, 0.2);
   --bs-color-action-selected: #5ec7d4;
   --bs-color-action-support-disabled: rgba(255, 255, 255, 0.04);
   --bs-color-action-support-enabled: rgba(255, 255, 255, 0.04);
@@ -159,6 +164,7 @@
   --bs-color-border-emphasized: rgba(255, 255, 255, 0.92);
   --bs-color-border-focus: #eee;
   --bs-color-border-focus-inset: #141414;
+  --bs-color-border-minimal: rgba(255, 255, 255, 0.04);
   --bs-color-border-muted: rgba(255, 255, 255, 0.08);
   --bs-color-border-on-brand-primary: #061618;
   --bs-color-border-on-brand-secondary: #061618;
@@ -280,12 +286,13 @@
   --bs-link-mono-color-content-disabled: rgba(0, 0, 0, 0.28);
   --bs-link-mono-color-content-focus: #000;
   --bs-switch-color-cursor: #fff;
-  --bs-switch-color-track-selected: #17a02f;
-  --bs-switch-color-track-selected-interaction: #138126;
+  --bs-switch-color-track-selected: #247a85;
+  --bs-switch-color-track-selected-interaction: #1a5961;
   --bs-switch-color-track-unselected: rgba(0, 0, 0, 0.44);
   --bs-switch-color-track-unselected-interaction: rgba(0, 0, 0, 0.52);
   --bs-icon-color-content-status-warning-external-shape: #ffd000;
   --bs-icon-color-content-status-warning-internal-shape: #856a00;
+  --bs-icon-color-content-default: #000;
   --bs-button-color-bg-brand-enabled: #247a85;
   --bs-link-color-chevron-hover: #d5204e;
 }
@@ -337,12 +344,13 @@
   --bs-link-mono-color-content-disabled: rgba(255, 255, 255, 0.44);
   --bs-link-mono-color-content-focus: #fff;
   --bs-switch-color-cursor: #141414;
-  --bs-switch-color-track-selected: #1ecd3c;
-  --bs-switch-color-track-selected-interaction: #94f0a4;
+  --bs-switch-color-track-selected: #5ec7d4;
+  --bs-switch-color-track-selected-interaction: #f0f7fa;
   --bs-switch-color-track-unselected: rgba(255, 255, 255, 0.64);
   --bs-switch-color-track-unselected-interaction: rgba(255, 255, 255, 0.8);
   --bs-icon-color-content-status-warning-external-shape: #ffe270;
   --bs-icon-color-content-status-warning-internal-shape: rgba(255, 255, 255, 0);
+  --bs-icon-color-content-default: #eee;
   --bs-button-color-bg-brand-enabled: #ffe366;
   --bs-link-color-chevron-hover: #5ec7d4;
 }

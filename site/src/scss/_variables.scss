@@ -1,10 +1,12 @@
+// stylelint-disable function-disallowed-list
+
 // Local docs variables
-// stylelint-disable-next-line function-disallowed-list
+
 $bd-primary-light: lighten(saturate($ouds-color-surface-brand-primary-light, 5%), 15%); // OUDS mod
-// stylelint-disable-next-line function-disallowed-list
+
 $bd-primary-dark:  darken(saturate($ouds-color-surface-brand-primary-dark, 5%), 15%); // OUDS mod
 $bd-purple:        #4c0bce;
-$bd-violet:        lighten(saturate($bd-purple, 5%), 15%); // stylelint-disable-line function-disallowed-list
+$bd-violet:        lighten(saturate($bd-purple, 5%), 15%);
 // OUDS mod: np $bd-purple-light
 // OUDS mod: no $bd-accent
 
@@ -44,6 +46,6 @@ $bd-callout-variants: info, warning, danger !default;
 // OUDS mod
 $zindex-skippy: 1080;
 $offset-top: 7rem;
-$sidebar-height: subtract(100vh, $offset-top + 1rem);
+$sidebar-height: calc(100vh - ($offset-top + 1rem));
 $tac-prefix: "tarteaucitron";
 // End mod

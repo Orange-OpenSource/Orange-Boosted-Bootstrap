@@ -5,7 +5,19 @@ import { docsPages } from '@libs/content'
 import { getSlug } from '@libs/utils'
 import { getVersionedDocsPath } from '@libs/path'
 
-const sidebar = getData('sidebar')
+
+const slug = Astro.url.pathname.split('/')[4]
+
+const sidebarMap = {
+  'getting-started': 'getting-started',
+  'foundation': 'getting-started',
+  'components': 'components',
+  'utilities': 'utilities',
+  'layout': 'layout',
+  'about': 'getting-started',
+}
+
+const sidebar = sidebarMap[slug] ? getData(`sidebar-${sidebarMap[slug]}`) : []
 ---
 
 <nav class="bd-links w-100" id="bd-docs-nav" aria-labelledby="docs-nav">
@@ -31,7 +43,7 @@ const sidebar = getData('sidebar')
               </h2>
               <ul class="list-unstyled fw-normal mt-2xsmall pb-small small">
                 {group.pages
-                  ?.filter((page) => !page.brand || page.brand === getConfig().brand)
+                  ?.filter((page) => !page.brand || page.brand === getConfig().brand || !!page.brand.split(',').find(element => element === getConfig().brand))
                   .map((page) => {
                     const docSlug = getSlug(page.title)
                     const unversionedPageSlug = `${groupSlug}/${docSlug}`
@@ -44,7 +56,7 @@ const sidebar = getData('sidebar')
                     // This test should not be necessary, see comments for `getSlug()` in `src/libs/utils.ts`.
                     if (!generatedPage) {
                       throw new Error(
-                        `The page '${page.title}' referenced in 'site/data/sidebar.yml' does not exist at '${url}'.`
+                        `The page '${page.title}' referenced in 'site/data/sidebar${sidebarMap[slug]}.yml' does not exist at '${url}'.`
                       )
                     }
 

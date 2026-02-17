@@ -28,7 +28,7 @@ Because OUDS Web’s components are purposely designed to be fairly generic, aut
  {/* for things such as button variations, alert variations, form validation indicators— */}
 Some combinations of colors that currently make up OUDS Web’s default palette—used throughout the framework may lead to *insufficient* color contrast (below the recommended [WCAG 2.2 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) and the [WCAG 2.2 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast)), particularly when used against a light background.
 
-OUDS Web **contrasts aren’t locked, please make sure they meet [WCAG 2.2 accessibility standards for color contrast](https://www.w3.org/TR/WCAG/#contrast-minimum)** when using [`.text-*`]([[docsref:/utilities/colors]]) and [`.bg-*` utilities]([[docsref:/utilities/background]]), by defining `color` and `background-color`. Please refer to [our theme colors]([[docsref:/customize/color-palette]]) to have a full preview of OUDS Web color palette’s reached WCAG level.
+OUDS Web **contrasts aren’t locked, please make sure they meet [WCAG 2.2 accessibility standards for color contrast](https://www.w3.org/TR/WCAG/#contrast-minimum)** when using [`.text-*`]([[docsref:/utilities/color]]) and [`.bg-*` utilities]([[docsref:/utilities/background]]), by defining `color` and `background-color`. Please refer to [our theme colors]([[docsref:/foundation/color-palette]]) to have a full preview of OUDS Web color palette’s reached WCAG level.
 
 ### Visually hidden content
 
@@ -81,7 +81,7 @@ This visible focus state is defined by an outer outline and an inner box shadow.
 When using a fixed (or sticky) header, tabbing backward often hides focused element under the header. OUDS Web sets `scroll-padding-top` property for such case. This feature is configurable in two ways:
 
 1. `$scroll-offset-top` variable defines the offset,
-2. and [`$enable-fixed-header` allows to drop this rule]([[docsref:/customize/options]]) if you don’t use a fixed header.
+2. and [`$enable-fixed-header` allows to drop this rule]([[docsref:/foundation/options]]) if you don’t use a fixed header.
 
 <ScssDocs name="scroll-offset" file="scss/_reboot.scss" /> */}
 

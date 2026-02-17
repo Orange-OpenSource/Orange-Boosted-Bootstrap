@@ -61,7 +61,7 @@
     z-index: $focus-visible-zindex; // Make sure the focused star is displayed over its next sibling
     @include focus-visible();
     outline-offset: -1px;
-    box-shadow: inset 0 0 0 add(1px, $focus-visible-inner-width) var(--#{$prefix}color-border-focus-inset);
+    box-shadow: inset 0 0 0 calc(1px + $focus-visible-inner-width) var(--#{$prefix}color-border-focus-inset);
   }
 
   &:hover input + label::before {

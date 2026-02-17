@@ -1,0 +1,39 @@
+---
+title: Form validation
+description: Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.
+aliases:
+  - "/docs/forms/validation/"
+  - "/docs/foundation/form-validation/"
+toc: true
+extra_js:
+  - src: "[[docsref:/assets/js/validate-forms.js]]"
+    async: true
+---
+
+## Accessibility
+
+Ensure that all form components have an appropriate accessible name so that their purpose can be conveyed to users of assistive technologies. The simplest way to achieve this is to use a `<label>` element, or—in the case of buttons—to include sufficiently descriptive text as part of the `<button>...</button>` content.
+
+For situations where it’s not possible to include a visible `<label>` or appropriate text content, there are alternative ways of still providing an accessible name, such as:
+
+- `<label>` elements hidden using the `.visually-hidden` class
+- Pointing to an existing element that can act as a label using `aria-labelledby`
+- Providing a `title` attribute
+- Explicitly setting the accessible name on an element using `aria-label`
+
+If none of these are present, assistive technologies may resort to using the `placeholder` attribute as a fallback for the accessible name on `<input />` and `<textarea>` elements.{/*  The examples in this section provide a few suggested, case-specific approaches. */}
+
+While using visually hidden content (`.visually-hidden`, `aria-label`, and even `placeholder` content, which disappears once a form field has content) will benefit assistive technology users, a lack of visible label text may still be problematic for certain users. Some form of visible label is generally the best approach, both for accessibility and usability.
+
+## How it works
+
+Here’s how form validation works with OUDS Web:
+
+- HTML form validation is applied via CSS’s two pseudo-classes, `:invalid` and `:valid`. It applies to `<input />`, `<select>`, and `<textarea>` elements.
+- OUDS Web scopes the `:invalid` and `:valid` styles to parent `.was-validated` class, usually applied to the `<form>`. Otherwise, any required field without a value shows up as invalid on page load. This way, you may choose when to activate them (typically after form submission is attempted).
+- To reset the appearance of the form (for instance, in the case of dynamic form submissions using Ajax), remove the `.was-validated` class from the `<form>` again after submission.
+{/* for [server-side validation](#server-side) */}
+- As a fallback, `.is-invalid` and `.is-valid` classes may be used instead of the pseudo-classes. They do not require a `.was-validated` parent class.
+- All modern browsers support the [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api), a series of JavaScript methods for validating form controls.
+- Feedback messages may utilize the [browser defaults](#browser-defaults) (different for each browser, and unstylable via CSS) or our custom feedback styles with additional HTML and CSS.
+- You may provide custom validity messages with `setCustomValidity` in JavaScript.

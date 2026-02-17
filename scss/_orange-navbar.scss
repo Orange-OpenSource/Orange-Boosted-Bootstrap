@@ -20,7 +20,7 @@
     padding-top: var(--#{$prefix}navbar-nav-link-padding-y);
 
     &.nav-icon {
-      padding-top: add(var(--#{$prefix}navbar-nav-icon-padding-y), .3125rem);
+      padding-top: calc(var(--#{$prefix}navbar-nav-icon-padding-y) + .3125rem);
     }
   }
 

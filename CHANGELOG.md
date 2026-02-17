@@ -1,3 +1,41 @@
+# [1.0.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v0.6.0-ouds-web...v1.0.0) (2025-12-19)
+
+
+### Bug Fixes
+
+* **docs:** fix `new in` text ([757597a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/757597a1d3441b6e09b276e651ce93886bedc3ca))
+* **docs:** Enhance accessibility message for functional badges after a11y review  ([5c1788b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5c1788b3b1dee40340cbb21050d4844a15aebe2e))
+* **docs:** Fix redirect links on live ([#3251](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3251)) ([525601d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/525601dceb8a966fec0ed33dae5729bf6b6fcf9f))
+* **docs:** Remove Algolia button and add Teams links ([#3292](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3292)) ([ff6492d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ff6492da6b4dc9ef6f1f3efbc403e3cbbcbe13de))
+* **docs:** make bootstrap compat tag float only on bigger breakpoints ([#3252](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3252)) ([10c6827](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/10c68278e4064a2c21a5451e9cb627f3a3a3a521))
+* **docs:** Use getVersionedDocsPath to get to the icon in SVG sprite for examples ([#3275](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3275)) ([3a35c7f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3a35c7f0bb5c00d5c21b755f75e485dc372896f1))
+* **docs:** missing spaces in migration guide ([f8f2b22](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f8f2b22af24e4ce956103690133f36edc37c94b0))
+* **docs:** Enhance pwd input and select input DSM links typography after demo ([c74ee8f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c74ee8fc0f65a008c189271c951ecc1d5109fae1))
+
+
+### Features
+
+* **component** add high contrast mode on control items ([#3279](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3279)) ([93987e2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/93987e28590e7943f5738f0164821cea86020d03))
+* **reboot** add max width on native ul, ol and dl ([#3277](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3277)) ([13706cc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/13706cc965c098eff45e840250a8593bd50d1ec1))
+* **component** add max-width modifier for textual inputs ([#3284](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3284)) ([14c0455](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/14c04554f6b77f0facdc30743cc1a0726da7439a))
+* **core** Add Orange font-face for Helvetica Neue plus medium font weight ([#3255](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3255)) ([dbfaa89](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dbfaa89add5f15b8bb49c7980ef80ff99c92e566))
+* **component:** add Text Area component ([#3215](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3215)) ([5ffa46d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5ffa46daa24909647e98a3b07eabd40afa485864))
+* **component** implements global opt-in classes for rounded corners in input and button ([#3273](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3273)) ([0f955d3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0f955d32826b85cc86cd974feba9f2a915528b7c))
+* **lib:** Add Select input component ([#3256](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3256)) ([1e8646d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1e8646db3aa381bedbbb5c604ba28e49ec4b1586))
+* **lib:** update tokens raw 1.9.0, core orange 1.2.0, brand system 2.3.0 and update checkbox, radio button and switch components ([#3233](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3233)) ([31b0e79](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/31b0e79a31212464291187c6c90583f47682c18e))
+* **component** Password Input component ([#3238](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3238)) ([bbe65f2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/bbe65f2e660555524a113a3dd3b83b8a5e7985cd))
+* **lib** Update alert and heart-empty icons to v1.4 ([#3272](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3272)) ([cab30f2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cab30f2f6184f934304aa8ad79d38edb8c784c27))
+* **utilities** Update bg-* utilities with bg and surface ([#3260](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3260)) ([70a6483](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/70a6483f90334d81028cff9c72995f58610cfd5e))
+* **doc** apply doc template to button and link doc ([77c121d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/77c121dc82397e3fecb57f9510330884fee0350f))
+* **doc** add no truncation information on breadcrumb ([#3259](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3259)) ([77c121d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0859d37c176e3a62a3cfdf18ab46749652b930d0))
+* **docs:** Replace values by tokens compiled values ([3a35c7f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3a35c7f0bb5c00d5c21b755f75e485dc372896f1))
+* **docs:** Update DSM links in components pages ([#3265](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3265)) ([c1af980](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c1af9803b788b098127f0029b57822154e92b466))
+* **docs:** Bi-mode documentation ([#3202](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3202)) ([c74ee8f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c74ee8fc0f65a008c189271c951ecc1d5109fae1))
+* **docs:** input accessibility improvements ([0b0c1d8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0b0c1d8bc082a6041618791a581de46bb7f0c857))
+* **docs:** Add a11y labels to copy/stackblitz buttons on homepage ([#2886](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2886)) ([d2286bb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d2286bba37f307907eed368c1d196505f640f84f))
+
+
+
 # [0.6.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v0.5.0-ouds-web...v0.6.0) (2025-12-02)
 
 
