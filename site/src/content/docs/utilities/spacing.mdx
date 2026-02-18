@@ -354,12 +354,13 @@ We also provide scaled versions of the gap (including `row-gap` and `column-gap`
     <div class="p-small">Grid item 4</div>
   </div>`} />
 
-## Grid specific spacings
+## Grid measures
 
-OUDS web provides two specific spacings based on grid measures: `gridgap` and `gridmargin` which use the custom properties `--bs-grid-gap` and `--bs-grid-margin`, respectively. These spacings can be applied as `margin`, `padding` and `gap` utilities and are responsive.
+OUDS web provides two specific size based on grid measures: `gridgap` and `gridmargin` which use the custom properties `--bs-grid-gap` and `--bs-grid-margin`, respectively. These custom properties are responsive so the values will depend on the current viewport breakpoint. These utilities are available as `margin`, `padding` or `gap` and can be applied on a specific breakpoint, they use the [same notation as fixed values](#notation-for-fixed-values).
 
 <Example class="bd-example-spacings" code={`<div class="px-gridgap">Gridgap padding</div>
-  <div class="px-xl-gridgap">Grid-gap padding for xl viewports</div>`} />
+  <div class="px-xl-gridgap">Grid-gap padding for xl viewports</div>
+  <div class="mt-gridmargin">Grid-margin margin viewports</div>`} />
 
 ### Edge to edge containers
 
