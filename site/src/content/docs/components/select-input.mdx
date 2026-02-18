@@ -233,7 +233,7 @@ By default select inputs will span the whole width of their parent container, to
 
 ## States
 
-These states should be exclusive among each others.
+Apart if specified, these states should be exclusive among each others.
 
 ### Disabled
 
@@ -399,7 +399,7 @@ At the end of the loading, you should:
 - Set a final status message in `<span>`, indicating the loading has ended.
 - Put the focus back on the select to ensure similar behavior across browsers and not lose the user after changes.
 
-<Callout type="info">
+<Callout type="info" title="Execption">
   The select can be disabled or not during the loading time depending on the context of use.
 </Callout>
 

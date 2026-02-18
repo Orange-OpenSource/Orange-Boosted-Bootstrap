@@ -302,7 +302,7 @@ By default text inputs will span the whole width of their parent container, to l
 
 ## States
 
-These states should be exclusive among each others.
+Apart if specified, these states should be exclusive among each others.
 
 ### Disabled
 
@@ -320,6 +320,9 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
   </div>
   <div class="text-input mb-medium">
     <div class="text-input-container">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
       <label for="exampleTextInputDisabled">Lastname</label>
       <input type="text" class="text-input-field" id="exampleTextInputDisabled" placeholder=" " value="Doe" disabled>
     </div>
@@ -511,7 +514,7 @@ At the end of the loading, you should:
 - Set a final status message in `<span>`, indicating the loading has ended.
 - Put the focus back on the input to ensure similar behavior across browsers and not lose the user after changes.
 
-<Callout type="info">
+<Callout type="info" title="Exception">
   The input can be disabled or not during the loading time depending on the context of use.
 </Callout>
 
@@ -588,6 +591,48 @@ In case of an invalid input, you may remove the invalid state before the loading
         <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
       </svg>
       <span role="status" id="loading-msg-3" class="visually-hidden d-none">Loading message</span>
+    </div>
+  </div>`} />
+
+You may also set the [trailing action on loading]([[docsref:/components/buttons#loading]]), it also works, but the text-input can't be disabled in this case.
+
+<Example buttonLabel="loading button inside input" code={`<div class="text-input mb-medium">
+    <div class="text-input-container">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <label for="exampleLoadingActionButton">Loading action inside input example</label>
+      <input type="text" class="text-input-field" id="exampleLoadingActionButton" placeholder=" " value="Input">
+      <button disabled class="btn btn-minimal btn-icon loading-indeterminate">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        <span class="visually-hidden">Add to favorites</span>
+        <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-msg-4" class="visually-hidden d-none">Loading message</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="text-input">
+    <div class="text-input-container">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <label for="exampleDisabledLoadingActionButton">Loading action inside disabled input example</label>
+      <input disabled type="text" class="text-input-field" id="exampleDisabledLoadingActionButton" placeholder=" " value="Input">
+      <button disabled class="btn btn-minimal btn-icon loading-indeterminate">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        <span class="visually-hidden">Add to favorites</span>
+        <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-msg-4" class="visually-hidden d-none">Loading message</span>
+      </button>
     </div>
   </div>`} />
 

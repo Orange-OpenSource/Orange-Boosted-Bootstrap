@@ -248,6 +248,12 @@
       &:not(.text-input-container-outlined) {
         --#{$prefix}text-input-background-color: var(--#{$prefix}color-action-support-disabled);
       }
+
+      > img,
+      > svg,
+      > .icon {
+        color: $ouds-color-content-disabled;
+      }
     }
 
     // Leading icon
