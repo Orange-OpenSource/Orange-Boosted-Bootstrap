@@ -13,7 +13,7 @@
 // OUDS mod: Add userAgent on GitHub issues link
 export default () => {
   document.querySelectorAll('.add-user-agent').forEach(element => {
-    element.href += `&user-agent=${window.navigator.userAgent}`
+    element.href += encodeURIComponent(`&user-agent=${window.navigator.userAgent}`)
   })
 }
 // End mod
