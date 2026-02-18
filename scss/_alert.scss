@@ -17,7 +17,7 @@
   background-color: var(--#{$prefix}alert-bg);
   border: var(--#{$prefix}alert-border-color) solid $ouds-alert-border-width;
 
-  &:has(.btn) {
+  &:has(.btn-close) {
     padding-right: 0;
   }
 
@@ -30,12 +30,18 @@
   }
 
   // To avoid overflow: hidden that hides the focus
-  .btn {
+  .btn-close {
     @include border-top-end-radius(var(--#{$prefix}alert-border-radius));
+
+    @container (height <= #{$ouds-alert-size-min-height}) {
+      @include border-bottom-end-radius(var(--#{$prefix}alert-border-radius));
+    }
   }
 
-  &:not(:has(.alert-text-container p:not(.alert-label), .bullet-list, .alert-container .link)) .btn {
-    @include border-bottom-end-radius(var(--#{$prefix}alert-border-radius));
+  @supports not (container-type: inline-size) {
+    &:not(:has(.alert-text-container p:not(.alert-label), .bullet-list, .alert-container .link)) .btn-close {
+      @include border-bottom-end-radius(var(--#{$prefix}alert-border-radius));
+    }
   }
 }
 
@@ -75,7 +81,7 @@
     height: 100%;
     font-size: $ouds-alert-size-icon;
     line-height: 1;
-    vertical-align: baseline; // TODO: For reboot maybe ?
+    vertical-align: baseline; // Remove some weird stuff on zoom // TODO: For reboot maybe ?
   }
 }
 
@@ -85,8 +91,8 @@
   flex-direction: column;
   gap: $ouds-alert-space-row-gap-action;
   align-items: flex-start;
-  justify-content: center;
-  min-height: $ouds-alert-size-min-height;
+  justify-content: center; // To handle weird edge cases in de-zoom one line title alert
+  min-height: $ouds-alert-size-min-height; // To handle weird edge cases in de-zoom one line title alert
   padding-block: $ouds-alert-space-padding-block;
 }
 
@@ -96,7 +102,7 @@
   gap: $ouds-alert-space-row-gap;
   color: $ouds-color-content-muted;
 
-  > *,
+  > *, // To handle any content inside this text-container.
   .bullet-list.fs-bm {
     --#{$prefix}bullet-list-icon-container-width: #{calc(px-to-rem($ouds-size-icon-with-label-medium-size-medium) - $ouds-bullet-list-space-padding-inline-level-0)}; // TODO: Do we need a token for that ?
     --#{$prefix}bullet-list-padding-block: #{$ouds-alert-space-row-gap-bullet / 2};
@@ -111,6 +117,16 @@
 .alert-action-container {
   display: flex;
   gap: $ouds-alert-space-column-gap-action;
+  // A small tweak to give height of alert message to alert-close-container or use alert-action-container without.
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.alert-close-container {
+  align-self: stretch;
+  width: calc(2 * $ouds-button-space-inset-icon-only + px-to-rem($ouds-button-size-icon-only));
+  min-width: $ouds-button-size-min-width;
+  container-type: size;
 }
 
 .alert-label {
@@ -121,10 +137,12 @@
   color: var(--#{$prefix}alert-label-color);
 }
 
+// Global config
 .use-rounded-corner-alert {
   --#{$prefix}alert-border-radius: #{$ouds-alert-border-radius-rounded};
 }
 
+// Variants
 .alert-neutral {
   --#{$prefix}alert-label-color: #{$ouds-color-content-default};
   --#{$prefix}alert-icon-color: #{$ouds-color-content-default};
@@ -173,6 +191,7 @@
   --#{$prefix}alert-border-color: #{$ouds-color-border-status-warning};
 }
 
+// Bootstrap compatibility
 @if $enable-bootstrap-compatibility {
   .alert {
     > svg,

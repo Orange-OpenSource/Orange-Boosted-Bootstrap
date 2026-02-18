@@ -92,7 +92,11 @@ Alert messages come with additional layout classes such as `.alert-container`, `
 
 `.alert-text-container` is to space vertically all the textual content of the alert message.
 
+<BrandSpecific brand="orange">
 `.alert-action-container` is mainly useful when there is an action next to a close button in alert message. It may be omitted if not needed.
+</BrandSpecific>
+
+`.alert-close-container` is only useful when there are rounded corner alerts, with a title on one line, in order to help to round the `.btn-close` automatically. Since it's a very specific usage, it may be omitted. If present, this element should only wrap the `.btn-close` button.
 
 ### Accessibility
 
@@ -111,6 +115,7 @@ Several examples are provided below, but they need to be adapted for actual use 
 Close buttons should be labelled:
 - Either via a `<span class="visually-hidden">` and a descriptive text inside to know what the associated action is. (**Preferred method**)
 - Or via `aria-labelledby` referencing the action performed by the button and the id of the title of the alert.
+- Or via `aria-label` and a descriptive text inside to know what the associated action is.
 
 #### Dynamic behavior
 
@@ -379,6 +384,10 @@ If the alert can be removed when its content is acknowledged, you can add a clos
   If you want the JavaScript behavior presented on the first alert below, please refer to our [JavaScript section](#javascript).
 </Callout>
 
+<Callout type="info" title="One line title alert">
+  If you have an `.alert-message` with only a title that might be on one line and you are using a rounded alert (that might happen in our documentation depending on the documentation), you can wrap the `.btn-close` with an element holding `.alert-close-container` class to handle the rounded effect automatically. See it in action in our [live example](#live-example).
+</Callout>
+
 <Callout type="warning">
   For accessibility purpose, please provide a comprehensive name for the close button. For example, adding an `aria-labelledby` linking to the title of the alert, or adding a `.visually-hidden` content.
 </Callout>
@@ -395,12 +404,11 @@ If the alert can be removed when its content is acknowledged, you can add a clos
       </div>
     </div>
     <div class="alert-action-container">
-      <button class="btn btn-minimal btn-icon" data-bs-dismiss="alert" aria-labelledby="btn-close-alert closable-alert-accent" id="btn-close-alert">
-        <svg aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
-        </svg>
-        <span class="visually-hidden">Close</span>
-      </button>
+      <div class="alert-close-container">
+        <button class="btn-close" data-bs-dismiss="alert" aria-labelledby="btn-close-alert closable-alert-accent" id="btn-close-alert">
+          <span class="visually-hidden">Close accent alert</span>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -412,12 +420,11 @@ If the alert can be removed when its content is acknowledged, you can add a clos
       </div>
     </div>
     <div class="alert-action-container">
-      <button class="btn btn-minimal btn-icon">
-        <svg aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
-        </svg>
-        <span class="visually-hidden">Close info alert</span>
-      </button>
+      <div class="alert-close-container">
+        <button class="btn-close" data-bs-dismiss="alert" aria-labelledby="btn-close-alert closable-alert-accent" id="btn-close-alert">
+          <span class="visually-hidden">Close info alert</span>
+        </button>
+      </div>
     </div>
   </div>`} />
 
@@ -438,10 +445,7 @@ You can add an alternate action [link]([[docsref:/components/links]]) (`<a>` or 
       <button class="link">Action</button>
     </div>
     <div class="alert-action-container">
-      <button class="btn btn-minimal btn-icon" data-bs-dismiss="alert">
-        <svg aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
-        </svg>
+      <button class="btn-close" data-bs-dismiss="alert" aria-labelledby="btn-close-alert closable-alert-accent" id="btn-close-alert">
         <span class="visually-hidden">Close info alert</span>
       </button>
     </div>
@@ -456,12 +460,11 @@ You can add an alternate action [link]([[docsref:/components/links]]) (`<a>` or 
     </div>
     <div class="alert-action-container">
       <button class="link">Action</button>
-      <button class="btn btn-minimal btn-icon" data-bs-dismiss="alert">
-        <svg aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
-        </svg>
-        <span class="visually-hidden">Close info alert</span>
-      </button>
+      <div class="alert-close-container">
+        <button class="btn-close" data-bs-dismiss="alert" aria-labelledby="btn-close-alert closable-alert-accent" id="btn-close-alert">
+          <span class="visually-hidden">Close info alert</span>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -474,10 +477,7 @@ You can add an alternate action [link]([[docsref:/components/links]]) (`<a>` or 
       <a href="#" class="link">Action</a>
     </div>
     <div class="alert-action-container">
-      <button class="btn btn-minimal btn-icon" data-bs-dismiss="alert">
-        <svg aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
-        </svg>
+      <button class="btn-close" data-bs-dismiss="alert">
         <span class="visually-hidden">Close info alert</span>
       </button>
     </div>
@@ -492,12 +492,11 @@ You can add an alternate action [link]([[docsref:/components/links]]) (`<a>` or 
     </div>
     <div class="alert-action-container">
       <a href="#" class="link">Action</a>
-      <button class="btn btn-minimal btn-icon" data-bs-dismiss="alert">
-        <svg aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
-        </svg>
-        <span class="visually-hidden">Close info alert</span>
-      </button>
+      <div class="alert-close-container">
+        <button class="btn-close" data-bs-dismiss="alert" aria-labelledby="btn-close-alert closable-alert-accent" id="btn-close-alert">
+          <span class="visually-hidden">Close info alert</span>
+        </button>
+      </div>
     </div>
   </div>`} />
 
@@ -564,10 +563,7 @@ Here are some examples with everything activated and some long texts to see how 
       <a href="#" class="link">Action</a>
     </div>
     <div class="alert-action-container">
-      <button class="btn btn-minimal btn-icon">
-        <svg aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
-        </svg>
+      <button class="btn-close" data-bs-dismiss="alert">
         <span class="visually-hidden">Close warning alert</span>
       </button>
     </div>
@@ -587,10 +583,7 @@ Here are some examples with everything activated and some long texts to see how 
     </div>
     <div class="alert-action-container">
       <button class="link">Action</button>
-      <button class="btn btn-minimal btn-icon">
-        <svg aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
-        </svg>
+      <button class="btn-close" data-bs-dismiss="alert">
         <span class="visually-hidden">Close positive alert</span>
       </button>
     </div>
@@ -608,7 +601,13 @@ Using the alert plugin, it’s possible to dismiss any alert message, here’s h
 
 Click the button below to show an alert (hidden with inline styles to start), then dismiss (and destroy) it with the built-in close button.
 
-<Example buttonLabel="alert message with live behavior" addStackblitzJs code={`<div id="liveAlertPlaceholder" role="status" class="use-rounded-corner-alert d-flex flex-column gap-medium mb-medium">
+<BrandSpecific brand="orange">
+  <Callout type="warning">
+    We use `.use-rounded-corner-alert` here to detect edge cases.
+  </Callout>
+</BrandSpecific>
+
+<Example buttonLabel="alert message with live behavior" addStackblitzJs code={`<div id="liveAlertPlaceholder" role="status" class="${getConfig().brand === 'orange' ? 'use-rounded-corner-alert ' : '' }d-flex flex-column gap-medium mb-medium">
     <div class="alert alert-message alert-positive">
       <div class="alert-icon"></div>
       <div class="alert-container">
@@ -617,12 +616,11 @@ Click the button below to show an alert (hidden with inline styles to start), th
         </div>
       </div>
       <div class="alert-action-container">
-        <button class="btn btn-icon btn-minimal" data-bs-dismiss="alert">
-          <svg aria-hidden="true">
-            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/>
-          </svg>
-          <span class="visually-hidden">Close alert</span>
-        </button>
+        <div class="alert-close-container">
+          <button class="btn-close" data-bs-dismiss="alert">
+            <span class="visually-hidden">Close alert</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -634,7 +632,7 @@ We use the following JavaScript to trigger our live alert demo:
 
 #### Initialize
 
-Initialize elements as alerts
+Initialize elements as alerts.
 
 ```js
 const alertList = document.querySelectorAll('.alert')
@@ -752,6 +750,8 @@ Here, only `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-warni
 Non-functional alerts are informative or decorative. They provide context or highlight content without implying a specific state, system event, or user action. These alerts are not tied to UX patterns such as positive, negative, info, or warning, and may use contextual or brand-related icons to enhance recognition or storytelling.
 
 Here, only `.alert-neutral` and `.alert-accent` are considered as non-functional.
+
+<Callout type="info" title="Please note that this variant of alert needs an icon specified." />
 
 <Example buttonLabel="non-functional inline alert" class="d-flex flex-column gap-medium" code={`<div class="alert alert-neutral">
     <div class="alert-icon">

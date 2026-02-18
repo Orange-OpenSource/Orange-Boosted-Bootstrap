@@ -97,10 +97,11 @@ export default () => {
       '    </div>',
       '  </div>',
       '  <div class="alert-action-container">',
-      '    <button class="btn btn-icon btn-minimal" data-bs-dismiss="alert">',
-      '      <svg aria-hidden="true"><use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#expurge"/></svg>',
-      `      <span class="visually-hidden">Close ${type} alert</span>`,
-      '    </button>',
+      '    <div class="alert-close-container">',
+      '      <button class="btn-close" data-bs-dismiss="alert">',
+      `        <span class="visually-hidden">Close ${type} alert</span>`,
+      '      </button>',
+      '    </div>',
       '  </div>',
       '</div>'
     ].join('')
