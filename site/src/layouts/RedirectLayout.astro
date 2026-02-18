@@ -15,7 +15,7 @@ const url = new URL(path, Astro.site)
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{getConfig().title}</title>
+    <title>Redirecting - {getConfig().title}</title>
     <link rel="canonical" href={url} />
     <meta name="robots" content="noindex" />
     <script define:vars={{ url: url}}>
