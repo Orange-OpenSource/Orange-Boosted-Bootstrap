@@ -19,7 +19,7 @@ export const fixedSpacingLevel = [
   "2xlarge",
   "3xlarge",
   "4xlarge",
-  "5xlarge"
+  "5xlarge",
 ]
 
 export const scaledSpacingLevel = [
@@ -45,10 +45,6 @@ export const screenSize = [
 ## Margin and padding
 
 Assign responsive-friendly `margin` or `padding` values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from `none` to `5xlarge`. Classes include fixed values on zoom (using `px`).
-
-<Callout>
-**Using the CSS Grid layout module?** Consider using [the gap utility](#gap) instead.
-</Callout>
 
 ### Notation for fixed values
 
@@ -82,6 +78,8 @@ Where *size* is one of:
     ))
   }
   <li>`auto` - for classes that set the `margin` to `auto`</li>
+  <li>`gridgap` - for classes that set the `margin` to `var(--bs-grid-gap)` [see below](#grid-specific-spacings)</li>
+  <li>`gridmargin` - for classes that set the `margin` to `var(--bs-grid-margin)` [see below](#grid-specific-spacings)</li>
 </ul>
 
 (You can but shouldn’t add more sizes by adding entries to the `$ouds-dimension-space-fixed` Sass map variable.)
@@ -355,3 +353,22 @@ We also provide scaled versions of the gap (including `row-gap` and `column-gap`
     <div class="p-small">Grid item 3</div>
     <div class="p-small">Grid item 4</div>
   </div>`} />
+
+## Grid specific spacings
+
+OUDS web provides two specific spacings based on grid measures: `gridgap` and `gridmargin` which use the custom properties `--bs-grid-gap` and `--bs-grid-margin`, respectively. These spacings can be applied as `margin`, `padding` and `gap` utilities and are responsive.
+
+<Example class="bd-example-spacings" code={`<div class="px-gridgap">Gridgap padding</div>
+  <div class="px-xl-gridgap">Grid-gap padding for xl viewports</div>`} />
+
+### Edge to edge containers
+
+The negative `gridmargin` `margin` utility can be used to create edge to edge containers (this example creates an edge to edge container on the smaller breakpoints).
+
+<div class="mx-ngridmargin mx-md-auto py-small px-md-small px-gridmargin mb-small" style="background-color: rgba(var(--bd-primary-light-rgb), 0.15);">Edge to edge container on smaller breakpoints</div>
+
+```html
+<div class="mx-ngridmargin mx-md-auto py-small px-md-small px-gridmargin">
+  Edge to edge container on smaller breakpoints
+</div>
+```
