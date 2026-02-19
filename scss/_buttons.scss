@@ -185,6 +185,7 @@
   svg,
   img,
   .icon { // TODO: Any way to make it from an a11y pov, like `img[alt]` or `svg[aria-hidden]` ?
+    flex-shrink: 0;
     width: 1em;
     height: 1em;
     margin-right: var(--#{$prefix}btn-icon-gap);
