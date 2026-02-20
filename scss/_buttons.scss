@@ -432,7 +432,7 @@
 }
 
 .btn-close {
-  // Boosted compatibility
+  // Boosted compatibility, to be able to use `.btn-close` as a standalone class.
   @extend .btn;
   @extend .btn-minimal;
   @extend .btn-icon;

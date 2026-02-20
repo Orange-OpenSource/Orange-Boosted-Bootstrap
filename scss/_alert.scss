@@ -38,7 +38,7 @@
     }
   }
 
-  @supports not (container-type: inline-size) {
+  @supports not (container-type: size) {
     &:not(:has(.alert-text-container p:not(.alert-label), .bullet-list, .alert-container .link)) .btn-close {
       @include border-bottom-end-radius(var(--#{$prefix}alert-border-radius));
     }
@@ -123,9 +123,9 @@
 }
 
 .alert-close-container {
-  align-self: stretch;
+  align-self: stretch; // To have the alert-close-container height defined on the alert-message height
   width: calc(2 * $ouds-button-space-inset-icon-only + px-to-rem($ouds-button-size-icon-only));
-  min-width: $ouds-button-size-min-width;
+  min-width: $ouds-button-size-min-width; // To handle some zoom '-' issues
   container-type: size;
 }
 

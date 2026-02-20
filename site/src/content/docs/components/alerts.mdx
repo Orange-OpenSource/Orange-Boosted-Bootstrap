@@ -82,7 +82,7 @@ For both types of alert, OUDS Web has a common basic `.alert` class that sets up
 
 Alerts are built on `.alert` class. They contain texts such as label, icons, and may also contain actions or close buttons.
 
-`.alert-label` is used to entitle all alerts. Note that this one is **mandatory**.
+`.alert-label` is used to display the title in all alerts. Note that this one is **mandatory**.
 
 `.alert-icon` is used to display the icon in all alerts.
 
@@ -90,13 +90,13 @@ Alert messages come with additional layout classes such as `.alert-container`, `
 
 `.alert-container` is used to align content inside the alert message correctly.
 
-`.alert-text-container` is to space vertically all the textual content of the alert message.
+`.alert-text-container` is to vertically distribute all the textual content of the alert message.
 
 <BrandSpecific brand="orange">
-`.alert-action-container` is mainly useful when there is an action next to a close button in alert message. It may be omitted if not needed.
+`.alert-action-container` is mainly useful when there is an action next to a close button in alert message.
 </BrandSpecific>
 
-`.alert-close-container` is only useful when there are rounded corner alerts, with a title on one line, in order to help to round the `.btn-close` automatically. Since it's a very specific usage, it may be omitted. If present, this element should only wrap the `.btn-close` button.
+`.alert-close-container` is only useful when there are rounded corner alerts, with a title on one line, in order to help to round the `.btn-close` automatically. If present, this element should only wrap the `.btn-close` button.
 
 ### Accessibility
 
@@ -126,9 +126,11 @@ In case an alert is dynamically added, there are several use cases:
 
 In case an alert is closed and the focus haven’t been customized, the focus order should stay the same.
 
-## Alert message
+## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Alert message
 
-Add `.alert-message` at the `.alert` level to display an alert message.
+Alert message is a UI element that displays system feedback, status changes or required action; throughout detailed, prominent, persistent and actionable communication.
+
+To have an alert message, add `.alert-message` at the `.alert` level to display an alert message.
 
 ### Variants
 
@@ -152,7 +154,7 @@ Use functional alerts to inform users about state changes, confirmations, or iss
 
 Please note that you shouldn’t add any icon in those alert messages.
 
-Here, only `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-warning` are considered as functional.
+The variants `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-warning` are considered as functional.
 
 <Example buttonLabel="functional alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-negative">
     <div class="alert-icon"><p class="visually-hidden">Error</p></div>
@@ -224,7 +226,7 @@ Here, only `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-warni
 
 Non-functional alerts are informative or decorative. They provide context or highlight content without implying a specific state, system event, or user action. These alerts are not tied to UX patterns such as positive, negative, info, or warning, and may use contextual or brand-related icons to enhance recognition or storytelling.
 
-Here, only `.alert-neutral` and `.alert-accent` are considered as non-functional.
+The variants `.alert-neutral` and `.alert-accent` are considered as non-functional.
 
 <Example buttonLabel="non-functional alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-neutral">
     <div class="alert-icon">
@@ -271,11 +273,14 @@ Here, only `.alert-neutral` and `.alert-accent` are considered as non-functional
 
 ###### Icon
 
-For the [non-functional alert messages](#non-functional), know that you can change the icon either by adding a `<svg>`, `<img>` or an `.icon` inside the `.alert-icon` container. It should be colorized automatically via the color attribute.
+For [non-functional alert messages](#non-functional), the displayed icon can be customized.
 
-It can also be made with a `mask-image` applied to `.alert-icon` with a class or inline directly.
+This can be achieved by using one of the following solutions:
+* adding a `<svg>`, `<img>` or an `.icon` inside the `.alert-icon` container.
+* applying a `mask-image` on `.alert-icon` with a class or an inline `style` attribute.
+* setting the custom property `--bs-alert-icon` inside the `.alert`.
 
-You can set the image via `--bs-alert-icon` wherever inside the `.alert`.
+In any case, the icon will be colorized automatically via the `color` attribute.
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
@@ -378,18 +383,18 @@ Rounded corners alerts is a project-wide option therefore all your alerts should
 
 #### Close button
 
-If the alert can be removed when its content is acknowledged, you can add a close button inside the `.alert-action-container` with our [button icon]([[docsref:/components/buttons#icon-only]]).
+If the alert can be removed when its content is acknowledged, add a close button inside the `.alert-action-container` with our [button icon]([[docsref:/components/buttons#icon-only]]).
 
 <Callout type="info">
   If you want the JavaScript behavior presented on the first alert below, please refer to our [JavaScript section](#javascript).
 </Callout>
 
 <Callout type="info" title="One line title alert">
-  If you have an `.alert-message` with only a title that might be on one line and you are using a rounded alert (that might happen in our documentation depending on the documentation), you can wrap the `.btn-close` with an element holding `.alert-close-container` class to handle the rounded effect automatically. See it in action in our [live example](#live-example).
+  If you have a one line title-only `.alert-message` and you are using a rounded alert (that might happen in our documentation depending on the brand), you can wrap the `.btn-close` with an element holding `.alert-close-container` class to prevent issues with the rounded button. See it in action in our [live example](#live-example).
 </Callout>
 
 <Callout type="warning">
-  For accessibility purpose, please provide a comprehensive name for the close button. For example, adding an `aria-labelledby` linking to the title of the alert, or adding a `.visually-hidden` content.
+  For accessibility purpose, please provide a meaningful label for the close button. For example, adding an `aria-labelledby` linking to the title of the alert, or adding a `.visually-hidden` content.
 </Callout>
 
 <Example buttonLabel="closable alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-accent">
@@ -430,7 +435,7 @@ If the alert can be removed when its content is acknowledged, you can add a clos
 
 #### With action
 
-You can add an alternate action [link]([[docsref:/components/links]]) (`<a>` or `<button` depending on the context of use) either after the `.alert-text-container` or inside the `.alert-action-container`.
+You can add an action [link]([[docsref:/components/links]]) (`<a>` or `<button` depending on the context of use) either after the `.alert-text-container` or inside the `.alert-action-container`.
 
 <Callout type="warning">
   Please note that only the basic link should be used.
@@ -524,7 +529,7 @@ To display a description text below the alert label, add a `<p>` after `.alert-l
 To display a [bullet list]([[docsref:/components/bullet-list]]) below the alert label, add a `.bullet-list` after `.alert-label`.
 
 <Callout type="warning">
-  Please note that the `.bullet-list` needs to have `.fs-bm` in order to change its bullet size. {/* TODO: Do we keep this ? */}
+  Please note that the `.bullet-list` needs to have `.fs-bm` in order to change its bullet size, and that it should be only one level depth.
 </Callout>
 
 <Example buttonLabel="alert message with description" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-neutral">
@@ -547,7 +552,7 @@ To display a [bullet list]([[docsref:/components/bullet-list]]) below the alert 
 
 ### Layout
 
-Here are some examples with everything activated and some long texts to see how it should behave. Please note that there are some `max-width` on the texts.
+Here are some examples with everything activated and some long texts to see how it should behave. Please note that a `max-width` limit is applied on the texts.
 
 <Example buttonLabel="alert message with much text" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-warning">
     <div class="alert-icon"><p class="visually-hidden">Warning alert</p></div>
@@ -602,7 +607,7 @@ Using the alert plugin, it’s possible to dismiss any alert message, here’s h
 Click the button below to show an alert (hidden with inline styles to start), then dismiss (and destroy) it with the built-in close button.
 
 <BrandSpecific brand="orange">
-  <Callout type="warning">
+  <Callout type="info">
     We use `.use-rounded-corner-alert` here to detect edge cases.
   </Callout>
 </BrandSpecific>
@@ -640,7 +645,7 @@ const alerts = [...alertList].map(element => new oudsWeb.Alert(element))
 ```
 
 <Callout type="info">
-  For the sole purpose of dismissing an alert, it isn’t necessary to initialize the component manually via the JS API. By making use of `data-bs-dismiss="alert"`, the component will be initialized automatically and properly dismissed.
+  For the sole purpose of dismissing an alert, it isn’t necessary to initialize the component manually via the JS API, unless you want to use one of our [methods](#methods). By making use of `data-bs-dismiss="alert"`, the component will be initialized automatically and properly dismissed.
 
   See the [triggers](#triggers) section for more details.
 </Callout>
@@ -697,9 +702,11 @@ myAlert.addEventListener('closed.bs.alert', event => {
 })
 ```
 
-## Inline alert
+## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Inline alert
 
-There is no specific class for inline alert right now, only the `.alert` class.
+Inline alert is a lightweight UI element, placed in the content flow, that displays information, system feedback, status changes throughout short, prominent, persistent and non actionable communication.
+
+There is no specific class for inline alert, the `.alert` class is used standalone here.
 
 ### Variants
 
@@ -723,7 +730,7 @@ Use functional inline alerts to inform users about state changes, or issues that
 
 Please note that you shouldn’t add any icon in those inline alerts.
 
-Here, only `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-warning` are considered as functional.
+The variants `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-warning` are considered as functional.
 
 <Example buttonLabel="functional inline alert" class="d-flex flex-column gap-medium" code={`<div class="alert alert-negative">
     <div class="alert-icon"><p class="visually-hidden">Error</p></div>
@@ -749,7 +756,7 @@ Here, only `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-warni
 
 Non-functional alerts are informative or decorative. They provide context or highlight content without implying a specific state, system event, or user action. These alerts are not tied to UX patterns such as positive, negative, info, or warning, and may use contextual or brand-related icons to enhance recognition or storytelling.
 
-Here, only `.alert-neutral` and `.alert-accent` are considered as non-functional.
+The variants `.alert-neutral` and `.alert-accent` are considered as non-functional.
 
 <Callout type="info" title="Please note that this variant of alert needs an icon specified." />
 
@@ -775,11 +782,14 @@ Here, only `.alert-neutral` and `.alert-accent` are considered as non-functional
 
 ###### Icon
 
-For the [non-functional inline alert](#non-functional-1), know that you can change the icon either by adding a `<svg>`, `<img>` or an `.icon` inside the `.alert-icon` container. It should be colorized automatically via the `color` attribute.
+For [non-functional alert messages](#non-functional), the displayed icon can be customized.
 
-It can also be made with a `mask-image` applied to `.alert-icon` with a class or inline directly.
+This can be achieved by using one of the following solutions:
+* adding a `<svg>`, `<img>` or an `.icon` inside the `.alert-icon` container.
+* applying a `mask-image` on `.alert-icon` with a class or an inline `style` attribute.
+* setting the custom property `--bs-alert-icon` inside the `.alert`.
 
-You can set the image via `--bs-alert-icon` wherever inside the `.alert`.
+In any case, the icon will be colorized automatically via the `color` attribute.
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
