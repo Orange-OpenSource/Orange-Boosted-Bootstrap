@@ -9,6 +9,7 @@ import { getVersionedDocsPath } from '@libs/path'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import DocsSidebar from '@components/DocsSidebar.astro'
 import TableOfContents from '@components/TableOfContents.astro'
+import GitHubIcon from '@components/icons/GitHubIcon.astro'
 
 interface Props {
   frontmatter: CollectionEntry<'docs'>['data']
@@ -74,7 +75,7 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
     <main class="bd-main order-1">
       <div class="bd-intro pt-small ps-lg-small">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-large mb-md-none d-flex gap-small align-items-center text-nowrap">
+          <div class="d-flex align-items-center gap-medium mb-large mb-md-none text-nowrap">
             {
               // This is needed because we want to show the badge if show_badge isn't present or is set to false
               frontmatter.added &&
@@ -86,16 +87,41 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
                 )
             }
             <a
-              class="btn btn-default"
+              class="btn btn-default btn-icon"
               href={`${getConfig().repo}/blob/v${getConfig().current_version}-ouds-web/site/src/content/docs/${id}`}
-              title="View and edit this file on GitHub"
+              title="View this file on GitHub"
               target="_blank"
               rel="noopener"
             >
-              View on GitHub
+              <span class="visually-hidden">View this file on GitHub</span>
+              <GitHubIcon class="pe-none" />
+            </a>
+            <a
+              class="btn btn-icon btn-default add-user-agent"
+              href={`${getConfig().repo}/issues/new?template=doc_report.yml&title=${encodeURIComponent(`Update the ${id.slice(0, -4)} page on ${getConfig().brand}`)}&version=${encodeURIComponent(getConfig().docs_version)}&labels=${encodeURIComponent('💪 contribution')}&what-happened=${encodeURIComponent(`I report a bug concerning ${id.slice(0, -4)} :`)}`}
+              title={`Report a bug on the ${id.slice(0, -4).split('/').pop()} page`}
+              target="_blank"
+              rel="noopener"
+            >
+              <svg aria-hidden="true">
+                <use xlink:href={`${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#bug')}`}></use>
+              </svg>
+              <span class="visually-hidden">Report a bug on the {id.slice(0, -4).split('/').pop()} page</span>
+            </a>
+            <a
+              class="btn btn-icon btn-default"
+              href={`${getConfig().repo}/discussions/new?category=q-a&title=${encodeURIComponent(`Question about ${id.slice(0, -4).split('/').pop()} on ${getConfig().brand}`)}&body=${encodeURIComponent('I have a question about ...')}`}
+              title={`Ask a question about ${id.slice(0, -4).split('/').pop()} topic`}
+              target="_blank"
+              rel="noopener"
+            >
+              <svg aria-hidden="true">
+                <use xlink:href={`${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#message-talk')}`}></use>
+              </svg>
+              <span class="visually-hidden">Ask a question about {id.slice(0, -4).split('/').pop()} topic</span>
             </a>
           </div>
-          <h1 class="bd-title mb-none" id="content">{frontmatter.title}</h1>
+          <h1 class="bd-title mb-none" id="bd-content">{frontmatter.title}</h1>
         </div>
         <div class="bd-subtitle mt-small">
           {frontmatter.description && <Fragment set:html={processMarkdownToHtml(frontmatter.description)} />}

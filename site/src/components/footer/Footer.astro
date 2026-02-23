@@ -13,67 +13,10 @@ const { title } = Astro.props
 ---
 
 <footer class="footer navbar bd-footer" data-bs-theme="dark">
-  <h2 class="visually-hidden">Boosted sitemap & information</h2>
+  <h2 class="visually-hidden">OUDS Web sitemap & information</h2>
   <div class="container-fluid container-max-width footer-nav">
-    <nav class="accordion" id="sitemapAccordion" aria-label="Boosted sitemap footer">
+    <nav class="accordion" id="sitemapAccordion" aria-label="OUDS Web sitemap footer">
       <div class="row">
-        <div class="footer-column col-md-6 col-lg-2">
-          <h3 class="accordion-header footer-heading" id="headingLinks">
-            <button
-              class="accordion-button collapsed container-fluid container-max-width px-2xsmall d-md-none"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseLinks"
-              aria-expanded="true"
-              aria-controls="collapseLinks"
-            >
-              Links
-            </button>
-            <span class="d-none d-md-flex">Links</span>
-          </h3>
-          <div
-            id="collapseLinks"
-            class="container-fluid container-max-width accordion-collapse collapse"
-            data-bs-parent="#sitemapAccordion"
-          >
-            <ul class="navbar-nav">
-              <li>
-                <a
-                  class:list={['nav-link', { active: Astro.url.pathname === '/' }]}
-                  {...Astro.url.pathname === '/' && { 'aria-current': 'page' }}
-                  href={`/${getConfig().brand}/`}
-                  aria-describedby="headingLinks"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  class:list={[
-                    'nav-link',
-                    { active: !Astro.url.pathname.includes('getting-started') && layout === 'docs' }
-                  ]}
-                  {...!Astro.url.pathname.includes('getting-started') &&
-                    layout === 'docs' && { 'aria-current': 'true' }}
-                  href={getVersionedDocsPath('')}
-                  aria-describedby="headingLinks"
-                >
-                  Docs
-                </a>
-              </li>
-              <li>
-                <a
-                  class:list={['nav-link', { active: title === 'Examples' }]}
-                  {...title === 'Examples' && { 'aria-current': 'page' }}
-                  href={getVersionedDocsPath('examples')}
-                  aria-describedby="headingLinks"
-                >
-                  Examples
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
         <div class="footer-column col-md-6 col-lg-2">
           <h3 class="accordion-header footer-heading" id="headingGuides">
             <button
@@ -81,7 +24,7 @@ const { title } = Astro.props
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseGuides"
-              aria-expanded="true"
+              aria-expanded="false"
               aria-controls="collapseGuides"
             >
               Guides
@@ -99,7 +42,7 @@ const { title } = Astro.props
                   class:list={['nav-link', { active: Astro.url.pathname.includes('getting-started') }]}
                   {...Astro.url.pathname.includes('getting-started') && { 'aria-current': 'true' }}
                   href={getVersionedDocsPath('getting-started')}
-                  aria-describedby="headingLinks"
+                  aria-describedby="headingGuides"
                 >
                   Getting started
                 </a>
@@ -109,9 +52,19 @@ const { title } = Astro.props
                   class:list={['nav-link', { active: Astro.url.pathname.includes('customize') }]}
                   {...Astro.url.pathname.includes('customize') && { 'aria-current': 'true' }}
                   href={getVersionedDocsPath('customize')}
-                  aria-describedby="headingLinks"
+                  aria-describedby="headingGuides"
                 >
                   Customize
+                </a>
+              </li>
+              <li>
+                <a
+                  class:list={['nav-link', { active: Astro.url.pathname.includes('dual-mode') }]}
+                  {...Astro.url.pathname.includes('customize') && { 'aria-current': 'true' }}
+                  href={getVersionedDocsPath('dual-mode')}
+                  aria-describedby="headingGuides"
+                >
+                  Dual Mode
                 </a>
               </li>
             </ul>
@@ -124,7 +77,7 @@ const { title } = Astro.props
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseProjects"
-              aria-expanded="true"
+              aria-expanded="false"
               aria-controls="collapseProjects"
             >
               Projects
@@ -140,7 +93,7 @@ const { title } = Astro.props
               <li>
                 <a
                   class="nav-link"
-                  href={getConfig().repo}
+                  href={`${getConfig().repo}/tree/ouds/main`}
                   aria-describedby="headingProjects"
                   target="_blank"
                   rel="noopener"
@@ -180,7 +133,7 @@ const { title } = Astro.props
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseCommunity"
-              aria-expanded="true"
+              aria-expanded="false"
               aria-controls="collapseCommunity"
             >
               Community
@@ -224,6 +177,79 @@ const { title } = Astro.props
                   rel="noopener"
                 >
                   Teams channel
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-6 col-lg-2">
+          <h3 class="accordion-header footer-heading" id="headingAbout">
+            <button
+              class="accordion-button collapsed container-fluid container-max-width px-2xsmall d-md-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseAbout"
+              aria-expanded="false"
+              aria-controls="collapseAbout"
+            >
+              About
+            </button>
+            <span class="d-none d-md-flex">About</span>
+          </h3>
+          <div
+            id="collapseAbout"
+            class="container-fluid container-max-width accordion-collapse collapse"
+            data-bs-parent="#sitemapAccordion"
+          >
+            <ul class="navbar-nav">
+              <li class="d-none">
+                <a
+                  class:list={['nav-link', { active: Astro.url.pathname.includes('about/overview') }]}
+                  {...Astro.url.pathname.includes('about/overview') && { 'aria-current': 'page' }}
+                  href={getVersionedDocsPath('/about/overview')}
+                  aria-describedby="headingAbout"
+                >
+                  Overview
+                </a>
+              </li>
+              <li>
+                <a
+                  class:list={['nav-link', { active: Astro.url.pathname.includes('about/team') }]}
+                  {...Astro.url.pathname.includes('about/team') && { 'aria-current': 'page' }}
+                  href={getVersionedDocsPath('/about/team')}
+                  aria-describedby="headingAbout"
+                >
+                  Team
+                </a>
+              </li>
+              <li class="d-none">
+                <a
+                  class:list={['nav-link', { active: Astro.url.pathname.includes('about/brand') }]}
+                  {...Astro.url.pathname.includes('about/brand') && { 'aria-current': 'page' }}
+                  href={getVersionedDocsPath('/about/brand')}
+                  aria-describedby="headingAbout"
+                >
+                  Brand
+                </a>
+              </li>
+              <li>
+                <a
+                  class:list={['nav-link', { active: Astro.url.pathname.includes('about/license') }]}
+                  {...Astro.url.pathname.includes('about/license') && { 'aria-current': 'page' }}
+                  href={getVersionedDocsPath('/about/license')}
+                  aria-describedby="headingAbout"
+                >
+                  License
+                </a>
+              </li>
+              <li>
+                <a
+                  class:list={['nav-link', { active: Astro.url.pathname.includes('about/cookies') }]}
+                  {...Astro.url.pathname.includes('about/cookies') && { 'aria-current': 'page' }}
+                  href={getVersionedDocsPath('/about/cookies')}
+                  aria-describedby="headingAbout"
+                >
+                  Cookies
                 </a>
               </li>
             </ul>
