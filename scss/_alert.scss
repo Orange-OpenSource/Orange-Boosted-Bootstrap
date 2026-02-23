@@ -1,7 +1,13 @@
+// Global config
 #{$ouds-root-selector} {
   --#{$prefix}alert-border-radius: #{$ouds-alert-border-radius-default};
 }
 
+.use-rounded-corner-alert {
+  --#{$prefix}alert-border-radius: #{$ouds-alert-border-radius-rounded};
+}
+
+// Alert component
 .alert {
   display: flex;
   gap: $ouds-alert-space-column-gap;
@@ -10,7 +16,7 @@
 }
 
 .alert-message {
-  --#{$prefix}alert-icon-margin-top: #{$ouds-alert-space-padding-block}; // Here to avoid an encapsulation
+  --#{$prefix}alert-icon-margin-block: #{$ouds-alert-space-padding-block}; // Here to avoid an encapsulation
   min-width: $ouds-alert-size-min-width;
   min-height: $ouds-alert-size-min-height;
   padding-inline: $ouds-alert-space-padding-inline;
@@ -32,10 +38,6 @@
   // To avoid overflow: hidden that hides the focus
   .btn-close {
     @include border-top-end-radius(var(--#{$prefix}alert-border-radius));
-
-    @container (height <= #{$ouds-alert-size-min-height}) {
-      @include border-bottom-end-radius(var(--#{$prefix}alert-border-radius));
-    }
   }
 
   @supports not (container-type: size) {
@@ -61,7 +63,7 @@ dialog.alert-message {
   flex-shrink: 0;
   width: px-to-rem($ouds-alert-size-icon);
   height: px-to-rem($ouds-alert-size-icon);
-  margin-block: var(--#{$prefix}alert-icon-margin-top);
+  margin-block: var(--#{$prefix}alert-icon-margin-block);
   color: var(--#{$prefix}alert-icon-color);
 
   &:where(:not(:has(svg, img, .icon))) {
@@ -137,6 +139,13 @@ dialog.alert-message {
   width: calc(2 * $ouds-button-space-inset-icon-only + px-to-rem($ouds-button-size-icon-only));
   min-width: $ouds-button-size-min-width; // To handle some zoom '-' issues
   container-type: size;
+
+  // Complete the border-radius of the button
+  .btn-close {
+    @container (height <= #{$ouds-alert-size-min-height}) {
+      @include border-bottom-end-radius(var(--#{$prefix}alert-border-radius));
+    }
+  }
 }
 
 .alert-label {
@@ -145,11 +154,6 @@ dialog.alert-message {
   @include get-font-size("label-large");
   font-weight: $ouds-font-weight-web-label-moderate;
   color: var(--#{$prefix}alert-label-color);
-}
-
-// Global config
-.use-rounded-corner-alert {
-  --#{$prefix}alert-border-radius: #{$ouds-alert-border-radius-rounded};
 }
 
 // Variants
