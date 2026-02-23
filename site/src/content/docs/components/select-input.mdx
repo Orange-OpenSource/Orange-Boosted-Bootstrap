@@ -284,7 +284,7 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 
 <Callout type="info" name="input-invalid" />
 
-To display an invalid select, add `.is-invalid` to a `.select-input-field` within the `.select-input-container`. Please take a look at our [Validation page to learn more]([[docsref:/foundation/form-validation]]).
+To display an invalid select, add `aria-invalid="true"` to a `.select-input-field` within the `.select-input-container`. Please take a look at our [Validation page to learn more]([[docsref:/foundation/form-validation]]).
 
 <Callout type="warning">
 For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.select-input-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when the select input becomes invalid.
@@ -293,7 +293,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
 <Example buttonLabel="invalid selects" code={`<div class="select-input mb-medium">
     <div class="select-input-container">
       <label id="labelErrorSelect" for="exampleErrorSelect">Select example with error</label>
-      <select class="select-input-field is-invalid" id="exampleErrorSelect" aria-describedby="numberFeedback">
+      <select class="select-input-field" aria-invalid="true" id="exampleErrorSelect" aria-describedby="numberFeedback">
         <option value="" disabled selected></option>
         <option value="1">One</option>
         <option value="2">Two</option>
@@ -314,7 +314,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
     <div class="select-input mb-medium">
       <div class="select-input-container">
         <label id="labelErrorValidatedSelect" for="exampleErrorValidatedSelect">Select example with validated error</label>
-        <select class="select-input-field is-invalid" id="exampleErrorValidatedSelect" aria-describedby="validatedNumberFeedback">
+        <select class="select-input-field" aria-invalid="true" id="exampleErrorValidatedSelect" aria-describedby="validatedNumberFeedback">
           <option value="" disabled selected></option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -335,7 +335,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
   <div class="select-input mb-medium">
     <div class="select-input-container select-input-container-outlined">
       <label id="labelErrorSelect2" for="exampleErrorSelect2">Outlined select example with error</label>
-      <select class="select-input-field is-invalid" id="exampleErrorSelect2" aria-describedby="numberFeedback2">
+      <select class="select-input-field" aria-invalid="true" id="exampleErrorSelect2" aria-describedby="numberFeedback2">
         <option value="" disabled selected></option>
         <option value="1">One</option>
         <option value="2">Two</option>
@@ -355,7 +355,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <label id="labelErrorSelect3" for="exampleErrorSelect3">Select example with error and icon</label>
-      <select class="select-input-field is-invalid" id="exampleErrorSelect3" aria-describedby="numberFeedback3">
+      <select class="select-input-field" aria-invalid="true" id="exampleErrorSelect3" aria-describedby="numberFeedback3">
         <option value="" disabled selected></option>
         <option value="1">One</option>
         <option value="2">Two</option>
