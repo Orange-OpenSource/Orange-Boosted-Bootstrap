@@ -237,7 +237,8 @@
       }
     }
 
-    &:has(.text-input-field:disabled:not(.loading-indeterminate, .loading-determinate)) {
+    // To have the disabled rendering on loading button: `&:has(.text-input-field:disabled:not(.loading-indeterminate, .loading-determinate)) {`
+    &:has(.text-input-field:disabled):not(:has(.loading-indeterminate, .loading-determinate)) {
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-disabled);
       --#{$prefix}text-input-color: var(--#{$prefix}color-action-disabled);
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-disabled);
