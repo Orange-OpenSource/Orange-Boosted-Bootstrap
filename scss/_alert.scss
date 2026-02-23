@@ -45,6 +45,16 @@
   }
 }
 
+// Make the background non semi-transparent in case of a dialog usage.
+dialog.alert-message {
+  background: var(--#{$prefix}color-bg-primary) linear-gradient(var(--#{$prefix}alert-bg));
+
+  // Override the default alert display.
+  &:not([open], :open, :popover-open) {
+    display: none;
+  }
+}
+
 .alert-icon {
   position: relative;
   display: block;
