@@ -48,6 +48,7 @@
 }
 
 // Make the background non semi-transparent in case of a dialog usage.
+// stylelint-disable selector-no-qualifying-type
 dialog.alert-message {
   background: var(--#{$prefix}color-bg-primary) linear-gradient(var(--#{$prefix}alert-bg));
 
@@ -56,6 +57,7 @@ dialog.alert-message {
     display: none;
   }
 }
+// stylelint-enable selector-no-qualifying-type
 
 .alert-icon {
   position: relative;

@@ -766,10 +766,10 @@ progress {
 
 // Dialog
 dialog {
-  border: none;
   padding: 0;
   overflow: visible;
-  background: none;
+  background: unset;
+  border: 0;
 }
 
 :not([popover])::backdrop {
