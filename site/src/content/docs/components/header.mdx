@@ -1,0 +1,164 @@
+---
+title: Header
+description: Documentation and examples for OUDS Web’s exclusive responsive headers.
+aliases:
+  - "/docs/[[config:docs_version]]/components/orange-navbar/"
+  - "/docs/components/orange-navbar/"
+  - "/docs/components/header/"
+toc: true
+---
+
+import { getVersionedDocsPath } from '@libs/path'
+import { getConfig } from '@libs/config'
+
+<Callout type="danger">
+  The header component is not yet designed, and this component is only a placeholder for the moment. It will be updated in the future with the final design and will certainly need adjustments regarding the DOM. Use it as a temporary component to speed up your development.
+
+  The documentation only reflects an approximate header. Please refer to the [Orange Navbar in the Boosted documentation](https://boosted.orange.com/docs/components/orange-navbar/) to have a full view of the header component and its variations. You’ll only need to adapt the utilities inside the DOM.
+</Callout>
+
+## Global header
+
+Here is a [simple header example](https://boosted.orange.com/docs/components/orange-navbar/#standard-1) with a logo on the left. The header is responsive and will collapse on smaller screens.
+
+<Example class="p-none" code={`<header${getConfig().brand.includes('orange') ? ' data-bs-theme="dark"' : ''}>
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Standard example">
+      <div class="container-fluid container-max-width">
+        <div class="navbar-brand me-auto me-lg-xlarge">
+          <a class="stretched-link" href="#">
+            <img src="${getVersionedDocsPath(`assets/brand/${getConfig().brand}-logo.svg`)}" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
+          </a>
+          <h1 class="title">Title</h1>
+        </div>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-1" aria-controls="global-header-1.1 global-header-1.2" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="global-header-1.1" class="navbar-collapse collapse me-lg-auto global-header-1">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Discover</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+          </ul>
+        </div>
+        <div id="global-header-1.2" class="navbar-collapse collapse d-sm-flex global-header-1">
+          <ul class="navbar-nav flex-row">
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
+                  <use xlink:href="${getVersionedDocsPath(`assets/img/ouds-web-sprite.svg#search`)}"></use>
+                </svg>
+                <span class="visually-hidden">Search</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
+                  <use xlink:href="${getVersionedDocsPath(`assets/img/ouds-web-sprite.svg#buy`)}"></use>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-relative align-self-start">
+                  <span class="badge badge-count badge-info position-absolute top-0 translate-middle">1<span class="visually-hidden">shopping basket items</span></span>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <img src="${getVersionedDocsPath(`assets/img/navbar-contact.png`)}" width="25" height="25" alt="" loading="lazy">
+                <span class="visually-hidden">My account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>`} />
+
+## Supra bar
+
+Here is a [simple supra bar example](https://boosted.orange.com/docs/components/orange-navbar/#supra-bar). The supra bar is placed before the global header.
+
+<Example class="p-none" code={`<nav class="navbar navbar-expand-lg supra"${getConfig().brand.includes('orange') ? ' data-bs-theme="dark"' : ''} aria-label="Supra navigation - With an additional languages navbar example">
+    <div class="container-fluid container-max-width">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" lang="fr" hreflang="fr">FR</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" lang="es" hreflang="es">ES</a></li>
+      </ul>
+    </div>
+  </nav>`} />
+
+## Navigation under
+
+Here is a [simple navigation under example](https://boosted.orange.com/docs/components/orange-navbar/#navigation-under). The navigation under is placed after the global header.
+
+<Example class="p-none" code={`<header${getConfig().brand.includes('orange') ? ' data-bs-theme="dark"' : ''}>
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Standard example">
+      <div class="container-fluid container-max-width">
+        <div class="navbar-brand me-auto me-lg-xlarge">
+          <a class="stretched-link" href="#">
+            <img src="${getVersionedDocsPath(`assets/brand/${getConfig().brand}-logo.svg`)}" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
+          </a>
+          <h1 class="two-lined">
+            Title Line 1
+            <br />
+            Title Line 2
+          </h1>
+        </div>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-2" aria-controls="global-header-2.1 global-header-2.2 global-header-2.3" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="global-header-2.1" class="navbar-collapse collapse me-lg-auto global-header-2">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Discover</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+          </ul>
+        </div>
+        <div id="global-header-2.2" class="navbar-collapse collapse d-sm-flex global-header-2">
+          <ul class="navbar-nav flex-row">
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
+                  <use xlink:href="${getVersionedDocsPath(`assets/img/ouds-web-sprite.svg#search`)}"></use>
+                </svg>
+                <span class="visually-hidden">Search</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
+                  <use xlink:href="${getVersionedDocsPath(`assets/img/ouds-web-sprite.svg#buy`)}"></use>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-relative align-self-start">
+                  <span class="badge badge-count badge-info position-absolute top-0 translate-middle">1<span class="visually-hidden">shopping basket items</span></span>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <img src="${getVersionedDocsPath(`assets/img/navbar-contact.png`)}" width="25" height="25" alt="" loading="lazy">
+                <span class="visually-hidden">My account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Nav-under example">
+      <div class="container-fluid container-max-width">
+        <div id="global-header-2.3" class="navbar-collapse collapse m-none global-header-2">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>`} />

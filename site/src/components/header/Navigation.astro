@@ -111,7 +111,7 @@ const { addedIn, layout, title } = Astro.props
         </ul>
       </div>
       <div id="bd-navbar2" class="navbar-collapse collapse bd-navbar border-none">
-        <ul class="navbar-nav flex-row me-lg-large">
+        <ul class="navbar-nav flex-row me-lg-2xlarge">
           <LinkItem class="nav-icon" href={getConfig().repo} target="_blank" rel="noopener">
             <GitHubIcon height={16} width={16} />
             <span class="visually-hidden">GitHub</span>
@@ -124,7 +124,7 @@ const { addedIn, layout, title } = Astro.props
 
           <Versions layout={layout} addedIn={addedIn} />
         </ul>
-        <ul class="navbar-nav flex-row ms-lg-large">
+        <ul class="navbar-nav flex-row">
           <li class="nav-item dropdown">
             <ThemeToggler layout={layout} />
           </li>

@@ -34,6 +34,8 @@
       draft: true
     - title: Footer
       draft: true
+    - title: Header
+      category: Navigation
     - title: Icon
       category: Visual assets
     - title: Links
@@ -49,8 +51,6 @@
     - title: Nav & tab
       draft: true
     - title: Offcanvas
-      draft: true
-    - title: Orange navbar
       draft: true
     - title: Pagination
       draft: true
