@@ -1,7 +1,10 @@
 ---
 title: Components
 description: OUDS components summarized in one place.
-aliases: "/components/"
+aliases:
+  - "/components/"
+  - "/docs/components/"
+  - "/docs/[[config:docs_version]]/components/"
 toc: true
 ---
 
@@ -65,7 +68,7 @@ export const components = [
   {
     name: 'Icon',
     snippet: `
-      <svg class="text-status-info decorative-small-icon" aria-hidden="true">
+      <svg class="text-status-accent decorative-small-icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
       </svg> `
   },
@@ -83,7 +86,7 @@ export const components = [
           </svg>
           <label for="inputPasswordPrefix">Password</label>
           <div class="input-container" data-bs-prefix="DEV-">
-            <input type="password" id="inputPasswordPrefix" aria-describedby="inputPasswordPrefixHelper" class="text-input-field" placeholder=" ">
+            <input type="password" id="inputPasswordPrefix" class="text-input-field" placeholder=" ">
           </div>
           <button class="btn btn-minimal btn-icon">
             <svg aria-hidden="true">
