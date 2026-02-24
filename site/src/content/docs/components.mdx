@@ -10,41 +10,177 @@ import { getData } from '@libs/data'
 import { getVersionedDocsPath } from '@libs/path'
 import fs from 'node:fs'
 
+export const components = [
+  {
+    name: 'Badges',
+    snippet: `<p class="badge badge-count">1<span class="visually-hidden">error</span></p>`
+  },
+  {
+    name: 'Breadcrumb',
+    snippet: `
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#" title="Link">Link</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><span title="Page">Page</span></li>
+      </ol>`
+  },
+  {
+    name: 'Bullet list',
+    snippet: `
+      <ul class="bullet-list" style="margin-inline-start: calc(-1 * var(--bs-bullet-list-icon-container-width))">
+        <li>Label</li>
+      </ul>`
+  },
+  {
+    name: 'Buttons',
+    snippet: `<button type="button" class="btn btn-default">Label</button>`
+  },
+  {
+    name: 'Checkbox',
+    snippet: `
+      <div class="checkbox-item" style="min-width: unset">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault" checked />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checkboxDefault">Label</label>
+        </div>
+      </div>`
+  },
+  {
+    name: 'Chips',
+    snippet: `
+      <ul class="chips-container">
+        <li class="chip chip-filter">
+          <input type="checkbox" id="appleCheck" checked />
+          <label class="chip-interactive" for="appleCheck">
+            Label
+          </label>
+        </li>
+      </ul>`
+  },
+  {
+    name: 'Divider',
+    snippet: `<hr class="w-50" />`
+  },
+  {
+    name: 'Icon',
+    snippet: `
+      <svg class="text-status-info decorative-small-icon" aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+      </svg> `
+  },
+  {
+    name: 'Links',
+    snippet: `<a class="link" href="#">Link</a>`
+  },
+  {
+    name: 'Password input',
+    snippet: `
+      <div class="text-input" style="scale: .6">
+        <div class="text-input-container">
+          <svg aria-hidden="true">
+            <use xlink:href="/sosh/docs/1.0/assets/img/ouds-web-sprite.svg#lock-closed"/>
+          </svg>
+          <label for="inputPasswordPrefix">Password</label>
+          <div class="input-container" data-bs-prefix="DEV-">
+            <input type="password" id="inputPasswordPrefix" aria-describedby="inputPasswordPrefixHelper" class="text-input-field" placeholder=" ">
+          </div>
+          <button class="btn btn-minimal btn-icon">
+            <svg aria-hidden="true">
+              <use xlink:href="/sosh/docs/1.0/assets/img/ouds-web-sprite.svg#accessibility-vision"/>
+            </svg>
+            <span class="visually-hidden">Show password</span>
+          </button>
+        </div>
+      </div>`
+  },
+  {
+    name: 'Radio button',
+    snippet: `
+      <div class="radio-button-item" style="min-width: unset">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="radio" value="" id="radioDefault" name="radioBasic" checked />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="radioDefault">Label</label>
+        </div>
+      </div>`
+  },
+  {
+    name: 'Select input',
+    snippet: `
+      <div class="select-input w-100" style="scale: .6">
+        <div class="select-input-container">
+          <label for="exampleSelect">Select</label>
+          <select class="select-input-field" id="exampleSelect">
+            <option value="" disabled selected></option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>`
+  },
+  {
+    name: 'Switch',
+    snippet: `
+      <div class="switch-item" style="min-width: unset">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchWithSVG" checked />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="switchWithSVG">Label</label>
+        </div>
+      </div>`
+  },
+  {
+    name: 'Tags',
+    snippet: `<p class="tag">Tag</p>`
+  },
+  {
+    name: 'Text area',
+    snippet: `
+      <div class="text-area" style="scale: .9">
+        <div class="text-area-container">
+          <label for="exampleTextArea">Label</label>
+          <textarea class="text-area-field" id="exampleTextArea" style="min-height: unset"></textarea>
+        </div>
+      </div>`
+  },
+  {
+    name: 'Text input',
+    snippet: `
+      <div class="text-input" style="scale: .6">
+        <div class="text-input-container">
+          <label for="exampleTextInputWithPlaceholder">Label</label>
+          <input type="email" class="text-input-field" id="exampleTextInputWithPlaceholder" placeholder="placeholder">
+        </div>
+      </div>`
+  }
+]
+
 ## Alphabetical order
 
 <ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5">
   {
-    getData('sidebar-components')[0]
-      .pages.map((page) => {
-        if (page.category && !page.draft) {
-          return (
-            <li class="col">
-              <div class="card position-relative h-100">
-                <div class="card-top">
-                  <img
-                    class="w-100 object-fit-cover ratio-16x9"
-                    src={fs.existsSync(`${process.cwd()}/site/static/${getConfig().brand}/docs/[version]/assets/img/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}.svg`)
-                      ? `/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}.svg`
-                      : `/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`}
-                    alt=""
-                    loading="lazy"
-                  />
-                </div>
-                <div class="card-body">
-                  <a
-                    class="stretched-link"
-                    href={getVersionedDocsPath(
-                      `/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}`
-                    )}
-                  >
-                    {page.title}
-                  </a>
-                </div>
+    components.map((component) => {
+      return (
+        <li class="col">
+          <div class="card h-100">
+            <div class="card-top bg-inverse-high">
+              <div class="ratio-16x9 d-flex justify-content-center align-items-center" data-bs-theme="root-inverted">
+                <Fragment set:html={component.snippet} />
               </div>
-            </li>
-          )
-        }
-      })
+            </div>
+            <div class="card-body">
+              <a class="stretched-link" href={getVersionedDocsPath(
+                  `/components/${component.name.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}`
+                )}>{component.name}</a>
+            </div>
+          </div>
+        </li>
+      )
+    })
   }
 </ul>
 
