@@ -116,7 +116,7 @@ export const components = [
           <input class="control-item-indicator" type="radio" value="" id="radioDefault[[id_prefix]]" name="radioBasic" checked />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="radioDefault">Label</label>
+          <label class="control-item-label" for="radioDefault[[id_prefix]]">Label</label>
         </div>
       </div>`
   },
@@ -126,7 +126,7 @@ export const components = [
     snippet: `
       <div class="select-input w-100" style="scale: .6">
         <div class="select-input-container select-input-container-outlined">
-          <label for="exampleSelect">Select</label>
+          <label for="exampleSelect[[id_prefix]]">Select</label>
           <select class="select-input-field" id="exampleSelect[[id_prefix]]">
             <option value="" disabled selected></option>
             <option value="1">One</option>
@@ -160,7 +160,7 @@ export const components = [
     snippet: `
       <div class="text-area" style="scale: .9">
         <div class="text-area-container text-area-container-outlined">
-          <label for="exampleTextArea">Label</label>
+          <label for="exampleTextArea[[id_prefix]]">Label</label>
           <textarea class="text-area-field" id="exampleTextArea[[id_prefix]]" style="min-height: unset"></textarea>
         </div>
       </div>`
@@ -171,7 +171,7 @@ export const components = [
     snippet: `
       <div class="text-input" style="scale: .6">
         <div class="text-input-container text-input-container-outlined">
-          <label for="exampleTextInputWithPlaceholder">Label</label>
+          <label for="exampleTextInputWithPlaceholder[[id_prefix]]">Label</label>
           <input type="email" class="text-input-field" id="exampleTextInputWithPlaceholder[[id_prefix]]" placeholder="placeholder">
         </div>
       </div>`
