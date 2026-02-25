@@ -1,68 +1,59 @@
-// Note: Bootstrap stops at --base0F
-
 @include color-mode(light, true) {
-  --base00: #{$white};
-  --base01: #{$gray-700};
-  --base02: #{$red-500};
-  --base03: #{$blue-600};
-  --base04: #{$green-700};
-  --base05: #{$cyan-800};
-  --base06: #{$gray-800};
-  --base07: #{$pink-200};
-  --base08: #{$green-900};
-  --base09: #{$green-200};
-  --base0A: #{$blue-900};
-  --base0B: #{$cyan-700};
-  --base0C: #{$orange-700};
-  --base0D: #{$purple-700};
-  --base0E: #{$teal-700};
-  --base0F: #{$black};
-  --base10: #{$gray-400};
-  --base11: #{$yellow-800};
-  --base12: #{$cyan-900};
-  --base13: #{$pink-800};
+  // --base00: #fff;
+  // --base01: #f5f5f5;
+  // --base02: #{$red-500};
+  --base03: #{$core-ouds-color-functional-gray-dark-240};
+  // --base04: #{$green-700};
+  --base05: #{$core-ouds-color-functional-gray-dark-640};
+  // --base06: #{$gray-800};
+  --base07: #{$core-orange-color-decorative-sky-700};
+  --base08: #{$core-ouds-color-functional-scarlet-600};
+  --base09: #{$core-orange-color-decorative-emerald-800};
+  --base0A: #{$core-orange-color-decorative-amethyst-600};
+  --base0B: #{$core-ouds-color-functional-dodger-blue-700};
+  --base0C: #{$core-ouds-color-functional-malachite-750};
+  // --base0D: #{$purple-700};
+  --base0E: #{$core-orange-color-decorative-shocking-pink-700};
+  // --base0F: #{$black};
 }
 
 // Right now, values are from Bootstrap from `--base00` to `--baseOF` and the 4 remaining one are copied from OUDS Web's light mode
 @include color-mode(dark, true) {
-  --base00: #{$core-ouds-color-functional-gray-dark-880};
-  --base01: #{$gray-400};
-  --base02: #{$teal-300};
-  --base03: #{$cyan-300};
-  --base04: #{$yellow-300};
-  --base05: #{$cyan-400};
-  --base06: #{$gray-400};
-  --base07: #{$pink-800};
-  --base08: #{$cyan-300};
-  --base09: #{$green-800};
-  --base0A: #{$blue-200};
-  --base0B: #{$cyan-500};
-  --base0C: #{$orange-300};
-  --base0D: #{$purple-300};
-  --base0E: #{$teal-400};
-  --base0F: #{$white};
-  --base10: #{$gray-700};
-  --base11: #{$green-400};
-  --base12: #{$cyan-500};
-  --base13: #{$pink-500};
+  // --base00: #282c34;
+  // --base01: #353b45;
+  // --base02: #{$teal-300};
+  --base03: #{$core-ouds-color-functional-gray-light-640};
+  // --base04: #{$yellow-300};
+  --base05: #{$core-ouds-color-functional-gray-light-400};
+  // --base06: #{$gray-400};
+  --base07: #{$core-orange-color-orange-600};
+  --base08: #{$core-orange-color-decorative-emerald-500};
+  --base09: #{$core-orange-color-orange-300};
+  --base0A: #{$core-orange-color-decorative-amber-400};
+  --base0B: #{$core-orange-color-decorative-sky-400};
+  --base0C: #{$core-orange-color-decorative-sky-400};
+  // --base0D: #{$purple-300};
+  --base0E: #{$core-orange-color-decorative-shocking-pink-300};
+  // --base0F: #{$white};
 }
 
 // Shell prompts
 .language-bash .line::before,
 .language-sh .line::before {
   display: inline-block;
-  color: var(--base12);
+  color: var(--base03);
   content: "$ ";
   user-select: none;
 }
 
 .language-powershell .line::before {
   display: inline-block;
-  color: var(--base12);
+  color: var(--base0B);
   content: "PM> ";
   user-select: none;
 }
 
+// Token styles
 .token {
   &.tag {
     display: initial;
@@ -84,104 +75,101 @@
   &.comment,
   &.prolog,
   &.doctype,
-  &.cdata,
-  &.punctuation {
-    color: var(--base01);
-  }
-
-  &.string,
-  &.char,
-  &.attr-value {
-    color: var(--base02);
-  }
-
-  &.tag,
-  &.atrule,
-  &.selector,
-  &.class-name {
+  &.cdata {
     color: var(--base03);
   }
 
-  &.number,
-  &.boolean,
-  &.attr-name,
-  &.builtin,
-  &.property {
-    color: var(--base04);
-  }
-
-  &.important {
+  &.punctuation {
     color: var(--base05);
   }
 
-  &.entity {
-    color: var(--base06);
-    cursor: help;
+  &.property {
+    color: var(--base0A);
   }
 
-  &.deleted {
-    background-color: var(--base07);
+  &.tag {
+    color: var(--base08);
   }
 
-  &.inserted {
-    background-color: var(--base09);
+  &.boolean,
+  &.number {
+    color: var(--base09);
   }
 
   &.constant,
-  &.keyword {
-    color: var(--base0B);
+  &.symbol,
+  &.deleted {
+    color: var(--base08);
   }
 
-  &.url /* tbd */ {
+  &.attr-name,
+  &.string,
+  &.char,
+  &.builtin,
+  &.inserted {
     color: var(--base0C);
   }
 
-  &.variable {
-    color: var(--base0D);
+  &.operator,
+  &.entity,
+  &.url {
+    color: var(--base05);
   }
 
-  &.function,
-  &.regex {
+  &.atrule,
+  &.attr-value,
+  &.keyword {
     color: var(--base0E);
   }
 
-  &.operator {
-    color: var(--base0F);
+  &.function {
+    color: var(--base0B);
   }
 
-  &.symbol {
-    color: var(--base11);
-  }
-
-  &.keyword,
-  &.important,
-  &.bold,
   &.selector,
-  &.tag > .token.tag {
+  &.class-name {
+    color: var(--base07);
+  }
+
+  &.regex,
+  &.important {
+    color: var(--base0A);
+  }
+
+  &.variable {
+    color: var(--base08);
+  }
+
+  &.important,
+  &.bold {
     font-weight: $font-weight-bold;
   }
 
   &.italic {
-    font-style: none;
+    font-style: italic;
+  }
+
+  &.entity {
+    cursor: help;
   }
 }
 
-// .language-diff {
-//   .token {
-//     &.deleted {
-//       color: $red-400;
-//       background-color: transparent;
-//     }
-//     &.inserted {
-//       color: $green-400;
-//       background-color: transparent;
-//     }
-//   }
-// }
+.language-diff {
+  .token {
+    &.deleted {
+      color: $ouds-color-content-status-negative;
+      background-color: transparent;
+    }
+    &.inserted {
+      color: $ouds-color-content-status-positive;
+      background-color: transparent;
+    }
+  }
+}
 
-// .language-bash,
-// .language-sh {
-//   .token.comment {
-//     color: var(--base03);
-//   }
-// }
+.language-bash,
+.language-sh {
+  .token.comment {
+    color: var(--base03);
+  }
+}
