@@ -16,10 +16,12 @@ import fs from 'node:fs'
 export const components = [
   {
     name: 'Badges',
+    category: 'Indicator',
     snippet: `<p class="badge badge-count">1<span class="visually-hidden">error</span></p>`
   },
   {
     name: 'Breadcrumb',
+    category: 'Navigation',
     snippet: `
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#" title="Link">Link</a></li>
@@ -28,6 +30,7 @@ export const components = [
   },
   {
     name: 'Bullet list',
+    category: 'Content display',
     snippet: `
       <ul class="bullet-list" style="margin-inline-start: calc(-1 * var(--bs-bullet-list-icon-container-width))">
         <li>Label</li>
@@ -35,10 +38,12 @@ export const components = [
   },
   {
     name: 'Buttons',
+    category: 'Actions',
     snippet: `<button type="button" class="btn btn-default">Label</button>`
   },
   {
     name: 'Checkbox',
+    category: 'Control',
     snippet: `
       <div class="checkbox-item" style="min-width: unset">
         <div class="control-item-assets-container">
@@ -51,6 +56,7 @@ export const components = [
   },
   {
     name: 'Chips',
+    category: 'Control',
     snippet: `
       <ul class="chips-container">
         <li class="chip chip-filter">
@@ -63,10 +69,12 @@ export const components = [
   },
   {
     name: 'Divider',
+    category: 'Layout',
     snippet: `<hr class="w-50" />`
   },
   {
     name: 'Icon',
+    category: 'Visual assets',
     snippet: `
       <svg class="text-status-accent decorative-small-icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
@@ -74,15 +82,17 @@ export const components = [
   },
   {
     name: 'Links',
+    category: 'Navigation',
     snippet: `<a class="link" href="#">Link</a>`
   },
   {
     name: 'Password input',
+    category: 'Control',
     snippet: `
       <div class="text-input" style="scale: .6">
-        <div class="text-input-container">
+        <div class="text-input-container text-input-container-outlined">
           <svg aria-hidden="true">
-            <use xlink:href="/sosh/docs/1.0/assets/img/ouds-web-sprite.svg#lock-closed"/>
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#lock-closed')}"/>
           </svg>
           <label for="inputPasswordPrefix">Password</label>
           <div class="input-container" data-bs-prefix="DEV-">
@@ -90,7 +100,7 @@ export const components = [
           </div>
           <button class="btn btn-minimal btn-icon">
             <svg aria-hidden="true">
-              <use xlink:href="/sosh/docs/1.0/assets/img/ouds-web-sprite.svg#accessibility-vision"/>
+              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}"/>
             </svg>
             <span class="visually-hidden">Show password</span>
           </button>
@@ -99,6 +109,7 @@ export const components = [
   },
   {
     name: 'Radio button',
+    category: 'Control',
     snippet: `
       <div class="radio-button-item" style="min-width: unset">
         <div class="control-item-assets-container">
@@ -111,9 +122,10 @@ export const components = [
   },
   {
     name: 'Select input',
+    category: 'Control',
     snippet: `
       <div class="select-input w-100" style="scale: .6">
-        <div class="select-input-container">
+        <div class="select-input-container select-input-container-outlined">
           <label for="exampleSelect">Select</label>
           <select class="select-input-field" id="exampleSelect">
             <option value="" disabled selected></option>
@@ -126,6 +138,7 @@ export const components = [
   },
   {
     name: 'Switch',
+    category: 'Control',
     snippet: `
       <div class="switch-item" style="min-width: unset">
         <div class="control-item-assets-container">
@@ -138,13 +151,15 @@ export const components = [
   },
   {
     name: 'Tags',
+    category: 'Indicator',
     snippet: `<p class="tag">Tag</p>`
   },
   {
     name: 'Text area',
+    category: 'Control',
     snippet: `
       <div class="text-area" style="scale: .9">
-        <div class="text-area-container">
+        <div class="text-area-container text-area-container-outlined">
           <label for="exampleTextArea">Label</label>
           <textarea class="text-area-field" id="exampleTextArea" style="min-height: unset"></textarea>
         </div>
@@ -152,9 +167,10 @@ export const components = [
   },
   {
     name: 'Text input',
+    category: 'Control',
     snippet: `
       <div class="text-input" style="scale: .6">
-        <div class="text-input-container">
+        <div class="text-input-container text-input-container-outlined">
           <label for="exampleTextInputWithPlaceholder">Label</label>
           <input type="email" class="text-input-field" id="exampleTextInputWithPlaceholder" placeholder="placeholder">
         </div>
@@ -171,7 +187,7 @@ export const components = [
         <li class="col">
           <div class="card h-100">
             <div class="card-top bg-inverse-high">
-              <div class="ratio-16x9 d-flex justify-content-center align-items-center" data-bs-theme="root-inverted">
+              <div class="ratio-16x9 d-flex justify-content-center align-items-center" data-bs-theme="root-inverted" inert>
                 <Fragment set:html={component.snippet} />
               </div>
             </div>
@@ -189,37 +205,27 @@ export const components = [
 
 <hr />
 
-## Categorical order
+## By category
 
 {
   ['Actions', 'Content display', 'Control', 'Data', 'Dialog', 'Indicator', 'Layout', 'Navigation', 'Visual assets'].map((element) => {
     return (
       <>
-        {getData('sidebar-components')[0].pages.filter((page) => page?.category === element).length > 0 && <h3>{element}</h3>}
+        {components.filter((component) => component.category === element).length > 0 && <h3>{element}</h3>}
         <ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5">
-          {getData('sidebar-components')[0].pages.filter((page) => page?.category === element).map((page) => {
+          {components.filter((component) => component.category === element).map((component) => {
             return (
               <li class="col">
-                <div class="card position-relative h-100">
-                  <div class="card-top">
-                    <img
-                      class="w-100 object-fit-cover ratio-16x9"
-                      src={fs.existsSync(`${process.cwd()}/site/static/${getConfig().brand}/docs/[version]/assets/img/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}.svg`)
-                        ? `/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}.svg`
-                        : `/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`}
-                      alt=""
-                      loading="lazy"
-                    />
+                <div class="card h-100">
+                  <div class="card-top bg-inverse-high">
+                    <div class="ratio-16x9 d-flex justify-content-center align-items-center" data-bs-theme="root-inverted" inert>
+                      <Fragment set:html={component.snippet} />
+                    </div>
                   </div>
                   <div class="card-body">
-                    <a
-                      class="stretched-link"
-                      href={getVersionedDocsPath(
-                        `/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}`
-                      )}
-                    >
-                      {page.title}
-                    </a>
+                    <a class="stretched-link" href={getVersionedDocsPath(
+                        `/components/${component.name.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}`
+                      )}>{component.name}</a>
                   </div>
                 </div>
               </li>
