@@ -16,7 +16,7 @@
   .breadcrumb-item {
     display: none;
     align-items: center;
-    min-width: #{$ouds-size-min-interactive-area}; // overrides children links implied width see https://css-tricks.com/flexbox-truncated-text/
+    min-width: calc(#{$ouds-size-min-interactive-area} + 2 * var(--#{$prefix}breadcrumb-item-gap) + $ouds-breadcrumb-size-icon); // overrides children links implied width see https://css-tricks.com/flexbox-truncated-text/
     padding-right: var(--#{$prefix}breadcrumb-item-gap);
     white-space: nowrap;
 
