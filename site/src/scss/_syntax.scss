@@ -61,6 +61,7 @@
     font-size: inherit;
     font-weight: initial;
     line-height: inherit;
+    color: var(--base08);
     background-color: initial;
     border: initial;
   }
@@ -85,10 +86,6 @@
 
   &.property {
     color: var(--base0A);
-  }
-
-  &.tag {
-    color: var(--base08);
   }
 
   &.boolean,
