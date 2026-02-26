@@ -1,8 +1,10 @@
 ---
 import { getVersionedDocsPath } from '@libs/path'
 
-type ComponentCardData = {
+export type ComponentCardData = {
   name: string
+  slug?: string // if not present, slug is name.tolowercase()
+  link?: string
   snippet: string
   category: string
 }
@@ -26,7 +28,7 @@ const { component, idPrefix } = Astro.props
       <a
         class="stretched-link"
         href={getVersionedDocsPath(
-          `/components/${component.name.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}`
+          `/components/${component.link ? component.link : component.slug ? component.slug : component.name.toLowerCase()}`
         )}>{component.name}</a
       >
     </div>
