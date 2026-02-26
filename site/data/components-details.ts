@@ -1,5 +1,4 @@
-
-import type { ComponentCardData } from '@components/shortcodes/ComponentCard.astro';
+import type { ComponentCardData } from '@components/shortcodes/ComponentCard.astro'
 import { getVersionedDocsPath } from '@libs/path'
 
 export const componentsDetails: ComponentCardData[] = [
@@ -216,4 +215,4 @@ export const componentsDetails: ComponentCardData[] = [
         </div>
       </div>`
   }
-];
+]
