@@ -1,91 +1,34 @@
 ---
 title: Components
-description: OUDS components summarized in one place.
-aliases: "/components/"
+description: All OUDS components at a glance.
+aliases:
+  - "/components/"
+  - "/docs/components/"
+  - "/docs/[[config:docs_version]]/components/"
 toc: true
 ---
 
-import { getConfig } from '@libs/config'
-import { getData } from '@libs/data'
-import { getVersionedDocsPath } from '@libs/path'
-import fs from 'node:fs'
+import {componentsDetails} from '../../../data/components-details'
 
 ## Alphabetical order
 
 <ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5">
   {
-    getData('sidebar-components')[0]
-      .pages.map((page) => {
-        if (page.category && !page.draft) {
-          return (
-            <li class="col">
-              <div class="card position-relative h-100">
-                <div class="card-top">
-                  <img
-                    class="w-100 object-fit-cover ratio-16x9"
-                    src={fs.existsSync(`${process.cwd()}/site/static/${getConfig().brand}/docs/[version]/assets/img/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}.svg`)
-                      ? `/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}.svg`
-                      : `/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`}
-                    alt=""
-                    loading="lazy"
-                  />
-                </div>
-                <div class="card-body">
-                  <a
-                    class="stretched-link"
-                    href={getVersionedDocsPath(
-                      `/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}`
-                    )}
-                  >
-                    {page.title}
-                  </a>
-                </div>
-              </div>
-            </li>
-          )
-        }
-      })
+    componentsDetails.map((component) => <ComponentCard component={component} idPrefix={'_alpha'} />)
   }
 </ul>
 
 <hr />
 
-## Categorical order
+## By category
 
 {
   ['Actions', 'Content display', 'Control', 'Data', 'Dialog', 'Indicator', 'Layout', 'Navigation', 'Visual assets'].map((element) => {
     return (
       <>
-        {getData('sidebar-components')[0].pages.filter((page) => page?.category === element).length > 0 && <h3>{element}</h3>}
+        {componentsDetails.filter((component) => component.category === element).length > 0 && <h3>{element}</h3>}
         <ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5">
-          {getData('sidebar-components')[0].pages.filter((page) => page?.category === element).map((page) => {
-            return (
-              <li class="col">
-                <div class="card position-relative h-100">
-                  <div class="card-top">
-                    <img
-                      class="w-100 object-fit-cover ratio-16x9"
-                      src={fs.existsSync(`${process.cwd()}/site/static/${getConfig().brand}/docs/[version]/assets/img/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}.svg`)
-                        ? `/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}.svg`
-                        : `/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`}
-                      alt=""
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <a
-                      class="stretched-link"
-                      href={getVersionedDocsPath(
-                        `/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}`
-                      )}
-                    >
-                      {page.title}
-                    </a>
-                  </div>
-                </div>
-              </li>
-            )
-          })}
+          {componentsDetails.filter((component) => component.category === element).map((component) => <ComponentCard component={component} idPrefix={'_category'} />)}
         </ul>
       </>
     )

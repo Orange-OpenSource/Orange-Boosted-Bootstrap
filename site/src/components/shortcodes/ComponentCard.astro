@@ -1,0 +1,36 @@
+---
+import { getVersionedDocsPath } from '@libs/path'
+
+export type ComponentCardData = {
+  name: string
+  slug?: string // if not present, slug is name.tolowercase()
+  link?: string
+  snippet: string
+  category: string
+}
+
+interface Props {
+  component: ComponentCardData
+  idPrefix: string
+}
+
+const { component, idPrefix } = Astro.props
+---
+
+<li class="col">
+  <div class="card h-100">
+    <div class="card-top bg-inverse-high">
+      <div class="ratio-16x9 d-flex justify-content-center align-items-center" data-bs-theme="root-inverted" inert>
+        <Fragment set:html={component.snippet.replaceAll('[[id_prefix]]', idPrefix)} />
+      </div>
+    </div>
+    <div class="card-body">
+      <a
+        class="stretched-link"
+        href={getVersionedDocsPath(
+          `/components/${component.link ? component.link : component.slug ? component.slug : component.name.toLowerCase()}`
+        )}>{component.name}</a
+      >
+    </div>
+  </div>
+</li>
