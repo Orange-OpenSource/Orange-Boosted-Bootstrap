@@ -415,7 +415,7 @@
       max-height: px-to-rem($ouds-text-area-size-max-height-input);
       padding: 0;
       padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right));
-      padding-bottom: $ouds-text-area-space-padding-block;
+      padding-bottom: calc(#{$ouds-text-area-space-padding-block} - var(--#{$prefix}text-input-border-width-bottom));
       padding-left: calc(#{$ouds-text-input-space-padding-inline-default} - var(--#{$prefix}text-input-border-width-left));
       color: var(--#{$prefix}text-input-color);
       appearance: none;
