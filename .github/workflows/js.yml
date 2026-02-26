@@ -53,3 +53,4 @@ jobs:
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           path-to-lcov: "./js/coverage/lcov.info"
+          fail-on-error: false
