@@ -6,8 +6,32 @@ aliases:
 toc: true
 ---
 
+import { getData } from '@libs/data'
+
 OUDS components are first designed on Figma and then developed on each platform the design system targets. That means there can be a time during which a component available on Figma (and therefore usable by designers) is not yet available on OUDS Web. Our designers also update our components designs from time to time, the new features or updated APIs of these components will need some time before coming to OUDS Web.
 
 This is why we list the "design version" of every components in our documentation, this way you can check if we have parity with the component available for the designers. To find the global changelog for a particular component (and its current Figma version), please go to the component specification page (available on each component documentation page) and go to the Changelog tab. As components' design versions are fixed for a specific OUDS Web version, you might need to update the library to benefit from the updated component.
 
 You can find [all the components here](https://unified-design-system.orange.com/472794e18/p/73c701-components).
+
+<table class="table">
+  <caption>
+    All designed components versions (not all are available in OUDS Web)
+  </caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Design version</th>
+    </tr>
+  </thead>
+  <tbody>
+  {
+    getData('_components-versions').map((component) => (
+      <tr>
+        <td class="text-capitalize">{component.name}</td>
+        <td><a href={`https://r.orange.fr/r/S-ouds-web-${component.name}`}>{component.value}</a></td>
+      </tr>
+    ))
+  }
+  </tbody>
+</table>
