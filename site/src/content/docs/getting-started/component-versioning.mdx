@@ -24,7 +24,6 @@ You can find [the components matrix here](https://unified-design-system.orange.c
     <tr>
       <th>Name</th>
       <th>Design version</th>
-      <th>Specifications</th>
     </tr>
   </thead>
   <tbody>
@@ -40,12 +39,9 @@ You can find [the components matrix here](https://unified-design-system.orange.c
             )}>{component.name}</a>
           </td>
           <td>
-            {component.version.value}
-          </td>
-          <td>
-            <a href={`https://r.orange.fr/r/S-ouds-doc-${component.slug ?? component.name.toLowerCase()}`}>
-              Specifications
-            </a>
+            {component.version.value} (<a href={`https://r.orange.fr/r/S-ouds-doc-${component.slug ?? component.name.toLowerCase()}_changelog`}>
+              changelog
+            </a>)
           </td>
         </tr>
       ))
