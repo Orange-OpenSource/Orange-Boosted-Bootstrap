@@ -46,7 +46,7 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     // Allow empty option in select
     'Element “option” without attribute “label” must not be empty.',
     // Allow `popover` attribute.
-    'Attribute “popover” not allowed on element div at this point.',
+    'Attribute “popover” not allowed on element “div” at this point.',
     'Attribute “popovertarget” not allowed on element “button” at this point.',
     'Attribute “popovertargetaction” not allowed on element “button” at this point.'
     // End mod
