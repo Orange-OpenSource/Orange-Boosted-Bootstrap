@@ -106,8 +106,6 @@ For accessibility reasons, any textual element must either be a semantic element
 
 For instance there is no need to have a title element if the alert doesn’t have any description or other element inside.
 
-You may also want to use `<dialog>` element for your alert if it’s dismissible, it requires a user action and you have to display it like a modal. In this case, you can still use our alert classes to style the content of the dialog. See our [live example using `<dialog>`](#using-dialog) for more details.
-
 #### Information for visually impaired users
 
 Keep in mind that visually impaired and blind users will lack the visual context (color and icons for instance) that permits to understand the alerts purpose on the page. If alerts’ titles are not self-explanatory, it’s mandatory to add a `.visually-hidden` information to explain what it represents.
@@ -637,61 +635,6 @@ We use the following JavaScript to trigger our live alert demo:
 
 <JsDocs name="live-alert" file="site/src/assets/partials/snippets.js" />
 
-##### Using dialog
-
-This use case is for future friendly projects. Our Alert plugin might be removed from our JavaScript someday in favor of a more native approach.
-
-You should  use `<dialog>` element for your alert only if it’s dismissible, it requires a user action and you have to display it like a modal. In this case, you can still use our alert classes to style the content of the dialog.
-
-<Callout type="negative">
-  The [disponibility of the Invoker Commands API](https://caniuse.com/wf-invoker-commands) is very limited for now, so we don't recommand using it for now.
-
-  When using a `<dialog>` element, the alert will be displayed as a modal. This is because the [dialog’s modality](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog) takes precedence over the alert’s CSS. There are 2 different displays for the alert message, depending on whether the `popover` attribute is used or not:
-
-  <ul class="bullet-list fs-bm">
-    <li>Without the `popover` attribute, the alert message will be displayed as a modal, without the possibility of clicking on the backdrop to dismiss, the backdrop removing all the pointer events and a focustrap on the modal.</li>
-    <li>With the `popover` attribute, the alert message will be displayed as a modal, with the possibility of clicking on the backdrop to dismiss and no focustrap.</li>
-  </ul>
-</Callout>
-
-<details class="mb-medium">
-  <summary>See both in action</summary>
-  <Example buttonLabel="live alert messages without JavaScript" class="d-flex flex-wrap justify-content-between gap-medium" code={`<dialog id="my-modal" class="alert alert-message alert-warning" popover>
-      <div class="alert-icon"><p class="visually-hidden">Warning alert</p></div>
-      <div class="alert-container">
-        <div class="alert-text-container">
-          <h5 class="alert-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem.</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis. Aliquam erat volutpat. Ut quam turpis, interdum non ex at, imperdiet ornare mi. Curabitur eget hendrerit diam. Curabitur id placerat ipsum.</p>
-        </div>
-        <a href="#" class="link">Action</a>
-      </div>
-      <div class="alert-action-container">
-        <button class="btn-close" command="close" commandfor="my-modal">
-          <span class="visually-hidden">Close warning alert</span>
-        </button>
-      </div>
-    </dialog>
-
-    <dialog id="my-popover" class="alert alert-message alert-warning" popover>
-      <div class="alert-icon"><p class="visually-hidden">Warning alert</p></div>
-      <div class="alert-container">
-        <div class="alert-text-container">
-          <h5 class="alert-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem.</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis. Aliquam erat volutpat. Ut quam turpis, interdum non ex at, imperdiet ornare mi. Curabitur eget hendrerit diam. Curabitur id placerat ipsum.</p>
-        </div>
-        <a href="#" class="link">Action</a>
-      </div>
-      <div class="alert-action-container">
-        <button class="btn-close" popovertarget="my-popover" popovertargetaction="hide">
-          <span class="visually-hidden">Close warning alert</span>
-        </button>
-      </div>
-    </dialog>
-
-    <button command="show-modal" commandfor="my-modal" class="btn btn-default">Show modal alert</button>
-    <button popovertarget="my-popover" class="btn btn-default">Show popover alert</button>`} />
-</details>
-
 #### Initialize
 
 Initialize elements as alerts.
@@ -758,6 +701,39 @@ myAlert.addEventListener('closed.bs.alert', event => {
   // document.getElementById('...').focus()
 })
 ```
+
+### No javascript
+
+This use case is for **future friendly projects only**. Our Alert plugin will probably be removed from our JavaScript someday in favor of [a more native approach](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API).
+
+<Callout type="negative">
+  The [disponibility of the Invoker Commands API](https://caniuse.com/wf-invoker-commands) is very limited for now, so we don't recommand using it for now.
+
+  With the `popover` attribute:
+
+  <ul class="bullet-list fs-bm">
+    <li>The alert message will be displayed as a modal, with the possibility of clicking on the backdrop to dismiss and no focustrap.</li>
+    <li>To avoid it, we hide the popover when the alert is in shown state and we display it when the alert is in hidden state. The alert is hidden by default.</li>
+  </ul>
+</Callout>
+
+<Example buttonLabel="live alert messages without JavaScript" class="d-flex flex-wrap justify-content-between gap-medium" code={`<div id="my-invoked-alert" class="alert alert-message alert-warning" popover>
+    <div class="alert-icon"><p class="visually-hidden">Warning alert</p></div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <h5 class="alert-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem.</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis. Aliquam erat volutpat. Ut quam turpis, interdum non ex at, imperdiet ornare mi. Curabitur eget hendrerit diam. Curabitur id placerat ipsum.</p>
+      </div>
+      <a href="#" class="link">Action</a>
+    </div>
+    <div class="alert-action-container">
+      <button class="btn-close" popovertarget="my-invoked-alert" popovertargetaction="show">
+        <span class="visually-hidden">Close warning alert</span>
+      </button>
+    </div>
+  </div>
+
+  <button popovertarget="my-invoked-alert" class="btn btn-default">Toggle invoked alert</button>`} />
 
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Inline alert
 

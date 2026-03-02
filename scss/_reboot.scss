@@ -765,7 +765,8 @@ progress {
 }
 
 // Dialog
-dialog {
+dialog,
+[popover] {
   padding: 0;
   overflow: visible;
   background: unset;
