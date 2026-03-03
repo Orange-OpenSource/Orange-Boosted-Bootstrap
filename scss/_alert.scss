@@ -45,14 +45,6 @@
       @include border-bottom-end-radius(var(--#{$prefix}alert-border-radius));
     }
   }
-
-  &[popover] {
-    position: static;
-  }
-
-  &:popover-open {
-    display: none;
-  }
 }
 
 .alert-icon {

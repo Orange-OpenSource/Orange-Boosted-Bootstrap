@@ -702,39 +702,6 @@ myAlert.addEventListener('closed.bs.alert', event => {
 })
 ```
 
-### No javascript
-
-This use case is for **future friendly projects only**. Our Alert plugin will probably be removed from our JavaScript someday in favor of [a more native approach](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API).
-
-<Callout type="negative">
-  The [disponibility of the Invoker Commands API](https://caniuse.com/wf-invoker-commands) is very limited for now, so we don't recommand using it for now.
-
-  With the `popover` attribute:
-
-  <ul class="bullet-list fs-bm">
-    <li>The alert message will be displayed as a modal, with the possibility of clicking on the backdrop to dismiss and no focustrap.</li>
-    <li>To avoid it, we hide the popover when the alert is in shown state and we display it when the alert is in hidden state. The alert is hidden by default.</li>
-  </ul>
-</Callout>
-
-<Example buttonLabel="live alert messages without JavaScript" class="d-flex flex-wrap justify-content-between gap-medium" code={`<div id="my-invoked-alert" class="alert alert-message alert-warning" popover>
-    <div class="alert-icon"><p class="visually-hidden">Warning alert</p></div>
-    <div class="alert-container">
-      <div class="alert-text-container">
-        <h5 class="alert-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem.</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis. Aliquam erat volutpat. Ut quam turpis, interdum non ex at, imperdiet ornare mi. Curabitur eget hendrerit diam. Curabitur id placerat ipsum.</p>
-      </div>
-      <a href="#" class="link">Action</a>
-    </div>
-    <div class="alert-action-container">
-      <button class="btn-close" popovertarget="my-invoked-alert" popovertargetaction="show">
-        <span class="visually-hidden">Close warning alert</span>
-      </button>
-    </div>
-  </div>
-
-  <button popovertarget="my-invoked-alert" class="btn btn-default">Toggle invoked alert</button>`} />
-
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Inline alert
 
 Inline alert is a lightweight UI element, placed in the content flow, that displays information, system feedback, status changes throughout short, prominent, persistent and non actionable communication.

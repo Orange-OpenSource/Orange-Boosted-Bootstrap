@@ -44,11 +44,7 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     'Attribute “switch” not allowed on element “input” at this point.',
     'Element “style” not allowed as child of element “div” in this context.*',
     // Allow empty option in select
-    'Element “option” without attribute “label” must not be empty.',
-    // Allow `popover` attribute.
-    'Attribute “popover” not allowed on element “div” at this point.',
-    'Attribute “popovertarget” not allowed on element “button” at this point.',
-    'Attribute “popovertargetaction” not allowed on element “button” at this point.'
+    'Element “option” without attribute “label” must not be empty.'
     // End mod
   ].join('|')
 
