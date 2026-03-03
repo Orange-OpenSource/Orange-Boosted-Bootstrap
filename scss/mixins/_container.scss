@@ -3,18 +3,11 @@
 // scss-docs-start container-mixins
 @mixin make-container($gutter: $container-padding-x) {
   // OUDS mod: no CSS variable gutter definition inside containers
+  --#{$prefix}container-margin-x: var(--#{$prefix}grid-margin);
   width: 100%;
   padding-right: var(--#{$prefix}container-margin-x); // OUDS mod: instead of `calc(var(--#{$prefix}gutter-x) * .5)`
   padding-left: var(--#{$prefix}container-margin-x); // OUDS mod: instead of `calc(var(--#{$prefix}gutter-x) * .5)`
   margin-right: auto;
   margin-left: auto;
-
-  // OUDS mod: gutter depends on breakpoints
-  @each $breakpoint, $container-fluid-marg in $container-fluid-margin {
-    @include media-breakpoint-up($breakpoint) {
-      --#{$prefix}container-margin-x: #{$container-fluid-marg};
-    }
-  }
-  // End mod
 }
 // scss-docs-end container-mixins
