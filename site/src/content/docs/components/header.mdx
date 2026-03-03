@@ -21,7 +21,7 @@ import { getConfig } from '@libs/config'
 
 Here is a [simple header example](https://boosted.orange.com/docs/components/orange-navbar/#standard-1) with a logo on the left. The header is responsive and will collapse on smaller screens.
 
-<Example class="p-none" code={`<header${getConfig().brand.includes('orange') ? ' data-bs-theme="dark"' : ''}>
+<Example class="p-none" code={`<header>
     <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Standard example">
       <div class="container-fluid container-max-width">
         <div class="navbar-brand me-auto me-lg-xlarge">
@@ -76,7 +76,7 @@ Here is a [simple header example](https://boosted.orange.com/docs/components/ora
 
 Here is a [simple supra bar example](https://boosted.orange.com/docs/components/orange-navbar/#supra-bar). The supra bar is placed before the global header.
 
-<Example class="p-none" code={`<nav class="navbar navbar-expand-lg supra"${getConfig().brand.includes('orange') ? ' data-bs-theme="dark"' : ''} aria-label="Supra navigation - With an additional languages navbar example">
+<Example class="p-none" code={`<nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation - With an additional languages navbar example">
     <div class="container-fluid container-max-width">
       <ul class="navbar-nav me-auto">
         <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
@@ -94,7 +94,7 @@ Here is a [simple supra bar example](https://boosted.orange.com/docs/components/
 
 Here is a [simple navigation under example](https://boosted.orange.com/docs/components/orange-navbar/#navigation-under). The navigation under is placed after the global header.
 
-<Example class="p-none" code={`<header${getConfig().brand.includes('orange') ? ' data-bs-theme="dark"' : ''}>
+<Example class="p-none" code={`<header>
     <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Standard example">
       <div class="container-fluid container-max-width">
         <div class="navbar-brand me-auto me-lg-xlarge">
