@@ -1,0 +1,42 @@
+---
+
+---
+
+<ouds-component-finder>
+  <div class="text-input mb-medium">
+    <div class="text-input-container">
+      <svg aria-hidden="true">
+        <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#search"></use>
+      </svg>
+      <label for="oudsComponentFinderInput">Find component</label>
+      <input type="search" class="text-input-field" id="oudsComponentFinderInput" placeholder=" " />
+    </div>
+  </div>
+  <ul
+    class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5"
+    data-component-list
+  >
+    <slot />
+  </ul>
+</ouds-component-finder>
+
+<script>
+  class OudsComponentFinder extends HTMLElement {
+    connectedCallback() {
+      const searchInput = document.getElementById('oudsComponentFinderInput') as HTMLInputElement
+      if (!searchInput) return
+      searchInput.addEventListener('input', () => {
+        setTimeout(() => {
+          this.querySelectorAll('ul[data-component-list] > *').forEach((elt) => elt.classList.remove('d-none'))
+          if (searchInput.value) {
+            this.querySelectorAll(
+              `ul[data-component-list] > :not([data-name*=${searchInput.value.toLowerCase()}])`
+            ).forEach((elt) => elt.classList.add('d-none'))
+          }
+        }, 0)
+      })
+    }
+  }
+
+  customElements.define('ouds-component-finder', OudsComponentFinder)
+</script>

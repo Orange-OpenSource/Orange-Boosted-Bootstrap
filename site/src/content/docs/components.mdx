@@ -12,11 +12,11 @@ import { componentsDetails } from '../../../data/components-details'
 
 ## Alphabetical order
 
-<ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5">
+<ComponentFinder>
   {
     componentsDetails.map((component) => <ComponentCard component={component} idPrefix={'_alpha'} />)
   }
-</ul>
+</ComponentFinder>
 
 <hr />
 
