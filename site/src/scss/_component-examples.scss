@@ -306,7 +306,7 @@
   .position-absolute {
     width: 2rem;
     height: 2rem;
-    background-color: var(--#{$prefix}color-bg-emphasized);
+    background-color: var(--#{$prefix}color-bg-inverse-high);
     @include border-radius();
   }
 }

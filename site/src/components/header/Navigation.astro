@@ -67,8 +67,7 @@ const { addedIn, layout, title } = Astro.props
           <LinkItem
             active={layout === 'docs' &&
               (Astro.url.pathname.includes('/getting-started/') ||
-                Astro.url.pathname.includes('/foundation/') ||
-                Astro.url.pathname.includes('/about/'))}
+                Astro.url.pathname.includes('/foundation/'))}
             href={getVersionedDocsPath('getting-started/introduction')}
             onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'getting-started'});"
           >

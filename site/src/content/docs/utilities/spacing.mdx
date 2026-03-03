@@ -19,7 +19,7 @@ export const fixedSpacingLevel = [
   "2xlarge",
   "3xlarge",
   "4xlarge",
-  "5xlarge"
+  "5xlarge",
 ]
 
 export const scaledSpacingLevel = [
@@ -45,10 +45,6 @@ export const screenSize = [
 ## Margin and padding
 
 Assign responsive-friendly `margin` or `padding` values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from `none` to `5xlarge`. Classes include fixed values on zoom (using `px`).
-
-<Callout>
-**Using the CSS Grid layout module?** Consider using [the gap utility](#gap) instead.
-</Callout>
 
 ### Notation for fixed values
 
@@ -82,6 +78,8 @@ Where *size* is one of:
     ))
   }
   <li>`auto` - for classes that set the `margin` to `auto`</li>
+  <li>`gridgap` - for classes that set the `margin` to `var(--bs-grid-gap)` [see below](#grid-measures)</li>
+  <li>`gridmargin` - for classes that set the `margin` to `var(--bs-grid-margin)` [see below](#grid-measures)</li>
 </ul>
 
 (You can but shouldn’t add more sizes by adding entries to the `$ouds-dimension-space-fixed` Sass map variable.)
@@ -249,6 +247,10 @@ Additionally, OUDS Web also includes an `.mx-auto` class for horizontally center
 
 In CSS, `margin` properties can utilize negative values (`padding` cannot). These negative margins are **disabled by default**, but can be enabled in Sass by setting `$enable-negative-margins: true`.
 
+<Callout type="info">
+ The [negative margins for grid measures](#grid-measures) are always available, irrespective of `$enable-negative-margins` value.
+</Callout>
+
 The syntax is nearly the same as the default, positive margin utilities, but with the addition of `n` before the requested size. Here are some example classes that are the opposite of `.mt-small` and `.ms-scaled-large`:
 
 ```scss
@@ -355,3 +357,27 @@ We also provide scaled versions of the gap (including `row-gap` and `column-gap`
     <div class="p-small">Grid item 3</div>
     <div class="p-small">Grid item 4</div>
   </div>`} />
+
+## Grid measures
+
+OUDS web provides two specific sizes based on grid measures: `gridgap` and `gridmargin` which use the custom properties `--bs-grid-gap` and `--bs-grid-margin`, respectively. These custom properties are responsive so the values will depend on the current viewport breakpoint. These utilities are available as `margin`, `padding` or `gap` and can be applied on a specific breakpoint, they use the [same notation as fixed values](#notation-for-fixed-values).
+
+<Example class="bd-example-spacings" code={`<div class="px-gridgap">Gridgap padding</div>
+  <div class="px-xl-gridgap">Grid-gap padding for xl viewports</div>
+  <div class="mt-gridmargin">Grid-margin margin viewports</div>`} />
+
+### Edge to edge containers
+
+<Callout type="info">
+ The negative margins for grid measures are always available, unlike [the other negative margins](#negative-margin).
+</Callout>
+
+The negative `gridmargin` `margin` utility can be used to create edge to edge containers, the following example creates an edge to edge container on the smaller breakpoints.
+
+<div class="mx-ngridmargin mx-lg-none py-small px-lg-small px-gridmargin mb-small" style="background-color: rgba(var(--bd-primary-light-rgb), 0.15);">Edge to edge container on smaller breakpoints</div>
+
+```html
+<div class="mx-ngridmargin mx-lg-none px-gridmargin py-small px-lg-small">
+  Edge to edge container on smaller breakpoints
+</div>
+```
