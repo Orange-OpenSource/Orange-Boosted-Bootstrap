@@ -78,18 +78,16 @@ Try to submit the form below; our JavaScript will intercept the submit button, a
     <div class="text-input mb-large">
       <div class="text-input-container">
         <label for="username">Username <span aria-hidden="true">*</span></label>
-        <input type="text" class="text-input-field" id="username" data-feedback-id="usernameFeedback"
-               placeholder=" " required>
+        <input type="text" class="text-input-field" id="username" data-feedback-id="usernameFeedback" autocomplete="username" placeholder=" " required>
       </div>
       <p id="usernameFeedback" class="error-text">
         Username is required.
       </p>
     </div>
-
     <div class="text-input mb-large">
       <div class="text-input-container">
         <label for="inputPassword">Password <span aria-hidden="true">*</span></label>
-        <input type="password" id="inputPassword" class="text-input-field" data-feedback-id="passwordFeedback" placeholder=" " required>
+        <input type="password" id="inputPassword" class="text-input-field" aria-describedby="inputPasswordPrefixHelper" data-feedback-id="passwordFeedback" autocomplete="new-password" placeholder=" " required minlength="8">
         <button class="btn btn-minimal btn-icon">
           <svg aria-hidden="true">
             <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#accessibility-vision"/>
@@ -97,8 +95,9 @@ Try to submit the form below; our JavaScript will intercept the submit button, a
           <span class="visually-hidden">Show password</span>
         </button>
       </div>
+      <p id="inputPasswordPrefixHelper" class="helper-text">Enter a password with at least 8 characters.</p>
       <p id="passwordFeedback" class="error-text">
-        Password is required.
+        Password is required and must be at least 8 characters.
       </p>
     </div>
 
