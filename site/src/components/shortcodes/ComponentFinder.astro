@@ -9,8 +9,16 @@
         <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#search"></use>
       </svg>
       <label for="oudsComponentFinderInput">Find component</label>
-      <input type="search" class="text-input-field" id="oudsComponentFinderInput" placeholder=" " />
+      <input
+        type="search"
+        class="text-input-field"
+        id="oudsComponentFinderInput"
+        pattern="[a-zA-Z]+"
+        placeholder=" "
+        data-feedback-id="componentSearchFeedback"
+      />
     </div>
+    <p id="usernameFeedback" class="error-text">Alphabetical characters only.</p>
   </div>
   <ul
     class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5"
@@ -28,7 +36,7 @@
       searchInput.addEventListener('input', () => {
         setTimeout(() => {
           this.querySelectorAll('ul[data-component-list] > *').forEach((elt) => elt.classList.remove('d-none'))
-          if (searchInput.value) {
+          if (searchInput.value && searchInput.checkValidity()) {
             this.querySelectorAll(
               `ul[data-component-list] > :not([data-name*=${searchInput.value.toLowerCase()}])`
             ).forEach((elt) => elt.classList.add('d-none'))
