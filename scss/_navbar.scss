@@ -175,20 +175,24 @@
   .title,
   .two-lined {
     margin: divide(-2em, 7) $spacer divide(-1em, 7) calc(var(--#{$prefix}navbar-brand-logo-size) / 2);
-    @include font-size(var(--#{$prefix}navbar-brand-font-size));
+    @include get-font-size("heading-large");
     line-height: 1;
-    letter-spacing: var(--#{$prefix}navbar-brand-letter-spacing);
   }
 
   .two-lined {
-    --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-two-lined-xs};
-    --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-two-lined-xs};
-
-    @include media-breakpoint-up(md) {
-      --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-two-lined};
-      --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-two-lined};
-    }
+    @include get-font-size("heading-medium");
+    line-height: 1;
   }
+
+  // .two-lined {
+  //   --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-two-lined-xs};
+  //   --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-two-lined-xs};
+
+  //   @include media-breakpoint-up(md) {
+  //     --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-two-lined};
+  //     --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-two-lined};
+  //   }
+  // }
 }
 // End mod
 
@@ -419,6 +423,7 @@
           // OUDS mod
           .nav-link {
             margin: 0;
+            line-height: 1;
 
             &.active::before {
               position: absolute;
@@ -541,7 +546,7 @@
         @include media-breakpoint-up($next) {
           &:first-child:not(.supra),
           &.navbar {
-            --#{$prefix}navbar-nav-link-padding-y: 9px;
+            --#{$prefix}navbar-nav-link-padding-y: 14px;
           }
         }
       }
