@@ -482,7 +482,7 @@
     .text-area-field {
       z-index: 3;
       width: 100%;
-      min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
+      min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) * 2 + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
       max-height: px-to-rem($ouds-text-area-size-max-height-input);
       padding: 0;
       padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right));
@@ -496,7 +496,6 @@
       background-color: transparent;
       border: 0;
       box-shadow: none;
-      field-sizing: content;  // Not yet standard, but supported in some browsers
 
       // Disable resize on touch devices
       @media (pointer: coarse) and (not (any-pointer: fine)) {
@@ -505,7 +504,7 @@
 
       @supports (field-sizing: content) {
         field-sizing: content;  // Not yet standard, but supported in some browsers
-        min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) * 2 + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
+        min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
       }
 
       &:focus,
