@@ -163,8 +163,9 @@ In this scenario, you will have access to all the components available in OUDS W
             --#{$prefix}heading-color: #{$headings-color};
 
             // No Link colors and let the OUDS Web links hydrate the Boosted ones
-            // No basic element colors definition and let the OUDS Web links hydrate the Boosted ones
 
+            --#{$prefix}highlight-color: #{$mark-color};
+            --#{$prefix}highlight-bg: #{$mark-bg};
             --#{$prefix}disabled-color: #{$disabled-color};
             --#{$prefix}tertiary-active-bg: #{$tertiary-active-bg};
 
@@ -205,6 +206,9 @@ In this scenario, you will have access to all the components available in OUDS W
             --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor};
             --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor};
             --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor};
+
+            // Modal-specific styles
+            --#{$prefix}modal-border-radius: 0px;
 
             // No Boosted specific Breadcrumb styles
 
@@ -273,6 +277,8 @@ In this scenario, you will have access to all the components available in OUDS W
 
             --#{$prefix}heading-color: #{$headings-color-dark};
 
+            --#{$prefix}highlight-color: #{$mark-color-dark};
+            --#{$prefix}highlight-bg: #{$mark-bg-dark};
             --#{$prefix}disabled-color: #{$disabled-color-dark};
             --#{$prefix}tertiary-active-bg: #{$tertiary-active-bg-dark};
 
