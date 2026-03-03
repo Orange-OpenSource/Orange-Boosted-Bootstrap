@@ -17,7 +17,7 @@ interface Props {
 const { component, idPrefix } = Astro.props
 ---
 
-<li class="col" data-component={component.name.toLowerCase()}>
+<li class="col" data-name={component.name.toLowerCase()}>
   <div class="card h-100">
     <div class="card-top bg-inverse-high">
       <div class="ratio-16x9 d-flex justify-content-center align-items-center" data-bs-theme="root-inverted" inert>
