@@ -23,8 +23,7 @@
       draft: true
     - title: RTL
       draft: true
-    - title: Versioning
-      draft: true
+    - title: Component versioning
     - title: Migration
 
 - title: Foundation
