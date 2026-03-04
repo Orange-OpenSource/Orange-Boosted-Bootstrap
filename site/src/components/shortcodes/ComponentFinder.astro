@@ -3,12 +3,12 @@
 ---
 
 <ouds-component-finder>
-  <div class="text-input mb-medium">
+  <div class="text-input mb-gridgap">
     <div class="text-input-container">
       <svg aria-hidden="true">
-        <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#search"></use>
+        <use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#search')}></use>
       </svg>
-      <label for="oudsComponentFinderInput">Find component</label>
+      <label for="oudsComponentFinderInput">Find component <span class="visually-hidden">and update the component list below</span></label>
       <input
         type="search"
         class="text-input-field"
