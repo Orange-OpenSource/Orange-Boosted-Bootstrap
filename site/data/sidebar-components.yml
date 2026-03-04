@@ -25,7 +25,7 @@
     - title: Dropdown
       draft: true
     - title: Footer
-      draft: true
+      category: Navigation
     - title: Header
     - title: Icon
     - title: Links

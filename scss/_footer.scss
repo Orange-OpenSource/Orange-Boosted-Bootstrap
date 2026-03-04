@@ -47,11 +47,9 @@
     }
 
     .footer-heading {
+      @include get-font-size("body-large");
+      max-width: unset;
       margin-bottom: var(--#{$prefix}footer-title-margin-bottom);
-      font-size: var(--#{$prefix}footer-title-font-size);
-      font-weight: var(--#{$prefix}footer-title-font-weight);
-      line-height: var(--#{$prefix}footer-title-line-height);
-      letter-spacing: var(--#{$prefix}footer-title-letter-spacing);
       white-space: nowrap;
     }
   }
