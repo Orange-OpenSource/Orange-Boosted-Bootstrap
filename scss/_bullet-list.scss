@@ -3,7 +3,7 @@
   --#{$prefix}bullet-list-padding-block: #{$ouds-bullet-list-space-padding-block-body-large};
   --#{$prefix}bullet-list-icon-container-width: var(--#{$prefix}icon-medium-with-body-large);
   --#{$prefix}bullet-list-icon-size: var(--#{$prefix}icon-small-with-body-large);
-  --#{$prefix}bullet-list-fixed-left-padding: calc(var(--#{$prefix}bullet-list-icon-container-width) + #{$ouds-bullet-list-space-column-gap-body-large}); // stylelint-disable-line function-disallowed-list
+  --#{$prefix}bullet-list-fixed-left-padding: calc(var(--#{$prefix}bullet-list-icon-container-width) + #{$ouds-bullet-list-space-column-gap-body-large});
   --#{$prefix}bullet-list-marker-left: #{$ouds-bullet-list-space-padding-inline-level-0};
 
   padding-left: 0;
@@ -17,7 +17,7 @@
     --#{$prefix}bullet-list-padding-block: #{$ouds-bullet-list-space-padding-block-body-medium};
     --#{$prefix}bullet-list-icon-container-width: var(--#{$prefix}icon-medium-with-body-medium);
     --#{$prefix}bullet-list-icon-size: var(--#{$prefix}icon-small-with-body-medium);
-    --#{$prefix}bullet-list-fixed-left-padding: calc(var(--#{$prefix}bullet-list-icon-container-width) + #{$ouds-bullet-list-space-column-gap-body-medium}); // stylelint-disable-line function-disallowed-list
+    --#{$prefix}bullet-list-fixed-left-padding: calc(var(--#{$prefix}bullet-list-icon-container-width) + #{$ouds-bullet-list-space-column-gap-body-medium});
     @include get-font-size("body-medium");
   }
 
@@ -30,7 +30,7 @@
   li {
     position: relative;
     padding: var(--#{$prefix}bullet-list-padding-block) 0;
-    padding-left: calc(var(--#{$prefix}bullet-list-fixed-left-padding) + #{$ouds-bullet-list-space-padding-inline-level-0}); // stylelint-disable-line function-disallowed-list
+    padding-left: calc(var(--#{$prefix}bullet-list-fixed-left-padding) + #{$ouds-bullet-list-space-padding-inline-level-0});
 
     &:has(ul, ol) {
       padding-bottom: 0; // remove duplicate padding when we have nested lists
@@ -54,12 +54,12 @@
     }
 
     li {
-      --#{$prefix}bullet-list-marker-left: calc(#{$ouds-bullet-list-space-padding-inline-level-1} - (var(--#{$prefix}bullet-list-fixed-left-padding) + #{$ouds-bullet-list-space-padding-inline-level-0})); // stylelint-disable-line function-disallowed-list
-      padding-left: calc($ouds-bullet-list-space-padding-inline-level-1 - $ouds-bullet-list-space-padding-inline-level-0); // stylelint-disable-line function-disallowed-list
+      --#{$prefix}bullet-list-marker-left: calc(#{$ouds-bullet-list-space-padding-inline-level-1} - (var(--#{$prefix}bullet-list-fixed-left-padding) + #{$ouds-bullet-list-space-padding-inline-level-0}));
+      padding-left: calc($ouds-bullet-list-space-padding-inline-level-1 - $ouds-bullet-list-space-padding-inline-level-0);
 
       li {
-        --#{$prefix}bullet-list-marker-left: calc(#{$ouds-bullet-list-space-padding-inline-level-2} - (var(--#{$prefix}bullet-list-fixed-left-padding) + #{$ouds-bullet-list-space-padding-inline-level-1})); // stylelint-disable-line function-disallowed-list
-        padding-left: calc($ouds-bullet-list-space-padding-inline-level-2 - $ouds-bullet-list-space-padding-inline-level-1); // stylelint-disable-line function-disallowed-list
+        --#{$prefix}bullet-list-marker-left: calc(#{$ouds-bullet-list-space-padding-inline-level-2} - (var(--#{$prefix}bullet-list-fixed-left-padding) + #{$ouds-bullet-list-space-padding-inline-level-1}));
+        padding-left: calc($ouds-bullet-list-space-padding-inline-level-2 - $ouds-bullet-list-space-padding-inline-level-1);
       }
     }
   }

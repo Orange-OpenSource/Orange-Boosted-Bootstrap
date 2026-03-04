@@ -35,7 +35,7 @@
     display: flex;
     flex: 1 0 0;
     aspect-ratio: 1/1;
-    font-size: calc(var(--#{$prefix}badge-size) - (2 * var(--#{$prefix}badge-count-padding-x))); // stylelint-disable-line function-disallowed-list
+    font-size: calc(var(--#{$prefix}badge-size) - (2 * var(--#{$prefix}badge-count-padding-x)));
   }
 
   .badge-status-icon {

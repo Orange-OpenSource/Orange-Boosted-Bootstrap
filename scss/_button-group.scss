@@ -46,7 +46,7 @@
   // Prevent double borders when buttons are next to each other
   > :not(.btn-check:first-child) + .btn:not(.btn-toggle),
   > .btn-group:not(:first-child) {
-    margin-left: calc(-1 * #{$btn-border-width}); // stylelint-disable-line function-disallowed-list
+    margin-left: calc(-1 * #{$btn-border-width});
   }
   // End mod
 
@@ -104,10 +104,9 @@
 //
 
 .dropdown-toggle-split {
-  // stylelint-disable-next-line function-disallowed-list
-  min-width: add($dropdown-padding-x * 2, calc(#{$caret-width} * 2)); // OUDS mod
-  padding-right: subtract($dropdown-padding-x, $btn-border-width); // OUDS mod
-  padding-left: subtract($dropdown-padding-x, $btn-border-width); // OUDS mod
+  min-width: calc($dropdown-padding-x * 2 + #{$caret-width} * 2); // OUDS mod
+  padding-right: calc($dropdown-padding-x - $btn-border-width); // OUDS mod
+  padding-left: calc($dropdown-padding-x - $btn-border-width); // OUDS mod
 
   // OUDS mod
   .btn-group:not(.dropstart) &,
@@ -117,9 +116,9 @@
 
       &::before {
         position: absolute;
-        top: calc(-1 * #{$btn-border-width}); // stylelint-disable-line function-disallowed-list
-        bottom: calc(-1 * #{$btn-border-width}); // stylelint-disable-line function-disallowed-list
-        left: calc(-1 * #{$btn-border-width}); // stylelint-disable-line function-disallowed-list
+        top: calc(-1 * #{$btn-border-width});
+        bottom: calc(-1 * #{$btn-border-width});
+        left: calc(-1 * #{$btn-border-width});
         width: $btn-border-width;
         color: inherit;
         content: "";
@@ -128,9 +127,9 @@
             transparent $btn-border-width,
             transparent map-get($spacers, 1),
             currentcolor map-get($spacers, 1),
-            currentcolor subtract(100%, map-get($spacers, 1)),
-            transparent subtract(100%, map-get($spacers, 1)),
-            transparent subtract(100%, $btn-border-width)
+            currentcolor calc(100% - map-get($spacers, 1)),
+            transparent calc(100% - map-get($spacers, 1)),
+            transparent calc(100% - $btn-border-width)
           );
       }
     }
@@ -190,7 +189,7 @@
 
   > .btn:not(:first-child),
   > .btn-group:not(:first-child) {
-    margin-top: calc(-1 * #{$btn-border-width}); // stylelint-disable-line function-disallowed-list
+    margin-top: calc(-1 * #{$btn-border-width});
   }
 
   // Reset rounded corners
