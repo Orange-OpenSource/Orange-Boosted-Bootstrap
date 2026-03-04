@@ -55,6 +55,8 @@ This is the preferred scenario and will help you implement the basic concepts of
 
 <Callout type="info">
 **This is the recommended scenario.**
+
+Note that you won’t be able to use any Scss variable or mixin from OUDS Web in this scenario.
 </Callout>
 
 In this scenario, you will have access to all the components available in OUDS Web, the grid, the utilities, the helpers, and fill the missing parts using Boosted and custom CSS.
@@ -65,7 +67,7 @@ In this scenario, you will have access to all the components available in OUDS W
 2. Replace your Boosted import file by copy pasting this code in the main style file of your project:
     <details class="mb-medium">
       <summary>See the main style file example</summary>
-      <Code lang="scss" code={`// 1. Import all OUDS Web
+      <Code lang="scss" code={`// 1. Import all OUDS Web or make your own build in a different file to avoid variables conflicts).
         @import "@ouds/web-orange/dist/css/ouds-web";
 
         // 2. Import a custom stack of Boosted and remove already existing elements.
@@ -368,6 +370,8 @@ In this scenario, you will have access to all the components available in OUDS W
 
 <Callout type="warning">
 This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to do it.
+
+You won’t be able to use any Scss variable or mixin from either Boosted or OUDS Web in this scenario.
 </Callout>
 
 In this scenario, you will have access to OUDS Web on the root, but once a Boosted element is encountered, it will be Boosted. It means that once you’ve set `.boosted` on an element, you’ll have access to Boosted only on its children.
@@ -381,12 +385,12 @@ In this scenario, you will have access to OUDS Web on the root, but once a Boost
       <Code lang="scss" code={`// 1. Import all OUDS Web
         @import "@ouds/web-orange/dist/css/ouds-web";
 
-        // 2. Import all OUDS Web and remove already existing elements.
+        // 2. Import all Boosted
         .boosted {
           @import "boosted/dist/css/boosted";
         }
 
-        // 3. Import custom components from your project
+        // 3. Import custom components from your project with possible definitions of the variables you need.
         @import "your/custom/(s)css/files.scss";`} />
     </details>
 
@@ -398,6 +402,8 @@ In this scenario, you will have access to OUDS Web on the root, but once a Boost
 
 <Callout type="warning">
 This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to do it.
+
+You won’t be able to use any Scss variable or mixin from Boosted in this scenario.
 </Callout>
 
 In this scenario, you will have access to OUDS Web on defined elements and children. It means that once you’ve set `.ouds-web` on an element, you’ll have access to OUDS Web.
