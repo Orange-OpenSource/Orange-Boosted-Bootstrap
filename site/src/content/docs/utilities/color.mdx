@@ -32,12 +32,12 @@ Here are some compliant combinations examples for texts:
 
 <Example code={[...allTokens.filter(token => token.name.match(/\$ouds-color-content-/) && !token.name.match(/-action-/) && token.name.match(/-light/) && token.compiledValue).map(token => {
     if (token.name.match(/-on-/)) {
-      return `<p class="bg-${token.name.split('-').slice(4, -1).join('-')} text-${token.name.split('-').slice(3, -1).join('-')} p-small">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
+      return `<p class="bg-surface-${token.name.split('-').slice(4, -1).join('-')} text-${token.name.split('-').slice(3, -1).join('-')} p-small">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
     }
     return `<p class="text-${token.name.split('-').slice(3, -1).join('-')} p-small">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
   }),
   `<p class="text-always-black p-small">Text always-black</p>
-  <p class="text-always-white p-small">Text always-white</p>
+  <p class="text-always-white bg-always-black p-small">Text always-white</p>
   <p class="text-always-on-black bg-always-black p-small">Text always-on-black</p>
   <p class="text-always-on-white bg-always-white p-small">Text always-on-white</p>`]} />
 
