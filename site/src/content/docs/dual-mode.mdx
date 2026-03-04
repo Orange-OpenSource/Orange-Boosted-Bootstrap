@@ -43,7 +43,7 @@ Here is a non exhaustive list of advantages of using this dual-mode:
 
 ### JavaScript
 
-As there is no diff on any javascript component at the moment, we encourage you to take the JavaScript from `@ouds/web-common`. So replace `boosted/dist/js/boosted.ems.min.js` by `@ouds/web-common/dist/js/ouds-web.esm.min.js`, and you should be good to go.
+As there is no diff on any javascript component at the moment, we encourage you to take the JavaScript from `@ouds/web-common`. So replace any import like `boosted/dist/js/boosted.bundle.min.js` by `@ouds/web-common/dist/js/ouds-web.bundle.min.js`, and you should be good to go.
 
 ### CSS
 
@@ -67,13 +67,17 @@ In this scenario, you will have access to all the components available in OUDS W
         @import "@ouds/web-orange/dist/css/ouds-web";
 
         // 2. Import a custom stack of Boosted and remove already existing elements.
+
+        // Configuration
+        @import "boosted/scss/functions";
+        @import "boosted/scss/variables";
+        @import "boosted/scss/variables-dark";
+        @import "boosted/scss/maps";
+        @import "boosted/scss/mixins";
+        // Please note that if you don’t need any Boosted variables in your custom components,
+        // all the Configuration imports may be scoped inside the .boosted class to avoid side effects
+
         .boosted {
-          // Configuration
-          @import "boosted/scss/functions";
-          @import "boosted/scss/variables";
-          @import "boosted/scss/variables-dark";
-          @import "boosted/scss/maps";
-          @import "boosted/scss/mixins";
           // Don’t import Boosted utilities since they are all defined by OUDS Web already
 
           // Declare a custom _root.scss, inspired from Boosted, but linked to OUDS Web evolutions
