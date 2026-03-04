@@ -1,25 +1,29 @@
 ---
-
+import { getVersionedDocsPath } from '@libs/path'
 ---
 
 <ouds-component-finder>
-  <div class="text-input mb-gridgap">
-    <div class="text-input-container">
-      <svg aria-hidden="true">
-        <use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#search')}></use>
-      </svg>
-      <label for="oudsComponentFinderInput">Find component <span class="visually-hidden">and update the component list below</span></label>
-      <input
-        type="search"
-        class="text-input-field"
-        id="oudsComponentFinderInput"
-        pattern="[a-zA-Z]+"
-        placeholder=" "
-        data-feedback-id="componentSearchFeedback"
-      />
+  <form class="needs-validation" novalidate onsubmit="return false">
+    <div class="text-input mb-gridgap">
+      <div class="text-input-container">
+        <svg aria-hidden="true">
+          <use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#search')}></use>
+        </svg>
+        <label for="oudsComponentFinderInput"
+          >Find component <span class="visually-hidden">and update the component list below</span></label
+        >
+        <input
+          type="search"
+          class="text-input-field"
+          id="oudsComponentFinderInput"
+          pattern="[a-zA-Z \\-]+"
+          placeholder=" "
+          data-feedback-id="componentSearchFeedback"
+        />
+      </div>
+      <p id="usernameFeedback" class="error-text">Alphabetical characters only.</p>
     </div>
-    <p id="usernameFeedback" class="error-text">Alphabetical characters only.</p>
-  </div>
+  </form>
   <ul
     class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5"
     data-component-list
@@ -38,7 +42,7 @@
           this.querySelectorAll('ul[data-component-list] > *').forEach((elt) => elt.classList.remove('d-none'))
           if (searchInput.value && searchInput.checkValidity()) {
             this.querySelectorAll(
-              `ul[data-component-list] > :not([data-name*=${searchInput.value.toLowerCase()}])`
+              `ul[data-component-list] > :not([data-name*="${searchInput.value.toLowerCase()}"])`
             ).forEach((elt) => elt.classList.add('d-none'))
           }
         }, 0)
