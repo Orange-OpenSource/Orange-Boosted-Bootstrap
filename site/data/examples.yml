@@ -53,6 +53,8 @@
       description: 'Use loading buttons in an accessible way.'
     - name: Download app
       description: 'A way to illustrate a download app page.'
+    - name: Show password
+      description: 'A show/hide password button.'
 
 - category: 'Bootstrap examples'
   bootstrap: true
