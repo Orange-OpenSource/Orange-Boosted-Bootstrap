@@ -488,10 +488,20 @@ Align terms and descriptions horizontally by using our grid system’s predefine
     </dd>
   </dl>`} />
 
-## Custom components and `label` font size
+## Font size for custom components
 
-OUDS introduces a specific font size for components named `label` with 4 levels: `small`, `medium`, `large` and `xlarge`. If you need to develop a custom component for your project you can use this font by calling the Scss mixin `get-font-size()`. Following is an example of code, this will apply the correct CSS properties for the particular level of font size: `font-size`, `line-height` and `letter-spacing` as defined by OUDS.
+OUDS Web introduces a specific font size for components named `label` with 4 levels: `small`, `medium`, `large` and `xlarge`. We use this font size for many components included in OUDS Web, if you need to develop a custom component for your project you can use this font by calling the Scss mixin `get-font-size()`. Following is an call example for this mixin.
 
 <Example showPreview={false}  lang="scss" code={`.my-custom-component {
     @include get-font-size("label-medium");
+  }`} />
+
+This will result in the following CSS.
+
+<Example showPreview={false}  lang="css" code={`.my-custom-component {
+    font-size: var(--bs-font-size-label-medium);
+    line-height: var(--bs-font-line-height-label-medium);
+
+    // only for ltr
+    letter-spacing: var(--bs-font-letter-spacing-label-medium);
   }`} />
