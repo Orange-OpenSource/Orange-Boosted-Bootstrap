@@ -697,6 +697,10 @@
 
   .form-check-input {
     @extend .control-item-indicator;
+
+    &.is-invalid {
+      @extend [aria-invalid="true"];
+    }
   }
 
   .form-check-label {

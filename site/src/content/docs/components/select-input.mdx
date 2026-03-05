@@ -295,7 +295,9 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 
 <Callout type="info" name="input-invalid" />
 
-To display an invalid select, add `aria-invalid="true"` to a `.select-input-field` within the `.select-input-container`. Please take a look at our [Validation page to learn more]([[docsref:/foundation/form-validation]]).
+<Callout type="info" name="form-field-validation" />
+
+To manually mark a select as invalid, add `aria-invalid="true"` to a `.select-input-field` within the `.select-input-container`.
 
 <Callout type="warning">
 For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.select-input-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when the select input becomes invalid.

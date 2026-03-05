@@ -171,7 +171,9 @@ Add the `readonly` boolean attribute on a text area to prevent modification of t
 
 <Callout type="info" name="input-invalid" />
 
-To display an invalid text area, add `aria-invalid="true"` to a `.text-area-field` within the `.text-area-container`. Please take a look at our [Validation page to learn more]([[docsref:/foundation/form-validation]]).
+<Callout type="info" name="form-field-validation" />
+
+To manually mark a  text area as invalid, add `aria-invalid="true"` to a `.text-area-field` within the `.text-area-container`.
 
 <Callout type="warning">
 For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.text-area-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when the text area becomes invalid.

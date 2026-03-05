@@ -401,7 +401,9 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 
 <Callout type="info" name="input-invalid" />
 
-To display an invalid input, add `aria-invalid="true"` to a `.text-input-field` within the `.text-input-container`. Please take a look at our [Validation page to learn more]([[docsref:/foundation/form-validation]]).
+<Callout type="info" name="form-field-validation" />
+
+To manually mark an input as invalid, add `aria-invalid="true"` to a `.text-input-field` within the `.text-input-container`.
 
 <Callout type="warning">
 For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.text-input-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when switching the text input to invalid.
