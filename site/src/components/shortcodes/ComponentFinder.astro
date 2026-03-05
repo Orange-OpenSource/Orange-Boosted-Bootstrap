@@ -38,14 +38,12 @@ import { getVersionedDocsPath } from '@libs/path'
       const searchInput = document.getElementById('oudsComponentFinderInput') as HTMLInputElement
       if (!searchInput) return
       searchInput.addEventListener('input', () => {
-        setTimeout(() => {
-          this.querySelectorAll('ul[data-component-list] > *').forEach((elt) => elt.classList.remove('d-none'))
-          if (searchInput.value && searchInput.checkValidity()) {
-            this.querySelectorAll(
-              `ul[data-component-list] > :not([data-name*="${searchInput.value.toLowerCase()}"])`
-            ).forEach((elt) => elt.classList.add('d-none'))
-          }
-        }, 0)
+        this.querySelectorAll('ul[data-component-list] > *').forEach((elt) => elt.classList.remove('d-none'))
+        if (searchInput.value && searchInput.checkValidity()) {
+          this.querySelectorAll(
+            `ul[data-component-list] > :not([data-name*="${searchInput.value.toLowerCase()}"])`
+          ).forEach((elt) => elt.classList.add('d-none'))
+        }
       })
     }
   }
