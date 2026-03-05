@@ -441,14 +441,14 @@ $utilities: map-merge(
     ),
     "margin-x": (
       responsive: true,
-      property: margin-right margin-left,
+      property: margin-inline,
       class: mx,
       values: $spacers, // OUDS mod: `auto` value handled by `margin-x-ouds`
       bootstrap-compatibility: true
     ),
     "margin-y": (
       responsive: true,
-      property: margin-top margin-bottom,
+      property: margin-block,
       class: my,
       values: $spacers, // OUDS mod: `auto` value handled by `margin-y-ouds`
       bootstrap-compatibility: true
@@ -491,14 +491,14 @@ $utilities: map-merge(
     ),
     "negative-margin-x": (
       responsive: true,
-      property: margin-right margin-left,
+      property: margin-inline,
       class: mx,
       values: $negative-spacers,
       bootstrap-compatibility: true
     ),
     "negative-margin-y": (
       responsive: true,
-      property: margin-top margin-bottom,
+      property: margin-block,
       class: my,
       values: $negative-spacers,
       bootstrap-compatibility: true
@@ -541,14 +541,14 @@ $utilities: map-merge(
     ),
     "padding-x": (
       responsive: true,
-      property: padding-right padding-left,
+      property: padding-inline,
       class: px,
       values: $spacers,
       bootstrap-compatibility: true
     ),
     "padding-y": (
       responsive: true,
-      property: padding-top padding-bottom,
+      property: padding-block,
       class: py,
       values: $spacers,
       bootstrap-compatibility: true
@@ -613,12 +613,12 @@ $utilities: map-merge(
       values: $ouds-dimension-space-scaled
     ),
     "margin-x-scaled-ouds": (
-      property: margin-right margin-left,
+      property: margin-inline,
       class: mx-scaled,
       values: $ouds-dimension-space-scaled
     ),
     "margin-y-scaled-ouds": (
-      property: margin-top margin-bottom,
+      property: margin-block,
       class: my-scaled,
       values: $ouds-dimension-space-scaled
     ),
@@ -649,12 +649,12 @@ $utilities: map-merge(
       values: $ouds-dimension-negative-space-scaled
     ),
     "negative-margin-x-scaled-ouds": (
-      property: margin-right margin-left,
+      property: margin-inline,
       class: mx-scaled,
       values: $ouds-dimension-negative-space-scaled
     ),
     "negative-margin-y-scaled-ouds": (
-      property: margin-top margin-bottom,
+      property: margin-block,
       class: my-scaled,
       values: $ouds-dimension-negative-space-scaled
     ),
@@ -687,13 +687,13 @@ $utilities: map-merge(
     ),
     "margin-x-ouds": (
       responsive: true,
-      property: margin-right margin-left,
+      property: margin-inline,
       class: mx,
       values: map-merge($ouds-dimension-space-fixed, (auto: auto))
     ),
     "margin-y-ouds": (
       responsive: true,
-      property: margin-top margin-bottom,
+      property: margin-block,
       class: my,
       values: map-merge($ouds-dimension-space-fixed, (auto: auto))
     ),
@@ -730,13 +730,13 @@ $utilities: map-merge(
     ),
     "negative-margin-x-ouds": (
       responsive: true,
-      property: margin-right margin-left,
+      property: margin-inline,
       class: mx,
       values: $ouds-dimension-negative-space-fixed
     ),
     "negative-margin-y-ouds": (
       responsive: true,
-      property: margin-top margin-bottom,
+      property: margin-block,
       class: my,
       values: $ouds-dimension-negative-space-fixed
     ),
@@ -771,12 +771,12 @@ $utilities: map-merge(
       values: $ouds-dimension-space-scaled
     ),
     "padding-x-scaled-ouds": (
-      property: padding-right padding-left,
+      property: padding-inline,
       class: px-scaled,
       values: $ouds-dimension-space-scaled
     ),
     "padding-y-scaled-ouds": (
-      property: padding-top padding-bottom,
+      property: padding-block,
       class: py-scaled,
       values: $ouds-dimension-space-scaled
     ),
@@ -808,13 +808,13 @@ $utilities: map-merge(
     ),
     "padding-x-ouds": (
       responsive: true,
-      property: padding-right padding-left,
+      property: padding-inline,
       class: px,
       values: $ouds-dimension-space-fixed
     ),
     "padding-y-ouds": (
       responsive: true,
-      property: padding-top padding-bottom,
+      property: padding-block,
       class: py,
       values: $ouds-dimension-space-fixed
     ),
