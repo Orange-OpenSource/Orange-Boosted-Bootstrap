@@ -39,13 +39,13 @@ yarn add @ouds/web-common@[[config:current_version]] @ouds/web-[[config:brand]]@
 ```
 
 <Callout type="warning">
-**Yarn 2+ (aka Yarn Berry) doesn’t support the `node_modules` directory by default**: using the Bootstrap [Sass & JS example](https://github.com/twbs/examples/tree/main/sass-js) needs some adjustments:
-```sh
-yarn config set nodeLinker node-modules # Use the node_modules linker
-touch yarn.lock # Create an empty yarn.lock file
-yarn install # Install the dependencies
-yarn start # Start the project
-```
+  **Yarn 2+ (aka Yarn Berry) doesn’t support the `node_modules` directory by default**: using the Bootstrap [Sass & JS example](https://github.com/twbs/examples/tree/main/sass-js) needs some adjustments:
+  ```sh
+  yarn config set nodeLinker node-modules # Use the node_modules linker
+  touch yarn.lock # Create an empty yarn.lock file
+  yarn install # Install the dependencies
+  yarn start # Start the project
+  ```
 </Callout>
 
 ### Bun
@@ -91,8 +91,8 @@ If you’re using our compiled JavaScript and prefer to include Popper separatel
 <script src="[[config:cdn.js]]" integrity="[[config:cdn.js_hash]]" crossorigin="anonymous"></script>
 ```
 
-<Callout type="warning">
-**Resource hint**: make sure to use [`preconnect`](https://developer.mozilla.org/docs/Web/HTML/Attributes/rel/preconnect) where appropriate (**only** when given URL **will** be used).
+<Callout type="warning" title="Resource hint">
+  Make sure to use [`preconnect`](https://developer.mozilla.org/docs/Web/HTML/Attributes/rel/preconnect) where appropriate (**only** when given URL **will** be used).
 </Callout>
 
 ### Alternative CDN
@@ -100,7 +100,7 @@ If you’re using our compiled JavaScript and prefer to include Popper separatel
 In some cases—like in some specific countries or environments—you may need to use other CDN providers like [unpkg](https://www.unpkg.com/browse/@ouds/web@[[config:current_version]]). You’ll find the same files on these CDN providers, albeit with different URLs.
 
 <Callout type="warning">
-**If the SRI hashes differ for a given file, you shouldn’t use the files from that CDN, because it means that the file was modified by someone else.**
+  **If the SRI hashes differ for a given file, you shouldn’t use the files from that CDN, because it means that the file was modified by someone else.**
 </Callout>
 
 Note that you should compare same length hashes, e.g. `sha384` with `sha384`, otherwise it’s expected for them to be different.
