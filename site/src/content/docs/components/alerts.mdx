@@ -226,9 +226,9 @@ The variants `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-war
 
 Non-functional alerts are informative or decorative. They provide context or highlight content without implying a specific state, system event, or user action. These alerts are not tied to UX patterns such as positive, negative, info, or warning, and may use contextual or brand-related icons to enhance recognition or storytelling.
 
-The variants `.alert-neutral` and `.alert-accent` are considered as non-functional.
+The variants alert neutral (default) and `.alert-accent` are considered as non-functional.
 
-<Example buttonLabel="non-functional alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-neutral">
+<Example buttonLabel="non-functional alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message">
     <div class="alert-icon">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -284,7 +284,7 @@ In any case, the icon will be colorized automatically via the `color` attribute.
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
-<Example buttonLabel="changed icon alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-neutral">
+<Example buttonLabel="changed icon alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message">
     <div class="alert-icon">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -310,7 +310,7 @@ In any case, the icon will be colorized automatically via the `color` attribute.
     </div>
   </div>
 
-  <div class="alert alert-message alert-neutral">
+  <div class="alert alert-message">
     <div class="alert-icon">
       <span class="icon si si-settings" aria-hidden="true"></span>
       <p class="visually-hidden">Emphasized content</p>
@@ -326,7 +326,7 @@ Optionally, for the [non-functional alert message](#non-functional), you can rem
 
 <Callout type="warning" name="warning-color-assistive-technologies" />
 
-<Example buttonLabel="iconless alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-neutral">
+<Example buttonLabel="iconless alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message">
     <div class="alert-container">
       <div class="alert-text-container">
         <p class="alert-label"><span class="visually-hidden">Emphasized content: </span>Your data plan includes free calls on weekends.</p>
@@ -356,7 +356,7 @@ Rounded corners alerts is a project-wide option therefore all your alerts should
 </Callout>
 
 <Example buttonLabel="rounded alert message" code={`<div class="use-rounded-corner-alert">
-    <div class="alert alert-message alert-neutral mb-medium">
+    <div class="alert alert-message mb-medium">
       <div class="alert-icon">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -509,7 +509,7 @@ You can add an action [link]([[docsref:/components/links]]) (`<a>` or `<button` 
 
 To display a description text below the alert label, add a `<p>` after `.alert-label`.
 
-<Example buttonLabel="alert message with description" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-neutral">
+<Example buttonLabel="alert message with description" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message">
     <div class="alert-icon">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -525,13 +525,9 @@ To display a description text below the alert label, add a `<p>` after `.alert-l
 
 #### With bullet list
 
-To display a [bullet list]([[docsref:/components/bullet-list]]) below the alert label, add a `.bullet-list` after `.alert-label`.
+To display a bullet list below the alert label, add an `<ul>` after `.alert-label`.
 
-<Callout type="warning">
-  Please note that the `.bullet-list` needs to have `.fs-bm` in order to change its bullet size, and that it should be only one level depth.
-</Callout>
-
-<Example buttonLabel="alert message with description" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-neutral">
+<Example buttonLabel="alert message with bullet list" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message">
     <div class="alert-icon">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -540,7 +536,7 @@ To display a [bullet list]([[docsref:/components/bullet-list]]) below the alert 
     <div class="alert-container">
       <div class="alert-text-container">
         <h5 class="alert-label">Label</h5>
-        <ul class="bullet-list fs-bm">
+        <ul>
           <li>Bullet text</li>
           <li>Bullet text</li>
           <li>Bullet text</li>
@@ -559,7 +555,7 @@ Here are some examples with everything activated and some long texts to see how 
       <div class="alert-text-container">
         <h4 class="alert-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem.</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis. Aliquam erat volutpat. Ut quam turpis, interdum non ex at, imperdiet ornare mi. Curabitur eget hendrerit diam. Curabitur id placerat ipsum.</p>
-        <ul class="bullet-list fs-bm">
+        <ul>
           <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis. Aliquam erat volutpat. Ut quam turpis, interdum non ex at, imperdiet ornare mi. Curabitur eget hendrerit diam. Curabitur id placerat ipsum.</li>
           <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis.</li>
         </ul>
@@ -579,7 +575,7 @@ Here are some examples with everything activated and some long texts to see how 
       <div class="alert-text-container">
         <h4 class="alert-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem.</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis. Aliquam erat volutpat. Ut quam turpis, interdum non ex at, imperdiet ornare mi. Curabitur eget hendrerit diam. Curabitur id placerat ipsum.</p>
-        <ul class="bullet-list fs-bm">
+        <ul>
           <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis. Aliquam erat volutpat. Ut quam turpis, interdum non ex at, imperdiet ornare mi. Curabitur eget hendrerit diam. Curabitur id placerat ipsum.</li>
           <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis.</li>
         </ul>
@@ -755,11 +751,11 @@ The variants `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-war
 
 Non-functional alerts are informative or decorative. They provide context or highlight content without implying a specific state, system event, or user action. These alerts are not tied to UX patterns such as positive, negative, info, or warning, and may use contextual or brand-related icons to enhance recognition or storytelling.
 
-The variants `.alert-neutral` and `.alert-accent` are considered as non-functional.
+The variants alert neutral (default) and `.alert-accent` are considered as non-functional.
 
 <Callout type="info" title="Please note that this variant of alert needs an icon specified." />
 
-<Example buttonLabel="non-functional inline alert" class="d-flex flex-column gap-medium" code={`<div class="alert alert-neutral">
+<Example buttonLabel="non-functional inline alert" class="d-flex flex-column gap-medium" code={`<div class="alert">
     <div class="alert-icon">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -792,7 +788,7 @@ In any case, the icon will be colorized automatically via the `color` attribute.
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
-<Example buttonLabel="changed icon inline alert" class="d-flex flex-column gap-medium" code={`<div class="alert alert-neutral">
+<Example buttonLabel="changed icon inline alert" class="d-flex flex-column gap-medium" code={`<div class="alert">
     <div class="alert-icon">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -810,7 +806,7 @@ In any case, the icon will be colorized automatically via the `color` attribute.
     <p class="alert-label">Upgrade your plan and get a free device.</p>
   </div>
 
-  <div class="alert alert-neutral">
+  <div class="alert">
     <div class="alert-icon">
       <span class="icon si si-settings" aria-hidden="true"></span>
       <p class="visually-hidden">Emphasized content</p>

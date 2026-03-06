@@ -9,6 +9,12 @@
 
 // Alert component
 .alert {
+  // Default to neutral variant
+  --#{$prefix}alert-label-color: #{$ouds-color-content-default};
+  --#{$prefix}alert-icon-color: #{$ouds-color-content-default};
+  --#{$prefix}alert-bg: #{$ouds-color-surface-secondary};
+  --#{$prefix}alert-border-color: #{$ouds-color-border-default};
+
   display: flex;
   gap: $ouds-alert-space-column-gap;
   align-items: flex-start;
@@ -41,7 +47,7 @@
   }
 
   @supports not (container-type: size) {
-    &:not(:has(.alert-text-container p:not(.alert-label), .bullet-list, .alert-container .link)) .btn-close {
+    &:not(:has(.alert-text-container p:not(.alert-label), .alert-text-container ul, .alert-container .link)) .btn-close {
       @include border-bottom-end-radius(var(--#{$prefix}alert-border-radius));
     }
   }
@@ -53,7 +59,7 @@
   flex-shrink: 0;
   width: px-to-rem($ouds-alert-size-icon);
   height: px-to-rem($ouds-alert-size-icon);
-  margin-block: var(--#{$prefix}alert-icon-margin-block);
+  margin-top: var(--#{$prefix}alert-icon-margin-block);
   color: var(--#{$prefix}alert-icon-color);
 
   &:where(:not(:has(svg, img, .icon))) {
@@ -104,15 +110,36 @@
   gap: $ouds-alert-space-row-gap;
   color: $ouds-color-content-muted;
 
-  > *, // To handle any content inside this text-container.
-  .bullet-list.fs-bm {
-    --#{$prefix}bullet-list-icon-container-width: #{calc(px-to-rem($ouds-size-icon-with-label-medium-size-medium) - $ouds-bullet-list-space-padding-inline-level-0)}; // TODO: Do we need a token for that ?
-    --#{$prefix}bullet-list-padding-block: #{$ouds-alert-space-row-gap-bullet / 2};
-    --#{$prefix}bullet-color: var(--#{$prefix}color-content-default);
+  > * { // To handle any content inside this text-container.
     max-width: var(--#{$prefix}font-max-width-label-medium);
     margin-bottom: 0;
     @include get-font-size("label-medium");
     font-weight: $ouds-font-weight-web-label-default;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style-type: "";
+
+    > li {
+      position: relative;
+      padding-left: calc(px-to-rem(20px) + 8px);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: px-to-rem(20px);
+        height: px-to-rem(20px);
+        height: 1lh;
+        content: "";
+        background-color: $ouds-color-content-muted;
+        mask-image: $bullet-list-marker-level-0;
+        mask-repeat: no-repeat;
+        mask-position: center right;
+        mask-size: px-to-rem(16px);
+      }
+    }
   }
 }
 
@@ -147,13 +174,6 @@
 }
 
 // Variants
-.alert-neutral {
-  --#{$prefix}alert-label-color: #{$ouds-color-content-default};
-  --#{$prefix}alert-icon-color: #{$ouds-color-content-default};
-  --#{$prefix}alert-bg: #{$ouds-color-surface-secondary};
-  --#{$prefix}alert-border-color: #{$ouds-color-border-default};
-}
-
 .alert-accent {
   --#{$prefix}alert-label-color: #{$ouds-color-content-default};
   --#{$prefix}alert-icon-color: #{$ouds-color-content-status-accent};
@@ -216,12 +236,6 @@
 
   .alert-primary {
     @extend .alert-accent;
-  }
-
-  .alert-secondary,
-  .alert-light,
-  .alert-dark {
-    @extend .alert-neutral;
   }
 
   .alert-heading {
