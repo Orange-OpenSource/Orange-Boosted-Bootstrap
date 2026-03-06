@@ -35,20 +35,20 @@ To make your form validation accessible, you also have to ensure that any feedba
 
 ## Client-side
 
-Try to submit the form below; our JavaScript will intercept the submit button, and you’ll see the `:user-invalid` styles applied to the fields. For invalid fields, it also associates the invalid feedback/error message with the relevant form field using `aria-describedby` (noting that this attribute allows more than one `id` to be referenced, in case the field already points to additional description/helper text).
+Try to submit the form below; our JavaScript will intercept the submit event, and you’ll see the `:user-invalid` styles applied to the fields. For invalid fields, it also associates the invalid feedback/error message with the relevant form field using `aria-describedby` (noting that this attribute allows more than one `id` to be referenced, in case the field already points to additional description/helper text).
 
-<Example code={`<form class="needs-validation" novalidate>
+<Example buttonLabel="example client-side form" code={`<form class="needs-validation" novalidate>
     <p>
       This form uses client-side validation with custom validation styles. Try to submit the form without filling it out to see them in action.
     </p>
     <p class="fw-bold">
-      All fields are required.
+      Required fields are marked with a star.
     </p>
     <fieldset class="control-items-list mb-large">
      <legend>Title <span aria-hidden="true">*</span></legend>
       <div class="radio-button-item">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" name="title" id="mr" data-feedback-id="titleFeedback" required />
+          <input class="control-item-indicator" type="radio" value="" name="title" id="mr" data-errormessage="titleFeedback" required />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="mr">Mr.</label>
@@ -56,7 +56,7 @@ Try to submit the form below; our JavaScript will intercept the submit button, a
       </div>
       <div class="radio-button-item">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" name="title" id="ms" data-feedback-id="titleFeedback" required />
+          <input class="control-item-indicator" type="radio" value="" name="title" id="ms" data-errormessage="titleFeedback" required />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="ms">Ms.</label>
@@ -64,7 +64,7 @@ Try to submit the form below; our JavaScript will intercept the submit button, a
       </div>
       <div class="radio-button-item">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" name="title" id="other" data-feedback-id="titleFeedback" required />
+          <input class="control-item-indicator" type="radio" value="" name="title" id="other" data-errormessage="titleFeedback" required />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="other">Other or prefer not to choose</label>
@@ -78,7 +78,7 @@ Try to submit the form below; our JavaScript will intercept the submit button, a
     <div class="text-input mb-large">
       <div class="text-input-container">
         <label for="username">Username <span aria-hidden="true">*</span></label>
-        <input type="text" class="text-input-field" id="username" data-feedback-id="usernameFeedback" autocomplete="username" placeholder=" " required>
+        <input type="text" class="text-input-field" id="username" data-errormessage="usernameFeedback" autocomplete="username" placeholder=" " required>
       </div>
       <p id="usernameFeedback" class="error-text">
         Username is required.
@@ -87,7 +87,7 @@ Try to submit the form below; our JavaScript will intercept the submit button, a
     <div class="text-input mb-large">
       <div class="text-input-container">
         <label for="inputPassword">Password <span aria-hidden="true">*</span></label>
-        <input type="password" id="inputPassword" class="text-input-field" aria-describedby="inputPasswordPrefixHelper" data-feedback-id="passwordFeedback" autocomplete="new-password" placeholder=" " required minlength="8">
+        <input type="password" id="inputPassword" class="text-input-field" aria-describedby="inputPasswordPrefixHelper" data-errormessage="passwordFeedback" autocomplete="new-password" placeholder=" " required minlength="8">
         <button class="btn btn-minimal btn-icon">
           <svg aria-hidden="true">
             <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#accessibility-vision"/>
@@ -96,7 +96,7 @@ Try to submit the form below; our JavaScript will intercept the submit button, a
         </button>
       </div>
       <p id="inputPasswordPrefixHelper" class="helper-text">Enter a password with at least 8 characters.</p>
-      <p id="passwordFeedback" class="error-text">
+      <p id="passwordFeedback" aria-live="polite" class="error-text">
         Password is required and must be at least 8 characters.
       </p>
     </div>
@@ -104,7 +104,7 @@ Try to submit the form below; our JavaScript will intercept the submit button, a
     <div class="select-input mb-large">
       <div class="select-input-container">
         <label for="continent">Continent <span aria-hidden="true">*</span></label>
-        <select class="select-input-field" id="continent" data-feedback-id="continentFeedback" required>
+        <select class="select-input-field" id="continent" data-errormessage="continentFeedback" required>
           <option value="" disabled selected></option>
           <option value="1">Europe</option>
           <option value="2">Oceania</option>
@@ -121,7 +121,7 @@ Try to submit the form below; our JavaScript will intercept the submit button, a
     <div class="text-area mb-large">
       <div class="text-area-container">
         <label for="comments">Comments <span aria-hidden="true">*</span></label>
-        <textarea id="comments" class="text-area-field" data-feedback-id="commentsFeedback" required></textarea>
+        <textarea id="comments" class="text-area-field" data-errormessage="commentsFeedback" required></textarea>
       </div>
       <p id="commentsFeedback" class="error-text">
         Comments is required.
@@ -131,7 +131,7 @@ Try to submit the form below; our JavaScript will intercept the submit button, a
     <div class="switch-item-container mb-large">
       <div class="switch-item control-item-reverse">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="readTermsAndConditions" data-feedback-id="readTermsAndConditionsFeedback" required />
+          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="readTermsAndConditions" data-errormessage="readTermsAndConditionsFeedback" required />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="readTermsAndConditions">I have read the terms and conditions <span aria-hidden="true">*</span></label>
@@ -146,7 +146,7 @@ Try to submit the form below; our JavaScript will intercept the submit button, a
       <div class="checkbox-item">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" type="checkbox" value="" id="agreeTermsAndConditions"
-                 data-feedback-id="agreeTermsAndConditionsFeedback" required/>
+                 data-errormessage="agreeTermsAndConditionsFeedback" required/>
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="agreeTermsAndConditions">I agree to the terms and conditions <span aria-hidden="true">*</span></label>
@@ -160,11 +160,17 @@ Try to submit the form below; our JavaScript will intercept the submit button, a
     <button type="submit" class="btn btn-strong">Submit</button>
   </form>`} />
 
+The following script is just a stub doing the minimum to handle inputs description and ARIA description when fields are invalid. We are using a data attribute to store the descriptions ids and change the `aria-describedby` attribute when necessary.
+
+<Callout type="warning">
+  We do not recommend ARIA attribute `aria-errormessage` because it is not widely implemented by assistive technologies.
+</Callout>
+
 <Code containerClass="bd-example-snippet" lang="js" filePath={getDocsRelativePath('/static/[brand]/docs/[version]/assets/js/validate-forms.js')} />
 
 ## Server-side
 
-We recommend using client-side validation before server-side validation. If server-side validation returns any invalid field, you can indicate it by setting the `aria-invalid` to `true`.
+We recommend using client-side validation before server-side validation. If server-side validation returns any invalid field, you can indicate it by setting the `aria-invalid` attribute to `true`.
 
 For invalid fields, ensure that the invalid feedback/error message is associated with the relevant form field using `aria-describedby` (noting that this attribute allows more than one `id` to be referenced, in case the field already points to additional description/helper text).
 
@@ -173,7 +179,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
       This form simulates server-side validation with custom validation styles.
     </p>
     <p class="fw-bold">
-      All fields are required.
+      Required fields are marked with a star.
     </p>
     <fieldset class="control-items-list mb-large">
      <legend>Title <span aria-hidden="true">*</span></legend>
@@ -209,8 +215,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
     <div class="text-input mb-large">
       <div class="text-input-container">
         <label for="username2">Username <span aria-hidden="true">*</span></label>
-        <input type="text" class="text-input-field" aria-invalid="true" id="username2" aria-describedby="username2Feedback"
-               placeholder=" " required>
+        <input type="text" class="text-input-field" aria-invalid="true" id="username2" aria-describedby="username2Feedback" autocomplete="username" placeholder=" " required>
       </div>
       <p id="username2Feedback" class="error-text">
         Username is required.
@@ -220,7 +225,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
     <div class="text-input mb-large">
       <div class="text-input-container">
         <label for="inputPassword2">Password <span aria-hidden="true">*</span></label>
-        <input type="password" id="inputPassword2" class="text-input-field" aria-invalid="true" aria-describedby="password2Feedback" placeholder=" " required>
+        <input type="password" id="inputPassword2" class="text-input-field" aria-invalid="true" aria-describedby="password2Feedback" autocomplete="new-password" placeholder=" " required minlength="8">
         <button class="btn btn-minimal btn-icon">
           <svg aria-hidden="true">
             <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#accessibility-vision"/>
@@ -229,7 +234,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
         </button>
       </div>
       <p id="password2Feedback" class="error-text">
-        Password is required.
+        Password is required and must be at least 8 characters.
       </p>
     </div>
 

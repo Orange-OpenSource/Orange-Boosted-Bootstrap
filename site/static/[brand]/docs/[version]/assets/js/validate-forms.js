@@ -1,24 +1,18 @@
-// Example starter JavaScript for managing forms with custom validation styles.
+// Example starter JavaScript for managing a11y in forms with client-side validation
 (() => {
   'use strict'
 
   function manageFeedbackMessage(field) {
-    // Get the ID of the feedback message from the attribute data-feedback-id
-    const feedbackId = field.getAttribute('data-feedback-id')
+    // Get the ID of the feedback message from the attribute data-errormessage
+    const errorMessageId = field.dataset.errormessage
     let description = field.getAttribute('aria-describedby') || ''
 
     // aria-describedby can contain multiple space separated ids,
     //  we need to preserve everything other than feedback id
-    description = description.replace(feedbackId, '').trim()
-    if (feedbackId && field.checkValidity()) {
-      // Valid field: remove feedback id from aria-describedby attribute string
-      if (!description) {
-        field.removeAttribute('aria-describedby')
-        return
-      }
-    } else if (!field.checkValidity()) {
+    description = description.replace(errorMessageId, '').trim()
+    if (!field.checkValidity()) {
       // Add feedback id on aria-describedby if field invalid
-      description = `${feedbackId} ${description}`
+      description = `${errorMessageId} ${description}`
     }
 
     // Apply update on aria-describedby
@@ -46,6 +40,10 @@
       })
 
       if (!form.checkValidity()) {
+        // Focus on first error for accessibility
+        const invalidItems = form.querySelectorAll(':user-invalid')
+        invalidItems[0].focus()
+
         event.preventDefault()
         event.stopPropagation()
       }
