@@ -318,7 +318,7 @@ To create a read only switch, the input should be replaced by a `span` element w
 
 <Callout type="info" name="form-field-validation" />
 
-To manually mark a switch as invalid, add `aria-invalid="true"` to a `.control-item-indicator`.
+To manually mark a switch as invalid, add `aria-invalid="true"` to a `.control-item-indicator`. An error icon will be automatically shown, if there is a decorative icon specified it will be hidden.is-
 
 #### Error text on one switch item
 
@@ -339,7 +339,7 @@ To automatically display an error text on a single switch item, enclose it insid
 
 <BootstrapCompatibility>
 
-To display an invalid switch, add `.is-invalid"` to a `.form-check-input`.
+To display an invalid switch, add `.is-invalid` to a `.form-check-input`.
 
 <Example buttonLabel="Bootstrap compatibility: invalid single switch" code={`<div class="form-check form-switch">
     <input class="form-check-input is-invalid" type="checkbox" value="" id="checkInvalid" role="switch" />
