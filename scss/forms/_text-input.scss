@@ -482,7 +482,8 @@
     .text-area-field {
       z-index: 3;
       width: 100%;
-      min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) * 2 + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
+      height: calc(px-to-rem($ouds-text-area-size-min-height-input) * 2 + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
+      min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
       max-height: px-to-rem($ouds-text-area-size-max-height-input);
       padding: 0;
       padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right));
@@ -503,8 +504,8 @@
       }
 
       @supports (field-sizing: content) {
+        height: unset;
         field-sizing: content;  // Not yet standard, but supported in some browsers
-        min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
       }
 
       &:focus,
