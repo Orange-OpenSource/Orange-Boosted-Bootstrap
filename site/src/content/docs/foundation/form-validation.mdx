@@ -11,13 +11,17 @@ extra_js:
 ---
 import { getDocsRelativePath } from '@libs/path'
 
+Browsers built-in form validation is the preferred way to handle [client-side validation](#client-side). When using [semantic inputs and validation constraints attributes](#accessibility) (like `required`, `pattern`...), the browser automatically adds a `:user-invalid` pseudo-class on invalid fields that [OUDS Web will style](#how-it-works).
+
+Alternatively you can programmatically add a `aria-invalid="true"` to manually mark a field as invalid, this is especially useful for [server-side validation](#server-side).
+
 ## How it works
 
 OUDS Web provides custom feedback styles that apply custom colors, borders, focus styles, and background icons to better communicate feedback. to use them, you’ll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript.
 
 Here’s how form validation works with OUDS Web:
 
-- HTML form validation is applied via CSS’s pseudo-classe `:user-invalid`. It applies to `<input />`, `<select>`, and `<textarea>` elements.
+- HTML form validation is applied via CSS’s pseudo-class `:user-invalid`. It applies to `<input />`, `<select>`, and `<textarea>` elements.
 - `:user-invalid` will only be applied after the user has interacted with the field. Read [more about `:user-invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:user-invalid) behavior.
 - As a fallback, `aria-invalid="true"` attribute may be used instead of the pseudo-class `:user-invalid` for [server-side validation](#server-side).
 - All modern browsers support the [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api), a series of JavaScript methods for validating form controls. You may provide custom validity messages with `setCustomValidity` in JavaScript.
@@ -29,9 +33,13 @@ With that in mind, consider the following demos for our custom form validation s
 
 OUDS Web's form elements are designed to be accessible in particular by always using a `<label>` linked to a form element (beware though to use the right `id`). This allows assistive technologies to convey the purpose of each form field to users.
 
-You must take care to specify the validation rules for each field using an appropriate attribute like `required`, `pattern`, `min`, `minLength`, etc. This allows assistive technologies to understand the validation requirements for each field and communicate them to users. The form fields will be marked as `:user-invalid` if the user input doesn't meet the specified validation rules.
+You must take care to specify the [validation rules for each field using an appropriate attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation#intrinsic_and_basic_constraints) like `required`, `pattern`, `min`, `minLength`, etc. This allows assistive technologies to understand the validation requirements for each field and communicate them to users. The form fields will be marked as `:user-invalid` if the user input doesn't meet the specified validation rules. It is also a good practice to add correct [`inputmode`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode) and [`autocomplete`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attributes on your fields as needed.
 
 To make your form validation accessible, you also have to ensure that any feedback messages are properly associated with the relevant form field using `aria-describedby` when the field becomes invalid. This is important for users of assistive technologies, as it allows them to understand what went wrong and how to fix it. This is done with a bit of JavaScript in the following example.
+
+<Callout type="warning">
+  We do not recommend using ARIA attribute `aria-errormessage` because it is not widely implemented by assistive technologies at this time.
+</Callout>
 
 ## Client-side
 
@@ -161,10 +169,6 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
   </form>`} />
 
 The following script is just a stub doing the minimum to handle inputs description and ARIA description when fields are invalid. We are using a data attribute to store the descriptions ids and change the `aria-describedby` attribute when necessary.
-
-<Callout type="warning">
-  We do not recommend ARIA attribute `aria-errormessage` because it is not widely implemented by assistive technologies.
-</Callout>
 
 <Code containerClass="bd-example-snippet" lang="js" filePath={getDocsRelativePath('/static/[brand]/docs/[version]/assets/js/validate-forms.js')} />
 
