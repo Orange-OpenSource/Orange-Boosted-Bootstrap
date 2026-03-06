@@ -62,7 +62,7 @@ export const screenSize = [
 ]
 
 <Callout type="info">
-You can find here the [iconography design guidelines](https://r.orange.fr/r/S-ouds-doc-icon-intro).
+  You can find here the [iconography design guidelines](https://r.orange.fr/r/S-ouds-doc-icon-intro).
 </Callout>
 
 <BrandSpecific brand="orange">
@@ -78,7 +78,7 @@ If you need guidance to use Solaris icons, please refer to the paragraph [use So
 Icons are designed within a square layout to preserve consistency. Within this square, there exists a designated safety zone to guarantee that icons can be used in various sizes and contexts while maintaining alignment as intended by the designers. The dimensions of the icons encompass this safety zone, ensuring adaptability and consistency across diverse applications.
 
 <svg width="8em" height="8em" class="bg-opacity-lowest" aria-hidden="true">
-  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#delete')}/>
+  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}/>
 </svg>
 <svg width="8em" height="8em" class="bg-opacity-lowest" aria-hidden="true">
   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}/>
@@ -204,7 +204,7 @@ Here are some examples of other [color utilities]([[docsref:utilities/color#colo
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
     </svg>
     <svg class="decorative-small-icon text-default" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#delete')}" />
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}" />
     </svg>
     <svg class="decorative-small-icon text-primary" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}" />
@@ -219,7 +219,7 @@ Here are some examples of other [color utilities]([[docsref:utilities/color#colo
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
     </svg>
     <svg class="decorative-small-icon" style="color: var(--bs-color-content-default)" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#delete')}" />
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}" />
     </svg>
     <svg class="decorative-small-icon" style="color: var(--bs-color-content-brand-primary)" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}" />
@@ -756,7 +756,7 @@ SVG Sprite is the preferred choice for flexibility, performance and accessibilit
 ## Icons accessibility
 
 <Callout type="info">
-For more details, **Orange Accessibility Guidelines** provides [a deep-dive article regarding SVG accessibility](https://a11y-guidelines.orange.com/en/articles/accessible-svg/).
+  For more details, **Orange Accessibility Guidelines** provides [a deep-dive article regarding SVG accessibility](https://a11y-guidelines.orange.com/en/articles/accessible-svg/).
 </Callout>
 
 #### Decorative icons
@@ -861,7 +861,7 @@ Icon font is not the preferred solution. However, for websites needing more than
 <Example code={`<span class="si si-settings" aria-hidden="true" style="font-size: 3rem"></span>`} />
 
 <Callout type="warning">
-Note that with this technique, you cannot have multicolor icons, so you cannot render the [warning icon](#accessible-warning-icon).
+  Note that with this technique, you cannot have multicolor icons, so you cannot render the [warning icon](#accessible-warning-icon).
 </Callout>
 
 ### Inline SVG
