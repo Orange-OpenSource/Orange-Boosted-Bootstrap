@@ -7,11 +7,11 @@ export const componentsDetails: ComponentCardData[] = [
     link: 'alerts#alert-message',
     category: 'Dialog',
     snippet: `
-      <div class="alert alert-message alert-negative">
+      <div class="alert alert-message alert-negative" style="scale: .9">
         <div class="alert-icon"></div>
         <div class="alert-container">
           <div class="alert-text-container">
-            <p class="alert-label">Alert message</p>
+            <p class="alert-label">Label</p>
           </div>
         </div>
       </div>`
@@ -112,7 +112,7 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <div class="alert alert-info">
         <div class="alert-icon"></div>
-        <p class="alert-label">Inline alert</p>
+        <p class="alert-label">Label</p>
       </div>`
   },
   {
