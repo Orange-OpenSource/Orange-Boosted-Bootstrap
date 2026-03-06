@@ -1,40 +1,26 @@
 @include color-mode(light, true) {
-  // --base00: #fff;
-  // --base01: #f5f5f5;
-  // --base02: #{$red-500};
   --base03: #{$core-ouds-color-functional-gray-dark-240};
-  // --base04: #{$green-700};
   --base05: #{$core-ouds-color-functional-gray-dark-640};
-  // --base06: #{$gray-800};
   --base07: #{$core-orange-color-decorative-sky-700};
   --base08: #{$core-ouds-color-functional-scarlet-600};
   --base09: #{$core-orange-color-decorative-emerald-800};
   --base0A: #{$core-orange-color-decorative-amethyst-600};
   --base0B: #{$core-ouds-color-functional-dodger-blue-700};
   --base0C: #{$core-ouds-color-functional-malachite-750};
-  // --base0D: #{$purple-700};
   --base0E: #{$core-orange-color-decorative-shocking-pink-700};
-  // --base0F: #{$black};
 }
 
 // Right now, values are from Bootstrap from `--base00` to `--baseOF` and the 4 remaining one are copied from OUDS Web's light mode
 @include color-mode(dark, true) {
-  // --base00: #282c34;
-  // --base01: #353b45;
-  // --base02: #{$teal-300};
   --base03: #{$core-ouds-color-functional-gray-light-640};
-  // --base04: #{$yellow-300};
   --base05: #{$core-ouds-color-functional-gray-light-400};
-  // --base06: #{$gray-400};
   --base07: #{$core-orange-color-orange-600};
   --base08: #{$core-orange-color-decorative-emerald-500};
   --base09: #{$core-orange-color-orange-300};
   --base0A: #{$core-orange-color-decorative-amber-400};
   --base0B: #{$core-orange-color-decorative-sky-400};
   --base0C: #{$core-orange-color-decorative-sky-400};
-  // --base0D: #{$purple-300};
   --base0E: #{$core-orange-color-decorative-shocking-pink-300};
-  // --base0F: #{$white};
 }
 
 // Shell prompts
