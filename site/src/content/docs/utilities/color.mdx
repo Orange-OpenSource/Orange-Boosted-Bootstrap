@@ -32,12 +32,12 @@ Here are some compliant combinations examples for texts:
 
 <Example code={[...allTokens.filter(token => token.name.match(/\$ouds-color-content-/) && !token.name.match(/-action-/) && token.name.match(/-light/) && token.compiledValue).map(token => {
     if (token.name.match(/-on-/)) {
-      return `<p class="bg-${token.name.split('-').slice(4, -1).join('-')} text-${token.name.split('-').slice(3, -1).join('-')} p-small">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
+      return `<p class="bg-surface-${token.name.split('-').slice(4, -1).join('-')} text-${token.name.split('-').slice(3, -1).join('-')} p-small">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
     }
     return `<p class="text-${token.name.split('-').slice(3, -1).join('-')} p-small">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
   }),
-  `<p class="text-always-black p-small">Text always-black</p>
-  <p class="text-always-white p-small">Text always-white</p>
+  `<p class="text-always-black bg-always-white p-small">Text always-black</p>
+  <p class="text-always-white bg-always-black p-small">Text always-white</p>
   <p class="text-always-on-black bg-always-black p-small">Text always-on-black</p>
   <p class="text-always-on-white bg-always-white p-small">Text always-on-white</p>`]} />
 
@@ -48,36 +48,6 @@ Here are some compliant combinations examples for texts:
   - **Large texts** are texts that are at least 24px or 19px bold. This corresponds to at least [`.fs-hl` and above or `.fs-hm` bold and above]([[docsref:/utilities/text#font-size]]) in OUDS Web.
   - **Normal texts** are the remaining texts references.
 </Callout>
-
-{/* In the following table we assume that the context is switching between light and dark mode and the use of `data-bs-theme` is correctly used.
-
-{/* TODO: Keep this table ? /}
-
-<BsTable>
-| Color utility | Allowed `.bg-*` utility for normal and large texts | Allowed `.bg-*` utility for large text only |
-| --- | --- | --- |
-| `.text-brand-primary` | `.bg-emphasized`, `.bg-always-black` | `.bg-primary`, `.bg-secondary`, `.bg-tertiary`, `.bg-status-neutral-emphasized`, `.bg-status-neutral-muted`, `.bg-always-white` |
-| `.text-default` | All `.bg-*` are allowed. | — |
-| `.text-muted` | All `.bg-*` are allowed. | — |
-| `.text-disabled` must be used carefully in a **disabled context only**. | All `.bg-*` are allowed. | — |
-| `.text-always-black` | `.bg-surface-brand-primary`, `.bg-surface-status-accent-emphasized`, `.bg-surface-status-positive-emphasized`, `.bg-surface-status-warning-emphasized`, `.bg-surface-status-info-emphasized`, `.bg-always-white` | — |
-| `.text-always-white` | `.bg-emphasized`, `.bg-always-black` | — |
-| `.text-on-brand-primary` | `.bg-surface-brand-primary` | — |
-| `.text-on-status-accent-emphasized` | `.bg-surface-status-accent-emphasized` | — |
-| `.text-on-status-accent-muted` | `.bg-surface-status-accent-muted` | — |
-| `.text-on-status-info-emphasized` | `.bg-surface-status-info-emphasized` | — |
-| `.text-on-status-info-muted` | `.bg-surface-status-info-muted` | — |
-| `.text-on-status-negative-emphasized` | `.bg-surface-status-negative-emphasized` | — |
-| `.text-on-status-negative-muted` | `.bg-surface-status-negative-muted` | — |
-| `.text-on-status-neutral-emphasized` | `.bg-status-neutral-emphasized` | — |
-| `.text-on-status-neutral-muted` | `.bg-status-neutral-muted` | — |
-| `.text-on-status-positive-emphasized` | `.bg-surface-status-positive-emphasized` | — |
-| `.text-on-status-positive-muted` | `.bg-surface-status-positive-muted` | — |
-| `.text-on-status-warning-emphasized` | `.bg-surface-status-warning-emphasized` | — |
-| `.text-on-status-warning-muted` | `.bg-surface-status-warning-muted` | — |
-| `.text-always-on-black` | `.bg-emphasized`, `.bg-always-black` | — |
-| `.text-always-on-white` | `.bg-surface-brand-primary`, `.bg-surface-status-accent-emphasized`, `.bg-surface-status-positive-emphasized`, `.bg-surface-status-warning-emphasized`, `.bg-surface-status-info-emphasized`, `.bg-always-white` | — |
-</BsTable> */}
 
 <BootstrapCompatibility>
 <Example code={[

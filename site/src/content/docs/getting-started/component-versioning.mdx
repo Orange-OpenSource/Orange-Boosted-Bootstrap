@@ -40,7 +40,7 @@ You can find [the components matrix here](https://unified-design-system.orange.c
           </td>
           <td>
             {component.version.value} (<a href={`https://r.orange.fr/r/S-ouds-doc-${component.slug ?? component.name.toLowerCase()}_changelog`}>
-              changelog
+              changelog<span class="visually-hidden">for {component.name}</span>
             </a>)
           </td>
         </tr>

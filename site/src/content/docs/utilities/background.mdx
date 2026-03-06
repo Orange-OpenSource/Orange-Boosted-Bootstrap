@@ -108,7 +108,7 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
         const themesArray = allTokens.filter(allToken => {
           return allToken.name.match(`modes-on-(bg-)?${bgName}-(dark|light)`)
         }).map(token => token.compiledValue)
-        const theme = themesArray[0].includes('light')
+        const theme = themesArray[1].includes('light')
           ? 'light'
           : 'dark'
         return `    <p class="bg-${bgName} p-large fw-bold">${theme !== 'light' ? `<span data-bs-theme="${theme}">` : ''}.bg-${bgName}${theme !== 'light' ? '</span>' : ''}</p>`
@@ -120,7 +120,7 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
         const themesArray = allTokens.filter(allToken => {
           return allToken.name.match(`modes-on-(surface-)?${surfaceName}-(dark|light)`)
         }).map(token => token.compiledValue)
-        const theme = themesArray[0].includes('light')
+        const theme = themesArray[1].includes('light')
           ? 'light'
           : 'dark'
         return `    <p class="bg-${bgName} p-large fw-bold">${theme !== 'light' ? `<span data-bs-theme="${theme}">` : ''}.bg-${bgName}${theme !== 'light' ? '</span>' : ''}</p>`
