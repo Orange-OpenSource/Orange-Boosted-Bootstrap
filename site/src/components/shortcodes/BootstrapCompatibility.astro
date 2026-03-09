@@ -1,5 +1,6 @@
 ---
 import { getVersionedDocsPath } from '@libs/path'
+import Callout from './Callout.astro'
 ---
 
 <details class="mt-medium mb-2xlarge" data-sb-css-bootstrap="true">
@@ -10,13 +11,9 @@ import { getVersionedDocsPath } from '@libs/path'
     </span>
   </summary>
 
-  <div class="alert alert-info alert-sm mb-medium" role="alert">
-    <span class="alert-icon"><span class="visually-hidden">Info</span></span>
-    <p>
-      This part is enabled only when <code>$enable-bootstrap-compatibility</code> is set to <code>true</code>. Read more
-      about <a href={`${getVersionedDocsPath('/foundation/approach/#bootstrap-compatibility')}`}>Bootstrap compatibility</a>.
-    </p>
-  </div>
+  <Callout type="info" class="mb-medium" action="Read more about Bootstrap compatibility" actionHref={getVersionedDocsPath('/foundation/approach/#bootstrap-compatibility')}>
+    <p>This part is enabled only when <code>$enable-bootstrap-compatibility</code> is set to <code>true</code>.</p>
+  </Callout>
 
   <slot />
 </details>
