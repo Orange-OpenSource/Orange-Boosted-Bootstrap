@@ -4,6 +4,7 @@ import { getConfig } from '@libs/config'
 import { getData } from '@libs/data'
 import { getSlug } from '@libs/utils'
 import GitHubIcon from '@components/icons/GitHubIcon.astro'
+import Callout from '@components/shortcodes/Callout.astro'
 ---
 
 {
@@ -13,24 +14,15 @@ import GitHubIcon from '@components/icons/GitHubIcon.astro'
         <h2 id={getSlug(category)}>{category}</h2>
         <p>{description}</p>
         {category === 'RTL' && (
-          <div class="bd-callout bd-callout-warning small">
-            <p>
-              <strong>RTL is still experimental</strong> and will evolve with feedback. Spotted something or have an
-              improvement to suggest?
-            </p>
-            <p>
-              <a href={`${getConfig().repo}/issues/new/choose`}>Please open an issue.</a>
-            </p>
-          </div>
+          <Callout type="warning" action="Please open an issue" actionHref={`${getConfig().repo}/issues/new/choose`}>
+            <p><strong>RTL is still experimental</strong> and will evolve with feedback. Spotted something or have an improvement to suggest?</p>
+          </Callout>
         )}
         {category === 'Starters' && (
-          <div class="bd-callout bd-callout-warning mb-2xlarge">
-            <p>
-              <strong>To get working OUDS Web examples based on the Bootstrap ones</strong>, you need to replace all{' '}
-              <code>bootstrap</code> occurrences with <code>oudsWeb</code> in some files.
-            </p>
-            <p>You may need to tweak a bit Sass files.</p>
-          </div>
+          <Callout type="warning" class="mb-2xlarge mt-medium">
+            <p><strong>To get working OUDS Web examples based on the Bootstrap ones</strong>, you need to replace all <code>bootstrap</code> occurrences with <code>oudsWeb</code> in some files.</p>
+            <p>You may need to tweak a bit Sass files as well.</p>
+          </Callout>
         )}
         {!bootstrap && (
           <div class="row">
