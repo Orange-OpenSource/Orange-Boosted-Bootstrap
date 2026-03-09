@@ -46,7 +46,7 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#" title="Label">Label</a></li>
-        <li class="breadcrumb-item active" aria-current="label"><span title="Label">Label</span></li>
+        <li class="breadcrumb-item active"><span title="Label">Label</span></li>
       </ol>`
   },
   {
