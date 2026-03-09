@@ -12,7 +12,7 @@ import { componentsDetails } from '../../../data/components-details'
 
 ## Alphabetical order
 
-<ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5">
+<ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-xl-3 row-cols-2xl-4">
   {
     componentsDetails.map((component) => <ComponentCard component={component} idPrefix={'_alpha'} />)
   }
@@ -27,7 +27,7 @@ import { componentsDetails } from '../../../data/components-details'
     return (
       <>
         {componentsDetails.filter((component) => component.category === element).length > 0 && <h3>{element}</h3>}
-        <ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5">
+        <ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-xl-3 row-cols-2xl-4">
           {componentsDetails.filter((component) => component.category === element).map((component) => <ComponentCard component={component} idPrefix={'_category'} />)}
         </ul>
       </>
