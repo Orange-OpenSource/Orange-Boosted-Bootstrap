@@ -440,12 +440,14 @@ To create a read only checkbox, the input should be replaced by a `span` element
 
 <Callout type="info" name="input-invalid" />
 
-To display an invalid checkbox, add `.is-invalid` to a `.control-item-indicator`. An error icon will be automatically shown, if there is a decorative icon specified it will be hidden. Please take a look at our [Validation page to learn more]([[docsref:/foundation/form-validation]]).
+<Callout title="Prefer built-in form validation to handle client-side validation" type="info" name="form-field-validation" />
+
+To manually mark a checkbox as invalid, add `aria-invalid="true"` to a `.control-item-indicator`. An error icon will be automatically shown, if there is a decorative icon specified it will be hidden.
 
 <Example buttonLabel="invalid checkboxes" class="bd-example-indeterminate" addStackblitzJs code={`<fieldset class="control-items-list">
     <div class="checkbox-item control-item-divider">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid" aria-describedby="checkboxInvalidDescription checkboxInvalidErrorText" />
+        <input class="control-item-indicator" aria-invalid="true" type="checkbox" value="" id="checkboxInvalid" aria-describedby="checkboxInvalidDescription checkboxInvalidErrorText" />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="checkboxInvalid">Default invalid checkbox</label>
@@ -459,7 +461,7 @@ To display an invalid checkbox, add `.is-invalid` to a `.control-item-indicator`
     </div>
     <div class="checkbox-item control-item-divider">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid2" aria-describedby="checkboxInvalid2Description checkboxInvalidErrorText" checked />
+        <input class="control-item-indicator" aria-invalid="true" type="checkbox" value="" id="checkboxInvalid2" aria-describedby="checkboxInvalid2Description checkboxInvalidErrorText" checked />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="checkboxInvalid2">Checked invalid checkbox</label>
@@ -473,7 +475,7 @@ To display an invalid checkbox, add `.is-invalid` to a `.control-item-indicator`
     </div>
     <div class="checkbox-item control-item-divider">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalidIndeterminate" aria-describedby="checkboxInvalidIndeterminateDescription checkboxInvalidErrorText" />
+        <input class="control-item-indicator" aria-invalid="true" type="checkbox" value="" id="checkboxInvalidIndeterminate" aria-describedby="checkboxInvalidIndeterminateDescription checkboxInvalidErrorText" />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="checkboxInvalidIndeterminate">Indeterminate invalid checkbox</label>
@@ -507,7 +509,7 @@ If the layout is horizontal, the `<fieldset>` must enclose the flex containers s
     <div class="d-flex flex-row gap-small w-50">
       <div class="checkbox-item flex-fill">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxLayoutRowInvalid1" aria-describedby="checkboxLayoutRowInvalidErrorText" />
+          <input class="control-item-indicator" aria-invalid="true" type="checkbox" value="" id="checkboxLayoutRowInvalid1" aria-describedby="checkboxLayoutRowInvalidErrorText" />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="checkboxLayoutRowInvalid1">Option 1</label>
@@ -515,7 +517,7 @@ If the layout is horizontal, the `<fieldset>` must enclose the flex containers s
       </div>
       <div class="checkbox-item flex-fill">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxLayoutRowInvalid2" aria-describedby="checkboxLayoutRowInvalidErrorText" />
+          <input class="control-item-indicator" aria-invalid="true" type="checkbox" value="" id="checkboxLayoutRowInvalid2" aria-describedby="checkboxLayoutRowInvalidErrorText" />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="checkboxLayoutRowInvalid2">Option 2</label>
@@ -532,7 +534,7 @@ It is possible to use a `<ul>` instead of `<fieldset>` but you will need to hand
 <Example buttonLabel="invalid checkboxes with `<ul>`" class="bd-example-indeterminate" addStackblitzJs code={`<ul class="control-items-list">
     <li class="checkbox-item control-item-divider">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalidUl" aria-describedby="checkboxInvalidUlDescription checkboxInvalidUlErrorText" />
+        <input class="control-item-indicator" aria-invalid="true" type="checkbox" value="" id="checkboxInvalidUl" aria-describedby="checkboxInvalidUlDescription checkboxInvalidUlErrorText" />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="checkboxInvalidUl">Invalid checkbox</label>
@@ -546,7 +548,7 @@ It is possible to use a `<ul>` instead of `<fieldset>` but you will need to hand
     </li>
     <li class="checkbox-item control-item-divider">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalidUl2" aria-describedby="checkboxInvalidUl2Description checkboxInvalidUlErrorText" />
+        <input class="control-item-indicator" aria-invalid="true" type="checkbox" value="" id="checkboxInvalidUl2" aria-describedby="checkboxInvalidUl2Description checkboxInvalidUlErrorText" />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="checkboxInvalidUl2">Invalid checkbox</label>
@@ -568,7 +570,7 @@ If you have a checkbox that is not part of a group but needs validation control,
 <Example buttonLabel="invalid unique checkbox" code={`<div class="checkbox-item-container">
     <div class="checkbox-item">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxUniqueInvalid" aria-describedby="checkboxUniqueInvalidErrorText" />
+        <input class="control-item-indicator" aria-invalid="true" type="checkbox" value="" id="checkboxUniqueInvalid" aria-describedby="checkboxUniqueInvalidErrorText" />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="checkboxUniqueInvalid">Accept terms and conditions</label>
