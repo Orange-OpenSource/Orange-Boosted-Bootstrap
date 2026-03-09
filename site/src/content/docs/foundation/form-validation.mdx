@@ -11,19 +11,19 @@ extra_js:
 ---
 import { getDocsRelativePath } from '@libs/path'
 
-Browsers built-in form validation is the preferred way to handle [client-side validation](#client-side). When using [semantic inputs and validation constraints attributes](#accessibility) (like `required`, `pattern`...), the browser automatically adds a `:user-invalid` pseudo-class on invalid fields that [OUDS Web will style](#how-it-works).
+Browsers' built-in form validation is the preferred way to handle [client-side validation](#client-side). When using [semantic inputs and validation constraints attributes](#accessibility) (like `required`, `pattern`...), the browser automatically adds a `:user-invalid` pseudo-class on invalid fields that [OUDS Web will style](#how-it-works).
 
-Alternatively you can programmatically add a `aria-invalid="true"` to manually mark a field as invalid, this is especially useful for [server-side validation](#server-side).
+Alternatively you can programmatically add an `aria-invalid="true"` attribute to manually mark a field as invalid, this is especially useful for [server-side validation](#server-side).
 
 ## How it works
 
-OUDS Web provides custom feedback styles that apply custom colors, borders, focus styles, and background icons to better communicate feedback. to use them, you’ll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript.
+OUDS Web provides custom feedback styles that apply custom colors, borders, focus styles, and background icons to better communicate feedback. To use them, you’ll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript.
 
 Here’s how form validation works with OUDS Web:
 
 - HTML form validation is applied via CSS’s pseudo-class `:user-invalid`. It applies to `<input />`, `<select>`, and `<textarea>` elements.
 - `:user-invalid` will only be applied after the user has interacted with the field. Read [more about `:user-invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:user-invalid) behavior.
-- As a fallback, `aria-invalid="true"` attribute may be used instead of the pseudo-class `:user-invalid` for [server-side validation](#server-side).
+- As a fallback, an `aria-invalid="true"` attribute may be used instead of the pseudo-class `:user-invalid` for [server-side validation](#server-side).
 - All modern browsers support the [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api), a series of JavaScript methods for validating form controls. You may provide custom validity messages with `setCustomValidity` in JavaScript.
 - Feedback messages should use our custom feedback styles with additional HTML and CSS, rather than the browser defaults (which differ for each browser and can't be styled via CSS).
 
@@ -117,8 +117,8 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
           <option value="1">Europe</option>
           <option value="2">Oceania</option>
           <option value="3">America</option>
-          <option value="3">Asia</option>
-          <option value="4">Africa</option>
+          <option value="4">Asia</option>
+          <option value="5">Africa</option>
         </select>
       </div>
       <p id="continentFeedback" class="error-text">
@@ -132,7 +132,7 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
         <textarea id="comments" class="text-area-field" data-errormessage="commentsFeedback" required></textarea>
       </div>
       <p id="commentsFeedback" class="error-text">
-        Comments is required.
+        Comments are required.
       </p>
     </div>
 
@@ -161,14 +161,14 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
         </div>
       </div>
       <p class="control-item-error-message" id="agreeTermsAndConditionsFeedback">
-        You must accept the terms and condition to proceed.
+        You must accept the terms and conditions to proceed.
       </p>
     </div>
 
     <button type="submit" class="btn btn-strong">Submit</button>
   </form>`} />
 
-The following script is just a stub doing the minimum to handle inputs description and ARIA description when fields are invalid. We are using a data attribute to store the descriptions ids and change the `aria-describedby` attribute when necessary.
+The following script is just a stub doing the minimum to handle inputs descriptions and ARIA descriptions when fields are invalid. We are using a data attribute to store the error description id and change the `aria-describedby` attribute when necessary.
 
 <Code containerClass="bd-example-snippet" lang="js" filePath={getDocsRelativePath('/static/[brand]/docs/[version]/assets/js/validate-forms.js')} />
 
@@ -250,8 +250,8 @@ For invalid fields, ensure that the invalid feedback/error message is associated
           <option value="1">Europe</option>
           <option value="2">Oceania</option>
           <option value="3">America</option>
-          <option value="3">Asia</option>
-          <option value="4">Africa</option>
+          <option value="4">Asia</option>
+          <option value="5">Africa</option>
         </select>
       </div>
       <p id="continent2Feedback" class="error-text">
@@ -265,7 +265,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
         <textarea id="comments2" class="text-area-field" aria-invalid="true" aria-describedby="comments2Feedback" required></textarea>
       </div>
       <p id="comments2Feedback" class="error-text">
-        Comments is required.
+        Comments are required.
       </p>
     </div>
 
@@ -294,7 +294,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
         </div>
       </div>
       <p class="control-item-error-message" id="agreeTermsAndConditions2Feedback">
-        You must accept the terms and condition to proceed.
+        You must accept the terms and conditions to proceed.
       </p>
     </div>
   </form>`} />

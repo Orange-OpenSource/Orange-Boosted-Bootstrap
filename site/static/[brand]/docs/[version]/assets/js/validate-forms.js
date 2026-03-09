@@ -5,18 +5,29 @@
   function manageFeedbackMessage(field) {
     // Get the ID of the feedback message from the attribute data-errormessage
     const errorMessageId = field.dataset.errormessage
-    let description = field.getAttribute('aria-describedby') || ''
+    if (!errorMessageId) {
+      return
+    }
 
-    // aria-describedby can contain multiple space separated ids,
-    //  we need to preserve everything other than feedback id
-    description = description.replace(errorMessageId, '').trim()
+    const currentDescription = field.getAttribute('aria-describedby') || ''
+
+    // aria-describedby can contain multiple space separated ids;
+    // we need to preserve everything other than the feedback id
+    const tokens = currentDescription
+      .split(/\s+/)
+      .filter(token => token && token !== errorMessageId)
+
     if (!field.checkValidity()) {
       // Add feedback id on aria-describedby if field invalid
-      description = `${errorMessageId} ${description}`
+      tokens.unshift(errorMessageId)
     }
 
     // Apply update on aria-describedby
-    field.setAttribute('aria-describedby', description)
+    if (tokens.length > 0) {
+      field.setAttribute('aria-describedby', tokens.join(' '))
+    } else {
+      field.removeAttribute('aria-describedby')
+    }
   }
 
   // Fetch all the forms we want to apply custom OUDS Web validation styles to
@@ -40,12 +51,12 @@
       })
 
       if (!form.checkValidity()) {
-        // Focus on first error for accessibility
-        const invalidItems = form.querySelectorAll(':user-invalid')
-        invalidItems[0].focus()
-
         event.preventDefault()
         event.stopPropagation()
+
+        // Focus on first error for accessibility
+        const invalidItems = form.querySelectorAll(':invalid')
+        invalidItems[0].focus()
       }
     }, false)
   })
