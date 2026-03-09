@@ -3,6 +3,20 @@ import { getVersionedDocsPath } from '@libs/path'
 
 export const componentsDetails: ComponentCardData[] = [
   {
+    name: 'Alert message',
+    link: 'alerts#alert-message',
+    category: 'Dialog',
+    snippet: `
+      <div class="alert alert-message alert-negative" style="scale: .9">
+        <div class="alert-icon"></div>
+        <div class="alert-container">
+          <div class="alert-text-container">
+            <p class="alert-label">Label</p>
+          </div>
+        </div>
+      </div>`
+  },
+  {
     name: 'Badge',
     link: 'badges#badge',
     category: 'Indicator',
@@ -90,6 +104,16 @@ export const componentsDetails: ComponentCardData[] = [
       <svg class="text-status-accent decorative-small-icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
       </svg> `
+  },
+  {
+    name: 'Inline alert',
+    link: 'alerts#inline-alert',
+    category: 'Dialog',
+    snippet: `
+      <div class="alert alert-info">
+        <div class="alert-icon"></div>
+        <p class="alert-label">Label</p>
+      </div>`
   },
   {
     name: 'Input tag',

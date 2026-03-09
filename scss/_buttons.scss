@@ -59,6 +59,7 @@
   // scss-docs-end btn-css-vars
 
   display: inline-flex; // OUDS mod: instead of `inline-block`
+  flex-shrink: 0;
   align-items: center; // OUDS mod
   justify-content: center; // OUDS mod
   min-width: var(--#{$prefix}btn-min-width); // OUDS mod
@@ -428,6 +429,21 @@
     var(--#{$prefix}color-opacity-transparent),
     $ouds-button-mono-color-content-minimal-loading
   );
+}
+
+.btn-close {
+  // Boosted compatibility, to be able to use `.btn-close` as a standalone class.
+  @extend .btn;
+  @extend .btn-minimal;
+  @extend .btn-icon;
+
+  &:where(:not(:has(svg, img, .icon)))::before {
+    width: var(--#{$prefix}btn-icon-size);
+    height: var(--#{$prefix}btn-icon-size);
+    content: "";
+    background-color: currentcolor;
+    mask-image: var(--#{$prefix}close-icon);
+  }
 }
 
 @if $enable-bootstrap-compatibility {

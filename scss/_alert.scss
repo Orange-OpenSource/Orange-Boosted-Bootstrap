@@ -1,166 +1,244 @@
-//
-// Base styles
-//
+// Global config
+#{$ouds-root-selector} {
+  --#{$prefix}alert-border-radius: #{$ouds-alert-border-radius-default};
+}
 
+.use-rounded-corner-alert {
+  --#{$prefix}alert-border-radius: #{$ouds-alert-border-radius-rounded};
+}
+
+// Alert component
 .alert {
-  // scss-docs-start alert-css-vars
-  --#{$prefix}alert-bg: transparent;
-  --#{$prefix}alert-padding-x: #{$alert-padding-x};
-  --#{$prefix}alert-padding-y: #{$alert-padding-y};
-  --#{$prefix}alert-margin-bottom: #{$alert-margin-bottom};
-  @include rfs($font-size-base, --#{$prefix}alert-font-size); // OUDS mod
-  --#{$prefix}alert-line-height: #{$line-height-base}; // OUDS mod
-  --#{$prefix}alert-color: #{$alert-color}; // OUDS mod
-  --#{$prefix}alert-border-color: transparent;
-  --#{$prefix}alert-border: #{$alert-border-width} solid var(--#{$prefix}alert-border-color);
-  --#{$prefix}alert-border-radius: #{$alert-border-radius};
-  // OUDS mod: no `--#{$prefix}alert-link-color`
-  --#{$prefix}alert-logo-size: #{$alert-logo-size}; // OUDS mod
-  --#{$prefix}alert-icon-size: #{$alert-icon-size}; // OUDS mod
-  --#{$prefix}alert-icon-margin-y: #{$alert-icon-margin-y}; // OUDS mod
-  --#{$prefix}alert-link-font-weight: #{$alert-link-font-weight}; // OUDS mod
-  --#{$prefix}alert-heading-font-weight: #{$alert-heading-font-weight}; // OUDS mod
-  --#{$prefix}alert-dismissible-padding-right: #{$alert-dismissible-padding-r}; // OUDS mod
-  --#{$prefix}alert-btn-close-offset: #{$alert-btn-close-offset}; // OUDS mod
-  // scss-docs-end alert-css-vars
+  // Default to neutral variant
+  --#{$prefix}alert-label-color: #{$ouds-color-content-default};
+  --#{$prefix}alert-icon-color: #{$ouds-color-content-default};
+  --#{$prefix}alert-bg: #{$ouds-color-surface-secondary};
+  --#{$prefix}alert-border-color: #{$ouds-color-border-default};
 
-  position: relative;
-  display: flex; // OUDS mod
-  padding: var(--#{$prefix}alert-padding-y) var(--#{$prefix}alert-padding-x);
-  margin-bottom: var(--#{$prefix}alert-margin-bottom);
-  @include font-size(var(--#{$prefix}alert-font-size));
-  line-height: var(--#{$prefix}alert-line-height);
-  color: var(--#{$prefix}alert-color);
-  background-color: var(--#{$prefix}alert-bg);
-  border: var(--#{$prefix}alert-border);
+  display: flex;
+  gap: $ouds-alert-space-column-gap;
+  align-items: flex-start;
   @include border-radius(var(--#{$prefix}alert-border-radius));
 }
 
-// Headings for larger alerts
-.alert-heading {
-  // OUDS mod: ensure headings look like paragraphs
-  margin: 0;
-  font-size: inherit;
-  font-weight: var(--#{$prefix}alert-heading-font-weight);
-  line-height: inherit;
-  // End mod
-  // Specified to prevent conflicts of changing $headings-color
-  color: inherit;
-}
+.alert-message {
+  --#{$prefix}alert-icon-margin-block: #{$ouds-alert-space-padding-block}; // Here to avoid an encapsulation
+  min-width: $ouds-alert-size-min-width;
+  min-height: $ouds-alert-size-min-height;
+  padding-inline: $ouds-alert-space-padding-inline;
+  background-color: var(--#{$prefix}alert-bg);
+  border: var(--#{$prefix}alert-border-color) solid $ouds-alert-border-width;
 
-// Provide class for links that match alerts
-.alert-link {
-  font-weight: var(--#{$prefix}alert-link-font-weight); // OUDS mod
-  // OUDS mod: no `color`
-}
+  &:has(.btn-close) {
+    padding-right: 0;
+  }
 
+  &:has(.alert-container > .link) {
+    min-height: $ouds-alert-size-min-height-bottom-action-placement;
+  }
 
-// Dismissible alerts
-//
-// Expand the right padding and account for the close button's positioning.
+  .alert-label {
+    color: $ouds-color-content-default;
+  }
 
-.alert-dismissible {
-  padding-right: var(--#{$prefix}alert-dismissible-padding-right); // OUDS mod
-
-  // Adjust close link position
+  // To avoid overflow: hidden that hides the focus
   .btn-close {
-    position: absolute;
-    top: var(--#{$prefix}alert-btn-close-offset); // OUDS mod
-    right: var(--#{$prefix}alert-btn-close-offset); // OUDS mod
-    z-index: $stretched-link-z-index + 1;
-    // OUDS mod: no padding
+    @include border-top-end-radius(var(--#{$prefix}alert-border-radius));
   }
-}
 
-
-// scss-docs-start alert-modifiers
-// Generate contextual modifier classes for colorizing the alert.
-
-@each $state, $value in $alert-colors {
-  .alert-#{$state} {
-    // OUDS mod: no --#{$prefix}alert-color
-    --#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
-    // OUDS mod: no `--#{$prefix}alert-link-color`
-    // OUDS mod
-    @if type-of(map-get($alert-icons, $state)) == "list" {
-      --#{$prefix}alert-icon-bg-image: #{nth(map-get($alert-icons, $state), 1)};
-
-      .alert-icon::before {
-        background: var(--#{$prefix}alert-icon-bg-image) no-repeat top left / var(--#{$prefix}alert-logo-size);
-
-        /* rtl:raw:
-        background-position: top right;
-        */
-        mask: none;
-      }
-    } @else {
-      --#{$prefix}alert-icon-bg-image: #{map-get($alert-icons, $state)};
+  @supports not (container-type: size) {
+    &:not(:has(.alert-text-container p:not(.alert-label), .alert-text-container ul, .alert-container .link)) .btn-close {
+      @include border-bottom-end-radius(var(--#{$prefix}alert-border-radius));
     }
-    // End mod
   }
 }
-// scss-docs-end alert-modifiers
 
-//
-// OUDS mod
-//
-
-//// Additional content
-.alert * p {
-  margin: 0;
-}
-
-.alert-heading ~ p {
-  line-height: 1.5;
-}
-
-//// Icons
 .alert-icon {
+  position: relative;
+  display: block;
   flex-shrink: 0;
-  width: var(--#{$prefix}alert-icon-size);
-  margin: calc(-.5 * var(--#{$prefix}alert-icon-margin-y)) 0;
+  width: px-to-rem($ouds-alert-size-icon);
+  height: px-to-rem($ouds-alert-size-icon);
+  margin-top: var(--#{$prefix}alert-icon-margin-block);
+  color: var(--#{$prefix}alert-icon-color);
 
-  + * {
-    margin: var(--#{$prefix}alert-icon-margin-y) 0 0;
+  &:where(:not(:has(svg, img, .icon))) {
+    &::before,
+    &::after {
+      position: absolute;
+      inset: 0;
+      display: block;
+      content: "";
+    }
+
+    &::before {
+      background-color: currentcolor;
+      mask-image: escape-svg(var(--#{$prefix}alert-icon));
+    }
+
+    &::after {
+      background-color: var(--#{$prefix}alert-icon-internal-color);
+      mask-image: escape-svg(var(--#{$prefix}alert-icon-internal));
+    }
   }
 
-  + p {
-    font-weight: var(--#{$prefix}alert-heading-font-weight);
+  svg,
+  img,
+  .icon {
+    width: 100%;
+    height: 100%;
+    font-size: $ouds-alert-size-icon;
+    line-height: 1;
+    vertical-align: baseline; // Remove some weird stuff on zoom // TODO: For reboot maybe ?
+  }
+}
+
+.alert-container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: $ouds-alert-space-row-gap-action;
+  align-items: flex-start;
+  justify-content: center; // To handle weird edge cases in de-zoom one line title alert
+  min-height: $ouds-alert-size-min-height; // To handle weird edge cases in de-zoom one line title alert
+  padding-block: $ouds-alert-space-padding-block;
+}
+
+.alert-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: $ouds-alert-space-row-gap;
+  color: $ouds-color-content-muted;
+
+  > * { // To handle any content inside this text-container.
+    max-width: var(--#{$prefix}font-max-width-label-medium);
+    margin-bottom: 0;
+    @include get-font-size("label-medium");
+    font-weight: $ouds-font-weight-web-label-default;
   }
 
-  &::before {
-    display: block;
-    order: -1;
-    height: var(--#{$prefix}alert-logo-size);
-    content: "";
-    background-color: var(--#{$prefix}alert-border-color);
-    mask-image: var(--#{$prefix}alert-icon-bg-image);
-    mask-repeat: no-repeat;
+  ul {
+    padding-left: 0;
+    list-style-type: "";
 
-    /* rtl:raw:
-    mask-position: top right;
-    */
-    mask-size: var(--#{$prefix}alert-logo-size);
+    > li {
+      position: relative;
+      padding-left: calc(px-to-rem(20px) + 8px);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: px-to-rem(20px);
+        height: px-to-rem(20px);
+        height: 1lh;
+        content: "";
+        background-color: $ouds-color-content-muted;
+        mask-image: $bullet-list-marker-level-0;
+        mask-repeat: no-repeat;
+        mask-position: center right;
+        mask-size: px-to-rem(16px);
+      }
+    }
   }
 }
 
-//// Small alerts
-.alert-sm {
-  // scss-docs-start alert-sm-css-vars
-  --#{$prefix}alert-padding-x: 0;
-  --#{$prefix}alert-padding-y: #{$alert-padding-sm};
-  --#{$prefix}alert-margin-bottom: 0;
-  @include rfs($font-size-sm, --#{$prefix}alert-font-size);
-  --#{$prefix}alert-line-height: #{$line-height-sm};
-  --#{$prefix}alert-border: 0;
-  --#{$prefix}alert-logo-size: #{$alert-logo-size-sm};
-  --#{$prefix}alert-icon-size: #{$alert-icon-size-sm};
-  --#{$prefix}alert-btn-close-offset: #{$alert-btn-close-offset-sm};
-  // scss-docs-end alert-sm-css-vars
-  --#{$prefix}icon-spacing: #{$btn-close-padding-sm};
+.alert-action-container {
+  display: flex;
+  gap: $ouds-alert-space-column-gap-action;
+  // A small tweak to give height of alert message to alert-close-container or use alert-action-container without.
+  align-items: flex-start;
+  align-self: stretch;
+}
 
-  .alert-icon {
-    margin: var(--#{$prefix}alert-icon-margin-y) 0;
+.alert-close-container {
+  align-self: stretch; // To have the alert-close-container height defined on the alert-message height
+  width: calc(2 * $ouds-button-space-inset-icon-only + px-to-rem($ouds-button-size-icon-only));
+  min-width: $ouds-button-size-min-width; // To handle some zoom '-' issues
+  container-type: size;
+
+  // Complete the border-radius of the button
+  .btn-close {
+    @container (height <= #{$ouds-alert-size-min-height}) {
+      @include border-bottom-end-radius(var(--#{$prefix}alert-border-radius));
+    }
   }
 }
-// End mod
+
+.alert-label {
+  max-width: var(--#{$prefix}font-max-width-label-large);
+  margin-bottom: 0;
+  @include get-font-size("label-large");
+  font-weight: $ouds-font-weight-web-label-moderate;
+  color: var(--#{$prefix}alert-label-color);
+}
+
+// Variants
+.alert-accent {
+  --#{$prefix}alert-label-color: #{$ouds-color-content-default};
+  --#{$prefix}alert-icon-color: #{$ouds-color-content-status-accent};
+  --#{$prefix}alert-bg: #{$ouds-color-surface-status-accent-muted};
+  --#{$prefix}alert-border-color: #{$ouds-color-border-status-accent};
+}
+
+.alert-negative {
+  --#{$prefix}alert-label-color: #{$ouds-color-content-status-negative};
+  --#{$prefix}alert-icon: var(--#{$prefix}error-icon);
+  --#{$prefix}alert-icon-color: #{$ouds-color-content-status-negative};
+  --#{$prefix}alert-bg: #{$ouds-color-surface-status-negative-muted};
+  --#{$prefix}alert-border-color: #{$ouds-color-border-status-negative};
+}
+
+.alert-positive {
+  --#{$prefix}alert-label-color: #{$ouds-color-content-status-positive};
+  --#{$prefix}alert-icon: var(--#{$prefix}success-icon);
+  --#{$prefix}alert-icon-color: #{$ouds-color-content-status-positive};
+  --#{$prefix}alert-bg: #{$ouds-color-surface-status-positive-muted};
+  --#{$prefix}alert-border-color: #{$ouds-color-border-status-positive};
+}
+
+.alert-info {
+  --#{$prefix}alert-label-color: #{$ouds-color-content-status-info};
+  --#{$prefix}alert-icon: var(--#{$prefix}info-icon);
+  --#{$prefix}alert-icon-color: #{$ouds-color-content-status-info};
+  --#{$prefix}alert-bg: #{$ouds-color-surface-status-info-muted};
+  --#{$prefix}alert-border-color: #{$ouds-color-border-status-info};
+}
+
+.alert-warning {
+  --#{$prefix}alert-label-color: #{$ouds-color-content-status-warning};
+  --#{$prefix}alert-icon: var(--#{$prefix}warning-icon);
+  --#{$prefix}alert-icon-color: var(--#{$prefix}icon-color-content-status-warning-external-shape);
+  --#{$prefix}alert-icon-internal: var(--#{$prefix}warning-internal-icon);
+  --#{$prefix}alert-icon-internal-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
+  --#{$prefix}alert-bg: #{$ouds-color-surface-status-warning-muted};
+  --#{$prefix}alert-border-color: #{$ouds-color-border-status-warning};
+}
+
+// Bootstrap compatibility
+@if $enable-bootstrap-compatibility {
+  .alert {
+    > svg,
+    > img,
+    > .icon {
+      @extend .alert-icon;
+      fill: currentcolor;
+    }
+  }
+
+  .alert-danger {
+    @extend .alert-negative;
+  }
+
+  .alert-success {
+    @extend .alert-positive;
+  }
+
+  .alert-primary {
+    @extend .alert-accent;
+  }
+
+  .alert-heading {
+    @extend .alert-label;
+  }
+}

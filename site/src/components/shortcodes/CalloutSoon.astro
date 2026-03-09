@@ -1,4 +1,6 @@
 ---
+import Callout from '@components/shortcodes/Callout.astro'
+
 /*
  * Outputs a callout for elements that are not yet available.
  */
@@ -12,7 +14,6 @@ interface Props {
 const { type = 'component' } = Astro.props
 ---
 
-<div class="bd-callout bd-callout-warning">
-  <p><strong>This {type} is not yet available.</strong></p>
-  <p>Please check back soon.</p>
-</div>
+<Callout type="warning" title={`This ${type} is not yet available.`} titleLevel={2}>
+  Please check back soon.
+</Callout>

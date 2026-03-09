@@ -71,7 +71,7 @@ Rounded corners inputs is a project-wide option therefore all your inputs should
 To display a helper text below text areas, add a `.helper-text` as a sibling of a `.text-area-container`.
 
 <Callout type="warning">
-Helper text should be explicitly associated with the text area it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this helper text when the user focuses or enters the text area.
+  Helper text should be explicitly associated with the text area it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this helper text when the user focuses or enters the text area.
 </Callout>
 
 <Example buttonLabel="text area with helper text" code={`<div class="text-area">
@@ -90,7 +90,7 @@ If the helper text is not sufficient, it’s possible to offer the user an addit
 To display a helper link below text areas, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.text-area-container`.
 
 <Callout type="warning">
-Helper link should be explicitly described using the `aria-labelledby` attribute in which you must combine the helper link id and the related text area label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the text area. We also recommend adding a `.visually-hidden` span inside the link to coordinate the link content and the label.
+  Helper link should be explicitly described using the `aria-labelledby` attribute in which you must combine the helper link id and the related text area label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the text area. We also recommend adding a `.visually-hidden` span inside the link to coordinate the link content and the label.
 </Callout>
 
 <Example buttonLabel="text areas with helper link" code={`<div class="text-area mb-medium">
@@ -171,16 +171,18 @@ Add the `readonly` boolean attribute on a text area to prevent modification of t
 
 <Callout type="info" name="input-invalid" />
 
-To display an invalid text area, add `.is-invalid` to a `.text-area-field` within the `.text-area-container`. Please take a look at our [Validation page to learn more]([[docsref:/foundation/form-validation]]).
+<Callout title="Prefer built-in form validation to handle client-side validation" type="info" name="form-field-validation" />
+
+To manually mark a  text area as invalid, add `aria-invalid="true"` to a `.text-area-field` within the `.text-area-container`.
 
 <Callout type="warning">
-For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.text-area-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when the text area becomes invalid.
+  For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.text-area-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when the text area becomes invalid.
 </Callout>
 
 <Example buttonLabel="invalid text areas" code={`<div class="text-area mb-medium">
     <div class="text-area-container">
       <label id="labelTextAreaInvalid" for="exampleTextAreaInvalid">Additional comments</label>
-      <textarea class="text-area-field is-invalid" id="exampleTextAreaInvalid" aria-describedby="commentFeedback"></textarea>
+      <textarea class="text-area-field" aria-invalid="true" id="exampleTextAreaInvalid" aria-describedby="commentFeedback"></textarea>
     </div>
     <p id="commentTextHelpBlock" class="helper-text">
       Please be concise and limit your comment to <strong>180</strong> characters.
@@ -192,7 +194,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
   <div class="text-area">
     <div class="text-area-container text-area-container-outlined">
       <label for="labelTextAreaOutlinedInvalid">Additional comments</label>
-      <textarea class="text-area-field is-invalid" id="labelTextAreaOutlinedInvalid" aria-describedby="commentFeedbackOutlined">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+      <textarea class="text-area-field" aria-invalid="true" id="labelTextAreaOutlinedInvalid" aria-describedby="commentFeedbackOutlined">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
     <p id="commentTextHelpBlockOutlined" class="helper-text">
       Please be concise and limit your comment to <strong>180</strong> characters.
