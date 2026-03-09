@@ -62,8 +62,7 @@
   }
 }
 
-.was-validated .select-input-field:invalid,
-.select-input-field.is-invalid {
+.select-input-field:is(:user-invalid, [aria-invalid="true"]) {
   --#{$prefix}text-input-background-color: #{$ouds-color-surface-status-negative-muted};
   --#{$prefix}text-input-border-color: #{$ouds-color-action-negative-enabled};
   padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-right) + var(--#{$prefix}text-input-column-gap) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap-trailing-error) + px-to-rem($ouds-button-size-icon-only));
@@ -216,8 +215,7 @@
   }
 }
 
-.was-validated .select-input-container:has(:invalid),
-.select-input-container:has(.is-invalid) {
+.select-input-container:has(:user-invalid, [aria-invalid="true"]) {
   color: $ouds-color-action-negative-enabled;
 
   &::before {
