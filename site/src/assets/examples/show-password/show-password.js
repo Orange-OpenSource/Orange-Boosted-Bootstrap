@@ -18,10 +18,10 @@
 
       // Toggle the icon, the visually-hidden text for accessibility reasons
       if (type === 'text') {
-        iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('accessibility-vision', 'accessibility-hide'))
+        iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('accessibility-vision', 'hide'))
         visuallyHiddenText.textContent = 'Hide password'
       } else {
-        iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('accessibility-hide', 'accessibility-vision'))
+        iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('hide', 'accessibility-vision'))
         visuallyHiddenText.textContent = 'Show password'
       }
     })
