@@ -3,22 +3,13 @@ import JsDocs from '@components/shortcodes/JsDocs.astro'
 import { getVersionedDocsPath } from '@libs/path'
 
 export const title = 'Show password'
-export const extra_css = ['loading-buttons.css']
+export const extra_css = ['show-password.css']
 export const extra_js = [{src: 'show-password.js'}]
 export const aliases = [
   '/examples/show-password',
   '/docs/examples/show-password'
 ]
 ---
-
-<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-  <symbol id="accessibility-vision" viewBox="0 0 24 24" fill="currentColor">
-    <path fill-rule="evenodd" d="M12.314 6.003c-.097 0-.193-.003-.29-.003-.097 0-.194.003-.29.003C7.232 6.003 2.676 9.176 1.2 12c1.476 2.824 5.984 5.997 10.486 5.997.096 0 .193.003.29.003.097 0 .193-.003.29-.003 4.502 0 9.058-3.173 10.534-5.997-1.476-2.824-5.984-5.997-10.486-5.997Zm-.347 10.317a4.32 4.32 0 1 1 0-8.64 4.32 4.32 0 0 1 0 8.64ZM2.89 12c.715-.997 1.858-2.017 3.19-2.827.433-.263.881-.501 1.342-.712a5.756 5.756 0 0 0 .019 7.102 12.877 12.877 0 0 1-1.381-.734C4.74 14.02 3.603 13.002 2.89 12Zm15.03 2.827c-.466.283-.948.537-1.446.76a5.755 5.755 0 0 0-.018-7.196 12.88 12.88 0 0 1 1.485.78C19.26 9.98 20.396 11 21.11 12c-.715.998-1.857 2.018-3.19 2.828Zm-3.57-3.951a1.158 1.158 0 1 1-1.499-1.359 2.634 2.634 0 1 0 1.5 1.359Z" clip-rule="evenodd"/>
-  </symbol>
-  <symbol id="accessibility-hide" viewBox="0 0 960 960" fill="currentColor">
-    <path fill-rule="evenodd" d="M809.208,350.568l-43.17,43.17c47.061,31.481,87.2,69.038,113.545,105.978-29.782,41.6-77.4,84.079-132.916,117.815a543.936,543.936,0,0,1-60.236,31.655A240.332,240.332,0,0,0,728.646,431.13l-50.895,50.895q0.855,8.747.869,17.722a179.994,179.994,0,0,1-180,180q-8.971,0-17.722-.869L416.177,743.6a429.382,429.382,0,0,0,70.742,6.022c4.017,0,8.04.129,12.081,0.129s8.064-.129,12.081-0.129C698.665,749.621,888.51,617.406,950,499.75,923.359,448.774,872.989,395.073,809.208,350.568ZM120.417,499.784C150.2,458.19,197.82,415.7,253.333,381.968a545.253,545.253,0,0,1,55.918-29.694,240.373,240.373,0,0,0-38.318,223.517l49.622-49.622A180.093,180.093,0,0,1,525.042,321.682l64.736-64.736a432.184,432.184,0,0,0-76.7-7.066c-4.017,0-8.041-.13-12.081-0.13s-8.064.13-12.081,0.13C301.335,249.88,111.491,382.093,50,499.75c27.215,52.073,79.192,106.99,144.932,152.043l43.24-43.241C189.3,576.514,147.541,537.822,120.417,499.784ZM823.218,136L504.458,454.76,403.918,555.3,133.25,825.969,186.281,879,462.012,603.269,602.14,463.141l274.11-274.11Z"/>
-  </symbol>
-</svg>
 
 <main class="container-fluid container-max-width">
   <h1 class="py-medium">Show password button</h1>
@@ -31,7 +22,7 @@ export const aliases = [
       <input type="password" id="inputPassword" class="text-input-field" placeholder=" ">
       <button class="btn btn-minimal btn-icon" id="togglePassword">
         <svg aria-hidden="true">
-          <use xlink:href="#accessibility-vision"/>
+          <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}/>
         </svg>
         <span class="visually-hidden">Show password</span>
       </button>
