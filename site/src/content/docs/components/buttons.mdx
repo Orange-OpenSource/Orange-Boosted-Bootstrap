@@ -1,11 +1,12 @@
 ---
 title: Buttons
-description: Use OUDS Web’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+description: Use OUDS Web’s custom button styles for actions in forms, dialogs, and more with support for multiple variants, states, and more.
 aliases:
   - "/docs/components/buttons/"
 toc: true
 types:
   - Button
+  - Navigation button
 ---
 
 import { getData } from '@libs/data'
@@ -14,29 +15,62 @@ import { getVersionedDocsPath } from '@libs/path'
 import { getMode } from '@libs/sass-variables'
 
 <Callout type="info">
-  You can find here the OUDS [button design guidelines](https://r.orange.fr/r/S-ouds-doc-button).
+  You can find the OUDS design guidelines here: [button guidelines](https://r.orange.fr/r/S-ouds-doc-button), [navigation button guidelines](https://r.orange.fr/r/S-ouds-doc-navigation-button).
 </Callout>
 
 ## Overview
 
-OUDS Web has a base `.btn` class that sets up basic styles such as padding and content alignment. By default, `.btn` controls have a transparent border and background color, but still defines basic focus and hover styles.
+### Component types
 
-<Example code={`<button type="button" class="btn">Base class</button>`} />
+<ul class="list-unstyled row row-cols-1 row-cols-sm-2">
+  <li class="col">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-inverse-low" aria-hidden="true">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
+          <button type="button" class="btn btn-default">Default</button>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#button">Button</a> is a UI element that triggers an action or event, and is used to initiate tasks or confirming an action.</div>
+    </div>
+  </li>
+  <li class="col">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-inverse-low" aria-hidden="true">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
+          <button type="button" class="btn btn-default">Next todo</button>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#navigation-button">Navigation button</a> is a UI element that allows to move between different pages within a multi-page interface.</div>
+    </div>
+  </li>
+</ul>
 
-The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles. The most basic button is the `.btn-default` variant.
+For the two types of button, OUDS Web has a common base `.btn` class that sets up default styles such as padding and content alignment. By default, `.btn` controls have a transparent border and background color, but still defines basic focus and hover styles. The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles. The most basic button is the `.btn-default` variant.
 
-<Example code={`<button type="button" class="btn btn-default">Default</button>`} />
+<Example showToolbar={false} code={`<button type="button" class="btn btn-default">Default</button>`} />
 
-### Alternative tags
+<Example showToolbar={false} code={`<button type="button" class="btn btn-default">Next todo</button>`} />
 
-The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input />` elements (though some browsers may apply a slightly different rendering).
+### Accessibility (semantics)
 
-When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
+The `.btn` classes are designed to be used with the `<button>` element, but can be used on `<a>` or `<input />` elements (with `type` equal to  `button`, `reset`, or `submit`). You should use any semantic element that best fits the context to appropriately convey its purpose to assistive technologies such as screen readers.
 
-<Example class="bd-btn-example" code={`<a class="btn btn-default" href="#" role="button">Link</a>
-  <input class="btn btn-default" type="reset" value="Reset" />`} />
+For any action or for an element that triggers an in-page functionality (like collapsing content), you should use a `<button>` element, as it is the most semantically correct and accessible choice.
 
-## Variants
+For any navigation purpose, an `<a>` element should be used, and it must have an `href` attribute.
+
+The visual rendering will remain the same anyway:
+
+<Example class="bd-btn-example" code={`<a class="btn btn-default" href="#">Link</a>
+  <input class="btn btn-default" type="button" value="Button" />
+  <input class="btn btn-default" type="reset" value="Reset" />
+  <input class="btn btn-default" type="submit" value="Submit" />`} />
+
+## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Button
+
+Button is a UI element that triggers an action or event, and is used to initiate tasks or confirming an action. Button appears in different layouts, styles and states to indicate hierarchy or emphasis.
+
+### Variants
 
 OUDS Web includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control. Please follow the [button design specifications](https://r.orange.fr/r/S-ouds-doc-button) to choose the right button for the right action.
 
@@ -52,11 +86,7 @@ OUDS Web includes several button variants, each serving its own semantic purpose
 ]} />
 </BootstrapCompatibility>
 
-{/* OUDS mod: no accessibility tip callout about colored buttons since OUDS Web does not provide such buttons */}
-
-{/* OUDS mod: Variants on colored background added */}
-
-### Colored background
+#### Colored background
 
 OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/utilities/background#colored-background]]). Their accessibility (readability) is ensured by suitable semi-opaque backgrounds.
 
@@ -85,7 +115,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 
 {/* OUDS mod: With icon added */}
 <BrandSpecific brand="orange">
-### Rounded
+#### Rounded
 
 Rounded corners buttons is a project-wide option therefore all your buttons should either be rounded or not. Add `.use-rounded-corner-buttons` on a top container (for example `<body>`) to use rounded corners.
 
@@ -106,11 +136,11 @@ Rounded corners buttons is a project-wide option therefore all your buttons shou
   </div>`} />
 </BrandSpecific>
 
-### With icon
+#### With icon
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
-#### Text and icon
+##### Text and icon
 
 <Callout type="warning">
 Icons in text and icon buttons are considered purely decorative, so they should be hidden from assistive technologies using `aria-hidden="true"`, as we’ve done in our examples. See [icons accessibility]([[docsref:/components/icon#icons-accessibility]]) for more info.
@@ -184,7 +214,7 @@ You don’t need to apply any spacing utility on the icon to get consistent spac
     </div>
   </div>`} />
 
-#### Icon only
+##### Icon only
 
 Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or an `aria-label` attribute.
 
@@ -260,7 +290,7 @@ For icon only buttons, we chose to keep the icon hidden from assistive technolog
     </div>
   </div>`} />
 
-### Outline buttons
+#### Outline buttons
 
 <BootstrapCompatibility>
 
@@ -272,9 +302,9 @@ In need of a button, but not the hefty background colors they bring? Replace the
 
 </BootstrapCompatibility>
 
-## States
+### States
 
-### Disabled
+#### Disabled
 
 Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
@@ -311,7 +341,7 @@ Disabled buttons using the `<a>` element behave a bit different:
     </div>
   </div>`} />
 
-### Loading
+#### Loading
 
 The loading state of a button indicates that an action is currently processing or taking place. This state provides feedback to users, enhancing user experience.
 
@@ -519,9 +549,9 @@ Loading state can also be combined with all kind of buttons, including icons.
   </div>
   `} />
 
-## Layout
+### Layout
 
-### Block buttons
+#### Block buttons
 
 Create responsive stacks of full-width, "block buttons" with a mix of our display and gap utilities. By using utilities instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
@@ -553,6 +583,31 @@ Additional utilities can be used to adjust the alignment of buttons when horizon
     <button class="btn btn-default" type="button">Button</button>
   </div>`} />
 
-### Disable text wrapping
+#### Disable text wrapping
 
 If you don’t want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
+
+## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Navigation button
+
+Navigation button is a UI element that allows to move between different pages within a multi-page interface. Navigation button is typically arrange in sequence to indicate the user's current position and provide controls to access previous, next, or specific pages.
+
+You can use `.btn-previous` and `.btn-next` classes to indicate backward and forward actions in a process or a flow. These classes will add a directional arrow to the left or right of the button text, respectively.
+
+<Example class="bd-btn-example" code={`<a class="btn btn-default btn-previous" href="#">Previous</a>
+    <a class="btn btn-default btn-next" href="#">Next</a>
+    <button type="button" class="btn btn-default">Default</button>`} />
+
+### Variants
+
+OUDS Web includes several navigation button variants, each serving its own semantic purpose, with a few extras thrown in for more control. Please follow the [button design specifications](https://r.orange.fr/r/S-ouds-doc-button) to choose the right button for the right action.
+
+<Example class="bd-btn-example" code={`<a class="btn btn-default btn-next" href="#">Next</a>
+    <a class="btn btn-strong btn-next" href="#">Next</a>
+    <a class="btn btn-brand btn-next" href="#">Next</a>
+    <a class="btn btn-minimal btn-next" href="#">Next</a>
+    <a class="btn btn-negative btn-next" href="#">Next</a>
+    <button type="button" class="btn btn-strong">Strong</button>
+    <button type="button" class="btn btn-brand">Brand</button>
+    <button type="button" class="btn btn-minimal">Minimal</button>
+    <button type="button" class="btn btn-negative">Negative</button>`} />
+

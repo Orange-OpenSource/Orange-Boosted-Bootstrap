@@ -471,3 +471,35 @@
 }
 // scss-docs-end btn-variant-loops
 // End mod
+
+//
+// Navigation button styles
+//
+
+.btn-previous {
+  --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-chevron-start};
+  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-end-icon-start};
+}
+
+.btn-next {
+  --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-start-icon-end};
+  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-chevron-end};
+}
+
+.btn-previous::before,
+.btn-next::after {
+  width: var(--#{$prefix}btn-icon-size);
+  height: var(--#{$prefix}btn-icon-size);
+  color: var(--#{$prefix}btn-color);
+}
+
+.btn-previous::before {
+  margin-right: $ouds-button-space-column-gap-chevron;
+  content: $btn-previous-icon;
+}
+
+.btn-next::after {
+  margin-left: $ouds-button-space-column-gap-chevron;
+  content: $btn-next-icon;
+}
+
