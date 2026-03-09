@@ -89,9 +89,30 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ## Components
 
+### Alerts
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.alert-message`, `.alert-label`, `.alert-accent`, `.alert-neutral`, `.use-rounded-corner-alert`, `.alert-container`, `.alert-text-container`, `.alert-action-container`, `.alert-positive`, and `.alert-negative` have been added.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The DOM for alerts has changed a lot so we recommend to read our [new alerts page]([[docsref:/components/alerts]]) first. `.alert-sm`, `.alert-success`, `.alert-danger`, `.alert-dismissible`, `.alert-heading` have been removed.
+    <details class="mb-medium">
+      <summary>See all changing classes</summary>
+
+      - `.alert` → `.alert.alert-message`.
+      - `.alert-sm` → To remove.
+      - `.alert-success` → `.alert-positive`.
+      - `.alert-info` → Stays the same.
+      - `.alert-warning` → Stays the same.
+      - `.alert-danger` → `.alert-negative`.
+      - `.alert-icon` → Stays the same.
+      - `.alert-heading` → `.alert-label`.
+      - `.alert-dismissible` → To remove.
+      - The DOM has been updated to add more containers around in order to ease the future integrations.
+
+    </details>
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> `alert-variant()` mixin has been removed as it was deprecated in Boosted v5.3.0.
+
 ### Badges
 
-- <span class="tag tag-small rounded-none tag-warning">Breaking</span> Badge has changed a lot in its meaning and usages. It can no longer contain text (use our new [tags]([[docsref:/components/tags]]) for this). It is now either a basic badge (a coloured bullet), a badge - count (with a number) or a badge - icon (with an icon).
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Badge has changed a lot in its meaning and usages. It can no longer contain text (use our new [tags]([[docsref:/components/tags]]) for this). It is now either a basic badge (a colored bullet), a badge - count (with a number) or a badge - icon (with an icon).
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> New dedicated classes have been added to handle badges colors, states and sizes.
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> New classes have been added to handle badges icons.
 
@@ -119,6 +140,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   - `.btn-secondary` and `.btn-success` will look as `.btn-default`
   - `.btn-danger` and `.btn-warning` will look as `.btn-negative`
   - `.btn-info` and `.btn-light` will look as `.btn-minimal`
+  - `.btn-dropdown` could look as any variant of the button. So replace it with `.btn-strong`, `.btn-default`, `.btn-minimal` or `.btn-negative` depending on your context.
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-no-outline` has been removed. You can use `.btn-minimal` instead.
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-social` and all its variants have been removed.
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-outline-*` have been removed. You can still have them using `$enable-bootstrap-compatibility`. They all look like `.btn-default`.
@@ -432,7 +454,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
     <summary><span class="tag tag-small rounded-none tag-info">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>
 
   <Callout type="info">
-  See more details about [`[data-bs-theme]`]([[docsref:/foundation/color-modes]]).
+    See more details about [`[data-bs-theme]`]([[docsref:/foundation/color-modes]]).
   </Callout>
 
   1. `.bg-transparent` stays the same
@@ -729,7 +751,11 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 - <span class="tag tag-small rounded-none tag-warning">Warning</span> `$enable-rounded` option have been set to `true` by default. This option allows you to set rounded corner on components. Please check that it doesn’t impact your website.
 
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> `scss/_close.scss` doesn’t exist anymore. If you were importing it in your project, please make sure to remove it.
+
 - <span class="tag tag-small rounded-none tag-warning">Warning</span> `scss/_color-palette.scss` doesn’t exist anymore. If you were importing it in your project, please make sure to remove it.
+
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> `scss/mixins/_alert.scss` doesn’t exist anymore. If you were importing it in your project, please make sure to remove it.
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
 

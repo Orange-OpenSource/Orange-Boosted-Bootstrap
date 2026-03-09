@@ -9,8 +9,8 @@ toc: true
 
 import { getDocsRelativePath } from '@libs/path'
 
-<Callout>
-**Try it yourself!** Download the source code and working demo for using Bootstrap with Stylelint, and the color modes from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/color-modes). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html).
+<Callout type="info" title="Try it yourself!">
+  Download the source code and working demo for using Bootstrap with Stylelint, and the color modes from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/color-modes). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html).
 </Callout>
 
 ## Modes
@@ -18,7 +18,7 @@ import { getDocsRelativePath } from '@libs/path'
 Modes are a way to change the **color of the text and the components inside**. We provide 4 different modes that are `"light"`, `"dark"`, `"root"`, and `"root-inverted"`. The `"light"` and `"dark"` modes are static, while the `"root"` and `"root-inverted"` modes are dynamic.
 
 <Callout type="warning">
-Be careful when using the `data-bs-theme` attribute on an element carrying one of our [`.bg-*` utilities]([[docsref:/utilities/background]]), the `background-color` property will also be automatically changed to use the current defined color mode. **Use it on two different elements.**
+  Be careful when using the `data-bs-theme` attribute on an element carrying one of our [`.bg-*` utilities]([[docsref:/utilities/background]]), the `background-color` property will also be automatically changed to use the current defined color mode. **Use it on two different elements.**
 </Callout>
 
 ### Static color modes
@@ -51,7 +51,7 @@ Dark mode allows you to write using light gray text color and dark mode componen
 We have two more dynamic themes that are `"root"` and `"root-inverted"`. These themes are named dynamic because they depend on the main element mode, so by changing the main mode, you’re changing all those dynamic calls as well. The `"root"` theme will reset the color mode to the main theme of your page, while the `"root-inverted"` theme will reset the color mode to the opposite theme of your page.
 
 <Callout type="info">
-Note that these themes **aren’t meant to be used on the root element**.
+  Note that these themes **aren’t meant to be used on the root element**.
 </Callout>
 
 <Example code={`<div class="bg-inverse-high p-small">
@@ -101,7 +101,7 @@ Here is a recap table of when to use which contextual theme. Prefer to use `ligh
 However, these 4 themes should be enough to deal with all of your use cases. If it’s not the case, you are probably using them wrong. Since the implementation might be quite hard to understand, don’t hesitate to contact us via our [GitHub discussions]([[config:repo]]/discussions) with a reduced test case if you’re having trouble implementing.
 
 <Callout type="info">
-We use **2 different layers to set the `background-color` and the theme**. Sometimes you won’t need to set the theme since it’ll be the same as the current one. Please check out our [Background utilities]([[docsref:/utilities/background]]) to know more about this specific topic.
+  We use **2 different layers to set the `background-color` and the theme**. Sometimes you won’t need to set the theme since it’ll be the same as the current one. Please check out our [Background utilities]([[docsref:/utilities/background]]) to know more about this specific topic.
 </Callout>
 
 <BsTable>
@@ -114,7 +114,7 @@ We use **2 different layers to set the `background-color` and the theme**. Somet
 </BsTable>
 
 <Callout type="warning">
-`root` theme should be used only in very specific occasions, most of the time it will cascade from the main theme.
+  `root` theme should be used only in very specific occasions, most of the time it will cascade from the main theme.
 </Callout>
 
 ## Examples
@@ -207,9 +207,9 @@ OUDS Web do ship with a built-in color mode picker, you can use the one from our
 Our dark mode option is available to use for all users of OUDS Web, but it’s controlled via data attributes instead of media queries and does not automatically toggle your project’s color mode. You can disable our dark mode entirely via Sass by changing `$enable-dark-mode` to `false`.
 
 {/* <Callout type="warning">
-Please be aware that some of OUDS Web’s components always use the contextual dark mode to have the same rendering both in light and dark mode, such as our [Orange navbar]([[docsref:/components/orange-navbar]]) and [Footer]([[docsref:/components/footer]]). Please respect this constraint.
+  Please be aware that some of OUDS Web’s components always use the contextual dark mode to have the same rendering both in light and dark mode, such as our [Orange navbar]([[docsref:/components/orange-navbar]]) and [Footer]([[docsref:/components/footer]]). Please respect this constraint.
 
-If you need to use them, you won’t be able to disable the dark mode globally.
+  If you need to use them, you won’t be able to disable the dark mode globally.
 </Callout> */}
 
 #### Change default behavior
@@ -296,7 +296,7 @@ Outputs to:
 To allow visitors or users to toggle color modes, you’ll need to create a toggle element to control the `data-bs-theme` attribute on the root element, `<html>`. We’ve built a toggler in our documentation that initially defers to a user’s current system color mode, but provides an option to override that and pick a specific color mode.
 
 {/* <Callout type="info">
-Check out our [Orange navbar mode selector variant]([[docsref:/components/orange-navbar#with-mode-selector]]) to add a color mode selector to your navbar.
+  Check out our [Orange navbar mode selector variant]([[docsref:/components/orange-navbar#with-mode-selector]]) to add a color mode selector to your navbar.
 </Callout> */}
 
 Here’s a look at the JavaScript that powers it. Feel free to inspect our own documentation navbar to see how it’s implemented using HTML and CSS from our own components. It is suggested to include the JavaScript at the top of your page to reduce potential screen flickering during reloading of your site. Note that if you decide to use media queries for your color modes, your JavaScript may need to be modified or removed if you prefer an implicit control.
