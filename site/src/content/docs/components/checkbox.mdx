@@ -440,7 +440,9 @@ To create a read only checkbox, the input should be replaced by a `span` element
 
 <Callout type="info" name="input-invalid" />
 
-To display an invalid checkbox, add `aria-invalid="true"` to a `.control-item-indicator`. An error icon will be automatically shown, if there is a decorative icon specified it will be hidden. Please take a look at our [Validation page to learn more]([[docsref:/foundation/form-validation]]).
+<Callout title="Prefer built-in form validation to handle client-side validation" type="info" name="form-field-validation" />
+
+To manually mark a checkbox as invalid, add `aria-invalid="true"` to a `.control-item-indicator`. An error icon will be automatically shown, if there is a decorative icon specified it will be hidden.
 
 <Example buttonLabel="invalid checkboxes" class="bd-example-indeterminate" addStackblitzJs code={`<fieldset class="control-items-list">
     <div class="checkbox-item control-item-divider">
@@ -630,7 +632,7 @@ For the standalone checkbox, we provide a completely different architecture to e
 
 <BootstrapCompatibility>
 <Callout type="warning">
-Be careful when using this, as you must implement the background on hover, focus and active states.
+  Be careful when using this, as you must implement the background on hover, focus and active states.
 </Callout>
 
 <Example buttonLabel="Bootstrap compatibility: standalone checkbox" code={`<div style="position: relative">

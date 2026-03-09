@@ -424,7 +424,9 @@ To create a read only radio button, the input should be replaced by a `span` ele
 
 <Callout type="info" name="input-invalid" />
 
-To display an invalid radio button, add `aria-invalid="true"` to a `.control-item-indicator`. Please take a look at our [Validation page to learn more]([[docsref:/foundation/form-validation]]).
+<Callout title="Prefer built-in form validation to handle client-side validation" type="info" name="form-field-validation" />
+
+To manually mark a radio button as invalid, add the `aria-invalid="true"` attribute to a `.control-item-indicator`. An error icon will be automatically shown, if there is a decorative icon specified it will be hidden.
 
 <Example buttonLabel="invalid radio buttons" code={`<fieldset class="control-items-list">
     <div class="radio-button-item control-item-divider">
@@ -564,7 +566,7 @@ For the standalone radio button, we provide a completely different architecture 
 
 <BootstrapCompatibility>
 <Callout type="warning">
-Be careful when using this, as you must implement the background on hover, focus and active states.
+  Be careful when using this, as you must implement the background on hover, focus and active states.
 </Callout>
 
 <Example buttonLabel="Bootstrap compatibility: standalone radio button" code={`<div>
