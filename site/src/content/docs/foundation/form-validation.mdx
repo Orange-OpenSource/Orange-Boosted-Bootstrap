@@ -229,7 +229,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
     <div class="text-input mb-large">
       <div class="text-input-container">
         <label for="inputPassword2">Password <span aria-hidden="true">*</span></label>
-        <input type="password" id="inputPassword2" class="text-input-field" aria-invalid="true" aria-describedby="password2Feedback" autocomplete="new-password" placeholder=" " required minlength="8">
+        <input type="password" id="inputPassword2" class="text-input-field" aria-invalid="true" aria-describedby="inputPassword2PrefixHelper password2Feedback" autocomplete="new-password" placeholder=" " required minlength="8">
         <button class="btn btn-minimal btn-icon">
           <svg aria-hidden="true">
             <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#accessibility-vision"/>
@@ -237,6 +237,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
           <span class="visually-hidden">Show password</span>
         </button>
       </div>
+      <p id="inputPassword2PrefixHelper" class="helper-text">Enter a password with at least 8 characters.</p>
       <p id="password2Feedback" class="error-text">
         Password is required and must be at least 8 characters.
       </p>
