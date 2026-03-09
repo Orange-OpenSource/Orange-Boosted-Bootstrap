@@ -259,7 +259,8 @@
 
     // Leading icon
     > img,
-    > svg {
+    > svg,
+    > .icon {
       position: absolute;
       top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-icon-size) / 2 - var(--#{$prefix}text-input-border-width-top));
       left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left));
@@ -267,6 +268,7 @@
       width: var(--#{$prefix}text-input-icon-size);
       min-width: var(--#{$prefix}text-input-icon-size);
       height: var(--#{$prefix}text-input-icon-size);
+      color: $ouds-color-content-muted;
     }
 
     &:has(> svg:not(.loader)),
