@@ -1,27 +1,46 @@
 ---
 import { getVersionedDocsPath } from '@libs/path'
+import { componentsDetails } from '../../../data/components-details'
+
+const existingStartingLetters = [...new Set(componentsDetails.map((component) => component.name.charAt(0)))]
 ---
 
 <ouds-component-finder>
-  <form class="needs-validation" novalidate onsubmit="return false">
-    <div class="text-input mb-gridgap">
+  <form class="needs-validation mb-gridgap" novalidate onsubmit="return false">
+    <div class="text-input">
       <div class="text-input-container">
         <svg aria-hidden="true">
           <use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#search')}></use>
         </svg>
-        <label for="oudsComponentFinderInput"
-          >Find component <span class="visually-hidden">and update the component list below</span></label
-        >
+        <label for="oudsComponentFinderInput">
+          Find component <span class="visually-hidden">and update the component list below</span>
+        </label>
         <input
           type="search"
-          class="text-input-field"
+          name="componentFinderInput"
           id="oudsComponentFinderInput"
+          class="text-input-field"
           pattern="[a-zA-Z \\-]+"
           placeholder=" "
           data-feedback-id="componentSearchFeedback"
         />
       </div>
       <p id="usernameFeedback" class="error-text">Alphabetical characters only.</p>
+    </div>
+    <div class="d-flex align-items-center gap-xsmall flex-row" data-alpha-filter>
+      <h5 class="my-none flex-shrink-0">Starting by:</h5>
+      <div class="chips-container">
+        {
+          existingStartingLetters.map((char) => (
+            <div class="chip chip-filter">
+              <input type="radio" id={`radioCheck${char}`} name="componentFinderAlpha" value={char.toLowerCase()} />
+              <label class="chip-interactive" for={`radioCheck${char}`}>
+                {char}
+              </label>
+            </div>
+          ))
+        }
+      </div>
     </div>
   </form>
   <ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-xl-3 row-cols-2xl-4" data-component-list>
@@ -32,16 +51,39 @@ import { getVersionedDocsPath } from '@libs/path'
 <script>
   class OudsComponentFinder extends HTMLElement {
     connectedCallback() {
-      const searchInput = document.getElementById('oudsComponentFinderInput') as HTMLInputElement
-      if (!searchInput) return
-      searchInput.addEventListener('input', () => {
-        this.querySelectorAll('ul[data-component-list] > *').forEach((elt) => elt.classList.remove('d-none'))
-        if (searchInput.value && searchInput.checkValidity()) {
+      const searchForm = this.querySelector('form') as HTMLFormElement
+      if (!searchForm) return
+      const finderInput = searchForm.elements.namedItem('componentFinderInput') as HTMLInputElement
+      const finderAlpha = searchForm.elements.namedItem('componentFinderAlpha') as RadioNodeList
+      const alphaFieldset = this.querySelector('[data-alpha-filter]')
+      if (!finderInput || !alphaFieldset || !finderAlpha) return
+
+      finderInput.addEventListener('input', () => {
+        this.resetList()
+        this.resetAlphaFinder()
+        if (finderInput.value && finderInput.checkValidity()) {
           this.querySelectorAll(
-            `ul[data-component-list] > :not([data-name*="${searchInput.value.toLowerCase()}"])`
+            `ul[data-component-list] > :not([data-name*="${finderInput.value.toLowerCase()}"])`
           ).forEach((elt) => elt.classList.add('d-none'))
         }
       })
+
+      alphaFieldset.addEventListener('change', () => {
+        this.resetList()
+        if (finderAlpha.value) {
+          this.querySelectorAll(`ul[data-component-list] > :not([data-name^="${finderAlpha.value}"])`).forEach((elt) =>
+            elt.classList.add('d-none')
+          )
+        }
+      })
+    }
+
+    resetList() {
+      this.querySelectorAll('ul[data-component-list] > *').forEach((elt) => elt.classList.remove('d-none'))
+    }
+
+    resetAlphaFinder() {
+      this.querySelectorAll('input[type=radio]').forEach((elt) => ((elt as HTMLInputElement).checked = false))
     }
   }
 
