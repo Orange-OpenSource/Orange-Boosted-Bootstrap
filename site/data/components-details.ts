@@ -277,7 +277,7 @@ export const componentsDetails: ComponentCardData[] = [
       <div class="text-input w-75">
         <div class="text-input-container" style="min-width: unset">
           <label for="exampleTextInputWithPlaceholder[[id_prefix]]">Label</label>
-          <input type="email" class="text-input-field" id="exampleTextInputWithPlaceholder[[id_prefix]]" placeholder="placeholder">
+          <input type="email" class="text-input-field" id="exampleTextInputWithPlaceholder[[id_prefix]]" placeholder="Placeholder">
         </div>
       </div>`
   }
