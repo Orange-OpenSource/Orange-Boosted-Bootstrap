@@ -763,4 +763,18 @@ progress {
   color: var(--#{$prefix}color-content-on-action-highlighted);
   background-color: var(--#{$prefix}color-action-highlighted);
 }
+
+// Dialog
+dialog,
+[popover] {
+  padding: 0;
+  overflow: visible;
+  background: unset;
+  border: 0;
+}
+
+:not([popover])::backdrop {
+  background-color: $modal-backdrop-bg;
+  opacity: $modal-backdrop-opacity;
+}
 // End mod

@@ -424,12 +424,14 @@ To create a read only radio button, the input should be replaced by a `span` ele
 
 <Callout type="info" name="input-invalid" />
 
-To display an invalid radio button, add `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation page to learn more]([[docsref:/foundation/form-validation]]).
+<Callout title="Prefer built-in form validation to handle client-side validation" type="info" name="form-field-validation" />
+
+To manually mark a radio button as invalid, add the `aria-invalid="true"` attribute to a `.control-item-indicator`. An error icon will be automatically shown, if there is a decorative icon specified it will be hidden.
 
 <Example buttonLabel="invalid radio buttons" code={`<fieldset class="control-items-list">
     <div class="radio-button-item control-item-divider">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="radio" value="" name="radioInvalid" id="radioInvalid" aria-describedby="radioInvalidExtraLabel radioInvalidDescription radioInvalidErrorText" />
+        <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="radioInvalid" id="radioInvalid" aria-describedby="radioInvalidExtraLabel radioInvalidDescription radioInvalidErrorText" />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="radioInvalid">Default invalid radio button</label>
@@ -439,7 +441,7 @@ To display an invalid radio button, add `.is-invalid` to a `.control-item-indica
     </div>
     <div class="radio-button-item control-item-divider">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="radio" value="" name="radioInvalid" id="radioInvalid2" aria-describedby="radioInvalid2Description radioInvalidErrorText" checked />
+        <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="radioInvalid" id="radioInvalid2" aria-describedby="radioInvalid2Description radioInvalidErrorText" checked />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="radioInvalid2">Checked invalid radio button</label>
@@ -468,7 +470,7 @@ This also works for outlined variant of the component.
 <Example buttonLabel="outlined invalid radio buttons" code={`<fieldset class="control-items-list">
     <div class="radio-button-item radio-button-item-outlined">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="radio" value="" name="outlinedInvalid" id="outlinedInvalid1" aria-describedby="radioLayoutOutlinedInvalidErrorText" />
+        <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="outlinedInvalid" id="outlinedInvalid1" aria-describedby="radioLayoutOutlinedInvalidErrorText" />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="outlinedInvalid1">Default invalid outlined radio button</label>
@@ -476,7 +478,7 @@ This also works for outlined variant of the component.
     </div>
     <div class="radio-button-item radio-button-item-outlined">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="radio" value="" name="outlinedInvalid" id="outlinedInvalid2" checked aria-describedby="radioLayoutOutlinedInvalidErrorText" />
+        <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="outlinedInvalid" id="outlinedInvalid2" checked aria-describedby="radioLayoutOutlinedInvalidErrorText" />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="outlinedInvalid2">Checked invalid outlined radio button</label>
@@ -493,7 +495,7 @@ If the layout is horizontal, the `<fieldset>` must enclose the flex containers s
     <div class="d-flex flex-row gap-small w-50">
       <div class="radio-button-item flex-fill">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator is-invalid" type="radio" value="" id="radioLayoutRowInvalid1" name="radioLayoutRowInvalid" aria-describedby="radioLayoutRowInvalidErrorText" />
+          <input class="control-item-indicator" aria-invalid="true" type="radio" value="" id="radioLayoutRowInvalid1" name="radioLayoutRowInvalid" aria-describedby="radioLayoutRowInvalidErrorText" />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="radioLayoutRowInvalid1">Option 1</label>
@@ -501,7 +503,7 @@ If the layout is horizontal, the `<fieldset>` must enclose the flex containers s
       </div>
       <div class="radio-button-item flex-fill">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator is-invalid" type="radio" value="" id="radioLayoutRowInvalid2" name="radioLayoutRowInvalid" aria-describedby="radioLayoutRowInvalidErrorText" />
+          <input class="control-item-indicator" aria-invalid="true" type="radio" value="" id="radioLayoutRowInvalid2" name="radioLayoutRowInvalid" aria-describedby="radioLayoutRowInvalidErrorText" />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="radioLayoutRowInvalid2">Option 2</label>
@@ -564,7 +566,7 @@ For the standalone radio button, we provide a completely different architecture 
 
 <BootstrapCompatibility>
 <Callout type="warning">
-Be careful when using this, as you must implement the background on hover, focus and active states.
+  Be careful when using this, as you must implement the background on hover, focus and active states.
 </Callout>
 
 <Example buttonLabel="Bootstrap compatibility: standalone radio button" code={`<div>

@@ -11,11 +11,10 @@ export declare global {
   export const BrandSpecific: typeof import('@shortcodes/BrandSpecific.astro').default
   export const BsTable: typeof import('@shortcodes/BsTable.astro').default
   export const Callout: typeof import('@shortcodes/Callout.astro').default
-  export const CalloutDeprecatedDarkVariants: typeof import('@shortcodes/CalloutDeprecatedDarkVariants.astro').default
   export const CalloutSoon: typeof import('@shortcodes/CalloutSoon.astro').default
   export const Code: typeof import('@shortcodes/Code.astro').default
+  export const ComponentCard: typeof import('@shortcodes/ComponentCard.astro').default
   export const DeprecatedIn: typeof import('@shortcodes/DeprecatedIn.astro').default
-  export const DesignCalloutAlert: typeof import('@shortcodes/DesignCalloutAlert.astro').default
   export const EnableBtnCloseTooltip: typeof import('@shortcodes/EnableBtnCloseTooltip.astro').default
   export const Example: typeof import('@shortcodes/Example.astro').default
   export const JsDismiss: typeof import('@shortcodes/JsDismiss.astro').default

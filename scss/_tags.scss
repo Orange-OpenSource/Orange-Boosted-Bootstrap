@@ -125,9 +125,7 @@
     width: var(--#{$prefix}tag-size-decorative-asset);
     height: var(--#{$prefix}tag-size-decorative-asset);
     padding: var(--#{$prefix}tag-icon-padding);
-    &::before {
-      font-size: var(--#{$prefix}tag-font-size-icon);
-    }
+    font-size: var(--#{$prefix}tag-font-size-icon);
   }
 
   .tag-status-icon {
