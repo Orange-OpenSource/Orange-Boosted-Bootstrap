@@ -166,7 +166,7 @@
     }
 
     // Hover state styles
-    &:hover:has(.text-input-field:not(:focus, :disabled, :read-only, .is-invalid)) {
+    &:hover:has(.text-input-field:not(:focus, :disabled, :read-only, :user-invalid, [aria-invalid="true"])) {
       --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-hover};
 
       &:not(.text-input-container-outlined) {
@@ -185,7 +185,7 @@
       }
     }
 
-    &:has(.text-input-field:focus:not(:disabled, :read-only, .is-invalid)) {
+    &:has(.text-input-field:focus:not(:disabled, :read-only, :user-invalid, [aria-invalid="true"])) {
       --#{$prefix}text-input-background-color: var(--#{$prefix}color-action-support-pressed);
       --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-focus};
 
@@ -300,7 +300,7 @@
     }
 
     // Invalid text inputs
-    &:has(.text-input-field.is-invalid) {
+    &:has(.text-input-field:is(:user-invalid, [aria-invalid="true"])) {
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-enabled);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-enabled);
 
@@ -352,7 +352,7 @@
       }
     }
 
-    &:has(.text-input-field:focus.is-invalid) {
+    &:has(.text-input-field:is(:user-invalid, [aria-invalid="true"]):focus) {
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-pressed);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-pressed);
       --#{$prefix}text-input-caret-color: var(--#{$prefix}color-action-negative-pressed);
@@ -414,13 +414,11 @@
   }
 
   // Helper text and error text visibility handling
-  .text-input-container:has(.text-input-field.is-invalid):has(~ .error-text) ~ .helper-text,
-  .text-input-container:has(.text-input-field:invalid):has(~ .error-text) ~ .helper-text {
+  .text-input-container:has(.text-input-field:is(:user-invalid, [aria-invalid="true"])):has(~ .error-text) ~ .helper-text {
     display: none;
   }
 
-  .text-input-container:has(.text-input-field.is-invalid) ~ .error-text,
-  .text-input-container:has(.text-input-field:invalid) ~ .error-text {
+  .text-input-container:has(.text-input-field:is(:user-invalid, [aria-invalid="true"])) ~ .error-text {
     display: block;
   }
 }
@@ -517,7 +515,7 @@
     }
 
     // Hover state styles
-    &:hover:has(.text-area-field:not(:focus, :disabled, :read-only, .is-invalid)) {
+    &:hover:has(.text-area-field:not(:focus, :disabled, :read-only, :user-invalid, [aria-invalid="true"])) {
       --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-hover};
 
       &:not(.text-area-container-outlined) {
@@ -536,7 +534,7 @@
       }
     }
 
-    &:has(.text-area-field:focus:not(:disabled, :read-only, .is-invalid)) {
+    &:has(.text-area-field:focus:not(:disabled, :read-only, :user-invalid, [aria-invalid="true"])) {
       --#{$prefix}text-input-background-color: var(--#{$prefix}color-action-support-pressed);
       --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-focus};
 
@@ -583,7 +581,7 @@
     }
 
     // Invalid text inputs
-    &:has(.text-area-field.is-invalid) {
+    &:has(.text-area-field:is(:user-invalid, [aria-invalid="true"])) {
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-enabled);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-enabled);
 
@@ -618,7 +616,7 @@
       }
     }
 
-    &:has(.text-area-field:focus.is-invalid) {
+    &:has(.text-area-field:is(:user-invalid, [aria-invalid="true"]):focus) {
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-pressed);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-pressed);
       --#{$prefix}text-input-caret-color: var(--#{$prefix}color-action-negative-pressed);
@@ -631,13 +629,11 @@
   }
 
   // Helper text and error text visibility handling
-  .text-area-container:has(.text-area-field.is-invalid):has(~ .error-text) ~ .helper-text,
-  .text-area-container:has(.text-area-field:invalid):has(~ .error-text) ~ .helper-text {
+  .text-area-container:has(.text-area-field:is(:user-invalid, [aria-invalid="true"])):has(~ .error-text) ~ .helper-text {
     display: none;
   }
 
-  .text-area-container:has(.text-area-field.is-invalid) ~ .error-text,
-  .text-area-container:has(.text-area-field:invalid) ~ .error-text {
+  .text-area-container:has(.text-area-field:is(:user-invalid, [aria-invalid="true"])) ~ .error-text {
     display: block;
   }
 }
