@@ -41,6 +41,7 @@
     a {
       @extend %link-properties;
       display: inline-block;
+      min-width: #{$ouds-size-min-interactive-area};
       padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
       overflow: hidden;
       text-overflow: ellipsis;
