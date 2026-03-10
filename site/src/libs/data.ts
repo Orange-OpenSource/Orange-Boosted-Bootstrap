@@ -61,6 +61,7 @@ const dataDefinitions = {
     .array(),
   grays: zNamedHexColors(9),
   'sidebar-components': zSidebar,
+  'sidebar-foundation': zSidebar,
   'sidebar-getting-started': zSidebar,
   'sidebar-layout': zSidebar,
   'sidebar-utilities': zSidebar,
