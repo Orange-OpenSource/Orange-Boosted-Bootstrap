@@ -44,7 +44,9 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     'Attribute “switch” not allowed on element “input” at this point.',
     'Element “style” not allowed as child of element “div” in this context.*',
     // Allow empty option in select
-    'Element “option” without attribute “label” must not be empty.'
+    'Element “option” without attribute “label” must not be empty.',
+    // Allow inputmode
+    'The "inputmode" attribute is not supported in all browsers. Please be sure to test, and consider using a polyfill.'
     // End mod
   ].join('|')
 
