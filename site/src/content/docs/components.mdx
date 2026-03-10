@@ -10,14 +10,6 @@ toc: true
 
 import { componentsDetails } from '../../../data/components-details'
 
-export const getComponentListForCategory = (category) => {
-  return (
-    <ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-xl-3 row-cols-2xl-4">
-      {componentsDetails.filter((component) => component.category === category).map((component) => <ComponentCard component={component} idPrefix={'_category'} />)}
-    </ul>
-  )
-}
-
 ## Alphabetical order
 
 <ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-xl-3 row-cols-2xl-4">
@@ -29,6 +21,14 @@ export const getComponentListForCategory = (category) => {
 <hr />
 
 ## By category
+
+export const getComponentListForCategory = (category) => {
+  return (
+    <ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-xl-3 row-cols-2xl-4">
+      {componentsDetails.filter((component) => component.category === category).map((component) => <ComponentCard component={component} idPrefix={'_category'} />)}
+    </ul>
+  )
+}
 
 {/* No loop here to have the headings in the toc */}
 
