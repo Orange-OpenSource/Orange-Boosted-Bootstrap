@@ -46,7 +46,8 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     // Allow empty option in select
     'Element “option” without attribute “label” must not be empty.',
     // Allow inputmode
-    'The “inputmode“ attribute is not supported in all browsers.'
+    'The “inputmode” attribute is not supported in all browsers.'
+    // !!! WARNING !!! check both quotes you are using when updating this list
     // End mod
   ].join('|')
 
