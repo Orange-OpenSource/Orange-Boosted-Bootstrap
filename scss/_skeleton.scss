@@ -14,9 +14,9 @@
   height: var(--#{$prefix}skeleton-height);
   margin-block: var(--#{$prefix}skeleton-margin-block, $ouds-space-padding-block-3xsmall);
   overflow: hidden;
-  border: 0;
-  background-color: $ouds-skeleton-color-bg;
   color: transparent;
+  background-color: $ouds-skeleton-color-bg;
+  border: 0;
 
   // Remove all styles of the children elements and hide them
   > * {
@@ -31,9 +31,9 @@
   &::after {
     all: unset;
     position: absolute;
+    inset: 0;
     z-index: 6; // Avoid edge cases where the skeleton wave could be under other elements
     display: block;
-    inset: 0;
     content: "";
     background: linear-gradient(270deg, $ouds-skeleton-color-gradient-start-end 3%, $ouds-skeleton-color-gradient-middle 47%, $ouds-skeleton-color-gradient-start-end 97%); // Asked for tokens
     transform: translate3d(-100%, 0, 0);
