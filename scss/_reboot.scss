@@ -616,37 +616,30 @@ textarea {
   resize: vertical; // 1
 }
 
-// 1. Browsers set a default `min-width: min-content;` on fieldsets,
-//    unlike e.g. `<div>`s, which have `min-width: 0;` by default.
+// 1. Browsers set a default `min-inline-size: min-content;` on fieldsets,
+//    unlike e.g. `<div>`s, which have `min-inline-size: 0;` by default.
 //    So we reset that to ensure fieldsets behave more like a standard block element.
 //    See https://github.com/twbs/bootstrap/issues/12359
 //    and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
 // 2. Reset the default outline behavior of fieldsets so they don't affect page layout.
 
 fieldset {
-  min-width: 0; // 1
+  min-inline-size: 0; // 1
   padding: 0; // 2
   margin: 0; // 2
   border: 0; // 2
 }
 
-// 1. By using `float: left`, the legend will behave like a block element.
-//    This way the border of a fieldset wraps around the legend if present.
-// 2. Fix wrapping bug.
-//    See https://github.com/twbs/bootstrap/issues/29712
+// By using `display: contents`, the legend will behave like a normal element
+// instead of a rendered legend, this way we can use it as a normal box
 
 legend {
-  float: left; // 1
-  width: 100%;
+  display: contents;
   padding: 0;
   margin-bottom: $legend-margin-bottom;
   font-weight: $legend-font-weight;
   // OUDS mod: no line-height
   @include get-font-size("body-large"); // OUDS mod: instead of `@include font-size($legend-font-size)`
-
-  + * {
-    clear: left; // 2
-  }
 }
 
 // Fix height of inputs with a type of datetime-local, date, month, week, or time
