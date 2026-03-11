@@ -402,6 +402,21 @@ If the switch items list is part of a form, add a `<fieldset>` with the class `.
     <p class="control-item-error-message" id="switchInvalidErrorTextGroup">Incompatible choices.</p>
   </fieldset>`} />
 
+### Skeleton
+
+<SkeletonRedirect component="switch item" />
+
+<Example buttonLabel="switch item skeleton" code={`<div aria-busy="true" inert>
+    <div class="switch-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchSkeleton" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="switchSkeleton">Skeleton switch</label>
+      </div>
+    </div>
+  </div>`} />
+
 ## Fieldset `<legend>`
 
 For accessibility reasons, it is required to provide understandable switch labels without relying on visual context. If switches belong to a group, it is good practice to add a group title inside a `<legend>` element as the first child of the `<fieldset>` element. Screen readers will read the legend before navigating through the switches; this way, keyboard navigation users have more information on what is expected with the multiple switches element.

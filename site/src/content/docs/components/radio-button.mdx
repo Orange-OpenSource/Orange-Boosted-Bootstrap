@@ -511,6 +511,31 @@ If the layout is horizontal, the `<fieldset>` must enclose the flex containers s
     <p class="control-item-error-message" id="radioLayoutRowInvalidErrorText">Please make a choice.</p>
   </fieldset>`} />
 
+### Skeleton
+
+<SkeletonRedirect component="radio button item" />
+
+<Example buttonLabel="radio button skeleton" code={`<div aria-busy="true" inert>
+    <fieldset class="control-items-list">
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="radio" value="" id="radioSkeleton" name="radioSkeleton" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="radioSkeleton">Default radio button</label>
+        </div>
+      </div>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input checked class="control-item-indicator" type="radio" value="" id="radioSkeleton2" name="radioSkeleton" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="radioSkeleton2">Checked radio button</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>`} />
+
 ## Fieldset `<legend>`
 
 For accessibility reasons, it is required to provide understandable radio button labels without relying on visual context. It is also good practice to add a radio button group title inside a `<legend>` element as the first child of the `<fieldset>` element. Screen readers will read the legend before navigating through the radio buttons; this way, keyboard navigation users have more information on what is expected with the multiple radio buttons element.

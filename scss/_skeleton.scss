@@ -25,7 +25,9 @@
 
   // Remove all styles of the before elements
   &::before {
-    content: unset !important; // stylelint-disable-line declaration-no-important
+    color: transparent !important; // stylelint-disable-line declaration-no-important
+    background-color: transparent;
+    box-shadow: none;
   }
 
   &::after {
@@ -43,24 +45,28 @@
 
 // Skeleton selectors
 [aria-busy="true"] {
-  // List of all the components we have
+  // List of all the components that don't have security margins
   .alert,
-  .bullet-list > li,
   .btn,
-  .checkbox-item,
   .checkbox-standalone,
   .chip-interactive,
   .link,
-  .radio-button-item,
   .radio-button-standalone,
   .select-input,
-  .switch-item,
-  .switch-standalone,
+  .switch-standalone > .control-item-indicator,
   .tag,
   .text-area,
   .text-input {
     @extend %skeleton-placeholder;
     margin-block: 0; // Remove security margins for components
+  }
+
+  // List of components with security margins
+  .bullet-list > li,
+  .checkbox-item,
+  .radio-button-item,
+  .switch-item {
+    @extend %skeleton-placeholder;
   }
 }
 
@@ -75,10 +81,22 @@
 
 
 // Predefined heights
+.skeleton-text {
+  --#{$prefix}skeleton-height: calc(var(--#{$prefix}font-size-body-medium) * var(--#{$prefix}font-line-height-body-medium));
+}
+
 .skeleton-title {
   --#{$prefix}skeleton-height: calc(var(--#{$prefix}font-size-heading-medium) * var(--#{$prefix}font-line-height-heading-medium));
 }
 
-.skeleton-text {
-  --#{$prefix}skeleton-height: calc(var(--#{$prefix}font-size-body-medium) * var(--#{$prefix}font-line-height-body-medium));
+@if $enable-bootstrap-compatibility {
+  .placeholder {
+    @extend .skeleton;
+    @extend .skeleton-text;
+    display: inline-block;
+  }
+
+  .placeholder-lg {
+    @extend .skeleton-title;
+  }
 }
