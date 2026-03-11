@@ -45,7 +45,7 @@ To make your form validation accessible, you also have to ensure that any feedba
 
 Try to submit the form below; our JavaScript will intercept the submit event, and you’ll see the `:user-invalid` styles applied to the fields. For invalid fields, it also associates the invalid feedback/error message with the relevant form field using `aria-describedby` (noting that this attribute allows more than one `id` to be referenced, in case the field already points to additional description/helper text).
 
-<Example buttonLabel="example client-side form" code={`<form class="col-sm-7 needs-validation" novalidate>
+<Example buttonLabel="example client-side form" code={`<form class="needs-validation" novalidate>
     <p>
       This form uses client-side validation with custom validation styles. Try to submit the form without filling it out to see them in action.
     </p>
