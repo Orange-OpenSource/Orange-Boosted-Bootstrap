@@ -62,10 +62,7 @@ export const componentsDetails: ComponentCardData[] = [
     name: 'Button',
     link: 'buttons',
     category: 'Actions',
-    snippet: `
-      <div class="d-flex flex-column gap-xsmall">
-        <button type="button" class="btn btn-default">Label</button>
-      </div>`
+    snippet: `<button type="button" class="btn btn-default">Label</button>`
   },
   {
     name: 'Checkbox',
@@ -91,12 +88,14 @@ export const componentsDetails: ComponentCardData[] = [
     link: 'chips#filter-chip',
     category: 'Control',
     snippet: `
-      <div class="chip chip-filter">
-        <input type="checkbox" id="appleCheck[[id_prefix]]" checked />
-        <label class="chip-interactive" for="appleCheck[[id_prefix]]">
-          Label
-        </label>
-      </div>`
+      <ul class="chips-container">
+        <li class="chip chip-filter">
+          <input type="checkbox" id="appleCheck[[id_prefix]]" checked />
+          <label class="chip-interactive" for="appleCheck[[id_prefix]]">
+            Label
+          </label>
+        </li>
+      </ul>`
   },
   {
     name: 'Icon',
@@ -210,12 +209,10 @@ export const componentsDetails: ComponentCardData[] = [
     link: 'tags#tag',
     category: 'Indicator',
     snippet: `
-      <ul class="list-unstyled d-flex gap-xsmall">
-        <li class="tag tag-info">
-          <span class="tag-status-icon"></span>
-          Label
-        </li>
-      </ul>`
+      <p class="tag tag-info">
+        <span class="tag-status-icon"></span>
+        Label
+      </p>`
   },
   {
     name: 'Text area',
