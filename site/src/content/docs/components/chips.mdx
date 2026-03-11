@@ -1,6 +1,6 @@
 ---
 title: Chips
-description: Provides a compact UI element used either to represent a filter or to recommend an option.
+description: Chip is a UI element that allows to capture filtering decisions throughout a series, a defined list of options, or recommended or predictive options.
 aliases:
   - "/docs/components/chips/"
   - "/docs/components/chip/"
@@ -33,7 +33,7 @@ import { getMode } from '@libs/sass-variables'
           </p>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#filter-chip">Filter chip</a> is a filter option that can be selected or deselected by the user.</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#filter-chip">Filter chip</a> is a UI element that allows to select or deselect an option within a series, and is commonly used to capture filtering decisions.</div>
     </div>
   </li>
   <li class="col">
@@ -45,7 +45,7 @@ import { getMode } from '@libs/sass-variables'
           </p>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#suggestion-chip">Suggestion chip</a> is a recommended or predictive option based on user input or context.</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#suggestion-chip">Suggestion chip</a> is a UI element that allows to present recommended or predictive options based on user’s input or context, and is commonly used to capture filtering decisions.</div>
     </div>
   </li>
 </ul>
@@ -87,7 +87,9 @@ Here is a table summarizing the pseudo elements that are used by the different v
 
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Filter chip
 
-Filter chips allow users to filter content by selecting or deselecting specific categories or attributes while keeping the element on the page. They are based on checkbox inputs, but we also have [button based](#using-buttons) or [radio button based](#using-radio-buttons) filter chips. Thus, there is a selected state on this variant of the component.
+Filter chip allows to filter content by being selected or deselected. It can be toggled “On” or “Off” to refine displayed results, and selected filter chips remain visually distinct to indicate active filters.
+
+They are based on checkbox inputs, but we also have [button based](#using-buttons) or [radio button based](#using-radio-buttons) filter chips.
 
 To create a filter chip, add `.chip-filter` to the `.chip`.
 
@@ -288,7 +290,7 @@ document.querySelectorAll('.chip-suggestion').forEach(chipElement => {
 
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Suggestion chip
 
-Suggestion chips show relevant options based on user input or context. They help users quickly choose from dynamic or recommended items. Since this implies a dynamic behavior, these should be implemented using buttons.
+Suggestion chip is typically non-selected by default and can be tapped or clicked to apply the suggestion, streamlining input and enhancing usability. Since this implies a dynamic behavior, these should be implemented using buttons.
 
 To create a suggestion chip, add `.chip-suggestion` to the `.chip`.
 

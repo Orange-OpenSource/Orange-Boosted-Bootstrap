@@ -1,6 +1,6 @@
 ---
 title: Tags
-description: A tag is a static or interactive component used to show status, key details, or categories. It can also help users filter content by selecting or entering relevant information.
+description: Tag is a UI element that displays short information such as a label, a keyword or a category.
 aliases:
   - "/docs/components/tags/"
   - "/docs/components/tag/"
@@ -31,7 +31,7 @@ import { getMode } from '@libs/sass-variables'
         </div>
       </div>
       <div class="card-body border-default border-thin border-top">
-        <a class="stretched-link" href="#tag">Tag</a> is used in an informative way, to show short info like a label, keyword, or category.
+        <a class="stretched-link" href="#tag">Tag</a> is a UI element that displays short information such as a label, a keyword or a category.
       </div>
     </div>
   </li>
@@ -44,7 +44,7 @@ import { getMode } from '@libs/sass-variables'
       </div>
 
       <div class="card-body border-default border-thin border-top">
-        <a class="stretched-link" href="#input-tag">Input tag</a> is interactive and can take all the usual states: enabled, hover, pressed, disabled or focused.
+        <a class="stretched-link" href="#input-tag">Input tag</a> is a UI element that allows to render an inputted value as a tag, in order to display short information such as a label, a keyword or a category.
       </div>
     </div>
   </li>
@@ -90,7 +90,7 @@ Several examples are provided below, but they need to be adapted for actual use 
 
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Tag
 
-A tag is a small element that shows short info like a label, keyword, or category. It helps users quickly find, group, or understand content. Tags can include icons or bullets.
+Tag helps users quickly find, group, or understand content. Tags can stay in place or be removed, and can include icons or actions like “close” or “edit”.
 
 <Callout type="warning" name="warning-tag-lists-accessibility" />
 
@@ -416,7 +416,9 @@ Tags can be added side by side. They require horizontal and vertical spacing bet
 
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Input tag
 
-A input tag is a component that allows users to enter multiple values, each represented as a tag. As users type and submit values (usually by pressing enter, comma, or tab), each value is transformed into a tag. Input tags are often used for adding labels, categories, or participants. They typically support removing individual tags.
+Input tag helps users type and submit values (usually by pressing enter, comma, or tab), and see each value transformed into a tag.
+
+They are often used for adding labels, categories, or participants. They typically support removing individual tags.
 
 <Callout type="warning">
   Please note that all the variants of tag above *must not* be applied on input tag.
