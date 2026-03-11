@@ -113,10 +113,10 @@ $select-input-chevron:          url("data:image/svg+xml,<svg xmlns='http://www.w
 $select-input-expanded-chevron: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19.124 14.023 12 6.75l-7.125 7.273 2.035 2.079L12 10.905l5.088 5.197 2.037-2.079Z'/></svg>") !default;
 
 // Navigation button
-// icon previous v1.4
-$btn-previous-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' viewBox='0 0 24 24'><path d='M14.023 4.875 6.75 12l7.273 7.125 2.079-2.035L10.905 12l5.197-5.088-2.079-2.037Z'/></svg>") !default;
-// icon next v1.4
-$btn-next-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' viewBox='0 0 24 24'><path d='M9.977 19.125 17.25 12 9.977 4.875 7.898 6.91 13.095 12l-5.197 5.088 2.079 2.037Z'/></svg>") !default;
+// icon button previous v1.4
+$btn-previous-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='M14.023 4.875 6.75 12l7.273 7.125 2.079-2.035L10.905 12l5.197-5.088-2.079-2.037Z'/></svg>") !default;
+// icon button next v1.4
+$btn-next-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='M9.977 19.125 17.25 12 9.977 4.875 7.898 6.91 13.095 12l-5.197 5.088 2.079 2.037Z'/></svg>") !default;
 
 //// SVG used several times
 $svg-as-custom-props: (
