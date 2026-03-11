@@ -624,10 +624,10 @@ textarea {
 // 2. Reset the default outline behavior of fieldsets so they don't affect page layout.
 
 fieldset {
-  min-width: 0; // 1
+  min-inline-size: 0; // 1
   padding: 0; // 2
   margin: 0; // 2
-  border: 0; // 2
+  border: unset; // 2
 }
 
 // 1. By using `float: left`, the legend will behave like a block element.
@@ -636,17 +636,18 @@ fieldset {
 //    See https://github.com/twbs/bootstrap/issues/29712
 
 legend {
-  float: left; // 1
-  width: 100%;
+  // float: left; // 1
+  // width: 100%;
+  display: contents;
   padding: 0;
   margin-bottom: $legend-margin-bottom;
   font-weight: $legend-font-weight;
   // OUDS mod: no line-height
   @include get-font-size("body-large"); // OUDS mod: instead of `@include font-size($legend-font-size)`
 
-  + * {
-    clear: left; // 2
-  }
+  // + * {
+  //   clear: left; // 2
+  // }
 }
 
 // Fix height of inputs with a type of datetime-local, date, month, week, or time
