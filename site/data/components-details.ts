@@ -56,7 +56,6 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <ul class="bullet-list" style="margin-inline-start: calc(-1 * var(--bs-bullet-list-icon-container-width))">
         <li>Label</li>
-        <li>Label</li>
       </ul>`
   },
   {
@@ -66,7 +65,6 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <div class="d-flex flex-column gap-xsmall">
         <button type="button" class="btn btn-default">Label</button>
-        <button type="button" class="btn btn-strong">Label</button>
       </div>`
   },
   {
@@ -79,14 +77,6 @@ export const componentsDetails: ComponentCardData[] = [
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="checkboxDefault[[id_prefix]]">Label</label>
-        </div>
-      </div>
-      <div class="checkbox-item" style="min-width: unset">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault2[[id_prefix]]" />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="checkboxDefault2[[id_prefix]]">Label</label>
         </div>
       </div>`
   },
@@ -101,20 +91,12 @@ export const componentsDetails: ComponentCardData[] = [
     link: 'chips#filter-chip',
     category: 'Control',
     snippet: `
-      <ul class="chips-container">
-        <li class="chip chip-filter">
-          <input type="checkbox" id="appleCheck[[id_prefix]]" checked />
-          <label class="chip-interactive" for="appleCheck[[id_prefix]]">
-            Label
-          </label>
-        </li>
-        <li class="chip chip-filter">
-          <input type="checkbox" id="appleCheck2[[id_prefix]]" />
-          <label class="chip-interactive" for="appleCheck2[[id_prefix]]">
-            Label
-          </label>
-        </li>
-      </ul>`
+      <div class="chip chip-filter">
+        <input type="checkbox" id="appleCheck[[id_prefix]]" checked />
+        <label class="chip-interactive" for="appleCheck[[id_prefix]]">
+          Label
+        </label>
+      </div>`
   },
   {
     name: 'Icon',
@@ -154,12 +136,9 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <div class="text-input w-75">
         <div class="text-input-container" style="min-width: unset">
-          <svg aria-hidden="true">
-            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#lock-closed')}"/>
-          </svg>
           <label for="inputPasswordPrefix[[id_prefix]]">Label</label>
-          <div class="input-container" data-bs-prefix="DEV-">
-            <input type="password" id="inputPasswordPrefix[[id_prefix]]" class="text-input-field" placeholder=" ">
+          <div class="input-container">
+            <input type="password" id="inputPasswordPrefix[[id_prefix]]" class="text-input-field" placeholder=" " value="xxxxxx">
           </div>
           <button class="btn btn-minimal btn-icon">
             <svg aria-hidden="true">
@@ -175,24 +154,14 @@ export const componentsDetails: ComponentCardData[] = [
     slug: 'radio-button',
     category: 'Control',
     snippet: `
-      <fieldset class="control-items-list">
-        <div class="radio-button-item" style="min-width: unset">
-          <div class="control-item-assets-container">
-            <input class="control-item-indicator" type="radio" value="" id="radioDefault[[id_prefix]]" name="radioBasic[[id_prefix]]" checked />
-          </div>
-          <div class="control-item-text-container">
-            <label class="control-item-label" for="radioDefault[[id_prefix]]">Label</label>
-          </div>
+      <div class="radio-button-item" style="min-width: unset">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="radio" value="" id="radioDefault[[id_prefix]]" name="radioBasic[[id_prefix]]" checked />
         </div>
-        <div class="radio-button-item" style="min-width: unset">
-          <div class="control-item-assets-container">
-            <input class="control-item-indicator" type="radio" value="" id="radioDefault2[[id_prefix]]" name="radioBasic[[id_prefix]]" />
-          </div>
-          <div class="control-item-text-container">
-            <label class="control-item-label" for="radioDefault2[[id_prefix]]">Label</label>
-          </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="radioDefault[[id_prefix]]">Label</label>
         </div>
-      </fieldset>`
+      </div>`
   },
   {
     name: 'Select input',
@@ -234,14 +203,6 @@ export const componentsDetails: ComponentCardData[] = [
         <div class="control-item-text-container">
           <label class="control-item-label" for="switch[[id_prefix]]">Label</label>
         </div>
-      </div>
-      <div class="switch-item" style="min-width: unset">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switch2[[id_prefix]]" />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="switch2[[id_prefix]]">Label</label>
-        </div>
       </div>`
   },
   {
@@ -250,7 +211,6 @@ export const componentsDetails: ComponentCardData[] = [
     category: 'Indicator',
     snippet: `
       <ul class="list-unstyled d-flex gap-xsmall">
-        <li class="tag">Label</li>
         <li class="tag tag-info">
           <span class="tag-status-icon"></span>
           Label
