@@ -12,7 +12,6 @@ types:
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
-import { getMode } from '@libs/sass-variables'
 
 <Callout type="info">
   You can find the OUDS design guidelines here: [tag guidelines](https://r.orange.fr/r/S-ouds-doc-tag), [input tag guidelines](https://r.orange.fr/r/S-ouds-doc-input-tag).
@@ -25,8 +24,8 @@ import { getMode } from '@libs/sass-variables'
 <ul class="list-unstyled row row-cols-1 row-cols-sm-2">
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top bg-inverse-low" aria-hidden="true">
-        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
+      <div class="card-top bg-secondary" aria-hidden="true">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
           <p class="tag">Tag</p>
         </div>
       </div>
@@ -37,8 +36,8 @@ import { getMode } from '@libs/sass-variables'
   </li>
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top bg-inverse-low" aria-hidden="true">
-        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
+      <div class="card-top bg-secondary" aria-hidden="true">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
           <button type="button" class="tag tag-input" tabindex="-1">Input tag</button>
         </div>
       </div>
@@ -89,6 +88,8 @@ Keep in mind that visually impaired and blind users will lack the visual context
 Several examples are provided below, but they need to be adapted for actual use cases.
 
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Tag
+
+Tag is a UI element that displays short information such as a label, a keyword or a category.
 
 Tag helps users quickly find, group, or understand content. Tags can stay in place or be removed, and can include icons or actions like “close” or “edit”.
 
@@ -415,6 +416,8 @@ Tags can be added side by side. They require horizontal and vertical spacing bet
   </ul>`} />
 
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Input tag
+
+Input tag is a UI element that allows to render an inputted value as a tag, in order to display short information such as a label, a keyword or a category.
 
 Input tag helps users type and submit values (usually by pressing enter, comma, or tab), and see each value transformed into a tag.
 
