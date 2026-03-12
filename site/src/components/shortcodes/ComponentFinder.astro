@@ -7,7 +7,7 @@ const existingStartingLetters = [...new Set(componentsDetails.map((component) =>
 
 <ouds-component-finder>
   <form class="needs-validation mb-gridgap" novalidate onsubmit="return false">
-    <div class="text-input">
+    <div class="text-input mb-small">
       <div class="text-input-container">
         <svg aria-hidden="true">
           <use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#search')}></use>
@@ -28,9 +28,13 @@ const existingStartingLetters = [...new Set(componentsDetails.map((component) =>
       </div>
       <p id="usernameFeedback" class="error-text">Alphabetical characters only.</p>
     </div>
-    <fieldset class="d-flex align-items-center gap-xsmall flex-row" data-alpha-filter>
-      <legend class="my-none flex-shrink-0">Starting by:</legend>
+    <fieldset class="d-md-flex align-items-center gap-xsmall" data-alpha-filter>
+      <legend class="d-block my-md-none flex-shrink-0">Filter by starting letter:</legend>
       <div class="chips-container">
+        <div class="chip chip-filter">
+          <input type="radio" id="radioCheckAll" name="componentFinderAlpha" value="all" checked />
+          <label class="chip-interactive" for="radioCheckAll"> No filter </label>
+        </div>
         {
           existingStartingLetters.map((char) => (
             <div class="chip chip-filter">
@@ -71,7 +75,7 @@ const existingStartingLetters = [...new Set(componentsDetails.map((component) =>
 
       alphaFieldset.addEventListener('change', () => {
         this.resetList()
-        if (finderAlpha.value) {
+        if (finderAlpha.value && finderAlpha.value !== 'all') {
           this.querySelectorAll(`ul[data-component-list] > :not([data-name^="${finderAlpha.value}"])`).forEach((elt) =>
             elt.classList.add('d-none')
           )
@@ -85,6 +89,7 @@ const existingStartingLetters = [...new Set(componentsDetails.map((component) =>
 
     resetAlphaFinder() {
       this.querySelectorAll('input[type=radio]').forEach((elt) => ((elt as HTMLInputElement).checked = false))
+      ;(this.querySelector('input[type=radio][value="all"]') as HTMLInputElement).checked = true
     }
   }
 
