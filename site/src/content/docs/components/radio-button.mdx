@@ -453,10 +453,10 @@ To manually mark a radio button as invalid, add the `aria-invalid="true"` attrib
 
 <BootstrapCompatibility>
 
-To display an invalid radio button, add `.is-invalid` to a `.form-check-input`.
+To display an invalid radio button, add `aria-invalid="true"` to a `.form-check-input`.
 
 <Example buttonLabel="Bootstrap compatibility: invalid radio buttons" code={`<div class="form-check">
-    <input class="form-check-input is-invalid" type="radio" value="" id="radioInvalidBootstrap" />
+    <input class="form-check-input" aria-invalid="true" type="radio" value="" id="radioInvalidBootstrap" />
     <label class="form-check-label" for="radioInvalidBootstrap">
       Invalid radio
     </label>
