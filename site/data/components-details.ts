@@ -56,18 +56,13 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <ul class="bullet-list" style="margin-inline-start: calc(-1 * var(--bs-bullet-list-icon-container-width))">
         <li>Label</li>
-        <li>Label</li>
       </ul>`
   },
   {
     name: 'Button',
     link: 'buttons',
     category: 'Actions',
-    snippet: `
-      <div class="d-flex flex-column gap-xsmall">
-        <button type="button" class="btn btn-default">Label</button>
-        <button type="button" class="btn btn-strong">Label</button>
-      </div>`
+    snippet: `<button type="button" class="btn btn-default">Label</button>`
   },
   {
     name: 'Checkbox',
@@ -79,14 +74,6 @@ export const componentsDetails: ComponentCardData[] = [
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="checkbox[[id_prefix]]">Label</label>
-        </div>
-      </div>
-      <div class="checkbox-item" style="min-width: unset">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault2[[id_prefix]]" />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="checkboxDefault2[[id_prefix]]">Label</label>
         </div>
       </div>`
   },
@@ -105,12 +92,6 @@ export const componentsDetails: ComponentCardData[] = [
         <li class="chip chip-filter">
           <input type="checkbox" id="filterChip[[id_prefix]]" checked />
           <label class="chip-interactive" for="filterChip[[id_prefix]]">
-            Label
-          </label>
-        </li>
-        <li class="chip chip-filter">
-          <input type="checkbox" id="appleCheck2[[id_prefix]]" />
-          <label class="chip-interactive" for="appleCheck2[[id_prefix]]">
             Label
           </label>
         </li>
@@ -179,7 +160,7 @@ export const componentsDetails: ComponentCardData[] = [
         <div class="control-item-text-container">
           <label class="control-item-label" for="radio[[id_prefix]]">Label</label>
         </div>
-      </fieldset>`
+      </div>`
   },
   {
     name: 'Select input',
