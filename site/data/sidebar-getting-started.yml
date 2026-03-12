@@ -25,3 +25,5 @@
       draft: true
     - title: Component versioning
     - title: Migration
+    - title: Resources
+      direct_url: '/resources'
