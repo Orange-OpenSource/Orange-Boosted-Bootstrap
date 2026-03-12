@@ -1,6 +1,7 @@
 ---
 title: Form validation
 description: Provide valuable, actionable feedback to your users with HTML5 form validation, via custom styles and JavaScript.
+description: Provide valuable, actionable feedback to your users with HTML5 form validation, via custom styles and JavaScript.
 aliases:
   - "/docs/forms/validation/"
   - "/docs/foundation/form-validation/"
@@ -14,8 +15,15 @@ import { getDocsRelativePath } from '@libs/path'
 Browsers' built-in form validation is the preferred way to handle [client-side validation](#client-side). When using [semantic inputs and validation constraints attributes](#accessibility) (like `required`, `pattern`...), the browser automatically adds a `:user-invalid` pseudo-class on invalid fields that [OUDS Web will style](#how-it-works).
 
 Alternatively you can programmatically add an `aria-invalid="true"` attribute to manually mark a field as invalid, this is especially useful for [server-side validation](#server-side).
+import { getDocsRelativePath } from '@libs/path'
+
+Browsers' built-in form validation is the preferred way to handle [client-side validation](#client-side). When using [semantic inputs and validation constraints attributes](#accessibility) (like `required`, `pattern`...), the browser automatically adds a `:user-invalid` pseudo-class on invalid fields that [OUDS Web will style](#how-it-works).
+
+Alternatively you can programmatically add an `aria-invalid="true"` attribute to manually mark a field as invalid, this is especially useful for [server-side validation](#server-side).
 
 ## How it works
+
+OUDS Web provides custom feedback styles that apply custom colors, borders, focus styles, and background icons to better communicate feedback. To use them, you’ll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript.
 
 OUDS Web provides custom feedback styles that apply custom colors, borders, focus styles, and background icons to better communicate feedback. To use them, you’ll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript.
 
@@ -54,7 +62,7 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
     </p>
     <fieldset class="control-items-list mb-large">
      <legend>Title <span aria-hidden="true">*</span></legend>
-      <div class="radio-button-item">
+      <div class="radio-button-item component-max-width">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" type="radio" value="" name="title" id="mr" data-errormessage="titleFeedback" required />
         </div>
@@ -62,7 +70,7 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
           <label class="control-item-label" for="mr">Mr.</label>
         </div>
       </div>
-      <div class="radio-button-item">
+      <div class="radio-button-item component-max-width">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" type="radio" value="" name="title" id="ms" data-errormessage="titleFeedback" required />
         </div>
@@ -70,7 +78,7 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
           <label class="control-item-label" for="ms">Ms.</label>
         </div>
       </div>
-      <div class="radio-button-item">
+      <div class="radio-button-item component-max-width">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" type="radio" value="" name="title" id="other" data-errormessage="titleFeedback" required />
         </div>
@@ -83,7 +91,7 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
       </p>
     </fieldset>
 
-    <div class="text-input mb-large">
+    <div class="text-input component-max-width mb-large">
       <div class="text-input-container">
         <label for="username">Username <span aria-hidden="true">*</span></label>
         <input type="text" class="text-input-field" id="username" data-errormessage="usernameFeedback" autocomplete="username" placeholder=" " required>
@@ -92,7 +100,7 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
         Username is required.
       </p>
     </div>
-    <div class="text-input mb-large">
+    <div class="text-input component-max-width mb-large">
       <div class="text-input-container">
         <label for="inputPassword">Password <span aria-hidden="true">*</span></label>
         <input type="password" id="inputPassword" class="text-input-field" aria-describedby="inputPasswordPrefixHelper" data-errormessage="passwordFeedback" autocomplete="new-password" placeholder=" " required minlength="8">
@@ -109,7 +117,7 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
       </p>
     </div>
 
-    <div class="select-input mb-large">
+    <div class="select-input component-max-width mb-large">
       <div class="select-input-container">
         <label for="continent">Continent <span aria-hidden="true">*</span></label>
         <select class="select-input-field" id="continent" data-errormessage="continentFeedback" required>
@@ -126,7 +134,7 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
       </p>
     </div>
 
-    <div class="text-area mb-large">
+    <div class="text-area component-max-width mb-large">
       <div class="text-area-container">
         <label for="comments">Comments <span aria-hidden="true">*</span></label>
         <textarea id="comments" class="text-area-field" data-errormessage="commentsFeedback" required></textarea>
@@ -137,7 +145,7 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
     </div>
 
     <div class="switch-item-container mb-large">
-      <div class="switch-item control-item-reverse">
+      <div class="switch-item control-item-reverse component-max-width">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" type="checkbox" role="switch" value="" id="readTermsAndConditions" data-errormessage="readTermsAndConditionsFeedback" required />
         </div>
@@ -151,7 +159,7 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
     </div>
 
     <div class="checkbox-item-container mb-large">
-      <div class="checkbox-item">
+      <div class="checkbox-item component-max-width">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" type="checkbox" value="" id="agreeTermsAndConditions"
                  data-errormessage="agreeTermsAndConditionsFeedback" required/>
@@ -187,7 +195,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
     </p>
     <fieldset class="control-items-list mb-large">
      <legend>Title <span aria-hidden="true">*</span></legend>
-      <div class="radio-button-item">
+      <div class="radio-button-item component-max-width">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="title" id="mr2" aria-describedby="title2Feedback" required />
         </div>
@@ -195,7 +203,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
           <label class="control-item-label" for="mr2">Mr.</label>
         </div>
       </div>
-      <div class="radio-button-item">
+      <div class="radio-button-item component-max-width">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="title" id="ms2" aria-describedby="title2Feedback" required />
         </div>
@@ -203,7 +211,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
           <label class="control-item-label" for="ms2">Ms.</label>
         </div>
       </div>
-      <div class="radio-button-item">
+      <div class="radio-button-item component-max-width">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="title" id="other2" aria-describedby="title2Feedback" required />
         </div>
@@ -216,7 +224,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
       </p>
     </fieldset>
 
-    <div class="text-input mb-large">
+    <div class="text-input component-max-width mb-large">
       <div class="text-input-container">
         <label for="username2">Username <span aria-hidden="true">*</span></label>
         <input type="text" class="text-input-field" aria-invalid="true" id="username2" aria-describedby="username2Feedback" autocomplete="username" placeholder=" " required>
@@ -226,7 +234,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
       </p>
     </div>
 
-    <div class="text-input mb-large">
+    <div class="text-input component-max-width mb-large">
       <div class="text-input-container">
         <label for="inputPassword2">Password <span aria-hidden="true">*</span></label>
         <input type="password" id="inputPassword2" class="text-input-field" aria-invalid="true" aria-describedby="inputPassword2PrefixHelper password2Feedback" autocomplete="new-password" placeholder=" " required minlength="8">
@@ -243,7 +251,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
       </p>
     </div>
 
-    <div class="select-input mb-large">
+    <div class="select-input component-max-width mb-large">
       <div class="select-input-container">
         <label for="continent2">Continent <span aria-hidden="true">*</span></label>
         <select class="select-input-field" aria-invalid="true" id="continent2" aria-describedby="continent2Feedback" required>
@@ -260,7 +268,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
       </p>
     </div>
 
-    <div class="text-area mb-large">
+    <div class="text-area component-max-width mb-large">
       <div class="text-area-container">
         <label for="comments2">Comments <span aria-hidden="true">*</span></label>
         <textarea id="comments2" class="text-area-field" aria-invalid="true" aria-describedby="comments2Feedback" required></textarea>
@@ -271,7 +279,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
     </div>
 
     <div class="switch-item-container mb-large">
-      <div class="switch-item control-item-reverse">
+      <div class="switch-item control-item-reverse component-max-width">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" aria-invalid="true" type="checkbox" role="switch" value="" id="readTermsAndConditions2" aria-describedby="readTermsAndConditions2Feedback" required />
         </div>
@@ -285,7 +293,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
     </div>
 
     <div class="checkbox-item-container mb-large">
-      <div class="checkbox-item">
+      <div class="checkbox-item component-max-width">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" aria-invalid="true" type="checkbox" value="" id="agreeTermsAndConditions2"
                  aria-describedby="agreeTermsAndConditions2Feedback" required/>

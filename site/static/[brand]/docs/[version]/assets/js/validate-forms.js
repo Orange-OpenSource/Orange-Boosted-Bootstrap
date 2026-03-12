@@ -55,8 +55,7 @@
         event.stopPropagation()
 
         // Focus on first error for accessibility
-        const invalidItems = form.querySelectorAll(':invalid')
-        invalidItems[0].focus()
+        form.querySelector(':invalid').focus()
       }
     }, false)
   })
