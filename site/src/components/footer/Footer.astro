@@ -202,6 +202,16 @@ const { title } = Astro.props
             data-bs-parent="#sitemapAccordion"
           >
             <ul class="navbar-nav">
+              <li>
+                <a
+                  class:list={['nav-link', { active: Astro.url.pathname.includes('resources') }]}
+                  {...Astro.url.pathname.includes('resources') && { 'aria-current': 'page' }}
+                  href="/resources"
+                  aria-describedby="headingAbout"
+                >
+                  Resources
+                </a>
+              </li>
               <li class="d-none">
                 <a
                   class:list={['nav-link', { active: Astro.url.pathname.includes('about/overview') }]}
