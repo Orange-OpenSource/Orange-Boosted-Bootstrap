@@ -222,7 +222,7 @@ export const componentsDetails: ComponentCardData[] = [
       <div class="text-area w-75 h-75">
         <div class="text-area-container h-100">
           <label for="exampleTextArea[[id_prefix]]">Label</label>
-          <textarea class="text-area-field" id="exampleTextArea[[id_prefix]]" style="min-height: unset"></textarea>
+          <textarea class="text-area-field h-100" id="exampleTextArea[[id_prefix]]"></textarea>
         </div>
       </div>`
   },
