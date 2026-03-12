@@ -1,6 +1,6 @@
 ---
 title: Buttons
-description: Use OUDS Web’s custom button styles for actions in forms, dialogs, and more with support for multiple variants, states, and more.
+description: Button is a UI element that triggers an action or event, and is used to initiate tasks or confirming an action.
 aliases:
   - "/docs/components/buttons/"
 toc: true
@@ -37,7 +37,7 @@ import { getMode } from '@libs/sass-variables'
     <div class="card position-relative h-100">
       <div class="card-top bg-inverse-low" aria-hidden="true">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
-          <button type="button" class="btn btn-next btn-default">Next</button>
+          <a class="btn btn-next btn-default" href="#">Next</a>
         </div>
       </div>
       <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#navigation-button">Navigation button</a> is a UI element that allows to move between different pages within a multi-page interface.</div>
@@ -684,7 +684,7 @@ Make navigation buttons inactive by:
 
 <Example buttonLabel="disabled navigation buttons using `<a>` tag" class="bd-btn-example" code={`
   <a class="btn btn-next btn-default" aria-disabled="true">Next</a>
-  <a class="btn btn-next btn-icon btn-default" aria-disabled="true"><span class="visually-hidden">Next</span></a>`} />
+  <a class="btn btn-next btn-icon btn-strong" aria-disabled="true"><span class="visually-hidden">Next</span></a>`} />
 
 In case you use a `<button>` element, simply add the `disabled` boolean attribute to it. Disabled navigation buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
@@ -696,7 +696,7 @@ In case you use a `<button>` element, simply add the `disabled` boolean attribut
 
 The loading state of a navigation button indicates that an action is currently processing or taking place. This state provides feedback to users, enhancing user experience.
 
-Please refer to the [loading state section of the button component type](#loading) for guidelines on how to implement loading states, as well as a JavaScript example and a live demo.
+Please refer to the [loading state section of the button component](#loading) for guidelines on how to implement loading states, as well as a JavaScript example and a live demo.
 
 <Example buttonLabel="loading navigation buttons" class="bd-btn-example" code={`
   <a class="btn btn-next btn-default loading-indeterminate" id="loading-nav-btn-1" aria-disabled="true">
@@ -720,5 +720,4 @@ Please refer to the [loading state section of the button component type](#loadin
     </svg>
     <span role="status" id="loading-nav-btn-msg-3" class="visually-hidden">Loading next page</span>
   </button>`} />
-
 
