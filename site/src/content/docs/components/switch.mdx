@@ -316,7 +316,9 @@ To create a read only switch, the input should be replaced by a `span` element w
 
 <Callout type="info" name="input-invalid" />
 
-To display an invalid switch, add `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation page to learn more]([[docsref:/foundation/form-validation]]).
+<Callout title="Prefer built-in form validation to handle client-side validation" type="info" name="form-field-validation" />
+
+To manually mark a switch as invalid, add `aria-invalid="true"` to a `.control-item-indicator`. An error icon will be automatically shown, if there is a decorative icon specified it will be hidden.
 
 #### Error text on one switch item
 
@@ -325,7 +327,7 @@ To automatically display an error text on a single switch item, enclose it insid
 <Example buttonLabel="invalid single switch" code={`<div class="switch-item-container">
     <div class="switch-item control-item-divider">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalid" aria-describedby="switchInvalidDescription switchInvalidErrorText" checked />
+        <input class="control-item-indicator" aria-invalid="true" type="checkbox" role="switch" value="" id="switchInvalid" aria-describedby="switchInvalidDescription switchInvalidErrorText" checked />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="switchInvalid">Default invalid switch</label>
@@ -337,10 +339,10 @@ To automatically display an error text on a single switch item, enclose it insid
 
 <BootstrapCompatibility>
 
-To display an invalid switch, add `.is-invalid` to a `.form-check-input`.
+To display an invalid switch, add `aria-invalid="true"` to a `.form-check-input`.
 
 <Example buttonLabel="Bootstrap compatibility: invalid single switch" code={`<div class="form-check form-switch">
-    <input class="form-check-input is-invalid" type="checkbox" value="" id="checkInvalid" role="switch" />
+    <input class="form-check-input" aria-invalid="true" type="checkbox" value="" id="checkInvalid" role="switch" />
     <label class="form-check-label" for="checkInvalid">
       Default invalid switch (Bootstrap compatible)
     </label>
@@ -353,7 +355,7 @@ To add an error message on a single switch item inside a list, the `.switch-item
     <li class="switch-item-container">
       <div class="switch-item control-item-divider">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalidUl" aria-describedby="switchInvalidUlDescription switchInvalidErrorTextUl" checked />
+          <input class="control-item-indicator" aria-invalid="true" type="checkbox" role="switch" value="" id="switchInvalidUl" aria-describedby="switchInvalidUlDescription switchInvalidErrorTextUl" checked />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="switchInvalidUl">Default invalid switch</label>
@@ -383,7 +385,7 @@ If the switch items list is part of a form, add a `<fieldset>` with the class `.
 <Example buttonLabel="invalid switch group" code={`<fieldset class="control-items-list">
     <div class="switch-item">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalidFieldset" aria-describedby="switchInvalidFieldsetDescription switchInvalidErrorTextGroup" />
+        <input class="control-item-indicator" aria-invalid="true" type="checkbox" role="switch" value="" id="switchInvalidFieldset" aria-describedby="switchInvalidFieldsetDescription switchInvalidErrorTextGroup" />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="switchInvalidFieldset">Default invalid switch</label>
@@ -392,7 +394,7 @@ If the switch items list is part of a form, add a `<fieldset>` with the class `.
     </div>
     <div class="switch-item">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalidFieldset2" aria-describedby="switchInvalidFieldset2Description switchInvalidErrorTextGroup" checked />
+        <input class="control-item-indicator" aria-invalid="true" type="checkbox" role="switch" value="" id="switchInvalidFieldset2" aria-describedby="switchInvalidFieldset2Description switchInvalidErrorTextGroup" checked />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="switchInvalidFieldset2">Checked invalid switch</label>
