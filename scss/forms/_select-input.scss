@@ -223,6 +223,7 @@
     position: absolute;
     top: 50%;
     right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-trailing-action-padding-right) + var(--#{$prefix}text-input-column-gap-trailing-error));
+    z-index: 5;
     display: block;
     width: px-to-rem($ouds-button-size-icon-only);
     height: px-to-rem($ouds-button-size-icon-only);
