@@ -6,17 +6,20 @@ aliases:
   - "/docs/components/"
   - "/docs/[[config:docs_version]]/components/"
 toc: true
+extra_js:
+  - src: "[[docsref:/assets/js/validate-forms.js]]"
+    async: true
 ---
 
 import { componentsDetails } from '../../../data/components-details'
 
 ## Alphabetical order
 
-<ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-xl-3 row-cols-2xl-4">
+<ComponentFinder>
   {
     componentsDetails.map((component) => <ComponentCard component={component} idPrefix={'_alpha'} />)
   }
-</ul>
+</ComponentFinder>
 
 <hr />
 

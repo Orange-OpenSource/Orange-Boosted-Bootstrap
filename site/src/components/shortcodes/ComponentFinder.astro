@@ -1,0 +1,99 @@
+---
+import { getVersionedDocsPath } from '@libs/path'
+import { componentsDetails } from '../../../data/components-details'
+
+const existingStartingLetters = [...new Set(componentsDetails.map((component) => component.name.charAt(0)))]
+---
+
+<ouds-component-finder>
+  <form class="needs-validation mb-gridgap" novalidate onsubmit="return false">
+    <div class="text-input mb-small">
+      <div class="text-input-container">
+        <svg aria-hidden="true">
+          <use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#search')}></use>
+        </svg>
+        <label for="oudsComponentFinderInput">
+          Start typing to filter components <span class="visually-hidden">and update the component list below</span>
+        </label>
+        <input
+          type="search"
+          name="componentFinderInput"
+          id="oudsComponentFinderInput"
+          class="text-input-field"
+          pattern="[a-zA-Z \\-]+"
+          placeholder=" "
+          data-feedback-id="componentSearchFeedback"
+          inputmode="search"
+        />
+      </div>
+      <p id="usernameFeedback" class="error-text">Alphabetical characters only.</p>
+    </div>
+    <fieldset class="d-md-flex align-items-center gap-xsmall" data-alpha-filter>
+      <legend class="my-md-none flex-shrink-0">
+        <span class="visually-hidden">filter by </span>Starting letter:
+      </legend>
+      <div class="chips-container">
+        <div class="chip chip-filter">
+          <input type="radio" id="radioCheckAll" name="componentFinderAlpha" value="all" checked />
+          <label class="chip-interactive" for="radioCheckAll">No filter</label>
+        </div>
+        {
+          existingStartingLetters.map((char) => (
+            <div class="chip chip-filter">
+              <input type="radio" id={`radioCheck${char}`} name="componentFinderAlpha" value={char.toLowerCase()} />
+              <label class="chip-interactive" for={`radioCheck${char}`}>
+                {char}
+              </label>
+            </div>
+          ))
+        }
+      </div>
+    </fieldset>
+  </form>
+  <ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-xl-3 row-cols-2xl-4" data-component-list>
+    <slot />
+  </ul>
+</ouds-component-finder>
+
+<script>
+  class OudsComponentFinder extends HTMLElement {
+    connectedCallback() {
+      const searchForm = this.querySelector('form') as HTMLFormElement
+      if (!searchForm) return
+      const finderInput = searchForm.elements.namedItem('componentFinderInput') as HTMLInputElement
+      const finderAlpha = searchForm.elements.namedItem('componentFinderAlpha') as RadioNodeList
+      const alphaFieldset = this.querySelector('[data-alpha-filter]')
+      if (!finderInput || !alphaFieldset || !finderAlpha) return
+
+      finderInput.addEventListener('input', () => {
+        this.resetList()
+        this.resetAlphaFinder()
+        if (finderInput.value && finderInput.checkValidity()) {
+          this.querySelectorAll(
+            `ul[data-component-list] > :not([data-name*="${finderInput.value.toLowerCase()}"])`
+          ).forEach((elt) => elt.classList.add('d-none'))
+        }
+      })
+
+      alphaFieldset.addEventListener('change', () => {
+        this.resetList()
+        if (finderAlpha.value && finderAlpha.value !== 'all') {
+          this.querySelectorAll(`ul[data-component-list] > :not([data-name^="${finderAlpha.value}"])`).forEach((elt) =>
+            elt.classList.add('d-none')
+          )
+        }
+      })
+    }
+
+    resetList() {
+      this.querySelectorAll('ul[data-component-list] > *').forEach((elt) => elt.classList.remove('d-none'))
+    }
+
+    resetAlphaFinder() {
+      this.querySelectorAll('input[type=radio]').forEach((elt) => ((elt as HTMLInputElement).checked = false))
+      ;(this.querySelector('input[type=radio][value="all"]') as HTMLInputElement).checked = true
+    }
+  }
+
+  customElements.define('ouds-component-finder', OudsComponentFinder)
+</script>
