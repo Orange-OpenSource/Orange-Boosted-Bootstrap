@@ -201,6 +201,11 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         @include get-font-size("label-small");
+
+        // stylelint-disable-next-line selector-no-qualifying-type
+        &.is-required::after {
+          margin-left: 3px;
+        }
       }
     }
 
@@ -476,6 +481,11 @@
         cursor: text;
         content: "";
         background-color: transparent;
+      }
+
+      // stylelint-disable-next-line selector-no-qualifying-type
+      &.is-required::after {
+        margin-left: 3px;
       }
     }
 

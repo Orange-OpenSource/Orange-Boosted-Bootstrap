@@ -167,6 +167,11 @@
       top: calc(var(--#{$prefix}text-input-padding-y) + .5 * (var(--#{$prefix}font-size-label-small) * var(--#{$prefix}font-line-height-label-small)) + .5 * (var(--#{$prefix}text-input-min-height) - 2 * var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}font-size-label-small) * var(--#{$prefix}font-line-height-label-small) - var(--#{$prefix}font-size-label-large) * var(--#{$prefix}font-line-height-label-large)));
       white-space: nowrap;
       @include get-font-size("label-small");
+
+      // stylelint-disable-next-line selector-no-qualifying-type
+      &.is-required::after {
+        margin-left: 3px;
+      }
     }
   }
 
@@ -223,6 +228,7 @@
     position: absolute;
     top: 50%;
     right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-trailing-action-padding-right) + var(--#{$prefix}text-input-column-gap-trailing-error));
+    z-index: 5;
     display: block;
     width: px-to-rem($ouds-button-size-icon-only);
     height: px-to-rem($ouds-button-size-icon-only);
