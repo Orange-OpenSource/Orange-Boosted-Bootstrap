@@ -628,10 +628,10 @@ For general rules about when to add mandatory fields indication, please refer to
 <Example buttonLabel="mandatory checkboxes indication" code={`<div class="checkbox-item-container">
     <div class="checkbox-item">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="checkbox" value="" id="checkboxUniqueInvalid" aria-describedby="checkboxUniqueInvalidErrorText" />
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxUniqueMandatory" />
       </div>
       <div class="control-item-text-container">
-        <label class="control-item-label is-required" for="checkboxUniqueInvalid">Mandatory unique checkbox</label>
+        <label class="control-item-label is-required" for="checkboxUniqueMandatory">Mandatory unique checkbox</label>
       </div>
     </div>
   </div>
@@ -640,18 +640,18 @@ For general rules about when to add mandatory fields indication, please refer to
     <legend class="is-required">Mandatory checkboxes</legend>
     <div class="checkbox-item">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="checkbox" value="" id="requiredCheckbox1" required aria-describedby="checkboxesInvalidErrorText"/>
+        <input class="control-item-indicator" type="checkbox" value="" id="mandatoryCheckbox1" required />
       </div>
       <div class="control-item-text-container">
-        <label class="control-item-label" for="checkboxDefault">Default checkbox</label>
+        <label class="control-item-label" for="mandatoryCheckbox1">Default checkbox</label>
       </div>
     </div>
     <div class="checkbox-item">
       <div class="control-item-assets-container">
-        <input checked class="control-item-indicator" type="checkbox" value="" id="requiredCheckbox2" required aria-describedby="checkboxesInvalidErrorText"/>
+        <input checked class="control-item-indicator" type="checkbox" value="" id="mandatoryCheckbox2" required />
       </div>
       <div class="control-item-text-container">
-        <label class="control-item-label" for="checkboxDefault2">Checked checkbox</label>
+        <label class="control-item-label" for="mandatoryCheckbox2">Checked checkbox</label>
       </div>
     </div>
   </fieldset>`} />
