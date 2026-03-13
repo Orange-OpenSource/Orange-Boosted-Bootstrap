@@ -636,16 +636,16 @@ fieldset {
 //    See https://github.com/twbs/bootstrap/issues/29712
 
 legend {
-  display: contents;
+  float: left;
   padding: 0;
   margin-bottom: $legend-margin-bottom;
   font-weight: $legend-font-weight;
   // OUDS mod: no line-height
   @include get-font-size("body-large"); // OUDS mod: instead of `@include font-size($legend-font-size)`
 
-  // + * {
-  //   clear: left; // 2
-  // }
+  + * {
+    clear: left; // 2
+  }
 }
 
 // Fix height of inputs with a type of datetime-local, date, month, week, or time
