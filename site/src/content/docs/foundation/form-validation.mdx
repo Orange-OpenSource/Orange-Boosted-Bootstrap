@@ -50,10 +50,10 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
       This form uses client-side validation with custom validation styles. Try to submit the form without filling it out to see them in action.
     </p>
     <p class="fw-bold">
-      Required fields are marked with a star.
+      All fields are mandatory.
     </p>
     <fieldset class="control-items-list mb-large">
-     <legend>Title <span aria-hidden="true">*</span></legend>
+     <legend>Title</legend>
       <div class="radio-button-item component-max-width">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" type="radio" value="" name="title" id="mr" data-errormessage="titleFeedback" required />
@@ -85,7 +85,7 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
 
     <div class="text-input component-max-width mb-large">
       <div class="text-input-container">
-        <label for="username">Username <span aria-hidden="true">*</span></label>
+        <label for="username">Username</label>
         <input type="text" class="text-input-field" id="username" data-errormessage="usernameFeedback" autocomplete="username" placeholder=" " required>
       </div>
       <p id="usernameFeedback" class="error-text">
@@ -94,7 +94,7 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
     </div>
     <div class="text-input component-max-width mb-large">
       <div class="text-input-container">
-        <label for="inputPassword">Password <span aria-hidden="true">*</span></label>
+        <label for="inputPassword">Password</label>
         <input type="password" id="inputPassword" class="text-input-field" aria-describedby="inputPasswordPrefixHelper" data-errormessage="passwordFeedback" autocomplete="new-password" placeholder=" " required minlength="8">
         <button class="btn btn-minimal btn-icon">
           <svg aria-hidden="true">
@@ -111,7 +111,7 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
 
     <div class="select-input component-max-width mb-large">
       <div class="select-input-container">
-        <label for="continent">Continent <span aria-hidden="true">*</span></label>
+        <label for="continent">Continent</label>
         <select class="select-input-field" id="continent" data-errormessage="continentFeedback" required>
           <option value="" disabled selected></option>
           <option value="1">Europe</option>
@@ -128,7 +128,7 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
 
     <div class="text-area component-max-width mb-large">
       <div class="text-area-container">
-        <label for="comments">Comments <span aria-hidden="true">*</span></label>
+        <label for="comments">Comments</label>
         <textarea id="comments" class="text-area-field" data-errormessage="commentsFeedback" required></textarea>
       </div>
       <p id="commentsFeedback" class="error-text">
@@ -142,7 +142,7 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
           <input class="control-item-indicator" type="checkbox" role="switch" value="" id="readTermsAndConditions" data-errormessage="readTermsAndConditionsFeedback" required />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="readTermsAndConditions">I have read the terms and conditions <span aria-hidden="true">*</span></label>
+          <label class="control-item-label" for="readTermsAndConditions">I have read the terms and conditions</label>
         </div>
       </div>
       <p class="control-item-error-message mb-xsmall" id="readTermsAndConditionsFeedback">
@@ -157,7 +157,7 @@ Try to submit the form below; our JavaScript will intercept the submit event, an
                  data-errormessage="agreeTermsAndConditionsFeedback" required/>
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="agreeTermsAndConditions">I agree to the terms and conditions <span aria-hidden="true">*</span></label>
+          <label class="control-item-label" for="agreeTermsAndConditions">I agree to the terms and conditions</label>
         </div>
       </div>
       <p class="control-item-error-message" id="agreeTermsAndConditionsFeedback">
@@ -183,10 +183,10 @@ For invalid fields, ensure that the invalid feedback/error message is associated
       This form simulates server-side validation with custom validation styles.
     </p>
     <p class="fw-bold">
-      Required fields are marked with a star.
+      All fields are mandatory.
     </p>
     <fieldset class="control-items-list mb-large">
-     <legend>Title <span aria-hidden="true">*</span></legend>
+      <legend>Title</legend>
       <div class="radio-button-item component-max-width">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="title" id="mr2" aria-describedby="title2Feedback" required />
@@ -218,7 +218,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
 
     <div class="text-input component-max-width mb-large">
       <div class="text-input-container">
-        <label for="username2">Username <span aria-hidden="true">*</span></label>
+        <label for="username2">Username</label>
         <input type="text" class="text-input-field" aria-invalid="true" id="username2" aria-describedby="username2Feedback" autocomplete="username" placeholder=" " required>
       </div>
       <p id="username2Feedback" class="error-text">
@@ -228,7 +228,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
 
     <div class="text-input component-max-width mb-large">
       <div class="text-input-container">
-        <label for="inputPassword2">Password <span aria-hidden="true">*</span></label>
+        <label for="inputPassword2">Password</label>
         <input type="password" id="inputPassword2" class="text-input-field" aria-invalid="true" aria-describedby="inputPassword2PrefixHelper password2Feedback" autocomplete="new-password" placeholder=" " required minlength="8">
         <button class="btn btn-minimal btn-icon">
           <svg aria-hidden="true">
@@ -245,7 +245,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
 
     <div class="select-input component-max-width mb-large">
       <div class="select-input-container">
-        <label for="continent2">Continent <span aria-hidden="true">*</span></label>
+        <label for="continent2">Continent</label>
         <select class="select-input-field" aria-invalid="true" id="continent2" aria-describedby="continent2Feedback" required>
           <option value="" disabled selected></option>
           <option value="1">Europe</option>
@@ -262,7 +262,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
 
     <div class="text-area component-max-width mb-large">
       <div class="text-area-container">
-        <label for="comments2">Comments <span aria-hidden="true">*</span></label>
+        <label for="comments2">Comments</label>
         <textarea id="comments2" class="text-area-field" aria-invalid="true" aria-describedby="comments2Feedback" required></textarea>
       </div>
       <p id="comments2Feedback" class="error-text">
@@ -276,7 +276,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
           <input class="control-item-indicator" aria-invalid="true" type="checkbox" role="switch" value="" id="readTermsAndConditions2" aria-describedby="readTermsAndConditions2Feedback" required />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="readTermsAndConditions2">I have read the terms and conditions <span aria-hidden="true">*</span></label>
+          <label class="control-item-label" for="readTermsAndConditions2">I have read the terms and conditions</label>
         </div>
       </div>
       <p class="control-item-error-message mb-xsmall" id="readTermsAndConditions2Feedback">
@@ -291,7 +291,7 @@ For invalid fields, ensure that the invalid feedback/error message is associated
                  aria-describedby="agreeTermsAndConditions2Feedback" required/>
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="agreeTermsAndConditions2">I agree to the terms and conditions <span aria-hidden="true">*</span></label>
+          <label class="control-item-label" for="agreeTermsAndConditions2">I agree to the terms and conditions</label>
         </div>
       </div>
       <p class="control-item-error-message" id="agreeTermsAndConditions2Feedback">
