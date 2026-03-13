@@ -1,9 +1,9 @@
 {
   "name": "@ouds/web-common",
   "description": "OUDS Web is a Bootstrap based, Orange branded accessible and ergonomic components library.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "config": {
-    "version_short": "1.0"
+    "version_short": "1.1"
   },
   "keywords": [
     "mobile-first",

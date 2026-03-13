@@ -1,11 +1,11 @@
 /*!
- * OUDS Web Grid v1.0.0 (https://web.unified-design-system.orange.com/)
- * Copyright 2014-2025 The OUDS Web Authors
- * Copyright 2014-2025 Orange SA
+ * OUDS Web Grid v1.1.0 (https://web.unified-design-system.orange.com/)
+ * Copyright 2014-2026 The OUDS Web Authors
+ * Copyright 2014-2026 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
  * Bootstrap Grid v5.3.5 (https://getbootstrap.com/)
- * Copyright 2011-2025 The Bootstrap Authors
+ * Copyright 2011-2026 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root,
@@ -332,47 +332,12 @@
 }
 
 .container-fluid {
+  --bs-container-margin-x: var(--bs-grid-margin);
   width: 100%;
   padding-right: var(--bs-container-margin-x);
   padding-left: var(--bs-container-margin-x);
   margin-right: auto;
   margin-left: auto;
-  --bs-container-margin-x: 16px;
-}
-@media (min-width: 390px) {
-  .container-fluid {
-    --bs-container-margin-x: 16px;
-  }
-}
-@media (min-width: 480px) {
-  .container-fluid {
-    --bs-container-margin-x: 16px;
-  }
-}
-@media (min-width: 736px) {
-  .container-fluid {
-    --bs-container-margin-x: 24px;
-  }
-}
-@media (min-width: 1024px) {
-  .container-fluid {
-    --bs-container-margin-x: 24px;
-  }
-}
-@media (min-width: 1320px) {
-  .container-fluid {
-    --bs-container-margin-x: 36px;
-  }
-}
-@media (min-width: 1640px) {
-  .container-fluid {
-    --bs-container-margin-x: 36px;
-  }
-}
-@media (min-width: 1880px) {
-  .container-fluid {
-    --bs-container-margin-x: 52px;
-  }
 }
 
 @media (min-width: 1640px) {
@@ -397,48 +362,13 @@
 }
 
 .row {
+  --bs-gutter-x: var(--bs-grid-gap);
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
-  --bs-gutter-x: 8px;
-}
-@media (min-width: 390px) {
-  .row {
-    --bs-gutter-x: 16px;
-  }
-}
-@media (min-width: 480px) {
-  .row {
-    --bs-gutter-x: 16px;
-  }
-}
-@media (min-width: 736px) {
-  .row {
-    --bs-gutter-x: 16px;
-  }
-}
-@media (min-width: 1024px) {
-  .row {
-    --bs-gutter-x: 16px;
-  }
-}
-@media (min-width: 1320px) {
-  .row {
-    --bs-gutter-x: 20px;
-  }
-}
-@media (min-width: 1640px) {
-  .row {
-    --bs-gutter-x: 20px;
-  }
-}
-@media (min-width: 1880px) {
-  .row {
-    --bs-gutter-x: 20px;
-  }
 }
 .row > * {
   box-sizing: border-box;
@@ -2277,6 +2207,10 @@
   display: inline-flex !important;
 }
 
+.d-flow-root {
+  display: flow-root !important;
+}
+
 .d-none {
   display: none !important;
 }
@@ -2484,6 +2418,9 @@
   .d-xs-inline-flex {
     display: inline-flex !important;
   }
+  .d-xs-flow-root {
+    display: flow-root !important;
+  }
   .d-xs-none {
     display: none !important;
   }
@@ -2647,6 +2584,9 @@
   }
   .d-sm-inline-flex {
     display: inline-flex !important;
+  }
+  .d-sm-flow-root {
+    display: flow-root !important;
   }
   .d-sm-none {
     display: none !important;
@@ -2812,6 +2752,9 @@
   .d-md-inline-flex {
     display: inline-flex !important;
   }
+  .d-md-flow-root {
+    display: flow-root !important;
+  }
   .d-md-none {
     display: none !important;
   }
@@ -2975,6 +2918,9 @@
   }
   .d-lg-inline-flex {
     display: inline-flex !important;
+  }
+  .d-lg-flow-root {
+    display: flow-root !important;
   }
   .d-lg-none {
     display: none !important;
@@ -3140,6 +3086,9 @@
   .d-xl-inline-flex {
     display: inline-flex !important;
   }
+  .d-xl-flow-root {
+    display: flow-root !important;
+  }
   .d-xl-none {
     display: none !important;
   }
@@ -3303,6 +3252,9 @@
   }
   .d-2xl-inline-flex {
     display: inline-flex !important;
+  }
+  .d-2xl-flow-root {
+    display: flow-root !important;
   }
   .d-2xl-none {
     display: none !important;
@@ -3468,6 +3420,9 @@
   .d-3xl-inline-flex {
     display: inline-flex !important;
   }
+  .d-3xl-flow-root {
+    display: flow-root !important;
+  }
   .d-3xl-none {
     display: none !important;
   }
@@ -3631,6 +3586,9 @@
   }
   .d-print-inline-flex {
     display: inline-flex !important;
+  }
+  .d-print-flow-root {
+    display: flow-root !important;
   }
   .d-print-none {
     display: none !important;
