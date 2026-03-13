@@ -638,6 +638,19 @@ You may also set the [trailing action on loading]([[docsref:/components/buttons#
     </div>
   </div>`} />
 
+## Mandatory fields indication
+
+To indicate that a text input is mandatory in a form, add the class `.is-required` to display a red asterisk at the end of the label.
+
+For general rules about when to add mandatory fields indication, please refer to the [text input design guidelines](https://r.orange.fr/r/S-ouds-doc-text-input) and to the [form validation documentation]([[docsref:/foundation/form-validation#mandatory-fields-indication]]). In particular, do not forget to handle error messages.
+
+<Example buttonLabel="mandatory text input indication" code={`<div class="text-input component-max-width mb-large">
+    <div class="text-input-container">
+      <label for="username" class="is-required">Username</label>
+      <input type="text" class="text-input-field" id="username" placeholder=" " required>
+    </div>
+  </div>`} />
+
 <BootstrapCompatibility>
 
 ## Example

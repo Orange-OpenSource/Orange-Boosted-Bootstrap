@@ -621,13 +621,23 @@ For accessibility reasons, it is required to provide understandable checkbox lab
 
 ## Mandatory fields indication
 
-Use the class `.is-required` if you want to add a red asterisk after the legend.
+To indicate that some checkboxes are mandatory in a form, add the class `.is-required` to display a red asterisk at the end of the legend of a group of checkboxes, or at the end of the label of a checkbox.
 
-For general rules about when to add mandatory fields indication, please refer to the [checkbox design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox) and to the [form validation documentation]([[docsref:/foundation/form-validation#mandatory-fields-indication]]).
+For general rules about when to add mandatory fields indication, please refer to the [checkbox design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox) and to the [form validation documentation]([[docsref:/foundation/form-validation#mandatory-fields-indication]]). In particular, do not forget to handle error messages.
 
-
-<Example buttonLabel="mandatory checkboxes in a fieldset" code={`<fieldset class="control-items-list">
-    <legend class="is-required">Mandatory checkboxes example</legend>
+<Example buttonLabel="mandatory checkboxes indication" code={`<div class="checkbox-item-container">
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxUniqueInvalid" aria-describedby="checkboxUniqueInvalidErrorText" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label is-required" for="checkboxUniqueInvalid">Mandatory unique checkbox</label>
+      </div>
+    </div>
+  </div>
+  <hr class="my-2xlarge">
+  <fieldset class="control-items-list">
+    <legend class="is-required">Mandatory checkboxes</legend>
     <div class="checkbox-item">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="checkbox" value="" id="requiredCheckbox1" required aria-describedby="checkboxesInvalidErrorText"/>
@@ -645,17 +655,6 @@ For general rules about when to add mandatory fields indication, please refer to
       </div>
     </div>
   </fieldset>`} />
-
-<Example buttonLabel="mandatory unique checkbox" code={`<div class="checkbox-item-container">
-    <div class="checkbox-item">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="checkbox" value="" id="checkboxUniqueInvalid" aria-describedby="checkboxUniqueInvalidErrorText" />
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label is-required" for="checkboxUniqueInvalid">Accept terms and conditions</label>
-      </div>
-    </div>
-  </div>`} />
 
 ## Standalone
 
