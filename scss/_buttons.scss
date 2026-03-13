@@ -450,7 +450,7 @@
 
 @if $enable-bootstrap-compatibility {
   .btn-primary {
-    @extend .btn-strong;
+    @extend .btn-brand;
   }
 
   .btn-success {
