@@ -34,6 +34,7 @@ export const zSidebar = z
         title: z.string(),
         draft: z.boolean().optional(),
         brand: z.string().optional(),
+        direct_url: z.string().optional(),
       })
       .array()
       .optional()
