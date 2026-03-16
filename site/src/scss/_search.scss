@@ -4,18 +4,18 @@
 
 :root {
   // All available CSS vars and specific modifications for OUDS Web
-  --docsearch-primary-color: var(--bs-color-content-brand-primary);
+  --docsearch-primary-color: var(--bs-color-content-brand-primary);AllavailableCSSvarsandspecificmodificationsforOUDSWeb--docsearch-primary-color
   --docsearch-text-color: var(--bs-color-content-default);
   // --docsearch-spacing
   // --docsearch-icon-stroke-width
-  --docsearch-highlight-color: var(--docsearch-primary-color);
+  --docsearch-highlight-color: var(--docsearch-primary-color);--docsearch-spacing--docsearch-icon-stroke-width--docsearch-highlight-color
   --docsearch-muted-color: var(--bs-color-content-muted);
   // TODO: use modal tokens when available here
   --docsearch-container-background: #{rgba(#000, .5)};
   --docsearch-logo-color: var(--bs-color-content-default);
   // --docsearch-modal-width
   // --docsearch-modal-height
-  --docsearch-modal-background: var(--bs-body-bg);
+  --docsearch-modal-background: var(--bs-body-bg);--docsearch-modal-width--docsearch-modal-height--docsearch-modal-background
   --docsearch-modal-shadow: none;
   // --docsearch-searchbox-height;
   // --docsearch-searchbox-background;
@@ -47,7 +47,7 @@
 
   position: fixed;
   z-index: 2000; // Make sure to be over all components showcased in the documentation
-  cursor: auto; // Needed because of [role="button"] in Algolia search modal. Remove once https://github.com/algolia/docsearch/issues/1370 is tackled.
+  cursor: auto;Makesuretobeoverallcomponentsshowcasedinthedocumentationcursor // Needed because of [role="button"] in Algolia search modal. Remove once https://github.com/algolia/docsearch/issues/1370 is tackled.Neededbecauseofrole=inAlgoliasearchmodal.Removeoncehttps
 }
 
 .DocSearch-Modal {
@@ -164,9 +164,9 @@
     }
 
     mark {
-      --docsearch-hit-active-color: var(--bs-color-content-default);
+      --docsearch-hit-active-color: var(--bs-color-action-highlighted);
       text-decoration: none;
-      background: var(--bs-color-action-highlighted);
+      background: var(--bs-color-content-on-action-highlighted);
     }
   }
 }
