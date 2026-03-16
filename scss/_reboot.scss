@@ -630,16 +630,22 @@ fieldset {
   border: 0; // 2
 }
 
-// By using `display: contents`, the legend will behave like a normal element
-// instead of a rendered legend, this way we can use it as a normal box
+// 1. By using `float: left`, the legend will behave like a block element.
+//    This way the border of a fieldset wraps around the legend if present.
+// 2. Fix wrapping bug.
+//    See https://github.com/twbs/bootstrap/issues/29712
 
 legend {
-  display: contents;
+  float: left;
   padding: 0;
   margin-bottom: $legend-margin-bottom;
   font-weight: $legend-font-weight;
   // OUDS mod: no line-height
   @include get-font-size("body-large"); // OUDS mod: instead of `@include font-size($legend-font-size)`
+
+  + * {
+    clear: left; // 2
+  }
 }
 
 // Fix height of inputs with a type of datetime-local, date, month, week, or time
