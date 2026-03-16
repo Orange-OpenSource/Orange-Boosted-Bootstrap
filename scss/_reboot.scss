@@ -636,7 +636,7 @@ fieldset {
 //    See https://github.com/twbs/bootstrap/issues/29712
 
 legend {
-  float: left;
+  float: left; // 1
   padding: 0;
   margin-bottom: $legend-margin-bottom;
   font-weight: $legend-font-weight;
