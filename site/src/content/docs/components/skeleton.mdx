@@ -20,7 +20,7 @@ import { getVersionedDocsPath } from '@libs/path'
 
 Skeleton is basically a blank element with a background color and a shimmer animation to indicate that something is loading. You can use it as a placeholder for any content that is loading, such as text, images, components, or even pages.
 
-`[aria-busy="true"]` is a container that sets all its children in skeleton state.
+A container with an `aria-busy="true"` attribute will set all its children components in skeleton state.
 
 `.skeleton` is a single skeleton element. It can be used alone or as a child of `[aria-busy="true"]` container.
 
@@ -40,9 +40,9 @@ Skeleton is basically a blank element with a background color and a shimmer anim
 
 ### Accessibility
 
-Everything that is a skeleton should be hidden either via `[inert]` attribute, or via `[aria-hidden]` attribute, `[tabindex="-1"]` attribute, and `pointer-events: none` CSS rule if possible. This is to prevent assistive technologies from reading the content of the skeleton, and to prevent users from interacting with it. Note that inside an assistive technology won't care about the semantic of the used elements.
+Everything that is a skeleton should be hidden either via an `[inert]` attribute, or via an `[aria-hidden]` attribute, a `[tabindex="-1"]` attribute, and `pointer-events: none` CSS rule if possible. This is to prevent assistive technologies from reading the content of the skeleton, and to prevent users from interacting with it. Note that inside an assistive technology won't care about the semantic of the used elements.
 
-While loading, assistive technologies should announce that a part of the page is loading. You may use `[aria-busy="true"]` on the content container to display.
+While loading, assistive technologies should announce that a part of the page is loading. You may use `[aria-busy="true"]` on a parent container to achieve that.
 
 Once loading is complete, the skeleton should be removed from the DOM, or hidden with `.d-none`, and the content container should be updated accordingly with `[aria-busy="false"]`.
 

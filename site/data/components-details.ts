@@ -180,7 +180,7 @@ export const componentsDetails: ComponentCardData[] = [
   {
     name: 'Skeleton',
     category: 'Indicator',
-    snippet: `<div class="skeleton w-100 h-100" style="scale: .8"></div>`
+    snippet: `<div class="skeleton w-75 h-75"></div>`
   },
   {
     name: 'Suggestion chip',
