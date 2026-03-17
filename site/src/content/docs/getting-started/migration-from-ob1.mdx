@@ -69,7 +69,7 @@ Read more about the [font stack]([[docsref:/foundation/reboot#font-stack]]) for 
   - `2xs` and `3xl` have been added.
   - `xxl` has been renamed to `2xl`.
   - The breakpoints values have changed. Please refer to the [breakpoints’ documentation]([[docsref:/layout/breakpoints]]).
-  - The default container to use is now `.container-fluid` associated to `.container-max-width` instead of using `.site-width` as parent. Please refer to the [fluid containers’ documentation]([[docsref:/layout/containers#fluid-containers]]). The security margin value has changed.
+  - The default container to use is `.container-fluid` associated to `.container-max-width` instead of using `.site-width` as parent. Please refer to the [fluid containers’ documentation]([[docsref:/layout/containers#fluid-containers]]). The security margin value has changed.
   - Default gutter inside grid has been changed to have a fully responsive behavior. It should be a pretty transparent change for you.
   - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|3xsmall|2xsmall|xsmall|small|medium|large|xlarge|2xlarge|3xlarge|4xlarge|5xlarge`. Proportional equivalence between `0` → `none`, `1` → `medium`, `2` → `xlarge`, `3` → `3xlarge`, `4` → `5xlarge`, `5` → no equivalence.
 
@@ -88,84 +88,74 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ### Badges
 
-- <span class="tag tag-small rounded-none tag-warning">Breaking</span> Badge has changed a lot in its meaning and usages. It can no longer contain text (use our new [tags]([[docsref:/components/tags]]) for this). It is now either a basic badge (a coloured bullet), a badge - count (with a number) or a badge - icon (with an icon).
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> New dedicated classes have been added to handle badges colors, states and sizes.
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> New classes have been added to handle badges icons.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> New dedicated classes have been added to handle badges colors, states and sizes. The OUDS equivalent of OB1 badge is the Badge - count component, so you should use the new classes related to this component. Please check the [badges documentation]([[docsref:/components/badges]]) for more details.
+- <span class="tag tag-small rounded-none tag-positive">New</span> New classes have been added to handle badges icons.
 
 ### Breadcrumb
 
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> the last element of a Breadcrumb must now contain a `span` element to handle behavior on smaller viewport.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> the last element of a Breadcrumb must now have the `.active` class and contain a `span` element to handle behavior on smaller viewport.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> the hidding of overflowing element is only based on CSS and not on JS anymore. Check the documentation for more details and tips to handle it.
+- <span class="tag tag-small rounded-none tag-info">Info</span> Accessibility must be enhanced by using an aria-label on the parent element.
 
 ### Bullet list
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.bullet-list`, `.bullet-list-default-color`, `.bullet-list-tick` and `.bullet-list-bare` classes have been added.
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.bullet-list` is mandatory for a full Bullet list component as defined in OUDS.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The class `.list` must be replaced by `.bullet-list`.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The class `.ob1-list-tick` must be handled differently as the tick marker is not available by default. Learn more about it in the [bullet list documentation]([[docsref:/components/bullet-list/#tick-marker]]).
 - <span class="tag tag-small rounded-none tag-warning">Warning</span> Native `<ul>`, `<ol>` and `<dl>` now have a `max-width` set to the variable `--bs-font-max-width-body-medium`.
-
-### Close button
-
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> `.btn-close-white` class has been removed as it was deprecated in Boosted v5.3.3.
 
 ### Buttons
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.btn-default`, `.btn-strong`, `.btn-minimal`, and `.btn-negative` have been added.
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.btn-on-colored-bg` has been added; it can be used with `.btn-default`, `.btn-strong` and `.btn-minimal` to get variants on colored backgrounds (neither primary, nor secondary, nor tertiary, nor emphasized backgrounds).
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.use-rounded-corner-buttons` have been added; it can be added on `<body>` to toggle project-wide rounded corners buttons.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-inverse` class has been removed, you must use `data-bs-theme` to handle dark backgrounds instead. Learn more about it in our [color modes documentation]([[docsref:/foundation/color-modes]]).
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-primary`, `.btn-secondary`, `.btn-success`, `.btn-danger`, `.btn-warning`, `.btn-info`, `.btn-light`, `.btn-dark` and `btn-dropdown` have been removed. You can still have them using `$enable-bootstrap-compatibility`. Here is the visual correspondence:
   - `.btn-primary` and `.btn-dark` will look as `.btn-strong`
   - `.btn-secondary` and `.btn-success` will look as `.btn-default`
   - `.btn-danger` and `.btn-warning` will look as `.btn-negative`
   - `.btn-info` and `.btn-light` will look as `.btn-minimal`
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-no-outline` has been removed. You can use `.btn-minimal` instead.
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-social` and all its variants have been removed.
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-outline-*` have been removed. You can still have them using `$enable-bootstrap-compatibility`. They all look like `.btn-default`.
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> `.btn-sm` and `.btn-lg` have been removed.
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Loading buttons implementation has changed. You should now use the classes `.loading-indeterminate` and `.loading-determinate` and no more spinner borders.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Loading buttons implementation has changed. You should now use the classes `.loading-indeterminate` and `.loading-determinate` and no more progress bars.
 <div class="ps-xlarge">
-
-For example, if you used to write:
-
-```html
-<button class="btn btn-secondary" type="button" disabled>
-  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-  <span class="visually-hidden" role="status">Loading...</span>
-</button>
-```
-Now you should write:
-
-```html
-<button type="button" class="btn btn-default loading-indeterminate" id="loading-btn-1" disabled>
-  Download file 1
-  <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-    <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-  </svg>
-  <span role="status" id="loading-btn-msg-1" class="visually-hidden">Downloading file 1</span>
-</button>
-```
-
 You will have to make some extra Javascript to change the styles and update the status message like explained in the documentation. You can find a complete example in our [loading buttons live example]([[docsref:/examples/loading-buttons/]]).
-
 </div>
-
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Button plugin (button with a toggle behavior) has been removed.
 
 ### Chips
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> Chips components have been implemented. See more in our [Chips page]([[docsref:/components/chips]]).
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Classes should be updated to match new names. See more in our [Chips page]([[docsref:/components/chips]]).
+  - `.ob1-filterchip` should be replaced by `.chip` and `.chip-filter` for filter chip or `.chip-suggestion` for suggestion chip.
+  - `.ob1-choicechip` can be removed.
+  - `.ob1-filterchip-input` can be removed.
+  - `.ob1-filterchip-label` must be replaced by `.chip-interactive`.
+  - `data-ob1-title` attribute can be removed as there is no equivalent in OUDS Web.
+  - `.ob1-filterchip-reverse` can be removed, the dark version must be handled by using `data-bs-theme` attribute on a parent element.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> OB1's color selection chip doesn't have any equivalent in OUDS Web
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> OB1's Input Chip is now called Input Tag and can be found in the [Tags documentation]([[docsref:/components/tags/#input-tag]]).
+
 
 ### Links
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> New standalone link component has been added. Use `.link` class to get it.
 - <span class="tag tag-small rounded-none tag-positive">New</span> Use `.link-sm` class to get small standalone link.
-- <span class="tag tag-small rounded-none tag-positive">New</span> `.link-on-colored-bg` has been added; it can be used to get variants on colored backgrounds.
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> A `.link` class should be added to existing links with `.link-chevron` class to comply with the OUDS Web documentation and ensure future compatibility.
+- <span class="tag tag-small rounded-none tag-positive">Breaking</span> The `.ob1-link-dark` class for variant on colored backgrounds must be renamed to `.link-on-colored-bg`.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The `.ob1-link-arrow` class must be replaced by both `.link` and `.link-chevron` classes.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The `.ob1-link-icon` class must be replaced by both `.link` and `.icon-link` classes.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The `.ob1-link-small` class can be removed as it doesn't have any equivalent in OUDS Web.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The `.ob1-link-reverse` class can be removed as it shoud be handled by using a `data-bs-theme` attribute on a parent element.
 
 ### Tags
 
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Tag has changed a lot in its meaning and usages. The Informative tag has changed to be the basic tag, and the input tag markup has been updated. The filter tag has changed to be the [filter chip]([[docsref:/components/chips#filter-chip]]). The navigation tag has been removed. Be careful, either the meaning or the markup changed, or both.
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> New dedicated classes have been added to handle tags colors, appearance, states and sizes.
+  - `.ob1-capsule` must be replaced by `.tag`, the positive status (by default in OB1) now needs the `.tag-positive` class.
+  - `.ob1-capsule-negative` must be replaced by `.tag-negative`
+  - `.ob1-capsule-warning` must be replaced by `.tag-warning`
+  - `.ob1-capsule-information` and `.ob1-capsule-reminder` can be removed. [Check tag documentation]([[docsref:/components/tags]]) to find the best status for replacement.
+  - `.ob1-capsule-disabled` must be replaced by `.disabled` on the element or a parent container.
+  - `.ob1-capsule-small` and `.ob1-tag-small` must be replaced by `.tag-small`.
+  - All `.ob1-tag*` classes should be replaced by the new classes. [Check tag documentation]([[docsref:/components/tags]]) to find the best status for replacement.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The `.ob1-tag-inverse` and `.ob1-capsule-inverse` classes can be removed as it shoud be handled by using a `data-bs-theme` attribute on a parent element.
 - <span class="tag tag-small rounded-none tag-positive">New</span> A tag can now contain a decorative bullet or an icon. New dedicated classes have been added to handle this.
-- <span class="tag tag-small rounded-none tag-positive">New</span> A tag can now have squared corners by using `rounded-none` utility.
+- <span class="tag tag-small rounded-none tag-positive">New</span> To get squared corners like in OB1's commercial tags, you can use `rounded-none` utility.
 
 ## Forms
 
@@ -174,41 +164,55 @@ You will have to make some extra Javascript to change the styles and update the 
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.control-item-assets-container`, `.control-item-text-container`, `.control-item-label`, `.control-item-indicator`, `.control-item-helper`, `.control-item-divider` and `.control-item-inverse` have been added.
 
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.form-check`, `.form-check-input`, `.form-check-label`, `.form-check-inline`, `.form-check-reverse` and `.form-switch` have been removed.
-
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The `.ob1-custom-checkbox-inverse` class can be removed as it shoud be handled by using a `data-bs-theme` attribute on a parent element.
 
 #### Checkbox
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.checkbox-item` and `.checkbox-standalone` have been added.
 
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Checkbox is a new component compared to Boosted’s Check, the DOM is therefore very different.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Checkbox is a new component compared to OB1’s Check, the DOM is therefore different.
 <div class="ps-xlarge">
 For example, if you used to write:
 
 ```html
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="checkboxDefault" />
-  <label class="form-check-label" for="checkboxDefault">
-    Default checkbox
-  </label>
-</div>
+<ul class="items-list">
+  <li>
+    <div class="items-list-item">
+      <div class="item-container item-container-sm">
+        <div class="form-check">
+          <input
+            type="checkbox"
+            aria-labelledby="customControlLabelValidation1"
+            class="form-check-input"
+            id="customControlValidation1"
+            checked
+          />
+          <label aria-hidden="true" class="form-check-label" for="customControlValidation1"></label>
+        </div>
+        <label id="customControlLabelValidation1" for="customControlValidation1" class="item-text"> Label </label>
+      </div>
+    </div>
+  </li>
+</ul>
 ```
 Now you should write:
 
 ```html
-<div class="checkbox-item">
-  <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault" />
+<fieldset class="control-items-list">
+  <div class="checkbox-item">
+    <div class="control-item-assets-container">
+      <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault" checked />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="checkboxDefault">Label</label>
+    </div>
   </div>
-  <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxDefault">Default checkbox</label>
-  </div>
-</div>
+</fieldset>
 ```
 See [our new Checkbox page]([[docsref:/components/checkbox]]) for more information.
 </div>
 
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> Links in checkboxes’ labels are now forbidden (they won’t be interactive anyway).
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The error management is different from OB1's, it is now based on `:user-invalid` pseudo class or `aria-invalid` attribute. The DOM structure must also be updated for the error message. Read more in the [checkbox documentation]([[docsref:/components/checkbox/#invalid]]) for more details.
 
 #### Radio button
 
