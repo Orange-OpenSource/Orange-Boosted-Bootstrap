@@ -42,7 +42,7 @@ jobs:
         run: npm ci
 
       - name: Run dist
-        run: npm-run-all --aggregate-output --parallel css-orange js
+        run: npm run css-orange && npm run js
 
       - name: Run bundlewatch
         run: npm run bundlewatch
