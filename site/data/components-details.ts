@@ -130,7 +130,8 @@ export const componentsDetails: ComponentCardData[] = [
   },
   {
     name: 'Navigation button',
-    link: 'buttons',
+    slug: 'navigation-button',
+    link: 'buttons#navigation-button',
     category: 'Actions',
     snippet: `<a class="btn btn-next btn-default" href="#">Next</a>`
   },
