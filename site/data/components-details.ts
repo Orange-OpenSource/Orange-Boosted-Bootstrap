@@ -104,16 +104,16 @@ export const componentsDetails: ComponentCardData[] = [
       <footer class="footer navbar w-75" data-bs-theme="dark">
         <h2 class="visually-hidden">Sitemap &amp; information</h2>
         <div class="container-fluid container-max-width footer-nav px-small py-2xl-small d-lg-none d-sm-none d-md-block">
-          <nav class="accordion" id="accordion1" aria-label="Sitemap footer 1">
+          <nav class="accordion">
             <div class="row">
               <div class="footer-column">
-                <h3 class="accordion-header footer-heading" id="headingOne1">
+                <h3 class="accordion-header footer-heading">
                   <button class="accordion-button collapsed container-fluid container-max-width px-none d-md-none" type="button">Label</button>
                   <span class="d-none d-md-flex">Label</span>
                 </h3>
-                <div id="collapseOne1" class="container-fluid container-max-width accordion-collapse collapse">
+                <div class="container-fluid container-max-width accordion-collapse collapse">
                   <ul class="navbar-nav ps-large ps-md-none">
-                    <li><a class="nav-link" href="#" aria-describedby="headingOne1">Label</a></li>
+                    <li><a class="nav-link" href="#">Label</a></li>
                   </ul>
                 </div>
               </div>
