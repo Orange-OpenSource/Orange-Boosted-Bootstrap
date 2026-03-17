@@ -98,10 +98,42 @@ export const componentsDetails: ComponentCardData[] = [
       </ul>`
   },
   {
+    name: 'Footer',
+    category: 'Navigation',
+    snippet: `
+      <footer class="footer navbar w-75" data-bs-theme="dark">
+        <h2 class="visually-hidden">Sitemap &amp; information</h2>
+        <div class="container-fluid container-max-width footer-nav px-small py-2xl-small d-lg-none d-sm-none d-md-block">
+          <nav class="accordion" id="accordion1" aria-label="Sitemap footer 1">
+            <div class="row">
+              <div class="footer-column">
+                <h3 class="accordion-header footer-heading" id="headingOne1">
+                  <button class="accordion-button collapsed container-fluid container-max-width px-none d-md-none" type="button">Label</button>
+                  <span class="d-none d-md-flex">Label</span>
+                </h3>
+                <div id="collapseOne1" class="container-fluid container-max-width accordion-collapse collapse">
+                  <ul class="navbar-nav ps-large ps-md-none">
+                    <li><a class="nav-link" href="#" aria-describedby="headingOne1">Label</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="border-bottom border-thin border-default d-lg-none d-sm-none d-md-block"></div>
+        <div class="container-fluid container-max-width footer-terms px-small">
+          <ul class="navbar-nav gap-md-large">
+            <li>© Label</li>
+            <li><a class="nav-link" href="#">Label</a></li>
+          </ul>
+        </div>
+      </footer>`
+  },
+  {
     name: 'Header',
     category: 'Navigation',
     snippet: `
-      <header class="header-minimized">
+      <header class="header-minimized w-75">
         <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Standard example">
           <div class="container-fluid container-max-width px-small">
             <div class="navbar-brand me-auto me-lg-xlarge">

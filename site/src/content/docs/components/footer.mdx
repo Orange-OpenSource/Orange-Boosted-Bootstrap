@@ -9,7 +9,7 @@ toc: true
 import { getVersionedDocsPath } from '@libs/path'
 import { getConfig } from '@libs/config'
 
-<Callout type="danger">
+<Callout type="negative">
   The footer component is not yet designed, and this component is only a placeholder for the moment. It will be updated in the future with the final design and will certainly need adjustments regarding the DOM. Use it as a temporary component to speed up your development.
 
   Please refer to the [Footer in the Boosted documentation](https://boosted.orange.com/docs/components/footer/) to have a full view of the footer component and its variations. You’ll only need to adapt the utilities and the components inside the DOM.
@@ -21,12 +21,9 @@ import { getConfig } from '@libs/config'
 
 <Callout type="warning">
   Several changes to be up to date:
-
-  <ul class="bullet-list fs-bm">
-    <li>`.accordion-button` should have `.px-gridmargin` to align with the rest of the content, read [our documentation about it]([[docsref:/utilities/spacing#grid-measures]]).</li>
-    <li>`.navbar-nav` inside the `.footer-nav` should have `.ps-large.ps-md-none` to better convey information.</li>
-    <li>Already existing components should be replaced inside the footer, such as the text input and the buttons.</li>
-  </ul>
+  - `.accordion-button` should have `.px-gridmargin` to align with the rest of the content, read [our documentation about it]([[docsref:/utilities/spacing#grid-measures]]).
+  - `.navbar-nav` inside the `.footer-nav` should have `.ps-large.ps-md-none` to better convey information.
+  - Already existing components should be replaced inside the footer, such as the text input and the buttons.
 </Callout>
 
 ## Footer
@@ -105,7 +102,7 @@ Here is a [simple footer example](https://boosted.orange.com/docs/components/foo
     <div class="border-bottom border-thin border-default"></div>
     <div class="container-fluid container-max-width footer-terms">
       <ul class="navbar-nav gap-md-large">
-        <li class="fw-normal">© Orange 2025</li>
+        <li>© Orange 2026</li>
         <li><a class="nav-link" href="#">Terms and conditions</a></li>
         <li><a class="nav-link" href="#">Privacy</a></li>
         <li><a class="nav-link" href="#" aria-current="false">Accessibility statement</a></li>
