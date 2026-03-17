@@ -218,34 +218,51 @@ See [our new Checkbox page]([[docsref:/components/checkbox]]) for more informati
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.radio-button-item`, `.radio-button-standalone`, `.radio-button-additional-label` and `.radio-button-item-outlined` have been added.
 
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Radio button is a new component compared to Boosted’s radio, the DOM is therefore very different.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Radio button is a new component compared to OB1’s radio, the DOM is therefore very different.
 <div class="ps-xlarge">
 For example, if you used to write:
 
 ```html
-<div class="form-check">
-  <input class="form-check-input" type="radio" value="" id="radioDefault" />
-  <label class="form-check-label" for="radioDefault">
-    Default radio
-  </label>
-</div>
+<ul class="items-list">
+  <li>
+    <div class="items-list-item">
+      <div class="item-container item-container-sm">
+        <div class="form-check">
+          <input
+            type="radio"
+            id="customRadio1"
+            aria-labelledby="customRadioLabel1"
+            name="customRadio1"
+            class="form-check-input"
+          />
+          <label aria-hidden="true" class="form-check-label" for="customRadio1"></label>
+        </div>
+        <label id="customRadioLabel1" for="customRadio1" class="item-text">
+          <span>Label</span>
+        </label>
+      </div>
+    </div>
+  </li>
+</ul>
 ```
 Now you should write:
 
 ```html
-<div class="radio-button-item">
-  <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="radio" value="" id="radioButtonDefault" />
+<fieldset class="control-items-list">
+  <div class="radio-button-item">
+    <div class="control-item-assets-container">
+      <input class="control-item-indicator" type="radio" value="" id="radioDefault" name="radioBasic" />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="radioDefault">Label</label>
+    </div>
   </div>
-  <div class="control-item-text-container">
-    <label class="control-item-label" for="radioButtonDefault">Default radio button</label>
-  </div>
-</div>
+</fieldset>
 ```
 See [our new Radio button page]([[docsref:/components/radio-button]]) for more information.
 </div>
 
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> Links in radio buttons’ labels are now forbidden (they won’t be interactive anyway).
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The error management is different from OB1's, it is now based on `:user-invalid` pseudo class or `aria-invalid` attribute. The DOM structure must also be updated for the error message. Read more in the [checkbox documentation]([[docsref:/components/radio-button/#invalid]]) for more details.
 
 #### Select
 
