@@ -20,9 +20,9 @@ import { getVersionedDocsPath } from '@libs/path'
 
 Skeleton is basically a blank element with a background color and a shimmer animation to indicate that something is loading. You can use it as a placeholder for any content that is loading, such as text, images, components, or even pages.
 
-A container with an `aria-busy="true"` attribute will set all its children components in skeleton state.
+A container with an `[aria-busy="true"]` attribute will set all its children components in skeleton state.
 
-`.skeleton` is a single skeleton element. It can be used alone or as a child of `[aria-busy="true"]` container.
+`.skeleton` is a single skeleton element. It can be used alone or as a child of `[aria-busy="true"]` container to improve accessibility.
 
 <Example showToolbar={false} code={`<div class="skeleton" style="width: 50%; height: 50px;" inert></div>`} />
 
@@ -50,19 +50,19 @@ See our [live example](#live-example) below to see it in action.
 
 ## Sizes
 
-They don't come with any size, but some heights are provided by the framework to ease the use of skeletons.
+They don't come with any height, but we provide some helpers to help to set the height of some skeletons.
 
 You can also set the size of the skeletons either via inline styles, via our [sizing utility]([[docsref:/utilities/sizing/]]), via our [ratio utility]([[docsref:/utilities/aspect-ratio/]]), or via our [columns utility]([[docsref:/layout/columns/]]).
 
-### With titles
+### Title height
 
-Use `.skeleton-title` to render a title skeleton on itself and children elements.
+Use `.skeleton-title` to render a skeleton with a height of medium title on itself and for children elements.
 
 <Callout type="info">
-  Title should be represented on one line, a full line if possible, limited by the title max-width if possible.
+  Titles should be represented on one full line.
 </Callout>
 
-<Example buttonLabel="" code={`<div class="skeleton skeleton-title" inert></div>
+<Example buttonLabel="skeletons with title height" code={`<div class="skeleton skeleton-title" inert></div>
 
   <div class="skeleton-title" inert>
     <div class="skeleton"></div>
@@ -77,24 +77,24 @@ Use `.skeleton-title` to render a title skeleton on itself and children elements
   <span class="placeholder col-12 placeholder-xs"></span>`} />
 </BootstrapCompatibility>
 
-### With paragraphs
+### Paragraph height
 
-Use `.skeleton-text` to render a paragraph skeleton on itself and children elements.
+Use `.skeleton-text` to render a skeleton with a height of medium paragraph on itself and for children elements.
 
 <Callout type="info">
-  Paragraphs should be represented with full lines without horizontal spacing and the last one might be shorter to represent the end of the paragraph. You can use our [sizing utility]([[docsref:/utilities/sizing/]]) to set the width of the last line.
+  Paragraphs should be represented with full lines without horizontal spacing and the last one might be shorter to represent the end of the paragraph. You can use our [sizing utility]([[docsref:/utilities/sizing/]]) or our [columns utility]([[docsref:/layout/columns/]]) to set the width of the last line.
 </Callout>
 
-<Example buttonLabel="" code={`<div class="skeleton skeleton-text" inert></div>
+<Example buttonLabel="skeletons with paragraph height" code={`<div class="skeleton skeleton-text" inert></div>
   <div class="skeleton skeleton-text w-75" inert></div>
 
   <div class="skeleton-text" inert>
     <div class="skeleton"></div>
     <div class="skeleton"></div>
-    <div class="skeleton w-75"></div>
+    <div class="skeleton col-9"></div>
   </div>`} />
 
-### With ratios
+### Ratios
 
 Use our [aspect ratio utility]([[docsref:/utilities/aspect-ratio/]]) to set a skeleton with a specific aspect ratio.
 
@@ -102,7 +102,7 @@ Use our [aspect ratio utility]([[docsref:/utilities/aspect-ratio/]]) to set a sk
 
 ## No margins
 
-You can the same without the default security margins using `.skeleton-no-margins`. You'll probably need to set some spacings manually using our [spacing utility]([[docsref:/utilities/spacing/]]).
+You can have the same without the default security margins using `.skeleton-no-margins`. You'll probably need to set some spacings manually using our [spacing utility]([[docsref:/utilities/spacing/]]).
 
 <Example buttonLabel="" code={`<div class="skeleton-no-margins skeleton-text" inert>
     <div class="skeleton mb-2xsmall"></div>
@@ -112,7 +112,7 @@ You can the same without the default security margins using `.skeleton-no-margin
 
 ## With components
 
-To set components in skeleton state, you can wrap any of them in an `[aria-busy="true"]` container, and add the `inert` attribute to it. This will set all the children components in skeleton state, and make them inaccessible.
+To set components in skeleton state, you can wrap any of them in an `[aria-busy="true"]` container, and add the `inert` attribute to it. This will set all the children components in skeleton state, and make them unaccessible.
 
 <Example buttonLabel="" code={`<div aria-busy="true" inert>
     <div class="alert alert-message alert-negative mb-medium">
@@ -252,7 +252,7 @@ To set components in skeleton state, you can wrap any of them in an `[aria-busy=
 
 ## Live examples
 
-Here are two live examples of skeletons. The first one is a skeleton that is completely replaced via JavaScript. The second one is a skeleton for a form where elements are already set but waiting to be displayed.
+Here are two live examples of skeletons. The first one is a skeleton that is completely replaced via JavaScript.
 
 <Example buttonLabel="Show live example" code={`<div class="bd-skeleton-replace">
     <div aria-busy="true" inert>
