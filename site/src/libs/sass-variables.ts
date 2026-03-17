@@ -8,6 +8,14 @@ const options = {
 
 export const allTokens = exporter(options).getArray()
 
+
+const optionsCustomProps = {
+  inputFiles: [`packages/${getConfig().brand}/scss/tokens/_semantic-colors-custom-props.scss`],
+  includePaths: []
+}
+
+export const allCustomPropsSassVariables = exporter(optionsCustomProps).getArray()
+
 /**
  * This function returns the current theme depending on the parameter passed (light, dark, root, root-inverted). You need to use a name containing 'modes-on' and it should exist in the _semantic.scss file.
  * @param regex
