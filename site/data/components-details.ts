@@ -98,6 +98,26 @@ export const componentsDetails: ComponentCardData[] = [
       </ul>`
   },
   {
+    name: 'Header',
+    category: 'Navigation',
+    snippet: `
+      <header class="header-minimized">
+        <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Standard example">
+          <div class="container-fluid container-max-width px-small">
+            <div class="navbar-brand me-auto me-lg-xlarge">
+              <a class="stretched-link" href="#">
+                <img src="${getVersionedDocsPath('/assets/brand/orange-logo.svg')}" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
+              </a>
+              <h1 class="title">Label</h1>
+            </div>
+            <button class="navbar-toggler collapsed" type="button" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </nav>
+      </header>`
+  },
+  {
     name: 'Icon',
     category: 'Visual assets',
     snippet: `
