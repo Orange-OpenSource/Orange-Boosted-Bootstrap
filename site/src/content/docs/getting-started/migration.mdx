@@ -17,15 +17,27 @@ toc: true
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> Orange Compact brand has been added.
 
-### Sass
+### Forms
 
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `add` and `subtract` functions have been removed, use `calc` instead.
+#### Validation
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.was-validated` and `.is-invalid` have been removed, form validation is now based on `:user-invalid` for browser validation and `aria-invalid=true` for manual validation. Read more about [form validation]([[docsref:/foundation/form-validation]]).
+
+### Components
+
+#### Alerts
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> Alert message and inline alert has been implemented. Read more in our [alerts page]([[docsref:/components/alerts]]).
 
 ### Helpers
 
 #### Clearfix
 
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.clearfix` helper and `clearfix()` mixin have been removed in favor of `.d-flow-root`.
+
+### Sass
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `add` and `subtract` functions have been removed, use `calc` instead.
 
 ### Utilities
 
@@ -40,6 +52,13 @@ toc: true
 #### Spacing
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> Several spacing utilities based on grid measures have been added. These utilities can be used for specific layout tweaks like edge to edge containers. Read more about [grid measures spacing utilities]([[docsref:/utilities/spacing#grid-measures]]).
+
+### Dual mode
+
+1. Update `@ouds/web-common` and `@ouds/web-[theme]` to v1.1.0.
+2. Update the import of Boosted variables out of the `.boosted` scope, to ease custom integrations.
+3. Add back `--#{$prefix}highlight-bg` and `--#{$prefix}highlight-color` for light and dark mode and add `--#{$prefix}modal-border-radius: 0px;` for light mode.
+4. Remove `@import "boosted/scss/alert";` and `@import "boosted/scss/close";` from the Boosted custom import stack.
 
 ## v1.0.0
 

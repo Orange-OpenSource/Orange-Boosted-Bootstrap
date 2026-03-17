@@ -137,7 +137,7 @@ function getOptionsWithDefaults(options: Partial<PlaceholderOptions>) {
   const optionsWithDefaults = Object.assign(
     {},
     {
-      background: 'var(--bs-secondary-bg)',
+      background: 'var(--bs-color-surface-secondary)',
       color: 'var(--bs-tertiary-color)',
       height: '180',
       markup: 'svg',
@@ -204,7 +204,7 @@ function sanitizeHtmlAttributesFromMdx(attributes: Record<string, unknown>) {
 export interface PlaceholderOptions {
   /**
    * The SVG background color.
-   * @default "var(--bs-secondary-bg)"
+   * @default "var(--bs-color-surface-secondary)"
    */
   background: string
   /**

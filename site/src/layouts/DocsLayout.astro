@@ -75,7 +75,7 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
     <main class="bd-main order-1">
       <div class="bd-intro pt-small ps-lg-small">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="d-flex gap-medium mb-large mb-md-none text-nowrap">
+          <div class="d-flex align-items-center gap-medium mb-large mb-md-none text-nowrap">
             {
               // This is needed because we want to show the badge if show_badge isn't present or is set to false
               frontmatter.added &&
@@ -159,7 +159,7 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
 
       <div class="bd-content ps-lg-small">
         {isComponent && (
-          <p class="d-inline"><a class="link" href={getVersionedDocsPath('/getting-started/versioning')} id="componentVersions">Component{`${multipleComponents}`} design version{`${multipleComponents}`}:</a></p>
+          <p class="d-inline"><a class="link" href={getVersionedDocsPath('/getting-started/component-versioning')} id="componentVersions">Component{`${multipleComponents}`} design version{`${multipleComponents}`}:</a></p>
           <div class="d-inline align-middle" role="group"  aria-labelledby="componentVersions">
             <ul class="list-unstyled d-inline-flex flex-wrap column-gap-xsmall row-gap-medium mb-none align-middle">
               {componentsVersions.map((component) => (

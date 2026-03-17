@@ -23,26 +23,7 @@
       draft: true
     - title: RTL
       draft: true
-    - title: Versioning
-      draft: true
+    - title: Component versioning
     - title: Migration
-
-- title: Foundation
-  icon: design-token-figma
-  icon_color: body-color
-  pages:
-    - title: Approach
-    - title: Options
-    - title: Tokens
-      draft: true
-    - title: Color palette
-    - title: Color modes
-    - title: CSS variables
-    - title: Reboot
-    - title: Typography
-    - title: Images
-      draft: true
-    - title: Figures
-      draft: true
-    - title: Component
-    - title: Form validation
+    - title: Resources
+      direct_url: '/resources'

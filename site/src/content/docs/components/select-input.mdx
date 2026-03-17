@@ -46,6 +46,15 @@ When there’s a value already defined, `<label>`s will automatically adjust to 
     </div>
   </div>`} />
 
+<BootstrapCompatibility>
+<Example code={`<select class="form-select" aria-label="Default select example">
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>`} />
+</BootstrapCompatibility>
+
 ## Variants
 
 ### Outlined
@@ -142,7 +151,7 @@ Add an icon to help indicate the purpose of the input by placing an `<svg>` or `
 To display a helper text below inputs, add a `.helper-text` as a sibling of a `.select-input-container`.
 
 <Callout type="warning">
-Helper text should be explicitly associated with the select input it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this helper text when the user focuses or enters the input.
+  Helper text should be explicitly associated with the select input it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this helper text when the user focuses or enters the input.
 </Callout>
 
 <Example buttonLabel="select with helper text" code={`<div class="select-input">
@@ -166,7 +175,7 @@ If the helper text is not sufficient, it’s possible to offer the user an addit
 To display a helper link below selects, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.select-input-container`.
 
 <Callout type="warning">
-Helper link should be explicitly labelled using the `aria-labelledby` attribute in which you must combine the helper link id and the related select input label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the select input. We also recommend adding a `.visually-hidden` span inside the link to coordinate the link content and the label.
+  Helper link should be explicitly labelled using the `aria-labelledby` attribute in which you must combine the helper link id and the related select input label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the select input. We also recommend adding a `.visually-hidden` span inside the link to coordinate the link content and the label.
 </Callout>
 
 <Example buttonLabel="selects with helper link" code={`<div class="select-input mb-medium">
@@ -223,6 +232,8 @@ By default select inputs will span the whole width of their parent container, to
   </div>`} />
 
 ## States
+
+Apart if specified, these states should be exclusive among each others.
 
 ### Disabled
 
@@ -284,16 +295,18 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 
 <Callout type="info" name="input-invalid" />
 
-To display an invalid select, add `.is-invalid` to a `.select-input-field` within the `.select-input-container`. Please take a look at our [Validation page to learn more]([[docsref:/foundation/form-validation]]).
+<Callout title="Prefer built-in form validation to handle client-side validation" type="info" name="form-field-validation" />
+
+To manually mark a select as invalid, add `aria-invalid="true"` to a `.select-input-field` within the `.select-input-container`.
 
 <Callout type="warning">
-For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.select-input-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when the select input becomes invalid.
+  For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.select-input-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when the select input becomes invalid.
 </Callout>
 
 <Example buttonLabel="invalid selects" code={`<div class="select-input mb-medium">
     <div class="select-input-container">
       <label id="labelErrorSelect" for="exampleErrorSelect">Select example with error</label>
-      <select class="select-input-field is-invalid" id="exampleErrorSelect" aria-describedby="numberFeedback">
+      <select class="select-input-field" aria-invalid="true" id="exampleErrorSelect" aria-describedby="numberFeedback">
         <option value="" disabled selected></option>
         <option value="1">One</option>
         <option value="2">Two</option>
@@ -314,7 +327,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
     <div class="select-input mb-medium">
       <div class="select-input-container">
         <label id="labelErrorValidatedSelect" for="exampleErrorValidatedSelect">Select example with validated error</label>
-        <select class="select-input-field is-invalid" id="exampleErrorValidatedSelect" aria-describedby="validatedNumberFeedback">
+        <select class="select-input-field" aria-invalid="true" id="exampleErrorValidatedSelect" aria-describedby="validatedNumberFeedback">
           <option value="" disabled selected></option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -335,7 +348,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
   <div class="select-input mb-medium">
     <div class="select-input-container select-input-container-outlined">
       <label id="labelErrorSelect2" for="exampleErrorSelect2">Outlined select example with error</label>
-      <select class="select-input-field is-invalid" id="exampleErrorSelect2" aria-describedby="numberFeedback2">
+      <select class="select-input-field" aria-invalid="true" id="exampleErrorSelect2" aria-describedby="numberFeedback2">
         <option value="" disabled selected></option>
         <option value="1">One</option>
         <option value="2">Two</option>
@@ -355,7 +368,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <label id="labelErrorSelect3" for="exampleErrorSelect3">Select example with error and icon</label>
-      <select class="select-input-field is-invalid" id="exampleErrorSelect3" aria-describedby="numberFeedback3">
+      <select class="select-input-field" aria-invalid="true" id="exampleErrorSelect3" aria-describedby="numberFeedback3">
         <option value="" disabled selected></option>
         <option value="1">One</option>
         <option value="2">Two</option>
@@ -368,6 +381,84 @@ For accessibility purposes, the invalid state should be associated with a `.erro
     <p id="numberFeedback3" class="error-text">
       A number is required.
     </p>
+  </div>`} />
+
+### Loading
+
+Add the `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for an known loading time) class on a `.select-input-field` to display a loader instead of the arrow.
+
+The SVG must already be in the `.select-input-container` for it to work. You should also have a status `<span>` so assistive technologies can announce the loading message.
+
+When the loading starts, you will have to:
+- Add the class `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for a known loading time) to the select to provide the appropriate styles and animation.
+- For a known loading time, provide a CSS variable `--bs-loading-time` to set the loading time. For example, add `style="--bs-loading-time: 5s;"` to the select container, for a 5 seconds loading.
+- Remove the `.d-none` from the status message `<span>`.
+- Update regularly the status message `<span>` containing the loading message.
+
+At the end of the loading, you should:
+
+- Remove the class `.loading-indeterminate` or `.loading-determinate` to restore the select’s look.
+- Set a final status message in `<span>`, indicating the loading has ended.
+- Put the focus back on the select to ensure similar behavior across browsers and not lose the user after changes.
+
+<Callout type="info" title="Execption">
+  The select can be disabled or not during the loading time depending on the context of use.
+</Callout>
+
+You can see it live and find a JavaScript example on our [loading buttons live example]([[docsref:/examples/loading-buttons/]]).
+
+In case of an invalid select, you may remove the invalid state before the loading state.
+
+<Example buttonLabel="loading selects" code={`<div class="select-input mb-medium">
+    <div class="select-input-container">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <label for="exampleDisabledLoadingSelect">Disabled loading select example</label>
+      <select disabled class="select-input-field loading-indeterminate" id="exampleDisabledLoadingSelect" aria-describedby="loading-msg-0">
+        <option value="" disabled></option>
+        <option value="1" selected>One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-msg-0" class="visually-hidden d-none">Loading message</span>
+    </div>
+  </div>
+  <div class="select-input mb-medium">
+    <div class="select-input-container" style="--bs-loading-time: 5s;">
+      <label for="exampleLoadingSelect">Determinate loading select example</label>
+      <select class="select-input-field loading-determinate" id="exampleLoadingSelect" aria-describedby="loading-msg-1">
+        <option value="" disabled></option>
+        <option value="1">One</option>
+        <option value="2" selected>Two</option>
+        <option value="3">Three</option>
+      </select>
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-msg-1" class="visually-hidden d-none">Loading message</span>
+    </div>
+  </div>
+  <div class="select-input">
+    <div class="select-input-container">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <label for="exampleIndeterminateLoadingSelect">Indeterminate loading select example</label>
+      <select class="select-input-field loading-indeterminate" id="exampleIndeterminateLoadingSelect" aria-describedby="loading-msg-2">
+        <option value="" disabled></option>
+        <option value="1">One</option>
+        <option value="2" selected>Two</option>
+        <option value="3">Three</option>
+      </select>
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-msg-2" class="visually-hidden d-none">Loading message</span>
+    </div>
   </div>`} />
 
 {/* ## Specific attributes

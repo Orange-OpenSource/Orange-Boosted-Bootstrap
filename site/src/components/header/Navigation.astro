@@ -65,13 +65,18 @@ const { addedIn, layout, title } = Astro.props
       <div id="bd-navbar1" class="navbar-collapse collapse me-lg-auto bd-navbar mb-none border-none">
         <ul class="navbar-nav">
           <LinkItem
-            active={layout === 'docs' &&
-              (Astro.url.pathname.includes('/getting-started/') ||
-                Astro.url.pathname.includes('/foundation/'))}
+            active={layout === 'docs' && Astro.url.pathname.includes('/getting-started/')}
             href={getVersionedDocsPath('getting-started/introduction')}
             onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'getting-started'});"
           >
             Getting started
+          </LinkItem>
+          <LinkItem
+            active={layout === 'docs' && Astro.url.pathname.includes('/foundation/')}
+            href={getVersionedDocsPath('foundation/approach')}
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'foundation'});"
+          >
+            Foundation
           </LinkItem>
           <LinkItem
             active={layout === 'docs' && Astro.url.pathname.includes('/layout/')}
@@ -100,13 +105,6 @@ const { addedIn, layout, title } = Astro.props
             onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});"
           >
             Examples
-          </LinkItem>
-          <LinkItem
-            active={title === 'Resources'}
-            href="/resources"
-            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'resources'});"
-          >
-            Resources
           </LinkItem>
         </ul>
       </div>

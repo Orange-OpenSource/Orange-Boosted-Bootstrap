@@ -5,31 +5,23 @@
     - title: Accordion
       draft: true
     - title: Alerts
-      draft: true
     - title: Back to top
       draft: true
     - title: Badges
-      category: Indicator
     - title: Breadcrumb
-      category: Navigation
     - title: Bullet list
-      category: Content display
     - title: Buttons
-      category: Actions
     - title: Card
       draft: true
     - title: Carousel
       draft: true
     - title: Checkbox
-      category: Control
     - title: Chips
-      category: Control
     - title: Close button
       draft: true
     - title: Collapse
       draft: true
     - title: Divider
-      category: Layout
     - title: Dropdown
       draft: true
     - title: Footer
@@ -37,9 +29,7 @@
     - title: Header
       category: Navigation
     - title: Icon
-      category: Visual assets
     - title: Links
-      category: Navigation
     - title: List group
       draft: true
     - title: Local navigation
@@ -55,7 +45,6 @@
     - title: Pagination
       draft: true
     - title: Password input
-      category: Control
     - title: Placeholder
       draft: true
     - title: Popover
@@ -65,13 +54,11 @@
     - title: Quantity selector
       draft: true
     - title: Radio button
-      category: Control
     - title: Range
       draft: true
     - title: Scrollspy
       draft: true
     - title: Select input
-      category: Control
     - title: Spinner
       draft: true
     - title: Stepped process
@@ -79,15 +66,11 @@
     - title: Sticker
       draft: true
     - title: Switch
-      category: Control
     - title: Table
       draft: true
     - title: Tags
-      category: Indicator
     - title: Text area
-      category: Control
     - title: Text input
-      category: Control
     - title: Title bar
       draft: true
     - title: Toast
