@@ -524,11 +524,8 @@
 
 .btn-previous::before,
 .btn-next::after {
-  //display: inline-block;
   width: var(--#{$prefix}btn-icon-size);
   height: var(--#{$prefix}btn-icon-size);
-  //vertical-align: middle;
   background-color: currentcolor;
-  //background-size: contain;
 }
 

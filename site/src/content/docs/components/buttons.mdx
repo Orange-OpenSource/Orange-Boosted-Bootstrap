@@ -25,8 +25,8 @@ import { getMode } from '@libs/sass-variables'
 <ul class="list-unstyled row row-cols-1 row-cols-sm-2">
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top bg-inverse-low">
-        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')} inert>
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
           <button type="button" class="btn btn-default">Default</button>
         </div>
       </div>
@@ -35,8 +35,8 @@ import { getMode } from '@libs/sass-variables'
   </li>
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top bg-inverse-low">
-        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')} inert>
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
           <a class="btn btn-next btn-default" href="#">Next</a>
         </div>
       </div>
@@ -57,7 +57,7 @@ The `.btn` classes are designed to be used with the `<button>` element, but can 
 
 Use a `<button>` element for actions or for an element that triggers an in-page functionality (like collapsing content), as it is the most semantically correct and accessible choice.
 
-For any navigation purpose, an `<a>` element should be used, and it must have an `href` attribute (to make it focusable). Thus, for the specific [navigation buttons](#navigation-button), we have used `<a>` elements in our examples, but this could be adapted to your own context.
+Use an `<a>` element only for navigation purpose, it must have an `href` attribute to make it focusable. For the [navigation button](#navigation-button), we have used `<a>` elements in our examples, but this could be adapted to your own context.
 
 The visual rendering will remain the same anyway:
 
