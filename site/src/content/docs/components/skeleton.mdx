@@ -98,13 +98,13 @@ Use `.skeleton-text` to render a skeleton with a height of medium paragraph on i
 
 Use our [aspect ratio utility]([[docsref:/utilities/aspect-ratio/]]) to set a skeleton with a specific aspect ratio.
 
-<Example buttonLabel="" code={`<div class="skeleton w-50 ratio-1x1" inert></div>`} />
+<Example buttonLabel="skeleton with aspect ratio" code={`<div class="skeleton w-50 ratio-1x1" inert></div>`} />
 
 ## No margins
 
 You can have the same without the default security margins using `.skeleton-no-margins`. You'll probably need to set some spacings manually using our [spacing utility]([[docsref:/utilities/spacing/]]).
 
-<Example buttonLabel="" code={`<div class="skeleton-no-margins skeleton-text" inert>
+<Example buttonLabel="skeletons without margins" code={`<div class="skeleton-no-margins skeleton-text" inert>
     <div class="skeleton mb-2xsmall"></div>
     <div class="skeleton mb-2xsmall"></div>
     <div class="skeleton w-50"></div>
@@ -114,7 +114,7 @@ You can have the same without the default security margins using `.skeleton-no-m
 
 To set components in skeleton state, you can wrap any of them in an `[aria-busy="true"]` container, and add the `inert` attribute to it. This will set all the children components in skeleton state, and make them unaccessible.
 
-<Example buttonLabel="" code={`<div aria-busy="true" inert>
+<Example buttonLabel="all components in skeleton state" code={`<div aria-busy="true" inert>
     <div class="alert alert-message alert-negative mb-medium">
       <div class="alert-icon"></div>
       <div class="alert-container">
@@ -254,7 +254,7 @@ To set components in skeleton state, you can wrap any of them in an `[aria-busy=
 
 Here are two live examples of skeletons. The first one is a skeleton that is completely replaced via JavaScript.
 
-<Example buttonLabel="Show live example" code={`<div class="bd-skeleton-replace">
+<Example buttonLabel="live example of skeletons being replaced" code={`<div class="bd-skeleton-replace">
     <div aria-busy="true" inert>
       <div class="d-flex gap-medium">
         <div class="skeleton w-50 ratio-1x1"></div>
@@ -277,7 +277,7 @@ Here is the associated JavaScript for the first example.
 
 The second example is a skeleton for a form where elements are already set but waiting to be displayed.
 
-<Example buttonLabel="Show live example" code={`<div class="bd-skeleton-replace2">
+<Example buttonLabel="live example of skeletons over components" code={`<div class="bd-skeleton-replace2">
     <div aria-busy="true" inert>
       <form class="d-flex flex-column gap-medium mb-medium" novalidate>
         <div class="text-input">
