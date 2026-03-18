@@ -18,6 +18,16 @@
 
 .is-required::after {
   position: absolute;
+  //right: 0;
+  margin-left: 4px;
+  font-weight: $ouds-font-weight-system-web-strong;
+  color: $ouds-color-content-status-negative;
+  content: "*";
+}
+
+.is-required2::after {
+  position: absolute;
+  //right: 0;
   margin-left: 4px;
   font-weight: $ouds-font-weight-system-web-strong;
   color: $ouds-color-content-status-negative;

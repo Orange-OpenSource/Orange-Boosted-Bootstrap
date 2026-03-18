@@ -203,7 +203,19 @@
         @include get-font-size("label-small");
 
         // stylelint-disable-next-line selector-no-qualifying-type
-        &.is-required::after {
+        &.is-required {
+          position: relative;
+          width: fit-content;
+          max-width: 100%;
+          padding-right: 7px;
+
+          &::after {
+            right: 0;
+            margin-left: 3px;
+          }
+        }
+        // stylelint-disable-next-line selector-no-qualifying-type
+        &.is-required2::after {
           margin-left: 3px;
         }
       }
@@ -309,21 +321,21 @@
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-enabled);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-enabled);
 
-      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
+      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
 
-      .text-input-field,
-      .input-container,
-      label {
-        padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
-      }
+      //.text-input-field,
+      //.input-container,
+      //label {
+      //  padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
+      //}
 
       &:has(> button),
       &:has(.loading-indeterminate, .loading-determinate) {
-        .text-input-field,
-        .input-container,
-        label {
-          padding-right: calc($ouds-button-size-icon-only + var(--#{$prefix}text-input-column-gap-trailing-error) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
-        }
+        //.text-input-field,
+        //.input-container,
+        //label {
+        padding-right: calc($ouds-button-size-icon-only + var(--#{$prefix}text-input-column-gap-trailing-error) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
+        //}
       }
 
       &::after {
@@ -484,8 +496,16 @@
       }
 
       // stylelint-disable-next-line selector-no-qualifying-type
-      &.is-required::after {
-        margin-left: 3px;
+      &.is-required {
+        position: relative;
+        width: fit-content;
+        max-width: 100%;
+        padding-right: 15px;
+
+        &::after {
+          right: 0;
+          margin-left: 3px;
+        }
       }
     }
 
