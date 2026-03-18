@@ -57,14 +57,16 @@ The `.btn` classes are designed to be used with the `<button>` element, but can 
 
 Use a `<button>` element for actions or for an element that triggers an in-page functionality (like collapsing content), as it is the most semantically correct and accessible choice.
 
-Use an `<a>` element only for navigation purpose, it must have an `href` attribute to make it focusable. For the [navigation button](#navigation-button), we have used `<a>` elements in our examples, but this could be adapted to your own context.
+Use an `<a>` element only for navigation purpose; it must include an `href` attribute to be focusable. For the [navigation button component](#navigation-button), we have used `<a>` elements in our examples, but this could be adapted to your own context.
 
-The visual rendering will remain the same anyway:
+Generally speaking, you should always ask yourself which tag is appropriate for your specific context. The visual rendering will remain the same anyway:
 
 <Example buttonLabel="buttons and navigation buttons semantics" class="bd-btn-example" code={`<button type="button" class="btn btn-default">Standard button</button>
   <a class="btn btn-default" href="#">Button link</a>
   <input class="btn btn-default" type="button" value="Input button" />
   <a class="btn btn-next btn-default" href="#">Navigation button link</a>`} />
+
+When navigation buttons are used for global navigation (between pages or within content), they should be wrapped in a `<nav>` tag, which must have an explicit (accessible) name defined using an `aria-label` attribute.
 
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Button
 
