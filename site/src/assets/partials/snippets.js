@@ -192,4 +192,38 @@ export default () => {
       }, false)
     })
   // storybook-end offcanvas
+
+
+  // -------------------------------
+  // Show password live example
+  // -------------------------------
+  // Used by 'password input' example in docs or StackBlitz
+  // storybook-start show-password
+  // js-docs-start live-show-password
+  // Toggle password visibility
+  const togglePasswordButton = document.querySelector('#liveShowPasswordExample #togglePassword')
+  if (togglePasswordButton) {
+    const passwordInput = document.querySelector('#liveShowPasswordExample #inputPassword')
+    const iconUse = togglePasswordButton.querySelector('use')
+    const visuallyHiddenText = togglePasswordButton.querySelector('.visually-hidden')
+
+    togglePasswordButton.addEventListener('click', event => {
+      event.preventDefault()
+
+      // Toggle the type attribute to make the password visible or hidden
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password'
+      passwordInput.setAttribute('type', type)
+
+      // Toggle the icon, the visually-hidden text for accessibility reasons
+      if (type === 'text') {
+        iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('accessibility-vision', 'hide'))
+        visuallyHiddenText.textContent = 'Hide password'
+      } else {
+        iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('hide', 'accessibility-vision'))
+        visuallyHiddenText.textContent = 'Show password'
+      }
+    })
+  }
+  // js-docs-end live-show-password
+  // storybook-end show-password
 }
