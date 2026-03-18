@@ -7,7 +7,7 @@ export const componentsDetails: ComponentCardData[] = [
     link: 'alerts#alert-message',
     category: 'Dialog',
     snippet: `
-      <div class="alert alert-message alert-negative" style="scale: .9">
+      <div class="alert alert-message alert-negative w-75">
         <div class="alert-icon"></div>
         <div class="alert-container">
           <div class="alert-text-container">
@@ -45,8 +45,8 @@ export const componentsDetails: ComponentCardData[] = [
     category: 'Navigation',
     snippet: `
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#" title="Link">Link</a></li>
-        <li class="breadcrumb-item active" aria-current="page"><span title="Page">Page</span></li>
+        <li class="breadcrumb-item"><a href="#" title="Label">Label</a></li>
+        <li class="breadcrumb-item active"><span title="Label">Label</span></li>
       </ol>`
   },
   {
@@ -70,10 +70,10 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <div class="checkbox-item" style="min-width: unset">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault[[id_prefix]]" checked />
+          <input class="control-item-indicator" type="checkbox" value="" id="checkbox[[id_prefix]]" checked />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="checkboxDefault[[id_prefix]]">Label</label>
+          <label class="control-item-label" for="checkbox[[id_prefix]]">Label</label>
         </div>
       </div>`
   },
@@ -90,8 +90,8 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <ul class="chips-container">
         <li class="chip chip-filter">
-          <input type="checkbox" id="appleCheck[[id_prefix]]" checked />
-          <label class="chip-interactive" for="appleCheck[[id_prefix]]">
+          <input type="checkbox" id="filterChip[[id_prefix]]" checked />
+          <label class="chip-interactive" for="filterChip[[id_prefix]]">
             Label
           </label>
         </li>
@@ -120,36 +120,35 @@ export const componentsDetails: ComponentCardData[] = [
     slug: 'input-tag',
     link: 'tags#input-tag',
     category: 'Indicator',
-    snippet: `<button type="button" class="tag tag-input">Input tag</button>`
+    snippet: `<button type="button" class="tag tag-input">Label</button>`
   },
   {
     name: 'Link',
     link: 'links',
     category: 'Navigation',
-    snippet: `<a class="link" href="#">Link</a>`
+    snippet: `<a class="link" href="#">Label</a>`
   },
   {
     name: 'Password input',
     slug: 'password-input',
     category: 'Control',
     snippet: `
-      <div class="text-input" style="scale: .6">
-        <div class="text-input-container text-input-container-outlined">
-          <svg aria-hidden="true">
-            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#lock-closed')}"/>
-          </svg>
-          <label for="inputPasswordPrefix[[id_prefix]]">Password</label>
-          <div class="input-container" data-bs-prefix="DEV-">
-            <input type="password" id="inputPasswordPrefix[[id_prefix]]" class="text-input-field" placeholder=" ">
+      <form class="w-75">
+        <div class="text-input">
+          <div class="text-input-container" style="min-width: unset">
+            <label for="passwordInput[[id_prefix]]">Label</label>
+            <div class="input-container">
+              <input type="password" id="passwordInput[[id_prefix]]" class="text-input-field" placeholder=" " value="xxxxxx">
+            </div>
+            <button class="btn btn-minimal btn-icon">
+              <svg aria-hidden="true">
+                <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}"/>
+              </svg>
+              <span class="visually-hidden">Show password</span>
+            </button>
           </div>
-          <button class="btn btn-minimal btn-icon">
-            <svg aria-hidden="true">
-              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}"/>
-            </svg>
-            <span class="visually-hidden">Show password</span>
-          </button>
         </div>
-      </div>`
+      </form>` // form element is used here to prevent the browser from asking to save the password when leaving the page
   },
   {
     name: 'Radio button',
@@ -158,10 +157,10 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <div class="radio-button-item" style="min-width: unset">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" id="radioDefault[[id_prefix]]" name="radioBasic" checked />
+          <input class="control-item-indicator" type="radio" value="" id="radio[[id_prefix]]" name="radio[[id_prefix]]" checked />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="radioDefault[[id_prefix]]">Label</label>
+          <label class="control-item-label" for="radio[[id_prefix]]">Label</label>
         </div>
       </div>`
   },
@@ -170,14 +169,12 @@ export const componentsDetails: ComponentCardData[] = [
     slug: 'select-input',
     category: 'Control',
     snippet: `
-      <div class="select-input w-100" style="scale: .6">
-        <div class="select-input-container select-input-container-outlined">
-          <label for="exampleSelect[[id_prefix]]">Select</label>
-          <select class="select-input-field" id="exampleSelect[[id_prefix]]">
+      <div class="select-input w-75">
+        <div class="select-input-container">
+          <label for="select[[id_prefix]]">Label</label>
+          <select class="select-input-field" id="select[[id_prefix]]">
             <option value="" disabled selected></option>
             <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
           </select>
         </div>
       </div>`
@@ -202,10 +199,10 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <div class="switch-item" style="min-width: unset">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchWithSVG[[id_prefix]]" checked />
+          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switch[[id_prefix]]" checked />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="switchWithSVG[[id_prefix]]">Label</label>
+          <label class="control-item-label" for="switch[[id_prefix]]">Label</label>
         </div>
       </div>`
   },
@@ -213,17 +210,21 @@ export const componentsDetails: ComponentCardData[] = [
     name: 'Tag',
     link: 'tags#tag',
     category: 'Indicator',
-    snippet: `<p class="tag">Tag</p>`
+    snippet: `
+      <p class="tag tag-info">
+        <span class="tag-status-icon"></span>
+        Label
+      </p>`
   },
   {
     name: 'Text area',
     slug: 'text-area',
     category: 'Control',
     snippet: `
-      <div class="text-area" style="scale: .9">
-        <div class="text-area-container text-area-container-outlined">
+      <div class="text-area w-75 h-75">
+        <div class="text-area-container h-100">
           <label for="exampleTextArea[[id_prefix]]">Label</label>
-          <textarea class="text-area-field" id="exampleTextArea[[id_prefix]]" style="height: unset; min-height: unset"></textarea>
+          <textarea class="text-area-field h-100" id="exampleTextArea[[id_prefix]]" style="min-height: unset"></textarea>
         </div>
       </div>`
   },
@@ -232,10 +233,10 @@ export const componentsDetails: ComponentCardData[] = [
     slug: 'text-input',
     category: 'Control',
     snippet: `
-      <div class="text-input" style="scale: .6">
-        <div class="text-input-container text-input-container-outlined">
+      <div class="text-input w-75">
+        <div class="text-input-container" style="min-width: unset">
           <label for="exampleTextInputWithPlaceholder[[id_prefix]]">Label</label>
-          <input type="email" class="text-input-field" id="exampleTextInputWithPlaceholder[[id_prefix]]" placeholder="placeholder">
+          <input type="email" class="text-input-field" id="exampleTextInputWithPlaceholder[[id_prefix]]" placeholder=" ">
         </div>
       </div>`
   }
