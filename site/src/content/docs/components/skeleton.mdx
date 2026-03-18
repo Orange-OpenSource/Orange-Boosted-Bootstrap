@@ -40,7 +40,7 @@ A container with an `[aria-busy="true"]` attribute will set all its children com
 
 ### Accessibility
 
-Everything that is a skeleton should be hidden either via an `[inert]` attribute, or via an `[aria-hidden]` attribute, a `[tabindex="-1"]` attribute, and `pointer-events: none` CSS rule if possible. This is to prevent assistive technologies from reading the content of the skeleton, and to prevent users from interacting with it. Note that inside an assistive technology won't care about the semantic of the used elements.
+Everything that is a skeleton should be hidden either via an `[inert]` attribute, or via an `[aria-hidden]` attribute, a `[tabindex="-1"]` attribute, and `pointer-events: none` CSS rule if possible. This is to prevent assistive technologies from reading the content of the skeleton, and to prevent users from interacting with it. Note that inside an assistive technology won’t care about the semantic of the used elements.
 
 While loading, assistive technologies should announce that a part of the page is loading. You may use `[aria-busy="true"]` on a parent container to achieve that.
 
@@ -50,7 +50,7 @@ See our [live example](#live-example) below to see it in action.
 
 ## Sizes
 
-Skeletons don't have default height nor width, we provide two specific height helpers: `.skeleton-title` and `.skeleton-text`, these will apply to all their children.
+Skeletons don’t have default height nor width, we provide two specific height helpers: `.skeleton-title` and `.skeleton-text`, these will apply to all their children.
 
 You can also set the size of the skeletons either via inline styles, via our [sizing utility]([[docsref:/utilities/sizing/]]), via our [ratio utility]([[docsref:/utilities/aspect-ratio/]]), or via our [columns utility]([[docsref:/layout/columns/]]).
 
@@ -102,7 +102,7 @@ Use our [aspect ratio utility]([[docsref:/utilities/aspect-ratio/]]) to set a sk
 
 ## No margins
 
-You can have the same without the default security margins using `.skeleton-no-margins`. You'll probably need to set some spacings manually using our [spacing utility]([[docsref:/utilities/spacing/]]).
+You can have the same without the default security margins using `.skeleton-no-margins`. You’ll probably need to set some spacings manually using our [spacing utility]([[docsref:/utilities/spacing/]]).
 
 <Example buttonLabel="skeletons without margins" code={`<div class="skeleton-no-margins skeleton-text" inert>
     <div class="skeleton mb-2xsmall"></div>
@@ -256,7 +256,7 @@ Here are two live examples of skeletons. The first one is a skeleton that is com
 
 <Example buttonLabel="live example of skeletons being replaced" code={`<div class="bd-skeleton-replace">
     <div aria-busy="true" inert>
-      <div class="d-flex gap-medium">
+      <div class="d-flex gap-medium mb-medium">
         <div class="skeleton w-50 ratio-1x1"></div>
         <div class="flex-grow-1 d-flex flex-column skeleton-text">
           <div class="skeleton skeleton-title mb-small"></div>
