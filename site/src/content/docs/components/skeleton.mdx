@@ -50,16 +50,16 @@ See our [live example](#live-example) below to see it in action.
 
 ## Sizes
 
-They don't come with any height, but we provide some helpers to help to set the height of some skeletons.
+Skeletons don't have default height nor width, we provide two specific height helpers: `.skeleton-title` and `.skeleton-text`, these will apply to all their children.
 
 You can also set the size of the skeletons either via inline styles, via our [sizing utility]([[docsref:/utilities/sizing/]]), via our [ratio utility]([[docsref:/utilities/aspect-ratio/]]), or via our [columns utility]([[docsref:/layout/columns/]]).
 
 ### Title height
 
-Use `.skeleton-title` to render a skeleton with a height of medium title on itself and for children elements.
+Use `.skeleton-title` to render a skeleton with a height corresponding to a medium title on itself or its children elements.
 
 <Callout type="info">
-  Titles should be represented on one full line.
+  Titles should be represented by a full-width skeleton.
 </Callout>
 
 <Example buttonLabel="skeletons with title height" code={`<div class="skeleton skeleton-title" inert></div>
@@ -79,7 +79,7 @@ Use `.skeleton-title` to render a skeleton with a height of medium title on itse
 
 ### Paragraph height
 
-Use `.skeleton-text` to render a skeleton with a height of medium paragraph on itself and for children elements.
+Use `.skeleton-text` to render a skeleton with a height corresponding to a medium paragraph on itself or its children elements.
 
 <Callout type="info">
   Paragraphs should be represented with full lines without horizontal spacing and the last one might be shorter to represent the end of the paragraph. You can use our [sizing utility]([[docsref:/utilities/sizing/]]) or our [columns utility]([[docsref:/layout/columns/]]) to set the width of the last line.
@@ -112,7 +112,7 @@ You can have the same without the default security margins using `.skeleton-no-m
 
 ## With components
 
-To set components in skeleton state, you can wrap any of them in an `[aria-busy="true"]` container, and add the `inert` attribute to it. This will set all the children components in skeleton state, and make them unaccessible.
+To set components in skeleton state, you can wrap any of them in an `[aria-busy="true"]` container, and add the `inert` attribute to it. This will set all the children components in skeleton state, disable them and prevent any interaction.
 
 <Example buttonLabel="all components in skeleton state" code={`<div aria-busy="true" inert>
     <div class="alert alert-message alert-negative mb-medium">
