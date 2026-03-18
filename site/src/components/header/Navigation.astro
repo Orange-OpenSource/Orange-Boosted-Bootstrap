@@ -94,7 +94,7 @@ const { addedIn, layout, title } = Astro.props
           </LinkItem>
           <LinkItem
             active={layout === 'docs' && Astro.url.pathname.includes('/utilities/')}
-            href={getVersionedDocsPath('utilities/api')}
+            href={getVersionedDocsPath('utilities')}
             onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'utilities'});"
           >
             Utilities
