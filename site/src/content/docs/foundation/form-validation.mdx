@@ -331,7 +331,7 @@ If there is only one field in the form, or if the mandatory nature of the fields
 
 ### Forms with only mandatory fields
 
-In a form having several fields and where all fields are mandatory, it is sufficient to indicate this in the form instructions, by stating "All fields are mandatory." at the top. This way, assistive technologies can communicate this information to users without the need for additional mention on each form control.
+In a form having several fields and where all fields are mandatory, it is sufficient to indicate this in the form instructions, by stating "**All fields are mandatory.**" at the top. This way, assistive technologies can communicate this information to users without the need for additional mention on each form control.
 
 <Example buttonLabel="form with all fields mandatory" code={`<form class="needs-validation" novalidate>
     <p class="fw-bold" aria-hidden="true">
@@ -370,11 +370,11 @@ In a form having several fields and where all fields are mandatory, it is suffic
 
 ### Forms with optional fields
 
-In a form having several fields and where not all fields are mandatory, you have to display a message "All fields marked with an * are mandatory." at the top, and hide it from assistive technologies with `aria-hidden="true"`, since the mandatory nature of the fields will be explicitely indicated by the `required` attribute. Then, you have to explicitely indicate which fields are mandatory to other users, by adding the class `.is-required` on the label. This adds a red asterisk at the end of the label.
+In a form having several fields and where not all fields are mandatory, you have to display a message "**All fields marked with an <span class="text-status-negative">*</span> are mandatory.**" at the top, and hide it from assistive technologies with `aria-hidden="true"`, since the mandatory nature of the fields will be explicitely indicated by the `required` attribute. Then, you have to explicitely indicate which fields are mandatory to other users, by adding the class `.is-required` on the label. This adds a red asterisk at the end of the label.
 
 <Example buttonLabel="form with some mandatory fields" code={`<form class="needs-validation" novalidate>
     <p class="fw-bold" aria-hidden="true">
-      All fields marked with an * are mandatory.
+      All fields marked with an <span class="text-status-negative">*</span> are mandatory.
     </p>
 
     <div class="text-input component-max-width mb-large">

@@ -214,10 +214,6 @@
             margin-left: 3px;
           }
         }
-        // stylelint-disable-next-line selector-no-qualifying-type
-        &.is-required2::after {
-          margin-left: 3px;
-        }
       }
     }
 
@@ -307,13 +303,7 @@
 
     &:has(> button),
     &:has(.loading-indeterminate, .loading-determinate) {
-      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
-
-      > .text-input-field,
-      > .input-container,
-      > label {
-        padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
-      }
+      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
     }
 
     // Invalid text inputs
@@ -323,19 +313,9 @@
 
       padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
 
-      //.text-input-field,
-      //.input-container,
-      //label {
-      //  padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
-      //}
-
       &:has(> button),
       &:has(.loading-indeterminate, .loading-determinate) {
-        //.text-input-field,
-        //.input-container,
-        //label {
         padding-right: calc($ouds-button-size-icon-only + var(--#{$prefix}text-input-column-gap-trailing-error) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
-        //}
       }
 
       &::after {
@@ -500,7 +480,7 @@
         position: relative;
         width: fit-content;
         max-width: 100%;
-        padding-right: 15px;
+        padding-right: 7px;
 
         &::after {
           right: 0;
