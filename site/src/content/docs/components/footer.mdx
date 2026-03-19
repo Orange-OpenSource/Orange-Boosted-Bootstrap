@@ -9,8 +9,8 @@ toc: true
 import { getVersionedDocsPath } from '@libs/path'
 import { getConfig } from '@libs/config'
 
-<Callout type="negative">
-  The footer component is not yet designed, and this component is only a placeholder for the moment. It will be updated in the future with the final design and will certainly need adjustments regarding the DOM. Use it as a temporary component to speed up your development.
+<Callout type="negative" title="Draft component">
+  The footer component is not yet designed, and this component is only a draft for the moment. It will be updated in the future with the final design and will certainly need adjustments regarding the DOM. Use it as a temporary component to speed up your development.
 
   Please refer to the [Footer in the Boosted documentation](https://boosted.orange.com/docs/components/footer/) to have a full view of the footer component and its variations. You’ll only need to adapt the utilities and the components inside the DOM.
 </Callout>
@@ -20,7 +20,7 @@ import { getConfig } from '@libs/config'
 </Callout>
 
 <Callout type="warning">
-  Several changes to be up to date:
+  Mandatory changes from Boosted:
   - `.accordion-button` should have `.px-gridmargin` to align with the rest of the content, read [our documentation about it]([[docsref:/utilities/spacing#grid-measures]]).
   - `.navbar-nav` inside the `.footer-nav` should have `.ps-large.ps-md-none` to better convey information.
   - Already existing components should be replaced inside the footer, such as the text input and the buttons.
@@ -28,7 +28,7 @@ import { getConfig } from '@libs/config'
 
 ## Footer
 
-Here is a [simple footer example](https://boosted.orange.com/docs/components/footer/#example). The footer is responsive and will wrap on smaller screens.
+Here is a simple footer example, which is responsive and will wrap on smaller screens. Take a look at the [Boosted footer](https://boosted.orange.com/docs/components/footer/#example).
 
 <Example class="p-none" code={`<footer class="footer navbar" data-bs-theme="dark">
     <h2 class="visually-hidden">Sitemap &amp; information</h2>
