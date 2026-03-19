@@ -197,13 +197,13 @@ export default () => {
   // -------------------------------
   // Show password live example
   // -------------------------------
-  // Used by 'password input' example in docs or StackBlitz
-  // storybook-start show-password
+  // Used by 'password input' live example in docs or StackBlitz
+  // storybook-start password-input
   // js-docs-start live-show-password
   // Toggle password visibility
   const togglePasswordButton = document.querySelector('#liveShowPasswordExample #togglePassword')
   if (togglePasswordButton) {
-    const passwordInput = document.querySelector('#liveShowPasswordExample #inputPassword')
+    const passwordInput = document.querySelector('#liveShowPasswordExample #liveInputPassword')
     const iconUse = togglePasswordButton.querySelector('use')
     const visuallyHiddenText = togglePasswordButton.querySelector('.visually-hidden')
 
@@ -225,5 +225,5 @@ export default () => {
     })
   }
   // js-docs-end live-show-password
-  // storybook-end show-password
+  // storybook-end password-input
 }
