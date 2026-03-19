@@ -49,15 +49,13 @@ const openOUDSWebSnippet = (htmlSnippet, jsSnippet, classes, cssBootstrap) => {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="${cssBootstrap ? CONFIG.cssBootstrapCdn : CONFIG.cssCdn}" rel="stylesheet" />
     <link href="https://web.unified-design-system.orange.com/docs/${CONFIG.docsVersion}/assets/css/docs.css" rel="stylesheet" />
+    <link rel="preload" href="${spriteUrl}" as="image" type="image/svg+xml">
     <title>OUDS Web Example</title>
     <${'script'} defer src="${CONFIG.jsBundleCdn}"></${'script'}>
   </head>
   <body class="p-2xlarge m-none border-none ${classes}">
-    <svg class="d-none">
-      <image xlink:href="${spriteUrl}" />
-    </svg>
     <!-- Example Code -->
-  ${htmlSnippet.trimStart().replace(/^/gm, '    ').replace(/^ {4}$/gm, '').replaceAll(/xlink:href="\/.+\/ouds-web-sprite\.svg/g, `xlink:href="`).trimEnd()}
+  ${htmlSnippet.trimStart().replace(/^/gm, '    ').replace(/^ {4}$/gm, '').replaceAll(/xlink:href="\/.+\/ouds-web-sprite\.svg/g, `xlink:href="${spriteUrl}`).trimEnd()}
     <!-- End Example Code -->
   </body>
 </html>`
