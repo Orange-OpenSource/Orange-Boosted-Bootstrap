@@ -133,20 +133,22 @@ export const componentsDetails: ComponentCardData[] = [
     slug: 'password-input',
     category: 'Control',
     snippet: `
-      <div class="text-input w-75">
-        <div class="text-input-container" style="min-width: unset">
-          <label for="passwordInput[[id_prefix]]">Label</label>
-          <div class="input-container">
-            <input type="password" id="passwordInput[[id_prefix]]" class="text-input-field" placeholder=" " value="xxxxxx">
+      <form class="w-75">
+        <div class="text-input">
+          <div class="text-input-container" style="min-width: unset">
+            <label for="passwordInput[[id_prefix]]">Label</label>
+            <div class="input-container">
+              <input type="password" id="passwordInput[[id_prefix]]" class="text-input-field" placeholder=" " value="xxxxxx">
+            </div>
+            <button class="btn btn-minimal btn-icon">
+              <svg aria-hidden="true">
+                <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}"/>
+              </svg>
+              <span class="visually-hidden">Show password</span>
+            </button>
           </div>
-          <button class="btn btn-minimal btn-icon">
-            <svg aria-hidden="true">
-              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}"/>
-            </svg>
-            <span class="visually-hidden">Show password</span>
-          </button>
         </div>
-      </div>`
+      </form>` // form element is used here to prevent the browser from asking to save the password when leaving the page
   },
   {
     name: 'Radio button',
