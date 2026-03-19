@@ -2,78 +2,83 @@
   icon: menu-button-wide-fill
   icon_color: body-color
   pages:
-    - title: Accordion
-      draft: true
     - title: Alerts
-    - title: Back to top
-      draft: true
     - title: Badges
     - title: Breadcrumb
     - title: Bullet list
     - title: Buttons
-    - title: Card
-      draft: true
-    - title: Carousel
-      draft: true
     - title: Checkbox
     - title: Chips
-    - title: Close button
-      draft: true
-    - title: Collapse
-      draft: true
     - title: Divider
-    - title: Dropdown
-      draft: true
-    - title: Footer
-      draft: true
     - title: Icon
     - title: Links
-    - title: List group
-      draft: true
-    - title: Local navigation
-      draft: true
-    - title: Modal
-      draft: true
-    - title: Navbar
-      draft: true
-    - title: Nav & tab
-      draft: true
-    - title: Offcanvas
-      draft: true
-    - title: Orange navbar
-      draft: true
-    - title: Pagination
-      draft: true
     - title: Password input
-    - title: Placeholder
-      draft: true
-    - title: Popover
-      draft: true
-    - title: Progress
-      draft: true
-    - title: Quantity selector
-      draft: true
     - title: Radio button
-    - title: Range
-      draft: true
-    - title: Scrollspy
-      draft: true
     - title: Select input
-    - title: Spinner
-      draft: true
-    - title: Stepped process
-      draft: true
-    - title: Sticker
-      draft: true
     - title: Switch
-    - title: Table
-      draft: true
     - title: Tags
     - title: Text area
     - title: Text input
+
+- title: Coming soon
+  icon: menu-button-wide-fill
+  icon_color: body-color
+  pages:
+    - title: Accordion
+      coming_soon: true
+    - title: Back to top
+      coming_soon: true
+    - title: Card
+      coming_soon: true
+    - title: Carousel
+      coming_soon: true
+    - title: Close button
+      coming_soon: true
+    - title: Collapse
+      coming_soon: true
+    - title: Dropdown
+      coming_soon: true
+    - title: Footer
+      coming_soon: true
+    - title: List group
+      coming_soon: true
+    - title: Local navigation
+      coming_soon: true
+    - title: Modal
+      coming_soon: true
+    - title: Navbar
+      coming_soon: true
+    - title: Nav & tab
+      coming_soon: true
+    - title: Offcanvas
+      coming_soon: true
+    - title: Orange navbar
+      coming_soon: true
+    - title: Pagination
+      coming_soon: true
+    - title: Placeholder
+      coming_soon: true
+    - title: Popover
+      coming_soon: true
+    - title: Progress
+      coming_soon: true
+    - title: Quantity selector
+      coming_soon: true
+    - title: Range
+      coming_soon: true
+    - title: Scrollspy
+      coming_soon: true
+    - title: Spinner
+      coming_soon: true
+    - title: Stepped process
+      coming_soon: true
+    - title: Sticker
+      coming_soon: true
+    - title: Table
+      coming_soon: true
     - title: Title bar
-      draft: true
+      coming_soon: true
     - title: Toast
-      draft: true
+      coming_soon: true
     - title: Tooltip
-      draft: true
+      coming_soon: true

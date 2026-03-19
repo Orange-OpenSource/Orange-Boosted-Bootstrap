@@ -23,15 +23,18 @@ const sidebar = sidebarMap[slug] ? getData(`sidebar-${sidebarMap[slug]}`) : []
   <ul class="bd-links-nav list-unstyled mb-none pb-large pb-md-small pe-lg-small">
     {
       sidebar.map((group) => {
-        const groupSlug = getSlug(group.title)
+        let groupSlug = getSlug(group.title)
+        if (groupSlug === 'coming-soon') {
+          groupSlug = 'components'
+        }
 
         if (group.pages) {
           return (
             <li class="bd-links-group py-small">
-              <h2 class="fs-bm mb-none bd-links-heading d-flex w-100 align-items-center fw-semibold">
+              <h2 class="fs-bl mb-none bd-links-heading d-flex w-100 align-items-center fw-semibold">
                 {group.icon && (
                   <svg
-                    class="bm-medium-icon me-2xsmall"
+                    class="bl-medium-icon me-2xsmall"
                     style={group.icon_color && `color: var(--bs-${group.icon_color});"`}
                     aria-hidden="true"
                   >
@@ -72,13 +75,24 @@ const sidebar = sidebarMap[slug] ? getData(`sidebar-${sidebarMap[slug]}`) : []
                           href={url}
                           class:list={[
                             'bd-links-link',
-                            'd-block',
+                            'd-inline-flex',
+                            'gap-2xsmall',
+                            'align-items-center',
                             { active },
-                            { 'text-decoration-line-through': page.draft }
+                            { 'text-decoration-line-through': page.coming_soon }
                           ]}
                           aria-current={active ? 'page' : undefined}
                         >
-                          {page.title} {page.draft && <span class="visually-hidden">page is not yet available</span>}
+                          {page.title}{' '}
+                          {page.draft && (
+                            <>
+                              <svg width="1rem" height="1rem" aria-hidden="true">
+                                <use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#traffic-cone')} />
+                              </svg>
+                              <span class="visually-hidden">draft component</span>
+                            </>
+                          )}
+                          {page.coming_soon && <span class="visually-hidden">page is not yet available</span>}
                         </a>
                       </li>
                     )

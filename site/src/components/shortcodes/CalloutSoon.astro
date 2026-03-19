@@ -14,6 +14,12 @@ interface Props {
 const { type = 'component' } = Astro.props
 ---
 
-<Callout type="warning" title={`This ${type} is not yet available.`} titleLevel={2}>
+<Callout
+  type="warning"
+  title={`This ${type} is not yet available.`}
+  titleLevel={2}
+  action="Check OUDS components statuses"
+  actionHref="https://unified-design-system.orange.com/472794e18/p/73c701-components"
+>
   Please check back soon.
 </Callout>
