@@ -45,8 +45,6 @@
     - title: Pagination
       draft: true
     - title: Password input
-    - title: Placeholder
-      draft: true
     - title: Popover
       draft: true
     - title: Progress
@@ -59,6 +57,7 @@
     - title: Scrollspy
       draft: true
     - title: Select input
+    - title: Skeleton
     - title: Spinner
       draft: true
     - title: Stepped process
