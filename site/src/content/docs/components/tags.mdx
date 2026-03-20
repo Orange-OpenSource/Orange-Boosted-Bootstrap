@@ -356,6 +356,14 @@ You can see a similar live example with buttons with the full JavaScript code on
     Label
   </p>`} />
 
+#### Skeleton
+
+<SkeletonRedirect component="tag" />
+
+<Example buttonLabel="tag skeleton" code={`<div aria-busy="true" inert>
+    <p class="tag">Tag</p>
+  </div>`} />
+
 ### Sizes
 
 To display a small tag, add the class `.tag-small` to the tag.
@@ -477,6 +485,14 @@ To disable an input tag, just add the `disabled` attribute to the `.tag`.
       </button>
     </li>
   </ul>`} />
+
+#### Skeleton
+
+<SkeletonRedirect component="input tag" />
+
+<Example buttonLabel="input tag skeleton" code={`<div aria-busy="true" inert>
+    <button type="button" class="tag tag-input">Input tag<span class="visually-hidden">Remove this tag</span></button>
+  </div>`} />
 
 ### Layout
 
