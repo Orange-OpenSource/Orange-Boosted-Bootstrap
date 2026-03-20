@@ -579,6 +579,21 @@ If you have a checkbox that is not part of a group but needs validation control,
     <p class="control-item-error-message" id="checkboxUniqueInvalidErrorText">You must accept the terms and condition to proceed.</p>
   </div>`} />
 
+### Skeleton
+
+<SkeletonRedirect component="checkbox item" />
+
+<Example buttonLabel="checkbox item skeleton" code={`<div aria-busy="true" inert>
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxSkeleton" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxSkeleton">Skeleton checkbox</label>
+      </div>
+    </div>
+  </div>`} />
+
 ## Fieldset `<legend>`
 
 For accessibility reasons, it is required to provide understandable checkbox labels without relying on visual context. It is also good practice to add a checkbox group title inside a `<legend>` element as the first child of the `<fieldset>` element. Screen readers will read the legend before navigating through the checkboxes; this way, keyboard navigation users have more information on what is expected with the multiple checkboxes element.

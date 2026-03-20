@@ -103,7 +103,7 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <svg class="text-status-accent decorative-small-icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-      </svg> `
+      </svg>`
   },
   {
     name: 'Inline alert',
@@ -178,6 +178,11 @@ export const componentsDetails: ComponentCardData[] = [
           </select>
         </div>
       </div>`
+  },
+  {
+    name: 'Skeleton',
+    category: 'Indicator',
+    snippet: `<div class="skeleton w-75 h-75"></div>`
   },
   {
     name: 'Suggestion chip',

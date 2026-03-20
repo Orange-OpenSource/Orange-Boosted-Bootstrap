@@ -1,0 +1,93 @@
+// Skeleton animation
+@keyframes skeleton-wave {
+  64% { // To simulate 450ms delay on 1.25s between animations
+    transform: translate3d(100%, 0, 0); // Translate3d to use GPU acceleration
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+// Skeleton styles
+%skeleton-placeholder {
+  position: relative;
+  height: var(--#{$prefix}skeleton-height);
+  overflow: hidden;
+  color: transparent;
+  background-color: transparent;
+  border: 0;
+
+  // Remove all styles of the children elements and hide them
+  > * {
+    visibility: hidden;
+  }
+
+  // Remove all styles of the pseudo elements
+  &::before,
+  &::after {
+    all: unset;
+    position: absolute;
+    inset: var(--#{$prefix}skeleton-margin-block, $ouds-space-padding-block-3xsmall) 0;
+    z-index: 6; // Avoid edge cases where the skeleton wave could be under other elements
+    display: block;
+    content: "";
+  }
+
+  // `!important` are used to cancel chip style that is too specific
+  &::before {
+    width: unset !important; // stylelint-disable-line declaration-no-important
+    height: unset !important; // stylelint-disable-line declaration-no-important
+    background-color: $ouds-skeleton-color-bg !important; // stylelint-disable-line declaration-no-important
+    mask: unset !important; // stylelint-disable-line declaration-no-important
+  }
+
+  &::after {
+    background: linear-gradient(270deg, $ouds-skeleton-color-gradient-start-end 3%, $ouds-skeleton-color-gradient-middle 47%, $ouds-skeleton-color-gradient-start-end 97%); // Asked for tokens
+    transform: translate3d(-100%, 0, 0);
+    animation: skeleton-wave 1.25s 2s ease-in-out infinite; // Asked for tokens TODO: Ask for a11y if the infinite is fine
+  }
+}
+
+// Skeleton selectors
+[aria-busy="true"] {
+  // List of all the components that don't have security margins
+  :is(.alert, .btn, .checkbox-standalone, .chip-interactive, .link, .radio-button-standalone, .select-input, .switch-standalone > .control-item-indicator, .tag, .text-area, .text-input) {
+    --#{$prefix}skeleton-margin-block: 0; // Remove security margins for components
+    @extend %skeleton-placeholder;
+  }
+
+  // List of components with security margins
+  :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item) {
+    @extend %skeleton-placeholder;
+  }
+}
+
+.skeleton {
+  @extend %skeleton-placeholder;
+}
+
+// Remove skeleton security margins
+.skeleton-no-margins {
+  --#{$prefix}skeleton-margin-block: 0;
+}
+
+// Predefined heights
+.skeleton-text {
+  --#{$prefix}skeleton-height: calc(var(--#{$prefix}font-size-body-medium) * var(--#{$prefix}font-line-height-body-medium));
+}
+
+.skeleton-title {
+  --#{$prefix}skeleton-height: calc(var(--#{$prefix}font-size-heading-medium) * var(--#{$prefix}font-line-height-heading-medium));
+}
+
+@if $enable-bootstrap-compatibility {
+  .placeholder {
+    @extend .skeleton;
+    @extend .skeleton-text;
+    display: inline-block;
+  }
+
+  .placeholder-lg {
+    @extend .skeleton-title;
+  }
+}
