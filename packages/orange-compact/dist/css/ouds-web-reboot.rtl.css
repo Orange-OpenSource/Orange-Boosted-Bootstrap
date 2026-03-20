@@ -1,11 +1,11 @@
 /*!
- * OUDS Web Reboot v1.0.0 (https://web.unified-design-system.orange.com/)
- * Copyright 2014-2025 The OUDS Web Authors
- * Copyright 2014-2025 Orange SA
+ * OUDS Web Reboot v1.1.0 (https://web.unified-design-system.orange.com/)
+ * Copyright 2014-2026 The OUDS Web Authors
+ * Copyright 2014-2026 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
  * Bootstrap Reboot v5.3.5 (https://getbootstrap.com/)
- * Copyright 2011-2025 The Bootstrap Authors
+ * Copyright 2011-2026 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root,
@@ -369,7 +369,7 @@
 :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
   color-scheme: light;
   --bs-chevron-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3e%3cpath d='M597.22 225 402.78 421.43 325 500l77.78 78.57L597.22 775 675 696.43 480.56 500 675 303.57z'/%3e%3c/svg%3e");
-  --bs-close-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='116 116 767 767'%3e%3cpath d='M817.493 676.165a49.977 49.977 0 0 1 0 70.664l-70.664 70.664a49.977 49.977 0 0 1-70.664 0L499.5 640.828 322.835 817.493a49.977 49.977 0 0 1-70.664 0l-70.664-70.664a49.977 49.977 0 0 1 0-70.664L358.172 499.5 181.507 322.835a49.977 49.977 0 0 1 0-70.664l70.664-70.664a49.977 49.977 0 0 1 70.664 0L499.5 358.172l176.665-176.665a49.977 49.977 0 0 1 70.664 0l70.664 70.664a49.977 49.977 0 0 1 0 70.664L640.828 499.5Z'/%3e%3c/svg%3e");
+  --bs-close-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='m18.75 7.178-1.928-1.929L12 10.071 7.178 5.25 5.249 7.18 10.071 12 5.25 16.822l1.93 1.929L12 13.929l4.822 4.822 1.929-1.929L13.929 12l4.822-4.822Z'/%3e%3c/svg%3e");
   --bs-success-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M12 2.4A9.6 9.6 0 0 0 2.4 12a9.6 9.6 0 0 0 9.6 9.6 9.6 9.6 0 0 0 9.6-9.6A9.6 9.6 0 0 0 12 2.4Zm4.97 8.148-5.408 5.407c-.09.09-.178.171-.265.245-.04.053-.085.105-.136.156a1.27 1.27 0 0 1-.596.336 1.205 1.205 0 0 1-.266.033 1.206 1.206 0 0 1-.263-.033 1.277 1.277 0 0 1-.597-.337 1.47 1.47 0 0 1-.136-.155 4.53 4.53 0 0 1-.265-.245L7.035 13.95c-.853-.852-.997-1.549-.412-2.134.574-.574 1.282-.44 2.134.412l1.543 1.543 4.947-4.947c.853-.853 1.55-.997 2.134-.412.574.574.44 1.282-.411 2.134Z'/%3e%3c/svg%3e");
   --bs-info-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M12 2.4A9.6 9.6 0 0 0 2.4 12a9.6 9.6 0 0 0 9.6 9.6 9.6 9.6 0 0 0 9.6-9.6A9.6 9.6 0 0 0 12 2.4Zm1.2 13.994c0 1.188-.4 1.758-1.2 1.758-.8 0-1.2-.57-1.2-1.758v-4.535c0-1.188.384-1.774 1.2-1.774.8 0 1.2.586 1.2 1.774v4.535Zm-1.213-7.32A1.39 1.39 0 0 1 10.6 7.681c0-.768.622-1.407 1.387-1.407.766 0 1.388.624 1.388 1.407a1.38 1.38 0 0 1-1.388 1.391Z'/%3e%3c/svg%3e");
   --bs-warning-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M21.852 16.98 14.205 3.064a2.556 2.556 0 0 0-4.41 0L2.17 16.942l-.001.002-.021.036a2.54 2.54 0 0 0-.009 2.552 2.55 2.55 0 0 0 2.214 1.276h15.293a2.549 2.549 0 0 0 2.214-1.276 2.542 2.542 0 0 0-.008-2.553ZM10.8 8.031c0-1.187.4-1.758 1.2-1.758.8 0 1.2.57 1.2 1.758v4.535c0 1.188-.384 1.774-1.2 1.774s-1.2-.585-1.2-1.774V8.031Zm1.188 10.119a1.394 1.394 0 0 1-1.388-1.407 1.38 1.38 0 0 1 1.388-1.391 1.39 1.39 0 0 1 1.387 1.39c0 .768-.622 1.408-1.387 1.408Z'/%3e%3c/svg%3e");
@@ -486,6 +486,8 @@
   --bs-table-active-bg-factor: 0.135;
   --bs-table-hover-bg-factor: 0.065;
   --bs-table-striped-bg-factor: 0.035;
+  --bs-grid-gap: 8px;
+  --bs-grid-margin: 16px;
 }
 @media (min-width: 736px) {
   :root,
@@ -677,6 +679,118 @@
     --bs-icon-small-with-body-small: 1rem;
     --bs-icon-medium-with-body-small: 1.25rem;
     --bs-icon-large-with-body-small: 1.5rem;
+  }
+}
+@media (min-width: 390px) {
+  :root,
+  [data-bs-theme=light],
+  :root[data-bs-theme=light] [data-bs-theme=root],
+  :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+    --bs-grid-gap: 16px;
+  }
+}
+@media (min-width: 480px) {
+  :root,
+  [data-bs-theme=light],
+  :root[data-bs-theme=light] [data-bs-theme=root],
+  :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+    --bs-grid-gap: 16px;
+  }
+}
+@media (min-width: 736px) {
+  :root,
+  [data-bs-theme=light],
+  :root[data-bs-theme=light] [data-bs-theme=root],
+  :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+    --bs-grid-gap: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  :root,
+  [data-bs-theme=light],
+  :root[data-bs-theme=light] [data-bs-theme=root],
+  :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+    --bs-grid-gap: 16px;
+  }
+}
+@media (min-width: 1320px) {
+  :root,
+  [data-bs-theme=light],
+  :root[data-bs-theme=light] [data-bs-theme=root],
+  :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+    --bs-grid-gap: 20px;
+  }
+}
+@media (min-width: 1640px) {
+  :root,
+  [data-bs-theme=light],
+  :root[data-bs-theme=light] [data-bs-theme=root],
+  :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+    --bs-grid-gap: 20px;
+  }
+}
+@media (min-width: 1880px) {
+  :root,
+  [data-bs-theme=light],
+  :root[data-bs-theme=light] [data-bs-theme=root],
+  :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+    --bs-grid-gap: 20px;
+  }
+}
+@media (min-width: 390px) {
+  :root,
+  [data-bs-theme=light],
+  :root[data-bs-theme=light] [data-bs-theme=root],
+  :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+    --bs-grid-margin: 16px;
+  }
+}
+@media (min-width: 480px) {
+  :root,
+  [data-bs-theme=light],
+  :root[data-bs-theme=light] [data-bs-theme=root],
+  :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+    --bs-grid-margin: 16px;
+  }
+}
+@media (min-width: 736px) {
+  :root,
+  [data-bs-theme=light],
+  :root[data-bs-theme=light] [data-bs-theme=root],
+  :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+    --bs-grid-margin: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  :root,
+  [data-bs-theme=light],
+  :root[data-bs-theme=light] [data-bs-theme=root],
+  :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+    --bs-grid-margin: 24px;
+  }
+}
+@media (min-width: 1320px) {
+  :root,
+  [data-bs-theme=light],
+  :root[data-bs-theme=light] [data-bs-theme=root],
+  :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+    --bs-grid-margin: 36px;
+  }
+}
+@media (min-width: 1640px) {
+  :root,
+  [data-bs-theme=light],
+  :root[data-bs-theme=light] [data-bs-theme=root],
+  :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+    --bs-grid-margin: 36px;
+  }
+}
+@media (min-width: 1880px) {
+  :root,
+  [data-bs-theme=light],
+  :root[data-bs-theme=light] [data-bs-theme=root],
+  :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+    --bs-grid-margin: 52px;
   }
 }
 
@@ -1198,5 +1312,18 @@ progress {
 ::selection {
   color: var(--bs-color-content-on-action-highlighted);
   background-color: var(--bs-color-action-highlighted);
+}
+
+dialog,
+[popover] {
+  padding: 0;
+  overflow: visible;
+  background: unset;
+  border: 0;
+}
+
+:not([popover])::backdrop {
+  background-color: #000;
+  opacity: 0.5;
 }
 /*# sourceMappingURL=ouds-web-reboot.rtl.css.map */
