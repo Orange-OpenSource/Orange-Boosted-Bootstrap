@@ -40,7 +40,7 @@ A container with an `[aria-busy="true"]` attribute will set all its children com
 
 ### Accessibility
 
-Everything that is a skeleton should be hidden either via an `[inert]` attribute, or via an `[aria-hidden]` attribute, a `[tabindex="-1"]` attribute, and `pointer-events: none` CSS rule if possible. This is to prevent assistive technologies from reading the content of the skeleton, and to prevent users from interacting with it. Note that inside an assistive technology won’t care about the semantic of the used elements.
+Everything that is a skeleton should be hidden to assistive technologies either via an `[inert]` attribute, or via an `[aria-hidden]` attribute, a `[tabindex="-1"]` attribute, and `pointer-events: none` CSS rule if possible. This is to prevent assistive technologies from reading the content of the skeleton, and to prevent users from interacting with it. Note that inside a skeleton zone using `[inert]`, an assistive technology won’t care about the semantic of the used elements.
 
 While loading, assistive technologies should announce that a part of the page is loading. You may use `[aria-busy="true"]` on a parent container to achieve that.
 
