@@ -42,7 +42,7 @@ jobs:
         run: npm ci
 
       - name: Run dist
-        run: npm run dist
+        run: npm run css-dev-orange && npm run js
 
       - name: Run bundlewatch
         run: npm run bundlewatch
