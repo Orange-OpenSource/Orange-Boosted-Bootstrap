@@ -14,7 +14,7 @@ import { getConfig } from '@libs/config';
 
 ## Examples
 
-When you [browse the Figma design](https://youtu.be/EnGJE0jZLPU?t=200), you may encounter some tokens that are defined as `ouds/**`. You'll find here some examples of how to use them in your codebase.
+When you [browse the Figma design](https://youtu.be/EnGJE0jZLPU?t=200), you may encounter some tokens that are defined as `ouds/**`. You’ll find here some examples of how to use them in your codebase.
 
 ### Using our utilities
 
@@ -32,7 +32,7 @@ When a token is used on Figma side, you should check if there is a utility class
   | An opacity using a standard token `ouds/opacity/*`. Be careful where the token is applied. | `ouds/opacity/medium` | `.opacity-medium` | [Opacity]([[docsref:/utilities/opacity]]) |
   | A shadow using an aggregated reference. Having a token shaped like `ouds/elevation/*` is a good sign that this reference has been used or should have been. | `ouds/elevation/**/emphasized` | `.shadow-emphasized` | [Shadow]([[docsref:/utilities/shadow]]) |
   | A spacing using a standard token `ouds/space/{scaled\|fixed}/*` or `ouds/space/{column-gap\|row-gap}/*`. | `ouds/space/scaled/2xlarge`<br/>`ouds/space/fixed/medium`<br/>`ouds/space/row-gap/none` | `.p-scaled-2xlarge`<br/>`.p-medium`<br/>`.row-gap-none` | [Spacing]([[docsref:/utilities/spacing]]) |
-  | A text using an aggregated reference. Having a token shaped like `ouds/font/*` or `font-ref/size/weight` is a good sign that this reference has been used or should have been. | `ouds/font/**/body-large`<br/>`Body/Large/Strong` | `.fs-bl`<br/>`.fs-bl.fw-bold` | [Typography]([[docsref:/utilities/typography#font-size]]) |
+  | A text using an aggregated reference. Having a token shaped like `ouds/font/*` or `font-ref/size/weight` is a good sign that this reference has been used or should have been. | `ouds/font/**/body-large`<br/>`Body/Large/Strong` | `.fs-bl`<br/>`.fs-bl.fw-bold` | [Typography]([[docsref:/utilities/text#font-size]]) |
   | A spacing using a grid token `ouds/grid/*` | `ouds/grid/column-gap`<br/>`ouds/grid/margin` | `.gap-gridgap`<br/>`.px-gridmargin` | [Spacing]([[docsref:/utilities/spacing#grid-measures]]) |
 </BsTable>
 
@@ -81,7 +81,7 @@ The [`@ouds/web-[[config:brand]]/scss/tokens/_composite.scss`]([[config:repo]]/b
 
 ### Component tokens
 
-The [`@ouds/web-[[config:brand]]/scss/tokens/_component.scss`]([[config:repo]]/blob/v[[config:current_version]]-ouds-web/packages/[[config:brand]]/scss/tokens/_component.scss) file is dedicated to component tokens. These tokens are used exclusively within components, often relying on [semantic tokens](#semantic-tokens) and [composite tokens](#composite-tokens), though they may occasionally reference [raw tokens](#raw-tokens). Unless you're sure of what you're doing, you should avoid using these tokens directly in your codebase, as they are defined for a specific component.
+The [`@ouds/web-[[config:brand]]/scss/tokens/_component.scss`]([[config:repo]]/blob/v[[config:current_version]]-ouds-web/packages/[[config:brand]]/scss/tokens/_component.scss) file is dedicated to component tokens. These tokens are used exclusively within components, often relying on [semantic tokens](#semantic-tokens) and [composite tokens](#composite-tokens), though they may occasionally reference [raw tokens](#raw-tokens). Unless you’re sure of what you’re doing, you should avoid using these tokens directly in your codebase, as they are defined for a specific component.
 
 ## General usage
 
@@ -93,10 +93,10 @@ Almost each token that is provided by the design, and that can be needed in any 
 
 We build our Sass variables following the architecture of the Figma tokens:
 - [Raw tokens](#raw-tokens): `$core-{ouds|[[config:brand]]}-{border|color|dimension|effect|elevation|font|grid|opacity}-{token-name}`.
-  - They shouldn't be used.
+  - They shouldn’t be used.
   - Ex: `core/ouds/color/functional/black` becomes `$core-ouds-color-functional-black`.
 - [Semantic tokens](#semantic-tokens): `$ouds-{border|color|dimension|effect|elevation|font|grid|opacity|size|space}-{token-name}`.
-  - Our scaled spacing, font and icon sizes tokens don't have a Sass variable, please refer to the [CSS variable](#css-variables) or to the [utilities](#utilities) instead.
+  - Our scaled spacing, font and icon sizes tokens don’t have a Sass variable, please refer to the [CSS variable](#css-variables) or to the [utilities](#utilities) instead.
   - Colors and elevation colors have also have their version using their suffix `*-light` and `*-dark`.
   - Ex: `ouds/color/content/on/brand-primary` becomes `$ouds-color-content-on-brand-primary`, `ouds/elevation/blur/emphasized` becomes `$ouds-elevation-blur-emphasized`.
 - [Composite tokens](#composite-tokens): `$ouds-elevation-{token-name}`
@@ -110,14 +110,14 @@ We build our Sass variables following the architecture of the Figma tokens:
 All the colors and the tokens suffixed by `*-mobile`, `*-tablet`, or `*-desktop` are available as CSS variables.
 
 We build our CSS variables following the architecture of the Figma tokens:
-- [Raw tokens](#raw-tokens): We don't have any raw token transformed into a CSS variable.
+- [Raw tokens](#raw-tokens): We don’t have any raw token transformed into a CSS variable.
 - [Semantic tokens](#semantic-tokens): `--bs-{color|elevation|font|icon|space}-{token-name}`.
-  - Our scaled spacing, are only declared as CSS variables `--bs-space-scaled-{size}`. It's equivalent to `ouds/space/scaled/{size}` in Figma. Prefer using our [utilities](#utilities) when possible.
-  - Our colors and elevation colors are declared as CSS variables `--bs-color-{token-name}`. It's equivalent to `ouds/color/{token-name}` in Figma. Prefer using our [utilities](#utilities) when possible.
-  - Our icon sizes are declared as CSS variables `--bs-icon-{size}`. It's equivalent to `ouds/size/icon/{size}` in Figma. Prefer using our [utilities](#utilities) when possible.
-  - Our font tokens are aggregated in a mixin [`get-font-size()`]([[docsref:/foundation/typography/#text-style-for-custom-components]]) that takes the font reference name as a parameter. So `ouds/font/**/body-large` are aggregated via `get-font-size("body-large")`. Don't use our CSS variables for font alone.
-- [Composite tokens](#composite-tokens): We don't have any composite token transformed into a CSS variable, but they are available as [Sass variables](#sass-variables).
-- [Component tokens](#component-tokens): We don't have any component token transformed into a CSS variable. The only CSS variables that we have for components are the ones that we need to build the component on our side.
+  - Our scaled spacing, are only declared as CSS variables `--bs-space-scaled-{size}`. It’s equivalent to `ouds/space/scaled/{size}` in Figma. Prefer using our [utilities](#utilities) when possible.
+  - Our colors and elevation colors are declared as CSS variables `--bs-color-{token-name}`. It’s equivalent to `ouds/color/{token-name}` in Figma. Prefer using our [utilities](#utilities) when possible.
+  - Our icon sizes are declared as CSS variables `--bs-icon-{size}`. It’s equivalent to `ouds/size/icon/{size}` in Figma. Prefer using our [utilities](#utilities) when possible.
+  - Our font tokens are aggregated in a mixin [`get-font-size()`]([[docsref:/foundation/typography/#text-style-for-custom-components]]) that takes the font reference name as a parameter. So `ouds/font/**/body-large` are aggregated via `get-font-size("body-large")`. Don’t use our CSS variables for font alone.
+- [Composite tokens](#composite-tokens): We don’t have any composite token transformed into a CSS variable, but they are available as [Sass variables](#sass-variables).
+- [Component tokens](#component-tokens): We don’t have any component token transformed into a CSS variable. The only CSS variables that we have for components are the ones that we need to build the component on our side.
 
 ### Utilities
 
