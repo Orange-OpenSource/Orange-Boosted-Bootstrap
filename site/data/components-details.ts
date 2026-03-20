@@ -129,6 +129,13 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `<a class="link" href="#">Label</a>`
   },
   {
+    name: 'Navigation button',
+    slug: 'navigation-button',
+    link: 'buttons#navigation-button',
+    category: 'Actions',
+    snippet: `<a class="btn btn-next btn-default" href="#">Next</a>`
+  },
+  {
     name: 'Password input',
     slug: 'password-input',
     category: 'Control',
