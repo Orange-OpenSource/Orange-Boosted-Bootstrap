@@ -491,10 +491,10 @@ To manually mark a checkbox as invalid, add `aria-invalid="true"` to a `.control
   </fieldset>`} />
 
 <BootstrapCompatibility>
-To display an invalid checkbox, add `aria-invalid="true"` to a `.form-check-input`.
+To display an invalid checkbox, add `.is-invalid` to a `.form-check-input`.
 
 <Example buttonLabel="Bootstrap compatibility: invalid checkboxes" class="bd-example-indeterminate" addStackblitzJs code={`<div class="form-check">
-    <input class="form-check-input" aria-invalid="true" type="checkbox" value="" id="checkInvalid" />
+    <input class="form-check-input is-invalid" type="checkbox" value="" id="checkInvalid" />
     <label class="form-check-label" for="checkInvalid">
       Default invalid checkbox (Bootstrap compatible)
     </label>

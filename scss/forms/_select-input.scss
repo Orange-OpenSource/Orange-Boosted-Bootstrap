@@ -274,8 +274,11 @@
     --#{$prefix}text-input-border-width-left: #{$ouds-text-input-border-width-focus};
   }
 
-  &:is(:user-invalid, [aria-invalid="true"]) {
-    --#{$prefix}text-input-background-color: transparent;
+  // see https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3465
+  @if $enable-bootstrap-compatibility {
+    &:is(:user-invalid, [aria-invalid="true"]) {
+      --#{$prefix}text-input-background-color: transparent;
+    }
   }
 }
 
