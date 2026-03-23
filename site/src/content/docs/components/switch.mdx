@@ -339,10 +339,10 @@ To automatically display an error text on a single switch item, enclose it insid
 
 <BootstrapCompatibility>
 
-To display an invalid switch, add `aria-invalid="true"` to a `.form-check-input`.
+To display an invalid switch, add `.is-invalid` to a `.form-check-input`.
 
 <Example buttonLabel="Bootstrap compatibility: invalid single switch" code={`<div class="form-check form-switch">
-    <input class="form-check-input" aria-invalid="true" type="checkbox" value="" id="checkInvalid" role="switch" />
+    <input class="form-check-input is-invalid" type="checkbox" value="" id="checkInvalid" role="switch" />
     <label class="form-check-label" for="checkInvalid">
       Default invalid switch (Bootstrap compatible)
     </label>
@@ -403,6 +403,21 @@ If the switch items list is part of a form, add a `<fieldset>` with the class `.
     </div>
     <p class="control-item-error-message" id="switchInvalidErrorTextGroup">Incompatible choices.</p>
   </fieldset>`} />
+
+### Skeleton
+
+<SkeletonRedirect component="switch item" />
+
+<Example buttonLabel="switch item skeleton" code={`<div aria-busy="true" inert>
+    <div class="switch-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchSkeleton" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="switchSkeleton">Skeleton switch</label>
+      </div>
+    </div>
+  </div>`} />
 
 ## Fieldset `<legend>`
 

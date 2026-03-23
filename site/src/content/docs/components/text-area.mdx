@@ -207,6 +207,19 @@ To manually mark a  text area as invalid, add `aria-invalid="true"` to a `.text-
     </a>
   </div>`} />
 
+### Skeleton
+
+<SkeletonRedirect component="text area" />
+
+<Example buttonLabel="text area skeleton" code={`<div aria-busy="true" inert>
+    <div class="text-area">
+      <div class="text-area-container">
+        <label for="skeletonTextArea">Additional comments</label>
+        <textarea class="text-area-field" id="skeletonTextArea"></textarea>
+      </div>
+    </div>
+  </div>`} />
+
 ## Mandatory field indication
 
 <MandatoryFieldIndication componentName="text area" />

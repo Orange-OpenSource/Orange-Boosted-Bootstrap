@@ -1,0 +1,14 @@
+---
+import { getVersionedDocsPath } from '@libs/path'
+
+/*
+ * Outputs a paragraph redirecting to skeleton documentation
+ */
+interface Props {
+  component: string
+}
+
+const { component } = Astro.props
+---
+
+<p>To set the {component} in skeleton state, it needs to be wrapped in an <code>[aria-busy="true"]</code> container that also has the <code>inert</code> attribute. To get more information, please refer to the <a href={getVersionedDocsPath('/components/skeleton/')}>skeleton documentation</a>.</p>

@@ -453,10 +453,10 @@ To manually mark a radio button as invalid, add the `aria-invalid="true"` attrib
 
 <BootstrapCompatibility>
 
-To display an invalid radio button, add `aria-invalid="true"` to a `.form-check-input`.
+To display an invalid radio button, add `.is-invalid` to a `.form-check-input`.
 
 <Example buttonLabel="Bootstrap compatibility: invalid radio buttons" code={`<div class="form-check">
-    <input class="form-check-input" aria-invalid="true" type="radio" value="" id="radioInvalidBootstrap" />
+    <input class="form-check-input is-invalid" type="radio" value="" id="radioInvalidBootstrap" />
     <label class="form-check-label" for="radioInvalidBootstrap">
       Invalid radio
     </label>
@@ -512,6 +512,31 @@ If the layout is horizontal, the `<fieldset>` must enclose the flex containers s
     </div>
     <p class="control-item-error-message" id="radioLayoutRowInvalidErrorText">Please make a choice.</p>
   </fieldset>`} />
+
+### Skeleton
+
+<SkeletonRedirect component="radio button item" />
+
+<Example buttonLabel="radio button item skeleton" code={`<div aria-busy="true" inert>
+    <fieldset class="control-items-list">
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="radio" value="" id="radioSkeleton" name="radioSkeleton" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="radioSkeleton">Default radio button</label>
+        </div>
+      </div>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input checked class="control-item-indicator" type="radio" value="" id="radioSkeleton2" name="radioSkeleton" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="radioSkeleton2">Checked radio button</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>`} />
 
 ## Fieldset `<legend>`
 

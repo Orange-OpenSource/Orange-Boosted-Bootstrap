@@ -128,6 +128,7 @@
     max-height: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+    pointer-events: none;
     transform: translate(0, -50%);
     @include transition(font-size .15s ease-in-out, top .15s ease-out);
   }
@@ -271,6 +272,13 @@
     --#{$prefix}text-input-border-width-top: #{$ouds-text-input-border-width-focus};
     --#{$prefix}text-input-border-width-right: #{$ouds-text-input-border-width-focus};
     --#{$prefix}text-input-border-width-left: #{$ouds-text-input-border-width-focus};
+  }
+
+  // see https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3465
+  @if $enable-bootstrap-compatibility {
+    &:is(:user-invalid, [aria-invalid="true"]) {
+      --#{$prefix}text-input-background-color: transparent;
+    }
   }
 }
 

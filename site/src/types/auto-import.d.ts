@@ -22,6 +22,7 @@ export declare global {
   export const MandatoryFieldIndication: typeof import('@shortcodes/MandatoryFieldIndication.astro').default
   export const Placeholder: typeof import('@shortcodes/Placeholder.astro').default
   export const ScssDocs: typeof import('@shortcodes/ScssDocs.astro').default
+  export const SkeletonRedirect: typeof import('@shortcodes/SkeletonRedirect.astro').default
   export const SvgDocs: typeof import('@shortcodes/SvgDocs.astro').default
   export const Table: typeof import('@shortcodes/Table.astro').default
 }
