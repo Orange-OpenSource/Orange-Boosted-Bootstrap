@@ -1,6 +1,6 @@
 ---
 title: Links
-description: Use OUDS Web’s custom link styles for navigational elements, enabling users to move between pages, sections, or external resources.
+description: Link is a UI element that allows to navigate from one location to another.
 aliases:
   - "/docs/components/links/"
 toc: true
@@ -16,6 +16,10 @@ import { getMode } from '@libs/sass-variables'
 </Callout>
 
 ## Overview
+
+Link is a UI element that allows to navigate from one location to another, either within the same page or across different pages in the same resource, or to an external resource.
+
+The link’s main function is navigation, and it visually and semantically conveys its interactive nature.
 
 Use OUDS Web `.link` class to set up styles such as padding and content alignment to display standalone links. Standalone links should not be used inline within a sentence or a paragraph. In that case, use only a `<a>` tag as described in the [reboot page]([[docsref:/foundation/reboot#links]]).
 
@@ -129,6 +133,14 @@ However, if the disabled link conveys useful information for users, it must rema
 
 <Example code={`<div><a href="#" class="link" tabindex="-1" aria-disabled="true">Disabled link without any useful information</a></div>
   <div><a href="#" class="link" aria-disabled="true">Keyboard focusable disabled link</a></div>`} />
+
+### Skeleton
+
+<SkeletonRedirect component="link" />
+
+<Example buttonLabel="link skeleton" code={`<div aria-busy="true" inert>
+    <a class="link" href="#">Very long link</a>
+  </div>`} />
 
 ## Sizes
 
