@@ -192,4 +192,13 @@ export default () => {
       }, false)
     })
   // storybook-end offcanvas
+
+  // -------------------------------
+  // Table
+  // -------------------------------
+  // Indeterminate checkbox in table example in docs and StackBlitz
+  // storybook-start table
+  const tableSelectAll = document.querySelector('.has-row-selection #tableSelectAll')
+  tableSelectAll.indeterminate = true
+  // storybook-end table
 }

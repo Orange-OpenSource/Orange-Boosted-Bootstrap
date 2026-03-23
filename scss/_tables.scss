@@ -1,6 +1,11 @@
 //
 // Basic OUDS Web table
 //
+%row-selection {
+  width: calc($ouds-checkbox-size-min-width + $core-ouds-dimension-50);
+  padding: 0;
+  vertical-align: middle;
+}
 
 .table {
   // Reset needed for nesting tables
@@ -71,9 +76,14 @@
 
   // OUDS mod
   // When using checkboxes in the first column, force width to ensure correct spacing on this column
-  &.has-checkbox tr > :first-child {
-    width: $spacer * 2;
-    max-width: $spacer * 2;
+  &.has-row-selection tr > :first-child {
+    @extend %row-selection;
+  }
+
+  @if $enable-bootstrap-compatibility {
+    &.has-checkbox tr > :first-child {
+      @extend %row-selection;
+    }
   }
 
   // Use negative margins on icons in tables to preserve row height
@@ -118,10 +128,16 @@
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
 
 // For rows
-.table-striped {
+.table-zebra {
   > tbody > tr:nth-of-type(#{$table-striped-order}) > * {
     --#{$prefix}table-color-type: var(--#{$prefix}table-striped-color);
     --#{$prefix}table-bg-type: var(--#{$prefix}table-striped-bg);
+  }
+}
+
+@if $enable-bootstrap-compatibility {
+  .table-striped {
+    @extend .table-zebra;
   }
 }
 

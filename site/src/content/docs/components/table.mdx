@@ -8,7 +8,12 @@ toc: true
 ---
 
 import { getData } from '@libs/data'
-import { getConfig } from '@libs/config'
+
+<Callout type="negative" title="Draft component">
+  The table component is not yet designed, and this component is only a draft for the moment. It will be updated in the future with the final design and will certainly need adjustments regarding the DOM. Use it as a temporary component to speed up your development.
+
+  Please refer to the [Tables in the Boosted documentation](https://boosted.orange.com/docs/content/tables/) to have a full view of the header component and its variations. You’ll only need to adapt the utilities inside the DOM.
+</Callout>
 
 ## Overview
 
@@ -48,7 +53,340 @@ Using the most basic table markup, here’s how `.table`-based tables look in OU
 
 To make a table accessible, you should respect these main rules:
 
-- add a `scope="col"`, `scope="row"`, `scope="colgroup"`, or `scope="rowgroup"` attribute to the `<th>` tags when needed to make the content of table readable by screen readers.
-- add a `<caption>` on each table. If the table doesn’t have a caption or if the caption is not enough informative to describe the table, add an `aria-label` attribute to describe the table content. The `aria-label` should match the following pattern: `aria-label="Description of table data - Description of table metadata (e.g.: table with one level of column header)"`. The metadata is mandatory for complex tables.
+- Add a `scope="col"`, `scope="row"`, `scope="colgroup"`, or `scope="rowgroup"` attribute to the `<th>` tags when needed to make the content of table readable by screen readers.
+- Add a `<caption>` on each table. If the table doesn’t have a caption or if the caption is not enough informative to describe the table, add an `aria-label` attribute to describe the table content. The `aria-label` should match the following pattern: `aria-label="Description of table data - Description of table metadata (e.g.: table with one level of column header)"`. The metadata is mandatory for complex tables.
 
 See [more information about the tables structures](https://a11y-guidelines.orange.com/en/web/develop/textual-content/#structuring-data-tables).
+
+## Variants
+
+### Zebra
+
+To create a striped table, add the `.table-zebra` modifier class to the base `.table` class. This will add a background color to even rows (not including the header) to improve readability.
+
+<Example buttonLabel="zebra table" code={`<table class="table table-zebra">
+    <caption class="visually-hidden">OUDS Web zebra table</caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+  </table>`} />
+
+## Responsive tables
+
+Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a `.table` with `.table-responsive`. Or, pick a maximum breakpoint with which to have a responsive table up to by using `.table-responsive{-sm|-md|-lg|-xl|-xxl}`.
+
+<Callout type="warning">
+    ##### Vertical clipping/truncation
+
+    Responsive tables make use of `overflow-y: hidden`, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.
+</Callout>
+
+### Always responsive
+
+Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
+
+<Example showMarkup={false} code={`<div class="table-responsive">
+    <table class="table">
+      <caption class="visually-hidden">Boosted responsive table</caption>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>`} />
+
+<Code buttonLabel="table responsive" lang="html" code={`
+  <div class="table-responsive">
+    <table class="table">
+      ...
+    </table>
+  </div>`} />
+
+### Breakpoint specific
+
+Use `.table-responsive{-xs|-sm|-md|-lg|-xl|-2xl|3xl}` as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
+
+**These tables may appear broken until their responsive styles apply at specific viewport widths.**
+
+<details class="mt-medium mb-2xlarge">
+<summary>Example of tables responsive up to particular breakpoint</summary>
+{getData('breakpoints').map((breakpoint) => {
+return (
+<div class="bd-example">
+<div class={`table-responsive${breakpoint.abbr}`}>
+<table class="table">
+<caption class="visually-hidden">Boosted responsive table for {breakpoint.abbr} breakpoint and under</caption>
+<thead>
+<tr>
+<th scope="col">#</th>
+<th scope="col">Heading</th>
+<th scope="col">Heading</th>
+<th scope="col">Heading</th>
+<th scope="col">Heading</th>
+<th scope="col">Heading</th>
+<th scope="col">Heading</th>
+<th scope="col">Heading</th>
+<th scope="col">Heading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">1</th>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+</tr>
+<tr>
+<th scope="row">2</th>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+</tr>
+<tr>
+<th scope="row">3</th>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+)
+})}
+
+<Code buttonLabel="tables responsive up to particular breakpoint" lang="html" code={getData('breakpoints').map((breakpoint) => `<div class="table-responsive${breakpoint.abbr}">
+    <table class="table">
+    ...
+    </table>
+  </div>`)} />
+
+</details>
+
+## Rich content tables
+
+### Row selection
+
+When using checkboxes, radio buttons or switches in tables, you should add the `.has-row-selection` modifier class to the base `.table` class. This will add the necessary padding to the first column to accommodate these control items. The control items should be placed in the first column, and the type of control items should obviously not be mixed.
+
+For the row selection purpose, you should use [standalone checkboxes]([[docsref:/components/checkbox#standalone]]), [standalone radio buttons]([[docsref:/components/radio-utton#standalone]]), or [standalone switches]([[docsref:/components/switch#standalone]]) with `.visually-hidden` labels describing their use.
+
+If the control items are checkboxes, the first cell of the header sould contain a checkbox to select or deselect all rows. If some rows are selected, the header checkbox should be in an [indeterminate state]([[docsref:/components/checkbox#indeterminate]]) to indicate this.
+
+<Example buttonLabel="table with row selection" code={`<table class="table has-row-selection">
+    <caption class="visually-hidden">OUDS Web table with row selection</caption>
+    <thead>
+      <tr>
+        <th scope="col">
+          <label class="checkbox-standalone">
+            <input class="control-item-indicator" type="checkbox" value="all" id="tableSelectAll" />
+            <span class="visually-hidden">Select all rows</span>
+          </label>
+        </th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">
+          <label class="checkbox-standalone">
+            <input class="control-item-indicator" type="checkbox" value="1" checked />
+            <span class="visually-hidden">Select row 1</span>
+          </label>
+        </th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <label class="checkbox-standalone">
+            <input class="control-item-indicator" type="checkbox" value="2" />
+            <span class="visually-hidden">Select row 2</span>
+          </label>
+        </th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <label class="checkbox-standalone">
+            <input class="control-item-indicator" type="checkbox" value="3" checked />
+            <span class="visually-hidden">Select row 3</span>
+          </label>
+        </th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+  </table>`} />
+
+<Example buttonLabel="table with radio buttons" code={`<table class="table has-row-selection">
+    <caption class="visually-hidden">OUDS Web table with radio buttons</caption>
+    <thead>
+      <tr>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">
+          <label class="radio-button-standalone">
+            <input class="control-item-indicator" type="radio" name="radio1" value="1" />
+            <span class="visually-hidden">Select row 1</span>
+          </label>
+        </th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <label class="radio-button-standalone">
+            <input class="control-item-indicator" type="radio" name="radio1" value="2" checked />
+            <span class="visually-hidden">Select row 2</span>
+          </label>
+        </th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <label class="radio-button-standalone">
+            <input class="control-item-indicator" type="radio" name="radio1" value="3" />
+            <span class="visually-hidden">Select row 3</span>
+          </label>
+        </th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+  </table>`} />
+
+<Example buttonLabel="table with switches" code={`<table class="table has-row-selection">
+    <caption class="visually-hidden">OUDS Web table with switches</caption>
+    <thead>
+      <tr>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">
+          <label class="switch-standalone">
+            <input class="control-item-indicator" type="checkbox" role="switch"  value="1" />
+            <span class="visually-hidden">Select row 1</span>
+          </label>
+        </th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <label class="switch-standalone">
+            <input class="control-item-indicator" type="checkbox" role="switch"  value="2" checked />
+            <span class="visually-hidden">Select row 2</span>
+          </label>
+        </th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <label class="switch-standalone">
+            <input class="control-item-indicator" type="checkbox" role="switch"  value="3" />
+            <span class="visually-hidden">Select row 3</span>
+          </label>
+        </th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+  </table>`} />

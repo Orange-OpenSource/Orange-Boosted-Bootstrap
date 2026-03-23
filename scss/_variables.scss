@@ -788,8 +788,8 @@ $mark-bg:                     $ouds-color-action-highlighted-light !default; // 
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:                  1rem !default; // OUDS mod
-$table-cell-padding-x:                  1rem !default; // OUDS mod
+$table-cell-padding-y:                  $core-ouds-dimension-200 !default; // OUDS mod
+$table-cell-padding-x:                  $core-ouds-dimension-200 !default; // OUDS mod
 //$table-cell-padding-y-sm:               .5625rem !default; // OUDS mod
 //$table-cell-padding-x-sm:               $table-cell-padding-x !default; // OUDS mod
 
@@ -806,7 +806,7 @@ $table-th-font-weight:                  null !default;
 
 $table-striped-color:                   $table-color !default;
 $table-striped-bg-factor:               .035 !default; // OUDS mod: equivalent to `$gray-200`
-$table-striped-bg:                      rgba(var(--#{$prefix}black-rgb), var(--#{$prefix}table-striped-bg-factor)) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), $table-striped-bg-factor)`
+$table-striped-bg:                      var(--#{$prefix}color-bg-secondary) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), $table-striped-bg-factor)`
 $table-variant-striped-bg-factor:       .08 !default; // OUDS mod
 
 $table-active-color:                    $table-color !default;
@@ -824,8 +824,8 @@ $table-header-border-width:             2px !default;  // OUDS mod
 $table-border-width:                    1px !default;  // OUDS mod
 $table-border-color:                    var(--#{$prefix}color-border-default) !default; // OUDS mod: instead of `var(--#{$prefix}border-color)`
 
-$table-striped-order:                   odd !default;
-$table-striped-columns-order:           even !default;
+$table-striped-order:                   even !default; // OUDS mod
+$table-striped-columns-order:           odd !default; // OUDS mod
 
 $table-group-separator-color:           currentcolor !default;
 
