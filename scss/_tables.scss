@@ -11,7 +11,7 @@
   // End of reset
   --#{$prefix}table-color: #{$table-color};
   --#{$prefix}table-bg: #{$table-bg};
-  --#{$prefix}table-border-color: #{$table-border-color};
+  --#{$prefix}table-border-color: #{$table-border-color}; // OK
   --#{$prefix}table-accent-bg: #{$table-accent-bg};
   --#{$prefix}table-striped-color: #{$table-striped-color};
   --#{$prefix}table-striped-bg: #{$table-striped-bg};
@@ -27,7 +27,14 @@
   // OUDS mod
   //// Only rows have border
   //// Set line-height everywhere
-  tr {
+
+  // stylelint-disable selector-no-qualifying-type
+  th[scope="col"],
+  th[scope="colgroup"] {
+    border-bottom: $table-header-border-width solid var(--#{$prefix}table-border-color);
+  }
+
+  tr  {
     border-bottom: $table-border-width solid var(--#{$prefix}table-border-color);
   }
 
@@ -95,12 +102,12 @@
 // Condensed table w/ half padding
 //
 
-.table-sm {
-  // stylelint-disable-next-line selector-max-universal
-  > :not(caption) > * > * {
-    padding: $table-cell-padding-y-sm $table-cell-padding-x-sm calc($table-cell-padding-y-sm + 1px); // OUDS mod
-  }
-}
+//.table-sm {
+//  // stylelint-disable-next-line selector-max-universal
+//  > :not(caption) > * > * {
+//    padding: $table-cell-padding-y-sm $table-cell-padding-x-sm calc($table-cell-padding-y-sm + 1px); // OUDS mod
+//  }
+//}
 
 // OUDS mod: no .table-bordered
 

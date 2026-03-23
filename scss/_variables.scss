@@ -788,10 +788,10 @@ $mark-bg:                     $ouds-color-action-highlighted-light !default; // 
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:                  .875rem !default; // OUDS mod
-$table-cell-padding-x:                  $spacer * .5 !default; // OUDS mod
-$table-cell-padding-y-sm:               .5625rem !default; // OUDS mod
-$table-cell-padding-x-sm:               $table-cell-padding-x !default; // OUDS mod
+$table-cell-padding-y:                  1rem !default; // OUDS mod
+$table-cell-padding-x:                  1rem !default; // OUDS mod
+//$table-cell-padding-y-sm:               .5625rem !default; // OUDS mod
+//$table-cell-padding-x-sm:               $table-cell-padding-x !default; // OUDS mod
 
 $table-cell-icon-margin-top:            -.75rem !default; // OUDS mod
 $table-cell-icon-margin-bottom:         -.625rem !default; // OUDS mod
@@ -820,7 +820,8 @@ $table-hover-bg:                        rgba(var(--#{$prefix}emphasis-color-rgb)
 $table-variant-hover-bg-factor:         .2 !default; // OUDS mod
 
 $table-border-factor:                   .4 !default; // OUDS mod
-$table-border-width:                    calc(var(--#{$prefix}border-width) * .5) !default;  // OUDS mod
+$table-header-border-width:             2px !default;  // OUDS mod
+$table-border-width:                    1px !default;  // OUDS mod
 $table-border-color:                    var(--#{$prefix}color-border-default) !default; // OUDS mod: instead of `var(--#{$prefix}border-color)`
 
 $table-striped-order:                   odd !default;

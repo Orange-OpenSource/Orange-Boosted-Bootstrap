@@ -1,5 +1,5 @@
 ---
-title: Tables
+title: Table
 description: Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with OUDS Web.
 aliases:
   - "/docs/content/tables/"
@@ -7,4 +7,48 @@ aliases:
 toc: true
 ---
 
-<CalloutSoon type="page" />
+import { getData } from '@libs/data'
+import { getConfig } from '@libs/config'
+
+## Overview
+
+Due to the extensive use of `<table>` elements in third-party widgets such as calendars and date pickers, OUDS Web’s tables are **opt-in**. This means that you must add the base class `.table` to any `<table>`, to benefit from OUDS Web's table styles which you can then extend with our optional modifier classes or custom styles. All table styles are not inherited in OUDS Web, meaning any nested tables can be styled independent of the parent.
+
+Using the most basic table markup, here’s how `.table`-based tables look in OUDS Web.
+
+<Example buttonLabel="basic table" code={`<table class="table">
+    <caption class="visually-hidden">OUDS Web basic table</caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+  </table>`} />
+
+## Accessibility
+
+To make a table accessible, you should respect these main rules:
+
+- add a `scope="col"`, `scope="row"`, `scope="colgroup"`, or `scope="rowgroup"` attribute to the `<th>` tags when needed to make the content of table readable by screen readers.
+- add a `<caption>` on each table. If the table doesn’t have a caption or if the caption is not enough informative to describe the table, add an `aria-label` attribute to describe the table content. The `aria-label` should match the following pattern: `aria-label="Description of table data - Description of table metadata (e.g.: table with one level of column header)"`. The metadata is mandatory for complex tables.
+
+See [more information about the tables structures](https://a11y-guidelines.orange.com/en/web/develop/textual-content/#structuring-data-tables).
