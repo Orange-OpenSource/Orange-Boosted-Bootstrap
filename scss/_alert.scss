@@ -10,7 +10,7 @@
 // Alert component
 .alert {
   // Default to neutral variant
-  --#{$prefix}alert-label-color: #{$ouds-color-content-default};
+  --#{$prefix}alert-text-color: #{$ouds-color-content-default};
   --#{$prefix}alert-icon-color: #{$ouds-color-content-default};
   --#{$prefix}alert-bg: #{$ouds-color-surface-secondary};
   --#{$prefix}alert-border-color: #{$ouds-color-border-default};
@@ -18,6 +18,7 @@
   display: flex;
   gap: $ouds-alert-space-column-gap;
   align-items: flex-start;
+  color: var(--#{$prefix}alert-text-color);
   @include border-radius(var(--#{$prefix}alert-border-radius));
 }
 
@@ -35,10 +36,6 @@
 
   &:has(.alert-container > .link) {
     min-height: $ouds-alert-size-min-height-bottom-action-placement;
-  }
-
-  .alert-label {
-    color: $ouds-color-content-default;
   }
 
   // To avoid overflow: hidden that hides the focus
@@ -108,7 +105,6 @@
   display: flex;
   flex-direction: column;
   gap: $ouds-alert-space-row-gap;
-  color: $ouds-color-content-muted;
 
   > * { // To handle any content inside this text-container.
     max-width: var(--#{$prefix}font-max-width-label-medium);
@@ -133,7 +129,7 @@
         height: px-to-rem(20px);
         height: 1lh;
         content: "";
-        background-color: $ouds-color-content-muted;
+        background-color: currentcolor;
         mask-image: $bullet-list-marker-level-0;
         mask-repeat: no-repeat;
         mask-position: center right;
@@ -170,49 +166,68 @@
   margin-bottom: 0;
   @include get-font-size("label-large");
   font-weight: $ouds-font-weight-web-label-moderate;
-  color: var(--#{$prefix}alert-label-color);
 }
 
 // Variants
 .alert-accent {
-  --#{$prefix}alert-label-color: #{$ouds-color-content-default};
+  --#{$prefix}alert-text-color: #{$ouds-color-content-default};
   --#{$prefix}alert-icon-color: #{$ouds-color-content-status-accent};
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-accent-muted};
   --#{$prefix}alert-border-color: #{$ouds-color-border-status-accent};
+
+  &.alert-message {
+    --#{$prefix}alert-text-color: #{$ouds-color-content-on-status-accent-muted};
+  }
 }
 
 .alert-negative {
-  --#{$prefix}alert-label-color: #{$ouds-color-content-status-negative};
+  --#{$prefix}alert-text-color: #{$ouds-color-content-status-negative};
   --#{$prefix}alert-icon: var(--#{$prefix}error-icon);
   --#{$prefix}alert-icon-color: #{$ouds-color-content-status-negative};
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-negative-muted};
   --#{$prefix}alert-border-color: #{$ouds-color-border-status-negative};
+
+  &.alert-message {
+    --#{$prefix}alert-text-color: #{$ouds-color-content-on-status-negative-muted};
+  }
 }
 
 .alert-positive {
-  --#{$prefix}alert-label-color: #{$ouds-color-content-status-positive};
+  --#{$prefix}alert-text-color: #{$ouds-color-content-status-positive};
   --#{$prefix}alert-icon: var(--#{$prefix}success-icon);
   --#{$prefix}alert-icon-color: #{$ouds-color-content-status-positive};
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-positive-muted};
   --#{$prefix}alert-border-color: #{$ouds-color-border-status-positive};
+
+  &.alert-message {
+    --#{$prefix}alert-text-color: #{$ouds-color-content-on-status-positive-muted};
+  }
 }
 
 .alert-info {
-  --#{$prefix}alert-label-color: #{$ouds-color-content-status-info};
+  --#{$prefix}alert-text-color: #{$ouds-color-content-status-info};
   --#{$prefix}alert-icon: var(--#{$prefix}info-icon);
   --#{$prefix}alert-icon-color: #{$ouds-color-content-status-info};
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-info-muted};
   --#{$prefix}alert-border-color: #{$ouds-color-border-status-info};
+
+  &.alert-message {
+    --#{$prefix}alert-text-color: #{$ouds-color-content-on-status-info-muted};
+  }
 }
 
 .alert-warning {
-  --#{$prefix}alert-label-color: #{$ouds-color-content-status-warning};
+  --#{$prefix}alert-text-color: #{$ouds-color-content-status-warning};
   --#{$prefix}alert-icon: var(--#{$prefix}warning-icon);
   --#{$prefix}alert-icon-color: var(--#{$prefix}icon-color-content-status-warning-external-shape);
   --#{$prefix}alert-icon-internal: var(--#{$prefix}warning-internal-icon);
   --#{$prefix}alert-icon-internal-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-warning-muted};
   --#{$prefix}alert-border-color: #{$ouds-color-border-status-warning};
+
+  &.alert-message {
+    --#{$prefix}alert-text-color: #{$ouds-color-content-on-status-warning-muted};
+  }
 }
 
 // Bootstrap compatibility

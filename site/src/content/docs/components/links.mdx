@@ -130,6 +130,14 @@ However, if the disabled link conveys useful information for users, it must rema
 <Example code={`<div><a href="#" class="link" tabindex="-1" aria-disabled="true">Disabled link without any useful information</a></div>
   <div><a href="#" class="link" aria-disabled="true">Keyboard focusable disabled link</a></div>`} />
 
+### Skeleton
+
+<SkeletonRedirect component="link" />
+
+<Example buttonLabel="link skeleton" code={`<div aria-busy="true" inert>
+    <a class="link" href="#">Very long link</a>
+  </div>`} />
+
 ## Sizes
 
 Links are available in two sizes. Add `.link-small` for small size.
