@@ -25,7 +25,7 @@ import { getMode } from '@libs/sass-variables'
 <ul class="list-unstyled row row-cols-1 row-cols-sm-2">
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top bg-inverse-low" aria-hidden="true">
+      <div class="card-top bg-inverse-low" inert>
         <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
           <p class="chip chip-filter mb-none">
             <input type="checkbox" id="filterCheck" checked tabindex="-1" />
@@ -38,7 +38,7 @@ import { getMode } from '@libs/sass-variables'
   </li>
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top bg-inverse-low" aria-hidden="true">
+      <div class="card-top bg-inverse-low" inert>
         <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
           <p class="chip chip-suggestion mb-none">
             <button class="chip-interactive" tabindex="-1">Suggestion</button>
@@ -226,7 +226,7 @@ Make sure to provide an accessible text for each chip.
 
 ### States
 
-#### Disabled state
+#### Disabled
 
 Add `disabled` attribute either on the input or on the button element to disable the chip.
 
@@ -251,6 +251,26 @@ The following example shows every possible renderings depending on the filter ch
       </button>
     </li>
   </ul>`} />
+
+#### Skeleton
+
+<SkeletonRedirect component="filter chip" />
+
+<Example buttonLabel="filter chip skeleton" code={`<div aria-busy="true" inert>
+    <ul class="chips-container">
+      <li class="chip chip-filter">
+        <input type="checkbox" id="skeletonFilter" checked />
+        <label class="chip-interactive" for="skeletonFilter">
+          Filter chip
+        </label>
+      </li>
+      <li class="chip chip-filter">
+        <button class="chip-interactive">
+          Filter chip
+        </button>
+      </li>
+    </ul>
+  </div>`} />
 
 ### JavaScript
 
@@ -368,7 +388,7 @@ Make sure to provide an accessible text for each chip.
 
 ### States
 
-#### Disabled state
+#### Disabled
 
 Add `disabled` attribute on the button element to disable the chip.
 
@@ -395,6 +415,25 @@ The following example shows every possible renderings depending on the suggestio
       </button>
     </li>
   </ul>`} />
+
+#### Skeleton
+
+<SkeletonRedirect component="suggestion chip" />
+
+<Example buttonLabel="suggestion chip skeleton" code={`<div aria-busy="true" inert>
+    <ul class="chips-container">
+      <li class="chip chip-suggestion">
+        <button class="chip-interactive">
+          Thanks.
+        </button>
+      </li>
+      <li class="chip chip-suggestion">
+        <button class="chip-interactive">
+          Suggestion chip
+        </button>
+      </li>
+    </ul>
+  </div>`} />
 
 ## Layout
 
