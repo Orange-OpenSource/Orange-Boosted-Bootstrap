@@ -155,7 +155,7 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <svg class="text-status-accent decorative-small-icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-      </svg> `
+      </svg>`
   },
   {
     name: 'Inline alert',
@@ -181,24 +181,33 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `<a class="link" href="#">Label</a>`
   },
   {
+    name: 'Navigation button',
+    slug: 'navigation-button',
+    link: 'buttons#navigation-button',
+    category: 'Actions',
+    snippet: `<a class="btn btn-next btn-default" href="#">Next</a>`
+  },
+  {
     name: 'Password input',
     slug: 'password-input',
     category: 'Control',
     snippet: `
-      <div class="text-input w-75">
-        <div class="text-input-container" style="min-width: unset">
-          <label for="passwordInput[[id_prefix]]">Label</label>
-          <div class="input-container">
-            <input type="password" id="passwordInput[[id_prefix]]" class="text-input-field" placeholder=" " value="xxxxxx">
+      <form class="w-75">
+        <div class="text-input">
+          <div class="text-input-container" style="min-width: unset">
+            <label for="passwordInput[[id_prefix]]">Label</label>
+            <div class="input-container">
+              <input type="password" id="passwordInput[[id_prefix]]" class="text-input-field" placeholder=" " value="xxxxxx">
+            </div>
+            <button class="btn btn-minimal btn-icon">
+              <svg aria-hidden="true">
+                <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}"/>
+              </svg>
+              <span class="visually-hidden">Show password</span>
+            </button>
           </div>
-          <button class="btn btn-minimal btn-icon">
-            <svg aria-hidden="true">
-              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}"/>
-            </svg>
-            <span class="visually-hidden">Show password</span>
-          </button>
         </div>
-      </div>`
+      </form>` // form element is used here to prevent the browser from asking to save the password when leaving the page
   },
   {
     name: 'Radio button',
@@ -228,6 +237,11 @@ export const componentsDetails: ComponentCardData[] = [
           </select>
         </div>
       </div>`
+  },
+  {
+    name: 'Skeleton',
+    category: 'Indicator',
+    snippet: `<div class="skeleton w-75 h-75"></div>`
   },
   {
     name: 'Suggestion chip',

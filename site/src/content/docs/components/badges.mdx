@@ -1,6 +1,6 @@
 ---
 title: Badges
-description: Badges are used to display notifications, item counts, or status indicators on navigation elements or icons. They help draw attention to updates, alerts, or changes that require user awareness or action, without disrupting the overall interface.
+description: A badge is a UI element that highlights system notifications, statuses, or the categorisation of information.
 aliases:
   - "/docs/components/badges/"
   - "/docs/components/badge/"
@@ -14,7 +14,6 @@ types:
 
 import { getData } from '@libs/data'
 import { getVersionedDocsPath } from '@libs/path'
-import { getMode } from '@libs/sass-variables'
 
 <Callout type="info">
   You can find the OUDS design guidelines here: [badge guidelines](https://r.orange.fr/r/S-ouds-doc-badge), [badge - count guidelines](https://r.orange.fr/r/S-ouds-doc-badge-count), [badge - icon guidelines](https://r.orange.fr/r/S-ouds-doc-badge-icon).
@@ -27,37 +26,37 @@ import { getMode } from '@libs/sass-variables'
 <ul class="list-unstyled row row-cols-1 row-cols-sm-3">
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top bg-inverse-low" aria-hidden="true">
-        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
           <p class="badge">
             <span class="visually-hidden">Beware</span>
           </p>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#badge">Badge</a> is used for status indicator.</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#badge">Badge</a> is a UI element that highlights system notifications, statuses, or the categorisation of information through colour alone.</div>
     </div>
   </li>
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top bg-inverse-low" aria-hidden="true">
-        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
           <p class="badge badge-count">1<span class="visually-hidden">Error</span></p>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#badge---count">Badge - Count</a> adds a number to notifications for example.</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#badge---count">Badge - Count</a> is a UI element that highlights system notifications, status, or the categorisation of information through colour and numerical value.</div>
     </div>
   </li>
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top bg-inverse-low" aria-hidden="true">
-        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
           <p class="badge">
             <span class="badge-status-icon"></span>
             <span class="visually-hidden">Beware</span>
           </p>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#badge---icon">Badge - Icon</a> adds an icon to reinforce the badge meaning.</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#badge---icon">Badge - Icon</a> is a UI element that highlights system notifications, statuses, or the categorisation of information through colour and iconography.</div>
     </div>
   </li>
 </ul>
@@ -86,7 +85,9 @@ Several examples are provided below, but they need to be adapted for actual use 
 
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Badge
 
-The badge is a small UI element used to highlight categories, presence, or draw attention to certain elements within an interface. Default badge carries a negative functional status.
+Badge is a UI element that highlights system notifications, statuses, or the categorisation of information through colour alone.
+
+Badge is displayed as a coloured shape, without an icon, text, or number; its selected size remains constant, regardless of any changes to the interface size.
 
 <Callout type="warning">
   If the context does not allow visually impaired or blind users to understand the meaning, add a `.visually-hidden` text associated with the badge. [Read more about badges accessibility here](#accessibility).
@@ -164,7 +165,9 @@ Badges are available in four sizes. Default size is medium.
 
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Badge - Count
 
-Badges - count provide a numerical indication.
+Badge - count is a UI element that highlights system notifications, status, or the categorisation of information through colour and numerical value.
+
+Badge - count is displayed as a coloured shape that shows numerical values, and its selected size remains consistent regardless of any changes to the interface size.
 
 <Callout type="warning">
   If the number itself is not meaningful in the context, add a `.visually-hidden` text associated with the badge - count. [Read more about badges accessibility here](#accessibility).
@@ -214,7 +217,9 @@ Badges - count are available in two sizes. Add `.badge-large` to have a larger b
 
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Badge - Icon
 
-Badges - icon can be used to visually reinforce meaning.
+Badge - icon is a UI element that highlights system notifications, statuses, or the categorisation of information through colour and iconography.
+
+Badge - icon is presented as a coloured shape that displays an icon, and its selected size remains constant despite any changes to the interface size.
 
 <Callout type="info" name="info-icons-svg-sprite" />
 

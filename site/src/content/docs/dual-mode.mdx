@@ -68,290 +68,290 @@ In this scenario, you will have access to all the components available in OUDS W
     <details class="mb-medium">
       <summary>See the main style file example</summary>
       <Code lang="scss" code={`// 1. Import all OUDS Web or make your own build in a different file to avoid variables conflicts.
-        @import "@ouds/web-orange/dist/css/ouds-web";
+    @import "@ouds/web-orange/dist/css/ouds-web";
 
-        // 2. Import a custom stack of Boosted and remove already existing elements.
+    // 2. Import a custom stack of Boosted and remove already existing elements.
 
-        // Configuration
-        @import "boosted/scss/functions";
-        @import "boosted/scss/variables";
-        @import "boosted/scss/variables-dark";
-        @import "boosted/scss/maps";
-        @import "boosted/scss/mixins";
-        // Please note that if you don’t need any Boosted variables in your custom components,
-        // all the Configuration imports may be scoped inside the .boosted class to avoid side effects
+    // Configuration
+    @import "boosted/scss/functions";
+    @import "boosted/scss/variables";
+    @import "boosted/scss/variables-dark";
+    @import "boosted/scss/maps";
+    @import "boosted/scss/mixins";
+    // Please note that if you don’t need any Boosted variables in your custom components,
+    // all the Configuration imports may be scoped inside the .boosted class to avoid side effects
 
-        .boosted {
-          // Don’t import Boosted utilities since they are all defined by OUDS Web already
+    .boosted {
+      // Don’t import Boosted utilities since they are all defined by OUDS Web already
 
-          // Declare a custom _root.scss, inspired from Boosted, but linked to OUDS Web evolutions
-          [data-bs-theme] {
-            color: var(--#{$prefix}body-color);
-            background-color: var(--#{$prefix}body-bg);
-          }
+      // Declare a custom _root.scss, inspired from Boosted, but linked to OUDS Web evolutions
+      [data-bs-theme] {
+        color: var(--#{$prefix}body-color);
+        background-color: var(--#{$prefix}body-bg);
+      }
 
-          &,
-          [data-bs-theme="light"],
-          :root[data-bs-theme="light"] & [data-bs-theme="root"],
-          :root[data-bs-theme="dark"] & [data-bs-theme="root-inverted"],
-          :root[data-bs-theme="light"] &[data-bs-theme="root"],
-          :root[data-bs-theme="dark"] &[data-bs-theme="root-inverted"] {
-            color-scheme: light;
+      &,
+      [data-bs-theme="light"],
+      :root[data-bs-theme="light"] & [data-bs-theme="root"],
+      :root[data-bs-theme="dark"] & [data-bs-theme="root-inverted"],
+      :root[data-bs-theme="light"] &[data-bs-theme="root"],
+      :root[data-bs-theme="dark"] &[data-bs-theme="root-inverted"] {
+        color-scheme: light;
 
-            // Colors
-            @each $color, $value in $colors {
-              --#{$prefix}#{$color}: #{$value};
-            }
-
-            @each $color, $value in $grays {
-              --#{$prefix}gray-#{$color}: #{$value};
-            }
-
-            @each $color, $value in $theme-colors {
-              --#{$prefix}#{$color}: #{$value};
-            }
-
-            @each $color, $value in $theme-colors-rgb {
-              --#{$prefix}#{$color}-rgb: #{$value};
-            }
-
-            @each $color, $value in $theme-colors-text {
-              --#{$prefix}#{$color}-text-emphasis: #{$value};
-            }
-
-            @each $color, $value in $theme-colors-bg-subtle {
-              --#{$prefix}#{$color}-bg-subtle: #{$value};
-            }
-
-            @each $color, $value in $theme-colors-border-subtle {
-              --#{$prefix}#{$color}-border-subtle: #{$value};
-            }
-
-            --#{$prefix}white-rgb: #{to-rgb($white)};
-            --#{$prefix}black-rgb: #{to-rgb($black)};
-
-
-            @each $icon, $svg in $svg-as-custom-props {
-              --#{$prefix}#{$icon}-icon: #{escape-svg($svg)};
-            }
-
-            // Fonts
-            // No definition of the font-stacks and let the OUDS Web ones hydrate Boosted
-            @if $font-size-root != null {
-              --#{$prefix}root-font-size: #{$font-size-root};
-            }
-            --#{$prefix}body-font-family: #{inspect($font-family-base)};
-            @include rfs($font-size-base, --#{$prefix}body-font-size);
-            --#{$prefix}body-font-weight: #{$font-weight-base};
-            --#{$prefix}body-line-height: #{$line-height-base};
-            @if $body-text-align != null {
-              --#{$prefix}body-text-align: #{$body-text-align};
-            }
-
-            --#{$prefix}body-color: #{$body-color};
-            --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
-            --#{$prefix}body-bg: #{$body-bg};
-            --#{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
-
-            --#{$prefix}emphasis-color: #{$body-emphasis-color};
-            --#{$prefix}emphasis-color-rgb: #{to-rgb($body-emphasis-color)};
-
-            --#{$prefix}secondary-color: #{$body-secondary-color};
-            --#{$prefix}secondary-color-rgb: #{to-rgb($body-secondary-color)};
-            --#{$prefix}secondary-bg: #{$body-secondary-bg};
-            --#{$prefix}secondary-bg-rgb: #{to-rgb($body-secondary-bg)};
-
-            --#{$prefix}tertiary-color: #{$body-tertiary-color};
-            --#{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color)};
-            --#{$prefix}tertiary-bg: #{$body-tertiary-bg};
-            --#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg)};
-
-            --#{$prefix}heading-color: #{$headings-color};
-
-            // No Link colors and let the OUDS Web links hydrate the Boosted ones
-
-            --#{$prefix}highlight-color: #{$mark-color};
-            --#{$prefix}highlight-bg: #{$mark-bg};
-            --#{$prefix}disabled-color: #{$disabled-color};
-            --#{$prefix}tertiary-active-bg: #{$tertiary-active-bg};
-
-            --#{$prefix}border-width: #{$border-width};
-            --#{$prefix}border-style: #{$border-style};
-            --#{$prefix}border-color: #{$border-color};
-            --#{$prefix}border-color-subtle: #{$border-color-subtle};
-            --#{$prefix}border-color-translucent: #{$border-color-translucent};
-
-            --#{$prefix}border-radius: #{0px};
-            --#{$prefix}border-radius-sm: #{$border-radius-sm};
-            --#{$prefix}border-radius-lg: #{$border-radius-lg};
-            --#{$prefix}border-radius-xl: #{$border-radius-xl};
-            --#{$prefix}border-radius-xxl: #{$border-radius-xxl};
-            --#{$prefix}border-radius-2xl: var(--#{$prefix}border-radius-xxl);
-            --#{$prefix}border-radius-pill: #{$border-radius-pill};
-
-            --#{$prefix}box-shadow: #{$box-shadow};
-            --#{$prefix}box-shadow-sm: #{$box-shadow-sm};
-            --#{$prefix}box-shadow-lg: #{$box-shadow-lg};
-            --#{$prefix}box-shadow-inset: #{$box-shadow-inset};
-
-            // Focus styles
-            --#{$prefix}focus-ring-width: #{$focus-ring-width};
-            --#{$prefix}focus-ring-opacity: #{$focus-ring-opacity};
-            --#{$prefix}focus-ring-color: #{$focus-ring-color};
-
-            --#{$prefix}form-valid-color: #{$form-valid-color};
-            --#{$prefix}form-valid-border-color: #{$form-valid-border-color};
-            --#{$prefix}form-invalid-color: #{$form-invalid-color};
-            --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color};
-
-            --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter};
-            --#{$prefix}form-select-indicator: #{$form-select-indicator};
-            --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator};
-
-            // Table-specific styles
-            --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor};
-            --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor};
-            --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor};
-
-            // Modal-specific styles
-            --#{$prefix}modal-border-radius: 0px;
-
-            // No Boosted specific Breadcrumb styles
-
-            // Remove some unwanted edge changes of OUDS Web inside Boosted
-            --#{$prefix}font-max-width-display-large: none;
-            --#{$prefix}font-max-width-display-medium: none;
-            --#{$prefix}font-max-width-display-small: none;
-            --#{$prefix}font-max-width-heading-xlarge: none;
-            --#{$prefix}font-max-width-heading-large: none;
-            --#{$prefix}font-max-width-heading-medium: none;
-            --#{$prefix}font-max-width-heading-small: none;
-            --#{$prefix}font-max-width-body-large: none;
-            --#{$prefix}font-max-width-body-medium: none;
-            --#{$prefix}font-max-width-body-small: none;
-          }
-
-          [data-bs-theme="dark"] &,
-          &[data-bs-theme="dark"],
-          :root[data-bs-theme="dark"] & [data-bs-theme="root"],
-          :root[data-bs-theme="light"] & [data-bs-theme="root-inverted"],
-          :root[data-bs-theme="dark"] &[data-bs-theme="root"],
-          :root[data-bs-theme="light"] &[data-bs-theme="root-inverted"] {
-            color-scheme: dark;
-
-            --#{$prefix}body-color: #{$body-color-dark};
-            --#{$prefix}body-color-rgb: #{to-rgb($body-color-dark)};
-            --#{$prefix}body-bg: #{$body-bg-dark};
-            --#{$prefix}body-bg-rgb: #{to-rgb($body-bg-dark)};
-
-            --#{$prefix}emphasis-color: #{$body-emphasis-color-dark};
-            --#{$prefix}emphasis-color-rgb: #{to-rgb($body-emphasis-color-dark)};
-
-            --#{$prefix}secondary-color: #{$body-secondary-color-dark};
-            --#{$prefix}secondary-color-rgb: #{to-rgb($body-secondary-color-dark)};
-            --#{$prefix}secondary-bg: #{$body-secondary-bg-dark};
-            --#{$prefix}secondary-bg-rgb: #{to-rgb($body-secondary-bg-dark)};
-
-            --#{$prefix}tertiary-color: #{$body-tertiary-color-dark};
-            --#{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color-dark)};
-            --#{$prefix}tertiary-bg: #{$body-tertiary-bg-dark};
-            --#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg-dark)};
-
-            @each $color, $value in $theme-colors-dark {
-              --#{$prefix}#{$color}: #{$value};
-            }
-
-            @each $color, $value in $theme-colors-rgb-dark {
-              --#{$prefix}#{$color}-rgb: #{$value};
-            }
-
-            @each $color, $value in $theme-colors-text-dark {
-              --#{$prefix}#{$color}-text-emphasis: #{$value};
-            }
-
-            @each $color, $value in $theme-colors-bg-subtle-dark {
-              --#{$prefix}#{$color}-bg-subtle: #{$value};
-            }
-
-            @each $color, $value in $theme-colors-border-subtle-dark {
-              --#{$prefix}#{$color}-border-subtle: #{$value};
-            }
-
-            @each $icon, $svg in $svg-as-custom-props-dark {
-              --#{$prefix}#{$icon}-icon: #{escape-svg($svg)};
-            }
-
-            --#{$prefix}heading-color: #{$headings-color-dark};
-
-            --#{$prefix}highlight-color: #{$mark-color-dark};
-            --#{$prefix}highlight-bg: #{$mark-bg-dark};
-            --#{$prefix}disabled-color: #{$disabled-color-dark};
-            --#{$prefix}tertiary-active-bg: #{$tertiary-active-bg-dark};
-
-            --#{$prefix}border-color: #{$border-color-dark};
-            --#{$prefix}border-color-subtle: #{$border-color-subtle-dark};
-            --#{$prefix}border-color-translucent: #{$border-color-translucent-dark};
-
-            --#{$prefix}focus-ring-color: #{$focus-ring-color-dark};
-
-            --#{$prefix}form-valid-color: #{$form-valid-color-dark};
-            --#{$prefix}form-valid-border-color: #{$form-valid-border-color-dark};
-            --#{$prefix}form-invalid-color: #{$form-invalid-color-dark};
-            --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color-dark};
-            --#{$prefix}form-select-indicator: #{$form-select-indicator-dark};
-            --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator-dark};
-            --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter-dark};
-
-            // Table-specific styles
-            --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor-dark};
-            --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor-dark};
-            --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor-dark};
-          }
-
-          // Import only what’s needed from Boosted to fill in the missing parts
-          @import "boosted/scss/images";
-          @import "boosted/scss/tables";
-          @import "boosted/scss/forms/labels";
-          @import "boosted/scss/forms/form-text";
-          @import "boosted/scss/forms/form-control";
-          @import "boosted/scss/forms/form-select";
-          @import "boosted/scss/forms/form-range";
-          @import "boosted/scss/forms/input-group";
-          @import "boosted/scss/forms/star-rating";
-          @import "boosted/scss/forms/validation";
-          @import "boosted/scss/forms/quantity-selector";
-          @import "boosted/scss/transitions";
-          @import "boosted/scss/dropdown";
-          @import "boosted/scss/button-group";
-          @import "boosted/scss/card";
-          @import "boosted/scss/accordion";
-          @import "boosted/scss/pagination";
-          @import "boosted/scss/progress";
-          @import "boosted/scss/list-group";
-          @import "boosted/scss/toasts";
-          @import "boosted/scss/modal";
-          @import "boosted/scss/tooltip";
-          @import "boosted/scss/popover";
-          @import "boosted/scss/carousel";
-          @import "boosted/scss/spinners";
-          @import "boosted/scss/offcanvas";
-          @import "boosted/scss/placeholders";
-
-          // Boosted specific imports
-          @import "boosted/scss/back-to-top";
-          @import "boosted/scss/local-navigation";
-          @import "boosted/scss/stepped-process";
-          @import "boosted/scss/sticker";
-          @import "boosted/scss/title-bars";
-
-          // No need to import helpers or utilities, and use the OUDS Web ones
+        // Colors
+        @each $color, $value in $colors {
+          --#{$prefix}#{$color}: #{$value};
         }
 
-        // 3. Import your custom Boosted components
-        @import "backport/custom/boosted/components.scss";
+        @each $color, $value in $grays {
+          --#{$prefix}gray-#{$color}: #{$value};
+        }
 
-        // 4. Import custom components from your project
-        @import "your/custom/(s)css/files.scss";`} />
+        @each $color, $value in $theme-colors {
+          --#{$prefix}#{$color}: #{$value};
+        }
+
+        @each $color, $value in $theme-colors-rgb {
+          --#{$prefix}#{$color}-rgb: #{$value};
+        }
+
+        @each $color, $value in $theme-colors-text {
+          --#{$prefix}#{$color}-text-emphasis: #{$value};
+        }
+
+        @each $color, $value in $theme-colors-bg-subtle {
+          --#{$prefix}#{$color}-bg-subtle: #{$value};
+        }
+
+        @each $color, $value in $theme-colors-border-subtle {
+          --#{$prefix}#{$color}-border-subtle: #{$value};
+        }
+
+        --#{$prefix}white-rgb: #{to-rgb($white)};
+        --#{$prefix}black-rgb: #{to-rgb($black)};
+
+
+        @each $icon, $svg in $svg-as-custom-props {
+          --#{$prefix}#{$icon}-icon: #{escape-svg($svg)};
+        }
+
+        // Fonts
+        // No definition of the font-stacks and let the OUDS Web ones hydrate Boosted
+        @if $font-size-root != null {
+          --#{$prefix}root-font-size: #{$font-size-root};
+        }
+        --#{$prefix}body-font-family: #{inspect($font-family-base)};
+        @include rfs($font-size-base, --#{$prefix}body-font-size);
+        --#{$prefix}body-font-weight: #{$font-weight-base};
+        --#{$prefix}body-line-height: #{$line-height-base};
+        @if $body-text-align != null {
+          --#{$prefix}body-text-align: #{$body-text-align};
+        }
+
+        --#{$prefix}body-color: #{$body-color};
+        --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
+        --#{$prefix}body-bg: #{$body-bg};
+        --#{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
+
+        --#{$prefix}emphasis-color: #{$body-emphasis-color};
+        --#{$prefix}emphasis-color-rgb: #{to-rgb($body-emphasis-color)};
+
+        --#{$prefix}secondary-color: #{$body-secondary-color};
+        --#{$prefix}secondary-color-rgb: #{to-rgb($body-secondary-color)};
+        --#{$prefix}secondary-bg: #{$body-secondary-bg};
+        --#{$prefix}secondary-bg-rgb: #{to-rgb($body-secondary-bg)};
+
+        --#{$prefix}tertiary-color: #{$body-tertiary-color};
+        --#{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color)};
+        --#{$prefix}tertiary-bg: #{$body-tertiary-bg};
+        --#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg)};
+
+        --#{$prefix}heading-color: #{$headings-color};
+
+        // No Link colors and let the OUDS Web links hydrate the Boosted ones
+
+        --#{$prefix}highlight-color: #{$mark-color};
+        --#{$prefix}highlight-bg: #{$mark-bg};
+        --#{$prefix}disabled-color: #{$disabled-color};
+        --#{$prefix}tertiary-active-bg: #{$tertiary-active-bg};
+
+        --#{$prefix}border-width: #{$border-width};
+        --#{$prefix}border-style: #{$border-style};
+        --#{$prefix}border-color: #{$border-color};
+        --#{$prefix}border-color-subtle: #{$border-color-subtle};
+        --#{$prefix}border-color-translucent: #{$border-color-translucent};
+
+        --#{$prefix}border-radius: #{0px};
+        --#{$prefix}border-radius-sm: #{$border-radius-sm};
+        --#{$prefix}border-radius-lg: #{$border-radius-lg};
+        --#{$prefix}border-radius-xl: #{$border-radius-xl};
+        --#{$prefix}border-radius-xxl: #{$border-radius-xxl};
+        --#{$prefix}border-radius-2xl: var(--#{$prefix}border-radius-xxl);
+        --#{$prefix}border-radius-pill: #{$border-radius-pill};
+
+        --#{$prefix}box-shadow: #{$box-shadow};
+        --#{$prefix}box-shadow-sm: #{$box-shadow-sm};
+        --#{$prefix}box-shadow-lg: #{$box-shadow-lg};
+        --#{$prefix}box-shadow-inset: #{$box-shadow-inset};
+
+        // Focus styles
+        --#{$prefix}focus-ring-width: #{$focus-ring-width};
+        --#{$prefix}focus-ring-opacity: #{$focus-ring-opacity};
+        --#{$prefix}focus-ring-color: #{$focus-ring-color};
+
+        --#{$prefix}form-valid-color: #{$form-valid-color};
+        --#{$prefix}form-valid-border-color: #{$form-valid-border-color};
+        --#{$prefix}form-invalid-color: #{$form-invalid-color};
+        --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color};
+
+        --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter};
+        --#{$prefix}form-select-indicator: #{$form-select-indicator};
+        --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator};
+
+        // Table-specific styles
+        --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor};
+        --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor};
+        --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor};
+
+        // Modal-specific styles
+        --#{$prefix}modal-border-radius: 0px;
+
+        // No Boosted specific Breadcrumb styles
+
+        // Remove some unwanted edge changes of OUDS Web inside Boosted
+        --#{$prefix}font-max-width-display-large: none;
+        --#{$prefix}font-max-width-display-medium: none;
+        --#{$prefix}font-max-width-display-small: none;
+        --#{$prefix}font-max-width-heading-xlarge: none;
+        --#{$prefix}font-max-width-heading-large: none;
+        --#{$prefix}font-max-width-heading-medium: none;
+        --#{$prefix}font-max-width-heading-small: none;
+        --#{$prefix}font-max-width-body-large: none;
+        --#{$prefix}font-max-width-body-medium: none;
+        --#{$prefix}font-max-width-body-small: none;
+      }
+
+      [data-bs-theme="dark"] &,
+      &[data-bs-theme="dark"],
+      :root[data-bs-theme="dark"] & [data-bs-theme="root"],
+      :root[data-bs-theme="light"] & [data-bs-theme="root-inverted"],
+      :root[data-bs-theme="dark"] &[data-bs-theme="root"],
+      :root[data-bs-theme="light"] &[data-bs-theme="root-inverted"] {
+        color-scheme: dark;
+
+        --#{$prefix}body-color: #{$body-color-dark};
+        --#{$prefix}body-color-rgb: #{to-rgb($body-color-dark)};
+        --#{$prefix}body-bg: #{$body-bg-dark};
+        --#{$prefix}body-bg-rgb: #{to-rgb($body-bg-dark)};
+
+        --#{$prefix}emphasis-color: #{$body-emphasis-color-dark};
+        --#{$prefix}emphasis-color-rgb: #{to-rgb($body-emphasis-color-dark)};
+
+        --#{$prefix}secondary-color: #{$body-secondary-color-dark};
+        --#{$prefix}secondary-color-rgb: #{to-rgb($body-secondary-color-dark)};
+        --#{$prefix}secondary-bg: #{$body-secondary-bg-dark};
+        --#{$prefix}secondary-bg-rgb: #{to-rgb($body-secondary-bg-dark)};
+
+        --#{$prefix}tertiary-color: #{$body-tertiary-color-dark};
+        --#{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color-dark)};
+        --#{$prefix}tertiary-bg: #{$body-tertiary-bg-dark};
+        --#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg-dark)};
+
+        @each $color, $value in $theme-colors-dark {
+          --#{$prefix}#{$color}: #{$value};
+        }
+
+        @each $color, $value in $theme-colors-rgb-dark {
+          --#{$prefix}#{$color}-rgb: #{$value};
+        }
+
+        @each $color, $value in $theme-colors-text-dark {
+          --#{$prefix}#{$color}-text-emphasis: #{$value};
+        }
+
+        @each $color, $value in $theme-colors-bg-subtle-dark {
+          --#{$prefix}#{$color}-bg-subtle: #{$value};
+        }
+
+        @each $color, $value in $theme-colors-border-subtle-dark {
+          --#{$prefix}#{$color}-border-subtle: #{$value};
+        }
+
+        @each $icon, $svg in $svg-as-custom-props-dark {
+          --#{$prefix}#{$icon}-icon: #{escape-svg($svg)};
+        }
+
+        --#{$prefix}heading-color: #{$headings-color-dark};
+
+        --#{$prefix}highlight-color: #{$mark-color-dark};
+        --#{$prefix}highlight-bg: #{$mark-bg-dark};
+        --#{$prefix}disabled-color: #{$disabled-color-dark};
+        --#{$prefix}tertiary-active-bg: #{$tertiary-active-bg-dark};
+
+        --#{$prefix}border-color: #{$border-color-dark};
+        --#{$prefix}border-color-subtle: #{$border-color-subtle-dark};
+        --#{$prefix}border-color-translucent: #{$border-color-translucent-dark};
+
+        --#{$prefix}focus-ring-color: #{$focus-ring-color-dark};
+
+        --#{$prefix}form-valid-color: #{$form-valid-color-dark};
+        --#{$prefix}form-valid-border-color: #{$form-valid-border-color-dark};
+        --#{$prefix}form-invalid-color: #{$form-invalid-color-dark};
+        --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color-dark};
+        --#{$prefix}form-select-indicator: #{$form-select-indicator-dark};
+        --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator-dark};
+        --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter-dark};
+
+        // Table-specific styles
+        --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor-dark};
+        --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor-dark};
+        --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor-dark};
+      }
+
+      // Import only what’s needed from Boosted to fill in the missing parts
+      @import "boosted/scss/images";
+      @import "boosted/scss/tables";
+      @import "boosted/scss/forms/labels";
+      @import "boosted/scss/forms/form-text";
+      @import "boosted/scss/forms/form-control";
+      @import "boosted/scss/forms/form-select";
+      @import "boosted/scss/forms/form-range";
+      @import "boosted/scss/forms/input-group";
+      @import "boosted/scss/forms/star-rating";
+      @import "boosted/scss/forms/validation";
+      @import "boosted/scss/forms/quantity-selector";
+      @import "boosted/scss/transitions";
+      @import "boosted/scss/dropdown";
+      @import "boosted/scss/button-group";
+      @import "boosted/scss/card";
+      @import "boosted/scss/accordion";
+      @import "boosted/scss/pagination";
+      @import "boosted/scss/progress";
+      @import "boosted/scss/list-group";
+      @import "boosted/scss/toasts";
+      @import "boosted/scss/modal";
+      @import "boosted/scss/tooltip";
+      @import "boosted/scss/popover";
+      @import "boosted/scss/carousel";
+      @import "boosted/scss/spinners";
+      @import "boosted/scss/offcanvas";
+      @import "boosted/scss/placeholders";
+
+      // Boosted specific imports
+      @import "boosted/scss/back-to-top";
+      @import "boosted/scss/local-navigation";
+      @import "boosted/scss/stepped-process";
+      @import "boosted/scss/sticker";
+      @import "boosted/scss/title-bars";
+
+      // No need to import helpers or utilities, and use the OUDS Web ones
+    }
+
+    // 3. Import your custom Boosted components
+    @import "backport/custom/boosted/components.scss";
+
+    // 4. Import custom components from your project
+    @import "your/custom/(s)css/files.scss";`} />
     </details>
 
 3. Once you’re all set, you can begin to follow [our migration guide from Boosted]([[docsref:/getting-started/migration-from-boosted]]).
@@ -377,15 +377,15 @@ In this scenario, you will have access to OUDS Web on the root, but once a Boost
     <details class="mb-medium">
       <summary>See the main style file example</summary>
       <Code lang="scss" code={`// 1. Import all OUDS Web
-        @import "@ouds/web-orange/dist/css/ouds-web";
+    @import "@ouds/web-orange/dist/css/ouds-web";
 
-        // 2. Import all Boosted
-        .boosted {
-          @import "boosted/dist/css/boosted";
-        }
+    // 2. Import all Boosted
+    .boosted {
+      @import "boosted/dist/css/boosted";
+    }
 
-        // 3. Import custom components from your project with possible definitions of the variables you need.
-        @import "your/custom/(s)css/files.scss";`} />
+    // 3. Import custom components from your project with possible definitions of the variables you need.
+    @import "your/custom/(s)css/files.scss";`} />
     </details>
 
 3. Once you’re all set, you can begin to follow [our migration guide from Boosted]([[docsref:/getting-started/migration-from-boosted]]), and add a `.boosted` each time you need to use Boosted on the element or its children and also to set the `[data-bs-theme]` every time you use this selector. Don’t change any element further since you’ll be using Boosted directly.
@@ -409,50 +409,50 @@ In this scenario, you will have access to OUDS Web on defined elements and child
     <details class="mb-medium">
       <summary>See the main style file example</summary>
       <Code lang="scss" code={`// 1. Import all Boosted or make your own build in a different file to avoid variables conflicts
-        @import "boosted/dist/css/boosted";
+    @import "boosted/dist/css/boosted";
 
-        // 2. Import a custom stack of OUDS Web and remove already existing elements.
-        .ouds-web {
-          // Configuration
-          $ouds-root-selector: "&";
+    // 2. Import a custom stack of OUDS Web and remove already existing elements.
+    .ouds-web {
+      // Configuration
+      $ouds-root-selector: "&";
 
-          @import "@ouds/web-common/scss/config";
-          @import "@ouds/web-common/scss/functions";
-          @import "@ouds/web-orange/scss/tokens"; // Orange theme
-          @import "@ouds/web-common/scss/variables";
-          @import "@ouds/web-common/scss/variables-dark";
-          @import "@ouds/web-common/scss/maps";
-          @import "@ouds/web-common/scss/mixins";
-          @import "@ouds/web-common/scss/utilities";
+      @import "@ouds/web-common/scss/config";
+      @import "@ouds/web-common/scss/functions";
+      @import "@ouds/web-orange/scss/tokens"; // Orange theme
+      @import "@ouds/web-common/scss/variables";
+      @import "@ouds/web-common/scss/variables-dark";
+      @import "@ouds/web-common/scss/maps";
+      @import "@ouds/web-common/scss/mixins";
+      @import "@ouds/web-common/scss/utilities";
 
-          // Layout & components
-          @import "@ouds/web-common/scss/root";
-          @import "@ouds/web-common/scss/containers";
-          @import "@ouds/web-common/scss/grid";
-          @import "@ouds/web-common/scss/reboot";
-          @import "@ouds/web-common/scss/type";
-          @import "@ouds/web-common/scss/forms/control-item";
-          @import "@ouds/web-common/scss/forms/input-group";
-          @import "@ouds/web-common/scss/links";
-          @import "@ouds/web-common/scss/buttons";
-          @import "@ouds/web-common/scss/breadcrumb";
-          @import "@ouds/web-common/scss/badge";
-          @import "@ouds/web-common/scss/tags";
+      // Layout & components
+      @import "@ouds/web-common/scss/root";
+      @import "@ouds/web-common/scss/containers";
+      @import "@ouds/web-common/scss/grid";
+      @import "@ouds/web-common/scss/reboot";
+      @import "@ouds/web-common/scss/type";
+      @import "@ouds/web-common/scss/forms/control-item";
+      @import "@ouds/web-common/scss/forms/input-group";
+      @import "@ouds/web-common/scss/links";
+      @import "@ouds/web-common/scss/buttons";
+      @import "@ouds/web-common/scss/breadcrumb";
+      @import "@ouds/web-common/scss/badge";
+      @import "@ouds/web-common/scss/tags";
 
-          @import "@ouds/web-common/scss/helpers";
-          @import "@ouds/web-common/scss/utilities/api";
-        }
+      @import "@ouds/web-common/scss/helpers";
+      @import "@ouds/web-common/scss/utilities/api";
+    }
 
-        [data-bs-theme],
-        &[data-bs-theme] {
-          background: unset;
-        }
+    [data-bs-theme],
+    &[data-bs-theme] {
+      background: unset;
+    }
 
-        // 3. Import your custom Boosted components
-        @import "backport/custom/boosted/components.scss";
+    // 3. Import your custom Boosted components
+    @import "backport/custom/boosted/components.scss";
 
-        // 4. Import custom components from your project
-        @import "your/custom/(s)css/files.scss";`} />
+    // 4. Import custom components from your project
+    @import "your/custom/(s)css/files.scss";`} />
     </details>
 
 3. Once you’re all set, you can begin to follow [our migration guide from Boosted]([[docsref:/getting-started/migration-from-boosted]]), and add a `.ouds-web` each time you need to use OUDS Web on the element or its children and also to set the `[data-bs-theme]` every time you use this selector.

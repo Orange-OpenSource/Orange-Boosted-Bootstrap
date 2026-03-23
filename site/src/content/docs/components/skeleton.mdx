@@ -1,0 +1,316 @@
+---
+title: Skeleton
+description: A skeleton is a UI element that indicates when content is loading.
+aliases:
+  - "/docs/components/placeholders/"
+  - "/docs/components/placeholder/"
+  - "/docs/components/skeleton/"
+toc: true
+added:
+  version: "1.2"
+---
+
+import { getVersionedDocsPath } from '@libs/path'
+
+<Callout type="info">
+  You can find here the OUDS [skeleton design guidelines](https://r.orange.fr/r/S-ouds-doc-skeleton).
+</Callout>
+
+## Overview
+
+A skeleton is a UI element that indicates when content is loading. The skeleton enhances user experience by temporarily replacing content with gray areas or animations that simulate the visual structure of the forthcoming content.
+
+A container with an `[aria-busy="true"]` attribute will set all its children components in skeleton state.
+
+`.skeleton` is a single skeleton element. It can be used alone or as a child of `[aria-busy="true"]` container to improve accessibility.
+
+<Example showToolbar={false} code={`<div class="skeleton" style="width: 50%; height: 50px;" inert></div>`} />
+
+<BootstrapCompatibility>
+  Animate placeholders with `.placeholder-glow` or `.placeholder-wave` to better convey the perception of something being actively loaded.
+
+  <Example code={`<p class="placeholder-glow">
+    <span class="placeholder col-12"></span>
+  </p>
+
+  <p class="placeholder-wave">
+    <span class="placeholder col-12"></span>
+  </p>`} />
+</BootstrapCompatibility>
+
+### Accessibility
+
+Everything that is a skeleton should be hidden to assistive technologies either via an `[inert]` attribute, or via an `[aria-hidden]` attribute, a `[tabindex="-1"]` attribute, and `pointer-events: none` CSS rule if possible. This is to prevent assistive technologies from reading the content of the skeleton, and to prevent users from interacting with it. Note that inside a skeleton zone using `[inert]`, an assistive technology won’t care about the semantic of the used elements.
+
+While loading, assistive technologies should announce that a part of the page is loading. You may use `[aria-busy="true"]` on a parent container to achieve that.
+
+Once loading is complete, the skeleton should be removed from the DOM, or hidden with `.d-none`, and the content container should be updated accordingly with `[aria-busy="false"]`.
+
+See our [live example](#live-example) below to see it in action.
+
+## Sizes
+
+Skeletons don’t have default height nor width, we provide two specific height helpers: `.skeleton-title` and `.skeleton-text`, these will apply to all their children.
+
+You can also set the size of the skeletons either via inline styles, via our [sizing utility]([[docsref:/utilities/sizing/]]), via our [ratio utility]([[docsref:/utilities/aspect-ratio/]]), or via our [columns utility]([[docsref:/layout/columns/]]).
+
+### Title height
+
+Use `.skeleton-title` to render a skeleton with a height corresponding to a medium title on itself or its children elements.
+
+<Callout type="info">
+  Titles should be represented by a full-width skeleton.
+</Callout>
+
+<Example buttonLabel="skeletons with title height" code={`<div class="skeleton skeleton-title" inert></div>
+
+  <div class="skeleton-title" inert>
+    <div class="skeleton"></div>
+  </div>`} />
+
+<BootstrapCompatibility>
+  The size of `.placeholder`s are based on the typographic style of the parent element. Customize them with sizing modifiers: `.placeholder-lg`, `.placeholder-sm`, or `.placeholder-xs`.
+
+  <Example code={`<span class="placeholder col-12 placeholder-lg"></span>
+  <span class="placeholder col-12"></span>
+  <span class="placeholder col-12 placeholder-sm"></span>
+  <span class="placeholder col-12 placeholder-xs"></span>`} />
+</BootstrapCompatibility>
+
+### Paragraph height
+
+Use `.skeleton-text` to render a skeleton with a height corresponding to a medium paragraph on itself or its children elements.
+
+<Callout type="info">
+  Paragraphs should be represented with full lines without horizontal spacing and the last one might be shorter to represent the end of the paragraph. You can use our [sizing utility]([[docsref:/utilities/sizing/]]) or our [columns utility]([[docsref:/layout/columns/]]) to set the width of the last line.
+</Callout>
+
+<Example buttonLabel="skeletons with paragraph height" code={`<div class="skeleton skeleton-text" inert></div>
+  <div class="skeleton skeleton-text w-75" inert></div>
+
+  <div class="skeleton-text" inert>
+    <div class="skeleton"></div>
+    <div class="skeleton"></div>
+    <div class="skeleton col-9"></div>
+  </div>`} />
+
+### Ratios
+
+Use our [aspect ratio utility]([[docsref:/utilities/aspect-ratio/]]) to set a skeleton with a specific aspect ratio.
+
+<Example buttonLabel="skeleton with aspect ratio" code={`<div class="skeleton w-50 ratio-1x1" inert></div>`} />
+
+## No margins
+
+You can have the same without the default security margins using `.skeleton-no-margins`. You’ll probably need to set some spacings manually using our [spacing utility]([[docsref:/utilities/spacing/]]).
+
+<Example buttonLabel="skeletons without margins" code={`<div class="skeleton-no-margins skeleton-text" inert>
+    <div class="skeleton mb-2xsmall"></div>
+    <div class="skeleton mb-2xsmall"></div>
+    <div class="skeleton w-50"></div>
+  </div>`} />
+
+## With components
+
+To set components in skeleton state, you can wrap any of them in an `[aria-busy="true"]` container, and add the `inert` attribute to it. This will set all the children components in skeleton state, disable them and prevent any interaction.
+
+<Example buttonLabel="all components in skeleton state" code={`<div aria-busy="true" inert>
+    <div class="alert alert-message alert-negative mb-medium">
+      <div class="alert-icon"></div>
+      <div class="alert-container">
+        <div class="alert-text-container">
+          <p class="alert-label">Label</p>
+        </div>
+      </div>
+    </div>
+
+    <ul class="bullet-list mb-medium">
+      <li>Label</li>
+      <li>Label</li>
+    </ul>
+
+    <button class="btn btn-default mb-medium">Label</button>
+
+    <div class="checkbox-item mb-medium">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxDefault">Label</label>
+      </div>
+    </div>
+
+    <label class="checkbox-standalone mb-medium">
+      <input class="control-item-indicator" type="checkbox" value="" />
+      <span class="visually-hidden">Standalone checkbox</span>
+    </label>
+
+    <ul class="chips-container mb-medium">
+      <li class="chip chip-filter">
+        <input type="checkbox" id="filterCheck" checked />
+        <label class="chip-interactive" for="filterCheck">
+          Label
+        </label>
+      </li>
+    </ul>
+
+    <div class="alert alert-info mb-medium">
+      <div class="alert-icon"></div>
+      <p class="alert-label">Label</p>
+    </div>
+
+    <button type="button" class="tag tag-input mb-medium">Input tag</button>
+
+    <br/>
+
+    <a class="link mb-medium" href="#">Link</a>
+
+    <div class="text-input mb-medium">
+      <div class="text-input-container text-input-container-outlined">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#lock-closed')}"/>
+        </svg>
+        <label for="inputPasswordPrefix">Password</label>
+        <div class="input-container" data-bs-prefix="DEV-">
+          <input type="password" id="inputPasswordPrefix" class="text-input-field" placeholder=" ">
+        </div>
+        <button class="btn btn-minimal btn-icon">
+          <svg aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}"/>
+          </svg>
+          <span class="visually-hidden">Show password</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="radio-button-item mb-medium">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="radio" value="" id="radioDefault" name="radioBasic" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="radioDefault">Label</label>
+      </div>
+    </div>
+
+    <label class="radio-button-standalone mb-medium">
+      <input class="control-item-indicator" type="radio" value="" />
+      <span class="visually-hidden">Default standalone radio button</span>
+    </label>
+
+    <div class="select-input mb-medium">
+      <div class="select-input-container select-input-container-outlined">
+        <label for="exampleSelect">Select</label>
+        <select class="select-input-field" id="exampleSelect">
+          <option value="" disabled selected></option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+    </div>
+
+    <ul class="chips-container mb-medium">
+      <li class="chip chip-suggestion">
+        <button class="chip-interactive">
+          Label
+        </button>
+      </li>
+    </ul>
+
+    <div class="switch-item mb-medium">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchWithSVG" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="switchWithSVG">Label</label>
+      </div>
+    </div>
+
+    <label class="switch-standalone mb-medium">
+      <input class="control-item-indicator" type="checkbox" role="switch" value="" />
+      <span class="visually-hidden">Standalone switch</span>
+    </label>
+
+    <br/>
+
+    <p class="tag mb-medium">Tag</p>
+
+    <div class="text-area mb-medium">
+      <div class="text-area-container text-area-container-outlined">
+        <label for="exampleTextArea">Label</label>
+        <textarea class="text-area-field" id="exampleTextArea" style="height: unset; min-height: unset"></textarea>
+      </div>
+    </div>
+
+    <div class="text-input mb-medium">
+      <div class="text-input-container text-input-container-outlined">
+        <label for="exampleTextInputWithPlaceholder">Label</label>
+        <input type="email" class="text-input-field" id="exampleTextInputWithPlaceholder" placeholder="placeholder">
+      </div>
+    </div>
+  </div>`} />
+
+## Live examples
+
+Here are two live examples of skeletons. The first one is a skeleton that is completely replaced via JavaScript.
+
+<Example buttonLabel="live example of skeletons being replaced" code={`<div class="bd-skeleton-replace">
+    <div aria-busy="true" inert>
+      <div class="d-flex gap-medium mb-medium">
+        <div class="skeleton w-50 ratio-1x1"></div>
+        <div class="flex-grow-1 d-flex flex-column skeleton-text">
+          <div class="skeleton skeleton-title mb-small"></div>
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+          <div class="skeleton w-75"></div>
+        </div>
+      </div>
+      <button class="btn btn-default">Relaunch animation</button>
+    </div>
+    <p class="visually-hidden" role="alert">Loading content ...</p>
+  </div>`} />
+
+Here is the associated JavaScript for the first example.
+
+<JsDocs name="skeleton-first-example" file="site/src/assets/partials/snippets.js" />
+
+The second example is a skeleton for a form where elements are already set but waiting to be displayed.
+
+<Example buttonLabel="live example of skeletons over components" code={`<div class="bd-skeleton-replace2">
+    <div aria-busy="true" inert>
+      <form class="d-flex flex-column gap-medium mb-medium" novalidate>
+        <div class="text-input">
+          <div class="text-input-container">
+            <label for="exampleTextInputWithPlaceholder2">Email address</label>
+            <input type="email" class="text-input-field" id="exampleTextInputWithPlaceholder2" placeholder="name@example.com">
+          </div>
+        </div>
+        <div class="select-input">
+          <div class="select-input-container">
+            <label for="exampleSelect2">Default select example</label>
+            <select class="select-input-field" id="exampleSelect2">
+              <option value="" disabled selected></option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="checkbox-item">
+          <div class="control-item-assets-container">
+            <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault2" />
+          </div>
+          <div class="control-item-text-container">
+            <label class="control-item-label" for="checkboxDefault2">Default checkbox</label>
+          </div>
+        </div>
+      </form>
+      <button class="btn btn-default" onclick="window.relaunchAnim2()">Relaunch animation</button>
+    </div>
+    <p class="visually-hidden" role="status">Loading form ...</p>
+  </div>`} />
+
+Here is the associated JavaScript for the second example.
+
+<JsDocs name="skeleton-second-example" file="site/src/assets/partials/snippets.js" />
