@@ -209,6 +209,8 @@
     --#{$prefix}btn-padding-y: #{$ouds-button-space-inset-icon-only};
     --#{$prefix}btn-icon-gap: 0;
     --#{$prefix}btn-icon-size: #{px-to-rem($ouds-button-size-icon-only)};
+
+    max-height: $ouds-button-size-max-height-icon-only;
   }
   // End mod
 }
@@ -448,7 +450,7 @@
 
 @if $enable-bootstrap-compatibility {
   .btn-primary {
-    @extend .btn-strong;
+    @extend .btn-brand;
   }
 
   .btn-success {
@@ -487,3 +489,43 @@
 }
 // scss-docs-end btn-variant-loops
 // End mod
+
+//
+// Navigation button styles
+//
+
+.btn-previous {
+  --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-chevron-start};
+  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-end-icon-start};
+
+  &::before {
+    content: "";
+    mask-image: $btn-previous-icon;
+  }
+
+  &:not(.btn-icon)::before {
+    margin-right: $ouds-button-space-column-gap-chevron;
+  }
+}
+
+.btn-next {
+  --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-start-icon-end};
+  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-chevron-end};
+
+  &::after {
+    content: "";
+    mask-image: $btn-next-icon;
+  }
+
+  &:not(.btn-icon)::after {
+    margin-left: $ouds-button-space-column-gap-chevron;
+  }
+}
+
+.btn-previous::before,
+.btn-next::after {
+  width: var(--#{$prefix}btn-icon-size);
+  height: var(--#{$prefix}btn-icon-size);
+  background-color: currentcolor;
+}
+
