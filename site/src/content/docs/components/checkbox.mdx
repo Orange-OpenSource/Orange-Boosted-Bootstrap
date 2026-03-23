@@ -662,7 +662,7 @@ For the standalone checkbox, we provide a completely different architecture to e
 <Example buttonLabel="mandatory checkboxes indication" code={`<div class="checkbox-item-container">
     <div class="checkbox-item">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="checkbox" value="" id="checkboxUniqueMandatory" />
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxUniqueMandatory" name="mandatoryCheckbox" />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label is-required" for="checkboxUniqueMandatory">Mandatory unique checkbox</label>
@@ -674,7 +674,7 @@ For the standalone checkbox, we provide a completely different architecture to e
     <legend class="is-required">Mandatory checkboxes</legend>
     <div class="checkbox-item">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="checkbox" value="" id="mandatoryCheckbox1" required />
+        <input class="control-item-indicator" type="checkbox" value="" id="mandatoryCheckbox1" name="mandatoryCheckboxes" required />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="mandatoryCheckbox1">Default checkbox</label>
@@ -682,7 +682,7 @@ For the standalone checkbox, we provide a completely different architecture to e
     </div>
     <div class="checkbox-item">
       <div class="control-item-assets-container">
-        <input checked class="control-item-indicator" type="checkbox" value="" id="mandatoryCheckbox2" required />
+        <input checked class="control-item-indicator" type="checkbox" value="" id="mandatoryCheckbox2" name="mandatoryCheckboxes" required />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="mandatoryCheckbox2">Checked checkbox</label>

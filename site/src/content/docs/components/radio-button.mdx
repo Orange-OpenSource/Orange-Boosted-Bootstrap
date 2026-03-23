@@ -607,7 +607,7 @@ For the standalone radio button, we provide a completely different architecture 
 <Example buttonLabel="mandatory radio buttons indication" code={`<div class="radio-button-item-container">
     <div class="radio-button-item">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="radio" value="" id="radioUniqueMandatory" />
+        <input class="control-item-indicator" type="radio" value="" id="radioUniqueMandatory" name="mandatoryRadio" />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label is-required" for="radioUniqueMandatory">Mandatory unique radio button</label>
@@ -619,7 +619,7 @@ For the standalone radio button, we provide a completely different architecture 
     <legend class="is-required">Mandatory radio buttons</legend>
     <div class="radio-button-item">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="radio" value="" id="mandatoryRadio1" required />
+        <input class="control-item-indicator" type="radio" value="" id="mandatoryRadio1" name="mandatoryRadios" required />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="mandatoryRadio1">Default radio button</label>
@@ -627,7 +627,7 @@ For the standalone radio button, we provide a completely different architecture 
     </div>
     <div class="radio-button-item">
       <div class="control-item-assets-container">
-        <input checked class="control-item-indicator" type="radio" value="" id="mandatoryRadio2" required />
+        <input checked class="control-item-indicator" type="radio" value="" id="mandatoryRadio2" name="mandatoryRadios" required />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="mandatoryRadio2">Checked radio button</label>

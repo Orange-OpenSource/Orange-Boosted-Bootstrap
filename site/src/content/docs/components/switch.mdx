@@ -492,7 +492,7 @@ Be sure to read more about [the switch attribute on the WebKit blog](https://web
 <Example buttonLabel="mandatory switches indication" code={`<div class="switch-item-container">
     <div class="switch-item component-max-width">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchUniqueMandatory" />
+        <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchUniqueMandatory" name="mandatorySwitch"/>
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label is-required" for="switchUniqueMandatory">Mandatory unique switch</label>
@@ -504,7 +504,7 @@ Be sure to read more about [the switch attribute on the WebKit blog](https://web
     <legend class="is-required">Mandatory switches</legend>
     <div class="switch-item component-max-width">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="checkbox" role="switch" value="" id="mandatorySwitch1" required />
+        <input class="control-item-indicator" type="checkbox" role="switch" value="" id="mandatorySwitch1" name="mandatorySwitches" required />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="mandatorySwitch1">Default switch</label>
@@ -512,7 +512,7 @@ Be sure to read more about [the switch attribute on the WebKit blog](https://web
     </div>
     <div class="switch-item component-max-width">
       <div class="control-item-assets-container">
-        <input checked class="control-item-indicator" type="checkbox" role="switch" value="" id="mandatorySwitch2" required />
+        <input checked class="control-item-indicator" type="checkbox" role="switch" value="" id="mandatorySwitch2" name="mandatorySwitches" required />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="mandatorySwitch2">Checked switch</label>
