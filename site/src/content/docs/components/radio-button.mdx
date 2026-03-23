@@ -1,6 +1,6 @@
 ---
 title: Radio button
-description: Create consistent cross-browser and cross-device radio buttons.
+description: A radio button is a UI element that allows the selection of a single option from a set of mutually exclusive choices.
 aliases:
   - "/docs/forms/radio/"
   - "/docs/components/radio/"
@@ -17,7 +17,9 @@ import { getVersionedDocsPath } from '@libs/path'
 
 ## Overview
 
-Radio buttons allow user to select a single option from a set of mutually exclusive choices.
+Radio button item is a UI element that allows users to select a single option from a set of mutually exclusive choices.
+
+Unlike the [radio button](#standalone), the radio button item accommodates a broader range of contexts by enabling the toggling of visibility of additional text labels and icon assets.
 
 They are implemented using `.radio-button-item` and `.control-item-*` classes, [see below](#control-item). Browser default radio buttons are replaced with the help of the selector `.control-item-indicator[type="radio"]`.
 
@@ -579,6 +581,10 @@ For accessibility reasons, it is required to provide understandable radio button
   </div>`} />
 
 ## Standalone
+
+Radio button is a UI element that allows users to select a single option from a set of mutually exclusive choices.
+
+Radio button, that lacks an additional icon asset or text label, provides greater flexibility when designing other components that incorporate a radio button.
 
 <Callout type="warning" name="standalone-form-indicator" />
 

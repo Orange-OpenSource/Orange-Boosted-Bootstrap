@@ -1,6 +1,6 @@
 ---
 title: Switch
-description: Create consistent cross-browser and cross-device switches.
+description: A switch is a UI element that toggles between two states, typically 'On' and 'Off', used to enable or disable features, options, or settings.
 aliases:
   - "/docs/forms/switch/"
   - "/docs/components/switch/"
@@ -15,7 +15,9 @@ import { getVersionedDocsPath } from '@libs/path'
 
 ## Overview
 
-Switches allow users to turn an individual option on or off. They are usually used to activate or deactivate a specific setting.
+Switch item is a UI element that toggles between two states, typically "On" and "Off," and is used to enable or disable features, options, or settings.
+
+Unlike the [switch](#standalone), the switch item accommodates a broader range of contexts by enabling the toggling of visibility of additional text labels and icon assets.
 
 They are implemented using `.switch-item` and `.control-item-*` classes, [see below](#control-item). Browser default checkboxes are replaced with the help of `.control-item-indicator[role="switch"]`.
 
@@ -460,6 +462,10 @@ For accessibility reasons, it is required to provide understandable switch label
   </div>`} />
 
 ## Standalone
+
+Switch is a UI element that toggles between two states, typically "On" and "Off," and is used to enable or disable features, options, or settings.
+
+Switch, that lacks an additional icon asset or text label, provides greater flexibility when creating other components that require a switch.
 
 <Callout type="warning" name="standalone-form-indicator" />
 
