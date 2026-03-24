@@ -168,8 +168,6 @@ You will have to make some extra Javascript to change the styles and update the 
 
 #### Checkbox
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> `.checkbox-item` and `.checkbox-standalone` have been added.
-
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> Checkbox is a new component compared to OB1’s Check, the DOM is therefore different.
 <div class="ps-xlarge">
 For example, if you used to write:
@@ -216,8 +214,6 @@ See [our new Checkbox page]([[docsref:/components/checkbox]]) for more informati
 
 #### Radio button
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> `.radio-button-item`, `.radio-button-standalone`, `.radio-button-additional-label` and `.radio-button-item-outlined` have been added.
-
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> Radio button is a new component compared to OB1’s radio, the DOM is therefore very different.
 <div class="ps-xlarge">
 For example, if you used to write:
@@ -262,37 +258,43 @@ Now you should write:
 See [our new Radio button page]([[docsref:/components/radio-button]]) for more information.
 </div>
 
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The error management is different from OB1's, it is now based on `:user-invalid` pseudo class or `aria-invalid` attribute. The DOM structure must also be updated for the error message. Read more in the [checkbox documentation]([[docsref:/components/radio-button/#invalid]]) for more details.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The error management is different from OB1's, it is now based on `:user-invalid` pseudo class or `aria-invalid` attribute. The DOM structure must also be updated for the error message. Read more in the [radio button documentation]([[docsref:/components/radio-button/#invalid]]) for more details.
 
 #### Select
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> `.select-input` has been added.
-
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.use-rounded-corner-inputs` have been added; it can be added on `<body>` to toggle project-wide rounded corners inputs.
 
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Select Input is a new component compared to Boosted’s Select, the DOM is therefore very different.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Select Input is a new component compared to OB1’s Select, the DOM is therefore very different.
 <div class="ps-xlarge">
 For example, if you used to write:
 
 ```html
-<select class="form-select" aria-label="Default select example">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
+<div class="ob1-form-group">
+  <select
+    class="form-control form-control-empty"
+    data-ob1-component="FormControlEmpty"
+    id="input1"
+    aria-labelledby="label1"
+  >
+    <option class="label-option-hidden" value="" disabled="" selected=""></option>
+    <option value="1">Item 1</option>
+    <option value="2">Item 2</option>
+    <option value="3">Item 3</option>
+  </select>
+  <label id="label1" class="form-control-placeholder" for="input1">Label</label>
+</div>
 ```
 Now you should write:
 
 ```html
 <div class="select-input">
   <div class="select-input-container">
-    <label for="exampleSelect">Default select example</label>
+    <label for="exampleSelect">Label</label>
     <select class="select-input-field" id="exampleSelect">
       <option value="" disabled selected></option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option value="1">Item 1</option>
+      <option value="2">Item 2</option>
+      <option value="3">Item 3</option>
     </select>
   </div>
 </div>
@@ -300,104 +302,129 @@ Now you should write:
 See [our new Select Input page]([[docsref:/components/select-input]]) for more information.
 </div>
 
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The error management is different from OB1's, it is now based on `:user-invalid` pseudo class or `aria-invalid` attribute. The DOM structure must also be updated for the error message. Read more in the [select input documentation]([[docsref:/components/select-input/#invalid]]) for more details.
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The `.ob1-form-group-inverse` class can be removed as it shoud be handled by using a `data-bs-theme` attribute on a parent element.
+
 #### Switch
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> `.switch-item` and `.switch-standalone` have been added.
-
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Switch is a new component compared to Boosted’s Check, the DOM is therefore very different.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Switch is a new component compared to OB1’s Switch, the DOM is therefore very different.
 <div class="ps-xlarge">
 For example, if you used to write:
 
 ```html
-<div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" value="" id="switchDefault" />
-  <label class="form-check-label" for="switchDefault">
-    Default switch
-  </label>
-</div>
+<ul class="items-list">
+  <li>
+    <div class="items-list-item">
+      <div class="item-container item-container-switch">
+        <label for="checkbox1" class="item-text">
+          <span>Label</span>
+        </label>
+        <div class="ob1-switch">
+          <input class="checkbox visually-hidden" id="checkbox1" type="checkbox" checked />
+          <label for="checkbox1" class="toggle toggle-rounded labels">
+            <span class="on">Yes</span>
+            <span class="off">No</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
 ```
 Now you should write:
 
 ```html
-<div class="switch-item">
-  <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDefault" />
-  </div>
-  <div class="control-item-text-container">
-    <label class="control-item-label" for="switchDefault">Default switch</label>
-  </div>
-</div>
+<ul class="control-items-list">
+  <li class="switch-item">
+    <div class="control-item-assets-container">
+      <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDefault" checked />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="switchDefault">Label</label>
+    </div>
+  </li>
+</ul>
 ```
 See [our new Switch page]([[docsref:/components/switch]]) for more information.
 </div>
 
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> Links in switches’ labels are now forbidden (they won’t be interactive anyway).
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The error management is different from OB1's, it is now based on `:user-invalid` pseudo class or `aria-invalid` attribute. The DOM structure must also be updated for the error message. Read more in the [switch documentation]([[docsref:/components/switch/#invalid]]) for more details.
 
 ### Text Input
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> `.text-input` has been added.
-
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.use-rounded-corner-inputs` have been added; it can be added on `<body>` to toggle project-wide rounded corners inputs.
 
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Text Input is a new component compared to Boosted’s Input, the DOM is therefore very different.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Text Input is a new component compared to OB1’s Input, the DOM is therefore very different.
 <div class="ps-xl">
 For example, if you used to write:
 
 ```html
-<div class="mb-3">
-  <label for="exampleFormControlInput" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput" placeholder="name@example.com">
+<div class="ob1-form-group">
+  <input
+    type="text"
+    id="input1"
+    data-ob1-component="FormControlEmpty"
+    class="form-control form-control-empty"
+    aria-labelledby="label1"
+  />
+  <label id="label1" class="form-control-placeholder" for="input1">Label</label>
 </div>
 ```
 Now you should write:
 
 ```html
-<div class="text-input mb-medium">
+<div class="text-input">
   <div class="text-input-container">
-    <label for="exampleTextInput">Email address</label>
-    <input type="email" class="text-input-field" id="exampleTextInput" placeholder="name@example.com">
+    <label for="exampleTextInput">Label</label>
+    <input type="text" class="text-input-field" id="exampleTextInput" placeholder=" ">
   </div>
 </div>
 ```
 See [our new Text Input page]([[docsref:/components/text-input]]) for more information.
 </div>
 
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Floating label is now handled with CSS, the `data-ob1-component` attribute is not needed anymore but you must have a placeholder with one space character to make it work.
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The error management is different from OB1's, it is now based on `:user-invalid` pseudo class or `aria-invalid` attribute. The DOM structure must also be updated for the error message. Read more in the [text input documentation]([[docsref:/components/text-input/#invalid]]) for more details.
+
 #### Text Area
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> `.text-area` has been added.
-
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Text Area is a new component compared to Boosted’s Input, the DOM is therefore very different.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Text Area is a new component compared to OB1’s Input, the DOM is therefore very different.
 <div class="ps-xl">
 For example, if you used to write:
 
 ```html
-<div class="mb-3">
-  <label for="exampleFormControlTextarea" class="form-label">Example textarea</label>
-  <textarea class="form-control" id="exampleFormControlTextarea" rows="3"></textarea>
-</div>
+  <div class="ob1-form-group">
+    <textarea
+      id="input21"
+      data-ob1-component="FormControlEmpty, AutoResizeOnCondition"
+      maxlength="1000"
+      class="form-control form-control-empty"
+      aria-labelledby="label21"
+    ></textarea>
+    <label id="label21" class="form-control-placeholder" for="input21">Label</label>
+  </div>
 ```
 Now you should write:
 
 ```html
-<div class="text-area">
-  <div class="text-area-container">
-    <label for="exampleTextArea">Example textarea</label>
-    <textarea class="text-area-field" id="exampleTextArea"></textarea>
+  <div class="text-area">
+    <div class="text-area-container">
+      <label for="exampleTextArea">Label</label>
+      <textarea class="text-area-field" id="exampleTextArea"></textarea>
+    </div>
   </div>
-</div>
 ```
 See [our new Text Area page]([[docsref:/components/text-area]]) for more information.
 </div>
 
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Vertical resizing is now handled with CSS, the `data-ob1-component` attribute is not needed anymore since there is no more floating label on this component.
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The error management is different from OB1's, it is now based on `:user-invalid` pseudo class or `aria-invalid` attribute. The DOM structure must also be updated for the error message. Read more in the [text area documentation]([[docsref:/components/text-area/#invalid]]) for more details.
+
+
 ## Helpers
-
-### Color background
-
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Color-background color helpers have been removed. Classes still exist for Bootstrap compatibility.
-
-### Colored links
-
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> All colored links helpers are unstyled in OUDS Web. Classes still exist for Bootstrap compatibility.
 
 ### Divider
 
