@@ -132,11 +132,13 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ### Buttons
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> `.btn-default`, `.btn-strong`, `.btn-minimal`, and `.btn-negative` have been added.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.btn-default`, `.btn-strong`, `.btn-brand`, `.btn-minimal`, and `.btn-negative` have been added.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.btn-previous` and  `.btn-next` have been added.
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.btn-on-colored-bg` has been added; it can be used with `.btn-default`, `.btn-strong` and `.btn-minimal` to get variants on colored backgrounds (neither primary, nor secondary, nor tertiary, nor emphasized backgrounds).
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.use-rounded-corner-buttons` have been added; it can be added on `<body>` to toggle project-wide rounded corners buttons.
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-primary`, `.btn-secondary`, `.btn-success`, `.btn-danger`, `.btn-warning`, `.btn-info`, `.btn-light`, `.btn-dark` and `btn-dropdown` have been removed. You can still have them using `$enable-bootstrap-compatibility`. Here is the visual correspondence:
-  - `.btn-primary` and `.btn-dark` will look as `.btn-strong`
+  - `.btn-primary` will look as `.btn-brand`
+  - `.btn-dark` will look as `.btn-strong`
   - `.btn-secondary` and `.btn-success` will look as `.btn-default`
   - `.btn-danger` and `.btn-warning` will look as `.btn-negative`
   - `.btn-info` and `.btn-light` will look as `.btn-minimal`
@@ -234,6 +236,28 @@ See [our new Checkbox page]([[docsref:/components/checkbox]]) for more informati
 </div>
 
 - <span class="tag tag-small rounded-none tag-warning">Warning</span> Links in checkboxes’ labels are now forbidden (they won’t be interactive anyway).
+
+#### Placeholders
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Placeholder component has been changed a lot, its name has been changed to [Skeleton]([[docsref:/components/skeleton]]). We only support one animation now. Placeholder sizing have been revamped a bit. Placeholders colors shouldn’t be used anymore.
+<div class="ps-xlarge">
+For example, if you used to write:
+
+```html
+<p class="placeholder-wave">
+  <span class="placeholder col-12"></span>
+</p>
+```
+
+Now you should write:
+
+```html
+<span class="skeleton col-12"></span>
+```
+See [our new Skeleton page]([[docsref:/components/skeleton]]) for more information.
+</div>
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> You can now set components in skeleton state.
 
 #### Radio button
 

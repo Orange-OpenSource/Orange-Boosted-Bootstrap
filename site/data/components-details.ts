@@ -103,7 +103,7 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <svg class="text-status-accent decorative-small-icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-      </svg> `
+      </svg>`
   },
   {
     name: 'Inline alert',
@@ -127,6 +127,13 @@ export const componentsDetails: ComponentCardData[] = [
     link: 'links',
     category: 'Navigation',
     snippet: `<a class="link" href="#">Label</a>`
+  },
+  {
+    name: 'Navigation button',
+    slug: 'navigation-button',
+    link: 'buttons#navigation-button',
+    category: 'Actions',
+    snippet: `<a class="btn btn-next btn-default" href="#">Next</a>`
   },
   {
     name: 'Password input',
@@ -178,6 +185,11 @@ export const componentsDetails: ComponentCardData[] = [
           </select>
         </div>
       </div>`
+  },
+  {
+    name: 'Skeleton',
+    category: 'Indicator',
+    snippet: `<div class="skeleton w-75 h-75"></div>`
   },
   {
     name: 'Suggestion chip',
