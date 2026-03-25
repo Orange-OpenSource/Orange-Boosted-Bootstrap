@@ -1,4 +1,5 @@
 ---
+import { getVersionedDocsPath } from '@libs/path'
 import { type IDeclaration } from '@libs/sass-variables'
 import { allTokens } from '@libs/sass-variables'
 
@@ -20,11 +21,13 @@ export const extractRootName = (colorToken: IDeclaration) => ({
 })
 
 export const mergeTokensByMode = (acc: IColorToken[], curToken: IDeclaration & IColorToken) => {
-  const mode = curToken.name.match(/(light|dark)/)
-  if (curToken.name.includes('surface')) console.log(mode)
-  if (!mode || mode.length < 2) return []
-  const value = mode[1] === 'light' ? { lightValue: curToken.compiledValue } : { darkValue: curToken.compiledValue }
   const idx = acc.findIndex((token: IColorToken) => token.rootName === curToken.rootName)
+  const mode = curToken.name.match(/(light|dark)/)
+  // this is to handle "always" colors which have no light/dark modes
+  let value: any = { lightValue: curToken.compiledValue, darkValue: curToken.compiledValue }
+  if (mode && mode.length > 1) {
+    value = mode[1] === 'light' ? { lightValue: curToken.compiledValue } : { darkValue: curToken.compiledValue }
+  }
 
   if (idx !== -1) {
     acc[idx] = {
@@ -47,6 +50,7 @@ export const mergeTokensByMode = (acc: IColorToken[], curToken: IDeclaration & I
       <th>Custom property</th>
       <th>Light mode</th>
       <th>Dark mode</th>
+      <th>&nbsp;</th>
     </tr>
   </thead>
   <tbody>
@@ -56,19 +60,30 @@ export const mergeTokensByMode = (acc: IColorToken[], curToken: IDeclaration & I
         .map(extractRootName)
         .reduce(mergeTokensByMode, [])
         .map((token: IColorToken) => (
-          <tr>
-            <td class="align-middle" style="width: 60%;">
+          <tr class="align-middle">
+            <td style="width: 50%;">
               <var class="user-select-all">{`var(--bs-color-${token.rootName})`}</var>
+              <button
+                type="button"
+                class="btn btn-minimal btn-icon btn-clipboard color-copy"
+                data-clipboard-text={`var(--bs-color-${token.rootName})`}
+                title="Copy to clipboard"
+                data-bs-toggle="tooltip"
+              >
+                <svg aria-hidden="true">
+                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')} />
+                </svg>
+              </button>
             </td>
             <td>
-              <figure class="ratio-21x9 mb-none w-75" style={{ backgroundColor: token.lightValue }}>
+              <figure class="ratio-21x9 mb-none" style={{ backgroundColor: token.lightValue }}>
                 <figcaption class="visually-hidden">
                   <var>{token.lightValue}</var>
                 </figcaption>
               </figure>
             </td>
             <td>
-              <figure class="ratio-21x9 mb-none w-75" style={{ backgroundColor: token.darkValue }}>
+              <figure class="ratio-21x9 mb-none" style={{ backgroundColor: token.darkValue }}>
                 <figcaption class="visually-hidden">
                   <var>{token.darkValue}</var>
                 </figcaption>

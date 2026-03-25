@@ -10,15 +10,16 @@ toc: true
 
 import { getData } from '@libs/data'
 import { getConfig } from '@libs/config'
-import { allTokens } from '@libs/sass-variables'
+import { allTokens, getTokenValue } from '@libs/sass-variables'
 import { getVersionedDocsPath } from '@libs/path'
 import { extractRootName, mergeTokensByMode } from '@components/shortcodes/ColorTable.astro'
 
-export const getSurfaceColorFor = (colorName) => {
-  if(colorName.includes('-action-')) {
-    return `var(--bs${colorName.replace('$ouds-color-content-on-', '-color-')})`
+export const getSurfaceColorValueFor = (colorName) => {
+  let bgColor = colorName.replace('content-on', '$ouds-color')
+  if(colorName.includes('-status-')) {
+    bgColor = colorName.replace('content-on', '$ouds-color-surface')
   }
-  return `var(--bs${colorName.replace('$ouds-color-content-on-', '-color-surface-')})`
+  return {bgLight: getTokenValue(`${bgColor}-light`), bgDark: getTokenValue(`${bgColor}-dark`)};
 }
 
 This page lists all the colors available in OUDS Web and their usage, organized by their category. All colors are presented in their light and dark mode for reference, but they must be used through their custom property or implementing utilities that will dynamically conform to the [color mode]([[docsref:/foundation/color-modes]]).
@@ -30,7 +31,7 @@ These colors are used for whole pages and structurally meaningful sections backg
 These colors can be used with [our background utilities]([[docsref:/utilities/background]]).
 
 <Callout type="info" title="Usage reference">
-  Please refer to the [background colors design reference]() for more information on usage.
+  Please refer to the [background colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/b/11c27d) for more information on usage.
 </Callout>
 
 <ColorTable tokenFilter={(token) => /\$ouds-color-bg-.*-(light|dark)/.test(token.name)} />
@@ -40,6 +41,10 @@ These colors can be used with [our background utilities]([[docsref:/utilities/ba
 These colors should be used as background for elements that are on another background.
 
 These colors can be used with [our background utilities]([[docsref:/utilities/background]]). Some of these surface colors have an opacity value and are designed to come on top of another color, we explain [how to achieve that here]([[docsref:/utilities/background#multiple-backgrounds]]).
+
+<Callout type="info" title="Usage reference">
+  Please refer to the [surface colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/b/11c27d) for more information on usage.
+</Callout>
 
 <ColorTable tokenFilter={(token) => /\$ouds-color-surface-((?!status)).*-(light|dark)/.test(token.name)} />
 
@@ -56,6 +61,10 @@ Like other surface colors, they can be used with [our background utilities]([[do
 These colors are used for informative but non-interactive content such as texts and icons.
 
 These colors can be used with [our text color utilities]([[docsref:/utilities/colors]]).
+
+<Callout type="info" title="Usage reference">
+  Please refer to the [content colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/b/11c27d) for more information on usage.
+</Callout>
 
 <ColorTable tokenFilter={(token) => /\$ouds-color-content((?!-on-)).*-(light|dark)/.test(token.name)} />
 
@@ -84,16 +93,27 @@ These content colors are used to guarantee maximum legibility for contents displ
         .reduce(mergeTokensByMode, [])
         .map((colorToken) => ({
           ...colorToken,
-          surfaceProp: getSurfaceColorFor(colorToken.rootName)
+          ...getSurfaceColorValueFor(colorToken.rootName)
         }))
         .map((token) => (
-          <tr>
-            <td class="align-middle" style="width: 60%;">
+          <tr class="align-middle">
+            <td style="width: 50%;">
               <var class="user-select-all">{`var(--bs-color-${token.rootName})`}</var>
+              <button
+                type="button"
+                class="btn btn-minimal btn-icon btn-clipboard color-copy"
+                data-clipboard-text={`var(--bs-color-${token.rootName})`}
+                title="Copy to clipboard"
+                data-bs-toggle="tooltip"
+              >
+                <svg aria-hidden="true">
+                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')} />
+                </svg>
+              </button>
             </td>
             <td>
-              <figure class="ratio-21x9 mb-none w-75" style={{ backgroundColor: token.surfaceProp }}>
-                <svg class="decorative-xsmall-icon" x="15" y="15" width="20" height="20" aria-hidden="true" color={token.lightValue}>
+              <figure class="ratio-21x9 mb-none d-flex justify-content-center align-items-center" style={{ backgroundColor: token.bgLight }}>
+                <svg class="decorative-small-icon" x="15" y="15" width="20" height="20" aria-hidden="true" color={token.lightValue}>
                   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}/>
                 </svg>
                 <figcaption class="visually-hidden">
@@ -102,7 +122,10 @@ These content colors are used to guarantee maximum legibility for contents displ
               </figure>
             </td>
             <td>
-              <figure class="ratio-21x9 mb-none w-75" style={{ backgroundColor: token.darkValue }}>
+              <figure class="ratio-21x9 mb-none d-flex justify-content-center align-items-center" style={{ backgroundColor: token.bgDark }}>
+                <svg class="decorative-small-icon" x="15" y="15" width="20" height="20" aria-hidden="true" color={token.darkValue}>
+                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}/>
+                </svg>
                 <figcaption class="visually-hidden">
                   <var>{token.darkValue}</var>
                 </figcaption>
@@ -114,87 +137,56 @@ These content colors are used to guarantee maximum legibility for contents displ
   </tbody>
 </table>
 
-{/* <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-2xlarge pb-large">
-{
-  allCustomPropsSassVariables.filter((token) => token.name.includes('$ouds-color-content-on'))
-    .map((colorToken) => ({ colorProp: `var(--bs${colorToken.name.replace('$ouds', '')})`, surfaceProp: getSurfaceColorFor(colorToken.name) }))
-    .map((color) => (
-      <figure class="mb-none" aria-label={color.colorProp}>
-        <button class="border-none p-none color-copy w-100 ratio-1x1 bg-body" data-clipboard-text={color.colorProp} data-bs-toggle="tooltip" data-bs-title="Copy to clipboard">
-          <svg viewBox="0 0 100 100" class="rounded" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
-            <rect fill={color.surfaceProp} width="100" height="100"/>
-            <svg class="decorative-xsmall-icon" x="15" y="15" width="20" height="20" aria-hidden="true" color={color.colorProp}>
-              <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}/>
-            </svg>
-          </svg>
-          <span class="visually-hidden">Copy variable name {color.colorProp}</span>
-        </button>
-        <figcaption class="py-2xsmall">
-          <var class="user-select-all">{color.colorProp}</var>
-        </figcaption>
-      </figure>
-    ))
-}
-</div> */}
+## Border
 
-### Action
+These colors are used for borders and dividers.
 
-{/* <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-2xlarge pb-large">
-{
-  allCustomPropsSassVariables.filter((token) => token.name.includes('$ouds-color-action'))
-    .map((colorToken) => `var(--bs${colorToken.name.replace('$ouds', '')})`)
-    .map(customPropFigure)
-}
-</div> */}
+These colors can be used with [our border utilities]([[docsref:/utilities/border#color]]).
 
-### Border
+<Callout type="info" title="Usage reference">
+  Please refer to the [border colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/b/11c27d) for more information on usage.
+</Callout>
 
-{/* <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-2xlarge pb-large">
-{
-  allCustomPropsSassVariables.filter((token) => token.name.includes('$ouds-color-border'))
-    .map((colorToken) => `var(--bs${colorToken.name.replace('$ouds', '')})`)
-    .map(customPropFigure)
-}
-</div> */}
+<ColorTable tokenFilter={(token) => /\$ouds-color-border.*-(light|dark)/.test(token.name)} />
 
-### Overlay
+## Action
 
-{/* <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-2xlarge pb-large">
-{
-  allCustomPropsSassVariables.filter((token) => token.name.includes('$ouds-color-overlay'))
-    .map((colorToken) => `var(--bs${colorToken.name.replace('$ouds', '')})`)
-    .map(customPropFigure)
-}
-</div> */}
+These colors are used for interactive elements and actions' states.
 
-### Opacity
+<Callout type="info" title="Usage reference">
+  Please refer to the [action colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/b/11c27d) for more information on usage.
+</Callout>
 
-{/* <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-2xlarge pb-large">
-{
-  allCustomPropsSassVariables.filter((token) => token.name.includes('$ouds-color-opacity'))
-    .map((colorToken) => `var(--bs${colorToken.name.replace('$ouds', '')})`)
-    .map(customPropFigure)
-}
-</div> */}
+<Callout type="warning">
+  These colors should only be used for custom components development, this is why no utilities are provided, please use directly the custom properties in your CSS.
+</Callout>
 
-## Non semantic
+<ColorTable tokenFilter={(token) => /\$ouds-color-action.*-(light|dark)/.test(token.name)} />
 
-### Always
+## Overlay
 
-{/* <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-2xlarge pb-large">
-{
-  allCustomPropsSassVariables.filter((token) => token.name.includes('$ouds-color-always'))
-    .map((colorToken) => `var(--bs${colorToken.name.replace('$ouds', '')})`)
-    .map(customPropFigure)
-}
-</div> */}
+These colors are used for overlay elements like dropdown, modals and tooltips to create depth and emphasis.
 
-### Decorative
+<Callout type="info" title="Usage reference">
+  Please refer to the [overlay colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/b/11c27d) for more information on usage.
+</Callout>
+
+<Callout type="warning">
+  These colors should only be used for custom components development, this is why no utilities are provided, please use directly the custom properties in your CSS.
+</Callout>
+
+<ColorTable tokenFilter={(token) => /\$ouds-color-overlay.*-(light|dark)/.test(token.name)} />
+
+## Always
+
+These colors are the sole invariant colors defined by OUDS Web, they will stay the same on every brand, modes or contexts.
+
+<Callout type="info" title="Usage reference">
+  Please refer to the [always colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/b/11c27d) for more information on usage.
+</Callout>
+
+<ColorTable tokenFilter={(token) => /\$ouds-color-always.*/.test(token.name)} />
+
+## Decorative
 
 <p>No tokens generated</p>
-
-
-
-
-
-
