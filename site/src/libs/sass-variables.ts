@@ -1,12 +1,12 @@
 import { exporter } from 'sass-export'
 import { getConfig } from './config'
 
-// this come from sass-export, but it's not exported there
+// this is not exported by sass-export so we redeclare
 export interface IDeclaration {
   name: string,
   value: string,
   mapValue?: Array<any>,
-  compiledValue: string,
+  compiledValue: string
 }
 
 const options = {
@@ -14,7 +14,7 @@ const options = {
   includePaths: []
 }
 
-export const allTokens = exporter(options).getArray()
+export const allTokens:IDeclaration[] = exporter(options).getArray()
 
 /**
  * This function returns the current theme depending on the parameter passed (light, dark, root, root-inverted). You need to use a name containing 'modes-on' and it should exist in the _semantic.scss file.
@@ -22,7 +22,7 @@ export const allTokens = exporter(options).getArray()
  * @returns the current theme (light, dark, root, root-inverted) for the chosen background
  */
 export const getMode = (regex: string) => {
-  const modes = allTokens.filter((token: any) => token.name.match(regex)).map((token: any) => token.compiledValue)
+  const modes = allTokens.filter((token: IDeclaration) => token.name.match(regex)).map((token: IDeclaration) => token.compiledValue)
   const theme = modes[0].includes('dark')
     ? modes[1].includes('light')
       ? 'root'
@@ -39,5 +39,11 @@ export const getMode = (regex: string) => {
  * @returns boolean
  */
 export const hasToken = (searchToken: string) => {
-  return allTokens.some((token: any) => token.name === searchToken);
+  return allTokens.some((token: IDeclaration) => token.name === searchToken);
+}
+
+export const getTokenValue = (name: string) => {
+  const token = allTokens.find((token: IDeclaration) => token.name === name)
+  if(!token) return 'unknown'
+  return token.compiledValue
 }
