@@ -1,0 +1,81 @@
+---
+import { type IDeclaration } from '@libs/sass-variables'
+import { allTokens } from '@libs/sass-variables'
+
+interface IColorToken {
+  rootName: string
+  lightValue?: string
+  darkValue?: string
+}
+
+interface Props {
+  tokenFilter: (token: IDeclaration) => boolean
+}
+
+const { tokenFilter } = Astro.props
+
+export const extractRootName = (colorToken: IDeclaration) => ({
+  ...colorToken,
+  rootName: colorToken.name.replace('$ouds-color-', '').replace('-light', '').replace('-dark', '')
+})
+
+export const mergeTokensByMode = (acc: IColorToken[], curToken: IDeclaration & IColorToken) => {
+  const mode = curToken.name.match(/(light|dark)/)
+  if (curToken.name.includes('surface')) console.log(mode)
+  if (!mode || mode.length < 2) return []
+  const value = mode[1] === 'light' ? { lightValue: curToken.compiledValue } : { darkValue: curToken.compiledValue }
+  const idx = acc.findIndex((token: IColorToken) => token.rootName === curToken.rootName)
+
+  if (idx !== -1) {
+    acc[idx] = {
+      ...acc[idx],
+      ...value
+    }
+  } else {
+    acc.push({
+      rootName: curToken.rootName,
+      ...value
+    })
+  }
+  return acc
+}
+---
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Custom property</th>
+      <th>Light mode</th>
+      <th>Dark mode</th>
+    </tr>
+  </thead>
+  <tbody>
+    {
+      allTokens
+        .filter(tokenFilter)
+        .map(extractRootName)
+        .reduce(mergeTokensByMode, [])
+        .map((token: IColorToken) => (
+          <tr>
+            <td class="align-middle" style="width: 60%;">
+              <var class="user-select-all">{`var(--bs-color-${token.rootName})`}</var>
+            </td>
+            <td>
+              <figure class="ratio-21x9 mb-none w-75" style={{ backgroundColor: token.lightValue }}>
+                <figcaption class="visually-hidden">
+                  <var>{token.lightValue}</var>
+                </figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure class="ratio-21x9 mb-none w-75" style={{ backgroundColor: token.darkValue }}>
+                <figcaption class="visually-hidden">
+                  <var>{token.darkValue}</var>
+                </figcaption>
+              </figure>
+            </td>
+          </tr>
+        ))
+    }
+  </tbody>
+</table>

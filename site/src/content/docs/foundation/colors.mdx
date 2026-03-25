@@ -1,0 +1,200 @@
+---
+title: Colors
+description: OUDS Web’s colors reinforces our brand identity and ensures consistency across all websites.
+aliases:
+  - "/docs/customize/color-palette/"
+  - "/docs/foundation/color-palette/"
+  - "/docs/foundation/colors/"
+toc: true
+---
+
+import { getData } from '@libs/data'
+import { getConfig } from '@libs/config'
+import { allTokens } from '@libs/sass-variables'
+import { getVersionedDocsPath } from '@libs/path'
+import { extractRootName, mergeTokensByMode } from '@components/shortcodes/ColorTable.astro'
+
+export const getSurfaceColorFor = (colorName) => {
+  if(colorName.includes('-action-')) {
+    return `var(--bs${colorName.replace('$ouds-color-content-on-', '-color-')})`
+  }
+  return `var(--bs${colorName.replace('$ouds-color-content-on-', '-color-surface-')})`
+}
+
+This page lists all the colors available in OUDS Web and their usage, organized by their category. All colors are presented in their light and dark mode for reference, but they must be used through their custom property or implementing utilities that will dynamically conform to the [color mode]([[docsref:/foundation/color-modes]]).
+
+## Background
+
+These colors are used for whole pages and structurally meaningful sections backgrounds.
+
+These colors can be used with [our background utilities]([[docsref:/utilities/background]]).
+
+<Callout type="info" title="Usage reference">
+  Please refer to the [background colors design reference]() for more information on usage.
+</Callout>
+
+<ColorTable tokenFilter={(token) => /\$ouds-color-bg-.*-(light|dark)/.test(token.name)} />
+
+## Surface
+
+These colors should be used as background for elements that are on another background.
+
+These colors can be used with [our background utilities]([[docsref:/utilities/background]]). Some of these surface colors have an opacity value and are designed to come on top of another color, we explain [how to achieve that here]([[docsref:/utilities/background#multiple-backgrounds]]).
+
+<ColorTable tokenFilter={(token) => /\$ouds-color-surface-((?!status)).*-(light|dark)/.test(token.name)} />
+
+### Status
+
+These surface colors are used specifically to indicate a status.
+
+Like other surface colors, they can be used with [our background utilities]([[docsref:/utilities/background]]).
+
+<ColorTable tokenFilter={(token) => /\$ouds-color-surface-status.*-(light|dark)/.test(token.name)} />
+
+## Content
+
+These colors are used for informative but non-interactive content such as texts and icons.
+
+These colors can be used with [our text color utilities]([[docsref:/utilities/colors]]).
+
+<ColorTable tokenFilter={(token) => /\$ouds-color-content((?!-on-)).*-(light|dark)/.test(token.name)} />
+
+### Content on other colors
+
+These content colors are used to guarantee maximum legibility for contents displayed on a background or surface color.
+
+<Callout type="info">
+  In this table we display an icon with the content color on their target background color.
+</Callout>
+
+{/* this table is quite specific so we do not use the component */}
+<table class="table">
+  <thead>
+    <tr>
+      <th>Custom property</th>
+      <th>Light mode</th>
+      <th>Dark mode</th>
+    </tr>
+  </thead>
+  <tbody>
+    {
+      allTokens
+        .filter((token) => /\$ouds-color-content-on-.*-(light|dark)/.test(token.name))
+        .map(extractRootName)
+        .reduce(mergeTokensByMode, [])
+        .map((colorToken) => ({
+          ...colorToken,
+          surfaceProp: getSurfaceColorFor(colorToken.rootName)
+        }))
+        .map((token) => (
+          <tr>
+            <td class="align-middle" style="width: 60%;">
+              <var class="user-select-all">{`var(--bs-color-${token.rootName})`}</var>
+            </td>
+            <td>
+              <figure class="ratio-21x9 mb-none w-75" style={{ backgroundColor: token.surfaceProp }}>
+                <svg class="decorative-xsmall-icon" x="15" y="15" width="20" height="20" aria-hidden="true" color={token.lightValue}>
+                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}/>
+                </svg>
+                <figcaption class="visually-hidden">
+                  <var>{token.lightValue}</var>
+                </figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure class="ratio-21x9 mb-none w-75" style={{ backgroundColor: token.darkValue }}>
+                <figcaption class="visually-hidden">
+                  <var>{token.darkValue}</var>
+                </figcaption>
+              </figure>
+            </td>
+          </tr>
+        ))
+    }
+  </tbody>
+</table>
+
+{/* <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-2xlarge pb-large">
+{
+  allCustomPropsSassVariables.filter((token) => token.name.includes('$ouds-color-content-on'))
+    .map((colorToken) => ({ colorProp: `var(--bs${colorToken.name.replace('$ouds', '')})`, surfaceProp: getSurfaceColorFor(colorToken.name) }))
+    .map((color) => (
+      <figure class="mb-none" aria-label={color.colorProp}>
+        <button class="border-none p-none color-copy w-100 ratio-1x1 bg-body" data-clipboard-text={color.colorProp} data-bs-toggle="tooltip" data-bs-title="Copy to clipboard">
+          <svg viewBox="0 0 100 100" class="rounded" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <rect fill={color.surfaceProp} width="100" height="100"/>
+            <svg class="decorative-xsmall-icon" x="15" y="15" width="20" height="20" aria-hidden="true" color={color.colorProp}>
+              <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}/>
+            </svg>
+          </svg>
+          <span class="visually-hidden">Copy variable name {color.colorProp}</span>
+        </button>
+        <figcaption class="py-2xsmall">
+          <var class="user-select-all">{color.colorProp}</var>
+        </figcaption>
+      </figure>
+    ))
+}
+</div> */}
+
+### Action
+
+{/* <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-2xlarge pb-large">
+{
+  allCustomPropsSassVariables.filter((token) => token.name.includes('$ouds-color-action'))
+    .map((colorToken) => `var(--bs${colorToken.name.replace('$ouds', '')})`)
+    .map(customPropFigure)
+}
+</div> */}
+
+### Border
+
+{/* <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-2xlarge pb-large">
+{
+  allCustomPropsSassVariables.filter((token) => token.name.includes('$ouds-color-border'))
+    .map((colorToken) => `var(--bs${colorToken.name.replace('$ouds', '')})`)
+    .map(customPropFigure)
+}
+</div> */}
+
+### Overlay
+
+{/* <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-2xlarge pb-large">
+{
+  allCustomPropsSassVariables.filter((token) => token.name.includes('$ouds-color-overlay'))
+    .map((colorToken) => `var(--bs${colorToken.name.replace('$ouds', '')})`)
+    .map(customPropFigure)
+}
+</div> */}
+
+### Opacity
+
+{/* <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-2xlarge pb-large">
+{
+  allCustomPropsSassVariables.filter((token) => token.name.includes('$ouds-color-opacity'))
+    .map((colorToken) => `var(--bs${colorToken.name.replace('$ouds', '')})`)
+    .map(customPropFigure)
+}
+</div> */}
+
+## Non semantic
+
+### Always
+
+{/* <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-2xlarge pb-large">
+{
+  allCustomPropsSassVariables.filter((token) => token.name.includes('$ouds-color-always'))
+    .map((colorToken) => `var(--bs${colorToken.name.replace('$ouds', '')})`)
+    .map(customPropFigure)
+}
+</div> */}
+
+### Decorative
+
+<p>No tokens generated</p>
+
+
+
+
+
+
