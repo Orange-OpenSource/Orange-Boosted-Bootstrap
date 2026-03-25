@@ -16,7 +16,7 @@ import { extractRootName, mergeTokensByMode } from '@components/shortcodes/Color
 
 export const getSurfaceColorValueFor = (colorName) => {
   let bgColor = colorName.replace('content-on', '$ouds-color')
-  if(colorName.includes('-status-')) {
+  if(!colorName.includes('-action-')) {
     bgColor = colorName.replace('content-on', '$ouds-color-surface')
   }
   return {bgLight: getTokenValue(`${bgColor}-light`), bgDark: getTokenValue(`${bgColor}-dark`)};
