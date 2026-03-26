@@ -34,10 +34,11 @@ const matchAndGetValues = (colorToken: IDeclaration) => {
     colorName: string
     backdropColorName?: string
   }
+
   return {
     lightValue: colorToken.compiledValue,
-    darkValue: colorToken.name.includes('light')
-      ? getTokenValue(colorToken.name.replace('light', 'dark'))
+    darkValue: colorToken.name.endsWith('-light')
+      ? getTokenValue(colorToken.name.replace(/-light$/, '-dark'))
       : colorToken.compiledValue,
     colorName,
     // add both dark and light colors of backdrop (this is for `content-on` tokens)
