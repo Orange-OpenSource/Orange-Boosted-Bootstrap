@@ -12,15 +12,7 @@ import { getData } from '@libs/data'
 import { getConfig } from '@libs/config'
 import { allTokens, getTokenValue } from '@libs/sass-variables'
 import { getVersionedDocsPath } from '@libs/path'
-import { extractRootName, mergeTokensByMode } from '@components/shortcodes/ColorTable.astro'
-
-export const getSurfaceColorValueFor = (colorName) => {
-  let bgColor = colorName.replace('content-on', '$ouds-color')
-  if(!colorName.includes('-action-')) {
-    bgColor = colorName.replace('content-on', '$ouds-color-surface')
-  }
-  return {bgLight: getTokenValue(`${bgColor}-light`), bgDark: getTokenValue(`${bgColor}-dark`)};
-}
+import { addRootName, mergeTokensByMode } from '@components/shortcodes/ColorTable.astro'
 
 This page lists all the colors available in OUDS Web and their usage, organized by their category. All colors are presented in their light and dark mode for reference, but they must be used through their custom property or implementing utilities that will dynamically conform to the [color mode]([[docsref:/foundation/color-modes]]).
 
@@ -34,7 +26,9 @@ These colors can be used with [our background utilities]([[docsref:/utilities/ba
   Please refer to the [background colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/b/11c27d) for more information on usage.
 </Callout>
 
-<ColorTable tokenFilter={(token) => /\$ouds-color-bg-.*-(light|dark)/.test(token.name)} />
+<ColorTable
+  colorPrefix="ouds/color/bg/"
+  tokenRegexp={/\$ouds-color-bg-(?<colorName>.*)-light/}/>
 
 ## Surface
 
@@ -46,7 +40,13 @@ These colors can be used with [our background utilities]([[docsref:/utilities/ba
   Please refer to the [surface colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/b/11c27d) for more information on usage.
 </Callout>
 
-<ColorTable tokenFilter={(token) => /\$ouds-color-surface-((?!status)).*-(light|dark)/.test(token.name)} />
+<ColorTable
+  colorPrefix="ouds/color/surface/"
+  tokenRegexp={/\$ouds-color-surface-((?!status|brand))(?<colorName>.*)-light/} />
+
+<ColorTable
+  colorPrefix="ouds/color/surface/brand/"
+  tokenRegexp={/\$ouds-color-surface-brand-(?<colorName>.*)-light/} />
 
 ### Status
 
@@ -54,7 +54,13 @@ These surface colors are used specifically to indicate a status.
 
 Like other surface colors, they can be used with [our background utilities]([[docsref:/utilities/background]]).
 
-<ColorTable tokenFilter={(token) => /\$ouds-color-surface-status.*-(light|dark)/.test(token.name)} />
+{
+  ['positive', 'info', 'warning', 'negative', 'accent'].map((status) => (
+    <ColorTable
+      colorPrefix={`ouds/color/surface/status/${status}/`}
+      tokenRegexp={new RegExp(`\\$ouds-color-surface-status-${status}-\(\?<colorName>\.\*\)-light`)} />
+  ))
+}
 
 ## Content
 
@@ -66,7 +72,13 @@ These colors can be used with [our text color utilities]([[docsref:/utilities/co
   Please refer to the [content colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/b/11c27d) for more information on usage.
 </Callout>
 
-<ColorTable tokenFilter={(token) => /\$ouds-color-content((?!-on-)).*-(light|dark)/.test(token.name)} />
+<ColorTable
+  colorPrefix="ouds/color/content/"
+  tokenRegexp={/\$ouds-color-content((?!-on|-status))-(?<colorName>.*)-light/} />
+
+<ColorTable
+  colorPrefix="ouds/color/content/status/"
+  tokenRegexp={/\$ouds-color-content-status-(?<colorName>.*)-light/} />
 
 ### Content on other colors
 
@@ -76,66 +88,21 @@ These content colors are used to guarantee maximum legibility for contents displ
   In this table we display an icon with the content color on their target background color.
 </Callout>
 
-{/* this table is quite specific so we do not use the component */}
-<table class="table">
-  <thead>
-    <tr>
-      <th>Custom property</th>
-      <th>Light mode</th>
-      <th>Dark mode</th>
-    </tr>
-  </thead>
-  <tbody>
-    {
-      allTokens
-        .filter((token) => /\$ouds-color-content-on-.*-(light|dark)/.test(token.name))
-        .map(extractRootName)
-        .reduce(mergeTokensByMode, [])
-        .map((colorToken) => ({
-          ...colorToken,
-          ...getSurfaceColorValueFor(colorToken.rootName)
-        }))
-        .map((token) => (
-          <tr class="align-middle">
-            <td style="width: 50%;">
-              <var class="user-select-all">{`var(--bs-color-${token.rootName})`}</var>
-              <button
-                type="button"
-                class="btn btn-minimal btn-icon btn-clipboard color-copy"
-                data-clipboard-text={`var(--bs-color-${token.rootName})`}
-                title="Copy to clipboard"
-                data-bs-toggle="tooltip"
-              >
-                <svg aria-hidden="true">
-                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')} />
-                </svg>
-              </button>
-            </td>
-            <td>
-              <figure class="ratio-21x9 mb-none d-flex justify-content-center align-items-center" style={{ backgroundColor: token.bgLight }}>
-                <svg class="decorative-small-icon" x="15" y="15" width="20" height="20" aria-hidden="true" color={token.lightValue}>
-                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}/>
-                </svg>
-                <figcaption class="visually-hidden">
-                  <var>{token.lightValue}</var>
-                </figcaption>
-              </figure>
-            </td>
-            <td>
-              <figure class="ratio-21x9 mb-none d-flex justify-content-center align-items-center" style={{ backgroundColor: token.bgDark }}>
-                <svg class="decorative-small-icon" x="15" y="15" width="20" height="20" aria-hidden="true" color={token.darkValue}>
-                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}/>
-                </svg>
-                <figcaption class="visually-hidden">
-                  <var>{token.darkValue}</var>
-                </figcaption>
-              </figure>
-            </td>
-          </tr>
-        ))
-    }
-  </tbody>
-</table>
+<ColorTable
+  colorPrefix="ouds/color/content/on/brand/"
+  tokenRegexp={/\$ouds-color-content-on-(?<backdropColorName>brand-(?<colorName>.*))-light/} />
+
+{
+  ['positive', 'info', 'warning', 'negative', 'accent'].map((status) => (
+    <ColorTable
+      colorPrefix={`ouds/color/content/on/status/${status}/`}
+      tokenRegexp={new RegExp(`\\$ouds-color-content-on-\(\?<backdropColorName>status-${status}-\(\?<colorName>\.\*\)\)-light`)} />
+  ))
+}
+
+<ColorTable
+  colorPrefix="ouds/color/content/on/action/"
+  tokenRegexp={/\$ouds-color-content-on-(?<backdropColorName>action-(?<colorName>.*))-light/} />
 
 ## Border
 
@@ -147,7 +114,21 @@ These colors can be used with [our border utilities]([[docsref:/utilities/border
   Please refer to the [border colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/b/11c27d) for more information on usage.
 </Callout>
 
-<ColorTable tokenFilter={(token) => /\$ouds-color-border.*-(light|dark)/.test(token.name)} />
+<ColorTable
+  colorPrefix="ouds/color/border/"
+  tokenRegexp={/\$ouds-color-border((?!-status|-on))-(?<colorName>.*)-light/} />
+
+<ColorTable
+  colorPrefix="ouds/color/border/status/"
+  tokenRegexp={/\$ouds-color-border-status-(?<colorName>.*)-light/} />
+
+### Border on other colors
+
+These border colors will guarantee an acceptable contrast on a specific background or surface color.
+
+<ColorTable
+  colorPrefix="ouds/color/border/on/brand"
+  tokenRegexp={/\$ouds-color-border-on-brand-(?<colorName>.*)-light/} />
 
 ## Action
 
@@ -161,7 +142,17 @@ These colors are used for interactive elements and actions' states.
   These colors should only be used for custom components development, this is why no utilities are provided, please use directly the custom properties in your CSS.
 </Callout>
 
-<ColorTable tokenFilter={(token) => /\$ouds-color-action.*-(light|dark)/.test(token.name)} />
+<ColorTable
+  colorPrefix="ouds/color/action/"
+  tokenRegexp={/\$ouds-color-action((?!-support|-negative))-(?<colorName>.*)-light/} />
+
+<ColorTable
+  colorPrefix="ouds/color/action/support"
+  tokenRegexp={/\$ouds-color-action-support-(?<colorName>.*)-light/} />
+
+<ColorTable
+  colorPrefix="ouds/color/action/negative"
+  tokenRegexp={/\$ouds-color-action-negative-(?<colorName>.*)-light/} />
 
 ## Overlay
 
@@ -175,7 +166,9 @@ These colors are used for overlay elements like dropdown, modals and tooltips to
   These colors should only be used for custom components development, this is why no utilities are provided, please use directly the custom properties in your CSS.
 </Callout>
 
-<ColorTable tokenFilter={(token) => /\$ouds-color-overlay.*-(light|dark)/.test(token.name)} />
+<ColorTable
+  colorPrefix="ouds/color/overlay"
+  tokenRegexp={/\$ouds-color-overlay-(?<colorName>.*)-light/} />
 
 ## Always
 
@@ -185,7 +178,9 @@ These colors are the sole invariant colors defined by OUDS Web, they will stay t
   Please refer to the [always colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/b/11c27d) for more information on usage.
 </Callout>
 
-<ColorTable tokenFilter={(token) => /\$ouds-color-always.*/.test(token.name)} />
+<ColorTable
+  colorPrefix="ouds/color/always"
+  tokenRegexp={/\$ouds-color-always-(?<colorName>.*)/} />
 
 ## Decorative
 

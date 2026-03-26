@@ -1,53 +1,55 @@
 ---
 import { getVersionedDocsPath } from '@libs/path'
-import { type IDeclaration } from '@libs/sass-variables'
+import { getTokenValue, type IDeclaration } from '@libs/sass-variables'
 import { allTokens } from '@libs/sass-variables'
 
 interface IColorToken {
-  rootName: string
+  colorName: string
   lightValue?: string
   darkValue?: string
+  backdropLight?: string
+  backdropDark?: string
 }
 
 interface Props {
-  tokenFilter: (token: IDeclaration) => boolean
+  tokenRegexp: RegExp
+  colorPrefix: string
 }
 
-const { tokenFilter } = Astro.props
+const { colorPrefix, tokenRegexp } = Astro.props
 
-export const extractRootName = (colorToken: IDeclaration) => ({
-  ...colorToken,
-  rootName: colorToken.name.replace('$ouds-color-', '').replace('-light', '').replace('-dark', '')
-})
-
-export const mergeTokensByMode = (acc: IColorToken[], curToken: IDeclaration & IColorToken) => {
-  const idx = acc.findIndex((token: IColorToken) => token.rootName === curToken.rootName)
-  const mode = curToken.name.match(/(light|dark)/)
-  // this is to handle "always" colors which have no light/dark modes
-  let value: any = { lightValue: curToken.compiledValue, darkValue: curToken.compiledValue }
-  if (mode && mode.length > 1) {
-    value = mode[1] === 'light' ? { lightValue: curToken.compiledValue } : { darkValue: curToken.compiledValue }
+const getLightDarkValuesFor = (colorName: string) => {
+  let token = `$ouds-color-${colorName}`
+  if (colorName.includes('status') || colorName.includes('brand')) {
+    token = `$ouds-color-surface-${colorName}`
   }
-
-  if (idx !== -1) {
-    acc[idx] = {
-      ...acc[idx],
-      ...value
-    }
-  } else {
-    acc.push({
-      rootName: curToken.rootName,
-      ...value
-    })
+  return {
+    backdropLight: getTokenValue(`${token}-light`),
+    backdropDark: getTokenValue(`${token}-dark`)
   }
-  return acc
+}
+
+const matchAndGetValues = (colorToken: IDeclaration) => {
+  const { colorName, backdropColorName } = colorToken.name.match(tokenRegexp)?.groups as {
+    colorName: string
+    backdropColorName?: string
+  }
+  return {
+    lightValue: colorToken.compiledValue,
+    darkValue: colorToken.name.includes('light')
+      ? getTokenValue(colorToken.name.replace('light', 'dark'))
+      : colorToken.compiledValue,
+    colorName,
+    // add both dark and light colors of backdrop (this is for `content-on` tokens)
+    ...(backdropColorName ? getLightDarkValuesFor(backdropColorName) : {})
+  }
 }
 ---
 
 <table class="table">
   <thead>
     <tr>
-      <th>Custom property</th>
+      <th>{colorPrefix}</th>
       <th>Light mode</th>
       <th>Dark mode</th>
     </tr>
@@ -55,34 +57,58 @@ export const mergeTokensByMode = (acc: IColorToken[], curToken: IDeclaration & I
   <tbody>
     {
       allTokens
-        .filter(tokenFilter)
-        .map(extractRootName)
-        .reduce(mergeTokensByMode, [])
+        .filter((token) => tokenRegexp.test(token.name))
+        .map(matchAndGetValues)
         .map((token: IColorToken) => (
           <tr class="align-middle">
-            <td style="width: 50%;">
-              <var class="user-select-all">{`var(--bs-color-${token.rootName})`}</var>
-              <button
-                type="button"
-                class="btn btn-minimal btn-icon btn-clipboard color-copy"
-                data-clipboard-text={`var(--bs-color-${token.rootName})`}
-                title="Copy to clipboard"
-                data-bs-toggle="tooltip"
-              >
-                <svg aria-hidden="true">
-                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')} />
-                </svg>
-              </button>
+            <td class="w-50">
+              <var class="user-select-all">{token.colorName}</var>
             </td>
             <td>
-              <figure class="ratio-21x9 mb-none" style={{ backgroundColor: token.lightValue }}>
+              <figure
+                class="ratio-21x9 mb-none d-flex justify-content-center align-items-center"
+                style={{
+                  backgroundColor: token.backdropLight ? token.backdropLight : token.lightValue
+                }}
+              >
+                {token.backdropLight && (
+                  <svg
+                    class="decorative-small-icon"
+                    x="15"
+                    y="15"
+                    width="20"
+                    height="20"
+                    aria-hidden="true"
+                    color={token.lightValue}
+                  >
+                    <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')} />
+                  </svg>
+                )}
                 <figcaption class="visually-hidden">
                   <var>{token.lightValue}</var>
                 </figcaption>
               </figure>
             </td>
             <td>
-              <figure class="ratio-21x9 mb-none" style={{ backgroundColor: token.darkValue }}>
+              <figure
+                class="ratio-21x9 mb-none d-flex justify-content-center align-items-center"
+                style={{
+                  backgroundColor: token.backdropDark ? token.backdropDark : token.darkValue
+                }}
+              >
+                {token.backdropDark && (
+                  <svg
+                    class="decorative-small-icon"
+                    x="15"
+                    y="15"
+                    width="20"
+                    height="20"
+                    aria-hidden="true"
+                    color={token.darkValue}
+                  >
+                    <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')} />
+                  </svg>
+                )}
                 <figcaption class="visually-hidden">
                   <var>{token.darkValue}</var>
                 </figcaption>
