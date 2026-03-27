@@ -86,7 +86,7 @@
   }
 
   // Automatically highlight rows with checked checkboxes
-  &.has-row-selection tbody tr:has(.control-item-indicator[type="checkbox"]:checked),
+  &.has-row-selection tbody tr:has(.control-item-indicator[type="checkbox"]:not([role="switch"]):checked),
   &.has-row-selection tbody tr:has(.control-item-indicator[type="radio"]:checked) {
     @extend %row-active;
     @extend [data-bs-theme=root-inverted];
