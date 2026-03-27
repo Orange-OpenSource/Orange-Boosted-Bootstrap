@@ -89,6 +89,11 @@ To create a striped table, add the `.table-zebra` modifier class to the base `.t
         <td>Cell</td>
         <td>Cell</td>
       </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
     </tbody>
   </table>`} />
 
@@ -178,7 +183,7 @@ Use `.table-responsive{-xs|-sm|-md|-lg|-xl|-2xl|3xl}` as needed to create respon
 **These tables may appear broken until their responsive styles apply at specific viewport widths.**
 
 <details class="mt-medium mb-2xlarge">
-<summary>Example of tables responsive up to particular breakpoint</summary>
+<summary>Examples of responsive tables up to particular breakpoint</summary>
 {getData('breakpoints').map((breakpoint) => {
 return (
 <div class="bd-example">
@@ -239,7 +244,7 @@ return (
 )
 })}
 
-<Code buttonLabel="tables responsive up to particular breakpoint" lang="html" code={getData('breakpoints').map((breakpoint) => `<div class="table-responsive${breakpoint.abbr}">
+<Code buttonLabel="responsive tables up to particular breakpoint" lang="html" code={getData('breakpoints').map((breakpoint) => `<div class="table-responsive${breakpoint.abbr}">
     <table class="table">
     ...
     </table>
@@ -255,7 +260,12 @@ When using checkboxes, radio buttons or switches in tables, you should add the `
 
 For the row selection purpose, you should use [standalone checkboxes]([[docsref:/components/checkbox#standalone]]), [standalone radio buttons]([[docsref:/components/radio-button#standalone]]), or [standalone switches]([[docsref:/components/switch#standalone]]) with `.visually-hidden` labels describing their use.
 
-If the control items are checkboxes, the first cell of the header sould contain a checkbox to select or deselect all rows. If some rows are selected, the header checkbox should be in an [indeterminate state]([[docsref:/components/checkbox#indeterminate]]) to indicate this.
+If the control items are checkboxes, the first cell of the header should contain a checkbox to select or deselect all rows. If some rows are selected, the header checkbox should be in an [indeterminate state]([[docsref:/components/checkbox#indeterminate]]) to indicate this.
+
+If the control items are checkboxes or radio buttons, selecting a row will automtically apply some styles to visually indicate that the row is selected. If you want to manually apply the same styles to rows or even cells, you can use the class `.table-active` on the `<tr>` or `<td>` elements.
+
+
+to visually indicate that a row is selected (except the header row), add the `.table-active` class to the `<tr>` element. This applies a background color to highlight the selected row, ensuring users can easily identify which rows are currently selected.
 
 <Example buttonLabel="table with row selection" code={`<table class="table has-row-selection">
     <caption class="visually-hidden">OUDS Web table with row selection</caption>

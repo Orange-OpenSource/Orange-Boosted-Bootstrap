@@ -256,5 +256,11 @@ export default () => {
   // storybook-start table
   const tableSelectAll = document.querySelector('.has-row-selection #tableSelectAll')
   tableSelectAll.indeterminate = true
+
+  document.querySelectorAll('.has-row-selection tr:has(.control-item-indicator[type="checkbox"]:checked), ' +
+    '.has-row-selection tr:has(.control-item-indicator[type="radio"]:checked)').forEach(row => {
+    row.setAttribute('aria-selected', 'true')
+    row.setAttribute('data-bs-theme', 'root-inverted')
+  })
   // storybook-end table
 }

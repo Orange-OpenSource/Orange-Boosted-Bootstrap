@@ -7,6 +7,11 @@
   vertical-align: middle;
 }
 
+%row-active {
+  --#{$prefix}table-color-state: var(--#{$prefix}table-active-color);
+  --#{$prefix}table-bg-state: var(--#{$prefix}table-active-bg);
+}
+
 .table {
   // Reset needed for nesting tables
   --#{$prefix}table-color-type: initial;
@@ -78,6 +83,13 @@
   // When using checkboxes in the first column, force width to ensure correct spacing on this column
   &.has-row-selection tr > :first-child {
     @extend %row-selection;
+  }
+
+  // Automatically highlight rows with checked checkboxes
+  &.has-row-selection tbody tr:has(.control-item-indicator[type="checkbox"]:checked),
+  &.has-row-selection tbody tr:has(.control-item-indicator[type="radio"]:checked) {
+    @extend %row-active;
+    @extend [data-bs-theme=root-inverted];
   }
 
   @if $enable-bootstrap-compatibility {
@@ -154,8 +166,7 @@
 // The `.table-active` class can be added to highlight rows or cells
 
 .table-active {
-  --#{$prefix}table-color-state: var(--#{$prefix}table-active-color);
-  --#{$prefix}table-bg-state: var(--#{$prefix}table-active-bg);
+  @extend %row-active;
 }
 
 // Hover effect
@@ -172,10 +183,9 @@
 // Table variants set the table cell backgrounds, border colors
 // and the colors of the striped, hovered & active tables
 
-@each $color, $value in $table-variants {
-  @include table-variant($color, $value);
-}
-
+//@each $color, $value in $table-variants {
+//  @include table-variant($color, $value);
+//}
 
 // Responsive tables
 //
