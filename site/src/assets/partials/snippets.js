@@ -198,37 +198,36 @@ export default () => {
   // -------------------------------
   // First example
   // js-docs-start skeleton-first-example
-  const skeletonToReplace = document.querySelector('.bd-skeleton-replace')
-  const originalContent = skeletonToReplace.innerHTML
-
   function replaceSkeleton() {
     setTimeout(() => {
       skeletonToReplace.innerHTML = `<div class="d-flex gap-medium mb-medium">
-        <img class="flex-shrink-0 w-50 ratio-1x1 object-fit-cover" src="https://placecats.com/500/500" alt="" />
-        <div class="flex-grow-1 d-flex flex-column">
-          <h4 class="h1">Placeholder title</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis. Aliquam erat volutpat. Ut quam turpis, interdum non ex at, imperdiet ornare mi.</p>
+          <img class="flex-shrink-0 w-50 ratio-1x1 object-fit-cover" src="https://placecats.com/500/500" alt="" />
+          <div class="flex-grow-1 d-flex flex-column">
+            <h4 class="h1">Placeholder title</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis. Aliquam erat volutpat. Ut quam turpis, interdum non ex at, imperdiet ornare mi.</p>
+          </div>
         </div>
-      </div>
-      <button class="btn btn-default" onclick="window.relaunchAnim()">Relaunch animation</button>
-      <p class="visually-hidden" role="alert">Content loaded.</p>`
+        <button class="btn btn-default" onclick="window.relaunchAnim()">Relaunch animation</button>
+        <p class="visually-hidden" role="alert">Content loaded.</p>`
     }, 8000)
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    replaceSkeleton()
-  })
+  const skeletonToReplace = document.querySelector('.bd-skeleton-replace')
+  if (skeletonToReplace) {
+    const originalContent = skeletonToReplace.innerHTML
+    document.addEventListener('DOMContentLoaded', () => {
+      replaceSkeleton()
+    })
 
-  window.relaunchAnim = () => {
-    skeletonToReplace.innerHTML = originalContent
-    replaceSkeleton()
+    window.relaunchAnim = () => {
+      skeletonToReplace.innerHTML = originalContent
+      replaceSkeleton()
+    }
   }
   // js-docs-end skeleton-first-example
 
   // Second example
   // js-docs-start skeleton-second-example
-  const skeletonToReplace2 = document.querySelector('.bd-skeleton-replace2')
-
   function removeSkeletons() {
     setTimeout(() => {
       skeletonToReplace2.firstElementChild.removeAttribute('inert')
@@ -237,15 +236,18 @@ export default () => {
     }, 8000)
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    removeSkeletons()
-  })
+  const skeletonToReplace2 = document.querySelector('.bd-skeleton-replace2')
+  if (skeletonToReplace2) {
+    document.addEventListener('DOMContentLoaded', () => {
+      removeSkeletons()
+    })
 
-  window.relaunchAnim2 = () => {
-    skeletonToReplace2.firstElementChild.setAttribute('inert', '')
-    skeletonToReplace2.firstElementChild.setAttribute('aria-busy', 'true')
-    skeletonToReplace2.lastElementChild.textContent = 'Loading form ...'
-    removeSkeletons()
+    window.relaunchAnim2 = () => {
+      skeletonToReplace2.firstElementChild.setAttribute('inert', '')
+      skeletonToReplace2.firstElementChild.setAttribute('aria-busy', 'true')
+      skeletonToReplace2.lastElementChild.textContent = 'Loading form ...'
+      removeSkeletons()
+    }
   }
   // js-docs-end skeleton-second-example
 
@@ -254,13 +256,45 @@ export default () => {
   // -------------------------------
   // Indeterminate checkbox in table example in docs and StackBlitz
   // storybook-start table
-  const tableSelectAll = document.querySelector('.has-row-selection #tableSelectAll')
-  tableSelectAll.indeterminate = true
+  // js-docs-start live-row-selection
+  // Manage checkboxes states (e.g., select/deselect all rows, update header checkbox state)
+  const tableSelectAll = document.querySelector('.has-row-selection#tableWithCheckboxes #tableSelectAll')
+  const allCheckboxes = document.querySelectorAll('.has-row-selection#tableWithCheckboxes tbody input[type="checkbox"]')
 
-  document.querySelectorAll('.has-row-selection tr:has(.control-item-indicator[type="checkbox"]:checked), ' +
-    '.has-row-selection tr:has(.control-item-indicator[type="radio"]:checked)').forEach(row => {
-    row.setAttribute('aria-selected', 'true')
-    row.setAttribute('data-bs-theme', 'root-inverted')
-  })
+  function updateSelectAllState() {
+    const checkedCheckboxes = document.querySelectorAll('.has-row-selection#tableWithCheckboxes tbody input[type="checkbox"]:checked')
+
+    if (checkedCheckboxes.length === 0) {
+      // None are checked
+      tableSelectAll.checked = false
+      tableSelectAll.indeterminate = false
+    } else if (checkedCheckboxes.length === allCheckboxes.length) {
+      // All are checked
+      tableSelectAll.checked = true
+      tableSelectAll.indeterminate = false
+    } else {
+      // Some are checked
+      tableSelectAll.checked = false
+      tableSelectAll.indeterminate = true
+    }
+  }
+
+  if (tableSelectAll) {
+    tableSelectAll.addEventListener('change', event => {
+      allCheckboxes.forEach(checkbox => {
+        checkbox.checked = event.target.checked
+      })
+      updateSelectAllState()
+    })
+
+    // Add change listener to all row checkboxes
+    allCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', updateSelectAllState)
+    })
+
+    // Initialize the state on load
+    updateSelectAllState()
+  }
+  // js-docs-end live-row-selection
   // storybook-end table
 }

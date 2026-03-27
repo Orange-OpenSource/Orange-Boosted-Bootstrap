@@ -262,12 +262,9 @@ For the row selection purpose, you should use [standalone checkboxes]([[docsref:
 
 If the control items are checkboxes, the first cell of the header should contain a checkbox to select or deselect all rows. If some rows are selected, the header checkbox should be in an [indeterminate state]([[docsref:/components/checkbox#indeterminate]]) to indicate this.
 
-If the control items are checkboxes or radio buttons, selecting a row will automtically apply some styles to visually indicate that the row is selected. If you want to manually apply the same styles to rows or even cells, you can use the class `.table-active` on the `<tr>` or `<td>` elements.
+If the control items are checkboxes or radio buttons, selecting a row will automtically apply some styles to visually indicate that the row is selected. If you want to manually apply the same styles to rows or even cells, you can use the class `.table-active` on `<tr>` or `<td>` elements.
 
-
-to visually indicate that a row is selected (except the header row), add the `.table-active` class to the `<tr>` element. This applies a background color to highlight the selected row, ensuring users can easily identify which rows are currently selected.
-
-<Example buttonLabel="table with row selection" code={`<table class="table has-row-selection">
+<Example buttonLabel="table with checkboxes row selection" code={`<table class="table has-row-selection" id="tableWithCheckboxes">
     <caption class="visually-hidden">OUDS Web table with row selection</caption>
     <thead>
       <tr>
@@ -315,11 +312,14 @@ to visually indicate that a row is selected (except the header row), add the `.t
     </tbody>
   </table>`} />
 
-<Example buttonLabel="table with radio buttons" code={`<table class="table has-row-selection">
+To manage checkboxes states (e.g., select/deselect all rows, update header checkbox state), here is an example of JavaScript code:
+<JsDocs name="live-row-selection" file="site/src/assets/partials/snippets.js" />
+
+<Example buttonLabel="table with radio buttons row selection" code={`<table class="table has-row-selection">
     <caption class="visually-hidden">OUDS Web table with radio buttons</caption>
     <thead>
       <tr>
-        <th scope="col">Heading</th>
+        <th scope="col">Select</th>
         <th scope="col">Heading</th>
         <th scope="col">Heading</th>
       </tr>
@@ -362,7 +362,7 @@ to visually indicate that a row is selected (except the header row), add the `.t
     <caption class="visually-hidden">OUDS Web table with switches</caption>
     <thead>
       <tr>
-        <th scope="col">Heading</th>
+        <th scope="col">Select</th>
         <th scope="col">Heading</th>
         <th scope="col">Heading</th>
       </tr>
