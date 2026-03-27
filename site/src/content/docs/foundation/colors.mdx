@@ -28,7 +28,8 @@ These colors can be used with [our background utilities]([[docsref:/utilities/ba
 
 <ColorTable
   colorPrefix="ouds/color/bg/"
-  tokenRegexp={/\$ouds-color-bg-(?<colorName>.*)-light/}/>
+  tokenRegexp={/\$ouds-color-bg-(?<colorName>.*)-light/}
+  getUsage={(colorName) => `.bg-${colorName}`} />
 
 ## Surface
 
@@ -42,11 +43,13 @@ These colors can be used with [our background utilities]([[docsref:/utilities/ba
 
 <ColorTable
   colorPrefix="ouds/color/surface/"
-  tokenRegexp={/\$ouds-color-surface-((?!status|brand))(?<colorName>.*)-light/} />
+  tokenRegexp={/\$ouds-color-surface-((?!status|brand))(?<colorName>.*)-light/}
+  getUsage={(colorName) => `.bg-surface-${colorName}`} />
 
 <ColorTable
   colorPrefix="ouds/color/surface/brand/"
-  tokenRegexp={/\$ouds-color-surface-brand-(?<colorName>.*)-light/} />
+  tokenRegexp={/\$ouds-color-surface-brand-(?<colorName>.*)-light/}
+  getUsage={(colorName) => `.bg-surface-brand-${colorName}`} />
 
 ### Status
 
@@ -58,7 +61,8 @@ Like other surface colors, they can be used with [our background utilities]([[do
   ['positive', 'info', 'warning', 'negative', 'accent'].map((status) => (
     <ColorTable
       colorPrefix={`ouds/color/surface/status/${status}/`}
-      tokenRegexp={new RegExp(`\\$ouds-color-surface-status-${status}-\(\?<colorName>\.\*\)-light`)} />
+      tokenRegexp={new RegExp(`\\$ouds-color-surface-status-${status}-\(\?<colorName>\.\*\)-light`)}
+      getUsage={(colorName) => `.bg-surface-status-${status}-${colorName}`} />
   ))
 }
 
@@ -74,11 +78,13 @@ These colors can be used with [our text color utilities]([[docsref:/utilities/co
 
 <ColorTable
   colorPrefix="ouds/color/content/"
-  tokenRegexp={/\$ouds-color-content((?!-on|-status))-(?<colorName>.*)-light/} />
+  tokenRegexp={/\$ouds-color-content((?!-on|-status))-(?<colorName>.*)-light/}
+  getUsage={(colorName) => `.text-${colorName}`} />
 
 <ColorTable
   colorPrefix="ouds/color/content/status/"
-  tokenRegexp={/\$ouds-color-content-status-(?<colorName>.*)-light/} />
+  tokenRegexp={/\$ouds-color-content-status-(?<colorName>.*)-light/}
+  getUsage={(colorName) => `.text-status-${colorName}`} />
 
 ### Content on other colors
 
@@ -90,15 +96,21 @@ These content colors are used to guarantee maximum legibility for contents displ
 
 <ColorTable
   colorPrefix="ouds/color/content/on/brand/"
-  tokenRegexp={/\$ouds-color-content-on-(?<backdropColorName>brand-(?<colorName>.*))-light/} />
+  tokenRegexp={/\$ouds-color-content-on-(?<backdropColorName>brand-(?<colorName>.*))-light/}
+  getUsage={(colorName) => `.text-on-brand-${colorName}`} />
 
 {
   ['positive', 'info', 'warning', 'negative', 'accent'].map((status) => (
     <ColorTable
       colorPrefix={`ouds/color/content/on/status/${status}/`}
-      tokenRegexp={new RegExp(`\\$ouds-color-content-on-\(\?<backdropColorName>status-${status}-\(\?<colorName>\.\*\)\)-light`)} />
+      tokenRegexp={new RegExp(`\\$ouds-color-content-on-\(\?<backdropColorName>status-${status}-\(\?<colorName>\.\*\)\)-light`)}
+      getUsage={(colorName) => `.text-on-status-${status}-${colorName}`} />
   ))
 }
+
+<Callout type="info">
+  The following content colors are highly specific and should only be used with a designer directions.
+</Callout>
 
 <ColorTable
   colorPrefix="ouds/color/content/on/action/"
@@ -116,19 +128,22 @@ These colors can be used with [our border utilities]([[docsref:/utilities/border
 
 <ColorTable
   colorPrefix="ouds/color/border/"
-  tokenRegexp={/\$ouds-color-border((?!-status|-on))-(?<colorName>.*)-light/} />
+  tokenRegexp={/\$ouds-color-border((?!-status|-on))-(?<colorName>.*)-light/}
+  getUsage={(colorName) => `.border-${colorName}`} />
 
 <ColorTable
   colorPrefix="ouds/color/border/status/"
-  tokenRegexp={/\$ouds-color-border-status-(?<colorName>.*)-light/} />
+  tokenRegexp={/\$ouds-color-border-status-(?<colorName>.*)-light/}
+  getUsage={(colorName) => `.border-status-${colorName}`} />
 
 ### Border on other colors
 
 These border colors will guarantee an acceptable contrast on a specific background or surface color.
 
 <ColorTable
-  colorPrefix="ouds/color/border/on/brand"
-  tokenRegexp={/\$ouds-color-border-on-brand-(?<colorName>.*)-light/} />
+  colorPrefix="ouds/color/border/on/brand/"
+  tokenRegexp={/\$ouds-color-border-on-brand-(?<colorName>.*)-light/}
+  getUsage={(colorName) => `.border-on-brand-${colorName}`} />
 
 ## Action
 
@@ -147,11 +162,11 @@ These colors are used for interactive elements and actions' states.
   tokenRegexp={/\$ouds-color-action((?!-support|-negative))-(?<colorName>.*)-light/} />
 
 <ColorTable
-  colorPrefix="ouds/color/action/support"
+  colorPrefix="ouds/color/action/support/"
   tokenRegexp={/\$ouds-color-action-support-(?<colorName>.*)-light/} />
 
 <ColorTable
-  colorPrefix="ouds/color/action/negative"
+  colorPrefix="ouds/color/action/negative/"
   tokenRegexp={/\$ouds-color-action-negative-(?<colorName>.*)-light/} />
 
 ## Overlay
@@ -167,19 +182,21 @@ These colors are used for overlay elements like dropdown, modals and tooltips to
 </Callout>
 
 <ColorTable
-  colorPrefix="ouds/color/overlay"
+  colorPrefix="ouds/color/overlay/"
   tokenRegexp={/\$ouds-color-overlay-(?<colorName>.*)-light/} />
 
 ## Always
 
 These colors are the sole invariant colors defined by OUDS Web, they will stay the same on every brand, modes or contexts.
 
+These colors can be used with [our background utilities]([[docsref:/utilities/background]]), [our text utilities]([[docsref:/utilities/color]]) or [our border utilities]([[docsref:/utilities/border]]).
+
 <Callout type="info" title="Usage reference">
   Please refer to the [always colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/b/11c27d) for more information on usage.
 </Callout>
 
 <ColorTable
-  colorPrefix="ouds/color/always"
+  colorPrefix="ouds/color/always/"
   tokenRegexp={/\$ouds-color-always-(?<colorName>.*)/} />
 
 ## Decorative

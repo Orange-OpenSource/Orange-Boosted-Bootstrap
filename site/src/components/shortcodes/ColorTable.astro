@@ -14,9 +14,13 @@ interface IColorToken {
 interface Props {
   tokenRegexp: RegExp
   colorPrefix: string
+  getUsage?: (tokenName: string) => string
 }
 
-const { colorPrefix, tokenRegexp } = Astro.props
+const getCustomProp = (colorName: string, colorPrefix: string) =>
+  `var(--bs${colorPrefix.replace('ouds', '').replaceAll('/', '-')}${colorName})`
+
+const { colorPrefix, tokenRegexp, getUsage = getCustomProp } = Astro.props
 
 const getLightDarkValuesFor = (colorName: string) => {
   let token = `$ouds-color-${colorName}`
@@ -47,76 +51,82 @@ const matchAndGetValues = (colorToken: IDeclaration) => {
 }
 ---
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>{colorPrefix}</th>
-      <th>Light mode</th>
-      <th>Dark mode</th>
-    </tr>
-  </thead>
-  <tbody>
-    {
-      allTokens
-        .filter((token) => tokenRegexp.test(token.name))
-        .map(matchAndGetValues)
-        .map((token: IColorToken) => (
-          <tr class="align-middle">
-            <td class="w-50">
-              <var class="user-select-all">{token.colorName}</var>
-            </td>
-            <td>
-              <figure
-                class="ratio-21x9 mb-none d-flex justify-content-center align-items-center"
-                style={{
-                  backgroundColor: token.backdropLight ? token.backdropLight : token.lightValue
-                }}
-              >
-                {token.backdropLight && (
-                  <svg
-                    class="decorative-small-icon"
-                    x="15"
-                    y="15"
-                    width="20"
-                    height="20"
-                    aria-hidden="true"
-                    color={token.lightValue}
-                  >
-                    <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')} />
-                  </svg>
-                )}
-                <figcaption class="visually-hidden">
-                  <var>{token.lightValue}</var>
-                </figcaption>
-              </figure>
-            </td>
-            <td>
-              <figure
-                class="ratio-21x9 mb-none d-flex justify-content-center align-items-center"
-                style={{
-                  backgroundColor: token.backdropDark ? token.backdropDark : token.darkValue
-                }}
-              >
-                {token.backdropDark && (
-                  <svg
-                    class="decorative-small-icon"
-                    x="15"
-                    y="15"
-                    width="20"
-                    height="20"
-                    aria-hidden="true"
-                    color={token.darkValue}
-                  >
-                    <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')} />
-                  </svg>
-                )}
-                <figcaption class="visually-hidden">
-                  <var>{token.darkValue}</var>
-                </figcaption>
-              </figure>
-            </td>
-          </tr>
-        ))
-    }
-  </tbody>
-</table>
+<div class="table-responsive mb-small">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="w-25">{colorPrefix}</th>
+        <th>Light mode</th>
+        <th>Dark mode</th>
+        <th>Usage</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        allTokens
+          .filter((token) => tokenRegexp.test(token.name))
+          .map(matchAndGetValues)
+          .map((token: IColorToken) => (
+            <tr class="align-middle">
+              <td class="w-50">
+                <var>{token.colorName}</var>
+              </td>
+              <td>
+                <figure
+                  class="ratio-21x9 mb-none d-flex justify-content-center align-items-center"
+                  style={{
+                    backgroundColor: token.backdropLight ? token.backdropLight : token.lightValue
+                  }}
+                >
+                  {token.backdropLight && (
+                    <svg
+                      class="decorative-small-icon"
+                      x="15"
+                      y="15"
+                      width="20"
+                      height="20"
+                      aria-hidden="true"
+                      color={token.lightValue}
+                    >
+                      <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')} />
+                    </svg>
+                  )}
+                  <figcaption class="visually-hidden">
+                    <var>{token.lightValue}</var>
+                  </figcaption>
+                </figure>
+              </td>
+              <td>
+                <figure
+                  class="ratio-21x9 mb-none d-flex justify-content-center align-items-center"
+                  style={{
+                    backgroundColor: token.backdropDark ? token.backdropDark : token.darkValue
+                  }}
+                >
+                  {token.backdropDark && (
+                    <svg
+                      class="decorative-small-icon"
+                      x="15"
+                      y="15"
+                      width="20"
+                      height="20"
+                      aria-hidden="true"
+                      color={token.darkValue}
+                    >
+                      <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')} />
+                    </svg>
+                  )}
+                  <figcaption class="visually-hidden">
+                    <var>{token.darkValue}</var>
+                  </figcaption>
+                </figure>
+              </td>
+              <td class="w-25 user-select-all" style="max-width: 2rem;">
+                <var>{getUsage(token.colorName, colorPrefix)}</var>
+              </td>
+            </tr>
+          ))
+      }
+    </tbody>
+  </table>
+</div>
