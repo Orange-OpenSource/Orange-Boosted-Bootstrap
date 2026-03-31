@@ -10,27 +10,49 @@ import { getConfig } from '@libs/config'
 import { getData } from '@libs/data'
 import { allTokens } from '@libs/sass-variables'
 
-<Callout type="info" name="warning-color-assistive-technologies" />
+<Callout title="Accessibility tip" type="info" name="warning-color-assistive-technologies" />
 
-## Background color
+## Overview
 
-Background utilities like `.bg-*` are generated from our `$ouds-backgrounds` Sass map and respond to color modes.
+Background utility classes, in the form  `.bg-*`, apply a color [token]([[docsref:/foundation/tokens]]) as `background-color` for a [background]([[docsref:/foundation/colors#background]]), [surface]([[docsref:/foundation/colors#surface]]) or ['always' color]([[docsref:/foundation/colors#surface]]) dynamically depending on the [color mode]([[docsref:/foundation/color-modes]]).
 
-Similar to the contextual text color classes, set the background of an element to any contextual class. Some background utilities will set the text color for you, some will not.
+*Depending on the context of the element with a `.bg-*` class and its resulting color, you should add a unique child element with a `[data-bs-theme]` [attribute to specify the color mode]([[docsref:/foundation/color-modes#how-to-use]]) for its descendants.*
+This ensures that all descendant nodes adopt the correct color mode for the specific background color. As a result:
+* Text nodes will automatically display in the appropriate [content color]([[docsref:/foundation/colors#content-on-other-colors]]).
+* Components will respond to the color mode and adapt accordingly.
 
-Utilities that set the text color: `.bg-surface-brand-primary`, `.bg-surface-brand-secondary`, `.bg-surface-brand-tertiary`, `.bg-surface-status-accent-emphasized`, `.bg-surface-status-accent-muted`, `.bg-surface-status-positive-emphasized`, `.bg-surface-status-positive-muted`, `.bg-surface-status-negative-emphasized`, `.bg-surface-status-negative-muted`, `.bg-surface-status-warning-emphasized`, `.bg-surface-status-warning-muted`, `.bg-surface-status-info-emphasized`, `.bg-surface-status-info-muted`, `.bg-always-black`, `.bg-always-white`.
+*Note:* It is not possible to add the attribute directly on the `.bg-*` element, as the background color would then adapt to the attribute instead of conforming to the color mode set by its ancestors.
 
-All the other background utilities **will not set `color`**, depending on the cases you’ll want to use an additional:
-* `[data-bs-theme]` [color mode attribute]([[docsref:/foundation/color-modes#how-to-use]]) is the best option most of the time and moreover when the element using a background utility contains complex sub-elements such as components that need to respond to color modes. It also sets the right color for texts inside
-* `.text-*` [color utilities]([[docsref:/utilities/color]]) when the background color and color couple are accessible together in light and dark mode, and there is no components inside
+*For some background colors, we have set the default content color directly* using a CSS `color` attribute. This allows descendants text nodes to automatically display in the correct color. However this approach is only suitable when the `.bg-*` element contains only text, if the element contains components, you must add a child container with the `[data-bs-theme]` attribute.
+
+<details class="my-medium">
+  <summary class="py-small">Utility classes that set the text color</summary>
+  * `.bg-surface-brand-primary`
+  * `.bg-surface-brand-secondary`
+  * `.bg-surface-brand-tertiary`
+  * `.bg-surface-status-accent-emphasized`
+  * `.bg-surface-status-accent-muted`
+  * `.bg-surface-status-positive-emphasized`
+  * `.bg-surface-status-positive-muted`
+  * `.bg-surface-status-negative-emphasized`
+  * `.bg-surface-status-negative-muted`
+  * `.bg-surface-status-warning-emphasized`
+  * `.bg-surface-status-warning-muted`
+  * `.bg-surface-status-info-emphasized`
+  * `.bg-surface-status-info-muted`
+  * `.bg-always-black`
+  * `.bg-always-white`.
+</details>
+
+In the following examples we always use a child element with `[data-bs-theme]` attribute as it is the recommended way to use the `.bg-*` classes and will work in every case even if we only have text in our elements.
 
 <Callout type="info">
-  You can find more information on the OUDS background colors in the [design guidelines](https://unified-design-system.orange.com/472794e18/p/217ac6-color/t/b3d025a22f)
+  You can find more information on the OUDS background and surface colors in the [design guidelines](https://unified-design-system.orange.com/472794e18/p/217ac6-color/t/b3d025a22f)
 </Callout>
 
 <BootstrapCompatibility>
 
-Here are the equivalent Bootstrap background that you shouldn’t be using. Prefer using the classes above according to [our design system]([[config:ouds.web]]).
+Following are the equivalent Bootstrap background that you shouldn’t be using. Prefer using the classes below that conform to [our design system]([[config:ouds.web]]).
 
 <Example code={[
   ...getData('theme-colors').map((themeColor) => `<div class="p-3 mb-2 bg-${themeColor.name}">.bg-${themeColor.name}</div>
@@ -44,12 +66,12 @@ Here are the equivalent Bootstrap background that you shouldn’t be using. Pref
 
 </BootstrapCompatibility>
 
-### `data-bs-theme` attribute
+## Nominal mode
 
-Here are the nominal cases you should be using, when there is no other theme interferences than the root one, using `data-bs-theme` attribute:
+Below are all the background utilities along with their recommended `[data-bs-theme]` attribute values to use when no other color mode is specified in the container's ancestry apart from the one on the root element:
 
 <Callout type="info">
-  Please note that we use `[data-bs-theme]` attribute on a child element to avoid interfering with the parent theme. This is a workaround to avoid switching the colors between light and dark modes and keep having the good ones displayed.
+  Please note that we use `[data-bs-theme]` attribute on a child element so that the background to not adapt to the attribute instead of conforming to the color mode set by its ancestors.
 </Callout>
 
 <Example code={[
@@ -88,14 +110,20 @@ Here are the nominal cases you should be using, when there is no other theme int
   <p class="bg-always-white p-large fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
   <p class="bg-transparent p-large fw-bold">.bg-transparent</p>`]} />
 
-We also provide some opacity backgrounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
+We also provide opacity-based background classes, which should be used only in specific contexts where you need to adjust background opacity to enhance text readability. In most cases, `.bg-secondary` is the preferred alternative.
 
 <Example code={`<p class="bg-opacity-lower p-large fw-bold">.bg-opacity-lower</p>
   <p class="bg-opacity-lowest p-large fw-bold">.bg-opacity-lowest</p>`} />
 
-#### Inside a static theme
+## Inside a static color mode
 
-Here is a more complex example to understand how to use `[data-bs-theme]` in specific static contexts. In here you should only use the inverse static theme by replacing all `data-bs-theme="root-inverted"` by `data-bs-theme="light"`. So if you’re in a dark theme context, use only `data-bs-theme="light"` when and if needed and respectively.
+The following examples demonstrate the proper use of `[data-bs-theme]` in static color mode contexts. In this case, background colors will stay the same so it's safe to use a corresponding `[data-bs-theme]` to set the mode for the descendant nodes.
+
+For example in a `light` color mode context, dark backgrounds like `.bg-inverse-high` will stay dark so we must add a `data-bs-theme="dark"` child element to set the descendant in the right mode.
+
+<Callout type="info">
+  As you can see in the examples, it is not necessary to add the `[data-bs-theme]` child element when the color mode context already matches the background color. For example `.bg-primary` is a light background and therefore the parent `data-bs-theme="light"` already sets its descendant in the right mode.
+</Callout>
 
 <details class="mb-large px-small">
   <summary class="py-small">You’re in a static <code>light</code> context</summary>
@@ -131,7 +159,7 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
   `  </div>
   </div>`]} />
 
-We also provide some opacity backgrounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
+We also provide opacity-based background classes, which should be used only in specific contexts where you need to adjust background opacity to enhance text readability. In most cases, `.bg-secondary` is the preferred alternative.
 
 <Example code={`<div class="bg-always-white p-large">
     <div data-bs-theme="light">
@@ -141,6 +169,8 @@ We also provide some opacity backgrounds that should only be used in very specif
   </div>`} />
 
 </details>
+
+With a `dark` color mode context, light backgrounds like `.bg-inverse-high` will stay light so we must add a `data-bs-theme="light"` child element for descendants to set the descendant in the right mode.
 
 <details class="mb-large px-small">
   <summary class="py-small">You’re in a static <code>dark</code> context</summary>
@@ -176,7 +206,7 @@ We also provide some opacity backgrounds that should only be used in very specif
   `  </div>
   </div>`]} />
 
-We also provide some opacity backgrounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
+We also provide opacity-based background classes, which should be used only in specific contexts where you need to adjust background opacity to enhance text readability. In most cases, `.bg-secondary` is the preferred alternative.
 
 <Example code={`<div class="bg-always-black p-large">
     <div data-bs-theme="dark">
@@ -187,9 +217,9 @@ We also provide some opacity backgrounds that should only be used in very specif
 
 </details>
 
-#### Inside a dynamic theme
+## Inside a dynamic color mode
 
-Here is a more complex example to understand how to use `[data-bs-theme]` in specific dynamic contexts. In here you should only replace `data-bs-theme="root-inverted"` by `data-bs-theme="root"` and respectively.
+The following examples demonstrate the proper use of `[data-bs-theme]` in dynamic contexts. In this case you must take into account that some background colors will change when the color mode context change. For example in a (root) `light` color mode, a parent container with `data-bs-theme="root-inverted"` will make the background color of a container with `.bg-inverse-high` light, therefore we must switch back the local color mode to `root` for its descendants.
 
 <details class="mb-large px-small">
   <summary class="py-small">You’re in a dynamic <code>root-inverted</code> context</summary>
@@ -233,7 +263,7 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
   `  </div>
   </div>`]} />
 
-We also provide some opacity backgrounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
+We also provide opacity-based background classes, which should be used only in specific contexts where you need to adjust background opacity to enhance text readability. In most cases, `.bg-secondary` is the preferred alternative.
 
 <Example code={`<div class="bg-inverse-high p-large">
     <div data-bs-theme="root-inverted">
@@ -246,9 +276,7 @@ We also provide some opacity backgrounds that should only be used in very specif
 
 ## Colored backgrounds
 
-In OUDS Web, we have some backgrounds that are a bit specific because they can take only few components like buttons, links and texts. For accessibility reasons we remove the color of these components.
-
-`.bg-surface-brand-primary`,{getConfig().brand !== 'orange' ? <><code>.bg-surface-brand-secondary</code>, <code>.bg-surface-brand-tertiary</code></> : ''} `.bg-surface-status-accent-emphasized`, `.bg-surface-status-warning-emphasized`, `.bg-surface-status-negative-emphasized`, `.bg-surface-status-positive-emphasized` and `.bg-surface-status-info-emphasized` are considered as colored backgrounds.
+The following colored backgrounds are designed for specific use cases and can only accommodate a limited set of components, such as buttons, links, and text elements. For accessibility reasons we remove the color of these components.
 
 <Example code={[
   ...allTokens.filter(token => (token.name.match(/\$ouds-color-surface-brand.*-light/) && token.compiledValue)).map(token => {
@@ -283,7 +311,7 @@ In OUDS Web, we have some backgrounds that are a bit specific because they can t
 
 ## Multiple backgrounds
 
-Sometimes it will be necessary to layer two background colors on top of each other. This can happen when designers opt to have two fill color on a container for example if the parent container have a specific background and we want to opacify a card on top of it. To achieve this with OUDS Web you will need two containers with the specified background color utility.
+Occasionally, you may need to layer two background colors on top of each other. This scenario arises when design requirements call for dual fill colors on containers—for example, when a parent container has a specific background and you need to place a card over it. To implement this in OUDS Web, you'll need to create two nested containers, each with its own specified background color utility class.
 
 <Example code={`<div class="p-large" style="background: repeating-linear-gradient(-45deg, #ccc, #ccc 40px, var(--bs-color-bg-secondary) 40px, var(--bs-color-bg-secondary) 80px)">
     <div class="bg-secondary">
