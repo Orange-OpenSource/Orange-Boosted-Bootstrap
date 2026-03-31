@@ -98,6 +98,7 @@ Orange-Boosted-Bootstrap/
 │   │   │   └── tokens/       #    _raw.scss, _semantic.scss, _composite.scss, _component.scss
 │   │   │                     #    + _semantic-colors-custom-props.scss
 │   │   │                     #    + _component-colors-custom-props.scss
+│   │   │                     #    ⚠️ All auto-generated except _composite.scss
 │   │   └── dist/css/         #    Compiled brand CSS (LTR, RTL, minified)
 │   ├── sosh/                 # 🟣 Sosh brand package (@ouds/web-sosh)
 │   │   └── (same structure as orange)
@@ -133,7 +134,33 @@ Orange-Boosted-Bootstrap/
 
 ## Design tokens system
 
-Tokens are the single source of truth for all visual properties. They follow a **3-tier hierarchy**:
+Tokens are the single source of truth for all visual properties. They follow a **3-tier hierarchy**.
+
+### Token generation pipeline
+
+⚠️ **Most token files are auto-generated. Do NOT edit them by hand.**
+
+Tokens flow through this pipeline:
+
+```
+Figma (design)  →  DTCG export  →  Style Dictionary  →  SCSS files  →  PR on GitHub
+```
+
+1. Designers define tokens in **Figma**.
+2. Tokens are exported in **DTCG format** (Design Token Community Group standard).
+3. **Style Dictionary** transforms them into SCSS files (`_raw.scss`, `_semantic.scss`, `_component.scss`, `_semantic-colors-custom-props.scss`, `_component-colors-custom-props.scss`).
+4. A **pull request** is opened on GitHub to integrate the updated token files.
+
+| Token file | Auto-generated? | Editable by hand? |
+|---|---|---|
+| `tokens/_raw.scss` | ✅ Yes | ❌ **Never** |
+| `tokens/_semantic.scss` | ✅ Yes | ❌ **Never** |
+| `tokens/_component.scss` | ✅ Yes | ❌ **Never** |
+| `tokens/_semantic-colors-custom-props.scss` | ✅ Yes | ❌ **Never** |
+| `tokens/_component-colors-custom-props.scss` | ✅ Yes | ❌ **Never** |
+| `tokens/_composite.scss` | ❌ No | ✅ **Yes** — manually managed |
+
+**`_composite.scss` is the exception**: It contains icons (SVG data URIs), composite elevation tokens, font stacks, and Sass maps that cannot be expressed in the DTCG format. This is the only token file that should be edited by hand.
 
 ### Token layers
 
@@ -144,11 +171,11 @@ $core-ouds-*         $ouds-*      $ouds-<component>-*
 
 | Layer | Prefix | Location | Purpose |
 |---|---|---|---|
-| **Raw** | `$core-ouds-*`, `$core-orange-*` | `tokens/_raw.scss` | Primitive values (colors, dimensions, base units). **Never use directly in component SCSS.** |
-| **Semantic** | `$ouds-*` | `tokens/_semantic.scss` | Meaningful aliases (e.g., `$ouds-border-radius-default`). Maps raw tokens to design intent. |
-| **Composite** | `$ouds-*` | `tokens/_composite.scss` | Combined values (elevation, font stacks, font-face). |
-| **Component** | `$ouds-<component>-*` | `tokens/_component.scss` | Per-component tokens (e.g., `$ouds-button-border-radius-default`). References semantic tokens. |
-| **CSS Custom Props** | `--bs-*` | `tokens/_*-custom-props.scss` | Runtime tokens exposed as CSS custom properties for color-mode switching. |
+| **Raw** | `$core-ouds-*`, `$core-orange-*` | `tokens/_raw.scss` | Primitive values (colors, dimensions, base units). **Never use directly in component SCSS.** ⚠️ Auto-generated. |
+| **Semantic** | `$ouds-*` | `tokens/_semantic.scss` | Meaningful aliases (e.g., `$ouds-border-radius-default`). Maps raw tokens to design intent. ⚠️ Auto-generated. |
+| **Composite** | `$ouds-*` | `tokens/_composite.scss` | Combined values (elevation, font stacks, icons, Sass maps). ✅ Manually managed. |
+| **Component** | `$ouds-<component>-*` | `tokens/_component.scss` | Per-component tokens (e.g., `$ouds-button-border-radius-default`). References semantic tokens. ⚠️ Auto-generated. |
+| **CSS Custom Props** | `--bs-*` | `tokens/_*-custom-props.scss` | Runtime tokens exposed as CSS custom properties for color-mode switching. ⚠️ Auto-generated. |
 
 ### Token naming convention
 
@@ -241,11 +268,19 @@ Every brand's `ouds-web.scss` follows the same structure:
 
 ### Adding or modifying tokens for a brand
 
-- Edit files in `packages/<brand>/scss/tokens/`.
-- Raw tokens: `_raw.scss` — brand primitives.
-- Semantic tokens: `_semantic.scss` — how primitives map to design intent.
-- Component tokens: `_component.scss` — per-component overrides.
-- Color custom props: `_*-custom-props.scss` — light/dark mode values.
+⚠️ **Most token files are auto-generated from Figma via Style Dictionary. Do NOT edit them by hand.**
+
+Token updates follow this workflow:
+1. Designers update tokens in **Figma**.
+2. The pipeline exports DTCG → Style Dictionary → SCSS files.
+3. A **PR is opened** on GitHub with the updated token files.
+4. The PR is reviewed and merged into `ouds/main`.
+
+| Action | Where |
+|---|---|
+| Edit composite tokens (elevation, font stacks, icons, maps) | `packages/<brand>/scss/tokens/_composite.scss` ✅ |
+| Edit raw, semantic, or component tokens | ❌ **Never** — wait for the generated PR |
+| Edit color custom properties | ❌ **Never** — wait for the generated PR |
 
 ---
 
@@ -500,6 +535,7 @@ npm run lint
 | Write `transition: ...` directly | Stylelint violation — must use mixin | Use `@include transition(...)` |
 | Remove `:focus` styles | Accessibility violation | Add visible focus alternative with `focus-ring()` |
 | Use raw tokens in component SCSS | Couples components to primitive values | Use semantic or component tokens |
+| Edit auto-generated token files (`_raw.scss`, `_semantic.scss`, `_component.scss`, `_*-custom-props.scss`) | These are generated from Figma via Style Dictionary | Only edit `_composite.scss`; wait for generated PRs for the rest |
 | Edit `dist/` or `js/dist/` files | Overwritten on build | Edit source in `scss/` and `js/src/` |
 | Edit compiled CSS (`ouds-web.css`) | Overwritten on build | Edit SCSS source files |
 | Commit `dist/` files in PRs | Not wanted in version control | Let CI build them |
@@ -518,7 +554,7 @@ npm run lint
 
 - **Which brand(s)** are affected? Changes in `scss/` affect all brands. Changes in `packages/<brand>/` affect only that brand.
 - **Is it a common component or brand-specific?** Common SCSS is in the root `scss/` directory.
-- **Token layer**: Are you modifying raw, semantic, or component tokens?
+- **Token layer**: Are you modifying raw, semantic, or component tokens? ⚠️ Most token files are **auto-generated** — only `_composite.scss` can be edited by hand.
 
 #### 2. Locate existing code
 
@@ -539,6 +575,7 @@ Tests             → js/tests/unit/<component>.spec.js
 - Follow the existing code style (2-space indent, no semicolons in JS, etc.).
 - For new SCSS variables, always add `!default`.
 - For new components, add tokens in `_component.scss` for **each** brand package.
+- ⚠️ **Never edit auto-generated token files** (`_raw.scss`, `_semantic.scss`, `_component.scss`, `_*-custom-props.scss`). Only `_composite.scss` is manually editable.
 - Comments: Use `// OUDS mod:` prefix when modifying Bootstrap's original code.
 
 #### 4. Verify
