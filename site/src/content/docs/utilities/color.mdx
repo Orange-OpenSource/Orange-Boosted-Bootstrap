@@ -14,40 +14,34 @@ import { allTokens } from '@libs/sass-variables'
 
 ## Colors
 
-Colorize text with color utilities. To colorize icons, please refer to our [icon color section](#on-icons).
+Content color utility classes, in the form  `.text-*`, apply a color [token]([[docsref:/foundation/tokens]]) as `color` for a [content]([[docsref:/foundation/colors#background]]) or ['always' color]([[docsref:/foundation/colors#always]]) dynamically depending on the [color mode]([[docsref:/foundation/color-modes]]).
+
+To colorize icons, please refer to our [icon color section](#on-icons).
 
 OUDS Web provides many `.text-*` and `.bg-*` utilities, but they should be used with care to meet our design specifications and [WCAG 2.2 accessibility standards for color contrast](https://www.w3.org/TR/WCAG/#distinguishable).
-To be sure to respect the specifications, it is necessary to define `color`, `background-color` and `font-size` altogether.
+To ensure compliance with the standard, define `color`, `background-color`, and `font-size` together.
 
 <BrandSpecific brand="orange">
 Thus, the `.text-brand-primary` color on light background (`#f15e00`) should only be used in a font size greater than 24px (using for example `.fs-ds` utility), or 19px bold (using for example `.fs-hm` and `.fw-bold` utilities).
 The `.text-brand-primary` color on dark background (`#ff7900`) can be used in any size.
 </BrandSpecific>
 
-<Callout type="info">
-  Know that apart `.text-brand-primary`, `.text-default` and `.text-muted`, most of these utilities should be avoided since they are very contextual and you should rather use our [color modes]([[docsref:/foundation/color-modes]]) directly as explained in our [background utilities]([[docsref:/utilities/background]]) to set nested components in the right mode directly as well.
+<Callout type="warning">
+  Please note that aside from `.text-brand-primary`, `.text-default`, and `.text-muted`, most text-utility classes should be avoided as they are highly contextual. Instead, apply our [color modes]([[docsref:/foundation/color-modes]]) directly—as described in the [background utilities]([[docsref:/utilities/background]])—to get the right text color as well as ensure nested components render in the correct mode.
 </Callout>
 
 Here are some compliant combinations examples for texts:
 
 <Example code={[...allTokens.filter(token => token.name.match(/\$ouds-color-content-/) && !token.name.match(/-action-/) && token.name.match(/-light/) && token.compiledValue).map(token => {
     if (token.name.match(/-on-/)) {
-      return `<p class="bg-surface-${token.name.split('-').slice(4, -1).join('-')} text-${token.name.split('-').slice(3, -1).join('-')} p-small">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
+      return `<p class="bg-surface-${token.name.split('-').slice(4, -1).join('-')} text-${token.name.split('-').slice(3, -1).join('-')} p-small fs-hl">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
     }
-    return `<p class="text-${token.name.split('-').slice(3, -1).join('-')} p-small">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
+    return `<p class="text-${token.name.split('-').slice(3, -1).join('-')} p-small fs-hl">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
   }),
-  `<p class="text-always-black bg-always-white p-small">Text always-black</p>
-  <p class="text-always-white bg-always-black p-small">Text always-white</p>
-  <p class="text-always-on-black bg-always-black p-small">Text always-on-black</p>
-  <p class="text-always-on-white bg-always-white p-small">Text always-on-white</p>`]} />
-
-<Callout type="info">
-  If you don’t see the couple you need in the following table, please mind using one of the table or check that the contrast between the text and the background is at least 4.5 for normal text and 3 for large text.
-
-  These text categories are some [accessibility text categories](https://www.w3.org/TR/WCAG22/#dfn-large-scale) commonly used. They divide the texts into two categories:
-  - **Large texts** are texts that are at least 24px or 19px bold. This corresponds to at least [`.fs-hl` and above or `.fs-hm` bold and above]([[docsref:/utilities/text#font-size]]) in OUDS Web.
-  - **Normal texts** are the remaining texts references.
-</Callout>
+  `<p class="text-always-black bg-always-white p-small fs-hl">Text always-black</p>
+  <p class="text-always-white bg-always-black p-small fs-hl">Text always-white</p>
+  <p class="text-always-on-black bg-always-black p-small fs-hl">Text always-on-black</p>
+  <p class="text-always-on-white bg-always-white p-small fs-hl">Text always-on-white</p>`]} />
 
 <BootstrapCompatibility>
 <Example code={[

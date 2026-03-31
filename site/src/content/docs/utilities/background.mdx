@@ -14,7 +14,7 @@ import { allTokens } from '@libs/sass-variables'
 
 ## Overview
 
-Background utility classes, in the form  `.bg-*`, apply a color [token]([[docsref:/foundation/tokens]]) as `background-color` for a [background]([[docsref:/foundation/colors#background]]), [surface]([[docsref:/foundation/colors#surface]]) or ['always' color]([[docsref:/foundation/colors#surface]]) dynamically depending on the [color mode]([[docsref:/foundation/color-modes]]).
+Background utility classes, in the form  `.bg-*`, apply a color [token]([[docsref:/foundation/tokens]]) as `background-color` for a [background]([[docsref:/foundation/colors#background]]), [surface]([[docsref:/foundation/colors#surface]]) or ['always' color]([[docsref:/foundation/colors#always]]) dynamically depending on the [color mode]([[docsref:/foundation/color-modes]]).
 
 *Depending on the context of the element with a `.bg-*` class and its resulting color, you should add a unique child element with a `[data-bs-theme]` [attribute to specify the color mode]([[docsref:/foundation/color-modes#how-to-use]]) for its descendants.*
 This ensures that all descendant nodes adopt the correct color mode for the specific background color. As a result:
@@ -276,7 +276,7 @@ We also provide opacity-based background classes, which should be used only in s
 
 ## Colored backgrounds
 
-The following colored backgrounds are designed for specific use cases and can only accommodate a limited set of components, such as buttons, links, and text elements. For accessibility reasons we remove the color of these components.
+The following colored backgrounds are designed for specific use cases and can only accommodate a limited set of components, such as buttons, links, and text elements. For accessibility reasons we need remove the color of these components, this is achieved by the colored variants of [buttons]([[docsref:components/buttons#colored-background]]) and [links]([[docsref:components/links#on-colored-background]]).
 
 <Example code={[
   ...allTokens.filter(token => (token.name.match(/\$ouds-color-surface-brand.*-light/) && token.compiledValue)).map(token => {
@@ -320,3 +320,18 @@ Occasionally, you may need to layer two background colors on top of each other. 
       </div>
     </div>
   </div>`} />
+
+
+<BootstrapCompatibility>
+Color and background helpers shouldn’t be used in OUDS Web context please consider using our [color modes]([[docsref:/foundation/color-modes]]) directly as explained in this page.
+
+Color and background helpers combine the power of our [`.text-*` utilities]([[docsref:/utilities/color]]) and [`.bg-*` utilities]([[docsref:/utilities/background]]) in one class. Using our Sass `color-contrast()` function, we automatically determine a contrasting `color` for a particular `background-color`.
+
+<Callout type="warning" title="Heads up!">
+  There’s currently no support for a CSS-native `color-contrast` function, so we use our own via Sass. This means that customizing our theme colors via CSS variables may cause color contrast issues with these utilities.
+</Callout>
+
+<Example buttonLabel="text and background colors (Bootstrap compatibility)" code={[
+  ...getData('theme-colors').map((themeColor) => `<div class="text-bg-${themeColor.name} p-3">${themeColor.title} with contrasting color</div>`)
+]} />
+</BootstrapCompatibility>
