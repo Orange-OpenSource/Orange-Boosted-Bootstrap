@@ -617,7 +617,7 @@ npm run test
 | [`.ai/CODE_CONVENTIONS.md`](.ai/CODE_CONVENTIONS.md) | Full HTML, SCSS, JS style guide; linter configs; naming conventions; comment patterns | 🔜 Planned |
 | [`.ai/ACCESSIBILITY.md`](.ai/ACCESSIBILITY.md) | WCAG 2.1 AA checklist; ARIA patterns per component type; testing strategy; Pa11y config | 🔜 Planned |
 | [`.ai/DESIGN_TOKENS.md`](.ai/DESIGN_TOKENS.md) | Full token reference; layer details; naming scheme; how to add new tokens; brand override guide | 🔜 Planned |
-| [`.ai/COMPONENTS.md`](.ai/COMPONENTS.md) | Full component catalog; component creation guide; SCSS/JS patterns; testing patterns | 🔜 Planned |
+| [`.ai/COMPONENTS.md`](.ai/COMPONENTS.md) | Full component catalog; component creation guide; SCSS/JS patterns; testing patterns | ✅ Available |
 | [`.ai/ARCHITECTURE.md`](.ai/ARCHITECTURE.md) | Build pipeline details; package publishing; CI/CD; Astro docs site structure | 🔜 Planned |
 
 ---
