@@ -199,7 +199,7 @@ export default () => {
   // First example
   // js-docs-start skeleton-first-example
   const skeletonToReplace = document.querySelector('.bd-skeleton-replace')
-  const originalContent = skeletonToReplace.innerHTML
+  const originalContent = skeletonToReplace?.innerHTML
 
   function replaceSkeleton() {
     setTimeout(() => {
@@ -215,9 +215,11 @@ export default () => {
     }, 8000)
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    replaceSkeleton()
-  })
+  if (skeletonToReplace) {
+    document.addEventListener('DOMContentLoaded', () => {
+      replaceSkeleton()
+    })
+  }
 
   window.relaunchAnim = () => {
     skeletonToReplace.innerHTML = originalContent
@@ -237,9 +239,11 @@ export default () => {
     }, 8000)
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    removeSkeletons()
-  })
+  if (skeletonToReplace2) {
+    document.addEventListener('DOMContentLoaded', () => {
+      removeSkeletons()
+    })
+  }
 
   window.relaunchAnim2 = () => {
     skeletonToReplace2.firstElementChild.setAttribute('inert', '')
