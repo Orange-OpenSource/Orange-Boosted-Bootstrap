@@ -1,13 +1,13 @@
 //
 // Basic OUDS Web table
 //
-%row-selection {
+%has-custom-item {
   width: calc($ouds-checkbox-size-min-width + $core-ouds-dimension-50);
   padding: 0;
   vertical-align: middle;
 }
 
-%row-active {
+%active {
   --#{$prefix}table-color-state: var(--#{$prefix}table-active-color);
   --#{$prefix}table-bg-state: var(--#{$prefix}table-active-bg);
 }
@@ -21,7 +21,7 @@
   // End of reset
   --#{$prefix}table-color: #{$table-color};
   --#{$prefix}table-bg: #{$table-bg};
-  --#{$prefix}table-border-color: #{$table-border-color}; // OK
+  --#{$prefix}table-border-color: #{$table-border-color};
   --#{$prefix}table-accent-bg: #{$table-accent-bg};
   --#{$prefix}table-striped-color: #{$table-striped-color};
   --#{$prefix}table-striped-bg: #{$table-striped-bg};
@@ -81,21 +81,16 @@
 
   // OUDS mod
   // When using checkboxes in the first column, force width to ensure correct spacing on this column
-  &.has-row-selection tr > :first-child {
-    @extend %row-selection;
+  tr > td:has(.control-item-indicator[type="checkbox"]),
+  tr > td:has(.control-item-indicator[type="radio"]) {
+    @extend %has-custom-item;
   }
 
   // Automatically highlight rows with checked checkboxes
-  &.has-row-selection tbody tr:has(.control-item-indicator[type="checkbox"]:not([role="switch"]):checked),
-  &.has-row-selection tbody tr:has(.control-item-indicator[type="radio"]:checked) {
-    @extend %row-active;
-    @extend [data-bs-theme=root-inverted];
-  }
-
-  @if $enable-bootstrap-compatibility {
-    &.has-checkbox tr > :first-child {
-      @extend %row-selection;
-    }
+  tbody tr:has(.control-item-indicator[type="checkbox"]:not([role="switch"]):checked),
+  tbody tr:has(.control-item-indicator[type="radio"]:checked) {
+    @extend %active;
+    @extend [data-bs-theme=dark];
   }
 
   // Use negative margins on icons in tables to preserve row height
@@ -118,18 +113,6 @@
 .caption-bottom {
   caption-side: bottom; // OUDS mod
 }
-
-
-//
-// Condensed table w/ half padding
-//
-
-//.table-sm {
-//  // stylelint-disable-next-line selector-max-universal
-//  > :not(caption) > * > * {
-//    padding: $table-cell-padding-y-sm $table-cell-padding-x-sm calc($table-cell-padding-y-sm + 1px); // OUDS mod
-//  }
-//}
 
 // OUDS mod: no .table-bordered
 
@@ -166,7 +149,7 @@
 // The `.table-active` class can be added to highlight rows or cells
 
 .table-active {
-  @extend %row-active;
+  @extend %active;
 }
 
 // Hover effect
@@ -180,12 +163,12 @@
   }
 }
 
-// Table variants set the table cell backgrounds, border colors
-// and the colors of the striped, hovered & active tables
-
-//@each $color, $value in $table-variants {
-//  @include table-variant($color, $value);
-//}
+// Table functional colors
+@each $table-state in ("info", "positive", "warning", "negative") {
+  .table-#{$table-state} {
+    --#{$prefix}table-bg: var(--#{$prefix}color-surface-status-#{$table-state}-muted);
+  }
+}
 
 // Responsive tables
 //

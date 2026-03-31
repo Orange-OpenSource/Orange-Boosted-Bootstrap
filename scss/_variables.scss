@@ -809,7 +809,7 @@ $table-striped-bg-factor:               .035 !default; // OUDS mod: equivalent t
 $table-striped-bg:                      var(--#{$prefix}color-bg-secondary) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), $table-striped-bg-factor)`
 $table-variant-striped-bg-factor:       .08 !default; // OUDS mod
 
-$table-active-color:                    var(--#{$prefix}color-content-inverse) !default;
+$table-active-color:                    var(--#{$prefix}color-content-default) !default;
 $table-active-bg-factor:                .135 !default; // OUDS mod
 $table-active-bg:                       var(--#{$prefix}color-bg-inverse-low) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), $table-active-bg-factor)`
 $table-variant-active-bg-factor:        .4 !default; // OUDS mod
@@ -831,22 +831,7 @@ $table-group-separator-color:           currentcolor !default;
 
 $table-caption-color:                   var(--#{$prefix}caption-color, var(--#{$prefix}emphasis-color)) !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
 $table-caption-padding-y:               .75rem !default; // OUDS mod
-
-$table-bg-scale:                        -60% !default;
 // scss-docs-end table-variables
-
-// scss-docs-start table-loop
-$table-variants: (
-  "primary":    shift-color($primary, $table-bg-scale),
-  "secondary":  shift-color($secondary, $table-bg-scale),
-  "success":    shift-color($success, $table-bg-scale),
-  "info":       shift-color($info, $table-bg-scale),
-  "warning":    shift-color($warning, $table-bg-scale),
-  "danger":     shift-color($danger, $table-bg-scale),
-  "light":      $light,
-  "dark":       $dark,
-) !default;
-// scss-docs-end table-loop
 
 // Buttons + Forms
 //

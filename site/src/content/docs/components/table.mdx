@@ -8,6 +8,7 @@ toc: true
 ---
 
 import { getData } from '@libs/data'
+import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="negative" title="Draft component">
   The table component is not yet designed, and this component is only a draft for the moment. It will be updated in the future with the final design and will certainly need adjustments regarding the DOM. Use it as a temporary component to speed up your development.
@@ -60,6 +61,43 @@ See [more information about the tables structures](https://a11y-guidelines.orang
 
 ## Variants
 
+### Functional colors
+
+To add a background color to a table row, you can use the contextual classes `.table-{status}` on `<tr>` elements. These classes will apply a muted background color based on the status you choose, among `info`, `positive`, `warning`, or `negative`. This can be useful for highlighting specific rows based on their content or status. Statuses could be emphasized further by adding a badge with the same color in the relevant cell(s), and with a relevant label.
+
+<Example buttonLabel="table with functional colored backgrounds" code={`<table class="table">
+    <caption class="visually-hidden">OUDS Web table with functional colored backgrounds</caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Status</th>
+        <th scope="col">Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-info">
+        <th scope="row">1</th>
+        <td><p class="badge badge-info me-xsmall"></p>Running</td>
+        <td>Cell</td>
+      </tr>
+      <tr class="table-positive">
+        <th scope="row">2</th>
+        <td><p class="badge badge-positive me-xsmall"></p>New</td>
+        <td>Cell</td>
+      </tr>
+      <tr class="table-warning">
+        <th scope="row">3</th>
+        <td><p class="badge badge-warning me-xsmall"></p>Reloading</td>
+        <td>Cell</td>
+      </tr>
+      <tr class="table-negative">
+        <th scope="row">4</th>
+        <td><p class="badge badge-negative me-xsmall"></p>Error</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+  </table>`} />
+
 ### Zebra
 
 To create a striped table, add the `.table-zebra` modifier class to the base `.table` class. This will add a background color to even rows (not including the header) to improve readability.
@@ -99,12 +137,10 @@ To create a striped table, add the `.table-zebra` modifier class to the base `.t
 
 ## Responsive tables
 
-Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a `.table` with `.table-responsive`. Or, pick a maximum breakpoint with which to have a responsive table up to by using `.table-responsive{-sm|-md|-lg|-xl|-xxl}`.
+Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a `.table` with `.table-responsive`. Or, pick a maximum breakpoint with which to have a responsive table up to by using `.table-responsive{-xs|-sm|-md|-lg|-xl|-2xl|3xl}`.
 
-<Callout type="warning">
-    ##### Vertical clipping/truncation
-
-    Responsive tables make use of `overflow-y: hidden`, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.
+<Callout type="warning" title="Vertical clipping/truncation">
+Responsive tables make use of `overflow-y: hidden`, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.
 </Callout>
 
 ### Always responsive
@@ -184,9 +220,11 @@ Use `.table-responsive{-xs|-sm|-md|-lg|-xl|-2xl|3xl}` as needed to create respon
 
 <details class="mt-medium mb-2xlarge">
 <summary>Examples of responsive tables up to particular breakpoint</summary>
+Resize window to see differencies:
 {getData('breakpoints').map((breakpoint) => {
 return (
 <div class="bd-example">
+
 <div class={`table-responsive${breakpoint.abbr}`}>
 <table class="table">
 <caption class="visually-hidden">Boosted responsive table for {breakpoint.abbr} breakpoint and under</caption>
@@ -256,7 +294,7 @@ return (
 
 ### Row selection
 
-When using checkboxes, radio buttons or switches in tables, you should add the `.has-row-selection` modifier class to the base `.table` class. This will add the necessary padding to the first column to accommodate these control items. The control items should be placed in the first column, and the type of control items should obviously not be mixed.
+When using checkboxes or radio buttons or switches in tables, you should add the `.has-row-selection` modifier class to the base `.table` class. This will add the necessary padding to the first column to accommodate these control items. The control items should be placed in the first column, and the type of control items should obviously not be mixed.
 
 For the row selection purpose, you should use [standalone checkboxes]([[docsref:/components/checkbox#standalone]]), [standalone radio buttons]([[docsref:/components/radio-button#standalone]]), or [standalone switches]([[docsref:/components/switch#standalone]]) with `.visually-hidden` labels describing their use.
 
@@ -264,48 +302,48 @@ If the control items are checkboxes, the first cell of the header should contain
 
 If the control items are checkboxes or radio buttons, selecting a row will automtically apply some styles to visually indicate that the row is selected. If you want to manually apply the same styles to rows or even cells, you can use the class `.table-active` on `<tr>` or `<td>` elements.
 
-<Example buttonLabel="table with checkboxes row selection" code={`<table class="table has-row-selection" id="tableWithCheckboxes">
+<Example buttonLabel="table with checkboxes row selection" code={`<table class="table" id="tableWithCheckboxes">
     <caption class="visually-hidden">OUDS Web table with row selection</caption>
     <thead>
       <tr>
-        <th scope="col">
+        <td>
           <label class="checkbox-standalone">
             <input class="control-item-indicator" type="checkbox" value="all" id="tableSelectAll" />
             <span class="visually-hidden">Select all rows</span>
           </label>
-        </th>
+        </td>
         <th scope="col">Heading</th>
         <th scope="col">Heading</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th scope="row">
+        <td>
           <label class="checkbox-standalone">
             <input class="control-item-indicator" type="checkbox" value="1" checked />
             <span class="visually-hidden">Select row 1</span>
           </label>
-        </th>
+        </td>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
       <tr>
-        <th scope="row">
+        <td>
           <label class="checkbox-standalone">
             <input class="control-item-indicator" type="checkbox" value="2" />
             <span class="visually-hidden">Select row 2</span>
           </label>
-        </th>
+        </td>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
       <tr>
-        <th scope="row">
+        <td>
           <label class="checkbox-standalone">
             <input class="control-item-indicator" type="checkbox" value="3" checked />
             <span class="visually-hidden">Select row 3</span>
           </label>
-        </th>
+        </td>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
@@ -315,7 +353,7 @@ If the control items are checkboxes or radio buttons, selecting a row will autom
 To manage checkboxes states (e.g., select/deselect all rows, update header checkbox state), here is an example of JavaScript code:
 <JsDocs name="live-row-selection" file="site/src/assets/partials/snippets.js" />
 
-<Example buttonLabel="table with radio buttons row selection" code={`<table class="table has-row-selection">
+<Example buttonLabel="table with radio buttons row selection" code={`<table class="table">
     <caption class="visually-hidden">OUDS Web table with radio buttons</caption>
     <thead>
       <tr>
@@ -326,77 +364,110 @@ To manage checkboxes states (e.g., select/deselect all rows, update header check
     </thead>
     <tbody>
       <tr>
-        <th scope="row">
+        <td class="text-center">
           <label class="radio-button-standalone">
             <input class="control-item-indicator" type="radio" name="radio1" value="1" />
             <span class="visually-hidden">Select row 1</span>
           </label>
-        </th>
+        </td>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
       <tr>
-        <th scope="row">
+        <td class="text-center">
           <label class="radio-button-standalone">
             <input class="control-item-indicator" type="radio" name="radio1" value="2" checked />
             <span class="visually-hidden">Select row 2</span>
           </label>
-        </th>
+        </td>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
       <tr>
-        <th scope="row">
+        <td class="text-center">
           <label class="radio-button-standalone">
             <input class="control-item-indicator" type="radio" name="radio1" value="3" />
             <span class="visually-hidden">Select row 3</span>
           </label>
-        </th>
+        </td>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
     </tbody>
   </table>`} />
 
-<Example buttonLabel="table with switches" code={`<table class="table has-row-selection">
+### Additional content
+
+You can also use other components in tables, such as tags, switches, images or icons. You can use the `.align-middle` class on `<tr>` elements to vertically align the content of cells in the middle of the row, which is useful for rows with rich content.
+
+<Example buttonLabel="table with components and icons" code={`<table class="table">
     <caption class="visually-hidden">OUDS Web table with switches</caption>
     <thead>
       <tr>
-        <th scope="col">Select</th>
         <th scope="col">Heading</th>
         <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Activated</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">
+      <tr class="align-middle">
+        <td>
+          <svg class="bm-large-icon me-xsmall" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#file-earmark-richtext')}"></use>
+          </svg>Cell
+        </td>
+        <td>Cell</td>
+        <td>
+          <p class="tag tag tag-warning tag-small">
+            <span class="tag-status-icon"></span>
+            Maintenance
+          </p>
+        </td>
+        <td class="text-center">
           <label class="switch-standalone">
             <input class="control-item-indicator" type="checkbox" role="switch"  value="1" />
             <span class="visually-hidden">Select row 1</span>
           </label>
-        </th>
-        <td>Cell</td>
-        <td>Cell</td>
+        </td>
       </tr>
-      <tr>
-        <th scope="row">
+      <tr class="align-middle">
+        <td>
+          <img src="${getVersionedDocsPath('/assets/img/thumbnail.png')}" alt="" class="bm-large-icon me-xsmall" />Cell
+        </td>
+        <td>Cell</td>
+        <td>
+          <p class="tag tag-positive tag-small">
+            <span class="tag-status-icon"></span>
+            Running
+          </p>
+        </td>
+        <td class="text-center">
           <label class="switch-standalone">
             <input class="control-item-indicator" type="checkbox" role="switch"  value="2" checked />
             <span class="visually-hidden">Select row 2</span>
           </label>
-        </th>
-        <td>Cell</td>
-        <td>Cell</td>
+        </td>
       </tr>
-      <tr>
-        <th scope="row">
+      <tr class="align-middle">
+        <td>
+          <svg class="bm-large-icon me-xsmall" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#file-earmark-richtext')}"></use>
+          </svg>Cell
+        </td>
+        <td>Cell</td>
+        <td>
+          <p class="tag tag-negative tag-small">
+            <span class="tag-status-icon"></span>
+            Error
+          </p>
+        </td>
+        <td class="text-center">
           <label class="switch-standalone">
             <input class="control-item-indicator" type="checkbox" role="switch"  value="3" />
             <span class="visually-hidden">Select row 3</span>
           </label>
-        </th>
-        <td>Cell</td>
-        <td>Cell</td>
+        </td>
       </tr>
     </tbody>
   </table>`} />
