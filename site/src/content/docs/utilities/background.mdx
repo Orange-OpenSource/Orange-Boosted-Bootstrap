@@ -16,12 +16,12 @@ import { allTokens } from '@libs/sass-variables'
 
 Background utility classes, in the form  `.bg-*`, apply a color [token]([[docsref:/foundation/tokens]]) as `background-color` for a [background]([[docsref:/foundation/colors#background]]), [surface]([[docsref:/foundation/colors#surface]]) or ['always' color]([[docsref:/foundation/colors#always]]) dynamically depending on the [color mode]([[docsref:/foundation/color-modes]]).
 
-*Depending on the context of the element with a `.bg-*` class and its resulting color, you should add a unique child element with a `[data-bs-theme]` [attribute to specify the color mode]([[docsref:/foundation/color-modes#how-to-use]]) for its descendants.*
+*Depending on the context of the element with a `.bg-*` class and its resulting color, it may be necessary to add a single child element with a `[data-bs-theme]` [attribute to specify the color mode]([[docsref:/foundation/color-modes#how-to-use]]) for its descendants.*
 This ensures that all descendant nodes adopt the correct color mode for the specific background color. As a result:
 * Text nodes will automatically display in the appropriate [content color]([[docsref:/foundation/colors#content-on-other-colors]]).
 * Components will respond to the color mode and adapt accordingly.
 
-*Note:* It is not possible to add the attribute directly on the `.bg-*` element, as the background color would then adapt to the attribute instead of conforming to the color mode set by its ancestors.
+*Note:* It is not possible to add the attribute directly on the `.bg-*` element, as the background color would then adapt to the attribute instead of conforming to the inherited color mode set by its ancestors.
 
 *For some background colors, we have set the default content color directly* using a CSS `color` attribute. This allows descendants text nodes to automatically display in the correct color. However this approach is only suitable when the `.bg-*` element contains only text, if the element contains components, you must add a child container with the `[data-bs-theme]` attribute.
 
