@@ -1,4 +1,5 @@
 import type { ComponentCardData } from '@components/shortcodes/ComponentCard.astro'
+import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
 
 export const componentsDetails: ComponentCardData[] = [
@@ -134,17 +135,26 @@ export const componentsDetails: ComponentCardData[] = [
     category: 'Navigation',
     snippet: `
       <header class="header-minimized w-75">
-        <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Standard example">
+        <nav class="navbar navbar-expand-lg">
           <div class="container-fluid container-max-width px-small">
             <div class="navbar-brand me-auto me-lg-xlarge">
               <a class="stretched-link" href="#">
-                <img src="${getVersionedDocsPath('/assets/brand/orange-logo.svg')}" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
+                <img src="${getVersionedDocsPath(`/assets/brand/${getConfig().brand}-logo.svg`)}" width="50" height="50" alt="" loading="lazy">
               </a>
               <h1 class="title">Label</h1>
             </div>
-            <button class="navbar-toggler collapsed" type="button" aria-label="Toggle navigation">
+            <button class="navbar-toggler collapsed" type="button">
               <span class="navbar-toggler-icon"></span>
             </button>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid container-max-width px-small">
+            <div class="navbar-collapse collapse m-none">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+              </ul>
+            </div>
           </div>
         </nav>
       </header>`

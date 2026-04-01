@@ -12,6 +12,7 @@
     - title: Divider
     - title: Footer
     - title: Header
+      draft: true
     - title: Icon
     - title: Links
     - title: Password input

@@ -183,16 +183,6 @@
     @include get-font-size("heading-medium");
     line-height: 1;
   }
-
-  // .two-lined {
-  //   --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-two-lined-xs};
-  //   --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-two-lined-xs};
-
-  //   @include media-breakpoint-up(md) {
-  //     --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-two-lined};
-  //     --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-two-lined};
-  //   }
-  // }
 }
 // End mod
 
