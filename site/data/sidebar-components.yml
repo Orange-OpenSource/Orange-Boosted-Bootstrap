@@ -11,6 +11,7 @@
     - title: Chips
     - title: Divider
     - title: Footer
+      draft: true
     - title: Header
       draft: true
     - title: Icon
@@ -41,8 +42,6 @@
     - title: Collapse
       coming_soon: true
     - title: Dropdown
-      coming_soon: true
-    - title: Footer
       coming_soon: true
     - title: List group
       coming_soon: true
