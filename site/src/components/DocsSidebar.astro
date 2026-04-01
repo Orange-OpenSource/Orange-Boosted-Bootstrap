@@ -76,23 +76,20 @@ const sidebar = sidebarMap[slug] ? getData(`sidebar-${sidebarMap[slug]}`) : []
                           class:list={[
                             'bd-links-link',
                             'd-inline-flex',
-                            'row-gap-2xsmall',
+                            'column-gap-2xsmall',
                             'align-items-center',
                             { active },
                             { 'text-decoration-line-through': page.coming_soon }
                           ]}
                           aria-current={active ? 'page' : undefined}
+                          title={page.draft ? 'draft component' : page.coming_soon ? 'page is not yet available' : null}
                         >
-                          {page.title}{' '}
+                          {page.title}
                           {page.draft && (
-                            <>
-                              <svg width="1rem" height="1rem" aria-hidden="true">
-                                <use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#traffic-cone')} />
-                              </svg>
-                              <span class="visually-hidden">draft component</span>
-                            </>
+                            <svg width="1rem" height="1rem" aria-hidden="true">
+                              <use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#traffic-cone')} />
+                            </svg>
                           )}
-                          {page.coming_soon && <span class="visually-hidden">page is not yet available</span>}
                         </a>
                       </li>
                     )
