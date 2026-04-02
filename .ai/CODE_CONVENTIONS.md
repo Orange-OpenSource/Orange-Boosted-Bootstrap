@@ -1,3 +1,31 @@
+---
+title: "Code Conventions — OUDS Web"
+description: "Full HTML, SCSS, and JavaScript style guide for OUDS Web: naming conventions, linter rules, comment patterns, SCSS token usage, and testing conventions."
+audience:
+  - developers
+  - contributors
+  - code-reviewers
+  - ai-agents
+keywords:
+  - conventions
+  - style-guide
+  - SCSS
+  - JavaScript
+  - HTML
+  - ESLint
+  - Stylelint
+  - naming
+  - formatting
+  - tokens
+  - mixins
+related_files:
+  - "../AGENTS.md#code-conventions"
+  - "COMPONENTS.md"
+  - "DESIGN_TOKENS.md"
+  - "QUICK_LOOKUP.md#code-conventions"
+last_updated: "2026-03-31"
+---
+
 # Code Conventions — OUDS Web
 
 > Detailed style guide for HTML, SCSS, and JavaScript contributions to OUDS Web.
@@ -22,13 +50,13 @@
 
 All source files follow the `.editorconfig` at the repository root:
 
-| Setting | Value |
-|---|---|
-| Charset | UTF-8 |
-| Line endings | LF (Unix) |
-| Indentation | **2 spaces** (no tabs) |
-| Final newline | Always present |
-| Trailing whitespace | Trimmed |
+| Setting             | Value                  |
+| ------------------- | ---------------------- |
+| Charset             | UTF-8                  |
+| Line endings        | LF (Unix)              |
+| Indentation         | **2 spaces** (no tabs) |
+| Final newline       | Always present         |
+| Trailing whitespace | Trimmed                |
 
 These rules apply to **every** file type: SCSS, JS, HTML, MDX, JSON, YAML.
 
@@ -72,7 +100,7 @@ All JavaScript-driven behaviors use `data-bs-*` prefixed attributes:
 
 <!-- Input decoration -->
 <div class="input-container" data-bs-prefix="https://" data-bs-suffix=".com">
-  <input type="text" class="text-input-field" placeholder=" ">
+  <input type="text" class="text-input-field" placeholder=" " />
 </div>
 ```
 
@@ -80,18 +108,18 @@ All JavaScript-driven behaviors use `data-bs-*` prefixed attributes:
 
 Every piece of markup must comply with **WCAG 2.1 Level AA**. These patterns are mandatory:
 
-| Pattern | Implementation |
-|---|---|
-| Decorative icons | `aria-hidden="true"` on SVGs that are purely visual |
-| Screen-reader text | `.visually-hidden` on `<span>` or `<p>` inside visual elements |
-| Form validation | `aria-invalid="true"` on invalid inputs |
-| Form helpers | `aria-describedby` linking inputs to helper/error text by `id` |
-| Close buttons | `aria-labelledby` referencing the button and the element being closed |
-| Lists/groups | `aria-label` on `<ul>` or `role="group"` containers |
-| Toggle states | `aria-pressed="true"` on active toggle buttons |
-| Expanded states | `aria-expanded="true"` / `"false"` on collapsible triggers |
-| Disabled state | `aria-disabled="true"` (defensive CSS hooks this attribute) |
-| Loading states | `aria-busy="true"` on skeleton/loading containers |
+| Pattern            | Implementation                                                        |
+| ------------------ | --------------------------------------------------------------------- |
+| Decorative icons   | `aria-hidden="true"` on SVGs that are purely visual                   |
+| Screen-reader text | `.visually-hidden` on `<span>` or `<p>` inside visual elements        |
+| Form validation    | `aria-invalid="true"` on invalid inputs                               |
+| Form helpers       | `aria-describedby` linking inputs to helper/error text by `id`        |
+| Close buttons      | `aria-labelledby` referencing the button and the element being closed |
+| Lists/groups       | `aria-label` on `<ul>` or `role="group"` containers                   |
+| Toggle states      | `aria-pressed="true"` on active toggle buttons                        |
+| Expanded states    | `aria-expanded="true"` / `"false"` on collapsible triggers            |
+| Disabled state     | `aria-disabled="true"` (defensive CSS hooks this attribute)           |
+| Loading states     | `aria-busy="true"` on skeleton/loading containers                     |
 
 ```html
 <!-- Alert with accessible icon -->
@@ -100,8 +128,11 @@ Every piece of markup must comply with **WCAG 2.1 Level AA**. These patterns are
   <div class="alert-container">
     <h3 class="alert-label">Something went wrong</h3>
   </div>
-  <button class="btn-close" data-bs-dismiss="alert"
-          aria-labelledby="btn-close-alert alert-heading">
+  <button
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-labelledby="btn-close-alert alert-heading"
+  >
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -134,6 +165,7 @@ $component-state-property-size
 ```
 
 Examples:
+
 - `$nav-link-disabled-color`
 - `$modal-content-box-shadow-xs`
 - `$btn-padding-y`
@@ -160,7 +192,7 @@ Sass maps also require `!default`:
 ```scss
 $theme-colors: (
   "primary": $primary,
-  "secondary": $secondary
+  "secondary": $secondary,
 ) !default;
 ```
 
@@ -226,35 +258,35 @@ Use the configurable `$ouds-root-selector` variable instead of hardcoding `:root
 
 Stylelint **forbids** using certain CSS properties directly. You must use the corresponding mixins instead:
 
-| Forbidden direct property | Required mixin |
-|---|---|
-| `border-radius` | `@include border-radius($value)` |
-| `border-top-left-radius` | `@include border-top-start-radius($value)` |
-| `border-top-right-radius` | `@include border-top-end-radius($value)` |
-| `border-bottom-right-radius` | `@include border-bottom-end-radius($value)` |
-| `border-bottom-left-radius` | `@include border-bottom-start-radius($value)` |
-| `transition` | `@include transition($value)` |
+| Forbidden direct property    | Required mixin                                |
+| ---------------------------- | --------------------------------------------- |
+| `border-radius`              | `@include border-radius($value)`              |
+| `border-top-left-radius`     | `@include border-top-start-radius($value)`    |
+| `border-top-right-radius`    | `@include border-top-end-radius($value)`      |
+| `border-bottom-right-radius` | `@include border-bottom-end-radius($value)`   |
+| `border-bottom-left-radius`  | `@include border-bottom-start-radius($value)` |
+| `transition`                 | `@include transition($value)`                 |
 
 ```scss
 // Correct
 @include border-radius($ouds-border-radius-default);
-@include transition(opacity .15s linear);
+@include transition(opacity 0.15s linear);
 
 // Wrong — will fail Stylelint
 border-radius: 4px;
-transition: opacity .15s linear;
+transition: opacity 0.15s linear;
 ```
 
 The `border-radius` mixin respects the `$enable-rounded` feature flag. The `transition` mixin respects `$enable-transitions` and automatically injects `prefers-reduced-motion: reduce` media queries for accessibility.
 
 ### Disallowed values and functions
 
-| Rule | Disallowed | Use instead |
-|---|---|---|
-| `border: none` | Stylelint violation | `border: 0` |
-| `outline: none` | Stylelint violation | Provide a visible focus alternative |
-| `lighten()` | Breaks token system | Use the appropriate lighter token variant |
-| `darken()` | Breaks token system | Use the appropriate darker token variant |
+| Rule            | Disallowed          | Use instead                               |
+| --------------- | ------------------- | ----------------------------------------- |
+| `border: none`  | Stylelint violation | `border: 0`                               |
+| `outline: none` | Stylelint violation | Provide a visible focus alternative       |
+| `lighten()`     | Breaks token system | Use the appropriate lighter token variant |
+| `darken()`      | Breaks token system | Use the appropriate darker token variant  |
 
 ### Color mode declarations
 
@@ -290,12 +322,12 @@ stroke-dashoffset: 107 #{"/* rtl:ignore */"};
 
 Several boolean variables gate optional behavior:
 
-| Flag | Default | Purpose |
-|---|---|---|
-| `$enable-rounded` | `true` | Controls `border-radius` output |
-| `$enable-transitions` | `true` | Controls transition output + reduced motion |
-| `$enable-button-pointers` | `true` | Adds `cursor: pointer` on buttons |
-| `$enable-bootstrap-compatibility` | varies | Gates legacy Bootstrap CSS variable generation |
+| Flag                              | Default | Purpose                                        |
+| --------------------------------- | ------- | ---------------------------------------------- |
+| `$enable-rounded`                 | `true`  | Controls `border-radius` output                |
+| `$enable-transitions`             | `true`  | Controls transition output + reduced motion    |
+| `$enable-button-pointers`         | `true`  | Adds `cursor: pointer` on buttons              |
+| `$enable-bootstrap-compatibility` | varies  | Gates legacy Bootstrap CSS variable generation |
 
 ### `fusv` markers
 
@@ -305,7 +337,7 @@ The "Flag Unused Sass Variables" linter check is suppressed around variables tha
 // fusv-disable
 $grays: (
   "100": $gray-100,
-  "200": $gray-200
+  "200": $gray-200,
 ) !default;
 // fusv-enable
 ```
@@ -377,19 +409,19 @@ Component SCSS files follow this structure:
 
 ### Style rules
 
-| Rule | Detail |
-|---|---|
-| **Semicolons** | None — enforced by ESLint (`"semi": ["error", "never"]`) |
-| **Indentation** | 2 spaces |
-| **Trailing commas** | None — enforced by ESLint (`"comma-dangle": ["error", "never"]`) |
-| **String quotes** | Prefer template literals for interpolation; single quotes otherwise |
-| **Strict mode** | Required in all files (`"strict": "error"`) |
-| **Console** | No `console.log` in production code (`"no-console": "error"`) |
-| **Object curly spacing** | Spaces inside braces (`{ foo }` not `{foo}`) |
-| **Imports** | Always include `.js` extension (`import/extensions` rule) |
+| Rule                      | Detail                                                                  |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Semicolons**            | None — enforced by ESLint (`"semi": ["error", "never"]`)                |
+| **Indentation**           | 2 spaces                                                                |
+| **Trailing commas**       | None — enforced by ESLint (`"comma-dangle": ["error", "never"]`)        |
+| **String quotes**         | Prefer template literals for interpolation; single quotes otherwise     |
+| **Strict mode**           | Required in all files (`"strict": "error"`)                             |
+| **Console**               | No `console.log` in production code (`"no-console": "error"`)           |
+| **Object curly spacing**  | Spaces inside braces (`{ foo }` not `{foo}`)                            |
+| **Imports**               | Always include `.js` extension (`import/extensions` rule)               |
 | **Variable declarations** | `const` by default; `let` only when reassignment is needed; never `var` |
-| **Functions** | Arrow function expressions for utilities; class methods for components |
-| **Number parsing** | `Number.parseFloat()` preferred over global `parseFloat()` |
+| **Functions**             | Arrow function expressions for utilities; class methods for components  |
+| **Number parsing**        | `Number.parseFloat()` preferred over global `parseFloat()`              |
 
 ### File structure
 
@@ -475,16 +507,16 @@ export default MyComponent
 
 ### Constant naming
 
-| Prefix | Purpose | Example |
-|---|---|---|
-| `NAME` | Component name (lowercase camelCase) | `'alert'`, `'carousel'` |
-| `DATA_KEY` | Data storage key | `'bs.alert'` |
-| `EVENT_KEY` | Event namespace | `'.bs.alert'` |
-| `EVENT_*` | Event name constants | `EVENT_CLOSE`, `EVENT_CLOSED`, `EVENT_SHOW` |
-| `CLASS_NAME_*` | CSS class name constants | `CLASS_NAME_FADE`, `CLASS_NAME_SHOW` |
-| `SELECTOR_*` | CSS selector constants | `SELECTOR_DATA_TOGGLE`, `SELECTOR_ACTIVE` |
-| `Default` | Default options object | `{ offset: [0, 10] }` |
-| `DefaultType` | Type-checking config | `{ offset: '(array|string|function)' }` |
+| Prefix         | Purpose                              | Example                                     |
+| -------------- | ------------------------------------ | ------------------------------------------- | ------ | ------------- |
+| `NAME`         | Component name (lowercase camelCase) | `'alert'`, `'carousel'`                     |
+| `DATA_KEY`     | Data storage key                     | `'bs.alert'`                                |
+| `EVENT_KEY`    | Event namespace                      | `'.bs.alert'`                               |
+| `EVENT_*`      | Event name constants                 | `EVENT_CLOSE`, `EVENT_CLOSED`, `EVENT_SHOW` |
+| `CLASS_NAME_*` | CSS class name constants             | `CLASS_NAME_FADE`, `CLASS_NAME_SHOW`        |
+| `SELECTOR_*`   | CSS selector constants               | `SELECTOR_DATA_TOGGLE`, `SELECTOR_ACTIVE`   |
+| `Default`      | Default options object               | `{ offset: [0, 10] }`                       |
+| `DefaultType`  | Type-checking config                 | `{ offset: '(array                          | string | function)' }` |
 
 All constants use `UPPER_SNAKE_CASE` except `Default` and `DefaultType` which use `PascalCase`.
 
@@ -522,12 +554,12 @@ Private members are prefixed with `_`. There is no native `#private` usage.
 
 ### ESLint environment overrides
 
-| Directory | Environment | Source type |
-|---|---|---|
-| `js/src/**` | Browser | ES module |
-| `js/tests/unit/**` | Jasmine | ES module |
-| `build/**` | Node.js | ES module |
-| `site/**` | Browser | Script (with module exceptions) |
+| Directory          | Environment | Source type                     |
+| ------------------ | ----------- | ------------------------------- |
+| `js/src/**`        | Browser     | ES module                       |
+| `js/tests/unit/**` | Jasmine     | ES module                       |
+| `build/**`         | Node.js     | ES module                       |
+| `site/**`          | Browser     | Script (with module exceptions) |
 
 ---
 
@@ -573,8 +605,8 @@ justify-content: center; // OUDS mod
 ```
 
 ```javascript
-const CLASS_NAME_PAUSED = 'is-paused' // OUDS mod
-export { default as OrangeNavbar } from './src/orange-navbar.js' // OUDS mod
+const CLASS_NAME_PAUSED = "is-paused"; // OUDS mod
+export { default as OrangeNavbar } from "./src/orange-navbar.js"; // OUDS mod
 ```
 
 #### Pattern D: Block modification
@@ -584,8 +616,12 @@ Used for multi-line additions or changes. Opened with `// OUDS mod: <description
 ```scss
 // OUDS mod: Animation keyframes
 @keyframes rotate-determinate {
-  0% { stroke-dashoffset: 107 #{"/* rtl:ignore */"}; }
-  100% { stroke-dashoffset: 0 #{"/* rtl:ignore */"}; }
+  0% {
+    stroke-dashoffset: 107 #{"/* rtl:ignore */"};
+  }
+  100% {
+    stroke-dashoffset: 0 #{"/* rtl:ignore */"};
+  }
 }
 // End mod
 ```
@@ -647,6 +683,7 @@ The `// scss-docs-start` and `// scss-docs-end` markers delimit code blocks that
 ```
 
 There are approximately **241** `scss-docs-start` markers across the codebase. They are used for:
+
 - Variable blocks
 - Sass maps
 - CSS custom property groups
@@ -716,53 +753,53 @@ js/tests/unit/<component>.spec.js
 #### Test structure
 
 ```javascript
-import Alert from '../../src/alert.js'
-import { clearFixture, getFixture, jQueryMock } from '../helpers/fixture.js'
+import Alert from "../../src/alert.js";
+import { clearFixture, getFixture, jQueryMock } from "../helpers/fixture.js";
 
-describe('Alert', () => {
-  let fixtureEl
+describe("Alert", () => {
+  let fixtureEl;
 
   beforeAll(() => {
-    fixtureEl = getFixture()
-  })
+    fixtureEl = getFixture();
+  });
 
   afterEach(() => {
-    clearFixture()
-  })
+    clearFixture();
+  });
 
-  it('should take care of element passed as CSS selector or DOM element', () => {
-    fixtureEl.innerHTML = '<div class="alert"></div>'
-    const alertEl = fixtureEl.querySelector('.alert')
-    const alertBySelector = new Alert('.alert')
-    expect(alertBySelector._element).toEqual(alertEl)
-  })
+  it("should take care of element passed as CSS selector or DOM element", () => {
+    fixtureEl.innerHTML = '<div class="alert"></div>';
+    const alertEl = fixtureEl.querySelector(".alert");
+    const alertBySelector = new Alert(".alert");
+    expect(alertBySelector._element).toEqual(alertEl);
+  });
 
-  describe('data-api', () => {
-    it('should close an alert without manual instantiation', () => {
+  describe("data-api", () => {
+    it("should close an alert without manual instantiation", () => {
       fixtureEl.innerHTML = [
         '<div class="alert">',
         '  <button type="button" data-bs-dismiss="alert">x</button>',
-        '</div>'
-      ].join('')
+        "</div>",
+      ].join("");
 
-      document.querySelector('button').click()
-      expect(document.querySelectorAll('.alert')).toHaveSize(0)
-    })
-  })
-})
+      document.querySelector("button").click();
+      expect(document.querySelectorAll(".alert")).toHaveSize(0);
+    });
+  });
+});
 ```
 
 #### Conventions
 
-| Convention | Detail |
-|---|---|
-| Imports | ES module imports from relative paths to source |
-| Fixture setup | `getFixture()` in `beforeAll`, `clearFixture()` in `afterEach` |
-| HTML fixtures | Set via `fixtureEl.innerHTML` with array `.join('')` for multi-line |
-| Grouping | Nested `describe` blocks: component name > sub-features |
-| Callbacks | Arrow functions everywhere |
-| Matchers | Standard Jasmine + `.toHaveSize()` custom matcher |
-| Loose matching | `jasmine.any(String)` for type-only assertions |
+| Convention     | Detail                                                              |
+| -------------- | ------------------------------------------------------------------- |
+| Imports        | ES module imports from relative paths to source                     |
+| Fixture setup  | `getFixture()` in `beforeAll`, `clearFixture()` in `afterEach`      |
+| HTML fixtures  | Set via `fixtureEl.innerHTML` with array `.join('')` for multi-line |
+| Grouping       | Nested `describe` blocks: component name > sub-features             |
+| Callbacks      | Arrow functions everywhere                                          |
+| Matchers       | Standard Jasmine + `.toHaveSize()` custom matcher                   |
+| Loose matching | `jasmine.any(String)` for type-only assertions                      |
 
 ### SCSS tests
 
@@ -782,18 +819,18 @@ SCSS tests use Jasmine running in Node.js. Config is at `scss/tests/jasmine.js`.
 
 ### Build commands
 
-| Command | Purpose |
-|---|---|
-| `npm run lint` | Run all linters (ESLint + Stylelint + lockfile-lint) in parallel |
-| `npm run js-lint` | ESLint only |
-| `npm run css-lint` | Stylelint only |
-| `npm run dist` | Build CSS + JS for all brands |
-| `npm run js-test` | Run Jasmine unit tests via Karma |
-| `npm run test` | Full suite: lint + dist + test + docs build + docs lint |
-| `npm run docs-prettier-check` | Check Prettier formatting on `site/` |
-| `npm run docs-prettier-format` | Auto-format `site/` files with Prettier |
-| `npm run docs-accessibility` | Pa11y-CI accessibility tests |
-| `npm run docs-vnu` | HTML validation |
+| Command                        | Purpose                                                          |
+| ------------------------------ | ---------------------------------------------------------------- |
+| `npm run lint`                 | Run all linters (ESLint + Stylelint + lockfile-lint) in parallel |
+| `npm run js-lint`              | ESLint only                                                      |
+| `npm run css-lint`             | Stylelint only                                                   |
+| `npm run dist`                 | Build CSS + JS for all brands                                    |
+| `npm run js-test`              | Run Jasmine unit tests via Karma                                 |
+| `npm run test`                 | Full suite: lint + dist + test + docs build + docs lint          |
+| `npm run docs-prettier-check`  | Check Prettier formatting on `site/`                             |
+| `npm run docs-prettier-format` | Auto-format `site/` files with Prettier                          |
+| `npm run docs-accessibility`   | Pa11y-CI accessibility tests                                     |
+| `npm run docs-vnu`             | HTML validation                                                  |
 
 ### CSS build pipeline
 
@@ -825,13 +862,13 @@ js/index.umd.js  →  Rollup + Babel  →  dist/js/ouds-web.bundle.js  (Popper.j
 
 Prettier is **only** used for the documentation site (`site/` directory). It is not applied to SCSS or JS source code.
 
-| Setting | Value |
-|---|---|
-| Arrow parens | Always |
-| Print width | 120 |
-| Semicolons | None |
-| Quotes | Single |
-| Trailing commas | None |
+| Setting         | Value  |
+| --------------- | ------ |
+| Arrow parens    | Always |
+| Print width     | 120    |
+| Semicolons      | None   |
+| Quotes          | Single |
+| Trailing commas | None   |
 
 Prettier plugins: `prettier-plugin-astro` for `.astro` file formatting.
 
@@ -843,17 +880,18 @@ Prettier plugins: `prettier-plugin-astro` for `.astro` file formatting.
 
 The config extends `stylelint-config-twbs-bootstrap` and adds these OUDS-specific rules:
 
-| Rule | Setting | Effect |
-|---|---|---|
-| `declaration-property-value-disallowed-list` | `border: none`, `outline: none` | Use `border: 0`; provide visible focus alternative |
-| `function-disallowed-list` | `lighten`, `darken` | Use token-defined color variants |
-| `property-disallowed-list` | `border-radius`, `border-*-*-radius`, `transition` | Must use `@include border-radius()` / `@include transition()` |
-| `scss/dollar-variable-default` | `true` (ignore local) | All global variables must use `!default` |
-| `scss/selector-no-union-class-name` | `true` | No `.parent { &__child {} }` BEM-style nesting |
-| `reportNeedlessDisables` | `true` | Flags unnecessary `stylelint-disable` comments |
-| `reportInvalidScopeDisables` | `true` | Flags disable comments for rules not being checked |
+| Rule                                         | Setting                                            | Effect                                                        |
+| -------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------- |
+| `declaration-property-value-disallowed-list` | `border: none`, `outline: none`                    | Use `border: 0`; provide visible focus alternative            |
+| `function-disallowed-list`                   | `lighten`, `darken`                                | Use token-defined color variants                              |
+| `property-disallowed-list`                   | `border-radius`, `border-*-*-radius`, `transition` | Must use `@include border-radius()` / `@include transition()` |
+| `scss/dollar-variable-default`               | `true` (ignore local)                              | All global variables must use `!default`                      |
+| `scss/selector-no-union-class-name`          | `true`                                             | No `.parent { &__child {} }` BEM-style nesting                |
+| `reportNeedlessDisables`                     | `true`                                             | Flags unnecessary `stylelint-disable` comments                |
+| `reportInvalidScopeDisables`                 | `true`                                             | Flags disable comments for rules not being checked            |
 
 **Overrides**:
+
 - `scss/tests/**`: `!default` and `!important` rules disabled.
 - `site/**/*.scss`: `!default` rule disabled.
 - `site/**/examples/**/*.css`: Vendor prefixes and qualifying type selectors allowed.
@@ -862,23 +900,24 @@ The config extends `stylelint-config-twbs-bootstrap` and adds these OUDS-specifi
 
 The config extends `xo`, `xo/browser`, `plugin:unicorn/recommended`, and `plugin:storybook/recommended`.
 
-| Rule | Setting | Effect |
-|---|---|---|
-| `semi` | `["error", "never"]` | No semicolons |
-| `comma-dangle` | `["error", "never"]` | No trailing commas |
-| `indent` | `["error", 2]` | 2-space indentation |
-| `no-console` | `"error"` | No `console.*` in production code |
-| `strict` | `"error"` | Strict mode required |
-| `prefer-template` | `"error"` | Template literals over concatenation |
-| `object-curly-spacing` | `["error", "always"]` | Spaces inside `{ }` |
-| `import/extensions` | `.js` always required | Explicit `.js` in imports |
-| `import/no-cycle` | `"error"` | No circular dependencies |
-| `import/order` | `"error"` | Ordered imports |
-| `unicorn/no-unused-properties` | `"error"` | Flag unused object properties |
-| `unicorn/prefer-module` | `"off"` | CommonJS still allowed in some contexts |
-| `max-params` | `["warn", 5]` | Warn on functions with more than 5 parameters |
+| Rule                           | Setting               | Effect                                        |
+| ------------------------------ | --------------------- | --------------------------------------------- |
+| `semi`                         | `["error", "never"]`  | No semicolons                                 |
+| `comma-dangle`                 | `["error", "never"]`  | No trailing commas                            |
+| `indent`                       | `["error", 2]`        | 2-space indentation                           |
+| `no-console`                   | `"error"`             | No `console.*` in production code             |
+| `strict`                       | `"error"`             | Strict mode required                          |
+| `prefer-template`              | `"error"`             | Template literals over concatenation          |
+| `object-curly-spacing`         | `["error", "always"]` | Spaces inside `{ }`                           |
+| `import/extensions`            | `.js` always required | Explicit `.js` in imports                     |
+| `import/no-cycle`              | `"error"`             | No circular dependencies                      |
+| `import/order`                 | `"error"`             | Ordered imports                               |
+| `unicorn/no-unused-properties` | `"error"`             | Flag unused object properties                 |
+| `unicorn/prefer-module`        | `"off"`               | CommonJS still allowed in some contexts       |
+| `max-params`                   | `["warn", 5]`         | Warn on functions with more than 5 parameters |
 
 **Overrides**:
+
 - `build/**`: Node.js environment, `no-console` disabled.
 - `js/tests/unit/**`: Jasmine environment, `no-console` disabled.
 - `site/**`: Browser environment, script source type (with module exceptions).
@@ -886,6 +925,7 @@ The config extends `xo`, `xo/browser`, `plugin:unicorn/recommended`, and `plugin
 ### Ignored paths
 
 Both ESLint and Stylelint ignore:
+
 - `**/*.min.js` / `**/*.min.css`
 - `**/dist/`
 - `**/vendor/`
@@ -895,4 +935,4 @@ Both ESLint and Stylelint ignore:
 
 ---
 
-*This file provides detailed code convention context for AI agents and LLMs working on the OUDS Web codebase. It complements the overview in [AGENTS.md](../AGENTS.md#code-conventions) with implementation-level details and concrete examples.*
+_This file provides detailed code convention context for AI agents and LLMs working on the OUDS Web codebase. It complements the overview in [AGENTS.md](../AGENTS.md#code-conventions) with implementation-level details and concrete examples._
