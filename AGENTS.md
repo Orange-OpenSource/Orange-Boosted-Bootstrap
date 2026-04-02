@@ -174,7 +174,7 @@ Orange-Boosted-Bootstrap/
 └── .storybook/               # Storybook configuration
 ```
 
-** You must not access to files outside of this repository **
+**You must not access files outside this repository.**
 
 ### Important files to know
 
@@ -813,7 +813,3 @@ npm run test
 ---
 
 _This file was generated to provide context for AI agents and LLMs working on the OUDS Web codebase. Keep it up to date when project architecture, conventions, or tooling changes._
-
-```
-
-```
