@@ -1,6 +1,6 @@
 ---
 title: Text input
-description: A text input is a user interface component that allows users to enter or edit textual data. It provides a visual and interactive affordance for text entry while supporting labels, placeholders, icons, helper messages, and validation feedback.
+description: Text input is a UI element that enables users to type, edit, or select a single line of text, such as names, emails, or search queries.
 aliases:
   - "/docs/forms/text-input/"
   - "/docs/components/text-input/"
@@ -15,9 +15,13 @@ import { getVersionedDocsPath } from '@libs/path'
 
 ## Overview
 
+Text is a UI element that enables users to type, edit, or select a single line of text, such as names, emails, or search queries.
+
+Text input features labels, placeholders, icons, helper messages, and validation feedback to provide visual and interactive cues.
+
 Use a `.text-input` wrapper to create a textual form field with OUDS styles, then wrap a pair of `<input class="text-input-field">` and `<label>` elements in `.text-input-container`. Note that the `<label>` must come before the `<input>`.
 
-A `placeholder` attribute is required on each `<input>` as our CSS-only floating label implementation relies on the `:placeholder-shown` pseudo-element to detect when the input is a empty.
+A `placeholder` attribute is required on each `<input>` as our CSS-only floating label implementation relies on the `:placeholder-shown` pseudo-element to detect when the input is empty.
 
 <Callout type="info">
   Even if you don't need a placeholder, **you must always define the placeholder attribute with a single space character**. This ensures the label behaves correctly by preventing it from overlapping the input text when a value is entered.
