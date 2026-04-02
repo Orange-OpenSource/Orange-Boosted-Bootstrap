@@ -393,11 +393,11 @@ All JS components extend `BaseComponent` (`js/src/base-component.js`) and follow
 
 ```javascript
 // Pattern for all JS components
-import BaseComponent from "./base-component.js";
+import BaseComponent from './base-component.js'
 
 class MyComponent extends BaseComponent {
   static get NAME() {
-    return "myComponent";
+    return 'myComponent'
   }
   // ...
 }
