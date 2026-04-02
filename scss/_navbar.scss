@@ -525,7 +525,7 @@
 }
 
 .header-minimized {
-  .navbar-expand,
+  .navbar-expand:not(.supra),
   .supra + .navbar-expand {
     @each $breakpoint in map-keys($grid-breakpoints) {
       $next: breakpoint-next($breakpoint, $grid-breakpoints);
