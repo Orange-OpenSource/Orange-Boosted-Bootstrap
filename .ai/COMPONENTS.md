@@ -481,32 +481,32 @@ Every JS component follows this exact file structure:
  */
 
 // 1. IMPORTS
-import BaseComponent from "./base-component.js";
-import EventHandler from "./dom/event-handler.js";
+import BaseComponent from './base-component.js'
+import EventHandler from './dom/event-handler.js'
 
 /**
  * Constants
  */
 
 // 2. CONSTANTS
-const NAME = "componentname"; // lowercase, no hyphens
-const DATA_KEY = "bs.componentname";
-const EVENT_KEY = `.${DATA_KEY}`;
-const DATA_API_KEY = ".data-api";
+const NAME = 'componentname' // lowercase, no hyphens
+const DATA_KEY = 'bs.componentname'
+const EVENT_KEY = `.${DATA_KEY}`
+const DATA_API_KEY = '.data-api'
 
-const EVENT_SHOW = `show${EVENT_KEY}`; // 'show.bs.componentname'
-const EVENT_SHOWN = `shown${EVENT_KEY}`; // 'shown.bs.componentname'
-const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
+const EVENT_SHOW = `show${EVENT_KEY}` // 'show.bs.componentname'
+const EVENT_SHOWN = `shown${EVENT_KEY}` // 'shown.bs.componentname'
+const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 
-const CLASS_NAME_SHOW = "show";
-const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="componentname"]';
+const CLASS_NAME_SHOW = 'show'
+const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="componentname"]'
 
 const Default = {
   /* config defaults */
-};
+}
 const DefaultType = {
   /* type validation regex */
-};
+}
 
 /**
  * Class definition
@@ -515,19 +515,19 @@ const DefaultType = {
 // 3. CLASS
 class Component extends BaseComponent {
   constructor(element, config) {
-    super(element, config);
+    super(element, config)
     // Initialize instance properties
   }
 
   // Getters
   static get Default() {
-    return Default;
+    return Default
   }
   static get DefaultType() {
-    return DefaultType;
+    return DefaultType
   }
   static get NAME() {
-    return NAME;
+    return NAME
   }
 
   // Public
@@ -539,7 +539,7 @@ class Component extends BaseComponent {
   }
   dispose() {
     // Component-specific cleanup
-    super.dispose();
+    super.dispose()
   }
 
   // Private
@@ -550,13 +550,18 @@ class Component extends BaseComponent {
   // Static
   static jQueryInterface(config) {
     return this.each(function () {
-      const data = Component.getOrCreateInstance(this, config);
-      if (typeof config !== "string") return;
-      if (typeof data[config] === "undefined") {
-        throw new TypeError(`No method named "${config}"`);
+      const data = Component.getOrCreateInstance(this, config)
+
+      if (typeof config !== 'string') {
+        return
       }
-      data[config]();
-    });
+
+      if (typeof data[config] === 'undefined') {
+        throw new TypeError(`No method named "${config}"`)
+      }
+
+      data[config]()
+    })
   }
 }
 
@@ -570,19 +575,19 @@ EventHandler.on(
   EVENT_CLICK_DATA_API,
   SELECTOR_DATA_TOGGLE,
   function (event) {
-    event.preventDefault();
-    Component.getOrCreateInstance(this).toggle();
-  },
-);
+    event.preventDefault()
+    Component.getOrCreateInstance(this).toggle()
+  }
+)
 
 /**
  * jQuery
  */
 
 // 5. JQUERY REGISTRATION
-defineJQueryPlugin(Component);
+defineJQueryPlugin(Component)
 
-export default Component;
+export default Component
 ```
 
 ### Event pair pattern
