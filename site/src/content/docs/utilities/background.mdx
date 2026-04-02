@@ -41,7 +41,7 @@ This ensures that all descendant nodes adopt the correct color mode for the spec
   * `.bg-surface-status-info-emphasized`
   * `.bg-surface-status-info-muted`
   * `.bg-always-black`
-  * `.bg-always-white`.
+  * `.bg-always-white`
 </details>
 
 In the following examples we always use a child element with `[data-bs-theme]` attribute as it is the recommended way to use the `.bg-*` classes and will work in every case even if we only have text in our elements.
@@ -71,7 +71,7 @@ Following are the equivalent Bootstrap background that you shouldn’t be using.
 Below are all the background utilities along with their recommended `[data-bs-theme]` attribute values to use when no other color mode is specified in the container's ancestry apart from the one on the root element:
 
 <Callout type="info">
-  Please note that we use `[data-bs-theme]` attribute on a child element so that the background to not adapt to the attribute instead of conforming to the color mode set by its ancestors.
+  Please note that we use the `[data-bs-theme]` attribute on a child element so that the background does not adapt to the attribute but instead conforms to the color mode set by its ancestors.
 </Callout>
 
 <Example code={[
@@ -276,7 +276,7 @@ We also provide opacity-based background classes, which should be used only in s
 
 ## Colored backgrounds
 
-The following colored backgrounds are designed for specific use cases and can only accommodate a limited set of components, such as buttons, links, and text elements. For accessibility reasons we need remove the color of these components, this is achieved by the colored variants of [buttons]([[docsref:components/buttons#colored-background]]) and [links]([[docsref:components/links#on-colored-background]]).
+The following colored backgrounds are designed for specific use cases and can only accommodate a limited set of components, such as buttons, links, and text elements. For accessibility reasons, we need to remove the color of these components this is achieved by the colored variants of [buttons]([[docsref:/components/buttons#colored-background]]) and [links]([[docsref:/components/links#on-colored-background]]).
 
 <Example code={[
   ...allTokens.filter(token => (token.name.match(/\$ouds-color-surface-brand.*-light/) && token.compiledValue)).map(token => {

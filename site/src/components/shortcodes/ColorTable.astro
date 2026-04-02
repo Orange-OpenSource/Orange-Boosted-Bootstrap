@@ -14,7 +14,7 @@ interface IColorToken {
 interface Props {
   tokenRegexp: RegExp
   colorPrefix: string
-  getUsage?: (tokenName: string) => string
+  getUsage?: (colorName: string, colorPrefix?: string) => string
 }
 
 const getCustomProp = (colorName: string, colorPrefix: string) =>

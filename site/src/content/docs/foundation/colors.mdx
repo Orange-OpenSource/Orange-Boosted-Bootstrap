@@ -12,7 +12,6 @@ import { getData } from '@libs/data'
 import { getConfig } from '@libs/config'
 import { allTokens, getTokenValue } from '@libs/sass-variables'
 import { getVersionedDocsPath } from '@libs/path'
-import { addRootName, mergeTokensByMode } from '@components/shortcodes/ColorTable.astro'
 
 This page lists all the colors available in OUDS Web and their usage, organized by their category. All colors are displayed in both light and dark modes for reference. However, they should be applied using their respective utility classes or custom properties to ensure dynamic adaptation to the [color mode]([[docsref:/foundation/color-modes]]).
 
@@ -109,7 +108,7 @@ These content colors are used to guarantee maximum legibility for contents displ
 }
 
 <Callout type="info">
-  The following content colors are highly specific and should only be used with a designer directions.
+  The following content colors are highly specific and should only be used with direction from a designer.
 </Callout>
 
 <ColorTable
