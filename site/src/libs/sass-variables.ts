@@ -3,9 +3,9 @@ import { getConfig } from './config'
 
 // this is not exported by sass-export so we redeclare
 export interface IDeclaration {
-  name: string,
-  value: string,
-  mapValue?: Array<any>,
+  name: string
+  value: string
+  mapValue?: Array<any>
   compiledValue: string
 }
 
@@ -44,6 +44,6 @@ export const hasToken = (searchToken: string) => {
 
 export const getTokenValue = (name: string) => {
   const token = allTokens.find((token: IDeclaration) => token.name === name)
-  if(!token) return 'unknown'
+  if(!token) throw new Error(`Token not found: ${name}`)
   return token.compiledValue
 }

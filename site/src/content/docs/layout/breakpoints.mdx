@@ -183,7 +183,7 @@ For example the `@include media-breakpoint-only(md) { ... }` will result in:
 
 <Code lang="scss" code={`// Example
   // Apply styles starting from medium devices and up to large devices
-  @media (min-width: ${getTokenValue('$ouds-grid-md-min-width').compiledValue}) and (max-width: ${getTokenValue('$ouds-grid-lg-min-width').slice(0, -2) - .02}px) { ... }`} />
+  @media (min-width: ${getTokenValue('$ouds-grid-md-min-width')}) and (max-width: ${getTokenValue('$ouds-grid-lg-min-width').slice(0, -2) - .02}px) { ... }`} />
 
 ### Between breakpoints
 
@@ -197,4 +197,4 @@ Which results in:
 
 <Code lang="scss" code={`// Example
   // Apply styles starting from medium devices and up to x-large devices
-  @media (min-width: ${getTokenValue('$ouds-grid-md-min-width').compiledValue}) and (max-width: ${getTokenValue('$ouds-grid-xl-min-width').slice(0, -2) - .02}px) { ... }`} />
+  @media (min-width: ${getTokenValue('$ouds-grid-md-min-width')}) and (max-width: ${getTokenValue('$ouds-grid-xl-min-width').slice(0, -2) - .02}px) { ... }`} />
