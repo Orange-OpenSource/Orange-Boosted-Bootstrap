@@ -256,11 +256,11 @@ export default () => {
   // storybook-start table
   // js-docs-start live-row-selection
   // Manage checkboxes states (e.g., select/deselect all rows, update header checkbox state)
-  const tableSelectAll = document.querySelector('.has-row-selection#tableWithCheckboxes #tableSelectAll')
-  const allCheckboxes = document.querySelectorAll('.has-row-selection#tableWithCheckboxes tbody input[type="checkbox"]')
+  const tableSelectAll = document.querySelector('#tableWithCheckboxes #tableSelectAll')
+  const allCheckboxes = document.querySelectorAll('#tableWithCheckboxes tbody input[type="checkbox"]')
 
   function updateSelectAllState() {
-    const checkedCheckboxes = document.querySelectorAll('.has-row-selection#tableWithCheckboxes tbody input[type="checkbox"]:checked')
+    const checkedCheckboxes = document.querySelectorAll('#tableWithCheckboxes tbody input[type="checkbox"]:checked')
 
     if (checkedCheckboxes.length === 0) {
       // None are checked
