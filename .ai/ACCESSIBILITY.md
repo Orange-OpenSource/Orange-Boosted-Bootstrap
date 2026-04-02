@@ -1,3 +1,29 @@
+---
+title: "Accessibility — OUDS Web"
+description: "WCAG 2.1 Level AA compliance guide for OUDS Web components: focus management, keyboard navigation, ARIA patterns, color contrast, RTL, and testing."
+audience:
+  - developers
+  - accessibility-reviewers
+  - ai-agents
+keywords:
+  - accessibility
+  - a11y
+  - WCAG
+  - ARIA
+  - focus
+  - keyboard
+  - contrast
+  - RTL
+  - screen-reader
+  - Pa11y
+related_files:
+  - "../AGENTS.md#accessibility-requirements"
+  - "CODE_CONVENTIONS.md"
+  - "COMPONENTS.md"
+  - "QUICK_LOOKUP.md#accessibility"
+last_updated: "2026-03-31"
+---
+
 # Accessibility — OUDS Web
 
 > WCAG 2.1 Level AA compliance guide for OUDS Web components.
@@ -28,20 +54,20 @@ OUDS Web targets **WCAG 2.1 Level AA** as its minimum compliance level. Every co
 
 Key WCAG success criteria that drive the implementation:
 
-| SC | Name | How OUDS Web addresses it |
-|---|---|---|
-| 1.3.1 | Info and Relationships | Semantic HTML, ARIA roles set programmatically by JS components |
-| 1.4.3 | Contrast (Minimum) | `$min-contrast-ratio: 4.5` in Sass, token-driven colors |
-| 1.4.11 | Non-text Contrast | 3:1 for UI components and graphical objects |
-| 2.1.1 | Keyboard | All interactive components operable via keyboard |
-| 2.1.2 | No Keyboard Trap | Focus trap only in modal contexts, Escape always available |
-| 2.2.1 | Timing Adjustable | Toast pauses auto-hide on focus/hover |
-| 2.2.2 | Pause, Stop, Hide | Carousel play/pause button |
-| 2.3.3 | Animation from Interactions | `prefers-reduced-motion` respected via transition mixin |
-| 2.4.3 | Focus Order | Focus restoration to trigger on modal/offcanvas close |
-| 2.4.7 | Focus Visible | Dual-ring focus indicator on all focusable elements |
-| 2.5.8 | Target Size (Minimum) | `target-size()` mixin enforces 44x44px hit areas |
-| 4.1.2 | Name, Role, Value | ARIA attributes managed dynamically by JS components |
+| SC     | Name                        | How OUDS Web addresses it                                       |
+| ------ | --------------------------- | --------------------------------------------------------------- |
+| 1.3.1  | Info and Relationships      | Semantic HTML, ARIA roles set programmatically by JS components |
+| 1.4.3  | Contrast (Minimum)          | `$min-contrast-ratio: 4.5` in Sass, token-driven colors         |
+| 1.4.11 | Non-text Contrast           | 3:1 for UI components and graphical objects                     |
+| 2.1.1  | Keyboard                    | All interactive components operable via keyboard                |
+| 2.1.2  | No Keyboard Trap            | Focus trap only in modal contexts, Escape always available      |
+| 2.2.1  | Timing Adjustable           | Toast pauses auto-hide on focus/hover                           |
+| 2.2.2  | Pause, Stop, Hide           | Carousel play/pause button                                      |
+| 2.3.3  | Animation from Interactions | `prefers-reduced-motion` respected via transition mixin         |
+| 2.4.3  | Focus Order                 | Focus restoration to trigger on modal/offcanvas close           |
+| 2.4.7  | Focus Visible               | Dual-ring focus indicator on all focusable elements             |
+| 2.5.8  | Target Size (Minimum)       | `target-size()` mixin enforces 44x44px hit areas                |
+| 4.1.2  | Name, Role, Value           | ARIA attributes managed dynamically by JS components            |
 
 ---
 
@@ -65,13 +91,13 @@ OUDS Web replaces Bootstrap's default box-shadow focus ring with a **dual-ring s
 
 **Parameters and defaults:**
 
-| Parameter | Default | Source |
-|---|---|---|
-| `$color` | `var(--bs-color-border-focus)` | Semantic color token (black in light, gray-160 in dark) |
-| `$width` | `3px` (`$focus-visible-outer-width`) | `scss/_variables.scss:594` |
-| `$offset` | `2px` (`$focus-visible-outer-offset`) | `scss/_variables.scss:595` |
-| `$box-width` | `2px` (`$focus-visible-inner-width`) | `scss/_variables.scss:593` |
-| `$box-color` | `var(--bs-color-border-focus-inset)` | Semantic color token (white in light, gray-880 in dark) |
+| Parameter    | Default                               | Source                                                  |
+| ------------ | ------------------------------------- | ------------------------------------------------------- |
+| `$color`     | `var(--bs-color-border-focus)`        | Semantic color token (black in light, gray-160 in dark) |
+| `$width`     | `3px` (`$focus-visible-outer-width`)  | `scss/_variables.scss:594`                              |
+| `$offset`    | `2px` (`$focus-visible-outer-offset`) | `scss/_variables.scss:595`                              |
+| `$box-width` | `2px` (`$focus-visible-inner-width`)  | `scss/_variables.scss:593`                              |
+| `$box-color` | `var(--bs-color-border-focus-inset)`  | Semantic color token (white in light, gray-880 in dark) |
 
 **Global application** — every focusable element gets this by default via `scss/_reboot.scss`:
 
@@ -94,23 +120,26 @@ The Bootstrap `.focus-ring` helper class still exists (`scss/helpers/_focus-ring
 FocusTrap constrains keyboard focus within a container element. It is used by **Modal** and **Offcanvas** only.
 
 How it works:
+
 1. Listens for `focusin` on `document` — if focus moves outside the trap, it redirects back.
 2. Listens for `keydown` (Tab key only) — records whether the user is tabbing forward or backward.
 3. When focus escapes, redirects to the **first** focusable child (forward Tab) or **last** focusable child (backward Tab).
 4. If no focusable children exist, focuses the container element itself.
 
 Focusable children are determined by `SelectorEngine.focusableChildren()`:
+
 - Matches: `a`, `button`, `input`, `textarea`, `select`, `details`, `[tabindex]`, `[contenteditable="true"]`
 - Excludes: elements with negative `tabindex`, disabled elements, invisible elements
 
 Config options:
 
-| Option | Type | Default | Purpose |
-|---|---|---|---|
-| `autofocus` | `boolean` | `true` | Focus the trap element immediately on activation |
-| `trapElement` | `element` | `null` | The DOM element to trap focus within |
+| Option        | Type      | Default | Purpose                                          |
+| ------------- | --------- | ------- | ------------------------------------------------ |
+| `autofocus`   | `boolean` | `true`  | Focus the trap element immediately on activation |
+| `trapElement` | `element` | `null`  | The DOM element to trap focus within             |
 
 Lifecycle:
+
 - `activate()` — registers listeners, optionally focuses the trap element
 - `deactivate()` — removes all `.bs.focustrap` event listeners
 
@@ -122,9 +151,9 @@ Both Modal and Offcanvas restore focus to the **trigger element** when closed:
 // Pattern used by both components (Data API handler)
 EventHandler.one(target, EVENT_HIDDEN, () => {
   if (isVisible(this)) {
-    this.focus() // 'this' is the trigger element
+    this.focus(); // 'this' is the trigger element
   }
-})
+});
 ```
 
 The `isVisible()` check prevents focusing hidden elements. This implements WCAG 2.4.3 (Focus Order).
@@ -143,26 +172,26 @@ The `isVisible()` check prevents focusing hidden elements. This implements WCAG 
 
 ### Per-component keyboard support
 
-| Component | Keys | Behavior |
-|---|---|---|
-| **Modal** | `Escape` | Closes modal (if `keyboard: true`); otherwise triggers visual bounce |
-| | `Tab` / `Shift+Tab` | Cycles within modal (focus trap) |
-| **Offcanvas** | `Escape` | Closes offcanvas (if `keyboard: true`); otherwise fires `hidePrevented` event |
-| | `Tab` / `Shift+Tab` | Cycles within offcanvas (focus trap) |
-| **Dropdown** | `ArrowDown` | Opens menu (if closed), moves focus to next item |
-| | `ArrowUp` | Opens menu (if closed), moves focus to previous item |
-| | `Escape` | Closes menu, returns focus to toggle button |
-| | `Tab` | Closes menu, allows normal Tab navigation |
-| **Tab** | `ArrowRight` / `ArrowDown` | Activates and focuses next tab (wraps around) |
-| | `ArrowLeft` / `ArrowUp` | Activates and focuses previous tab (wraps around) |
-| | `Home` | Activates and focuses first tab |
-| | `End` | Activates and focuses last tab |
-| **Carousel** | `ArrowLeft` | Previous slide (next in RTL) |
-| | `ArrowRight` | Next slide (previous in RTL) |
-| **Collapse** | Native `Enter` / `Space` | Toggles via native `<button>` behavior |
-| **Alert** | Native `Enter` / `Space` | Dismisses via native `<button>` behavior |
-| **Toast** | Focus (`Tab` in) | Pauses auto-hide timer |
-| **Tooltip** | Focus (`Tab` in) | Shows tooltip (with `focus` trigger) |
+| Component     | Keys                       | Behavior                                                                      |
+| ------------- | -------------------------- | ----------------------------------------------------------------------------- |
+| **Modal**     | `Escape`                   | Closes modal (if `keyboard: true`); otherwise triggers visual bounce          |
+|               | `Tab` / `Shift+Tab`        | Cycles within modal (focus trap)                                              |
+| **Offcanvas** | `Escape`                   | Closes offcanvas (if `keyboard: true`); otherwise fires `hidePrevented` event |
+|               | `Tab` / `Shift+Tab`        | Cycles within offcanvas (focus trap)                                          |
+| **Dropdown**  | `ArrowDown`                | Opens menu (if closed), moves focus to next item                              |
+|               | `ArrowUp`                  | Opens menu (if closed), moves focus to previous item                          |
+|               | `Escape`                   | Closes menu, returns focus to toggle button                                   |
+|               | `Tab`                      | Closes menu, allows normal Tab navigation                                     |
+| **Tab**       | `ArrowRight` / `ArrowDown` | Activates and focuses next tab (wraps around)                                 |
+|               | `ArrowLeft` / `ArrowUp`    | Activates and focuses previous tab (wraps around)                             |
+|               | `Home`                     | Activates and focuses first tab                                               |
+|               | `End`                      | Activates and focuses last tab                                                |
+| **Carousel**  | `ArrowLeft`                | Previous slide (next in RTL)                                                  |
+|               | `ArrowRight`               | Next slide (previous in RTL)                                                  |
+| **Collapse**  | Native `Enter` / `Space`   | Toggles via native `<button>` behavior                                        |
+| **Alert**     | Native `Enter` / `Space`   | Dismisses via native `<button>` behavior                                      |
+| **Toast**     | Focus (`Tab` in)           | Pauses auto-hide timer                                                        |
+| **Tooltip**   | Focus (`Tab` in)           | Shows tooltip (with `focus` trigger)                                          |
 
 Components without custom keyboard handlers (Scrollspy, OrangeNavbar, QuantitySelector) rely on native HTML element behavior (`<button>`, `<input>`, `<a>`).
 
@@ -186,11 +215,11 @@ Components without custom keyboard handlers (Scrollspy, OrangeNavbar, QuantitySe
 
 **JS:** `js/src/modal.js` | **Reference:** [WAI-ARIA Dialog (Modal)](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
 
-| Attribute | On show | On hide |
-|---|---|---|
-| `role="dialog"` | Set | Removed |
-| `aria-modal="true"` | Set | Removed |
-| `aria-hidden` | Removed | Set to `true` |
+| Attribute           | On show | On hide       |
+| ------------------- | ------- | ------------- |
+| `role="dialog"`     | Set     | Removed       |
+| `aria-modal="true"` | Set     | Removed       |
+| `aria-hidden`       | Removed | Set to `true` |
 
 Focus: Trapped via FocusTrap. Restored to trigger on close.
 
@@ -198,10 +227,10 @@ Focus: Trapped via FocusTrap. Restored to trigger on close.
 
 **JS:** `js/src/offcanvas.js` | **Reference:** [WAI-ARIA Dialog (Modal)](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
 
-| Attribute | On show | On hide |
-|---|---|---|
-| `role="dialog"` | Set | Removed |
-| `aria-modal="true"` | Set | Removed |
+| Attribute           | On show | On hide |
+| ------------------- | ------- | ------- |
+| `role="dialog"`     | Set     | Removed |
+| `aria-modal="true"` | Set     | Removed |
 
 Focus: Trapped via FocusTrap (when `!config.scroll || config.backdrop`). Restored to trigger on close. Responsive behavior: auto-hides when CSS `position` changes from `fixed` (breakpoint change detected via `[aria-modal][class*=show]` selector).
 
@@ -209,9 +238,9 @@ Focus: Trapped via FocusTrap (when `!config.scroll || config.backdrop`). Restore
 
 **JS:** `js/src/dropdown.js` | **Reference:** [WAI-ARIA Menu Button](https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/)
 
-| Attribute | On show | On hide |
-|---|---|---|
-| `aria-expanded` on toggle | `true` | `"false"` |
+| Attribute                 | On show | On hide   |
+| ------------------------- | ------- | --------- |
+| `aria-expanded` on toggle | `true`  | `"false"` |
 
 Focus: Menu items navigated with arrow keys via `_selectMenuItem()`. Escape returns focus to toggle.
 
@@ -219,9 +248,9 @@ Focus: Menu items navigated with arrow keys via `_selectMenuItem()`. Escape retu
 
 **JS:** `js/src/collapse.js` | **Reference:** [WAI-ARIA Disclosure](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)
 
-| Attribute | On show | On hide |
-|---|---|---|
-| `aria-expanded` on trigger(s) | `true` | `false` |
+| Attribute                     | On show | On hide |
+| ----------------------------- | ------- | ------- |
+| `aria-expanded` on trigger(s) | `true`  | `false` |
 
 Managed by `_addAriaAndCollapsedClass()` — iterates all triggers pointing to the collapsible and syncs state. When used with a `parent` option, implements the Accordion pattern.
 
@@ -231,15 +260,15 @@ Managed by `_addAriaAndCollapsedClass()` — iterates all triggers pointing to t
 
 This is the most ARIA-rich component. It programmatically sets roles and attributes at initialization via `_setInitialAttributes()`:
 
-| Attribute | Target | Value |
-|---|---|---|
-| `role="tablist"` | Parent container | Set on init if not present |
-| `role="presentation"` | Wrapper elements (`<li>`) | Set on init if wrapper differs from tab |
-| `role="tab"` | Tab elements | Set on init if not present |
-| `role="tabpanel"` | Panel elements | Set on init if not present |
-| `aria-selected` | Active tab: `true`; inactive: `false` | Updated on activation |
-| `tabindex` | Active tab: removed; inactive: `"-1"` | Roving tabindex pattern |
-| `aria-labelledby` | Panel | Set to associated tab's `id` on init |
+| Attribute             | Target                                | Value                                   |
+| --------------------- | ------------------------------------- | --------------------------------------- |
+| `role="tablist"`      | Parent container                      | Set on init if not present              |
+| `role="presentation"` | Wrapper elements (`<li>`)             | Set on init if wrapper differs from tab |
+| `role="tab"`          | Tab elements                          | Set on init if not present              |
+| `role="tabpanel"`     | Panel elements                        | Set on init if not present              |
+| `aria-selected`       | Active tab: `true`; inactive: `false` | Updated on activation                   |
+| `tabindex`            | Active tab: removed; inactive: `"-1"` | Roving tabindex pattern                 |
+| `aria-labelledby`     | Panel                                 | Set to associated tab's `id` on init    |
 
 Uses **automatic activation** — arrow key navigation immediately shows the target tab's panel. Disabled tabs are filtered out. Uses `_setAttributeIfNotExists()` helper to avoid overwriting author-provided attributes.
 
@@ -247,11 +276,12 @@ Uses **automatic activation** — arrow key navigation immediately shows the tar
 
 **JS:** `js/src/tooltip.js` | **Reference:** [WAI-ARIA Tooltip](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/)
 
-| Attribute | On show | On hide |
-|---|---|---|
+| Attribute                     | On show                          | On hide |
+| ----------------------------- | -------------------------------- | ------- |
 | `aria-describedby` on trigger | Set to tip's auto-generated `id` | Removed |
 
 The `_fixTitle()` method:
+
 1. Moves native `title` to `data-bs-original-title` (prevents double tooltip).
 2. Sets `aria-label` on the trigger if it has no text content and no existing `aria-label`.
 
@@ -261,20 +291,20 @@ Popover (`js/src/popover.js`) extends Tooltip and inherits all ARIA behavior.
 
 **JS:** `js/src/button.js`
 
-| Attribute | On toggle |
-|---|---|
+| Attribute      | On toggle                          |
+| -------------- | ---------------------------------- |
 | `aria-pressed` | Synced with `.active` class toggle |
 
 ### Carousel — Carousel pattern (OUDS-enhanced)
 
 **JS:** `js/src/carousel.js`
 
-| Attribute | Target | Behavior |
-|---|---|---|
-| `aria-current="true"` | Active slide indicator | Set on active; removed from previous |
+| Attribute                                | Target                          | Behavior                                  |
+| ---------------------------------------- | ------------------------------- | ----------------------------------------- |
+| `aria-current="true"`                    | Active slide indicator          | Set on active; removed from previous      |
 | `aria-disabled="true"` + `tabindex="-1"` | Prev/next controls (non-button) | Set at first/last slide when `wrap=false` |
-| `disabled` | Prev/next controls (`<button>`) | Set at first/last slide when `wrap=false` |
-| `title` + `.visually-hidden` text | Play/pause button | Updated with localized labels |
+| `disabled`                               | Prev/next controls (`<button>`) | Set at first/last slide when `wrap=false` |
+| `title` + `.visually-hidden` text        | Play/pause button               | Updated with localized labels             |
 
 The play/pause button reads localized text from `data-bs-play-text` / `data-bs-pause-text` attributes (defaults: `"Play Carousel"` / `"Pause Carousel"`).
 
@@ -298,12 +328,12 @@ Toast pauses its auto-hide timer on `focusin` and `mouseover` (WCAG 2.2.1).
 
 41 locations across 19+ SCSS files style elements based on ARIA attributes, ensuring visual state matches semantic state:
 
-| ARIA Pattern | Usage | Purpose |
-|---|---|---|
-| `[aria-disabled="true"]` | Buttons, links, tags, carousel | Disabled appearance (muted colors, `pointer-events: none`) |
-| `[aria-invalid="true"]` | Text inputs, select inputs, control items | Error/invalid styling, paired with `:user-invalid` |
-| `[aria-expanded="true"]` | Navbar toggler | Expanded state styling |
-| `[aria-pressed="true"]` | Chips | Pressed/selected state |
+| ARIA Pattern             | Usage                                     | Purpose                                                    |
+| ------------------------ | ----------------------------------------- | ---------------------------------------------------------- |
+| `[aria-disabled="true"]` | Buttons, links, tags, carousel            | Disabled appearance (muted colors, `pointer-events: none`) |
+| `[aria-invalid="true"]`  | Text inputs, select inputs, control items | Error/invalid styling, paired with `:user-invalid`         |
+| `[aria-expanded="true"]` | Navbar toggler                            | Expanded state styling                                     |
+| `[aria-pressed="true"]`  | Chips                                     | Pressed/selected state                                     |
 
 Key pattern in `scss/_reboot.scss`:
 
@@ -328,16 +358,16 @@ OUDS Web implements the **WCAG 2.2 contrast ratio algorithm** at Sass compile ti
 
 **File:** `scss/_functions.scss`
 
-| Function | Purpose |
-|---|---|
-| `luminance($color)` | Calculates WCAG relative luminance per W3C spec |
-| `contrast-ratio($background, $foreground)` | Returns the contrast ratio between two colors |
-| `color-contrast($background)` | Returns the best foreground color (light or dark) that meets the threshold |
+| Function                                   | Purpose                                                                    |
+| ------------------------------------------ | -------------------------------------------------------------------------- |
+| `luminance($color)`                        | Calculates WCAG relative luminance per W3C spec                            |
+| `contrast-ratio($background, $foreground)` | Returns the contrast ratio between two colors                              |
+| `color-contrast($background)`              | Returns the best foreground color (light or dark) that meets the threshold |
 
 ```scss
 // Configuration (scss/_variables.scss)
 $min-contrast-ratio: 4.5 !default; // WCAG AA for normal text
-$color-contrast-dark:  $black !default;
+$color-contrast-dark: $black !default;
 $color-contrast-light: $white !default;
 ```
 
@@ -360,12 +390,13 @@ The `color-contrast()` function iterates through light, dark, white, and black f
 
 The `color-mode()` mixin generates selectors for light/dark theme switching. The strategy is controlled by `$color-mode-type` (`scss/_config.scss`):
 
-| Mode | Selector strategy | Default? |
-|---|---|---|
-| `data` | `[data-bs-theme="light"]` / `[data-bs-theme="dark"]` attribute selectors | Yes |
-| `media-query` | `@media (prefers-color-scheme: ...)` | No |
+| Mode          | Selector strategy                                                        | Default? |
+| ------------- | ------------------------------------------------------------------------ | -------- |
+| `data`        | `[data-bs-theme="light"]` / `[data-bs-theme="dark"]` attribute selectors | Yes      |
+| `media-query` | `@media (prefers-color-scheme: ...)`                                     | No       |
 
 **OUDS extensions** — the mixin supports nested theme contexts:
+
 - `[data-bs-theme="root"]` — inherits the root-level theme
 - `[data-bs-theme="root-inverted"]` — inherits the opposite of the root-level theme
 
@@ -408,7 +439,12 @@ Every use of `@include transition(...)` automatically generates a `prefers-reduc
     @if nth($transition, 1) != null {
       transition: $transition;
     }
-    @if $enable-reduced-motion and nth($transition, 1) != null and nth($transition, 1) != none {
+    @if $enable-reduced-motion and
+      nth($transition, 1) !=
+      null and
+      nth($transition, 1) !=
+      none
+    {
       @media (prefers-reduced-motion: reduce) {
         transition: none;
       }
@@ -419,20 +455,20 @@ Every use of `@include transition(...)` automatically generates a `prefers-reduc
 
 Configuration flags (`scss/_variables.scss`):
 
-| Variable | Default | Purpose |
-|---|---|---|
-| `$enable-transitions` | `true` | Master switch for all CSS transitions |
-| `$enable-reduced-motion` | `true` | Generates `prefers-reduced-motion` blocks |
+| Variable                 | Default | Purpose                                   |
+| ------------------------ | ------- | ----------------------------------------- |
+| `$enable-transitions`    | `true`  | Master switch for all CSS transitions     |
+| `$enable-reduced-motion` | `true`  | Generates `prefers-reduced-motion` blocks |
 
 ### Component-specific reduced motion handling
 
-| Component | File | Behavior |
-|---|---|---|
-| Smooth scroll | `scss/_reboot.scss` | Only enabled when `prefers-reduced-motion: no-preference` |
-| Spinners | `scss/_spinners.scss` | Animation speed halved (2x duration), not removed |
-| Progress bars | `scss/_progress.scss` | Animation disabled entirely |
-| Carousel indicators | `scss/_carousel.scss` | Animation disabled entirely |
-| Switch (form) | `scss/forms/_control-item.scss` | Check-in animation disabled |
+| Component           | File                            | Behavior                                                  |
+| ------------------- | ------------------------------- | --------------------------------------------------------- |
+| Smooth scroll       | `scss/_reboot.scss`             | Only enabled when `prefers-reduced-motion: no-preference` |
+| Spinners            | `scss/_spinners.scss`           | Animation speed halved (2x duration), not removed         |
+| Progress bars       | `scss/_progress.scss`           | Animation disabled entirely                               |
+| Carousel indicators | `scss/_carousel.scss`           | Animation disabled entirely                               |
+| Switch (form)       | `scss/forms/_control-item.scss` | Check-in animation disabled                               |
 
 ### Rules for contributors
 
@@ -451,7 +487,13 @@ Configuration flags (`scss/_variables.scss`):
 Implements WCAG 2.2 SC 2.5.8 (Target Size Minimum) — ensures interactive elements have at least a 44x44 CSS pixel hit area.
 
 ```scss
-@mixin target-size($size: $target-size, $pseudo-element: before, $position: relative, $width: $size, $height: $size) {
+@mixin target-size(
+  $size: $target-size,
+  $pseudo-element: before,
+  $position: relative,
+  $width: $size,
+  $height: $size
+) {
   position: $position;
   &::#{$pseudo-element} {
     position: absolute;
@@ -497,8 +539,12 @@ The `.visually-hidden` class hides content visually while keeping it in the acce
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
-  &:not(caption) { position: absolute !important; }
-  * { overflow: hidden !important; } // Prevent children from becoming focusable
+  &:not(caption) {
+    position: absolute !important;
+  }
+  * {
+    overflow: hidden !important;
+  } // Prevent children from becoming focusable
 }
 ```
 
@@ -514,12 +560,12 @@ The `.visually-hidden-focusable` variant becomes visible when focused — used f
 
 ### When to use
 
-| Use case | Class |
-|---|---|
-| Screen-reader-only labels | `.visually-hidden` |
-| Skip navigation links | `.visually-hidden-focusable` |
-| Icon-only button labels | `.visually-hidden` inside the `<button>` |
-| Form field descriptions | `.visually-hidden` |
+| Use case                  | Class                                    |
+| ------------------------- | ---------------------------------------- |
+| Screen-reader-only labels | `.visually-hidden`                       |
+| Skip navigation links     | `.visually-hidden-focusable`             |
+| Icon-only button labels   | `.visually-hidden` inside the `<button>` |
+| Form field descriptions   | `.visually-hidden`                       |
 
 ### Rules for contributors
 
@@ -538,13 +584,13 @@ OUDS Web generates `.rtl.css` variants via the **rtlcss** PostCSS plugin (`build
 
 65 annotations across SCSS files fine-tune RTL behavior:
 
-| Directive | Purpose | Example use |
-|---|---|---|
-| `/* rtl:remove */` | Remove the next declaration in RTL | `letter-spacing` (inappropriate for RTL scripts) |
-| `/* rtl:begin:remove */` ... `/* rtl:end:remove */` | Remove a block in RTL | Carousel directional animations |
-| `/* rtl:ignore */` | Keep unchanged in RTL | Spinner rotation, SVG animations |
-| `/* rtl:begin:ignore */` ... `/* rtl:end:ignore */` | Keep a block unchanged | Tooltip/popover positioning |
-| `/* rtl:raw: ... */` | Insert CSS only in RTL output | Form input `direction: ltr` for tel/url/email/number |
+| Directive                                           | Purpose                            | Example use                                          |
+| --------------------------------------------------- | ---------------------------------- | ---------------------------------------------------- |
+| `/* rtl:remove */`                                  | Remove the next declaration in RTL | `letter-spacing` (inappropriate for RTL scripts)     |
+| `/* rtl:begin:remove */` ... `/* rtl:end:remove */` | Remove a block in RTL              | Carousel directional animations                      |
+| `/* rtl:ignore */`                                  | Keep unchanged in RTL              | Spinner rotation, SVG animations                     |
+| `/* rtl:begin:ignore */` ... `/* rtl:end:ignore */` | Keep a block unchanged             | Tooltip/popover positioning                          |
+| `/* rtl:raw: ... */`                                | Insert CSS only in RTL output      | Form input `direction: ltr` for tel/url/email/number |
 
 ### Key RTL accessibility pattern
 
@@ -587,10 +633,10 @@ OUDS Web uses a **multi-layered defense** for accessibility:
 
 Catches accessibility anti-patterns at the SCSS level:
 
-| Rule | What it prevents |
-|---|---|
-| `outline: none` banned | Removing focus indicators |
-| `lighten()` / `darken()` banned | Color manipulations that break contrast ratios |
+| Rule                                                       | What it prevents                                      |
+| ---------------------------------------------------------- | ----------------------------------------------------- |
+| `outline: none` banned                                     | Removing focus indicators                             |
+| `lighten()` / `darken()` banned                            | Color manipulations that break contrast ratios        |
 | `border-radius` / `transition` as direct properties banned | Forces use of mixins that include a11y considerations |
 
 ### Layer 2 — Unit tests (JS)
@@ -599,20 +645,20 @@ Catches accessibility anti-patterns at the SCSS level:
 
 13 spec files contain ARIA and keyboard assertions:
 
-| Spec file | Key a11y patterns tested |
-|---|---|
-| `focustrap.spec.js` | Autofocus, forward/backward Tab wrapping, no focusable children |
-| `modal.spec.js` | `aria-modal`, `role="dialog"`, `aria-hidden`, focus trap, Escape, focus return |
-| `offcanvas.spec.js` | Escape, focus trap, `keyboard` config |
-| `dropdown.spec.js` | `aria-expanded`, ArrowUp/Down/Escape/Tab, skip disabled items |
-| `tab.spec.js` | All ARIA roles, `aria-selected`, `aria-labelledby`, roving tabindex |
-| `collapse.spec.js` | `aria-expanded`, `aria-controls`, `aria-selected` |
-| `carousel.spec.js` | `.visually-hidden` labels, keyboard navigation |
-| `tooltip.spec.js` | ARIA attributes on triggers |
-| `quantity-selector.spec.js` | `aria-live`, `aria-describedby`, `aria-label`, `.visually-hidden` |
-| `toast.spec.js` | `.visually-hidden` close button text |
-| `button.spec.js` | `aria-pressed` toggling |
-| `sanitizer.spec.js` | `aria-label` and `aria-pressed` preserved through sanitization |
+| Spec file                   | Key a11y patterns tested                                                       |
+| --------------------------- | ------------------------------------------------------------------------------ |
+| `focustrap.spec.js`         | Autofocus, forward/backward Tab wrapping, no focusable children                |
+| `modal.spec.js`             | `aria-modal`, `role="dialog"`, `aria-hidden`, focus trap, Escape, focus return |
+| `offcanvas.spec.js`         | Escape, focus trap, `keyboard` config                                          |
+| `dropdown.spec.js`          | `aria-expanded`, ArrowUp/Down/Escape/Tab, skip disabled items                  |
+| `tab.spec.js`               | All ARIA roles, `aria-selected`, `aria-labelledby`, roving tabindex            |
+| `collapse.spec.js`          | `aria-expanded`, `aria-controls`, `aria-selected`                              |
+| `carousel.spec.js`          | `.visually-hidden` labels, keyboard navigation                                 |
+| `tooltip.spec.js`           | ARIA attributes on triggers                                                    |
+| `quantity-selector.spec.js` | `aria-live`, `aria-describedby`, `aria-label`, `.visually-hidden`              |
+| `toast.spec.js`             | `.visually-hidden` close button text                                           |
+| `button.spec.js`            | `aria-pressed` toggling                                                        |
+| `sanitizer.spec.js`         | `aria-label` and `aria-pressed` preserved through sanitization                 |
 
 ### Layer 3 — HTML validation
 
@@ -623,6 +669,7 @@ Runs in **strict mode** (`--Werror`) — warnings are treated as errors. Validat
 Catches: invalid ARIA attributes, incorrect element nesting, missing required attributes, structural HTML errors.
 
 Notable ignored patterns (intentional deviations):
+
 - `aria-disabled="true"` on `<a href>` — valid but not recommended per WAI-ARIA spec; used intentionally in OUDS Web.
 - `aria-readonly` on `<span>` / `<div>` — validator bug (validator/validator#1199).
 
@@ -630,14 +677,14 @@ Notable ignored patterns (intentional deviations):
 
 **Tool:** Pa11y-CI with axe-core (`build/.pa11yci.json`)
 
-| Setting | Value |
-|---|---|
-| Standard | WCAG2AA |
-| Runner | axe (axe-core engine) |
-| Level | error |
-| Scope | Every page in the docs sitemap |
+| Setting       | Value                                                         |
+| ------------- | ------------------------------------------------------------- |
+| Standard      | WCAG2AA                                                       |
+| Runner        | axe (axe-core engine)                                         |
+| Level         | error                                                         |
+| Scope         | Every page in the docs sitemap                                |
 | Ignored rules | `color-contrast` (false positives with CSS custom properties) |
-| Reports | CLI + HTML reports (`.pa11y/` directory) |
+| Reports       | CLI + HTML reports (`.pa11y/` directory)                      |
 
 **npm script:** `npm run docs-accessibility` — starts a local server and runs Pa11y-CI against the full sitemap.
 
@@ -654,6 +701,7 @@ Runs the full default axe-core ruleset in the Storybook UI. No custom rule overr
 **Process:** GitHub PR label workflow
 
 PRs go through a gated review process:
+
 1. Automated CI checks (Pa11y, VNU, Stylelint, unit tests)
 2. Developer approval → label changes to `ready for a11y review`
 3. **Human accessibility expert review** → `passed a11y review` label
@@ -687,6 +735,7 @@ npm run test
 Before submitting a PR that touches UI components, verify:
 
 ### HTML markup
+
 - [ ] Semantic elements used (`<button>` for actions, `<a>` for navigation, `<nav>`, `<main>`, etc.)
 - [ ] Correct heading hierarchy
 - [ ] Appropriate `role` attributes where native semantics are insufficient
@@ -696,6 +745,7 @@ Before submitting a PR that touches UI components, verify:
 - [ ] `.visually-hidden` text for icon-only buttons and screen-reader-only content
 
 ### Focus and keyboard
+
 - [ ] All interactive elements are keyboard-operable
 - [ ] Focus indicator is visible (uses `@include focus-visible()` or `:focus-visible` styles)
 - [ ] Focus is trapped in modal contexts (Modal, Offcanvas)
@@ -704,24 +754,29 @@ Before submitting a PR that touches UI components, verify:
 - [ ] Arrow key navigation does not scroll the page (use `preventDefault()` and `{ preventScroll: true }`)
 
 ### Color and contrast
+
 - [ ] All colors use design tokens via `var(--#{$prefix}color-*)` — no hardcoded values
 - [ ] Text meets 4.5:1 contrast ratio (3:1 for large text)
 - [ ] UI components and graphical objects meet 3:1 contrast ratio
 - [ ] Component works in both light and dark modes
 
 ### Motion
+
 - [ ] Transitions use `@include transition()` mixin (auto-respects `prefers-reduced-motion`)
 - [ ] Custom animations include `@media (prefers-reduced-motion: reduce)` block
 - [ ] Auto-advancing content has pause/stop controls
 
 ### Touch and sizing
+
 - [ ] Interactive elements have at least 44x44px touch target (use `@include target-size()` if needed)
 
 ### RTL
+
 - [ ] No hardcoded directional values without rtlcss annotations
 - [ ] Tested with `dir="rtl"` if the component has directional behavior
 
 ### Testing
+
 - [ ] `npm run lint` passes
 - [ ] `npm run dist` succeeds
 - [ ] Relevant unit tests added/updated for ARIA attribute management and keyboard interactions
@@ -730,4 +785,4 @@ Before submitting a PR that touches UI components, verify:
 
 ---
 
-*This file provides detailed accessibility context for AI agents and LLMs working on the OUDS Web codebase. It complements the [accessibility overview in AGENTS.md](../AGENTS.md#accessibility-requirements). Keep it up to date when accessibility patterns, tooling, or requirements change.*
+_This file provides detailed accessibility context for AI agents and LLMs working on the OUDS Web codebase. It complements the [accessibility overview in AGENTS.md](../AGENTS.md#accessibility-requirements). Keep it up to date when accessibility patterns, tooling, or requirements change._

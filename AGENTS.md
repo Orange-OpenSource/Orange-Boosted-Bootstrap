@@ -46,7 +46,6 @@ documentation:
   extended_dir: .ai/
   docs_site: https://web.unified-design-system.orange.com/
   repo: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap
-
 ---
 
 # OUDS Web — AI Agent Context
@@ -54,14 +53,14 @@ documentation:
 > **OUDS Web** is a multi-brand design system for the web, built as a fork of Bootstrap 5.3.6.
 > It ships accessible, token-driven UI components for Orange group brands (Orange, Sosh, Orange Compact).
 
-| Key info | Value |
-|---|---|
-| Version | 1.1.0 |
-| Upstream | Bootstrap 5.3.6 |
-| Main branch | `ouds/main` |
-| License | MIT (code) / CC BY 3.0 (docs) |
-| Docs | <https://web.unified-design-system.orange.com/> |
-| Repo | <https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap> |
+| Key info    | Value                                                           |
+| ----------- | --------------------------------------------------------------- |
+| Version     | 1.1.0                                                           |
+| Upstream    | Bootstrap 5.3.6                                                 |
+| Main branch | `ouds/main`                                                     |
+| License     | MIT (code) / CC BY 3.0 (docs)                                   |
+| Docs        | <https://web.unified-design-system.orange.com/>                 |
+| Repo        | <https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap> |
 
 ---
 
@@ -100,17 +99,18 @@ Consumer installs:  @ouds/web-common (JS) + @ouds/web-<brand> (CSS)
 
 ### Tech stack
 
-| Layer | Technology |
-|---|---|
-| Markup | Semantic HTML5 |
-| Styles | SCSS → CSS (via `sass` 1.78) + PostCSS (autoprefixer, RTL via rtlcss) |
-| Scripts | Vanilla JavaScript (ES modules), bundled with Rollup |
-| Tokens | SCSS variables + CSS custom properties |
-| Docs site | Astro 5.x with MDX content collections |
-| Testing | Karma + Jasmine (JS), Pa11y-CI (a11y), VNU (HTML validation), Stylelint, ESLint |
-| Storybook | `@storybook/html-vite` with a11y addon |
+| Layer     | Technology                                                                      |
+| --------- | ------------------------------------------------------------------------------- |
+| Markup    | Semantic HTML5                                                                  |
+| Styles    | SCSS → CSS (via `sass` 1.78) + PostCSS (autoprefixer, RTL via rtlcss)           |
+| Scripts   | Vanilla JavaScript (ES modules), bundled with Rollup                            |
+| Tokens    | SCSS variables + CSS custom properties                                          |
+| Docs site | Astro 5.x with MDX content collections                                          |
+| Testing   | Karma + Jasmine (JS), Pa11y-CI (a11y), VNU (HTML validation), Stylelint, ESLint |
+| Storybook | `@storybook/html-vite` with a11y addon                                          |
 
 > 💡 **Context queries for AI agents:**
+>
 > - To understand the build pipeline: See [`.ai/ARCHITECTURE.md`](.ai/ARCHITECTURE.md#build-pipeline)
 > - To explore JS bundling: `grep_search("rollup.config", includePattern="build/*.mjs")`
 > - To see all test configurations: `file_search("**/*{.spec,.test}.js")`
@@ -176,19 +176,22 @@ Orange-Boosted-Bootstrap/
 └── .storybook/               # Storybook configuration
 ```
 
+** You must not access to files outside of this repository **
+
 ### Important files to know
 
-| File | Purpose |
-|---|---|
-| `scss/_config.scss` | CSS prefix (`bs-`), color-mode type, root selector |
-| `scss/_variables.scss` | All Bootstrap variables remapped to OUDS tokens (~2200 lines) |
-| `packages/<brand>/scss/tokens/_index.scss` | Token import order for each brand |
-| `packages/<brand>/scss/ouds-web.scss` | Brand entry point — imports common + tokens |
-| `packages/<brand>/config.yml` | Brand metadata (name, CDN URLs, docs config) |
-| `build/rollup.config.mjs` | JS build configuration |
-| `build/postcss.config.mjs` | CSS post-processing (autoprefixer) |
+| File                                       | Purpose                                                       |
+| ------------------------------------------ | ------------------------------------------------------------- |
+| `scss/_config.scss`                        | CSS prefix (`bs-`), color-mode type, root selector            |
+| `scss/_variables.scss`                     | All Bootstrap variables remapped to OUDS tokens (~2200 lines) |
+| `packages/<brand>/scss/tokens/_index.scss` | Token import order for each brand                             |
+| `packages/<brand>/scss/ouds-web.scss`      | Brand entry point — imports common + tokens                   |
+| `packages/<brand>/config.yml`              | Brand metadata (name, CDN URLs, docs config)                  |
+| `build/rollup.config.mjs`                  | JS build configuration                                        |
+| `build/postcss.config.mjs`                 | CSS post-processing (autoprefixer)                            |
 
 > 💡 **Context queries for AI agents:**
+>
 > - To see all SCSS component files: `file_search("scss/_*.scss")`
 > - To find a specific component: `semantic_search("button component javascript")`
 > - To understand package structure: `read_file("packages/orange/package.json")`
@@ -215,14 +218,14 @@ Figma (design)  →  DTCG export  →  Style Dictionary  →  SCSS files  →  P
 3. **Style Dictionary** transforms them into SCSS files (`_raw.scss`, `_semantic.scss`, `_component.scss`, `_semantic-colors-custom-props.scss`, `_component-colors-custom-props.scss`).
 4. A **pull request** is opened on GitHub to integrate the updated token files.
 
-| Token file | Auto-generated? | Editable by hand? |
-|---|---|---|
-| `tokens/_raw.scss` | ✅ Yes | ❌ **Never** |
-| `tokens/_semantic.scss` | ✅ Yes | ❌ **Never** |
-| `tokens/_component.scss` | ✅ Yes | ❌ **Never** |
-| `tokens/_semantic-colors-custom-props.scss` | ✅ Yes | ❌ **Never** |
-| `tokens/_component-colors-custom-props.scss` | ✅ Yes | ❌ **Never** |
-| `tokens/_composite.scss` | ❌ No | ✅ **Yes** — manually managed |
+| Token file                                   | Auto-generated? | Editable by hand?             |
+| -------------------------------------------- | --------------- | ----------------------------- |
+| `tokens/_raw.scss`                           | ✅ Yes          | ❌ **Never**                  |
+| `tokens/_semantic.scss`                      | ✅ Yes          | ❌ **Never**                  |
+| `tokens/_component.scss`                     | ✅ Yes          | ❌ **Never**                  |
+| `tokens/_semantic-colors-custom-props.scss`  | ✅ Yes          | ❌ **Never**                  |
+| `tokens/_component-colors-custom-props.scss` | ✅ Yes          | ❌ **Never**                  |
+| `tokens/_composite.scss`                     | ❌ No           | ✅ **Yes** — manually managed |
 
 **`_composite.scss` is the exception**: It contains icons (SVG data URIs), composite elevation tokens, font stacks, and Sass maps that cannot be expressed in the DTCG format. This is the only token file that should be edited by hand.
 
@@ -233,13 +236,13 @@ Raw (primitives)  →  Semantic  →  Component
 $core-ouds-*         $ouds-*      $ouds-<component>-*
 ```
 
-| Layer | Prefix | Location | Purpose |
-|---|---|---|---|
-| **Raw** | `$core-ouds-*`, `$core-orange-*` | `tokens/_raw.scss` | Primitive values (colors, dimensions, base units). **Never use directly in component SCSS.** ⚠️ Auto-generated. |
-| **Semantic** | `$ouds-*` | `tokens/_semantic.scss` | Meaningful aliases (e.g., `$ouds-border-radius-default`). Maps raw tokens to design intent. ⚠️ Auto-generated. |
-| **Composite** | `$ouds-*` | `tokens/_composite.scss` | Combined values (elevation, font stacks, icons, Sass maps). ✅ Manually managed. |
-| **Component** | `$ouds-<component>-*` | `tokens/_component.scss` | Per-component tokens (e.g., `$ouds-button-border-radius-default`). References semantic tokens. ⚠️ Auto-generated. |
-| **CSS Custom Props** | `--bs-*` | `tokens/_*-custom-props.scss` | Runtime tokens exposed as CSS custom properties for color-mode switching. ⚠️ Auto-generated. |
+| Layer                | Prefix                           | Location                      | Purpose                                                                                                           |
+| -------------------- | -------------------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **Raw**              | `$core-ouds-*`, `$core-orange-*` | `tokens/_raw.scss`            | Primitive values (colors, dimensions, base units). **Never use directly in component SCSS.** ⚠️ Auto-generated.   |
+| **Semantic**         | `$ouds-*`                        | `tokens/_semantic.scss`       | Meaningful aliases (e.g., `$ouds-border-radius-default`). Maps raw tokens to design intent. ⚠️ Auto-generated.    |
+| **Composite**        | `$ouds-*`                        | `tokens/_composite.scss`      | Combined values (elevation, font stacks, icons, Sass maps). ✅ Manually managed.                                  |
+| **Component**        | `$ouds-<component>-*`            | `tokens/_component.scss`      | Per-component tokens (e.g., `$ouds-button-border-radius-default`). References semantic tokens. ⚠️ Auto-generated. |
+| **CSS Custom Props** | `--bs-*`                         | `tokens/_*-custom-props.scss` | Runtime tokens exposed as CSS custom properties for color-mode switching. ⚠️ Auto-generated.                      |
 
 ### Token naming convention
 
@@ -260,9 +263,9 @@ Raw tokens use a base-multiplier pattern for consistency:
 
 ```scss
 $core-ouds-border-base: 4px !default;
-$core-ouds-border-radius-100: $core-ouds-border-base * 1;    // 4px
-$core-ouds-border-radius-200: $core-ouds-border-base * 2;    // 8px
-$core-ouds-border-radius-300: $core-ouds-border-base * 3;    // 12px
+$core-ouds-border-radius-100: $core-ouds-border-base * 1; // 4px
+$core-ouds-border-radius-200: $core-ouds-border-base * 2; // 8px
+$core-ouds-border-radius-300: $core-ouds-border-base * 3; // 12px
 ```
 
 ### CSS custom properties and color modes
@@ -285,6 +288,7 @@ Color tokens are exposed as CSS custom properties to support light/dark mode at 
 All variables use `!default` to allow consumer overrides.
 
 > 💡 **Context queries for AI agents:**
+>
 > - To see complete token documentation: See [`.ai/DESIGN_TOKENS.md`](.ai/DESIGN_TOKENS.md)
 > - To find all composite tokens: `grep_search("ouds-elevation|ouds-font-family", includePattern="packages/*/scss/tokens/_composite.scss")`
 > - To see how colors work in dark mode: `read_file("packages/orange/scss/tokens/_semantic-colors-custom-props.scss", 1, 50)`
@@ -311,7 +315,7 @@ Every brand's `ouds-web.scss` follows the same structure:
 // packages/<brand>/scss/ouds-web.scss
 @import "@ouds/web-common/scss/config";
 @import "@ouds/web-common/scss/functions";
-@import "@ouds/web-<brand>/scss/tokens";    // ← Brand tokens injected here
+@import "@ouds/web-<brand>/scss/tokens"; // ← Brand tokens injected here
 @import "@ouds/web-common/scss/variables";
 @import "@ouds/web-common/scss/variables-dark";
 @import "@ouds/web-common/scss/maps";
@@ -328,12 +332,12 @@ Every brand's `ouds-web.scss` follows the same structure:
 
 ```scss
 // packages/<brand>/scss/tokens/_index.scss
-@import "raw";                            // 1. Primitive values
-@import "semantic";                       // 2. Semantic mappings
-@import "semantic-colors-custom-props";   // 3. CSS custom properties (semantic)
-@import "composite";                      // 4. Composite tokens (elevation, fonts)
-@import "component-colors-custom-props";  // 5. CSS custom properties (component)
-@import "component";                      // 6. Component-level tokens
+@import "raw"; // 1. Primitive values
+@import "semantic"; // 2. Semantic mappings
+@import "semantic-colors-custom-props"; // 3. CSS custom properties (semantic)
+@import "composite"; // 4. Composite tokens (elevation, fonts)
+@import "component-colors-custom-props"; // 5. CSS custom properties (component)
+@import "component"; // 6. Component-level tokens
 ```
 
 ### Adding or modifying tokens for a brand
@@ -341,18 +345,20 @@ Every brand's `ouds-web.scss` follows the same structure:
 ⚠️ **Most token files are auto-generated from Figma via Style Dictionary. Do NOT edit them by hand.**
 
 Token updates follow this workflow:
+
 1. Designers update tokens in **Figma**.
 2. The pipeline exports DTCG → Style Dictionary → SCSS files.
 3. A **PR is opened** on GitHub with the updated token files.
 4. The PR is reviewed and merged into `ouds/main`.
 
-| Action | Where |
-|---|---|
+| Action                                                      | Where                                             |
+| ----------------------------------------------------------- | ------------------------------------------------- |
 | Edit composite tokens (elevation, font stacks, icons, maps) | `packages/<brand>/scss/tokens/_composite.scss` ✅ |
-| Edit raw, semantic, or component tokens | ❌ **Never** — wait for the generated PR |
-| Edit color custom properties | ❌ **Never** — wait for the generated PR |
+| Edit raw, semantic, or component tokens                     | ❌ **Never** — wait for the generated PR          |
+| Edit color custom properties                                | ❌ **Never** — wait for the generated PR          |
 
 > 💡 **Context queries for AI agents:**
+>
 > - To compare brand differences: `semantic_search("core-orange core-sosh brand specific colors")`
 > - To see a complete brand entry point: `read_file("packages/orange/scss/ouds-web.scss")`
 > - To understand brand config: `read_file("packages/orange/config.yml")`
@@ -363,21 +369,21 @@ Token updates follow this workflow:
 
 ### OUDS-specific components (beyond Bootstrap)
 
-| Component | SCSS | JS | Description |
-|---|---|---|---|
-| Back to top | `_back-to-top.scss` | — | Scroll-to-top button |
-| Bullet list | `_bullet-list.scss` | — | Styled unordered lists |
-| Chips | `_chips.scss` | — | Compact interactive elements |
-| Footer | `_footer.scss` | — | Structured page footer |
-| Local navigation | `_local-navigation.scss` | — | In-page anchor navigation |
-| Orange navbar | `_orange-navbar.scss` | `orange-navbar.js` | Brand-specific navigation bar |
-| Quantity selector | `forms/_quantity-selector.scss` | `quantity-selector.js` | Numeric stepper input |
-| Skeleton | `_skeleton.scss` | — | Loading placeholder |
-| Star rating | `forms/_star-rating.scss` | — | Rating input (CSS-only) |
-| Stepped process | `_stepped-process.scss` | — | Multi-step progress indicator |
-| Sticker | `_sticker.scss` | — | Promotional badge/label |
-| Tags | `_tags.scss` | — | Labeling/categorization elements |
-| Title bars | `_title-bars.scss` | — | Section header bars |
+| Component         | SCSS                            | JS                     | Description                      |
+| ----------------- | ------------------------------- | ---------------------- | -------------------------------- |
+| Back to top       | `_back-to-top.scss`             | —                      | Scroll-to-top button             |
+| Bullet list       | `_bullet-list.scss`             | —                      | Styled unordered lists           |
+| Chips             | `_chips.scss`                   | —                      | Compact interactive elements     |
+| Footer            | `_footer.scss`                  | —                      | Structured page footer           |
+| Local navigation  | `_local-navigation.scss`        | —                      | In-page anchor navigation        |
+| Orange navbar     | `_orange-navbar.scss`           | `orange-navbar.js`     | Brand-specific navigation bar    |
+| Quantity selector | `forms/_quantity-selector.scss` | `quantity-selector.js` | Numeric stepper input            |
+| Skeleton          | `_skeleton.scss`                | —                      | Loading placeholder              |
+| Star rating       | `forms/_star-rating.scss`       | —                      | Rating input (CSS-only)          |
+| Stepped process   | `_stepped-process.scss`         | —                      | Multi-step progress indicator    |
+| Sticker           | `_sticker.scss`                 | —                      | Promotional badge/label          |
+| Tags              | `_tags.scss`                    | —                      | Labeling/categorization elements |
+| Title bars        | `_title-bars.scss`              | —                      | Section header bars              |
 
 ### Bootstrap components (customized)
 
@@ -389,10 +395,12 @@ All JS components extend `BaseComponent` (`js/src/base-component.js`) and follow
 
 ```javascript
 // Pattern for all JS components
-import BaseComponent from './base-component.js'
+import BaseComponent from "./base-component.js";
 
 class MyComponent extends BaseComponent {
-  static get NAME() { return 'myComponent' }
+  static get NAME() {
+    return "myComponent";
+  }
   // ...
 }
 ```
@@ -401,15 +409,16 @@ Available JS components: Alert, Button, Carousel, Collapse, Dropdown, Modal, Off
 
 ### Finding component code
 
-| What you need | Where to look |
-|---|---|
-| Component SCSS | `scss/_<component>.scss` or `scss/forms/_<component>.scss` |
-| Component JS | `js/src/<component>.js` |
+| What you need    | Where to look                                                                    |
+| ---------------- | -------------------------------------------------------------------------------- |
+| Component SCSS   | `scss/_<component>.scss` or `scss/forms/_<component>.scss`                       |
+| Component JS     | `js/src/<component>.js`                                                          |
 | Component tokens | `packages/<brand>/scss/tokens/_component.scss` (search for `ouds-<component>-*`) |
-| Component docs | `site/src/content/docs/components/<component>.mdx` |
-| Component tests | `js/tests/unit/<component>.spec.js` |
+| Component docs   | `site/src/content/docs/components/<component>.mdx`                               |
+| Component tests  | `js/tests/unit/<component>.spec.js`                                              |
 
 > 💡 **Context queries for AI agents:**
+>
 > - To see all component details: See [`.ai/COMPONENTS.md`](.ai/COMPONENTS.md)
 > - To find component patterns: `semantic_search("BaseComponent extends class pattern")`
 > - To list all JS components: `file_search("js/src/*.js")`
@@ -445,7 +454,7 @@ Available JS components: Alert, Button, Carousel, Collapse, Dropdown, Modal, Off
   padding: $ouds-space-padding-block-medium;
   color: var(--#{$prefix}color-content-default);
   @include border-radius($ouds-border-radius-default);
-  @include transition(opacity .15s linear);
+  @include transition(opacity 0.15s linear);
 }
 
 // ❌ Bad
@@ -453,7 +462,7 @@ Available JS components: Alert, Button, Carousel, Collapse, Dropdown, Modal, Off
   padding: 16px;
   color: #333;
   border-radius: 4px;
-  transition: opacity .15s linear;
+  transition: opacity 0.15s linear;
 }
 ```
 
@@ -470,7 +479,7 @@ Available JS components: Alert, Button, Carousel, Collapse, Dropdown, Modal, Off
 
 ```javascript
 // ✅ Good
-const element = document.querySelector(`[data-bs-target="${selector}"]`)
+const element = document.querySelector(`[data-bs-target="${selector}"]`);
 
 // ❌ Bad
 const element = document.querySelector('[data-bs-target="' + selector + '"]');
@@ -484,6 +493,7 @@ const element = document.querySelector('[data-bs-target="' + selector + '"]');
 - **Trailing whitespace**: Trimmed
 
 > 💡 **Context queries for AI agents:**
+>
 > - To see complete code conventions: See [`.ai/CODE_CONVENTIONS.md`](.ai/CODE_CONVENTIONS.md)
 > - To check linter configs: `file_search("**/.{eslintrc,stylelintrc}*")`
 > - To see SCSS mixins: `file_search("scss/mixins/_*.scss")`
@@ -503,18 +513,18 @@ const element = document.querySelector('[data-bs-target="' + selector + '"]');
 
 ### Mandatory practices
 
-| Requirement | Implementation |
-|---|---|
-| **Color contrast** | Minimum 4.5:1 for text, 3:1 for large text and UI components. Use OUDS color tokens. |
-| **Focus visibility** | Never remove `:focus` styles. Use `focus-ring` mixin or helper. Always provide visible focus indicators. |
-| **Focus trapping** | Modals and dialogs must trap focus (`js/src/util/focustrap.js`). |
-| **Keyboard navigation** | All interactive elements must be operable with keyboard alone. |
-| **ARIA attributes** | Use `role`, `aria-label`, `aria-expanded`, `aria-controls`, `aria-live` as appropriate. |
-| **Semantic HTML** | Use correct heading hierarchy. Use `<button>` for actions, `<a>` for navigation. |
-| **Touch targets** | Minimum 44×44px touch target size (use `_target-size.scss` mixin). |
+| Requirement              | Implementation                                                                                                                   |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| **Color contrast**       | Minimum 4.5:1 for text, 3:1 for large text and UI components. Use OUDS color tokens.                                             |
+| **Focus visibility**     | Never remove `:focus` styles. Use `focus-ring` mixin or helper. Always provide visible focus indicators.                         |
+| **Focus trapping**       | Modals and dialogs must trap focus (`js/src/util/focustrap.js`).                                                                 |
+| **Keyboard navigation**  | All interactive elements must be operable with keyboard alone.                                                                   |
+| **ARIA attributes**      | Use `role`, `aria-label`, `aria-expanded`, `aria-controls`, `aria-live` as appropriate.                                          |
+| **Semantic HTML**        | Use correct heading hierarchy. Use `<button>` for actions, `<a>` for navigation.                                                 |
+| **Touch targets**        | Minimum 44×44px touch target size (use `_target-size.scss` mixin).                                                               |
 | **Visually hidden text** | Use `.visually-hidden` class for screen-reader-only content. Never use `display: none` to hide content that should be announced. |
-| **Motion** | Respect `prefers-reduced-motion`. Transitions are disabled automatically via Bootstrap's mixin. |
-| **RTL support** | Full RTL layout support via `rtlcss`. Test with `dir="rtl"`. CSS output includes `.rtl.css` variants. |
+| **Motion**               | Respect `prefers-reduced-motion`. Transitions are disabled automatically via Bootstrap's mixin.                                  |
+| **RTL support**          | Full RTL layout support via `rtlcss`. Test with `dir="rtl"`. CSS output includes `.rtl.css` variants.                            |
 
 ### Testing accessibility
 
@@ -527,6 +537,7 @@ npm run docs-vnu
 ```
 
 > 💡 **Context queries for AI agents:**
+>
 > - To see complete accessibility guide: See [`.ai/ACCESSIBILITY.md`](.ai/ACCESSIBILITY.md)
 > - To find Pa11y config: `read_file("build/.pa11yci.json")`
 > - To see focus management patterns: `semantic_search("focustrap focus-ring focus-visible")`
@@ -618,28 +629,29 @@ npm run lint
 
 ### ❌ Do NOT
 
-| Anti-pattern | Why | Do instead | Detection pattern |
-|---|---|---|---|
-| Hardcode color values (`#ff7900`, `rgb(...)`) | Breaks theming and dark mode | Use `var(--#{$prefix}color-*)` tokens | Regex: `#[0-9a-fA-F]{3,6}\|rgb\(` |
-| Hardcode spacing/dimensions (`16px`, `1rem`) | Breaks design consistency across brands | Use `$ouds-space-*` or `$ouds-dimension-*` tokens | Look for `padding\|margin:.*\d+(px\|rem)` |
-| Use `lighten()` / `darken()` Sass functions | Not supported, breaks token system | Use the appropriate token variant | Regex: `lighten\(\|darken\(` |
-| Use `border: none` | Stylelint violation | Use `border: 0` | Regex: `border:\s*none` |
-| Write `border-radius: Xpx` directly | Stylelint violation — must use mixin | Use `@include border-radius($value)` | File: `scss/**/*.scss`, Look for `border-radius:` without `@include` |
-| Write `transition: ...` directly | Stylelint violation — must use mixin | Use `@include transition(...)` | File: `scss/**/*.scss`, Look for `transition:` without `@include` |
-| Remove `:focus` styles | Accessibility violation | Add visible focus alternative with `focus-ring()` | Look for `:focus { outline: none }` |
-| Use raw tokens in component SCSS | Couples components to primitive values | Use semantic or component tokens | Regex: `\$core-(ouds\|orange\|sosh)-` in `scss/_*.scss` |
-| Edit auto-generated token files | These are generated from Figma via Style Dictionary | Only edit `_composite.scss`; wait for generated PRs for the rest | Files: `packages/*/scss/tokens/_raw.scss`, `_semantic.scss`, `_component.scss`, `_*-custom-props.scss` |
-| Edit `dist/` or `js/dist/` files | Overwritten on build | Edit source in `scss/` and `js/src/` | Any changes in `dist/` or `js/dist/` directories |
-| Edit compiled CSS (`ouds-web.css`) | Overwritten on build | Edit SCSS source files | Files: `packages/*/dist/css/*.css` |
-| Commit `dist/` files in PRs | Not wanted in version control | Let CI build them | Check git diff for `dist/` paths |
-| Use `display: none` for accessible content | Hidden from screen readers | Use `.visually-hidden` | Look for `display: none` with semantic content |
-| Use `<div>` for interactive elements | Not keyboard accessible | Use `<button>` or `<a>` | Look for `<div onclick=` or `<div role="button"` without proper keyboard handlers |
-| Skip ARIA attributes on dynamic UI | Breaks screen reader experience | Always add relevant `aria-*` attributes | Components with JS interaction missing `aria-expanded`, `aria-controls`, etc. |
-| Use `data-bs-theme` via media query | Breaks explicit theme toggle | Use `data-bs-theme` attribute on elements | Look for `@media (prefers-color-scheme:` for theme switching |
+| Anti-pattern                                  | Why                                                 | Do instead                                                       | Detection pattern                                                                                      |
+| --------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Hardcode color values (`#ff7900`, `rgb(...)`) | Breaks theming and dark mode                        | Use `var(--#{$prefix}color-*)` tokens                            | Regex: `#[0-9a-fA-F]{3,6}\|rgb\(`                                                                      |
+| Hardcode spacing/dimensions (`16px`, `1rem`)  | Breaks design consistency across brands             | Use `$ouds-space-*` or `$ouds-dimension-*` tokens                | Look for `padding\|margin:.*\d+(px\|rem)`                                                              |
+| Use `lighten()` / `darken()` Sass functions   | Not supported, breaks token system                  | Use the appropriate token variant                                | Regex: `lighten\(\|darken\(`                                                                           |
+| Use `border: none`                            | Stylelint violation                                 | Use `border: 0`                                                  | Regex: `border:\s*none`                                                                                |
+| Write `border-radius: Xpx` directly           | Stylelint violation — must use mixin                | Use `@include border-radius($value)`                             | File: `scss/**/*.scss`, Look for `border-radius:` without `@include`                                   |
+| Write `transition: ...` directly              | Stylelint violation — must use mixin                | Use `@include transition(...)`                                   | File: `scss/**/*.scss`, Look for `transition:` without `@include`                                      |
+| Remove `:focus` styles                        | Accessibility violation                             | Add visible focus alternative with `focus-ring()`                | Look for `:focus { outline: none }`                                                                    |
+| Use raw tokens in component SCSS              | Couples components to primitive values              | Use semantic or component tokens                                 | Regex: `\$core-(ouds\|orange\|sosh)-` in `scss/_*.scss`                                                |
+| Edit auto-generated token files               | These are generated from Figma via Style Dictionary | Only edit `_composite.scss`; wait for generated PRs for the rest | Files: `packages/*/scss/tokens/_raw.scss`, `_semantic.scss`, `_component.scss`, `_*-custom-props.scss` |
+| Edit `dist/` or `js/dist/` files              | Overwritten on build                                | Edit source in `scss/` and `js/src/`                             | Any changes in `dist/` or `js/dist/` directories                                                       |
+| Edit compiled CSS (`ouds-web.css`)            | Overwritten on build                                | Edit SCSS source files                                           | Files: `packages/*/dist/css/*.css`                                                                     |
+| Commit `dist/` files in PRs                   | Not wanted in version control                       | Let CI build them                                                | Check git diff for `dist/` paths                                                                       |
+| Use `display: none` for accessible content    | Hidden from screen readers                          | Use `.visually-hidden`                                           | Look for `display: none` with semantic content                                                         |
+| Use `<div>` for interactive elements          | Not keyboard accessible                             | Use `<button>` or `<a>`                                          | Look for `<div onclick=` or `<div role="button"` without proper keyboard handlers                      |
+| Skip ARIA attributes on dynamic UI            | Breaks screen reader experience                     | Always add relevant `aria-*` attributes                          | Components with JS interaction missing `aria-expanded`, `aria-controls`, etc.                          |
+| Use `data-bs-theme` via media query           | Breaks explicit theme toggle                        | Use `data-bs-theme` attribute on elements                        | Look for `@media (prefers-color-scheme:` for theme switching                                           |
 
 ### Common anti-pattern examples and fixes
 
 #### Example 1: Hardcoded colors
+
 ```scss
 // ❌ BAD
 .my-button {
@@ -655,6 +667,7 @@ npm run lint
 ```
 
 #### Example 2: Direct CSS properties instead of mixins
+
 ```scss
 // ❌ BAD
 .my-card {
@@ -670,6 +683,7 @@ npm run lint
 ```
 
 #### Example 3: Using raw tokens
+
 ```scss
 // ❌ BAD
 .my-component {
@@ -685,6 +699,7 @@ npm run lint
 ```
 
 #### Example 4: Editing auto-generated files
+
 ```bash
 # ❌ BAD - Never edit these files directly
 packages/orange/scss/tokens/_raw.scss
@@ -941,7 +956,7 @@ START: I made a change
 
 ### Decision tree 4: How should I test this change?
 
-```
+````
 START: I made a change
 │
 ├─ What type of change?
@@ -1003,7 +1018,8 @@ START: I made a change
 
    # If all pass → ready for PR
    # If failures → fix and re-run
-   ```
+````
+
 ```
 
 ---
@@ -1162,9 +1178,13 @@ START: I made a change
 ## Extended documentation
 
 > The `.ai/` directory contains detailed documentation on specific topics. Start with this file for an overview, then dive into these references for implementation details.
+> **Not sure which file to open?** Use [`.ai/QUICK_LOOKUP.md`](.ai/QUICK_LOOKUP.md) — it maps any topic or task to the right file and section.
 
 | File | Topics covered | Status |
 |---|---|---|
+| [`.ai/QUICK_LOOKUP.md`](.ai/QUICK_LOOKUP.md) | Topic → file routing index; anti-patterns quick-ref; file map | ✅ Available |
+| [`.ai/DECISION_TREES.md`](.ai/DECISION_TREES.md) | Where to put code; which token to use; multi-brand updates; testing strategy | ✅ Available |
+| [`.ai/GLOSSARY.md`](.ai/GLOSSARY.md) | 154 project terms, acronyms, prefixes, and patterns | ✅ Available |
 | [`.ai/CODE_CONVENTIONS.md`](.ai/CODE_CONVENTIONS.md) | Full HTML, SCSS, JS style guide; linter configs; naming conventions; comment patterns | ✅ Available |
 | [`.ai/ACCESSIBILITY.md`](.ai/ACCESSIBILITY.md) | WCAG 2.1 AA checklist; ARIA patterns per component type; testing strategy; Pa11y config | ✅ Available |
 | [`.ai/DESIGN_TOKENS.md`](.ai/DESIGN_TOKENS.md) | Full token reference; layer details; naming scheme; how to add new tokens; brand override guide | ✅ Available |
@@ -1174,3 +1194,4 @@ START: I made a change
 ---
 
 *This file was generated to provide context for AI agents and LLMs working on the OUDS Web codebase. Keep it up to date when project architecture, conventions, or tooling changes.*
+```
