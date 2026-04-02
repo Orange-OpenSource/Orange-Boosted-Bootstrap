@@ -5,10 +5,6 @@
   --#{$prefix}footer-padding-bottom: 0;
   --#{$prefix}footer-color: #{$footer-color};
   --#{$prefix}footer-title-margin-bottom: 0;
-  --#{$prefix}footer-title-font-size: #{$footer-font-size-md};
-  --#{$prefix}footer-title-font-weight: #{$footer-title-font-weight};
-  --#{$prefix}footer-title-line-height: #{$footer-line-height-md};
-  --#{$prefix}footer-title-letter-spacing: #{$footer-letter-spacing};
   // scss-docs-end footer-css-vars
   --#{$prefix}navbar-padding-y: 0;
   --#{$prefix}navbar-nav-link-padding-y: 0;
@@ -67,8 +63,6 @@
     --#{$prefix}footer-padding-top: #{$footer-social-padding-top};
     --#{$prefix}footer-padding-bottom: #{$footer-social-padding-bottom};
     --#{$prefix}footer-title-margin-bottom: #{$footer-title-margin-bottom};
-    --#{$prefix}footer-title-font-size: #{$footer-font-size-sm};
-    --#{$prefix}footer-title-line-height: #{$footer-line-height-sm};
     // scss-docs-end footer-social-css-vars
 
     display: flex;
@@ -136,8 +130,6 @@
       // scss-docs-start footer-social-md-css-vars
       --#{$prefix}footer-padding-top: #{$footer-social-padding-top-md};
       --#{$prefix}footer-title-margin-bottom: #{$footer-social-title-margin-bottom-md};
-      --#{$prefix}footer-title-font-size: #{$footer-font-size-md};
-      --#{$prefix}footer-title-line-height: #{$footer-line-height-md};
       // scss-docs-end footer-social-md-css-vars
 
       flex-direction: row;
