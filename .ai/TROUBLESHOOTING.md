@@ -193,7 +193,7 @@ Config: `.eslintrc.json` — extends `xo`, `xo/browser`, `plugin:unicorn/recomme
 const x = 1;
 
 // ✅ Correct
-const x = 1;
+const x = 1
 ```
 
 ---
@@ -204,7 +204,7 @@ const x = 1;
 
 ```javascript
 // ❌ Fails
-const obj = { a: 1, b: 2 };
+const obj = { a: 1, b: 2, };
 
 // ✅ Correct
 const obj = { a: 1, b: 2 };
