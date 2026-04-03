@@ -1,5 +1,5 @@
 ---
-title: Colors
+title: Color
 description: Convey meaning through `color` with a handful of color utility classes.
 aliases:
   - "/docs/utilities/colors/"
@@ -10,18 +10,18 @@ toc: true
 import { getData } from '@libs/data'
 import { allTokens } from '@libs/sass-variables'
 
-<Callout title="Accessibility tip" type="info" name="warning-color-assistive-technologies" />
+<Callout type="info" name="warning-color-assistive-technologies" />
 
 ## Colors
 
 Content color utility classes, in the form  `.text-*`, apply a color [token]([[docsref:/foundation/tokens]]) as `color` for a [content]([[docsref:/foundation/colors#content]]) or ['always' color]([[docsref:/foundation/colors#always]]) dynamically depending on the [color mode]([[docsref:/foundation/color-modes]]).
 
-To colorize icons, please refer to our [icon color section](#on-icons).
+To colorize icons, please refer to our [icon color section]([[docsref:/components/icon#icons-color]]).
 
 OUDS Web provides many `.text-*` and `.bg-*` utilities, but they should be used with care to meet our design specifications and [WCAG 2.2 accessibility standards for color contrast](https://www.w3.org/TR/WCAG/#distinguishable).
 To ensure compliance with the standard, define `color`, `background-color`, and `font-size` together.
 
-<BrandSpecific brand="orange">
+<BrandSpecific brand={['orange', 'orange-compact']}>
 Thus, the `.text-brand-primary` color on light background (`#f15e00`) should only be used in a font size greater than 24px (using for example `.fs-ds` utility), or 19px bold (using for example `.fs-hm` and `.fw-bold` utilities).
 The `.text-brand-primary` color on dark background (`#ff7900`) can be used in any size.
 </BrandSpecific>

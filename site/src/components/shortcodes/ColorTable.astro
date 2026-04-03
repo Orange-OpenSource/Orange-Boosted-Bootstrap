@@ -5,8 +5,8 @@ import { allTokens } from '@libs/sass-variables'
 
 interface IColorToken {
   colorName: string
-  lightValue?: string
-  darkValue?: string
+  lightValue: string
+  darkValue: string
   backdropLight?: string
   backdropDark?: string
 }
@@ -15,12 +15,22 @@ interface Props {
   tokenRegexp: RegExp
   colorPrefix: string
   getUsage?: (colorName: string, colorPrefix?: string) => string
+  getStyle?: (colorName: string) => astroHTML.JSX.CSSProperties
 }
 
 const getCustomProp = (colorName: string, colorPrefix: string) =>
   `var(--bs${colorPrefix.replace('ouds', '').replaceAll('/', '-')}${colorName})`
 
-const { colorPrefix, tokenRegexp, getUsage = getCustomProp } = Astro.props
+const getBackground = (token: IColorToken, mode: string): astroHTML.JSX.CSSProperties =>
+  mode === 'light'
+    ? {
+        backgroundColor: token.backdropLight ? token.backdropLight : token.lightValue
+      }
+    : {
+        backgroundColor: token.backdropDark ? token.backdropDark : token.darkValue
+      }
+
+const { colorPrefix, tokenRegexp, getUsage = getCustomProp, getStyle = getBackground } = Astro.props
 
 const getLightDarkValuesFor = (colorName: string) => {
   let token = `$ouds-color-${colorName}`
@@ -55,10 +65,10 @@ const matchAndGetValues = (colorToken: IDeclaration) => {
   <table class="table">
     <thead>
       <tr>
-        <th class="w-25">{colorPrefix}</th>
-        <th>Light mode</th>
-        <th>Dark mode</th>
-        <th>Usage</th>
+        <th class="w-50" scope="column">{colorPrefix}</th>
+        <th scope="column">Light mode</th>
+        <th scope="column">Dark mode</th>
+        <th scope="column">Usage</th>
       </tr>
     </thead>
     <tbody>
@@ -68,60 +78,50 @@ const matchAndGetValues = (colorToken: IDeclaration) => {
           .map(matchAndGetValues)
           .map((token: IColorToken) => (
             <tr class="align-middle">
-              <td class="w-50">
+              <td class="w-50" scope="row">
                 <var>{token.colorName}</var>
               </td>
               <td>
-                <figure
-                  class="ratio-21x9 mb-none d-flex justify-content-center align-items-center"
-                  style={{
-                    backgroundColor: token.backdropLight ? token.backdropLight : token.lightValue
-                  }}
-                >
-                  {token.backdropLight && (
-                    <svg
-                      class="decorative-small-icon"
-                      x="15"
-                      y="15"
-                      width="20"
-                      height="20"
-                      aria-hidden="true"
-                      color={token.lightValue}
-                    >
-                      <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')} />
-                    </svg>
-                  )}
-                  <figcaption class="visually-hidden">
-                    <var>{token.lightValue}</var>
-                  </figcaption>
-                </figure>
+                <div class="bg-primary ratio-21x9" data-bs-theme="light">
+                  <figure
+                    class="w-100 h-100 mb-none d-flex justify-content-center align-items-center"
+                    style={getStyle(token, 'light')}
+                    title={token.lightValue}
+                  >
+                    {token.backdropLight && (
+                      <svg class="decorative-small-icon" aria-hidden="true" color={token.lightValue}>
+                        <use
+                          xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}
+                        />
+                      </svg>
+                    )}
+                    <figcaption class="visually-hidden">
+                      <var>{token.lightValue}</var>
+                    </figcaption>
+                  </figure>
+                </div>
               </td>
               <td>
-                <figure
-                  class="ratio-21x9 mb-none d-flex justify-content-center align-items-center"
-                  style={{
-                    backgroundColor: token.backdropDark ? token.backdropDark : token.darkValue
-                  }}
-                >
-                  {token.backdropDark && (
-                    <svg
-                      class="decorative-small-icon"
-                      x="15"
-                      y="15"
-                      width="20"
-                      height="20"
-                      aria-hidden="true"
-                      color={token.darkValue}
-                    >
-                      <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')} />
-                    </svg>
-                  )}
-                  <figcaption class="visually-hidden">
-                    <var>{token.darkValue}</var>
-                  </figcaption>
-                </figure>
+                <div class="bg-primary ratio-21x9" data-bs-theme="dark">
+                  <figure
+                    class="w-100 h-100 mb-none d-flex justify-content-center align-items-center"
+                    style={getStyle(token, 'dark')}
+                    title={token.darkValue}
+                  >
+                    {token.backdropDark && (
+                      <svg class="decorative-small-icon" aria-hidden="true" color={token.darkValue}>
+                        <use
+                          xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}
+                        />
+                      </svg>
+                    )}
+                    <figcaption class="visually-hidden">
+                      <var>{token.darkValue}</var>
+                    </figcaption>
+                  </figure>
+                </div>
               </td>
-              <td class="w-25 user-select-all" style="max-width: 2rem;">
+              <td class="w-25 user-select-all">
                 <var>{getUsage(token.colorName, colorPrefix)}</var>
               </td>
             </tr>
