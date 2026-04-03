@@ -4,6 +4,7 @@ import { getVersionedDocsPath } from '@libs/path'
 export const componentsDetails: ComponentCardData[] = [
   {
     name: 'Alert message',
+    slug: 'alert-message',
     link: 'alerts#alert-message',
     category: 'Dialog',
     snippet: `
@@ -107,6 +108,7 @@ export const componentsDetails: ComponentCardData[] = [
   },
   {
     name: 'Inline alert',
+    slug: 'inline-alert',
     link: 'alerts#inline-alert',
     category: 'Dialog',
     snippet: `
