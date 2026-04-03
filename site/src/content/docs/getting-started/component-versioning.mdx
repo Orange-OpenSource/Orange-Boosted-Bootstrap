@@ -39,9 +39,10 @@ You can find [OUDS components statuses here](https://unified-design-system.orang
             )}>{component.name}</a>
           </td>
           <td>
-            {component.version.value} (<a href={`https://r.orange.fr/r/S-ouds-doc-${component.slug ?? component.name.toLowerCase()}_changelog`}>
+            <span class="tag tag-info tag-muted">{component.version.value}</span>&nbsp;
+            <a href={`https://r.orange.fr/r/S-ouds-doc-${component.slug ?? component.name.toLowerCase()}_changelog`}>
               changelog<span class="visually-hidden">for {component.name}</span>
-            </a>)
+            </a>
           </td>
         </tr>
       ))
