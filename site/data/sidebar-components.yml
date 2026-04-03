@@ -10,6 +10,8 @@
     - title: Checkbox
     - title: Chips
     - title: Divider
+    - title: Header
+      draft: true
     - title: Icon
     - title: Links
     - title: Password input
@@ -52,8 +54,6 @@
     - title: Nav & tab
       coming_soon: true
     - title: Offcanvas
-      coming_soon: true
-    - title: Orange navbar
       coming_soon: true
     - title: Pagination
       coming_soon: true
