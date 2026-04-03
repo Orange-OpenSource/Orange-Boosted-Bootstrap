@@ -535,7 +535,7 @@
       &#{$infix} {
         @include media-breakpoint-up($next) {
           &:first-child:not(.supra),
-          &.navbar {
+          &.navbar:not(.supra) {
             --#{$prefix}navbar-nav-link-padding-y: 14px;
           }
         }
