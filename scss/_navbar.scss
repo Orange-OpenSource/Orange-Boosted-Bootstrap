@@ -148,6 +148,7 @@
   margin-right: var(--#{$prefix}navbar-brand-margin-end);
   margin-bottom: var(--#{$prefix}navbar-brand-margin-y);
   @include font-size(var(--#{$prefix}navbar-brand-font-size));
+  line-height: 1;
   color: var(--#{$prefix}navbar-brand-color);
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
@@ -174,19 +175,13 @@
   .title,
   .two-lined {
     margin: divide(-2em, 7) $spacer divide(-1em, 7) calc(var(--#{$prefix}navbar-brand-logo-size) / 2);
-    @include font-size(var(--#{$prefix}navbar-brand-font-size));
+    @include get-font-size("heading-large");
     line-height: 1;
-    letter-spacing: var(--#{$prefix}navbar-brand-letter-spacing);
   }
 
   .two-lined {
-    --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-two-lined-xs};
-    --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-two-lined-xs};
-
-    @include media-breakpoint-up(md) {
-      --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-two-lined};
-      --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-two-lined};
-    }
+    @include get-font-size("heading-medium");
+    line-height: 1;
   }
 }
 // End mod
@@ -418,13 +413,14 @@
           // OUDS mod
           .nav-link {
             margin: 0;
+            line-height: 1;
 
             &.active::before {
               position: absolute;
               right: var(--#{$prefix}navbar-nav-link-padding-x);
               bottom: calc(-1 * var(--#{$prefix}navbar-padding-y));
               left: var(--#{$prefix}navbar-nav-link-padding-x);
-              height: calc(var(--#{$prefix}navbar-border-width) * 4);
+              height: 4px;
               content: "";
               background-color: currentcolor;
               @include transition($navbar-active-transition);
@@ -469,11 +465,6 @@
         // Handle the responsiveness of the different bars of a global header
         &.supra {
           display: flex;
-        }
-
-        .header-minimized &:first-child:not(.supra),
-        .header-minimized .supra + &.navbar {
-          --#{$prefix}navbar-nav-link-padding-y: .75rem;
         }
 
         &:not(.supra) + .navbar {
@@ -532,29 +523,24 @@
     }
   }
 }
+
+.header-minimized {
+  .navbar-expand,
+  .supra + .navbar-expand {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      $next: breakpoint-next($breakpoint, $grid-breakpoints);
+      $infix: breakpoint-infix($next, $grid-breakpoints);
+
+      // stylelint-disable-next-line scss/selector-no-union-class-name
+      &#{$infix} {
+        @include media-breakpoint-up($next) {
+          &:first-child:not(.supra),
+          &.navbar:not(.supra) {
+            --#{$prefix}navbar-nav-link-padding-y: 14px;
+          }
+        }
+      }
+    }
+  }
+}
 // scss-docs-end navbar-expand-loop
-
-// Navbar themes
-//
-// Styles for switching between navbars with light or dark background.
-
-.navbar-light {
-  @include deprecate("`.navbar-light`", "v5.2.0", "v6.0.0", true);
-}
-
-// OUDS mod: deprecated in OUDS Web, kept for Bootstrap compatibility
-// OUDS mod: no `navbar[data-bs-theme="dark"]` selector
-.navbar-dark {
-  --#{$prefix}navbar-border-color: #{$navbar-dark-border-color}; // OUDS mod
-  --#{$prefix}navbar-color: #{$navbar-dark-color};
-  --#{$prefix}navbar-hover-color: #{$navbar-dark-hover-color};
-  --#{$prefix}navbar-disabled-color: #{$navbar-dark-disabled-color};
-  --#{$prefix}navbar-active-color: #{$navbar-dark-active-color};
-  --#{$prefix}navbar-brand-color: #{$navbar-dark-brand-color};
-  --#{$prefix}navbar-brand-hover-color: #{$navbar-dark-brand-hover-color};
-  --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
-  // OUDS mod: No --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)}; since we handle the variant with filter
-}
-// End mod
-
-// OUDS mod: no `@if enable-dark-mode`
