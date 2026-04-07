@@ -35,6 +35,8 @@ When the user asks to perform a specific task, load and follow the appropriate c
 
 - **[ouds-lookup](.packmind/commands/ouds-lookup.md)** — Quick lookup index: maps any topic to the right standard, command, or skill.
 
+- **[ouds-validate-tokens](.packmind/commands/ouds-validate-tokens.md)** — Read-only audit: cross-brand token presence check and anti-pattern detection for SCSS component files.
+
 ---
 
 ## Skills — Domain Knowledge
