@@ -19,7 +19,7 @@ jobs:
           persist-credentials: false
 
       - name: Set up NuGet
-        uses: nuget/setup-nuget@323ab0502cd38fdc493335025a96c8fdb0edc71f # v2.0.1
+        uses: nuget/setup-nuget@12c57947e9458a5b976961b08ea0706a17dd71ae # v3.0.0
         with:
           nuget-api-key: ${{ secrets.NUGET_TOKEN }}
           nuget-version: '5.x'
