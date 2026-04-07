@@ -4,7 +4,7 @@ applyTo: "**"
 
 # OUDS Web — AI Agent Instructions
 
-You are working in **OUDS Web** (Orange Unified Design System — Web), a multi-brand design system built as a fork of Bootstrap 5.3.6.  
+You are working in **OUDS Web** (Orange Unified Design System — Web), a multi-brand design system built as a fork of Bootstrap 5.3.6.
 Version: 1.1.0 | Main branch: `ouds/main` | Brands: Orange, Sosh, Orange Compact
 
 ---
@@ -15,7 +15,7 @@ The following standards define mandatory conventions. Always apply them when wri
 
 - **[Code Conventions](.packmind/standards/ouds-code-conventions.md)** — HTML/SCSS/JS style rules: `!default` on variables, forbidden direct properties (`border-radius`, `transition`), forbidden values (`border: none`, `lighten()`), token usage, JS no-semicolons, template literals.
 
-- **[Accessibility WCAG 2.1 AA](.packmind/standards/ouds-accessibility-wcag.md)** — Non-negotiable: `@include focus-visible()`, ARIA attributes, `.visually-hidden`, keyboard navigation, 4.5:1 contrast, 44×44px touch targets, RTL support.
+- **[Accessibility WCAG 2.2 AAA (with AA fallback)](.packmind/standards/ouds-accessibility-wcag.md)** — Target WCAG 2.2 Level AAA with documented fallback to AA for specific color and UI constraints. Non-negotiable: `@include focus-visible()`, ARIA attributes, `.visually-hidden`, keyboard navigation, 7:1 text contrast (AAA) / 4.5:1 fallback (AA), 44×44px touch targets, RTL support, cognitive accessibility.
 
 - **[Design Token System](.packmind/standards/ouds-design-tokens.md)** — 3-tier hierarchy (raw → semantic → component). Never edit auto-generated files (`_raw.scss`, `_semantic.scss`, `_component.scss`, `_*-custom-props.scss`). Colors via `var(--#{$prefix}color-*)`. New tokens in all 3 brands.
 
