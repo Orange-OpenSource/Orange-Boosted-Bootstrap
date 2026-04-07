@@ -65,10 +65,10 @@ const matchAndGetValues = (colorToken: IDeclaration) => {
   <table class="table">
     <thead>
       <tr>
-        <th class="w-50" scope="column">{colorPrefix}</th>
-        <th scope="column">Light mode</th>
-        <th scope="column">Dark mode</th>
-        <th scope="column">Usage</th>
+        <th class="w-50" scope="col">{colorPrefix}</th>
+        <th scope="col">Light mode</th>
+        <th scope="col">Dark mode</th>
+        <th scope="col">Usage</th>
       </tr>
     </thead>
     <tbody>
@@ -78,9 +78,9 @@ const matchAndGetValues = (colorToken: IDeclaration) => {
           .map(matchAndGetValues)
           .map((token: IColorToken) => (
             <tr class="align-middle">
-              <td class="w-50" scope="row">
+              <th class="w-50" scope="row">
                 <var>{token.colorName}</var>
-              </td>
+              </th>
               <td>
                 <div class="bg-primary ratio-21x9" data-bs-theme="light">
                   <figure
