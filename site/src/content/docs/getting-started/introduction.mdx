@@ -31,7 +31,7 @@ Get started by including OUDS Web’s production-ready CSS and JavaScript via CD
    </html>
    ```
 
-2. **Include OUDS Web’s CSS and JS.** Place the `<link>` tag in the `<head>` for our CSS, and the `<script>` tag for our JavaScript bundle (including Popper for positioning dropdowns, popovers, and tooltips) before the closing `</body>`. Learn more about our [CDN links](#cdn-links).
+2. **Include OUDS Web’s CSS and JS.** Place the `<link>` tag in the `<head>` for our CSS, and the `<script>` tag for our JavaScript bundle (including Floating UI for positioning dropdowns, popovers, and tooltips) before the closing `</body>`. Learn more about our [CDN links](#cdn-links).
 
    ```html
    <!doctype html>
@@ -49,10 +49,10 @@ Get started by including OUDS Web’s production-ready CSS and JavaScript via CD
    </html>
    ```
 
-   You can also include [Popper](https://popper.js.org/docs/v2/) and our JS separately. If you don’t plan to use dropdowns, popovers, or tooltips, save some kilobytes by not including Popper.
+   You can also include [Floating UI](https://floating-ui.com/) and our JS separately. If you don’t plan to use dropdowns, popovers, or tooltips, save some kilobytes by not including Floating UI.
 
    ```html
-   <script src="[[config:cdn.popper]]" integrity="[[config:cdn.popper_hash]]" crossorigin="anonymous"></script>
+   <script src="[[config:cdn.floating_ui]]" integrity="[[config:cdn.floating_ui_hash]]" crossorigin="anonymous"></script>
    <script src="[[config:cdn.js]]" integrity="[[config:cdn.js_hash]]" crossorigin="anonymous"></script>
    ```
 
@@ -85,7 +85,7 @@ We also include a `crossorigin="anonymous"` attribute to prevent [CORS](https://
 
 ## JS components
 
-Here is a list of components that explicitly require our JavaScript and Popper for interactivity.
+Here is a list of components that explicitly require our JavaScript and Floating UI for interactivity.
 
 {/* - Accordions for extending our Collapse plugin */}
 
@@ -96,7 +96,7 @@ Here is a list of components that explicitly require our JavaScript and Popper f
 - Carousel for all slide behaviors, controls, and indicators
 - Close button for displaying and positioning tooltip
 - Collapse for toggling visibility of content
-- Dropdowns for displaying and positioning (also requires [Popper](https://popper.js.org/docs/v2/))
+- Dropdowns for displaying and positioning (also requires [Floating UI](https://floating-ui.com/))
 - Footer for extending our Collapse plugin to implement responsive behavior
 - Modals for displaying, positioning, scroll behavior, and Close button tooltip
 - Navbar for extending our Collapse and Offcanvas plugins to implement responsive behaviors, and Close button tooltip (Offcanvas only)
@@ -106,7 +106,7 @@ Here is a list of components that explicitly require our JavaScript and Popper f
 - Quantity selector for incrementing/decrementing number value
 - Scrollspy for scroll behavior and navigation updates
 - Toasts for displaying, dismissing, and Close button tooltip
-- Tooltips and popovers for displaying and positioning (also requires [Popper](https://popper.js.org/docs/v2/)) */}
+- Tooltips and popovers for displaying and positioning (also requires [Floating UI](https://floating-ui.com/)) */}
 
 ## Important globals
 

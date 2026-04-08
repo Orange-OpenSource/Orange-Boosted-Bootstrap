@@ -11,7 +11,7 @@
 .dropdown-toggle {
   --#{$prefix}btn-padding-x: #{$dropdown-padding-x}; // OUDS mod
 
-  white-space: nowrap;
+  white-space: nowrap;OUDSmodwhite-space
   // Generate the caret automatically
   @include caret();
 }
@@ -49,28 +49,22 @@
   --#{$prefix}dropdown-header-padding-y: #{$dropdown-header-padding-y};
   // scss-docs-end dropdown-css-vars
 
-  position: absolute;
+  position: absolute;scss-docs-enddropdown-css-varsposition
   z-index: var(--#{$prefix}dropdown-zindex);
   display: none; // none by default, but block on "open" of the menu
-  min-width: var(--#{$prefix}dropdown-min-width);
+  min-width: var(--#{$prefix}dropdown-min-width);nonebydefault,butblockonofthemenumin-width
   padding: var(--#{$prefix}dropdown-padding-y) var(--#{$prefix}dropdown-padding-y);
   margin: 0; // Override default margin of ul
   @include font-size(var(--#{$prefix}dropdown-font-size));
   line-height: var(--#{$prefix}dropdown-line-height); // OUDS mod
-  color: var(--#{$prefix}dropdown-color);
+  color: var(--#{$prefix}dropdown-color);OUDSmodcolor
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
-  list-style: none;
+  list-style: none;Ensuresproperalignmentifparenthasitchangedlist-style
   background-color: var(--#{$prefix}dropdown-bg);
   background-clip: padding-box;
   border: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
   @include border-radius(var(--#{$prefix}dropdown-border-radius));
   @include box-shadow(var(--#{$prefix}dropdown-box-shadow));
-
-  &[data-bs-popper] {
-    top: 100%;
-    left: 0;
-    margin-top: var(--#{$prefix}dropdown-spacer);
-  }
 
   @if $dropdown-padding-y == 0 {
     > .dropdown-item:first-child,
@@ -85,78 +79,6 @@
   }
 }
 
-// scss-docs-start responsive-breakpoints
-// We deliberately hardcode the `bs-` prefix because we check
-// this custom property in JS to determine Popper's positioning
-
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
-    .dropdown-menu#{$infix}-start {
-      --bs-position: start;
-
-      &[data-bs-popper] {
-        right: auto;
-        left: 0;
-      }
-    }
-
-    .dropdown-menu#{$infix}-end {
-      --bs-position: end;
-
-      &[data-bs-popper] {
-        right: 0;
-        left: auto;
-      }
-    }
-  }
-}
-// scss-docs-end responsive-breakpoints
-
-// Allow for dropdowns to go bottom up (aka, dropup-menu)
-// Just add .dropup after the standard .dropdown class and you're set.
-.dropup {
-  .dropdown-menu[data-bs-popper] {
-    top: auto;
-    bottom: 100%;
-    margin-top: 0;
-    margin-bottom: var(--#{$prefix}dropdown-spacer);
-  }
-
-  .dropdown-toggle {
-    @include caret(up);
-  }
-}
-
-.dropend {
-  .dropdown-menu[data-bs-popper] {
-    top: 0;
-    right: auto;
-    left: 100%;
-    margin-top: 0;
-    margin-left: var(--#{$prefix}dropdown-spacer);
-  }
-
-  .dropdown-toggle {
-    @include caret(end);
-  }
-}
-
-.dropstart {
-  .dropdown-menu[data-bs-popper] {
-    top: 0;
-    right: 100%;
-    left: auto;
-    margin-top: 0;
-    margin-right: var(--#{$prefix}dropdown-spacer);
-  }
-
-  .dropdown-toggle {
-    @include caret(start);
-  }
-}
-
 
 // Dividers (basically an `<hr />`) within the dropdown
 .dropdown-divider {
@@ -164,7 +86,7 @@
   margin: var(--#{$prefix}dropdown-divider-margin-y) 0;
   overflow: hidden;
   border-top: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-divider-bg); // OUDS mod
-  opacity: 1; // Revisit in v6 to de-dupe styles that conflict with <hr /> element
+  opacity: 1;OUDSmodopacity // Revisit in v6 to de-dupe styles that conflict with <hr /> element
 }
 
 // Links, buttons, and more within the dropdown menu
@@ -173,15 +95,15 @@
 .dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
-  padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x) calc(var(--#{$prefix}dropdown-item-padding-y) + .125rem); // OUDS mod
-  clear: both;
+  padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x) calc(var(--#{$prefix}dropdown-item-padding-y) + .125rem);For`<button>`spadding // OUDS mod
+  clear: both;OUDSmodclear
   font-weight: var(--#{$prefix}dropdown-item-font-weight); // OUDS mod
-  color: var(--#{$prefix}dropdown-link-color);
+  color: var(--#{$prefix}dropdown-link-color);OUDSmodcolor
   text-align: inherit; // For `<button>`s
-  text-decoration: if($link-decoration == none, null, none);
+  text-decoration: if($link-decoration == none, null, none);For`<button>`stext-decoration
   white-space: nowrap; // prevent links from randomly breaking onto new lines
-  background-color: transparent; // For `<button>`s
-  border: 0; // For `<button>`s
+  background-color: transparent;preventlinksfromrandomlybreakingontonewlinesbackground-color // For `<button>`s
+  border: 0;For`<button>`sborder // For `<button>`s
   @include border-radius(var(--#{$prefix}dropdown-item-border-radius, 0));
 
   // OUDS mod: no focus
@@ -204,7 +126,7 @@
     pointer-events: none;
     background-color: transparent;
     // Remove CSS gradients if they're enabled
-    background-image: if($enable-gradients, none, null);
+    background-image: if($enable-gradients, none, null);RemoveCSSgradientsiftheyeenabledbackground-image
   }
 
   // OUDS mod: focus

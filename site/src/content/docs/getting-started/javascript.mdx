@@ -53,15 +53,15 @@ We provide a version of OUDS Web built as `ESM` (`ouds-web.esm.js` and `ouds-web
   </script>
   `} />
 
-Compared to JS bundlers, using ESM in the browser requires you to use the full path and filename instead of the module name. [Read more about JS modules in the browser.](https://v8.dev/features/modules#specifiers) That's why we use `'ouds-web.esm.min.js'` instead of `'ouds-web'` above. However, this is further complicated by our Popper dependency, which imports Popper into our JavaScript like so:
+Compared to JS bundlers, using ESM in the browser requires you to use the full path and filename instead of the module name. [Read more about JS modules in the browser.](https://v8.dev/features/modules#specifiers) That's why we use `'ouds-web.esm.min.js'` instead of `'ouds-web'` above. However, this is further complicated by our Floating UI dependency, which imports Floating UI into our JavaScript like so:
 
-<Code buttonLabel="import Popper" lang="js" code={`import * as Popper from "@popperjs/core"`} />
+<Code buttonLabel="import Floating UI" lang="js" code={`import * as FloatingUI from "@floating-ui/dom"`} />
 
 If you try this as-is, you'll see an error in the console like the following:
 
-<Code buttonLabel="error" lang="text" code={`Uncaught TypeError: Failed to resolve module specifier "@popperjs/core". Relative references must start with either "/", "./", or "../".`} />
+<Code buttonLabel="error" lang="text" code={`Uncaught TypeError: Failed to resolve module specifier "@floating-ui/dom". Relative references must start with either "/", "./", or "../".`} />
 
-To fix this, you can use an `importmap` to resolve the arbitrary module names to complete paths. If your [targeted browsers](https://caniuse.com/?search=importmap) do not support `importmap`, you'll need to use the [es-module-shims](https://github.com/guybedford/es-module-shims) project. Here's how it works for OUDS Web and Popper:
+To fix this, you can use an `importmap` to resolve the arbitrary module names to complete paths. If your [targeted browsers](https://caniuse.com/?search=importmap) do not support `importmap`, you'll need to use the [es-module-shims](https://github.com/guybedford/es-module-shims) project. Here's how it works for OUDS Web and Floating UI:
 
 <Code buttonLabel="importmap" lang="html" code={`<!doctype html>
   <html lang="en">
@@ -79,7 +79,7 @@ To fix this, you can use an `importmap` to resolve the arbitrary module names to
       <script type="importmap">
       {
         "imports": {
-          "@popperjs/core": "{{< param "cdn.popper_esm" >}}",
+          "@floating-ui/dom": "{{< param "cdn.floating_ui_esm" >}}",
           "@ouds/web-common": "https://cdn.jsdelivr.net/npm/@ouds/web-common@{{< param "current_version" >}}/dist/js/ouds-web.esm.min.js"
         }
       }
@@ -96,7 +96,7 @@ To fix this, you can use an `importmap` to resolve the arbitrary module names to
 
 Some plugins and CSS components depend on other plugins. If you include plugins individually, make sure to check for these dependencies in the docs.
 
-Our dropdowns, popovers, and tooltips also depend on [Popper](https://popper.js.org/docs/v2/).
+Our dropdowns, popovers, and tooltips also depend on [Floating UI](https://floating-ui.com/).
 
 ## Data attributes
 
