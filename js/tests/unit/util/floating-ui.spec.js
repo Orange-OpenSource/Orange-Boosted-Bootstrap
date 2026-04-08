@@ -11,11 +11,13 @@ describe('FloatingUI Util', () => {
   describe('BREAKPOINTS', () => {
     it('should export breakpoint values', () => {
       expect(BREAKPOINTS).toEqual(jasmine.any(Object))
-      expect(BREAKPOINTS.sm).toBe(576)
-      expect(BREAKPOINTS.md).toBe(768)
+      expect(BREAKPOINTS.xs).toBe(390)
+      expect(BREAKPOINTS.sm).toBe(480)
+      expect(BREAKPOINTS.md).toBe(736)
       expect(BREAKPOINTS.lg).toBe(1024)
-      expect(BREAKPOINTS.xl).toBe(1280)
-      expect(BREAKPOINTS['2xl']).toBe(1536)
+      expect(BREAKPOINTS.xl).toBe(1320)
+      expect(BREAKPOINTS['2xl']).toBe(1640)
+      expect(BREAKPOINTS['3xl']).toBe(1880)
     })
   })
 

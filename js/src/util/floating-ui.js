@@ -10,12 +10,14 @@ import { isRTL } from './index.js'
 /**
  * Breakpoints for responsive placement (matches SCSS $grid-breakpoints)
  */
-export const BREAKPOINTS = { /* TODO */
-  sm: 576,
-  md: 768,
+export const BREAKPOINTS = {
+  xs: 390,
+  sm: 480,
+  md: 736,
   lg: 1024,
-  xl: 1280,
-  '2xl': 1536
+  xl: 1320,
+  '2xl': 1640,
+  '3xl': 1880
 }
 
 /**
@@ -84,7 +86,7 @@ export const getResponsivePlacement = (responsivePlacements, defaultPlacement = 
   let activePlacement = responsivePlacements.xs || defaultPlacement
 
   // Check breakpoints in order (sm, md, lg, xl, 2xl)
-  const breakpointOrder = ['sm', 'md', 'lg', 'xl', '2xl']
+  const breakpointOrder = ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl']
 
   for (const breakpoint of breakpointOrder) {
     const minWidth = BREAKPOINTS[breakpoint]
