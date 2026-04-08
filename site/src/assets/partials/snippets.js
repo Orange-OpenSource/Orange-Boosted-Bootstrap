@@ -277,9 +277,11 @@ export default () => {
       if (type === 'text') {
         iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('accessibility-vision', 'hide'))
         visuallyHiddenText.textContent = 'Hide password'
+        togglePasswordButton.setAttribute('aria-pressed', 'true')
       } else {
         iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('hide', 'accessibility-vision'))
         visuallyHiddenText.textContent = 'Show password'
+        togglePasswordButton.setAttribute('aria-pressed', 'false')
       }
     })
   }
