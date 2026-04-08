@@ -5,7 +5,7 @@ aliases:
   - "/docs/utilities/spacing/"
 toc: true
 ---
-import { allTokens } from '@libs/sass-variables'
+import { getTokenValue } from '@libs/sass-variables'
 
 export const fixedSpacingLevel = [
   "none",
@@ -73,7 +73,7 @@ Where *size* is one of:
   {
     fixedSpacingLevel.map((level) => (
       <li><code>{level}</code> - for classes that set
-        the <code>margin</code> or <code>padding</code> to <code>{allTokens.find((token) => token.name === `$ouds-space-fixed-${level}`).compiledValue}</code>
+        the <code>margin</code> or <code>padding</code> to <code>{getTokenValue(`$ouds-space-fixed-${level}`)}</code>
       </li>
     ))
   }
@@ -162,7 +162,7 @@ Where *size* is one of:
           {
             screenSize.map((size) => (
               <td>
-                <code>{allTokens.find((token) => token.name === `$ouds-space-scaled-${level}-${size}`).compiledValue}</code>
+                <code>{getTokenValue(`$ouds-space-scaled-${level}-${size}`)}</code>
               </td>
             ))
           }
@@ -369,7 +369,7 @@ OUDS web provides two specific sizes based on grid measures: `gridgap` and `grid
 ### Edge to edge containers
 
 <Callout type="info">
- The negative margins for grid measures are always available, unlike [the other negative margins](#negative-margin).
+  The negative margins for grid measures are always available, unlike [the other negative margins](#negative-margin).
 </Callout>
 
 The negative `gridmargin` `margin` utility can be used to create edge to edge containers, the following example creates an edge to edge container on the smaller breakpoints.

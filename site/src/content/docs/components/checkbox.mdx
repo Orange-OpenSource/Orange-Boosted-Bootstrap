@@ -1,6 +1,6 @@
 ---
 title: Checkbox
-description: Create consistent cross-browser and cross-device checkboxes.
+description: A checkbox is a UI element that enables users to select multiple options from a set of mutually non-exclusive choices.
 aliases:
   - "/docs/forms/checks/"
   - "/docs/components/checks/"
@@ -19,7 +19,9 @@ import { getVersionedDocsPath } from '@libs/path'
 
 ## Overview
 
-Checkboxes allow users to select one or more options from a number of choices.
+Checkbox item is a UI element that allows users to select multiple options from a set of mutually non-exclusive choices.
+
+Unlike the [checkbox](#standalone), the checkbox item accommodates a broader range of contexts by enabling the toggling of visibility of additional text labels and icon assets.
 
 They are implemented using `.checkbox-item` and `.control-item-*` classes, [see below](#control-item). Browser default checkboxes are replaced with the help of the selector `.control-item-indicator[type="checkbox"]`.
 
@@ -489,10 +491,10 @@ To manually mark a checkbox as invalid, add `aria-invalid="true"` to a `.control
   </fieldset>`} />
 
 <BootstrapCompatibility>
-To display an invalid checkbox, add `aria-invalid="true"` to a `.form-check-input`.
+To display an invalid checkbox, add `.is-invalid` to a `.form-check-input`.
 
 <Example buttonLabel="Bootstrap compatibility: invalid checkboxes" class="bd-example-indeterminate" addStackblitzJs code={`<div class="form-check">
-    <input class="form-check-input" aria-invalid="true" type="checkbox" value="" id="checkInvalid" />
+    <input class="form-check-input is-invalid" type="checkbox" value="" id="checkInvalid" />
     <label class="form-check-label" for="checkInvalid">
       Default invalid checkbox (Bootstrap compatible)
     </label>
@@ -577,6 +579,21 @@ If you have a checkbox that is not part of a group but needs validation control,
     <p class="control-item-error-message" id="checkboxUniqueInvalidErrorText">You must accept the terms and condition to proceed.</p>
   </div>`} />
 
+### Skeleton
+
+<SkeletonRedirect component="checkbox item" />
+
+<Example buttonLabel="checkbox item skeleton" code={`<div aria-busy="true" inert>
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxSkeleton" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxSkeleton">Skeleton checkbox</label>
+      </div>
+    </div>
+  </div>`} />
+
 ## Fieldset `<legend>`
 
 For accessibility reasons, it is required to provide understandable checkbox labels without relying on visual context. It is also good practice to add a checkbox group title inside a `<legend>` element as the first child of the `<fieldset>` element. Screen readers will read the legend before navigating through the checkboxes; this way, keyboard navigation users have more information on what is expected with the multiple checkboxes element.
@@ -618,6 +635,10 @@ For accessibility reasons, it is required to provide understandable checkbox lab
   </div>`} />
 
 ## Standalone
+
+Checkbox is a UI element that enables users to select multiple options from a set of mutually non-exclusive choices.
+
+Checkbox, that lacks an additional icon asset or text label, offers greater flexibility when designing other components that incorporate a checkbox.
 
 <Callout type="warning" name="standalone-form-indicator" />
 
