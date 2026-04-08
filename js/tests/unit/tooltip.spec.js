@@ -1144,18 +1144,30 @@ describe('Tooltip', () => {
     })
 
     it('should re-show tip if it was already shown', () => {
-      fixtureEl.innerHTML = '<a href="#" rel="tooltip" data-bs-title="Another tooltip"></a>'
+      return new Promise(resolve => {
+        fixtureEl.innerHTML = '<a href="#" rel="tooltip" data-bs-title="Another tooltip"></a>'
 
-      const tooltipEl = fixtureEl.querySelector('a')
-      const tooltip = new Tooltip(tooltipEl)
-      tooltip.show()
-      const tip = () => tooltip._getTipElement()
+        const tooltipEl = fixtureEl.querySelector('a')
+        const tooltip = new Tooltip(tooltipEl)
+        const tip = () => tooltip._getTipElement()
 
-      expect(tip()).toHaveClass('show')
-      tooltip.setContent({ '.tooltip-inner': 'foo' })
+        tooltipEl.addEventListener('shown.bs.tooltip', function handler() {
+          tooltipEl.removeEventListener('shown.bs.tooltip', handler)
 
-      expect(tip()).toHaveClass('show')
-      expect(tip().querySelector('.tooltip-inner').textContent).toEqual('foo')
+          expect(tip()).toHaveClass('show')
+
+          // Listen for the re-show after setContent
+          tooltipEl.addEventListener('shown.bs.tooltip', () => {
+            expect(tip()).toHaveClass('show')
+            expect(tip().querySelector('.tooltip-inner').textContent).toEqual('foo')
+            resolve()
+          })
+
+          tooltip.setContent({ '.tooltip-inner': 'foo' })
+        })
+
+        tooltip.show()
+      })
     })
 
     it('should keep tip hidden, if it was already hidden before', () => {
