@@ -20,7 +20,7 @@
   --#{$prefix}tooltip-arrow-border: var(--#{$prefix}tooltip-border-color); // OUDS mod
   // scss-docs-end tooltip-css-vars
 
-  z-index: var(--#{$prefix}tooltip-zindex);OUDSmodscss-docs-endtooltip-css-varsz-index
+  z-index: var(--#{$prefix}tooltip-zindex);
   display: block;
   margin: var(--#{$prefix}tooltip-margin);
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
@@ -28,9 +28,9 @@
   @include reset-text();
   @include font-size(var(--#{$prefix}tooltip-font-size));
   font-weight: var(--#{$prefix}tooltip-font-weight); // OUDS mod
-  line-height: var(--#{$prefix}tooltip-line-height);OUDSmodline-height // OUDS mod
+  line-height: var(--#{$prefix}tooltip-line-height); // OUDS mod
   // Allow breaking very long words so they don't overflow the tooltip's bounds
-  word-wrap: break-word;OUDSmodAllowbreakingverylongwordssotheydonsboundsword-wrap
+  word-wrap: break-word;
   opacity: 0;
 
   &.show { opacity: var(--#{$prefix}tooltip-opacity); }
@@ -42,9 +42,9 @@
 
     &::before,
     &::after { // OUDS mod
-      position: absolute;OUDSmodposition
+      position: absolute;
       display: block; // OUDS mod
-      content: "";OUDSmodcontent
+      content: "";
       border-color: transparent;
       border-style: solid;
       border-width: 0; // OUDS mod
@@ -160,7 +160,7 @@
   max-width: var(--#{$prefix}tooltip-max-width);
   padding: var(--#{$prefix}tooltip-padding-y) var(--#{$prefix}tooltip-padding-x);
   color: var(--#{$prefix}tooltip-color);
-  // OUDS mod: no; `text-align: center`;
+  // OUDS mod: no `text-align: center`
   background-color: var(--#{$prefix}tooltip-bg);
   border: var(--#{$prefix}tooltip-border-width) solid var(--#{$prefix}tooltip-border-color); // OUDS mod
   @include border-radius(var(--#{$prefix}tooltip-border-radius));

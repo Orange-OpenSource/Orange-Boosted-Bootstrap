@@ -11,7 +11,7 @@
 .dropdown-toggle {
   --#{$prefix}btn-padding-x: #{$dropdown-padding-x}; // OUDS mod
 
-  white-space: nowrap;OUDSmodwhite-space
+  white-space: nowrap;
   // Generate the caret automatically
   @include caret();
 }
@@ -49,17 +49,17 @@
   --#{$prefix}dropdown-header-padding-y: #{$dropdown-header-padding-y};
   // scss-docs-end dropdown-css-vars
 
-  position: absolute;scss-docs-enddropdown-css-varsposition
+  position: absolute;
   z-index: var(--#{$prefix}dropdown-zindex);
   display: none; // none by default, but block on "open" of the menu
-  min-width: var(--#{$prefix}dropdown-min-width);nonebydefault,butblockonofthemenumin-width
+  min-width: var(--#{$prefix}dropdown-min-width);
   padding: var(--#{$prefix}dropdown-padding-y) var(--#{$prefix}dropdown-padding-y);
   margin: 0; // Override default margin of ul
   @include font-size(var(--#{$prefix}dropdown-font-size));
   line-height: var(--#{$prefix}dropdown-line-height); // OUDS mod
-  color: var(--#{$prefix}dropdown-color);OUDSmodcolor
+  color: var(--#{$prefix}dropdown-color);
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
-  list-style: none;Ensuresproperalignmentifparenthasitchangedlist-style
+  list-style: none;
   background-color: var(--#{$prefix}dropdown-bg);
   background-clip: padding-box;
   border: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
@@ -86,7 +86,7 @@
   margin: var(--#{$prefix}dropdown-divider-margin-y) 0;
   overflow: hidden;
   border-top: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-divider-bg); // OUDS mod
-  opacity: 1;OUDSmodopacity // Revisit in v6 to de-dupe styles that conflict with <hr /> element
+  opacity: 1; // Revisit in v6 to de-dupe styles that conflict with <hr /> element
 }
 
 // Links, buttons, and more within the dropdown menu
@@ -95,15 +95,15 @@
 .dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
-  padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x) calc(var(--#{$prefix}dropdown-item-padding-y) + .125rem);For`<button>`spadding // OUDS mod
-  clear: both;OUDSmodclear
+  padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x) calc(var(--#{$prefix}dropdown-item-padding-y) + .125rem); // OUDS mod
+  clear: both;
   font-weight: var(--#{$prefix}dropdown-item-font-weight); // OUDS mod
-  color: var(--#{$prefix}dropdown-link-color);OUDSmodcolor
+  color: var(--#{$prefix}dropdown-link-color);
   text-align: inherit; // For `<button>`s
-  text-decoration: if($link-decoration == none, null, none);For`<button>`stext-decoration
+  text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap; // prevent links from randomly breaking onto new lines
-  background-color: transparent;preventlinksfromrandomlybreakingontonewlinesbackground-color // For `<button>`s
-  border: 0;For`<button>`sborder // For `<button>`s
+  background-color: transparent; // For `<button>`s
+  border: 0; // For `<button>`s
   @include border-radius(var(--#{$prefix}dropdown-item-border-radius, 0));
 
   // OUDS mod: no focus
@@ -126,7 +126,7 @@
     pointer-events: none;
     background-color: transparent;
     // Remove CSS gradients if they're enabled
-    background-image: if($enable-gradients, none, null);RemoveCSSgradientsiftheyeenabledbackground-image
+    background-image: if($enable-gradients, none, null);
   }
 
   // OUDS mod: focus

@@ -29,7 +29,7 @@
   --#{$prefix}popover-arrow-border: var(--#{$prefix}popover-border-color);
   // scss-docs-end popover-css-vars
 
-  z-index: var(--#{$prefix}popover-zindex);scss-docs-endpopover-css-varsz-index
+  z-index: var(--#{$prefix}popover-zindex);
   display: block;
   max-width: var(--#{$prefix}popover-max-width);
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
@@ -38,7 +38,7 @@
   @include font-size(var(--#{$prefix}popover-font-size));
   line-height: var(--#{$prefix}popover-line-height); // OUDS mod
   // Allow breaking very long words so they don't overflow the popover's bounds
-  word-wrap: break-word;OUDSmodAllowbreakingverylongwordssotheydonsboundsword-wrap
+  word-wrap: break-word;
   background-color: var(--#{$prefix}popover-bg);
   background-clip: padding-box;
   border: var(--#{$prefix}popover-border-width) solid var(--#{$prefix}popover-border-color);
@@ -77,8 +77,8 @@
     }
 
     &::after {
-      bottom: calc(var(--#{$prefix}popover-border-width) * 1.5); // OUDS mod: instead of `var(--#{$prefix}popover-border-width)`;
-      border-top-color: var(--#{$prefix}popover-bg)
+      bottom: calc(var(--#{$prefix}popover-border-width) * 1.5); // OUDS mod: instead of `var(--#{$prefix}popover-border-width)`
+      border-top-color: var(--#{$prefix}popover-bg);
     }
   }
 }
@@ -101,8 +101,8 @@
     }
 
     &::after {
-      left: calc(var(--#{$prefix}popover-border-width) * 1.5); // OUDS mod: instead of `var(--#{$prefix}popover-border-width)`;
-      border-right-color: var(--#{$prefix}popover-bg)
+      left: calc(var(--#{$prefix}popover-border-width) * 1.5); // OUDS mod: instead of `var(--#{$prefix}popover-border-width)`
+      border-right-color: var(--#{$prefix}popover-bg);
     }
   }
 }
@@ -124,8 +124,8 @@
     }
 
     &::after {
-      top: calc(var(--#{$prefix}popover-border-width) * 1.5); // OUDS mod: instead of `var(--#{$prefix}popover-border-width)`;
-      border-bottom-color: var(--#{$prefix}popover-bg)
+      top: calc(var(--#{$prefix}popover-border-width) * 1.5); // OUDS mod: instead of `var(--#{$prefix}popover-border-width)`
+      border-bottom-color: var(--#{$prefix}popover-bg);
     }
   }
 
