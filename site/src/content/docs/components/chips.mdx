@@ -1,6 +1,6 @@
 ---
 title: Chips
-description: Provides a compact UI element used either to represent a filter or to recommend an option.
+description: A chip is a UI element that captures filtering decisions across a series, a defined list of options, or recommended and predictive choices.
 aliases:
   - "/docs/components/chips/"
   - "/docs/components/chip/"
@@ -12,7 +12,6 @@ types:
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
-import { getMode } from '@libs/sass-variables'
 
 <Callout type="info">
   You can find the OUDS design guidelines here: [filter chip guidelines](https://r.orange.fr/r/S-ouds-doc-filter-chip), [suggestion chip guidelines](https://r.orange.fr/r/S-ouds-doc-suggestion-chip).
@@ -25,27 +24,27 @@ import { getMode } from '@libs/sass-variables'
 <ul class="list-unstyled row row-cols-1 row-cols-sm-2">
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top bg-inverse-low" inert>
-        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
+      <div class="card-top bg-secondary" inert>
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
           <p class="chip chip-filter mb-none">
             <input type="checkbox" id="filterCheck" checked tabindex="-1" />
             <label class="chip-interactive" for="filterCheck">Filter</label>
           </p>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#filter-chip">Filter chip</a> is a filter option that can be selected or deselected by the user.</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#filter-chip">Filter chip</a> is a UI element that enables users to select or deselect options within a series, commonly used to capture filtering decisions.</div>
     </div>
   </li>
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top bg-inverse-low" inert>
-        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
+      <div class="card-top bg-secondary" inert>
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
           <p class="chip chip-suggestion mb-none">
             <button class="chip-interactive" tabindex="-1">Suggestion</button>
           </p>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#suggestion-chip">Suggestion chip</a> is a recommended or predictive option based on user input or context.</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#suggestion-chip">Suggestion chip</a> is a UI element that presents recommended or predictive options based on the user's input or context, often utilised to capture filtering decisions.</div>
     </div>
   </li>
 </ul>
@@ -87,7 +86,11 @@ Here is a table summarizing the pseudo elements that are used by the different v
 
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Filter chip
 
-Filter chips allow users to filter content by selecting or deselecting specific categories or attributes while keeping the element on the page. They are based on checkbox inputs, but we also have [button based](#using-buttons) or [radio button based](#using-radio-buttons) filter chips. Thus, there is a selected state on this variant of the component.
+Filter chip is a UI element that enables users to select or deselect options within a series, commonly used to capture filtering decisions.
+
+Filter chip allows users to refine content by selecting or deselecting options. It can be toggled 'On' or 'Off' to adjust the displayed results, and selected filter chips remain visually distinct to show which filters are active.
+
+They are based on checkbox inputs, but we also have [button based](#using-buttons) or [radio button based](#using-radio-buttons) filter chips.
 
 To create a filter chip, add `.chip-filter` to the `.chip`.
 
@@ -308,7 +311,9 @@ document.querySelectorAll('.chip-suggestion').forEach(chipElement => {
 
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Suggestion chip
 
-Suggestion chips show relevant options based on user input or context. They help users quickly choose from dynamic or recommended items. Since this implies a dynamic behavior, these should be implemented using buttons.
+Suggestion chip is a UI element that presents recommended or predictive options based on the user's input or context, often utilised to capture filtering decisions.
+
+Suggestion chip is usually unselected by default and can be tapped or clicked to apply the suggestion, making input easier and improving usability.
 
 To create a suggestion chip, add `.chip-suggestion` to the `.chip`.
 
