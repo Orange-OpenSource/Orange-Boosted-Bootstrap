@@ -295,7 +295,7 @@ You can align horizontally up to three checkboxes if their labels are short, add
 
 By default checkboxes will span the whole width of their parent container, to limit the width of the checkbox on wider parent container, add a `.component-max-width` to the `.checkbox-item` container. More information on checkbox sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox-responsiveness).
 
-<Example code={`<fieldset class="control-items-list">
+<Example buttonLabel="checkboxes max width" code={`<fieldset class="control-items-list">
     <div class="checkbox-item component-max-width">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxMWDescription" id="checkboxWithMaxWidth" value="" />
@@ -337,7 +337,7 @@ Indeterminate state can be used in conjunction with all the other states below.
 
 Here is the associated JavaScript to set a checkbox as indeterminate.
 
-<Code buttonLabel="JavaScript to set a checkbox as indeterminate" lang="js" showPreview="false" code={`const checkbox = document.getElementById('checkboxIndeterminate')
+<Code buttonLabel="JavaScript to set a checkbox as indeterminate" lang="js" code={`const checkbox = document.getElementById('checkboxIndeterminate')
 
   checkbox.indeterminate = true`} />
 

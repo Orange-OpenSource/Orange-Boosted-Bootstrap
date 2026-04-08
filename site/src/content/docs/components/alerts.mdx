@@ -192,7 +192,7 @@ The variants `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-war
   </div>`} />
 
 <BootstrapCompatibility>
-<Example class="d-flex flex-column gap-medium" code={`<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+<Example buttonLabel="Bootstrap compatibility: functional alert message" class="d-flex flex-column gap-medium" code={`<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check-circle-fill" viewBox="0 0 16 16">
       <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
     </symbol>
@@ -256,7 +256,7 @@ The variants alert neutral (default) and `.alert-accent` are considered as non-f
   </div>`} />
 
 <BootstrapCompatibility>
-<Example class="d-flex flex-column gap-medium" code={`<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+<Example buttonLabel="Bootstrap compatibility: non-functional alert message" class="d-flex flex-column gap-medium" code={`<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="info-fill" viewBox="0 0 16 16">
       <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
     </symbol>
@@ -650,10 +650,8 @@ We use the following JavaScript to trigger our live alert demo:
 
 Initialize elements as alerts.
 
-```js
-const alertList = document.querySelectorAll('.alert')
-const alerts = [...alertList].map(element => new oudsWeb.Alert(element))
-```
+<Code buttonLabel="alerts initialization" lang="js" code={`const alertList = document.querySelectorAll('.alert')
+  const alerts = [...alertList].map(element => new oudsWeb.Alert(element))`} />
 
 <Callout type="info">
   For the sole purpose of dismissing an alert, it isn’t necessary to initialize the component manually via the JS API, unless you want to use one of our [methods](#methods). By making use of `data-bs-dismiss="alert"`, the component will be initialized automatically and properly dismissed.
@@ -671,9 +669,7 @@ const alerts = [...alertList].map(element => new oudsWeb.Alert(element))
 
 You can create an alert instance with the alert constructor, for example:
 
-```js
-const bsAlert = new oudsWeb.Alert('#myAlert')
-```
+<Code buttonLabel="alert instance creation" lang="js" code={`const bsAlert = new oudsWeb.Alert('#myAlert')`} />
 
 This makes an alert listen for click events on descendant elements which have the `data-bs-dismiss="alert"` attribute. (Not necessary when using the data-api’s auto-initialization.)
 
@@ -688,10 +684,8 @@ This makes an alert listen for click events on descendant elements which have th
 
 Basic usage:
 
-```js
-const alert = oudsWeb.Alert.getOrCreateInstance('#myAlert')
-alert.close()
-```
+<Code buttonLabel="alert basic usage" lang="js" code={`const alert = oudsWeb.Alert.getOrCreateInstance('#myAlert')
+  alert.close()`} />
 
 #### Events
 
@@ -704,14 +698,12 @@ OUDS Web’s alert plugin exposes a few events for hooking into alert functional
 | `closed.bs.alert` | Fired when the alert has been closed and CSS transitions have completed. |
 </BsTable>
 
-```js
-const myAlert = document.getElementById('myAlert')
+<Code buttonLabel="events listening" lang="js" code={`const myAlert = document.getElementById('myAlert')
 myAlert.addEventListener('closed.bs.alert', event => {
   // do something, for instance, explicitly move focus to the most appropriate element,
   // so it doesn’t get lost/reset to the start of the page
   // document.getElementById('...').focus()
-})
-```
+})`} />
 
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Inline alert
 

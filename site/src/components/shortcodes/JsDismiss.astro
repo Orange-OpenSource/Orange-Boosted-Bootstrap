@@ -7,6 +7,8 @@ interface Props {
 }
 
 const { name } = Astro.props
+const withinButtonLabel = `dismissal button within the ${name}`
+const outsideButtonLabel = `dismissal button outside the ${name}`
 ---
 
 <p>
@@ -15,7 +17,7 @@ const { name } = Astro.props
   > as demonstrated below:
 </p>
 
-<Code
+<Code buttonLabel={withinButtonLabel}
   code={`<button class="btn btn-icon btn-minimal" data-bs-dismiss="${name}">\n  <svg aria-hidden="true"><use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/></svg>\n  <span class="visually-hidden">Close</span>\n</button>`}
   lang="html"
 />
@@ -24,7 +26,7 @@ const { name } = Astro.props
   or on a button <strong>outside the {name}</strong> using the additional <code>data-bs-target</code> as demonstrated below:
 </p>
 
-<Code
+<Code buttonLabel={outsideButtonLabel}
   code={`<button class="btn btn-icon btn-minimal" data-bs-dismiss="${name}" data-bs-target="#my-${name}">\n  <svg aria-hidden="true"><use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/></svg>\n  <span class="visually-hidden">Close</span>\n</button>`}
   lang="html"
 />

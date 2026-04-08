@@ -287,7 +287,7 @@ Add `data-bs-toggle="button"` to toggle a button’s `active` state. If you’re
 
 You can create a button instance with the button constructor, for example:
 
-<Code buttonLabel="JavaScript to create a button instance" lang="js" showPreview="false" code={`const bsButton = new oudsWeb.Button('#myButton')`} />
+<Code buttonLabel="JavaScript to create a button instance" lang="js" code={`const bsButton = new oudsWeb.Button('#myButton')`} />
 
 <BsTable>
 | Method | Description |
@@ -300,7 +300,7 @@ You can create a button instance with the button constructor, for example:
 
 For example, to toggle all chips:
 
-<Code buttonLabel="JavaScript to toggle all chips" lang="js" showPreview="false" code={`document.querySelectorAll('.chip-suggestion').forEach(chipElement => {
+<Code buttonLabel="JavaScript to toggle all chips" lang="js" code={`document.querySelectorAll('.chip-suggestion').forEach(chipElement => {
     const chip = oudsWeb.Button.getOrCreateInstance(chipElement)
     chip.toggle()
   })`} />
