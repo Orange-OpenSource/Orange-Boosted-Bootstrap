@@ -7,15 +7,14 @@ interface Props {
   /**
    * The component name that should be displayed.
    */
-  componentName?: string
-
+    componentName: string
 }
 
 import { getVersionedDocsPath } from '@libs/path'
 
 const { componentName } = Astro.props
 
-const name = (componentName ? componentName.toLowerCase() : "")
+const name = componentName.toLowerCase()
 
 const link = (componentName ? `https://r.orange.fr/r/S-ouds-doc-${componentName.replace(" ", "-")}` : "")
 
