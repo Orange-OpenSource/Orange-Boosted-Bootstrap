@@ -321,7 +321,7 @@ If there is only one field in the form, or if the mandatory nature of the fields
         <input type="password" id="passwd" class="text-input-field" autocomplete="new-password" placeholder=" " required>
         <button class="btn btn-minimal btn-icon">
           <svg aria-hidden="true">
-            <use xlink:href="/orange/docs/1.0/assets/img/ouds-web-sprite.svg#accessibility-vision"/>
+            <use xlink:href="${getVersionedDocsPath("/assets/img/ouds-web-sprite.svg#accessibility-vision")}"/>
           </svg>
           <span class="visually-hidden">Show password</span>
         </button>
@@ -331,7 +331,7 @@ If there is only one field in the form, or if the mandatory nature of the fields
 
 ### Forms with only mandatory fields
 
-In a form having several fields and where all fields are mandatory, it is sufficient to indicate this in the form instructions, by stating "**All fields are mandatory.**" at the top. This way, assistive technologies can communicate this information to users without the need for additional mention on each form control.
+In a form having several fields and where all fields are mandatory, it is sufficient to indicate this in the form instructions, by stating "**All fields are mandatory.**" at the top. This way, standard users have the information without the need for additional mention on each form control. The mandatory nature of the fields will also be indicated to assistive technlogies by the `required` attribute on each field.
 
 <Example buttonLabel="form with all fields mandatory" code={`<form class="needs-validation" novalidate>
     <p class="fw-bold" aria-hidden="true">
