@@ -10,6 +10,10 @@
     - title: Checkbox
     - title: Chips
     - title: Divider
+    - title: Footer
+      draft: true
+    - title: Header
+      draft: true
     - title: Icon
     - title: Links
     - title: Password input
@@ -39,8 +43,6 @@
       coming_soon: true
     - title: Dropdown
       coming_soon: true
-    - title: Footer
-      coming_soon: true
     - title: List group
       coming_soon: true
     - title: Local navigation
@@ -52,8 +54,6 @@
     - title: Nav & tab
       coming_soon: true
     - title: Offcanvas
-      coming_soon: true
-    - title: Orange navbar
       coming_soon: true
     - title: Pagination
       coming_soon: true
