@@ -1,6 +1,6 @@
 // Utility generator
 // Used to generate utilities & print utilities
-@mixin generate-utility($utility, $infix: "", $is-rfs-media-query: false) {
+@mixin generate-utility($utility, $prefix: "", $is-rfs-media-query: false) {
   $values: map-get($utility, values);
   $bootstrap-compatibility: map-get($utility, bootstrap-compatibility); // OUDS mod
 
@@ -28,10 +28,10 @@
       // State params to generate pseudo-classes
       $state: if(map-has-key($utility, state), map-get($utility, state), ());
 
-      $infix: if($property-class == "" and str-slice($infix, 1, 1) == "-", str-slice($infix, 2), $infix);
+      // $infix: if($property-class == "" and str-slice($infix, 1, 1) == "-", str-slice($infix, 2), $infix);
 
       // Don't prefix if value key is null (e.g. with shadow class)
-      $property-class-modifier: if($key, if($property-class == "" and $infix == "", "", "-") + $key, "");
+      $property-class-modifier: if($key, if($property-class == "", "", "-") + $key, "");
 
       @if map-get($utility, rfs) {
         // Inside the media query
@@ -57,23 +57,23 @@
 
         // OUDS mod
         @if type-of($value) == "string" and str-slice($value, 1, 1) == "/" {
-          .#{$property-class + $infix + $property-class-modifier} {
+          .#{$prefix + $property-class + $property-class-modifier} {
             @include get-font-size(#{str-slice($value, 2)});
           }
           // End mod
         } @else {
           @if $is-css-var {
-            .#{$property-class + $infix + $property-class-modifier} {
+            .#{$prefix + $property-class + $property-class-modifier} {
               --#{$prefix}#{$css-variable-name}: #{$value};
             }
 
             @each $pseudo in $state {
-              .#{$property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+              .#{$prefix + $property-class + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
                 --#{$prefix}#{$css-variable-name}: #{$value};
               }
             }
           } @else {
-            .#{$property-class + $infix + $property-class-modifier} {
+            .#{$prefix + $property-class + $property-class-modifier} {
               @each $property in $properties {
                 @if $is-local-vars {
                   @each $local-var, $variable in $is-local-vars {
@@ -85,7 +85,7 @@
             }
 
             @each $pseudo in $state {
-              .#{$property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+              .#{$prefix + $property-class + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
                 @each $property in $properties {
                   @if $is-local-vars {
                     @each $local-var, $variable in $is-local-vars {

@@ -21,13 +21,13 @@
     @each $breakpoint, $container-max-width in $container-max-widths {
       // OUDS mod: link 2xl breakpoint to xxl
       @if $breakpoint == 2xl {
-        .container-xxl {
+        .xxl\:container {
           @extend .container-fluid;
         }
       }
       // End mod
 
-      .container-#{$breakpoint} {
+      .#{breakpoint-prefix($breakpoint, $grid-breakpoints)}container {
         @extend .container-fluid;
       }
 
@@ -41,7 +41,7 @@
 
         @each $name, $width in $grid-breakpoints {
           @if ($extend-breakpoint) {
-            .container#{breakpoint-infix($name, $grid-breakpoints)} {
+            .#{breakpoint-prefix($name, $grid-breakpoints)}container {
               @extend %responsive-container-#{$breakpoint};
             }
 

@@ -1,3 +1,6 @@
+@use "sass:list";
+@use "sass:string";
+
 // Breakpoint viewport sizes and media queries.
 //
 // Breakpoints are defined as a map of (name: minimum width), order from small to large:
@@ -45,15 +48,36 @@
   @return if($max and $max > 0, $max - .02, null);
 }
 
-// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
-// Useful for making responsive utilities.
+// Escape a name for use at the start of a CSS identifier.
+// Leading digits are hex-escaped (e.g., 2xl becomes \32 xl).
+@function css-escape-ident($name) {
+  $name-str: "#{$name}";
+  $digits: "0", "1", "2", "3", "4", "5", "6", "7", "8", "9";
+  $first: string.slice($name-str, 1, 1);
+
+  @if list.index($digits, $first) {
+    @return "\\3#{$first} #{string.slice($name-str, 2)}";
+  }
+
+  @return $name-str;
+}
+
+// Returns a blank string if smallest breakpoint, otherwise returns the name
+// with an escaped colon as a Tailwind-style prefix for responsive class names.
+// Leading digits are CSS-escaped (e.g., 2xl becomes \32 xl) for valid identifiers.
 //
-//    >> breakpoint-infix(2xs, (2xs: 0, xs: 390px, sm: 480px, md: 736px, lg: 1024px, xl: 1320px, 2xl: 1640px, 3xl: 1880px))
+//    >> breakpoint-prefix(xs, (xs: 0, sm: 576px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1536px))
 //    ""  (Returns a blank string)
-//    >> breakpoint-infix(sm, (2xs: 0, xs: 390px, sm: 480px, md: 736px, lg: 1024px, xl: 1320px, 2xl: 1640px, 3xl: 1880px))
-//    "-sm"
-@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+//    >> breakpoint-prefix(sm, (xs: 0, sm: 576px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1536px))
+//    "sm\:"
+//    >> breakpoint-prefix(2xl, (xs: 0, sm: 576px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1536px))
+//    "\32 xl\:"
+@function breakpoint-prefix($name, $breakpoints: $breakpoints) {
+  @if breakpoint-min($name, $breakpoints) == null {
+    @return "";
+  }
+
+  @return "#{css-escape-ident($name)}\\:";
 }
 
 // Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
@@ -127,14 +151,14 @@
 }
 
 // OUDS mod
-// Get the breakpoint infix corresponding to a given width
+// Get the breakpoint name if any corresponding to a given width
 @function get-breakpoint-from-width($width: $ouds-grid-2xl-max-width-alt, $breakpoints: $grid-breakpoints) {
-  $breakpoint-infix: "";
-  @each $infix, $value in $grid-breakpoints {
+  $breakpoint-if-any: "";
+  @each $breakpoint, $value in $grid-breakpoints {
     @if $width >= $value {
-      $breakpoint-infix: $infix;
+      $breakpoint-if-any: $breakpoint;
     }
   }
-  @return $breakpoint-infix;
+  @return $breakpoint-if-any;
 }
 // End mod

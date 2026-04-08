@@ -95,7 +95,7 @@
   }
 
   @each $breakpoint, $container-max-width in $container-max-widths {
-    > .container#{breakpoint-infix($breakpoint, $container-max-widths)} {
+    > .#{breakpoint-prefix($breakpoint, $container-max-widths)}container {
       @extend %container-flex-properties;
     }
   }
@@ -392,152 +392,145 @@
 // scss-docs-start navbar-expand-loop
 // Generate series of `.navbar-expand-*` responsive classes for configuring
 // where your navbar collapses.
-.navbar-expand {
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    $next: breakpoint-next($breakpoint, $grid-breakpoints);
-    $infix: breakpoint-infix($next, $grid-breakpoints);
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $next: breakpoint-next($breakpoint, $grid-breakpoints);
 
-    // stylelint-disable-next-line scss/selector-no-union-class-name
-    &#{$infix} {
-      @include media-breakpoint-up($next) {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
+  .#{breakpoint-prefix($breakpoint, $grid-breakpoints)}navbar-expand {
+    @include media-breakpoint-up($next) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
 
-        .navbar-nav {
-          flex-direction: row;
+      .navbar-nav {
+        flex-direction: row;
 
-          .dropdown-menu {
+        .dropdown-menu {
+          position: absolute;
+        }
+
+        // OUDS mod
+        .nav-link {
+          margin: 0;
+          line-height: 1;
+
+          &.active::before {
             position: absolute;
-          }
-
-          // OUDS mod
-          .nav-link {
-            margin: 0;
-            line-height: 1;
-
-            &.active::before {
-              position: absolute;
-              right: var(--#{$prefix}navbar-nav-link-padding-x);
-              bottom: calc(-1 * var(--#{$prefix}navbar-padding-y));
-              left: var(--#{$prefix}navbar-nav-link-padding-x);
-              height: 4px;
-              content: "";
-              background-color: currentcolor;
-              @include transition($navbar-active-transition);
-            }
-          }
-
-          .nav-item {
-            border: 0;
-
-            &:first-child > .nav-link {
-              margin-left: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x));
-            }
-
-            &:last-child > .nav-link {
-              margin-right: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x));
-            }
-
-            &:first-child > .nav-icon {
-              margin-left: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x));
-            }
-
-            &:last-child > .nav-icon {
-              margin-right: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x));
-            }
-          }
-          // End mod
-        }
-
-        // OUDS mod: Handle the responsiveness of the collapsing content in a global header
-        .navbar-collapse.show,
-        .navbar-collapse.collapsing {
-          &[class*="d-"] {
-            margin-bottom: 0;
-            border-top: 0;
-          }
-
-          &:first-of-type {
-            margin-top: 0;
+            right: var(--#{$prefix}navbar-nav-link-padding-x);
+            bottom: calc(-1 * var(--#{$prefix}navbar-padding-y));
+            left: var(--#{$prefix}navbar-nav-link-padding-x);
+            height: 4px;
+            content: "";
+            background-color: currentcolor;
+            @include transition($navbar-active-transition);
           }
         }
 
-        // Handle the responsiveness of the different bars of a global header
-        &.supra {
-          display: flex;
-        }
+        .nav-item {
+          border: 0;
 
-        &:not(.supra) + .navbar {
-          margin-top: 0;
+          &:first-child > .nav-link {
+            margin-left: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x));
+          }
 
-          .nav-link{
-            padding-bottom: calc(var(--#{$prefix}navbar-nav-link-padding-y) + .0625rem);
+          &:last-child > .nav-link {
+            margin-right: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x));
+          }
 
-            &.active::before{
-              bottom: 0;
-            }
+          &:first-child > .nav-icon {
+            margin-left: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x));
+          }
+
+          &:last-child > .nav-icon {
+            margin-right: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x));
           }
         }
         // End mod
+      }
 
-        .navbar-nav-scroll {
-          overflow: visible;
+      // OUDS mod: Handle the responsiveness of the collapsing content in a global header
+      .navbar-collapse.show,
+      .navbar-collapse.collapsing {
+        &[class*="d-"] {
+          margin-bottom: 0;
+          border-top: 0;
         }
 
-        .navbar-collapse {
-          display: flex !important; // stylelint-disable-line declaration-no-important
-          flex-basis: auto;
+        &:first-of-type {
+          margin-top: 0;
         }
+      }
 
-        .navbar-toggler {
+      // Handle the responsiveness of the different bars of a global header
+      &.supra {
+        display: flex;
+      }
+
+      &:not(.supra) + .navbar {
+        margin-top: 0;
+
+        .nav-link{
+          padding-bottom: calc(var(--#{$prefix}navbar-nav-link-padding-y) + .0625rem);
+
+          &.active::before{
+            bottom: 0;
+          }
+        }
+      }
+      // End mod
+
+      .navbar-nav-scroll {
+        overflow: visible;
+      }
+
+      .navbar-collapse {
+        display: flex !important; // stylelint-disable-line declaration-no-important
+        flex-basis: auto;
+      }
+
+      .navbar-toggler {
+        display: none;
+      }
+
+      .offcanvas {
+        // stylelint-disable declaration-no-important
+        position: static;
+        z-index: auto;
+        flex-grow: 1;
+        width: auto !important;
+        height: auto !important;
+        visibility: visible !important;
+        background-color: transparent !important;
+        border: 0 !important;
+        transform: none !important;
+        @include box-shadow(none);
+        @include transition(none);
+        // stylelint-enable declaration-no-important
+
+        .offcanvas-header {
           display: none;
         }
 
-        .offcanvas {
-          // stylelint-disable declaration-no-important
-          position: static;
-          z-index: auto;
-          flex-grow: 1;
-          width: auto !important;
-          height: auto !important;
-          visibility: visible !important;
-          background-color: transparent !important;
-          border: 0 !important;
-          transform: none !important;
-          @include box-shadow(none);
-          @include transition(none);
-          // stylelint-enable declaration-no-important
-
-          .offcanvas-header {
-            display: none;
-          }
-
-          .offcanvas-body {
-            display: flex;
-            flex-grow: 0;
-            padding: 0;
-            overflow-y: visible;
-          }
+        .offcanvas-body {
+          display: flex;
+          flex-grow: 0;
+          padding: 0;
+          overflow-y: visible;
         }
       }
     }
   }
 }
 
-.header-minimized {
-  .navbar-expand,
-  .supra + .navbar-expand {
-    @each $breakpoint in map-keys($grid-breakpoints) {
-      $next: breakpoint-next($breakpoint, $grid-breakpoints);
-      $infix: breakpoint-infix($next, $grid-breakpoints);
 
-      // stylelint-disable-next-line scss/selector-no-union-class-name
-      &#{$infix} {
-        @include media-breakpoint-up($next) {
-          &:first-child:not(.supra),
-          &.navbar:not(.supra) {
-            --#{$prefix}navbar-nav-link-padding-y: 14px;
-          }
+.header-minimized {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+
+    .#{breakpoint-prefix($next, $grid-breakpoints)}navbar-expand,
+    .supra + .#{breakpoint-prefix($next, $grid-breakpoints)}navbar-expand {
+      @include media-breakpoint-up($next) {
+        &:first-child:not(.supra),
+        &.navbar:not(.supra) {
+          --#{$prefix}navbar-nav-link-padding-y: 14px;
         }
       }
     }

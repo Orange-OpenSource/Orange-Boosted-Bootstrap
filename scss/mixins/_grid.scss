@@ -67,41 +67,41 @@
 
 @mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
   @each $breakpoint in map-keys($breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
+    $breakpoint-prefix: breakpoint-prefix($breakpoint, $breakpoints);
 
     @include media-breakpoint-up($breakpoint, $breakpoints) {
       // Provide basic `.col-{bp}` classes for equal-width flexbox columns
-      .col#{$infix} {
+      .#{$breakpoint-prefix}col {
         flex: 1 0 0;
       }
 
-      .row-cols#{$infix}-auto > * {
+      .#{$breakpoint-prefix}row-cols-auto > * {
         @include make-col-auto();
       }
 
       @if $grid-row-columns > 0 {
         @for $i from 1 through $grid-row-columns {
-          .row-cols#{$infix}-#{$i} {
+          .#{$breakpoint-prefix}row-cols-#{$i} {
             @include row-cols($i);
           }
         }
       }
 
-      .col#{$infix}-auto {
+      .#{$breakpoint-prefix}col-auto {
         @include make-col-auto();
       }
 
       @if $columns > 0 {
         @for $i from 1 through $columns {
-          .col#{$infix}-#{$i} {
+          .#{$breakpoint-prefix}col-#{$i} {
             @include make-col($i, $columns);
           }
         }
 
         // `$columns - 1` because offsetting by the width of an entire row isn't possible
         @for $i from 0 through ($columns - 1) {
-          @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-0
-            .offset#{$infix}-#{$i} {
+          @if not ($breakpoint-prefix == "" and $i == 0) { // Avoid emitting useless .offset-0
+            .#{$breakpoint-prefix}offset-#{$i} {
               @include make-col-offset($i, $columns);
             }
           }
@@ -112,13 +112,13 @@
       //
       // Make use of `.g-*`, `.gx-*` or `.gy-*` utilities to change spacing between the columns.
       @each $key, $value in $gutters {
-        .g#{$infix}-#{$key},
-        .gx#{$infix}-#{$key} {
+        .#{$breakpoint-prefix}g-#{$key},
+        .#{$breakpoint-prefix}gx-#{$key} {
           --#{$prefix}gutter-x: #{$value if($enable-important-utilities, !important, null)}; // OUDS mod: `$enable-important-utilities` check is added
         }
 
-        .g#{$infix}-#{$key},
-        .gy#{$infix}-#{$key} {
+        .#{$breakpoint-prefix}g-#{$key},
+        .#{$breakpoint-prefix}gy-#{$key} {
           --#{$prefix}gutter-y: #{$value if($enable-important-utilities, !important, null)}; // OUDS mod: `$enable-important-utilities` check is added
         }
       }
@@ -128,12 +128,12 @@
 
 @mixin make-cssgrid($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
   @each $breakpoint in map-keys($breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
+    $breakpoint-prefix: breakpoint-prefix($breakpoint, $breakpoints);
 
     @include media-breakpoint-up($breakpoint, $breakpoints) {
       @if $columns > 0 {
         @for $i from 1 through $columns {
-          .g-col#{$infix}-#{$i} {
+          .#{$breakpoint-prefix}g-col-#{$i} {
             grid-column: auto / span $i;
           }
         }
@@ -141,7 +141,7 @@
         // Start with `1` because `0` is an invalid value.
         // Ends with `$columns - 1` because offsetting by the width of an entire row isn't possible.
         @for $i from 1 through ($columns - 1) {
-          .g-start#{$infix}-#{$i} {
+          .#{$breakpoint-prefix}g-start-#{$i} {
             grid-column-start: $i;
           }
         }
