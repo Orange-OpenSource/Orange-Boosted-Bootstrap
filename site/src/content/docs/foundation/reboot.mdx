@@ -439,8 +439,4 @@ HTML5 adds [a new global attribute named `[hidden]`](https://developer.mozilla.o
 
 <Code lang="html" buttonLabel="hidden attribute" code={`<input type="text" hidden />`} />
 
-<Callout type="info">
-  Since `[hidden]` is not compatible with jQuery’s `$(...).hide()` and `$(...).show()` methods, we don’t specifically endorse `[hidden]` over other techniques for managing the `display` of elements.
-</Callout>
-
 To merely toggle the visibility of an element, meaning its `display` is not modified and the element can still affect the flow of the document, use [the `.invisible` class]([[docsref:/utilities/visibility]]) instead.
