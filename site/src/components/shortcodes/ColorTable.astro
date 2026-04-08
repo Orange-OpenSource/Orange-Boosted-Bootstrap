@@ -15,7 +15,7 @@ interface Props {
   tokenRegexp: RegExp
   colorPrefix: string
   getUsage?: (colorName: string, colorPrefix?: string) => string
-  getStyle?: (colorName: string) => astroHTML.JSX.CSSProperties
+  getStyle?: (token: IColorToken, mode: string) => astroHTML.JSX.CSSProperties
 }
 
 const getCustomProp = (colorName: string, colorPrefix: string) =>
