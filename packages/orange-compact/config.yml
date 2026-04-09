@@ -52,9 +52,9 @@ cdn:
   js_hash:                        "sha384-kXVJkJzQlSTSOoSQBbGwxS7eK1UbAZ9Nld7ycZ1+ElvXg1UvQzuAGcHvtrmSh1v2"
   js_bundle:                      "https://cdn.jsdelivr.net/npm/@ouds/web-common@1.1.0/dist/js/ouds-web.bundle.min.js"
   js_bundle_hash:                 "sha384-qPTEwuRMLbfwT0l3TtdD1vvupC5JbZopSu6JJJZu8IycZivMR0d57kv0IoLlKeW9"
-  popper:                         "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-  popper_hash:                    "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-  popper_esm:                     "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js"
+  floating_ui:                    "https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.7.6/dist/floating-ui.dom.umd.min.js"
+  floating_ui_hash:               "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  floating_ui_esm:                "https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.7.6/dist/floating-ui.dom.esm.min.js"
 
 anchors:
   min:                  2

@@ -42,7 +42,7 @@
     },
     {
       "path": "./dist/js/ouds-web.bundle.js",
-      "maxSize": "44.25 kB"
+      "maxSize": "46 kB"
     },
     {
       "path": "./dist/js/ouds-web.bundle.min.js",
@@ -50,19 +50,19 @@
     },
     {
       "path": "./dist/js/ouds-web.esm.js",
-      "maxSize": "29.25 kB"
+      "maxSize": "32.25 kB"
     },
     {
       "path": "./dist/js/ouds-web.esm.min.js",
-      "maxSize": "19 kB"
+      "maxSize": "20 kB"
     },
     {
       "path": "./dist/js/ouds-web.js",
-      "maxSize": "30 kB"
+      "maxSize": "32.75 kB"
     },
     {
       "path": "./dist/js/ouds-web.min.js",
-      "maxSize": "17 kB"
+      "maxSize": "17.75 kB"
     }
   ],
   "ci": {
