@@ -1,6 +1,6 @@
 // Utility generator
 // Used to generate utilities & print utilities
-@mixin generate-utility($utility, $infix: "", $is-rfs-media-query: false) {
+@mixin generate-utility($utility, $infix: "") {
   $values: map-get($utility, values);
   $bootstrap-compatibility: map-get($utility, bootstrap-compatibility); // OUDS mod
 
@@ -32,19 +32,6 @@
 
       // Don't prefix if value key is null (e.g. with shadow class)
       $property-class-modifier: if($key, if($property-class == "" and $infix == "", "", "-") + $key, "");
-
-      @if map-get($utility, rfs) {
-        // Inside the media query
-        @if $is-rfs-media-query {
-          $val: rfs-value($value);
-
-          // Do not render anything if fluid and non fluid values are the same
-          $value: if($val == rfs-fluid-value($value), null, $val);
-        }
-        @else {
-          $value: rfs-fluid-value($value);
-        }
-      }
 
       $is-css-var: map-get($utility, css-var);
       $is-local-vars: map-get($utility, local-vars);

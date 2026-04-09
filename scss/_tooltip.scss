@@ -6,7 +6,7 @@
   --#{$prefix}tooltip-padding-x: #{$tooltip-padding-x};
   --#{$prefix}tooltip-padding-y: #{$tooltip-padding-y};
   --#{$prefix}tooltip-margin: #{$tooltip-margin};
-  @include rfs($tooltip-font-size, --#{$prefix}tooltip-font-size);
+  --#{$prefix}tooltip-font-size: #{$tooltip-font-size};
   --#{$prefix}tooltip-font-weight: #{$tooltip-font-weight}; // OUDS mod: extra CSS variable
   --#{$prefix}tooltip-line-height: #{$tooltip-line-height}; // OUDS mod
   --#{$prefix}tooltip-color: #{$tooltip-color};
@@ -27,7 +27,7 @@
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
   // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text();
-  @include font-size(var(--#{$prefix}tooltip-font-size));
+  font-size: var(--#{$prefix}tooltip-font-size);
   font-weight: var(--#{$prefix}tooltip-font-weight); // OUDS mod
   line-height: var(--#{$prefix}tooltip-line-height); // OUDS mod
   // Allow breaking very long words so they don't overflow the tooltip's bounds

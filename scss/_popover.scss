@@ -2,7 +2,7 @@
   // scss-docs-start popover-css-vars
   --#{$prefix}popover-zindex: #{$zindex-popover};
   --#{$prefix}popover-max-width: #{$popover-max-width};
-  @include rfs($popover-font-size, --#{$prefix}popover-font-size);
+  --#{$prefix}popover-font-size: #{$popover-font-size};
   --#{$prefix}popover-line-height: #{$popover-line-height}; // OUDS mod
   --#{$prefix}popover-font-weight: #{$popover-font-weight}; // OUDS mod
   --#{$prefix}popover-bg: #{$popover-bg};
@@ -15,7 +15,7 @@
   --#{$prefix}popover-header-padding-y: #{$popover-header-padding-y};
   --#{$prefix}popover-header-padding-top: #{$popover-header-padding-top}; // OUDS mod
   --#{$prefix}popover-header-padding-bottom: #{$popover-header-padding-bottom}; // OUDS mod
-  @include rfs($popover-header-font-size, --#{$prefix}popover-header-font-size);
+  --#{$prefix}popover-header-font-size: #{$popover-header-font-size};
   --#{$prefix}popover-header-line-height: #{$popover-header-line-height}; // OUDS mod
   --#{$prefix}popover-header-color: #{$popover-header-color};
   --#{$prefix}popover-header-bg: #{$popover-header-bg};
@@ -35,7 +35,7 @@
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
   // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text();
-  @include font-size(var(--#{$prefix}popover-font-size));
+  font-size: var(--#{$prefix}popover-font-size);
   line-height: var(--#{$prefix}popover-line-height); // OUDS mod
   // Allow breaking very long words so they don't overflow the popover's bounds
   word-wrap: break-word;
@@ -189,7 +189,7 @@
   margin-bottom: 0; // Reset the default from Reboot
   font-weight: var(--#{$prefix}popover-font-weight); // OUDS mod
   line-height: var(--#{$prefix}popover-header-line-height); // OUDS mod
-  @include font-size(var(--#{$prefix}popover-header-font-size));
+  font-size: var(--#{$prefix}popover-header-font-size);
   color: var(--#{$prefix}popover-header-color);
 
   /* rtl:remove */
