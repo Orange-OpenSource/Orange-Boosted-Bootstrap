@@ -130,7 +130,7 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
 
       <div class="bd-toc mt-large mb-4xlarge my-lg-none mb-lg-4xlarge px-sm-2xsmall text-muted">
         {
-          frontmatter.toc && headings && (
+          frontmatter.toc && headings && headings.length > 0 && (
             <h2 class="mb-none" id="docs-toc">
               <button
                 class="btn btn-default p-md-none mb-small mb-md-none text-decoration-none bd-toc-toggle d-md-none"
@@ -140,10 +140,10 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
                 aria-expanded="false"
                 aria-controls="tocContents"
               >
-                On this page
-                <svg class="bi d-md-none ms-small" aria-hidden="true">
+                <svg class="d-md-none" aria-hidden="true">
                   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#chevron-expand')} />
                 </svg>
+                On this page
               </button>
               <span class="d-none d-md-block h6 my-small ms-large">On this page</span>
             </h2>

@@ -1279,18 +1279,18 @@ $navbar-padding-y:                    .375rem !default; // OUDS mod
 $navbar-padding-x:                    null !default;
 $navbar-font-weight:                  $font-weight-bold !default; // OUDS mod
 
-$navbar-nav-link-padding-y:           1rem !default; // OUDS mod
-$navbar-nav-link-padding-x-xs:        $spacer * .25 !default; // OUDS mod
-$navbar-nav-link-padding-x:           $spacer * .5 !default; // OUDS mod
+$navbar-nav-link-padding-y:           16px !default; // OUDS mod
+$navbar-nav-link-padding-x-xs:        5px !default; // OUDS mod
+$navbar-nav-link-padding-x:           10px !default; // OUDS mod
 
 $navbar-brand-font-size:              2.1875rem !default; // OUDS mod
 // OUDS mod: no nav-link-height calculation
 $navbar-brand-padding-y:              0 !default; // OUDS mod
-$navbar-brand-margin-end:             $spacer * 1.5 !default; // OUDS mod
+$navbar-brand-margin-end:             30px !default; // OUDS mod
 
 $navbar-toggler-icon-close-bg:        $cross-icon !default; // OUDS mod
-$navbar-toggler-padding-y:            $spacer * .6 !default; // OUDS mod: same as $navbar-nav-icon-padding-y-xs
-$navbar-toggler-padding-x:            $spacer * .75 !default; // OUDS mod: same as $navbar-nav-icon-padding-x-xs
+$navbar-toggler-padding-y:            12px !default; // OUDS mod: same as $navbar-nav-icon-padding-y-xs
+$navbar-toggler-padding-x:            15px !default; // OUDS mod: same as $navbar-nav-icon-padding-x-xs
 $navbar-toggler-font-size-xs:         1.04166666rem !default; // OUDS mod
 $navbar-toggler-font-size:            1.25rem !default; // OUDS mod
 $navbar-toggler-border-radius:        $btn-border-radius !default;
@@ -1299,11 +1299,11 @@ $navbar-toggler-transition:           $transition-focus !default; // OUDS mod
 
 $navbar-light-color:                  var(--#{$prefix}emphasis-color) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .65)`
 $navbar-light-bg:                     var(--#{$prefix}highlight-color) !default; // OUDS mod
-$navbar-light-hover-color:            var(--#{$prefix}link-hover-color) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .8)`
-$navbar-light-active-color:           var(--#{$prefix}primary) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), 1)`
+$navbar-light-hover-color:            var(--#{$prefix}link-active-color) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .8)`
+$navbar-light-active-color:           var(--#{$prefix}color-action-selected) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), 1)`
 $navbar-light-disabled-color:         var(--#{$prefix}color-content-disabled) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .3)`
 $navbar-light-icon-color:             var(--#{$prefix}emphasis-color) !default; // OUDS mod: instead of `rgba($body-color, .75)`
-$navbar-light-icon-hover-color:       var(--#{$prefix}link-hover-color) !default; // OUDS mod
+$navbar-light-icon-hover-color:       var(--#{$prefix}link-active-color) !default; // OUDS mod
 $navbar-light-toggler-icon-bg:        $burger-icon !default; // OUDS mod: instead of inline SVG
 $navbar-light-toggler-icon-bg-small:  $burger-icon-small !default; // OUDS mod: slightly different burger icon for small breakpoints
 $navbar-light-toggler-border-color:   null !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .15)`
@@ -1320,37 +1320,37 @@ $navbar-brand-transition:                   margin $navbar-transition-duration $
 $navbar-brand-logo-transition:              width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
 $navbar-active-transition:                  bottom $navbar-transition-duration $navbar-transition-timing-function !default;
 
-$navbar-border-width:                       calc(var(--#{$prefix}border-width) * .5) !default;
+$navbar-border-width:                       var(--#{$prefix}border-width) !default;
 $navbar-border-color:                       var(--#{$prefix}color-border-default) !default;
 
-$navbar-brand-margin-y-xs:                  $spacer * .5 !default;
-$navbar-brand-logo-size-xs:                 $spacer * 1.5 !default;
+$navbar-brand-margin-y-xs:                  10px !default;
+$navbar-brand-logo-size-xs:                 1.875rem !default;
 $navbar-brand-font-size-xs:                 1.3125rem !default;
 $navbar-brand-letter-spacing-xs:            calc(#{$letter-spacing-base} * 5) !default;
 $navbar-brand-font-size-two-lined-xs:       1.0625rem !default;
 $navbar-brand-letter-spacing-two-lined-xs:  calc(#{$letter-spacing-base} * 4) !default;
 
-$navbar-brand-margin-y:                     $spacer * .95 !default;
-$navbar-brand-logo-size:                    $spacer * 2.5 !default;
+$navbar-brand-margin-y:                     18px !default;
+$navbar-brand-logo-size:                    3rem !default;
 $navbar-brand-letter-spacing:               calc(#{$letter-spacing-base} * 10) !default;
 $navbar-brand-font-size-two-lined:          1.8125rem !default;
 $navbar-brand-letter-spacing-two-lined:     calc(#{$letter-spacing-base} * 8) !default;
 
-$navbar-icon-size-xs:                       $spacer * 1.25 !default;
-$navbar-icon-size:                          $spacer * 1.5 !default;
+$navbar-icon-size-xs:                       1.5rem !default;
+$navbar-icon-size:                          1.5rem !default;
 
-$navbar-nav-icon-padding-y-xs:              $spacer * .6 !default;
-$navbar-nav-icon-padding-x-xs:              $spacer * .75 !default;
+$navbar-nav-icon-padding-y-xs:              12px !default;
+$navbar-nav-icon-padding-x-xs:              15px !default;
 $navbar-nav-icon-padding-y:                 $navbar-brand-margin-y !default;
-$navbar-nav-icon-padding-x:                 $spacer !default;
+$navbar-nav-icon-padding-x:                 20px !default;
 
-$navbar-supra-link-padding-y:               $spacer * .6 !default;
+$navbar-supra-link-padding-y:               12px !default;
 $navbar-supra-link-padding-x:               .46875rem !default;
-$navbar-supra-icon-padding-y:               $spacer * .25 !default;
+$navbar-supra-icon-padding-y:               5px !default;
 $navbar-supra-icon-padding-x:               $navbar-nav-icon-padding-x-xs !default;
 $navbar-supra-icon-size:                    $navbar-icon-size-xs !default;
 
-$navbar-minimized-brand-margin-y:           $spacer * .75 !default;
+$navbar-minimized-brand-margin-y:           15px !default;
 $navbar-minimized-nav-icon-padding-y:       $navbar-minimized-brand-margin-y !default;
 $navbar-minimized-toggler-padding-y:        $navbar-minimized-brand-margin-y !default;
 

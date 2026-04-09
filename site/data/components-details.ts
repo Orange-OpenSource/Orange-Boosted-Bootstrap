@@ -1,9 +1,11 @@
 import type { ComponentCardData } from '@components/shortcodes/ComponentCard.astro'
+import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
 
 export const componentsDetails: ComponentCardData[] = [
   {
     name: 'Alert message',
+    slug: 'alert-message',
     link: 'alerts#alert-message',
     category: 'Dialog',
     snippet: `
@@ -98,6 +100,67 @@ export const componentsDetails: ComponentCardData[] = [
       </ul>`
   },
   {
+    name: 'Footer',
+    category: 'Navigation',
+    snippet: `
+      <footer class="footer navbar w-75" data-bs-theme="dark">
+        <h2 class="visually-hidden">Sitemap &amp; information</h2>
+        <div class="container-fluid container-max-width footer-nav px-small py-2xl-small d-lg-none d-sm-none d-md-block">
+          <nav class="accordion">
+            <div class="row">
+              <div class="footer-column">
+                <h3 class="accordion-header footer-heading">
+                  <button class="accordion-button collapsed container-fluid container-max-width px-none d-md-none" type="button">Label</button>
+                  <span class="d-none d-md-flex">Label</span>
+                </h3>
+                <div class="container-fluid container-max-width accordion-collapse collapse">
+                  <ul class="navbar-nav ps-large ps-md-none">
+                    <li><a class="nav-link" href="#">Label</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="border-bottom border-thin border-default d-lg-none d-sm-none d-md-block"></div>
+        <div class="container-fluid container-max-width footer-terms px-small">
+          <ul class="navbar-nav gap-md-large">
+            <li>© Label</li>
+            <li><a class="nav-link" href="#">Label</a></li>
+          </ul>
+        </div>
+      </footer>`
+  },
+  {
+    name: 'Header',
+    category: 'Navigation',
+    snippet: `
+      <header class="header-minimized w-75">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid container-max-width px-small">
+            <div class="navbar-brand me-auto me-lg-xlarge">
+              <a class="stretched-link" href="#">
+                <img src="${getVersionedDocsPath(`/assets/brand/${getConfig().brand}-logo.svg`)}" width="50" height="50" alt="" loading="lazy">
+              </a>
+              <h1 class="title">Label</h1>
+            </div>
+            <button class="navbar-toggler collapsed" type="button">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid container-max-width px-small">
+            <div class="navbar-collapse collapse m-none">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>`
+  },
+  {
     name: 'Icon',
     category: 'Visual assets',
     snippet: `
@@ -107,6 +170,7 @@ export const componentsDetails: ComponentCardData[] = [
   },
   {
     name: 'Inline alert',
+    slug: 'inline-alert',
     link: 'alerts#inline-alert',
     category: 'Dialog',
     snippet: `
