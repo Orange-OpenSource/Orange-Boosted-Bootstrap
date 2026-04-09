@@ -220,7 +220,7 @@ Use `.table-responsive{-xs|-sm|-md|-lg|-xl|-2xl|3xl}` as needed to create respon
 
 <details class="mt-medium mb-2xlarge">
 <summary>Examples of responsive tables up to particular breakpoint</summary>
-Resize window to see differencies:
+Resize window to see differences:
 {getData('breakpoints').map((breakpoint) => {
 return (
 <div class="bd-example">
@@ -300,24 +300,26 @@ For the row selection purpose, you should use [standalone checkboxes]([[docsref:
 
 If the control items are checkboxes, the first cell of the header should contain a checkbox to select or deselect all rows. If some rows are selected, the header checkbox should be in an [indeterminate state]([[docsref:/components/checkbox#indeterminate]]) to indicate this.
 
-If the control items are checkboxes or radio buttons, selecting a row will automtically apply some styles to visually indicate that the row is selected. If you want to manually apply the same styles to rows or even cells, you can use the class `.table-active` on `<tr>` or `<td>` elements.
+If the control items are checkboxes or radio buttons, selecting a row will automatically apply some styles to visually indicate that the row is selected. If you want to manually apply the same styles to rows or even cells, you can use the class `.table-active` on `<tr>` or `<td>` elements.
+
+Note that the click area will be extended to the full width of the cell.
 
 <Example buttonLabel="table with checkboxes row selection" code={`<table class="table" id="tableWithCheckboxes">
     <caption class="visually-hidden">OUDS Web table with row selection</caption>
     <thead>
       <tr>
-        <td>
+        <th scope="col">
           <label class="checkbox-standalone">
             <input class="control-item-indicator" type="checkbox" value="all" id="tableSelectAll" />
             <span class="visually-hidden">Select all rows</span>
           </label>
-        </td>
+        </th>
         <th scope="col">Heading</th>
         <th scope="col">Heading</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr data-bs-theme="dark">
         <td>
           <label class="checkbox-standalone">
             <input class="control-item-indicator" type="checkbox" value="1" checked />
@@ -337,7 +339,7 @@ If the control items are checkboxes or radio buttons, selecting a row will autom
         <td>Cell</td>
         <td>Cell</td>
       </tr>
-      <tr>
+      <tr data-bs-theme="dark">
         <td>
           <label class="checkbox-standalone">
             <input class="control-item-indicator" type="checkbox" value="3" checked />
@@ -350,10 +352,10 @@ If the control items are checkboxes or radio buttons, selecting a row will autom
     </tbody>
   </table>`} />
 
-To manage checkboxes states (e.g., select/deselect all rows, update header checkbox state), here is an example of JavaScript code:
-<JsDocs name="live-row-selection" file="site/src/assets/partials/snippets.js" />
+To manage checkboxes states (i.e. select/deselect all rows, update header checkbox state, and update data-bs-theme on selected row), here is an example of JavaScript code:
+<JsDocs name="live-row-selection-checkboxes" file="site/src/assets/partials/snippets.js" />
 
-<Example buttonLabel="table with radio buttons row selection" code={`<table class="table">
+<Example buttonLabel="table with radio buttons row selection" code={`<table class="table" id="tableWithRadios">
     <caption class="visually-hidden">OUDS Web table with radio buttons</caption>
     <thead>
       <tr>
@@ -364,7 +366,7 @@ To manage checkboxes states (e.g., select/deselect all rows, update header check
     </thead>
     <tbody>
       <tr>
-        <td class="text-center">
+        <td>
           <label class="radio-button-standalone">
             <input class="control-item-indicator" type="radio" name="radio1" value="1" />
             <span class="visually-hidden">Select row 1</span>
@@ -373,8 +375,8 @@ To manage checkboxes states (e.g., select/deselect all rows, update header check
         <td>Cell</td>
         <td>Cell</td>
       </tr>
-      <tr>
-        <td class="text-center">
+      <tr data-bs-theme="dark">
+        <td>
           <label class="radio-button-standalone">
             <input class="control-item-indicator" type="radio" name="radio1" value="2" checked />
             <span class="visually-hidden">Select row 2</span>
@@ -384,7 +386,7 @@ To manage checkboxes states (e.g., select/deselect all rows, update header check
         <td>Cell</td>
       </tr>
       <tr>
-        <td class="text-center">
+        <td>
           <label class="radio-button-standalone">
             <input class="control-item-indicator" type="radio" name="radio1" value="3" />
             <span class="visually-hidden">Select row 3</span>
@@ -396,9 +398,16 @@ To manage checkboxes states (e.g., select/deselect all rows, update header check
     </tbody>
   </table>`} />
 
-### Additional content
+To manage radio buttons states (i.e. update data-bs-theme on selected row), here is an example of JavaScript code:
+  <JsDocs name="live-row-selection-radios" file="site/src/assets/partials/snippets.js" />
+
+### Other components
 
 You can also use other components in tables, such as tags, switches, images or icons. You can use the `.align-middle` class on `<tr>` elements to vertically align the content of cells in the middle of the row, which is useful for rows with rich content.
+
+For switches, note that the click area will be extended to the full width of the cell.
+
+The class `.text-center` can be used on `<th>` and `<td>` elements to center the content of the cell horizontally when needed.
 
 <Example buttonLabel="table with components and icons" code={`<table class="table">
     <caption class="visually-hidden">OUDS Web table with switches</caption>
@@ -407,6 +416,7 @@ You can also use other components in tables, such as tags, switches, images or i
         <th scope="col">Heading</th>
         <th scope="col">Heading</th>
         <th scope="col">Heading</th>
+        <th scope="col" class="text-center">Heading</th>
         <th scope="col">Activated</th>
       </tr>
     </thead>
@@ -419,12 +429,18 @@ You can also use other components in tables, such as tags, switches, images or i
         </td>
         <td>Cell</td>
         <td>
-          <p class="tag tag tag-warning tag-small">
+          <p class="tag tag-warning tag-small">
             <span class="tag-status-icon"></span>
             Maintenance
           </p>
         </td>
         <td class="text-center">
+          <p class="badge badge-warning badge-large">
+            <span class="badge-status-icon"></span>
+            <span class="visually-hidden">Warning</span>
+          </p>
+        </td>
+        <td>
           <label class="switch-standalone">
             <input class="control-item-indicator" type="checkbox" role="switch"  value="1" />
             <span class="visually-hidden">Select row 1</span>
@@ -443,6 +459,12 @@ You can also use other components in tables, such as tags, switches, images or i
           </p>
         </td>
         <td class="text-center">
+          <p class="badge badge-positive badge-large">
+            <span class="badge-status-icon"></span>
+            <span class="visually-hidden">OK</span>
+          </p>
+        </td>
+        <td>
           <label class="switch-standalone">
             <input class="control-item-indicator" type="checkbox" role="switch"  value="2" checked />
             <span class="visually-hidden">Select row 2</span>
@@ -463,6 +485,12 @@ You can also use other components in tables, such as tags, switches, images or i
           </p>
         </td>
         <td class="text-center">
+          <p class="badge badge-large">
+            <span class="badge-status-icon"></span>
+            <span class="visually-hidden">Error</span>
+          </p>
+        </td>
+        <td>
           <label class="switch-standalone">
             <input class="control-item-indicator" type="checkbox" role="switch"  value="3" />
             <span class="visually-hidden">Select row 3</span>
