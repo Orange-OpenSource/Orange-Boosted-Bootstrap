@@ -159,8 +159,8 @@
 .form-control-sm {
   min-height: $input-height-sm;
   padding: $input-padding-y-sm $input-padding-x-sm calc($input-padding-y-sm + 1px); // OUDS mod
-  line-height: $line-height-sm; // OUDS mod
   font-size: $input-font-size-sm;
+  line-height: $line-height-sm; // OUDS mod
   @include border-radius($input-border-radius-sm);
 
   &::file-selector-button {
@@ -172,8 +172,8 @@
 
 .form-control-lg {
   min-height: $input-height-lg;
-  line-height: $input-line-height-lg; // OUDS mod
   font-size: $input-font-size-lg;
+  line-height: $input-line-height-lg; // OUDS mod
   @include border-radius($input-border-radius-lg);
 
   &::file-selector-button {
