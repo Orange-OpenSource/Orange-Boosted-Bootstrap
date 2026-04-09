@@ -263,7 +263,7 @@ Output:
 
 ### Responsive
 
-Add the `responsive` boolean to generate responsive utilities (e.g., `.opacity-md-25`) across [all breakpoints]([[docsref:/layout/breakpoints]]).
+Add the `responsive` boolean to generate responsive utilities (e.g., `.md:opacity-25`) across [all breakpoints]([[docsref:/layout/breakpoints]]).
 
 ```scss
 $utilities: (
@@ -283,6 +283,10 @@ $utilities: (
 
 Output:
 
+<Callout type="info">
+  The backslash (`\`) is used to escape the colon (`:`) in class names for responsive utilities.
+</Callout>
+
 ```css
 .opacity-0 { opacity: 0 !important; }
 .opacity-25 { opacity: .25 !important; }
@@ -291,59 +295,59 @@ Output:
 .opacity-100 { opacity: 1 !important; }
 
 @media (min-width: 390px) {
-  .opacity-xs-0 { opacity: 0 !important; }
-  .opacity-xs-25 { opacity: .25 !important; }
-  .opacity-xs-50 { opacity: .5 !important; }
-  .opacity-xs-75 { opacity: .75 !important; }
-  .opacity-xs-100 { opacity: 1 !important; }
+  .xs\:opacity-0 { opacity: 0 !important; }
+  .xs\:opacity-25 { opacity: .25 !important; }
+  .xs\:opacity-50 { opacity: .5 !important; }
+  .xs\:opacity-75 { opacity: .75 !important; }
+  .xs\:opacity-100 { opacity: 1 !important; }
 }
 
 @media (min-width: 480px) {
-  .opacity-sm-0 { opacity: 0 !important; }
-  .opacity-sm-25 { opacity: .25 !important; }
-  .opacity-sm-50 { opacity: .5 !important; }
-  .opacity-sm-75 { opacity: .75 !important; }
-  .opacity-sm-100 { opacity: 1 !important; }
+  .sm\:opacity-0 { opacity: 0 !important; }
+  .sm\:opacity-25 { opacity: .25 !important; }
+  .sm\:opacity-50 { opacity: .5 !important; }
+  .sm\:opacity-75 { opacity: .75 !important; }
+  .sm\:opacity-100 { opacity: 1 !important; }
 }
 
 @media (min-width: 736px) {
-  .opacity-md-0 { opacity: 0 !important; }
-  .opacity-md-25 { opacity: .25 !important; }
-  .opacity-md-50 { opacity: .5 !important; }
-  .opacity-md-75 { opacity: .75 !important; }
-  .opacity-md-100 { opacity: 1 !important; }
+  .md\:opacity-0 { opacity: 0 !important; }
+  .md\:opacity-25 { opacity: .25 !important; }
+  .md\:opacity-50 { opacity: .5 !important; }
+  .md\:opacity-75 { opacity: .75 !important; }
+  .md\:opacity-100 { opacity: 1 !important; }
 }
 
 @media (min-width: 1024px) {
-  .opacity-lg-0 { opacity: 0 !important; }
-  .opacity-lg-25 { opacity: .25 !important; }
-  .opacity-lg-50 { opacity: .5 !important; }
-  .opacity-lg-75 { opacity: .75 !important; }
-  .opacity-lg-100 { opacity: 1 !important; }
+  .lg\:opacity-0 { opacity: 0 !important; }
+  .lg\:opacity-25 { opacity: .25 !important; }
+  .lg\:opacity-50 { opacity: .5 !important; }
+  .lg\:opacity-75 { opacity: .75 !important; }
+  .lg\:opacity-100 { opacity: 1 !important; }
 }
 
 @media (min-width: 1320px) {
-  .opacity-xl-0 { opacity: 0 !important; }
-  .opacity-xl-25 { opacity: .25 !important; }
-  .opacity-xl-50 { opacity: .5 !important; }
-  .opacity-xl-75 { opacity: .75 !important; }
-  .opacity-xl-100 { opacity: 1 !important; }
+  .xl\:opacity-0 { opacity: 0 !important; }
+  .xl\:opacity-25 { opacity: .25 !important; }
+  .xl\:opacity-50 { opacity: .5 !important; }
+  .xl\:opacity-75 { opacity: .75 !important; }
+  .xl\:opacity-100 { opacity: 1 !important; }
 }
 
 @media (min-width: 1640px) {
-  .opacity-2xl-0 { opacity: 0 !important; }
-  .opacity-2xl-25 { opacity: .25 !important; }
-  .opacity-2xl-50 { opacity: .5 !important; }
-  .opacity-2xl-75 { opacity: .75 !important; }
-  .opacity-2xl-100 { opacity: 1 !important; }
+  .2xl\:opacity-0 { opacity: 0 !important; }
+  .2xl\:opacity-25 { opacity: .25 !important; }
+  .2xl\:opacity-50 { opacity: .5 !important; }
+  .2xl\:opacity-75 { opacity: .75 !important; }
+  .2xl\:opacity-100 { opacity: 1 !important; }
 }
 
 @media (min-width: 1880px) {
-  .opacity-3xl-0 { opacity: 0 !important; }
-  .opacity-3xl-25 { opacity: .25 !important; }
-  .opacity-3xl-50 { opacity: .5 !important; }
-  .opacity-3xl-75 { opacity: .75 !important; }
-  .opacity-3xl-100 { opacity: 1 !important; }
+  .3xl\:opacity-0 { opacity: 0 !important; }
+  .3xl\:opacity-25 { opacity: .25 !important; }
+  .3xl\:opacity-50 { opacity: .5 !important; }
+  .3xl\:opacity-75 { opacity: .75 !important; }
+  .3xl\:opacity-100 { opacity: 1 !important; }
 }
 ```
 
@@ -512,43 +516,47 @@ $utilities: map-merge(
 
 This will now generate responsive variations of `.border` and `.border-none` for each breakpoint. Your generated CSS will look like this:
 
+<Callout type="info">
+  The backslash (`\`) is used to escape the colon (`:`) in class names for responsive utilities.
+</Callout>
+
 ```css
 .border { ... }
 .border-none { ... }
 
 @media (min-width: 390px) {
   .border-xs { ... }
-  .border-xs-none { ... }
+  .xs\:border-none { ... }
 }
 
 @media (min-width: 480px) {
   .border-sm { ... }
-  .border-sm-none { ... }
+  .sm\:border-none { ... }
 }
 
 @media (min-width: 736px) {
   .border-md { ... }
-  .border-md-none { ... }
+  .md\:border-none { ... }
 }
 
 @media (min-width: 1024px) {
   .border-lg { ... }
-  .border-lg-none { ... }
+  .lg\:border-none { ... }
 }
 
 @media (min-width: 1320px) {
   .border-xl { ... }
-  .border-xl-none { ... }
+  .xl\:border-none { ... }
 }
 
 @media (min-width: 1640px) {
   .border-2xl { ... }
-  .border-2xl-none { ... }
+  .2xl\:border-none { ... }
 }
 
 @media (min-width: 1880px) {
   .border-3xl { ... }
-  .border-3xl-none { ... }
+  .3xl\:border-none { ... }
 }
 ```
 

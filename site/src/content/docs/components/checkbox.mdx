@@ -159,7 +159,7 @@ To display a description text, add a `.control-item-description` as a sibling of
 It's recommended to keep checkbox label to no more than three words. When space is limited or when a long label or description text is required, the text can wrap, as this is preferable to truncation. The checkbox indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
 
 <Example buttonLabel="checkboxes with long texts" code={`<div class="row">
-    <div class="col-8 col-md-6 col-xl-5">
+    <div class="col-8 md:col-6 xl:col-5">
       <fieldset class="control-items-list">
         <div class="checkbox-item control-item-divider">
           <div class="control-item-assets-container">
@@ -212,7 +212,7 @@ It's recommended to keep checkbox label to no more than three words. When space 
 To reverse the component, simply add `.control-item-reverse` to a `.checkbox-item`.
 
 <Example buttonLabel="reversed checkboxes" code={`<div class="row">
-    <div class="col-8 col-md-6 col-xl-5">
+    <div class="col-8 md:col-6 xl:col-5">
       <fieldset class="control-items-list">
         <div class="checkbox-item control-item-divider control-item-reverse">
           <div class="control-item-assets-container">
@@ -263,7 +263,7 @@ Put your checkboxes on the opposite side with the `.form-check-reverse` modifier
 You can align horizontally up to three checkboxes if their labels are short, add sufficient space (for example by using `.gap-small`) between the controls to ensure a clear association of each labels with their corresponding indicator.
 
 <Example buttonLabel="horizontal checkboxes" code={`<fieldset class="control-items-list">
-    <div class="d-lg-flex flex-row gap-small">
+    <div class="lg:d-flex flex-row gap-small">
       <div class="checkbox-item flex-fill">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow1" />
@@ -601,7 +601,7 @@ If you have a checkbox that is not part of a group but needs validation control,
 For accessibility reasons, it is required to provide understandable checkbox labels without relying on visual context. It is also good practice to add a checkbox group title inside a `<legend>` element as the first child of the `<fieldset>` element. Screen readers will read the legend before navigating through the checkboxes; this way, keyboard navigation users have more information on what is expected with the multiple checkboxes element.
 
 <Example buttonLabel="checkboxes grouped with fieldset" code={`<div class="row">
-    <div class="col-md-6">
+    <div class="md:col-6">
       <fieldset class="control-items-list">
         <legend>Checkboxes group example</legend>
         <div class="checkbox-item control-item-divider">

@@ -22,7 +22,7 @@ import { getMode } from '@libs/sass-variables'
 
 ### Component types
 
-<ul class="list-unstyled row row-cols-1 row-cols-sm-2">
+<ul class="list-unstyled row row-cols-1 sm:row-cols-2">
   <li class="col">
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
@@ -569,9 +569,9 @@ Please note that these **full-width** buttons should not be used on desktop scre
     <button class="btn btn-default" type="button">Button</button>
   </div>`} />
 
-Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where `.d-md-block` replaces the `.d-grid` class, thus nullifying the `gap-sm` utility. Resize your browser to see them change.
+Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where `.md:d-block` replaces the `.d-grid` class, thus nullifying the `gap-sm` utility. Resize your browser to see them change.
 
-<Example buttonLabel="block buttons until the md breakpoint" class="bd-btn-example" code={`<div class="d-grid gap-small d-md-block">
+<Example buttonLabel="block buttons until the md breakpoint" class="bd-btn-example" code={`<div class="d-grid gap-small md:d-block">
     <button class="btn btn-default" type="button">Button</button>
     <button class="btn btn-default" type="button">Button</button>
   </div>`} />
@@ -585,8 +585,8 @@ You can adjust the width of your block buttons with grid column width classes. F
 
 Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we’ve taken our previous responsive example and added some flex utilities and a margin utility on the button to right-align the buttons when they’re no longer stacked.
 
-<Example buttonLabel="right aligned inline buttons" class="bd-btn-example" code={`<div class="d-grid gap-small d-md-flex justify-content-md-end">
-    <button class="btn btn-default me-md-xsmall" type="button">Button</button>
+<Example buttonLabel="right aligned inline buttons" class="bd-btn-example" code={`<div class="d-grid gap-small md:d-flex md:justify-content-end">
+    <button class="btn btn-default md:me-xsmall" type="button">Button</button>
     <button class="btn btn-default" type="button">Button</button>
   </div>`} />
 
