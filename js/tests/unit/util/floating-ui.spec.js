@@ -179,14 +179,14 @@ describe('FloatingUI Util', () => {
     })
 
     it('should return appropriate placement for xl viewport', () => {
-      spyOnProperty(window, 'innerWidth').and.returnValue(1300)
+      spyOnProperty(window, 'innerWidth').and.returnValue(1400)
 
       const placements = { xs: 'bottom', lg: 'top', xl: 'left' }
       expect(getResponsivePlacement(placements)).toBe('left')
     })
 
     it('should return appropriate placement for 2xl viewport', () => {
-      spyOnProperty(window, 'innerWidth').and.returnValue(1600)
+      spyOnProperty(window, 'innerWidth').and.returnValue(1700)
 
       const placements = { xs: 'bottom', xl: 'top', '2xl': 'right-start' }
       expect(getResponsivePlacement(placements)).toBe('right-start')

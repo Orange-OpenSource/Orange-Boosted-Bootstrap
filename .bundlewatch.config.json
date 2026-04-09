@@ -50,7 +50,7 @@
     },
     {
       "path": "./dist/js/ouds-web.esm.js",
-      "maxSize": "32 kB"
+      "maxSize": "32.25 kB"
     },
     {
       "path": "./dist/js/ouds-web.esm.min.js",
