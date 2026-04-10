@@ -458,6 +458,7 @@
       z-index: 2;
       padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right));
       padding-left: calc(#{$ouds-text-input-space-padding-inline-default} - var(--#{$prefix}text-input-border-width-left));
+      overflow: hidden;
       color: var(--#{$prefix}text-input-label-color);
       text-overflow: ellipsis;
       white-space: nowrap;
