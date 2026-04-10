@@ -1,0 +1,25 @@
+---
+/*
+ * Outputs mandatory fields indication
+ */
+
+interface Props {
+  /**
+   * The component name that should be displayed.
+   */
+    componentName: string
+}
+
+import { getVersionedDocsPath } from '@libs/path'
+
+const { componentName } = Astro.props
+
+const name = componentName.toLowerCase()
+
+const link = (componentName ? `https://r.orange.fr/r/S-ouds-doc-${componentName.replace(" ", "-")}` : "")
+
+---
+
+<p>To indicate that a {name} is mandatory in a form, add the class <code>.is-required</code> to display a red asterisk at the end of the label.</p>
+
+<p>For general rules about when to add mandatory fields indication, please refer to the <a href={link}>{name} design guidelines</a> and to the <a href={getVersionedDocsPath('/foundation/form-validation#mandatory-fields-indication')}>form validation documentation</a>. In particular, do not forget to handle error messages.</p>
