@@ -155,7 +155,7 @@ Trailing actions can be added to the right side of the input field by placing a 
     <div class="text-input-container">
       <label for="exampleTextInputEmptyWithAction">Label</label>
       <input type="email" class="text-input-field" id="exampleTextInputEmptyWithAction" placeholder=" ">
-      <button class="btn btn-minimal btn-icon">
+      <button class="btn btn-minimal btn-icon" type="button">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
@@ -167,7 +167,7 @@ Trailing actions can be added to the right side of the input field by placing a 
     <div class="text-input-container text-input-container-outlined">
       <label for="exampleTextInputEmptyWithActionOutlined">Label</label>
       <input type="email" class="text-input-field" id="exampleTextInputEmptyWithActionOutlined" placeholder=" ">
-      <button class="btn btn-minimal btn-icon">
+      <button class="btn btn-minimal btn-icon" type="button">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
@@ -307,7 +307,7 @@ A textual prefix or suffix can be added to an input by wrapping the `<input>` in
       <div class="input-container" data-bs-prefix="€" data-bs-suffix=".00">
         <input type="text" id="inputTextWithPrefixSuffixIcon" aria-describedby="prefixSuffixIconTextHelpBlock" class="text-input-field" placeholder=" ">
       </div>
-      <button class="btn btn-minimal btn-icon">
+      <button class="btn btn-minimal btn-icon" type="button">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
@@ -386,7 +386,7 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
     <div class="text-input-container">
       <label for="exampleTextInputEmptyWithActionDisabled">Label</label>
       <input disabled type="email" class="text-input-field" id="exampleTextInputEmptyWithActionDisabled" placeholder=" ">
-      <button disabled class="btn btn-minimal btn-icon">
+      <button disabled class="btn btn-minimal btn-icon" type="button">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
@@ -438,7 +438,7 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
     <div class="text-input-container">
       <label for="exampleTextInputEmptyWithActionReadonly">Label</label>
       <input readonly type="email" class="text-input-field" id="exampleTextInputEmptyWithActionReadonly" value="Input" placeholder=" ">
-      <button disabled class="btn btn-minimal btn-icon">
+      <button disabled class="btn btn-minimal btn-icon" type="button">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
@@ -481,7 +481,7 @@ To manually mark an input as invalid, add `aria-invalid="true"` to a `.text-inpu
     <div class="text-input-container">
       <label id="labelTextInputInvalid" for="exampleTextInputInvalid">Email</label>
       <input type="text" class="text-input-field" aria-invalid="true" id="exampleTextInputInvalid" value="john.doe@example" aria-describedby="emailFeedback" placeholder=" ">
-       <button class="btn btn-minimal btn-icon">
+       <button class="btn btn-minimal btn-icon" type="button">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
@@ -536,7 +536,7 @@ To manually mark an input as invalid, add `aria-invalid="true"` to a `.text-inpu
       <div class="input-container" data-bs-prefix="£" data-bs-suffix=".00">
         <input type="text" class="text-input-field" aria-invalid="true" id="exampleTextInputInvalidTrailingWithPrefixSuffix" value="-2.2XX" aria-describedby="invalidPrice" placeholder=" ">
       </div>
-      <button class="btn btn-minimal btn-icon">
+      <button class="btn btn-minimal btn-icon" type="button">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}"/>
         </svg>
@@ -601,7 +601,7 @@ In case of an invalid input, you may remove the invalid state before the loading
       </svg>
       <label for="exampleDisabledLoadingTextInputWithDisabledAction">Disabled loading input example with disabled action</label>
       <input disabled type="text" class="text-input-field loading-indeterminate" id="exampleDisabledLoadingTextInputWithDisabledAction" placeholder=" " value="Input" aria-describedby="loading-msg-1">
-      <button disabled class="btn btn-minimal btn-icon">
+      <button disabled class="btn btn-minimal btn-icon" type="button">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
@@ -620,7 +620,7 @@ In case of an invalid input, you may remove the invalid state before the loading
       </svg>
       <label for="exampleDeterminateLoadingTextInputWithDisabledAction">Determinate loading input example with disabled action</label>
       <input type="text" class="text-input-field loading-determinate" id="exampleDeterminateLoadingTextInputWithDisabledAction" placeholder=" " value="Input" aria-describedby="loading-msg-2">
-      <button disabled class="btn btn-minimal btn-icon">
+      <button disabled class="btn btn-minimal btn-icon" type="button">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
@@ -639,7 +639,7 @@ In case of an invalid input, you may remove the invalid state before the loading
       </svg>
       <label for="exampleLoadingTextInputDisabledAction">Loading input example with disabled action</label>
       <input type="text" class="text-input-field loading-indeterminate" id="exampleLoadingTextInputDisabledAction" placeholder=" " value="Input" aria-describedby="loading-msg-3">
-      <button disabled class="btn btn-minimal btn-icon">
+      <button disabled class="btn btn-minimal btn-icon" type="button">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
@@ -661,7 +661,7 @@ You may also set the [trailing action on loading]([[docsref:/components/buttons#
       </svg>
       <label for="exampleDisabledLoadingActionButton">Loading action inside disabled input example</label>
       <input disabled type="text" class="text-input-field" id="exampleDisabledLoadingActionButton" placeholder=" " value="Input">
-      <button disabled class="btn btn-minimal btn-icon loading-indeterminate">
+      <button disabled class="btn btn-minimal btn-icon loading-indeterminate" type="button">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
@@ -681,7 +681,7 @@ You may also set the [trailing action on loading]([[docsref:/components/buttons#
       </svg>
       <label for="exampleLoadingActionButton">Loading action inside input example</label>
       <input type="text" class="text-input-field" id="exampleLoadingActionButton" placeholder=" " value="Input">
-      <button disabled class="btn btn-minimal btn-icon loading-indeterminate">
+      <button disabled class="btn btn-minimal btn-icon loading-indeterminate" type="button">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
