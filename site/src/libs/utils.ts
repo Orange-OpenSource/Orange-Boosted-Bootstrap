@@ -45,5 +45,5 @@ export function processMarkdownToHtml(markdown: string): string {
 }
 
 export function getComponentSVG(className: string): string {
-  return `<svg class="${className}" width="1rem" height="1rem" aria-hidden="true"><use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>`
+  return `<svg class="${className}" width="1rem" height="1rem" aria-hidden="true"><use xlink:href="${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')}" /></svg>`
 }
