@@ -928,8 +928,6 @@ $form-label-font-style:                 null !default;
 $form-label-font-weight:                null !default;
 $form-label-color:                      null !default;
 $form-label-disabled-color:             var(--#{$prefix}color-content-disabled) !default; // OUDS mod
-$form-label-required-margin-left:       .1875rem !default; // OUDS mod
-$form-label-required-color:             var(--#{$prefix}primary) !default; // OUDS mod
 // scss-docs-end form-label-variables
 
 // scss-docs-start form-helper-variables
