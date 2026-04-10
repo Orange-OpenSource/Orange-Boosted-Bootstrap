@@ -3,6 +3,7 @@ import fromMarkdown from 'mdast-util-from-markdown'
 import toString from 'mdast-util-to-string'
 import { remark } from 'remark'
 import remarkHtml from 'remark-html'
+import { getVersionedDocsPath } from './path'
 
 export function capitalizeFirstLetter(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1)
@@ -41,4 +42,8 @@ export function processMarkdownToHtml(markdown: string): string {
   // Use remark to process markdown to HTML
   const result = remark().use(remarkHtml).processSync(markdown)
   return result.toString()
+}
+
+export function getComponentSVG(className: string): string {
+  return `<svg class="${className}" width="1rem" height="1rem" aria-hidden="true"><use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>`
 }

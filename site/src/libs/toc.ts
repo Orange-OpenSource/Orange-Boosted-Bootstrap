@@ -7,12 +7,17 @@ export function generateToc(allHeadings: MarkdownHeading[]) {
     (heading) => heading.depth >= getConfig().toc.min && heading.depth <= getConfig().toc.max
   )
 
+  const multipleTypes: boolean = !!headings.find((heading) => heading.slug === 'component-types')
   const toc: TocEntry[] = []
 
   for (const heading of headings) {
     if (toc.length === 0) {
       toc.push({ ...heading, children: [] })
       continue
+    }
+
+    if (multipleTypes && heading.depth === 2) {
+      heading.text = `[[comp]] ${heading.text}`
     }
 
     const previousEntry = toc[toc.length - 1]
