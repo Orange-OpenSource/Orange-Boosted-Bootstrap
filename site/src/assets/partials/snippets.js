@@ -333,8 +333,5 @@ export default () => {
     })
   })
   // js-docs-end live-row-selection-radios
-
   // storybook-end table
-
-
 }
