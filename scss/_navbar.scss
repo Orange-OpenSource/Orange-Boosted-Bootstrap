@@ -395,7 +395,7 @@
 @each $breakpoint in map-keys($grid-breakpoints) {
   $next: breakpoint-next($breakpoint, $grid-breakpoints);
 
-  .#{breakpoint-prefix($breakpoint, $grid-breakpoints)}navbar-expand {
+  .#{breakpoint-prefix($next, $grid-breakpoints)}navbar-expand {
     @include media-breakpoint-up($next) {
       flex-wrap: nowrap;
       justify-content: flex-start;

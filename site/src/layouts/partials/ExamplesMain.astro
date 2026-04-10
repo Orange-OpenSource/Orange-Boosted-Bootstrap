@@ -29,7 +29,7 @@ import Callout from '@components/shortcodes/Callout.astro'
             {examples.map((example, index) => {
               if (external) {
                 return (
-                  <article class="col-md-6 col-lg-4 mb-large d-flex gap-large">
+                  <article class="md:col-6 lg:col-4 mb-large d-flex gap-large">
                     <GitHubIcon class="bi fs-hm flex-shrink-0" />
                     <div>
                       <h3 class="h5 mb-2xsmall">
@@ -68,7 +68,7 @@ import Callout from '@components/shortcodes/Callout.astro'
               }
 
               return (
-                <article class="col-sm-6 col-md-3 mb-large">
+                <article class="sm:col-6 md:col-3 mb-large">
                   <a
                     class="d-block link-offset-1"
                     href={`/${getConfig().brand}/docs/${getConfig().docs_version}/examples/${getSlug(example.name)}/`}
@@ -105,7 +105,7 @@ import Callout from '@components/shortcodes/Callout.astro'
               <div class="row">
                 {examples.map((example) => {
                   return (
-                    <article class="col-sm-6 col-md-3 mb-large">
+                    <article class="sm:col-6 md:col-3 mb-large">
                       <a
                         class="d-block link-offset-1"
                         href={`/${getConfig().brand}/docs/${getConfig().docs_version}/examples/${getSlug(example.name)}/`}
