@@ -300,3 +300,108 @@ For invalid fields, ensure that the invalid feedback/error message is associated
       </p>
     </div>
   </form>`} />
+
+## Mandatory fields indication
+
+### Single field forms or obvious mandatory fields
+
+If there is only one field in the form, or if the mandatory nature of the fields is obvious (such as login/password in a sign-in form), no mention is necessary since the fields are essential to the form's functionality.
+
+<Example buttonLabel="sign-in form with obvious mandatory fields" code={`<form class="needs-validation" novalidate>
+    <div class="text-input component-max-width mb-large">
+      <div class="text-input-container">
+        <label for="login">Login</label>
+        <input type="text" class="text-input-field" id="login" autocomplete="username" placeholder=" " required>
+      </div>
+    </div>
+
+    <div class="text-input component-max-width mb-large">
+      <div class="text-input-container">
+        <label for="passwd">Password</label>
+        <input type="password" id="passwd" class="text-input-field" autocomplete="new-password" placeholder=" " required>
+        <button class="btn btn-minimal btn-icon">
+          <svg aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath("/assets/img/ouds-web-sprite.svg#accessibility-vision")}"/>
+          </svg>
+          <span class="visually-hidden">Show password</span>
+        </button>
+      </div>
+    </div>
+  </form>`} />
+
+### Forms with only mandatory fields
+
+In a form having several fields and where all fields are mandatory, it is sufficient to indicate this in the form instructions, by stating "**All fields are mandatory.**" at the top. This way, users have the information without the need for additional mention on each form control. The mandatory nature of the fields will also be indicated to assistive technlogies by the `required` attribute on each field.
+
+<Example buttonLabel="form with all fields mandatory" code={`<form class="needs-validation" novalidate>
+    <p class="fw-bold">
+      All fields are mandatory.
+    </p>
+
+    <div class="text-input component-max-width mb-large">
+      <div class="text-input-container">
+        <label for="firstname1">First name</label>
+        <input type="text" class="text-input-field" id="firstname1" placeholder=" " required>
+      </div>
+    </div>
+
+    <div class="text-input component-max-width mb-large">
+      <div class="text-input-container">
+        <label for="commonname1">Common name</label>
+        <input type="text" class="text-input-field" id="commonname1" placeholder=" " required>
+      </div>
+    </div>
+
+    <div class="text-input component-max-width mb-large">
+      <div class="text-input-container">
+        <label for="lastname1">Last name</label>
+        <input type="text" class="text-input-field" id="lastname1" placeholder=" " required>
+      </div>
+    </div>
+
+    <div class="text-input component-max-width mb-large">
+      <div class="text-input-container">
+        <label for="city1">City of birth</label>
+        <input type="text" class="text-input-field" id="city1" placeholder=" " required>
+      </div>
+    </div>
+  </form>`} />
+
+
+### Forms with optional fields
+
+In a form having several fields and where not all fields are mandatory, you have to display a message "**All fields marked with an <span class="text-status-negative">*</span> are mandatory.**" at the top. Then, you have to explicitly indicate which fields are mandatory to users, by adding the class `.is-required` on the label, which adds a red asterisk at the end of the label. The mandatory nature of the fields will be indicated to assistive technlogies by the `required` attribute.
+
+<Example buttonLabel="form with some mandatory fields" code={`<form class="needs-validation" novalidate>
+    <p class="fw-bold">
+      All fields marked with an <span class="text-status-negative">*</span> are mandatory.
+    </p>
+
+    <div class="text-input component-max-width mb-large">
+      <div class="text-input-container">
+        <label for="firstname2" class="is-required">First name</label>
+        <input type="text" class="text-input-field" id="firstname2" placeholder=" " required>
+      </div>
+    </div>
+
+    <div class="text-input component-max-width mb-large">
+      <div class="text-input-container">
+        <label for="commonname2">Common name</label>
+        <input type="text" class="text-input-field" id="commonname2" placeholder=" ">
+      </div>
+    </div>
+
+    <div class="text-input component-max-width mb-large">
+      <div class="text-input-container">
+        <label for="lastname2" class="is-required">Last name</label>
+        <input type="text" class="text-input-field" id="lastname2" placeholder=" " required>
+      </div>
+    </div>
+
+    <div class="text-input component-max-width mb-large">
+      <div class="text-input-container">
+        <label for="city2">City of birth</label>
+        <input type="text" class="text-input-field" id="city2" placeholder=" ">
+      </div>
+    </div>
+  </form>`} />
