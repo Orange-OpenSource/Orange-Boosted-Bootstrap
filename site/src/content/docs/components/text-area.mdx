@@ -123,7 +123,7 @@ To display a helper link below text areas, use a standard small link [with `.lin
 
 ### Max width
 
-By default text areas will span the whole width of their parent container, to limit the width of the text area on wider parent container, add a `.component-max-width` to the `.text-input` container.
+By default, text areas will span the whole width of their parent container, to limit the width of the text area on wider parent container, add a `.component-max-width` to the `.text-input` container.
 
 <Example buttonLabel="text areas max width" code={`<div class="text-area component-max-width">
     <div class="text-area-container">
@@ -221,5 +221,16 @@ To manually mark a  text area as invalid, add `aria-invalid="true"` to a `.text-
         <label for="skeletonTextArea">Additional comments</label>
         <textarea class="text-area-field" id="skeletonTextArea"></textarea>
       </div>
+    </div>
+  </div>`} />
+
+## Mandatory field indication
+
+<MandatoryFieldIndication componentName="text area" />
+
+<Example buttonLabel="mandatory text area indication" code={`<div class="text-area mb-medium">
+    <div class="text-area-container">
+      <label for="mandatoryTextArea" class="is-required">Additional comments</label>
+      <textarea class="text-area-field" id="mandatoryTextArea" required></textarea>
     </div>
   </div>`} />

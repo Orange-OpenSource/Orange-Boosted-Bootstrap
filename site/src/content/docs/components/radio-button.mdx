@@ -330,7 +330,7 @@ You can align horizontally up to three radio buttons if their labels are short, 
 
 ### Max width
 
-By default radio buttons will span the whole width of their parent container, to limit the width of the radio button on wider parent container, add a `.component-max-width` to the `.radio-button-item` container. More information on radio button sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-radio-button-responsiveness).
+By default, radio buttons will span the whole width of their parent container, to limit the width of the radio button on wider parent container, add a `.component-max-width` to the `.radio-button-item` container. More information on radio button sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-radio-button-responsiveness).
 
 <Example buttonLabel="radio buttons max width" code={`<fieldset class="control-items-list">
     <div class="radio-button-item component-max-width">
@@ -604,3 +604,39 @@ For the standalone radio button, we provide a completely different architecture 
     <input class="form-check-input" type="radio" value="" aria-label="Default standalone radio button (Bootstrap compatible)" />
   </div>`} />
 </BootstrapCompatibility>
+
+
+## Mandatory field indication
+
+<MandatoryFieldIndication componentName="radio button" />
+
+<Example buttonLabel="mandatory radio buttons indication" code={`<div class="radio-button-item-container">
+    <div class="radio-button-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="radio" value="" id="radioUniqueMandatory" name="mandatoryRadio" required />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label is-required" for="radioUniqueMandatory">Mandatory unique radio button</label>
+      </div>
+    </div>
+  </div>
+  <hr class="my-xlarge">
+  <fieldset class="control-items-list">
+    <legend class="is-required">Mandatory radio buttons</legend>
+    <div class="radio-button-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="radio" value="" id="mandatoryRadio1" name="mandatoryRadios" required />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="mandatoryRadio1">Default radio button</label>
+      </div>
+    </div>
+    <div class="radio-button-item">
+      <div class="control-item-assets-container">
+        <input checked class="control-item-indicator" type="radio" value="" id="mandatoryRadio2" name="mandatoryRadios" required />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="mandatoryRadio2">Checked radio button</label>
+      </div>
+    </div>
+  </fieldset>`} />
