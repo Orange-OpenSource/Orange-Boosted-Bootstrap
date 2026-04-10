@@ -13,7 +13,7 @@ import { getVersionedDocsPath } from '@libs/path'
 <Callout type="negative" title="Draft component">
   The table component is not yet designed, and this component is only a draft for the moment. It will be updated in the future with the final design and will certainly need adjustments regarding the DOM. Use it as a temporary component to speed up your development.
 
-  Please refer to the [Tables in the Boosted documentation](https://boosted.orange.com/docs/content/tables/) to have a full view of the header component and its variations. You’ll only need to adapt the utilities inside the DOM.
+  Please refer to the [Tables in the Boosted documentation](https://boosted.orange.com/docs/content/tables/) to have a full view of the table component and its variations. You’ll only need to adapt the utilities inside the DOM.
 </Callout>
 
 ## Overview
@@ -63,7 +63,7 @@ See [more information about the tables structures](https://a11y-guidelines.orang
 
 ### Functional colors
 
-To add a background color to a table row, you can use the contextual classes `.table-{status}` on `<tr>` elements. These classes will apply a muted background color based on the status you choose, among `info`, `positive`, `warning`, or `negative`. This can be useful for highlighting specific rows based on their content or status. Statuses could be emphasized further by adding a badge with the same color in the relevant cell(s), and with a relevant label.
+To add a background color to a table row, you can use the contextual classes `.table-{status}` on `<tr>` elements. These classes will apply a muted background color based on the status you choose, among `info`, `positive`, `warning`, or `negative`. This can be useful for highlighting specific rows based on their content or status. Another way to convey information must be used in addition to color, such as a badge with a relevant label or icon, to ensure that the information is accessible to all users.
 
 <Example buttonLabel="table with functional colored backgrounds" code={`<table class="table">
     <caption class="visually-hidden">OUDS Web table with functional colored backgrounds</caption>
@@ -77,22 +77,22 @@ To add a background color to a table row, you can use the contextual classes `.t
     <tbody>
       <tr class="table-info">
         <th scope="row">1</th>
-        <td><p class="badge badge-info me-xsmall"></p>Running</td>
+        <td><span class="badge badge-info me-xsmall"></span>Running</td>
         <td>Cell</td>
       </tr>
       <tr class="table-positive">
         <th scope="row">2</th>
-        <td><p class="badge badge-positive me-xsmall"></p>New</td>
+        <td><span class="badge badge-positive me-xsmall"></span>New</td>
         <td>Cell</td>
       </tr>
       <tr class="table-warning">
         <th scope="row">3</th>
-        <td><p class="badge badge-warning me-xsmall"></p>Reloading</td>
+        <td><span class="badge badge-warning me-xsmall"></span>Reloading</td>
         <td>Cell</td>
       </tr>
       <tr class="table-negative">
         <th scope="row">4</th>
-        <td><p class="badge badge-negative me-xsmall"></p>Error</td>
+        <td><span class="badge badge-negative me-xsmall"></span>Error</td>
         <td>Cell</td>
       </tr>
     </tbody>
@@ -290,19 +290,17 @@ return (
 
 </details>
 
-## Rich content tables
+## Row selection
 
-### Row selection
+### With checkboxes
 
-When using checkboxes or radio buttons or switches in tables, you should add the `.has-row-selection` modifier class to the base `.table` class. This will add the necessary padding to the first column to accommodate these control items. The control items should be placed in the first column, and the type of control items should obviously not be mixed.
+For the row selection purpose, you should use [standalone checkboxes]([[docsref:/components/checkbox#standalone]]) with `.visually-hidden` labels describing their use.
 
-For the row selection purpose, you should use [standalone checkboxes]([[docsref:/components/checkbox#standalone]]), [standalone radio buttons]([[docsref:/components/radio-button#standalone]]), or [standalone switches]([[docsref:/components/switch#standalone]]) with `.visually-hidden` labels describing their use.
+The first cell of the header should contain a checkbox to select or deselect all rows. When some rows - but not all - are selected, the header checkbox should be in an [indeterminate state]([[docsref:/components/checkbox#indeterminate]]).
 
-If the control items are checkboxes, the first cell of the header should contain a checkbox to select or deselect all rows. If some rows are selected, the header checkbox should be in an [indeterminate state]([[docsref:/components/checkbox#indeterminate]]) to indicate this.
+To visually indicate a row is selected, you'll need to apply a `data-bs-theme="dark"` attribute on the `<tr>` element (some additional styles will be applied too). This can be done by JavaScript, see the example below. If you want to manually apply the same styles to rows or even cells, you can use the class `.table-active` with `data-bs-theme="dark"` on `<tr>` or `<td>` elements.
 
-If the control items are checkboxes or radio buttons, selecting a row will automatically apply some styles to visually indicate that the row is selected. If you want to manually apply the same styles to rows or even cells, you can use the class `.table-active` on `<tr>` or `<td>` elements.
-
-Note that the click area will be extended to the full width of the cell.
+Note that the width of columns containing checkboxes will automatically adjust to the largest cell, and the click area will be extended to the full width of the cell.
 
 <Example buttonLabel="table with checkboxes row selection" code={`<table class="table" id="tableWithCheckboxes">
     <caption class="visually-hidden">OUDS Web table with row selection</caption>
@@ -352,8 +350,14 @@ Note that the click area will be extended to the full width of the cell.
     </tbody>
   </table>`} />
 
-To manage checkboxes states (i.e. select/deselect all rows, update header checkbox state, and update data-bs-theme on selected row), here is an example of JavaScript code:
+To manage checkboxes states and active styles (i.e. select/deselect all rows, update header checkbox state, and update `data-bs-theme` on selected row), here is an example of JavaScript code:
 <JsDocs name="live-row-selection-checkboxes" file="site/src/assets/partials/snippets.js" />
+
+### With radio buttons
+
+For the row selection purpose, you should use [standalone radio buttons]([[docsref:/components/radio-button#standalone]]) with `.visually-hidden` labels describing their use.
+
+The [same rules apply as with checkboxes](#with-checkboxes), except that there is no "all rows" selection. The JavaScript will only need to update the `data-bs-theme` on selected rows, as we have done in the example below.
 
 <Example buttonLabel="table with radio buttons row selection" code={`<table class="table" id="tableWithRadios">
     <caption class="visually-hidden">OUDS Web table with radio buttons</caption>
@@ -398,16 +402,14 @@ To manage checkboxes states (i.e. select/deselect all rows, update header checkb
     </tbody>
   </table>`} />
 
-To manage radio buttons states (i.e. update data-bs-theme on selected row), here is an example of JavaScript code:
-  <JsDocs name="live-row-selection-radios" file="site/src/assets/partials/snippets.js" />
+To manage radio buttons active state (i.e. update `data-bs-theme` on the selected row), here is an example of JavaScript code:
+<JsDocs name="live-row-selection-radios" file="site/src/assets/partials/snippets.js" />
 
-### Other components
+## Rich content tables
 
-You can also use other components in tables, such as tags, switches, images or icons. You can use the `.align-middle` class on `<tr>` elements to vertically align the content of cells in the middle of the row, which is useful for rows with rich content.
+You can also use other components in tables, such as tags, badges, switches, images or icons. You can use the `.align-middle` class on `<tr>` elements to vertically align the content of cells in the middle of the row, which is useful for rows with rich content. The class `.text-center` can be used on `<th>` and `<td>` elements to center the content of the cell horizontally when needed.
 
 For switches, note that the click area will be extended to the full width of the cell.
-
-The class `.text-center` can be used on `<th>` and `<td>` elements to center the content of the cell horizontally when needed.
 
 <Example buttonLabel="table with components and icons" code={`<table class="table">
     <caption class="visually-hidden">OUDS Web table with switches</caption>

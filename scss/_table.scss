@@ -1,6 +1,10 @@
 //
 // Basic OUDS Web table
 //
+%active {
+  --#{$prefix}table-color-state: var(--#{$prefix}color-content-default);
+  --#{$prefix}table-bg-state: var(--#{$prefix}table-active-bg);
+}
 
 .table {
   // Reset needed for nesting tables
@@ -71,11 +75,9 @@
 
   // OUDS mod
   // When using checkboxes in the first column, force width to ensure correct spacing on this column
-  tr > td:has(.control-item-indicator[type="checkbox"]),
-  tr > th:has(.control-item-indicator[type="checkbox"]),
-  tr > td:has(.control-item-indicator[type="radio"]),
-  tr > th:has(.control-item-indicator[type="radio"]) {
-    width: calc($ouds-checkbox-size-min-width + $core-ouds-dimension-50);
+  tr > td:has(.control-item-indicator),
+  tr > th:has(.control-item-indicator) {
+    width: 1%;
     padding: 0;
     vertical-align: middle;
   }
@@ -90,15 +92,7 @@
   // Automatically highlight rows with checked checkboxes or radios
   tbody tr:has(.control-item-indicator[type="checkbox"]:not([role="switch"]):checked),
   tbody tr:has(.control-item-indicator[type="radio"]:checked) {
-    --#{$prefix}table-color-state: var(--#{$prefix}color-content-default);
-    --#{$prefix}table-bg-state: var(--#{$prefix}table-active-bg);
-  }
-
-  // Use negative margins on icons in tables to preserve row height
-  svg,
-  img {
-    margin-top: $table-cell-icon-margin-top;
-    margin-bottom: $table-cell-icon-margin-bottom;
+    @extend %active;
   }
   // End mod
 }
@@ -148,6 +142,9 @@
 // Active table
 //
 // The `.table-active` class can be added to highlight rows or cells
+.table-active[data-bs-theme="dark"] {
+  @extend %active;
+}
 
 // Hover effect
 //
