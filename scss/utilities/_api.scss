@@ -4,35 +4,36 @@
   // Generate media query if needed
   @include media-breakpoint-up($breakpoint) {
     $breakpoint-prefix: breakpoint-prefix($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     // Loop over each utility property
     @each $key, $utility in $utilities {
       // The utility can be disabled with `false`, thus check if the utility is a map first
       // Only proceed if responsive media queries are enabled or if it's the base media query
       @if type-of($utility) == "map" and (map-get($utility, responsive) or $breakpoint-prefix == "") {
-        @include generate-utility($utility, $breakpoint-prefix);
+        @include generate-utility($utility, $breakpoint-prefix, $infix);
       }
     }
   }
 }
 
 // RFS rescaling
-@media (min-width: $rfs-mq-value) {
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    $breakpoint-prefix: breakpoint-prefix($breakpoint, $grid-breakpoints);
+// @media (min-width: $rfs-mq-value) {
+//   @each $breakpoint in map-keys($grid-breakpoints) {
+//     $breakpoint-prefix: breakpoint-prefix($breakpoint, $grid-breakpoints);
 
-    @if (map-get($grid-breakpoints, $breakpoint) < $rfs-breakpoint) {
-      // Loop over each utility property
-      @each $key, $utility in $utilities {
-        // The utility can be disabled with `false`, thus check if the utility is a map first
-        // Only proceed if responsive media queries are enabled or if it's the base media query
-        @if type-of($utility) == "map" and map-get($utility, rfs) and (map-get($utility, responsive) or $breakpoint-prefix == "") {
-          @include generate-utility($utility, $breakpoint-prefix, true);
-        }
-      }
-    }
-  }
-}
+//     @if (map-get($grid-breakpoints, $breakpoint) < $rfs-breakpoint) {
+//       // Loop over each utility property
+//       @each $key, $utility in $utilities {
+//         // The utility can be disabled with `false`, thus check if the utility is a map first
+//         // Only proceed if responsive media queries are enabled or if it's the base media query
+//         @if type-of($utility) == "map" and map-get($utility, rfs) and (map-get($utility, responsive) or $breakpoint-prefix == "") {
+//           @include generate-utility($utility, $breakpoint-prefix, true);
+//         }
+//       }
+//     }
+//   }
+// }
 
 
 // Print utilities
@@ -41,7 +42,7 @@
     // The utility can be disabled with `false`, thus check if the utility is a map first
     // Then check if the utility needs print styles
     @if type-of($utility) == "map" and map-get($utility, print) == true {
-      @include generate-utility($utility, "print\\:");
+      @include generate-utility($utility, "print\\:", "-print");
     }
   }
 }

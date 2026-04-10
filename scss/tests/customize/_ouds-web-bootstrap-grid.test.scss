@@ -641,1919 +641,1919 @@ $enable-bootstrap-compatibility: null !default;
         }
 
         @media (min-width: 390px) {
-          .col-xs {
+          .xs\:col {
             flex: 1 0 0;
           }
 
-          .row-cols-xs-auto > * {
+          .xs\:row-cols-auto > * {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .row-cols-xs-1 > * {
+          .xs\:row-cols-1 > * {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .row-cols-xs-2 > * {
+          .xs\:row-cols-2 > * {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .row-cols-xs-3 > * {
+          .xs\:row-cols-3 > * {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .row-cols-xs-4 > * {
+          .xs\:row-cols-4 > * {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .row-cols-xs-5 > * {
+          .xs\:row-cols-5 > * {
             flex: 0 0 auto;
             width: 20%;
           }
 
-          .row-cols-xs-6 > * {
+          .xs\:row-cols-6 > * {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-xs-auto {
+          .xs\:col-auto {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .col-xs-1 {
+          .xs\:col-1 {
             flex: 0 0 auto;
             width: 8.33333333%;
           }
 
-          .col-xs-2 {
+          .xs\:col-2 {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-xs-3 {
+          .xs\:col-3 {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .col-xs-4 {
+          .xs\:col-4 {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .col-xs-5 {
+          .xs\:col-5 {
             flex: 0 0 auto;
             width: 41.66666667%;
           }
 
-          .col-xs-6 {
+          .xs\:col-6 {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .col-xs-7 {
+          .xs\:col-7 {
             flex: 0 0 auto;
             width: 58.33333333%;
           }
 
-          .col-xs-8 {
+          .xs\:col-8 {
             flex: 0 0 auto;
             width: 66.66666667%;
           }
 
-          .col-xs-9 {
+          .xs\:col-9 {
             flex: 0 0 auto;
             width: 75%;
           }
 
-          .col-xs-10 {
+          .xs\:col-10 {
             flex: 0 0 auto;
             width: 83.33333333%;
           }
 
-          .col-xs-11 {
+          .xs\:col-11 {
             flex: 0 0 auto;
             width: 91.66666667%;
           }
 
-          .col-xs-12 {
+          .xs\:col-12 {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .offset-xs-0 {
+          .xs\:offset-0 {
             margin-left: 0;
           }
 
-          .offset-xs-1 {
+          .xs\:offset-1 {
             margin-left: 8.33333333%;
           }
 
-          .offset-xs-2 {
+          .xs\:offset-2 {
             margin-left: 16.66666667%;
           }
 
-          .offset-xs-3 {
+          .xs\:offset-3 {
             margin-left: 25%;
           }
 
-          .offset-xs-4 {
+          .xs\:offset-4 {
             margin-left: 33.33333333%;
           }
 
-          .offset-xs-5 {
+          .xs\:offset-5 {
             margin-left: 41.66666667%;
           }
 
-          .offset-xs-6 {
+          .xs\:offset-6 {
             margin-left: 50%;
           }
 
-          .offset-xs-7 {
+          .xs\:offset-7 {
             margin-left: 58.33333333%;
           }
 
-          .offset-xs-8 {
+          .xs\:offset-8 {
             margin-left: 66.66666667%;
           }
 
-          .offset-xs-9 {
+          .xs\:offset-9 {
             margin-left: 75%;
           }
 
-          .offset-xs-10 {
+          .xs\:offset-10 {
             margin-left: 83.33333333%;
           }
 
-          .offset-xs-11 {
+          .xs\:offset-11 {
             margin-left: 91.66666667%;
           }
 
-          .g-xs-none,
-          .gx-xs-none {
+          .xs\:g-none,
+          .xs\:gx-none {
             --bs-gutter-x: 0px !important;
           }
 
-          .g-xs-none,
-          .gy-xs-none {
+          .xs\:g-none,
+          .xs\:gy-none {
             --bs-gutter-y: 0px !important;
           }
 
-          .g-xs-3xsmall,
-          .gx-xs-3xsmall {
+          .xs\:g-3xsmall,
+          .xs\:gx-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-xs-3xsmall,
-          .gy-xs-3xsmall {
+          .xs\:g-3xsmall,
+          .xs\:gy-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-xs-2xsmall,
-          .gx-xs-2xsmall {
+          .xs\:g-2xsmall,
+          .xs\:gx-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-xs-2xsmall,
-          .gy-xs-2xsmall {
+          .xs\:g-2xsmall,
+          .xs\:gy-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-xs-xsmall,
-          .gx-xs-xsmall {
+          .xs\:g-xsmall,
+          .xs\:gx-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-xs-xsmall,
-          .gy-xs-xsmall {
+          .xs\:g-xsmall,
+          .xs\:gy-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-xs-small,
-          .gx-xs-small {
+          .xs\:g-small,
+          .xs\:gx-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-xs-small,
-          .gy-xs-small {
+          .xs\:g-small,
+          .xs\:gy-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-xs-medium,
-          .gx-xs-medium {
+          .xs\:g-medium,
+          .xs\:gx-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-xs-medium,
-          .gy-xs-medium {
+          .xs\:g-medium,
+          .xs\:gy-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-xs-large,
-          .gx-xs-large {
+          .xs\:g-large,
+          .xs\:gx-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-xs-large,
-          .gy-xs-large {
+          .xs\:g-large,
+          .xs\:gy-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-xs-xlarge,
-          .gx-xs-xlarge {
+          .xs\:g-xlarge,
+          .xs\:gx-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-xs-xlarge,
-          .gy-xs-xlarge {
+          .xs\:g-xlarge,
+          .xs\:gy-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-xs-2xlarge,
-          .gx-xs-2xlarge {
+          .xs\:g-2xlarge,
+          .xs\:gx-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-xs-2xlarge,
-          .gy-xs-2xlarge {
+          .xs\:g-2xlarge,
+          .xs\:gy-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-xs-3xlarge,
-          .gx-xs-3xlarge {
+          .xs\:g-3xlarge,
+          .xs\:gx-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-xs-3xlarge,
-          .gy-xs-3xlarge {
+          .xs\:g-3xlarge,
+          .xs\:gy-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-xs-4xlarge,
-          .gx-xs-4xlarge{
+          .xs\:g-4xlarge,
+          .xs\:gx-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-xs-4xlarge,
-          .gy-xs-4xlarge{
+          .xs\:g-4xlarge,
+          .xs\:gy-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-xs-5xlarge,
-          .gx-xs-5xlarge {
+          .xs\:g-5xlarge,
+          .xs\:gx-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-xs-5xlarge,
-          .gy-xs-5xlarge {
+          .xs\:g-5xlarge,
+          .xs\:gy-5xlarge {
             --bs-gutter-y: 64px !important;
           }
         }
 
         @media (min-width: 480px) {
-          .col-sm {
+          .sm\:col {
             flex: 1 0 0;
           }
 
-          .row-cols-sm-auto > * {
+          .sm\:row-cols-auto > * {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .row-cols-sm-1 > * {
+          .sm\:row-cols-1 > * {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .row-cols-sm-2 > * {
+          .sm\:row-cols-2 > * {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .row-cols-sm-3 > * {
+          .sm\:row-cols-3 > * {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .row-cols-sm-4 > * {
+          .sm\:row-cols-4 > * {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .row-cols-sm-5 > * {
+          .sm\:row-cols-5 > * {
             flex: 0 0 auto;
             width: 20%;
           }
 
-          .row-cols-sm-6 > * {
+          .sm\:row-cols-6 > * {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-sm-auto {
+          .sm\:col-auto {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .col-sm-1 {
+          .sm\:col-1 {
             flex: 0 0 auto;
             width: 8.33333333%;
           }
 
-          .col-sm-2 {
+          .sm\:col-2 {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-sm-3 {
+          .sm\:col-3 {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .col-sm-4 {
+          .sm\:col-4 {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .col-sm-5 {
+          .sm\:col-5 {
             flex: 0 0 auto;
             width: 41.66666667%;
           }
 
-          .col-sm-6 {
+          .sm\:col-6 {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .col-sm-7 {
+          .sm\:col-7 {
             flex: 0 0 auto;
             width: 58.33333333%;
           }
 
-          .col-sm-8 {
+          .sm\:col-8 {
             flex: 0 0 auto;
             width: 66.66666667%;
           }
 
-          .col-sm-9 {
+          .sm\:col-9 {
             flex: 0 0 auto;
             width: 75%;
           }
 
-          .col-sm-10 {
+          .sm\:col-10 {
             flex: 0 0 auto;
             width: 83.33333333%;
           }
 
-          .col-sm-11 {
+          .sm\:col-11 {
             flex: 0 0 auto;
             width: 91.66666667%;
           }
 
-          .col-sm-12 {
+          .sm\:col-12 {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .offset-sm-0 {
+          .sm\:offset-0 {
             margin-left: 0;
           }
 
-          .offset-sm-1 {
+          .sm\:offset-1 {
             margin-left: 8.33333333%;
           }
 
-          .offset-sm-2 {
+          .sm\:offset-2 {
             margin-left: 16.66666667%;
           }
 
-          .offset-sm-3 {
+          .sm\:offset-3 {
             margin-left: 25%;
           }
 
-          .offset-sm-4 {
+          .sm\:offset-4 {
             margin-left: 33.33333333%;
           }
 
-          .offset-sm-5 {
+          .sm\:offset-5 {
             margin-left: 41.66666667%;
           }
 
-          .offset-sm-6 {
+          .sm\:offset-6 {
             margin-left: 50%;
           }
 
-          .offset-sm-7 {
+          .sm\:offset-7 {
             margin-left: 58.33333333%;
           }
 
-          .offset-sm-8 {
+          .sm\:offset-8 {
             margin-left: 66.66666667%;
           }
 
-          .offset-sm-9 {
+          .sm\:offset-9 {
             margin-left: 75%;
           }
 
-          .offset-sm-10 {
+          .sm\:offset-10 {
             margin-left: 83.33333333%;
           }
 
-          .offset-sm-11 {
+          .sm\:offset-11 {
             margin-left: 91.66666667%;
           }
 
-          .g-sm-none,
-          .gx-sm-none {
+          .sm\:g-none,
+          .sm\:gx-none {
             --bs-gutter-x: 0px !important;
           }
 
-          .g-sm-none,
-          .gy-sm-none {
+          .sm\:g-none,
+          .sm\:gy-none {
             --bs-gutter-y: 0px !important;
           }
 
-          .g-sm-3xsmall,
-          .gx-sm-3xsmall {
+          .sm\:g-3xsmall,
+          .sm\:gx-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-sm-3xsmall,
-          .gy-sm-3xsmall {
+          .sm\:g-3xsmall,
+          .sm\:gy-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-sm-2xsmall,
-          .gx-sm-2xsmall {
+          .sm\:g-2xsmall,
+          .sm\:gx-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-sm-2xsmall,
-          .gy-sm-2xsmall {
+          .sm\:g-2xsmall,
+          .sm\:gy-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-sm-xsmall,
-          .gx-sm-xsmall {
+          .sm\:g-xsmall,
+          .sm\:gx-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-sm-xsmall,
-          .gy-sm-xsmall {
+          .sm\:g-xsmall,
+          .sm\:gy-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-sm-small,
-          .gx-sm-small {
+          .sm\:g-small,
+          .sm\:gx-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-sm-small,
-          .gy-sm-small {
+          .sm\:g-small,
+          .sm\:gy-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-sm-medium,
-          .gx-sm-medium {
+          .sm\:g-medium,
+          .sm\:gx-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-sm-medium,
-          .gy-sm-medium {
+          .sm\:g-medium,
+          .sm\:gy-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-sm-large,
-          .gx-sm-large {
+          .sm\:g-large,
+          .sm\:gx-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-sm-large,
-          .gy-sm-large {
+          .sm\:g-large,
+          .sm\:gy-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-sm-xlarge,
-          .gx-sm-xlarge {
+          .sm\:g-xlarge,
+          .sm\:gx-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-sm-xlarge,
-          .gy-sm-xlarge {
+          .sm\:g-xlarge,
+          .sm\:gy-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-sm-2xlarge,
-          .gx-sm-2xlarge {
+          .sm\:g-2xlarge,
+          .sm\:gx-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-sm-2xlarge,
-          .gy-sm-2xlarge {
+          .sm\:g-2xlarge,
+          .sm\:gy-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-sm-3xlarge,
-          .gx-sm-3xlarge {
+          .sm\:g-3xlarge,
+          .sm\:gx-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-sm-3xlarge,
-          .gy-sm-3xlarge {
+          .sm\:g-3xlarge,
+          .sm\:gy-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-sm-4xlarge,
-          .gx-sm-4xlarge{
+          .sm\:g-4xlarge,
+          .sm\:gx-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-sm-4xlarge,
-          .gy-sm-4xlarge{
+          .sm\:g-4xlarge,
+          .sm\:gy-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-sm-5xlarge,
-          .gx-sm-5xlarge {
+          .sm\:g-5xlarge,
+          .sm\:gx-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-sm-5xlarge,
-          .gy-sm-5xlarge {
+          .sm\:g-5xlarge,
+          .sm\:gy-5xlarge {
             --bs-gutter-y: 64px !important;
           }
         }
 
         @media (min-width: 736px) {
-          .col-md {
+          .md\:col {
             flex: 1 0 0;
           }
 
-          .row-cols-md-auto > * {
+          .md\:row-cols-auto > * {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .row-cols-md-1 > * {
+          .md\:row-cols-1 > * {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .row-cols-md-2 > * {
+          .md\:row-cols-2 > * {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .row-cols-md-3 > * {
+          .md\:row-cols-3 > * {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .row-cols-md-4 > * {
+          .md\:row-cols-4 > * {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .row-cols-md-5 > * {
+          .md\:row-cols-5 > * {
             flex: 0 0 auto;
             width: 20%;
           }
 
-          .row-cols-md-6 > * {
+          .md\:row-cols-6 > * {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-md-auto {
+          .md\:col-auto {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .col-md-1 {
+          .md\:col-1 {
             flex: 0 0 auto;
             width: 8.33333333%;
           }
 
-          .col-md-2 {
+          .md\:col-2 {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-md-3 {
+          .md\:col-3 {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .col-md-4 {
+          .md\:col-4 {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .col-md-5 {
+          .md\:col-5 {
             flex: 0 0 auto;
             width: 41.66666667%;
           }
 
-          .col-md-6 {
+          .md\:col-6 {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .col-md-7 {
+          .md\:col-7 {
             flex: 0 0 auto;
             width: 58.33333333%;
           }
 
-          .col-md-8 {
+          .md\:col-8 {
             flex: 0 0 auto;
             width: 66.66666667%;
           }
 
-          .col-md-9 {
+          .md\:col-9 {
             flex: 0 0 auto;
             width: 75%;
           }
 
-          .col-md-10 {
+          .md\:col-10 {
             flex: 0 0 auto;
             width: 83.33333333%;
           }
 
-          .col-md-11 {
+          .md\:col-11 {
             flex: 0 0 auto;
             width: 91.66666667%;
           }
 
-          .col-md-12 {
+          .md\:col-12 {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .offset-md-0 {
+          .md\:offset-0 {
             margin-left: 0;
           }
 
-          .offset-md-1 {
+          .md\:offset-1 {
             margin-left: 8.33333333%;
           }
 
-          .offset-md-2 {
+          .md\:offset-2 {
             margin-left: 16.66666667%;
           }
 
-          .offset-md-3 {
+          .md\:offset-3 {
             margin-left: 25%;
           }
 
-          .offset-md-4 {
+          .md\:offset-4 {
             margin-left: 33.33333333%;
           }
 
-          .offset-md-5 {
+          .md\:offset-5 {
             margin-left: 41.66666667%;
           }
 
-          .offset-md-6 {
+          .md\:offset-6 {
             margin-left: 50%;
           }
 
-          .offset-md-7 {
+          .md\:offset-7 {
             margin-left: 58.33333333%;
           }
 
-          .offset-md-8 {
+          .md\:offset-8 {
             margin-left: 66.66666667%;
           }
 
-          .offset-md-9 {
+          .md\:offset-9 {
             margin-left: 75%;
           }
 
-          .offset-md-10 {
+          .md\:offset-10 {
             margin-left: 83.33333333%;
           }
 
-          .offset-md-11 {
+          .md\:offset-11 {
             margin-left: 91.66666667%;
           }
 
-          .g-md-none,
-          .gx-md-none {
+          .md\:g-none,
+          .md\:gx-none {
             --bs-gutter-x: 0px !important;
           }
 
-          .g-md-none,
-          .gy-md-none {
+          .md\:g-none,
+          .md\:gy-none {
             --bs-gutter-y: 0px !important;
           }
 
-          .g-md-3xsmall,
-          .gx-md-3xsmall {
+          .md\:g-3xsmall,
+          .md\:gx-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-md-3xsmall,
-          .gy-md-3xsmall {
+          .md\:g-3xsmall,
+          .md\:gy-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-md-2xsmall,
-          .gx-md-2xsmall {
+          .md\:g-2xsmall,
+          .md\:gx-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-md-2xsmall,
-          .gy-md-2xsmall {
+          .md\:g-2xsmall,
+          .md\:gy-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-md-xsmall,
-          .gx-md-xsmall {
+          .md\:g-xsmall,
+          .md\:gx-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-md-xsmall,
-          .gy-md-xsmall {
+          .md\:g-xsmall,
+          .md\:gy-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-md-small,
-          .gx-md-small {
+          .md\:g-small,
+          .md\:gx-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-md-small,
-          .gy-md-small {
+          .md\:g-small,
+          .md\:gy-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-md-medium,
-          .gx-md-medium {
+          .md\:g-medium,
+          .md\:gx-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-md-medium,
-          .gy-md-medium {
+          .md\:g-medium,
+          .md\:gy-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-md-large,
-          .gx-md-large {
+          .md\:g-large,
+          .md\:gx-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-md-large,
-          .gy-md-large {
+          .md\:g-large,
+          .md\:gy-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-md-xlarge,
-          .gx-md-xlarge {
+          .md\:g-xlarge,
+          .md\:gx-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-md-xlarge,
-          .gy-md-xlarge {
+          .md\:g-xlarge,
+          .md\:gy-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-md-2xlarge,
-          .gx-md-2xlarge {
+          .md\:g-2xlarge,
+          .md\:gx-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-md-2xlarge,
-          .gy-md-2xlarge {
+          .md\:g-2xlarge,
+          .md\:gy-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-md-3xlarge,
-          .gx-md-3xlarge {
+          .md\:g-3xlarge,
+          .md\:gx-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-md-3xlarge,
-          .gy-md-3xlarge {
+          .md\:g-3xlarge,
+          .md\:gy-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-md-4xlarge,
-          .gx-md-4xlarge{
+          .md\:g-4xlarge,
+          .md\:gx-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-md-4xlarge,
-          .gy-md-4xlarge{
+          .md\:g-4xlarge,
+          .md\:gy-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-md-5xlarge,
-          .gx-md-5xlarge {
+          .md\:g-5xlarge,
+          .md\:gx-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-md-5xlarge,
-          .gy-md-5xlarge {
+          .md\:g-5xlarge,
+          .md\:gy-5xlarge {
             --bs-gutter-y: 64px !important;
           }
         }
 
         @media (min-width: 1024px) {
-          .col-lg {
+          .lg\:col {
             flex: 1 0 0;
           }
 
-          .row-cols-lg-auto > * {
+          .lg\:row-cols-auto > * {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .row-cols-lg-1 > * {
+          .lg\:row-cols-1 > * {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .row-cols-lg-2 > * {
+          .lg\:row-cols-2 > * {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .row-cols-lg-3 > * {
+          .lg\:row-cols-3 > * {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .row-cols-lg-4 > * {
+          .lg\:row-cols-4 > * {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .row-cols-lg-5 > * {
+          .lg\:row-cols-5 > * {
             flex: 0 0 auto;
             width: 20%;
           }
 
-          .row-cols-lg-6 > * {
+          .lg\:row-cols-6 > * {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-lg-auto {
+          .lg\:col-auto {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .col-lg-1 {
+          .lg\:col-1 {
             flex: 0 0 auto;
             width: 8.33333333%;
           }
 
-          .col-lg-2 {
+          .lg\:col-2 {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-lg-3 {
+          .lg\:col-3 {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .col-lg-4 {
+          .lg\:col-4 {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .col-lg-5 {
+          .lg\:col-5 {
             flex: 0 0 auto;
             width: 41.66666667%;
           }
 
-          .col-lg-6 {
+          .lg\:col-6 {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .col-lg-7 {
+          .lg\:col-7 {
             flex: 0 0 auto;
             width: 58.33333333%;
           }
 
-          .col-lg-8 {
+          .lg\:col-8 {
             flex: 0 0 auto;
             width: 66.66666667%;
           }
 
-          .col-lg-9 {
+          .lg\:col-9 {
             flex: 0 0 auto;
             width: 75%;
           }
 
-          .col-lg-10 {
+          .lg\:col-10 {
             flex: 0 0 auto;
             width: 83.33333333%;
           }
 
-          .col-lg-11 {
+          .lg\:col-11 {
             flex: 0 0 auto;
             width: 91.66666667%;
           }
 
-          .col-lg-12 {
+          .lg\:col-12 {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .offset-lg-0 {
+          .lg\:offset-0 {
             margin-left: 0;
           }
 
-          .offset-lg-1 {
+          .lg\:offset-1 {
             margin-left: 8.33333333%;
           }
 
-          .offset-lg-2 {
+          .lg\:offset-2 {
             margin-left: 16.66666667%;
           }
 
-          .offset-lg-3 {
+          .lg\:offset-3 {
             margin-left: 25%;
           }
 
-          .offset-lg-4 {
+          .lg\:offset-4 {
             margin-left: 33.33333333%;
           }
 
-          .offset-lg-5 {
+          .lg\:offset-5 {
             margin-left: 41.66666667%;
           }
 
-          .offset-lg-6 {
+          .lg\:offset-6 {
             margin-left: 50%;
           }
 
-          .offset-lg-7 {
+          .lg\:offset-7 {
             margin-left: 58.33333333%;
           }
 
-          .offset-lg-8 {
+          .lg\:offset-8 {
             margin-left: 66.66666667%;
           }
 
-          .offset-lg-9 {
+          .lg\:offset-9 {
             margin-left: 75%;
           }
 
-          .offset-lg-10 {
+          .lg\:offset-10 {
             margin-left: 83.33333333%;
           }
 
-          .offset-lg-11 {
+          .lg\:offset-11 {
             margin-left: 91.66666667%;
           }
 
-          .g-lg-none,
-          .gx-lg-none {
+          .lg\:g-none,
+          .lg\:gx-none {
             --bs-gutter-x: 0px !important;
           }
 
-          .g-lg-none,
-          .gy-lg-none {
+          .lg\:g-none,
+          .lg\:gy-none {
             --bs-gutter-y: 0px !important;
           }
 
-          .g-lg-3xsmall,
-          .gx-lg-3xsmall {
+          .lg\:g-3xsmall,
+          .lg\:gx-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-lg-3xsmall,
-          .gy-lg-3xsmall {
+          .lg\:g-3xsmall,
+          .lg\:gy-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-lg-2xsmall,
-          .gx-lg-2xsmall {
+          .lg\:g-2xsmall,
+          .lg\:gx-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-lg-2xsmall,
-          .gy-lg-2xsmall {
+          .lg\:g-2xsmall,
+          .lg\:gy-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-lg-xsmall,
-          .gx-lg-xsmall {
+          .lg\:g-xsmall,
+          .lg\:gx-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-lg-xsmall,
-          .gy-lg-xsmall {
+          .lg\:g-xsmall,
+          .lg\:gy-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-lg-small,
-          .gx-lg-small {
+          .lg\:g-small,
+          .lg\:gx-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-lg-small,
-          .gy-lg-small {
+          .lg\:g-small,
+          .lg\:gy-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-lg-medium,
-          .gx-lg-medium {
+          .lg\:g-medium,
+          .lg\:gx-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-lg-medium,
-          .gy-lg-medium {
+          .lg\:g-medium,
+          .lg\:gy-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-lg-large,
-          .gx-lg-large {
+          .lg\:g-large,
+          .lg\:gx-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-lg-large,
-          .gy-lg-large {
+          .lg\:g-large,
+          .lg\:gy-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-lg-xlarge,
-          .gx-lg-xlarge {
+          .lg\:g-xlarge,
+          .lg\:gx-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-lg-xlarge,
-          .gy-lg-xlarge {
+          .lg\:g-xlarge,
+          .lg\:gy-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-lg-2xlarge,
-          .gx-lg-2xlarge {
+          .lg\:g-2xlarge,
+          .lg\:gx-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-lg-2xlarge,
-          .gy-lg-2xlarge {
+          .lg\:g-2xlarge,
+          .lg\:gy-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-lg-3xlarge,
-          .gx-lg-3xlarge {
+          .lg\:g-3xlarge,
+          .lg\:gx-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-lg-3xlarge,
-          .gy-lg-3xlarge {
+          .lg\:g-3xlarge,
+          .lg\:gy-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-lg-4xlarge,
-          .gx-lg-4xlarge{
+          .lg\:g-4xlarge,
+          .lg\:gx-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-lg-4xlarge,
-          .gy-lg-4xlarge{
+          .lg\:g-4xlarge,
+          .lg\:gy-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-lg-5xlarge,
-          .gx-lg-5xlarge {
+          .lg\:g-5xlarge,
+          .lg\:gx-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-lg-5xlarge,
-          .gy-lg-5xlarge {
+          .lg\:g-5xlarge,
+          .lg\:gy-5xlarge {
             --bs-gutter-y: 64px !important;
           }
         }
 
         @media (min-width: 1320px) {
-          .col-xl {
+          .xl\:col {
             flex: 1 0 0;
           }
 
-          .row-cols-xl-auto > * {
+          .xl\:row-cols-auto > * {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .row-cols-xl-1 > * {
+          .xl\:row-cols-1 > * {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .row-cols-xl-2 > * {
+          .xl\:row-cols-2 > * {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .row-cols-xl-3 > * {
+          .xl\:row-cols-3 > * {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .row-cols-xl-4 > * {
+          .xl\:row-cols-4 > * {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .row-cols-xl-5 > * {
+          .xl\:row-cols-5 > * {
             flex: 0 0 auto;
             width: 20%;
           }
 
-          .row-cols-xl-6 > * {
+          .xl\:row-cols-6 > * {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-xl-auto {
+          .xl\:col-auto {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .col-xl-1 {
+          .xl\:col-1 {
             flex: 0 0 auto;
             width: 8.33333333%;
           }
 
-          .col-xl-2 {
+          .xl\:col-2 {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-xl-3 {
+          .xl\:col-3 {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .col-xl-4 {
+          .xl\:col-4 {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .col-xl-5 {
+          .xl\:col-5 {
             flex: 0 0 auto;
             width: 41.66666667%;
           }
 
-          .col-xl-6 {
+          .xl\:col-6 {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .col-xl-7 {
+          .xl\:col-7 {
             flex: 0 0 auto;
             width: 58.33333333%;
           }
 
-          .col-xl-8 {
+          .xl\:col-8 {
             flex: 0 0 auto;
             width: 66.66666667%;
           }
 
-          .col-xl-9 {
+          .xl\:col-9 {
             flex: 0 0 auto;
             width: 75%;
           }
 
-          .col-xl-10 {
+          .xl\:col-10 {
             flex: 0 0 auto;
             width: 83.33333333%;
           }
 
-          .col-xl-11 {
+          .xl\:col-11 {
             flex: 0 0 auto;
             width: 91.66666667%;
           }
 
-          .col-xl-12 {
+          .xl\:col-12 {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .offset-xl-0 {
+          .xl\:offset-0 {
             margin-left: 0;
           }
 
-          .offset-xl-1 {
+          .xl\:offset-1 {
             margin-left: 8.33333333%;
           }
 
-          .offset-xl-2 {
+          .xl\:offset-2 {
             margin-left: 16.66666667%;
           }
 
-          .offset-xl-3 {
+          .xl\:offset-3 {
             margin-left: 25%;
           }
 
-          .offset-xl-4 {
+          .xl\:offset-4 {
             margin-left: 33.33333333%;
           }
 
-          .offset-xl-5 {
+          .xl\:offset-5 {
             margin-left: 41.66666667%;
           }
 
-          .offset-xl-6 {
+          .xl\:offset-6 {
             margin-left: 50%;
           }
 
-          .offset-xl-7 {
+          .xl\:offset-7 {
             margin-left: 58.33333333%;
           }
 
-          .offset-xl-8 {
+          .xl\:offset-8 {
             margin-left: 66.66666667%;
           }
 
-          .offset-xl-9 {
+          .xl\:offset-9 {
             margin-left: 75%;
           }
 
-          .offset-xl-10 {
+          .xl\:offset-10 {
             margin-left: 83.33333333%;
           }
 
-          .offset-xl-11 {
+          .xl\:offset-11 {
             margin-left: 91.66666667%;
           }
 
-          .g-xl-none,
-          .gx-xl-none {
+          .xl\:g-none,
+          .xl\:gx-none {
             --bs-gutter-x: 0px !important;
           }
 
-          .g-xl-none,
-          .gy-xl-none {
+          .xl\:g-none,
+          .xl\:gy-none {
             --bs-gutter-y: 0px !important;
           }
 
-          .g-xl-3xsmall,
-          .gx-xl-3xsmall {
+          .xl\:g-3xsmall,
+          .xl\:gx-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-xl-3xsmall,
-          .gy-xl-3xsmall {
+          .xl\:g-3xsmall,
+          .xl\:gy-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-xl-2xsmall,
-          .gx-xl-2xsmall {
+          .xl\:g-2xsmall,
+          .xl\:gx-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-xl-2xsmall,
-          .gy-xl-2xsmall {
+          .xl\:g-2xsmall,
+          .xl\:gy-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-xl-xsmall,
-          .gx-xl-xsmall {
+          .xl\:g-xsmall,
+          .xl\:gx-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-xl-xsmall,
-          .gy-xl-xsmall {
+          .xl\:g-xsmall,
+          .xl\:gy-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-xl-small,
-          .gx-xl-small {
+          .xl\:g-small,
+          .xl\:gx-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-xl-small,
-          .gy-xl-small {
+          .xl\:g-small,
+          .xl\:gy-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-xl-medium,
-          .gx-xl-medium {
+          .xl\:g-medium,
+          .xl\:gx-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-xl-medium,
-          .gy-xl-medium {
+          .xl\:g-medium,
+          .xl\:gy-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-xl-large,
-          .gx-xl-large {
+          .xl\:g-large,
+          .xl\:gx-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-xl-large,
-          .gy-xl-large {
+          .xl\:g-large,
+          .xl\:gy-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-xl-xlarge,
-          .gx-xl-xlarge {
+          .xl\:g-xlarge,
+          .xl\:gx-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-xl-xlarge,
-          .gy-xl-xlarge {
+          .xl\:g-xlarge,
+          .xl\:gy-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-xl-2xlarge,
-          .gx-xl-2xlarge {
+          .xl\:g-2xlarge,
+          .xl\:gx-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-xl-2xlarge,
-          .gy-xl-2xlarge {
+          .xl\:g-2xlarge,
+          .xl\:gy-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-xl-3xlarge,
-          .gx-xl-3xlarge {
+          .xl\:g-3xlarge,
+          .xl\:gx-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-xl-3xlarge,
-          .gy-xl-3xlarge {
+          .xl\:g-3xlarge,
+          .xl\:gy-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-xl-4xlarge,
-          .gx-xl-4xlarge{
+          .xl\:g-4xlarge,
+          .xl\:gx-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-xl-4xlarge,
-          .gy-xl-4xlarge{
+          .xl\:g-4xlarge,
+          .xl\:gy-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-xl-5xlarge,
-          .gx-xl-5xlarge {
+          .xl\:g-5xlarge,
+          .xl\:gx-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-xl-5xlarge,
-          .gy-xl-5xlarge {
+          .xl\:g-5xlarge,
+          .xl\:gy-5xlarge {
             --bs-gutter-y: 64px !important;
           }
         }
 
         @media (min-width: 1640px) {
-          .col-2xl {
+          .\32 xl\:col {
             flex: 1 0 0;
           }
 
-          .row-cols-2xl-auto > * {
+          .\32 xl\:row-cols-auto > * {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .row-cols-2xl-1 > * {
+          .\32 xl\:row-cols-1 > * {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .row-cols-2xl-2 > * {
+          .\32 xl\:row-cols-2 > * {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .row-cols-2xl-3 > * {
+          .\32 xl\:row-cols-3 > * {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .row-cols-2xl-4 > * {
+          .\32 xl\:row-cols-4 > * {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .row-cols-2xl-5 > * {
+          .\32 xl\:row-cols-5 > * {
             flex: 0 0 auto;
             width: 20%;
           }
 
-          .row-cols-2xl-6 > * {
+          .\32 xl\:row-cols-6 > * {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-2xl-auto {
+          .\32 xl\:col-auto {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .col-2xl-1 {
+          .\32 xl\:col-1 {
             flex: 0 0 auto;
             width: 8.33333333%;
           }
 
-          .col-2xl-2 {
+          .\32 xl\:col-2 {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-2xl-3 {
+          .\32 xl\:col-3 {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .col-2xl-4 {
+          .\32 xl\:col-4 {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .col-2xl-5 {
+          .\32 xl\:col-5 {
             flex: 0 0 auto;
             width: 41.66666667%;
           }
 
-          .col-2xl-6 {
+          .\32 xl\:col-6 {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .col-2xl-7 {
+          .\32 xl\:col-7 {
             flex: 0 0 auto;
             width: 58.33333333%;
           }
 
-          .col-2xl-8 {
+          .\32 xl\:col-8 {
             flex: 0 0 auto;
             width: 66.66666667%;
           }
 
-          .col-2xl-9 {
+          .\32 xl\:col-9 {
             flex: 0 0 auto;
             width: 75%;
           }
 
-          .col-2xl-10 {
+          .\32 xl\:col-10 {
             flex: 0 0 auto;
             width: 83.33333333%;
           }
 
-          .col-2xl-11 {
+          .\32 xl\:col-11 {
             flex: 0 0 auto;
             width: 91.66666667%;
           }
 
-          .col-2xl-12 {
+          .\32 xl\:col-12 {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .offset-2xl-0 {
+          .\32 xl\:offset-0 {
             margin-left: 0;
           }
 
-          .offset-2xl-1 {
+          .\32 xl\:offset-1 {
             margin-left: 8.33333333%;
           }
 
-          .offset-2xl-2 {
+          .\32 xl\:offset-2 {
             margin-left: 16.66666667%;
           }
 
-          .offset-2xl-3 {
+          .\32 xl\:offset-3 {
             margin-left: 25%;
           }
 
-          .offset-2xl-4 {
+          .\32 xl\:offset-4 {
             margin-left: 33.33333333%;
           }
 
-          .offset-2xl-5 {
+          .\32 xl\:offset-5 {
             margin-left: 41.66666667%;
           }
 
-          .offset-2xl-6 {
+          .\32 xl\:offset-6 {
             margin-left: 50%;
           }
 
-          .offset-2xl-7 {
+          .\32 xl\:offset-7 {
             margin-left: 58.33333333%;
           }
 
-          .offset-2xl-8 {
+          .\32 xl\:offset-8 {
             margin-left: 66.66666667%;
           }
 
-          .offset-2xl-9 {
+          .\32 xl\:offset-9 {
             margin-left: 75%;
           }
 
-          .offset-2xl-10 {
+          .\32 xl\:offset-10 {
             margin-left: 83.33333333%;
           }
 
-          .offset-2xl-11 {
+          .\32 xl\:offset-11 {
             margin-left: 91.66666667%;
           }
 
-          .g-2xl-none,
-          .gx-2xl-none {
+          .\32 xl\:g-none,
+          .\32 xl\:gx-none {
             --bs-gutter-x: 0px !important;
           }
 
-          .g-2xl-none,
-          .gy-2xl-none {
+          .\32 xl\:g-none,
+          .\32 xl\:gy-none {
             --bs-gutter-y: 0px !important;
           }
 
-          .g-2xl-3xsmall,
-          .gx-2xl-3xsmall {
+          .\32 xl\:g-3xsmall,
+          .\32 xl\:gx-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-2xl-3xsmall,
-          .gy-2xl-3xsmall {
+          .\32 xl\:g-3xsmall,
+          .\32 xl\:gy-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-2xl-2xsmall,
-          .gx-2xl-2xsmall {
+          .\32 xl\:g-2xsmall,
+          .\32 xl\:gx-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-2xl-2xsmall,
-          .gy-2xl-2xsmall {
+          .\32 xl\:g-2xsmall,
+          .\32 xl\:gy-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-2xl-xsmall,
-          .gx-2xl-xsmall {
+          .\32 xl\:g-xsmall,
+          .\32 xl\:gx-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-2xl-xsmall,
-          .gy-2xl-xsmall {
+          .\32 xl\:g-xsmall,
+          .\32 xl\:gy-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-2xl-small,
-          .gx-2xl-small {
+          .\32 xl\:g-small,
+          .\32 xl\:gx-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-2xl-small,
-          .gy-2xl-small {
+          .\32 xl\:g-small,
+          .\32 xl\:gy-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-2xl-medium,
-          .gx-2xl-medium {
+          .\32 xl\:g-medium,
+          .\32 xl\:gx-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-2xl-medium,
-          .gy-2xl-medium {
+          .\32 xl\:g-medium,
+          .\32 xl\:gy-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-2xl-large,
-          .gx-2xl-large {
+          .\32 xl\:g-large,
+          .\32 xl\:gx-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-2xl-large,
-          .gy-2xl-large {
+          .\32 xl\:g-large,
+          .\32 xl\:gy-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-2xl-xlarge,
-          .gx-2xl-xlarge {
+          .\32 xl\:g-xlarge,
+          .\32 xl\:gx-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-2xl-xlarge,
-          .gy-2xl-xlarge {
+          .\32 xl\:g-xlarge,
+          .\32 xl\:gy-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-2xl-2xlarge,
-          .gx-2xl-2xlarge {
+          .\32 xl\:g-2xlarge,
+          .\32 xl\:gx-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-2xl-2xlarge,
-          .gy-2xl-2xlarge {
+          .\32 xl\:g-2xlarge,
+          .\32 xl\:gy-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-2xl-3xlarge,
-          .gx-2xl-3xlarge {
+          .\32 xl\:g-3xlarge,
+          .\32 xl\:gx-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-2xl-3xlarge,
-          .gy-2xl-3xlarge {
+          .\32 xl\:g-3xlarge,
+          .\32 xl\:gy-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-2xl-4xlarge,
-          .gx-2xl-4xlarge{
+          .\32 xl\:g-4xlarge,
+          .\32 xl\:gx-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-2xl-4xlarge,
-          .gy-2xl-4xlarge{
+          .\32 xl\:g-4xlarge,
+          .\32 xl\:gy-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-2xl-5xlarge,
-          .gx-2xl-5xlarge {
+          .\32 xl\:g-5xlarge,
+          .\32 xl\:gx-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-2xl-5xlarge,
-          .gy-2xl-5xlarge {
+          .\32 xl\:g-5xlarge,
+          .\32 xl\:gy-5xlarge {
             --bs-gutter-y: 64px !important;
           }
         }
 
         @media (min-width: 1880px) {
-          .col-3xl {
+          .\33 xl\:col {
             flex: 1 0 0;
           }
 
-          .row-cols-3xl-auto > * {
+          .\33 xl\:row-cols-auto > * {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .row-cols-3xl-1 > * {
+          .\33 xl\:row-cols-1 > * {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .row-cols-3xl-2 > * {
+          .\33 xl\:row-cols-2 > * {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .row-cols-3xl-3 > * {
+          .\33 xl\:row-cols-3 > * {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .row-cols-3xl-4 > * {
+          .\33 xl\:row-cols-4 > * {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .row-cols-3xl-5 > * {
+          .\33 xl\:row-cols-5 > * {
             flex: 0 0 auto;
             width: 20%;
           }
 
-          .row-cols-3xl-6 > * {
+          .\33 xl\:row-cols-6 > * {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-3xl-auto {
+          .\33 xl\:col-auto {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .col-3xl-1 {
+          .\33 xl\:col-1 {
             flex: 0 0 auto;
             width: 8.33333333%;
           }
 
-          .col-3xl-2 {
+          .\33 xl\:col-2 {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-3xl-3 {
+          .\33 xl\:col-3 {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .col-3xl-4 {
+          .\33 xl\:col-4 {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .col-3xl-5 {
+          .\33 xl\:col-5 {
             flex: 0 0 auto;
             width: 41.66666667%;
           }
 
-          .col-3xl-6 {
+          .\33 xl\:col-6 {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .col-3xl-7 {
+          .\33 xl\:col-7 {
             flex: 0 0 auto;
             width: 58.33333333%;
           }
 
-          .col-3xl-8 {
+          .\33 xl\:col-8 {
             flex: 0 0 auto;
             width: 66.66666667%;
           }
 
-          .col-3xl-9 {
+          .\33 xl\:col-9 {
             flex: 0 0 auto;
             width: 75%;
           }
 
-          .col-3xl-10 {
+          .\33 xl\:col-10 {
             flex: 0 0 auto;
             width: 83.33333333%;
           }
 
-          .col-3xl-11 {
+          .\33 xl\:col-11 {
             flex: 0 0 auto;
             width: 91.66666667%;
           }
 
-          .col-3xl-12 {
+          .\33 xl\:col-12 {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .offset-3xl-0 {
+          .\33 xl\:offset-0 {
             margin-left: 0;
           }
 
-          .offset-3xl-1 {
+          .\33 xl\:offset-1 {
             margin-left: 8.33333333%;
           }
 
-          .offset-3xl-2 {
+          .\33 xl\:offset-2 {
             margin-left: 16.66666667%;
           }
 
-          .offset-3xl-3 {
+          .\33 xl\:offset-3 {
             margin-left: 25%;
           }
 
-          .offset-3xl-4 {
+          .\33 xl\:offset-4 {
             margin-left: 33.33333333%;
           }
 
-          .offset-3xl-5 {
+          .\33 xl\:offset-5 {
             margin-left: 41.66666667%;
           }
 
-          .offset-3xl-6 {
+          .\33 xl\:offset-6 {
             margin-left: 50%;
           }
 
-          .offset-3xl-7 {
+          .\33 xl\:offset-7 {
             margin-left: 58.33333333%;
           }
 
-          .offset-3xl-8 {
+          .\33 xl\:offset-8 {
             margin-left: 66.66666667%;
           }
 
-          .offset-3xl-9 {
+          .\33 xl\:offset-9 {
             margin-left: 75%;
           }
 
-          .offset-3xl-10 {
+          .\33 xl\:offset-10 {
             margin-left: 83.33333333%;
           }
 
-          .offset-3xl-11 {
+          .\33 xl\:offset-11 {
             margin-left: 91.66666667%;
           }
 
-          .g-3xl-none,
-          .gx-3xl-none {
+          .\33 xl\:g-none,
+          .\33 xl\:gx-none {
             --bs-gutter-x: 0px !important;
           }
 
-          .g-3xl-none,
-          .gy-3xl-none {
+          .\33 xl\:g-none,
+          .\33 xl\:gy-none {
             --bs-gutter-y: 0px !important;
           }
 
-          .g-3xl-3xsmall,
-          .gx-3xl-3xsmall {
+          .\33 xl\:g-3xsmall,
+          .\33 xl\:gx-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-3xl-3xsmall,
-          .gy-3xl-3xsmall {
+          .\33 xl\:g-3xsmall,
+          .\33 xl\:gy-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-3xl-2xsmall,
-          .gx-3xl-2xsmall {
+          .\33 xl\:g-2xsmall,
+          .\33 xl\:gx-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-3xl-2xsmall,
-          .gy-3xl-2xsmall {
+          .\33 xl\:g-2xsmall,
+          .\33 xl\:gy-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-3xl-xsmall,
-          .gx-3xl-xsmall {
+          .\33 xl\:g-xsmall,
+          .\33 xl\:gx-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-3xl-xsmall,
-          .gy-3xl-xsmall {
+          .\33 xl\:g-xsmall,
+          .\33 xl\:gy-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-3xl-small,
-          .gx-3xl-small {
+          .\33 xl\:g-small,
+          .\33 xl\:gx-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-3xl-small,
-          .gy-3xl-small {
+          .\33 xl\:g-small,
+          .\33 xl\:gy-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-3xl-medium,
-          .gx-3xl-medium {
+          .\33 xl\:g-medium,
+          .\33 xl\:gx-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-3xl-medium,
-          .gy-3xl-medium {
+          .\33 xl\:g-medium,
+          .\33 xl\:gy-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-3xl-large,
-          .gx-3xl-large {
+          .\33 xl\:g-large,
+          .\33 xl\:gx-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-3xl-large,
-          .gy-3xl-large {
+          .\33 xl\:g-large,
+          .\33 xl\:gy-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-3xl-xlarge,
-          .gx-3xl-xlarge {
+          .\33 xl\:g-xlarge,
+          .\33 xl\:gx-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-3xl-xlarge,
-          .gy-3xl-xlarge {
+          .\33 xl\:g-xlarge,
+          .\33 xl\:gy-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-3xl-2xlarge,
-          .gx-3xl-2xlarge {
+          .\33 xl\:g-2xlarge,
+          .\33 xl\:gx-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-3xl-2xlarge,
-          .gy-3xl-2xlarge {
+          .\33 xl\:g-2xlarge,
+          .\33 xl\:gy-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-3xl-3xlarge,
-          .gx-3xl-3xlarge {
+          .\33 xl\:g-3xlarge,
+          .\33 xl\:gx-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-3xl-3xlarge,
-          .gy-3xl-3xlarge {
+          .\33 xl\:g-3xlarge,
+          .\33 xl\:gy-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-3xl-4xlarge,
-          .gx-3xl-4xlarge{
+          .\33 xl\:g-4xlarge,
+          .\33 xl\:gx-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-3xl-4xlarge,
-          .gy-3xl-4xlarge{
+          .\33 xl\:g-4xlarge,
+          .\33 xl\:gy-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-3xl-5xlarge,
-          .gx-3xl-5xlarge {
+          .\33 xl\:g-5xlarge,
+          .\33 xl\:gx-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-3xl-5xlarge,
-          .gy-3xl-5xlarge {
+          .\33 xl\:g-5xlarge,
+          .\33 xl\:gy-5xlarge {
             --bs-gutter-y: 64px !important;
           }
         }
@@ -4067,275 +4067,275 @@ $enable-bootstrap-compatibility: null !default;
         }
 
         @media (min-width: 390px) {
-          .col-xs {
+          .xs\:col {
             flex: 1 0 0;
           }
 
-          .row-cols-xs-auto > * {
+          .xs\:row-cols-auto > * {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .row-cols-xs-1 > * {
+          .xs\:row-cols-1 > * {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .row-cols-xs-2 > * {
+          .xs\:row-cols-2 > * {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .row-cols-xs-3 > * {
+          .xs\:row-cols-3 > * {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .row-cols-xs-4 > * {
+          .xs\:row-cols-4 > * {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .row-cols-xs-5 > * {
+          .xs\:row-cols-5 > * {
             flex: 0 0 auto;
             width: 20%;
           }
 
-          .row-cols-xs-6 > * {
+          .xs\:row-cols-6 > * {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-xs-auto {
+          .xs\:col-auto {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .col-xs-1 {
+          .xs\:col-1 {
             flex: 0 0 auto;
             width: 8.33333333%;
           }
 
-          .col-xs-2 {
+          .xs\:col-2 {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-xs-3 {
+          .xs\:col-3 {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .col-xs-4 {
+          .xs\:col-4 {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .col-xs-5 {
+          .xs\:col-5 {
             flex: 0 0 auto;
             width: 41.66666667%;
           }
 
-          .col-xs-6 {
+          .xs\:col-6 {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .col-xs-7 {
+          .xs\:col-7 {
             flex: 0 0 auto;
             width: 58.33333333%;
           }
 
-          .col-xs-8 {
+          .xs\:col-8 {
             flex: 0 0 auto;
             width: 66.66666667%;
           }
 
-          .col-xs-9 {
+          .xs\:col-9 {
             flex: 0 0 auto;
             width: 75%;
           }
 
-          .col-xs-10 {
+          .xs\:col-10 {
             flex: 0 0 auto;
             width: 83.33333333%;
           }
 
-          .col-xs-11 {
+          .xs\:col-11 {
             flex: 0 0 auto;
             width: 91.66666667%;
           }
 
-          .col-xs-12 {
+          .xs\:col-12 {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .offset-xs-0 {
+          .xs\:offset-0 {
             margin-left: 0;
           }
 
-          .offset-xs-1 {
+          .xs\:offset-1 {
             margin-left: 8.33333333%;
           }
 
-          .offset-xs-2 {
+          .xs\:offset-2 {
             margin-left: 16.66666667%;
           }
 
-          .offset-xs-3 {
+          .xs\:offset-3 {
             margin-left: 25%;
           }
 
-          .offset-xs-4 {
+          .xs\:offset-4 {
             margin-left: 33.33333333%;
           }
 
-          .offset-xs-5 {
+          .xs\:offset-5 {
             margin-left: 41.66666667%;
           }
 
-          .offset-xs-6 {
+          .xs\:offset-6 {
             margin-left: 50%;
           }
 
-          .offset-xs-7 {
+          .xs\:offset-7 {
             margin-left: 58.33333333%;
           }
 
-          .offset-xs-8 {
+          .xs\:offset-8 {
             margin-left: 66.66666667%;
           }
 
-          .offset-xs-9 {
+          .xs\:offset-9 {
             margin-left: 75%;
           }
 
-          .offset-xs-10 {
+          .xs\:offset-10 {
             margin-left: 83.33333333%;
           }
 
-          .offset-xs-11 {
+          .xs\:offset-11 {
             margin-left: 91.66666667%;
           }
 
-          .g-xs-none,
-          .gx-xs-none {
+          .xs\:g-none,
+          .xs\:gx-none {
             --bs-gutter-x: 0px !important;
           }
 
-          .g-xs-none,
-          .gy-xs-none {
+          .xs\:g-none,
+          .xs\:gy-none {
             --bs-gutter-y: 0px !important;
           }
 
-          .g-xs-3xsmall,
-          .gx-xs-3xsmall {
+          .xs\:g-3xsmall,
+          .xs\:gx-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-xs-3xsmall,
-          .gy-xs-3xsmall {
+          .xs\:g-3xsmall,
+          .xs\:gy-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-xs-2xsmall,
-          .gx-xs-2xsmall {
+          .xs\:g-2xsmall,
+          .xs\:gx-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-xs-2xsmall,
-          .gy-xs-2xsmall {
+          .xs\:g-2xsmall,
+          .xs\:gy-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-xs-xsmall,
-          .gx-xs-xsmall {
+          .xs\:g-xsmall,
+          .xs\:gx-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-xs-xsmall,
-          .gy-xs-xsmall {
+          .xs\:g-xsmall,
+          .xs\:gy-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-xs-small,
-          .gx-xs-small {
+          .xs\:g-small,
+          .xs\:gx-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-xs-small,
-          .gy-xs-small {
+          .xs\:g-small,
+          .xs\:gy-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-xs-medium,
-          .gx-xs-medium {
+          .xs\:g-medium,
+          .xs\:gx-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-xs-medium,
-          .gy-xs-medium {
+          .xs\:g-medium,
+          .xs\:gy-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-xs-large,
-          .gx-xs-large {
+          .xs\:g-large,
+          .xs\:gx-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-xs-large,
-          .gy-xs-large {
+          .xs\:g-large,
+          .xs\:gy-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-xs-xlarge,
-          .gx-xs-xlarge {
+          .xs\:g-xlarge,
+          .xs\:gx-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-xs-xlarge,
-          .gy-xs-xlarge {
+          .xs\:g-xlarge,
+          .xs\:gy-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-xs-2xlarge,
-          .gx-xs-2xlarge {
+          .xs\:g-2xlarge,
+          .xs\:gx-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-xs-2xlarge,
-          .gy-xs-2xlarge {
+          .xs\:g-2xlarge,
+          .xs\:gy-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-xs-3xlarge,
-          .gx-xs-3xlarge {
+          .xs\:g-3xlarge,
+          .xs\:gx-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-xs-3xlarge,
-          .gy-xs-3xlarge {
+          .xs\:g-3xlarge,
+          .xs\:gy-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-xs-4xlarge,
-          .gx-xs-4xlarge{
+          .xs\:g-4xlarge,
+          .xs\:gx-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-xs-4xlarge,
-          .gy-xs-4xlarge{
+          .xs\:g-4xlarge,
+          .xs\:gy-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-xs-5xlarge,
-          .gx-xs-5xlarge {
+          .xs\:g-5xlarge,
+          .xs\:gx-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-xs-5xlarge,
-          .gy-xs-5xlarge {
+          .xs\:g-5xlarge,
+          .xs\:gy-5xlarge {
             --bs-gutter-y: 64px !important;
           }
 
@@ -4401,279 +4401,279 @@ $enable-bootstrap-compatibility: null !default;
         }
 
         @media (min-width: 480px) {
-          .col-sm {
+          .sm\:col {
             flex: 1 0 0;
           }
 
-          .row-cols-sm-auto > * {
+          .sm\:row-cols-auto > * {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .row-cols-sm-1 > * {
+          .sm\:row-cols-1 > * {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .row-cols-sm-2 > * {
+          .sm\:row-cols-2 > * {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .row-cols-sm-3 > * {
+          .sm\:row-cols-3 > * {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .row-cols-sm-4 > * {
+          .sm\:row-cols-4 > * {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .row-cols-sm-5 > * {
+          .sm\:row-cols-5 > * {
             flex: 0 0 auto;
             width: 20%;
           }
 
-          .row-cols-sm-6 > * {
+          .sm\:row-cols-6 > * {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-sm-auto {
+          .sm\:col-auto {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .col-sm-1 {
+          .sm\:col-1 {
             flex: 0 0 auto;
             width: 8.33333333%;
           }
 
-          .col-sm-2 {
+          .sm\:col-2 {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-sm-3 {
+          .sm\:col-3 {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .col-sm-4 {
+          .sm\:col-4 {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .col-sm-5 {
+          .sm\:col-5 {
             flex: 0 0 auto;
             width: 41.66666667%;
           }
 
-          .col-sm-6 {
+          .sm\:col-6 {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .col-sm-7 {
+          .sm\:col-7 {
             flex: 0 0 auto;
             width: 58.33333333%;
           }
 
-          .col-sm-8 {
+          .sm\:col-8 {
             flex: 0 0 auto;
             width: 66.66666667%;
           }
 
-          .col-sm-9 {
+          .sm\:col-9 {
             flex: 0 0 auto;
             width: 75%;
           }
 
-          .col-sm-10 {
+          .sm\:col-10 {
             flex: 0 0 auto;
             width: 83.33333333%;
           }
 
-          .col-sm-11 {
+          .sm\:col-11 {
             flex: 0 0 auto;
             width: 91.66666667%;
           }
 
-          .col-sm-12 {
+          .sm\:col-12 {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .offset-sm-0 {
+          .sm\:offset-0 {
             margin-left: 0;
           }
 
-          .offset-sm-1 {
+          .sm\:offset-1 {
             margin-left: 8.33333333%;
           }
 
-          .offset-sm-2 {
+          .sm\:offset-2 {
             margin-left: 16.66666667%;
           }
 
-          .offset-sm-3 {
+          .sm\:offset-3 {
             margin-left: 25%;
           }
 
-          .offset-sm-4 {
+          .sm\:offset-4 {
             margin-left: 33.33333333%;
           }
 
-          .offset-sm-5 {
+          .sm\:offset-5 {
             margin-left: 41.66666667%;
           }
 
-          .offset-sm-6 {
+          .sm\:offset-6 {
             margin-left: 50%;
           }
 
-          .offset-sm-7 {
+          .sm\:offset-7 {
             margin-left: 58.33333333%;
           }
 
-          .offset-sm-8 {
+          .sm\:offset-8 {
             margin-left: 66.66666667%;
           }
 
-          .offset-sm-9 {
+          .sm\:offset-9 {
             margin-left: 75%;
           }
 
-          .offset-sm-10 {
+          .sm\:offset-10 {
             margin-left: 83.33333333%;
           }
 
-          .offset-sm-11 {
+          .sm\:offset-11 {
             margin-left: 91.66666667%;
           }
 
-          .g-sm-none,
-          .gx-sm-none {
+          .sm\:g-none,
+          .sm\:gx-none {
             --bs-gutter-x: 0px !important;
           }
 
-          .g-sm-none,
-          .gy-sm-none {
+          .sm\:g-none,
+          .sm\:gy-none {
             --bs-gutter-y: 0px !important;
           }
 
-          .g-sm-3xsmall,
-          .gx-sm-3xsmall {
+          .sm\:g-3xsmall,
+          .sm\:gx-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-sm-3xsmall,
-          .gy-sm-3xsmall {
+          .sm\:g-3xsmall,
+          .sm\:gy-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-sm-2xsmall,
-          .gx-sm-2xsmall {
+          .sm\:g-2xsmall,
+          .sm\:gx-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-sm-2xsmall,
-          .gy-sm-2xsmall {
+          .sm\:g-2xsmall,
+          .sm\:gy-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-sm-xsmall,
-          .gx-sm-xsmall {
+          .sm\:g-xsmall,
+          .sm\:gx-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-sm-xsmall,
-          .gy-sm-xsmall {
+          .sm\:g-xsmall,
+          .sm\:gy-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-sm-small,
-          .gx-sm-small {
+          .sm\:g-small,
+          .sm\:gx-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-sm-small,
-          .gy-sm-small {
+          .sm\:g-small,
+          .sm\:gy-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-sm-medium,
-          .gx-sm-medium {
+          .sm\:g-medium,
+          .sm\:gx-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-sm-medium,
-          .gy-sm-medium {
+          .sm\:g-medium,
+          .sm\:gy-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-sm-large,
-          .gx-sm-large {
+          .sm\:g-large,
+          .sm\:gx-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-sm-large,
-          .gy-sm-large {
+          .sm\:g-large,
+          .sm\:gy-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-sm-xlarge,
-          .gx-sm-xlarge {
+          .sm\:g-xlarge,
+          .sm\:gx-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-sm-xlarge,
-          .gy-sm-xlarge {
+          .sm\:g-xlarge,
+          .sm\:gy-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-sm-2xlarge,
-          .gx-sm-2xlarge {
+          .sm\:g-2xlarge,
+          .sm\:gx-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-sm-2xlarge,
-          .gy-sm-2xlarge {
+          .sm\:g-2xlarge,
+          .sm\:gy-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-sm-3xlarge,
-          .gx-sm-3xlarge {
+          .sm\:g-3xlarge,
+          .sm\:gx-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-sm-3xlarge,
-          .gy-sm-3xlarge {
+          .sm\:g-3xlarge,
+          .sm\:gy-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-sm-4xlarge,
-          .gx-sm-4xlarge{
+          .sm\:g-4xlarge,
+          .sm\:gx-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-sm-4xlarge,
-          .gy-sm-4xlarge{
+          .sm\:g-4xlarge,
+          .sm\:gy-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-sm-5xlarge,
-          .gx-sm-5xlarge {
+          .sm\:g-5xlarge,
+          .sm\:gx-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-sm-5xlarge,
-          .gy-sm-5xlarge {
+          .sm\:g-5xlarge,
+          .sm\:gy-5xlarge {
             --bs-gutter-y: 64px !important;
           }
 
-          .g-sm-0,
+          .sm\:g-0,
           .gx-sm-0 {
             --bs-gutter-x: 0 !important;
           }
@@ -4735,275 +4735,275 @@ $enable-bootstrap-compatibility: null !default;
         }
 
         @media (min-width: 736px) {
-          .col-md {
+          .md\:col {
             flex: 1 0 0;
           }
 
-          .row-cols-md-auto > * {
+          .md\:row-cols-auto > * {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .row-cols-md-1 > * {
+          .md\:row-cols-1 > * {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .row-cols-md-2 > * {
+          .md\:row-cols-2 > * {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .row-cols-md-3 > * {
+          .md\:row-cols-3 > * {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .row-cols-md-4 > * {
+          .md\:row-cols-4 > * {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .row-cols-md-5 > * {
+          .md\:row-cols-5 > * {
             flex: 0 0 auto;
             width: 20%;
           }
 
-          .row-cols-md-6 > * {
+          .md\:row-cols-6 > * {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-md-auto {
+          .md\:col-auto {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .col-md-1 {
+          .md\:col-1 {
             flex: 0 0 auto;
             width: 8.33333333%;
           }
 
-          .col-md-2 {
+          .md\:col-2 {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-md-3 {
+          .md\:col-3 {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .col-md-4 {
+          .md\:col-4 {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .col-md-5 {
+          .md\:col-5 {
             flex: 0 0 auto;
             width: 41.66666667%;
           }
 
-          .col-md-6 {
+          .md\:col-6 {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .col-md-7 {
+          .md\:col-7 {
             flex: 0 0 auto;
             width: 58.33333333%;
           }
 
-          .col-md-8 {
+          .md\:col-8 {
             flex: 0 0 auto;
             width: 66.66666667%;
           }
 
-          .col-md-9 {
+          .md\:col-9 {
             flex: 0 0 auto;
             width: 75%;
           }
 
-          .col-md-10 {
+          .md\:col-10 {
             flex: 0 0 auto;
             width: 83.33333333%;
           }
 
-          .col-md-11 {
+          .md\:col-11 {
             flex: 0 0 auto;
             width: 91.66666667%;
           }
 
-          .col-md-12 {
+          .md\:col-12 {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .offset-md-0 {
+          .md\:offset-0 {
             margin-left: 0;
           }
 
-          .offset-md-1 {
+          .md\:offset-1 {
             margin-left: 8.33333333%;
           }
 
-          .offset-md-2 {
+          .md\:offset-2 {
             margin-left: 16.66666667%;
           }
 
-          .offset-md-3 {
+          .md\:offset-3 {
             margin-left: 25%;
           }
 
-          .offset-md-4 {
+          .md\:offset-4 {
             margin-left: 33.33333333%;
           }
 
-          .offset-md-5 {
+          .md\:offset-5 {
             margin-left: 41.66666667%;
           }
 
-          .offset-md-6 {
+          .md\:offset-6 {
             margin-left: 50%;
           }
 
-          .offset-md-7 {
+          .md\:offset-7 {
             margin-left: 58.33333333%;
           }
 
-          .offset-md-8 {
+          .md\:offset-8 {
             margin-left: 66.66666667%;
           }
 
-          .offset-md-9 {
+          .md\:offset-9 {
             margin-left: 75%;
           }
 
-          .offset-md-10 {
+          .md\:offset-10 {
             margin-left: 83.33333333%;
           }
 
-          .offset-md-11 {
+          .md\:offset-11 {
             margin-left: 91.66666667%;
           }
 
-          .g-md-none,
-          .gx-md-none {
+          .md\:g-none,
+          .md\:gx-none {
             --bs-gutter-x: 0px !important;
           }
 
-          .g-md-none,
-          .gy-md-none {
+          .md\:g-none,
+          .md\:gy-none {
             --bs-gutter-y: 0px !important;
           }
 
-          .g-md-3xsmall,
-          .gx-md-3xsmall {
+          .md\:g-3xsmall,
+          .md\:gx-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-md-3xsmall,
-          .gy-md-3xsmall {
+          .md\:g-3xsmall,
+          .md\:gy-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-md-2xsmall,
-          .gx-md-2xsmall {
+          .md\:g-2xsmall,
+          .md\:gx-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-md-2xsmall,
-          .gy-md-2xsmall {
+          .md\:g-2xsmall,
+          .md\:gy-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-md-xsmall,
-          .gx-md-xsmall {
+          .md\:g-xsmall,
+          .md\:gx-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-md-xsmall,
-          .gy-md-xsmall {
+          .md\:g-xsmall,
+          .md\:gy-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-md-small,
-          .gx-md-small {
+          .md\:g-small,
+          .md\:gx-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-md-small,
-          .gy-md-small {
+          .md\:g-small,
+          .md\:gy-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-md-medium,
-          .gx-md-medium {
+          .md\:g-medium,
+          .md\:gx-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-md-medium,
-          .gy-md-medium {
+          .md\:g-medium,
+          .md\:gy-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-md-large,
-          .gx-md-large {
+          .md\:g-large,
+          .md\:gx-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-md-large,
-          .gy-md-large {
+          .md\:g-large,
+          .md\:gy-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-md-xlarge,
-          .gx-md-xlarge {
+          .md\:g-xlarge,
+          .md\:gx-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-md-xlarge,
-          .gy-md-xlarge {
+          .md\:g-xlarge,
+          .md\:gy-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-md-2xlarge,
-          .gx-md-2xlarge {
+          .md\:g-2xlarge,
+          .md\:gx-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-md-2xlarge,
-          .gy-md-2xlarge {
+          .md\:g-2xlarge,
+          .md\:gy-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-md-3xlarge,
-          .gx-md-3xlarge {
+          .md\:g-3xlarge,
+          .md\:gx-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-md-3xlarge,
-          .gy-md-3xlarge {
+          .md\:g-3xlarge,
+          .md\:gy-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-md-4xlarge,
-          .gx-md-4xlarge{
+          .md\:g-4xlarge,
+          .md\:gx-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-md-4xlarge,
-          .gy-md-4xlarge{
+          .md\:g-4xlarge,
+          .md\:gy-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-md-5xlarge,
-          .gx-md-5xlarge {
+          .md\:g-5xlarge,
+          .md\:gx-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-md-5xlarge,
-          .gy-md-5xlarge {
+          .md\:g-5xlarge,
+          .md\:gy-5xlarge {
             --bs-gutter-y: 64px !important;
           }
 
@@ -5069,275 +5069,275 @@ $enable-bootstrap-compatibility: null !default;
         }
 
         @media (min-width: 1024px) {
-          .col-lg {
+          .lg\:col {
             flex: 1 0 0;
           }
 
-          .row-cols-lg-auto > * {
+          .lg\:row-cols-auto > * {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .row-cols-lg-1 > * {
+          .lg\:row-cols-1 > * {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .row-cols-lg-2 > * {
+          .lg\:row-cols-2 > * {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .row-cols-lg-3 > * {
+          .lg\:row-cols-3 > * {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .row-cols-lg-4 > * {
+          .lg\:row-cols-4 > * {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .row-cols-lg-5 > * {
+          .lg\:row-cols-5 > * {
             flex: 0 0 auto;
             width: 20%;
           }
 
-          .row-cols-lg-6 > * {
+          .lg\:row-cols-6 > * {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-lg-auto {
+          .lg\:col-auto {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .col-lg-1 {
+          .lg\:col-1 {
             flex: 0 0 auto;
             width: 8.33333333%;
           }
 
-          .col-lg-2 {
+          .lg\:col-2 {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-lg-3 {
+          .lg\:col-3 {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .col-lg-4 {
+          .lg\:col-4 {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .col-lg-5 {
+          .lg\:col-5 {
             flex: 0 0 auto;
             width: 41.66666667%;
           }
 
-          .col-lg-6 {
+          .lg\:col-6 {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .col-lg-7 {
+          .lg\:col-7 {
             flex: 0 0 auto;
             width: 58.33333333%;
           }
 
-          .col-lg-8 {
+          .lg\:col-8 {
             flex: 0 0 auto;
             width: 66.66666667%;
           }
 
-          .col-lg-9 {
+          .lg\:col-9 {
             flex: 0 0 auto;
             width: 75%;
           }
 
-          .col-lg-10 {
+          .lg\:col-10 {
             flex: 0 0 auto;
             width: 83.33333333%;
           }
 
-          .col-lg-11 {
+          .lg\:col-11 {
             flex: 0 0 auto;
             width: 91.66666667%;
           }
 
-          .col-lg-12 {
+          .lg\:col-12 {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .offset-lg-0 {
+          .lg\:offset-0 {
             margin-left: 0;
           }
 
-          .offset-lg-1 {
+          .lg\:offset-1 {
             margin-left: 8.33333333%;
           }
 
-          .offset-lg-2 {
+          .lg\:offset-2 {
             margin-left: 16.66666667%;
           }
 
-          .offset-lg-3 {
+          .lg\:offset-3 {
             margin-left: 25%;
           }
 
-          .offset-lg-4 {
+          .lg\:offset-4 {
             margin-left: 33.33333333%;
           }
 
-          .offset-lg-5 {
+          .lg\:offset-5 {
             margin-left: 41.66666667%;
           }
 
-          .offset-lg-6 {
+          .lg\:offset-6 {
             margin-left: 50%;
           }
 
-          .offset-lg-7 {
+          .lg\:offset-7 {
             margin-left: 58.33333333%;
           }
 
-          .offset-lg-8 {
+          .lg\:offset-8 {
             margin-left: 66.66666667%;
           }
 
-          .offset-lg-9 {
+          .lg\:offset-9 {
             margin-left: 75%;
           }
 
-          .offset-lg-10 {
+          .lg\:offset-10 {
             margin-left: 83.33333333%;
           }
 
-          .offset-lg-11 {
+          .lg\:offset-11 {
             margin-left: 91.66666667%;
           }
 
-          .g-lg-none,
-          .gx-lg-none {
+          .lg\:g-none,
+          .lg\:gx-none {
             --bs-gutter-x: 0px !important;
           }
 
-          .g-lg-none,
-          .gy-lg-none {
+          .lg\:g-none,
+          .lg\:gy-none {
             --bs-gutter-y: 0px !important;
           }
 
-          .g-lg-3xsmall,
-          .gx-lg-3xsmall {
+          .lg\:g-3xsmall,
+          .lg\:gx-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-lg-3xsmall,
-          .gy-lg-3xsmall {
+          .lg\:g-3xsmall,
+          .lg\:gy-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-lg-2xsmall,
-          .gx-lg-2xsmall {
+          .lg\:g-2xsmall,
+          .lg\:gx-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-lg-2xsmall,
-          .gy-lg-2xsmall {
+          .lg\:g-2xsmall,
+          .lg\:gy-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-lg-xsmall,
-          .gx-lg-xsmall {
+          .lg\:g-xsmall,
+          .lg\:gx-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-lg-xsmall,
-          .gy-lg-xsmall {
+          .lg\:g-xsmall,
+          .lg\:gy-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-lg-small,
-          .gx-lg-small {
+          .lg\:g-small,
+          .lg\:gx-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-lg-small,
-          .gy-lg-small {
+          .lg\:g-small,
+          .lg\:gy-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-lg-medium,
-          .gx-lg-medium {
+          .lg\:g-medium,
+          .lg\:gx-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-lg-medium,
-          .gy-lg-medium {
+          .lg\:g-medium,
+          .lg\:gy-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-lg-large,
-          .gx-lg-large {
+          .lg\:g-large,
+          .lg\:gx-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-lg-large,
-          .gy-lg-large {
+          .lg\:g-large,
+          .lg\:gy-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-lg-xlarge,
-          .gx-lg-xlarge {
+          .lg\:g-xlarge,
+          .lg\:gx-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-lg-xlarge,
-          .gy-lg-xlarge {
+          .lg\:g-xlarge,
+          .lg\:gy-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-lg-2xlarge,
-          .gx-lg-2xlarge {
+          .lg\:g-2xlarge,
+          .lg\:gx-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-lg-2xlarge,
-          .gy-lg-2xlarge {
+          .lg\:g-2xlarge,
+          .lg\:gy-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-lg-3xlarge,
-          .gx-lg-3xlarge {
+          .lg\:g-3xlarge,
+          .lg\:gx-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-lg-3xlarge,
-          .gy-lg-3xlarge {
+          .lg\:g-3xlarge,
+          .lg\:gy-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-lg-4xlarge,
-          .gx-lg-4xlarge{
+          .lg\:g-4xlarge,
+          .lg\:gx-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-lg-4xlarge,
-          .gy-lg-4xlarge{
+          .lg\:g-4xlarge,
+          .lg\:gy-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-lg-5xlarge,
-          .gx-lg-5xlarge {
+          .lg\:g-5xlarge,
+          .lg\:gx-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-lg-5xlarge,
-          .gy-lg-5xlarge {
+          .lg\:g-5xlarge,
+          .lg\:gy-5xlarge {
             --bs-gutter-y: 64px !important;
           }
 
@@ -5403,275 +5403,275 @@ $enable-bootstrap-compatibility: null !default;
         }
 
         @media (min-width: 1320px) {
-          .col-xl {
+          .xl\:col {
             flex: 1 0 0;
           }
 
-          .row-cols-xl-auto > * {
+          .xl\:row-cols-auto > * {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .row-cols-xl-1 > * {
+          .xl\:row-cols-1 > * {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .row-cols-xl-2 > * {
+          .xl\:row-cols-2 > * {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .row-cols-xl-3 > * {
+          .xl\:row-cols-3 > * {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .row-cols-xl-4 > * {
+          .xl\:row-cols-4 > * {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .row-cols-xl-5 > * {
+          .xl\:row-cols-5 > * {
             flex: 0 0 auto;
             width: 20%;
           }
 
-          .row-cols-xl-6 > * {
+          .xl\:row-cols-6 > * {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-xl-auto {
+          .xl\:col-auto {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .col-xl-1 {
+          .xl\:col-1 {
             flex: 0 0 auto;
             width: 8.33333333%;
           }
 
-          .col-xl-2 {
+          .xl\:col-2 {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-xl-3 {
+          .xl\:col-3 {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .col-xl-4 {
+          .xl\:col-4 {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .col-xl-5 {
+          .xl\:col-5 {
             flex: 0 0 auto;
             width: 41.66666667%;
           }
 
-          .col-xl-6 {
+          .xl\:col-6 {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .col-xl-7 {
+          .xl\:col-7 {
             flex: 0 0 auto;
             width: 58.33333333%;
           }
 
-          .col-xl-8 {
+          .xl\:col-8 {
             flex: 0 0 auto;
             width: 66.66666667%;
           }
 
-          .col-xl-9 {
+          .xl\:col-9 {
             flex: 0 0 auto;
             width: 75%;
           }
 
-          .col-xl-10 {
+          .xl\:col-10 {
             flex: 0 0 auto;
             width: 83.33333333%;
           }
 
-          .col-xl-11 {
+          .xl\:col-11 {
             flex: 0 0 auto;
             width: 91.66666667%;
           }
 
-          .col-xl-12 {
+          .xl\:col-12 {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .offset-xl-0 {
+          .xl\:offset-0 {
             margin-left: 0;
           }
 
-          .offset-xl-1 {
+          .xl\:offset-1 {
             margin-left: 8.33333333%;
           }
 
-          .offset-xl-2 {
+          .xl\:offset-2 {
             margin-left: 16.66666667%;
           }
 
-          .offset-xl-3 {
+          .xl\:offset-3 {
             margin-left: 25%;
           }
 
-          .offset-xl-4 {
+          .xl\:offset-4 {
             margin-left: 33.33333333%;
           }
 
-          .offset-xl-5 {
+          .xl\:offset-5 {
             margin-left: 41.66666667%;
           }
 
-          .offset-xl-6 {
+          .xl\:offset-6 {
             margin-left: 50%;
           }
 
-          .offset-xl-7 {
+          .xl\:offset-7 {
             margin-left: 58.33333333%;
           }
 
-          .offset-xl-8 {
+          .xl\:offset-8 {
             margin-left: 66.66666667%;
           }
 
-          .offset-xl-9 {
+          .xl\:offset-9 {
             margin-left: 75%;
           }
 
-          .offset-xl-10 {
+          .xl\:offset-10 {
             margin-left: 83.33333333%;
           }
 
-          .offset-xl-11 {
+          .xl\:offset-11 {
             margin-left: 91.66666667%;
           }
 
-          .g-xl-none,
-          .gx-xl-none {
+          .xl\:g-none,
+          .xl\:gx-none {
             --bs-gutter-x: 0px !important;
           }
 
-          .g-xl-none,
-          .gy-xl-none {
+          .xl\:g-none,
+          .xl\:gy-none {
             --bs-gutter-y: 0px !important;
           }
 
-          .g-xl-3xsmall,
-          .gx-xl-3xsmall {
+          .xl\:g-3xsmall,
+          .xl\:gx-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-xl-3xsmall,
-          .gy-xl-3xsmall {
+          .xl\:g-3xsmall,
+          .xl\:gy-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-xl-2xsmall,
-          .gx-xl-2xsmall {
+          .xl\:g-2xsmall,
+          .xl\:gx-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-xl-2xsmall,
-          .gy-xl-2xsmall {
+          .xl\:g-2xsmall,
+          .xl\:gy-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-xl-xsmall,
-          .gx-xl-xsmall {
+          .xl\:g-xsmall,
+          .xl\:gx-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-xl-xsmall,
-          .gy-xl-xsmall {
+          .xl\:g-xsmall,
+          .xl\:gy-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-xl-small,
-          .gx-xl-small {
+          .xl\:g-small,
+          .xl\:gx-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-xl-small,
-          .gy-xl-small {
+          .xl\:g-small,
+          .xl\:gy-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-xl-medium,
-          .gx-xl-medium {
+          .xl\:g-medium,
+          .xl\:gx-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-xl-medium,
-          .gy-xl-medium {
+          .xl\:g-medium,
+          .xl\:gy-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-xl-large,
-          .gx-xl-large {
+          .xl\:g-large,
+          .xl\:gx-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-xl-large,
-          .gy-xl-large {
+          .xl\:g-large,
+          .xl\:gy-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-xl-xlarge,
-          .gx-xl-xlarge {
+          .xl\:g-xlarge,
+          .xl\:gx-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-xl-xlarge,
-          .gy-xl-xlarge {
+          .xl\:g-xlarge,
+          .xl\:gy-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-xl-2xlarge,
-          .gx-xl-2xlarge {
+          .xl\:g-2xlarge,
+          .xl\:gx-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-xl-2xlarge,
-          .gy-xl-2xlarge {
+          .xl\:g-2xlarge,
+          .xl\:gy-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-xl-3xlarge,
-          .gx-xl-3xlarge {
+          .xl\:g-3xlarge,
+          .xl\:gx-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-xl-3xlarge,
-          .gy-xl-3xlarge {
+          .xl\:g-3xlarge,
+          .xl\:gy-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-xl-4xlarge,
-          .gx-xl-4xlarge{
+          .xl\:g-4xlarge,
+          .xl\:gx-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-xl-4xlarge,
-          .gy-xl-4xlarge{
+          .xl\:g-4xlarge,
+          .xl\:gy-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-xl-5xlarge,
-          .gx-xl-5xlarge {
+          .xl\:g-5xlarge,
+          .xl\:gx-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-xl-5xlarge,
-          .gy-xl-5xlarge {
+          .xl\:g-5xlarge,
+          .xl\:gy-5xlarge {
             --bs-gutter-y: 64px !important;
           }
 
@@ -5737,275 +5737,275 @@ $enable-bootstrap-compatibility: null !default;
         }
 
         @media (min-width: 1640px) {
-          .col-xxl {
+          .xxl\:col {
             flex: 1 0 0;
           }
 
-          .row-cols-xxl-auto > * {
+          .xxl\:row-cols-auto > * {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .row-cols-xxl-1 > * {
+          .xxl\:row-cols-1 > * {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .row-cols-xxl-2 > * {
+          .xxl\:row-cols-2 > * {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .row-cols-xxl-3 > * {
+          .xxl\:row-cols-3 > * {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .row-cols-xxl-4 > * {
+          .xxl\:row-cols-4 > * {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .row-cols-xxl-5 > * {
+          .xxl\:row-cols-5 > * {
             flex: 0 0 auto;
             width: 20%;
           }
 
-          .row-cols-xxl-6 > * {
+          .xxl\:row-cols-6 > * {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-xxl-auto {
+          .xxl\:col-auto {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .col-xxl-1 {
+          .xxl\:col-1 {
             flex: 0 0 auto;
             width: 8.33333333%;
           }
 
-          .col-xxl-2 {
+          .xxl\:col-2 {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-xxl-3 {
+          .xxl\:col-3 {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .col-xxl-4 {
+          .xxl\:col-4 {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .col-xxl-5 {
+          .xxl\:col-5 {
             flex: 0 0 auto;
             width: 41.66666667%;
           }
 
-          .col-xxl-6 {
+          .xxl\:col-6 {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .col-xxl-7 {
+          .xxl\:col-7 {
             flex: 0 0 auto;
             width: 58.33333333%;
           }
 
-          .col-xxl-8 {
+          .xxl\:col-8 {
             flex: 0 0 auto;
             width: 66.66666667%;
           }
 
-          .col-xxl-9 {
+          .xxl\:col-9 {
             flex: 0 0 auto;
             width: 75%;
           }
 
-          .col-xxl-10 {
+          .xxl\:col-10 {
             flex: 0 0 auto;
             width: 83.33333333%;
           }
 
-          .col-xxl-11 {
+          .xxl\:col-11 {
             flex: 0 0 auto;
             width: 91.66666667%;
           }
 
-          .col-xxl-12 {
+          .xxl\:col-12 {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .offset-xxl-0 {
+          .xxl\:offset-0 {
             margin-left: 0;
           }
 
-          .offset-xxl-1 {
+          .xxl\:offset-1 {
             margin-left: 8.33333333%;
           }
 
-          .offset-xxl-2 {
+          .xxl\:offset-2 {
             margin-left: 16.66666667%;
           }
 
-          .offset-xxl-3 {
+          .xxl\:offset-3 {
             margin-left: 25%;
           }
 
-          .offset-xxl-4 {
+          .xxl\:offset-4 {
             margin-left: 33.33333333%;
           }
 
-          .offset-xxl-5 {
+          .xxl\:offset-5 {
             margin-left: 41.66666667%;
           }
 
-          .offset-xxl-6 {
+          .xxl\:offset-6 {
             margin-left: 50%;
           }
 
-          .offset-xxl-7 {
+          .xxl\:offset-7 {
             margin-left: 58.33333333%;
           }
 
-          .offset-xxl-8 {
+          .xxl\:offset-8 {
             margin-left: 66.66666667%;
           }
 
-          .offset-xxl-9 {
+          .xxl\:offset-9 {
             margin-left: 75%;
           }
 
-          .offset-xxl-10 {
+          .xxl\:offset-10 {
             margin-left: 83.33333333%;
           }
 
-          .offset-xxl-11 {
+          .xxl\:offset-11 {
             margin-left: 91.66666667%;
           }
 
-          .g-xxl-none,
-          .gx-xxl-none {
+          .xxl\:g-none,
+          .xxl\:gx-none {
             --bs-gutter-x: 0px !important;
           }
 
-          .g-xxl-none,
-          .gy-xxl-none {
+          .xxl\:g-none,
+          .xxl\:gy-none {
             --bs-gutter-y: 0px !important;
           }
 
-          .g-xxl-3xsmall,
-          .gx-xxl-3xsmall {
+          .xxl\:g-3xsmall,
+          .xxl\:gx-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-xxl-3xsmall,
-          .gy-xxl-3xsmall {
+          .xxl\:g-3xsmall,
+          .xxl\:gy-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-xxl-2xsmall,
-          .gx-xxl-2xsmall {
+          .xxl\:g-2xsmall,
+          .xxl\:gx-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-xxl-2xsmall,
-          .gy-xxl-2xsmall {
+          .xxl\:g-2xsmall,
+          .xxl\:gy-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-xxl-xsmall,
-          .gx-xxl-xsmall {
+          .xxl\:g-xsmall,
+          .xxl\:gx-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-xxl-xsmall,
-          .gy-xxl-xsmall {
+          .xxl\:g-xsmall,
+          .xxl\:gy-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-xxl-small,
-          .gx-xxl-small {
+          .xxl\:g-small,
+          .xxl\:gx-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-xxl-small,
-          .gy-xxl-small {
+          .xxl\:g-small,
+          .xxl\:gy-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-xxl-medium,
-          .gx-xxl-medium {
+          .xxl\:g-medium,
+          .xxl\:gx-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-xxl-medium,
-          .gy-xxl-medium {
+          .xxl\:g-medium,
+          .xxl\:gy-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-xxl-large,
-          .gx-xxl-large {
+          .xxl\:g-large,
+          .xxl\:gx-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-xxl-large,
-          .gy-xxl-large {
+          .xxl\:g-large,
+          .xxl\:gy-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-xxl-xlarge,
-          .gx-xxl-xlarge {
+          .xxl\:g-xlarge,
+          .xxl\:gx-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-xxl-xlarge,
-          .gy-xxl-xlarge {
+          .xxl\:g-xlarge,
+          .xxl\:gy-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-xxl-2xlarge,
-          .gx-xxl-2xlarge {
+          .xxl\:g-2xlarge,
+          .xxl\:gx-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-xxl-2xlarge,
-          .gy-xxl-2xlarge {
+          .xxl\:g-2xlarge,
+          .xxl\:gy-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-xxl-3xlarge,
-          .gx-xxl-3xlarge {
+          .xxl\:g-3xlarge,
+          .xxl\:gx-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-xxl-3xlarge,
-          .gy-xxl-3xlarge {
+          .xxl\:g-3xlarge,
+          .xxl\:gy-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-xxl-4xlarge,
-          .gx-xxl-4xlarge{
+          .xxl\:g-4xlarge,
+          .xxl\:gx-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-xxl-4xlarge,
-          .gy-xxl-4xlarge{
+          .xxl\:g-4xlarge,
+          .xxl\:gy-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-xxl-5xlarge,
-          .gx-xxl-5xlarge {
+          .xxl\:g-5xlarge,
+          .xxl\:gx-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-xxl-5xlarge,
-          .gy-xxl-5xlarge {
+          .xxl\:g-5xlarge,
+          .xxl\:gy-5xlarge {
             --bs-gutter-y: 64px !important;
           }
 
@@ -6071,275 +6071,275 @@ $enable-bootstrap-compatibility: null !default;
         }
 
         @media (min-width: 1640px) {
-          .col-2xl {
+          .\32 xl\:col {
             flex: 1 0 0;
           }
 
-          .row-cols-2xl-auto > * {
+          .\32 xl\:row-cols-auto > * {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .row-cols-2xl-1 > * {
+          .\32 xl\:row-cols-1 > * {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .row-cols-2xl-2 > * {
+          .\32 xl\:row-cols-2 > * {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .row-cols-2xl-3 > * {
+          .\32 xl\:row-cols-3 > * {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .row-cols-2xl-4 > * {
+          .\32 xl\:row-cols-4 > * {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .row-cols-2xl-5 > * {
+          .\32 xl\:row-cols-5 > * {
             flex: 0 0 auto;
             width: 20%;
           }
 
-          .row-cols-2xl-6 > * {
+          .\32 xl\:row-cols-6 > * {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-2xl-auto {
+          .\32 xl\:col-auto {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .col-2xl-1 {
+          .\32 xl\:col-1 {
             flex: 0 0 auto;
             width: 8.33333333%;
           }
 
-          .col-2xl-2 {
+          .\32 xl\:col-2 {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-2xl-3 {
+          .\32 xl\:col-3 {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .col-2xl-4 {
+          .\32 xl\:col-4 {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .col-2xl-5 {
+          .\32 xl\:col-5 {
             flex: 0 0 auto;
             width: 41.66666667%;
           }
 
-          .col-2xl-6 {
+          .\32 xl\:col-6 {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .col-2xl-7 {
+          .\32 xl\:col-7 {
             flex: 0 0 auto;
             width: 58.33333333%;
           }
 
-          .col-2xl-8 {
+          .\32 xl\:col-8 {
             flex: 0 0 auto;
             width: 66.66666667%;
           }
 
-          .col-2xl-9 {
+          .\32 xl\:col-9 {
             flex: 0 0 auto;
             width: 75%;
           }
 
-          .col-2xl-10 {
+          .\32 xl\:col-10 {
             flex: 0 0 auto;
             width: 83.33333333%;
           }
 
-          .col-2xl-11 {
+          .\32 xl\:col-11 {
             flex: 0 0 auto;
             width: 91.66666667%;
           }
 
-          .col-2xl-12 {
+          .\32 xl\:col-12 {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .offset-2xl-0 {
+          .\32 xl\:offset-0 {
             margin-left: 0;
           }
 
-          .offset-2xl-1 {
+          .\32 xl\:offset-1 {
             margin-left: 8.33333333%;
           }
 
-          .offset-2xl-2 {
+          .\32 xl\:offset-2 {
             margin-left: 16.66666667%;
           }
 
-          .offset-2xl-3 {
+          .\32 xl\:offset-3 {
             margin-left: 25%;
           }
 
-          .offset-2xl-4 {
+          .\32 xl\:offset-4 {
             margin-left: 33.33333333%;
           }
 
-          .offset-2xl-5 {
+          .\32 xl\:offset-5 {
             margin-left: 41.66666667%;
           }
 
-          .offset-2xl-6 {
+          .\32 xl\:offset-6 {
             margin-left: 50%;
           }
 
-          .offset-2xl-7 {
+          .\32 xl\:offset-7 {
             margin-left: 58.33333333%;
           }
 
-          .offset-2xl-8 {
+          .\32 xl\:offset-8 {
             margin-left: 66.66666667%;
           }
 
-          .offset-2xl-9 {
+          .\32 xl\:offset-9 {
             margin-left: 75%;
           }
 
-          .offset-2xl-10 {
+          .\32 xl\:offset-10 {
             margin-left: 83.33333333%;
           }
 
-          .offset-2xl-11 {
+          .\32 xl\:offset-11 {
             margin-left: 91.66666667%;
           }
 
-          .g-2xl-none,
-          .gx-2xl-none {
+          .\32 xl\:g-none,
+          .\32 xl\:gx-none {
             --bs-gutter-x: 0px !important;
           }
 
-          .g-2xl-none,
-          .gy-2xl-none {
+          .\32 xl\:g-none,
+          .\32 xl\:gy-none {
             --bs-gutter-y: 0px !important;
           }
 
-          .g-2xl-3xsmall,
-          .gx-2xl-3xsmall {
+          .\32 xl\:g-3xsmall,
+          .\32 xl\:gx-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-2xl-3xsmall,
-          .gy-2xl-3xsmall {
+          .\32 xl\:g-3xsmall,
+          .\32 xl\:gy-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-2xl-2xsmall,
-          .gx-2xl-2xsmall {
+          .\32 xl\:g-2xsmall,
+          .\32 xl\:gx-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-2xl-2xsmall,
-          .gy-2xl-2xsmall {
+          .\32 xl\:g-2xsmall,
+          .\32 xl\:gy-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-2xl-xsmall,
-          .gx-2xl-xsmall {
+          .\32 xl\:g-xsmall,
+          .\32 xl\:gx-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-2xl-xsmall,
-          .gy-2xl-xsmall {
+          .\32 xl\:g-xsmall,
+          .\32 xl\:gy-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-2xl-small,
-          .gx-2xl-small {
+          .\32 xl\:g-small,
+          .\32 xl\:gx-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-2xl-small,
-          .gy-2xl-small {
+          .\32 xl\:g-small,
+          .\32 xl\:gy-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-2xl-medium,
-          .gx-2xl-medium {
+          .\32 xl\:g-medium,
+          .\32 xl\:gx-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-2xl-medium,
-          .gy-2xl-medium {
+          .\32 xl\:g-medium,
+          .\32 xl\:gy-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-2xl-large,
-          .gx-2xl-large {
+          .\32 xl\:g-large,
+          .\32 xl\:gx-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-2xl-large,
-          .gy-2xl-large {
+          .\32 xl\:g-large,
+          .\32 xl\:gy-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-2xl-xlarge,
-          .gx-2xl-xlarge {
+          .\32 xl\:g-xlarge,
+          .\32 xl\:gx-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-2xl-xlarge,
-          .gy-2xl-xlarge {
+          .\32 xl\:g-xlarge,
+          .\32 xl\:gy-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-2xl-2xlarge,
-          .gx-2xl-2xlarge {
+          .\32 xl\:g-2xlarge,
+          .\32 xl\:gx-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-2xl-2xlarge,
-          .gy-2xl-2xlarge {
+          .\32 xl\:g-2xlarge,
+          .\32 xl\:gy-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-2xl-3xlarge,
-          .gx-2xl-3xlarge {
+          .\32 xl\:g-3xlarge,
+          .\32 xl\:gx-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-2xl-3xlarge,
-          .gy-2xl-3xlarge {
+          .\32 xl\:g-3xlarge,
+          .\32 xl\:gy-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-2xl-4xlarge,
-          .gx-2xl-4xlarge{
+          .\32 xl\:g-4xlarge,
+          .\32 xl\:gx-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-2xl-4xlarge,
-          .gy-2xl-4xlarge{
+          .\32 xl\:g-4xlarge,
+          .\32 xl\:gy-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-2xl-5xlarge,
-          .gx-2xl-5xlarge {
+          .\32 xl\:g-5xlarge,
+          .\32 xl\:gx-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-2xl-5xlarge,
-          .gy-2xl-5xlarge {
+          .\32 xl\:g-5xlarge,
+          .\32 xl\:gy-5xlarge {
             --bs-gutter-y: 64px !important;
           }
 
@@ -6405,275 +6405,275 @@ $enable-bootstrap-compatibility: null !default;
         }
 
         @media (min-width: 1880px) {
-          .col-3xl {
+          .\33 xl\:col {
             flex: 1 0 0;
           }
 
-          .row-cols-3xl-auto > * {
+          .\33 xl\:row-cols-auto > * {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .row-cols-3xl-1 > * {
+          .\33 xl\:row-cols-1 > * {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .row-cols-3xl-2 > * {
+          .\33 xl\:row-cols-2 > * {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .row-cols-3xl-3 > * {
+          .\33 xl\:row-cols-3 > * {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .row-cols-3xl-4 > * {
+          .\33 xl\:row-cols-4 > * {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .row-cols-3xl-5 > * {
+          .\33 xl\:row-cols-5 > * {
             flex: 0 0 auto;
             width: 20%;
           }
 
-          .row-cols-3xl-6 > * {
+          .\33 xl\:row-cols-6 > * {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-3xl-auto {
+          .\33 xl\:col-auto {
             flex: 0 0 auto;
             width: auto;
           }
 
-          .col-3xl-1 {
+          .\33 xl\:col-1 {
             flex: 0 0 auto;
             width: 8.33333333%;
           }
 
-          .col-3xl-2 {
+          .\33 xl\:col-2 {
             flex: 0 0 auto;
             width: 16.66666667%;
           }
 
-          .col-3xl-3 {
+          .\33 xl\:col-3 {
             flex: 0 0 auto;
             width: 25%;
           }
 
-          .col-3xl-4 {
+          .\33 xl\:col-4 {
             flex: 0 0 auto;
             width: 33.33333333%;
           }
 
-          .col-3xl-5 {
+          .\33 xl\:col-5 {
             flex: 0 0 auto;
             width: 41.66666667%;
           }
 
-          .col-3xl-6 {
+          .\33 xl\:col-6 {
             flex: 0 0 auto;
             width: 50%;
           }
 
-          .col-3xl-7 {
+          .\33 xl\:col-7 {
             flex: 0 0 auto;
             width: 58.33333333%;
           }
 
-          .col-3xl-8 {
+          .\33 xl\:col-8 {
             flex: 0 0 auto;
             width: 66.66666667%;
           }
 
-          .col-3xl-9 {
+          .\33 xl\:col-9 {
             flex: 0 0 auto;
             width: 75%;
           }
 
-          .col-3xl-10 {
+          .\33 xl\:col-10 {
             flex: 0 0 auto;
             width: 83.33333333%;
           }
 
-          .col-3xl-11 {
+          .\33 xl\:col-11 {
             flex: 0 0 auto;
             width: 91.66666667%;
           }
 
-          .col-3xl-12 {
+          .\33 xl\:col-12 {
             flex: 0 0 auto;
             width: 100%;
           }
 
-          .offset-3xl-0 {
+          .\33 xl\:offset-0 {
             margin-left: 0;
           }
 
-          .offset-3xl-1 {
+          .\33 xl\:offset-1 {
             margin-left: 8.33333333%;
           }
 
-          .offset-3xl-2 {
+          .\33 xl\:offset-2 {
             margin-left: 16.66666667%;
           }
 
-          .offset-3xl-3 {
+          .\33 xl\:offset-3 {
             margin-left: 25%;
           }
 
-          .offset-3xl-4 {
+          .\33 xl\:offset-4 {
             margin-left: 33.33333333%;
           }
 
-          .offset-3xl-5 {
+          .\33 xl\:offset-5 {
             margin-left: 41.66666667%;
           }
 
-          .offset-3xl-6 {
+          .\33 xl\:offset-6 {
             margin-left: 50%;
           }
 
-          .offset-3xl-7 {
+          .\33 xl\:offset-7 {
             margin-left: 58.33333333%;
           }
 
-          .offset-3xl-8 {
+          .\33 xl\:offset-8 {
             margin-left: 66.66666667%;
           }
 
-          .offset-3xl-9 {
+          .\33 xl\:offset-9 {
             margin-left: 75%;
           }
 
-          .offset-3xl-10 {
+          .\33 xl\:offset-10 {
             margin-left: 83.33333333%;
           }
 
-          .offset-3xl-11 {
+          .\33 xl\:offset-11 {
             margin-left: 91.66666667%;
           }
 
-          .g-3xl-none,
-          .gx-3xl-none {
+          .\33 xl\:g-none,
+          .\33 xl\:gx-none {
             --bs-gutter-x: 0px !important;
           }
 
-          .g-3xl-none,
-          .gy-3xl-none {
+          .\33 xl\:g-none,
+          .\33 xl\:gy-none {
             --bs-gutter-y: 0px !important;
           }
 
-          .g-3xl-3xsmall,
-          .gx-3xl-3xsmall {
+          .\33 xl\:g-3xsmall,
+          .\33 xl\:gx-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-3xl-3xsmall,
-          .gy-3xl-3xsmall {
+          .\33 xl\:g-3xsmall,
+          .\33 xl\:gy-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-3xl-2xsmall,
-          .gx-3xl-2xsmall {
+          .\33 xl\:g-2xsmall,
+          .\33 xl\:gx-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-3xl-2xsmall,
-          .gy-3xl-2xsmall {
+          .\33 xl\:g-2xsmall,
+          .\33 xl\:gy-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-3xl-xsmall,
-          .gx-3xl-xsmall {
+          .\33 xl\:g-xsmall,
+          .\33 xl\:gx-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-3xl-xsmall,
-          .gy-3xl-xsmall {
+          .\33 xl\:g-xsmall,
+          .\33 xl\:gy-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-3xl-small,
-          .gx-3xl-small {
+          .\33 xl\:g-small,
+          .\33 xl\:gx-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-3xl-small,
-          .gy-3xl-small {
+          .\33 xl\:g-small,
+          .\33 xl\:gy-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-3xl-medium,
-          .gx-3xl-medium {
+          .\33 xl\:g-medium,
+          .\33 xl\:gx-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-3xl-medium,
-          .gy-3xl-medium {
+          .\33 xl\:g-medium,
+          .\33 xl\:gy-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-3xl-large,
-          .gx-3xl-large {
+          .\33 xl\:g-large,
+          .\33 xl\:gx-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-3xl-large,
-          .gy-3xl-large {
+          .\33 xl\:g-large,
+          .\33 xl\:gy-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-3xl-xlarge,
-          .gx-3xl-xlarge {
+          .\33 xl\:g-xlarge,
+          .\33 xl\:gx-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-3xl-xlarge,
-          .gy-3xl-xlarge {
+          .\33 xl\:g-xlarge,
+          .\33 xl\:gy-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-3xl-2xlarge,
-          .gx-3xl-2xlarge {
+          .\33 xl\:g-2xlarge,
+          .\33 xl\:gx-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-3xl-2xlarge,
-          .gy-3xl-2xlarge {
+          .\33 xl\:g-2xlarge,
+          .\33 xl\:gy-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-3xl-3xlarge,
-          .gx-3xl-3xlarge {
+          .\33 xl\:g-3xlarge,
+          .\33 xl\:gx-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-3xl-3xlarge,
-          .gy-3xl-3xlarge {
+          .\33 xl\:g-3xlarge,
+          .\33 xl\:gy-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-3xl-4xlarge,
-          .gx-3xl-4xlarge{
+          .\33 xl\:g-4xlarge,
+          .\33 xl\:gx-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-3xl-4xlarge,
-          .gy-3xl-4xlarge{
+          .\33 xl\:g-4xlarge,
+          .\33 xl\:gy-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-3xl-5xlarge,
-          .gx-3xl-5xlarge {
+          .\33 xl\:g-5xlarge,
+          .\33 xl\:gx-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-3xl-5xlarge,
-          .gy-3xl-5xlarge {
+          .\33 xl\:g-5xlarge,
+          .\33 xl\:gy-5xlarge {
             --bs-gutter-y: 64px !important;
           }
 

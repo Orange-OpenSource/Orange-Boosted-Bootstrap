@@ -48,6 +48,7 @@
   @return if($max and $max > 0, $max - .02, null);
 }
 
+// OUDS mod
 // Escape a name for use at the start of a CSS identifier.
 // Leading digits are hex-escaped (e.g., 2xl becomes \32 xl).
 @function css-escape-ident($name) {
@@ -78,6 +79,18 @@
   }
 
   @return "#{css-escape-ident($name)}\\:";
+}
+// END mod
+
+// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
+// Useful for making responsive utilities.
+//
+//    >> breakpoint-infix(2xs, (2xs: 0, xs: 390px, sm: 480px, md: 736px, lg: 1024px, xl: 1320px, 2xl: 1640px, 3xl: 1880px))
+//    ""  (Returns a blank string)
+//    >> breakpoint-infix(sm, (2xs: 0, xs: 390px, sm: 480px, md: 736px, lg: 1024px, xl: 1320px, 2xl: 1640px, 3xl: 1880px))
+//    "-sm"
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
 }
 
 // Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
