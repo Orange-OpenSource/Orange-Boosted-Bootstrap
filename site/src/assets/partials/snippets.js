@@ -264,7 +264,6 @@ export default () => {
   if (togglePasswordButton) {
     const passwordInput = document.querySelector('#liveShowPasswordExample #liveInputPassword')
     const iconUse = togglePasswordButton.querySelector('use')
-    const visuallyHiddenText = togglePasswordButton.querySelector('.visually-hidden')
 
     togglePasswordButton.addEventListener('click', event => {
       event.preventDefault()
@@ -276,12 +275,8 @@ export default () => {
       // Toggle the icon, the visually-hidden text for accessibility reasons
       if (type === 'text') {
         iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('accessibility-vision', 'hide'))
-        visuallyHiddenText.textContent = 'Hide password'
-        togglePasswordButton.setAttribute('aria-pressed', 'true')
       } else {
         iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('hide', 'accessibility-vision'))
-        visuallyHiddenText.textContent = 'Show password'
-        togglePasswordButton.setAttribute('aria-pressed', 'false')
       }
     })
   }
