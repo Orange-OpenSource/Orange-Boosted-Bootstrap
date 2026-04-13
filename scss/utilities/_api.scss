@@ -9,9 +9,19 @@
     // Loop over each utility property
     @each $key, $utility in $utilities {
       // The utility can be disabled with `false`, thus check if the utility is a map first
-      // Only proceed if responsive media queries are enabled or if it's the base media query
-      @if type-of($utility) == "map" and (map-get($utility, responsive) or $breakpoint-prefix == "") {
-        @include generate-utility($utility, $breakpoint-prefix, $infix);
+      @if type-of($utility) == "map" {
+        // Base media query: always generate
+        @if $breakpoint-prefix == "" {
+          @include generate-utility($utility);
+        }
+        // Responsive media queries are enabled
+        @if map-get($utility, responsive) {
+          @include generate-utility($utility, $breakpoint-prefix);
+        }
+        // Bootstrap style responsive media queries are enabled
+        @if map-get($utility, responsive-bootstrap) and $enable-bootstrap-compatibility {
+          @include generate-utility($utility, "", $infix);
+        }
       }
     }
   }

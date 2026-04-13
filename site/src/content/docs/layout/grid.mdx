@@ -95,13 +95,13 @@ As noted above, each of these breakpoints have their own unique class prefix and
       <tr>
         <th class="text-nowrap" scope="row">Class prefix</th>
         <td><code>.col-</code></td>
-        <td><code>.col-xs-</code></td>
-        <td><code>.col-sm-</code></td>
-        <td><code>.col-md-</code></td>
-        <td><code>.col-lg-</code></td>
-        <td><code>.col-xl-</code></td>
-        <td><code>.col-2xl-</code></td>
-        <td><code>.col-3xl-</code></td>
+        <td><code>.xs:col-</code></td>
+        <td><code>.sm:col-</code></td>
+        <td><code>.md:col-</code></td>
+        <td><code>.lg:col-</code></td>
+        <td><code>.xl:col-</code></td>
+        <td><code>.2xl:col-</code></td>
+        <td><code>.3xl:col-</code></td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row"># of columns</th>
@@ -144,7 +144,7 @@ As noted above, each of these breakpoints have their own unique class prefix and
 
 <BootstrapCompatibility>
 
-Includes support for xxl breakpoint, defined like 2xl.
+Includes support for xxl breakpoint, defined like 2xl. Bootstrap responsive classes use an infix to target the breakpoint.
 
 <div class="table-responsive">
   <table class="table mb-2xlarge">
@@ -312,6 +312,35 @@ Use `{breakpoint}:col-auto` classes to size columns based on the natural width o
     </div>
   </div>`} />
 
+<BootstrapCompatibility>
+Use `col-{breakpoint}-auto` classes to size columns based on the natural width of their content.
+
+<Example class="bd-example-row" code={`<div class="container-fluid text-center">
+    <div class="row justify-content-md-center">
+      <div class="col col-lg-2">
+        1 of 3
+      </div>
+      <div class="col-md-auto">
+        Variable width content
+      </div>
+      <div class="col col-lg-2">
+        3 of 3
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        1 of 3
+      </div>
+      <div class="col-md-auto">
+        Variable width content
+      </div>
+      <div class="col col-lg-2">
+        3 of 3
+      </div>
+    </div>
+  </div>`} />
+</BootstrapCompatibility>
+
 ## Responsive classes
 
 OUDS Web’s grid includes eight tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on any width, from x-small to 3x-large devices, however you see fit.
@@ -335,19 +364,37 @@ For grids that are the same from the smallest of devices to the largest, use the
 
 ### Stacked to horizontal
 
+Using a single set of `.sm:col-*` classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (`sm`).
+
+<Example class="bd-example-row" code={`<div class="container-fluid text-center">
+    <div class="row">
+      <div class="sm:col-8">sm:col-8</div>
+      <div class="sm:col-4">sm:col-4</div>
+    </div>
+    <div class="row">
+      <div class="sm:col">sm:col</div>
+      <div class="sm:col">sm:col</div>
+      <div class="sm:col">sm:col</div>
+    </div>
+  </div>`} />
+
+<BootstrapCompatibility>
+
 Using a single set of `.col-sm-*` classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (`sm`).
 
 <Example class="bd-example-row" code={`<div class="container-fluid text-center">
     <div class="row">
-      <div class="sm:col-8">col-sm-8</div>
-      <div class="sm:col-4">col-sm-4</div>
+      <div class="col-sm-8">col-sm-8</div>
+      <div class="col-sm-4">col-sm-4</div>
     </div>
     <div class="row">
-      <div class="sm:col">col-sm</div>
-      <div class="sm:col">col-sm</div>
-      <div class="sm:col">col-sm</div>
+      <div class="col-sm">col-sm</div>
+      <div class="col-sm">col-sm</div>
+      <div class="col-sm">col-sm</div>
     </div>
   </div>`} />
+
+</BootstrapCompatibility>
 
 ### Mix and match
 
@@ -356,15 +403,37 @@ Don’t want your columns to simply stack in some grid tiers? Use a combination 
 <Example class="bd-example-row" code={`<div class="container-fluid text-center">
     <!-- Stack the columns on mobile by making one full-width and the other half-width -->
     <div class="row">
-      <div class="md:col-8">.col-md-8</div>
-      <div class="col-6 md:col-4">.col-6 .col-md-4</div>
+      <div class="md:col-8">md:col-8</div>
+      <div class="col-6 md:col-4">col-6 md:col-4</div>
     </div>
 
     <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
     <div class="row">
-      <div class="col-6 md:col-4">.col-6 .col-md-4</div>
-      <div class="col-6 md:col-4">.col-6 .col-md-4</div>
-      <div class="col-6 md:col-4">.col-6 .col-md-4</div>
+      <div class="col-6 md:col-4">col-6 md:col-4</div>
+      <div class="col-6 md:col-4">col-6 md:col-4</div>
+      <div class="col-6 md:col-4">col-6 md:col-4</div>
+    </div>
+
+    <!-- Columns are always 50% wide, on mobile and desktop -->
+    <div class="row">
+      <div class="col-6">col-6</div>
+      <div class="col-6">col-6</div>
+    </div>
+  </div>`} />
+
+<BootstrapCompatibility>
+<Example class="bd-example-row" code={`<div class="container-fluid text-center">
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <div class="row">
+      <div class="col-md-8">.col-md-8</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    </div>
+
+    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="row">
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
     </div>
 
     <!-- Columns are always 50% wide, on mobile and desktop -->
@@ -373,6 +442,7 @@ Don’t want your columns to simply stack in some grid tiers? Use a combination 
       <div class="col-6">.col-6</div>
     </div>
   </div>`} />
+</BootstrapCompatibility>
 
 ### Row columns
 
@@ -450,7 +520,7 @@ You can also use the accompanying Sass mixin, `row-cols()`:
 
 ## Nesting
 
-To nest your content with the default grid, add a new `.row` and set of `.col-sm-*` columns within an existing `.col-sm-*` column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).
+To nest your content with the default grid, add a new `.row` and set of `.sm:col-*` columns within an existing `.sm:col-*` column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).
 
 <Example class="bd-example-row" code={`<div class="container-fluid text-center">
     <div class="row">
@@ -469,6 +539,28 @@ To nest your content with the default grid, add a new `.row` and set of `.col-sm
       </div>
     </div>
   </div>`} />
+
+<BootstrapCompatibility>
+  To nest your content with the default grid, add a new `.row` and set of `.col-sm-*` columns within an existing `.col-sm-*` column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).
+
+<Example class="bd-example-row" code={`<div class="container-fluid text-center">
+    <div class="row">
+      <div class="col-sm-3">
+        Level 1: .col-sm-3
+      </div>
+      <div class="col-sm-9">
+        <div class="row">
+          <div class="col-8 col-sm-6">
+            Level 2: .col-8 .col-sm-6
+          </div>
+          <div class="col-4 col-sm-6">
+            Level 2: .col-4 .col-sm-6
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+</BootstrapCompatibility>
 
 ## Example usage
 

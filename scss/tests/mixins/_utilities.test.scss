@@ -329,7 +329,7 @@ $enable-important-utilities: false;
         ),
         $bkpt-prefix: sm\:
       ) {
-        .padding-sm {
+        .sm\:padding {
           padding: 1rem;
         }
 
@@ -355,11 +355,11 @@ $enable-important-utilities: false;
         ),
         $bkpt-prefix: sm\:
       ) {
-        .sm-visible {
+        .sm\:visible {
           visibility: visible;
         }
 
-        .sm-invisible {
+        .sm\:invisible {
           visibility: hidden;
         }
       }
