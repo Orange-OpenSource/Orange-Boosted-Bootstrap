@@ -21,6 +21,12 @@
   .#{breakpoint-prefix($next, $grid-breakpoints)}offcanvas {
     @extend %offcanvas-css-vars;
   }
+
+  @if $enable-bootstrap-compatibility {
+    .offcanvas#{breakpoint-infix($next, $grid-breakpoints)} {
+      @extend %offcanvas-css-vars;
+    }
+  }
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
@@ -109,6 +115,13 @@
           background-color: transparent !important; // stylelint-disable-line declaration-no-important
         }
       }
+    }
+  }
+
+  @if $enable-bootstrap-compatibility {
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+    .offcanvas#{$infix} {
+      @extend .#{$breakpoint-prefix}offcanvas;
     }
   }
 }

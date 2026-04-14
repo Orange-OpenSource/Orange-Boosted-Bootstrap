@@ -110,6 +110,17 @@
         left: auto;
       }
     }
+
+    @if $enable-bootstrap-compatibility {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      .dropdown-menu#{$infix}-start {
+        @extend .#{$breakpoint-prefix}dropdown-menu-start;
+      }
+
+      .dropdown-menu#{$infix}-end {
+        @extend .#{$breakpoint-prefix}dropdown-menu-end;
+      }
+    }
   }
 }
 // scss-docs-end responsive-breakpoints

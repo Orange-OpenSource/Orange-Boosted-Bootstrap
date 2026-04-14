@@ -269,6 +269,14 @@
         overflow-y: auto;
       }
     }
+
+    @if $enable-bootstrap-compatibility {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      $postfix: if($infix != "", $infix + "-down", "");
+      .modal-fullscreen#{$postfix} {
+        @extend .#{$breakpoint-prefix}modal-fullscreen;
+      }
+    }
   }
 }
 // scss-docs-end modal-fullscreen-loop

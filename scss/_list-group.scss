@@ -189,6 +189,12 @@
         }
       }
     }
+
+    @if $enable-bootstrap-compatibility {
+      .list-group-horizontal#{breakpoint-infix($breakpoint, $grid-breakpoints)} {
+        @extend .#{$breakpoint-prefix}list-group-horizontal;
+      }
+    }
   }
 }
 

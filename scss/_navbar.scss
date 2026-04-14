@@ -98,6 +98,11 @@
     > .#{breakpoint-prefix($breakpoint, $container-max-widths)}container {
       @extend %container-flex-properties;
     }
+    @if $enable-bootstrap-compatibility {
+      > .container#{breakpoint-infix($breakpoint, $container-max-widths)} {
+        @extend %container-flex-properties;
+      }
+    }
   }
 
   // OUDS mod
@@ -394,8 +399,9 @@
 // where your navbar collapses.
 @each $breakpoint in map-keys($grid-breakpoints) {
   $next: breakpoint-next($breakpoint, $grid-breakpoints);
+  $breakpoint-prefix: breakpoint-prefix($next, $grid-breakpoints);
 
-  .#{breakpoint-prefix($next, $grid-breakpoints)}navbar-expand {
+  .#{$breakpoint-prefix}navbar-expand {
     @include media-breakpoint-up($next) {
       flex-wrap: nowrap;
       justify-content: flex-start;
@@ -516,6 +522,13 @@
           overflow-y: visible;
         }
       }
+    }
+  }
+
+  @if $enable-bootstrap-compatibility {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .navbar-expand#{$infix} {
+      @extend .#{$breakpoint-prefix}navbar-expand;
     }
   }
 }

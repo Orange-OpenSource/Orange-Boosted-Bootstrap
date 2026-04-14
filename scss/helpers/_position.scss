@@ -32,5 +32,16 @@
       bottom: 0;
       z-index: $zindex-sticky;
     }
+
+    @if $enable-bootstrap-compatibility {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      .sticky-#{$infix}-top {
+        @extend .#{$breakpoint-prefix}sticky-top;
+      }
+
+      .sticky-#{$infix}-bottom {
+        @extend .#{$breakpoint-prefix}sticky-bottom;
+      }
+    }
   }
 }
