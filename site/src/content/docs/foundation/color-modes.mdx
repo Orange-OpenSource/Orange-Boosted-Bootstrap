@@ -29,7 +29,7 @@ Use the `[data-bs-theme]` attribute to set the color mode on a container. It can
 
 ## Static color modes
 
-We offer two static color modes: `"light"` and `"dark"`. These modes are called static because once the theme is set on an element, it remains fixed regardless of the root theme. The `"light"` theme will set the text color to black and the descendant components will adapt their colors accordingly. Conversely, the `"dark"` theme will set the text color to white, with descendant components adapting their colors to match.
+We offer two static color modes: `"light"` and `"dark"`. These modes are called static because once the mode is set on an element, it remains fixed regardless of the root mode. The `"light"` mode will set the text color to black and the descendant components will adapt their colors accordingly. Conversely, the `"dark"` mode will set the text color to white, with descendant components adapting their colors to match.
 
 To experiment with the following static modes examples, you can toggle the color mode picker of this documentation in the header.
 
@@ -56,7 +56,7 @@ Dark mode will use light gray text and dark-mode components. To apply the dark m
 
 ## Dynamic color modes
 
-We offer two dynamic modes: `"root"` and `"root-inverted"`. These modes are called dynamic because they depend **only** on the root element mode, so by changing the main mode, you’re changing all the dynamic areas using these modes as well. The `"root"` theme will reset the color mode to the root mode of your page, while the `"root-inverted"` mode will set the color mode to the opposite theme of your page.
+We offer two dynamic modes: `"root"` and `"root-inverted"`. These modes are called dynamic because they depend **only** on the root element mode, so by changing the main mode, you’re changing all the dynamic areas using these modes as well. The `"root"` mode will reset the color mode to the root mode of your page, while the `"root-inverted"` mode will set the color mode to the opposite mode of your page.
 
 <Callout type="warning">
   By definition these modes **can not be used on the root element**.
@@ -79,7 +79,7 @@ To experiment with the following dynamic modes examples, you can toggle the colo
 
 ### `root-inverted` mode
 
-This color mode inverts the main color mode. It will be useful for example inside a container with a darker background in root light mode like `.bg-inverse-high`. To apply this mode add <span class="user-select-all">`[data-bs-theme="root-inverted"]`</span> on any element but the main one.
+This color mode inverts the main color mode. It will be useful for example inside a container with a darker background, like `.bg-inverse-high` in root light mode. To apply this mode add <span class="user-select-all">`[data-bs-theme="root-inverted"]`</span> on any element but the main one.
 
 ### `root` mode
 
@@ -98,7 +98,7 @@ These four modes should be enough to deal with any use cases. If it’s not the 
 </Callout>
 
 <BsTable>
-| Wanted local text color <br />inside main light mode | Wanted local text color <br />inside main dark mode | Theme that should be used |
+| Wanted local text color <br />inside main light mode | Wanted local text color <br />inside main dark mode | Mode that should be used |
 | --- | --- | --- |
 | Dark | Dark | <span class="user-select-all">`"light"`</span> |
 | Light | Light | <span class="user-select-all">`"dark"`</span> |
@@ -107,7 +107,7 @@ These four modes should be enough to deal with any use cases. If it’s not the 
 </BsTable>
 
 <Callout type="warning">
-  `root` theme should be used only in very specific occasions, most of the time it will cascade from the main theme.
+  `root` mode should be used only in very specific occasions, most of the time it will cascade from the main mode.
 </Callout>
 
 ## Examples
@@ -149,7 +149,7 @@ Here are some examples of how to use the different `[data-bs-theme]` attribute o
   <div class="bg-inverse-high">
     <div data-bs-theme="root-inverted" class="dropdown">
       <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButtonRootInverted" data-bs-toggle="dropdown" aria-expanded="false">
-        Main inverted theme dropdown
+        Main inverted mode dropdown
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonRootInverted">
         <li><a class="dropdown-item active" href="#">Action</a></li>
@@ -165,7 +165,7 @@ Here are some examples of how to use the different `[data-bs-theme]` attribute o
   <div class="bg-inverse-high">
     <div data-bs-theme="root-inverted" class="dropdown">
       <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButtonRoot" data-bs-toggle="dropdown" aria-expanded="false">
-        Main inverted theme dropdown and main theme dropdown menu
+        Main inverted mode dropdown and main mode dropdown menu
       </button>
       <ul data-bs-theme="root" class="dropdown-menu" aria-labelledby="dropdownMenuButtonRoot">
         <li><a class="dropdown-item active" href="#">Action</a></li>
@@ -264,7 +264,7 @@ Outputs to:
 
 #### Change the root selector
 
-You can also change the root selector from where the theme variables are set. By default, it’s set to `:root`, but you can change it to any other selector. This is useful if you want to apply the theme to another element, for instance in Angular where you can’t access easily the `<html>` element.
+You can also change the root selector from where the mode variables are set. By default, it’s set to `:root`, but you can change it to any other selector. This is useful if you want to apply the mode to another element, for instance in Angular where you can’t access easily the `<html>` element.
 
 ```scss
 $ouds-root-selector: "#app";

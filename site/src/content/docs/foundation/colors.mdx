@@ -211,14 +211,26 @@ These colors can be used with [our opacity utilities]([[docsref:/utilities/opaci
   Please refer to the [opacity colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/t/b4eb059054) for more information on usage.
 </Callout>
 
+export const opacityBackgroundStyle = {
+  backgroundPosition: "0px 0px, 10px 10px",
+  backgroundSize: "20px 20px",
+  backgroundImage: "linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%)"
+};
+
 <ColorTable
   colorPrefix="ouds/opacity/"
   tokenRegexp={/\$ouds-opacity-(?<colorName>.*)/}
   getUsage={(colorName) => `.opacity-${colorName}`}
   getStyle={(token, mode) =>
     mode === 'light'
-      ? {opacity: token.lightValue, backgroundColor: 'var(--bs-color-surface-brand-primary)'}
-      : {opacity: token.darkValue, backgroundColor: 'var(--bs-color-surface-brand-primary)'}} />
+      ? {
+          opacity: token.lightValue,
+          ...opacityBackgroundStyle
+        }
+      : {
+          opacity: token.darkValue,
+          ...opacityBackgroundStyle
+        }} />
 
 ## Decorative
 
