@@ -73,7 +73,7 @@ Add `.text-input-container-outlined` for a minimalist input with a transparent b
   </div>`} />
 
 <BootstrapCompatibility>
-  <Example code={`<div>
+  <Example buttonLabel="Bootstrap compatibility: outlined text input" code={`<div>
     <label for="exampleFormControlInput1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
   </div>`} />
@@ -203,7 +203,7 @@ To display a helper text below inputs, add a `.helper-text` as a sibling of a `.
 
   Form text below inputs can be styled with `.form-text`. If a block-level element will be used, a top margin is added for easy spacing from the inputs above.
 
-  <Example code={`<label for="inputPassword5" class="form-label">Password</label>
+  <Example buttonLabel="Bootstrap compatibility: text input with helper text" code={`<label for="inputPassword5" class="form-label">Password</label>
   <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
   <div id="passwordHelpBlock" class="form-text">
     Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
@@ -211,7 +211,7 @@ To display a helper text below inputs, add a `.helper-text` as a sibling of a `.
 
   Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`, or something else) with nothing more than the `.form-text` class.
 
-  <Example code={`<div class="row g-large align-items-center">
+  <Example buttonLabel="Bootstrap compatibility: text input with inline helper text" code={`<div class="row g-large align-items-center">
     <div class="col-auto">
       <label for="inputPassword6" class="col-form-label">Password</label>
     </div>
@@ -323,9 +323,9 @@ A textual prefix or suffix can be added to an input by wrapping the `<input>` in
 
 ### Max width
 
-By default text inputs will span the whole width of their parent container, to limit the width of the text input on wider parent container, add a `.component-max-width` to the `.text-input` container.
+By default, text inputs will span the whole width of their parent container, to limit the width of the text input on wider parent container, add a `.component-max-width` to the `.text-input` container.
 
-<Example code={`<div class="text-input component-max-width mb-medium">
+<Example buttonLabel="text input max width" code={`<div class="text-input component-max-width mb-medium">
     <div class="text-input-container">
       <label for="exampleTextInputWithMaxWidth">Email address</label>
       <input type="email" autocomplete="email" class="text-input-field" id="exampleTextInputWithMaxWidth" placeholder=" ">
@@ -398,7 +398,7 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
 <BootstrapCompatibility>
   Add the `disabled` boolean attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.
 
-  <Example code={`<input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
+  <Example buttonLabel="Bootstrap compatibility: disabled text input" code={`<input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
   <input class="form-control" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled readonly>`} />
 </BootstrapCompatibility>
 
@@ -450,7 +450,7 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 <BootstrapCompatibility>
   Add the `readonly` boolean attribute on an input to prevent modification of the input’s value. `readonly` inputs can still be focused and selected, while `disabled` inputs cannot.
 
-  <Example code={`<input class="form-control" type="text" value="Readonly input here..." aria-label="readonly input example" readonly>`} />
+  <Example buttonLabel="Bootstrap compatibility: readonly text input" code={`<input class="form-control" type="text" value="Readonly input here..." aria-label="readonly input example" readonly>`} />
 </BootstrapCompatibility>
 
 ### Invalid
@@ -704,5 +704,15 @@ You may also set the [trailing action on loading]([[docsref:/components/buttons#
         <label for="exampleTextInputSkeleton">Email address</label>
         <input type="email" autocomplete="email" class="text-input-field" id="exampleTextInputSkeleton" placeholder=" ">
       </div>
+    </div>
+  </div>`} />
+
+## Mandatory field indication
+
+<MandatoryFieldIndication componentName="text input" />
+<Example buttonLabel="mandatory text input indication" code={`<div class="text-input component-max-width mb-large">
+    <div class="text-input-container">
+      <label for="username" class="is-required">Username</label>
+      <input type="text" class="text-input-field" id="username" placeholder=" " required>
     </div>
   </div>`} />

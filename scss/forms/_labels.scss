@@ -18,8 +18,9 @@
 
 .is-required::after {
   position: absolute;
-  margin-left: $form-label-required-margin-left;
-  color: $form-label-required-color;
+  margin-left: 4px;
+  font-weight: $ouds-font-weight-system-web-strong;
+  color: $ouds-color-content-status-negative;
   content: "*";
 }
 
