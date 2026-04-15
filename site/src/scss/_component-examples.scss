@@ -133,8 +133,10 @@
 }
 // End mod
 
-.bd-example-row [class*="col"], // OUDS mod instead of [class^="col"]
-.bd-example-cols [class*="col"] > *, // OUDS mod instead of [class^="col"]
+.bd-example-row [class^="col"],
+.bd-example-cols [class^="col"] > *,
+.bd-example-row [class*=":col"], // OUDS mod: for responsive row columns
+.bd-example-cols [class*=":col"] > *, // OUDS mod: for responsive row columns
 .bd-example-cssgrid [class*="grid"] > * {
   padding-top: .75rem;
   padding-bottom: .75rem;
