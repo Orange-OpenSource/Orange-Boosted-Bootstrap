@@ -118,16 +118,10 @@
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
 
 // For rows
-.table-zebra {
+.table-striped {
   > tbody > tr:nth-of-type(#{$table-striped-order}) > * {
     --#{$prefix}table-color-type: var(--#{$prefix}table-striped-color);
     --#{$prefix}table-bg-type: var(--#{$prefix}table-striped-bg);
-  }
-}
-
-@if $enable-bootstrap-compatibility {
-  .table-striped {
-    @extend .table-zebra;
   }
 }
 

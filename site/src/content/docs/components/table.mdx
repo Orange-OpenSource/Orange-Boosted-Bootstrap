@@ -1,6 +1,6 @@
 ---
 title: Table
-description: Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with OUDS Web.
+description: Documentation and examples for opt-in styling of tables with OUDS Web.
 aliases:
   - "/docs/content/tables/"
   - "/docs/components/table/"
@@ -13,7 +13,7 @@ import { getVersionedDocsPath } from '@libs/path'
 <Callout type="negative" title="Draft component">
   The table component is not yet designed, and this component is only a draft for the moment. It will be updated in the future with the final design and will certainly need adjustments regarding the DOM. Use it as a temporary component to speed up your development.
 
-  Please refer to the [Tables in the Boosted documentation](https://boosted.orange.com/docs/content/tables/) to have a full view of the table component and its variations. You’ll only need to adapt the utilities inside the DOM.
+  Please refer to the [Tables in the Boosted documentation](https://boosted.orange.com/docs/content/tables/) to have a full view of the table component and its variations.
 </Callout>
 
 ## Overview
@@ -98,11 +98,11 @@ To add a background color to a table row, you can use the contextual classes `.t
     </tbody>
   </table>`} />
 
-### Zebra
+### Striped rows
 
-To create a striped table, add the `.table-zebra` modifier class to the base `.table` class. This will add a background color to even rows (not including the header) to improve readability.
+Use  `.table-striped` to add zebra-striping to any table row within the `<tbody>`. This will add a background color to even rows (excluding the header) to improve readability.
 
-<Example buttonLabel="zebra table" code={`<table class="table table-zebra">
+<Example buttonLabel="striped table" code={`<table class="table table-striped">
     <caption class="visually-hidden">OUDS Web zebra table</caption>
     <thead>
       <tr>
@@ -219,6 +219,7 @@ Use `.table-responsive{-xs|-sm|-md|-lg|-xl|-2xl|3xl}` as needed to create respon
 **These tables may appear broken until their responsive styles apply at specific viewport widths.**
 
 <Details summary="Examples of responsive tables up to particular breakpoint">
+  <br/>
   Resize window to see differences:
   {getData('breakpoints').map((breakpoint) => {
     return (
@@ -292,7 +293,7 @@ Use `.table-responsive{-xs|-sm|-md|-lg|-xl|-2xl|3xl}` as needed to create respon
 
 ### With checkboxes
 
-For the row selection purpose, you should use [standalone checkboxes]([[docsref:/components/checkbox#standalone]]) with `.visually-hidden` labels describing their use.
+For the row selection purpose with checkboxes, you should use [standalone checkboxes]([[docsref:/components/checkbox#standalone]]) with `.visually-hidden` labels describing their use.
 
 The first cell of the header should contain a checkbox to select or deselect all rows. When some rows - but not all - are selected, the header checkbox should be in an [indeterminate state]([[docsref:/components/checkbox#indeterminate]]).
 
@@ -353,7 +354,7 @@ To manage checkboxes states and active styles (i.e. select/deselect all rows, up
 
 ### With radio buttons
 
-For the row selection purpose, you should use [standalone radio buttons]([[docsref:/components/radio-button#standalone]]) with `.visually-hidden` labels describing their use.
+For the row selection purpose with radio buttons, you should use [standalone radio buttons]([[docsref:/components/radio-button#standalone]]) with `.visually-hidden` labels describing their use.
 
 The [same rules apply as with checkboxes](#with-checkboxes), except that there is no "all rows" selection. The JavaScript will only need to update the `data-bs-theme` on selected rows, as we have done in the example below.
 
@@ -405,9 +406,9 @@ To manage radio buttons active state (i.e. update `data-bs-theme` on the selecte
 
 ## Rich content tables
 
-You can also use other components in tables, such as tags, badges, switches, images or icons. You can use the `.align-middle` class on `<tr>` elements to vertically align the content of cells in the middle of the row, which is useful for rows with rich content. The class `.text-center` can be used on `<th>` and `<td>` elements to center the content of the cell horizontally when needed.
+You can also use other components in tables, such as tags, badges, switches, images or icons.
 
-For switches, note that the click area will be extended to the full width of the cell.
+For standalone switches in tables, note that the click area will be extended to the full width of the cell.
 
 <Example buttonLabel="table with components and icons" code={`<table class="table">
     <caption class="visually-hidden">OUDS Web table with switches</caption>
@@ -499,3 +500,11 @@ For switches, note that the click area will be extended to the full width of the
       </tr>
     </tbody>
   </table>`} />
+
+### Layout
+
+To align horizontally or vertically, you can use the following:
+- For horizontal alignment, use the `.text-center` class on `<th>` and `<td>` elements.
+- For vertical alignment, use the `align-middle` class on the `<tr>`, `<th>` and `<td>` elements, or even on components within the cells themselves.
+
+These classes have been used in the examples above.
