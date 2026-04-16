@@ -150,7 +150,7 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
             <hr class="d-none d-md-block my-small ms-large" />
             <div class="collapse bd-toc-collapse ms-md-xsmall" id="tocContents">
               <nav id="TableOfContents" aria-labelledby="docs-toc">
-                <TableOfContents headings={headings} />
+                <TableOfContents headings={headings} types={frontmatter.types} />
               </nav>
             </div>
           )
