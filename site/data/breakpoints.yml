@@ -5,43 +5,43 @@
   container: ''
 
 - breakpoint: xs
-  abbr: -xs
+  abbr: xs
   name: X-small
   min-width: 390px
   container: 342px
 
 - breakpoint: sm
-  abbr: -sm
+  abbr: sm
   name: Small
   min-width: 480px
   container: 424px
 
 - breakpoint: md
-  abbr: -md
+  abbr: md
   name: Medium
   min-width: 736px
   container: 672px
 
 - breakpoint: lg
-  abbr: -lg
+  abbr: lg
   name: Large
   min-width: 1024px
   container: 944px
 
 - breakpoint: xl
-  abbr: -xl
+  abbr: xl
   name: X-large
   min-width: 1320px
   container: 1208px
 
 - breakpoint: 2xl
-  abbr: -2xl
+  abbr: 2xl
   name: 2x-large
   min-width: 1640px
   container: 1480px
 
 - breakpoint: 3xl
-  abbr: -3xl
+  abbr: 3xl
   name: 3x-large
   min-width: 1880px
   container: 1656px

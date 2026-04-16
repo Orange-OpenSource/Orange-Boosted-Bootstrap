@@ -19,16 +19,30 @@ Apply `display` utilities to create a flexbox container and transform **direct c
 
 Responsive variations also exist for `.d-flex` and `.d-inline-flex`.
 
+
 <ul>
   {getData('breakpoints').map((breakpoint) => {
     return (
       <>
-        <li><code>.d{breakpoint.abbr}-flex</code></li>
-        <li><code>.d{breakpoint.abbr}-inline-flex</code></li>
+        <li><code>{breakpoint.abbr && `${breakpoint.abbr}:`}d-flex</code></li>
+        <li><code>{breakpoint.abbr && `${breakpoint.abbr}:`}d-inline-flex</code></li>
       </>
     )
   })}
 </ul>
+
+<BootstrapCompatibility>
+<ul>
+  {getData('breakpoints').map((breakpoint) => {
+    return (
+      <>
+        <li><code>.d{breakpoint.abbr && `-${breakpoint.abbr}`}-flex</code></li>
+        <li><code>.d{breakpoint.abbr && `-${breakpoint.abbr}`}-inline-flex</code></li>
+      </>
+    )
+  })}
+</ul>
+</BootstrapCompatibility>
 
 ## Direction
 
@@ -66,14 +80,29 @@ Responsive variations also exist for `flex-direction`.
   {getData('breakpoints').map((breakpoint) => {
     return (
       <>
-        <li><code>.flex{breakpoint.abbr}-row</code></li>
-        <li><code>.flex{breakpoint.abbr}-row-reverse</code></li>
-        <li><code>.flex{breakpoint.abbr}-column</code></li>
-        <li><code>.flex{breakpoint.abbr}-column-reverse</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}flex-row</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}flex-row-reverse</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}flex-column</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}flex-column-reverse</code></li>
       </>
     )
   })}
 </ul>
+
+<BootstrapCompatibility>
+<ul>
+  {getData('breakpoints').map((breakpoint) => {
+    return (
+      <>
+        <li><code>.flex{breakpoint.abbr && `-${breakpoint.abbr}`}-row</code></li>
+        <li><code>.flex{breakpoint.abbr && `-${breakpoint.abbr}`}-row-reverse</code></li>
+        <li><code>.flex{breakpoint.abbr && `-${breakpoint.abbr}`}-column</code></li>
+        <li><code>.flex{breakpoint.abbr && `-${breakpoint.abbr}`}-column-reverse</code></li>
+      </>
+    )
+  })}
+</ul>
+</BootstrapCompatibility>
 
 ## Justify content
 
@@ -125,16 +154,33 @@ Responsive variations also exist for `justify-content`.
   {getData('breakpoints').map((breakpoint) => {
     return (
       <>
-        <li><code>.justify-content{breakpoint.abbr}-start</code></li>
-        <li><code>.justify-content{breakpoint.abbr}-end</code></li>
-        <li><code>.justify-content{breakpoint.abbr}-center</code></li>
-        <li><code>.justify-content{breakpoint.abbr}-between</code></li>
-        <li><code>.justify-content{breakpoint.abbr}-around</code></li>
-        <li><code>.justify-content{breakpoint.abbr}-evenly</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}justify-content-start</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}justify-content-end</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}justify-content-center</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}justify-content-between</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}justify-content-around</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}justify-content-evenly</code></li>
       </>
     )
   })}
 </ul>
+
+<BootstrapCompatibility>
+<ul>
+  {getData('breakpoints').map((breakpoint) => {
+    return (
+      <>
+        <li><code>.justify-content{breakpoint.abbr && `-${breakpoint.abbr}`}-start</code></li>
+        <li><code>.justify-content{breakpoint.abbr && `-${breakpoint.abbr}`}-end</code></li>
+        <li><code>.justify-content{breakpoint.abbr && `-${breakpoint.abbr}`}-center</code></li>
+        <li><code>.justify-content{breakpoint.abbr && `-${breakpoint.abbr}`}-between</code></li>
+        <li><code>.justify-content{breakpoint.abbr && `-${breakpoint.abbr}`}-around</code></li>
+        <li><code>.justify-content{breakpoint.abbr && `-${breakpoint.abbr}`}-evenly</code></li>
+      </>
+    )
+  })}
+</ul>
+</BootstrapCompatibility>
 
 ## Align items
 
@@ -180,15 +226,31 @@ Responsive variations also exist for `align-items`.
   {getData('breakpoints').map((breakpoint) => {
     return (
       <>
-        <li><code>.align-items{breakpoint.abbr}-start</code></li>
-        <li><code>.align-items{breakpoint.abbr}-end</code></li>
-        <li><code>.align-items{breakpoint.abbr}-center</code></li>
-        <li><code>.align-items{breakpoint.abbr}-baseline</code></li>
-        <li><code>.align-items{breakpoint.abbr}-stretch</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}align-items-start</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}align-items-end</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}align-items-center</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}align-items-baseline</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}align-items-stretch</code></li>
       </>
     )
   })}
 </ul>
+
+<BootstrapCompatibility>
+<ul>
+  {getData('breakpoints').map((breakpoint) => {
+    return (
+      <>
+        <li><code>.align-items{breakpoint.abbr && `-${breakpoint.abbr}`}-start</code></li>
+        <li><code>.align-items{breakpoint.abbr && `-${breakpoint.abbr}`}-end</code></li>
+        <li><code>.align-items{breakpoint.abbr && `-${breakpoint.abbr}`}-center</code></li>
+        <li><code>.align-items{breakpoint.abbr && `-${breakpoint.abbr}`}-baseline</code></li>
+        <li><code>.align-items{breakpoint.abbr && `-${breakpoint.abbr}`}-stretch</code></li>
+      </>
+    )
+  })}
+</ul>
+</BootstrapCompatibility>
 
 ## Align self
 
@@ -234,15 +296,32 @@ Responsive variations also exist for `align-self`.
   {getData('breakpoints').map((breakpoint) => {
     return (
       <>
-        <li><code>.align-self{breakpoint.abbr}-start</code></li>
-        <li><code>.align-self{breakpoint.abbr}-end</code></li>
-        <li><code>.align-self{breakpoint.abbr}-center</code></li>
-        <li><code>.align-self{breakpoint.abbr}-baseline</code></li>
-        <li><code>.align-self{breakpoint.abbr}-stretch</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}align-self-start</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}align-self-end</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}align-self-center</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}align-self-baseline</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}align-self-stretch</code></li>
       </>
     )
   })}
 </ul>
+
+<BootstrapCompatibility>
+<ul>
+  {getData('breakpoints').map((breakpoint) => {
+    return (
+      <>
+        <li><code>.align-self{breakpoint.abbr && `-${breakpoint.abbr}`}-start</code></li>
+        <li><code>.align-self{breakpoint.abbr && `-${breakpoint.abbr}`}-end</code></li>
+        <li><code>.align-self{breakpoint.abbr && `-${breakpoint.abbr}`}-center</code></li>
+        <li><code>.align-self{breakpoint.abbr && `-${breakpoint.abbr}`}-baseline</code></li>
+        <li><code>.align-self{breakpoint.abbr && `-${breakpoint.abbr}`}-stretch</code></li>
+      </>
+    )
+  })}
+</ul>
+</BootstrapCompatibility>
+
 
 ## Fill
 
@@ -260,11 +339,23 @@ Responsive variations also exist for `flex-fill`.
   {getData('breakpoints').map((breakpoint) => {
     return (
       <>
-        <li><code>.flex{breakpoint.abbr}-fill</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}flex-fill</code></li>
       </>
     )
   })}
 </ul>
+
+<BootstrapCompatibility>
+<ul>
+  {getData('breakpoints').map((breakpoint) => {
+    return (
+      <>
+        <li><code>.flex{breakpoint.abbr && `-${breakpoint.abbr}`}-fill</code></li>
+      </>
+    )
+  })}
+</ul>
+</BootstrapCompatibility>
 
 ## Grow and shrink
 
@@ -289,12 +380,25 @@ Responsive variations also exist for `flex-grow` and `flex-shrink`.
   {getData('breakpoints').map((breakpoint) => {
     return (
       <>
-        <li><code>.flex{breakpoint.abbr}-{'{grow|shrink}'}-0</code></li>
-        <li><code>.flex{breakpoint.abbr}-{'{grow|shrink}'}-1</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}flex-{'{grow|shrink}'}-0</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}flex-{'{grow|shrink}'}-1</code></li>
       </>
     )
   })}
 </ul>
+
+<BootstrapCompatibility>
+<ul>
+  {getData('breakpoints').map((breakpoint) => {
+    return (
+      <>
+        <li><code>.flex{breakpoint.abbr && `-${breakpoint.abbr}`}-{'{grow|shrink}'}-0</code></li>
+        <li><code>.flex{breakpoint.abbr && `-${breakpoint.abbr}`}-{'{grow|shrink}'}-1</code></li>
+      </>
+    )
+  })}
+</ul>
+</BootstrapCompatibility>
 
 ## Auto margins
 
@@ -405,13 +509,27 @@ Responsive variations also exist for `flex-wrap`.
   {getData('breakpoints').map((breakpoint) => {
     return (
       <>
-        <li><code>.flex{breakpoint.abbr}-nowrap</code></li>
-        <li><code>.flex{breakpoint.abbr}-wrap</code></li>
-        <li><code>.flex{breakpoint.abbr}-wrap-reverse</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}flex-nowrap</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}flex-wrap</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}flex-wrap-reverse</code></li>
       </>
     )
   })}
 </ul>
+
+<BootstrapCompatibility>
+<ul>
+  {getData('breakpoints').map((breakpoint) => {
+    return (
+      <>
+        <li><code>.flex{breakpoint.abbr && `-${breakpoint.abbr}`}-nowrap</code></li>
+        <li><code>.flex{breakpoint.abbr && `-${breakpoint.abbr}`}-wrap</code></li>
+        <li><code>.flex{breakpoint.abbr && `-${breakpoint.abbr}`}-wrap-reverse</code></li>
+      </>
+    )
+  })}
+</ul>
+</BootstrapCompatibility>
 
 ## Order
 
@@ -428,20 +546,40 @@ Responsive variations also exist for `order`.
 <ul>
   {getData('breakpoints').map((breakpoint) => getSequence(0, 5).map((value) => {
     return (
-      <li><code>.order{breakpoint.abbr}-{value}</code></li>
+      <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}order-{value}</code></li>
     )
   }))}
 </ul>
+
+<BootstrapCompatibility>
+<ul>
+  {getData('breakpoints').map((breakpoint) => getSequence(0, 5).map((value) => {
+    return (
+      <li><code>.order{breakpoint.abbr && `-${breakpoint.abbr}`}-{value}</code></li>
+    )
+  }))}
+</ul>
+</BootstrapCompatibility>
 
 Additionally there are also responsive `.order-first` and `.order-last` classes that change the `order` of an element by applying `order: -1` and `order: 6`, respectively.
 
 <ul>
   {getData('breakpoints').map((breakpoint) => ['first', 'last'].map((value) => {
     return (
-      <li><code>.order{breakpoint.abbr}-{value}</code></li>
+      <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}order-{value}</code></li>
     )
   }))}
 </ul>
+
+<BootstrapCompatibility>
+<ul>
+  {getData('breakpoints').map((breakpoint) => ['first', 'last'].map((value) => {
+    return (
+      <li><code>.order{breakpoint.abbr && `-${breakpoint.abbr}`}-{value}</code></li>
+    )
+  }))}
+</ul>
+</BootstrapCompatibility>
 
 ## Align content
 
@@ -589,13 +727,30 @@ Responsive variations also exist for `align-content`.
   {getData('breakpoints').map((breakpoint) => {
     return (
       <>
-        <li><code>.align-content{breakpoint.abbr}-start</code></li>
-        <li><code>.align-content{breakpoint.abbr}-end</code></li>
-        <li><code>.align-content{breakpoint.abbr}-center</code></li>
-        <li><code>.align-content{breakpoint.abbr}-between</code></li>
-        <li><code>.align-content{breakpoint.abbr}-around</code></li>
-        <li><code>.align-content{breakpoint.abbr}-stretch</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}align-content-start</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}align-content-end</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}align-content-center</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}align-content-between</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}align-content-around</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}align-content-stretch</code></li>
       </>
     )
   })}
 </ul>
+
+<BootstrapCompatibility>
+<ul>
+  {getData('breakpoints').map((breakpoint) => {
+    return (
+      <>
+        <li><code>.align-content-start</code></li>
+        <li><code>.align-content{breakpoint.abbr && `-${breakpoint.abbr}`}-end</code></li>
+        <li><code>.align-content{breakpoint.abbr && `-${breakpoint.abbr}`}-center</code></li>
+        <li><code>.align-content{breakpoint.abbr && `-${breakpoint.abbr}`}-between</code></li>
+        <li><code>.align-content{breakpoint.abbr && `-${breakpoint.abbr}`}-around</code></li>
+        <li><code>.align-content{breakpoint.abbr && `-${breakpoint.abbr}`}-stretch</code></li>
+      </>
+    )
+  })}
+</ul>
+</BootstrapCompatibility>
