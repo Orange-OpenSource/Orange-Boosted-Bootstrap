@@ -154,7 +154,7 @@ To have only one active filter chip at a time, use the radio button version. All
 
 If you need to trigger a dynamic interaction directly on the page, `<button>` markup is also supported. All the rules explained in this page about filter chips apply on this variant as well.
 
-Use our [button JS plugin](#javascript) or handle interactivity on your side, but make sure to use `aria-pressed` to ensure a good level of accessibility:
+Use our [button JS plugin](#javascript) through `data-bs-toggle="button"` attribute, or handle interactivity on your side, but make sure to use `aria-pressed` to ensure a good level of accessibility:
 - The presence of `aria-pressed` (`true` or `false`) is mandatory to indicate to assistive technologies that this is a toggle button.
 - The selected styles of the filter chip rely on `aria-pressed="true"`.
 
