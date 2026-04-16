@@ -134,8 +134,8 @@ The gutters between columns in our predefined grid classes can be removed with `
 In practice, here’s how it looks. Note that you can continue to use this with all other predefined grid classes (including column widths, responsive tiers, reorders, and more).
 
 <Example class="bd-example-row" code={`<div class="row g-none text-center">
-    <div class="sm:col-6 md:col-8">.sm:col-6 .col-md-8</div>
-    <div class="col-6 md:col-4">.col-6 .col-md-4</div>
+    <div class="sm:col-6 md:col-8">.sm:col-6 .md:col-8</div>
+    <div class="col-6 md:col-4">.col-6 .md:col-4</div>
   </div>`} />
 
 ## Nesting
@@ -145,7 +145,7 @@ Nested `.row`s will reset their own gutters to follow the main grid gutters. Her
 <Example class="bd-example-cols" code={`<div class="row gx-none text-center">
     <div class="col-12 md:col-8">
       <div>
-        <p>.col-12 .col-md-8</p>
+        <p>.col-12 .md:col-8</p>
         <div class="row">
           <div class="col-3"><div>.col-3</div></div>
           <div class="col-3"><div>.col-3</div></div>
@@ -155,6 +155,6 @@ Nested `.row`s will reset their own gutters to follow the main grid gutters. Her
       </div>
     </div>
     <div class="col-6 md:col-4">
-      <div>.col-6 .col-md-4</div>
+      <div>.col-6 .md:col-4</div>
     </div>
   </div>`} />

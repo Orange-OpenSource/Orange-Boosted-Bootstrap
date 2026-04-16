@@ -24,8 +24,8 @@ Responsive variations also exist for `.d-flex` and `.d-inline-flex`.
   {getData('breakpoints').map((breakpoint) => {
     return (
       <>
-        <li><code>{breakpoint.abbr && `${breakpoint.abbr}:`}d-flex</code></li>
-        <li><code>{breakpoint.abbr && `${breakpoint.abbr}:`}d-inline-flex</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}d-flex</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}d-inline-flex</code></li>
       </>
     )
   })}

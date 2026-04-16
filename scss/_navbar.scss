@@ -526,7 +526,7 @@
   }
 
   @if $enable-bootstrap-compatibility {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
     .navbar-expand#{$infix} {
       @extend .#{$breakpoint-prefix}navbar-expand;
     }
