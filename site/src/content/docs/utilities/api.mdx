@@ -373,6 +373,10 @@ $utilities: (
 
 Output:
 
+<Callout type="info">
+  The backslash (`\`) is used to escape the colon (`:`) in class names for print utilities.
+</Callout>
+
 ```css
 .opacity-0 { opacity: 0 !important; }
 .opacity-25 { opacity: .25 !important; }
@@ -381,11 +385,11 @@ Output:
 .opacity-100 { opacity: 1 !important; }
 
 @media print {
-  .opacity-print-0 { opacity: 0 !important; }
-  .opacity-print-25 { opacity: .25 !important; }
-  .opacity-print-50 { opacity: .5 !important; }
-  .opacity-print-75 { opacity: .75 !important; }
-  .opacity-print-100 { opacity: 1 !important; }
+  .print\:opacity-0 { opacity: 0 !important; }
+  .print\:opacity-25 { opacity: .25 !important; }
+  .print\:opacity-50 { opacity: .5 !important; }
+  .print\:opacity-75 { opacity: .75 !important; }
+  .print\:opacity-100 { opacity: 1 !important; }
 }
 ```
 
