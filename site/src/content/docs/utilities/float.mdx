@@ -36,10 +36,24 @@ Here are all the support classes:
   {getData('breakpoints').map((breakpoint) => {
     return (
       <>
-        <li><code>.float{breakpoint.abbr}-start</code></li>
-        <li><code>.float{breakpoint.abbr}-end</code></li>
-        <li><code>.float{breakpoint.abbr}-none</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}float-start</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}float-end</code></li>
+        <li><code>.{breakpoint.abbr && `${breakpoint.abbr}:`}float-none</code></li>
       </>
     )
   })}
 </ul>
+
+<BootstrapCompatibility>
+<ul>
+  {getData('breakpoints').map((breakpoint) => {
+    return (
+      <>
+        <li><code>.float{breakpoint.abbr && `-${breakpoint.abbr}`}-start</code></li>
+        <li><code>.float{breakpoint.abbr && `-${breakpoint.abbr}`}-end</code></li>
+        <li><code>.float{breakpoint.abbr && `-${breakpoint.abbr}`}-none</code></li>
+      </>
+    )
+  })}
+</ul>
+</BootstrapCompatibility>
