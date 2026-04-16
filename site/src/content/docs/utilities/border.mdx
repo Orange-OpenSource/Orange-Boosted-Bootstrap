@@ -46,7 +46,7 @@ Or remove borders:
 
 ## Color
 
-Change the border color using utilities. The color utilities are generated from our `$ouds-border-colors` Sass map.
+Border color utilities apply a color [token]([[docsref:/foundation/tokens]]) as `border-color` for a [border]([[docsref:/foundation/colors#border]]) or ['always' color]([[docsref:/foundation/colors#always]]) dynamically depending on the [color mode]([[docsref:/foundation/color-modes]]).
 
 <Example class="bd-example-border-utils d-flex align-items-center flex-wrap" code={[...allTokens.filter(token => token.name.match(/\$ouds-color-border-/) && token.name.match(/-light/) && token.compiledValue && !token.name.match(/-focus/)).map(token => {
     if (token.name.match(/-on-/)) {
