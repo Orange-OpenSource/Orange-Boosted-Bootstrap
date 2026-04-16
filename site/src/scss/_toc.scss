@@ -53,19 +53,6 @@
   }
 }
 
-.bd-toc-toggle {
-  display: flex;
-  align-items: center;
-  border-width: 1px; // OUDS mod
-
-  @include media-breakpoint-down(sm) {
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  // OUDS mod: no `@include media-breakpoint-down(md)`
-}
-
 .bd-toc-collapse {
   @include media-breakpoint-down(md) {
     nav {
