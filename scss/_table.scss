@@ -75,10 +75,7 @@
 
   // OUDS mod
   // When using checkboxes in the first column, force width to ensure correct spacing on this column
-  tr > td:has(.control-item-indicator[type="checkbox"]:not([role="switch"])),
-  tr > td:has(.control-item-indicator[type="radio"]),
-  tr > th:has(.control-item-indicator[type="checkbox"]:not([role="switch"])),
-  tr > th:has(.control-item-indicator[type="radio"]) {
+  tr > *:has(.control-item-indicator[type="checkbox"]:not([role="switch"]), .control-item-indicator[type="radio"]) {
     width: 1%;
     padding: 0;
     vertical-align: middle;
@@ -91,8 +88,7 @@
   }
 
   // Automatically highlight rows with checked checkboxes or radios
-  tbody tr:has(.control-item-indicator[type="checkbox"]:not([role="switch"]):checked),
-  tbody tr:has(.control-item-indicator[type="radio"]:checked) {
+  tbody tr:has(.control-item-indicator[type="checkbox"]:not([role="switch"]):checked, .control-item-indicator[type="radio"]:checked) {
     @extend %active;
   }
 
