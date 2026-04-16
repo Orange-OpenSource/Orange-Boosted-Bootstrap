@@ -65,7 +65,7 @@ export const screenSize = [
   You can find here the [iconography design guidelines](https://r.orange.fr/r/S-ouds-doc-icon-intro).
 </Callout>
 
-<BrandSpecific brand="orange">
+<BrandSpecific brand={['orange', 'orange-compact']}>
 While OUDS Web doesn’t include an icon set by default, Orange does have its own comprehensive icon library called Solaris. While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
 
 [Solaris icons library]([[config:icons]]) is a growing library of icons that are designed by OUDS design team. It features an icon search tool based on categories and keywords, and allows icons to be downloaded in various formats for use in design and development. They are not open-source though and should only be used for Orange projects. Please refer to the [icons license file]([[config:icons_license]]) for legal information.
@@ -93,13 +93,13 @@ To color icons, you can:
 - use [color utilities classes]([[docsref:utilities/color#colors]]) like `.text-brand-primary`, `.text-disabled` or `.text-status-positive` that change current color value.
 - specify a color using CSS variables like `--bs-color-content-brand-primary`, `--bs-color-content-disabled` or `--bs-color-content-status-positive`.
 
-For SVGs (SVG sprites, inline SVGs or CSS mask image SVGs), the `fill="currentColor"` attribute is required on the `<svg>` or `<symbol>` tag, if you want to change the icons color on the fly: it will make the icon inherit color from itself or its parent containers. <BrandSpecific brand="orange">It is set on the icons downloaded from Solaris icons finder.</BrandSpecific> For CSS mask image SVGs, the `background-color: currentColor` CSS property should be set.
+For SVGs (SVG sprites, inline SVGs or CSS mask image SVGs), the `fill="currentColor"` attribute is required on the `<svg>` or `<symbol>` tag, if you want to change the icons color on the fly: it will make the icon inherit color from itself or its parent containers. <BrandSpecific brand={['orange', 'orange-compact']}>It is set on the icons downloaded from Solaris icons finder.</BrandSpecific> For CSS mask image SVGs, the `background-color: currentColor` CSS property should be set.
 
 ### Functional icons
 
 The following color utilities and CSS variables are intended for use only with functional icons. The warning icon is an exception as it has two different colors for its internal and external shapes, to ensure accessibility. For this icon, you can use the dedicated [accessible warning icon](#accessible-warning-icon).
 
-Here are [the normal contexts of use of these functional colors](https://r.orange.fr/r/S-ouds-doc-token-color-functional).
+Here are [the normal contexts of use of these functional colors](https://unified-design-system.orange.com/472794e18/p/217ac6-color/t/6d158c2daf).
 
 <BsTable>
 | Color utility | Color CSS variable | Context of use |
@@ -796,7 +796,7 @@ Remember that you cannot use external images inside interactive elements because
 
 ## Use icons
 
-There are many ways to use <BrandSpecific brand="orange">Solaris</BrandSpecific> icons in a web page:
+There are many ways to use <BrandSpecific brand={['orange', 'orange-compact']}>Solaris</BrandSpecific> icons in a web page:
 - Bundled, if you have several icons in your project:
   - [SVG sprite](#svg-sprite) (preferred choice for flexibility, performance and accessibility)
   - [Icon font](#icon-font)
@@ -805,7 +805,7 @@ There are many ways to use <BrandSpecific brand="orange">Solaris</BrandSpecific>
   - [SVG external image](#svg-external-image)
   - [CSS mask image SVG](#css-mask-image-svg)
 
-<BrandSpecific brand="orange">All icons can be retrieved easily in any of these formats in the Solaris icons finder. See Solaris icons library [develop documentation]([[config:icons_develop]]) for complete development guidelines for the different formats, and their pros and cons.</BrandSpecific>
+<BrandSpecific brand={['orange', 'orange-compact']}>All icons can be retrieved easily in any of these formats in the Solaris icons finder. See Solaris icons library [develop documentation]([[config:icons_develop]]) for complete development guidelines for the different formats, and their pros and cons.</BrandSpecific>
 
 Overview on how to integrate icons in a web page:
 <BsTable class="table">
@@ -822,7 +822,7 @@ Overview on how to integrate icons in a web page:
 
 This technique is the <strong>preferred choice</strong> for flexibility, performance and accessibility.
 
-<BrandSpecific brand="orange">Using the [Solaris icons finder]([[config:icons]]), you can generate an SVG sprite, a single SVG file containing all your icons in `<symbol>` elements, and then insert an icon through a `<use>` element.</BrandSpecific> With SVG sprites, you can benefit of the power of `currentColor` for easy coloring and theming.
+<BrandSpecific brand={['orange', 'orange-compact']}>Using the [Solaris icons finder]([[config:icons]]), you can generate an SVG sprite, a single SVG file containing all your icons in `<symbol>` elements, and then insert an icon through a `<use>` element.</BrandSpecific> With SVG sprites, you can benefit of the power of `currentColor` for easy coloring and theming.
 
 Please note that if you experience a problem with a cropped SVG, we recommend using the `.overflow-visible` utility on the SVG to fix its rendering.
 
@@ -854,7 +854,7 @@ To speed up loading, the SVG sprite file can be preloaded in the `<head>` of the
 
 Icon font is not the preferred solution. However, for websites needing more than 20 icons, you may consider using an icon font instead of an SVG sprite for eco-design reasons.
 
-<BrandSpecific brand="orange">Using the [Solaris icons finder]([[config:icons]]),</BrandSpecific> you can generate an icon font containing all your icons and use it like a classic font. Icons can be styled through CSS properties like `font-size` and `color`. Please keep in mind that adding or removing icons from the font afterward can be complicated.
+<BrandSpecific brand={['orange', 'orange-compact']}>Using the [Solaris icons finder]([[config:icons]]),</BrandSpecific> you can generate an icon font containing all your icons and use it like a classic font. Icons can be styled through CSS properties like `font-size` and `color`. Please keep in mind that adding or removing icons from the font afterward can be complicated.
 
 <Example buttonLabel="icon font" code={`<span class="si si-settings" aria-hidden="true" style="font-size: 3rem"></span>`} />
 

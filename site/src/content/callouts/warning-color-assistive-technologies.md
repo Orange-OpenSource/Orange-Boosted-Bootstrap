@@ -1,1 +1,5 @@
-**Accessibility tip:** Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies like screen readers. Please ensure the meaning is obvious from the content itself (e.g., the visible text with a [_sufficient_ color contrast](/docs/[[config:docs_version]]/getting-started/accessibility/#color-contrast)) or is included through alternative means, such as additional text hidden with the `.visually-hidden` class.
+---
+title: Accessibility tip
+---
+
+Using colors alone to convey meaning can exclude users relying on assistive technologies such as screen readers. Make sure the meaning is clear from the content itself, such as visible text with [_sufficient_ color contrast](/docs/[[config:docs_version]]/getting-started/accessibility/#color-contrast), or include alternative indicators, such as additional text hidden with the `.visually-hidden` class.
