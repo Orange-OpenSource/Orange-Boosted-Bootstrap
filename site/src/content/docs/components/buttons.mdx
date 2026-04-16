@@ -68,7 +68,7 @@ Generally speaking, you should always ask yourself which tag is appropriate for 
 
 When navigation buttons are used for global navigation (between pages or within content), they should be wrapped in a `<nav>` tag, which must have an explicit (accessible) name defined using, for example, an `aria-label` attribute.
 
-## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Button
+## [[comp]] Button
 
 Button is a UI element that triggers an action or event, used to initiate tasks or confirm an action. Button comes in various layouts, styles, and states to convey hierarchy or emphasis.
 
@@ -114,7 +114,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
     </div>
   </div>`} />
 
-<BrandSpecific brand="orange">
+<BrandSpecific brand={['orange', 'orange-compact']}>
 #### Rounded corners
 
 Rounded corners buttons is a project-wide option therefore all your buttons should either be rounded or not. Add `.use-rounded-corner-buttons` on a top container (for example `<body>`) to use rounded corners.
@@ -548,7 +548,7 @@ Loading state can also be combined with all kind of buttons, including icons.
   </div>
   `} />
 
-### Skeleton
+#### Skeleton
 
 <SkeletonRedirect component="button" />
 
@@ -556,7 +556,7 @@ Loading state can also be combined with all kind of buttons, including icons.
     <button type="button" class="btn btn-default">Default</button>
   </div>`} />
 
-## Layout
+### Layout
 
 #### Block buttons
 
@@ -594,7 +594,7 @@ Additional utilities can be used to adjust the alignment of buttons when horizon
 
 If you don’t want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
 
-## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Navigation button
+## [[comp]] Navigation button
 
 Navigation button is a UI element that enables movement between different pages within a multi-page interface. Navigation button is typically arranged in a sequence to indicate the user’s current position and provide controls for accessing previous, next, or specific pages.
 
@@ -663,7 +663,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
     </div>
   </div>`} />
 
-<BrandSpecific brand="orange">
+<BrandSpecific brand={['orange', 'orange-compact']}>
   #### Rounded corners
 
   Rounded corners navigation buttons is a project-wide option therefore all your buttons should either be rounded or not. Add `.use-rounded-corner-buttons` on a top container (for example `<body>`) to use rounded corners.
