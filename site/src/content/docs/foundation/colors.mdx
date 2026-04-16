@@ -199,7 +199,8 @@ These colors can be used with [our background utilities]([[docsref:/utilities/ba
 
 <ColorTable
   colorPrefix="ouds/color/always/"
-  tokenRegexp={/\$ouds-color-always-(?<colorName>.*)/} />
+  tokenRegexp={/\$ouds-color-always-(?<colorName>.*)/}
+  multiTheme={false} />
 
 ## Opacity
 
@@ -211,25 +212,22 @@ These colors can be used with [our opacity utilities]([[docsref:/utilities/opaci
   Please refer to the [opacity colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/t/b4eb059054) for more information on usage.
 </Callout>
 
-export const opacityBackgroundStyle = {
-  backgroundPosition: "0px 0px, 10px 10px",
-  backgroundSize: "20px 20px",
-  backgroundImage: "linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%)"
-};
+export const opacityBackgroundStyle = "repeating-conic-gradient(#fff 0% 25%, #000 0% 50%) 0 0/ 20px 20px";
 
 <ColorTable
   colorPrefix="ouds/opacity/"
   tokenRegexp={/\$ouds-opacity-(?<colorName>.*)/}
   getUsage={(colorName) => `.opacity-${colorName}`}
+  multiTheme={false}
   getStyle={(token, mode) =>
     mode === 'light'
       ? {
           opacity: token.lightValue,
-          ...opacityBackgroundStyle
+          background: opacityBackgroundStyle
         }
       : {
           opacity: token.darkValue,
-          ...opacityBackgroundStyle
+          background: opacityBackgroundStyle
         }} />
 
 ## Decorative

@@ -6,7 +6,7 @@ import { allTokens } from '@libs/sass-variables'
 interface IColorToken {
   colorName: string
   lightValue: string
-  darkValue: string
+  darkValue?: string
   backdropLight?: string
   backdropDark?: string
 }
@@ -14,6 +14,7 @@ interface IColorToken {
 interface Props {
   tokenRegexp: RegExp
   colorPrefix: string
+  multiTheme?: boolean
   getUsage?: (colorName: string, colorPrefix?: string) => string
   getStyle?: (token: IColorToken, mode: string) => astroHTML.JSX.CSSProperties
 }
@@ -30,7 +31,7 @@ const getBackground = (token: IColorToken, mode: string): astroHTML.JSX.CSSPrope
         backgroundColor: token.backdropDark ? token.backdropDark : token.darkValue
       }
 
-const { colorPrefix, tokenRegexp, getUsage = getCustomProp, getStyle = getBackground } = Astro.props
+const { colorPrefix, tokenRegexp, multiTheme = true, getUsage = getCustomProp, getStyle = getBackground } = Astro.props
 
 const getLightDarkValuesFor = (colorName: string) => {
   let token = `$ouds-color-${colorName}`
@@ -43,7 +44,7 @@ const getLightDarkValuesFor = (colorName: string) => {
   }
 }
 
-const matchAndGetValues = (colorToken: IDeclaration) => {
+const matchAndGetValues = (colorToken: IDeclaration): IColorToken => {
   const { colorName, backdropColorName } = colorToken.name.match(tokenRegexp)?.groups as {
     colorName: string
     backdropColorName?: string
@@ -53,7 +54,7 @@ const matchAndGetValues = (colorToken: IDeclaration) => {
     lightValue: colorToken.compiledValue,
     darkValue: colorToken.name.endsWith('-light')
       ? getTokenValue(colorToken.name.replace(/-light$/, '-dark'))
-      : colorToken.compiledValue,
+      : undefined,
     colorName,
     // add both dark and light colors of backdrop (this is for `content-on` tokens)
     ...(backdropColorName ? getLightDarkValuesFor(backdropColorName) : {})
@@ -66,8 +67,16 @@ const matchAndGetValues = (colorToken: IDeclaration) => {
     <thead>
       <tr>
         <th class="w-50" scope="col">{colorPrefix}</th>
-        <th scope="col">Light mode</th>
-        <th scope="col">Dark mode</th>
+        {
+          multiTheme ? (
+            <>
+              <th scope="col">Light mode</th>
+              <th scope="col">Dark mode</th>
+            </>
+          ) : (
+            <th scope="col">All modes</th>
+          )
+        }
         <th scope="col">Usage</th>
       </tr>
     </thead>
@@ -82,7 +91,10 @@ const matchAndGetValues = (colorToken: IDeclaration) => {
                 <var>{token.colorName}</var>
               </th>
               <td>
-                <div class="bg-primary ratio-21x9" data-bs-theme="light">
+                <div
+                  class:list={['ratio-21x9', { 'bg-primary': multiTheme }]}
+                  data-bs-theme={multiTheme ? 'light' : undefined}
+                >
                   <figure
                     class="w-100 h-100 mb-none d-flex justify-content-center align-items-center"
                     style={getStyle(token, 'light')}
@@ -101,26 +113,28 @@ const matchAndGetValues = (colorToken: IDeclaration) => {
                   </figure>
                 </div>
               </td>
-              <td>
-                <div class="bg-primary ratio-21x9" data-bs-theme="dark">
-                  <figure
-                    class="w-100 h-100 mb-none d-flex justify-content-center align-items-center"
-                    style={getStyle(token, 'dark')}
-                    title={token.darkValue}
-                  >
-                    {token.backdropDark && (
-                      <svg class="decorative-small-icon" aria-hidden="true" color={token.darkValue}>
-                        <use
-                          xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}
-                        />
-                      </svg>
-                    )}
-                    <figcaption class="visually-hidden">
-                      <var>{token.darkValue}</var>
-                    </figcaption>
-                  </figure>
-                </div>
-              </td>
+              {multiTheme && (
+                <td>
+                  <div class="bg-primary ratio-21x9" data-bs-theme="dark">
+                    <figure
+                      class="w-100 h-100 mb-none d-flex justify-content-center align-items-center"
+                      style={getStyle(token, 'dark')}
+                      title={token.darkValue}
+                    >
+                      {token.backdropDark && (
+                        <svg class="decorative-small-icon" aria-hidden="true" color={token.darkValue}>
+                          <use
+                            xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}
+                          />
+                        </svg>
+                      )}
+                      <figcaption class="visually-hidden">
+                        <var>{token.darkValue}</var>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </td>
+              )}
               <td class="w-25 user-select-all">
                 <var>{getUsage(token.colorName, colorPrefix)}</var>
               </td>
