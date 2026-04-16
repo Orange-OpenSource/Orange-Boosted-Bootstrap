@@ -6,11 +6,12 @@ import { getComponentSVG } from '@libs/utils'
 interface Props {
   headings?: MarkdownHeading[]
   entries?: TocEntry[]
+  types?: string[]
 }
 
-const { entries, headings } = Astro.props
+const { entries, headings, types } = Astro.props
 
-const toc = entries ? entries : generateToc(headings ?? [])
+const toc = entries ? entries : generateToc(headings ?? [], types)
 ---
 
 <ul>

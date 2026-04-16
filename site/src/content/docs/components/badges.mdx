@@ -83,51 +83,6 @@ Keep in mind that visually impaired and blind users will lack the visual context
 
 Several examples are provided below, but they need to be adapted for actual use cases.
 
-### Positioning
-
-Use utilities to modify a `.badge` and position it in the corner of a button.
-
-<Example class="d-flex align-items-center gap-large" code={`<button type="button" class="btn btn-icon btn-default position-relative">
-    <svg class="icon" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}"/>
-    </svg>
-    <span class="visually-hidden">Trash</span>
-    <span class="position-absolute top-0 start-100 translate-middle badge badge-neutral">
-      <span class="visually-hidden">Trash contains items</span>
-    </span>
-  </button>
-
-  <button type="button" class="btn btn-default position-relative ms-medium">
-    Inbox
-    <span class="position-absolute top-0 start-100 translate-middle badge badge-count badge-info">
-      +99
-      <span class="visually-hidden">New emails</span>
-    </span>
-  </button>`} />
-
-<BootstrapCompatibility>
-
-<Example code={`<button type="button" class="btn btn-primary position-relative">
-    Inbox
-    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-      +99
-      <span class="visually-hidden">unread messages</span>
-    </span>
-  </button>`} />
-
-<Example code={`<button type="button" class="btn btn-primary position-relative">
-    Profile
-    <span class="position-absolute top-0 start-100 translate-middle p-small bg-danger border border-light rounded-circle">
-      <span class="visually-hidden">New alerts</span>
-    </span>
-  </button>`} />
-
-<Example code={getData('theme-colors').map((themeColor) => `<span class="badge text-bg-${themeColor.name}">+99</span>`)} />
-
-<Example code={getData('theme-colors').map((themeColor) => `<span class="badge rounded-pill text-bg-${themeColor.name}">+99</span>`)} />
-
-</BootstrapCompatibility>
-
 ## [[comp]] Badge
 
 Badge is a UI element that highlights system notifications, statuses, or the categorisation of information through colour alone.
@@ -387,3 +342,48 @@ Badges - icon are available in two sizes. Add `.badge-large` to have a larger ba
     <span class="badge-icon si si-settings" aria-hidden="true"></span>
     <span class="visually-hidden">Parameter</span>
   </p>`} />
+
+## Positioning
+
+Use utilities to modify a `.badge` and position it in the corner of a button.
+
+<Example class="d-flex align-items-center gap-large" code={`<button type="button" class="btn btn-icon btn-default position-relative">
+    <svg class="icon" aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}"/>
+    </svg>
+    <span class="visually-hidden">Trash</span>
+    <span class="position-absolute top-0 start-100 translate-middle badge badge-neutral">
+      <span class="visually-hidden">Trash contains items</span>
+    </span>
+  </button>
+
+  <button type="button" class="btn btn-default position-relative ms-medium">
+    Inbox
+    <span class="position-absolute top-0 start-100 translate-middle badge badge-count badge-info">
+      +99
+      <span class="visually-hidden">New emails</span>
+    </span>
+  </button>`} />
+
+<BootstrapCompatibility>
+
+<Example code={`<button type="button" class="btn btn-primary position-relative">
+    Inbox
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      +99
+      <span class="visually-hidden">unread messages</span>
+    </span>
+  </button>`} />
+
+<Example code={`<button type="button" class="btn btn-primary position-relative">
+    Profile
+    <span class="position-absolute top-0 start-100 translate-middle p-small bg-danger border border-light rounded-circle">
+      <span class="visually-hidden">New alerts</span>
+    </span>
+  </button>`} />
+
+<Example code={getData('theme-colors').map((themeColor) => `<span class="badge text-bg-${themeColor.name}">+99</span>`)} />
+
+<Example code={getData('theme-colors').map((themeColor) => `<span class="badge rounded-pill text-bg-${themeColor.name}">+99</span>`)} />
+
+</BootstrapCompatibility>
