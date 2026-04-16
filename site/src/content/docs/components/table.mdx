@@ -313,6 +313,7 @@ Note that the width of columns containing checkboxes will automatically adjust t
         </th>
         <th scope="col">Heading</th>
         <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
       </tr>
     </thead>
     <tbody>
@@ -325,6 +326,7 @@ Note that the width of columns containing checkboxes will automatically adjust t
         </td>
         <td>Cell</td>
         <td>Cell</td>
+        <td>Cell</td>
       </tr>
       <tr>
         <td>
@@ -333,6 +335,7 @@ Note that the width of columns containing checkboxes will automatically adjust t
             <span class="visually-hidden">Select row 2</span>
           </label>
         </td>
+        <td>This is a much longer section of text that demonstrates what happens when text wraps within a cell in a table</td>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
@@ -343,6 +346,7 @@ Note that the width of columns containing checkboxes will automatically adjust t
             <span class="visually-hidden">Select row 3</span>
           </label>
         </td>
+        <td>Cell</td>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
@@ -365,6 +369,7 @@ The [same rules apply as with checkboxes](#with-checkboxes), except that there i
         <th scope="col">Select</th>
         <th scope="col">Heading</th>
         <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
       </tr>
     </thead>
     <tbody>
@@ -375,6 +380,7 @@ The [same rules apply as with checkboxes](#with-checkboxes), except that there i
             <span class="visually-hidden">Select row 1</span>
           </label>
         </td>
+        <td>This is a much longer section of text that demonstrates what happens when text wraps within a cell in a table</td>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
@@ -387,6 +393,7 @@ The [same rules apply as with checkboxes](#with-checkboxes), except that there i
         </td>
         <td>Cell</td>
         <td>Cell</td>
+        <td>Cell</td>
       </tr>
       <tr>
         <td>
@@ -395,6 +402,7 @@ The [same rules apply as with checkboxes](#with-checkboxes), except that there i
             <span class="visually-hidden">Select row 3</span>
           </label>
         </td>
+        <td>Cell</td>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
@@ -408,11 +416,9 @@ To manage radio buttons active state (i.e. update `data-bs-theme` on the selecte
 
 You can also use other components in tables, such as tags, badges, switches, images or icons.
 
-For standalone switches in tables, note that the click area will be extended to the full width of the cell.
-
 To align horizontally or vertically, you can use the following:
 - For horizontal alignment, use the `.text-center` class on `<th>` and `<td>` elements.
-- For vertical alignment, use the `.align-middle` class on the `<tr>` elements.
+- For vertical alignment, use the `.align-middle` class on the `<tr>` elements. Some components inside cells may require additional alignment (possibly via a utility class).
 
 <Example buttonLabel="table with components and icons" class="table-responsive" code={`<table class="table">
     <caption class="visually-hidden">OUDS Web table with components and icons</caption>
@@ -432,7 +438,7 @@ To align horizontally or vertically, you can use the following:
             <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#file-earmark-richtext')}"></use>
           </svg>Cell
         </td>
-        <td>Much longer cell content which wraps to another line to show the vertical alignment</td>
+        <td>This is a much longer section of text that demonstrates what happens when text wraps within a cell in a table</td>
         <td>
           <p class="tag tag-warning tag-small">
             <span class="tag-status-icon"></span>
@@ -528,7 +534,7 @@ To align vertically and preserve the row height, use the `.align-middle` class o
             <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#file-earmark-richtext')}"></use>
           </svg>Cell
         </td>
-        <td>Much longer cell content which wraps to another line to show the vertical alignment</td>
+        <td>This is a much longer section of text that demonstrates what happens when text wraps within a cell in a table</td>
         <td class="table-cell-component">
           <p class="tag tag-warning tag-small">
             <span class="tag-status-icon"></span>
@@ -536,7 +542,7 @@ To align vertically and preserve the row height, use the `.align-middle` class o
           </p>
         </td>
         <td class="text-center table-cell-component">
-          <p class="badge badge-warning badge-large align-middle">
+          <p class="badge badge-warning badge-large">
             <span class="badge-status-icon"></span>
             <span class="visually-hidden">Warning</span>
           </p>
@@ -560,7 +566,7 @@ To align vertically and preserve the row height, use the `.align-middle` class o
           </p>
         </td>
         <td class="text-center table-cell-component">
-          <p class="badge badge-positive badge-large align-middle">
+          <p class="badge badge-positive badge-large">
             <span class="badge-status-icon"></span>
             <span class="visually-hidden">OK</span>
           </p>
@@ -586,7 +592,7 @@ To align vertically and preserve the row height, use the `.align-middle` class o
           </p>
         </td>
         <td class="text-center table-cell-component">
-          <p class="badge badge-large align-middle">
+          <p class="badge badge-large">
             <span class="badge-status-icon"></span>
             <span class="visually-hidden">Error</span>
           </p>

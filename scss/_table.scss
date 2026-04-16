@@ -86,8 +86,7 @@
 
   // Extend checkboxes and radios click area
   tr .radio-button-standalone,
-  tr .checkbox-standalone,
-  tr .switch-standalone {
+  tr .checkbox-standalone {
     width: stretch;
   }
 
@@ -107,6 +106,10 @@
   .table-cell-component {
     padding-block: 0;
     vertical-align: middle;
+
+    > * {
+      vertical-align: middle;
+    }
   }
   // End mod
 }
