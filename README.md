@@ -54,6 +54,7 @@ Read the [Getting started page](https://boosted.orange.com/docs/getting-started/
 [![JS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/js/boosted.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/js/boosted.min.js)
 [![JS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/js/boosted.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/js/boosted.min.js)
 [![JSDelivr](https://data.jsdelivr.com/v1/package/npm/boosted/badge)](https://www.jsdelivr.com/package/npm/boosted)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/badge)](https://api.securityscorecards.dev/projects/github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/badge)
 
 ## What’s included
 
