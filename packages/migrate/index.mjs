@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable no-undef, no-console */
 
 import { migrate } from './src/migrate.mjs'
 import { getReplacementsWarnings } from './src/warnings.mjs'
