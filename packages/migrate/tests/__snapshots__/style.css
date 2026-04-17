@@ -1,0 +1,5 @@
+.parent .p-small[style] {}
+.p-large {}
+.p-2xlarge:not(.p-4xlarge) {}
+
+/* should not be replaced */ .step-3 {}

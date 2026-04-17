@@ -1,0 +1,23 @@
+{
+  "name": "@ouds/web-migrate",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "bin": {
+    "ouds-web-migrate": "index.mjs"
+  },
+  "dependencies": {
+    "replace-in-file": "^8.3.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.2",
+    "vitest": "^3.0.7"
+  }
+}
