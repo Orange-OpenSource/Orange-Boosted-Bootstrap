@@ -1,14 +1,14 @@
 .parent .p-small[style] {
-  color: black;
+  color: #000;
 }
 .p-large {
-  color: black;
+  color: #000;
 }
 .p-2xlarge:not(.p-4xlarge) {
-  color: black;
+  color: #000;
 }
 
 /* should not be replaced */
 .step-3 {
-  color: black;
+  color: #000;
 }
