@@ -1,5 +1,14 @@
-.parent .p-2[style] {}
-.p-3 {}
-.p-4:not(.p-5) {}
+.parent .p-2[style] {
+  color: black;
+}
+.p-3 {
+  color: black;
+}
+.p-4:not(.p-5) {
+  color: black;
+}
 
-/* should not be replaced */ .step-3 {}
+/* should not be replaced */
+.step-3 {
+  color: black;
+}

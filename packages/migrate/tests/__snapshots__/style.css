@@ -1,5 +1,14 @@
-.parent .p-small[style] {}
-.p-large {}
-.p-2xlarge:not(.p-4xlarge) {}
+.parent .p-small[style] {
+  color: black;
+}
+.p-large {
+  color: black;
+}
+.p-2xlarge:not(.p-4xlarge) {
+  color: black;
+}
 
-/* should not be replaced */ .step-3 {}
+/* should not be replaced */
+.step-3 {
+  color: black;
+}
