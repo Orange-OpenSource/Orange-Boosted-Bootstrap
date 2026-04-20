@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { getBreakpointsReplacement, getGapReplacement, getSpacingReplacement } from './regexp.mjs'
+import { getBreakpointsReplacement, getGapReplacement, getSpacingReplacement } from './common.mjs'
 
 describe('GapReplacement', () => {
   for (const [search, replaced] of [

@@ -1,4 +1,4 @@
-import { getBreakpointsReplacement } from '../regexp.mjs'
+import { getBreakpointsReplacement } from './common.mjs'
 
 const breakpoints = ['2xs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl', '2xl', '3xl']
 

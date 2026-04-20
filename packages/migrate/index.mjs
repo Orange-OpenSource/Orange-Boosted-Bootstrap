@@ -2,17 +2,19 @@
 /* eslint-disable no-undef, no-console */
 
 import { migrate } from './src/migrate.mjs'
-import { getReplacementsWarnings } from './src/warnings.mjs'
+import { getFromFlag } from './src/utils/args.mjs'
+import { getReplacementsWarnings } from './src/utils/warnings.mjs'
 
 // Parse command line arguments
 const args = process.argv.slice(2)
-const ob1Flag = args.includes('--ob1')
-const globPattern = args.find(arg => !arg.startsWith('--')) || '**/*.(css,scss,html)'
+const fromFlag = getFromFlag(args)
+const globPattern = args.slice(2).find(arg => !arg.startsWith('--')) || '**/*.(css,scss,html)'
 
+console.log(`Starting migration from ${fromFlag} with pattern: ${globPattern}...`)
 try {
   const results = await migrate({
     files: globPattern,
-    ob1: ob1Flag
+    source: fromFlag
   })
   const warning = getReplacementsWarnings()
   console.log('Replacement results:', results)
