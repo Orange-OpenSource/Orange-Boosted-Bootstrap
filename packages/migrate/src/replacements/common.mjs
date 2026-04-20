@@ -60,6 +60,12 @@ export const commonReplacements = [
   ['border-warning', 'border-status-warning'],
   ['border-(secondary|black|dark)', 'border-emphasized'],
 
+  // Clearfix
+  ['clearfix', 'd-flow-root'],
+
+  // Color and background
+  [...warnForClass('text-bg-(primary|secondary|success|danger|info|warning|light|dark)')],
+
   // Colors
   ['text-primary(-emphasis)?', 'text-brand-primary'],
   ['text-secondary(-emphasis)?', 'text-muted'],
@@ -82,6 +88,7 @@ export const commonReplacements = [
   [...warnForClass('link-offset-[0-9]+')],
   [...warnForClass('link-underline')],
   [...warnForClass('link-underline-opacity-[0-9]+(-hover)?')],
+  ['link-chevron', 'link link-chevron'],
 
   // Opacity
   ['opacity-0', 'opacity-invisible'],
@@ -122,13 +129,38 @@ export const commonReplacements = [
       message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.'
     })
   ],
-  ['alert-danger', 'alert-positive'],
-  ['alert-success', 'alert-negative'],
+  ['alert', 'alert alert-message'],
+  ['alert-danger', 'alert-negative'],
+  ['alert-success', 'alert-positive'],
+  ['alert-heading', 'alert-label'],
+  [...warnForClass('alert-(sm|dismissible)', { remove: true })],
 
   // Badge
   [
     ...warnForClass('badge', {
       message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.'
     })
-  ]
+  ],
+
+  // Breadcrumb
+  [
+    ...warnForClass('breadcrumb-item', {
+      message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.'
+    })
+  ],
+
+  // Tags
+  [
+    ...warnForClass('tag', {
+      message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.'
+    })
+  ],
+  ['tag-sm', 'tag-small'],
+
+  // Checkbox and radios
+  [...warnForClass('form-(check|select|control)')],
+
+  // Skeleton
+  [...warnForClass('placeholder-(wave|glow)')],
+  ['placeholder', 'skeleton']
 ]

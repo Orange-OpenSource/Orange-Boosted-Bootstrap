@@ -30,21 +30,30 @@ describe('Migrate', () => {
   })
 
   it('should keep warning of removal', async () => {
-    const filename = 'tests/source-ob1.html'
+    const filename = 'tests/source-boosted.html'
     await decoratedMigrateForTest({
       files: filename,
-      source: 'ob1'
+      source: 'boosted'
     })
 
     expect(getReplacementsWarnings()).toEqual([
-      'initialism class is deprecated in tests/source-ob1.html',
-      'container class is deprecated in tests/source-ob1.html',
-      'container-md class is deprecated in tests/source-ob1.html',
-      'btn-close-white class is deprecated in tests/source-ob1.html',
-      'btn-social class is deprecated in tests/source-ob1.html',
-      'btn-sm class is deprecated in tests/source-ob1.html',
-      'The form using class \'was-validated\' in tests/source-ob1.html needs to be updated to use the new form validation style.',
-      'The component using class \'ob1-form-group\' in tests/source-ob1.html needs to be updated to use the new component version.'
+      'initialism class is deprecated in tests/source-boosted.html',
+      'container class is deprecated in tests/source-boosted.html',
+      'container-md class is deprecated in tests/source-boosted.html',
+      'btn-close-white class is deprecated in tests/source-boosted.html',
+      'btn-social class is deprecated in tests/source-boosted.html',
+      'btn-sm class is deprecated in tests/source-boosted.html',
+      'text-bg-secondary class is deprecated in tests/source-boosted.html',
+      'The form using class \'was-validated\' in tests/source-boosted.html needs to be updated to use the new form validation style.',
+      'The component using class \'alert\' in tests/source-boosted.html needs to be updated to use the new component DOM.',
+      'alert-sm class has been removed in tests/source-boosted.html',
+      'alert-dismissible class has been removed in tests/source-boosted.html',
+      'The component using class \'badge\' in tests/source-boosted.html needs to be updated to use the new component DOM.',
+      'The component using class \'breadcrumb-item\' in tests/source-boosted.html needs to be updated to use the new component DOM.',
+      'The component using class \'tag\' in tests/source-boosted.html needs to be updated to use the new component DOM.',
+      'form-check class is deprecated in tests/source-boosted.html',
+      'form-select class is deprecated in tests/source-boosted.html',
+      'placeholder-glow class is deprecated in tests/source-boosted.html'
     ])
   })
 
