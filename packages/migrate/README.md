@@ -4,23 +4,28 @@ CLI utility to migrate a Boosted or OB1 project to OUDS Web or update a OUDS Web
 
 ## Usage
 
+To update an OUDS project to the last version, simply run:
+
 ```bash
 npx @ouds/web-migrate "**/*.(css,scss,html)"
 ```
 
 ### Options
 
-- `--ob1` Use the OB1 replacement set (default is Boosted).
+- `--from` Change the replacement set (default is OUDS update).
 - First non-flag argument is the glob pattern. Default: `**/*.(css,scss,html)`
 
 ## Examples
 
 ```bash
-# Default (Boosted or migrate to last OUDS Web version)
-npx @ouds/web-migrate "**/*.css"
+# Default (migrate to last OUDS Web version)
+npx @ouds/web-migrate
 
-# OB1 replacements
-npx @ouds/web-migrate --ob1 "src/**/*.(css,scss,html)"
+# Migrate a Boosted project that uses JSX
+npx @ouds/web-migrate --from=boosted "src/**/*.(css,scss,html,jsx)"
+
+# Migrate an OB1 project that uses Vue
+npx @ouds/web-migrate --from=ob1 "src/**/*.(css,scss,html,vue)"
 ```
 
 ## What it does
@@ -41,4 +46,4 @@ npm test
 
 ## License
 
-ISC
+MIT
