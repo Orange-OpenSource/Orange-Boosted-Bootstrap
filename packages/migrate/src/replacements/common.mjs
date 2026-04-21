@@ -9,7 +9,7 @@ export const getSpacingReplacement = (value, semantic) => {
 }
 
 export const getBreakpointsReplacement = value => {
-  return [`([\\w-]*)-${value}-([\\w-]*)`, (...args) => `${value}:${args[1]}-${args[2]}`]
+  return [`([\\w-]+)-${value}-([\\w-]+)`, (...args) => `${value}:${args[1]}-${args[2]}`]
 }
 
 export const commonReplacements = [

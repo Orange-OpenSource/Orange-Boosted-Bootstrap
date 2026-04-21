@@ -10,7 +10,7 @@ const replacementsMap = {
 }
 
 export const getReplacements = (source = 'ouds') => {
-  const replacements = replacementsMap[source] || boostedReplacements
+  const replacements = replacementsMap[source] || oudsReplacements
   return replacements
     .map(([from, to]) => {
       return [new RegExp(`(?<=[". ,\`'])${from}(?=[{\\s"'\`,\\[:)])`, 'g'), to]

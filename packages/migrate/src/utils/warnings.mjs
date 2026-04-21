@@ -20,3 +20,7 @@ export const warnForClass = (className, options = { remove: false, message: '', 
 }
 
 export const getReplacementsWarnings = () => [...new Set(warnings)]
+
+export const clearWarnings = () => {
+  warnings.length = 0
+}
