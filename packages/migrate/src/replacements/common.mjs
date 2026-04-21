@@ -38,7 +38,7 @@ export const commonReplacements = [
   ['bg-info', 'bg-surface-status-info-emphasized'],
   ['bg-warning', 'bg-surface-status-warning-emphasized'],
   ['bg-light', 'bg-secondary'],
-  [...warnForClass('bg-supporting-.*')],
+  [...warnForClass('bg-supporting-[\\w-]+')],
 
   // Border
   ['border(-(?:top|bottom|start|end))?-0', 'border$1-none'],

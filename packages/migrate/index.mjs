@@ -8,7 +8,7 @@ import { getReplacementsWarnings } from './src/utils/warnings.mjs'
 // Parse command line arguments
 const args = process.argv.slice(2)
 const fromFlag = getFromFlag(args)
-const globPattern = args.find(arg => !arg.startsWith('--')) || '**/*.(css,scss,html)'
+const globPattern = args.find(arg => !arg.startsWith('--')) || '**/*.{css,scss,html}'
 
 console.log(`Starting migration from ${fromFlag} with pattern: ${globPattern}...`)
 try {

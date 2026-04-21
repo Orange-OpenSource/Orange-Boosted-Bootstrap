@@ -80,7 +80,7 @@ describe('Migrate', () => {
       'initialism class is deprecated in tests/source-boosted.html',
       'container class is deprecated in tests/source-boosted.html',
       'container-md class is deprecated in tests/source-boosted.html',
-      'bg-supporting-purple bg-surface-status-info-emphasized"></div> class is deprecated in tests/source-boosted.html',
+      'bg-supporting-purple class is deprecated in tests/source-boosted.html',
       'text-bg-secondary class is deprecated in tests/source-boosted.html',
       'link-primary class is deprecated in tests/source-boosted.html',
       'ratio class is deprecated in tests/source-boosted.html',
