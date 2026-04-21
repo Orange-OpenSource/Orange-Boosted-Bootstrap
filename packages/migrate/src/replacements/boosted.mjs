@@ -1,4 +1,3 @@
-import { warnForClass } from '../utils/warnings.mjs'
 import { commonReplacements, getGapReplacement, getSpacingReplacement } from './common.mjs'
 import { oudsReplacements } from './ouds.mjs'
 
@@ -22,17 +21,11 @@ export const boostedReplacements = [
   // ----- Utilities -----
   // Background colors
   ['bg-secondary', 'bg-inverted-low'],
-  ['bg-success', 'bg-surface-status-positive-emphasized'],
-  ['bg-danger', 'bg-surface-status-negative-emphasized'],
-  ['bg-info', 'bg-surface-status-info-emphasized'],
-  ['bg-warning', 'bg-surface-status-warning-emphasized'],
   ['bg-body', 'bg-primary'],
   ['bg-body-secondary', 'bg-secondary'],
-  ['bg-light', 'bg-secondary'],
   ['bg-dark', 'bg-inverse-low'],
-  [...warnForClass('bg-supporting-.*')],
 
-  // OUDS Breakpoints
+  // OUDS updates
   ...oudsReplacements,
   ['xxl:([^ "]*)', '2xl:$1'] // replace xxl breakpoints everywhere
 ]

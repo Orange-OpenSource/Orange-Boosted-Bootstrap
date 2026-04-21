@@ -44,6 +44,12 @@ export const commonReplacements = [
   ['bg-white', 'bg-always-white'],
   ['bg-black', 'bg-always-black'],
   ['bg-primary', 'bg-surface-brand-primary'],
+  ['bg-success', 'bg-surface-status-positive-emphasized'],
+  ['bg-danger', 'bg-surface-status-negative-emphasized'],
+  ['bg-info', 'bg-surface-status-info-emphasized'],
+  ['bg-warning', 'bg-surface-status-warning-emphasized'],
+  ['bg-light', 'bg-secondary'],
+  [...warnForClass('bg-supporting-.*')],
 
   // Border
   ['border(-(?:top|bottom|start|end))?-0', 'border$1-none'],
@@ -58,7 +64,12 @@ export const commonReplacements = [
   ['border-danger', 'border-status-negative'],
   ['border-info', 'border-status-info'],
   ['border-warning', 'border-status-warning'],
-  ['border-(secondary|black|dark)', 'border-emphasized'],
+  ['border-(secondary|dark)', 'border-emphasized'],
+  ['border-black', 'border-always-black'],
+  ['rounded(-(?:top|bottom|start|end))?-0', 'rounded$1-none'],
+  ['rounded(-(?:top|bottom|start|end))?-1', 'rounded$1-small'],
+  ['rounded(-(?:top|bottom|start|end))?-2', 'rounded$1-medium'],
+  ['rounded(-(?:top|bottom|start|end))?-[3-5]', 'rounded$1-large'],
 
   // Clearfix
   ['clearfix', 'd-flow-root'],
@@ -89,6 +100,7 @@ export const commonReplacements = [
   [...warnForClass('link-underline')],
   [...warnForClass('link-underline-opacity-[0-9]+(-hover)?')],
   ['link-chevron', 'link link-chevron'],
+  [...warnForClass('link-(primary|secondary|success|danger|info|warning|light|dark)')],
 
   // Opacity
   ['opacity-0', 'opacity-invisible'],
@@ -97,8 +109,11 @@ export const commonReplacements = [
   ['opacity-75', 'opacity-strong'],
   ['opacity-100', 'opacity-opaque'],
 
+  // Ratio
+  [...warnForClass('ratio')],
+
   // Shadow
-  ['shadow-sm', 'shadow-default'],
+  ['shadow(-sm)?', 'shadow-default'],
   ['shadow-lg', 'shadow-emphasized'],
 
   // Text

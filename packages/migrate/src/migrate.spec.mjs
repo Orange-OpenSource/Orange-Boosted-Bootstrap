@@ -44,6 +44,8 @@ describe('Migrate', () => {
       'btn-social class is deprecated in tests/source-boosted.html',
       'btn-sm class is deprecated in tests/source-boosted.html',
       'text-bg-secondary class is deprecated in tests/source-boosted.html',
+      'link-primary class is deprecated in tests/source-boosted.html',
+      'ratio class is deprecated in tests/source-boosted.html',
       'The form using class \'was-validated\' in tests/source-boosted.html needs to be updated to use the new form validation style.',
       'The component using class \'alert\' in tests/source-boosted.html needs to be updated to use the new component DOM.',
       'alert-sm class has been removed in tests/source-boosted.html',

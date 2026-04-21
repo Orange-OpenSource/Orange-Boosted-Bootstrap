@@ -24,17 +24,11 @@ export const ob1Replacements = [
   ['bg-primary2', 'bg-surface-brand-tertiary'],
   ['bg-primary3', 'bg-surface-brand-secondary'],
   ['bg-success-subtle', 'bg-surface-status-positive-muted'],
-  ['bg-success', 'bg-surface-status-positive-emphasized'],
   ['bg-danger-subtle', 'bg-surface-status-negative-muted'],
-  ['bg-danger', 'bg-surface-status-negative-emphasized'],
   ['bg-info-subtle', 'bg-surface-status-info-muted'],
-  ['bg-info', 'bg-surface-status-info-emphasized'],
   ['bg-warning-subtle', 'bg-surface-status-warning-muted'],
-  ['bg-warning', 'bg-surface-status-warning-emphasized'],
   ['bg-greige', 'bg-tertiary'],
   ['bg-dark', 'bg-always-black'],
-  ['bg-light', 'bg-secondary'],
-  [...warnForClass('bg-supporting-.*')],
   ['bg-gray1', 'bg-inverse-low'],
   ['bg-gray2', 'bg-secondary'],
   ['bg-gray3', 'bg-inverse-low'],
@@ -52,7 +46,7 @@ export const ob1Replacements = [
     })
   ],
 
-  // OUDS Breakpoints
+  // OUDS updates
   ...oudsReplacements,
   ['xxl:([^ "]*)', '2xl:$1'] // replace xxl breakpoints everywhere
 ]
