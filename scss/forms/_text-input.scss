@@ -201,6 +201,19 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         @include get-font-size("label-small");
+
+        // stylelint-disable-next-line selector-no-qualifying-type
+        &.is-required {
+          position: relative;
+          width: fit-content;
+          max-width: 100%;
+          padding-right: 7px;
+
+          &::after {
+            right: 0;
+            margin-left: 3px;
+          }
+        }
       }
     }
 
@@ -290,13 +303,7 @@
 
     &:has(> button),
     &:has(.loading-indeterminate, .loading-determinate) {
-      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
-
-      > .text-input-field,
-      > .input-container,
-      > label {
-        padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
-      }
+      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
     }
 
     // Invalid text inputs
@@ -304,21 +311,11 @@
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-enabled);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-enabled);
 
-      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
-
-      .text-input-field,
-      .input-container,
-      label {
-        padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
-      }
+      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
 
       &:has(> button),
       &:has(.loading-indeterminate, .loading-determinate) {
-        .text-input-field,
-        .input-container,
-        label {
-          padding-right: calc($ouds-button-size-icon-only + var(--#{$prefix}text-input-column-gap-trailing-error) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
-        }
+        padding-right: calc($ouds-button-size-icon-only + var(--#{$prefix}text-input-column-gap-trailing-error) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
       }
 
       &::after {
@@ -461,6 +458,7 @@
       z-index: 2;
       padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right));
       padding-left: calc(#{$ouds-text-input-space-padding-inline-default} - var(--#{$prefix}text-input-border-width-left));
+      overflow: hidden;
       color: var(--#{$prefix}text-input-label-color);
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -476,6 +474,19 @@
         cursor: text;
         content: "";
         background-color: transparent;
+      }
+
+      // stylelint-disable-next-line selector-no-qualifying-type
+      &.is-required {
+        position: relative;
+        width: fit-content;
+        max-width: 100%;
+        padding-right: 7px;
+
+        &::after {
+          right: 0;
+          margin-left: 3px;
+        }
       }
     }
 
