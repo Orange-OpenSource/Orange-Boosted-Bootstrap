@@ -7,6 +7,7 @@ toc: true
 types:
   - Button
   - Navigation button
+  - AI button
 ---
 
 import { getData } from '@libs/data'
@@ -730,3 +731,72 @@ Please refer to the [loading state section of the button component](#loading) fo
     <span role="status" id="loading-nav-btn-msg-3" class="visually-hidden">Loading next page</span>
   </button>`} />
 
+## [[comp]] AI button
+
+<Example buttonLabel="navigation buttons variants" class="bd-btn-example" code={`<a class="btn btn-default btn-ai" href="#">
+    <svg aria-hidden="true" class="btn-ai-icon">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#sparkles-default')}"/>
+    </svg>
+    Default
+  </a>
+  <a class="btn btn-strong btn-ai" href="#">
+    <svg aria-hidden="true" class="btn-ai-colored-icon">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#sparkles-colored')}"/>
+    </svg>
+    <svg aria-hidden="true" class="btn-ai-icon">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#sparkles-default')}"/>
+    </svg>
+    Strong
+  </a>
+  <a class="btn btn-brand btn-ai" href="#">
+    <svg aria-hidden="true" class="btn-ai-icon">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#sparkles-default')}"/>
+    </svg>
+    Brand
+  </a>
+  <a class="btn btn-minimal btn-ai" href="#">
+    <svg aria-hidden="true" class="btn-ai-colored-icon">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#sparkles-colored')}"/>
+    </svg>
+    <svg aria-hidden="true" class="btn-ai-icon">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#sparkles-default')}"/>
+    </svg>
+    Minimal
+  </a>
+  <a class="btn btn-negative btn-ai" href="#">
+    <svg aria-hidden="true" class="btn-ai-icon">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#sparkles-default')}"/>
+    </svg>
+    Negative
+  </a>
+  <a class="btn btn-default btn-icon btn-ai" href="#">
+    <svg aria-hidden="true" class="btn-ai-icon">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#sparkles-default')}"/>
+    </svg>
+  </a>
+  <a class="btn btn-strong btn-icon btn-ai" href="#">
+    <svg aria-hidden="true" class="btn-ai-colored-icon">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#sparkles-colored')}"/>
+    </svg>
+    <svg aria-hidden="true" class="btn-ai-icon">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#sparkles-default')}"/>
+    </svg>
+  </a>
+  <a class="btn btn-brand btn-icon btn-ai" href="#">
+    <svg aria-hidden="true" class="btn-ai-icon">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#sparkles-default')}"/>
+    </svg>
+  </a>
+  <a class="btn btn-minimal btn-icon btn-ai" href="#">
+    <svg aria-hidden="true" class="btn-ai-colored-icon">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#sparkles-colored')}"/>
+    </svg>
+    <svg aria-hidden="true" class="btn-ai-icon">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#sparkles-default')}"/>
+    </svg>
+  </a>
+  <a class="btn btn-negative btn-icon btn-ai" href="#">
+    <svg aria-hidden="true" class="btn-ai-icon">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#sparkles-default')}"/>
+    </svg>
+  </a>`} />
