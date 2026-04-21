@@ -28,17 +28,6 @@ export const commonReplacements = [
   // Spacing
   [...getSpacingReplacement(0, 'none')],
 
-  // Buttons
-  [...warnForClass('btn-close-white')],
-  ['btn-(primary|dark)', 'btn-strong'],
-  ['btn-(secondary|success)', 'btn-default'],
-  ['btn-(danger|warning)', 'btn-negative'],
-  ['btn-(info|light|no-outline)', 'btn-minimal'],
-  [...warnForClass('btn-social')],
-  ['btn-outline-[a-z]+', 'btn-default'],
-  [...warnForClass('btn-sm')],
-  [...warnForClass('btn-lg')],
-
   // ----- Utilities -----
   // Background colors
   ['bg-white', 'bg-always-white'],
@@ -130,14 +119,6 @@ export const commonReplacements = [
 
   // Components
 
-  // Form
-  // warn only for was-validated as is-invalid would generate too many warnings
-  [
-    ...warnForClass('was-validated', {
-      message: 'The form using class \'{class}\' in {file} needs to be updated to use the new form validation style.'
-    })
-  ],
-
   // Alert
   [
     ...warnForClass('alert', {
@@ -164,6 +145,27 @@ export const commonReplacements = [
     })
   ],
 
+  // Buttons
+  [...warnForClass('btn-close-white')],
+  ['btn-(primary|dark)', 'btn-strong'],
+  ['btn-(secondary|success)', 'btn-default'],
+  ['btn-(danger|warning)', 'btn-negative'],
+  ['btn-(info|light|no-outline)', 'btn-minimal'],
+  [...warnForClass('btn-social')],
+  ['btn-outline-[a-z]+', 'btn-default'],
+  [...warnForClass('btn-sm')],
+  [...warnForClass('btn-lg')],
+
+  // Form
+  [
+    ...warnForClass('was-validated', {
+      message: 'The form using class \'{class}\' in {file} needs to be updated to use the new form validation style.'
+    })
+  ],
+
+  // Checkbox and radios
+  [...warnForClass('form-(check|select|control)')],
+
   // Tags
   [
     ...warnForClass('tag', {
@@ -171,9 +173,6 @@ export const commonReplacements = [
     })
   ],
   ['tag-sm', 'tag-small'],
-
-  // Checkbox and radios
-  [...warnForClass('form-(check|select|control)')],
 
   // Skeleton
   [...warnForClass('placeholder-(wave|glow)')],
