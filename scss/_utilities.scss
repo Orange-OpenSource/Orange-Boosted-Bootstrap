@@ -449,49 +449,49 @@ $utilities: map-merge(
       responsive-bootstrap: true, // OUDS mod
       property: margin,
       class: m,
-      values: $spacers, // OUDS mod: `auto` value handled by `margin-ouds`
+      values: map-merge($spacers, (auto: auto)),
       bootstrap-compatibility: true
     ),
     "margin-x": (
       responsive-bootstrap: true, // OUDS mod
       property: margin-inline,
       class: mx,
-      values: $spacers, // OUDS mod: `auto` value handled by `margin-x-ouds`
+      values: map-merge($spacers, (auto: auto)),
       bootstrap-compatibility: true
     ),
     "margin-y": (
       responsive-bootstrap: true, // OUDS mod
       property: margin-block,
       class: my,
-      values: $spacers, // OUDS mod: `auto` value handled by `margin-y-ouds`
+      values: map-merge($spacers, (auto: auto)),
       bootstrap-compatibility: true
     ),
     "margin-top": (
       responsive-bootstrap: true, // OUDS mod
       property: margin-top,
       class: mt,
-      values: $spacers, // OUDS mod: `auto` value handled by `margin-top-ouds`
+      values: map-merge($spacers, (auto: auto)),
       bootstrap-compatibility: true
     ),
     "margin-end": (
       responsive-bootstrap: true, // OUDS mod
       property: margin-right,
       class: me,
-      values: $spacers, // OUDS mod: `auto` value handled by `margin-end-ouds`
+      values: map-merge($spacers, (auto: auto)),
       bootstrap-compatibility: true
     ),
     "margin-bottom": (
       responsive-bootstrap: true, // OUDS mod
       property: margin-bottom,
       class: mb,
-      values: $spacers, // OUDS mod: `auto` value handled by `margin-bottom-ouds`
+      values: map-merge($spacers, (auto: auto)),
       bootstrap-compatibility: true
     ),
     "margin-start": (
       responsive-bootstrap: true, // OUDS mod
       property: margin-left,
       class: ms,
-      values: $spacers, // OUDS mod: `auto` value handled by `margin-start-ouds`
+      values: map-merge($spacers, (auto: auto)),
       bootstrap-compatibility: true
     ),
     // Negative margin utilities
