@@ -29,8 +29,6 @@
   - Publish:
     - if you're releasing a pre-release, use `--tag`, e.g. for v1-alpha1 `npm publish ouds-web-1.0.0-alpha1.tgz --tag next`
     - `npm run publish`
-    <!-- When there is several branches to maintain
-    - (v4 only) `npm publish --tag v4.x.y` (if you forgot and v4 becomes the latest version on NPM, you can run `npm dist-tag add boosted@5.x.y latest` to fix it) -->
 - [ ] check release on [NPM](https://www.npmjs.com/package/@ouds/web), [Nuget](https://www.nuget.org/packages/@ouds/web/), [Packagist](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)…
 - [ ] publish documentation on `main` of the [ouds-web-doc](https://github.com/Orange-OpenSource/ouds-web-doc) repo:
   - [ ] run `npm run storybook-build` (be careful that `release-sri` doesn't update `config.yml`s)
@@ -40,11 +38,10 @@
   - [ ] when bumping minor or major version: ensure `dist` URLs in examples' HTML has changed
   - [ ] double-check everything before pushing, starting by searching for forgotten old version number occurrences
   - [ ] Make the new release banner appears in the previous version of the doc (e.g. in v5.3 when releasing the v5.4.0 doc)
-<!-- When there is a v1 released
-- [ ] make an announcement in [GitHub Discussions](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions/categories/announcements) (+ pin the new GH Discussion) -->
+- [ ] Run Algolia crawler for the new documentation to be indexed in the search engine
 - [ ] [create a GitHub release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/new):
   - attach the 2 zip files per brand
   - paste the CHANGELOG / Ship list in the release's description
-<!-- When there is a v1 released
-- [ ] make an announcement on internal communication channels :tada: -->
+- [ ] make an announcement in [GitHub Discussions](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions/categories/announcements) (+ pin the new GH Discussion)
+- [ ] make an announcement on internal communication channels and publish posts :tada:
 - [ ] [publish on Nuget](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/wiki/Generate-NuGet-packages)
