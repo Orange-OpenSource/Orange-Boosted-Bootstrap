@@ -8,9 +8,8 @@
       - [ ] `scss/docs.scss`
       - [ ] Several markdown files and markdown extended files
       - [ ] Add docs version to `site/data/docs-versions.yml`
-      - [ ] Make sure the migration guide is updated only for the next version
-      - [ ] (Major version) Manually update the version in `nuget/ouds-web.nuspec` and `nuget/ouds-web.sass.nuspec`
       - [ ] Check that the changes in the migration guide only apply to the latest version
+      - [ ] (Major version) Manually update the version in `nuget/ouds-web.nuspec` and `nuget/ouds-web.sass.nuspec`
     - [ ] Update the home news for the next release
   - check wrong matches in `CHANGELOG.md`, and maybe `site/content/docs/<version>/migration.md`
   - :warning: check the `package-lock.json` and `package.json` content, only "@ouds/web" should have its version changed!
@@ -31,14 +30,14 @@
     - `npm run publish`
 - [ ] check release on [NPM](https://www.npmjs.com/package/@ouds/web), [Nuget](https://www.nuget.org/packages/@ouds/web/), [Packagist](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)…
 - [ ] publish documentation on `main` of the [ouds-web-doc](https://github.com/Orange-OpenSource/ouds-web-doc) repo:
-  - [ ] run `npm run storybook-build` (be careful that `release-sri` doesn't update `config.yml`s)
+  - [ ] run `npm run storybook-build` from `Orange-Boosted-Bootstrap` (be careful that `release-sri` doesn't update `config.yml`s)
   - [ ] remove `storybook` folder from `ouds-web-doc`
-  - [ ] copy `../_site` to the `main` branch
+  - [ ] copy `Orange-Boosted-Bootstrap/_site` to the `ouds-web-doc#main` branch
   - [ ] check every `index.html` used as redirections to redirect to the new release
   - [ ] when bumping minor or major version: ensure `dist` URLs in examples' HTML has changed
   - [ ] double-check everything before pushing, starting by searching for forgotten old version number occurrences
-  - [ ] Make the new release banner appears in the previous version of the doc (e.g. in v5.3 when releasing the v5.4.0 doc)
-- [ ] Run Algolia crawler for the new documentation to be indexed in the search engine
+  - [ ] Make the new release banner appears in the previous version of the doc (e.g. in v5.3 when releasing the v5.4.0 doc, search for `navbar navbar-expand supra d-none` and replace by `navbar navbar-expand supra`)
+- [ ] Run Algolia crawler manually for the new documentation to be indexed in the search engine
 - [ ] [create a GitHub release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/new):
   - attach the 2 zip files per brand
   - paste the CHANGELOG / Ship list in the release's description
