@@ -54,7 +54,7 @@ const toPascalCase = str => {
 // Get all stories that might be displayed
 const files = fs.readdirSync(path.resolve(__dirname, `../site/src/content/docs/components/`)).map(fileName => [toPascalCase(fileName.replace('.mdx', '')), 'components'])
 const snippets = fs.readFileSync(path.resolve(__dirname, '../site/src/assets/partials/snippets.js'), { encoding: 'utf8' })
-const docsVersion = packageJson.version.split('.').slice(0, 1).join('.')
+const docsVersion = packageJson.version.split('.').slice(0, 2).join('.')
 
 const outputDirectory = `${__dirname}/auto`
 createDirectoryIfNeeded(outputDirectory);
