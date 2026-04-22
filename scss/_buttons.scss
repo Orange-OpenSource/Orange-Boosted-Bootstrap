@@ -64,6 +64,7 @@
   justify-content: center; // OUDS mod
   min-width: var(--#{$prefix}btn-min-width); // OUDS mod
   min-height: var(--#{$prefix}btn-min-height); // OUDS mod
+  gap: var(--#{$prefix}btn-icon-gap);
   padding: calc(var(--#{$prefix}btn-padding-y) - var(--#{$prefix}btn-border-width)) calc(var(--#{$prefix}btn-padding-end) - var(--#{$prefix}btn-border-width)) calc(var(--#{$prefix}btn-padding-y) - var(--#{$prefix}btn-border-width)) calc(var(--#{$prefix}btn-padding-start) - var(--#{$prefix}btn-border-width)); // OUDS mod: instead of `var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x)`
   // OUDS mod: no font-family
   @include get-font-size("label-large"); // OUDS mod
@@ -189,7 +190,6 @@
     flex-shrink: 0;
     width: 1em;
     height: 1em;
-    margin-right: var(--#{$prefix}btn-icon-gap);
     overflow: hidden;
     font-size: var(--#{$prefix}btn-icon-size);
     line-height: 1;
@@ -502,10 +502,6 @@
     content: "";
     mask-image: $btn-previous-icon;
   }
-
-  &:not(.btn-icon)::before {
-    margin-right: $ouds-button-space-column-gap-chevron;
-  }
 }
 
 .btn-next {
@@ -515,10 +511,6 @@
   &::after {
     content: "";
     mask-image: $btn-next-icon;
-  }
-
-  &:not(.btn-icon)::after {
-    margin-left: $ouds-button-space-column-gap-chevron;
   }
 }
 
@@ -541,20 +533,35 @@
 }
 
 .btn-ai {
-  &:has(.btn-ai-colored-icon) .btn-ai-icon {
-    display: none;
-  }
+  --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start};
+  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end};
 
   &:hover,
   &:focus,
   &:focus-visible,
-  &:active {
-    .btn-ai-icon {
-      display: block;
-    }
-
+  &:active,
+  &:disabled {
     .btn-ai-colored-icon {
       display: none;
+    }
+  }
+
+  &.btn-default,
+  &.btn-strong:where(:not(:has(.btn-ai-colored-icon))),
+  &.btn-brand,
+  &.btn-minimal:where(:not(:has(.btn-ai-colored-icon))),
+  &.btn-negative,
+  &:hover,
+  &:focus,
+  &:focus-visible,
+  &:active,
+  &:disabled {
+    &::before {
+      width: var(--#{$prefix}btn-icon-size);
+      height: var(--#{$prefix}btn-icon-size);
+      content: "";
+      mask-image: $btn-ai-icon;
+      background-color: currentcolor;
     }
   }
 }

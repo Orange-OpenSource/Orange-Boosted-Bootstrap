@@ -4,6 +4,13 @@ import { getVersionedDocsPath } from '@libs/path'
 
 export const componentsDetails: ComponentCardData[] = [
   {
+    name: 'AI button',
+    slug: 'ai-button',
+    link: 'buttons#ai-button',
+    category: 'Actions',
+    snippet: `<button type="button" class="btn btn-default btn-ai">Label</button>`
+  },
+  {
     name: 'Alert message',
     slug: 'alert-message',
     link: 'alerts#alert-message',
