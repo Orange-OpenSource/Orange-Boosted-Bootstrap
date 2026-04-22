@@ -23,7 +23,7 @@ import { getMode } from '@libs/sass-variables'
 
 ### Component types
 
-<ul class="list-unstyled row row-cols-1 row-cols-sm-2">
+<ul class="list-unstyled row row-cols-1 row-cols-sm-2 row-cols-xl-3">
   <li class="col">
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
@@ -44,13 +44,25 @@ import { getMode } from '@libs/sass-variables'
       <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#navigation-button">Navigation button</a> is a UI element that enables movement between different pages within a multi-page interface.</div>
     </div>
   </li>
+  <li class="col">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
+          <a class="btn btn-ai btn-default" href="#">Default</a>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#ai-button">AI button</a> is a UI element that triggers an AI-related action or event.</div>
+    </div>
+  </li>
 </ul>
 
-For the two types of button, OUDS Web has a common base `.btn` class that sets up default styles such as padding and content alignment. By default, `.btn` controls have a transparent border and background color, but still defines basic focus and hover styles. The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles. The most basic button is the `.btn-default` variant.
+For the three types of button, OUDS Web has a common base `.btn` class that sets up default styles such as padding and content alignment. By default, `.btn` controls have a transparent border and background color, but still defines basic focus and hover styles. The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles. The most basic button is the `.btn-default` variant.
 
 <Example showToolbar={false} code={`<button type="button" class="btn btn-default">Default</button>`} />
 
 <Example showToolbar={false} code={`<button type="button" class="btn btn-next btn-default">Next</button>`} />
+
+<Example showToolbar={false} code={`<button type="button" class="btn btn-ai btn-default">Default</button>`} />
 
 ### Accessibility (semantics)
 
@@ -748,7 +760,7 @@ Please refer to the [loading state section of the button component](#loading) fo
 
 AI button is a UI element that enables AI use in an interface. AI buttons are typically used to open a chatbot or trigger AI-powered actions.
 
-You can use `.btn-ai` class to indicate AI actions in a process or a flow. This class will add an icon to the right of the button text. As AI buttons generally indicate an AI-related action, in our examples, we have used `<button>` elements, but this could be adapted to your own context (in that case, don't forget to add an `href` attribute to make the element focusable). The visual rendering will remain the same anyway:
+You can use `.btn-ai` class to indicate AI actions in a process or a flow. This class will add an icon before the button text. As AI buttons generally indicate an AI-related action, in our examples, we have used `<button>` elements, but this could be adapted to your own context (in that case, don't forget to add an `href` attribute to make the element focusable). The visual rendering will remain the same anyway:
 
 <Example buttonLabel="basic AI buttons" class="bd-btn-example" code={`<a class="btn btn-default btn-ai" href="#">Default</a>
   <button type="button" class="btn btn-default btn-ai">Default</button>`} />
@@ -816,6 +828,16 @@ OUDS Web includes several AI button variants, each serving its own semantic purp
     Negative
   </button>`} />
 </BrandSpecific>
+
+<Callout type="info">
+  `.btn-default` isn't transparent here, and you might specify `--bs-btn-bg` to make it transparent if needed.
+</Callout>
+
+<Example buttonLabel="AI button variants" class="bd-btn-example" code={`<div class="bg-surface-secondary">
+    <button class="btn btn-default btn-ai" style="--bs-btn-bg: var(--bs-color-bg-secondary);">
+      Default
+    </button>
+  </div>`} />
 
 #### Icon only
 

@@ -60,11 +60,11 @@
 
   display: inline-flex; // OUDS mod: instead of `inline-block`
   flex-shrink: 0;
+  gap: var(--#{$prefix}btn-icon-gap);
   align-items: center; // OUDS mod
   justify-content: center; // OUDS mod
   min-width: var(--#{$prefix}btn-min-width); // OUDS mod
   min-height: var(--#{$prefix}btn-min-height); // OUDS mod
-  gap: var(--#{$prefix}btn-icon-gap);
   padding: calc(var(--#{$prefix}btn-padding-y) - var(--#{$prefix}btn-border-width)) calc(var(--#{$prefix}btn-padding-end) - var(--#{$prefix}btn-border-width)) calc(var(--#{$prefix}btn-padding-y) - var(--#{$prefix}btn-border-width)) calc(var(--#{$prefix}btn-padding-start) - var(--#{$prefix}btn-border-width)); // OUDS mod: instead of `var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x)`
   // OUDS mod: no font-family
   @include get-font-size("label-large"); // OUDS mod
@@ -497,6 +497,7 @@
 .btn-previous {
   --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-chevron-start};
   --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-end-icon-start};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-chevron};
 
   &::before {
     content: "";
@@ -507,6 +508,7 @@
 .btn-next {
   --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-start-icon-end};
   --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-chevron-end};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-chevron};
 
   &::after {
     content: "";
@@ -522,13 +524,15 @@
 }
 
 // No transparency on the button
-.btn-default.btn-ai:where(:not(:active, [class*="loading-"], :disabled, .btn-on-colored-bg)) {
-  background: linear-gradient(var(--#{$prefix}color-bg-primary)) padding-box, conic-gradient($ouds-button-color-border-secondary 0deg 78deg, $ouds-button-color-border-tertiary 78deg 118deg, $ouds-button-color-border-quaternary 118deg 242deg, $ouds-button-color-border-primary 242deg 360deg) border-box;
+.btn-default.btn-ai:where(:not(:active, [class*="loading-"], :disabled, [aria-disabled="true"], .btn-on-colored-bg)) {
+  --#{$prefix}btn-bg: initial;
+
+  background: linear-gradient(var(--#{$prefix}btn-bg, var(--#{$prefix}color-bg-primary))) padding-box, conic-gradient($ouds-button-color-border-secondary 0deg 78deg, $ouds-button-color-border-tertiary 78deg 118deg, $ouds-button-color-border-quaternary 118deg 242deg, $ouds-button-color-border-primary 242deg 360deg) border-box;
   background-origin: border-box;
   border-color: transparent;
 
   &.btn-icon {
-    background: linear-gradient(var(--#{$prefix}color-bg-primary)) padding-box, conic-gradient($ouds-button-color-border-secondary 0deg 72deg, $ouds-button-color-border-tertiary 72deg 144deg, $ouds-button-color-border-quaternary 144deg 216deg, $ouds-button-color-border-primary 216deg 360deg) border-box;
+    background: linear-gradient(var(--#{$prefix}btn-bg, var(--#{$prefix}color-bg-primary))) padding-box, conic-gradient($ouds-button-color-border-secondary 0deg 72deg, $ouds-button-color-border-tertiary 72deg 144deg, $ouds-button-color-border-quaternary 144deg 216deg, $ouds-button-color-border-primary 216deg 360deg) border-box;
   }
 }
 
@@ -540,7 +544,8 @@
   &:focus,
   &:focus-visible,
   &:active,
-  &:disabled {
+  &:disabled,
+  &[aria-disabled="true"] {
     .btn-ai-colored-icon {
       display: none;
     }
@@ -555,17 +560,14 @@
   &:focus,
   &:focus-visible,
   &:active,
-  &:disabled {
+  &:disabled,
+  &[aria-disabled="true"] {
     &::before {
       width: var(--#{$prefix}btn-icon-size);
       height: var(--#{$prefix}btn-icon-size);
       content: "";
-      mask-image: $btn-ai-icon;
       background-color: currentcolor;
+      mask-image: $btn-ai-icon;
     }
   }
 }
-
-// No border-radius
-// border-image-source: conic-gradient(#ff0 0deg 78deg, #00f 78deg 118deg, #0f0 118deg 242deg, #f15e00 216deg 360deg);
-// border-image-slice: 1;
