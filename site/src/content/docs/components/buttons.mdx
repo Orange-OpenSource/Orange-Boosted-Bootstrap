@@ -834,6 +834,9 @@ OUDS Web includes several AI button variants, each serving its own semantic purp
 </Callout>
 
 <Example buttonLabel="AI button variants" class="bd-btn-example" code={`<div class="bg-surface-secondary">
+    <button class="btn btn-default btn-ai">
+      Default
+    </button>
     <button class="btn btn-default btn-ai" style="--bs-btn-bg: var(--bs-color-bg-secondary);">
       Default
     </button>
@@ -885,6 +888,19 @@ Add the class `.btn-icon` to get a squared button that only contains an icon. Ma
   <button class="btn btn-minimal btn-icon btn-ai"><span class="visually-hidden">Minimal</span></button>
   <button class="btn btn-negative btn-icon btn-ai"><span class="visually-hidden">Negative</span></button>`} />
 </BrandSpecific>
+
+<Callout type="info">
+  `.btn-default` isn't transparent here, and you might specify `--bs-btn-bg` to make it transparent if needed.
+</Callout>
+
+<Example buttonLabel="AI button variants" class="bd-btn-example" code={`<div class="bg-surface-secondary">
+    <button class="btn btn-default btn-ai btn-icon">
+      <span class="visually-hidden">Default</span>
+    </button>
+    <button class="btn btn-default btn-ai btn-icon" style="--bs-btn-bg: var(--bs-color-bg-secondary);">
+      <span class="visually-hidden">Default</span>
+    </button>
+  </div>`} />
 
 <BrandSpecific brand={['orange', 'orange-compact']}>
   #### Rounded corners
