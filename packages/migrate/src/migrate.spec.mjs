@@ -83,7 +83,6 @@ describe('Migrate', () => {
       'bg-supporting-purple class is deprecated in tests/source-boosted.html',
       'text-bg-secondary class is deprecated in tests/source-boosted.html',
       'link-primary class is deprecated in tests/source-boosted.html',
-      'ratio class is deprecated in tests/source-boosted.html',
       'The component using class \'alert\' in tests/source-boosted.html needs to be updated to use the new component DOM.',
       'alert-sm class has been removed in tests/source-boosted.html',
       'alert-dismissible class has been removed in tests/source-boosted.html',
@@ -92,11 +91,12 @@ describe('Migrate', () => {
       'btn-close-white class is deprecated in tests/source-boosted.html',
       'btn-social class is deprecated in tests/source-boosted.html',
       'btn-sm class is deprecated in tests/source-boosted.html',
-      'The form using class \'was-validated\' in tests/source-boosted.html needs to be updated to use the new form validation style.',
       'form-check class is deprecated in tests/source-boosted.html',
       'form-select class is deprecated in tests/source-boosted.html',
       'The component using class \'tag\' in tests/source-boosted.html needs to be updated to use the new component DOM.',
-      'placeholder-glow class is deprecated in tests/source-boosted.html'
+      'placeholder-glow class is deprecated in tests/source-boosted.html',
+      'ratio class is deprecated in tests/source-boosted.html',
+      'The form using class \'was-validated\' in tests/source-boosted.html needs to be updated to use the new form validation style.'
     ])
   })
 })

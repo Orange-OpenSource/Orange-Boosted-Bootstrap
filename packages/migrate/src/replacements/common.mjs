@@ -60,9 +60,6 @@ export const commonReplacements = [
   ['rounded(-(?:top|bottom|start|end))?-2', 'rounded$1-medium'],
   ['rounded(-(?:top|bottom|start|end))?-[3-5]', 'rounded$1-large'],
 
-  // Clearfix
-  ['clearfix', 'd-flow-root'],
-
   // Color and background
   [...warnForClass('text-bg-(primary|secondary|success|danger|info|warning|light|dark)')],
 
@@ -97,9 +94,6 @@ export const commonReplacements = [
   ['opacity-50', 'opacity-medium'],
   ['opacity-75', 'opacity-strong'],
   ['opacity-100', 'opacity-opaque'],
-
-  // Ratio
-  [...warnForClass('ratio')],
 
   // Shadow
   ['shadow(-sm)?', 'shadow-default'],
@@ -155,13 +149,6 @@ export const commonReplacements = [
   ['btn-outline-[a-z]+', 'btn-default'],
   [...warnForClass('btn-sm')],
   [...warnForClass('btn-lg')],
-
-  // Form
-  [
-    ...warnForClass('was-validated', {
-      message: 'The form using class \'{class}\' in {file} needs to be updated to use the new form validation style.'
-    })
-  ],
 
   // Checkbox and radios
   [...warnForClass('form-(check|select|control)')],
