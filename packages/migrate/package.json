@@ -3,22 +3,21 @@
   "version": "1.0.0",
   "main": "index.mjs",
   "type": "module",
-  "engines": {"node" : ">=20.0.0"},
+  "engines": {"node" : ">=24.0.0"},
   "scripts": {
     "test": "vitest"
   },
   "keywords": [],
-  "author": "",
+  "author": "The OUDS Web Authors",
   "license": "MIT",
   "description": "",
   "bin": {
     "ouds-web-migrate": "index.mjs"
   },
   "dependencies": {
-    "replace-in-file": "^8.3.0"
+    "replace-in-file": "^8.4.0"
   },
   "devDependencies": {
-    "prettier": "^3.5.2",
-    "vitest": "^3.0.7"
+    "vitest": "^4.1.5"
   }
 }

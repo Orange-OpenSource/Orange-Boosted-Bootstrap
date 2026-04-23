@@ -1,6 +1,6 @@
 # @ouds/web-migrate
 
-CLI utility to migrate a Boosted or OB1 project to OUDS Web or update a OUDS Web project to the last version.
+CLI utility to migrate a Boosted or OB1 project to OUDS Web or update an OUDS Web project to the last version.
 
 ## Usage
 
@@ -10,9 +10,13 @@ To update an OUDS project to the last version, simply run:
 npx @ouds/web-migrate "**/*.{css,scss,html}"
 ```
 
+Any filetype can be specified, you could simply use `"**/*.*"` as a glob pattern to run on all files but this is not recommended.
+
+We advise to run this script in a version controlled folder to be able to check modifications afterward.
+
 ### Options
 
-- `--from` Change the replacement set (default is OUDS update).
+- `--from=value` Change the source framework, where value can be ouds, boosted or ob1. Default is ouds.
 - First non-flag argument is the glob pattern. Default: `**/*.{css,scss,html}`
 
 ## Examples
