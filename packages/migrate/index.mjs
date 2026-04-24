@@ -10,7 +10,7 @@ const args = process.argv.slice(2)
 const fromFlag = getFromFlag(args)
 const globPattern = args.find(arg => !arg.startsWith('--')) || '**/*.{css,scss,html}'
 
-console.log(`Starting migration from ${fromFlag} with pattern: ${globPattern}...`)
+console.log(`Starting migration from ${fromFlag} with pattern: ${globPattern}`)
 try {
   const results = await migrate({
     files: globPattern,

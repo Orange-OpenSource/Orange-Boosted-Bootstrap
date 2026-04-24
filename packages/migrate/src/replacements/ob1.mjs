@@ -23,28 +23,117 @@ export const ob1Replacements = [
   // Background colors
   ['bg-primary2', 'bg-surface-brand-tertiary'],
   ['bg-primary3', 'bg-surface-brand-secondary'],
-  ['bg-success-subtle', 'bg-surface-status-positive-muted'],
-  ['bg-danger-subtle', 'bg-surface-status-negative-muted'],
-  ['bg-info-subtle', 'bg-surface-status-info-muted'],
-  ['bg-warning-subtle', 'bg-surface-status-warning-muted'],
   ['bg-greige', 'bg-tertiary'],
-  ['bg-dark', 'bg-always-black'],
   ['bg-gray1', 'bg-inverse-low'],
   ['bg-gray2', 'bg-secondary'],
   ['bg-gray3', 'bg-inverse-low'],
   ['bg-gray4', 'bg-secondary'],
 
+  // Border
+  [...warnForClass('border-(primary[2]?|gray[1-4])')],
+  ['border-primary', 'border-brand-primary'],
+  ['border-primary2', 'border-brand-secondary'],
+  ['border-gray[13]', 'border-emphasized'],
+  ['border-gray[24]', 'border-default'],
+
   // Colors
-  ['text-primary2(-emphasis)?', 'text-brand-tertiary'],
-  ['text-primary3(-emphasis)?', 'text-brand-secondary'],
+  ['text-primary2', 'text-brand-tertiary'],
+  ['text-primary3', 'text-brand-secondary'],
+  ['text-gray[34]', 'text-muted'],
+
+  // Text
+  [...warnForClass('update-font-size')],
+  [...warnForClass('text-mw')],
 
   // Components
+  // Badge
+  ['ob1-badge', 'badge badge-count badge-positive'],
+  ['ob1-badge-negative', 'badge-negative'],
+  ['ob1-badge-warning', 'badge-warning'],
+  ['ob1-badge-info', 'badge-info'],
+  ['ob1-badge-disabled', 'badge-disabled'],
+  [...warnForClass('ob1-badge-small', { remove: true })],
+  ['ob1-badge-large', 'badge-large'],
+  [...warnForClass('ob1-badge-inverse', { remove: true })],
+
+  // Bullet list
+  ['list', 'bullet-list'],
+  [...warnForClass('ob1-list-inverse', { remove: true })],
+  ['ob1-list-tick', 'bullet-list-tick'],
+
+  // Buttons
+  ['btn-secondary', 'btn-default'],
+  ['btn-primary', 'btn-strong'],
+
+  // Chips
+  [
+    ...warnForClass('ob1-inputchip', {
+      message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component version.'
+    })
+  ],
+  [
+    ...warnForClass('ob1-filterchip', {
+      message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component version.'
+    })
+  ],
+
+  // Divider
+  [...warnForClass('separator', {
+    message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component version.'
+  })],
+
   // Form
   [
     ...warnForClass('ob1-form-group', {
       message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component version.'
     })
   ],
+  [
+    ...warnForClass('ob1-switch', {
+      message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component version.'
+    })
+  ],
+
+  // In-line suggestion
+  [
+    ...warnForClass('ob1-inline-suggestion', {
+      message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component version.'
+    })
+  ],
+
+  // Link
+  ['ob1-link', 'link'],
+  ['ob1-link-arrow', 'link link-chevron'],
+  ['ob1-link-small', 'link-small'],
+  ['ob1-link-dark', 'link-on-colored-bg'],
+  [...warnForClass('ob1-link-reverse', { remove: true })],
+  [...warnForClass('no-decoration', { remove: true })],
+  [
+    ...warnForClass('ob1-link-icon', {
+      message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component version.'
+    })
+  ],
+
+  // Skeleton
+  [...warnForClass('ob1-skeleton')],
+  ['ob1-skeleton-[\\w-]+', 'skeleton'],
+
+  // Tag
+  ['ob1-capsule', 'tag tag-positive'],
+  ['ob1-capsule-negative', 'tag-negative'],
+  ['ob1-capsule-warning', 'tag-warning'],
+  ['ob1-capsule-information', 'tag-info'],
+  ['ob1-capsule-disabled', 'tag-disabled'],
+  ['ob1-capsule-reminder', 'tag-muted'],
+  [...warnForClass('ob1-capsule-inverse', { remove: true })],
+  ['ob1-capsule-small', 'tag-small'],
+  ['ob1-tag', 'tag rounded-none'],
+  ['ob1-tag-primary', 'tag-warning'],
+  [...warnForClass('ob1-tag-subscribed')],
+  ['ob1-tag-unavailable', 'tag-muted'],
+  [...warnForClass('ob1-tag-information', { remove: true })],
+  [...warnForClass('ob1-tag-inverse', { remove: true })],
+  ['ob1-tag-small', 'tag-small'],
 
   // OUDS updates
   ...oudsReplacements,

@@ -17,11 +17,15 @@ export const commonReplacements = [
   ['display-1', 'display-large'],
   ['display-2', 'display-medium'],
   ['display-3', 'display-small'],
+  ['display-4', 'h1'],
+  ['display-5', 'h2'],
+  ['display-6', 'h3'],
   [...warnForClass('initialism')],
 
   // Layout
   [...warnForClass('container')],
   ['container-xxl', 'container-fluid container-max-width'],
+  ['container-fluid( container-max-width)?', 'container-fluid container-max-width'],
   [...warnForClass('container-[a-z]{2,3}')], // must be after container-xxl
   [...getGapReplacement(0, 'none')],
 
@@ -33,12 +37,28 @@ export const commonReplacements = [
   ['bg-white', 'bg-always-white'],
   ['bg-black', 'bg-always-black'],
   ['bg-primary', 'bg-surface-brand-primary'],
+  ['bg-secondary', 'bg-inverse-high'],
   ['bg-success', 'bg-surface-status-positive-emphasized'],
   ['bg-danger', 'bg-surface-status-negative-emphasized'],
   ['bg-info', 'bg-surface-status-info-emphasized'],
   ['bg-warning', 'bg-surface-status-warning-emphasized'],
-  ['bg-light', 'bg-secondary'],
+  ['bg-light', 'bg-secondary'], // TODO: When run multiple times, this replacement can cause bg-light to be replaced with bg-secondary and then bg-inverse-high
+  ['bg-dark', 'bg-inverse-low'],
+  ['bg-primary-subtle', 'bg-surface-brand-primary'],
+  ['bg-secondary-subtle', 'bg-surface-inverse-high'],
+  ['bg-success-subtle', 'bg-surface-status-positive-muted'],
+  ['bg-danger-subtle', 'bg-surface-status-negative-muted'],
+  ['bg-info-subtle', 'bg-surface-status-info-muted'],
+  ['bg-warning-subtle', 'bg-surface-status-warning-muted'],
+  ['bg-light-subtle', 'bg-surface-secondary'],
+  ['bg-dark-subtle', 'bg-surface-inverse-low'],
+  ['bg-body', 'bg-primary'], // TODO: When run multiple times, this replacement can cause bg-body to be replaced with bg-primary and then bg-surface-brand-primary
+  ['bg-body-secondary', 'bg-secondary'], // TODO: When run multiple times, this replacement can cause bg-body-secondary to be replaced with bg-secondary and then bg-inverse-high
+  ['bg-body-tertiary', 'bg-tertiary'],
   [...warnForClass('bg-supporting-[\\w-]+')],
+  [...warnForClass('bg-opacity-[\\d]+', { remove: true })],
+  [...warnForClass('bg-gradient', { remove: true })],
+  [...warnForClass('bg-[\\w-]+', { message: 'The utility class \'{class}\' in {file} needs to have the right `data-bs-theme` attached.' })],
 
   // Border
   ['border(-(?:top|bottom|start|end))?-0', 'border$1-none'],
@@ -55,6 +75,7 @@ export const commonReplacements = [
   ['border-warning', 'border-status-warning'],
   ['border-(secondary|dark)', 'border-emphasized'],
   ['border-black', 'border-always-black'],
+  [...warnForClass('border-opacity-[\\d]+', { remove: true })],
   ['rounded(-(?:top|bottom|start|end))?-0', 'rounded$1-none'],
   ['rounded(-(?:top|bottom|start|end))?-1', 'rounded$1-small'],
   ['rounded(-(?:top|bottom|start|end))?-2', 'rounded$1-medium'],
@@ -79,13 +100,16 @@ export const commonReplacements = [
   ['text-white', 'text-always-white'],
   ['text-black-50', 'text-muted'],
   ['text-white-50', 'text-muted'],
+  [...warnForClass('text-opacity-[0-9]+', { remove: true })],
 
   // Link
   [...warnForClass('link-opacity-[0-9]+(-hover)?')],
-  [...warnForClass('link-offset-[0-9]+')],
-  [...warnForClass('link-underline')],
+  [...warnForClass('link-offset-[0-9]+(-hover)?')],
+  [...warnForClass('link-underline(-(primary|secondary|success|danger|info|warning|light|dark))?')],
   [...warnForClass('link-underline-opacity-[0-9]+(-hover)?')],
   ['link-chevron', 'link link-chevron'],
+  [...warnForClass('link-body-emphasis', { remove: true })],
+  [...warnForClass('icon-link', { remove: true })],
   [...warnForClass('link-(primary|secondary|success|danger|info|warning|light|dark)')],
 
   // Opacity
@@ -106,31 +130,22 @@ export const commonReplacements = [
   ['fs-4', 'fs-hs'],
   ['fs-5', 'fs-bl'],
   ['fs-6', 'fs-bl'],
-  [...warnForClass('fw-semibold')],
-  [...warnForClass('fw-medium')],
+  ['fw-semibold', 'fw-medium'],
   [...warnForClass('lh-(1|sm|base|lg)')],
   [...warnForClass('ll-(sm|md)')],
 
   // Components
-
   // Alert
   [
     ...warnForClass('alert', {
       message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.'
     })
   ],
-  ['alert', 'alert alert-message'],
+  ['alert( alert-message)?', 'alert alert-message'], // To avoid multiple alert-message classes being added when run multiple times
   ['alert-danger', 'alert-negative'],
   ['alert-success', 'alert-positive'],
   ['alert-heading', 'alert-label'],
   [...warnForClass('alert-(sm|dismissible)', { remove: true })],
-
-  // Badge
-  [
-    ...warnForClass('badge', {
-      message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.'
-    })
-  ],
 
   // Breadcrumb
   [
@@ -139,29 +154,17 @@ export const commonReplacements = [
     })
   ],
 
-  // Buttons
-  [...warnForClass('btn-close-white')],
-  ['btn-(primary|dark)', 'btn-strong'],
-  ['btn-(secondary|success)', 'btn-default'],
-  ['btn-(danger|warning)', 'btn-negative'],
-  ['btn-(info|light|no-outline)', 'btn-minimal'],
-  [...warnForClass('btn-social')],
-  ['btn-outline-[a-z]+', 'btn-default'],
-  [...warnForClass('btn-sm')],
-  [...warnForClass('btn-lg')],
+  // Footer
+  [...warnForClass('footer-(social|title-content)')],
+  [...warnForClass('footer-nav', {
+    message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.'
+  })],
 
-  // Checkbox and radios
-  [...warnForClass('form-(check|select|control)')],
-
-  // Tags
-  [
-    ...warnForClass('tag', {
-      message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.'
-    })
-  ],
-  ['tag-sm', 'tag-small'],
-
-  // Skeleton
-  [...warnForClass('placeholder-(wave|glow)')],
-  ['placeholder', 'skeleton']
+  // Forms
+  [...warnForClass('btn-check')],
+  [...warnForClass('col-form-label(-[a-z]{1,2})?')],
+  [...warnForClass('form-(check|control|floating|select|switch|text)', {
+    message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.'
+  })],
+  [...warnForClass('input-group')]
 ]

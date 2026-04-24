@@ -13,7 +13,7 @@ export const getReplacements = (source = 'ouds') => {
   const replacements = replacementsMap[source] || oudsReplacements
   return replacements
     .map(([from, to]) => {
-      return [new RegExp(`(?<=[". ,\`'])${from}(?=[{\\s"'\`,\\[:)])`, 'g'), to]
+      return [new RegExp(`(?<=[". ,\`'])${from}(?=[{\\s"'\`,\\[:).])`, 'g'), to]
     })
     .reduce(
       (acc, [from, to]) => {

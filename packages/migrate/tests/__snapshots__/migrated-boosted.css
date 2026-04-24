@@ -1,7 +1,7 @@
 .parent .p-small[style] {
   color: #000;
 }
-.p-large {
+.p-large.custom-class {
   color: #000;
 }
 .p-2xlarge:not(.p-4xlarge) {
