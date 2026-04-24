@@ -20,13 +20,13 @@ export const commonReplacements = [
   ['display-4', 'h1'],
   ['display-5', 'h2'],
   ['display-6', 'h3'],
-  [...warnForClass('initialism')],
+  [...warnForClass('initialism', { link: 'https://web.unified-design-system.orange.com/docs/foundation/typography' })],
 
   // Layout
-  [...warnForClass('container')],
+  [...warnForClass('container', { link: 'https://web.unified-design-system.orange.com/docs/layout/containers' })],
   ['container-xxl', 'container-fluid container-max-width'],
   ['container-fluid( container-max-width)?', 'container-fluid container-max-width'],
-  [...warnForClass('container-[a-z]{2,3}')], // must be after container-xxl
+  [...warnForClass('container-[a-z]{2,3}', { link: 'https://web.unified-design-system.orange.com/docs/layout/containers' })], // must be after container-xxl
   [...getGapReplacement(0, 'none')],
 
   // Spacing
@@ -55,10 +55,10 @@ export const commonReplacements = [
   ['bg-body', 'bg-primary'], // TODO: When run multiple times, this replacement can cause bg-body to be replaced with bg-primary and then bg-surface-brand-primary
   ['bg-body-secondary', 'bg-secondary'], // TODO: When run multiple times, this replacement can cause bg-body-secondary to be replaced with bg-secondary and then bg-inverse-high
   ['bg-body-tertiary', 'bg-tertiary'],
-  [...warnForClass('bg-supporting-[\\w-]+')],
-  [...warnForClass('bg-opacity-[\\d]+', { remove: true })],
-  [...warnForClass('bg-gradient', { remove: true })],
-  [...warnForClass('bg-[\\w-]+', { message: 'The utility class \'{class}\' in {file} needs to have the right `data-bs-theme` attached.' })],
+  [...warnForClass('bg-supporting-[\\w-]+', { link: 'https://web.unified-design-system.orange.com/docs/utilities/background' })],
+  [...warnForClass('bg-opacity-[\\d]+', { remove: true, link: 'https://web.unified-design-system.orange.com/docs/utilities/background' })],
+  [...warnForClass('bg-gradient', { remove: true, link: 'https://web.unified-design-system.orange.com/docs/utilities/background' })],
+  [...warnForClass('bg-[\\w-]+', { message: 'The utility class \'{class}\' in {file} needs to have the right `data-bs-theme` attached.', link: 'https://web.unified-design-system.orange.com/docs/utilities/background' })],
 
   // Border
   ['border(-(?:top|bottom|start|end))?-0', 'border$1-none'],
@@ -75,7 +75,7 @@ export const commonReplacements = [
   ['border-warning', 'border-status-warning'],
   ['border-(secondary|dark)', 'border-emphasized'],
   ['border-black', 'border-always-black'],
-  [...warnForClass('border-opacity-[\\d]+', { remove: true })],
+  [...warnForClass('border-opacity-[\\d]+', { remove: true, link: 'https://web.unified-design-system.orange.com/docs/utilities/border' })],
   ['rounded(-(?:top|bottom|start|end))?-0', 'rounded$1-none'],
   ['rounded(-(?:top|bottom|start|end))?-1', 'rounded$1-small'],
   ['rounded(-(?:top|bottom|start|end))?-2', 'rounded$1-medium'],
@@ -100,17 +100,17 @@ export const commonReplacements = [
   ['text-white', 'text-always-white'],
   ['text-black-50', 'text-muted'],
   ['text-white-50', 'text-muted'],
-  [...warnForClass('text-opacity-[0-9]+', { remove: true })],
+  [...warnForClass('text-opacity-[0-9]+', { remove: true, link: 'https://web.unified-design-system.orange.com/docs/utilities/text' })],
 
   // Link
-  [...warnForClass('link-opacity-[0-9]+(-hover)?')],
-  [...warnForClass('link-offset-[0-9]+(-hover)?')],
-  [...warnForClass('link-underline(-(primary|secondary|success|danger|info|warning|light|dark))?')],
-  [...warnForClass('link-underline-opacity-[0-9]+(-hover)?')],
+  [...warnForClass('link-opacity-[0-9]+(-hover)?', { link: 'https://web.unified-design-system.orange.com/docs/components/links' })],
+  [...warnForClass('link-offset-[0-9]+(-hover)?', { link: 'https://web.unified-design-system.orange.com/docs/components/links' })],
+  [...warnForClass('link-underline(-(primary|secondary|success|danger|info|warning|light|dark))?', { link: 'https://web.unified-design-system.orange.com/docs/components/links' })],
+  [...warnForClass('link-underline-opacity-[0-9]+(-hover)?', { link: 'https://web.unified-design-system.orange.com/docs/components/links' })],
   ['link-chevron', 'link link-chevron'],
-  [...warnForClass('link-body-emphasis', { remove: true })],
-  [...warnForClass('icon-link', { remove: true })],
-  [...warnForClass('link-(primary|secondary|success|danger|info|warning|light|dark)')],
+  [...warnForClass('link-body-emphasis', { remove: true, link: 'https://web.unified-design-system.orange.com/docs/components/links' })],
+  [...warnForClass('icon-link', { remove: true, link: 'https://web.unified-design-system.orange.com/docs/components/links' })],
+  [...warnForClass('link-(primary|secondary|success|danger|info|warning|light|dark)', { link: 'https://web.unified-design-system.orange.com/docs/components/links' })],
 
   // Opacity
   ['opacity-0', 'opacity-invisible'],
@@ -131,40 +131,45 @@ export const commonReplacements = [
   ['fs-5', 'fs-bl'],
   ['fs-6', 'fs-bl'],
   ['fw-semibold', 'fw-medium'],
-  [...warnForClass('lh-(1|sm|base|lg)')],
-  [...warnForClass('ll-(sm|md)')],
+  [...warnForClass('lh-(1|sm|base|lg)', { link: 'https://web.unified-design-system.orange.com/docs/utilities/text' })],
+  [...warnForClass('ll-(sm|md)', { link: 'https://web.unified-design-system.orange.com/docs/utilities/text' })],
 
   // Components
   // Alert
   [
     ...warnForClass('alert', {
-      message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.'
+      message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.',
+      link: 'https://web.unified-design-system.orange.com/docs/components/alerts'
     })
   ],
   ['alert( alert-message)?', 'alert alert-message'], // To avoid multiple alert-message classes being added when run multiple times
   ['alert-danger', 'alert-negative'],
   ['alert-success', 'alert-positive'],
   ['alert-heading', 'alert-label'],
-  [...warnForClass('alert-(sm|dismissible)', { remove: true })],
+  [...warnForClass('alert-(sm|dismissible)', { remove: true, link: 'https://web.unified-design-system.orange.com/docs/components/alerts#inline-alert' })],
 
   // Breadcrumb
   [
     ...warnForClass('breadcrumb-item', {
-      message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.'
+      message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.',
+      link: 'https://web.unified-design-system.orange.com/docs/components/breadcrumb'
     })
   ],
 
   // Footer
-  [...warnForClass('footer-(social|title-content)')],
+  [...warnForClass('footer-(social|title-content)', { link: 'https://web.unified-design-system.orange.com/docs/components/footer' })],
   [...warnForClass('footer-nav', {
-    message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.'
+    message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.',
+    link: 'https://web.unified-design-system.orange.com/docs/components/footer'
   })],
 
   // Forms
-  [...warnForClass('btn-check')],
+  [...warnForClass('btn-check', { link: 'https://web.unified-design-system.orange.com/docs/components/buttons' })],
   [...warnForClass('col-form-label(-[a-z]{1,2})?')],
-  [...warnForClass('form-(check|control|floating|select|switch|text)', {
-    message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.'
-  })],
-  [...warnForClass('input-group')]
+  [...warnForClass('form-check', { link: 'https://web.unified-design-system.orange.com/docs/components/checkbox' })],
+  [...warnForClass('form-control', { link: 'https://web.unified-design-system.orange.com/docs/components/text-input' })],
+  [...warnForClass('form-select', { link: 'https://web.unified-design-system.orange.com/docs/components/select-input' })],
+  [...warnForClass('form-switch', { link: 'https://web.unified-design-system.orange.com/docs/components/switch' })],
+  [...warnForClass('form-(floating|text)')],
+  [...warnForClass('input-group', { link: 'https://web.unified-design-system.orange.com/docs/components/text-input' })]
 ]

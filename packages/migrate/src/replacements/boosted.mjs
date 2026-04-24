@@ -23,7 +23,8 @@ export const boostedReplacements = [
   // Badge
   [
     ...warnForClass('badge', {
-      message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.'
+      message: 'The badge component using class \'{class}\' in {file} needs to be updated to use the new component DOM.',
+      link: 'https://web.unified-design-system.orange.com/docs/components/badges'
     })
   ],
 
@@ -35,21 +36,22 @@ export const boostedReplacements = [
   ['btn-(danger|warning)', 'btn-negative'],
   ['btn-(info|no-outline)', 'btn-minimal'],
   ['btn-link', 'link'],
-  [...warnForClass('btn-dropdown')],
-  [...warnForClass('btn-social')],
-  [...warnForClass('btn-toggle')],
+  ['btn-dropdown', 'btn-default'],
+  [...warnForClass('btn-social', { link: 'https://web.unified-design-system.orange.com/docs/components/buttons#button' })],
+  [...warnForClass('btn-toggle', { link: 'https://web.unified-design-system.orange.com/docs/components/buttons#button' })],
   ['btn-outline-[a-z]+', 'btn-default'],
-  [...warnForClass('btn-sm')],
-  [...warnForClass('btn-lg')],
+  [...warnForClass('btn-sm', { link: 'https://web.unified-design-system.orange.com/docs/components/buttons#button' })],
+  [...warnForClass('btn-lg', { link: 'https://web.unified-design-system.orange.com/docs/components/buttons#button' })],
 
   // Skeleton
-  [...warnForClass('placeholder-(wave|glow)')],
+  [...warnForClass('placeholder-(wave|glow)', { link: 'https://web.unified-design-system.orange.com/docs/components/skeleton' })],
   ['placeholder', 'skeleton'],
 
   // Tags
   [
     ...warnForClass('tag', {
-      message: 'The component using class \'{class}\' in {file} needs to be updated to use the new component DOM.'
+      message: 'The tag component using class \'{class}\' in {file} needs to be updated to use the new component DOM.',
+      link: 'https://web.unified-design-system.orange.com/docs/components/tags#tag'
     })
   ],
   ['tag-sm', 'tag-small'],
