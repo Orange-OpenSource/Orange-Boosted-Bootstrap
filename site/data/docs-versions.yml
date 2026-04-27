@@ -10,7 +10,7 @@
     - '0.5'
     - '0.6'
 - group: v1.x
-  baseurl: 'https://web.unified-design-system.orange.com/docs'
+  baseurl: 'https://web.unified-design-system.orange.com/[brand]/docs'
   description: 'Current major release. Last update was v1.2.0'
   versions:
     - '1.0'
