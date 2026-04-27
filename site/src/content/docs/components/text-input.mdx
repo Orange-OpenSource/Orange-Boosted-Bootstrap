@@ -211,7 +211,7 @@ To display a helper text below inputs, add a `.helper-text` as a sibling of a `.
 
   Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`, or something else) with nothing more than the `.form-text` class.
 
-  <Example buttonLabel="Bootstrap compatibility: text input with inline helper text" code={`<div class="row g-large align-items-center">
+  <Example buttonLabel="Bootstrap compatibility: inline text input with helper text" code={`<div class="row g-large align-items-center">
     <div class="col-auto">
       <label for="inputPassword6" class="col-form-label">Password</label>
     </div>
@@ -325,7 +325,7 @@ A textual prefix or suffix can be added to an input by wrapping the `<input>` in
 
 By default, text inputs will span the whole width of their parent container, to limit the width of the text input on wider parent container, add a `.component-max-width` to the `.text-input` container.
 
-<Example buttonLabel="text input max width" code={`<div class="text-input component-max-width mb-medium">
+<Example buttonLabel="text inputs max width" code={`<div class="text-input component-max-width mb-medium">
     <div class="text-input-container">
       <label for="exampleTextInputWithMaxWidth">Email address</label>
       <input type="email" autocomplete="email" class="text-input-field" id="exampleTextInputWithMaxWidth" placeholder=" ">
@@ -398,7 +398,7 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
 <BootstrapCompatibility>
   Add the `disabled` boolean attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.
 
-  <Example buttonLabel="Bootstrap compatibility: disabled text input" code={`<input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
+  <Example buttonLabel="Bootstrap compatibility: disabled text inputs" code={`<input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
   <input class="form-control" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled readonly>`} />
 </BootstrapCompatibility>
 
