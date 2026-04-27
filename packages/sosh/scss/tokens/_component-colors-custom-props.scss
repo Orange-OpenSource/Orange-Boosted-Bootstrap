@@ -8,6 +8,7 @@
 @include color-mode(light, true) {
   --#{$prefix}button-color-bg-brand-pressed: #{$core-sosh-color-magenta-500};
   --#{$prefix}button-color-bg-brand-loading: #{$core-sosh-color-magenta-500};
+  --#{$prefix}button-color-border-quaternary: #{$core-ouds-color-opacity-black-680};
   --#{$prefix}button-color-content-brand-pressed: #{$core-ouds-color-functional-white};
   --#{$prefix}button-color-content-brand-loading: #{$core-ouds-color-functional-white};
   --#{$prefix}button-mono-color-bg-default-hover: #{$core-ouds-color-opacity-black-680};
@@ -64,6 +65,7 @@
 @include color-mode(dark, true) {
   --#{$prefix}button-color-bg-brand-pressed: #{$core-sosh-color-blue-duck-light-800};
   --#{$prefix}button-color-bg-brand-loading: #{$core-sosh-color-blue-duck-light-800};
+  --#{$prefix}button-color-border-quaternary: #{$core-ouds-color-opacity-white-200};
   --#{$prefix}button-color-content-brand-pressed: #{$core-ouds-color-functional-black};
   --#{$prefix}button-color-content-brand-loading: #{$core-ouds-color-functional-black};
   --#{$prefix}button-mono-color-bg-default-hover: #{$core-ouds-color-opacity-white-800};

@@ -60,6 +60,7 @@
 
   display: inline-flex; // OUDS mod: instead of `inline-block`
   flex-shrink: 0;
+  gap: var(--#{$prefix}btn-icon-gap);
   align-items: center; // OUDS mod
   justify-content: center; // OUDS mod
   min-width: var(--#{$prefix}btn-min-width); // OUDS mod
@@ -189,7 +190,6 @@
     flex-shrink: 0;
     width: 1em;
     height: 1em;
-    margin-right: var(--#{$prefix}btn-icon-gap);
     overflow: hidden;
     font-size: var(--#{$prefix}btn-icon-size);
     line-height: 1;
@@ -497,28 +497,22 @@
 .btn-previous {
   --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-chevron-start};
   --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-end-icon-start};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-chevron};
 
   &::before {
     content: "";
     mask-image: $btn-previous-icon;
-  }
-
-  &:not(.btn-icon)::before {
-    margin-right: $ouds-button-space-column-gap-chevron;
   }
 }
 
 .btn-next {
   --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-start-icon-end};
   --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-chevron-end};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-chevron};
 
   &::after {
     content: "";
     mask-image: $btn-next-icon;
-  }
-
-  &:not(.btn-icon)::after {
-    margin-left: $ouds-button-space-column-gap-chevron;
   }
 }
 
@@ -529,3 +523,51 @@
   background-color: currentcolor;
 }
 
+// No transparency on the button
+.btn-default.btn-ai:where(:not(:active, [class*="loading-"], :disabled, [aria-disabled="true"], .btn-on-colored-bg)) {
+  --#{$prefix}btn-bg: initial;
+
+  background: linear-gradient(var(--#{$prefix}btn-bg, var(--#{$prefix}color-bg-primary))) padding-box, conic-gradient($ouds-button-color-border-secondary 0deg 82deg, $ouds-button-color-border-tertiary 82deg 118deg, $ouds-button-color-border-quaternary 118deg 242deg, $ouds-button-color-border-primary 242deg 360deg) border-box;
+  background-origin: border-box;
+  border-color: transparent;
+
+  &.btn-icon {
+    background: linear-gradient(var(--#{$prefix}btn-bg, var(--#{$prefix}color-bg-primary))) padding-box, conic-gradient($ouds-button-color-border-secondary 0% 20%, $ouds-button-color-border-tertiary 20% 40%, $ouds-button-color-border-quaternary 40% 60%, $ouds-button-color-border-primary 60% 100%) border-box;
+  }
+}
+
+.btn-ai {
+  --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start};
+  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end};
+
+  &:hover,
+  &:focus,
+  &:focus-visible,
+  &:active,
+  &:disabled,
+  &[aria-disabled="true"] {
+    .btn-ai-colored-icon {
+      display: none;
+    }
+  }
+
+  &.btn-default,
+  &.btn-strong:where(:not(:has(.btn-ai-colored-icon))),
+  &.btn-brand,
+  &.btn-minimal:where(:not(:has(.btn-ai-colored-icon))),
+  &.btn-negative,
+  &:hover,
+  &:focus,
+  &:focus-visible,
+  &:active,
+  &:disabled,
+  &[aria-disabled="true"] {
+    &::before {
+      width: var(--#{$prefix}btn-icon-size);
+      height: var(--#{$prefix}btn-icon-size);
+      content: "";
+      background-color: currentcolor;
+      mask-image: $btn-ai-icon;
+    }
+  }
+}

@@ -156,6 +156,11 @@ $ouds-button-space-padding-inline-end-icon-start: $ouds-space-padding-inline-3xl
 $ouds-button-space-padding-inline-icon-none: $ouds-space-padding-inline-4xlarge !default;
 $ouds-button-space-padding-inline-icon-start: $ouds-space-padding-inline-xlarge !default;
 $ouds-button-space-padding-inline-start-icon-end: $ouds-space-padding-inline-3xlarge !default;
+// Manually added tokens for AI button
+$ouds-button-color-border-primary: var(--#{$prefix}color-border-brand-secondary) !default;
+$ouds-button-color-border-secondary: var(--#{$prefix}color-border-brand-primary) !default;
+$ouds-button-color-border-tertiary: var(--#{$prefix}color-border-brand-tertiary) !default;
+$ouds-button-color-border-quaternary: var(--#{$prefix}button-color-border-quaternary) !default;
 // scss-docs-end ouds-component-button
 
 // Checkbox
