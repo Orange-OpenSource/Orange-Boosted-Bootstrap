@@ -211,7 +211,7 @@ export const componentsDetails: ComponentCardData[] = [
             <div class="input-container">
               <input type="password" id="passwordInput[[id_prefix]]" class="text-input-field" placeholder=" " value="xxxxxx">
             </div>
-            <button class="btn btn-minimal btn-icon">
+            <button class="btn btn-minimal btn-icon" type="button" aria-pressed="false">
               <svg aria-hidden="true">
                 <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}"/>
               </svg>

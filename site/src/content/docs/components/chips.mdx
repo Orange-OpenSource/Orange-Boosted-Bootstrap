@@ -40,7 +40,7 @@ import { getVersionedDocsPath } from '@libs/path'
       <div class="card-top bg-secondary" inert>
         <div class="d-flex align-items-center justify-content-center ratio-16x9">
           <p class="chip chip-suggestion mb-none">
-            <button class="chip-interactive" tabindex="-1">Suggestion</button>
+            <button class="chip-interactive" tabindex="-1" type="button">Suggestion</button>
           </p>
         </div>
       </div>
@@ -160,12 +160,12 @@ Make use of our [button JS plugin]([[docsref:/components/chips#javascript]]) or 
 
 <Example buttonLabel="filter chips using buttons" code={`<ul class="chips-container" aria-label="Filter by">
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Filter label using button 1
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
+      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button" type="button">
         Filter label using button 2
       </button>
     </li>
@@ -246,7 +246,7 @@ The following example shows every possible renderings depending on the filter ch
       </label>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button" disabled>
+      <button class="chip-interactive" data-bs-toggle="button" disabled type="button">
         Disabled unchecked filter
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
@@ -268,7 +268,7 @@ The following example shows every possible renderings depending on the filter ch
         </label>
       </li>
       <li class="chip chip-filter">
-        <button class="chip-interactive">
+        <button class="chip-interactive" type="button">
           Filter chip
         </button>
       </li>
@@ -319,17 +319,17 @@ To create a suggestion chip, add `.chip-suggestion` to the `.chip`.
 
 <Example buttonLabel="basic suggestion chips" code={`<ul class="chips-container" aria-label="Answer with">
     <li class="chip chip-suggestion">
-      <button class="chip-interactive">
+      <button class="chip-interactive" type="button">
         Thanks.
       </button>
     </li>
     <li class="chip chip-suggestion">
-      <button class="chip-interactive">
+      <button class="chip-interactive" type="button">
         Looks good to me.
       </button>
     </li>
     <li class="chip chip-suggestion">
-      <button class="chip-interactive">
+      <button class="chip-interactive" type="button">
         Can we talk about it later ?
       </button>
     </li>
@@ -345,7 +345,7 @@ To display an icon, add the icon as the first child of the `.chip-interactive`.
 
 <Example buttonLabel="text and icon suggestion chips" code={`<ul class="chips-container" aria-label="Answer with">
     <li class="chip chip-suggestion">
-      <button class="chip-interactive">
+      <button class="chip-interactive" type="button">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
@@ -353,7 +353,7 @@ To display an icon, add the icon as the first child of the `.chip-interactive`.
       </button>
     </li>
     <li class="chip chip-suggestion">
-      <button class="chip-interactive">
+      <button class="chip-interactive" type="button">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
@@ -372,7 +372,7 @@ Make sure to provide an accessible text for each chip.
 
 <Example buttonLabel="icon only suggestion chips" code={`<ul class="chips-container" aria-label="Answer with">
     <li class="chip chip-suggestion">
-      <button class="chip-interactive chip-icon">
+      <button class="chip-interactive chip-icon" type="button">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
@@ -380,7 +380,7 @@ Make sure to provide an accessible text for each chip.
       </button>
     </li>
     <li class="chip chip-suggestion">
-      <button class="chip-interactive chip-icon">
+      <button class="chip-interactive chip-icon" type="button">
         <span class="icon si si-settings" aria-hidden="true"></span>
         <span class="visually-hidden">Go to parameters.</span>
       </button>
@@ -397,12 +397,12 @@ The following example shows every possible renderings depending on the suggestio
 
 <Example buttonLabel="disabled suggestion chips" code={`<ul class="chips-container" aria-label="Answer with">
     <li class="chip chip-suggestion">
-      <button class="chip-interactive" disabled>
+      <button class="chip-interactive" disabled type="button">
         Thanks.
       </button>
     </li>
     <li class="chip chip-suggestion">
-      <button class="chip-interactive" disabled>
+      <button class="chip-interactive" disabled type="button">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
@@ -410,7 +410,7 @@ The following example shows every possible renderings depending on the suggestio
       </button>
     </li>
     <li class="chip chip-suggestion">
-      <button class="chip-interactive chip-icon" disabled>
+      <button class="chip-interactive chip-icon" disabled type="button">
         <span class="icon si si-settings" aria-hidden="true"></span>
         <span class="visually-hidden">Send "Go to parameters."</span>
       </button>
@@ -424,12 +424,12 @@ The following example shows every possible renderings depending on the suggestio
 <Example buttonLabel="suggestion chip skeleton" code={`<div aria-busy="true" inert>
     <ul class="chips-container">
       <li class="chip chip-suggestion">
-        <button class="chip-interactive">
+        <button class="chip-interactive" type="button">
           Thanks.
         </button>
       </li>
       <li class="chip chip-suggestion">
-        <button class="chip-interactive">
+        <button class="chip-interactive" type="button">
           Suggestion chip
         </button>
       </li>
@@ -446,37 +446,37 @@ By default when using `.chips-container` the chip list will scroll horizontally 
 
 <Example buttonLabel="overflowing suggestion chips" code={`<ul class="chips-container" aria-label="Filter by">
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
+      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
+      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
+      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
@@ -488,37 +488,37 @@ Add `.flex-wrap` on the `.chips-container` element to display a wrapping list of
 
 <Example buttonLabel="wrapping suggestion chips" code={`<ul class="chips-container flex-wrap" aria-label="Filter by">
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
+      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
+      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
+      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
@@ -532,92 +532,92 @@ This layout combines wrapping and vertical scrolling, please note that a `style=
 
 <Example buttonLabel="wrapping and overflowing suggestion chips" code={`<ul class="chips-container flex-wrap" style="max-height: 115px;" aria-label="Filter by">
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
+      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
+      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
+      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
+      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
+      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
+      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
+      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
+      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive" data-bs-toggle="button">
+      <button class="chip-interactive" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
-      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
+      <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button" type="button">
         Quite long label
       </button>
     </li>
