@@ -1,6 +1,6 @@
 ---
 title: Switch
-description: Create consistent cross-browser and cross-device switches.
+description: A switch is a UI element that toggles between two states, typically 'On' and 'Off', used to enable or disable features, options, or settings.
 aliases:
   - "/docs/forms/switch/"
   - "/docs/components/switch/"
@@ -15,7 +15,9 @@ import { getVersionedDocsPath } from '@libs/path'
 
 ## Overview
 
-Switches allow users to turn an individual option on or off. They are usually used to activate or deactivate a specific setting.
+Switch item is a UI element that toggles between two states, typically "On" and "Off," and is used to enable or disable features, options, or settings.
+
+Unlike the [switch](#standalone), the switch item accommodates a broader range of contexts by enabling the toggling of visibility of additional text labels and icon assets.
 
 They are implemented using `.switch-item` and `.control-item-*` classes, [see below](#control-item). Browser default checkboxes are replaced with the help of `.control-item-indicator[role="switch"]`.
 
@@ -239,9 +241,9 @@ Put your switches on the opposite side with the `.form-check-reverse` modifier c
 
 ### Max width
 
-By default switches will span the whole width of their parent container, to limit the width of the switch on wider parent container, add a `.component-max-width` to the `.switch-item` container. More information on switch sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-switch-responsiveness).
+By default, switches will span the whole width of their parent container, to limit the width of the switch on wider parent container, add a `.component-max-width` to the `.switch-item` container. More information on switch sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-switch-responsiveness).
 
-<Example code={`<div class="switch-item component-max-width">
+<Example buttonLabel="switch max width" code={`<div class="switch-item component-max-width">
     <div class="control-item-assets-container">
       <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchMaxWidth" checked />
     </div>
@@ -339,10 +341,10 @@ To automatically display an error text on a single switch item, enclose it insid
 
 <BootstrapCompatibility>
 
-To display an invalid switch, add `aria-invalid="true"` to a `.form-check-input`.
+To display an invalid switch, add `.is-invalid` to a `.form-check-input`.
 
 <Example buttonLabel="Bootstrap compatibility: invalid single switch" code={`<div class="form-check form-switch">
-    <input class="form-check-input" aria-invalid="true" type="checkbox" value="" id="checkInvalid" role="switch" />
+    <input class="form-check-input is-invalid" type="checkbox" value="" id="checkInvalid" role="switch" />
     <label class="form-check-label" for="checkInvalid">
       Default invalid switch (Bootstrap compatible)
     </label>
@@ -404,6 +406,21 @@ If the switch items list is part of a form, add a `<fieldset>` with the class `.
     <p class="control-item-error-message" id="switchInvalidErrorTextGroup">Incompatible choices.</p>
   </fieldset>`} />
 
+### Skeleton
+
+<SkeletonRedirect component="switch item" />
+
+<Example buttonLabel="switch item skeleton" code={`<div aria-busy="true" inert>
+    <div class="switch-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchSkeleton" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="switchSkeleton">Skeleton switch</label>
+      </div>
+    </div>
+  </div>`} />
+
 ## Fieldset `<legend>`
 
 For accessibility reasons, it is required to provide understandable switch labels without relying on visual context. If switches belong to a group, it is good practice to add a group title inside a `<legend>` element as the first child of the `<fieldset>` element. Screen readers will read the legend before navigating through the switches; this way, keyboard navigation users have more information on what is expected with the multiple switches element.
@@ -446,6 +463,10 @@ For accessibility reasons, it is required to provide understandable switch label
 
 ## Standalone
 
+Switch is a UI element that toggles between two states, typically "On" and "Off," and is used to enable or disable features, options, or settings.
+
+Switch, that lacks an additional icon asset or text label, provides greater flexibility when creating other components that require a switch.
+
 <Callout type="warning" name="standalone-form-indicator" />
 
 For the standalone switch, we provide a completely different architecture to ease the integration inside your projects.
@@ -469,3 +490,43 @@ Progressively enhance your switches for mobile Safari (iOS 17.4+) by adding a `s
   </div>`} />
 
 Be sure to read more about [the switch attribute on the WebKit blog](https://webkit.org/blog/15054/an-html-switch-control/). Safari 17.4+ on macOS and iOS both have native-style switches in HTML while other browsers simply fall back to the standard checkbox appearance. Applying the attribute to a non-OUDS Web checkbox in more recent versions of Safari will render a native switch.
+
+## Mandatory field indication
+
+<MandatoryFieldIndication componentName="switch" />
+
+<Example buttonLabel="mandatory switches indication" code={`<div class="switch-item-container">
+    <div class="switch-item component-max-width">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchUniqueMandatory" name="mandatorySwitch" required />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label is-required" for="switchUniqueMandatory">Mandatory unique switch</label>
+      </div>
+    </div>
+  </div>
+  <hr class="my-xlarge">
+  <fieldset class="control-items-list">
+    <legend class="is-required">Mandatory switches</legend>
+    <div class="switch-item component-max-width">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" role="switch" value="" id="mandatorySwitch1" name="mandatorySwitches" required />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="mandatorySwitch1">Default switch</label>
+      </div>
+    </div>
+    <div class="switch-item component-max-width">
+      <div class="control-item-assets-container">
+        <input checked class="control-item-indicator" type="checkbox" role="switch" value="" id="mandatorySwitch2" name="mandatorySwitches" required />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="mandatorySwitch2">Checked switch</label>
+      </div>
+    </div>
+  </fieldset>`} />
+
+
+
+
+

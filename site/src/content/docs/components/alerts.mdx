@@ -1,6 +1,6 @@
 ---
 title: Alerts
-description: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+description: An alert message is a UI element that provides feedback from the system, indicates status changes, or prompts required actions.
 aliases:
   - "/docs/components/alerts/"
   - "/docs/components/alert/"
@@ -13,7 +13,6 @@ added:
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
-import { getMode } from '@libs/sass-variables'
 import { getConfig } from '@libs/config'
 
 <Callout type="info">
@@ -27,8 +26,8 @@ import { getConfig } from '@libs/config'
 <ul class="list-unstyled row row-cols-1 row-cols-sm-2">
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top bg-inverse-low" aria-hidden="true">
-        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
           <div class="alert alert-message alert-negative">
             <div class="alert-icon"><p class="visually-hidden">Negative alert</p></div>
             <div class="alert-container">
@@ -40,14 +39,14 @@ import { getConfig } from '@libs/config'
         </div>
       </div>
       <div class="card-body border-default border-thin border-top">
-        <a class="stretched-link" href="#alert-message">Alert message</a> is a prominent, persistent and actionable communication component to display system feedback, status change or required action.
+        <a class="stretched-link" href="#alert-message">Alert message</a> is a UI element that provides system feedback, indicates status changes, or prompts required actions through clear, prominent, persistent, and actionable communication.
       </div>
     </div>
   </li>
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top bg-inverse-low" aria-hidden="true">
-        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
           <div class="alert alert-info">
             <div class="alert-icon"><p class="visually-hidden">Info alert</p></div>
             <p class="alert-label">Label</p>
@@ -56,7 +55,7 @@ import { getConfig } from '@libs/config'
       </div>
 
       <div class="card-body border-default border-thin border-top">
-        <a class="stretched-link" href="#inline-alert">Inline alert</a> is a prominent and persistent component displayed in the content flow to display system feedback or status change.
+        <a class="stretched-link" href="#inline-alert">Inline alert</a> is a lightweight UI element integrated into the content flow. It conveys information, system feedback, and status changes through short, prominent, persistent, and non-actionable messages.
       </div>
     </div>
   </li>
@@ -92,7 +91,7 @@ Alert messages come with additional layout classes such as `.alert-container`, `
 
 `.alert-text-container` is to vertically distribute all the textual content of the alert message.
 
-<BrandSpecific brand="orange">
+<BrandSpecific brand={['orange', 'orange-compact']}>
 `.alert-action-container` is mainly useful when there is an action next to a close button in alert message.
 </BrandSpecific>
 
@@ -121,14 +120,14 @@ Close buttons should be labelled:
 
 In case an alert is dynamically added, there are several use cases:
 - The alert is only informational and/or can be accessed in a different way, there is no need for a particular role or vocalization.
-- The alert is informational and needs a user action but isn’t urgent, you can make it appear inside a `<div role="status">`. The dynamic alert message should reference where to find this action. [More information about the `role="status"`](https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/). [See a valid example](#live-example).
+- The alert is informational and needs a user action but isn’t urgent, you can make it appear inside a `<div role="status">`. The dynamic alert message should reference where to find this action. [More information about the `role="status"`](https://a11y-guidelines.orange.com/en/articles/aria-status-messages/). [See a valid example](#live-example).
 - The alert requires a user action, either add the `role="alert"` directly on the `<div class="alert" role="alert">` and add a way to access to it easily, **or**, focus the newly added alert and once it’s closed, give the focus back to the element that triggered the alert. If the second choice is applied here, you may want to add a focustrap to this alert. [More information about the `role="alert"`](https://a11y-guidelines.orange.com/en/articles/aria-live-alert/).
 
-In case an alert is closed and the focus haven’t been customized, the focus order should stay the same.
+## [[comp]] Alert message
 
-## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Alert message
+Alert message is a UI element that provides system feedback, indicates status changes, or prompts required actions through clear, prominent, persistent, and actionable communication.
 
-Alert message is a UI element that displays system feedback, status changes or required action; throughout detailed, prominent, persistent and actionable communication.
+Alert message features a functional icon and a semantic colour, and may also include a close button or an action link. The alert message does not disappear automatically and stays visible until the user dismisses or resolves it.
 
 To have an alert message, add `.alert-message` at the `.alert` level to display an alert message.
 
@@ -342,7 +341,7 @@ Optionally, for the [non-functional alert message](#non-functional), you can rem
     </div>
   </div>`} />
 
-<BrandSpecific brand="orange">
+<BrandSpecific brand={['orange', 'orange-compact']}>
 #### Rounded
 
 Rounded corners alerts is a project-wide option therefore all your alerts should either be rounded or not. Add `.use-rounded-corner-alert` on a top container (for example `<body>`) to use rounded corners.
@@ -545,6 +544,23 @@ To display a bullet list below the alert label, add an `<ul>` after `.alert-labe
     </div>
   </div>`} />
 
+### States
+
+#### Skeleton
+
+<SkeletonRedirect component="alert message" />
+
+<Example buttonLabel="alert message skeleton" code={`<div aria-busy="true" inert>
+    <div class="alert alert-info alert-message">
+      <div class="alert-icon"><p class="visually-hidden">Info alert</p></div>
+      <div class="alert-container">
+        <div class="alert-text-container">
+          <p class="alert-label">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+
 ### Layout
 
 Here are some examples with everything activated and some long texts to see how it should behave. Please note that a `max-width` limit is applied on the texts.
@@ -601,7 +617,7 @@ Using the alert plugin, it’s possible to dismiss any alert message, here’s h
 
 Click the button below to show an alert (hidden with inline styles to start), then dismiss (and destroy) it with the built-in close button.
 
-<BrandSpecific brand="orange">
+<BrandSpecific brand={['orange', 'orange-compact']}>
   <Callout type="info">
     We use `.use-rounded-corner-alert` here to detect edge cases.
   </Callout>
@@ -697,9 +713,11 @@ myAlert.addEventListener('closed.bs.alert', event => {
 })
 ```
 
-## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Inline alert
+## [[comp]] Inline alert
 
-Inline alert is a lightweight UI element, placed in the content flow, that displays information, system feedback, status changes throughout short, prominent, persistent and non actionable communication.
+Inline alert is a lightweight UI element integrated into the content flow. It conveys information, system feedback, and status changes through short, prominent, persistent, and non-actionable messages.
+
+Inline alert includes a functional icon and a semantic colour, but does not have a close button or an action link. The inline alert remains visible and does not disappear.
 
 There is no specific class for inline alert, the `.alert` class is used standalone here.
 
@@ -812,4 +830,17 @@ In any case, the icon will be colorized automatically via the `color` attribute.
       <p class="visually-hidden">Emphasized content</p>
     </div>
     <p class="alert-label">Your data plan includes free calls on weekends.</p>
+  </div>`} />
+
+### States
+
+#### Skeleton
+
+<SkeletonRedirect component="inline alert" />
+
+<Example buttonLabel="alert message skeleton" code={`<div aria-busy="true" inert>
+    <div class="alert alert-info">
+      <div class="alert-icon"><p class="visually-hidden">Info alert</p></div>
+      <p class="alert-label">Label</p>
+    </div>
   </div>`} />

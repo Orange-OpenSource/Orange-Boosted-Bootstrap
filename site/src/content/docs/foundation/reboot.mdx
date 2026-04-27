@@ -12,7 +12,7 @@ toc: true
 
 import { getMode } from '@libs/sass-variables'
 import { getConfig } from '@libs/config'
-import { allTokens } from '@libs/sass-variables'
+import { getTokenValue } from '@libs/sass-variables'
 
 ## Approach
 
@@ -69,7 +69,7 @@ The following `font-family` is applied on every code basis element. To switch th
 
 ## Headings
 
-All heading elements—`<h1>`—`<h6>` have their `margin-top` removed, <code>margin-bottom: {allTokens.find((token) => token.name === '$ouds-space-fixed-medium').compiledValue}</code> set, and `line-height` tightened. While headings inherit their `color` by default, you can also override it via optional CSS variable, `--bs-heading-color`.
+All heading elements—`<h1>`—`<h6>` have their `margin-top` removed, <code>margin-bottom: {getTokenValue('$ouds-space-fixed-medium')}</code> set, and `line-height` tightened. While headings inherit their `color` by default, you can also override it via optional CSS variable, `--bs-heading-color`.
 
 <BsTable class="table">
 | Heading | Example |
@@ -84,7 +84,7 @@ All heading elements—`<h1>`—`<h6>` have their `margin-top` removed, <code>ma
 
 ## Paragraphs
 
-All `<p>` elements have their `margin-top` removed and <code>margin-bottom: {allTokens.find((token) => token.name === '$ouds-space-fixed-medium').compiledValue}</code> set for easy spacing. If you want to get rid of the `margin-bottom`, please make sure to use our `.mb-none` [spacing utilities]([[docsref:/utilities/spacing]]).
+All `<p>` elements have their `margin-top` removed and <code>margin-bottom: {getTokenValue('$ouds-space-fixed-medium')}</code> set for easy spacing. If you want to get rid of the `margin-bottom`, please make sure to use our `.mb-none` [spacing utilities]([[docsref:/utilities/spacing]]).
 
 <Example buttonLabel="paragraph" code={`<p class="mw-none mb-none">This is an example paragraph which is long enough so it’s easy to see and compare the <code>max-width</code> in action and compare it to the one below.</p>
   <p>This is an example paragraph which is long enough so it’s easy to see and compare the <code>max-width</code> in action and compare it to the one above.</p>
@@ -102,7 +102,7 @@ Links have a disabled style when using an `aria-disabled="true"` attribute.
 
 Visited links don’t have a specific style by default.
 
-<BrandSpecific brand="orange">
+<BrandSpecific brand={['orange', 'orange-compact']}>
 The `:visited` state can be styled with the additional `.visited-links` utility class that can be applied directly to a link or to a parent element to style all the child links.
 
 <Example buttonLabel="visited link" code={`<div class="visited-links">
@@ -386,7 +386,7 @@ Reboot includes an enhancement for `role="button"` to change the default cursor 
 
 ### Address
 
-The `<address>` element is updated to reset the browser default `font-style` from `italic` to `normal`. `line-height` is also now inherited, and <code>margin-bottom: {allTokens.find((token) => token.name === '$ouds-space-fixed-medium').compiledValue}</code> has been added. `<address>`s are for presenting contact information for the nearest ancestor (or an entire body of work). Preserve formatting by ending lines with `<br />`.
+The `<address>` element is updated to reset the browser default `font-style` from `italic` to `normal`. `line-height` is also now inherited, and <code>margin-bottom: {getTokenValue('$ouds-space-fixed-medium')}</code> has been added. `<address>`s are for presenting contact information for the nearest ancestor (or an entire body of work). Preserve formatting by ending lines with `<br />`.
 
 <Example buttonLabel="address" showMarkup={false} code={`<address>
     <strong>ACME Corporation</strong><br />
@@ -402,7 +402,7 @@ The `<address>` element is updated to reset the browser default `font-style` fro
 
 ### Blockquote
 
-The default `margin` on blockquotes is `1em 40px`, so we reset that to <code>0 0 {allTokens.find((token) => token.name === '$ouds-space-fixed-medium').compiledValue}</code> for something more consistent with other elements.
+The default `margin` on blockquotes is `1em 40px`, so we reset that to <code>0 0 {getTokenValue('$ouds-space-fixed-medium')}</code> for something more consistent with other elements.
 
 <Example buttonLabel="blockquote" showMarkup={false} code={`<figure>
     <blockquote class="blockquote">

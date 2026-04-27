@@ -1,6 +1,6 @@
 ---
 title: Tags
-description: A tag is a static or interactive component used to show status, key details, or categories. It can also help users filter content by selecting or entering relevant information.
+description: A tag is a UI element that shows brief information, such as a label, keyword, or category.
 aliases:
   - "/docs/components/tags/"
   - "/docs/components/tag/"
@@ -12,7 +12,6 @@ types:
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
-import { getMode } from '@libs/sass-variables'
 
 <Callout type="info">
   You can find the OUDS design guidelines here: [tag guidelines](https://r.orange.fr/r/S-ouds-doc-tag), [input tag guidelines](https://r.orange.fr/r/S-ouds-doc-input-tag).
@@ -25,26 +24,26 @@ import { getMode } from '@libs/sass-variables'
 <ul class="list-unstyled row row-cols-1 row-cols-sm-2">
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top bg-inverse-low" aria-hidden="true">
-        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
           <p class="tag">Tag</p>
         </div>
       </div>
       <div class="card-body border-default border-thin border-top">
-        <a class="stretched-link" href="#tag">Tag</a> is used in an informative way, to show short info like a label, keyword, or category.
+        <a class="stretched-link" href="#tag">Tag</a> is a UI element that shows brief information, such as a label, keyword, or category.
       </div>
     </div>
   </li>
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top bg-inverse-low" aria-hidden="true">
-        <div class="d-flex align-items-center justify-content-center ratio-16x9" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
           <button type="button" class="tag tag-input" tabindex="-1">Input tag</button>
         </div>
       </div>
 
       <div class="card-body border-default border-thin border-top">
-        <a class="stretched-link" href="#input-tag">Input tag</a> is interactive and can take all the usual states: enabled, hover, pressed, disabled or focused.
+        <a class="stretched-link" href="#input-tag">Input tag</a> is a UI element that renders an entered value as a tag, allowing it to display brief information like a label, keyword, or category.
       </div>
     </div>
   </li>
@@ -88,9 +87,11 @@ Keep in mind that visually impaired and blind users will lack the visual context
 
 Several examples are provided below, but they need to be adapted for actual use cases.
 
-## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Tag
+## [[comp]] Tag
 
-A tag is a small element that shows short info like a label, keyword, or category. It helps users quickly find, group, or understand content. Tags can include icons or bullets.
+Tag is a UI element that shows brief information, such as a label, keyword, or category.
+
+Tag assists users in quickly finding, grouping, or understanding content. They can remain in place or be removed and may include icons or actions such as “close” or “edit.”
 
 <Callout type="warning" name="warning-tag-lists-accessibility" />
 
@@ -356,6 +357,14 @@ You can see a similar live example with buttons with the full JavaScript code on
     Label
   </p>`} />
 
+#### Skeleton
+
+<SkeletonRedirect component="tag" />
+
+<Example buttonLabel="tag skeleton" code={`<div aria-busy="true" inert>
+    <p class="tag">Tag</p>
+  </div>`} />
+
 ### Sizes
 
 To display a small tag, add the class `.tag-small` to the tag.
@@ -414,9 +423,13 @@ Tags can be added side by side. They require horizontal and vertical spacing bet
     <li class="tag">Label 6</li>
   </ul>`} />
 
-## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')} /></svg>Input tag
+## [[comp]] Input tag
 
-A input tag is a component that allows users to enter multiple values, each represented as a tag. As users type and submit values (usually by pressing enter, comma, or tab), each value is transformed into a tag. Input tags are often used for adding labels, categories, or participants. They typically support removing individual tags.
+Input tag is a UI element that renders an entered value as a tag, allowing it to display brief information like a label, keyword, or category.
+
+Input tag allows users to type and submit values (typically by pressing enter, comma, or tab), transforming each value into a tag.
+
+They are often used for adding labels, categories, or participants. They typically support removing individual tags.
 
 <Callout type="warning">
   Please note that all the variants of tag above *must not* be applied on input tag.
@@ -477,6 +490,14 @@ To disable an input tag, just add the `disabled` attribute to the `.tag`.
       </button>
     </li>
   </ul>`} />
+
+#### Skeleton
+
+<SkeletonRedirect component="input tag" />
+
+<Example buttonLabel="input tag skeleton" code={`<div aria-busy="true" inert>
+    <button type="button" class="tag tag-input">Input tag<span class="visually-hidden">Remove this tag</span></button>
+  </div>`} />
 
 ### Layout
 

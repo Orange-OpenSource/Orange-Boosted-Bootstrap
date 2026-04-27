@@ -68,7 +68,7 @@
     box-shadow: unset;
 
     .DocSearch-Search-Icon {
-      color: var(--bs-link-hover-color);
+      color: var(--bs-link-active-color);
     }
   }
 
@@ -164,9 +164,9 @@
     }
 
     mark {
-      --docsearch-hit-active-color: var(--bs-color-content-default);
+      --docsearch-hit-active-color: var(--bs-color-action-highlighted);
       text-decoration: none;
-      background: var(--bs-color-action-highlighted);
+      background: var(--bs-color-content-on-action-highlighted);
     }
   }
 }

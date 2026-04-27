@@ -1,6 +1,6 @@
 ---
 title: Select input
-description: Customize the native `<select>`s with custom CSS that changes the element’s initial appearance.
+description: Select input is a UI element that enables users to choose one or, in some cases, multiple options from a predefined list.
 aliases:
   - "/docs/forms/select/"
   - "/docs/forms/select-input/"
@@ -15,6 +15,10 @@ import { getVersionedDocsPath } from '@libs/path'
 </Callout>
 
 ## Overview
+
+Select input is a UI element that enables users to choose one or, in some cases, multiple options from a predefined list.
+
+Select input appears as a dropdown that shows available options. It is used when the number of choices is limited and known ahead of time, allowing users to select from controlled or standardised values.
 
 Use a `.select-input` wrapper to create a select form field with OUDS styles, then wrap a pair of `<select class="select-input-field"></select>` and `<label>` elements in `.select-input-container`. Note that the `<label>` must come before the `<select>`.
 
@@ -47,7 +51,7 @@ When there’s a value already defined, `<label>`s will automatically adjust to 
   </div>`} />
 
 <BootstrapCompatibility>
-<Example code={`<select class="form-select" aria-label="Default select example">
+<Example buttonLabel="Bootstrap compatibility: selected select" code={`<select class="form-select" aria-label="Default select example">
     <option selected>Open this select menu</option>
     <option value="1">One</option>
     <option value="2">Two</option>
@@ -75,7 +79,7 @@ Add `.select-input-container-outlined` for a minimalist input with a transparent
     </div>
   </div>`} />
 
-<BrandSpecific brand="orange">
+<BrandSpecific brand={['orange', 'orange-compact']}>
 ### Rounded
 
 Rounded corners inputs is a project-wide option therefore all your inputs should either be rounded or not. Add `.use-rounded-corner-inputs` on a top container (for example `<body>`) to use rounded corners.
@@ -214,9 +218,9 @@ To display a helper link below selects, use a standard small link [with `.link` 
 
 ### Max width
 
-By default select inputs will span the whole width of their parent container, to limit the width of the select input on wider parent container, add a `.component-max-width` to the `.select-input` container.
+By default, select inputs will span the whole width of their parent container, to limit the width of the select input on wider parent container, add a `.component-max-width` to the `.select-input` container.
 
-<Example code={`<div class="select-input component-max-width">
+<Example buttonLabel="select input max width" code={`<div class="select-input component-max-width">
     <div class="select-input-container">
       <label for="exampleSelectMaxWidth">Select example max width</label>
       <select class="select-input-field" id="exampleSelectMaxWidth" aria-describedby="selectMaxWidthHelper">
@@ -461,6 +465,24 @@ In case of an invalid select, you may remove the invalid state before the loadin
     </div>
   </div>`} />
 
+### Skeleton
+
+<SkeletonRedirect component="select input" />
+
+<Example buttonLabel="select input skeleton" code={`<div aria-busy="true" inert>
+    <div class="select-input">
+      <div class="select-input-container">
+        <label for="skeletonSelect">Skeleton select example</label>
+        <select class="select-input-field" id="skeletonSelect">
+          <option value="" disabled selected></option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+    </div>
+  </div>`} />
+
 {/* ## Specific attributes
 
 ### Multiple
@@ -519,3 +541,20 @@ Group options with `<optgroup>`:
       </select>
     </div>
   </div>`} />
+
+## Mandatory field indication
+
+<MandatoryFieldIndication componentName="select input" />
+
+<Example buttonLabel="mandatory select input indication" code={`<div class="select-input">
+    <div class="select-input-container">
+      <label for="mandatorySelect" class="is-required">Mandatory select example</label>
+      <select class="select-input-field" id="mandatorySelect" required>
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>`} />
+

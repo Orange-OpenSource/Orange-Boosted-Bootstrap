@@ -1,6 +1,6 @@
 ---
 title: Radio button
-description: Create consistent cross-browser and cross-device radio buttons.
+description: A radio button is a UI element that allows the selection of a single option from a set of mutually exclusive choices.
 aliases:
   - "/docs/forms/radio/"
   - "/docs/components/radio/"
@@ -17,7 +17,9 @@ import { getVersionedDocsPath } from '@libs/path'
 
 ## Overview
 
-Radio buttons allow user to select a single option from a set of mutually exclusive choices.
+Radio button item is a UI element that allows users to select a single option from a set of mutually exclusive choices.
+
+Unlike the [radio button](#standalone), the radio button item accommodates a broader range of contexts by enabling the toggling of visibility of additional text labels and icon assets.
 
 They are implemented using `.radio-button-item` and `.control-item-*` classes, [see below](#control-item). Browser default radio buttons are replaced with the help of the selector `.control-item-indicator[type="radio"]`.
 
@@ -328,9 +330,9 @@ You can align horizontally up to three radio buttons if their labels are short, 
 
 ### Max width
 
-By default radio buttons will span the whole width of their parent container, to limit the width of the radio button on wider parent container, add a `.component-max-width` to the `.radio-button-item` container. More information on radio button sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-radio-button-responsiveness).
+By default, radio buttons will span the whole width of their parent container, to limit the width of the radio button on wider parent container, add a `.component-max-width` to the `.radio-button-item` container. More information on radio button sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-radio-button-responsiveness).
 
-<Example code={`<fieldset class="control-items-list">
+<Example buttonLabel="radio button max width" code={`<fieldset class="control-items-list">
     <div class="radio-button-item component-max-width">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" aria-describedby="radioMWDescription" id="radioWithMaxWidth" value="" name="radioMaxWidth" />
@@ -453,10 +455,10 @@ To manually mark a radio button as invalid, add the `aria-invalid="true"` attrib
 
 <BootstrapCompatibility>
 
-To display an invalid radio button, add `aria-invalid="true"` to a `.form-check-input`.
+To display an invalid radio button, add `.is-invalid` to a `.form-check-input`.
 
 <Example buttonLabel="Bootstrap compatibility: invalid radio buttons" code={`<div class="form-check">
-    <input class="form-check-input" aria-invalid="true" type="radio" value="" id="radioInvalidBootstrap" />
+    <input class="form-check-input is-invalid" type="radio" value="" id="radioInvalidBootstrap" />
     <label class="form-check-label" for="radioInvalidBootstrap">
       Invalid radio
     </label>
@@ -513,6 +515,31 @@ If the layout is horizontal, the `<fieldset>` must enclose the flex containers s
     <p class="control-item-error-message" id="radioLayoutRowInvalidErrorText">Please make a choice.</p>
   </fieldset>`} />
 
+### Skeleton
+
+<SkeletonRedirect component="radio button item" />
+
+<Example buttonLabel="radio button item skeleton" code={`<div aria-busy="true" inert>
+    <fieldset class="control-items-list">
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="radio" value="" id="radioSkeleton" name="radioSkeleton" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="radioSkeleton">Default radio button</label>
+        </div>
+      </div>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input checked class="control-item-indicator" type="radio" value="" id="radioSkeleton2" name="radioSkeleton" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="radioSkeleton2">Checked radio button</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>`} />
+
 ## Fieldset `<legend>`
 
 For accessibility reasons, it is required to provide understandable radio button labels without relying on visual context. It is also good practice to add a radio button group title inside a `<legend>` element as the first child of the `<fieldset>` element. Screen readers will read the legend before navigating through the radio buttons; this way, keyboard navigation users have more information on what is expected with the multiple radio buttons element.
@@ -555,6 +582,10 @@ For accessibility reasons, it is required to provide understandable radio button
 
 ## Standalone
 
+Radio button is a UI element that allows users to select a single option from a set of mutually exclusive choices.
+
+Radio button, that lacks an additional icon asset or text label, provides greater flexibility when designing other components that incorporate a radio button.
+
 <Callout type="warning" name="standalone-form-indicator" />
 
 For the standalone radio button, we provide a completely different architecture to ease the integration inside your projects.
@@ -573,3 +604,39 @@ For the standalone radio button, we provide a completely different architecture 
     <input class="form-check-input" type="radio" value="" aria-label="Default standalone radio button (Bootstrap compatible)" />
   </div>`} />
 </BootstrapCompatibility>
+
+
+## Mandatory field indication
+
+<MandatoryFieldIndication componentName="radio button" />
+
+<Example buttonLabel="mandatory radio buttons indication" code={`<div class="radio-button-item-container">
+    <div class="radio-button-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="radio" value="" id="radioUniqueMandatory" name="mandatoryRadio" required />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label is-required" for="radioUniqueMandatory">Mandatory unique radio button</label>
+      </div>
+    </div>
+  </div>
+  <hr class="my-xlarge">
+  <fieldset class="control-items-list">
+    <legend class="is-required">Mandatory radio buttons</legend>
+    <div class="radio-button-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="radio" value="" id="mandatoryRadio1" name="mandatoryRadios" required />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="mandatoryRadio1">Default radio button</label>
+      </div>
+    </div>
+    <div class="radio-button-item">
+      <div class="control-item-assets-container">
+        <input checked class="control-item-indicator" type="radio" value="" id="mandatoryRadio2" name="mandatoryRadios" required />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="mandatoryRadio2">Checked radio button</label>
+      </div>
+    </div>
+  </fieldset>`} />
