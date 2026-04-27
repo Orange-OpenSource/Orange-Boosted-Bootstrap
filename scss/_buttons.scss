@@ -527,12 +527,12 @@
 .btn-default.btn-ai:where(:not(:active, [class*="loading-"], :disabled, [aria-disabled="true"], .btn-on-colored-bg)) {
   --#{$prefix}btn-bg: initial;
 
-  background: linear-gradient(var(--#{$prefix}btn-bg, var(--#{$prefix}color-bg-primary))) padding-box, conic-gradient($ouds-button-color-border-secondary 0deg 78deg, $ouds-button-color-border-tertiary 78deg 118deg, $ouds-button-color-border-quaternary 118deg 242deg, $ouds-button-color-border-primary 242deg 360deg) border-box;
+  background: linear-gradient(var(--#{$prefix}btn-bg, var(--#{$prefix}color-bg-primary))) padding-box, conic-gradient($ouds-button-color-border-secondary 0deg 82deg, $ouds-button-color-border-tertiary 82deg 118deg, $ouds-button-color-border-quaternary 118deg 242deg, $ouds-button-color-border-primary 242deg 360deg) border-box;
   background-origin: border-box;
   border-color: transparent;
 
   &.btn-icon {
-    background: linear-gradient(var(--#{$prefix}btn-bg, var(--#{$prefix}color-bg-primary))) padding-box, conic-gradient($ouds-button-color-border-secondary 0deg 72deg, $ouds-button-color-border-tertiary 72deg 144deg, $ouds-button-color-border-quaternary 144deg 216deg, $ouds-button-color-border-primary 216deg 360deg) border-box;
+    background: linear-gradient(var(--#{$prefix}btn-bg, var(--#{$prefix}color-bg-primary))) padding-box, conic-gradient($ouds-button-color-border-secondary 0% 20%, $ouds-button-color-border-tertiary 20% 40%, $ouds-button-color-border-quaternary 40% 60%, $ouds-button-color-border-primary 60% 100%) border-box;
   }
 }
 

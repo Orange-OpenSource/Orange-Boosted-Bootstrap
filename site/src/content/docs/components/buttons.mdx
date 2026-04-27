@@ -772,7 +772,7 @@ OUDS Web includes several AI button variants, each serving its own semantic purp
 
 <BrandSpecific brand={['orange', 'orange-compact']}>
 <Callout type="warning" title="Colored icon">
-  Be aware that `.btn-strong` and `.btn-minimal` variants should use a colored icon to indicate the AI action. It will be automatically replaced when not present or when needed.
+  Be aware that `.btn-strong` and `.btn-minimal` variants should use a colored icon (`.btn-ai-colored-icon`) to indicate the AI action. If omitted, the default AI icon will be displayed.
 
   <details>
   <summary>See symbol to integrate</summary>
@@ -830,7 +830,7 @@ OUDS Web includes several AI button variants, each serving its own semantic purp
 </BrandSpecific>
 
 <Callout type="info">
-  `.btn-default` isn't transparent here, and you might specify `--bs-btn-bg` to make it transparent if needed.
+  Due to technical limitations, an AI button with`.btn-default` does not have a transparent background. To simulate transparency, set `--bs-btn-bg` to its container background color. Make sure that the used variable isn't semi-transparent (ie. use bg tokens instead of surface tokens).
 </Callout>
 
 <Example buttonLabel="AI button variants" class="bd-btn-example" code={`<div class="bg-surface-secondary">
@@ -848,7 +848,7 @@ Add the class `.btn-icon` to get a squared button that only contains an icon. Ma
 
 <BrandSpecific brand={['orange', 'orange-compact']}>
 <Callout type="warning" title="Colored icon">
-  Be aware that `.btn-strong` and `.btn-minimal` variants should use a colored icon to indicate the AI action. It will be automatically replaced when not present or when needed.
+  Be aware that `.btn-strong` and `.btn-minimal` variants should use a colored icon (`.btn-ai-colored-icon`) to indicate the AI action. If omitted, the default AI icon will be displayed.
 
   <details>
   <summary>See symbol to integrate</summary>
@@ -890,7 +890,7 @@ Add the class `.btn-icon` to get a squared button that only contains an icon. Ma
 </BrandSpecific>
 
 <Callout type="info">
-  `.btn-default` isn't transparent here, and you might specify `--bs-btn-bg` to make it transparent if needed.
+  Due to technical limitations, an AI button with`.btn-default` does not have a transparent background. To simulate transparency, set `--bs-btn-bg` to its container background color. Make sure that the used variable isn't semi-transparent (ie. use bg tokens instead of surface tokens).
 </Callout>
 
 <Example buttonLabel="AI button variants" class="bd-btn-example" code={`<div class="bg-surface-secondary">
@@ -925,7 +925,7 @@ Add the class `.btn-icon` to get a squared button that only contains an icon. Ma
 
 #### Disabled
 
-AI buttons use a `<button>` element, simply add the `disabled` boolean attribute to it. Disabled AI buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
+AI buttons typically use the `<button>` element. To disable an AI button, add the `disabled` boolean attribute. Disabled AI buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
 <Example buttonLabel="disabled AI buttons using `<button>` tag" class="bd-btn-example" code={`<button type="button" class="btn btn-ai btn-default" disabled>Default</button>
   <button type="button" class="btn btn-ai btn-icon btn-strong" disabled>
