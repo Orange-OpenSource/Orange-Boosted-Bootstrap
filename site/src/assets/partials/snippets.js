@@ -272,10 +272,12 @@ export default () => {
       const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password'
       passwordInput.setAttribute('type', type)
 
-      // Toggle the icon, the visually-hidden text for accessibility reasons
+      // Toggle the aria-pressed attribute and the icon to reflect the change in state
       if (type === 'text') {
+        passwordInput.setAttribute('aria-pressed', 'false')
         iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('accessibility-vision', 'hide'))
       } else {
+        passwordInput.setAttribute('aria-pressed', 'true')
         iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('hide', 'accessibility-vision'))
       }
     })
