@@ -98,7 +98,7 @@ To create a filter chip, add `.chip-filter` to the `.chip`.
   If possible, display a semantically informative title to describe the chips' list purpose like in the following example, otherwise an `aria-label` must be added to the `.chips-container` to explain the function of the chips. [Read more about chips accessibility here.](#accessibility)
 </Callout>
 
-<Example code={`
+<Example buttonLabel="basic filter chips" code={`
   <h4 id="filtersHeader">Filter by brands</h4>
   <div role="group" aria-labelledby="filtersHeader">
     <ul class="chips-container">
@@ -129,7 +129,7 @@ To create a filter chip, add `.chip-filter` to the `.chip`.
 
 To have only one active filter chip at a time, use the radio button version. All the rules explained in this page about filter chips apply on this variant as well.
 
-<Example code={`<ul class="chips-container" aria-label="Filter by">
+<Example buttonLabel="filter chips using radio buttons" code={`<ul class="chips-container" aria-label="Filter by">
     <li class="chip chip-filter">
       <input type="radio" id="radioCheck" name="radio" />
       <label class="chip-interactive" for="radioCheck">
@@ -158,7 +158,7 @@ The style is applied on `[aria-pressed="true"]` to enforce a good level of acces
 
 Make use of our [button JS plugin]([[docsref:/components/chips#javascript]]) or handle interactivity on your side, but make sure to use `aria-pressed`.
 
-<Example code={`<ul class="chips-container" aria-label="Filter by">
+<Example buttonLabel="filter chips using buttons" code={`<ul class="chips-container" aria-label="Filter by">
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
         Filter label using button 1
@@ -179,7 +179,7 @@ To display an icon add the icon as the last child of the `.chip-interactive`.
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
-<Example code={`<ul class="chips-container" aria-label="Filter by">
+<Example buttonLabel="text and icon filter chips" code={`<ul class="chips-container" aria-label="Filter by">
     <li class="chip chip-filter">
       <input type="checkbox" id="filterWithIcon" />
       <label class="chip-interactive" for="filterWithIcon">
@@ -208,7 +208,7 @@ To display a chip with only an icon, add `.chip-icon` to the interactive part of
 
 Make sure to provide an accessible text for each chip.
 
-<Example code={`<ul class="chips-container" aria-label="Filter by">
+<Example buttonLabel="icon only filter chips" code={`<ul class="chips-container" aria-label="Filter by">
     <li class="chip chip-filter">
       <input type="checkbox" id="filterIconOnly1" />
       <label class="chip-interactive chip-icon" for="filterIconOnly1">
@@ -235,7 +235,7 @@ Add `disabled` attribute either on the input or on the button element to disable
 
 The following example shows every possible renderings depending on the filter chip type but it is not recommended to mix different types in a real use case.
 
-<Example code={`<ul class="chips-container" aria-label="Filter by">
+<Example buttonLabel="disabled filter chips" code={`<ul class="chips-container" aria-label="Filter by">
     <li class="chip chip-filter">
       <input type="checkbox" id="disabledFilter" checked disabled />
       <label class="chip-interactive" for="disabledFilter">
@@ -287,9 +287,7 @@ Add `data-bs-toggle="button"` to toggle a button’s `active` state. If you’re
 
 You can create a button instance with the button constructor, for example:
 
-```js
-const bsButton = new oudsWeb.Button('#myButton')
-```
+<Code buttonLabel="JavaScript to create a button instance" lang="js" code={`const bsButton = new oudsWeb.Button('#myButton')`} />
 
 <BsTable>
 | Method | Description |
@@ -302,12 +300,10 @@ const bsButton = new oudsWeb.Button('#myButton')
 
 For example, to toggle all chips:
 
-```js
-document.querySelectorAll('.chip-suggestion').forEach(chipElement => {
-  const chip = oudsWeb.Button.getOrCreateInstance(chipElement)
-  chip.toggle()
-})
-```
+<Code buttonLabel="JavaScript to toggle all chips" lang="js" code={`document.querySelectorAll('.chip-suggestion').forEach(chipElement => {
+    const chip = oudsWeb.Button.getOrCreateInstance(chipElement)
+    chip.toggle()
+  })`} />
 
 ## [[comp]] Suggestion chip
 
@@ -321,7 +317,7 @@ To create a suggestion chip, add `.chip-suggestion` to the `.chip`.
   If possible, display a semantically informative title to describe the chips' list purpose, otherwise an `aria-label` must be added to the `.chips-container` to explain the function of the chips, like in the following example. [Read more about chips accessibility here.](#accessibility)
 </Callout>
 
-<Example code={`<ul class="chips-container" aria-label="Answer with">
+<Example buttonLabel="basic suggestion chips" code={`<ul class="chips-container" aria-label="Answer with">
     <li class="chip chip-suggestion">
       <button class="chip-interactive">
         Thanks.
@@ -347,7 +343,7 @@ To display an icon, add the icon as the first child of the `.chip-interactive`.
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
-<Example code={`<ul class="chips-container" aria-label="Answer with">
+<Example buttonLabel="text and icon suggestion chips" code={`<ul class="chips-container" aria-label="Answer with">
     <li class="chip chip-suggestion">
       <button class="chip-interactive">
         <svg aria-hidden="true">
@@ -374,7 +370,7 @@ To display a chip with only an icon, add `.chip-icon` to the `<button>`.
 
 Make sure to provide an accessible text for each chip.
 
-<Example code={`<ul class="chips-container" aria-label="Answer with">
+<Example buttonLabel="icon only suggestion chips" code={`<ul class="chips-container" aria-label="Answer with">
     <li class="chip chip-suggestion">
       <button class="chip-interactive chip-icon">
         <svg aria-hidden="true">
@@ -399,7 +395,7 @@ Add `disabled` attribute on the button element to disable the chip.
 
 The following example shows every possible renderings depending on the suggestion chip type but it is not recommended to mix different types in a real use case.
 
-<Example code={`<ul class="chips-container" aria-label="Answer with">
+<Example buttonLabel="disabled suggestion chips" code={`<ul class="chips-container" aria-label="Answer with">
     <li class="chip chip-suggestion">
       <button class="chip-interactive" disabled>
         Thanks.
@@ -448,7 +444,7 @@ This layout section applies to both chip component types.
 
 By default when using `.chips-container` the chip list will scroll horizontally on one line.
 
-<Example code={`<ul class="chips-container" aria-label="Filter by">
+<Example buttonLabel="overflowing suggestion chips" code={`<ul class="chips-container" aria-label="Filter by">
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
         Quite long label
@@ -490,7 +486,7 @@ By default when using `.chips-container` the chip list will scroll horizontally 
 
 Add `.flex-wrap` on the `.chips-container` element to display a wrapping list of chips. Beware with this option as it could take too much vertical space on mobile viewports, as a rule there should not be more than 2 or 3 lines of chips displayed.
 
-<Example code={`<ul class="chips-container flex-wrap" aria-label="Filter by">
+<Example buttonLabel="wrapping suggestion chips" code={`<ul class="chips-container flex-wrap" aria-label="Filter by">
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
         Quite long label
@@ -534,7 +530,7 @@ For some use cases, mixing wrapping and overflowing can lead to a better UX.
 
 This layout combines wrapping and vertical scrolling, please note that a `style="max-height: 115px;"` is added since we don’t want to display more than 2 or 3 lines, and still show part of the following line as a visual clue when the scrollbar is not displayed.
 
-<Example code={`<ul class="chips-container flex-wrap" style="max-height: 115px;" aria-label="Filter by">
+<Example buttonLabel="wrapping and overflowing suggestion chips" code={`<ul class="chips-container flex-wrap" style="max-height: 115px;" aria-label="Filter by">
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
         Quite long label
