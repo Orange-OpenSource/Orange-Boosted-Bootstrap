@@ -37,7 +37,7 @@
   - [ ] when bumping minor or major version: ensure `dist` URLs in examples' HTML has changed
   - [ ] double-check everything before pushing, starting by searching for forgotten old version number occurrences
   - [ ] Make the new release banner appears in the previous version of the doc (e.g. in v5.3 when releasing the v5.4.0 doc, search for `navbar navbar-expand supra d-none` and replace by `navbar navbar-expand supra`)
-- [ ] Run Algolia crawler manually for the new documentation to be indexed in the search engine
+- [ ] Run Algolia crawler manually for the new documentation to be indexed in the search engine (https://dashboard.algolia.com/apps/AKIHKMSEKB/dashboard)
 - [ ] [create a GitHub release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/new):
   - attach the 2 zip files per brand
   - paste the CHANGELOG / Ship list in the release's description
