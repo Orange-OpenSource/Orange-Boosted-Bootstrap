@@ -15,6 +15,7 @@ export function stackblitzPlugin() {
           .replace(/__CSS_BOOTSTRAP_CDN__/g, config.cdn.css_bootstrap)
           .replace(/__JS_BUNDLE_CDN__/g, config.cdn.js_bundle)
           .replace(/__DOCS_VERSION__/g, config.docs_version)
+          .replace(/__BRAND__/g, config.brand)
       }
 
       return code
