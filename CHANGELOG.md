@@ -1,3 +1,39 @@
+# [1.2.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v1.1.0-ouds-web...v1.2.0) (2026-04-17)
+
+
+### Bug Fixes
+
+* **component:** select input, activate menu on label click and remove… ([#3466](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3466)) ([f7e12cb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f7e12cb292245aa6802a345631c46f0f23533562))
+* **docs:** add alerts components in versioning page ([#3488](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3488)) ([0b8cae2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0b8cae2706ce6991bb05c9403ca6756c108ff32a))
+* **docs:** add titles on draft and coming_soon pages ([#3470](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3470)) ([8106181](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8106181bb93f11c28369e84b1547d180849bf661))
+* **docs:** Change Netlify badge URL to avoid 404 ([#3490](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3490)) ([fa86090](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fa86090ed6c0cbd9c55a3ced27062e23368da8ed))
+* **docs:** examples copy to clipboard icon switches to check and back to copy ([#3494](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3494)) ([633b3ce](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/633b3ce183afd71afa0da15e54e524a0c333eef4))
+* **docs:** Handle errors introduced by skeletons ([#3483](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3483)) ([ebe108b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ebe108bf2aad9f7313f7f389034662d261b82307))
+* **docs:** improve dual mode examples displayed indentation ([#3441](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3441)) ([a53bcd9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a53bcd9d5fe1762b1d66875fafe1bdabcdc39bf7))
+* **docs:** prevent browser password saving on component list ([#3451](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3451)) ([eea8b8c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/eea8b8c1d3bd20f396d3d4ff53d0cb35ca0fbf26))
+* **docs:** Remove useless sentence in a11y alert ([#3455](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3455)) ([d801fbb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d801fbb7f6fa131b338b07cb8853f3c8a5d3c36a))
+* **docs:** remove wrong badge-count class in badge doc ([#3485](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3485)) ([126d47b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/126d47bfa6d8ee02bff143db5ed0889825761d99))
+* **docs:** Search: After hot fixes in prod and fix issues on highlighting ([#3446](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3446)) ([c7303fd](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c7303fd65187a28bba84e17150e7c4bfbd8d0c7a))
+* **docs:** implements a getTokenValue to simplify docs ([#3475](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3475)) ([c112503](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c11250339f97cde5842afd0973594cd26905cd2b1))
+* **docs:** Update the documentation with default OUDS tags ([#3460](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3460)) ([cdf5a26](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cdf5a262ec8bfe62b0717587cc395dd0bacebb7e))
+* **lib:** change tag min-width ([#3516](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3516)) ([3cf94d0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3cf94d08a919340f25b2aad44dc58e5a8da938a7))
+* **reboot:** modify legend element reboot style to avoid rendered legend feature ([#3430](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3430)) ([a10a500](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a10a500f57ee6dcf17e9680ad7209d68310a1452))
+
+
+### Features
+
+* **docs:** Add a shortcode to add icon to component types ([#3508](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3508)) ([092d1cf](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/092d1cf888543a1b6aa6250972dc761d626c1326))
+* **docs:** Add design description, draft components icon and coming soon submenu ([#3433](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3433)) ([864b10c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/864b10ce6d1e1ee9c4e866b0c0c1ca1d110dd0a4))
+* **docs:** reorganize color documentation ([#3453](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3453)) ([56c731e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/56c731ef77d3dae2678cac12baefb44e49ba13e3))
+* **lib:** Add Footer as a draft component ([#3389](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3389)) ([f9e2281](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f9e2281eb9ad168bfe1b66e9c556f5517eea8db3))
+* **lib:** Add Header as a draft component ([#3388](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3388)) ([c97ba96](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c97ba969e0f521a985a10274c89e016a1f1003e2))
+* **lib:** add Skeleton component ([#3428](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3428)) ([37a3a67](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/37a3a672f37277868391ffea573f44b7649eff91))
+* **lib:** Update Alert message to v1.1.0 ([#3452](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3452)) ([969a053](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/969a053b086fb1457e60a571f99598b9bba27c08))
+* **lib:** Add navigation button component ([#3431](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3431)) ([abc5e0f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/abc5e0fdfae606066b943e23b70b9dc6045aaa0a))
+* **lib:** Manage mandatory fields indication ([#3439](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3439)) ([e8934fa](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e8934fa938ffb568c7b994a91f96347ea248e5b8))
+
+
+
 # [1.1.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v1.0.0-ouds-web...v1.1.0) (2026-03-13)
 
 
