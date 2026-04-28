@@ -16,12 +16,12 @@ const { layout } = Astro.props
   aria-expanded="false"
   data-bs-toggle="dropdown"
   {...layout !== 'examples' ? { 'data-bs-display': 'static' } : {}}
-  aria-label="Toggle theme (auto)"
+  aria-label="Toggle mode (auto)"
 >
   <svg class="bi theme-icon-active" aria-hidden="true"
     ><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#ui-auto-mode')}></use></svg
   >
-  <span class=`${layout === 'examples' ? 'visually-hidden' : 'd-lg-none ms-small'}` id="bd-theme-text">Toggle mode</span>
+  <span class=`${layout === 'examples' ? 'visually-hidden' : 'd-lg-none ms-small'}` id="bd-theme-text">Mode</span>
 </button>
 <ul
   class=`dropdown-menu dropdown-menu-end${layout === 'examples' ? ' shadow' : ' mb-small'}`
