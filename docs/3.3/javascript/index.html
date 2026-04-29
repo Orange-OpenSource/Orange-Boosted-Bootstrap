@@ -10,9 +10,9 @@
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 
 <title>
-  
+
     JavaScript &middot; Boosted
-  
+
 </title>
 
 
@@ -52,17 +52,17 @@
 <link rel="icon" href="/favicon.ico">
 
 <script>
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
 </script>
 
   </head>
   <body>
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>    
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
 	  <a href="https://boosted.orange.com/" class="v4-tease">There's a newer version of Boosted!</a>
 
     <!-- Docs master nav -->
@@ -94,7 +94,7 @@
         </li>
         <li class="active">
           <a href="../javascript/">JavaScript</a>
-        </li>        
+        </li>
           <li>
           <a href="../boostwatch/">Boostwatch</a>
         </li>
@@ -110,9 +110,10 @@
     <!-- Docs page layout -->
     <div class="bs-docs-header" id="content" tabindex="-1">
       <div class="container">
+        <a class="btn btn-sm btn-default" href="https://web.unified-design-system.orange.com" target="_blank" rel="noopener">Explore OUDS</a>
         <h1>JavaScript</h1>
         <p>Bring Bootstrap's components to life with over a dozen custom jQuery plugins. Easily include them all, or one by one.</p>
-        
+
       </div>
     </div>
 
@@ -234,8 +235,8 @@
 			}
 
 			/* accessibility */
-			table.tablesorter > thead > tr > th[aria-sort="descending"]:after { 
-				content:"trié par ordre décroissant"; 
+			table.tablesorter > thead > tr > th[aria-sort="descending"]:after {
+				content:"trié par ordre décroissant";
 				border: 0 none;
 				clip: rect(0px, 0px, 0px, 0px);
 				height: 1px;
@@ -247,8 +248,8 @@
 			}
 
 			/* accessibility */
-			table.tablesorter > thead > tr > th[aria-sort="ascending"]:after { 
-				content:"trié par ordre croissant"; 
+			table.tablesorter > thead > tr > th[aria-sort="ascending"]:after {
+				content:"trié par ordre croissant";
 				border: 0 none;
 				clip: rect(0px, 0px, 0px, 0px);
 				height: 1px;
@@ -260,13 +261,13 @@
 			}
 		</style>
   <h1 id="complextable" class="page-header">Table sorter</h1>
-  <p class="lead">Table with sortable columns.</p>  
-  <p>Add the <code>.tablesorter</code> class to the <code>table</code> tag will make the table headers sortable. For ergonomic reaseons, you need to initiate the table with a default sorted row by including the folowing script, you can also put a text just before the table to inform the user that headers are sortable. <a href='http://tablesorter.com/docs/' target='_blank'>More informations about tablesorter options (External link)</a></p>    
-  <figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> 
-        <span class="nx">$</span><span class="p">(</span><span class="s2">"#myTable"</span><span class="p">).</span><span class="nx">tablesorter</span><span class="p">({</span> 
-            <span class="na">sortList</span><span class="p">:</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span> 
-        <span class="p">});</span> 
-    <span class="p">});</span>                
+  <p class="lead">Table with sortable columns.</p>
+  <p>Add the <code>.tablesorter</code> class to the <code>table</code> tag will make the table headers sortable. For ergonomic reaseons, you need to initiate the table with a default sorted row by including the folowing script, you can also put a text just before the table to inform the user that headers are sortable. <a href='http://tablesorter.com/docs/' target='_blank'>More informations about tablesorter options (External link)</a></p>
+  <figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">"#myTable"</span><span class="p">).</span><span class="nx">tablesorter</span><span class="p">({</span>
+            <span class="na">sortList</span><span class="p">:</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
   </code></pre></figure>
   <div class="bs-example" data-example-id="">
     <table id="myTable" class="table tablesorter">
@@ -317,7 +318,7 @@
 			</tbody>
 		</table>
   </div>
-    
+
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">id=</span><span class="s">"myTable"</span> <span class="na">class=</span><span class="s">"table tablesorter"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;caption&gt;</span>Calls received<span class="nt">&lt;/caption&gt;</span>
     <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"cf"</span><span class="nt">&gt;</span>
@@ -364,7 +365,7 @@
             <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"quantity_data"</span><span class="nt">&gt;</span>0.10<span class="nt">&lt;/td&gt;</span>
         <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span>    
+<span class="nt">&lt;/table&gt;</span>
     </code></pre></figure>
 </div><div class="bs-docs-section">
   <h1 id="modals" class="page-header">Modals <small>modal.js</small></h1>
@@ -2921,11 +2922,11 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
 
 
         </div>
-        
+
         <div class="col-md-3" role="complementary">
           <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
             <ul class="nav bs-docs-sidenav">
-              
+
                 <li>
   <a href="#js-overview">Overview</a>
   <ul class="nav">
@@ -3051,14 +3052,14 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
   </ul>
 </li>
 
-              
+
             </ul>
             <a class="back-to-top" href="#top">
               Back to top
             </a>
           </nav>
         </div>
-        
+
       </div>
     </div>
 

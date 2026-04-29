@@ -90,10 +90,10 @@
 
   </head>
   <body>
-     
+
  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6H78BQ"
  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
- 
+
 
     <div class="skippy fixed-top overflow-hidden pl-5 ml-3">
   <div class="container-fluid">
@@ -116,9 +116,9 @@
   </nav>
   <nav role="navigation" class="container-fluid" aria-label="Main navigation">
     <a class="navbar-brand" href="/" aria-label="Boosted">
-      
+
       <img src="/docs/4.6/assets/brand/orange_logo.svg" alt="Back to homepage" title="Go to homepage" width="50" height="50"/>
-      
+
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -275,7 +275,7 @@
 
         </div>
 
-        
+
           <nav class="d-none d-xl-block col-xl-2 bd-toc" id="toc" aria-label="Table of contents">
             <nav id="TableOfContents">
   <ul>
@@ -326,15 +326,16 @@
   </ul>
 </nav>
           </nav>
-        
+
 
         <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
           <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
             <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/site/content/docs/4.6/getting-started/theming.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+            <a class="btn btn-sm btn-bd-light mb-3 mb-md-0" href="https://web.unified-design-system.orange.com" target="_blank" rel="noopener">Explore OUDS</a>
             <h1 class="bd-title" id="content">Theming Boosted</h1>
           </div>
           <p class="bd-lead">Customize Boosted 4 with our new built-in Sass variables for global style preferences for easy theming and component changes.</p>
-          
+
           <h2 id="introduction">Introduction</h2>
 <p>In Boosted 3, theming was largely driven by variable overrides in LESS, custom CSS, and a separate theme stylesheet that we included in our <code>dist</code> files. With some effort, one could completely redesign the look of Boosted 3 without touching the core files. Boosted 4 provides a familiar, but slightly different approach.</p>
 <p>Now, theming is accomplished by Sass variables, Sass maps, and custom CSS. There&rsquo;s no more dedicated theme stylesheet; instead, you can enable the built-in theme to add gradients, shadows, and more.</p>
@@ -613,77 +614,77 @@
 <h3 id="all-colors">All colors</h3>
 <p>All colors available in Boosted 4, are available as Sass variables and a Sass map in <code>scss/_variables.scss</code> file. This will be expanded upon in subsequent minor releases to add additional shades, much like the <a href="#grays">grayscale palette</a> we already include.</p>
 <div class="row">
-  
+
     <div class="col-md-4">
       <div class="p-3 mb-3 swatch-blue">
         <code class="font-weight-bold d-block">$Blue</code>
         <code>#527edb</code>
       </div>
     </div>
-    
+
     <div class="col-md-4">
       <div class="p-3 mb-3 swatch-purple">
         <code class="font-weight-bold d-block">$Purple</code>
         <code>#882ae0</code>
       </div>
     </div>
-    
+
     <div class="col-md-4">
       <div class="p-3 mb-3 swatch-pink">
         <code class="font-weight-bold d-block">$Pink</code>
         <code>#f14095</code>
       </div>
     </div>
-    
+
     <div class="col-md-4">
       <div class="p-3 mb-3 swatch-red">
         <code class="font-weight-bold d-block">$Red</code>
         <code>#cd3c14</code>
       </div>
     </div>
-    
+
     <div class="col-md-4">
       <div class="p-3 mb-3 swatch-orange">
         <code class="font-weight-bold d-block">$Orange</code>
         <code>#ff7900</code>
       </div>
     </div>
-    
+
     <div class="col-md-4">
       <div class="p-3 mb-3 swatch-yellow">
         <code class="font-weight-bold d-block">$Yellow</code>
         <code>#ffd200</code>
       </div>
     </div>
-    
+
     <div class="col-md-4">
       <div class="p-3 mb-3 swatch-green">
         <code class="font-weight-bold d-block">$Green</code>
         <code>#32c832</code>
       </div>
     </div>
-    
+
     <div class="col-md-4">
       <div class="p-3 mb-3 swatch-teal">
         <code class="font-weight-bold d-block">$Teal</code>
         <code>#1dde8e</code>
       </div>
     </div>
-    
+
     <div class="col-md-4">
       <div class="p-3 mb-3 swatch-cyan">
         <code class="font-weight-bold d-block">$Cyan</code>
         <code>#527edb</code>
       </div>
     </div>
-    
+
     <div class="col-md-4">
       <div class="p-3 mb-3 swatch-orange-2">
         <code class="font-weight-bold d-block">$Orange-2</code>
         <code>#f16e00</code>
       </div>
     </div>
-    
+
 </div>
 <p>Here&rsquo;s how you can use these in your Sass:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// With variable
@@ -699,107 +700,107 @@ In the future, we&rsquo;ll aim to provide Sass maps and variables for shades of 
 <h3 id="theme-colors">Theme colors</h3>
 <p>We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Boosted&rsquo;s <code>scss/_variables.scss</code> file.</p>
 <div class="row">
-  
+
     <div class="col-md-4">
       <div class="p-3 mb-3 bg-primary">
         <code class="font-weight-bold d-block">$Primary</code>
         <code>#f16e00</code>
       </div>
     </div>
-  
+
     <div class="col-md-4">
       <div class="p-3 mb-3 bg-secondary">
         <code class="font-weight-bold d-block">$Secondary</code>
         <code>#000</code>
       </div>
     </div>
-  
+
     <div class="col-md-4">
       <div class="p-3 mb-3 bg-success">
         <code class="font-weight-bold d-block">$Success</code>
         <code>#32c832</code>
       </div>
     </div>
-  
+
     <div class="col-md-4">
       <div class="p-3 mb-3 bg-danger">
         <code class="font-weight-bold d-block">$Danger</code>
         <code>#cd3c14</code>
       </div>
     </div>
-  
+
     <div class="col-md-4">
       <div class="p-3 mb-3 bg-warning">
         <code class="font-weight-bold d-block">$Warning</code>
         <code>#fc0</code>
       </div>
     </div>
-  
+
     <div class="col-md-4">
       <div class="p-3 mb-3 bg-info">
         <code class="font-weight-bold d-block">$Info</code>
         <code>#527edb</code>
       </div>
     </div>
-  
+
     <div class="col-md-4">
       <div class="p-3 mb-3 bg-light">
         <code class="font-weight-bold d-block">$Light</code>
         <code>#ddd</code>
       </div>
     </div>
-  
+
 </div>
 <h3 id="grays">Grays</h3>
 <p>An expansive set of gray variables and a Sass map in <code>scss/_variables.scss</code> for consistent shades of gray across your project. Note that these are &ldquo;cool grays&rdquo;, which tend towards a subtle blue tone, rather than neutral grays.</p>
 <div class="row mb-3">
   <div class="col-md-4">
-    
+
       <div class="p-3 swatch-100">
         <code class="font-weight-bold d-block">$gray-100</code>
         <code>#fafafa</code>
       </div>
-    
+
       <div class="p-3 swatch-200">
         <code class="font-weight-bold d-block">$gray-200</code>
         <code>#f6f6f6</code>
       </div>
-    
+
       <div class="p-3 swatch-300">
         <code class="font-weight-bold d-block">$gray-300</code>
         <code>#eee</code>
       </div>
-    
+
       <div class="p-3 swatch-400">
         <code class="font-weight-bold d-block">$gray-400</code>
         <code>#ddd</code>
       </div>
-    
+
       <div class="p-3 swatch-500">
         <code class="font-weight-bold d-block">$gray-500</code>
         <code>#ccc</code>
       </div>
-    
+
       <div class="p-3 swatch-600">
         <code class="font-weight-bold d-block">$gray-600</code>
         <code>#999</code>
       </div>
-    
+
       <div class="p-3 swatch-700">
         <code class="font-weight-bold d-block">$gray-700</code>
         <code>#666</code>
       </div>
-    
+
       <div class="p-3 swatch-800">
         <code class="font-weight-bold d-block">$gray-800</code>
         <code>#595959</code>
       </div>
-    
+
       <div class="p-3 swatch-900">
         <code class="font-weight-bold d-block">$gray-900</code>
         <code>#333</code>
       </div>
-    
+
   </div>
 </div>
 <p>Within <code>scss/_variables.scss</code>, you&rsquo;ll find Boosted&rsquo;s color variables and Sass map. Here&rsquo;s an example of the <code>$colors</code> Sass map:</p>
@@ -908,7 +909,7 @@ In the future, we&rsquo;ll aim to provide Sass maps and variables for shades of 
       </div>
     </div>
 
-    
+
 <nav role="navigation">
   <a href="#" class="o-scroll-up" title="Back to top">
     <span class="d-none d-sm-inline-block">Back to top</span>
@@ -927,7 +928,7 @@ In the future, we&rsquo;ll aim to provide Sass maps and variables for shades of 
 
 
 
-  
+
 
 
 
