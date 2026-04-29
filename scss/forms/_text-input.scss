@@ -2,6 +2,10 @@
 // Common text item styles
 //
 
+// NB: no Bootstrap compatibility is provided for invalid state (`.is-invalid`) and error messages (`.invalid-feedback`)
+// of text inputs, text areas and password inputs, as markup and SCSS are really too different from Boosted/Bootstrap
+// to allow a simple solution. Moreover, we estimated that the use cases are very rare.
+
 #{$ouds-root-selector} {
   --#{$prefix}text-input-border-radius: #{$ouds-text-input-border-radius-default};
 }
