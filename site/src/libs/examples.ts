@@ -65,7 +65,7 @@ function sanitizeAssetPath(assetPath: string) {
     throw new Error(`Failed to get example asset path from path: '${assetPath}'.`)
   }
 
-  return matches[1].replace('\\', '/')
+  return matches[1].replaceAll('\\', '/')
 }
 
 function isAliasedAstroInstance(page: AstroInstance): page is AliasedAstroInstance {

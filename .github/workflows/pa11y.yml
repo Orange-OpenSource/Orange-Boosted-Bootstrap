@@ -15,6 +15,9 @@ env:
   FORCE_COLOR: 2
   NODE: 22
 
+permissions:
+  contents: read
+
 jobs:
   pa11y:
     runs-on: ubuntu-latest
