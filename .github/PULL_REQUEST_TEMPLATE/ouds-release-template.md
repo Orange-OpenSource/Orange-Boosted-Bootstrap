@@ -33,10 +33,11 @@
   - [ ] run `npm run storybook-build` from `Orange-Boosted-Bootstrap` (be careful that `release-sri` doesn't update `config.yml`s)
   - [ ] remove `storybook` folder from `ouds-web-doc`
   - [ ] copy `Orange-Boosted-Bootstrap/_site` to the `ouds-web-doc#main` branch
-  - [ ] check every `index.html` used as redirections to redirect to the new release
+  - [ ] check every `index.html` used as redirection, redirect to the new release
   - [ ] when bumping minor or major version: ensure `dist` URLs in examples' HTML has changed
   - [ ] double-check everything before pushing, starting by searching for forgotten old version number occurrences
   - [ ] Make the new release banner appears in the previous version of the doc (e.g. in v5.3 when releasing the v5.4.0 doc, search for `navbar navbar-expand supra d-none` and replace by `navbar navbar-expand supra`)
+  - [ ] Make the new release remove the Netlify badge in the newly released version of the documentation (search for `Netlify` and remove the badge in the new release)
 - [ ] Run Algolia crawler manually for the new documentation to be indexed in the search engine (https://dashboard.algolia.com/apps/AKIHKMSEKB/dashboard)
 - [ ] [create a GitHub release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/new):
   - attach the 2 zip files per brand
