@@ -1,8 +1,8 @@
 // Raw primitive values
 // Insertion of brand foundations
-// OUDS Core tokens version 1.9.0
-// Sosh Core tokens version 1.2.0
-// Sosh System tokens version 2.3.0
+// OUDS Core tokens version 1.10.0
+// Sosh Core tokens version 1.4.0
+// Sosh System tokens version 2.5.0
 
 // Border
 
@@ -37,83 +37,7 @@ $core-ouds-border-width-200: $core-ouds-border-base * 2 !default; // 8px
 
 // Color
 
-// scss-docs-start ouds-raw-color$core-orange-color-decorative-amber-100: #fff0cc !default;
-$core-orange-color-decorative-amber-200: #ffe199 !default;
-$core-orange-color-decorative-amber-300: #ffd266 !default;
-$core-orange-color-decorative-amber-400: #ffc333 !default;
-$core-orange-color-decorative-amber-500: #ffb400 !default;
-$core-orange-color-decorative-amber-600: #cc9000 !default;
-$core-orange-color-decorative-amber-700: #996c00 !default;
-$core-orange-color-decorative-amber-800: #664800 !default;
-$core-orange-color-decorative-amber-900: #332400 !default;
-$core-orange-color-decorative-amethyst-100: #f1ecf9 !default;
-$core-orange-color-decorative-amethyst-200: #e0d4f2 !default;
-$core-orange-color-decorative-amethyst-300: #c5ade6 !default;
-$core-orange-color-decorative-amethyst-400: #a885d8 !default;
-$core-orange-color-decorative-amethyst-500: #8d60cd !default;
-$core-orange-color-decorative-amethyst-600: #5b2f98 !default;
-$core-orange-color-decorative-amethyst-700: #432371 !default;
-$core-orange-color-decorative-amethyst-800: #2c174a !default;
-$core-orange-color-decorative-amethyst-900: #150b23 !default;
-$core-orange-color-decorative-deep-peach-100: #fbebdf !default;
-$core-orange-color-decorative-deep-peach-200: #f4cfb2 !default;
-$core-orange-color-decorative-deep-peach-300: #e3b591 !default;
-$core-orange-color-decorative-deep-peach-400: #c19372 !default;
-$core-orange-color-decorative-deep-peach-500: #cf7e3f !default;
-$core-orange-color-decorative-deep-peach-600: #aa6631 !default;
-$core-orange-color-decorative-deep-peach-700: #7e4f2a !default;
-$core-orange-color-decorative-deep-peach-800: #553720 !default;
-$core-orange-color-decorative-deep-peach-900: #2e2014 !default;
-$core-orange-color-decorative-emerald-100: #e5f5ed !default;
-$core-orange-color-decorative-emerald-200: #c0e8d4 !default;
-$core-orange-color-decorative-emerald-300: #9bdaba !default;
-$core-orange-color-decorative-emerald-400: #75cca1 !default;
-$core-orange-color-decorative-emerald-500: #50be87 !default;
-$core-orange-color-decorative-emerald-600: #3ba06e !default;
-$core-orange-color-decorative-emerald-700: #2e7b54 !default;
-$core-orange-color-decorative-emerald-800: #20563b !default;
-$core-orange-color-decorative-emerald-900: #123021 !default;
-$core-orange-color-decorative-shocking-pink-100: #ffe5f6 !default;
-$core-orange-color-decorative-shocking-pink-200: #ffb4e6 !default;
-$core-orange-color-decorative-shocking-pink-300: #ff80d4 !default;
-$core-orange-color-decorative-shocking-pink-400: #ff4dc3 !default;
-$core-orange-color-decorative-shocking-pink-500: #ff1ab2 !default;
-$core-orange-color-decorative-shocking-pink-600: #e50099 !default;
-$core-orange-color-decorative-shocking-pink-700: #b20077 !default;
-$core-orange-color-decorative-shocking-pink-800: #800055 !default;
-$core-orange-color-decorative-shocking-pink-900: #4d0033 !default;
-$core-orange-color-decorative-sky-100: #d2ecf9 !default;
-$core-orange-color-decorative-sky-200: #a5daf3 !default;
-$core-orange-color-decorative-sky-300: #79c7ec !default;
-$core-orange-color-decorative-sky-400: #4ab4e6 !default;
-$core-orange-color-decorative-sky-500: #1fa2e0 !default;
-$core-orange-color-decorative-sky-600: #1982b3 !default;
-$core-orange-color-decorative-sky-700: #136186 !default;
-$core-orange-color-decorative-sky-800: #0c415a !default;
-$core-orange-color-decorative-sky-900: #06202d !default;
-$core-orange-color-opacity-warm-gray-80: rgba(189, 121, 60, .08) !default;
-$core-orange-color-opacity-warm-gray-400: rgba(104, 93, 80, .4) !default;
-$core-orange-color-orange-50: #fff2e6 !default;
-$core-orange-color-orange-100: #ffd5b0 !default;
-$core-orange-color-orange-200: #ffc18a !default;
-$core-orange-color-orange-300: #ffa554 !default;
-$core-orange-color-orange-400: #ff9433 !default;
-$core-orange-color-orange-500: #ff7900 !default;
-$core-orange-color-orange-550: #f15e00 !default;
-$core-orange-color-orange-600: #e86e00 !default;
-$core-orange-color-orange-700: #b55600 !default;
-$core-orange-color-orange-800: #8c4300 !default;
-$core-orange-color-orange-900: #6b3300 !default;
-$core-orange-color-warm-gray-100: #f9f5f0 !default;
-$core-orange-color-warm-gray-200: #e9ddce !default;
-$core-orange-color-warm-gray-300: #d6c4ae !default;
-$core-orange-color-warm-gray-400: #c1ab90 !default;
-$core-orange-color-warm-gray-500: #a99275 !default;
-$core-orange-color-warm-gray-600: #8a7860 !default;
-$core-orange-color-warm-gray-700: #685d50 !default;
-$core-orange-color-warm-gray-800: #48433d !default;
-$core-orange-color-warm-gray-900: #353228 !default;
-$core-orange-color-warm-gray-1000: #23211a !default;
+// scss-docs-start ouds-raw-color
 $core-ouds-color-functional-amethyst-400: #a885d8 !default;
 $core-ouds-color-functional-amethyst-600: #5b2f98 !default;
 $core-ouds-color-functional-black: #000 !default;
@@ -207,8 +131,7 @@ $core-ouds-color-opacity-black-920: rgba(0, 0, 0, .92) !default;
 $core-ouds-color-opacity-black-960: rgba(0, 0, 0, .96) !default;
 $core-ouds-color-opacity-dodger-blue-80: rgba(38, 178, 255, .08) !default;
 $core-ouds-color-opacity-dodger-blue-520: rgba(0, 89, 138, .52) !default;
-$core-ouds-color-opacity-gray-dark-800-800: rgba(31, 31, 31, .8) !default;
-$core-ouds-color-opacity-gray-light-80-800: rgba(244, 244, 244, .8) !default;
+$core-ouds-color-opacity-gray-dark-880-800: rgba(20, 20, 20, .8) !default;
 $core-ouds-color-opacity-malachite-120: rgba(61, 227, 90, .12) !default;
 $core-ouds-color-opacity-malachite-640: rgba(14, 98, 29, .64) !default;
 $core-ouds-color-opacity-scarlet-80: rgba(219, 0, 2, .08) !default;
@@ -240,55 +163,135 @@ $core-ouds-color-opacity-white-840: rgba(255, 255, 255, .84) !default;
 $core-ouds-color-opacity-white-880: rgba(255, 255, 255, .88) !default;
 $core-ouds-color-opacity-white-920: rgba(255, 255, 255, .92) !default;
 $core-ouds-color-opacity-white-960: rgba(255, 255, 255, .96) !default;
-$core-sosh-color-blue-duck-dark-80: #33b1c1 !default;
-$core-sosh-color-blue-duck-dark-160: #2fa3b1 !default;
-$core-sosh-color-blue-duck-dark-240: #2b94a1 !default;
-$core-sosh-color-blue-duck-dark-320: #26828e !default;
-$core-sosh-color-blue-duck-dark-400: #247a85 !default;
-$core-sosh-color-blue-duck-dark-480: #1e6771 !default;
-$core-sosh-color-blue-duck-dark-560: #1a5961 !default;
-$core-sosh-color-blue-duck-dark-640: #154a51 !default;
-$core-sosh-color-blue-duck-dark-720: #113b40 !default;
-$core-sosh-color-blue-duck-dark-800: #0e2f34 !default;
-$core-sosh-color-blue-duck-dark-880: #0b2428 !default;
-$core-sosh-color-blue-duck-dark-960: #061618 !default;
-$core-sosh-color-blue-duck-light-80: #f0f7fa !default;
-$core-sosh-color-blue-duck-light-160: #dff4f6 !default;
-$core-sosh-color-blue-duck-light-240: #cfeef2 !default;
-$core-sosh-color-blue-duck-light-320: #bfe8ee !default;
-$core-sosh-color-blue-duck-light-400: #aee3ea !default;
-$core-sosh-color-blue-duck-light-480: #9edde5 !default;
-$core-sosh-color-blue-duck-light-560: #8ed8e1 !default;
-$core-sosh-color-blue-duck-light-640: #7ed2dd !default;
-$core-sosh-color-blue-duck-light-720: #6eccd8 !default;
-$core-sosh-color-blue-duck-light-800: #5ec7d4 !default;
-$core-sosh-color-blue-duck-light-880: #4ec1d0 !default;
-$core-sosh-color-blue-duck-light-960: #3ebbcc !default;
-$core-sosh-color-citrine-50: #f6f5ee !default;
-$core-sosh-color-citrine-100: #fff6cc !default;
-$core-sosh-color-citrine-200: #ffec99 !default;
-$core-sosh-color-citrine-300: #ffe366 !default;
-$core-sosh-color-citrine-400: #ffd92e !default;
-$core-sosh-color-citrine-500: #fbcd00 !default;
-$core-sosh-color-citrine-600: #c7a200 !default;
-$core-sosh-color-citrine-700: #997d00 !default;
-$core-sosh-color-citrine-800: #665300 !default;
-$core-sosh-color-citrine-900: #332a00 !default;
-$core-sosh-color-citrine-950: #241d00 !default;
-$core-sosh-color-citrine-1000: #191500 !default;
-$core-sosh-color-magenta-50: #fce9ee !default;
-$core-sosh-color-magenta-100: #f8d3dc !default;
-$core-sosh-color-magenta-200: #f2a6b9 !default;
-$core-sosh-color-magenta-300: #eb7a96 !default;
-$core-sosh-color-magenta-400: #e55277 !default;
-$core-sosh-color-magenta-500: #d5204e !default; // Test for support Figma
-$core-sosh-color-magenta-600: #b61b42 !default;
-$core-sosh-color-magenta-700: #851430 !default;
-$core-sosh-color-magenta-800: #590d20 !default;
-$core-sosh-color-magenta-900: #2c0710 !default;
-$core-sosh-color-magenta-950: #160308 !default;
-$core-sosh-color-opacity-magenta-120: rgba(229, 82, 119, .12) !default; // Test for support Figma
-$core-sosh-color-opacity-magenta-640: rgba(133, 20, 48, .64) !default; // Test for support Figma
+$core-sosh-color-functional-gray-dark-80: #5e8097 !default;
+$core-sosh-color-functional-gray-dark-160: #56758a !default;
+$core-sosh-color-functional-gray-dark-240: #4e6b7e !default;
+$core-sosh-color-functional-gray-dark-320: #476071 !default;
+$core-sosh-color-functional-gray-dark-400: #3f5564 !default;
+$core-sosh-color-functional-gray-dark-480: #374b58 !default;
+$core-sosh-color-functional-gray-dark-560: #2f404b !default;
+$core-sosh-color-functional-gray-dark-640: #27353f !default;
+$core-sosh-color-functional-gray-dark-720: #1f2b32 !default;
+$core-sosh-color-functional-gray-dark-800: #182026 !default;
+$core-sosh-color-functional-gray-dark-880: #101519 !default;
+$core-sosh-color-functional-gray-dark-960: #080b0d !default;
+$core-sosh-color-functional-gray-light-80: #f7f9fa !default;
+$core-sosh-color-functional-gray-light-160: #e9eef1 !default;
+$core-sosh-color-functional-gray-light-240: #d9e2e7 !default;
+$core-sosh-color-functional-gray-light-320: #cdd8e0 !default;
+$core-sosh-color-functional-gray-light-400: #c0ced8 !default;
+$core-sosh-color-functional-gray-light-480: #b4c5d0 !default;
+$core-sosh-color-functional-gray-light-560: #a7bbc8 !default;
+$core-sosh-color-functional-gray-light-640: #9bb1c0 !default;
+$core-sosh-color-functional-gray-light-720: #8ea7b8 !default;
+$core-sosh-color-functional-gray-light-800: #819eb1 !default;
+$core-sosh-color-functional-gray-light-880: #7594a9 !default;
+$core-sosh-color-functional-gray-light-960: #688aa1 !default;
+$core-sosh-color-lochmara-dark-80: #0191f4 !default;
+$core-sosh-color-lochmara-dark-160: #0182da !default;
+$core-sosh-color-lochmara-dark-240: #0173c1 !default;
+$core-sosh-color-lochmara-dark-320: #016ab2 !default;
+$core-sosh-color-lochmara-dark-400: #0161a2 !default;
+$core-sosh-color-lochmara-dark-480: #01558e !default;
+$core-sosh-color-lochmara-dark-560: #01487a !default;
+$core-sosh-color-lochmara-dark-640: #003c66 !default;
+$core-sosh-color-lochmara-dark-720: #003051 !default;
+$core-sosh-color-lochmara-dark-800: #002742 !default;
+$core-sosh-color-lochmara-dark-880: #002138 !default;
+$core-sosh-color-lochmara-dark-960: #001524 !default;
+$core-sosh-color-lochmara-light-80: #edf6fd !default;
+$core-sosh-color-lochmara-light-160: #d6eeff !default;
+$core-sosh-color-lochmara-light-240: #c2e6ff !default;
+$core-sosh-color-lochmara-light-320: #aedeff !default;
+$core-sosh-color-lochmara-light-400: #99d5ff !default;
+$core-sosh-color-lochmara-light-480: #85cdfe !default;
+$core-sosh-color-lochmara-light-560: #71c5fe !default;
+$core-sosh-color-lochmara-light-640: #5dbcfe !default;
+$core-sosh-color-lochmara-light-720: #48b4fe !default;
+$core-sosh-color-lochmara-light-800: #34acfe !default;
+$core-sosh-color-lochmara-light-880: #20a3fe !default;
+$core-sosh-color-lochmara-light-960: #0b9bfe !default;
+$core-sosh-color-opacity-black-0: rgba(0, 15, 25, 0) !default;
+$core-sosh-color-opacity-black-40: rgba(0, 15, 25, .04) !default;
+$core-sosh-color-opacity-black-80: rgba(0, 15, 25, .08) !default;
+$core-sosh-color-opacity-black-120: rgba(0, 15, 25, .12) !default;
+$core-sosh-color-opacity-black-160: rgba(0, 15, 25, .16) !default;
+$core-sosh-color-opacity-black-200: rgba(0, 15, 25, .2) !default;
+$core-sosh-color-opacity-black-240: rgba(0, 15, 25, .24) !default;
+$core-sosh-color-opacity-black-280: rgba(0, 15, 25, .28) !default;
+$core-sosh-color-opacity-black-320: rgba(0, 15, 25, .32) !default;
+$core-sosh-color-opacity-black-360: rgba(0, 15, 25, .36) !default;
+$core-sosh-color-opacity-black-400: rgba(0, 15, 25, .4) !default;
+$core-sosh-color-opacity-black-440: rgba(0, 15, 25, .44) !default;
+$core-sosh-color-opacity-black-480: rgba(0, 15, 25, .48) !default;
+$core-sosh-color-opacity-black-520: rgba(0, 15, 25, .52) !default;
+$core-sosh-color-opacity-black-560: rgba(0, 15, 25, .56) !default;
+$core-sosh-color-opacity-black-600: rgba(0, 15, 25, .6) !default;
+$core-sosh-color-opacity-black-640: rgba(0, 15, 25, .64) !default;
+$core-sosh-color-opacity-black-680: rgba(0, 15, 25, .68) !default;
+$core-sosh-color-opacity-black-720: rgba(0, 15, 25, .72) !default;
+$core-sosh-color-opacity-black-760: rgba(0, 15, 25, .76) !default;
+$core-sosh-color-opacity-black-800: rgba(0, 15, 25, .8) !default;
+$core-sosh-color-opacity-black-840: rgba(0, 15, 25, .84) !default;
+$core-sosh-color-opacity-black-880: rgba(0, 15, 25, .88) !default;
+$core-sosh-color-opacity-black-920: rgba(0, 15, 25, .92) !default;
+$core-sosh-color-opacity-black-960: rgba(0, 15, 25, .96) !default;
+$core-sosh-color-opacity-lochmara-dark-880-520: rgba(1, 85, 142, .52) !default;
+$core-sosh-color-opacity-lochmara-dark-960-800: rgba(0, 21, 36, .8) !default;
+$core-sosh-color-opacity-lochmara-light-800-80: rgba(52, 172, 254, .08) !default;
+$core-sosh-color-opacity-raspberry-100: rgba(252, 105, 153, .1) !default; // Test for support Figma
+$core-sosh-color-opacity-raspberry-640: rgba(150, 3, 51, .64) !default; // Test for support Figma
+$core-sosh-color-opacity-turbo-160: rgba(255, 229, 0, .16) !default; // Test for support Figma
+$core-sosh-color-opacity-turbo-480: rgba(102, 92, 0, .48) !default; // Test for support Figma
+$core-sosh-color-opacity-white-0: rgba(237, 246, 252, 0) !default;
+$core-sosh-color-opacity-white-40: rgba(237, 246, 252, .04) !default;
+$core-sosh-color-opacity-white-80: rgba(237, 246, 252, .08) !default;
+$core-sosh-color-opacity-white-120: rgba(237, 246, 252, .12) !default;
+$core-sosh-color-opacity-white-160: rgba(237, 246, 252, .16) !default;
+$core-sosh-color-opacity-white-200: rgba(237, 246, 252, .2) !default;
+$core-sosh-color-opacity-white-240: rgba(237, 246, 252, .24) !default;
+$core-sosh-color-opacity-white-280: rgba(237, 246, 252, .28) !default;
+$core-sosh-color-opacity-white-320: rgba(237, 246, 252, .32) !default;
+$core-sosh-color-opacity-white-360: rgba(237, 246, 252, .36) !default;
+$core-sosh-color-opacity-white-400: rgba(237, 246, 252, .4) !default;
+$core-sosh-color-opacity-white-440: rgba(237, 246, 252, .44) !default;
+$core-sosh-color-opacity-white-480: rgba(237, 246, 252, .48) !default;
+$core-sosh-color-opacity-white-520: rgba(237, 246, 252, .52) !default;
+$core-sosh-color-opacity-white-560: rgba(237, 246, 252, .56) !default;
+$core-sosh-color-opacity-white-600: rgba(237, 246, 252, .6) !default;
+$core-sosh-color-opacity-white-640: rgba(237, 246, 252, .64) !default;
+$core-sosh-color-opacity-white-680: rgba(237, 246, 252, .68) !default;
+$core-sosh-color-opacity-white-720: rgba(237, 246, 252, .72) !default;
+$core-sosh-color-opacity-white-760: rgba(237, 246, 252, .76) !default;
+$core-sosh-color-opacity-white-800: rgba(237, 246, 252, .8) !default;
+$core-sosh-color-opacity-white-840: rgba(237, 246, 252, .84) !default;
+$core-sosh-color-opacity-white-880: rgba(237, 246, 252, .88) !default;
+$core-sosh-color-opacity-white-920: rgba(237, 246, 252, .92) !default;
+$core-sosh-color-opacity-white-960: rgba(237, 246, 252, .96) !default;
+$core-sosh-color-raspberry-50: #ffe6ee !default;
+$core-sosh-color-raspberry-100: #fecddd !default;
+$core-sosh-color-raspberry-200: #fd9bbb !default;
+$core-sosh-color-raspberry-300: #fc6999 !default;
+$core-sosh-color-raspberry-400: #fb226a !default;
+$core-sosh-color-raspberry-500: #de034b !default;
+$core-sosh-color-raspberry-600: #bf0341 !default;
+$core-sosh-color-raspberry-700: #960333 !default;
+$core-sosh-color-raspberry-800: #640222 !default;
+$core-sosh-color-raspberry-900: #320111 !default;
+$core-sosh-color-raspberry-950: #190009 !default;
+$core-sosh-color-turbo-50: #fcfae8 !default;
+$core-sosh-color-turbo-100: #fffacc !default;
+$core-sosh-color-turbo-200: #fff599 !default;
+$core-sosh-color-turbo-300: #ffef66 !default;
+$core-sosh-color-turbo-400: #ffea33 !default;
+$core-sosh-color-turbo-500: #ffe500 !default;
+$core-sosh-color-turbo-600: #ccb700 !default;
+$core-sosh-color-turbo-700: #998900 !default;
+$core-sosh-color-turbo-750: #7a6e00 !default;
+$core-sosh-color-turbo-800: #665c00 !default;
+$core-sosh-color-turbo-900: #332e00 !default;
+$core-sosh-color-turbo-950: #221f02 !default;
+$core-sosh-color-turbo-1000: #1a1700 !default;
 // scss-docs-end ouds-raw-color
 
 // Dimension
@@ -343,8 +346,8 @@ $core-ouds-dimension-out-of-system-250: $core-ouds-dimension-base * 2.5 !default
 // Effect
 
 // scss-docs-start ouds-raw-effect
-$core-ouds-effect-blur-160: 16px !default;
 $core-ouds-effect-blur-320: 32px !default;
+$core-ouds-effect-blur-480: 48px !default;
 // scss-docs-end ouds-raw-effect
 
 // Elevation
@@ -467,7 +470,7 @@ $core-ouds-grid-max-width-600: 1639px !default;
 $core-ouds-grid-max-width-650: 1680px !default;
 $core-ouds-grid-max-width-700: 1879px !default;
 $core-ouds-grid-max-width-800: 1920px !default;
-$core-ouds-grid-min-width-100: 1px !default;
+$core-ouds-grid-min-width-100: 320px !default;
 $core-ouds-grid-min-width-200: 390px !default;
 $core-ouds-grid-min-width-300: 480px !default;
 $core-ouds-grid-min-width-400: 736px !default;
@@ -532,8 +535,8 @@ $core-ouds-opacity-960: .96 !default;
 $core-ouds-opacity-1000: 1 !default;
 // scss-docs-end ouds-raw-opacity
 
-// Version: "1.2.0" !default;
+// Version: "1.4.0" !default;
 
-// scss-docs-start ouds-raw-version: "1.2.0" !default;
-$core-sosh-version: "1.2.0" !default;
-// scss-docs-end ouds-raw-version: "1.2.0" !default;
+// scss-docs-start ouds-raw-version: "1.4.0" !default;
+$core-sosh-version: "1.4.0" !default;
+// scss-docs-end ouds-raw-version: "1.4.0" !default;
