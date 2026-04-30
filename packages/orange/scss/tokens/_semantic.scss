@@ -1,8 +1,8 @@
 // Semantic applications
 // Depends on raw primitive values
-// OUDS Core tokens version 1.9.0
+// OUDS Core tokens version 1.10.0
 // Orange Core tokens version 1.2.0
-// Orange System tokens version 2.3.0
+// Orange System tokens version 2.5.0
 
 // Border
 
@@ -138,13 +138,13 @@ $ouds-color-bg-primary-dark: $core-ouds-color-functional-gray-dark-880 !default;
 $ouds-color-bg-primary-light: $core-ouds-color-functional-white !default;
 $ouds-color-bg-secondary-dark: $core-ouds-color-functional-gray-dark-800 !default;
 $ouds-color-bg-secondary-light: $core-ouds-color-functional-gray-light-80 !default;
-$ouds-color-bg-tertiary-dark: $core-orange-color-warm-gray-900 !default;
+$ouds-color-bg-tertiary-dark: $core-orange-color-warm-gray-1000 !default;
 $ouds-color-bg-tertiary-light: $core-orange-color-warm-gray-100 !default;
 $ouds-color-border-brand-primary-dark: $core-orange-color-orange-500 !default;
 $ouds-color-border-brand-primary-light: $core-orange-color-orange-550 !default;
 $ouds-color-border-default-dark: $core-ouds-color-opacity-white-200 !default;
 $ouds-color-border-default-light: $core-ouds-color-opacity-black-200 !default;
-$ouds-color-border-emphasized-dark: $core-ouds-color-opacity-white-920 !default;
+$ouds-color-border-emphasized-dark: $core-ouds-color-functional-gray-light-160 !default;
 $ouds-color-border-emphasized-light: $core-ouds-color-functional-black !default;
 $ouds-color-border-focus-dark: $core-ouds-color-functional-gray-light-160 !default;
 $ouds-color-border-focus-inset-dark: $core-ouds-color-functional-gray-dark-880 !default;
@@ -218,6 +218,14 @@ $ouds-color-content-status-accent-dark: $core-orange-color-orange-500 !default;
 $ouds-color-content-status-accent-light: $core-orange-color-orange-500 !default;
 $ouds-color-content-status-info-dark: $core-ouds-color-functional-dodger-blue-300 !default;
 $ouds-color-content-status-info-light: $core-ouds-color-functional-dodger-blue-700 !default;
+$ouds-color-content-status-inverse-info-dark: $core-ouds-color-functional-dodger-blue-700 !default;
+$ouds-color-content-status-inverse-info-light: $core-ouds-color-functional-dodger-blue-300 !default;
+$ouds-color-content-status-inverse-negative-dark: $core-ouds-color-functional-scarlet-600 !default;
+$ouds-color-content-status-inverse-negative-light: $core-ouds-color-functional-scarlet-300 !default;
+$ouds-color-content-status-inverse-positive-dark: $core-ouds-color-functional-malachite-750 !default;
+$ouds-color-content-status-inverse-positive-light: $core-ouds-color-functional-malachite-300 !default;
+$ouds-color-content-status-inverse-warning-dark: $core-ouds-color-functional-sun-750 !default;
+$ouds-color-content-status-inverse-warning-light: $core-ouds-color-functional-sun-300 !default;
 $ouds-color-content-status-negative-dark: $core-ouds-color-functional-scarlet-300 !default;
 $ouds-color-content-status-negative-light: $core-ouds-color-functional-scarlet-600 !default;
 $ouds-color-content-status-positive-dark: $core-ouds-color-functional-malachite-300 !default;
@@ -230,12 +238,14 @@ $ouds-color-opacity-lowest-dark: $core-ouds-color-opacity-white-40 !default;
 $ouds-color-opacity-lowest-light: $core-ouds-color-opacity-black-40 !default;
 $ouds-color-opacity-transparent-dark: $core-ouds-color-opacity-white-0 !default;
 $ouds-color-opacity-transparent-light: $core-ouds-color-opacity-black-0 !default;
+$ouds-color-overlay-backdrop-dark: $core-ouds-color-opacity-black-680 !default;
+$ouds-color-overlay-backdrop-light: $core-ouds-color-opacity-black-680 !default;
 $ouds-color-overlay-drag-dark: $core-ouds-color-opacity-white-80 !default;
 $ouds-color-overlay-drag-light: $core-ouds-color-opacity-black-40 !default;
 $ouds-color-overlay-dropdown-dark: $core-ouds-color-functional-gray-dark-560 !default;
 $ouds-color-overlay-dropdown-light: $core-ouds-color-functional-white !default;
-$ouds-color-overlay-modal-dark: $core-ouds-color-functional-gray-dark-640 !default;
-$ouds-color-overlay-modal-light: $core-ouds-color-functional-white !default;
+$ouds-color-overlay-modal-sheet-dark: $core-ouds-color-functional-gray-dark-720 !default;
+$ouds-color-overlay-modal-sheet-light: $core-ouds-color-functional-white !default;
 $ouds-color-overlay-tooltip-dark: $core-ouds-color-functional-gray-dark-560 !default;
 $ouds-color-overlay-tooltip-light: $core-ouds-color-functional-gray-dark-720 !default;
 $ouds-color-surface-brand-primary-dark: $core-orange-color-orange-500 !default;
@@ -307,22 +317,22 @@ $ouds-dimension-xsmall: $core-ouds-dimension-400 !default;
 // Effect
 
 // scss-docs-start ouds-semantic-effect
-$ouds-effect-blur-drag: $core-ouds-effect-blur-320 !default;
+$ouds-effect-blur-drag: $core-ouds-effect-blur-480 !default;
 // scss-docs-end ouds-semantic-effect
 
 // Elevation
 
 // scss-docs-start ouds-semantic-elevation
-$ouds-elevation-blur-default: $core-ouds-elevation-blur-300 !default;
 $ouds-elevation-blur-drag: $core-ouds-elevation-blur-400 !default;
+$ouds-elevation-blur-elevated: $core-ouds-elevation-blur-300 !default;
 $ouds-elevation-blur-emphasized: $core-ouds-elevation-blur-500 !default;
 $ouds-elevation-blur-none: $core-ouds-elevation-blur-0 !default;
 $ouds-elevation-blur-raised: $core-ouds-elevation-blur-200 !default;
 $ouds-elevation-blur-sticky: $core-ouds-elevation-blur-400 !default;
-$ouds-elevation-color-default-dark: $core-ouds-color-opacity-black-320 !default;
-$ouds-elevation-color-default-light: $core-ouds-color-opacity-black-240 !default;
 $ouds-elevation-color-drag-dark: $core-ouds-color-opacity-black-320 !default;
 $ouds-elevation-color-drag-light: $core-ouds-color-opacity-black-240 !default;
+$ouds-elevation-color-elevated-dark: $core-ouds-color-opacity-black-320 !default;
+$ouds-elevation-color-elevated-light: $core-ouds-color-opacity-black-240 !default;
 $ouds-elevation-color-emphasized-dark: $core-ouds-color-opacity-black-240 !default;
 $ouds-elevation-color-emphasized-light: $core-ouds-color-opacity-black-160 !default;
 $ouds-elevation-color-none: $core-ouds-color-opacity-black-0 !default;
@@ -330,20 +340,20 @@ $ouds-elevation-color-raised-dark: $core-ouds-color-opacity-black-320 !default;
 $ouds-elevation-color-raised-light: $core-ouds-color-opacity-black-240 !default;
 $ouds-elevation-color-sticky-dark: $core-ouds-color-opacity-black-240 !default;
 $ouds-elevation-color-sticky-light: $core-ouds-color-opacity-black-160 !default;
-$ouds-elevation-spread-default: $core-ouds-elevation-spread-n100 !default;
 $ouds-elevation-spread-drag: $core-ouds-elevation-spread-n100 !default;
+$ouds-elevation-spread-elevated: $core-ouds-elevation-spread-n100 !default;
 $ouds-elevation-spread-emphasized: $core-ouds-elevation-spread-n200 !default;
 $ouds-elevation-spread-none: $core-ouds-elevation-spread-0 !default;
 $ouds-elevation-spread-raised: $core-ouds-elevation-spread-0 !default;
 $ouds-elevation-spread-sticky: $core-ouds-elevation-spread-n100 !default;
-$ouds-elevation-x-default: $core-ouds-elevation-x-0 !default;
 $ouds-elevation-x-drag: $core-ouds-elevation-x-0 !default;
+$ouds-elevation-x-elevated: $core-ouds-elevation-x-0 !default;
 $ouds-elevation-x-emphasized: $core-ouds-elevation-x-0 !default;
 $ouds-elevation-x-none: $core-ouds-elevation-x-0 !default;
 $ouds-elevation-x-raised: $core-ouds-elevation-x-0 !default;
 $ouds-elevation-x-sticky: $core-ouds-elevation-x-0 !default;
-$ouds-elevation-y-default: $core-ouds-elevation-y-200 !default;
 $ouds-elevation-y-drag: $core-ouds-elevation-y-300 !default;
+$ouds-elevation-y-elevated: $core-ouds-elevation-y-200 !default;
 $ouds-elevation-y-emphasized: $core-ouds-elevation-y-400 !default;
 $ouds-elevation-y-none: $core-ouds-elevation-y-0 !default;
 $ouds-elevation-y-raised: $core-ouds-elevation-y-100 !default;
@@ -497,6 +507,7 @@ $ouds-grid-2xs-width: $core-ouds-grid-width-100 !default;
 $ouds-grid-3xl-column-count: $core-ouds-grid-column-count-1200 !default;
 $ouds-grid-3xl-column-gap: $core-ouds-grid-column-gap-800 !default;
 $ouds-grid-3xl-margin: $core-ouds-grid-margin-2500 !default;
+$ouds-grid-3xl-max-width: $core-ouds-grid-max-width-800 !default;
 $ouds-grid-3xl-min-width: $core-ouds-grid-min-width-800 !default;
 $ouds-grid-3xl-width: $core-ouds-grid-width-800 !default;
 $ouds-grid-lg-column-count: $core-ouds-grid-column-count-600 !default;
@@ -610,48 +621,48 @@ $ouds-size-icon-with-heading-xlarge-size-medium-tablet: $core-ouds-dimension-600
 $ouds-size-icon-with-heading-xlarge-size-small-desktop: $core-ouds-dimension-650 !default;
 $ouds-size-icon-with-heading-xlarge-size-small-mobile: $core-ouds-dimension-450 !default;
 $ouds-size-icon-with-heading-xlarge-size-small-tablet: $core-ouds-dimension-550 !default;
-$ouds-size-max-width-type-body-large-desktop: $core-ouds-dimension-7000 !default;
-$ouds-size-max-width-type-body-large-mobile: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-body-large-tablet: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-body-medium-desktop: $core-ouds-dimension-7000 !default;
-$ouds-size-max-width-type-body-medium-mobile: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-body-medium-tablet: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-body-small-desktop: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-body-small-mobile: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-body-small-tablet: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-display-large-desktop: $core-ouds-dimension-11000 !default;
-$ouds-size-max-width-type-display-large-mobile: $core-ouds-dimension-9000 !default;
-$ouds-size-max-width-type-display-large-tablet: $core-ouds-dimension-9000 !default;
-$ouds-size-max-width-type-display-medium-desktop: $core-ouds-dimension-11000 !default;
-$ouds-size-max-width-type-display-medium-mobile: $core-ouds-dimension-9000 !default;
-$ouds-size-max-width-type-display-medium-tablet: $core-ouds-dimension-9000 !default;
-$ouds-size-max-width-type-display-small-desktop: $core-ouds-dimension-11000 !default;
-$ouds-size-max-width-type-display-small-mobile: $core-ouds-dimension-9000 !default;
-$ouds-size-max-width-type-display-small-tablet: $core-ouds-dimension-9000 !default;
-$ouds-size-max-width-type-heading-large-desktop: $core-ouds-dimension-11000 !default;
-$ouds-size-max-width-type-heading-large-mobile: $core-ouds-dimension-7000 !default;
-$ouds-size-max-width-type-heading-large-tablet: $core-ouds-dimension-9000 !default;
-$ouds-size-max-width-type-heading-medium-desktop: $core-ouds-dimension-9000 !default;
-$ouds-size-max-width-type-heading-medium-mobile: $core-ouds-dimension-7000 !default;
-$ouds-size-max-width-type-heading-medium-tablet: $core-ouds-dimension-7000 !default;
-$ouds-size-max-width-type-heading-small-desktop: $core-ouds-dimension-9000 !default;
-$ouds-size-max-width-type-heading-small-mobile: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-heading-small-tablet: $core-ouds-dimension-7000 !default;
-$ouds-size-max-width-type-heading-xlarge-desktop: $core-ouds-dimension-11000 !default;
-$ouds-size-max-width-type-heading-xlarge-mobile: $core-ouds-dimension-7000 !default;
-$ouds-size-max-width-type-heading-xlarge-tablet: $core-ouds-dimension-9000 !default;
-$ouds-size-max-width-type-label-large-desktop: $core-ouds-dimension-7000 !default;
-$ouds-size-max-width-type-label-large-mobile: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-label-large-tablet: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-label-medium-desktop: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-label-medium-mobile: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-label-medium-tablet: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-label-small-desktop: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-label-small-mobile: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-label-small-tablet: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-label-xlarge-desktop: $core-ouds-dimension-7000 !default;
-$ouds-size-max-width-type-label-xlarge-mobile: $core-ouds-dimension-6000 !default;
-$ouds-size-max-width-type-label-xlarge-tablet: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-body-large-desktop: $core-ouds-dimension-7000 !default;
+$ouds-size-max-width-body-large-mobile: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-body-large-tablet: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-body-medium-desktop: $core-ouds-dimension-7000 !default;
+$ouds-size-max-width-body-medium-mobile: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-body-medium-tablet: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-body-small-desktop: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-body-small-mobile: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-body-small-tablet: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-display-large-desktop: $core-ouds-dimension-11000 !default;
+$ouds-size-max-width-display-large-mobile: $core-ouds-dimension-9000 !default;
+$ouds-size-max-width-display-large-tablet: $core-ouds-dimension-9000 !default;
+$ouds-size-max-width-display-medium-desktop: $core-ouds-dimension-11000 !default;
+$ouds-size-max-width-display-medium-mobile: $core-ouds-dimension-9000 !default;
+$ouds-size-max-width-display-medium-tablet: $core-ouds-dimension-9000 !default;
+$ouds-size-max-width-display-small-desktop: $core-ouds-dimension-11000 !default;
+$ouds-size-max-width-display-small-mobile: $core-ouds-dimension-9000 !default;
+$ouds-size-max-width-display-small-tablet: $core-ouds-dimension-9000 !default;
+$ouds-size-max-width-heading-large-desktop: $core-ouds-dimension-11000 !default;
+$ouds-size-max-width-heading-large-mobile: $core-ouds-dimension-7000 !default;
+$ouds-size-max-width-heading-large-tablet: $core-ouds-dimension-9000 !default;
+$ouds-size-max-width-heading-medium-desktop: $core-ouds-dimension-9000 !default;
+$ouds-size-max-width-heading-medium-mobile: $core-ouds-dimension-7000 !default;
+$ouds-size-max-width-heading-medium-tablet: $core-ouds-dimension-7000 !default;
+$ouds-size-max-width-heading-small-desktop: $core-ouds-dimension-9000 !default;
+$ouds-size-max-width-heading-small-mobile: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-heading-small-tablet: $core-ouds-dimension-7000 !default;
+$ouds-size-max-width-heading-xlarge-desktop: $core-ouds-dimension-11000 !default;
+$ouds-size-max-width-heading-xlarge-mobile: $core-ouds-dimension-7000 !default;
+$ouds-size-max-width-heading-xlarge-tablet: $core-ouds-dimension-9000 !default;
+$ouds-size-max-width-label-large-desktop: $core-ouds-dimension-7000 !default;
+$ouds-size-max-width-label-large-mobile: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-label-large-tablet: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-label-medium-desktop: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-label-medium-mobile: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-label-medium-tablet: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-label-small-desktop: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-label-small-mobile: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-label-small-tablet: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-label-xlarge-desktop: $core-ouds-dimension-7000 !default;
+$ouds-size-max-width-label-xlarge-mobile: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-label-xlarge-tablet: $core-ouds-dimension-6000 !default;
 $ouds-size-min-interactive-area: $core-ouds-dimension-600 !default;
 $ouds-size-icon-decorative-2xlarge: $ouds-dimension-6xlarge !default;
 $ouds-size-icon-decorative-2xsmall: $ouds-dimension-5xsmall !default;
@@ -665,7 +676,7 @@ $ouds-size-icon-decorative-xsmall: $ouds-dimension-3xsmall !default;
 $ouds-size-icon-with-label-large-size-large: $ouds-dimension-xsmall !default;
 $ouds-size-icon-with-label-large-size-medium: $ouds-dimension-2xsmall !default;
 $ouds-size-icon-with-label-large-size-small: $ouds-dimension-3xsmall !default;
-$ouds-size-icon-with-label-large-size-xlarge: $ouds-dimension-large !default;
+$ouds-size-icon-with-label-large-size-xlarge: $ouds-dimension-small !default;
 $ouds-size-icon-with-label-large-size-xsmall: $ouds-dimension-4xsmall !default;
 $ouds-size-icon-with-label-medium-size-large: $ouds-dimension-3xsmall !default;
 $ouds-size-icon-with-label-medium-size-medium: $ouds-dimension-4xsmall !default;
@@ -675,9 +686,10 @@ $ouds-size-icon-with-label-small-size-large: $ouds-dimension-4xsmall !default;
 $ouds-size-icon-with-label-small-size-medium: $ouds-dimension-5xsmall !default;
 $ouds-size-icon-with-label-small-size-small: $ouds-dimension-6xsmall !default;
 $ouds-size-icon-with-label-small-size-xsmall: $ouds-dimension-7xsmall !default;
-$ouds-size-icon-with-label-xlarge-size-large: $ouds-dimension-large !default;
-$ouds-size-icon-with-label-xlarge-size-medium: $ouds-dimension-medium !default;
+$ouds-size-icon-with-label-xlarge-size-large: $ouds-dimension-medium !default;
+$ouds-size-icon-with-label-xlarge-size-medium: $ouds-dimension-small !default;
 $ouds-size-icon-with-label-xlarge-size-small: $ouds-dimension-xsmall !default;
+$ouds-size-icon-with-label-xlarge-size-xsmall: $ouds-dimension-2xsmall !default;
 // scss-docs-end ouds-semantic-size
 
 // Space
