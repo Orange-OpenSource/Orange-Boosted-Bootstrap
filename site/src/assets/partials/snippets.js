@@ -254,6 +254,38 @@ export default () => {
   }
 
   // -------------------------------
+  // Show password live example
+  // -------------------------------
+  // Used by 'password input' live example in docs or StackBlitz
+  // storybook-start password-input
+  // js-docs-start live-show-password
+  // Toggle password visibility
+  const togglePasswordButton = document.querySelector('#liveShowPasswordExample #togglePassword')
+  if (togglePasswordButton) {
+    const passwordInput = document.querySelector('#liveShowPasswordExample #liveInputPassword')
+    const iconUse = togglePasswordButton.querySelector('use')
+
+    togglePasswordButton.addEventListener('click', event => {
+      event.preventDefault()
+
+      // Toggle the type attribute to make the password visible or hidden
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password'
+      passwordInput.setAttribute('type', type)
+
+      // Toggle the aria-pressed attribute and the icon to reflect the change in state
+      if (type === 'text') {
+        passwordInput.setAttribute('aria-pressed', 'false')
+        iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('accessibility-vision', 'hide'))
+      } else {
+        passwordInput.setAttribute('aria-pressed', 'true')
+        iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('hide', 'accessibility-vision'))
+      }
+    })
+  }
+  // js-docs-end live-show-password
+  // storybook-end password-input
+
+  // -------------------------------
   // Table
   // -------------------------------
   // Indeterminate checkbox in table example in docs and StackBlitz
