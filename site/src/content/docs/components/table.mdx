@@ -149,7 +149,7 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
 
 <Example showMarkup={false} code={`<div class="table-responsive">
     <table class="table">
-      <caption class="visually-hidden">Boosted responsive table</caption>
+      <caption class="visually-hidden">OUDS Web responsive table</caption>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -222,12 +222,12 @@ Use `.table-responsive{-xs|-sm|-md|-lg|-xl|-2xl|3xl}` as needed to create respon
   <br/>
   Resize window to see differences:
   {getData('breakpoints').map((breakpoint) => {
-    return (
+    if (breakpoint.abbr) return (
       <div class="bd-example">
 
         <div class={`table-responsive${breakpoint.abbr}`}>
           <table class="table">
-            <caption class="visually-hidden">Boosted responsive table for {breakpoint.abbr} breakpoint and under</caption>
+            <caption>OUDS Web responsive table for {breakpoint.abbr.substring(1)} breakpoint and under</caption>
             <thead>
             <tr>
               <th scope="col">#</th>

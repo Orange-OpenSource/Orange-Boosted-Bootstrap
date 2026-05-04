@@ -788,8 +788,8 @@ $mark-bg:                     $ouds-color-action-highlighted-light !default; // 
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:                  $core-ouds-dimension-200 !default; // OUDS mod
-$table-cell-padding-x:                  $core-ouds-dimension-200 !default; // OUDS mod
+$table-cell-padding-y:                  $ouds-dimension-5xsmall !default; // OUDS mod
+$table-cell-padding-x:                  $ouds-dimension-5xsmall !default; // OUDS mod
 
 $table-cell-icon-margin-top:            -.7rem !default; // OUDS mod
 $table-cell-icon-margin-bottom:         -.5rem !default; // OUDS mod
@@ -804,7 +804,7 @@ $table-th-font-weight:                  null !default;
 
 $table-striped-color:                   $table-color !default;
 $table-striped-bg-factor:               .035 !default; // OUDS mod: equivalent to `$gray-200`
-$table-striped-bg:                      var(--#{$prefix}color-bg-secondary) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), $table-striped-bg-factor)`
+$table-striped-bg:                      var(--#{$prefix}color-surface-secondary) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), $table-striped-bg-factor)`
 $table-variant-striped-bg-factor:       .08 !default; // OUDS mod
 
 $table-active-color:                    var(--#{$prefix}color-content-default) !default;

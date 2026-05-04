@@ -478,7 +478,7 @@ table {
 caption {
   padding-top: $table-caption-padding-y;
   padding-bottom: $table-caption-padding-y;
-  @include get-font-size("heading-xlarge"); // OUDS mod
+  @include get-font-size("heading-small"); // OUDS mod
   font-weight: $font-weight-bold; // OUDS mod
   color: $table-caption-color;
   text-align: left;
