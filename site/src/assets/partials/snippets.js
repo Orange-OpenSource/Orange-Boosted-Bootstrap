@@ -260,7 +260,7 @@ export default () => {
   // storybook-start password-input
   // js-docs-start live-show-password
   // Toggle password visibility
-  const togglePasswordButton = document.querySelector('#liveShowPasswordExample #togglePassword')
+  const togglePasswordButton = document.querySelector('#liveShowPasswordExample #togglePassword[data-bs-toggle="button"]')
   if (togglePasswordButton) {
     const passwordInput = document.querySelector('#liveShowPasswordExample #liveInputPassword')
     const iconUse = togglePasswordButton.querySelector('use')
@@ -274,10 +274,10 @@ export default () => {
 
       // Toggle the aria-pressed attribute and the icon to reflect the change in state
       if (type === 'text') {
-        togglePasswordButton.setAttribute('aria-pressed', 'false')
+        // togglePasswordButton.setAttribute('aria-pressed', 'false')
         iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('accessibility-vision', 'hide'))
       } else {
-        togglePasswordButton.setAttribute('aria-pressed', 'true')
+        // togglePasswordButton.setAttribute('aria-pressed', 'true')
         iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('hide', 'accessibility-vision'))
       }
     })
