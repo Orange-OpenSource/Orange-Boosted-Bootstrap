@@ -19,16 +19,20 @@ interface Props {
    * @default true
    */
   downloadable?: boolean
+
   /**
    * Defines label to complete 'Copy SVG to clipboard' button aria-label.
    */
   buttonLabel?: string
+
+  brand?: string
 }
+const { brand = 'orange' } = Astro.props
 
-const { file = `${getConfig().brand}-logo`, downloadable = true, buttonLabel } = Astro.props
+const { file = `${brand}-logo`, downloadable = true, buttonLabel } = Astro.props
 
-const filePath = `site/${getConfig().brand}/static/docs/[version]/assets/brand/${file}`
-const svgFormattedPath = `${filePath}-formatted.svg`
+const filePath = `site/static/[brand]/docs/[version]/assets/brand/${file}`
+const svgFormattedPath = `${filePath}.svg`
 const svgPath = `${filePath}.svg`
 
 const svg = fs.readFileSync(svgPath, 'utf8')
@@ -40,6 +44,8 @@ const clipboardLabel = buttonLabel
     ? `Copy ${file}.svg file to clipboard`
     : 'Copy SVG to clipboard'
 ---
+
+filepath {filePath}
 
 <Code filePath={svgFormattedPath} lang="html" buttonLabel={buttonLabel}>
   <div slot="pre" class="bd-clipboard">

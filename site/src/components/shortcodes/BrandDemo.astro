@@ -15,7 +15,7 @@ const { brand = 'orange' } = Astro.props
 ---
 <div data-bs-brand={brand}>
   <div class="row mb-medium">
-    <div class="col">
+    <div class="col-12 col-sm-6 col-md-4">
       <div class="alert alert-message alert-negative mb-medium">
         <div class="alert-icon"></div>
         <div class="alert-container">
@@ -49,7 +49,7 @@ const { brand = 'orange' } = Astro.props
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col-12 col-sm-6 col-md-4">
       <div class="d-flex gap-xsmall flex-wrap my-small">
         <button type="button" class="btn btn-default">Default</button>
         <button type="button" class="btn btn-next btn-strong">Next</button>
@@ -85,7 +85,7 @@ const { brand = 'orange' } = Astro.props
         </button>
       </div>
     </div>
-    <div class="col">
+    <div class="col-12 col-sm-6 col-md-4">
       <div class="checkbox-item">
         <div class="control-item-assets-container">
           <input checked class="control-item-indicator" type="checkbox" value="" id={`cb-${brand}`} />
@@ -111,9 +111,7 @@ const { brand = 'orange' } = Astro.props
         </div>
       </div>
     </div>
-  </div>
-  <div class="row mb-medium">
-    <div class="col-12 col-md-4">
+    <div class="col-12 col-sm-6 col-md-4">
       <div class="d-flex gap-large my-small">
         <p class="badge badge-positive"><span class="visually-hidden">Success</span></p>
         <p class="badge badge-info"><span class="visually-hidden">Info</span></p>
@@ -132,19 +130,19 @@ const { brand = 'orange' } = Astro.props
           <span class="visually-hidden">Info</span>
         </p>
       </div>
-      <ul class="list-unstyled d-flex column-gap-xsmall my-small">
+      <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Keywords">
         <li class="tag">One</li>
         <li class="tag">Two</li>
         <li class="tag">Three</li>
       </ul>
-      <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall my-small">
+      <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Statuses">
         <li class="tag tag-positive">Positive</li>
         <li class="tag tag-info">Info</li>
         <li class="tag tag-warning tag-muted">Warning</li>
         <li class="tag tag-negative tag-muted">Negative</li>
       </ul>
     </div>
-    <div class="col">
+    <div class="col-12 col-sm-6 col-md-4">
       <div><a class="link link-chevron" href="#">Link with chevron</a></div>
       <nav aria-label="basic breadcrumb">
         <ol class="breadcrumb my-small">
@@ -152,7 +150,7 @@ const { brand = 'orange' } = Astro.props
           <li class="breadcrumb-item active" aria-current="page"><span title="Library">Library</span></li>
         </ol>
       </nav>
-      <ul class="chips-container">
+      <ul class="chips-container flex-wrap column-gap-xsmall row-gap-medium" aria-label="Filter by number">
         <li class="chip chip-filter">
           <input type="checkbox" id={`fc1-${brand}`} checked />
           <label class="chip-interactive" for={`fc1-${brand}`}>
@@ -172,7 +170,7 @@ const { brand = 'orange' } = Astro.props
           </label>
         </li>
       </ul>
-      <ul class="chips-container" aria-label="Answer with">
+      <ul class="chips-container flex-wrap column-gap-xsmall row-gap-medium" aria-label="Start with">
         <li class="chip chip-suggestion">
           <button class="chip-interactive" type="button">
             Hi
@@ -190,8 +188,31 @@ const { brand = 'orange' } = Astro.props
         </li>
       </ul>
     </div>
-    <div class="col">
-      One of three columns
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="text-input mb-medium">
+        <div class="text-input-container">
+          <label for="firstname">Firstname</label>
+          <input type="text" class="text-input-field" id="firstname" placeholder=" ">
+        </div>
+      </div>
+      <div class="text-input mb-medium">
+        <div class="text-input-container">
+          <label for="pwd">Password</label>
+          <input type="password" id="pwd" class="text-input-field" placeholder=" ">
+          <button class="btn btn-minimal btn-icon" aria-pressed="false" type="button">
+            <svg aria-hidden="true">
+              <use xlink:href="/orange/docs/1.2/assets/img/ouds-web-sprite.svg#accessibility-vision"/>
+            </svg>
+            <span class="visually-hidden">Show password</span>
+          </button>
+        </div>
+      </div>
+      <div class="text-area">
+        <div class="text-area-container">
+          <label for="exampleTextAreaPlaceholder">Additional comments</label>
+          <textarea class="text-area-field" id="exampleTextAreaPlaceholder" placeholder="Enter your comment here"></textarea>
+        </div>
+      </div>
     </div>
   </div>
 </div>

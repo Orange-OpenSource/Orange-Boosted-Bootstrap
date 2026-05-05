@@ -7,14 +7,32 @@ toc: true
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
+import { getConfig } from '@libs/config'
 
 The OUDS Web design system is provided with three independent brands: Orange, Orange compact, and Sosh.  Each brand of OUDS Web is technically a theme that is applied to all the elements of the design system. It has its own color scheme, typography, grid, and logo. The brands are designed to be used in different contexts and for different purposes.
+
+<Callout type="negative" title="Displaying multiple brands">
+   OUDS Web is designed to be used with a single brand per project. However, in this page, as a demo, we use multiple brands. This **must not** be reproduced on projects, as it can lead to confusion and inconsistency in the design.
+</Callout>
 
 # Orange
 
 The Orange brand is the default brand for OUDS Web. It is designed to be used in a wide range of contexts and for a variety of purposes. The Orange brand features a vibrant color scheme, modern typography, and a distinctive logo.
 
+
 <BrandDemo brand="orange" />
+
+## Orange logo
+
+OUDS Web provide a single SVG file for the logo, which can be displayed in several sizes.
+
+<img src={getVersionedDocsPath('assets/brand/orange-logo.svg')} class="figure-img img-fluid m-auto" width="220" height="220" alt="Orange master logo" loading="lazy" />
+
+
+Here is the SVG content:
+
+<SvgDocs brand="orange"/>
+
 
 # Orange compact
 
@@ -22,9 +40,13 @@ The Orange compact brand is a more compact version of the Orange brand. It is de
 
 <BrandDemo brand="orange-compact" />
 
+<SvgDocs brand="orange-compact"/>
+
 # Sosh
 
 The Sosh brand is a more playful and youthful brand. It is designed to be used for Sosh context, and is defined as more casual and fun, like on social media or in marketing materials. The Sosh brand features a bright color scheme, playful typography, and a distinctive logo.
 
 <BrandDemo brand="sosh" />
+
+<SvgDocs brand="sosh"/>
 
