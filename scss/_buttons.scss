@@ -87,8 +87,7 @@
   &:focus-visible,
   &.loading-indeterminate,
   &.loading-determinate,
-  &:active,
-  &.active {
+  &:active {
     padding: calc(var(--#{$prefix}btn-padding-y) - var(--#{$prefix}btn-interaction-border-width)) calc(var(--#{$prefix}btn-padding-end) - var(--#{$prefix}btn-interaction-border-width)) calc(var(--#{$prefix}btn-padding-y) - var(--#{$prefix}btn-interaction-border-width)) calc(var(--#{$prefix}btn-padding-start) - var(--#{$prefix}btn-interaction-border-width));
     border-width: var(--#{$prefix}btn-interaction-border-width);
   }
@@ -118,8 +117,7 @@
   // OUDS mod: no .btn-check:checked + &:active,
   // OUDS mod: no .btn-check:checked + &,
   // OUDS mod: no &.show,
-  &:active,
-  &.active {
+  &:active {
     color: var(--#{$prefix}btn-active-color);
     background-color: var(--#{$prefix}btn-active-bg);
     // Remove CSS gradients if they're enabled

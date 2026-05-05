@@ -34,8 +34,28 @@ class Button extends BaseComponent {
 
   // Public
   toggle() {
-    // Toggle class and sync the `aria-pressed` attribute with the return value of the `.toggle()` method
-    this._element.setAttribute('aria-pressed', this._element.classList.toggle(CLASS_NAME_ACTIVE))
+    // OUDS mod: Determine current pressed state from aria-pressed attribute if present or active class as a fallback (deprecated pattern)
+    const ariaPressed = this._element.getAttribute('aria-pressed')
+    const hasActiveClass = this._element.classList.contains(CLASS_NAME_ACTIVE)
+
+    // Determine new pressed state
+    let newPressedState
+    // eslint-disable-next-line unicorn/prefer-ternary
+    if (ariaPressed === 'true' || ariaPressed === 'false') {
+      // Toggle existing aria-pressed value
+      newPressedState = ariaPressed !== 'true'
+    } else {
+      // Convert active class presence to aria-pressed state
+      newPressedState = !hasActiveClass
+    }
+
+    // Update aria-pressed attribute
+    this._element.setAttribute('aria-pressed', String(newPressedState))
+
+    // Remove active class (deprecated pattern)
+    if (hasActiveClass) {
+      this._element.classList.remove(CLASS_NAME_ACTIVE)
+    }
   }
 
   // Static
