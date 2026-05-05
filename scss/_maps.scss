@@ -88,7 +88,7 @@ $ouds-dimension-space-fixed: (
 // scss-docs-end ouds-maps-dimension-fixed
 
 // scss-docs-start gutters
-$gutters: $ouds-dimension-space-fixed !default; // instead of `$spacers`
+$gutters: $spacers !default;
 // scss-docs-end gutters
 
 $ouds-dimension-negative-space-fixed: (
@@ -445,9 +445,4 @@ $grid-gutter-widths: (
   3xl: $ouds-grid-3xl-column-gap // 40px
 ) !default;
 // scss-docs-end grid-gutters
-
-@if $enable-bootstrap-compatibility {
-  // Add Bootstrap gutters
-  $gutters: map-merge($gutters, $spacers);
-}
 // End mod

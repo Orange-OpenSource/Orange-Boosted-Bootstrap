@@ -17,14 +17,14 @@ export function getStaticPaths() {
   title="Examples"
   description="Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts."
 >
-  <div class="d-flex flex-column flex-sm-row">
+  <div class="d-flex flex-column sm:flex-row">
     <a href={getConfig().download.dist_examples} class="btn btn-strong">
       <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}></use>
       </svg>
       Download examples
     </a>
-    <a href={getConfig().download.source} class="btn btn-default mt-large mt-sm-none ms-sm-large"
+    <a href={getConfig().download.source} class="btn btn-default mt-large sm:mt-none sm:ms-large"
       >Download source code</a
     >
   </div>

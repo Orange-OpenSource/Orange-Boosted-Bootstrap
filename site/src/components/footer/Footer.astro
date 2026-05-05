@@ -17,10 +17,10 @@ const { title } = Astro.props
   <div class="container-fluid container-max-width footer-nav">
     <nav class="accordion" id="sitemapAccordion" aria-label="OUDS Web sitemap footer">
       <div class="row">
-        <div class="footer-column col-md-6 col-lg-2">
+        <div class="footer-column md:col-6 lg:col-2">
           <h3 class="accordion-header footer-heading" id="headingGuides">
             <button
-              class="accordion-button collapsed container-fluid container-max-width px-gridmargin d-md-none"
+              class="accordion-button collapsed container-fluid container-max-width px-gridmargin md:d-none"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseGuides"
@@ -29,14 +29,14 @@ const { title } = Astro.props
             >
               Guides
             </button>
-            <span class="d-none d-md-flex">Guides</span>
+            <span class="d-none md:d-flex">Guides</span>
           </h3>
           <div
             id="collapseGuides"
             class="container-fluid container-max-width accordion-collapse collapse"
             data-bs-parent="#sitemapAccordion"
           >
-            <ul class="navbar-nav ps-large ps-md-none">
+            <ul class="navbar-nav ps-large md:ps-none">
               <li>
                 <a
                   class:list={['nav-link', { active: Astro.url.pathname.includes('getting-started') }]}
@@ -70,10 +70,10 @@ const { title } = Astro.props
             </ul>
           </div>
         </div>
-        <div class="footer-column col-md-6 col-lg-2">
+        <div class="footer-column md:col-6 lg:col-2">
           <h3 class="accordion-header footer-heading" id="headingProjects">
             <button
-              class="accordion-button collapsed container-fluid container-max-width px-gridmargin d-md-none"
+              class="accordion-button collapsed container-fluid container-max-width px-gridmargin md:d-none"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseProjects"
@@ -82,14 +82,14 @@ const { title } = Astro.props
             >
               Projects
             </button>
-            <span class="d-none d-md-flex">Projects</span>
+            <span class="d-none md:d-flex">Projects</span>
           </h3>
           <div
             id="collapseProjects"
             class="container-fluid container-max-width accordion-collapse collapse"
             data-bs-parent="#sitemapAccordion"
           >
-            <ul class="navbar-nav ps-large ps-md-none">
+            <ul class="navbar-nav ps-large md:ps-none">
               <li>
                 <a
                   class="nav-link"
@@ -126,10 +126,10 @@ const { title } = Astro.props
             </ul>
           </div>
         </div>
-        <div class="footer-column col-md-6 col-lg-2 mt-md-xlarge mt-lg-none">
+        <div class="footer-column md:col-6 lg:col-2 md:mt-xlarge lg:mt-none">
           <h3 class="accordion-header footer-heading" id="headingCommunity">
             <button
-              class="accordion-button collapsed container-fluid container-max-width px-gridmargin d-md-none"
+              class="accordion-button collapsed container-fluid container-max-width px-gridmargin md:d-none"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseCommunity"
@@ -138,14 +138,14 @@ const { title } = Astro.props
             >
               Community
             </button>
-            <span class="d-none d-md-flex">Community</span>
+            <span class="d-none md:d-flex">Community</span>
           </h3>
           <div
             id="collapseCommunity"
             class="container-fluid container-max-width accordion-collapse collapse"
             data-bs-parent="#sitemapAccordion"
           >
-            <ul class="navbar-nav ps-large ps-md-none">
+            <ul class="navbar-nav ps-large md:ps-none">
               <li>
                 <a
                   class="nav-link"
@@ -182,10 +182,10 @@ const { title } = Astro.props
             </ul>
           </div>
         </div>
-        <div class="footer-column col-md-6 col-lg-2 mt-md-xlarge mt-lg-none">
+        <div class="footer-column md:col-6 lg:col-2 md:mt-xlarge lg:mt-none">
           <h3 class="accordion-header footer-heading" id="headingAbout">
             <button
-              class="accordion-button collapsed container-fluid container-max-width px-gridmargin d-md-none"
+              class="accordion-button collapsed container-fluid container-max-width px-gridmargin md:d-none"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseAbout"
@@ -194,14 +194,14 @@ const { title } = Astro.props
             >
               About
             </button>
-            <span class="d-none d-md-flex">About</span>
+            <span class="d-none md:d-flex">About</span>
           </h3>
           <div
             id="collapseAbout"
             class="container-fluid container-max-width accordion-collapse collapse"
             data-bs-parent="#sitemapAccordion"
           >
-            <ul class="navbar-nav ps-large ps-md-none">
+            <ul class="navbar-nav ps-large md:ps-none">
               <li>
                 <a
                   class:list={['nav-link', { active: Astro.url.pathname.includes('resources') }]}
@@ -267,9 +267,9 @@ const { title } = Astro.props
         </div>
         <!-- OUDS mod: footer specific adaptations -->
         <div
-          class="footer-column accordion-header col-md-12 col-lg-4 mb-large fw-normal small pt-medium pt-md-2xlarge pt-lg-none"
+          class="footer-column accordion-header md:col-12 lg:col-4 mb-large fw-normal small pt-medium md:pt-2xlarge lg:pt-none"
         >
-          <p class="px-gridmargin px-md-none">
+          <p class="px-gridmargin md:px-none">
             This documentation is an adaptation made by Orange. Original version designed and built with all the love in
             the world by the <a href="https://github.com/orgs/twbs/people" target="_blank" rel="noopener"
               >Bootstrap core team</a
@@ -279,7 +279,7 @@ const { title } = Astro.props
               rel="noopener">their contributors</a
             >.
           </p>
-          <p class="px-gridmargin px-md-none">
+          <p class="px-gridmargin md:px-none">
             Orange modified code licensed <a
               href={`${getConfig().repo}/blob/main/LICENSE`}
               target="_blank"
@@ -294,8 +294,8 @@ const { title } = Astro.props
               >CC BY 3.0</a
             >.
           </p>
-          <p class="px-gridmargin px-md-none">Currently v{getConfig().current_version}.</p>
-          <p class="px-gridmargin px-md-none">
+          <p class="px-gridmargin md:px-none">Currently v{getConfig().current_version}.</p>
+          <p class="px-gridmargin md:px-none">
             <a href="https://www.netlify.com" target="_blank" rel="noopener">
               <img
                 src="https://www.netlify.com/assets/badges/netlify-badge-dark.svg"
