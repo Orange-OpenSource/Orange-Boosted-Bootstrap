@@ -1,6 +1,6 @@
 // Utility generator
 // Used to generate utilities & print utilities
-@mixin generate-utility($utility, $infix: "") {
+@mixin generate-utility($utility, $bkpt-prefix: "", $infix: "") {
   $values: map-get($utility, values);
   $bootstrap-compatibility: map-get($utility, bootstrap-compatibility); // OUDS mod
 
@@ -44,23 +44,23 @@
 
         // OUDS mod
         @if type-of($value) == "string" and str-slice($value, 1, 1) == "/" {
-          .#{$property-class + $infix + $property-class-modifier} {
+          .#{$bkpt-prefix + $property-class + $infix + $property-class-modifier} {
             @include get-font-size(#{str-slice($value, 2)});
           }
           // End mod
         } @else {
           @if $is-css-var {
-            .#{$property-class + $infix + $property-class-modifier} {
+            .#{$bkpt-prefix + $property-class + $infix + $property-class-modifier} {
               --#{$prefix}#{$css-variable-name}: #{$value};
             }
 
             @each $pseudo in $state {
-              .#{$property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+              .#{$bkpt-prefix + $property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
                 --#{$prefix}#{$css-variable-name}: #{$value};
               }
             }
           } @else {
-            .#{$property-class + $infix + $property-class-modifier} {
+            .#{$bkpt-prefix + $property-class + $infix + $property-class-modifier} {
               @each $property in $properties {
                 @if $is-local-vars {
                   @each $local-var, $variable in $is-local-vars {
@@ -72,7 +72,7 @@
             }
 
             @each $pseudo in $state {
-              .#{$property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+              .#{$bkpt-prefix + $property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
                 @each $property in $properties {
                   @if $is-local-vars {
                     @each $local-var, $variable in $is-local-vars {
