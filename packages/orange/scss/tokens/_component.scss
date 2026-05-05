@@ -1,8 +1,8 @@
 // Component application
 // Depends on semantic applications
-// OUDS Core tokens version 1.9.0
+// OUDS Core tokens version 1.10.0
 // Orange Core tokens version 1.2.0
-// Orange System tokens version 2.3.0
+// Orange System tokens version 2.4.0
 
 // Alert
 
@@ -30,7 +30,9 @@ $ouds-badge-size-large: $ouds-dimension-4xsmall !default;
 $ouds-badge-size-medium: $ouds-dimension-5xsmall !default;
 $ouds-badge-size-small: $ouds-dimension-6xsmall !default;
 $ouds-badge-size-xsmall: $ouds-dimension-8xsmall !default;
-$ouds-badge-space-inset: $core-ouds-dimension-out-of-system-75 !default;
+$ouds-badge-space-inset-medium-large: $core-ouds-dimension-out-of-system-75 !default;
+$ouds-badge-space-inset-small: $core-ouds-dimension-out-of-system-50 !default;
+$ouds-badge-space-inset-xsmall: $core-ouds-dimension-out-of-system-25 !default;
 $ouds-badge-space-padding-inline-large: $ouds-space-padding-inline-2xsmall !default;
 $ouds-badge-space-padding-inline-medium: $ouds-space-padding-inline-3xsmall !default;
 // scss-docs-end ouds-component-badge
@@ -170,7 +172,7 @@ $ouds-checkbox-border-width-unselected-focus: $ouds-border-width-medium !default
 $ouds-checkbox-border-width-unselected-hover: $ouds-border-width-medium !default;
 $ouds-checkbox-border-width-unselected-pressed: $ouds-border-width-medium !default;
 $ouds-checkbox-border-width-unselected: $ouds-border-width-thin !default;
-$ouds-checkbox-size-indicator: $ouds-size-icon-with-label-large-size-xsmall !default;
+$ouds-checkbox-size-indicator: $ouds-size-icon-with-label-large-size-xsmall !default; // Deprecated
 $ouds-checkbox-size-max-height: $ouds-size-min-interactive-area !default;
 $ouds-checkbox-size-min-height: $ouds-size-min-interactive-area !default;
 $ouds-checkbox-size-min-width: $ouds-size-min-interactive-area !default;
@@ -233,24 +235,63 @@ $ouds-chip-space-padding-inline-icon: $ouds-space-padding-inline-small !default;
 // Control
 
 // scss-docs-start ouds-component-control
-$ouds-control-item-border-radius-item-only: $ouds-border-radius-default !default;
-$ouds-control-item-border-radius: $ouds-border-radius-none !default;
-$ouds-control-item-color-bg-focus: $ouds-color-action-support-focus !default;
-$ouds-control-item-color-bg-hover: $ouds-color-action-support-hover !default;
-$ouds-control-item-color-bg-loading: $ouds-color-action-support-loading !default;
-$ouds-control-item-color-bg-pressed: $ouds-color-action-support-pressed !default;
-$ouds-control-item-color-content-loader: $ouds-color-content-default !default;
-$ouds-control-item-size-error-icon: $ouds-size-icon-with-label-large-size-small !default;
-$ouds-control-item-size-icon: $ouds-size-icon-with-label-large-size-medium !default;
-$ouds-control-item-size-loader: $ouds-size-icon-with-label-large-size-small !default;
-$ouds-control-item-size-max-height-assets-container: $core-ouds-dimension-1200 !default;
+$ouds-control-item-border-radius-current-indicator: $ouds-border-radius-none !default;
+$ouds-control-item-border-radius-default: $ouds-border-radius-default !default;
+$ouds-control-item-border-radius-item-only: $ouds-border-radius-default !default; // Deprecated
+$ouds-control-item-border-radius-media-rounded-corner: $ouds-border-radius-small !default;
+$ouds-control-item-border-radius-media: $ouds-border-radius-default !default;
+$ouds-control-item-border-radius-rounded: $ouds-border-radius-medium !default;
+$ouds-control-item-border-width-current-page: $ouds-border-width-medium !default;
+$ouds-control-item-border-width-default: $ouds-border-width-default !default;
+$ouds-control-item-color-badge-safety-area: $ouds-color-bg-primary !default;
+$ouds-control-item-color-bg-current-disabled: $ouds-color-action-support-disabled !default;
+$ouds-control-item-color-bg-current-enabled: var(--#{$prefix}control-item-color-bg-current-enabled) !default;
+$ouds-control-item-color-bg-current-focus: $ouds-color-action-support-focus !default;
+$ouds-control-item-color-bg-current-hover: $ouds-color-action-support-hover !default;
+$ouds-control-item-color-bg-current-pressed: $ouds-color-action-support-pressed !default;
+$ouds-control-item-color-bg-focus: var(--#{$prefix}control-item-color-bg-focus) !default;
+$ouds-control-item-color-bg-hover: var(--#{$prefix}control-item-color-bg-hover) !default;
+$ouds-control-item-color-bg-loading: var(--#{$prefix}control-item-color-bg-loading) !default;
+$ouds-control-item-color-bg-pressed: var(--#{$prefix}control-item-color-bg-pressed) !default;
+$ouds-control-item-color-content-current-disabled: $ouds-color-content-default !default;
+$ouds-control-item-color-content-current-enabled: $ouds-color-content-default !default;
+$ouds-control-item-color-content-current-focus: $ouds-color-content-default !default;
+$ouds-control-item-color-content-current-hover: $ouds-color-content-default !default;
+$ouds-control-item-color-content-current-pressed: $ouds-color-content-default !default;
+$ouds-control-item-color-content-loader: var(--#{$prefix}control-item-color-content-loader) !default;
+$ouds-control-item-font-letter-spacing-avatar-initial-xlarge: $core-ouds-font-letter-spacing-450 !default;
+$ouds-control-item-font-line-height-avatar-initial-xlarge: $core-ouds-font-line-height-650 !default;
+$ouds-control-item-font-size-avatar-initial-xlarge: $core-ouds-font-size-450 !default;
+$ouds-control-item-opacity-current-divider: $ouds-opacity-opaque !default;
+$ouds-control-item-opacity-current-indicator: $ouds-opacity-opaque !default;
+$ouds-control-item-size-asset-large: $ouds-dimension-medium !default;
+$ouds-control-item-size-asset-medium: $ouds-size-icon-with-label-large-size-medium !default;
+$ouds-control-item-size-asset-small: $ouds-size-icon-with-label-large-size-small !default;
+$ouds-control-item-size-asset-xlarge: $ouds-dimension-3xlarge !default;
+$ouds-control-item-size-control-indicator: $ouds-size-icon-with-label-large-size-xsmall !default;
+$ouds-control-item-size-current-indicator-width: $core-ouds-dimension-50 !default;
+$ouds-control-item-size-error-icon: $ouds-size-icon-with-label-large-size-small !default; // Deprecated
+$ouds-control-item-size-flag-height: $ouds-size-icon-with-label-large-size-xsmall !default;
+$ouds-control-item-size-icon: $ouds-size-icon-with-label-large-size-medium !default; // Deprecated
+$ouds-control-item-size-loader: $ouds-size-icon-with-label-large-size-small !default; // Deprecated
+$ouds-control-item-size-max-height-assets-container: $core-ouds-dimension-1200 !default; // Deprecated
 $ouds-control-item-size-max-width: $core-ouds-dimension-4000 !default;
-$ouds-control-item-size-min-height: $core-ouds-dimension-650 !default;
+$ouds-control-item-size-min-height-compact: $ouds-size-min-interactive-area !default;
+$ouds-control-item-size-min-height-default: $core-ouds-dimension-750 !default;
 $ouds-control-item-size-min-width: $core-ouds-dimension-2000 !default;
 $ouds-control-item-space-column-gap: $ouds-space-column-gap-medium !default;
-$ouds-control-item-space-padding-block-default: $ouds-space-padding-block-medium !default;
-$ouds-control-item-space-padding-block-top-error-text: $ouds-space-padding-block-xsmall !default;
-$ouds-control-item-space-padding-inline-error-icon: $ouds-space-padding-inline-4xsmall !default;
+$ouds-control-item-space-padding-block-bottom-slot: $ouds-space-padding-block-3xsmall !default;
+$ouds-control-item-space-padding-block-default: $ouds-space-padding-block-medium !default; // Deprecated
+$ouds-control-item-space-padding-block-density-compact-bottom-expand-container: $ouds-space-padding-block-2xlarge !default;
+$ouds-control-item-space-padding-block-density-compact-top-alignment-top-counterweight: $ouds-space-padding-block-xsmall !default;
+$ouds-control-item-space-padding-block-density-compact-top-alignment-top-text-container: $ouds-space-padding-block-none !default;
+$ouds-control-item-space-padding-block-density-compact: $ouds-space-padding-block-xsmall !default;
+$ouds-control-item-space-padding-block-density-default-bottom-expand-container: $ouds-space-padding-block-3xlarge !default;
+$ouds-control-item-space-padding-block-density-default-top-alignment-top-counterweight: $ouds-space-padding-block-small !default;
+$ouds-control-item-space-padding-block-density-default-top-alignment-top-text-container: $ouds-space-padding-block-4xsmall !default;
+$ouds-control-item-space-padding-block-density-default: $ouds-space-padding-block-medium !default;
+$ouds-control-item-space-padding-block-top-helper-text: $ouds-space-padding-block-xsmall !default;
+$ouds-control-item-space-padding-inline-error-icon: $ouds-space-padding-inline-4xsmall !default; // Deprecated
 $ouds-control-item-space-padding-inline: $ouds-space-padding-inline-large !default;
 $ouds-control-item-space-row-gap: $ouds-space-row-gap-none !default;
 // scss-docs-end ouds-component-control
@@ -347,7 +388,6 @@ $ouds-radio-button-border-width-unselected-focus: $ouds-border-width-medium !def
 $ouds-radio-button-border-width-unselected-hover: $ouds-border-width-medium !default;
 $ouds-radio-button-border-width-unselected-pressed: $ouds-border-width-medium !default;
 $ouds-radio-button-border-width-unselected: $ouds-border-width-thin !default;
-$ouds-radio-button-size-indicator: $ouds-size-icon-with-label-large-size-xsmall !default;
 $ouds-radio-button-size-max-height: $ouds-size-min-interactive-area !default;
 $ouds-radio-button-size-min-height: $ouds-size-min-interactive-area !default;
 $ouds-radio-button-size-min-width: $ouds-size-min-interactive-area !default;
@@ -405,8 +445,8 @@ $ouds-tag-size-asset-small: $ouds-size-icon-with-label-small-size-small !default
 $ouds-tag-size-min-height-default: $ouds-dimension-xsmall !default;
 $ouds-tag-size-min-height-interactive-area: $ouds-size-min-interactive-area !default;
 $ouds-tag-size-min-height-small: $ouds-dimension-3xsmall !default;
-$ouds-tag-size-min-width-default: $ouds-dimension-xsmall !default; // Manually changed to take design decision in advance
-$ouds-tag-size-min-width-small: $ouds-dimension-3xsmall !default; // Manually changed to take design decision in advance
+$ouds-tag-size-min-width-default: $ouds-dimension-xsmall !default;
+$ouds-tag-size-min-width-small: $ouds-dimension-3xsmall !default;
 $ouds-tag-space-column-gap-default: $ouds-space-column-gap-2xsmall !default;
 $ouds-tag-space-column-gap-small: $ouds-space-column-gap-2xsmall !default;
 $ouds-tag-space-inset-bullet-default: $core-ouds-dimension-out-of-system-75 !default;
@@ -430,9 +470,10 @@ $ouds-text-area-size-max-height-assets-container: $core-ouds-dimension-1100 !def
 $ouds-text-area-size-max-height-input: $core-ouds-dimension-2500 !default;
 $ouds-text-area-size-max-width: $core-ouds-dimension-6000 !default;
 $ouds-text-area-size-min-height-input: $core-ouds-dimension-900 !default;
+$ouds-text-area-space-padding-block-top-empty: $ouds-space-padding-block-medium !default;
 $ouds-text-area-space-padding-block: $ouds-space-padding-block-small !default;
 $ouds-text-input-border-radius-default: $ouds-border-radius-default !default;
-$ouds-text-input-border-radius-rounded: $ouds-border-radius-small !default;
+$ouds-text-input-border-radius-rounded: $ouds-border-radius-medium !default;
 $ouds-text-input-border-width-default: $ouds-border-width-default !default;
 $ouds-text-input-border-width-focus: $ouds-border-width-medium !default;
 $ouds-text-input-color-border-enabled: $ouds-color-border-default !default;
@@ -448,6 +489,8 @@ $ouds-text-input-size-min-width: $core-ouds-dimension-2500 !default;
 $ouds-text-input-size-vertical-divider-height: $ouds-dimension-4xsmall !default;
 $ouds-text-input-space-column-gap-default: $ouds-space-column-gap-medium !default;
 $ouds-text-input-space-column-gap-inline-text: $ouds-space-column-gap-xsmall !default;
+$ouds-text-input-space-column-gap-label-asterisk: $ouds-space-column-gap-2xsmall !default;
+$ouds-text-input-space-column-gap-label-small-asterisk: $core-ouds-dimension-out-of-system-75 !default;
 $ouds-text-input-space-column-gap-trailing-error-action: $ouds-space-column-gap-xsmall !default;
 $ouds-text-input-space-padding-block-default: $ouds-space-padding-block-2xsmall !default;
 $ouds-text-input-space-padding-block-top-helper-text: $ouds-space-padding-block-xsmall !default;
