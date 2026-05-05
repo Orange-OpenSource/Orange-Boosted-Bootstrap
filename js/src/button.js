@@ -34,7 +34,7 @@ class Button extends BaseComponent {
 
   // Public
   toggle() {
-    // OUDS mod: Determine current pressed state from aria-pressed attribute if present or active class as a fallback (deprecated pattern)
+    // OUDS mod: Determine current pressed state from aria-pressed attribute if present or active class as a fallback
     const ariaPressed = this._element.getAttribute('aria-pressed')
     const hasActiveClass = this._element.classList.contains(CLASS_NAME_ACTIVE)
 
@@ -52,8 +52,10 @@ class Button extends BaseComponent {
     // Update aria-pressed attribute
     this._element.setAttribute('aria-pressed', String(newPressedState))
 
-    // Remove active class (deprecated pattern)
-    if (hasActiveClass) {
+    // Add or remove active class
+    if (newPressedState) {
+      this._element.classList.add(CLASS_NAME_ACTIVE)
+    } else {
       this._element.classList.remove(CLASS_NAME_ACTIVE)
     }
   }
