@@ -31,7 +31,7 @@
   // OUDS mod: no --#{$prefix}btn-padding-x
   --#{$prefix}btn-padding-y: #{$btn-padding-y};
   // OUDS mod: no --#{$prefix}btn-font-family
-  // OUDS mod: no `@include rfs($btn-font-size, --#{$prefix}btn-font-size)`
+  // OUDS mod: no --#{$prefix}btn-font-size
   --#{$prefix}btn-font-weight: #{$btn-font-weight};
   // OUDS mod: no `--#{$prefix}btn-line-height`
   --#{$prefix}btn-color: #{$btn-color};
