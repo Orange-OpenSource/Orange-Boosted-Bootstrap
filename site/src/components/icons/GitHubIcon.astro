@@ -1,7 +1,9 @@
 ---
 import type { SvgIconProps } from '@libs/icon'
 
-type Props = SvgIconProps
+type Props = SvgIconProps & {
+  style?: string
+}
 
 const { class: className, height, width, style } = Astro.props
 ---

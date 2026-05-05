@@ -91,9 +91,9 @@
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    $breakpoint-prefix: breakpoint-prefix($breakpoint, $grid-breakpoints);
 
-    .dropdown-menu#{$infix}-start {
+    .#{$breakpoint-prefix}dropdown-menu-start {
       --bs-position: start;
 
       &[data-bs-popper] {
@@ -102,12 +102,23 @@
       }
     }
 
-    .dropdown-menu#{$infix}-end {
+    .#{$breakpoint-prefix}dropdown-menu-end {
       --bs-position: end;
 
       &[data-bs-popper] {
         right: 0;
         left: auto;
+      }
+    }
+
+    @if $enable-bootstrap-compatibility {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      .dropdown-menu#{$infix}-start {
+        @extend .#{$breakpoint-prefix}dropdown-menu-start;
+      }
+
+      .dropdown-menu#{$infix}-end {
+        @extend .#{$breakpoint-prefix}dropdown-menu-end;
       }
     }
   }

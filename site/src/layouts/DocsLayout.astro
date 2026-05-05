@@ -49,10 +49,10 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
 ---
 
 <BaseLayout {...Astro.props} layout="docs" overrides={{ body: bodyProps }}>
-  <div slot="main" class="container-fluid container-max-width bd-gutter mt-large my-md-2xlarge bd-layout">
+  <div slot="main" class="container-fluid container-max-width bd-gutter mt-large md:my-2xlarge bd-layout">
     <aside class="bd-sidebar">
       <h1 id="docs-nav" class="visually-hidden">Docs navigation</h1>
-      <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
+      <div class="lg:offcanvas offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
         <div class="offcanvas-header border-bottom">
           <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Browse docs</h5>
           <button
@@ -73,9 +73,9 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
     </aside>
 
     <main class="bd-main order-1">
-      <div class="bd-intro pt-small ps-lg-small">
-        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="d-flex align-items-center gap-medium mb-large mb-md-none text-nowrap">
+      <div class="bd-intro pt-small lg:ps-small">
+        <div class="md:d-flex md:flex-row-reverse align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-medium mb-large md:mb-none text-nowrap">
             {
               // This is needed because we want to show the badge if show_badge isn't present or is set to false
               frontmatter.added &&
@@ -128,27 +128,27 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
         </div>
       </div>
 
-      <div class="bd-toc mt-large mb-4xlarge my-lg-none mb-lg-4xlarge px-sm-2xsmall text-muted">
+      <div class="bd-toc mt-large mb-4xlarge lg:my-none lg:mb-4xlarge sm:px-2xsmall text-muted">
         {
           frontmatter.toc && headings && headings.length > 0 && (
             <h2 class="mb-none" id="docs-toc">
               <button
-                class="btn btn-default p-md-none mb-small mb-md-none text-decoration-none bd-toc-toggle d-md-none"
+                class="btn btn-default md:p-none mb-small md:mb-none text-decoration-none bd-toc-toggle md:d-none"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#tocContents"
                 aria-expanded="false"
                 aria-controls="tocContents"
               >
-                <svg class="d-md-none" aria-hidden="true">
+                <svg class="md:d-none" aria-hidden="true">
                   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#chevron-expand')} />
                 </svg>
                 On this page
               </button>
-              <span class="d-none d-md-block h6 my-small ms-large">On this page</span>
+              <span class="d-none md:d-block h6 my-small ms-large">On this page</span>
             </h2>
-            <hr class="d-none d-md-block my-small ms-large" />
-            <div class="collapse bd-toc-collapse ms-md-xsmall" id="tocContents">
+            <hr class="d-none md:d-block my-small ms-large" />
+            <div class="collapse bd-toc-collapse md:ms-xsmall" id="tocContents">
               <nav id="TableOfContents" aria-labelledby="docs-toc">
                 <TableOfContents headings={headings} types={frontmatter.types} />
               </nav>
@@ -157,7 +157,7 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
         }
       </div>
 
-      <div class="bd-content ps-lg-small">
+      <div class="bd-content lg:ps-small">
         {isComponent && (
           <p class="d-inline"><a class="link" href={getVersionedDocsPath('/getting-started/component-versioning')} id="componentVersions">Component{`${multipleComponents}`} design version{`${multipleComponents}`}:</a></p>
           <div class="d-inline align-middle" role="group"  aria-labelledby="componentVersions">
@@ -173,7 +173,7 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
             <div class="row g-medium">
               {frontmatter.sections.map((section) => {
                 return (
-                  <div class="col-md-6">
+                  <div class="md:col-6">
                     <a
                       class="d-block text-decoration-none"
                       href={getVersionedDocsPath(

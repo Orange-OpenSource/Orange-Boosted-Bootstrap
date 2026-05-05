@@ -152,9 +152,9 @@
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    $breakpoint-prefix: breakpoint-prefix($breakpoint, $grid-breakpoints);
 
-    .list-group-horizontal#{$infix} {
+    .#{$breakpoint-prefix}list-group-horizontal {
       flex-direction: row;
 
       > .list-group-item {
@@ -187,6 +187,12 @@
             border-left-width: $list-group-divider-size; // OUDS mod: instead of `var(--#{$prefix}list-group-border-width)`
           }
         }
+      }
+    }
+
+    @if $enable-bootstrap-compatibility {
+      .list-group-horizontal#{breakpoint-infix($breakpoint, $grid-breakpoints)} {
+        @extend .#{$breakpoint-prefix}list-group-horizontal;
       }
     }
   }
