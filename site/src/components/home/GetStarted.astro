@@ -5,11 +5,11 @@ import Code from '@components/shortcodes/Code.astro'
 ---
 
 <section class="row pb-scaled-xlarge">
-  <div class="col-12 d-none d-xl-block pb-scaled-small">
+  <div class="col-12 d-none xl:d-block pb-scaled-small">
     <hr class="border-medium border-default m-none" />
   </div>
-  <div class="col-xl-4 pe-xl-5xlarge">
-    <hr class="d-xl-none border-medium m-none pb-scaled-small" />
+  <div class="xl:col-4 xl:pe-5xlarge">
+    <hr class="xl:d-none border-medium m-none pb-scaled-small" />
     <h2 class="text-brand-primary mb-scaled-xsmall">Get started any way you&nbsp;want</h2>
     <p class="lead fw-bold bd-text-wrap-balance mb-scaled-xsmall">
       Jump right into building with OUDS Web—use the CDN, install it via package manager, or download the source code.
@@ -18,7 +18,7 @@ import Code from '@components/shortcodes/Code.astro'
       <a href={getVersionedDocsPath('getting-started/download')} class="link link-chevron"> Read installation docs</a>
     </p>
   </div>
-  <div class="col-xl-8">
+  <div class="xl:col-8">
     <h3 class="h2 mb-scaled-xsmall">Install via package manager</h3>
     <p class="mb-scaled-medium">
       Install OUDS Web's source files via npm, yarn, Composer, or NuGet. Package-managed installs include OUDS Web common Sass and
