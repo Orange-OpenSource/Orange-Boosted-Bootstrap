@@ -15,12 +15,18 @@ import Callout from '@components/shortcodes/Callout.astro'
         <p>{description}</p>
         {category === 'RTL' && (
           <Callout type="warning" action="Please open an issue" actionHref={`${getConfig().repo}/issues/new/choose`}>
-            <p><strong>RTL is still experimental</strong> and will evolve with feedback. Spotted something or have an improvement to suggest?</p>
+            <p>
+              <strong>RTL is still experimental</strong> and will evolve with feedback. Spotted something or have an
+              improvement to suggest?
+            </p>
           </Callout>
         )}
         {category === 'Starters' && (
           <Callout type="warning" class="mb-2xlarge mt-medium">
-            <p><strong>To get working OUDS Web examples based on the Bootstrap ones</strong>, you need to replace all <code>bootstrap</code> occurrences with <code>oudsWeb</code> in some files.</p>
+            <p>
+              <strong>To get working OUDS Web examples based on the Bootstrap ones</strong>, you need to replace all{' '}
+              <code>bootstrap</code> occurrences with <code>oudsWeb</code> in some files.
+            </p>
             <p>You may need to tweak a bit Sass files as well.</p>
           </Callout>
         )}
@@ -30,7 +36,7 @@ import Callout from '@components/shortcodes/Callout.astro'
               if (external) {
                 return (
                   <article class="md:col-6 lg:col-4 mb-large d-flex gap-large">
-                    <GitHubIcon class="bi fs-hm flex-shrink-0" />
+                    <GitHubIcon class="decorative-small-icon fs-hm flex-shrink-0" />
                     <div>
                       <h3 class="h5 mb-2xsmall">
                         <a
