@@ -400,7 +400,7 @@
   }
 
   pre code {
-    @include font-size(inherit);
+    font-size: inherit;
     color: var(--#{$prefix}color-content-default); // OUDS mod: instead of `var(--bs-body-color)`
     word-wrap: normal;
   }

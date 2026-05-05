@@ -111,7 +111,7 @@ Here are [the normal contexts of use of these functional colors](https://unified
 | `.text-status-negative` | `--bs-color-content-status-negative` | Use to communicate something negative. It can be a destructive action, an error state, or a negative feedback. |
 </BsTable>
 
-<Example code={`<div class="d-flex justify-content-center md:gap-large">
+<Example buttonLabel="functional icons and colors" code={`<div class="d-flex justify-content-center md:gap-large">
     <div class="p-medium bg-primary border border-default" data-bs-theme="light">
       <p>
         <svg class="text-status-accent decorative-small-icon" aria-hidden="true">
@@ -175,13 +175,13 @@ To ensure accessibility through sufficient contrast, OUDS provides a dedicated w
 Here is a SVG symbol to insert into your SVG sprite. It uses the CSS variables `--bs-icon-color-content-status-warning-external-shape` and `--bs-icon-color-content-status-warning-internal-shape` to color the external and internal shapes of the icon respectively, changing according to color mode. See below to know more about [SVG sprites](#svg-sprite).
 
 <BrandSpecific brand={['orange', 'orange-compact']}>
-<Example lang="svg" showPreview={false} code={`<symbol viewBox="0 0 24 24" id="alert-warning-accessible">
+<Example buttonLabel="accessible warning SVG path" lang="svg" showPreview={false} code={`<symbol viewBox="0 0 24 24" id="alert-warning-accessible">
     <path fill="var(--bs-icon-color-content-status-warning-external-shape)" d="M22.452 16.98 14.805 3.063a2.556 2.556 0 0 0-4.411 0L2.77 16.943l-.001.002-.021.036a2.54 2.54 0 0 0-.009 2.552 2.55 2.55 0 0 0 2.215 1.276h15.292a2.548 2.548 0 0 0 2.215-1.276 2.542 2.542 0 0 0-.01-2.553ZM11.4 8.031c0-1.188.4-1.758 1.2-1.758.8 0 1.2.57 1.2 1.758v4.535c0 1.188-.385 1.774-1.2 1.774-.8 0-1.2-.585-1.2-1.774V8.031Zm1.188 10.119a1.394 1.394 0 0 1-1.388-1.407 1.38 1.38 0 0 1 1.388-1.391 1.39 1.39 0 0 1 1.387 1.39c0 .768-.622 1.408-1.387 1.408Z"/>
     <path fill="var(--bs-icon-color-content-status-warning-internal-shape)" d="M12.6 6.273c-.8 0-1.2.57-1.2 1.758v4.535c0 1.188.4 1.774 1.2 1.774.816 0 1.2-.586 1.2-1.774V8.031c0-1.188-.4-1.758-1.2-1.758Zm-1.4 10.47c0 .784.622 1.407 1.388 1.407.765 0 1.387-.64 1.387-1.407a1.39 1.39 0 0 0-1.387-1.391 1.38 1.38 0 0 0-1.388 1.39Z"/>
   </symbol>`} />
 </BrandSpecific>
 <BrandSpecific brand="sosh">
-<Example lang="svg" showPreview={false} code={`<symbol viewBox="0 0 24 24" id="alert-warning-accessible">
+<Example buttonLabel="accessible warning SVG path" lang="svg" showPreview={false} code={`<symbol viewBox="0 0 24 24" id="alert-warning-accessible">
     <path fill="var(--bs-icon-color-content-status-warning-external-shape)" d="M12 3.36c.786 0 1.473.43 1.843 1.072l7.467 12.96c.184.32.29.692.29 1.088 0 1.193-.955 2.16-2.133 2.16H4.533c-1.178 0-2.132-.967-2.133-2.16 0-.396.106-.769.29-1.088l.018-.03.001-.003 7.448-12.927A2.127 2.127 0 0 1 12 3.36Zm0 12.72c-.334 0-.618.12-.85.36-.233.24-.35.52-.35.84 0 .33.117.612.35.847.218.23.528.357.85.353.335 0 .618-.118.85-.353.234-.235.35-.517.35-.847 0-.32-.116-.6-.35-.84a1.142 1.142 0 0 0-.85-.36Zm.001-9.6c-.643 0-1.171.455-1.201 1.025l.24 7.135h1.92l.24-7.135c-.03-.57-.556-1.025-1.199-1.025Z"/>
     <path fill="var(--bs-icon-color-content-status-warning-internal-shape)" d="M10.8 7.505c.03-.57.558-1.025 1.2-1.025.643 0 1.17.455 1.2 1.025l-.24 7.135h-1.92l-.24-7.135Zm2.05 10.622a1.15 1.15 0 0 1-.85.353 1.15 1.15 0 0 1-.85-.353 1.16 1.16 0 0 1-.35-.847c0-.32.116-.6.35-.84.232-.24.516-.36.85-.36.334 0 .618.12.85.36.234.24.35.52.35.84 0 .33-.116.613-.35.847Z"/>
   </symbol>`} />
@@ -189,7 +189,7 @@ Here is a SVG symbol to insert into your SVG sprite. It uses the CSS variables `
 
 Then, you can use it like this:
 
-<Example class="mt-none" code={`<svg class="decorative-small-icon" aria-hidden="true">
+<Example buttonLabel="accessible warning icon" class="mt-none" code={`<svg class="decorative-small-icon" aria-hidden="true">
     <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-warning-accessible')}" />
   </svg>`} />
 
@@ -199,7 +199,7 @@ Please note that this icon cannot be rendered by a Web font, due to its two colo
 
 Here are some examples of other [color utilities]([[docsref:utilities/color#colors]]) and CSS variables used with icons.
 
-<Example class="d-inline-flex flex-column" code={`<p class="p-small bg-primary d-inline-flex align-items-center gap-xsmall" data-bs-theme="light">
+<Example buttonLabel="non functional icons and colors" class="d-inline-flex flex-column" code={`<p class="p-small bg-primary d-inline-flex align-items-center gap-xsmall" data-bs-theme="light">
     <svg class="decorative-small-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
     </svg>
@@ -236,7 +236,7 @@ Icons’ size depends on where they are placed in the page content, so please ma
 
 Every icon size utility class presented in here has the common following code:
 
-<ScssDocs name="ouds-font-icon-common" file="scss/helpers/_icon.scss" />
+<ScssDocs buttonLabel="SCSS to manage icon size" name="ouds-font-icon-common" file="scss/helpers/_icon.scss" />
 
 ### Headings
 
@@ -294,7 +294,7 @@ Here are the rules to follow for headings. These icons’ sizes are responsive.
   </div>
 </details>
 
-<Example code={`<!-- h1 uses heading-xlarge font reference like all related classes as \`.h1\`, \`.fs-hxl\`, etc... -->
+<Example buttonLabel="icons in headings" code={`<!-- h1 uses heading-xlarge font reference like all related classes as \`.h1\`, \`.fs-hxl\`, etc... -->
   <div class="d-flex align-items-center mb-medium">
     <svg class="hxl-large-icon me-scaled-small text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}" />
@@ -475,7 +475,7 @@ Here are the rules to follow for regular texts. These icons’ sizes are respons
   </div>
 </details>
 
-<Example code={`<!-- .lead uses body-large font reference like all related classes as \`.lead\`, \`.fs-bl\`, etc... -->
+<Example buttonLabel="icons in regular texts" code={`<!-- .lead uses body-large font reference like all related classes as \`.lead\`, \`.fs-bl\`, etc... -->
   <div class="d-flex align-items-center mb-medium">
     <svg class="bl-large-icon me-scaled-small text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}" />
@@ -684,17 +684,15 @@ Here are the rules to follow for decorative icons. Be careful using these icons�
     </div>
   </div>`} />
 
-```html
-<svg class="decorative-2xlarge-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-xlarge-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-large-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-medium-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-small-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-2xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-3xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-4xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-```
+<Code buttonLabel="decorative icons" lang="html" code={`<svg class="decorative-2xlarge-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+  <svg class="decorative-xlarge-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+  <svg class="decorative-large-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+  <svg class="decorative-medium-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+  <svg class="decorative-small-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+  <svg class="decorative-xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+  <svg class="decorative-2xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+  <svg class="decorative-3xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+  <svg class="decorative-4xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>`} />
 
 ### Multiple lines
 
@@ -704,14 +702,14 @@ Sometimes you need a different structure to handle larger titles, or paragraphs 
 
 This is the default behavior of our DOM.
 
-<Example code={`<div class="d-flex align-items-center">
+<Example buttonLabel="icon centered on heading block" code={`<div class="d-flex align-items-center">
     <svg class="hxl-large-icon me-scaled-small text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}" />
     </svg>
     <h1 class="mb-none">H1 with large icon and a very long title to see how it behaves while being wrapped</h1>
   </div>`} />
 
-<Example code={`<div class="d-flex align-items-center">
+<Example buttonLabel="icon centered on regular text block" code={`<div class="d-flex align-items-center">
     <svg class="bm-large-icon me-scaled-small text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}" />
     </svg>
@@ -724,14 +722,14 @@ This is the default behavior of our DOM.
 
 You can also have the icon above the text block.
 
-<Example code={`<div>
+<Example buttonLabel="icon above heading block" code={`<div>
     <svg class="hxl-large-icon mb-scaled-xsmall text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}" />
     </svg>
     <h1 class="mb-none">H1 with large icon and a very long title to see how it behaves while being wrapped</h1>
   </div>`} />
 
-<Example code={`<div>
+<Example buttonLabel="icon above regular text block" code={`<div>
     <svg class="bm-large-icon mb-scaled-2xsmall text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}" />
     </svg>
@@ -744,7 +742,7 @@ You can also have the icon above the text block.
 
 SVG Sprite is the preferred choice for flexibility, performance and accessibility, and this is why all our examples use this method but there are other ways to display icons. They should all behave the same thanks to our CSS. If you are experimenting any trouble, feel free to search or fill in a new [Github discussion](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions) or contact [our team]([[docsref:/about/team]]).
 
-<Example code={`<div class="d-flex align-items-center mb-medium">
+<Example buttonLabel="image and font icons" code={`<div class="d-flex align-items-center mb-medium">
     <img class="hxl-large-icon me-small" alt="" src="${getVersionedDocsPath('/assets/img/vite.svg')}" />
     <h1 class="mb-none">H1 with large icon</h1>
   </div>
@@ -774,7 +772,7 @@ The best way to do this is to keep the icon hidden to assistive technologies (se
 Remember that you cannot use external images inside interactive elements because the color won’t change with the element’s status (hover, active, focus...), see [SVG external image](#svg-external-image).
 
 {/* todo add tooltip on buttons and explanation when available */}
-<Example class="mt-none bd-btn-example" code={`<button type="button" class="btn btn-icon btn-default">
+<Example buttonLabel="informative icons" class="mt-none bd-btn-example" code={`<button type="button" class="btn btn-icon btn-default">
     <svg width="1rem" height="1rem" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}" />
     </svg>
@@ -830,7 +828,7 @@ Please note that if you experience a problem with a cropped SVG, we recommend us
 
   SVG sprite file example:
 
-<Example lang="svg" showPreview={false} showToolbar={false} code={`<svg xmlns="http://www.w3.org/2000/svg">
+<Example buttonLabel="SVG sprite file" lang="svg" showPreview={false} showToolbar={false} code={`<svg xmlns="http://www.w3.org/2000/svg">
     <symbol id="settings" fill="currentColor" viewBox="0 0 1000 1000">
       <path d="..." fill-rule="evenodd"/>
     </symbol>
@@ -841,7 +839,7 @@ Please note that if you experience a problem with a cropped SVG, we recommend us
 
 SVG sprite usage:
 
-<Example code={`<svg width="3rem" height="3rem" aria-hidden="true">
+<Example buttonLabel="SVG sprite file usage" code={`<svg width="3rem" height="3rem" aria-hidden="true">
     <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#settings')}" />
   </svg>
   <svg width="3rem" height="3rem" aria-hidden="true">
@@ -850,7 +848,7 @@ SVG sprite usage:
 
 To speed up loading, the SVG sprite file can be preloaded in the `<head>` of the page:
 
-<Example lang="svg" showPreview={false} code={`<link rel="preload" href="/path/to/your/sprite.svg" as="image" type="image/svg+xml" />`} />
+<Example buttonLabel="SVG sprite file preloading" lang="svg" showPreview={false} code={`<link rel="preload" href="/path/to/your/sprite.svg" as="image" type="image/svg+xml" />`} />
 
 ### Icon font
 
@@ -858,7 +856,7 @@ Icon font is not the preferred solution. However, for websites needing more than
 
 <BrandSpecific brand={['orange', 'orange-compact']}>Using the [Solaris icons finder]([[config:icons]]),</BrandSpecific> you can generate an icon font containing all your icons and use it like a classic font. Icons can be styled through CSS properties like `font-size` and `color`. Please keep in mind that adding or removing icons from the font afterward can be complicated.
 
-<Example code={`<span class="si si-settings" aria-hidden="true" style="font-size: 3rem"></span>`} />
+<Example buttonLabel="icon font" code={`<span class="si si-settings" aria-hidden="true" style="font-size: 3rem"></span>`} />
 
 <Callout type="warning">
   Note that with this technique, you cannot have multicolor icons, so you cannot render the [warning icon](#accessible-warning-icon).
@@ -870,7 +868,7 @@ This technique should only be used if you have few icons to render, and if they 
 
 You can embed your icons directly within the HTML of your page (as opposed to an external image file). This way to use SVGs can benefit of the power of `currentColor` for easy coloring and theming.
 
-<Example class="mt-none" code={`<svg fill="currentColor" class="decorative-small-icon" viewBox="0 0 1000 1000" aria-hidden="true">
+<Example buttonLabel="inline SVG icon" class="mt-none" code={`<svg fill="currentColor" class="decorative-small-icon" viewBox="0 0 1000 1000" aria-hidden="true">
     <path d="M656.7 422.409a229.96 229.96 0 0 1-315.39.008A224.95 224.95 0 0 0 224.064 615H224v210a100 100 0 0 0 100 100h450V620a224.94 224.94 0 0 0-117.3-197.591M679 255A180 180 0 1 1 499 75a180 180 0 0 1 180 180" fill-rule="evenodd"/>
   </svg>`} />
 
@@ -886,8 +884,8 @@ CSS mask image icons should be used when you can’t or don’t want to refer to
 
 You should use the `mask-image` property instead of `background-image` to benefit from the coloring and theming system, by setting `background-color` property to `currentColor`. You can use the SVG code within your CSS (be sure to escape any characters with [our internal `escape-svg()` function]([[docsref:/getting-started/sass]]#escape-svg)). When no dimensions are specified via `width` and `height` on the `<svg>`, the icon will fill the available space. Mask images can also be styled through CSS properties like `width` or `height`. Note that the `xmlns` attribute is required.
 
-<Example class="mt-none" code={`<span class="icon-home"></span>`} />
+<Example buttonLabel="mask image icon" class="mt-none" code={`<span class="icon-home"></span>`} />
 
 Using:
 
-<ScssDocs name="icon-home" file="site/src/scss/_component-examples.scss" />
+<ScssDocs buttonLabel="SCSS for mask image icon" name="icon-home" file="site/src/scss/_component-examples.scss" />

@@ -24,7 +24,7 @@
   // OUDS mod: no --#{$prefix}dropdown-padding-x
   --#{$prefix}dropdown-padding-y: #{$dropdown-padding-y};
   --#{$prefix}dropdown-spacer: #{$dropdown-spacer};
-  @include rfs($dropdown-font-size, --#{$prefix}dropdown-font-size);
+  --#{$prefix}dropdown-font-size: #{$dropdown-font-size};
   --#{$prefix}dropdown-line-height: #{$dropdown-line-height}; // OUDS mod
   --#{$prefix}dropdown-color: #{$dropdown-color};
   --#{$prefix}dropdown-bg: #{$dropdown-bg};
@@ -55,7 +55,7 @@
   min-width: var(--#{$prefix}dropdown-min-width);
   padding: var(--#{$prefix}dropdown-padding-y) var(--#{$prefix}dropdown-padding-y);
   margin: 0; // Override default margin of ul
-  @include font-size(var(--#{$prefix}dropdown-font-size));
+  font-size: var(--#{$prefix}dropdown-font-size);
   line-height: var(--#{$prefix}dropdown-line-height); // OUDS mod
   color: var(--#{$prefix}dropdown-color);
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
@@ -235,7 +235,7 @@
   display: block;
   padding: var(--#{$prefix}dropdown-header-padding-y) var(--#{$prefix}dropdown-header-padding-x);
   margin-bottom: 0; // for use with heading elements
-  @include font-size($font-size-sm);
+  font-size: $font-size-sm;
   color: var(--#{$prefix}dropdown-header-color);
   white-space: nowrap; // as with > li > a
 }

@@ -5,7 +5,7 @@
   --#{$prefix}pagination-padding-end: #{$pagination-padding-end}; // OUDS mod
   --#{$prefix}pagination-margin-y: #{$pagination-margin-y}; // OUDS mod
   --#{$prefix}pagination-margin-x-first-last: #{$pagination-margin-x-first-last}; // OUDS mod
-  @include rfs($pagination-font-size, --#{$prefix}pagination-font-size);
+  --#{$prefix}pagination-font-size: #{$pagination-font-size};
   --#{$prefix}pagination-font-weight: #{$font-weight-bold}; // OUDS mod
   --#{$prefix}pagination-color: #{$pagination-color};
   --#{$prefix}pagination-bg: #{$pagination-bg};
@@ -47,7 +47,7 @@
   align-items: center; // OUDS mod
   justify-content: center; // OUDS mod
   padding: var(--#{$prefix}pagination-padding-y) var(--#{$prefix}pagination-padding-x);
-  @include font-size(var(--#{$prefix}pagination-font-size));
+  font-size: var(--#{$prefix}pagination-font-size);
   font-weight: var(--#{$prefix}pagination-font-weight); // OUDS mod
   color: var(--#{$prefix}pagination-color);
   text-decoration: if($link-decoration == none, null, none);

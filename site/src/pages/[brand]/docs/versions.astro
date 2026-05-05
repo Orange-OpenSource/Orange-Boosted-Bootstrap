@@ -42,7 +42,7 @@ export function getStaticPaths() {
                         'list-group-item list-group-item-action py-small',
                         isCurrentVersion && 'd-flex justify-content-between align-items-center'
                       ]}
-                      href={`${docsVersion.baseurl}/${version}/`}
+                      href={`${docsVersion.baseurl.replaceAll('[brand]', getConfig().brand)}/${version}/`}
                     >
                       {version}
                       {isCurrentVersion && <span class="tag tag-accent">Latest</span>}
