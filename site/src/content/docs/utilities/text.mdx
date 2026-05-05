@@ -33,7 +33,7 @@ export const screenSize = [
 Easily realign text to components with text alignment classes. For start, end, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.
 
 <Callout type="info">
-  We recommend to avoid using center and end alignment except in very specific cases. However, please note that you may use `.{breakpoint}:ms-auto` (respectively `.{breakpoint}:mx-auto`) in addition of `.{breakpoint}:text-end` (respectively `.{breakpoint}:text-center`) in these cases.
+  Center and end alignment should only be used in specific cases. When you must use them, combine `.{breakpoint}:text-center` with `.{breakpoint}:mx-auto` for centering or `.{breakpoint}:text-end` with `.{breakpoint}:ms-auto` for end alignment.
 </Callout>
 
 <Example code={`<p class="text-start">Start aligned text on all viewport sizes.</p>
@@ -51,7 +51,7 @@ Easily realign text to components with text alignment classes. For start, end, a
 <BootstrapCompatibility>
 
 <Callout type="info">
-  We recommend to avoid using center and end alignment except in very specific cases. However, please note that you may use `.ms-{breakpoint}-auto` (respectively `.mx-{breakpoint}-auto`) in addition of `.text-{breakpoint}-end` (respectively `.text-{breakpoint}-center`) in these cases.
+  Center and end alignment should only be used in specific cases. When you must use them, combine `.{breakpoint}:text-center` with `.{breakpoint}:mx-auto` for centering or `.{breakpoint}:text-end` with `.{breakpoint}:ms-auto` for end alignment.
 </Callout>
 
 <Example code={`<p class="text-start">Start aligned text on all viewport sizes.</p>
