@@ -105,16 +105,16 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <footer class="footer navbar w-75" data-bs-theme="dark">
         <h2 class="visually-hidden">Sitemap &amp; information</h2>
-        <div class="container-fluid container-max-width footer-nav px-small py-2xl-small d-lg-none d-sm-none d-md-block">
+        <div class="container-fluid container-max-width footer-nav px-small 2xl:py-small lg:d-none sm:d-none md:d-block">
           <nav class="accordion">
             <div class="row">
               <div class="footer-column">
                 <h3 class="accordion-header footer-heading">
-                  <button class="accordion-button collapsed container-fluid container-max-width px-none d-md-none" type="button">Label</button>
-                  <span class="d-none d-md-flex">Label</span>
+                  <button class="accordion-button collapsed container-fluid container-max-width px-none md:d-none" type="button">Label</button>
+                  <span class="d-none md:d-flex">Label</span>
                 </h3>
                 <div class="container-fluid container-max-width accordion-collapse collapse">
-                  <ul class="navbar-nav ps-large ps-md-none">
+                  <ul class="navbar-nav ps-large md:ps-none">
                     <li><a class="nav-link" href="#">Label</a></li>
                   </ul>
                 </div>
@@ -122,9 +122,9 @@ export const componentsDetails: ComponentCardData[] = [
             </div>
           </nav>
         </div>
-        <div class="border-bottom border-thin border-default d-lg-none d-sm-none d-md-block"></div>
+        <div class="border-bottom border-thin border-default lg:d-none sm:d-none md:d-block"></div>
         <div class="container-fluid container-max-width footer-terms px-small">
-          <ul class="navbar-nav gap-md-large">
+          <ul class="navbar-nav md:gap-large">
             <li>© Label</li>
             <li><a class="nav-link" href="#">Label</a></li>
           </ul>
@@ -136,9 +136,9 @@ export const componentsDetails: ComponentCardData[] = [
     category: 'Navigation',
     snippet: `
       <header class="header-minimized w-75">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar lg:navbar-expand">
           <div class="container-fluid container-max-width px-small">
-            <div class="navbar-brand me-auto me-lg-xlarge">
+            <div class="navbar-brand me-auto lg:me-xlarge">
               <a class="stretched-link" href="#">
                 <img src="${getVersionedDocsPath(`/assets/brand/${getConfig().brand}-logo.svg`)}" width="50" height="50" alt="" loading="lazy">
               </a>
@@ -149,7 +149,7 @@ export const componentsDetails: ComponentCardData[] = [
             </button>
           </div>
         </nav>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar lg:navbar-expand">
           <div class="container-fluid container-max-width px-small">
             <div class="navbar-collapse collapse m-none">
               <ul class="navbar-nav">

@@ -8,6 +8,10 @@
     {
       "files": "**/*.scss",
       "rules": {
+        "selector-class-pattern": [
+          "^([\\a-z0-9 ]*(-[a-z0-9]+)*:)?([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+          { "message": "Expected class selector \"%s\" to be kebab-case (with optional breakpoint prefix)" }
+        ],
         "declaration-property-value-disallowed-list": {
           "border": "none",
           "outline": "none"

@@ -19,18 +19,29 @@
 // Responsive sticky top and bottom
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    $breakpoint-prefix: breakpoint-prefix($breakpoint, $grid-breakpoints);
 
-    .sticky#{$infix}-top {
+    .#{$breakpoint-prefix}sticky-top {
       position: sticky;
       top: 0;
       z-index: $zindex-sticky;
     }
 
-    .sticky#{$infix}-bottom {
+    .#{$breakpoint-prefix}sticky-bottom {
       position: sticky;
       bottom: 0;
       z-index: $zindex-sticky;
+    }
+
+    @if $enable-bootstrap-compatibility {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      .sticky#{$infix}-top {
+        @extend .#{$breakpoint-prefix}sticky-top;
+      }
+
+      .sticky#{$infix}-bottom {
+        @extend .#{$breakpoint-prefix}sticky-bottom;
+      }
     }
   }
 }
