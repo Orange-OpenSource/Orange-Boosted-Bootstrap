@@ -19,6 +19,59 @@ toc: true
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `font-size()` mixin has been removed. Please refer to `get-font-size()` mixin instead.
 
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Some variables have been renamed or removed.
+
+- <details class="mb-small">
+    <summary><span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Renamed Sass variables:</summary>
+    <ul>
+      <li><code>$ouds-elevation-default</code>  → <code>$ouds-elevation-elevated</code></li>
+      <li><code>$ouds-elevation-x-default</code>  → <code>$ouds-elevation-x-elevated</code></li>
+      <li><code>$ouds-elevation-y-default</code>  → <code>$ouds-elevation-y-elevated</code></li>
+      <li><code>$ouds-elevation-blur-default</code>  → <code>$ouds-elevation-blur-elevated</code></li>
+      <li><code>$ouds-elevation-spread-default</code>  → <code>$ouds-elevation-spread-elevated</code></li>
+      <li><code>$ouds-control-item-size-min-height</code>  → <code>$ouds-control-item-size-min-height-default</code></li>
+      <li><code>$ouds-size-max-width-type-body-large-desktop</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-large-mobile</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-large-tablet</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-medium-desktop</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-medium-mobile</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-medium-tablet</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-small-desktop</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-small-mobile</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-small-tablet</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-display-large-desktop</code>  → <code>$ouds-size-max-width-display-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-display-large-mobile</code>  → <code>$ouds-size-max-width-display-large-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-display-large-tablet</code>  → <code>$ouds-size-max-width-display-large-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-display-medium-desktop</code>  → <code>$ouds-size-max-width-display-medium-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-display-medium-mobile</code>  → <code>$ouds-size-max-width-display-medium-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-display-medium-tablet</code>  → <code>$ouds-size-max-width-display-medium-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-display-small-desktop</code>  → <code>$ouds-size-max-width-display-small-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-display-small-mobile</code>  → <code>$ouds-size-max-width-display-small-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-display-small-tablet</code>  → <code>$ouds-size-max-width-display-small-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-heading-large-desktop</code>  → <code>$ouds-size-max-width-heading-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-heading-large-mobile</code>  → <code>$ouds-size-max-width-heading-large-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-heading-large-tablet</code>  → <code>$ouds-size-max-width-heading-large-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-heading-medium-desktop</code>  → <code>$ouds-size-max-width-heading-medium-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-heading-medium-mobile</code>  → <code>$ouds-size-max-width-heading-medium-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-heading-medium-tablet</code>  → <code>$ouds-size-max-width-heading-medium-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-heading-small-desktop</code>  → <code>$ouds-size-max-width-heading-small-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-heading-small-mobile</code>  → <code>$ouds-size-max-width-heading-small-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-heading-small-tablet</code>  → <code>$ouds-size-max-width-heading-small-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-heading-xlarge-desktop</code>  → <code>$ouds-size-max-width-heading-xlarge-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-heading-xlarge-mobile</code>  → <code>$ouds-size-max-width-heading-xlarge-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-heading-xlarge-tablet</code>  → <code>$ouds-size-max-width-heading-xlarge-tablet</code></li>
+      <li><code>$ouds-control-item-space-padding-block-top-error-text</code>  → <code>$ouds-control-item-space-padding-block-top-helper-text</code></li>
+      <li><code>$ouds-control-item-border-radius</code>  → <code>$ouds-control-item-border-radius-default</code></li>
+      <li><code>$ouds-badge-space-inset</code>  → <code>$ouds-badge-space-inset-medium-large</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-small">
+    <summary><span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Removed Sass variables:</summary>
+    <ul>
+    </ul>
+  </details>
+
 ### Dual mode
 
 1. Change the `@include rfs($font-size-base, --#{$prefix}body-font-size);` into `--#{$prefix}body-font-size: #{$font-size-base};`.

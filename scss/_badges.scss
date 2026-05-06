@@ -6,8 +6,8 @@
   // scss-docs-start badge-css-vars
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-medium)};
   --#{$prefix}badge-border-radius: #{$ouds-border-radius-pill};
-  --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-inset};
-  --#{$prefix}badge-count-padding-y: #{$ouds-badge-space-inset};
+  --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-inset-medium-large};
+  --#{$prefix}badge-count-padding-y: #{$ouds-badge-space-inset-medium-large};
   --#{$prefix}badge-color: #{$ouds-color-content-on-status-negative-emphasized};
   --#{$prefix}badge-background-color: #{$ouds-color-surface-status-negative-emphasized};
   --#{$prefix}badge-positive-icon: var(--#{$prefix}success-icon);
