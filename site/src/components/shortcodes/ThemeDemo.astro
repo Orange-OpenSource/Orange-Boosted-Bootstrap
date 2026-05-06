@@ -119,13 +119,13 @@ const { theme = 'orange' } = Astro.props
         <p class="badge"><span class="visually-hidden">Beware</span></p>
       </div>
       <div class="d-flex gap-large my-small">
-        <p class="badge badge-neutral badge-count">0<span class="visually-hidden">notification</span></p>
-        <p class="badge badge-accent badge-count">1<span class="visually-hidden">notification</span></p>
-        <p class="badge badge-positive">
+        <p class="badge badge-neutral badge-count badge-large">0<span class="visually-hidden">notification</span></p>
+        <p class="badge badge-accent badge-count badge-large">1<span class="visually-hidden">notification</span></p>
+        <p class="badge badge-positive badge-large">
           <span class="badge-status-icon"></span>
           <span class="visually-hidden">Success</span>
         </p>
-        <p class="badge badge-info">
+        <p class="badge badge-info badge-large">
           <span class="badge-status-icon"></span>
           <span class="visually-hidden">Info</span>
         </p>
@@ -201,7 +201,7 @@ const { theme = 'orange' } = Astro.props
           <input type="password" id={`pwd-${theme}`} class="text-input-field" placeholder=" ">
           <button class="btn btn-minimal btn-icon" aria-pressed="false" type="button">
             <svg aria-hidden="true">
-              <use xlink:href="/orange/docs/1.2/assets/img/ouds-web-sprite.svg#accessibility-vision"/>
+              <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')} />
             </svg>
             <span class="visually-hidden">Show password</span>
           </button>
