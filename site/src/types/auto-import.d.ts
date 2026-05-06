@@ -8,7 +8,6 @@
 export declare global {
   export const AddedIn: typeof import('@shortcodes/AddedIn.astro').default
   export const BootstrapCompatibility: typeof import('@shortcodes/BootstrapCompatibility.astro').default
-  export const BrandDemo: typeof import('@shortcodes/BrandDemo.astro').default
   export const BrandSpecific: typeof import('@shortcodes/BrandSpecific.astro').default
   export const BsTable: typeof import('@shortcodes/BsTable.astro').default
   export const Callout: typeof import('@shortcodes/Callout.astro').default
@@ -28,4 +27,5 @@ export declare global {
   export const SkeletonRedirect: typeof import('@shortcodes/SkeletonRedirect.astro').default
   export const SvgDocs: typeof import('@shortcodes/SvgDocs.astro').default
   export const Table: typeof import('@shortcodes/Table.astro').default
+  export const ThemeDemo: typeof import('@shortcodes/ThemeDemo.astro').default
 }

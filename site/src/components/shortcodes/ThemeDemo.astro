@@ -3,17 +3,17 @@ import {getVersionedDocsPath} from "@libs/path.ts";
 
 interface Props {
   /**
-   * The brand to use for display. One of `orange`, `orange-compact`, or `sosh`.
+   * The theme to use for display. One of `orange`, `orange-compact`, or `sosh`.
    * @default 'orange'
    */
-  brand?: 'orange' | 'orange-compact' | 'sosh'
+  theme?: 'orange' | 'orange-compact' | 'sosh'
 
 }
 
-const { brand = 'orange' } = Astro.props
+const { theme = 'orange' } = Astro.props
 
 ---
-<div data-bs-brand={brand}>
+<div data-bs-brand={theme}>
   <div class="row mb-medium">
     <div class="col-12 sm:col-6 md:col-4">
       <div class="alert alert-message alert-negative mb-medium">
@@ -88,26 +88,26 @@ const { brand = 'orange' } = Astro.props
     <div class="col-12 sm:col-6 md:col-4">
       <div class="checkbox-item">
         <div class="control-item-assets-container">
-          <input checked class="control-item-indicator" type="checkbox" value="" id={`cb-${brand}`} />
+          <input checked class="control-item-indicator" type="checkbox" value="" id={`cb-${theme}`} />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for={`cb-${brand}`}>Checkbox</label>
+          <label class="control-item-label" for={`cb-${theme}`}>Checkbox</label>
         </div>
       </div>
       <div class="radio-button-item">
         <div class="control-item-assets-container">
-          <input checked class="control-item-indicator" type="radio" value="" id={`rb-${brand}`} name={`radio-${brand}`} />
+          <input checked class="control-item-indicator" type="radio" value="" id={`rb-${theme}`} name={`radio-${theme}`} />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for={`rb-${brand}`}>Radio button</label>
+          <label class="control-item-label" for={`rb-${theme}`}>Radio button</label>
         </div>
       </div>
       <div class="switch-item control-item-reverse">
         <div class="control-item-assets-container">
-          <input checked class="control-item-indicator" type="checkbox" role="switch" value="" id={`sw-${brand}`} />
+          <input checked class="control-item-indicator" type="checkbox" role="switch" value="" id={`sw-${theme}`} />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for={`sw-${brand}`}>Switch</label>
+          <label class="control-item-label" for={`sw-${theme}`}>Switch</label>
         </div>
       </div>
     </div>
@@ -152,20 +152,20 @@ const { brand = 'orange' } = Astro.props
       </nav>
       <ul class="chips-container flex-wrap column-gap-xsmall row-gap-medium" aria-label="Filter by number">
         <li class="chip chip-filter">
-          <input type="checkbox" id={`fc1-${brand}`} checked />
-          <label class="chip-interactive" for={`fc1-${brand}`}>
+          <input type="checkbox" id={`fc1-${theme}`} checked />
+          <label class="chip-interactive" for={`fc1-${theme}`}>
             One
           </label>
         </li>
         <li class="chip chip-filter">
-          <input type="checkbox" id={`fc2-${brand}`} />
-          <label class="chip-interactive" for={`fc2-${brand}`}>
+          <input type="checkbox" id={`fc2-${theme}`} />
+          <label class="chip-interactive" for={`fc2-${theme}`}>
             Two
           </label>
         </li>
         <li class="chip chip-filter">
-          <input type="checkbox" id={`fc3-${brand}`} />
-          <label class="chip-interactive" for={`fc3-${brand}`}>
+          <input type="checkbox" id={`fc3-${theme}`} />
+          <label class="chip-interactive" for={`fc3-${theme}`}>
             Three
           </label>
         </li>
@@ -191,14 +191,14 @@ const { brand = 'orange' } = Astro.props
     <div class="col-12 sm:col-6 md:col-4">
       <div class="text-input mb-medium">
         <div class="text-input-container">
-          <label for="firstname">Firstname</label>
-          <input type="text" class="text-input-field" id="firstname" placeholder=" ">
+          <label for={`ti-${theme}`}>Firstname</label>
+          <input type="text" class="text-input-field" id={`ti-${theme}`} placeholder=" ">
         </div>
       </div>
       <div class="text-input mb-medium">
         <div class="text-input-container">
-          <label for="pwd">Password</label>
-          <input type="password" id="pwd" class="text-input-field" placeholder=" ">
+          <label for={`pwd-${theme}`}>Password</label>
+          <input type="password" id={`pwd-${theme}`} class="text-input-field" placeholder=" ">
           <button class="btn btn-minimal btn-icon" aria-pressed="false" type="button">
             <svg aria-hidden="true">
               <use xlink:href="/orange/docs/1.2/assets/img/ouds-web-sprite.svg#accessibility-vision"/>
@@ -209,8 +209,8 @@ const { brand = 'orange' } = Astro.props
       </div>
       <div class="text-area">
         <div class="text-area-container">
-          <label for="exampleTextAreaPlaceholder">Additional comments</label>
-          <textarea class="text-area-field" id="exampleTextAreaPlaceholder" placeholder="Enter your comment here"></textarea>
+          <label for={`ta-${theme}`}>Additional comments</label>
+          <textarea class="text-area-field" id={`ta-${theme}`} placeholder="Enter your comment here"></textarea>
         </div>
       </div>
     </div>
