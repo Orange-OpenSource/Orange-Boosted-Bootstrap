@@ -13,6 +13,47 @@ interface Props {
 const { theme = 'orange' } = Astro.props
 
 ---
+
+<style is:global lang="scss">
+  // ThemeDemo specific styles applied only to div with data-bs-brand attribute
+  div[data-bs-brand] {
+    // Common styles for all brands
+    isolation: isolate;
+
+    // Brand-specific styles
+    &[data-bs-brand='orange'] {
+      // Orange brand specific styles
+      $brand: 'orange';
+      @import '../../../../scss/config';
+      @import '../../../../scss/functions';
+      @import '../../../../packages/orange/scss/tokens';
+      @import '../../scss/docs_prod';
+      @import '../../../static/orange/docs/[version]/assets/fonts/solaris-icons';
+    }
+
+    &[data-bs-brand='orange-compact'] {
+      // Orange Compact brand specific styles
+      $brand: 'orange-compact';
+      @import '../../../../scss/config';
+      @import '../../../../scss/functions';
+      @import '../../../../packages/orange-compact/scss/tokens';
+      @import '../../scss/docs_prod';
+      @import '../../../static/orange-compact/docs/[version]/assets/fonts/solaris-icons';
+
+    }
+
+    &[data-bs-brand='sosh'] {
+      // Sosh brand specific styles
+      $brand: 'sosh';
+      @import '../../../../scss/config';
+      @import '../../../../scss/functions';
+      @import '../../../../packages/sosh/scss/tokens';
+      @import '../../scss/docs_prod';
+      @import '../../../static/sosh/docs/[version]/assets/fonts/solaris-icons';
+    }
+  }
+</style>
+
 <div data-bs-brand={theme}>
   <div class="row mb-medium">
     <div class="col-12 sm:col-6 md:col-4">
