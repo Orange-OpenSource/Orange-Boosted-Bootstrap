@@ -1,0 +1,17 @@
+---
+// Dynamic imports to avoid build-time processing
+
+import ThemeDemoStylesProd from "@shortcodes/ThemeDemoStylesProd.astro";
+import ThemeDemoStyles from "@shortcodes/ThemeDemoStyles.astro";
+import {getVersionedDocsPath} from "@libs/path.ts";
+const Scss = import.meta.env.PROD ? null : await import('@components/head/Scss.astro')
+const ScssProd = import.meta.env.PROD ? await import('@components/head/ScssProd.astro') : null
+---
+
+{import.meta.env.PROD && ScssProd && (
+  <ThemeDemoStylesProd />
+)}
+
+{!import.meta.env.PROD && Scss && (
+  <ThemeDemoStyles />
+)}

@@ -1,5 +1,6 @@
 ---
-import {getVersionedDocsPath} from "@libs/path.ts";
+import {getDocsPublicFsPath, getVersionedDocsPath} from "@libs/path.ts";
+import {getConfig} from "@libs/config.ts";
 
 interface Props {
   /**
@@ -14,47 +15,10 @@ const { theme = 'orange' } = Astro.props
 
 ---
 
-<style is:global lang="scss">
-  // ThemeDemo specific styles applied only to div with data-bs-brand attribute
-  div[data-bs-brand] {
-    // Common styles for all brands
-    isolation: isolate;
+<link rel="preload" href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg` as="image" type="image/svg+xml" />
 
-    // Brand-specific styles
-    &[data-bs-brand='orange'] {
-      // Orange brand specific styles
-      $brand: 'orange';
-      @import '../../../../scss/config';
-      @import '../../../../scss/functions';
-      @import '../../../../packages/orange/scss/tokens';
-      @import '../../scss/docs_prod';
-      @import '../../../static/orange/docs/[version]/assets/fonts/solaris-icons';
-    }
 
-    &[data-bs-brand='orange-compact'] {
-      // Orange Compact brand specific styles
-      $brand: 'orange-compact';
-      @import '../../../../scss/config';
-      @import '../../../../scss/functions';
-      @import '../../../../packages/orange-compact/scss/tokens';
-      @import '../../scss/docs_prod';
-      @import '../../../static/orange-compact/docs/[version]/assets/fonts/solaris-icons';
-
-    }
-
-    &[data-bs-brand='sosh'] {
-      // Sosh brand specific styles
-      $brand: 'sosh';
-      @import '../../../../scss/config';
-      @import '../../../../scss/functions';
-      @import '../../../../packages/sosh/scss/tokens';
-      @import '../../scss/docs_prod';
-      @import '../../../static/sosh/docs/[version]/assets/fonts/solaris-icons';
-    }
-  }
-</style>
-
-<div data-bs-brand={theme}>
+<div data-bs-brand={theme} id={`theme-demo-${theme}`}>
   <div class="row mb-medium">
     <div class="col-12 sm:col-6 md:col-4">
       <div class="alert alert-message alert-negative mb-medium">
@@ -96,7 +60,9 @@ const { theme = 'orange' } = Astro.props
         <button type="button" class="btn btn-next btn-strong">Next</button>
         <button type="button" class="btn btn-brand">
           <svg aria-hidden="true">
-            <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')} />
+            <!--/orange/docs/1.2/assets/img/ouds-web-sprite.svg-->
+            <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty` />
+            <!--<use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')} />-->
           </svg>
           Brand
         </button>
@@ -106,21 +72,21 @@ const { theme = 'orange' } = Astro.props
       <div class="d-flex gap-xsmall flex-wrap">
         <button type="button" class="btn btn-icon btn-default">
           <svg aria-hidden="true">
-            <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')} />
+            <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty` />
           </svg>
           <span class="visually-hidden">Default</span>
         </button>
         <a class="btn btn-next btn-icon btn-strong" href="#"><span class="visually-hidden">Next</span></a>
         <button type="button" class="btn btn-icon btn-brand">
           <svg aria-hidden="true">
-            <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')} />
+            <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty` />
           </svg>
           <span class="visually-hidden">Brand</span>
         </button>
         <a class="btn btn-previous btn-icon btn-minimal" href="#"><span class="visually-hidden">Previous</span></a>
         <button type="button" class="btn btn-icon btn-negative">
           <svg aria-hidden="true">
-            <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')} />
+            <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty` />
           </svg>
           <span class="visually-hidden">Negative</span>
         </button>
@@ -242,7 +208,7 @@ const { theme = 'orange' } = Astro.props
           <input type="password" id={`pwd-${theme}`} class="text-input-field" placeholder=" ">
           <button class="btn btn-minimal btn-icon" aria-pressed="false" type="button">
             <svg aria-hidden="true">
-              <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')} />
+              <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#accessibility-vision` />
             </svg>
             <span class="visually-hidden">Show password</span>
           </button>
