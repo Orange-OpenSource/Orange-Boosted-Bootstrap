@@ -41,11 +41,9 @@ const size = fs.statSync(svgPath).size
 const clipboardLabel = buttonLabel
   ? `Copy ${buttonLabel} SVG to clipboard`
   : file
-    ? `Copy ${file}.svg file to clipboard`
+    ? `Copy ${file}.svg content to clipboard`
     : 'Copy SVG to clipboard'
 ---
-
-filepath {filePath}
 
 <Code filePath={svgFormattedPath} lang="html" buttonLabel={buttonLabel}>
   <div slot="pre" class="bd-clipboard">

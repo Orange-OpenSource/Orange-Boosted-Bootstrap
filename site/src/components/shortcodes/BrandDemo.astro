@@ -15,7 +15,7 @@ const { brand = 'orange' } = Astro.props
 ---
 <div data-bs-brand={brand}>
   <div class="row mb-medium">
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 sm:col-6 md:col-4">
       <div class="alert alert-message alert-negative mb-medium">
         <div class="alert-icon"></div>
         <div class="alert-container">
@@ -49,7 +49,7 @@ const { brand = 'orange' } = Astro.props
         </div>
       </div>
     </div>
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 sm:col-6 md:col-4">
       <div class="d-flex gap-xsmall flex-wrap my-small">
         <button type="button" class="btn btn-default">Default</button>
         <button type="button" class="btn btn-next btn-strong">Next</button>
@@ -85,7 +85,7 @@ const { brand = 'orange' } = Astro.props
         </button>
       </div>
     </div>
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 sm:col-6 md:col-4">
       <div class="checkbox-item">
         <div class="control-item-assets-container">
           <input checked class="control-item-indicator" type="checkbox" value="" id={`cb-${brand}`} />
@@ -111,7 +111,7 @@ const { brand = 'orange' } = Astro.props
         </div>
       </div>
     </div>
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 sm:col-6 md:col-4">
       <div class="d-flex gap-large my-small">
         <p class="badge badge-positive"><span class="visually-hidden">Success</span></p>
         <p class="badge badge-info"><span class="visually-hidden">Info</span></p>
@@ -142,7 +142,7 @@ const { brand = 'orange' } = Astro.props
         <li class="tag tag-negative tag-muted">Negative</li>
       </ul>
     </div>
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 sm:col-6 md:col-4">
       <div><a class="link link-chevron" href="#">Link with chevron</a></div>
       <nav aria-label="basic breadcrumb">
         <ol class="breadcrumb my-small">
@@ -188,7 +188,7 @@ const { brand = 'orange' } = Astro.props
         </li>
       </ul>
     </div>
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 sm:col-6 md:col-4">
       <div class="text-input mb-medium">
         <div class="text-input-container">
           <label for="firstname">Firstname</label>
