@@ -274,10 +274,10 @@ export default () => {
 
       // Toggle the aria-pressed attribute and the icon to reflect the change in state
       if (type === 'text') {
-        // togglePasswordButton.setAttribute('aria-pressed', 'false')
+        togglePasswordButton.setAttribute('aria-pressed', 'false')
         iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('accessibility-vision', 'hide'))
       } else {
-        // togglePasswordButton.setAttribute('aria-pressed', 'true')
+        togglePasswordButton.setAttribute('aria-pressed', 'true')
         iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('hide', 'accessibility-vision'))
       }
     })
