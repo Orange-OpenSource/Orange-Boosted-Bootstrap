@@ -240,6 +240,7 @@
   --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-loader-small};
   --#{$prefix}tag-font-size-icon: #{$ouds-font-size-label-small};
   @include get-font-size("label-small");
+  font-weight: 500;
 }
 
 .tag-input {
@@ -250,6 +251,7 @@
   --#{$prefix}tag-padding-end: var(--#{$prefix}tag-padding-asset);
 
   margin: calc(($ouds-tag-size-min-height-interactive-area - var(--#{$prefix}tag-min-height)) / 2) 0;
+  font-weight: 500;
   border: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-border-color);
 
   &::before {
