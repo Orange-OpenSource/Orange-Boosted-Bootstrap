@@ -157,7 +157,7 @@ To display a description text, add a `.control-item-description` as a sibling of
 It's recommended to keep switch label to no more than three words. When space is limited or when a long label or description text is required, the text can wrap, as this is preferable to truncation. The switch indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
 
 <Example buttonLabel="switches with long texts" code={`<div class="row">
-    <div class="col-8 col-md-6 col-xl-5">
+    <div class="col-8 md:col-6 xl:col-5">
       <ul class="control-items-list">
         <li class="switch-item control-item-divider">
           <div class="control-item-assets-container">
@@ -196,7 +196,7 @@ It's recommended to keep switch label to no more than three words. When space is
 To reverse the component, simply add `.control-item-reverse` to a `.switch-item`.
 
 <Example buttonLabel="reversed switches" code={`<div class="row">
-    <div class="col-8 col-md-6 col-xl-5">
+    <div class="col-8 md:col-6 xl:col-5">
       <ul class="control-items-list">
         <li class="switch-item control-item-divider control-item-reverse">
           <div class="control-item-assets-container">
@@ -243,7 +243,7 @@ Put your switches on the opposite side with the `.form-check-reverse` modifier c
 
 By default, switches will span the whole width of their parent container, to limit the width of the switch on wider parent container, add a `.component-max-width` to the `.switch-item` container. More information on switch sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-switch-responsiveness).
 
-<Example buttonLabel="switch max width" code={`<div class="switch-item component-max-width">
+<Example buttonLabel="switches max width" code={`<div class="switch-item component-max-width">
     <div class="control-item-assets-container">
       <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchMaxWidth" checked />
     </div>
@@ -426,7 +426,7 @@ If the switch items list is part of a form, add a `<fieldset>` with the class `.
 For accessibility reasons, it is required to provide understandable switch labels without relying on visual context. If switches belong to a group, it is good practice to add a group title inside a `<legend>` element as the first child of the `<fieldset>` element. Screen readers will read the legend before navigating through the switches; this way, keyboard navigation users have more information on what is expected with the multiple switches element.
 
 <Example buttonLabel="switches grouped with fieldset" code={`<div class="row">
-    <div class="col-md-6">
+    <div class="md:col-6">
       <fieldset class="control-items-list">
         <legend>Switches group example</legend>
         <div class="switch-item control-item-divider">

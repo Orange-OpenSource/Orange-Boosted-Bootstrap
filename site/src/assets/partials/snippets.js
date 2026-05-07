@@ -252,4 +252,118 @@ export default () => {
     }
     // js-docs-end skeleton-second-example
   }
+
+  // -------------------------------
+  // Show password live example
+  // -------------------------------
+  // Used by 'password input' live example in docs or StackBlitz
+  // storybook-start password-input
+  // js-docs-start live-show-password
+  // Toggle password visibility
+  const togglePasswordButton = document.querySelector('#liveShowPasswordExample #togglePassword')
+  if (togglePasswordButton) {
+    const passwordInput = document.querySelector('#liveShowPasswordExample #liveInputPassword')
+    const iconUse = togglePasswordButton.querySelector('use')
+
+    togglePasswordButton.addEventListener('click', event => {
+      event.preventDefault()
+
+      // Toggle the type attribute to make the password visible or hidden
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password'
+      passwordInput.setAttribute('type', type)
+
+      // Toggle the aria-pressed attribute and the icon to reflect the change in state
+      if (type === 'text') {
+        passwordInput.setAttribute('aria-pressed', 'false')
+        iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('accessibility-vision', 'hide'))
+      } else {
+        passwordInput.setAttribute('aria-pressed', 'true')
+        iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('hide', 'accessibility-vision'))
+      }
+    })
+  }
+  // js-docs-end live-show-password
+  // storybook-end password-input
+
+  // -------------------------------
+  // Table
+  // -------------------------------
+  // Indeterminate checkbox in table example in docs and StackBlitz
+  // storybook-start table
+  // js-docs-start live-row-selection-checkboxes
+  // Manage checkboxes states: select/deselect all rows, update header checkbox state, update data-bs-theme on selected rows
+  const tableSelectAll = document.querySelector('#tableWithCheckboxes #tableSelectAll')
+  const allCheckboxes = document.querySelectorAll('#tableWithCheckboxes tbody input[type="checkbox"]')
+
+  function updateSelectAllState() {
+    const checkedCheckboxes = document.querySelectorAll('#tableWithCheckboxes tbody input[type="checkbox"]:checked')
+
+    if (checkedCheckboxes.length === 0) {
+      // None are checked
+      tableSelectAll.checked = false
+      tableSelectAll.indeterminate = false
+    } else if (checkedCheckboxes.length === allCheckboxes.length) {
+      // All are checked
+      tableSelectAll.checked = true
+      tableSelectAll.indeterminate = false
+    } else {
+      // Some are checked
+      tableSelectAll.checked = false
+      tableSelectAll.indeterminate = true
+    }
+  }
+
+  function updateSelectedRows() {
+    const selectedRows = document.querySelectorAll('#tableWithCheckboxes tbody tr:has(input[type="checkbox"]:checked)')
+
+    if (selectedRows.length >= 1) {
+      selectedRows.forEach(row => row.setAttribute('data-bs-theme', 'dark'))
+    }
+
+    const unselectedRows = document.querySelectorAll('#tableWithCheckboxes tbody tr:has(input[type="checkbox"]:not(:checked))')
+    if (unselectedRows.length >= 1) {
+      unselectedRows.forEach(row => row.removeAttribute('data-bs-theme'))
+    }
+
+    updateSelectAllState()
+  }
+
+  if (tableSelectAll) {
+    tableSelectAll.addEventListener('change', event => {
+      allCheckboxes.forEach(checkbox => {
+        checkbox.checked = event.target.checked
+      })
+      updateSelectedRows()
+    })
+
+    // Add change listener to all row checkboxes
+    allCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', updateSelectedRows)
+    })
+
+    // Initialize the state on load
+    updateSelectAllState()
+  }
+  // js-docs-end live-row-selection-checkboxes
+
+  // js-docs-start live-row-selection-radios
+  // Manage radio buttons states: update data-bs-theme on selected row
+  const allRadios = document.querySelectorAll('#tableWithRadios tbody input[type="radio"]')
+  // Add change listener to all row radios
+  allRadios.forEach(radio => {
+    radio.addEventListener('change', event => {
+      const selectedRow = event.target.closest('tr')
+      const allRows = document.querySelectorAll('#tableWithRadios tbody tr')
+
+      // Remove data-bs-theme from all rows
+      allRows.forEach(row => row.removeAttribute('data-bs-theme'))
+
+      // Add data-bs-theme="dark" to the selected row
+      if (selectedRow) {
+        selectedRow.setAttribute('data-bs-theme', 'dark')
+      }
+    })
+  })
+  // js-docs-end live-row-selection-radios
+  // storybook-end table
 }
