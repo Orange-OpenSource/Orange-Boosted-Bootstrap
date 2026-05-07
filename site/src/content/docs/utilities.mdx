@@ -8,6 +8,8 @@ aliases:
 toc: true
 ---
 
+To [integrate a Figma design](https://youtu.be/EnGJE0jZLPU?t=200), you will have to use tokens that are defined as `ouds/**`. This page gives you some directions on how to use these tokens within your codebase.
+
 ## General usage
 
 Our utilities are built on top of our [semantic tokens]([[docsref:/foundation/tokens#semantic-tokens]]) and our [composite tokens]([[docsref:/foundation/tokens#composite-tokens]]). They are the preferred way to use our tokens. When a token is used on Figma side, you should check if there is a utility class available for it.
@@ -20,23 +22,25 @@ We build our CSS variables following the architecture of the Figma tokens:
 
 ## Using our utilities
 
-To [integrate a Figma design](https://youtu.be/EnGJE0jZLPU?t=200), you will have to use tokens that are defined as `ouds/**`. This page gives you some directions on how to use these tokens within your codebase.
-
 <Callout type="info" title="This is the recommended method." />
 
 When a token is used on Figma side, you should check if there is a utility class available for it. If there is, you should use it. This way, you will be sure that the token is applied correctly, and that it will be updated automatically when the token value changes.
 
+<Callout type="info" class="my-none">
+  <p>Before using color tokens, please refer to [our color page]([[docsref:/foundation/colors]]).</p>
+</Callout>
+
 <BsTable>
   | On Figma I see | Used token | Utility classes | Utility link |
   | -------------- | ---------- | --------------- | ------------ |
-  | A color for a background, a border or a content, used depending on a user action `ouds/color/action/*`. | `ouds/color/action/pressed` | `--bs-color-action-pressed` | <Callout type="warning" class="my-none"><p>This case is a bit special and you should read about [our color page]([[docsref:/foundation/colors]]).</p></Callout> |
   | A background color using a standard token `ouds/color/{bg\|surface}/*`. | `ouds/color/bg/secondary`<br/>`ouds/color/surface/brand-primary` | `.bg-secondary`<br/>`.bg-surface-brand-primary` | [Background]([[docsref:/utilities/background]]) |
   | A border using a standard token `ouds/color/border/*` or `ouds/border/*`. | `ouds/color/border/default`<br/>`ouds/border/radius/small`<br/>`ouds/border/width/thick` | `.border-default`<br/>`.rounded-small`<br/>`.border-thick` | [Border]([[docsref:/utilities/border]]) |
   | A content using a standard color token `ouds/color/content/*`. | `ouds/color/content/muted`<br/>`ouds/color/content/on/brand-primary` | `.text-muted`<br/>`.text-on-brand-primary` | [Color]([[docsref:/utilities/color]]) |
+  | A color for a background, a border or a content, used depending on a user action `ouds/color/action/*`. | `ouds/color/action/pressed` | `--bs-color-action-pressed` | No utility, [use a CSS variable](#using-our-variables). |
   | An opacity using a standard token `ouds/opacity/*`. Be careful where the token is applied. | `ouds/opacity/medium` | `.opacity-medium` | [Opacity]([[docsref:/utilities/opacity]]) |
-  | A shadow using an aggregated reference. Having a token shaped like `ouds/elevation/*` is a good sign that this reference has been used or should have been. | `ouds/elevation/**/emphasized` | `.shadow-emphasized` | [Shadow]([[docsref:/utilities/shadow]]) |
+  | A shadow using a composite token like `ouds/elevation/*`. | `ouds/elevation/**/emphasized` | `.shadow-emphasized` | [Shadow]([[docsref:/utilities/shadow]]) |
   | A spacing using a standard token `ouds/space/{scaled\|fixed}/*` or `ouds/space/{column-gap\|row-gap}/*`. | `ouds/space/scaled/2xlarge`<br/>`ouds/space/fixed/medium`<br/>`ouds/space/row-gap/none` | `.p-scaled-2xlarge`<br/>`.p-medium`<br/>`.row-gap-none` | [Spacing]([[docsref:/utilities/spacing]]) |
-  | A text using an aggregated reference. Having a token shaped like `ouds/font/*` or `font-ref/size/weight` is a good sign that this reference has been used or should have been. | `ouds/font/**/body-large`<br/>`Body/Large/Strong` | `.fs-bl`<br/>`.fs-bl.fw-bold` | [Typography]([[docsref:/utilities/text#font-size]]) |
+  | A text using a named typography reference or tokens like `ouds/font/*` or `font-ref/size/weight`. | `ouds/font/**/body-large`<br/>`Body/Large/Strong` | `.fs-bl`<br/>`.fs-bl.fw-bold` | [Typography]([[docsref:/utilities/text#font-size]]) |
   | A spacing using a grid token `ouds/grid/*` | `ouds/grid/column-gap`<br/>`ouds/grid/margin` | `.gap-gridgap`<br/>`.px-gridmargin` | [Spacing]([[docsref:/utilities/spacing#grid-measures]]) |
 </BsTable>
 
@@ -55,8 +59,8 @@ Variables names can be easily inferred from token names, [this is explained in t
   | A border using a standard token `ouds/color/border/*` or `ouds/border/*`. | `ouds/color/border/default`<br/>`ouds/border/radius/small`<br/>`ouds/border/width/thick` | `--bs-color-border-default`<br/>`none`<br/>`none` | `$ouds-color-border-default`<br/>`$ouds-border-radius-small`<br/>`$ouds-border-width-thick` |
   | A content using a standard color token `ouds/color/content/*`. | `ouds/color/content/muted`<br/>`ouds/color/content/on/brand-primary`<br/>`ouds/color/content/on/action/hover` | `--bs-color-content-muted`<br/>`--bs-color-content-on-brand-primary`<br/>`--bs-color-content-on-action-hover` | `$ouds-color-content-muted`<br/>`$ouds-color-content-on-brand-primary`<br/>`$ouds-color-content-on-action-hover` |
   | An opacity using a standard token `ouds/opacity/*`. Be careful where the token is applied. | `ouds/opacity/medium` | `none` | `$ouds-opacity-medium` |
-  | A shadow using an aggregated reference. Having a token shaped like `ouds/elevation/*` is a good sign that this reference has been used or should have been. | `ouds/elevation/**/emphasized` | `none` | `$ouds-elevation-emphasized` |
+  | A shadow using a composite token like `ouds/elevation/*`. | `ouds/elevation/**/emphasized` | `none` | `$ouds-elevation-emphasized` |
   | A spacing using a standard token `ouds/space/{scaled\|fixed}/*` or `ouds/space/{column-gap\|row-gap}/*`. | `ouds/space/scaled/2xlarge`<br/>`ouds/space/fixed/medium`<br/>`ouds/space/row-gap/none` | `--bs-space-scaled-2xlarge`<br/>`none`<br/>`none` | `none`<br/>`$ouds-space-fixed-medium`<br/>`$ouds-space-row-gap-none` |
-  | A text using an aggregated reference. Having a token shaped like `ouds/font/*` or `font-ref/size/weight` is a good sign that this reference has been used or should have been. | `ouds/font/**/body-large`<br/>`Body/Large/Strong` | `get-font-size("body-large")`<br/>`none`<br/>As you can see, this one is a bit special and calls a mixin [`get-font-size()`]([[docsref:/foundation/typography/#text-style-for-custom-components]]). | `none`<br/>`$ouds-font-weight-web-body-strong` |
+  | A text using a named typography reference or tokens like `ouds/font/*` or `font-ref/size/weight`. | `ouds/font/**/body-large`<br/>`Body/Large/Strong` | `get-font-size("body-large")`<br/>`none`<br/>As you can see, this one is a bit special and calls a mixin [`get-font-size()`]([[docsref:/foundation/typography/#text-style-for-custom-components]]). | `none`<br/>`$ouds-font-weight-web-body-strong` |
   | A spacing using a grid token `ouds/grid/*` | `ouds/grid/column-gap`<br/>`ouds/grid/margin` | `--bs-grid-gap`<br/>`--bs-grid-margin` | `none`<br/>`none` |
 </BsTable>
