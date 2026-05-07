@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import yaml from 'js-yaml'
 import { z } from 'zod'
-import { zPrefixedVersionSemver, zVersionMajorMinor, zVersionSemver } from './validation'
+import { zVersionMajorMinor, zVersionSemver } from './validation'
 
 // The config schema used to validate the config file content and ensure all values required by the site are valid.
 const configSchema = z.object({
@@ -60,7 +60,6 @@ const configSchema = z.object({
     web: z.string().url()
   }),
   repo: z.string().url(),
-  rfs_version: zPrefixedVersionSemver,
   subtitle: z.string(),
   title: z.string(),
   toc: z.object({

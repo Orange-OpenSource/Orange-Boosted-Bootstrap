@@ -13,16 +13,15 @@ const sidebarMap = {
 ---
 
 <!--OUDS mod: doesn’t exist anymore in Bootstrap-->
-<nav class:list={['bd-subnavbar py-small d-lg-none', !sidebarMap[slug] && 'd-none']} aria-label="Secondary navigation">
+<nav class:list={['bd-subnavbar py-small lg:d-none', !sidebarMap[slug] && 'd-none']} aria-label="Secondary navigation">
   <div class="container-fluid container-max-width d-flex justify-content-start">
-    <button class="btn btn-default" type="button" data-bs-toggle="offcanvas"
+    <button class="btn btn-default btn-icon" type="button" data-bs-toggle="offcanvas"
       data-bs-target="#bdSidebar" aria-controls="bdSidebar">
-        <svg aria-hidden="true">
-          <use xlink:href={`${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#outgoing')}`}></use>
-        </svg>
-      <span class="d-none d-sm-inline">Browse docs: {sidebarMap[slug]}</span>
-      <span class="d-sm-none">Browse: {sidebarMap[slug]}</span>
+      <svg aria-hidden="true">
+        <use xlink:href={`${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#outgoing')}`}></use>
+      </svg>
+      <span class="d-none sm:d-inline">Browse docs: {sidebarMap[slug]}</span>
+      <span class="sm:d-none">Browse: {sidebarMap[slug]}</span>
     </button>
   </div>
 </nav>
-

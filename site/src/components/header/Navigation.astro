@@ -34,9 +34,9 @@ const { addedIn, layout, title } = Astro.props
       </ul>
     </div>
   </nav>
-  <nav class="navbar navbar-expand-lg" data-bs-theme="dark" aria-label="Main navigation">
+  <nav class="navbar lg:navbar-expand" data-bs-theme="dark" aria-label="Main navigation">
     <div class="container-fluid container-max-width">
-      <div class="navbar-brand me-auto me-lg-2xlarge">
+      <div class="navbar-brand me-auto lg:me-2xlarge">
         <a class="stretched-link" href={`/${getConfig().brand}/`}>
           <img
             src={getVersionedDocsPath(`assets/brand/${getConfig().brand}-logo.svg`)}
@@ -62,7 +62,7 @@ const { addedIn, layout, title } = Astro.props
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div id="bd-navbar1" class="navbar-collapse collapse me-lg-auto bd-navbar mb-none border-none">
+      <div id="bd-navbar1" class="navbar-collapse collapse lg:me-auto bd-navbar mb-none border-none">
         <ul class="navbar-nav">
           <LinkItem
             active={layout === 'docs' && Astro.url.pathname.includes('/getting-started/')}
@@ -109,7 +109,7 @@ const { addedIn, layout, title } = Astro.props
         </ul>
       </div>
       <div id="bd-navbar2" class="navbar-collapse collapse bd-navbar border-none">
-        <ul class="navbar-nav flex-row me-lg-2xlarge">
+        <ul class="navbar-nav flex-row lg:me-2xlarge">
           <LinkItem class="nav-icon" href={getConfig().repo} target="_blank" rel="noopener">
             <GitHubIcon height={16} width={16} />
             <span class="visually-hidden">GitHub</span>
@@ -139,7 +139,7 @@ const { addedIn, layout, title } = Astro.props
               <svg class="bi ms-auto" aria-hidden="true">
                 <use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#theme')}></use>
               </svg>
-              <span class="d-lg-none ms-small" id="bd-brand-text">Brand</span>
+              <span class="lg:d-none ms-small" id="bd-brand-text">Brand</span>
             </button>
             <ul class=`dropdown-menu dropdown-menu-end mb-small` aria-labelledby="bd-brand-text">
               <li>
