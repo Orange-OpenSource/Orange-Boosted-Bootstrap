@@ -9,11 +9,29 @@ aliases:
 toc: true
 ---
 
+## v1.3.0
+
+<hr />
+
+### CSS and Sass variables
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `scss/vendor/_rfs.scss` has been removed. It was deprecated and should not have been used.
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `font-size()` mixin has been removed. Please refer to `get-font-size()` mixin instead.
+
+### Dual mode
+
+1. Change the `@include rfs($font-size-base, --#{$prefix}body-font-size);` into `--#{$prefix}body-font-size: #{$font-size-base};`.
+
 ## v1.2.0
 
 <hr />
 
 ### Components
+
+#### Chips
+
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Since filter and suggestion chips can be used inside forms, the chips buttons should have the `type="button"` attribute. We have added this to our examples. Read more in our [chips page]([[docsref:/components/chips]]).
 
 #### Footer
 
@@ -27,20 +45,30 @@ toc: true
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Navigation button has been implemented. Read more in our [buttons page]([[docsref:/components/buttons]]).
 
+#### Password input
+
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Since password inputs are usually used inside forms, the "show password" button should have the `type="button"` attribute. We have added this to our examples. Read more in our [password input page]([[docsref:/components/password-input]]).
+- <span class="tag tag-small rounded-none tag-positive">New</span> A new live example about how to handle show/hide password buttons has been added. Read more in our [password input page]([[docsref:/components/password-input#live-example]]).
+
 #### Skeleton
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Skeleton component has been implemented. Read more in our [skeleton page]([[docsref:/components/skeleton]]). We also added a skeleton state on every component that supports it.
+
+#### Text input
+
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Since text inputs are usually used inside forms, the trailing action button should have the `type="button"` attribute. We have added this to our examples. Read more in our [text input page]([[docsref:/components/text-input]]).
 
 ### Foundations
 
 #### Colors
 
-- <span class="tag tag-small tag-positive">New</span> We replaced the color palette page with a new and improved colors page, it lists all existing semantic colors available in OUDS Web. Read more in our [colors page]([[docsref:/foundation/colors]]).
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> We replaced the color palette page with a new and improved colors page, it lists all existing semantic colors available in OUDS Web. Read more in our [colors page]([[docsref:/foundation/colors]]).
 
 ### Dual mode
 
 1. Update `@ouds/web-common` and `@ouds/web-[theme]` to v1.2.0.
 2. Remove `@import "boosted/scss/nav";`, `@import "boosted/scss/navbar";`, `@import "boosted/scss/footer";`, and `@import "boosted/scss/orange-navbar";` from the Boosted custom import stack.
+3. Change the `@include rfs($font-size-base, --#{$prefix}body-font-size);` into `--#{$prefix}body-font-size: #{$font-size-base};`.
 
 ## v1.1.0
 
@@ -905,7 +933,7 @@ toc: true
     ```
   </details>
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `$enable-container-classes` to enable or disable the generation of CSS classes for the grid system (e.g. `.row`, `.col-md-1`, etc.).
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `$enable-container-classes` to enable or disable the generation of CSS classes for the grid system (e.g. `.row`, `.md:col-1`, etc.).
 
 - <details class="mb-small">
     <summary><span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Sass variables:</summary>

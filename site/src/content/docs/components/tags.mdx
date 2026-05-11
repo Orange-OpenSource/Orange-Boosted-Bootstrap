@@ -21,7 +21,7 @@ import { getVersionedDocsPath } from '@libs/path'
 
 ### Component types
 
-<ul class="list-unstyled row row-cols-1 row-cols-sm-2">
+<ul class="list-unstyled row row-cols-1 sm:row-cols-2">
   <li class="col">
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
@@ -147,7 +147,7 @@ To display a colored icon in non-functional tags, add the icon inside the tag, w
   Since icons in tags are always next to some text, they are purely decorative and should be hidden from assistive technologies using `aria-hidden="true"`, as demonstrated in our examples. [Read more about tags accessibility here](#accessibility).
 </Callout>
 
-<Example  buttonLabel="non-functional icon tags" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Non-functional emphasized icons">
+<Example buttonLabel="non-functional icon tags" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Non-functional emphasized icons">
     <li class="tag">
       <svg aria-hidden="true" class="tag-icon">
         <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />

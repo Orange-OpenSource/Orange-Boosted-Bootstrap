@@ -21,7 +21,7 @@ import { getVersionedDocsPath } from '@libs/path'
 <Callout type="warning">
   Mandatory changes from Boosted:
   - `.accordion-button` should have `.px-gridmargin` to align with the rest of the content, read [our documentation about it]([[docsref:/utilities/spacing#grid-measures]]).
-  - `.navbar-nav` inside the `.footer-nav` should have `.ps-large.ps-md-none` to better convey information.
+  - `.navbar-nav` inside the `.footer-nav` should have `.ps-large.md:ps-none` to better convey information.
   - Already existing components should be replaced inside the footer, such as the text input and the buttons.
 </Callout>
 
@@ -34,52 +34,52 @@ Here is a simple footer example, which is responsive and will wrap on smaller sc
     <div class="container-fluid container-max-width footer-nav">
       <nav class="accordion" id="accordion1" aria-label="Sitemap footer 1">
         <div class="row">
-          <div class="footer-column col-md-3">
+          <div class="footer-column md:col-3">
             <h3 class="accordion-header footer-heading" id="headingOne1">
-              <button class="accordion-button collapsed container-fluid container-max-width px-gridmargin d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">Category</button>
-              <span class="d-none d-md-flex">Category</span>
+              <button class="accordion-button collapsed container-fluid container-max-width px-gridmargin md:d-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">Category</button>
+              <span class="d-none md:d-flex">Category</span>
             </h3>
             <div id="collapseOne1" class="container-fluid container-max-width accordion-collapse collapse" data-bs-parent="#accordion1">
-              <ul class="navbar-nav ps-large ps-md-none">
+              <ul class="navbar-nav ps-large md:ps-none">
                 <li><a class="nav-link" href="#" aria-describedby="headingOne1">Subcategory</a></li>
                 <li><a class="nav-link" href="#" aria-describedby="headingOne1">Subcategory</a></li>
                 <li><a class="nav-link" href="#" aria-describedby="headingOne1">Subcategory</a></li>
               </ul>
             </div>
           </div>
-          <div class="footer-column col-md-3">
+          <div class="footer-column md:col-3">
             <h3 class="accordion-header footer-heading" id="headingTwo1">
-              <button class="accordion-button collapsed container-fluid container-max-width px-gridmargin d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">Category</button>
-              <span class="d-none d-md-flex">Category</span>
+              <button class="accordion-button collapsed container-fluid container-max-width px-gridmargin md:d-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">Category</button>
+              <span class="d-none md:d-flex">Category</span>
             </h3>
             <div id="collapseTwo1" class="container-fluid container-max-width accordion-collapse collapse" data-bs-parent="#accordion1">
-              <ul class="navbar-nav ps-large ps-md-none">
+              <ul class="navbar-nav ps-large md:ps-none">
                 <li><a class="nav-link" href="#" aria-describedby="headingTwo1">Subcategory</a></li>
                 <li><a class="nav-link" href="#" aria-describedby="headingTwo1">Subcategory</a></li>
                 <li><a class="nav-link" href="#" aria-describedby="headingTwo1">Subcategory</a></li>
               </ul>
             </div>
           </div>
-          <div class="footer-column col-md-3">
+          <div class="footer-column md:col-3">
             <h3 class="accordion-header footer-heading" id="headingThree1">
-              <button class="accordion-button collapsed container-fluid container-max-width px-gridmargin d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">Category</button>
-              <span class="d-none d-md-flex">Category</span>
+              <button class="accordion-button collapsed container-fluid container-max-width px-gridmargin md:d-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">Category</button>
+              <span class="d-none md:d-flex">Category</span>
             </h3>
             <div id="collapseThree1" class="container-fluid container-max-width accordion-collapse collapse" data-bs-parent="#accordion1">
-              <ul class="navbar-nav ps-large ps-md-none">
+              <ul class="navbar-nav ps-large md:ps-none">
                 <li><a class="nav-link" href="#" aria-describedby="headingThree1">Subcategory</a></li>
                 <li><a class="nav-link" href="#" aria-describedby="headingThree1">Subcategory</a></li>
                 <li><a class="nav-link" href="#" aria-describedby="headingThree1">Subcategory</a></li>
               </ul>
             </div>
           </div>
-          <div class="footer-column col-md-3">
+          <div class="footer-column md:col-3">
             <h3 class="accordion-header footer-heading" id="headingFour1">
-              <button class="accordion-button collapsed container-fluid container-max-width px-gridmargin d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour1" aria-expanded="false" aria-controls="collapseFour1">Category</button>
-              <span class="d-none d-md-flex">Category</span>
+              <button class="accordion-button collapsed container-fluid container-max-width px-gridmargin md:d-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour1" aria-expanded="false" aria-controls="collapseFour1">Category</button>
+              <span class="d-none md:d-flex">Category</span>
             </h3>
             <div id="collapseFour1" class="container-fluid container-max-width accordion-collapse collapse" data-bs-parent="#accordion1">
-              <ul class="navbar-nav ps-large ps-md-none">
+              <ul class="navbar-nav ps-large md:ps-none">
                 <li><a class="nav-link" href="#" aria-describedby="headingFour1">Subcategory</a></li>
                 <li><a class="nav-link" href="#" aria-describedby="headingFour1">Subcategory</a></li>
                 <li><a class="nav-link" href="#" aria-describedby="headingFour1">Subcategory</a></li>
@@ -91,7 +91,7 @@ Here is a simple footer example, which is responsive and will wrap on smaller sc
     </div>
     <div class="border-bottom border-thin border-default"></div>
     <div class="container-fluid container-max-width footer-service">
-      <ul class="navbar-nav gap-large gap-md-2xlarge">
+      <ul class="navbar-nav gap-large md:gap-2xlarge">
         <li><a class="nav-link gap-2xsmall" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#location-pin-compass')}"></use></svg><span>Store locator</span></a></li>
         <li><a class="nav-link gap-2xsmall" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#mobile-network-coverage')}"></use></svg><span>Coverage checker</span></a></li>
         <li><a class="nav-link gap-2xsmall" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#live-chat')}"></use></svg><span>Contact us</span></a></li>
@@ -100,7 +100,7 @@ Here is a simple footer example, which is responsive and will wrap on smaller sc
     </div>
     <div class="border-bottom border-thin border-default"></div>
     <div class="container-fluid container-max-width footer-terms">
-      <ul class="navbar-nav gap-md-large">
+      <ul class="navbar-nav md:gap-large">
         <li>© Orange 2026</li>
         <li><a class="nav-link" href="#">Terms and conditions</a></li>
         <li><a class="nav-link" href="#">Privacy</a></li>

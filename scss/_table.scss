@@ -1,6 +1,10 @@
 //
 // Basic OUDS Web table
 //
+%active {
+  --#{$prefix}table-color-state: var(--#{$prefix}color-content-default);
+  --#{$prefix}table-bg-state: var(--#{$prefix}table-active-bg);
+}
 
 .table {
   // Reset needed for nesting tables
@@ -27,7 +31,14 @@
   // OUDS mod
   //// Only rows have border
   //// Set line-height everywhere
-  tr {
+
+  // stylelint-disable selector-no-qualifying-type
+  th[scope="col"],
+  th[scope="colgroup"] {
+    border-bottom: $table-header-border-width solid var(--#{$prefix}table-border-color);
+  }
+
+  tr  {
     border-bottom: $table-border-width solid var(--#{$prefix}table-border-color);
   }
 
@@ -64,9 +75,21 @@
 
   // OUDS mod
   // When using checkboxes in the first column, force width to ensure correct spacing on this column
-  &.has-checkbox tr > :first-child {
-    width: $spacer * 2;
-    max-width: $spacer * 2;
+  tr > *:has(.control-item-indicator[type="checkbox"]:not([role="switch"]), .control-item-indicator[type="radio"]) {
+    width: 1%;
+    padding: 0;
+    vertical-align: middle;
+  }
+
+  // Extend checkboxes and radios click area
+  tr .radio-button-standalone,
+  tr .checkbox-standalone {
+    width: stretch;
+  }
+
+  // Automatically highlight rows with checked checkboxes or radios
+  tbody tr:has(.control-item-indicator[type="checkbox"]:not([role="switch"]):checked, .control-item-indicator[type="radio"]:checked) {
+    @extend %active;
   }
 
   // Use negative margins on icons in tables to preserve row height
@@ -74,6 +97,15 @@
   img {
     margin-top: $table-cell-icon-margin-top;
     margin-bottom: $table-cell-icon-margin-bottom;
+  }
+
+  .table-cell-component {
+    padding-block: 0;
+    vertical-align: middle;
+
+    > * {
+      vertical-align: middle;
+    }
   }
   // End mod
 }
@@ -88,18 +120,6 @@
 
 .caption-bottom {
   caption-side: bottom; // OUDS mod
-}
-
-
-//
-// Condensed table w/ half padding
-//
-
-.table-sm {
-  // stylelint-disable-next-line selector-max-universal
-  > :not(caption) > * > * {
-    padding: $table-cell-padding-y-sm $table-cell-padding-x-sm calc($table-cell-padding-y-sm + 1px); // OUDS mod
-  }
 }
 
 // OUDS mod: no .table-bordered
@@ -129,10 +149,8 @@
 // Active table
 //
 // The `.table-active` class can be added to highlight rows or cells
-
-.table-active {
-  --#{$prefix}table-color-state: var(--#{$prefix}table-active-color);
-  --#{$prefix}table-bg-state: var(--#{$prefix}table-active-bg);
+.table-active[data-bs-theme="dark"] {
+  @extend %active;
 }
 
 // Hover effect
@@ -146,13 +164,12 @@
   }
 }
 
-// Table variants set the table cell backgrounds, border colors
-// and the colors of the striped, hovered & active tables
-
-@each $color, $value in $table-variants {
-  @include table-variant($color, $value);
+// Table functional colors
+@each $table-state in ("info", "positive", "warning", "negative") {
+  .table-#{$table-state} {
+    --#{$prefix}table-bg: var(--#{$prefix}color-surface-status-#{$table-state}-muted);
+  }
 }
-
 
 // Responsive tables
 //
@@ -160,12 +177,17 @@
 // size of where your table will overflow.
 
 @each $breakpoint in map-keys($grid-breakpoints) {
-  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
   @include media-breakpoint-down($breakpoint) {
-    .table-responsive#{$infix} {
+    $breakpoint-prefix: breakpoint-prefix($breakpoint, $grid-breakpoints);
+    .#{$breakpoint-prefix}table-responsive {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
+    }
+
+    @if $enable-bootstrap-compatibility {
+      .table-responsive#{breakpoint-infix($breakpoint, $grid-breakpoints)} {
+        @extend .#{$breakpoint-prefix}table-responsive;
+      }
     }
   }
 }
