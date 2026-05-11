@@ -225,9 +225,9 @@ Use `.table-responsive{-xs|-sm|-md|-lg|-xl|-2xl|3xl}` as needed to create respon
     if (breakpoint.abbr) return (
       <div class="bd-example">
 
-        <div class={`table-responsive${breakpoint.abbr}`}>
+        <div class={`table-responsive-${breakpoint.abbr}`}>
           <table class="table">
-            <caption>OUDS Web responsive table for {breakpoint.abbr.substring(1)} breakpoint and under</caption>
+            <caption>OUDS Web responsive table for {breakpoint.abbr} breakpoint and under</caption>
             <thead>
             <tr>
               <th scope="col">#</th>
