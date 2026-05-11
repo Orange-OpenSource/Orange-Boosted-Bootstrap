@@ -42,6 +42,16 @@ npx @ouds/web-migrate --from=ob1 "src/**/*.{css,scss,html,vue}"
 - Prints the replacement results returned by `replace-in-file`.
 - Lists warnings when manual action is required.
 
+## Known limitations
+
+- This script will not remove `class=" "` from your code and will keep a space for removed classes
+- If you have custom responsive classes with an infix (like `something-2xl-left`), they will be renamed to `2xl:something-left`
+- Please check the result in detail
+
+## Feedback
+
+Feel free to contact us or open a discussion if you have any issue or improvement idea for this script: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions/new?category=q-a
+
 ## Development
 
 ```bash

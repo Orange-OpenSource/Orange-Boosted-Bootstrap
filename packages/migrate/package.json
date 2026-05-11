@@ -1,6 +1,6 @@
 {
   "name": "@ouds/web-migrate",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "main": "index.mjs",
   "type": "module",
   "engines": {"node" : ">=24.0.0"},
@@ -11,9 +11,7 @@
   "author": "The OUDS Web Authors",
   "license": "MIT",
   "description": "",
-  "bin": {
-    "ouds-web-migrate": "index.mjs"
-  },
+  "bin": "./index.mjs",
   "dependencies": {
     "replace-in-file": "^8.4.0"
   },
