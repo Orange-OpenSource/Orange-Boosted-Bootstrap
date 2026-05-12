@@ -51,6 +51,7 @@ toc: true
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `font-size()` mixin has been removed. Please refer to `get-font-size()` mixin instead.
 
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `generate-utility()` mixin signature was modified, the `$is-rfs-media-query` parameter was removed. If you were using it, please make sure to update your code. For Bootstrap compatibility mode, we kept the infix breakpoint as the last parameter, so you can still use it for your custom utilities. You can check how we use it in `scss/utilities/_breakpoints.scss` for reference.
 
 ### Dual mode
 
