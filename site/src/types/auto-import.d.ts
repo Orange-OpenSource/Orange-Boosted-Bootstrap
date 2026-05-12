@@ -27,4 +27,7 @@ export declare global {
   export const SkeletonRedirect: typeof import('@shortcodes/SkeletonRedirect.astro').default
   export const SvgDocs: typeof import('@shortcodes/SvgDocs.astro').default
   export const Table: typeof import('@shortcodes/Table.astro').default
+  export const ThemeDemo: typeof import('@shortcodes/ThemeDemo.astro').default
+  export const ThemeDemoStyles: typeof import('@shortcodes/ThemeDemoStyles.astro').default
+  export const ThemeDemoStylesProd: typeof import('@shortcodes/ThemeDemoStylesProd.astro').default
 }
