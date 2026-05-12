@@ -74,6 +74,8 @@
     "docs-serve-only": "sirv _site --no-clear --port 9001",
     "lockfile-lint": "lockfile-lint --allowed-hosts npm --allowed-schemes https: --empty-hostname false --type npm --path package-lock.json",
     "update-deps": "ncu -u -x eslint,eslint-config-xo,eslint-plugin-unicorn,karma-browserstack-launcher,karma-rollup-preprocessor,sass",
+    "pack": "npm pack && cd packages/orange-compact && npm pack && cd ../sosh && npm pack && cd ../orange && npm pack",
+    "publish": "npm login && npm publish --access public && cd packages/orange-compact && npm publish --access public && cd ../sosh && npm publish --access public && cd ../orange && npm publish --access public",
     "release": "npm-run-all storybook-build release-zip*",
     "release-sri": "node build/generate-sri.mjs",
     "release-version": "node build/change-version.mjs",
