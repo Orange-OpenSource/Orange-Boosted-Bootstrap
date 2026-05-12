@@ -9,15 +9,48 @@ aliases:
 toc: true
 ---
 
+<Callout type="info">
+  The [`@ouds/web-migrate`](https://npmx.dev/package/@ouds/web-migrate) CLI can help update from one version to another. Run it against your project files and review the diff afterward:
+
+  ```bash
+  npx @ouds/web-migrate "src/**/*.{css,scss,html}"
+  ```
+</Callout>
+
 ## v1.3.0
 
 <hr />
+
+### Components
+
+#### Table
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> OUDS Web now supports a draft table component. It comes from Boosted directly with small tweaks. It is intended as a placeholder for projects that need it urgently but be aware that it will change in the future. Read more in our [table page]([[docsref:/components/table]]).
+
+### Tools
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> We have created a new CLI tool to update your project files automatically. Read more in our [CLI tool readme](https://www.npmx.dev/package/@ouds/web-migrate).
+
+### Utilities
+
+#### Breakpoint prefixes
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Responsive utilities now uses a breakpoint prefix instead of an infix. All classes that previously used `.{utility}-{breakpoint}-{value}` must be updated to `.{breakpoint}:{utility}-{value}`. Following are some examples of the changes to operate:
+  - `.d-sm-none` → `.sm:d-none`
+  - `.d-md-flex` → `.md:d-flex`
+  - `.flex-lg-row` → `.lg:flex-row`
+  - `.col-md-6` → `.md:col-6`
+  - `.float-xl-end` → `.xl:float-end`
+  - `.object-fit-2xl-cover` → `.2xl:object-fit-cover`
+
+  Read more in our [display]([[docsref:/utilities/display]]), [flex]([[docsref:/utilities/flex]]) or [spacing]([[docsref:/utilities/spacing]]) pages.
 
 ### CSS and Sass variables
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `scss/vendor/_rfs.scss` has been removed. It was deprecated and should not have been used.
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `font-size()` mixin has been removed. Please refer to `get-font-size()` mixin instead.
+
 
 ### Dual mode
 

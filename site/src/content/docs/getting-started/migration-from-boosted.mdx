@@ -10,6 +10,14 @@ toc: true
 
 This guide provides information on how to migrate from Boosted (latest release) to OUDS Web, with Bootstrap compatibility turned off. [Learn more about Bootstrap compatibility]([[docsref:/foundation/approach#bootstrap-compatibility]]).
 
+<Callout type="info">
+  The [`@ouds/web-migrate`](https://npmx.dev/package/@ouds/web-migrate) CLI can help migrate from Boosted to OUDS Web. Run it against your project files and review the diff afterward:
+
+  ```bash
+  npx @ouds/web-migrate --from=boosted "src/**/*.{css,scss,html}"
+  ```
+</Callout>
+
 Let’s start with the most obvious change you’ll notice: the name. **Boosted is now OUDS Web.**
 
 - The NPM package is now `@ouds/web`.
@@ -79,6 +87,8 @@ Read more about the [font stack]([[docsref:/foundation/reboot#font-stack]]) for 
   - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|3xsmall|2xsmall|xsmall|small|medium|large|xlarge|2xlarge|3xlarge|4xlarge|5xlarge`. Proportional equivalence between `0` → `none`, `1` → `2xsmall`, `2` → `small`, `3` → `large`, `4` → `2xlarge`, `5` → `4xlarge`.
 
 All responsive classes, helpers, and utilities have been updated accordingly to match the new breakpoints.
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> All responsive utility classes now use a **Tailwind-style colon prefix** instead of Bootstrap's dash infix. The pattern `.{utility}-{breakpoint}-{value}` becomes `.{breakpoint}:{utility}-{value}` for all breakpoints (`xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`). The `2xs` breakpoint (the smallest) has no prefix and is unchanged. Read more in our [breakpoints page]([[docsref:/layout/breakpoints]]).
 
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> `.container` and `.container-{breakpoint}` have been removed from the default build but you can still have them using `$enable-bootstrap-compatibility`.
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> `xxl` breakpoint and thus all related classes (like `.container-xxl`, `.col-xxl-*`) can still be available when `$enable-bootstrap-compatibility` is enabled.
@@ -586,16 +596,19 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 ### Display
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.d-xxl-{value}` responsive display utility has been replaced by `.2xl:d-{value}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> All Boosted responsive display utilities have been renamed to use the colon prefix: `.d-sm-{value}` → `.sm:d-{value}`, `.d-md-{value}` → `.md:d-{value}`, `.d-lg-{value}` → `.lg:d-{value}`, `.d-xl-{value}` → `.xl:d-{value}`. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.d-xxl-{value}` responsive display utility has been replaced by `.2xl:d-{value}` (breakpoint rename and prefix change). Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.xs:d-{value}` and `.3xl:d-{value}` responsive display utilities have been added. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
 
 ### Flex
 
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> All Boosted responsive flex utilities have been renamed to use the colon prefix: e.g. `.flex-sm-{row|column}` → `.sm:flex-{row|column}`, `.justify-content-md-{value}` → `.md:justify-content-{value}`, `.order-lg-{number}` → `.lg:order-{number}`, and so on for all `sm`, `md`, `lg`, `xl` breakpoints. You can still have them using `$enable-bootstrap-compatibility`.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `xxl` responsive flex utilities have been replaced by `2xl` utilities: `.d-xxl-flex`, `.d-xxl-inline-flex`, `.flex-xxl-{row|column}`, `.flex-xxl-{row|column}-reverse`, `.justify-content-xxl-{start|end|center|between|around|evenly}`, `.align-items-xxl-{start|end|center|baseline|stretch}`, `.align-self-xxl-{start|end|center|baseline|stretch}`, `.flex-xxl-fill`, `.flex-xxl-{grow|shrink}-{0|1}`, `.flex-xxl-{nowrap|wrap|wrap-reverse}`, `.order-xxl-{number}`, `.order-xxl-{first|last}` and `.align-content-xxl-{start|end|center|between|around|stretch}` utilities have been replaced by `.2xl:d-flex`, `.2xl:d-inline-flex`, `.2xl:flex-{row|column}`, `.2xl:flex-{row|column}-reverse`, `.2xl:justify-content-{start|end|center|between|around|evenly}`, `.2xl:align-items-{start|end|center|baseline|stretch}`, `.2xl:align-self-{start|end|center|baseline|stretch}`, `.2xl:flex-fill`, `.2xl:flex-{grow|shrink}-{0|1}`, `.2xl:flex-{nowrap|wrap|wrap-reverse}`, `.2xl:order-{number}`, `.2xl:order-{first|last}` and `.2xl:align-content-{start|end|center|between|around|stretch}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have them using `$enable-bootstrap-compatibility`.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `xs` and `3xl` responsive flex utilities have been added: `.xs:d-flex`, `.xs:d-inline-flex`, `.xs:flex-{row|column}`, `.xs:flex-{row|column}-reverse`, `.xs:justify-content-{start|end|center|between|around|evenly}`, `.xs:align-items-{start|end|center|baseline|stretch}`, `.xs:align-self-{start|end|center|baseline|stretch}`, `.xs:flex-fill`, `.xs:flex-{grow|shrink}-{0|1}`, `.xs:flex-{nowrap|wrap|wrap-reverse}`, `.xs:order-{number}`, `.xs:order-{first|last}`, `.xs:align-content-{start|end|center|between|around|stretch}`, `.3xl:d-flex`, `.3xl:d-inline-flex`, `.3xl:flex-{row|column}`, `.3xl:flex-{row|column}-reverse`, `.3xl:justify-content-{start|end|center|between|around|evenly}`, `.3xl:align-items-{start|end|center|baseline|stretch}`, `.3xl:align-self-{start|end|center|baseline|stretch}`, `.3xl:flex-fill`, `.3xl:flex-{grow|shrink}-{0|1}`, `.3xl:flex-{nowrap|wrap|wrap-reverse}`, `.3xl:order-{number}`, `.3xl:order-{first|last}` and `.3xl:align-content-{start|end|center|between|around|stretch}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
 
 ### Float
 
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> All Boosted responsive float utilities have been renamed to use the colon prefix: `.float-sm-{start|end|none}` → `.sm:float-{start|end|none}`, `.float-md-{start|end|none}` → `.md:float-{start|end|none}`, `.float-lg-{start|end|none}` → `.lg:float-{start|end|none}`, `.float-xl-{start|end|none}` → `.xl:float-{start|end|none}`. You can still have them using `$enable-bootstrap-compatibility`.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `xxl` responsive float utilities have been replaced by `2xl` utilities: `.float-xxl-{start|end|none}` utilities have been replaced by `.2xl:float-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `xs` and `3xl` responsive float utilities have been added:  `.xs:float-{start|end|none}` and  `.3xl:float-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
 
@@ -605,6 +618,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 ### Object fit
 
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> All Boosted responsive object fit utilities have been renamed to use the colon prefix: `.object-fit-sm-{value}` → `.sm:object-fit-{value}`, `.object-fit-md-{value}` → `.md:object-fit-{value}`, `.object-fit-lg-{value}` → `.lg:object-fit-{value}`, `.object-fit-xl-{value}` → `.xl:object-fit-{value}`. You can still have them using `$enable-bootstrap-compatibility`.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `xxl` responsive object fit utilities have been replaced by `2xl` utilities: `.object-fit-xxl-{contain|cover|fill|scale|none}` utilities have been replaced by `.2xl:object-fit-{contain|cover|fill|scale|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have them using `$enable-bootstrap-compatibility`.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `xs` and `3xl` responsive object fit utilities have been added:  `.xs:object-fit-{contain|cover|fill|scale|none}` and  `.3xl:object-fit-{contain|cover|fill|scale|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> `xxl` responsive object fit utilities can still be available when <code>$enable-bootstrap-compatibility</code> is on.
