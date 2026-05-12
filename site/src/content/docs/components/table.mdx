@@ -214,7 +214,7 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
 
 ### Breakpoint specific
 
-Use `.table-responsive{-xs|-sm|-md|-lg|-xl|-2xl|3xl}` as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
+Use `.{xs|sm|md|lg|xl|2xl|3xl}:table-responsive` as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
 
 **These tables may appear broken until their responsive styles apply at specific viewport widths.**
 
@@ -224,8 +224,7 @@ Use `.table-responsive{-xs|-sm|-md|-lg|-xl|-2xl|3xl}` as needed to create respon
   {getData('breakpoints').map((breakpoint) => {
     if (breakpoint.abbr) return (
       <div class="bd-example">
-
-        <div class={`table-responsive-${breakpoint.abbr}`}>
+        <div class={`${breakpoint.abbr}:table-responsive`}>
           <table class="table">
             <caption>OUDS Web responsive table for {breakpoint.abbr} breakpoint and under</caption>
             <thead>
@@ -282,12 +281,90 @@ Use `.table-responsive{-xs|-sm|-md|-lg|-xl|-2xl|3xl}` as needed to create respon
     )
   })}
 
-  <Code buttonLabel="responsive tables up to particular breakpoint" lang="html" code={getData('breakpoints').map((breakpoint) => `<div class="table-responsive${breakpoint.abbr}">
+  <Code buttonLabel="responsive tables up to particular breakpoint" lang="html"
+    code={getData('breakpoints').map((breakpoint) => { if (breakpoint.abbr) return (
+  `<div class="${breakpoint.abbr}:table-responsive">
     <table class="table">
-    ...
+      ...
     </table>
-  </div>`)} />
+  </div>`)}
+  )} />
 </Details>
+
+<BootstrapCompatibility>
+  Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
+
+  **These tables may appear broken until their responsive styles apply at specific viewport widths.**
+
+  {getData('breakpoints').map((breakpoint) => {
+    if (breakpoint.abbr) return (
+      <div class="bd-example">
+        <div class={`table-responsive-${breakpoint.abbr}`}>
+          <table class="table">
+            <caption>Responsive table for {breakpoint.abbr} breakpoint and under (Bootstrap)</caption>
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )
+  })}
+
+  <Code buttonLabel="Bootstrap compatibility: responsive tables up to particular breakpoint" lang="html"
+        code={getData('breakpoints').map((breakpoint) => { if (breakpoint.abbr) return (
+  `<div class="table-responsive-${breakpoint.abbr}">
+    <table class="table">
+      ...
+    </table>
+  </div>`)}
+        )} />
+</BootstrapCompatibility>
 
 ## Row selection
 
