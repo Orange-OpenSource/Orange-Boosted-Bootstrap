@@ -296,7 +296,7 @@ Use `.{xs|sm|md|lg|xl|2xl|3xl}:table-responsive` as needed to create responsive 
 
   **These tables may appear broken until their responsive styles apply at specific viewport widths.**
 
-  {getData('breakpoints').map((breakpoint) => {
+  {getData('bootstrap-breakpoints').map((breakpoint) => {
     if (breakpoint.abbr) return (
       <div class="bd-example">
         <div class={`table-responsive-${breakpoint.abbr}`}>
@@ -357,7 +357,7 @@ Use `.{xs|sm|md|lg|xl|2xl|3xl}:table-responsive` as needed to create responsive 
   })}
 
   <Code buttonLabel="Bootstrap compatibility: responsive tables up to particular breakpoint" lang="html"
-        code={getData('breakpoints').map((breakpoint) => { if (breakpoint.abbr) return (
+        code={getData('bootstrap-breakpoints').map((breakpoint) => { if (breakpoint.abbr) return (
   `<div class="table-responsive-${breakpoint.abbr}">
     <table class="table">
       ...

@@ -33,7 +33,7 @@ Responsive variations also exist for `.d-flex` and `.d-inline-flex`.
 
 <BootstrapCompatibility>
 <ul>
-  {getData('breakpoints').map((breakpoint) => {
+  {getData('bootstrap-breakpoints').map((breakpoint) => {
     return (
       <>
         <li><code>.d{breakpoint.abbr && `-${breakpoint.abbr}`}-flex</code></li>
@@ -91,7 +91,7 @@ Responsive variations also exist for `flex-direction`.
 
 <BootstrapCompatibility>
 <ul>
-  {getData('breakpoints').map((breakpoint) => {
+  {getData('bootstrap-breakpoints').map((breakpoint) => {
     return (
       <>
         <li><code>.flex{breakpoint.abbr && `-${breakpoint.abbr}`}-row</code></li>
@@ -167,7 +167,7 @@ Responsive variations also exist for `justify-content`.
 
 <BootstrapCompatibility>
 <ul>
-  {getData('breakpoints').map((breakpoint) => {
+  {getData('bootstrap-breakpoints').map((breakpoint) => {
     return (
       <>
         <li><code>.justify-content{breakpoint.abbr && `-${breakpoint.abbr}`}-start</code></li>
@@ -238,7 +238,7 @@ Responsive variations also exist for `align-items`.
 
 <BootstrapCompatibility>
 <ul>
-  {getData('breakpoints').map((breakpoint) => {
+  {getData('bootstrap-breakpoints').map((breakpoint) => {
     return (
       <>
         <li><code>.align-items{breakpoint.abbr && `-${breakpoint.abbr}`}-start</code></li>
@@ -308,7 +308,7 @@ Responsive variations also exist for `align-self`.
 
 <BootstrapCompatibility>
 <ul>
-  {getData('breakpoints').map((breakpoint) => {
+  {getData('bootstrap-breakpoints').map((breakpoint) => {
     return (
       <>
         <li><code>.align-self{breakpoint.abbr && `-${breakpoint.abbr}`}-start</code></li>
@@ -347,7 +347,7 @@ Responsive variations also exist for `flex-fill`.
 
 <BootstrapCompatibility>
 <ul>
-  {getData('breakpoints').map((breakpoint) => {
+  {getData('bootstrap-breakpoints').map((breakpoint) => {
     return (
       <>
         <li><code>.flex{breakpoint.abbr && `-${breakpoint.abbr}`}-fill</code></li>
@@ -389,7 +389,7 @@ Responsive variations also exist for `flex-grow` and `flex-shrink`.
 
 <BootstrapCompatibility>
 <ul>
-  {getData('breakpoints').map((breakpoint) => {
+  {getData('bootstrap-breakpoints').map((breakpoint) => {
     return (
       <>
         <li><code>.flex{breakpoint.abbr && `-${breakpoint.abbr}`}-{'{grow|shrink}'}-0</code></li>
@@ -519,7 +519,7 @@ Responsive variations also exist for `flex-wrap`.
 
 <BootstrapCompatibility>
 <ul>
-  {getData('breakpoints').map((breakpoint) => {
+  {getData('bootstrap-breakpoints').map((breakpoint) => {
     return (
       <>
         <li><code>.flex{breakpoint.abbr && `-${breakpoint.abbr}`}-nowrap</code></li>
@@ -553,7 +553,7 @@ Responsive variations also exist for `order`.
 
 <BootstrapCompatibility>
 <ul>
-  {getData('breakpoints').map((breakpoint) => getSequence(0, 5).map((value) => {
+  {getData('bootstrap-breakpoints').map((breakpoint) => getSequence(0, 5).map((value) => {
     return (
       <li><code>.order{breakpoint.abbr && `-${breakpoint.abbr}`}-{value}</code></li>
     )
@@ -573,7 +573,7 @@ Additionally there are also responsive `.order-first` and `.order-last` classes 
 
 <BootstrapCompatibility>
 <ul>
-  {getData('breakpoints').map((breakpoint) => ['first', 'last'].map((value) => {
+  {getData('bootstrap-breakpoints').map((breakpoint) => ['first', 'last'].map((value) => {
     return (
       <li><code>.order{breakpoint.abbr && `-${breakpoint.abbr}`}-{value}</code></li>
     )
@@ -740,7 +740,7 @@ Responsive variations also exist for `align-content`.
 
 <BootstrapCompatibility>
 <ul>
-  {getData('breakpoints').map((breakpoint) => {
+  {getData('bootstrap-breakpoints').map((breakpoint) => {
     return (
       <>
         <li><code>.align-content-start</code></li>
