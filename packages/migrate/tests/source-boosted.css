@@ -1,0 +1,14 @@
+.parent .p-2[style] {
+  color: #000;
+}
+.p-3.custom-class {
+  color: #000;
+}
+.p-4:not(.p-5) {
+  color: #000;
+}
+
+/* should not be replaced */
+.step-3 {
+  color: #000;
+}
