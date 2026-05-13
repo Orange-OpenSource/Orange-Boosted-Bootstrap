@@ -42,7 +42,7 @@
   min-height: $ouds-chip-size-min-height;
   padding: calc(var(--#{$prefix}chip-padding-block) - var(--#{$prefix}chip-border-width)) calc(var(--#{$prefix}chip-padding-end) - var(--#{$prefix}chip-border-width)) calc(var(--#{$prefix}chip-padding-block) - var(--#{$prefix}chip-border-width)) calc(var(--#{$prefix}chip-padding-start) - var(--#{$prefix}chip-border-width));
   @include get-font-size("label-medium");
-  font-weight: 700;
+  font-weight: 500;
   color: var(--#{$prefix}chip-color);
   background-color: var(--#{$prefix}chip-bg);
   border: var(--#{$prefix}chip-border-width) solid var(--#{$prefix}chip-border-color);
@@ -87,8 +87,8 @@
   svg,
   img,
   .icon {
-    width: 1em;
-    height: 1em;
+    width: $ouds-chip-size-icon;
+    height: $ouds-chip-size-icon;
     overflow: hidden;
     font-size: $ouds-chip-size-icon;
     line-height: 1;
@@ -195,6 +195,8 @@
   svg,
   img,
   .icon {
+    width: px-to-rem($ouds-chip-size-icon);
+    height: px-to-rem($ouds-chip-size-icon);
     font-size: px-to-rem($ouds-chip-size-icon);
   }
 }
