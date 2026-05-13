@@ -429,11 +429,11 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 ### Color background
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Color-background color helpers have been removed. Classes still exist for Bootstrap compatibility.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Color-background color helpers have been removed.
 
 ### Colored links
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> All colored links helpers are unstyled in OUDS Web. Classes still exist for Bootstrap compatibility.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> All colored links helpers are unstyled in OUDS Web.
 
 ### Divider
 
@@ -539,7 +539,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> All border color utilities have been removed or changed.
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Border opacity utilities have been removed.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Border opacity `--bs-border-opacity` custom property has been removed.
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> The new border color utilities are now available. Visit our [border page]([[docsref:/utilities/border#color]]) to see more.
 
@@ -549,8 +549,12 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
   1. `.border-primary` → `.border-brand-primary`
   2. `.border-black` → `.border-always-black` or `.border-always-on-white` or `.border-on-brand-primary`
   3. `.border-white` → `.border-always-white` or `.border-always-on-black`
-  4. All `.border-*-subtle` (that shouldn’t have been used) → `.border-default`
-  5. All the remaining `.border-*` → `.border-emphasized`
+  4. `.border-success` and `.border-success-subtle` → `.border-status-positive`
+  5. `.border-info` and `.border-info-subtle` → `.border-status-info`
+  6. `.border-warning` and `.border-warning-subtle` → `.border-status-warning`
+  7. `.border-danger` and `.border-danger-subtle` → `.border-status-negative`
+  8. All the remaining `.border-*-subtle` (that shouldn’t have been used) → `.border-default`
+  9. All the remaining `.border-*` → `.border-emphasized`
 
   </details>
 
@@ -2391,6 +2395,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
     <summary><span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Dropped CSS variables:</summary>
     <ul>
       <li><code>--bs-border-color-subtle</code></li>
+      <li><code>--bs-border-opacity</code></li>
       <li><code>--bs-btn-close-active-border-color</code></li>
       <li><code>--bs-btn-close-active-color</code></li>
       <li><code>--bs-btn-close-bg</code></li>

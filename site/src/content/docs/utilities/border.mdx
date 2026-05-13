@@ -50,7 +50,7 @@ Border color utilities apply a color [token]([[docsref:/foundation/tokens]]) as 
 
 <Example class="bd-example-border-utils d-flex align-items-center flex-wrap" code={[...allTokens.filter(token => token.name.match(/\$ouds-color-border-/) && token.name.match(/-light/) && token.compiledValue && !token.name.match(/-focus/)).map(token => {
     if (token.name.match(/-on-/)) {
-      return `<div class="bg-${token.name.split('-').slice(4, -1).join('-')} d-inline-flex m-2xsmall p-xsmall"><span class="border border-${token.name.split('-').slice(3, -1).join('-')} m-none bg-transparent"></span></div>`
+      return `<div class="bg-surface-${token.name.split('-').slice(4, -1).join('-')} d-inline-flex m-2xsmall p-xsmall"><span class="border border-${token.name.split('-').slice(3, -1).join('-')} m-none bg-transparent"></span></div>`
     }
     return `<span class="border border-${token.name.split('-').slice(3, -1).join('-')}"></span>`
   }),
