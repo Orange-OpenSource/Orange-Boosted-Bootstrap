@@ -87,8 +87,8 @@
   svg,
   img,
   .icon {
-    width: 1em;
-    height: 1em;
+    width: $ouds-chip-size-icon;
+    height: $ouds-chip-size-icon;
     overflow: hidden;
     font-size: $ouds-chip-size-icon;
     line-height: 1;
@@ -195,6 +195,8 @@
   svg,
   img,
   .icon {
+    width: px-to-rem($ouds-chip-size-icon);
+    height: px-to-rem($ouds-chip-size-icon);
     font-size: px-to-rem($ouds-chip-size-icon);
   }
 }
