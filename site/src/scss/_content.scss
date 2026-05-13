@@ -37,7 +37,7 @@
 
     // Prevent breaking of code
     th,
-    td:first-child > code { // stylelint-disable-line selector-max-compound-selectors
+    code {
       white-space: nowrap;
     }
   }

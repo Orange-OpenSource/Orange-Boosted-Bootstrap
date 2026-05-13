@@ -6,4 +6,70 @@ aliases:
 toc: true
 ---
 
-<CalloutSoon type="page" />
+## Figma tokens
+
+Figma tokens (or design tokens) provide a shared language and mutual understanding of the design system between designers and developers. They also serve as a single source of truth for the design system, which is crucial for its maintenance and evolution. We have structured them into a three-tier architecture: raw scope, semantic scope, and component scope. For more information, please refer to the [design guidelines on design tokens](https://r.orange.fr/r/S-ouds-doc-token-intro).
+
+<Callout type="info">
+  We provide a file to import them all: `@ouds/web-[[config:brand]]/scss/tokens/_index.scss`. So in a Sass context `@import "@ouds/web-[[config:brand]]/scss/tokens";` will import all the tokens.
+
+  Only [semantic](#semantic-tokens) and [composite tokens](#composite-tokens) should be used directly in projects. When possible, it is recommended to use these tokens via [utility classes]([[docsref:/utilities#using-our-utilities]]). All other tokens are intended for internal use by other tokens or by our components.
+</Callout>
+
+### Raw tokens
+
+The [`@ouds/web-[[config:brand]]/scss/tokens/_raw.scss`]([[config:repo]]/blob/v[[config:current_version]]-ouds-web/packages/[[config:brand]]/scss/tokens/_raw.scss) file aggregates all raw tokens. While these tokens don’t carry semantic meaning and aren’t meant to be used directly in projects, they are the foundation of the Orange Unified Design System. Their primary purpose is to be used by [semantic tokens](#semantic-tokens), and occasionally, by [component tokens](#component-tokens).
+
+### Semantic tokens
+
+The [`@ouds/web-[[config:brand]]/scss/tokens/_semantic.scss`]([[config:repo]]/blob/v[[config:current_version]]-ouds-web/packages/[[config:brand]]/scss/tokens/_semantic.scss) file contains all the semantic tokens. Unlike [raw tokens](#raw-tokens), these tokens can be used directly in projects (check the [cheatsheet for their recommended usage]([[docsref:/utilities#using-our-utilities]])). They are derived from raw tokens and add semantic meaning through media queries or specific contexts. Most of these tokens are available in our utilities or used within our components. The colors tokens should not be used directly but via their custom properties version, [see below](#semantic-colors-with-css-variables).
+
+#### Semantic colors with CSS variables
+
+The [`@ouds/web-[[config:brand]]/scss/tokens/_semantic-colors-custom-props.scss`]([[config:repo]]/blob/v[[config:current_version]]-ouds-web/packages/[[config:brand]]/scss/tokens/_semantic-colors-custom-props.scss) file contains all the usable semantic color tokens custom properties. They are built on [semantic tokens](#semantic-tokens) switching the color depending on the [color mode]([[docsref:/foundation/color-modes]]). Most of these tokens are already used in utilities or directly within our components. We also provide equivalence for Sass variables. For more information, check out our [colors documentation]([[docsref:/foundation/colors]]).
+
+### Composite tokens
+
+The [`@ouds/web-[[config:brand]]/scss/tokens/_composite.scss`]([[config:repo]]/blob/v[[config:current_version]]-ouds-web/packages/[[config:brand]]/scss/tokens/_composite.scss) file contains all the composite tokens. They are aggregations of several [semantic tokens](#semantic-tokens) or brand-specific icons. These tokens are already used either in utilities or directly within our components. Apart from the icons, these are shadows tokens and typographic definition.
+
+### Component tokens
+
+The [`@ouds/web-[[config:brand]]/scss/tokens/_component.scss`]([[config:repo]]/blob/v[[config:current_version]]-ouds-web/packages/[[config:brand]]/scss/tokens/_component.scss) file is dedicated to component tokens. These tokens are used exclusively within components, often relying on [semantic tokens](#semantic-tokens) and [composite tokens](#composite-tokens), though they may occasionally reference [raw tokens](#raw-tokens). Unless you’re sure of what you’re doing, you should avoid using these tokens in your codebase, as they are defined for a specific component.
+
+## Variables
+
+<Callout type="info">
+  Checkout our [utilities cheatsheet]([[docsref:/utilities]]) to learn the recommended usage for tokens and variables
+</Callout>
+
+### Sass variables
+
+Almost every token provided in the design specification and potentially needed in various contexts is represented in our codebase as a Sass variable. However, as explained in the [the previous section](#figma-tokens), not all tokens should be used directly in your codebase.
+
+We build our Sass variables following the architecture of the Figma tokens:
+- [Raw tokens](#raw-tokens): `$core-{ouds|[[config:brand]]}-{border|color|dimension|effect|elevation|font|grid|opacity}-{token-name}`.
+  - They shouldn’t be used.
+  - Ex: `core/ouds/color/functional/black` becomes `$core-ouds-color-functional-black`.
+- [Semantic tokens](#semantic-tokens): `$ouds-{border|color|dimension|effect|elevation|font|grid|opacity|size|space}-{token-name}`.
+  - Our scaled spacing, font and icon sizes tokens don’t have a Sass variable, please refer to the [CSS variables](#css-variables) or to the [utilities]([[docsref:/utilities#using-our-utilities]]) instead.
+  - Colors and elevation colors also have their versions using suffixes `*-light` and `*-dark`.
+  - Ex: `ouds/color/content/on/brand-primary` becomes `$ouds-color-content-on-brand-primary`, `ouds/elevation/blur/emphasized` becomes `$ouds-elevation-blur-emphasized`.
+- [Composite tokens](#composite-tokens): `$ouds-elevation-{token-name}`
+  - Ex: `ouds/elevation/**/emphasized` are aggregated via `$ouds-elevation-emphasized`.
+  - Our font tokens are aggregated in a mixin [`get-font-size()`]([[docsref:/foundation/typography/#text-style-for-custom-components]]) that takes the font reference name as a parameter. So `ouds/font/**/body-large` are aggregated via `get-font-size("body-large")`.
+- [Component tokens](#component-tokens): `$ouds-{component-name}-{token-name}`
+  - Ex: `ouds/button/color/bg/minimal/hover` becomes `$ouds-button-color-bg-minimal-hover`.
+
+### CSS variables
+
+All the colors and the tokens suffixed by `*-mobile`, `*-tablet`, or `*-desktop` are available as CSS variables.
+
+We build our CSS variables following the architecture of the Figma tokens:
+- [Raw tokens](#raw-tokens): We don’t have any raw token transformed into a CSS variable.
+- [Semantic tokens](#semantic-tokens): `--bs-{color|elevation|font|icon|space}-{token-name}`.
+  - Our scaled spacing are only declared as CSS variables `--bs-space-scaled-{size}`. It’s equivalent to `ouds/space/scaled/{size}` in Figma. Prefer using our [utilities]([[docsref:/utilities#using-our-utilities]]) when possible.
+  - Our colors and elevation colors are declared as CSS variables `--bs-color-{token-name}`. It’s equivalent to `ouds/color/{token-name}` in Figma. Prefer using our [utilities]([[docsref:/utilities#using-our-utilities]]) when possible.
+  - Our icon sizes are declared as CSS variables `--bs-icon-{size}`. It’s equivalent to `ouds/size/icon/{size}` in Figma. Prefer using our [utilities]([[docsref:/utilities#using-our-utilities]]) when possible.
+  - Our font tokens are aggregated in a mixin [`get-font-size()`]([[docsref:/foundation/typography/#text-style-for-custom-components]]) that takes the font reference name as a parameter. So `ouds/font/**/body-large` are aggregated via `get-font-size("body-large")`. Don’t use our CSS variables for font alone.
+- [Composite tokens](#composite-tokens): We don’t have any composite token transformed into a CSS variable, but they are available as [Sass variables](#sass-variables).
+- [Component tokens](#component-tokens): We don’t have any component token transformed into a CSS variable. The only CSS variables that we have for components are the ones that we need to build the component internally.
