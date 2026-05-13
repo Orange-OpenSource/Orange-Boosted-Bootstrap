@@ -260,10 +260,11 @@ export default () => {
   // storybook-start password-input
   // js-docs-start live-show-password
   // Toggle password visibility
-  const togglePasswordButton = document.querySelector('#liveShowPasswordExample #togglePassword[data-bs-toggle="button"]')
+  const togglePasswordButton = document.querySelector('#liveShowPasswordExample #togglePassword')
   if (togglePasswordButton) {
     const passwordInput = document.querySelector('#liveShowPasswordExample #liveInputPassword')
     const iconUse = togglePasswordButton.querySelector('use')
+    const buttonLabel = togglePasswordButton.querySelector('.visually-hidden')
 
     togglePasswordButton.addEventListener('click', event => {
       event.preventDefault()
@@ -272,12 +273,14 @@ export default () => {
       const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password'
       passwordInput.setAttribute('type', type)
 
-      // Toggle the aria-pressed attribute and the icon to reflect the change in state
+      // Toggle the aria-pressed attribute, the button's label and the icon to reflect the change in state
       if (type === 'text') {
-        togglePasswordButton.setAttribute('aria-pressed', 'false')
+        togglePasswordButton.setAttribute('aria-pressed', 'true')
+        buttonLabel.textContent = 'Hide password'
         iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('accessibility-vision', 'hide'))
       } else {
-        togglePasswordButton.setAttribute('aria-pressed', 'true')
+        togglePasswordButton.setAttribute('aria-pressed', 'false')
+        buttonLabel.textContent = 'Show password'
         iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('hide', 'accessibility-vision'))
       }
     })
