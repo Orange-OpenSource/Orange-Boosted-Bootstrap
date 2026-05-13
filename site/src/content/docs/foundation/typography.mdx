@@ -125,7 +125,7 @@ All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-s
                     <li><code class="text-default">font-size</code>: <b>{(getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2)) / 16}rem</b></li>
                     <li><code>line-height</code>: {Math.round(((getTokenValue( `$ouds-font-line-height-${level}-${size}`).slice(0, -2)) / (getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2))) * 10000) / 10000}</li>
                     <li><code>letter-spacing</code>: {(getTokenValue(`$ouds-font-letter-spacing-${level}-${size}`).slice(0, -2)) / 16}rem</li>
-                    <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-type-${level}-${size}`).slice(0, -2)) / 16}rem</li>
+                    <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-${level}-${size}`).slice(0, -2)) / 16}rem</li>
                   </ul>
                 </td>
               ))
@@ -226,7 +226,7 @@ We provide `.display-*` from `large` through `small`. Each class sets `font-size
                     <li><code class="text-default">font-size</code>: <b>{(getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2)) / 16}rem</b></li>
                     <li><code>line-height</code>: {Math.round(((getTokenValue(`$ouds-font-line-height-${level}-${size}`).slice(0, -2)) / (getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2))) * 10000) / 10000}</li>
                     <li><code>letter-spacing</code>: {(getTokenValue(`$ouds-font-letter-spacing-${level}-${size}`).slice(0, -2)) / 16}rem</li>
-                    <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-type-${level}-${size}`).slice(0, -2)) / 16}rem</li>
+                    <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-${level}-${size}`).slice(0, -2)) / 16}rem</li>
                   </ul>
                 </td>
               ))
@@ -337,7 +337,7 @@ Since only [headings](#headings), [display headings](#display-headings) and `str
                   <li><code class="text-default">font-size</code>: <b>{(getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2)) / 16}rem</b></li>
                   <li><code>line-height</code>: {Math.round(((getTokenValue(`$ouds-font-line-height-${level}-${size}`).slice(0, -2)) / (getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2))) * 10000) / 10000}</li>
                   <li><code>letter-spacing</code>: {(getTokenValue(`$ouds-font-letter-spacing-${level}-${size}`).slice(0, -2)) / 16}rem</li>
-                  <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-type-${level}-${size}`).slice(0, -2)) / 16}rem</li>
+                  <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-${level}-${size}`).slice(0, -2)) / 16}rem</li>
                 </ul>
               </td>
             ))

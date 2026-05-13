@@ -4,7 +4,7 @@
 // Elevation
 
 // scss-docs-start ouds-composite-elevation
-$ouds-elevation-default: $ouds-elevation-x-default $ouds-elevation-y-default $ouds-elevation-blur-default $ouds-elevation-spread-default var(--#{$prefix}elevation-color-default) !default;
+$ouds-elevation-elevated: $ouds-elevation-x-elevated $ouds-elevation-y-elevated $ouds-elevation-blur-elevated $ouds-elevation-spread-elevated var(--#{$prefix}elevation-color-default) !default;
 $ouds-elevation-drag: $ouds-elevation-x-drag $ouds-elevation-y-drag $ouds-elevation-blur-drag $ouds-elevation-spread-drag var(--#{$prefix}elevation-color-drag) !default;
 $ouds-elevation-emphasized: $ouds-elevation-x-emphasized $ouds-elevation-y-emphasized $ouds-elevation-blur-emphasized $ouds-elevation-spread-emphasized var(--#{$prefix}elevation-color-emphasized) !default;
 $ouds-elevation-none: $ouds-elevation-x-none $ouds-elevation-y-none $ouds-elevation-blur-none $ouds-elevation-spread-none var(--#{$prefix}elevation-color-none) !default;

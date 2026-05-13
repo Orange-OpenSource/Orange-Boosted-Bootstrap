@@ -111,7 +111,7 @@ $ouds-dimension-space-fixed: map-merge(
 
 // scss-docs-start ouds-maps-elevations
 $ouds-elevations: (
-  "default":                    $ouds-elevation-default,
+  "elevated":                   $ouds-elevation-elevated,
   "drag":                       $ouds-elevation-drag,
   "emphasized":                 $ouds-elevation-emphasized,
   "none":                       $ouds-elevation-none,

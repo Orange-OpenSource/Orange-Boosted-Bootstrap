@@ -18,7 +18,7 @@
 }
 
 .control-item-error-message {
-  padding: $ouds-control-item-space-padding-block-top-error-text $ouds-control-item-space-padding-inline 0;
+  padding: $ouds-control-item-space-padding-block-top-helper-text $ouds-control-item-space-padding-inline 0;
   color: var(--#{$prefix}color-content-status-negative);
   @include get-font-size("label-medium");
 }
@@ -39,7 +39,7 @@
   min-width: px-to-rem($ouds-control-item-size-min-width);
   min-height: $form-check-min-height;
   padding: $ouds-control-item-space-padding-block-default $ouds-control-item-space-padding-inline;
-  @include border-radius($ouds-control-item-border-radius);
+  @include border-radius($ouds-control-item-border-radius-default);
 
   &.component-max-width {
     max-width: px-to-rem($ouds-control-item-size-max-width);
