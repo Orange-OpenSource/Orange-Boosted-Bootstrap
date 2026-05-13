@@ -10,10 +10,10 @@
   --#{$prefix}badge-count-padding-y: #{$ouds-badge-space-inset-medium-large};
   --#{$prefix}badge-color: #{$ouds-color-content-on-status-negative-emphasized};
   --#{$prefix}badge-background-color: #{$ouds-color-surface-status-negative-emphasized};
-  --#{$prefix}badge-positive-icon: var(--#{$prefix}success-icon);
-  --#{$prefix}badge-info-icon: var(--#{$prefix}info-icon);
-  --#{$prefix}badge-warning-icon: var(--#{$prefix}warning-icon);
-  --#{$prefix}badge-negative-icon: var(--#{$prefix}error-icon);
+  --#{$prefix}badge-positive-icon: #{$badge-icon-positive};
+  --#{$prefix}badge-info-icon: #{$badge-icon-info};
+  --#{$prefix}badge-warning-icon: #{$badge-icon-warning};
+  --#{$prefix}badge-negative-icon: #{$badge-icon-negative};
   // scss-docs-end badge-css-vars
 
   display: inline-block;
@@ -38,6 +38,10 @@
     font-size: calc(var(--#{$prefix}badge-size) - (2 * var(--#{$prefix}badge-count-padding-x)));
   }
 
+  &:has(.badge-status-icon) {
+    padding: 0;
+  }
+
   .badge-status-icon {
     background-color: var(--#{$prefix}badge-color);
     background-size: contain;
@@ -54,34 +58,44 @@
   }
 
   &:not(.badge-neutral):not(.badge-accent) {
+    --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-negative-emphasized};
+
     .badge-status-icon {
-      mask-image: escape-svg(var(--#{$prefix}badge-negative-icon));
+      display: inline-block;
+      width: var(--#{$prefix}badge-size);
+      height: var(--#{$prefix}badge-size);
+      background-color: #{$ouds-color-surface-status-negative-emphasized};
+      mask-image: escape-svg($badge-icon-negative);
     }
 
     &.badge-positive {
-      --#{$prefix}badge-color: #{$ouds-color-content-on-status-positive-emphasized};
-      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-positive-emphasized};
+      --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-positive-emphasized};
 
       .badge-status-icon {
-        mask-image: escape-svg(var(--#{$prefix}badge-positive-icon));
+        background-color: #{$ouds-color-surface-status-positive-emphasized};
+        mask-image: escape-svg($badge-icon-positive);
       }
     }
 
     &.badge-info {
-      --#{$prefix}badge-color: #{$ouds-color-content-on-status-info-emphasized};
-      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-info-emphasized};
+      --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-info-emphasized};
 
       .badge-status-icon {
-        mask-image: escape-svg(var(--#{$prefix}badge-info-icon));
+        background-color: #{$ouds-color-surface-status-info-emphasized};
+        mask-image: escape-svg($badge-icon-info);
       }
     }
 
     &.badge-warning {
-      --#{$prefix}badge-color: #{$ouds-color-content-on-status-warning-emphasized};
-      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-warning-emphasized};
+      --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-warning-emphasized};
 
       .badge-status-icon {
-        mask-image: escape-svg(var(--#{$prefix}badge-warning-icon));
+        background-color: #{$ouds-color-surface-status-warning-emphasized};
+        mask-image: escape-svg($badge-icon-warning);
+      }
+
+      &:before {
+
       }
     }
   }

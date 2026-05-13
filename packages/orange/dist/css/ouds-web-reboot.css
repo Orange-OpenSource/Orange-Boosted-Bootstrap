@@ -82,15 +82,20 @@
   --bs-color-content-on-status-warning-muted: #000;
   --bs-color-content-status-accent: #ff7900;
   --bs-color-content-status-info: #0073b2;
+  --bs-color-content-status-inverse-info: #8ad5ff;
+  --bs-color-content-status-inverse-negative: #ff8081;
+  --bs-color-content-status-inverse-positive: #94f0a4;
+  --bs-color-content-status-inverse-warning: #ffe270;
   --bs-color-content-status-negative: #db0002;
   --bs-color-content-status-positive: #138126;
   --bs-color-content-status-warning: #856a00;
   --bs-color-opacity-lower: rgba(0, 0, 0, 0.08);
   --bs-color-opacity-lowest: rgba(0, 0, 0, 0.04);
   --bs-color-opacity-transparent: rgba(0, 0, 0, 0);
+  --bs-color-overlay-backdrop: rgba(0, 0, 0, 0.68);
   --bs-color-overlay-drag: rgba(0, 0, 0, 0.04);
   --bs-color-overlay-dropdown: #fff;
-  --bs-color-overlay-modal: #fff;
+  --bs-color-overlay-modal-sheet: #fff;
   --bs-color-overlay-tooltip: #272727;
   --bs-color-surface-brand-primary: #ff7900;
   --bs-color-surface-inverse-high: #272727;
@@ -108,8 +113,8 @@
   --bs-color-surface-status-warning-emphasized: #ffd000;
   --bs-color-surface-status-warning-muted: rgba(255, 208, 0, 0.16);
   --bs-color-surface-tertiary: rgba(189, 121, 60, 0.08);
-  --bs-elevation-color-default: rgba(0, 0, 0, 0.24);
   --bs-elevation-color-drag: rgba(0, 0, 0, 0.24);
+  --bs-elevation-color-elevated: rgba(0, 0, 0, 0.24);
   --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16);
   --bs-elevation-color-none: rgba(0, 0, 0, 0);
   --bs-elevation-color-raised: rgba(0, 0, 0, 0.24);
@@ -149,7 +154,7 @@
   --bs-color-bg-tertiary: #353228;
   --bs-color-border-brand-primary: #ff7900;
   --bs-color-border-default: rgba(255, 255, 255, 0.2);
-  --bs-color-border-emphasized: rgba(255, 255, 255, 0.92);
+  --bs-color-border-emphasized: #eee;
   --bs-color-border-focus: #eee;
   --bs-color-border-focus-inset: #141414;
   --bs-color-border-minimal: rgba(255, 255, 255, 0.04);
@@ -186,15 +191,20 @@
   --bs-color-content-on-status-warning-muted: #eee;
   --bs-color-content-status-accent: #ff7900;
   --bs-color-content-status-info: #8ad5ff;
+  --bs-color-content-status-inverse-info: #0073b2;
+  --bs-color-content-status-inverse-negative: #db0002;
+  --bs-color-content-status-inverse-positive: #138126;
+  --bs-color-content-status-inverse-warning: #856a00;
   --bs-color-content-status-negative: #ff8081;
   --bs-color-content-status-positive: #94f0a4;
   --bs-color-content-status-warning: #ffe270;
   --bs-color-opacity-lower: rgba(255, 255, 255, 0.08);
   --bs-color-opacity-lowest: rgba(255, 255, 255, 0.04);
   --bs-color-opacity-transparent: rgba(255, 255, 255, 0);
+  --bs-color-overlay-backdrop: rgba(0, 0, 0, 0.68);
   --bs-color-overlay-drag: rgba(255, 255, 255, 0.08);
   --bs-color-overlay-dropdown: #3b3b3b;
-  --bs-color-overlay-modal: #333;
+  --bs-color-overlay-modal-sheet: #272727;
   --bs-color-overlay-tooltip: #3b3b3b;
   --bs-color-surface-brand-primary: #ff7900;
   --bs-color-surface-inverse-high: #eee;
@@ -212,8 +222,8 @@
   --bs-color-surface-status-warning-emphasized: #ffe270;
   --bs-color-surface-status-warning-muted: rgba(102, 81, 0, 0.48);
   --bs-color-surface-tertiary: rgba(104, 93, 80, 0.4);
-  --bs-elevation-color-default: rgba(0, 0, 0, 0.32);
   --bs-elevation-color-drag: rgba(0, 0, 0, 0.32);
+  --bs-elevation-color-elevated: rgba(0, 0, 0, 0.32);
   --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.24);
   --bs-elevation-color-raised: rgba(0, 0, 0, 0.32);
   --bs-elevation-color-sticky: rgba(0, 0, 0, 0.24);
@@ -260,19 +270,26 @@
   --bs-button-mono-color-content-strong-focus: #fff;
   --bs-button-mono-color-border-default-enabled: #000;
   --bs-button-mono-color-border-default-disabled: rgba(0, 0, 0, 0.28);
-  --bs-link-mono-color-content-enabled: #000;
-  --bs-link-mono-color-content-hover: #000;
-  --bs-link-mono-color-content-pressed: rgba(0, 0, 0, 0.52);
-  --bs-link-mono-color-content-disabled: rgba(0, 0, 0, 0.28);
-  --bs-link-mono-color-content-focus: #000;
+  --bs-icon-color-content-status-warning-external-shape: #ffd000;
+  --bs-icon-color-content-status-warning-internal-shape: #856a00;
+  --bs-icon-color-content-status-warning-inverse-external-shape: #ffe270;
   --bs-switch-color-cursor: #fff;
   --bs-switch-color-track-selected: #17a02f;
   --bs-switch-color-track-selected-interaction: #138126;
   --bs-switch-color-track-unselected: rgba(0, 0, 0, 0.44);
   --bs-switch-color-track-unselected-interaction: rgba(0, 0, 0, 0.52);
-  --bs-icon-color-content-status-warning-external-shape: #ffd000;
-  --bs-icon-color-content-status-warning-internal-shape: #856a00;
-  --bs-icon-color-content-default: #000;
+  --bs-link-mono-color-content-enabled: #000;
+  --bs-link-mono-color-content-hover: #000;
+  --bs-link-mono-color-content-pressed: rgba(0, 0, 0, 0.52);
+  --bs-link-mono-color-content-disabled: rgba(0, 0, 0, 0.28);
+  --bs-link-mono-color-content-focus: #000;
+  --bs-icon-color-content-status-warning-inverse-internal-shape: rgba(255, 255, 255, 0);
+  --bs-control-item-color-bg-current-enabled: rgba(0, 0, 0, 0.04);
+  --bs-control-item-color-bg-hover: rgba(0, 0, 0, 0.08);
+  --bs-control-item-color-bg-pressed: rgba(0, 0, 0, 0.12);
+  --bs-control-item-color-bg-loading: rgba(0, 0, 0, 0.12);
+  --bs-control-item-color-bg-focus: rgba(0, 0, 0, 0.08);
+  --bs-control-item-color-content-loader: #000;
 }
 
 [data-bs-theme=dark],
@@ -316,19 +333,26 @@
   --bs-button-mono-color-content-strong-focus: #000;
   --bs-button-mono-color-border-default-enabled: #fff;
   --bs-button-mono-color-border-default-disabled: rgba(255, 255, 255, 0.44);
-  --bs-link-mono-color-content-enabled: #fff;
-  --bs-link-mono-color-content-hover: #fff;
-  --bs-link-mono-color-content-pressed: rgba(255, 255, 255, 0.8);
-  --bs-link-mono-color-content-disabled: rgba(255, 255, 255, 0.44);
-  --bs-link-mono-color-content-focus: #fff;
+  --bs-icon-color-content-status-warning-external-shape: #ffe270;
+  --bs-icon-color-content-status-warning-internal-shape: rgba(255, 255, 255, 0);
+  --bs-icon-color-content-status-warning-inverse-external-shape: #ffd000;
   --bs-switch-color-cursor: #141414;
   --bs-switch-color-track-selected: #1ecd3c;
   --bs-switch-color-track-selected-interaction: #94f0a4;
   --bs-switch-color-track-unselected: rgba(255, 255, 255, 0.64);
   --bs-switch-color-track-unselected-interaction: rgba(255, 255, 255, 0.8);
-  --bs-icon-color-content-status-warning-external-shape: #ffe270;
-  --bs-icon-color-content-status-warning-internal-shape: rgba(255, 255, 255, 0);
-  --bs-icon-color-content-default: #eee;
+  --bs-link-mono-color-content-enabled: #fff;
+  --bs-link-mono-color-content-hover: #fff;
+  --bs-link-mono-color-content-pressed: rgba(255, 255, 255, 0.8);
+  --bs-link-mono-color-content-disabled: rgba(255, 255, 255, 0.44);
+  --bs-link-mono-color-content-focus: #fff;
+  --bs-icon-color-content-status-warning-inverse-internal-shape: #856a00;
+  --bs-control-item-color-bg-current-enabled: rgba(255, 255, 255, 0.08);
+  --bs-control-item-color-bg-hover: rgba(255, 255, 255, 0.08);
+  --bs-control-item-color-bg-pressed: rgba(255, 255, 255, 0.12);
+  --bs-control-item-color-bg-loading: rgba(255, 255, 255, 0.12);
+  --bs-control-item-color-bg-focus: rgba(255, 255, 255, 0.08);
+  --bs-control-item-color-content-loader: #eee;
 }
 
 @font-face {
@@ -800,7 +824,7 @@
 :root[data-bs-theme=light] [data-bs-theme=root-inverted] {
   color-scheme: dark;
   --bs-heading-color: inherit;
-  --bs-border-color: rgba(255, 255, 255, 0.92);
+  --bs-border-color: #eee;
   --bs-focus-ring-color: rgba(255, 121, 0, 0.25);
   --bs-form-select-indicator: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath fill='%23fff' d='M7 7 0 0h14L7 7z'/%3e%3c/svg%3e");
   --bs-form-select-disabled-indicator: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath fill='%23666' d='M7 7 0 0h14L7 7z'/%3e%3c/svg%3e");
@@ -811,7 +835,7 @@
 }
 
 .use-rounded-corner-inputs {
-  --bs-text-input-border-radius: 4px !important;
+  --bs-text-input-border-radius: 8px !important;
 }
 
 *,
@@ -1153,11 +1177,11 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  max-width: var(--bs-font-max-width-heading-xlarge);
-  font-size: var(--bs-font-size-heading-xlarge);
-  line-height: var(--bs-font-line-height-heading-xlarge);
+  max-width: var(--bs-font-max-width-heading-small);
+  font-size: var(--bs-font-size-heading-small);
+  line-height: var(--bs-font-line-height-heading-small);
   /* rtl:remove */
-  letter-spacing: var(--bs-font-letter-spacing-heading-xlarge);
+  letter-spacing: var(--bs-font-letter-spacing-heading-small);
   font-weight: 700;
   color: var(--bs-caption-color, var(--bs-emphasis-color));
   text-align: left;
