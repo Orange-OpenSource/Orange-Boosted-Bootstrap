@@ -283,6 +283,27 @@ export const componentsDetails: ComponentCardData[] = [
       </div>`
   },
   {
+    name: 'Table',
+    category: 'Content display',
+    snippet: `
+      <table class="table w-75 mb-none">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Second</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+        </tbody>
+      </table>`
+  },
+  {
     name: 'Tag',
     link: 'tags#tag',
     category: 'Indicator',

@@ -787,13 +787,11 @@ $mark-bg:                     $ouds-color-action-highlighted-light !default; // 
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:                  .875rem !default; // OUDS mod
-$table-cell-padding-x:                  $spacer * .5 !default; // OUDS mod
-$table-cell-padding-y-sm:               .5625rem !default; // OUDS mod
-$table-cell-padding-x-sm:               $table-cell-padding-x !default; // OUDS mod
+$table-cell-padding-y:                  $ouds-dimension-5xsmall !default; // OUDS mod
+$table-cell-padding-x:                  $ouds-dimension-5xsmall !default; // OUDS mod
 
-$table-cell-icon-margin-top:            -.75rem !default; // OUDS mod
-$table-cell-icon-margin-bottom:         -.625rem !default; // OUDS mod
+$table-cell-icon-margin-top:            -.7rem !default; // OUDS mod
+$table-cell-icon-margin-bottom:         -.5rem !default; // OUDS mod
 $table-cell-vertical-align:             top !default;
 $table-line-height:                     1.25 !default; // OUDS mod
 
@@ -805,12 +803,12 @@ $table-th-font-weight:                  null !default;
 
 $table-striped-color:                   $table-color !default;
 $table-striped-bg-factor:               .035 !default; // OUDS mod: equivalent to `$gray-200`
-$table-striped-bg:                      rgba(var(--#{$prefix}black-rgb), var(--#{$prefix}table-striped-bg-factor)) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), $table-striped-bg-factor)`
+$table-striped-bg:                      var(--#{$prefix}color-surface-secondary) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), $table-striped-bg-factor)`
 $table-variant-striped-bg-factor:       .08 !default; // OUDS mod
 
-$table-active-color:                    $table-color !default;
+$table-active-color:                    var(--#{$prefix}color-content-default) !default;
 $table-active-bg-factor:                .135 !default; // OUDS mod
-$table-active-bg:                       rgba(var(--#{$prefix}emphasis-color-rgb), var(--#{$prefix}table-active-bg-factor)) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), $table-active-bg-factor)`
+$table-active-bg:                       var(--#{$prefix}color-bg-inverse-low) !default; // OUDS mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), $table-active-bg-factor)`
 $table-variant-active-bg-factor:        .4 !default; // OUDS mod
 
 $table-hover-color:                     $table-color !default;
@@ -819,32 +817,18 @@ $table-hover-bg:                        rgba(var(--#{$prefix}emphasis-color-rgb)
 $table-variant-hover-bg-factor:         .2 !default; // OUDS mod
 
 $table-border-factor:                   .4 !default; // OUDS mod
-$table-border-width:                    calc(var(--#{$prefix}border-width) * .5) !default;  // OUDS mod
+$table-header-border-width:             2px !default;  // OUDS mod
+$table-border-width:                    1px !default;  // OUDS mod
 $table-border-color:                    var(--#{$prefix}color-border-default) !default; // OUDS mod: instead of `var(--#{$prefix}border-color)`
 
-$table-striped-order:                   odd !default;
-$table-striped-columns-order:           even !default;
+$table-striped-order:                   even !default; // OUDS mod
+$table-striped-columns-order:           odd !default; // OUDS mod
 
 $table-group-separator-color:           currentcolor !default;
 
 $table-caption-color:                   var(--#{$prefix}caption-color, var(--#{$prefix}emphasis-color)) !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
 $table-caption-padding-y:               .75rem !default; // OUDS mod
-
-$table-bg-scale:                        -60% !default;
 // scss-docs-end table-variables
-
-// scss-docs-start table-loop
-$table-variants: (
-  "primary":    shift-color($primary, $table-bg-scale),
-  "secondary":  shift-color($secondary, $table-bg-scale),
-  "success":    shift-color($success, $table-bg-scale),
-  "info":       shift-color($info, $table-bg-scale),
-  "warning":    shift-color($warning, $table-bg-scale),
-  "danger":     shift-color($danger, $table-bg-scale),
-  "light":      $light,
-  "dark":       $dark,
-) !default;
-// scss-docs-end table-loop
 
 // Buttons + Forms
 //

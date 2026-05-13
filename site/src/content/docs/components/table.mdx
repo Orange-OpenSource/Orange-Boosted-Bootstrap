@@ -1,10 +1,686 @@
 ---
-title: Tables
-description: Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with OUDS Web.
+title: Table
+description: Documentation and examples for opt-in styling of tables with OUDS Web.
 aliases:
   - "/docs/content/tables/"
   - "/docs/components/table/"
 toc: true
 ---
 
-<CalloutSoon type="page" />
+import { getData } from '@libs/data'
+import { getVersionedDocsPath } from '@libs/path'
+
+<Callout type="negative" title="Draft component">
+  The table component is not yet designed, and this component is only a draft for the moment. It will be updated in the future with the final design and will certainly need adjustments regarding the DOM. Use it as a temporary component to speed up your development.
+
+  Please refer to the [Tables in the Boosted documentation](https://boosted.orange.com/docs/content/tables/) to have a full view of the table component and its variations.
+</Callout>
+
+## Overview
+
+Due to the extensive use of `<table>` elements in third-party widgets such as calendars and date pickers, OUDS Web’s tables are **opt-in**. This means that you must add the base class `.table` to any `<table>`, to benefit from OUDS Web's table styles which you can then extend with our optional modifier classes or custom styles. In OUDS Web, table styles are not inherited, enabling independent styling for nested tables.
+
+Using the most basic table markup, here’s how `.table`-based tables look in OUDS Web.
+
+<Example buttonLabel="basic table" code={`<table class="table">
+    <caption class="visually-hidden">OUDS Web basic table</caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+  </table>`} />
+
+## Accessibility
+
+To make a table accessible, you should respect these main rules:
+
+- Add a `scope="col"`, `scope="row"`, `scope="colgroup"`, or `scope="rowgroup"` attribute to the `<th>` tags when needed to make the content of table readable by screen readers.
+- Add a `<caption>` on each table. If the table doesn’t have a caption or if the caption is not enough informative to describe the table, add an `aria-label` attribute to describe the table content. The `aria-label` should match the following pattern: `aria-label="Description of table data - Description of table metadata (e.g.: table with one level of column header)"`. The metadata is mandatory for complex tables.
+
+See [more information about the tables structures](https://a11y-guidelines.orange.com/en/web/develop/textual-content/#structuring-data-tables).
+
+## Variants
+
+### Functional colors
+
+To add a background color to a table row, you can use the contextual classes `.table-{status}` on `<tr>` elements. These classes will apply a muted background color based on the status you choose, among `info`, `positive`, `warning`, or `negative`. This can be useful for highlighting specific rows based on their content or status. Another way to convey information must be used in addition to color, such as a badge with a relevant label or icon, to ensure that the information is accessible to all users.
+
+<Example buttonLabel="table with functional colored backgrounds" code={`<table class="table">
+    <caption class="visually-hidden">OUDS Web table with functional colored backgrounds</caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Status</th>
+        <th scope="col">Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-info">
+        <th scope="row">1</th>
+        <td><span class="badge badge-info me-xsmall"></span>Running</td>
+        <td>Cell</td>
+      </tr>
+      <tr class="table-positive">
+        <th scope="row">2</th>
+        <td><span class="badge badge-positive me-xsmall"></span>New</td>
+        <td>Cell</td>
+      </tr>
+      <tr class="table-warning">
+        <th scope="row">3</th>
+        <td><span class="badge badge-warning me-xsmall"></span>Reloading</td>
+        <td>Cell</td>
+      </tr>
+      <tr class="table-negative">
+        <th scope="row">4</th>
+        <td><span class="badge badge-negative me-xsmall"></span>Error</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+  </table>`} />
+
+### Striped rows
+
+Use  `.table-striped` to add zebra-striping to any table row within the `<tbody>`. This will add a background color to even rows (excluding the header) to improve readability.
+
+<Example buttonLabel="striped table" code={`<table class="table table-striped">
+    <caption class="visually-hidden">OUDS Web zebra table</caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+  </table>`} />
+
+## Responsive tables
+
+Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a `.table` with `.table-responsive`. Or, pick a maximum breakpoint with which to have a responsive table up to by using `.table-responsive{-xs|-sm|-md|-lg|-xl|-2xl|3xl}`.
+
+<Callout type="warning" title="Vertical clipping/truncation">
+Responsive tables make use of `overflow-y: hidden`, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.
+</Callout>
+
+### Always responsive
+
+Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
+
+<Example showMarkup={false} code={`<div class="table-responsive">
+    <table class="table">
+      <caption class="visually-hidden">OUDS Web responsive table</caption>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>`} />
+
+<Code buttonLabel="table responsive" lang="html" code={`
+  <div class="table-responsive">
+    <table class="table">
+      ...
+    </table>
+  </div>`} />
+
+### Breakpoint specific
+
+Use `.{xs|sm|md|lg|xl|2xl|3xl}:table-responsive` as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
+
+**These tables may appear broken until their responsive styles apply at specific viewport widths.**
+
+<Details summary="Examples of responsive tables up to particular breakpoint">
+  <br/>
+  Resize window to see differences:
+  {getData('breakpoints').map((breakpoint) => {
+    if (breakpoint.abbr) return (
+      <div class="bd-example">
+        <div class={`${breakpoint.abbr}:table-responsive`}>
+          <table class="table">
+            <caption>OUDS Web responsive table for {breakpoint.abbr} breakpoint and under</caption>
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )
+  })}
+
+  <Code buttonLabel="responsive tables up to particular breakpoint" lang="html"
+    code={getData('breakpoints').map((breakpoint) => { if (breakpoint.abbr) return (
+  `<div class="${breakpoint.abbr}:table-responsive">
+    <table class="table">
+      ...
+    </table>
+  </div>`)}
+  )} />
+</Details>
+
+<BootstrapCompatibility>
+  Use `.table-responsive{-xs|-sm|-md|-lg|-xl|-2xl|-3xl}` as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
+
+  **These tables may appear broken until their responsive styles apply at specific viewport widths.**
+
+  {getData('breakpoints').map((breakpoint) => {
+    if (breakpoint.abbr) return (
+      <div class="bd-example">
+        <div class={`table-responsive-${breakpoint.abbr}`}>
+          <table class="table">
+            <caption>Responsive table for {breakpoint.abbr} breakpoint and under (Bootstrap)</caption>
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )
+  })}
+
+  <Code buttonLabel="Bootstrap compatibility: responsive tables up to particular breakpoint" lang="html"
+        code={getData('breakpoints').map((breakpoint) => { if (breakpoint.abbr) return (
+  `<div class="table-responsive-${breakpoint.abbr}">
+    <table class="table">
+      ...
+    </table>
+  </div>`)}
+        )} />
+</BootstrapCompatibility>
+
+## Row selection
+
+### With checkboxes
+
+For the row selection purpose with checkboxes, you should use [standalone checkboxes]([[docsref:/components/checkbox#standalone]]) with `.visually-hidden` labels describing their use.
+
+The first cell of the header should contain a checkbox to select or deselect all rows. When some rows - but not all - are selected, the header checkbox should be in an [indeterminate state]([[docsref:/components/checkbox#indeterminate]]).
+
+To visually indicate a row is selected, you'll need to apply a `data-bs-theme="dark"` attribute on the `<tr>` element (some additional styles will be applied too). This can be done by JavaScript, see the example below. If you want to manually apply the same styles to rows or even cells, you can use the class `.table-active` with `data-bs-theme="dark"` on `<tr>` or `<td>` elements.
+
+Note that the width of columns containing checkboxes will automatically adjust to the largest cell, and the click area will be extended to the full width of the cell.
+
+<Example buttonLabel="table with checkboxes row selection" code={`<table class="table" id="tableWithCheckboxes">
+    <caption class="visually-hidden">OUDS Web table with row selection</caption>
+    <thead>
+      <tr>
+        <th scope="col">
+          <label class="checkbox-standalone">
+            <input class="control-item-indicator" type="checkbox" value="all" id="tableSelectAll" />
+            <span class="visually-hidden">Select all rows</span>
+          </label>
+        </th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-bs-theme="dark">
+        <td>
+          <label class="checkbox-standalone">
+            <input class="control-item-indicator" type="checkbox" value="1" checked />
+            <span class="visually-hidden">Select row 1</span>
+          </label>
+        </td>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <td>
+          <label class="checkbox-standalone">
+            <input class="control-item-indicator" type="checkbox" value="2" />
+            <span class="visually-hidden">Select row 2</span>
+          </label>
+        </td>
+        <td>This is a much longer section of text that demonstrates what happens when text wraps within a cell in a table</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr data-bs-theme="dark">
+        <td>
+          <label class="checkbox-standalone">
+            <input class="control-item-indicator" type="checkbox" value="3" checked />
+            <span class="visually-hidden">Select row 3</span>
+          </label>
+        </td>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+  </table>`} />
+
+To manage checkboxes states and active styles (i.e. select/deselect all rows, update header checkbox state, and update `data-bs-theme` on selected row), here is an example of JavaScript code:
+<JsDocs name="live-row-selection-checkboxes" file="site/src/assets/partials/snippets.js" />
+
+### With radio buttons
+
+For the row selection purpose with radio buttons, you should use [standalone radio buttons]([[docsref:/components/radio-button#standalone]]) with `.visually-hidden` labels describing their use.
+
+The [same rules apply as with checkboxes](#with-checkboxes), except that there is no "all rows" selection. The JavaScript will only need to update the `data-bs-theme` on selected rows, as we have done in the example below.
+
+<Example buttonLabel="table with radio buttons row selection" code={`<table class="table" id="tableWithRadios">
+    <caption class="visually-hidden">OUDS Web table with radio buttons</caption>
+    <thead>
+      <tr>
+        <th scope="col">Select</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <label class="radio-button-standalone">
+            <input class="control-item-indicator" type="radio" name="radio1" value="1" />
+            <span class="visually-hidden">Select row 1</span>
+          </label>
+        </td>
+        <td>This is a much longer section of text that demonstrates what happens when text wraps within a cell in a table</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr data-bs-theme="dark">
+        <td>
+          <label class="radio-button-standalone">
+            <input class="control-item-indicator" type="radio" name="radio1" value="2" checked />
+            <span class="visually-hidden">Select row 2</span>
+          </label>
+        </td>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <td>
+          <label class="radio-button-standalone">
+            <input class="control-item-indicator" type="radio" name="radio1" value="3" />
+            <span class="visually-hidden">Select row 3</span>
+          </label>
+        </td>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+  </table>`} />
+
+To manage radio buttons active state (i.e. update `data-bs-theme` on the selected row), here is an example of JavaScript code:
+<JsDocs name="live-row-selection-radios" file="site/src/assets/partials/snippets.js" />
+
+## Rich content tables
+
+You can also use other components in tables, such as tags, badges, switches, images or icons.
+
+To align horizontally or vertically, you can use the following:
+- For horizontal alignment, use the `.text-center` class on `<th>` and `<td>` elements.
+- For vertical alignment, use the `.align-middle` class on the `<tr>` elements. Some components inside cells may require additional alignment (possibly via a utility class).
+
+<Example buttonLabel="table with components and icons" class="table-responsive" code={`<table class="table">
+    <caption class="visually-hidden">OUDS Web table with components and icons</caption>
+    <thead>
+      <tr>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+        <th scope="col" class="text-center">Heading</th>
+        <th scope="col">Activated</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="align-middle">
+        <td>
+          <svg class="bm-large-icon me-xsmall" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#file-earmark-richtext')}"></use>
+          </svg>Cell
+        </td>
+        <td>This is a much longer section of text that demonstrates what happens when text wraps within a cell in a table</td>
+        <td>
+          <p class="tag tag-warning tag-small">
+            <span class="tag-status-icon"></span>
+            Maintenance
+          </p>
+        </td>
+        <td class="text-center">
+          <p class="badge badge-warning badge-large align-middle">
+            <span class="badge-status-icon"></span>
+            <span class="visually-hidden">Warning</span>
+          </p>
+        </td>
+        <td>
+          <label class="switch-standalone">
+            <input class="control-item-indicator" type="checkbox" role="switch"  value="1" />
+            <span class="visually-hidden">Select row 1</span>
+          </label>
+        </td>
+      </tr>
+      <tr class="align-middle">
+        <td>
+          <img src="${getVersionedDocsPath('/assets/img/thumbnail.png')}" alt="" class="bm-large-icon me-xsmall" />Cell
+        </td>
+        <td>Cell</td>
+        <td>
+          <p class="tag tag-positive tag-small">
+            <span class="tag-status-icon"></span>
+            Running
+          </p>
+        </td>
+        <td class="text-center">
+          <p class="badge badge-positive badge-large align-middle">
+            <span class="badge-status-icon"></span>
+            <span class="visually-hidden">OK</span>
+          </p>
+        </td>
+        <td>
+          <label class="switch-standalone">
+            <input class="control-item-indicator" type="checkbox" role="switch"  value="2" checked />
+            <span class="visually-hidden">Select row 2</span>
+          </label>
+        </td>
+      </tr>
+      <tr class="align-middle">
+        <td>
+          <svg class="bm-large-icon me-xsmall" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#file-earmark-richtext')}"></use>
+          </svg>Cell
+        </td>
+        <td>Cell</td>
+        <td>
+          <p class="tag tag-negative tag-small">
+            <span class="tag-status-icon"></span>
+            Error
+          </p>
+        </td>
+        <td class="text-center">
+          <p class="badge badge-large align-middle">
+            <span class="badge-status-icon"></span>
+            <span class="visually-hidden">Error</span>
+          </p>
+        </td>
+        <td>
+          <label class="switch-standalone">
+            <input class="control-item-indicator" type="checkbox" role="switch"  value="3" />
+            <span class="visually-hidden">Select row 3</span>
+          </label>
+        </td>
+      </tr>
+    </tbody>
+  </table>`} />
+
+
+### Row height and alignment
+
+To align vertically and preserve the row height, use the `.align-middle` class on the `<tr>` elements and `.table-cell-component` on `<td>` elements containing components that could cause vertical overflow.
+
+<Example buttonLabel="table with components and icons preserving the row height" class="table-responsive" code={`<table class="table">
+    <caption class="visually-hidden">OUDS Web table with components and icons preserving the row height</caption>
+    <thead>
+      <tr>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+        <th scope="col" class="text-center">Heading</th>
+        <th scope="col" class="text-center">Activated</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="align-middle">
+        <td>
+          <svg class="bm-large-icon me-xsmall" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#file-earmark-richtext')}"></use>
+          </svg>Cell
+        </td>
+        <td>This is a much longer section of text that demonstrates what happens when text wraps within a cell in a table</td>
+        <td class="table-cell-component">
+          <p class="tag tag-warning tag-small">
+            <span class="tag-status-icon"></span>
+            Maintenance
+          </p>
+        </td>
+        <td class="text-center table-cell-component">
+          <p class="badge badge-warning badge-large">
+            <span class="badge-status-icon"></span>
+            <span class="visually-hidden">Warning</span>
+          </p>
+        </td>
+        <td class="table-cell-component">
+          <label class="switch-standalone">
+            <input class="control-item-indicator" type="checkbox" role="switch"  value="1" />
+            <span class="visually-hidden">Select row 1</span>
+          </label>
+        </td>
+      </tr>
+      <tr class="align-middle">
+        <td>
+          <img src="${getVersionedDocsPath('/assets/img/thumbnail.png')}" alt="" class="bm-large-icon me-xsmall" />Cell
+        </td>
+        <td>Cell</td>
+        <td class="table-cell-component">
+          <p class="tag tag-positive tag-small">
+            <span class="tag-status-icon"></span>
+            Running
+          </p>
+        </td>
+        <td class="text-center table-cell-component">
+          <p class="badge badge-positive badge-large">
+            <span class="badge-status-icon"></span>
+            <span class="visually-hidden">OK</span>
+          </p>
+        </td>
+        <td class="table-cell-component">
+          <label class="switch-standalone">
+            <input class="control-item-indicator" type="checkbox" role="switch"  value="2" checked />
+            <span class="visually-hidden">Select row 2</span>
+          </label>
+        </td>
+      </tr>
+      <tr class="align-middle">
+        <td>
+          <svg class="bm-large-icon me-xsmall" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#file-earmark-richtext')}"></use>
+          </svg>Cell
+        </td>
+        <td>Cell</td>
+        <td class="table-cell-component">
+          <p class="tag tag-negative tag-small">
+            <span class="tag-status-icon"></span>
+            Error
+          </p>
+        </td>
+        <td class="text-center table-cell-component">
+          <p class="badge badge-large">
+            <span class="badge-status-icon"></span>
+            <span class="visually-hidden">Error</span>
+          </p>
+        </td>
+        <td class="table-cell-component">
+          <label class="switch-standalone">
+            <input class="control-item-indicator" type="checkbox" role="switch"  value="3" />
+            <span class="visually-hidden">Select row 3</span>
+          </label>
+        </td>
+      </tr>
+    </tbody>
+  </table>`} />
+
