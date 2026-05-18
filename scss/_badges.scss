@@ -38,10 +38,6 @@
     font-size: calc(var(--#{$prefix}badge-size) - (2 * var(--#{$prefix}badge-count-padding-x)));
   }
 
-  &:has(.badge-status-icon) {
-    padding: 0;
-  }
-
   .badge-status-icon {
     background-color: var(--#{$prefix}badge-color);
     background-size: contain;
@@ -58,7 +54,11 @@
   }
 
   &:not(.badge-neutral):not(.badge-accent) {
-    --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-negative-emphasized};
+    &:has(.badge-status-icon) {
+      --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-negative-emphasized};
+
+      padding: 0;
+    }
 
     .badge-status-icon {
       display: inline-block;
@@ -69,29 +69,44 @@
     }
 
     &.badge-positive {
-      --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-positive-emphasized};
+      --#{$prefix}badge-color: #{$ouds-color-content-on-status-positive-emphasized};
+      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-positive-emphasized};
 
-      .badge-status-icon {
-        background-color: #{$ouds-color-surface-status-positive-emphasized};
-        mask-image: escape-svg($badge-icon-positive);
+      &:has(.badge-status-icon) {
+        --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-positive-emphasized};
+
+        .badge-status-icon {
+          background-color: #{$ouds-color-surface-status-positive-emphasized};
+          mask-image: escape-svg($badge-icon-positive);
+        }
       }
     }
 
     &.badge-info {
-      --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-info-emphasized};
+      --#{$prefix}badge-color: #{$ouds-color-content-on-status-info-emphasized};
+      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-info-emphasized};
 
-      .badge-status-icon {
-        background-color: #{$ouds-color-surface-status-info-emphasized};
-        mask-image: escape-svg($badge-icon-info);
+      &:has(.badge-status-icon) {
+        --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-info-emphasized};
+
+        .badge-status-icon {
+          background-color: #{$ouds-color-surface-status-info-emphasized};
+          mask-image: escape-svg($badge-icon-info);
+        }
       }
     }
 
     &.badge-warning {
-      --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-warning-emphasized};
+      --#{$prefix}badge-color: #{$ouds-color-content-on-status-warning-emphasized};
+      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-warning-emphasized};
 
-      .badge-status-icon {
-        background-color: #{$ouds-color-surface-status-warning-emphasized};
-        mask-image: escape-svg($badge-icon-warning);
+      &:has(.badge-status-icon) {
+        --#{$prefix}badge-background-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
+
+        .badge-status-icon {
+          background-color: #{$ouds-color-surface-status-warning-emphasized};
+          mask-image: escape-svg($badge-icon-warning);
+        }
       }
     }
   }
