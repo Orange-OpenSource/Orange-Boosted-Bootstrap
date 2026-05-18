@@ -136,10 +136,10 @@ const { addedIn, layout, title } = Astro.props
               data-bs-display="static"
               aria-label={`Toggle brand (${getConfig().brand})`}
             >
-              <svg class="bi ms-auto" aria-hidden="true">
+              <svg class="ms-auto" aria-hidden="true">
                 <use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#theme')}></use>
               </svg>
-              <span class="lg:d-none ms-small" id="bd-brand-text">Toggle brand</span>
+              <span class="lg:d-none ms-small" id="bd-brand-text">Brand</span>
             </button>
             <ul class=`dropdown-menu dropdown-menu-end mb-small` aria-labelledby="bd-brand-text">
               <li>
@@ -150,13 +150,13 @@ const { addedIn, layout, title } = Astro.props
                   aria-current={getConfig().brand === 'orange'}
                 >
                   <img
-                    class="bi me-small"
+                    class="bs-medium-icon me-small"
                     src={getVersionedDocsPath('assets/brand/orange-logo.svg')}
                     alt=""
                     loading="lazy"
                   />
                   Orange
-                  <svg class:list={['bi ms-auto', { 'd-none': getConfig().brand !== 'orange' }]} aria-hidden="true"
+                  <svg class:list={['ms-auto', { 'd-none': getConfig().brand !== 'orange' }]} aria-hidden="true"
                     ><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#check2')}></use></svg
                   >
                 </a>
@@ -172,14 +172,14 @@ const { addedIn, layout, title } = Astro.props
                   aria-current={getConfig().brand === 'orange-compact'}
                 >
                   <img
-                    class="bi me-small"
+                    class="bs-medium-icon me-small"
                     src={getVersionedDocsPath('assets/brand/orange-compact-logo.svg')}
                     alt=""
                     loading="lazy"
                   />
                   Orange Compact
                   <svg
-                    class:list={['bi ms-auto', { 'd-none': getConfig().brand !== 'orange-buiness-tools' }]}
+                    class:list={['ms-auto', { 'd-none': getConfig().brand !== 'orange-buiness-tools' }]}
                     aria-hidden="true"
                     ><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#check2')}></use></svg
                   >
@@ -193,13 +193,13 @@ const { addedIn, layout, title } = Astro.props
                   aria-current={getConfig().brand === 'sosh'}
                 >
                   <img
-                    class="bi me-small"
+                    class="bs-medium-icon me-small"
                     src={getVersionedDocsPath('assets/brand/sosh-logo.svg')}
                     alt=""
                     loading="lazy"
                   />
                   Sosh
-                  <svg class:list={['bi ms-auto', { 'd-none': getConfig().brand !== 'sosh' }]} aria-hidden="true"
+                  <svg class:list={['ms-auto', { 'd-none': getConfig().brand !== 'sosh' }]} aria-hidden="true"
                     ><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#check2')}></use></svg
                   >
                 </a>
