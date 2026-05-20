@@ -316,15 +316,51 @@ The disabled state of a badge - icon appears visually muted to signal that it is
 
 ### Sizes
 
-Badges - icon are available in two sizes. Add `.badge-large` to have a larger badge. Default size is medium.
+Badges - icon are available in four sizes. Add `.badge-xsmall`, `.badge-small`, or `.badge-large` to have the size you want. Default size is medium.
 
-<Example buttonLabel="badges icon sizes" class="d-flex align-items-center gap-large" code={`<p class="badge">
+<Example buttonLabel="badges icon sizes" class="d-flex align-items-center gap-large" code={`<p class="badge badge-xsmall">
+    <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Error</span>
+  </p>
+  <p class="badge badge-small">
+    <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Error</span>
+  </p>
+  <p class="badge">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Error</span>
   </p>
   <p class="badge badge-large">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Error</span>
+  </p>
+  <p class="badge badge-xsmall badge-warning">
+    <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Error</span>
+  </p>
+  <p class="badge badge-small badge-warning">
+    <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Error</span>
+  </p>
+  <p class="badge badge-warning">
+    <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Error</span>
+  </p>
+  <p class="badge badge-large badge-warning">
+    <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Error</span>
+  </p>
+  <p class="badge badge-neutral badge-xsmall">
+    <svg class="badge-icon" aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+    <span class="visually-hidden">Badge alt text</span>
+  </p>
+  <p class="badge badge-neutral badge-small">
+    <svg class="badge-icon" aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+    <span class="visually-hidden">Badge alt text</span>
   </p>
   <p class="badge badge-neutral">
     <svg class="badge-icon" aria-hidden="true">
@@ -338,10 +374,23 @@ Badges - icon are available in two sizes. Add `.badge-large` to have a larger ba
     </svg>
     <span class="visually-hidden">Badge alt text</span>
   </p>
-  <p class="badge badge-neutral badge-large">
-    <span class="badge-icon si si-settings" aria-hidden="true"></span>
+  <p class="badge badge-neutral badge-xsmall">
+    <span class="badge-icon si-settings" aria-hidden="true"></span>
     <span class="visually-hidden">Parameter</span>
-  </p>`} />
+  </p>
+  <p class="badge badge-neutral badge-small">
+    <span class="badge-icon si-settings" aria-hidden="true"></span>
+    <span class="visually-hidden">Parameter</span>
+  </p>
+  <p class="badge badge-neutral">
+    <span class="badge-icon si-settings" aria-hidden="true"></span>
+    <span class="visually-hidden">Parameter</span>
+  </p>
+  <p class="badge badge-neutral badge-large">
+    <span class="badge-icon si-settings" aria-hidden="true"></span>
+    <span class="visually-hidden">Parameter</span>
+  </p>`}>
+</Example>
 
 ## Positioning
 

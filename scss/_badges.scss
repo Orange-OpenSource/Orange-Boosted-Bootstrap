@@ -5,22 +5,19 @@
 .badge {
   // scss-docs-start badge-css-vars
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-medium)};
-  --#{$prefix}badge-border-radius: #{$ouds-border-radius-pill};
-  --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-inset-medium-large};
-  --#{$prefix}badge-count-padding-y: #{$ouds-badge-space-inset-medium-large};
+  --#{$prefix}badge-padding-icon-xsmall: #{$ouds-badge-space-inset-xsmall};
+  --#{$prefix}badge-padding-icon-small: #{$ouds-badge-space-inset-small};
+  --#{$prefix}badge-padding-x-medium-large: #{$ouds-badge-space-inset-medium-large};
+  --#{$prefix}badge-padding-y-medium-large: #{$ouds-badge-space-inset-medium-large};
   --#{$prefix}badge-color: #{$ouds-color-content-on-status-negative-emphasized};
   --#{$prefix}badge-background-color: #{$ouds-color-surface-status-negative-emphasized};
-  --#{$prefix}badge-positive-icon: #{$badge-icon-positive};
-  --#{$prefix}badge-info-icon: #{$badge-icon-info};
-  --#{$prefix}badge-warning-icon: #{$badge-icon-warning};
-  --#{$prefix}badge-negative-icon: #{$badge-icon-negative};
   // scss-docs-end badge-css-vars
 
   display: inline-block;
   min-width: var(--#{$prefix}badge-size);
   height: var(--#{$prefix}badge-size);
   min-height: var(--#{$prefix}badge-size);
-  padding: var(--#{$prefix}badge-count-padding-y) var(--#{$prefix}badge-count-padding-x);
+  padding: var(--#{$prefix}badge-padding-y-medium-large) var(--#{$prefix}badge-padding-x-medium-large);
   margin: 0;
   font-style: normal;
   font-weight: 400;
@@ -28,19 +25,38 @@
   text-align: center;
   background-color: var(--#{$prefix}badge-background-color);
   @include get-font-size("label-small");
-  @include border-radius(var(--#{$prefix}badge-border-radius));
+  @include border-radius(#{$ouds-border-radius-pill});
 
-  .badge-icon,
-  .badge-status-icon {
+  .badge-icon {
     display: flex;
     flex: 1 0 0;
     aspect-ratio: 1/1;
-    font-size: calc(var(--#{$prefix}badge-size) - (2 * var(--#{$prefix}badge-count-padding-x)));
+    font-size: calc(var(--#{$prefix}badge-size) - (2 * var(--#{$prefix}badge-padding-x-medium-large)));
   }
 
-  .badge-status-icon {
-    background-color: var(--#{$prefix}badge-color);
-    background-size: contain;
+  &:has(.badge-status-icon) {
+    --#{$prefix}badge-color: #{$ouds-color-surface-status-negative-emphasized};
+    --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-negative-emphasized};
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+    width: var(--#{$prefix}badge-size);
+    height: var(--#{$prefix}badge-size);
+    padding: 0;
+
+    .badge-status-icon {
+      &::before,
+      &::after {
+        position: absolute;
+        inset: 0;
+        display: block;
+        content: "";
+      }
+      &::before {
+        background-color: currentcolor;
+        mask-image: escape-svg($badge-icon-negative);
+      }
+    }
   }
 
   &.badge-neutral {
@@ -53,30 +69,35 @@
     --#{$prefix}badge-background-color: #{$ouds-color-surface-status-accent-emphasized};
   }
 
+  &.badge-disabled:not(:has(.badge-status-icon)) {
+    --#{$prefix}badge-color: #{$ouds-color-content-on-action-disabled};
+    --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
+  }
+
   &:not(.badge-neutral):not(.badge-accent) {
-    &:has(.badge-status-icon) {
-      --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-negative-emphasized};
-
-      padding: 0;
-    }
-
-    .badge-status-icon {
-      display: inline-block;
-      width: var(--#{$prefix}badge-size);
-      height: var(--#{$prefix}badge-size);
-      background-color: #{$ouds-color-surface-status-negative-emphasized};
-      mask-image: escape-svg($badge-icon-negative);
+    &.badge-disabled:has(.badge-status-icon) {
+      --#{$prefix}badge-color: #{$ouds-color-action-disabled};
+      --#{$prefix}badge-background-color: #{$ouds-color-content-on-action-disabled};
     }
 
     &.badge-positive {
       --#{$prefix}badge-color: #{$ouds-color-content-on-status-positive-emphasized};
       --#{$prefix}badge-background-color: #{$ouds-color-surface-status-positive-emphasized};
 
+      &.badge-disabled {
+        --#{$prefix}badge-color: #{$ouds-color-content-on-action-disabled};
+        --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
+      }
+
       &:has(.badge-status-icon) {
+        --#{$prefix}badge-color: #{$ouds-color-surface-status-positive-emphasized};
         --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-positive-emphasized};
 
-        .badge-status-icon {
-          background-color: #{$ouds-color-surface-status-positive-emphasized};
+        &.badge-disabled {
+          --#{$prefix}badge-color: #{$ouds-color-content-on-action-disabled};
+          --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
+        }
+        .badge-status-icon::before {
           mask-image: escape-svg($badge-icon-positive);
         }
       }
@@ -86,11 +107,16 @@
       --#{$prefix}badge-color: #{$ouds-color-content-on-status-info-emphasized};
       --#{$prefix}badge-background-color: #{$ouds-color-surface-status-info-emphasized};
 
+      &.badge-disabled {
+        --#{$prefix}badge-color: #{$ouds-color-content-on-action-disabled};
+        --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
+      }
+
       &:has(.badge-status-icon) {
+        --#{$prefix}badge-color: #{$ouds-color-surface-status-info-emphasized};
         --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-info-emphasized};
 
-        .badge-status-icon {
-          background-color: #{$ouds-color-surface-status-info-emphasized};
+        .badge-status-icon::before {
           mask-image: escape-svg($badge-icon-info);
         }
       }
@@ -100,29 +126,53 @@
       --#{$prefix}badge-color: #{$ouds-color-content-on-status-warning-emphasized};
       --#{$prefix}badge-background-color: #{$ouds-color-surface-status-warning-emphasized};
 
+      &.badge-disabled {
+        --#{$prefix}badge-color: #{$ouds-color-content-on-action-disabled};
+        --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
+      }
+
       &:has(.badge-status-icon) {
-        --#{$prefix}badge-background-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
+        --#{$prefix}badge-color: #{$ouds-color-surface-status-warning-emphasized};
+        --#{$prefix}badge-background-color: transparent;
 
         .badge-status-icon {
-          background-color: #{$ouds-color-surface-status-warning-emphasized};
-          mask-image: escape-svg($badge-icon-warning);
+          &::before {
+            background-color: currentcolor;
+            mask-image: escape-svg($badge-icon-warning-external);
+          }
+
+          &::after {
+            background-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
+            mask-image: escape-svg($badge-icon-warning-internal);
+          }
         }
       }
     }
   }
 }
 
-.badge-disabled {
-  color: #{$ouds-color-content-on-action-disabled};
-  background-color: #{$ouds-color-action-disabled};
-}
-
-.badge-xsmall:not(.badge-count):not(:has(.badge-icon)):not(:has(.badge-status-icon)) {
+.badge-xsmall:not(.badge-count) {
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-xsmall)};
+
+  &:not(:has(.badge-status-icon)) {
+    padding: var(--#{$prefix}badge-padding-icon-xsmall);
+  }
+
+  .badge-icon {
+    font-size: calc(#{$ouds-badge-size-xsmall} - (2 * var(--#{$prefix}badge-padding-icon-xsmall)));
+  }
 }
 
-.badge-small:not(.badge-count):not(:has(.badge-icon)):not(:has(.badge-status-icon)) {
+.badge-small:not(.badge-count) {
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-small)};
+
+  &:not(:has(.badge-status-icon)) {
+    padding: var(--#{$prefix}badge-padding-icon-small);
+  }
+
+  .badge-icon {
+    font-size: calc(#{$ouds-badge-size-small} - (2 * var(--#{$prefix}badge-padding-icon-small)));
+  }
 }
 
 .badge-large {
@@ -132,11 +182,11 @@
 }
 
 .badge-count {
-  --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-medium};
-  --#{$prefix}badge-count-padding-y: 0;
+  --#{$prefix}badge-padding-x-medium-large: #{$ouds-badge-space-padding-inline-medium};
+  --#{$prefix}badge-padding-y-medium-large: 0;
 
   &.badge-large {
     --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-large)};
-    --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-large};
+    --#{$prefix}badge-padding-x-medium-large: #{$ouds-badge-space-padding-inline-large};
   }
 }
