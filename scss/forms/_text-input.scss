@@ -207,11 +207,12 @@
           position: relative;
           width: fit-content;
           max-width: 100%;
-          padding-right: 7px;
+          // 5px is the width of the asterisk
+          padding-right: calc(5px + $ouds-text-input-space-column-gap-label-small-asterisk);
 
           &::after {
             right: 0;
-            margin-left: 3px;
+            margin-left: $ouds-text-input-space-column-gap-label-small-asterisk;
           }
         }
       }

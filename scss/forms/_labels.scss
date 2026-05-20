@@ -18,7 +18,7 @@
 
 .is-required::after {
   position: absolute;
-  margin-left: 4px;
+  margin-left: $ouds-text-input-space-column-gap-label-asterisk;
   font-weight: $ouds-font-weight-system-web-strong;
   color: $ouds-color-content-status-negative;
   content: "*";
