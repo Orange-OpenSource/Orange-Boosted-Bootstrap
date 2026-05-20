@@ -1,4 +1,51 @@
 //
+// Mixins
+//
+
+// Generates color vars + status-icon mask for a status badge variant.
+// $icon: SVG mask icon (required)
+// $icon-internal: SVG mask icon for two-layer icons (optional, for 'warning' case)
+// $icon-internal-color: CSS custom property var for the internal shape color (optional, for 'warning' case)
+@mixin badge-status-variant($color, $bg, $icon, $icon-internal: null, $icon-internal-color: null) {
+  --#{$prefix}badge-color: #{$color};
+  --#{$prefix}badge-background-color: #{$bg};
+
+  &:has(.badge-status-icon) {
+    --#{$prefix}badge-color: #{$bg};
+    --#{$prefix}badge-background-color: #{$color};
+
+    &.badge-disabled {
+      --#{$prefix}badge-color: #{$ouds-color-action-disabled};
+      --#{$prefix}badge-background-color: #{$ouds-color-content-on-action-disabled};
+
+      @if $icon-internal {
+        .badge-status-icon::before {
+          background-color: #{$ouds-color-action-disabled};
+        }
+
+        .badge-status-icon::after {
+          background-color: #{$ouds-color-content-on-action-disabled};
+        }
+      }
+    }
+
+    .badge-status-icon::before {
+      background-color: currentcolor;
+      mask-image: escape-svg($icon);
+    }
+
+    @if $icon-internal {
+      --#{$prefix}badge-background-color: transparent;
+
+      .badge-status-icon::after {
+        background-color: #{$icon-internal-color};
+        mask-image: escape-svg($icon-internal);
+      }
+    }
+  }
+}
+
+//
 // Base styles
 //
 
@@ -52,10 +99,6 @@
         display: block;
         content: "";
       }
-      &::before {
-        background-color: currentcolor;
-        mask-image: escape-svg($badge-icon-negative);
-      }
     }
   }
 
@@ -69,87 +112,50 @@
     --#{$prefix}badge-background-color: #{$ouds-color-surface-status-accent-emphasized};
   }
 
-  &.badge-disabled:not(:has(.badge-status-icon)) {
+  // Functional variants — each uses the shared mixin
+  &:not(.badge-neutral):not(.badge-accent) {
+    @include badge-status-variant(
+      $ouds-color-content-on-status-negative-emphasized,
+      $ouds-color-surface-status-negative-emphasized,
+      $badge-icon-negative
+    );
+  }
+
+  &.badge-positive:not(.badge-neutral):not(.badge-accent) {
+    @include badge-status-variant(
+      $ouds-color-content-on-status-positive-emphasized,
+      $ouds-color-surface-status-positive-emphasized,
+      $badge-icon-positive
+    );
+  }
+
+  &.badge-info:not(.badge-neutral):not(.badge-accent) {
+    @include badge-status-variant(
+      $ouds-color-content-on-status-info-emphasized,
+      $ouds-color-surface-status-info-emphasized,
+      $badge-icon-info
+    );
+  }
+
+  &.badge-warning:not(.badge-neutral):not(.badge-accent) {
+    @include badge-status-variant(
+      $ouds-color-content-on-status-warning-emphasized,
+      $ouds-color-surface-status-warning-emphasized,
+      $badge-icon-warning-external,
+      $badge-icon-warning-internal,
+      var(--#{$prefix}icon-color-content-status-warning-internal-shape)
+    );
+  }
+
+  &.badge-disabled {
     --#{$prefix}badge-color: #{$ouds-color-content-on-action-disabled};
     --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
   }
-
-  &:not(.badge-neutral):not(.badge-accent) {
-    &.badge-disabled:has(.badge-status-icon) {
-      --#{$prefix}badge-color: #{$ouds-color-action-disabled};
-      --#{$prefix}badge-background-color: #{$ouds-color-content-on-action-disabled};
-    }
-
-    &.badge-positive {
-      --#{$prefix}badge-color: #{$ouds-color-content-on-status-positive-emphasized};
-      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-positive-emphasized};
-
-      &.badge-disabled {
-        --#{$prefix}badge-color: #{$ouds-color-content-on-action-disabled};
-        --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
-      }
-
-      &:has(.badge-status-icon) {
-        --#{$prefix}badge-color: #{$ouds-color-surface-status-positive-emphasized};
-        --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-positive-emphasized};
-
-        &.badge-disabled {
-          --#{$prefix}badge-color: #{$ouds-color-content-on-action-disabled};
-          --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
-        }
-        .badge-status-icon::before {
-          mask-image: escape-svg($badge-icon-positive);
-        }
-      }
-    }
-
-    &.badge-info {
-      --#{$prefix}badge-color: #{$ouds-color-content-on-status-info-emphasized};
-      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-info-emphasized};
-
-      &.badge-disabled {
-        --#{$prefix}badge-color: #{$ouds-color-content-on-action-disabled};
-        --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
-      }
-
-      &:has(.badge-status-icon) {
-        --#{$prefix}badge-color: #{$ouds-color-surface-status-info-emphasized};
-        --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-info-emphasized};
-
-        .badge-status-icon::before {
-          mask-image: escape-svg($badge-icon-info);
-        }
-      }
-    }
-
-    &.badge-warning {
-      --#{$prefix}badge-color: #{$ouds-color-content-on-status-warning-emphasized};
-      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-warning-emphasized};
-
-      &.badge-disabled {
-        --#{$prefix}badge-color: #{$ouds-color-content-on-action-disabled};
-        --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
-      }
-
-      &:has(.badge-status-icon) {
-        --#{$prefix}badge-color: #{$ouds-color-surface-status-warning-emphasized};
-        --#{$prefix}badge-background-color: transparent;
-
-        .badge-status-icon {
-          &::before {
-            background-color: currentcolor;
-            mask-image: escape-svg($badge-icon-warning-external);
-          }
-
-          &::after {
-            background-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
-            mask-image: escape-svg($badge-icon-warning-internal);
-          }
-        }
-      }
-    }
-  }
 }
+
+//
+// Size variants
+//
 
 .badge-xsmall:not(.badge-count) {
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-xsmall)};
