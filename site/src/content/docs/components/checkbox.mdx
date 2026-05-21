@@ -1,6 +1,6 @@
 ---
 title: Checkbox
-description: Create consistent cross-browser and cross-device checkboxes.
+description: A checkbox is a UI element that enables users to select multiple options from a set of mutually non-exclusive choices.
 aliases:
   - "/docs/forms/checks/"
   - "/docs/components/checks/"
@@ -19,7 +19,9 @@ import { getVersionedDocsPath } from '@libs/path'
 
 ## Overview
 
-Checkboxes allow users to select one or more options from a number of choices.
+Checkbox item is a UI element that allows users to select multiple options from a set of mutually non-exclusive choices.
+
+Unlike the [checkbox](#standalone), the checkbox item accommodates a broader range of contexts by enabling the toggling of visibility of additional text labels and icon assets.
 
 They are implemented using `.checkbox-item` and `.control-item-*` classes, [see below](#control-item). Browser default checkboxes are replaced with the help of the selector `.control-item-indicator[type="checkbox"]`.
 
@@ -157,7 +159,7 @@ To display a description text, add a `.control-item-description` as a sibling of
 It's recommended to keep checkbox label to no more than three words. When space is limited or when a long label or description text is required, the text can wrap, as this is preferable to truncation. The checkbox indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
 
 <Example buttonLabel="checkboxes with long texts" code={`<div class="row">
-    <div class="col-8 col-md-6 col-xl-5">
+    <div class="col-8 md:col-6 xl:col-5">
       <fieldset class="control-items-list">
         <div class="checkbox-item control-item-divider">
           <div class="control-item-assets-container">
@@ -210,7 +212,7 @@ It's recommended to keep checkbox label to no more than three words. When space 
 To reverse the component, simply add `.control-item-reverse` to a `.checkbox-item`.
 
 <Example buttonLabel="reversed checkboxes" code={`<div class="row">
-    <div class="col-8 col-md-6 col-xl-5">
+    <div class="col-8 md:col-6 xl:col-5">
       <fieldset class="control-items-list">
         <div class="checkbox-item control-item-divider control-item-reverse">
           <div class="control-item-assets-container">
@@ -261,7 +263,7 @@ Put your checkboxes on the opposite side with the `.form-check-reverse` modifier
 You can align horizontally up to three checkboxes if their labels are short, add sufficient space (for example by using `.gap-small`) between the controls to ensure a clear association of each labels with their corresponding indicator.
 
 <Example buttonLabel="horizontal checkboxes" code={`<fieldset class="control-items-list">
-    <div class="d-lg-flex flex-row gap-small">
+    <div class="lg:d-flex flex-row gap-small">
       <div class="checkbox-item flex-fill">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow1" />
@@ -291,9 +293,9 @@ You can align horizontally up to three checkboxes if their labels are short, add
 
 ### Max width
 
-By default checkboxes will span the whole width of their parent container, to limit the width of the checkbox on wider parent container, add a `.component-max-width` to the `.checkbox-item` container. More information on checkbox sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox-responsiveness).
+By default, checkboxes will span the whole width of their parent container, to limit the width of the checkbox on wider parent container, add a `.component-max-width` to the `.checkbox-item` container. More information on checkbox sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox-responsiveness).
 
-<Example code={`<fieldset class="control-items-list">
+<Example buttonLabel="checkboxes max width" code={`<fieldset class="control-items-list">
     <div class="checkbox-item component-max-width">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxMWDescription" id="checkboxWithMaxWidth" value="" />
@@ -335,11 +337,9 @@ Indeterminate state can be used in conjunction with all the other states below.
 
 Here is the associated JavaScript to set a checkbox as indeterminate.
 
-```javascript
-const checkbox = document.getElementById('checkboxIndeterminate')
+<Code buttonLabel="JavaScript to set a checkbox as indeterminate" lang="js" code={`const checkbox = document.getElementById('checkboxIndeterminate')
 
-checkbox.indeterminate = true
-```
+  checkbox.indeterminate = true`} />
 
 <BootstrapCompatibility>
   <Example buttonLabel="Bootstrap compatibility: indeterminate checkbox" class="bd-example-indeterminate" addStackblitzJs code={`<div class="form-check">
@@ -531,7 +531,7 @@ If the layout is horizontal, the `<fieldset>` must enclose the flex containers s
 
 It is possible to use a `<ul>` instead of `<fieldset>` but you will need to handle the error message display as it will not be hidden by default. The error message must be outside of the list as it is not a list item.
 
-<Example buttonLabel="invalid checkboxes with `<ul>`" class="bd-example-indeterminate" addStackblitzJs code={`<ul class="control-items-list">
+<Example buttonLabel="invalid checkboxes with ul element" class="bd-example-indeterminate" addStackblitzJs code={`<ul class="control-items-list">
     <li class="checkbox-item control-item-divider">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" aria-invalid="true" type="checkbox" value="" id="checkboxInvalidUl" aria-describedby="checkboxInvalidUlDescription checkboxInvalidUlErrorText" />
@@ -579,12 +579,27 @@ If you have a checkbox that is not part of a group but needs validation control,
     <p class="control-item-error-message" id="checkboxUniqueInvalidErrorText">You must accept the terms and condition to proceed.</p>
   </div>`} />
 
+### Skeleton
+
+<SkeletonRedirect component="checkbox item" />
+
+<Example buttonLabel="checkbox item skeleton" code={`<div aria-busy="true" inert>
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxSkeleton" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxSkeleton">Skeleton checkbox</label>
+      </div>
+    </div>
+  </div>`} />
+
 ## Fieldset `<legend>`
 
 For accessibility reasons, it is required to provide understandable checkbox labels without relying on visual context. It is also good practice to add a checkbox group title inside a `<legend>` element as the first child of the `<fieldset>` element. Screen readers will read the legend before navigating through the checkboxes; this way, keyboard navigation users have more information on what is expected with the multiple checkboxes element.
 
 <Example buttonLabel="checkboxes grouped with fieldset" code={`<div class="row">
-    <div class="col-md-6">
+    <div class="md:col-6">
       <fieldset class="control-items-list">
         <legend>Checkboxes group example</legend>
         <div class="checkbox-item control-item-divider">
@@ -621,6 +636,10 @@ For accessibility reasons, it is required to provide understandable checkbox lab
 
 ## Standalone
 
+Checkbox is a UI element that enables users to select multiple options from a set of mutually non-exclusive choices.
+
+Checkbox, that lacks an additional icon asset or text label, offers greater flexibility when designing other components that incorporate a checkbox.
+
 <Callout type="warning" name="standalone-form-indicator" />
 
 For the standalone checkbox, we provide a completely different architecture to ease the integration inside your projects.
@@ -639,3 +658,39 @@ For the standalone checkbox, we provide a completely different architecture to e
     <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="Standalone checkbox (Bootstrap compatible)" />
   </div>`} />
 </BootstrapCompatibility>
+
+## Mandatory field indication
+
+<MandatoryFieldIndication componentName="checkbox" />
+
+<Example buttonLabel="mandatory checkboxes indication" code={`<div class="checkbox-item-container">
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxUniqueMandatory" name="mandatoryCheckbox" required />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label is-required" for="checkboxUniqueMandatory">Mandatory unique checkbox</label>
+      </div>
+    </div>
+  </div>
+  <hr class="my-xlarge">
+  <fieldset class="control-items-list">
+    <legend class="is-required">Mandatory checkboxes</legend>
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="mandatoryCheckbox1" name="mandatoryCheckboxes" required />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="mandatoryCheckbox1">Default checkbox</label>
+      </div>
+    </div>
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input checked class="control-item-indicator" type="checkbox" value="" id="mandatoryCheckbox2" name="mandatoryCheckboxes" required />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="mandatoryCheckbox2">Checked checkbox</label>
+      </div>
+    </div>
+  </fieldset>`} />
+

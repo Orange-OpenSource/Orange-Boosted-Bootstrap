@@ -6,7 +6,7 @@
 
 /*
  * JavaScript for Bootstrap's docs (https://getbootstrap.com/)
- * Copyright 2011-2025 The Bootstrap Authors
+ * Copyright 2011-2026 The Bootstrap Authors
  * Licensed under the Creative Commons Attribution 3.0 Unported License.
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
@@ -192,4 +192,181 @@ export default () => {
       }, false)
     })
   // storybook-end offcanvas
+
+  // -------------------------------
+  // Skeletons
+  // -------------------------------
+  // First example
+  if (document.querySelector('.bd-skeleton-replace')) {
+  // js-docs-start skeleton-first-example
+    const skeletonToReplace = document.querySelector('.bd-skeleton-replace')
+    const originalContent = skeletonToReplace.innerHTML
+
+    // eslint-disable-next-line no-inner-declarations
+    function replaceSkeleton() {
+      setTimeout(() => {
+        skeletonToReplace.innerHTML = `<div class="d-flex gap-medium mb-medium">
+          <img class="flex-shrink-0 w-50 ratio-1x1 object-fit-cover" src="https://placecats.com/500/500" alt="" />
+          <div class="flex-grow-1 d-flex flex-column">
+            <h4 class="h1">Placeholder title</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis. Aliquam erat volutpat. Ut quam turpis, interdum non ex at, imperdiet ornare mi.</p>
+          </div>
+        </div>
+        <button class="btn btn-default" onclick="window.relaunchAnim()">Relaunch animation</button>
+        <p class="visually-hidden" role="alert">Content loaded.</p>`
+      }, 8000)
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      replaceSkeleton()
+    })
+
+    window.relaunchAnim = () => {
+      skeletonToReplace.innerHTML = originalContent
+      replaceSkeleton()
+    }
+    // js-docs-end skeleton-first-example
+
+    // Second example
+    // js-docs-start skeleton-second-example
+    const skeletonToReplace2 = document.querySelector('.bd-skeleton-replace2')
+
+    // eslint-disable-next-line no-inner-declarations
+    function removeSkeletons() {
+      setTimeout(() => {
+        skeletonToReplace2.firstElementChild.removeAttribute('inert')
+        skeletonToReplace2.firstElementChild.setAttribute('aria-busy', 'false')
+        skeletonToReplace2.lastElementChild.textContent = 'Form loaded.'
+      }, 8000)
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      removeSkeletons()
+    })
+
+    window.relaunchAnim2 = () => {
+      skeletonToReplace2.firstElementChild.setAttribute('inert', '')
+      skeletonToReplace2.firstElementChild.setAttribute('aria-busy', 'true')
+      skeletonToReplace2.lastElementChild.textContent = 'Loading form ...'
+      removeSkeletons()
+    }
+    // js-docs-end skeleton-second-example
+  }
+
+  // -------------------------------
+  // Show password live example
+  // -------------------------------
+  // Used by 'password input' live example in docs or StackBlitz
+  // storybook-start password-input
+  // js-docs-start live-show-password
+  // Toggle password visibility
+  const togglePasswordButton = document.querySelector('#liveShowPasswordExample #togglePassword')
+  if (togglePasswordButton) {
+    const passwordInput = document.querySelector('#liveShowPasswordExample #liveInputPassword')
+    const iconUse = togglePasswordButton.querySelector('use')
+    const buttonLabel = togglePasswordButton.querySelector('.visually-hidden')
+
+    togglePasswordButton.addEventListener('click', event => {
+      event.preventDefault()
+
+      // Toggle the type attribute to make the password visible or hidden
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password'
+      passwordInput.setAttribute('type', type)
+
+      // Toggle the aria-pressed attribute, the button's label and the icon to reflect the change in state
+      if (type === 'text') {
+        togglePasswordButton.setAttribute('aria-pressed', 'true')
+        buttonLabel.textContent = 'Hide password'
+        iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('accessibility-vision', 'hide'))
+      } else {
+        togglePasswordButton.setAttribute('aria-pressed', 'false')
+        buttonLabel.textContent = 'Show password'
+        iconUse.setAttribute('xlink:href', iconUse.getAttribute('xlink:href').replace('hide', 'accessibility-vision'))
+      }
+    })
+  }
+  // js-docs-end live-show-password
+  // storybook-end password-input
+
+  // -------------------------------
+  // Table
+  // -------------------------------
+  // Indeterminate checkbox in table example in docs and StackBlitz
+  // storybook-start table
+  // js-docs-start live-row-selection-checkboxes
+  // Manage checkboxes states: select/deselect all rows, update header checkbox state, update data-bs-theme on selected rows
+  const tableSelectAll = document.querySelector('#tableWithCheckboxes #tableSelectAll')
+  const allCheckboxes = document.querySelectorAll('#tableWithCheckboxes tbody input[type="checkbox"]')
+
+  function updateSelectAllState() {
+    const checkedCheckboxes = document.querySelectorAll('#tableWithCheckboxes tbody input[type="checkbox"]:checked')
+
+    if (checkedCheckboxes.length === 0) {
+      // None are checked
+      tableSelectAll.checked = false
+      tableSelectAll.indeterminate = false
+    } else if (checkedCheckboxes.length === allCheckboxes.length) {
+      // All are checked
+      tableSelectAll.checked = true
+      tableSelectAll.indeterminate = false
+    } else {
+      // Some are checked
+      tableSelectAll.checked = false
+      tableSelectAll.indeterminate = true
+    }
+  }
+
+  function updateSelectedRows() {
+    const selectedRows = document.querySelectorAll('#tableWithCheckboxes tbody tr:has(input[type="checkbox"]:checked)')
+
+    if (selectedRows.length >= 1) {
+      selectedRows.forEach(row => row.setAttribute('data-bs-theme', 'dark'))
+    }
+
+    const unselectedRows = document.querySelectorAll('#tableWithCheckboxes tbody tr:has(input[type="checkbox"]:not(:checked))')
+    if (unselectedRows.length >= 1) {
+      unselectedRows.forEach(row => row.removeAttribute('data-bs-theme'))
+    }
+
+    updateSelectAllState()
+  }
+
+  if (tableSelectAll) {
+    tableSelectAll.addEventListener('change', event => {
+      allCheckboxes.forEach(checkbox => {
+        checkbox.checked = event.target.checked
+      })
+      updateSelectedRows()
+    })
+
+    // Add change listener to all row checkboxes
+    allCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', updateSelectedRows)
+    })
+
+    // Initialize the state on load
+    updateSelectAllState()
+  }
+  // js-docs-end live-row-selection-checkboxes
+
+  // js-docs-start live-row-selection-radios
+  // Manage radio buttons states: update data-bs-theme on selected row
+  const allRadios = document.querySelectorAll('#tableWithRadios tbody input[type="radio"]')
+  // Add change listener to all row radios
+  allRadios.forEach(radio => {
+    radio.addEventListener('change', event => {
+      const selectedRow = event.target.closest('tr')
+      const allRows = document.querySelectorAll('#tableWithRadios tbody tr')
+
+      // Remove data-bs-theme from all rows
+      allRows.forEach(row => row.removeAttribute('data-bs-theme'))
+
+      // Add data-bs-theme="dark" to the selected row
+      if (selectedRow) {
+        selectedRow.setAttribute('data-bs-theme', 'dark')
+      }
+    })
+  })
+  // js-docs-end live-row-selection-radios
+  // storybook-end table
 }

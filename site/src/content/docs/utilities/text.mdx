@@ -6,7 +6,7 @@ aliases:
 toc: true
 ---
 
-import { allTokens } from '@libs/sass-variables'
+import { getTokenValue } from '@libs/sass-variables'
 
 export const fontSize = [
   "display-large",
@@ -33,7 +33,25 @@ export const screenSize = [
 Easily realign text to components with text alignment classes. For start, end, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.
 
 <Callout type="info">
-  We recommend to avoid using center and end alignment except in very specific cases. However, please note that you may use `.ms-{breakpoint}-auto` (respectively `.mx-{breakpoint}-auto`) in addition of `.text-{breakpoint}-end` (respectively `.text-{breakpoint}-center`) in these cases.
+  Center and end alignment should only be used in specific cases. When you must use them, combine `.{breakpoint}:text-center` with `.{breakpoint}:mx-auto` for centering or `.{breakpoint}:text-end` with `.{breakpoint}:ms-auto` for end alignment.
+</Callout>
+
+<Example code={`<p class="text-start">Start aligned text on all viewport sizes.</p>
+  <p class="text-center mx-auto">Center aligned text on all viewport sizes.</p>
+  <p class="text-end ms-auto">End aligned text on all viewport sizes.</p>
+
+  <p class="xs:text-end xs:ms-auto">End aligned text on viewports sized XS (x-small) or wider.</p>
+  <p class="sm:text-end sm:ms-auto">End aligned text on viewports sized SM (small) or wider.</p>
+  <p class="md:text-end md:ms-auto">End aligned text on viewports sized MD (medium) or wider.</p>
+  <p class="lg:text-end lg:ms-auto">End aligned text on viewports sized LG (large) or wider.</p>
+  <p class="xl:text-end xl:ms-auto">End aligned text on viewports sized XL (x-large) or wider.</p>
+  <p class="2xl:text-end 2xl:ms-auto">End aligned text on viewports sized 2XL (2x-large) or wider.</p>
+  <p class="3xl:text-end 3xl:ms-auto">End aligned text on viewports sized 3XL (3x-large) or wider.</p>`} />
+
+<BootstrapCompatibility>
+
+<Callout type="info">
+  Center and end alignment should only be used in specific cases. When you must use them, combine `.{breakpoint}:text-center` with `.{breakpoint}:mx-auto` for centering or `.{breakpoint}:text-end` with `.{breakpoint}:ms-auto` for end alignment.
 </Callout>
 
 <Example code={`<p class="text-start">Start aligned text on all viewport sizes.</p>
@@ -47,6 +65,7 @@ Easily realign text to components with text alignment classes. For start, end, a
   <p class="text-xl-end ms-xl-auto">End aligned text on viewports sized XL (x-large) or wider.</p>
   <p class="text-2xl-end ms-2xl-auto">End aligned text on viewports sized 2XL (2x-large) or wider.</p>
   <p class="text-3xl-end ms-3xl-auto">End aligned text on viewports sized 3XL (3x-large) or wider.</p>`} />
+</BootstrapCompatibility>
 
 <Callout type="info">
   Note that we don’t provide utility classes for justified text. While, aesthetically, justified text might look more appealing, it does make word-spacing more random and therefore harder to read.
@@ -126,9 +145,9 @@ These classes change the `font-size` but also the `line-height`, the `letter-spa
               screenSize.map((size) => (
                 <td>
                   {level !== 'code-medium'
-                    && (<><code>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</code> ({allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue})</>)}
+                    && (<><code>{(getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2)) / 16}rem</code> ({getTokenValue(`$ouds-font-size-${level}-${size}`)})</>)}
                   {level === 'code-medium'
-                    && (<><code>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}`).compiledValue.slice(0, -2)) / 16}rem</code> ({allTokens.find((token) => token.name === `$ouds-font-size-${level}`).compiledValue})</>)}
+                    && (<><code>{(getTokenValue(`$ouds-font-size-${level}`).slice(0, -2)) / 16}rem</code> ({getTokenValue(`$ouds-font-size-${level}`)})</>)}
                 </td>
               ))
             }
@@ -176,18 +195,18 @@ These classes change the `font-size` but also the `line-height`, the `letter-spa
                   {level !== 'code-medium'
                     && (
                       <ul class="mb-none ps-medium">
-                        <li><code class="text-default">font-size</code>: <b>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</b></li>
-                        <li><code>line-height</code>: {Math.round(((allTokens.find((token) => token.name === `$ouds-font-line-height-${level}-${size}`).compiledValue.slice(0, -2)) / (allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2))) * 10000) / 10000}</li>
-                        <li><code>letter-spacing</code>: {(allTokens.find((token) => token.name === `$ouds-font-letter-spacing-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
-                        <li><code>max-width</code>: {(allTokens.find((token) => token.name === `$ouds-size-max-width-type-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
+                        <li><code class="text-default">font-size</code>: <b>{(getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2)) / 16}rem</b></li>
+                        <li><code>line-height</code>: {Math.round(((getTokenValue(`$ouds-font-line-height-${level}-${size}`).slice(0, -2)) / (getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2))) * 10000) / 10000}</li>
+                        <li><code>letter-spacing</code>: {(getTokenValue(`$ouds-font-letter-spacing-${level}-${size}`).slice(0, -2)) / 16}rem</li>
+                        <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-type-${level}-${size}`).slice(0, -2)) / 16}rem</li>
                       </ul>
                     )}
                   {level === 'code-medium'
                     && (
                       <ul class="mb-none ps-medium">
-                        <li><code class="text-default">font-size</code>: <b>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}`).compiledValue.slice(0, -2)) / 16}rem</b></li>
-                        <li><code>line-height</code>: {Math.round(((allTokens.find((token) => token.name === `$ouds-font-line-height-${level}`).compiledValue.slice(0, -2)) / (allTokens.find((token) => token.name === `$ouds-font-size-${level}`).compiledValue.slice(0, -2))) * 10000) / 10000}</li>
-                        <li><code>letter-spacing</code>: {(allTokens.find((token) => token.name === `$ouds-font-letter-spacing-${level}`).compiledValue.slice(0, -2)) / 16}rem</li>
+                        <li><code class="text-default">font-size</code>: <b>{(getTokenValue(`$ouds-font-size-${level}`).slice(0, -2)) / 16}rem</b></li>
+                        <li><code>line-height</code>: {Math.round(((getTokenValue(`$ouds-font-line-height-${level}`).slice(0, -2)) / (getTokenValue(`$ouds-font-size-${level}`).slice(0, -2))) * 10000) / 10000}</li>
+                        <li><code>letter-spacing</code>: {(getTokenValue(`$ouds-font-letter-spacing-${level}`).slice(0, -2)) / 16}rem</li>
                       </ul>
                     )}
                 </td>

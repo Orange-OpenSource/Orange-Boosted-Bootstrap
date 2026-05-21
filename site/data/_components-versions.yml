@@ -4,7 +4,7 @@
 # OUDS System tokens version 2.3.0
 
 - name: 'alert-message'
-  value: '1.0.0'
+  value: '1.1.0'
 - name: 'badge'
   value: '1.2.0'
 - name: 'badge-count'

@@ -2,6 +2,10 @@
 // Common text item styles
 //
 
+// NB: no Bootstrap compatibility is provided for invalid state (`.is-invalid`) and error messages (`.invalid-feedback`)
+// of text inputs, text areas and password inputs, as markup and SCSS are really too different from Boosted/Bootstrap
+// to allow a simple solution. Moreover, we estimated that the use cases are very rare.
+
 #{$ouds-root-selector} {
   --#{$prefix}text-input-border-radius: #{$ouds-text-input-border-radius-default};
 }
@@ -201,6 +205,19 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         @include get-font-size("label-small");
+
+        // stylelint-disable-next-line selector-no-qualifying-type
+        &.is-required {
+          position: relative;
+          width: fit-content;
+          max-width: 100%;
+          padding-right: 7px;
+
+          &::after {
+            right: 0;
+            margin-left: 3px;
+          }
+        }
       }
     }
 
@@ -259,7 +276,8 @@
 
     // Leading icon
     > img,
-    > svg {
+    > svg,
+    > .icon {
       position: absolute;
       top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-icon-size) / 2 - var(--#{$prefix}text-input-border-width-top));
       left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left));
@@ -267,6 +285,7 @@
       width: var(--#{$prefix}text-input-icon-size);
       min-width: var(--#{$prefix}text-input-icon-size);
       height: var(--#{$prefix}text-input-icon-size);
+      color: $ouds-color-content-muted;
     }
 
     &:has(> svg:not(.loader)),
@@ -288,13 +307,7 @@
 
     &:has(> button),
     &:has(.loading-indeterminate, .loading-determinate) {
-      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
-
-      > .text-input-field,
-      > .input-container,
-      > label {
-        padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
-      }
+      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
     }
 
     // Invalid text inputs
@@ -302,21 +315,11 @@
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-enabled);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-enabled);
 
-      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
-
-      .text-input-field,
-      .input-container,
-      label {
-        padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
-      }
+      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
 
       &:has(> button),
       &:has(.loading-indeterminate, .loading-determinate) {
-        .text-input-field,
-        .input-container,
-        label {
-          padding-right: calc($ouds-button-size-icon-only + var(--#{$prefix}text-input-column-gap-trailing-error) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
-        }
+        padding-right: calc($ouds-button-size-icon-only + var(--#{$prefix}text-input-column-gap-trailing-error) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
       }
 
       &::after {
@@ -459,6 +462,7 @@
       z-index: 2;
       padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right));
       padding-left: calc(#{$ouds-text-input-space-padding-inline-default} - var(--#{$prefix}text-input-border-width-left));
+      overflow: hidden;
       color: var(--#{$prefix}text-input-label-color);
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -474,6 +478,19 @@
         cursor: text;
         content: "";
         background-color: transparent;
+      }
+
+      // stylelint-disable-next-line selector-no-qualifying-type
+      &.is-required {
+        position: relative;
+        width: fit-content;
+        max-width: 100%;
+        padding-right: 7px;
+
+        &::after {
+          right: 0;
+          margin-left: 3px;
+        }
       }
     }
 

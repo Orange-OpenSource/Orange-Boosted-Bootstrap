@@ -49,19 +49,8 @@ interface Props {
 const { name, type = 'info', title, titleLevel, action, actionHref = '#', class: className } = Astro.props
 
 let Content: MarkdownInstance<{}>['Content'] | undefined
-let titleToDisplay: string = title
-let titleTag: string
-
-if (name) {
-  const callout = await getCalloutByName(name)
-
-  if (!callout) {
-    throw new Error(`Could not find callout with name '${name}'.`)
-  }
-
-  const namedCallout = await callout.render()
-  Content = namedCallout.Content
-}
+let titleToDisplay: string = title as string
+let titleTag: string = 'p'
 
 // Set default title
 switch (type) {
@@ -76,7 +65,21 @@ switch (type) {
     break
 }
 
-titleLevel ? titleTag = `h${titleLevel}` : titleTag = 'p'
+if (name) {
+  const callout = await getCalloutByName(name)
+
+  if (!callout) {
+    throw new Error(`Could not find callout with name '${name}'.`)
+  }
+
+  const namedCallout = await callout.render()
+  if (namedCallout.remarkPluginFrontmatter && namedCallout.remarkPluginFrontmatter.title) {
+    titleToDisplay = namedCallout.remarkPluginFrontmatter.title
+  }
+  Content = namedCallout.Content
+}
+
+titleLevel && (titleTag = `h${titleLevel}`)
 ---
 
 <div class={`alert alert-message alert-${type} ${className ? className : 'my-medium'}`}>
@@ -86,6 +89,12 @@ titleLevel ? titleTag = `h${titleLevel}` : titleTag = 'p'
       <Fragment set:html={`<${titleTag} class="alert-label">${title || titleToDisplay}</${titleTag}>`} />
       {Content ? <Content /> : <slot />}
     </div>
-    {action && <a href={actionHref} class="link">{action}</a>}
+    {
+      action && (
+        <a href={actionHref} class="link">
+          {action}
+        </a>
+      )
+    }
   </div>
 </div>

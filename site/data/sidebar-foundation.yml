@@ -1,0 +1,19 @@
+- title: Foundation
+  icon: design-token-figma
+  icon_color: body-color
+  pages:
+    - title: Approach
+    - title: Options
+    - title: Tokens
+      coming_soon: true
+    - title: Colors
+    - title: Color modes
+    - title: CSS variables
+    - title: Reboot
+    - title: Typography
+    - title: Images
+      coming_soon: true
+    - title: Figures
+      coming_soon: true
+    - title: Component
+    - title: Form validation

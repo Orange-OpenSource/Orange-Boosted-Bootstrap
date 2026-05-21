@@ -1,23 +1,26 @@
 ---
 import type { MarkdownHeading } from 'astro'
 import { generateToc, type TocEntry } from '@libs/toc'
+import { getComponentSVG } from '@libs/utils'
 
 interface Props {
   headings?: MarkdownHeading[]
   entries?: TocEntry[]
+  types?: string[]
 }
 
-const { entries, headings } = Astro.props
+const { entries, headings, types } = Astro.props
 
-const toc = entries ? entries : generateToc(headings ?? [])
+const toc = entries ? entries : generateToc(headings ?? [], types)
 ---
 
 <ul>
   {
     toc.map(({ children, slug, text }) => {
+      const isComponent = text.includes('[[comp]]')
       return (
         <li>
-          <a href={`#${slug}`}>{text}</a>
+          <a href={`#${slug}`} class:list={[{'d-flex align-items-center': isComponent}]}>{text.replace('[[comp]]', '')}{isComponent ? <Fragment set:html={getComponentSVG('bs-medium-icon ms-2xsmall')} /> : null}</a>
           {children.length > 0 && <Astro.self entries={children} />}
         </li>
       )

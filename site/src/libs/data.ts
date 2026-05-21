@@ -28,6 +28,15 @@ const dataDefinitions = {
       container: zPxSizeOrEmpty
     })
     .array(),
+ 'bootstrap-breakpoints': z
+    .object({
+      breakpoint: z.string(),
+      abbr: z.string(),
+      name: z.string(),
+      'min-width': zPxSizeOrEmpty,
+      container: zPxSizeOrEmpty
+    })
+    .array(),
   colors: zNamedHexColors(13),
   'core-team': z
     .object({
@@ -61,6 +70,7 @@ const dataDefinitions = {
     .array(),
   grays: zNamedHexColors(9),
   'sidebar-components': zSidebar,
+  'sidebar-foundation': zSidebar,
   'sidebar-getting-started': zSidebar,
   'sidebar-layout': zSidebar,
   'sidebar-utilities': zSidebar,
@@ -87,7 +97,7 @@ let data = new Map<DataType, z.infer<DataSchema>>()
 export function getData<TType extends DataType>(type: TType): z.infer<(typeof dataDefinitions)[TType]> {
   if (data.has(type)) {
     // Returns the data if it has already been loaded.
-    return data.get(type)
+    return data.get(type) as z.infer<(typeof dataDefinitions)[TType]>
   }
 
   const dataPath = `./site/data/${type}.yml`
@@ -102,7 +112,7 @@ export function getData<TType extends DataType>(type: TType): z.infer<(typeof da
     // Cache the data.
     data.set(type, parsedData)
 
-    return parsedData
+    return parsedData as z.infer<(typeof dataDefinitions)[TType]>
   } catch (error) {
     if (error instanceof z.ZodError) {
       console.error(`The \`${dataPath}\` file content is invalid:`, error.issues)

@@ -5,7 +5,7 @@
  * Remember to use the same vendor files as the CDN ones,
  * otherwise the hashes won’t match!
  *
- * Copyright 2017-2025 The Bootstrap Authors
+ * Copyright 2017-2026 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
@@ -19,7 +19,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 sh.config.fatal = true
 
-const BRANDS = fs.readdirSync('packages', { withFileTypes: true }).filter(file => file.isDirectory()).map(dir => dir.name)
+const BRANDS = fs.readdirSync('packages', { withFileTypes: true }).filter(file => file.isDirectory() && file.name !== 'migrate').map(dir => dir.name)
 
 for (const brand of BRANDS) {
   const configFile = path.join(__dirname, `../packages/${brand}/config.yml`)

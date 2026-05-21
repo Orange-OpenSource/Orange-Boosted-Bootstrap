@@ -10,38 +10,20 @@
     - title: Browsers & devices
     - title: Accessibility
     - title: Sass
-      draft: true
+      coming_soon: true
     - title: JavaScript
     - title: Optimize
-      draft: true
+      coming_soon: true
     - title: Contribute
     - title: Webpack
-      draft: true
+      coming_soon: true
     - title: Parcel
-      draft: true
+      coming_soon: true
     - title: Vite
-      draft: true
+      coming_soon: true
     - title: RTL
-      draft: true
+      coming_soon: true
     - title: Component versioning
     - title: Migration
-
-- title: Foundation
-  icon: design-token-figma
-  icon_color: body-color
-  pages:
-    - title: Approach
-    - title: Options
-    - title: Tokens
-      draft: true
-    - title: Color palette
-    - title: Color modes
-    - title: CSS variables
-    - title: Reboot
-    - title: Typography
-    - title: Images
-      draft: true
-    - title: Figures
-      draft: true
-    - title: Component
-    - title: Form validation
+    - title: Resources
+      direct_url: '/resources'

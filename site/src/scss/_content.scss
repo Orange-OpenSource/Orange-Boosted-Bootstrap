@@ -124,18 +124,9 @@
   font-weight: 400;
 }
 
-.bi {
-  width: 1em;
-  height: 1em;
-  // OUDS mod: no `vertical-align`
-  fill: currentcolor;
-}
+// OUDS mod: no `.bi`
 
-.border-lg-start {
-  @include media-breakpoint-up(lg) {
-    border-left: var(--bs-border-width) solid var(--bs-border-color);
-  }
-}
+// OUDS mod: no `.border-lg-start`
 
 // OUDS mod: no `.bd-summary-link`
 

@@ -5,34 +5,36 @@ import { docsPages } from '@libs/content'
 import { getSlug } from '@libs/utils'
 import { getVersionedDocsPath } from '@libs/path'
 
-
 const slug = Astro.url.pathname.split('/')[4]
 
 const sidebarMap = {
   'getting-started': 'getting-started',
-  'foundation': 'getting-started',
-  'components': 'components',
-  'utilities': 'utilities',
-  'layout': 'layout',
-  'about': '',
+  foundation: 'foundation',
+  components: 'components',
+  utilities: 'utilities',
+  layout: 'layout',
+  about: ''
 }
 
 const sidebar = sidebarMap[slug] ? getData(`sidebar-${sidebarMap[slug]}`) : []
 ---
 
 <nav class="bd-links w-100" id="bd-docs-nav" aria-labelledby="docs-nav">
-  <ul class="bd-links-nav list-unstyled mb-none pb-large pb-md-small pe-lg-small">
+  <ul class="bd-links-nav list-unstyled mb-none pb-large md:pb-small lg:pe-small">
     {
       sidebar.map((group) => {
-        const groupSlug = getSlug(group.title)
+        let groupSlug = getSlug(group.title)
+        if (groupSlug === 'coming-soon') {
+          groupSlug = 'components'
+        }
 
         if (group.pages) {
           return (
             <li class="bd-links-group py-small">
-              <h2 class="fs-bm mb-none bd-links-heading d-flex w-100 align-items-center fw-semibold">
+              <h2 class="fs-bl mb-none bd-links-heading d-flex w-100 align-items-center fw-semibold">
                 {group.icon && (
                   <svg
-                    class="bm-medium-icon me-2xsmall"
+                    class="bl-medium-icon me-2xsmall"
                     style={group.icon_color && `color: var(--bs-${group.icon_color});"`}
                     aria-hidden="true"
                   >
@@ -43,18 +45,25 @@ const sidebar = sidebarMap[slug] ? getData(`sidebar-${sidebarMap[slug]}`) : []
               </h2>
               <ul class="list-unstyled fw-normal mt-2xsmall pb-small small">
                 {group.pages
-                  ?.filter((page) => !page.brand || page.brand === getConfig().brand || !!page.brand.split(',').find(element => element === getConfig().brand))
+                  ?.filter(
+                    (page) =>
+                      !page.brand ||
+                      page.brand === getConfig().brand ||
+                      !!page.brand.split(',').find((element) => element === getConfig().brand)
+                  )
                   .map((page) => {
                     const docSlug = getSlug(page.title)
-                    const unversionedPageSlug = `${groupSlug}/${docSlug}`
-
-                    const url = `/${getConfig().brand}/docs/${getConfig().docs_version}/${unversionedPageSlug}`
+                    let unversionedPageSlug = `${groupSlug}/${docSlug}`
+                    let url = `/${getConfig().brand}/docs/${getConfig().docs_version}/${unversionedPageSlug}`
+                    if (page.direct_url) {
+                      url = unversionedPageSlug = page.direct_url
+                    }
                     const active = Astro.params.slug === unversionedPageSlug
 
                     const generatedPage = docsPages.find((page: any) => page.slug === unversionedPageSlug)
 
                     // This test should not be necessary, see comments for `getSlug()` in `src/libs/utils.ts`.
-                    if (!generatedPage) {
+                    if (!page.direct_url && !generatedPage) {
                       throw new Error(
                         `The page '${page.title}' referenced in 'site/data/sidebar${sidebarMap[slug]}.yml' does not exist at '${url}'.`
                       )
@@ -66,13 +75,21 @@ const sidebar = sidebarMap[slug] ? getData(`sidebar-${sidebarMap[slug]}`) : []
                           href={url}
                           class:list={[
                             'bd-links-link',
-                            'd-block',
+                            'd-inline-flex',
+                            'column-gap-2xsmall',
+                            'align-items-center',
                             { active },
-                            { 'text-decoration-line-through': page.draft }
+                            { 'text-decoration-line-through': page.coming_soon }
                           ]}
                           aria-current={active ? 'page' : undefined}
+                          title={page.draft ? 'draft component' : page.coming_soon ? 'page is not yet available' : null}
                         >
-                          {page.title} {page.draft && <span class="visually-hidden">page is not yet available</span>}
+                          {page.title}
+                          {page.draft && (
+                            <svg width="1rem" height="1rem" aria-hidden="true">
+                              <use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#traffic-cone')} />
+                            </svg>
+                          )}
                         </a>
                       </li>
                     )

@@ -13,7 +13,7 @@
   }
 
   @include media-breakpoint-down(lg) {
-    .offcanvas-lg {
+    .lg\:offcanvas {
       // OUDS mod: no `border-right-color`
       box-shadow: $ouds-elevation-emphasized;
     }
@@ -51,7 +51,7 @@
   padding: .1875rem .5rem;
   margin-top: .125rem;
   margin-left: 1.375rem; // OUDS mod: changed value
-  @include get-font-size("body-small"); // OUDS mod: instead of `1rem`
+  @include get-font-size("body-medium"); // OUDS mod: instead of `1rem`
   font-weight: 400; // OUDS mod: no 'bold' for the sidebar links
   // OUDS mod: no `color`
   text-decoration: if($link-decoration == none, null, none);
