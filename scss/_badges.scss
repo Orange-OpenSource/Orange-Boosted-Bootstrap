@@ -98,6 +98,7 @@
         inset: 0;
         display: block;
         content: "";
+        mask: no-repeat center / contain;
       }
     }
   }
@@ -113,7 +114,7 @@
   }
 
   // Functional variants — each uses the shared mixin
-  &:not(.badge-neutral):not(.badge-accent) {
+  &:not(.badge-neutral, .badge-accent) {
     @include badge-status-variant(
       $ouds-color-content-on-status-negative-emphasized,
       $ouds-color-surface-status-negative-emphasized,
@@ -121,7 +122,7 @@
     );
   }
 
-  &.badge-positive:not(.badge-neutral):not(.badge-accent) {
+  &.badge-positive:not(.badge-neutral, .badge-accent) {
     @include badge-status-variant(
       $ouds-color-content-on-status-positive-emphasized,
       $ouds-color-surface-status-positive-emphasized,
@@ -129,7 +130,7 @@
     );
   }
 
-  &.badge-info:not(.badge-neutral):not(.badge-accent) {
+  &.badge-info:not(.badge-neutral, .badge-accent) {
     @include badge-status-variant(
       $ouds-color-content-on-status-info-emphasized,
       $ouds-color-surface-status-info-emphasized,
@@ -137,7 +138,7 @@
     );
   }
 
-  &.badge-warning:not(.badge-neutral):not(.badge-accent) {
+  &.badge-warning:not(.badge-neutral, .badge-accent) {
     @include badge-status-variant(
       $ouds-color-content-on-status-warning-emphasized,
       $ouds-color-surface-status-warning-emphasized,
