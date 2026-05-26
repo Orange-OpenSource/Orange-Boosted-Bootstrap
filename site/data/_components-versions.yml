@@ -65,7 +65,7 @@
 - name: 'tag'
   value: '1.5.0'
 - name: 'text-area'
-  value: '1.2.0'
+  value: '1.1.0'
 - name: 'text-input'
   value: '1.4.0'
 - name: 'toolbar'
