@@ -28,6 +28,15 @@ const dataDefinitions = {
       container: zPxSizeOrEmpty
     })
     .array(),
+ 'bootstrap-breakpoints': z
+    .object({
+      breakpoint: z.string(),
+      abbr: z.string(),
+      name: z.string(),
+      'min-width': zPxSizeOrEmpty,
+      container: zPxSizeOrEmpty
+    })
+    .array(),
   colors: zNamedHexColors(13),
   'core-team': z
     .object({
