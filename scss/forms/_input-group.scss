@@ -49,7 +49,7 @@
   display: flex;
   align-items: center;
   padding: $input-group-addon-padding-y $input-group-addon-padding-x;
-  @include font-size($input-font-size); // Match inputs
+  font-size: $input-font-size; // Match inputs
   font-weight: $input-group-addon-font-weight;
   line-height: $input-line-height;
   color: $input-group-addon-color;
@@ -71,8 +71,8 @@
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn {
   padding: $input-padding-y-lg $input-padding-x-lg;
+  font-size: $input-font-size-lg;
   line-height: var(--#{$prefix}font-line-height-body-large); // OUDS mod
-  @include font-size($input-font-size-lg);
   @include border-radius($input-border-radius-lg);
 }
 
@@ -81,8 +81,8 @@
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn {
   padding: $input-padding-y-sm $input-padding-x-sm;
+  font-size: $input-font-size-sm;
   line-height: $line-height-sm; // OUDS mod
-  @include font-size($input-font-size-sm);
   @include border-radius($input-border-radius-sm);
 }
 

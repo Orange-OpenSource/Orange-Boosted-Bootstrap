@@ -13,7 +13,7 @@
   }
 
   @include media-breakpoint-down(lg) {
-    .offcanvas-lg {
+    .lg\:offcanvas {
       // OUDS mod: no `border-right-color`
       box-shadow: $ouds-elevation-emphasized;
     }

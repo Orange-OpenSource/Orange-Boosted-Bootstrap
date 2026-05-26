@@ -18,11 +18,15 @@ export function getStaticPaths() {
 <BaseLayout>
   <MastHead />
   <div class="container-fluid container-max-width pt-scaled-medium pb-scaled-3xlarge bd-masthead-followup">
-    <p class="mb-scaled-medium d-inline-flex flex-column flex-md-row align-items-start align-items-md-center">
+    <p class="mb-scaled-medium d-inline-flex flex-column md:flex-row align-items-start md:align-items-center">
       <span class="tag me-medium">New in v{getConfig().docs_version}</span>
-      <span class="lead mt-scaled-small m-md-none">
+      <span class="lead mt-scaled-small md:m-none">
         <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/components/header`}>Header</a>,
-        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/foundation/form-validation#mandatory-fields-indication`}>Mandatory fields</a>,
+        <a
+          href={`/${getConfig().brand}/docs/${getConfig().docs_version}/foundation/form-validation#mandatory-fields-indication`}
+        >
+          Mandatory fields
+        </a>,
         <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/foundation/colors`}>Colors</a>, and
         <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/migration`}>much more</a>
       </span>

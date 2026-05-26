@@ -208,7 +208,7 @@ To display outlined radio buttons, add `.radio-button-item-outlined` to a `.radi
 It's recommended to keep radio button label to no more than three words. When space is limited or when a long label, extra label or description text is required, the text can wrap, as this is preferable to truncation. The radio button indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
 
 <Example buttonLabel="radio buttons with long texts" code={`<div class="row">
-    <div class="col-8 col-md-6 col-xl-5">
+    <div class="col-8 md:col-6 xl:col-5">
       <fieldset class="control-items-list">
         <div class="radio-button-item control-item-divider">
           <div class="control-item-assets-container">
@@ -249,7 +249,7 @@ It's recommended to keep radio button label to no more than three words. When sp
 To reverse the component, simply add `.control-item-reverse` to a `.radio-button-item`.
 
 <Example buttonLabel="reversed radio buttons" code={`<div class="row">
-    <div class="col-8 col-md-6 col-xl-5">
+    <div class="col-8 md:col-6 xl:col-5">
       <fieldset class="control-items-list">
         <div class="radio-button-item control-item-divider control-item-reverse">
           <div class="control-item-assets-container">
@@ -332,7 +332,7 @@ You can align horizontally up to three radio buttons if their labels are short, 
 
 By default, radio buttons will span the whole width of their parent container, to limit the width of the radio button on wider parent container, add a `.component-max-width` to the `.radio-button-item` container. More information on radio button sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-radio-button-responsiveness).
 
-<Example buttonLabel="radio button max width" code={`<fieldset class="control-items-list">
+<Example buttonLabel="radio buttons max width" code={`<fieldset class="control-items-list">
     <div class="radio-button-item component-max-width">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" aria-describedby="radioMWDescription" id="radioWithMaxWidth" value="" name="radioMaxWidth" />
@@ -545,7 +545,7 @@ If the layout is horizontal, the `<fieldset>` must enclose the flex containers s
 For accessibility reasons, it is required to provide understandable radio button labels without relying on visual context. It is also good practice to add a radio button group title inside a `<legend>` element as the first child of the `<fieldset>` element. Screen readers will read the legend before navigating through the radio buttons; this way, keyboard navigation users have more information on what is expected with the multiple radio buttons element.
 
 <Example buttonLabel="radio buttons grouped with fieldset" code={`<div class="row">
-    <fieldset class="col-md-6">
+    <fieldset class="md:col-6">
       <legend>Radio buttons group example</legend>
       <div class="radio-button-item control-item-divider">
         <div class="control-item-assets-container">
