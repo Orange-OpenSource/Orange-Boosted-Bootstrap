@@ -2,76 +2,57 @@
 applyTo: "**"
 ---
 
-# OUDS Web — AI Agent Instructions
+# OUDS Web — Project Context
 
-You are working in **OUDS Web** (Orange Unified Design System — Web), a multi-brand design system built as a fork of Bootstrap 5.3.6.
-Version: 1.1.0 | Main branch: `ouds/main` | Brands: Orange, Sosh, Orange Compact
+**OUDS Web** (Orange Unified Design System — Web) is a multi-brand design system built as a fork of Bootstrap 5.3.6. It serves 3 brands (Orange, Sosh, Orange Compact) from a single codebase where only CSS tokens differ per brand — JavaScript is fully shared.
 
----
+## Quick Reference
 
-## Standards — Apply Always
-
-The following standards define mandatory conventions. Always apply them when writing or reviewing code:
-
-- **[Code Conventions](.packmind/standards/ouds-code-conventions.md)** — HTML/SCSS/JS style rules: `!default` on variables, forbidden direct properties (`border-radius`, `transition`), forbidden values (`border: none`, `lighten()`), token usage, JS no-semicolons, template literals.
-
-- **[Accessibility WCAG 2.2 AAA (with AA fallback)](.packmind/standards/ouds-accessibility-wcag.md)** — Target WCAG 2.2 Level AAA with documented fallback to AA for specific color and UI constraints. Non-negotiable: `@include focus-visible()`, ARIA attributes, `.visually-hidden`, keyboard navigation, 7:1 text contrast (AAA) / 4.5:1 fallback (AA), 44×44px touch targets, RTL support, cognitive accessibility.
-
-- **[Design Token System](.packmind/standards/ouds-design-tokens.md)** — 3-tier hierarchy (raw → semantic → component). Never edit auto-generated files (`_raw.scss`, `_semantic.scss`, `_component.scss`, `_*-custom-props.scss`). Colors via `var(--#{$prefix}color-*)`. New tokens in all 3 brands.
-
-- **[Component Patterns](.packmind/standards/ouds-component-patterns.md)** — CSS custom property declaration at top of class, state overrides via variable overrides, `scss-docs-start/end` markers, `// OUDS mod:` comments, JS BaseComponent pattern.
-
----
-
-## Commands — Use for Specific Workflows
-
-When the user asks to perform a specific task, load and follow the appropriate command:
-
-- **[ouds-create-component](.packmind/commands/ouds-create-component.md)** — Full step-by-step guide for creating a new SCSS/JS component (SCSS structure, tokens per brand, ARIA, JS boilerplate, tests, docs).
-
-- **[ouds-diagnose-error](.packmind/commands/ouds-diagnose-error.md)** — Diagnostic workflow for Stylelint, ESLint, Sass build, CI, token, JS test, and Pa11y errors.
-
-- **[ouds-decision-routing](.packmind/commands/ouds-decision-routing.md)** — 4 decision trees (where to put code, which token, multi-brand updates, testing strategy).
-
-- **[ouds-lookup](.packmind/commands/ouds-lookup.md)** — Quick lookup index: maps any topic to the right standard, command, or skill.
-
-- **[ouds-validate-tokens](.packmind/commands/ouds-validate-tokens.md)** — Read-only audit: cross-brand token presence check and anti-pattern detection for SCSS component files.
-
----
-
-## Skills — Domain Knowledge
-
-Load these skills when deep conceptual understanding is needed:
-
-- **[ouds-token-strategy](.packmind/skills/ouds-token-strategy.md)** — Full token architecture: pipeline, layer hierarchy, CSS custom property bridge for dark mode, color token dual-track, consumption patterns. Load when asked about tokens, dark mode, or brand differentiation.
-
-- **[ouds-multi-brand-sync](.packmind/skills/ouds-multi-brand-sync.md)** — 3-brand architecture: what is shared, what differs, when to update all brands, brand entry point pattern, testing multi-brand changes.
-
-- **[ouds-knowledge-base](.packmind/skills/ouds-knowledge-base.md)** — Full glossary (154 terms), build pipeline, npm scripts reference, CI/CD jobs, release process, and project file map. Load when encountering unfamiliar terms or working on build/infra.
-
----
-
-## Critical Constraints (Always Active)
-
-1. **Never hardcode** colors (`#ff7900`), spacing (`16px`), or dimensions — use OUDS tokens.
-2. **Never use `border-radius: X` or `transition: X` directly** — use `@include border-radius()` / `@include transition()`.
-3. **Never edit auto-generated token files**: `_raw.scss`, `_semantic.scss`, `_component.scss`, `_*-custom-props.scss` — only `_composite.scss` is editable.
-4. **Never commit `dist/`** files — they are build artifacts.
-5. **Never put JavaScript** in `packages/<brand>/` — JS is shared via `js/src/`.
-6. **Color tokens for dark mode** → always `var(--#{$prefix}color-*)`, never the SCSS variable directly.
-7. **Accessibility**: never remove `:focus-visible` styles, always add ARIA attributes to interactive components, never use `display: none` for screen-reader content.
-
----
-
-## Project Quick Facts
-
-| | |
+| Key | Value |
 |---|---|
-| CSS prefix | `--bs-` (via `$prefix` in `scss/_config.scss`) |
-| Brands | orange, sosh, orange-compact |
-| JS components | 15 (all extend `BaseComponent`) |
-| Token layers | raw → semantic → composite → component → CSS custom props |
-| Build | `npm run dist` (CSS + JS) |
+| Version | 1.1.0 |
+| Main branch | `ouds/main` |
+| CSS prefix | `--bs-` (via `$prefix`) |
+| Build | `npm run dist` |
 | Lint | `npm run lint` |
 | Tests | `npm run test` |
-| Dev servers | `:9001` (orange), `:9002` (sosh), `:9003` (orange-compact) |
+| Dev servers | `:9001` (orange) · `:9002` (sosh) · `:9003` (orange-compact) |
+
+## Critical Constraints
+
+These rules are non-negotiable and apply to every contribution:
+
+1. **Use tokens, not hardcoded values** — colors, spacing, dimensions all come from the OUDS token system.
+2. **Use mixins for `border-radius` and `transition`** — direct CSS properties are forbidden by Stylelint.
+3. **Auto-generated token files are read-only** — never edit `_raw.scss`, `_semantic.scss`, `_component.scss`, or `_*-custom-props.scss`. Only `_composite.scss` is hand-editable.
+4. **Never commit `dist/`** — build artifacts are generated in CI.
+5. **JavaScript lives in `js/src/` only** — never in `packages/<brand>/`.
+6. **Colors use CSS custom properties** — `var(--#{$prefix}color-*)` enables runtime dark mode switching.
+7. **Accessibility is mandatory** — visible `:focus-visible`, ARIA attributes on all interactive elements, `.visually-hidden` for SR content.
+
+## Scoped Instructions
+
+Detailed conventions are loaded automatically based on the files you're working on. They live in `.github/instructions/`:
+
+- `scss.instructions.md` — SCSS conventions and patterns
+- `javascript.instructions.md` — JS conventions
+- `html-accessibility.instructions.md` — HTML structure and WCAG compliance
+- `tokens.instructions.md` — Token system rules
+- `components.instructions.md` — Component SCSS/JS patterns
+- `multi-brand.instructions.md` — Cross-brand synchronization
+
+## Workflows
+
+For complex multi-step tasks, follow the dedicated workflow guides:
+
+- `workflows/create-component.instructions.md` — Creating a new component
+- `workflows/diagnose-errors.instructions.md` — Debugging build/lint/CI errors
+- `workflows/validate-tokens.instructions.md` — Auditing token usage
+
+## Deep References
+
+For in-depth architecture knowledge, read the reference docs in `.github/instructions/references/`:
+
+- `token-architecture.md` — Full token pipeline and layer hierarchy
+- `glossary.md` — 154 project-specific terms
+- `project-map.md` — File structure, npm scripts, CI/CD jobs
