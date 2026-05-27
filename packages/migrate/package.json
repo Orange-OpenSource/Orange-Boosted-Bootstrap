@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "main": "index.mjs",
   "type": "module",
-  "engines": {"node" : ">=24.0.0"},
+  "engines": {"node" : ">=20.0.0"},
   "scripts": {
     "test": "vitest"
   },

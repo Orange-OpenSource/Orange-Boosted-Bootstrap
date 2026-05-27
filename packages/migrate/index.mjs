@@ -16,10 +16,10 @@ try {
     files: globPattern,
     source: fromFlag
   })
-  const warning = getReplacementsWarnings()
+  const warning = [...getReplacementsWarnings()]
   console.log('Replacement results:', results)
   if (warning.length > 0) {
-    console.log('\nSome actions needed :\n', warning)
+    console.log(`\nSome actions needed :\n\n${warning.join('\n')}`)
   }
 } catch (error) {
   console.error('Error replacing text:', error)
