@@ -6,9 +6,9 @@ aliases:
 toc: true
 ---
 
-## Figma tokens
+## Design tokens
 
-Figma tokens (or design tokens) provide a shared language and mutual understanding of the design system between designers and developers. They also serve as a single source of truth for the design system, which is crucial for its maintenance and evolution. We have structured them into a three-tier architecture: raw scope, semantic scope, and component scope. For more information, please refer to the [design guidelines on design tokens](https://r.orange.fr/r/S-ouds-doc-token-intro).
+Design tokens (from Figma) provide a shared language and mutual understanding of the design system between designers and developers. They also serve as a single source of truth for the design system, which is crucial for its maintenance and evolution. We have structured them into a three-tier architecture: raw scope, semantic scope, and component scope. For more information, please refer to the [design guidelines on design tokens](https://r.orange.fr/r/S-ouds-doc-token-intro).
 
 <Callout type="info">
   We provide a file to import them all: `@ouds/web-[[config:brand]]/scss/tokens/_index.scss`. So in a Sass context `@import "@ouds/web-[[config:brand]]/scss/tokens";` will import all the tokens.
@@ -22,7 +22,7 @@ The [`@ouds/web-[[config:brand]]/scss/tokens/_raw.scss`]([[config:repo]]/blob/v[
 
 ### Semantic tokens
 
-The [`@ouds/web-[[config:brand]]/scss/tokens/_semantic.scss`]([[config:repo]]/blob/v[[config:current_version]]-ouds-web/packages/[[config:brand]]/scss/tokens/_semantic.scss) file contains all the semantic tokens. Unlike [raw tokens](#raw-tokens), these tokens can be used directly in projects (check the [cheatsheet for their recommended usage]([[docsref:/utilities#using-our-utilities]])). They are derived from raw tokens and add semantic meaning through media queries or specific contexts. Most of these tokens are available in our utilities or used within our components. The colors tokens should not be used directly but via their custom properties version, [see below](#semantic-colors-with-css-variables).
+The [`@ouds/web-[[config:brand]]/scss/tokens/_semantic.scss`]([[config:repo]]/blob/v[[config:current_version]]-ouds-web/packages/[[config:brand]]/scss/tokens/_semantic.scss) file contains all the semantic tokens. Unlike [raw tokens](#raw-tokens), these tokens can be used directly in projects (check the [cheatsheet for their recommended usage]([[docsref:/utilities#using-our-utilities]])). They are derived from raw tokens and add semantic meaning through specific contexts. Most of these tokens are available in our utilities or used within our components. The colors tokens should not be used directly but via their custom properties version, [see below](#semantic-colors-with-css-variables).
 
 #### Semantic colors with CSS variables
 
@@ -44,9 +44,9 @@ The [`@ouds/web-[[config:brand]]/scss/tokens/_component.scss`]([[config:repo]]/b
 
 ### Sass variables
 
-Almost every token provided in the design specification and potentially needed in various contexts is represented in our codebase as a Sass variable. However, as explained in the [the previous section](#figma-tokens), not all tokens should be used directly in your codebase.
+Almost every token provided in the design specification and potentially needed in various contexts is represented in our codebase as a Sass variable. However, as explained in the [the previous section](#design-tokens), not all tokens should be used directly in your codebase.
 
-We build our Sass variables following the architecture of the Figma tokens:
+We build our Sass variables following the architecture of the design tokens:
 - [Raw tokens](#raw-tokens): `$core-{ouds|[[config:brand]]}-{border|color|dimension|effect|elevation|font|grid|opacity}-{token-name}`.
   - They shouldn’t be used.
   - Ex: `core/ouds/color/functional/black` becomes `$core-ouds-color-functional-black`.
@@ -64,7 +64,7 @@ We build our Sass variables following the architecture of the Figma tokens:
 
 All the colors and the tokens suffixed by `*-mobile`, `*-tablet`, or `*-desktop` are available as CSS variables.
 
-We build our CSS variables following the architecture of the Figma tokens:
+We build our CSS variables following the architecture of the design tokens:
 - [Raw tokens](#raw-tokens): We don’t have any raw token transformed into a CSS variable.
 - [Semantic tokens](#semantic-tokens): `--bs-{color|elevation|font|icon|space}-{token-name}`.
   - Our scaled spacing are only declared as CSS variables `--bs-space-scaled-{size}`. It’s equivalent to `ouds/space/scaled/{size}` in Figma. Prefer using our [utilities]([[docsref:/utilities#using-our-utilities]]) when possible.
