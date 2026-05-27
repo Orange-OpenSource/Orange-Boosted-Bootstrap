@@ -77,6 +77,8 @@
   .badge-icon {
     display: flex;
     flex: 1 0 0;
+    align-items: center;
+    justify-content: center;
     aspect-ratio: 1/1;
     font-size: calc(var(--#{$prefix}badge-size) - (2 * var(--#{$prefix}badge-padding-x-medium-large)));
   }
@@ -85,7 +87,6 @@
     --#{$prefix}badge-color: #{$ouds-color-surface-status-negative-emphasized};
     --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-negative-emphasized};
     position: relative;
-    display: block;
     flex-shrink: 0;
     width: var(--#{$prefix}badge-size);
     height: var(--#{$prefix}badge-size);
@@ -96,7 +97,6 @@
       &::after {
         position: absolute;
         inset: 0;
-        display: block;
         content: "";
         mask: no-repeat center / contain;
       }

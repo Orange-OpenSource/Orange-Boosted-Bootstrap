@@ -238,8 +238,8 @@ Badge - icon is presented as a coloured shape that displays an icon, and its sel
     <span class="visually-hidden">Favourite</span>
   </p>
   <p class="badge badge-neutral">
-    <span class="badge-icon si si-settings" aria-hidden="true"></span>
-    <span class="visually-hidden">Parameter</span>
+    <span class="badge-icon si-settings" aria-hidden="true"></span>
+    <span class="visually-hidden">Parameters</span>
   </p>`} />
 
 ### Variants
@@ -263,12 +263,12 @@ Non-functional badges - icon are used to display neutral or accent information w
     <span class="visually-hidden">Favourite</span>
   </p>
   <p class="badge badge-neutral">
-    <span class="badge-icon si si-settings" aria-hidden="true"></span>
-    <span class="visually-hidden">Parameter</span>
+    <span class="badge-icon si-settings" aria-hidden="true"></span>
+    <span class="visually-hidden">Parameters</span>
   </p>
   <p class="badge badge-accent">
-    <span class="badge-icon si si-settings" aria-hidden="true"></span>
-    <span class="visually-hidden">Parameter</span>
+    <span class="badge-icon si-settings" aria-hidden="true"></span>
+    <span class="visually-hidden">Parameters</span>
   </p>`} />
 
 ##### Functional
@@ -304,30 +304,36 @@ The disabled state of a badge - icon appears visually muted to signal that it is
 
 <Example buttonLabel="disabled badges icon" class="d-flex gap-large" code={`<p class="badge badge-disabled">
     <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Error</span>
   </p>
   <p class="badge badge-positive badge-disabled">
     <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Success</span>
   </p>
   <p class="badge badge-info badge-disabled">
     <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Info</span>
   </p>
   <p class="badge badge-warning badge-disabled">
     <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Warning</span>
   </p>
   <p class="badge badge-neutral badge-disabled">
     <svg class="badge-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
+    <span class="visually-hidden">Badge alt text</span>
   </p>
   <p class="badge badge-neutral badge-disabled">
-    <span class="badge-icon si si-settings" aria-hidden="true"></span>
+    <span class="badge-icon si-settings" aria-hidden="true"></span>
+    <span class="visually-hidden">Parameters</span>
   </p>`} />
 
 ### Sizes
 
 Badges - icon are available in four sizes. Add `.badge-xsmall`, `.badge-small`, or `.badge-large` to have the size you want. Default size is medium.
 
-<Example buttonLabel="badges icon sizes" class="d-flex align-items-center gap-large" code={`<p class="badge badge-xsmall">
+<Example buttonLabel="badges icon sizes" class="sm:d-flex align-items-center column-gap-scaled-xsmall" code={`<p class="badge badge-xsmall">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Error</span>
   </p>
