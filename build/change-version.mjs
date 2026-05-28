@@ -24,7 +24,7 @@ const FILES = [
   'site/data/docs-versions.yml'
 ]
 
-await FILES.push(...BRANDS.filter(name => name !== 'migrate').map(dirname => `packages/${dirname}/config.yml`))
+FILES.push(...BRANDS.filter(name => name !== 'migrate').map(dirname => `packages/${dirname}/config.yml`))
 
 // Blame TC39... https://github.com/benjamingr/RegExp.escape/issues/37
 function regExpQuote(string) {
