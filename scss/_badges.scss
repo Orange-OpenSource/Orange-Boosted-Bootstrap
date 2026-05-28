@@ -17,6 +17,7 @@
     &.badge-disabled {
       --#{$prefix}badge-color: #{$ouds-color-action-disabled};
       --#{$prefix}badge-background-color: #{$ouds-color-content-on-action-disabled};
+      background-color: transparent; // Due to transparency of $ouds-color-action-disabled, do not apply background color here
 
       @if $icon-internal {
         .badge-status-icon::before {
@@ -148,7 +149,7 @@
     );
   }
 
-  &.badge-disabled {
+  &.badge.badge-disabled { // Artificially increase the selector's weight to overwrite colors when badge is disabled
     --#{$prefix}badge-color: #{$ouds-color-content-on-action-disabled};
     --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
   }
