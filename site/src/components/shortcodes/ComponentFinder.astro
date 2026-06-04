@@ -28,8 +28,8 @@ const existingStartingLetters = [...new Set(componentsDetails.map((component) =>
       </div>
       <p id="usernameFeedback" class="error-text">Alphabetical characters only.</p>
     </div>
-    <fieldset class="d-md-flex align-items-center gap-xsmall" data-alpha-filter>
-      <legend class="my-md-none flex-shrink-0">
+    <fieldset class="md:d-flex align-items-center gap-xsmall" data-alpha-filter>
+      <legend class="md:my-none flex-shrink-0">
         <span class="visually-hidden">filter by </span>Starting letter:
       </legend>
       <div class="chips-container">
@@ -50,7 +50,7 @@ const existingStartingLetters = [...new Set(componentsDetails.map((component) =>
       </div>
     </fieldset>
   </form>
-  <ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-xl-3 row-cols-2xl-4" data-component-list>
+  <ul class="list-unstyled row gy-large row-cols-1 sm:row-cols-2 xl:row-cols-3 2xl:row-cols-4" data-component-list>
     <slot />
   </ul>
 </ouds-component-finder>
