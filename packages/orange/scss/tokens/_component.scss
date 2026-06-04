@@ -405,8 +405,8 @@ $ouds-tag-size-asset-small: $ouds-size-icon-with-label-small-size-small !default
 $ouds-tag-size-min-height-default: $ouds-dimension-xsmall !default;
 $ouds-tag-size-min-height-interactive-area: $ouds-size-min-interactive-area !default;
 $ouds-tag-size-min-height-small: $ouds-dimension-3xsmall !default;
-$ouds-tag-size-min-width-default: $ouds-dimension-xlarge !default;
-$ouds-tag-size-min-width-small: $ouds-dimension-large !default;
+$ouds-tag-size-min-width-default: $ouds-dimension-xsmall !default; // Manually changed to take design decision in advance
+$ouds-tag-size-min-width-small: $ouds-dimension-3xsmall !default; // Manually changed to take design decision in advance
 $ouds-tag-space-column-gap-default: $ouds-space-column-gap-2xsmall !default;
 $ouds-tag-space-column-gap-small: $ouds-space-column-gap-2xsmall !default;
 $ouds-tag-space-inset-bullet-default: $core-ouds-dimension-out-of-system-75 !default;

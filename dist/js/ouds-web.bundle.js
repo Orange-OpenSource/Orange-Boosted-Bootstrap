@@ -1,11 +1,11 @@
 /*!
-  * OUDS Web v1.0.0 (https://web.unified-design-system.orange.com/)
-  * Copyright 2015-2025 The OUDS Web Authors
-  * Copyright 2015-2025 Orange
+  * OUDS Web v1.3.0 (https://web.unified-design-system.orange.com/)
+  * Copyright 2015-2026 The OUDS Web Authors
+  * Copyright 2015-2026 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v1.0.0 (https://web.unified-design-system.orange.com/)
-  * Copyright 2011-2025 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap v1.3.0 (https://web.unified-design-system.orange.com/)
+  * Copyright 2011-2026 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -652,7 +652,7 @@
    * Constants
    */
 
-  const VERSION = '1.0.0';
+  const VERSION = '1.3.0';
 
   /**
    * Class definition
@@ -932,8 +932,30 @@
 
     // Public
     toggle() {
-      // Toggle class and sync the `aria-pressed` attribute with the return value of the `.toggle()` method
-      this._element.setAttribute('aria-pressed', this._element.classList.toggle(CLASS_NAME_ACTIVE$3));
+      // OUDS mod: Determine current pressed state from aria-pressed attribute if present or active class as a fallback
+      const ariaPressed = this._element.getAttribute('aria-pressed');
+      const hasActiveClass = this._element.classList.contains(CLASS_NAME_ACTIVE$3);
+
+      // Determine new pressed state
+      let newPressedState;
+      // eslint-disable-next-line unicorn/prefer-ternary
+      if (ariaPressed === 'true' || ariaPressed === 'false') {
+        // Toggle existing aria-pressed value
+        newPressedState = ariaPressed !== 'true';
+      } else {
+        // Convert active class presence to aria-pressed state
+        newPressedState = !hasActiveClass;
+      }
+
+      // Update aria-pressed attribute
+      this._element.setAttribute('aria-pressed', String(newPressedState));
+
+      // Add or remove active class
+      if (newPressedState) {
+        this._element.classList.add(CLASS_NAME_ACTIVE$3);
+      } else {
+        this._element.classList.remove(CLASS_NAME_ACTIVE$3);
+      }
     }
 
     // Static
@@ -4893,7 +4915,7 @@
     }
   });
   EventHandler.on(window, EVENT_RESIZE, () => {
-    for (const element of SelectorEngine.find('[aria-modal][class*=show][class*=offcanvas-]')) {
+    for (const element of SelectorEngine.find('[aria-modal][class*=show][class*=offcanvas]')) {
       if (getComputedStyle(element).position !== 'fixed') {
         Offcanvas.getOrCreateInstance(element).hide();
       }

@@ -1,9 +1,11 @@
 import type { ComponentCardData } from '@components/shortcodes/ComponentCard.astro'
+import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
 
 export const componentsDetails: ComponentCardData[] = [
   {
     name: 'Alert message',
+    slug: 'alert-message',
     link: 'alerts#alert-message',
     category: 'Dialog',
     snippet: `
@@ -98,15 +100,77 @@ export const componentsDetails: ComponentCardData[] = [
       </ul>`
   },
   {
+    name: 'Footer',
+    category: 'Navigation',
+    snippet: `
+      <footer class="footer navbar w-75" data-bs-theme="dark">
+        <h2 class="visually-hidden">Sitemap &amp; information</h2>
+        <div class="container-fluid container-max-width footer-nav px-small 2xl:py-small lg:d-none sm:d-none md:d-block">
+          <nav class="accordion">
+            <div class="row">
+              <div class="footer-column">
+                <h3 class="accordion-header footer-heading">
+                  <button class="accordion-button collapsed container-fluid container-max-width px-none md:d-none" type="button">Label</button>
+                  <span class="d-none md:d-flex">Label</span>
+                </h3>
+                <div class="container-fluid container-max-width accordion-collapse collapse">
+                  <ul class="navbar-nav ps-large md:ps-none">
+                    <li><a class="nav-link" href="#">Label</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="border-bottom border-thin border-default lg:d-none sm:d-none md:d-block"></div>
+        <div class="container-fluid container-max-width footer-terms px-small">
+          <ul class="navbar-nav md:gap-large">
+            <li>© Label</li>
+            <li><a class="nav-link" href="#">Label</a></li>
+          </ul>
+        </div>
+      </footer>`
+  },
+  {
+    name: 'Header',
+    category: 'Navigation',
+    snippet: `
+      <header class="header-minimized w-75">
+        <nav class="navbar lg:navbar-expand">
+          <div class="container-fluid container-max-width px-small">
+            <div class="navbar-brand me-auto lg:me-xlarge">
+              <a class="stretched-link" href="#">
+                <img src="${getVersionedDocsPath(`/assets/brand/${getConfig().brand}-logo.svg`)}" width="50" height="50" alt="" loading="lazy">
+              </a>
+              <h1 class="title">Label</h1>
+            </div>
+            <button class="navbar-toggler collapsed" type="button">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </nav>
+        <nav class="navbar lg:navbar-expand">
+          <div class="container-fluid container-max-width px-small">
+            <div class="navbar-collapse collapse m-none">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>`
+  },
+  {
     name: 'Icon',
     category: 'Visual assets',
     snippet: `
       <svg class="text-status-accent decorative-small-icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-      </svg> `
+      </svg>`
   },
   {
     name: 'Inline alert',
+    slug: 'inline-alert',
     link: 'alerts#inline-alert',
     category: 'Dialog',
     snippet: `
@@ -129,24 +193,33 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `<a class="link" href="#">Label</a>`
   },
   {
+    name: 'Navigation button',
+    slug: 'navigation-button',
+    link: 'buttons#navigation-button',
+    category: 'Actions',
+    snippet: `<a class="btn btn-next btn-default" href="#">Next</a>`
+  },
+  {
     name: 'Password input',
     slug: 'password-input',
     category: 'Control',
     snippet: `
-      <div class="text-input w-75">
-        <div class="text-input-container" style="min-width: unset">
-          <label for="passwordInput[[id_prefix]]">Label</label>
-          <div class="input-container">
-            <input type="password" id="passwordInput[[id_prefix]]" class="text-input-field" placeholder=" " value="xxxxxx">
+      <form class="w-75">
+        <div class="text-input">
+          <div class="text-input-container" style="min-width: unset">
+            <label for="passwordInput[[id_prefix]]">Label</label>
+            <div class="input-container">
+              <input type="password" id="passwordInput[[id_prefix]]" class="text-input-field" placeholder=" " value="xxxxxx">
+            </div>
+            <button class="btn btn-minimal btn-icon" type="button" aria-pressed="false">
+              <svg aria-hidden="true">
+                <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}"/>
+              </svg>
+              <span class="visually-hidden">Show password</span>
+            </button>
           </div>
-          <button class="btn btn-minimal btn-icon">
-            <svg aria-hidden="true">
-              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}"/>
-            </svg>
-            <span class="visually-hidden">Show password</span>
-          </button>
         </div>
-      </div>`
+      </form>` // form element is used here to prevent the browser from asking to save the password when leaving the page
   },
   {
     name: 'Radio button',
@@ -178,6 +251,11 @@ export const componentsDetails: ComponentCardData[] = [
       </div>`
   },
   {
+    name: 'Skeleton',
+    category: 'Indicator',
+    snippet: `<div class="skeleton w-75 h-75"></div>`
+  },
+  {
     name: 'Suggestion chip',
     slug: 'suggestion-chip',
     link: 'chips#suggestion-chip',
@@ -203,6 +281,27 @@ export const componentsDetails: ComponentCardData[] = [
           <label class="control-item-label" for="switch[[id_prefix]]">Label</label>
         </div>
       </div>`
+  },
+  {
+    name: 'Table',
+    category: 'Content display',
+    snippet: `
+      <table class="table w-75 mb-none">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Second</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+        </tbody>
+      </table>`
   },
   {
     name: 'Tag',

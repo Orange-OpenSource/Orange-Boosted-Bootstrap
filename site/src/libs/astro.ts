@@ -9,7 +9,7 @@ import type { Element, Text } from 'hast'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { getConfig } from './config'
 import { rehypeBsTable } from './rehype'
-import { remarkBsConfig, remarkBsDocsref } from './remark'
+import { remarkBsComp, remarkBsConfig, remarkBsDocsref } from './remark'
 import { configurePrism } from './prism'
 import {
   docsDirectory,
@@ -83,7 +83,7 @@ export function oudsWeb(): AstroIntegration[] {
                 ],
                 rehypeBsTable
               ],
-              remarkPlugins: [remarkBsConfig, remarkBsDocsref]
+              remarkPlugins: [remarkBsConfig, remarkBsDocsref, remarkBsComp]
             }
           })
         },

@@ -1,3 +1,126 @@
+# [1.3.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v1.2.0-ouds-web...v1.3.0) (2026-05-27)
+
+
+### Bug Fixes
+
+* **doc:** add xxl breakpoint to Bootstrap compatibility responsive classes ([#3573](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3573)) ([1181936](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/11819363449f24a35e55adfe8aae2b01ea121832))
+* **docs:** improve mobile display of docs (homepage and inside navigation) ([#3517](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3517)) ([c6290d5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c6290d5b868a623d86eaa569776e6280ccffe55c))
+* **docs:** some tags were without icons in migration ([#3578](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3578)) ([41169a4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/41169a47ead9145fdcfdd556b8e7cbeb266197d8))
+* **docs:** Update aria-pressed usage for toggle buttons in chips documentation ([#3514](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3514)) ([8852a57](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8852a572fbaff857afc6902095f39c7eaab77f38))
+* **docs:** Update our version page to have good redirects ([#3462](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3462)) ([c7580ea](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c7580ea3ecdaaacadfa2243c66aa39a6d97bb4a2))
+* **docs:** use `aria-invalid` instead of `.is-invalid` for password input examples ([#3547](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3547)) ([c34c92a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c34c92ad740b898da900d27cc512b021600d364a))
+* **docs:** Add a11y labels to copy/stackblitz buttons on the remaining components ([#3417](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3417)) ([b504a51](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b504a515948fa250d5180fab226086937fcff692))
+* **migrate:** Fix the logs on migration ([#3584](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3584)) ([36c9460](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/36c94608dd2c676e10ee0182b2cb7d8498df3ecc))
+
+
+### Features
+
+* Add draft component table ([#3471](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3471)) ([413a6dd](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/413a6dd8ad420b1b51bf4f50cc1f74dace7bdac9))
+* add ouds/web-migrate package ([#3523](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3523)) ([ab03c64](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ab03c64547b6a84feb77340ad353a2e7822dff34))
+* **breadcrumb:** add actual min width on breadcrumb item to avoid nasty truncation ([#3391](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3391)) ([970314e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/970314eb47789408e71ae2f4769ccab78feb02f7))
+* **docs:** add Design Tokens page ([#3458](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3458)) ([5751e48](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5751e483e4f7d64cc6b83207af40a7dc22e1d5fa))
+* **docs:** update migration guides for new breakpoints style ([#3571](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3571)) ([40f4777](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/40f4777d325f43b8b790a8020b504b20415fcad6))
+* **docs:** Show password example ([#3410](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3410)) ([06984c5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/06984c552f895b37534ff99993cd42a3c1636904))
+* **lib:** migrate breakpoints from infix to prefix ([#3499](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3499)) ([e041eba](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e041eba1a452f9a7002ebc637bf1178e7b999644))
+* **lib:** Remove useless mixin rfs and font-size + remove vendor ([#3504](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3504)) ([6645ea4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6645ea4ef3168153233399fae32276fc0d7f7770))
+
+
+
+# [1.2.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v1.1.0-ouds-web...v1.2.0) (2026-04-17)
+
+
+### Bug Fixes
+
+* **component:** select input, activate menu on label click and remove… ([#3466](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3466)) ([f7e12cb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f7e12cb292245aa6802a345631c46f0f23533562))
+* **docs:** add alerts components in versioning page ([#3488](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3488)) ([0b8cae2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0b8cae2706ce6991bb05c9403ca6756c108ff32a))
+* **docs:** add titles on draft and coming_soon pages ([#3470](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3470)) ([8106181](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8106181bb93f11c28369e84b1547d180849bf661))
+* **docs:** Change Netlify badge URL to avoid 404 ([#3490](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3490)) ([fa86090](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fa86090ed6c0cbd9c55a3ced27062e23368da8ed))
+* **docs:** examples copy to clipboard icon switches to check and back to copy ([#3494](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3494)) ([633b3ce](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/633b3ce183afd71afa0da15e54e524a0c333eef4))
+* **docs:** Handle errors introduced by skeletons ([#3483](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3483)) ([ebe108b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ebe108bf2aad9f7313f7f389034662d261b82307))
+* **docs:** improve dual mode examples displayed indentation ([#3441](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3441)) ([a53bcd9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a53bcd9d5fe1762b1d66875fafe1bdabcdc39bf7))
+* **docs:** prevent browser password saving on component list ([#3451](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3451)) ([eea8b8c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/eea8b8c1d3bd20f396d3d4ff53d0cb35ca0fbf26))
+* **docs:** Remove useless sentence in a11y alert ([#3455](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3455)) ([d801fbb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d801fbb7f6fa131b338b07cb8853f3c8a5d3c36a))
+* **docs:** remove wrong badge-count class in badge doc ([#3485](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3485)) ([126d47b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/126d47bfa6d8ee02bff143db5ed0889825761d99))
+* **docs:** Search: After hot fixes in prod and fix issues on highlighting ([#3446](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3446)) ([c7303fd](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c7303fd65187a28bba84e17150e7c4bfbd8d0c7a))
+* **docs:** implements a getTokenValue to simplify docs ([#3475](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3475)) ([c112503](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c11250339f97cde5842afd0973594cd26905cd2b1))
+* **docs:** Update the documentation with default OUDS tags ([#3460](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3460)) ([cdf5a26](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cdf5a262ec8bfe62b0717587cc395dd0bacebb7e))
+* **lib:** change tag min-width ([#3516](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3516)) ([3cf94d0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3cf94d08a919340f25b2aad44dc58e5a8da938a7))
+* **reboot:** modify legend element reboot style to avoid rendered legend feature ([#3430](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3430)) ([a10a500](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a10a500f57ee6dcf17e9680ad7209d68310a1452))
+
+
+### Features
+
+* **docs:** Add a shortcode to add icon to component types ([#3508](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3508)) ([092d1cf](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/092d1cf888543a1b6aa6250972dc761d626c1326))
+* **docs:** Add design description, draft components icon and coming soon submenu ([#3433](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3433)) ([864b10c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/864b10ce6d1e1ee9c4e866b0c0c1ca1d110dd0a4))
+* **docs:** reorganize color documentation ([#3453](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3453)) ([56c731e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/56c731ef77d3dae2678cac12baefb44e49ba13e3))
+* **lib:** Add Footer as a draft component ([#3389](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3389)) ([f9e2281](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f9e2281eb9ad168bfe1b66e9c556f5517eea8db3))
+* **lib:** Add Header as a draft component ([#3388](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3388)) ([c97ba96](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c97ba969e0f521a985a10274c89e016a1f1003e2))
+* **lib:** add Skeleton component ([#3428](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3428)) ([37a3a67](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/37a3a672f37277868391ffea573f44b7649eff91))
+* **lib:** Update Alert message to v1.1.0 ([#3452](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3452)) ([969a053](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/969a053b086fb1457e60a571f99598b9bba27c08))
+* **lib:** Add navigation button component ([#3431](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3431)) ([abc5e0f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/abc5e0fdfae606066b943e23b70b9dc6045aaa0a))
+* **lib:** Manage mandatory fields indication ([#3439](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3439)) ([e8934fa](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e8934fa938ffb568c7b994a91f96347ea248e5b8))
+
+
+
+# [1.1.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v1.0.0-ouds-web...v1.1.0) (2026-03-13)
+
+
+### Bug Fixes
+
+* **a11y:** better a11y on doc ([#3332](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3332)) ([d873a8f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d873a8f79a268a833023e34fd177a3b00ba4f23e))
+* add a11y on changelog link in components versioning page ([#3416](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3416)) ([a56eea2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a56eea274d864b3edf841daffcc93c758f32e273))
+* Add missing flex-shrink: 0 to avoid shrinking icon in button ([#3335](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3335)) ([7d6debc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7d6debc28cafc83aedde8f08595ec476e562494d))
+* **ci:** remove coveralls as a failing step ([#3395](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3395)) ([49fa5dd](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/49fa5dd7779795de346953648cab6189dd050846))
+* **component:** control items indeterminate color only for checkboxes ([#3366](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3366)) ([ec74f7d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ec74f7d43d3aede35febe53535d549aecc651507))
+* **doc:** correct bg color on position utilities examples ([#3379](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3379)) ([3b78480](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3b78480f600aa4a6c7b4a12237148a31f3b5fbb2))
+* **doc:** remove col-7 on form example ([#3429](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3429)) ([ef5f09c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ef5f09c4a4c5f49784cb3229fdbb09cf4ed56e62))
+* **docs:** Add aliases and typos to dual mode page ([#3354](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3354)) ([a7b3c2b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a7b3c2b360f31965ca4d5de7fa559984ea55d11a))
+* **docs:** Dual mode, reword and change the scope of Boosted variables ([#3371](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3371)) ([6e5e3d0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6e5e3d07faf62f31e7e354274c91b0e785645b2e))
+* **docs:** fix colors syntax for code presentation ([#3392](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3392)) ([7ea34f1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7ea34f18e05c52bde1311d7af0f57e1aa53c66de))
+* **docs:** move spacings migration tip on top of the paragraph in migration from boosted ([#3304](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3304)) ([f439734](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f439734170c313233ab0b8d410f4b37c166366ac))
+* **docs:** Remove about section from getting-started ([#3372](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3372)) ([49bf58e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/49bf58e48142a790f0fa8bd37ab24e7bb5e743ea))
+* **docs:** Remove asterisk when all fields are mandatory ([#3438](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3438)) ([d0dce80](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d0dce80c1e7a810902a58d4ce34f3d1ceb96f3ff))
+* **docs:** right data-bs-theme on light static context in background utilities page ([#3409](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3409)) ([948e71d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/948e71da7ea373e641782af649d108806d759fe5))
+* **docs:** textarea resizer position ([#3435](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3435)) ([22aadf7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/22aadf788339679e3d58dbc9db41d52f9bc59842))
+* **docs:** Update charts library URL ([#3432](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3432)) ([f17557e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f17557ee73612e8cddd767d3d7e55619b5a725e9))
+* **docs:** Update dual mode documentation ([#3405](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3405)) ([0e06fd4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0e06fd414ccdcd915875fffdb15e2ed41cabb754))
+* **docs:** use right bg-surface-* utilities on text color utilities page ([#3408](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3408)) ([934a226](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/934a226a041686b8e2b830c859d94eb63b19fb6e))
+* **download app page:** Improve accessibility ([#3337](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3337)) ([acdecf9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/acdecf9d99e055c0c1540d5ade9094db49c814de))
+* **lib:** fix min-height of the textarea ([#3407](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3407)) ([300f322](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/300f32211797ffe4162f4b51516635b2298b4d4e))
+* **lib:** fix select input color ([#3421](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3421)) ([454a988](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/454a9883f283e7d6e696b7111a46fdf552a02551))
+* **tags:** Avoid strange centered overflow ([#3336](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3336)) ([2b1d10e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2b1d10ee978d9d1b6c497d31d914c582bd5a287f))
+* **tags:** tag font icon resising error ([#3327](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3327)) ([693e146](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/693e146f870eb7eb5e9b891bc017aaa482ed2800))
+* **textarea:** fix small shift on focus ([#3390](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3390)) ([1c20c86](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1c20c86a749879bb5ae53a1044e0afcbb64a8012))
+* update ratio utility usage after switching to aspect-ratio ([#3329](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3329)) ([04ce018](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/04ce018362fbbc30925f11899792f40c8f9fb219))
+
+
+### Features
+
+* add helpers for grid margin and grid gap ([#3344](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3344)) ([4d39790](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4d3979057ea209d82d90dd4ddd24c668f8019307))
+* **component:** Add loading state on select and text input ([#3278](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3278)) ([278877e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/278877e8f228284064d02051cf4e3966b7f93ff2))
+* **docs:** add Component versioning page ([#3393](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3393)) ([172eaa2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/172eaa24989d6bca4f54877e7b87260a880f601c))
+* **docs:** Add Components page ([#3300](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3300)) ([1f8ec7d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1f8ec7df798ec0e64af05d1cfbc1ed5a8b3005db))
+* **docs:** Add CSS Variables page ([#3301](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3301)) ([510ba9f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/510ba9ff128474ab221d1b4f176467b90c43e485))
+* **docs:** Add easing links ([#3356](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3356)) ([33f454a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/33f454a8a82dbd8fef7d238ebbac512063b41488))
+* **docs:** add paragraph on label font size in Typography ([#3400](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3400)) ([8675757](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/86757577ab0b0c12c62960eee4603dbb2a8585ee))
+* **docs:** Add separated Algolia button ([#3299](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3299)) ([f1d7162](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f1d71625b0d85cc6f37227323b414d6d127e0e67))
+* **docs:** move Foundation to its own top menu, move Resources to Footer ([#3427](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3427)) ([676fda8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/676fda83369594563d4f39713cf42581866f53b2))
+* **docs:** update components page with real components ([#3387](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3387)) ([d41cffa](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d41cffaac313838f0172e933d248be074bad7e7b))
+* **docs:** use bg secondary and bigger cards for component list ([#3422](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3422)) ([4d02615](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4d0261539f4eb40b9153a215ce219f168259ebbb))
+* **documentation:** reorganize the whole documentation ([#3055](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3055)) ([a424efb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a424efbc9dba986bf75408aef1cc895bc46974f0))
+* **forms:** use :user-invalid and enforce aria-invalid for form inputs validation ([#3386](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3386)) ([75b47b3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/75b47b323706f01f850e269d8abb9d8fb6bc4458))
+* **lib:** add Alerts components ([#3348](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3348)) ([d36e393](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d36e393661962cee01b8645a0d7c60848cdfbf9d))
+* **lib:** Add Orange Business Tools theme ([#3315](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3315)) ([20008c6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/20008c63da4fb5ec6c02b5b84e4d64fd70972710))
+* Move ratio from helpers to utilties (use aspect-ratio css property) ([#41684](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/41684)) ([#3324](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3324)) ([aacd6e2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/aacd6e2c7d262d8d66cf441c9be6903f9eac67a2))
+* remove clearfix helper in favor of flow-root utility ([#3325](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3325)) ([2cee3e7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2cee3e7a09ea86b72474ecd47fbc28af3a541511))
+* rename Orange Business Tools to Orange Compact ([#3339](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3339)) ([fd960b4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fd960b4c87e5ac2b94adbb87cd1cee975fc790d8))
+* Restore form-validation documentation page ([#3350](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3350)) ([d2d9923](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d2d9923fe1c3d23bb510cfde5a224f72cdd00129))
+* **textarea:** disable resizing feature on touchscreen devices ([#3305](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3305)) ([3e1ae80](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3e1ae8064f12faac05d3e4b8e7294f7475e89f9a))
+* Use brand theme switcher icon in header ([#3309](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3309)) ([ed9a817](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ed9a817b04e563e33d94f7c91946e112e8ac2f5b))
+* **utilities:** switch to logical shorthand properties for margin and padding ([#3399](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3399)) ([31a1e29](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/31a1e29ba975220a5bab390a0e28d819bb081a92))
+
+
+
 # [1.0.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v0.6.0-ouds-web...v1.0.0) (2025-12-19)
 
 
