@@ -123,7 +123,7 @@
     );
   }
 
-  &.badge-positive:not(.badge-neutral, .badge-accent) {
+  &.badge-positive {
     @include badge-status-variant(
       $ouds-color-content-on-status-positive-emphasized,
       $ouds-color-surface-status-positive-emphasized,
@@ -131,7 +131,7 @@
     );
   }
 
-  &.badge-info:not(.badge-neutral, .badge-accent) {
+  &.badge-info {
     @include badge-status-variant(
       $ouds-color-content-on-status-info-emphasized,
       $ouds-color-surface-status-info-emphasized,
@@ -139,7 +139,7 @@
     );
   }
 
-  &.badge-warning:not(.badge-neutral, .badge-accent) {
+  &.badge-warning {
     @include badge-status-variant(
       $ouds-color-content-on-status-warning-emphasized,
       $ouds-color-surface-status-warning-emphasized,
@@ -149,7 +149,7 @@
     );
   }
 
-  &.badge.badge-disabled { // Artificially increase the selector's weight to overwrite colors when badge is disabled
+  &.badge-disabled {
     --#{$prefix}badge-color: #{$ouds-color-content-on-action-disabled};
     --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
   }
