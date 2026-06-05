@@ -7,7 +7,7 @@
       - [ ] Some download links in the `README.md`
       - [ ] `docs_version` in `config.yml` and other references to the previous version
       - [ ] `VERSION` in `js/src/base-component.js`
-      - [ ] `versionShort` in `package.json`
+      - [ ] `version_short` in `package.json`
       - [ ] `scss/mixins/_banner.scss`
       - [ ] `scss/docs.scss`
       - [ ] Several markdown files and markdown extended files

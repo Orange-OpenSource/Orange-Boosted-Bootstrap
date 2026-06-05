@@ -22,7 +22,7 @@ BRANDS.map(async brand => {
   const pkgJson = path.join(__dirname, '../package.json')
   const pkg = JSON.parse(await fs.readFile(pkgJson, 'utf8'))
 
-  const { versionShort } = pkg.config
+  const versionShort = pkg.version_short
   const distFolder = `ouds-web-${brand}-${pkg.version}-examples`
   const rootDocsDir = '_site'
   const docsDir = `${rootDocsDir}/${brand}/docs/${versionShort}/`
