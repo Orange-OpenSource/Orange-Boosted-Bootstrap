@@ -5,8 +5,7 @@
     "chromeLaunchConfig": {
         "args": [
             "--no-sandbox"
-        ],
-        "executablePath": "/usr/bin/google-chrome"
+        ]
     },
     "reporters": [
       "cli",
