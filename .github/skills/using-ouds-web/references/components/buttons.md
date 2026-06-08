@@ -118,7 +118,7 @@ Use `.d-grid` and `.gap-small` for full-width stacked buttons.
 
 ### Responsive block
 
-`.d-grid gap-small d-md-block` — stacked on mobile, inline from `md`.
+`.d-grid gap-small md:d-block` — stacked on mobile, inline from `md`.
 
 ## Accessibility
 

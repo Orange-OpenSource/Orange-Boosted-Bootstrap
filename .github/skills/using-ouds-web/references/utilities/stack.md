@@ -52,7 +52,7 @@ Use `.hstack` for horizontal layouts. Items are vertically centered and take onl
 Stacked buttons:
 
 ```html
-<div class="vstack gap-small col-md-5 mx-auto">
+<div class="vstack gap-small md:col-5 mx-auto">
   <button type="button" class="btn btn-strong">Save changes</button>
   <button type="button" class="btn btn-default">Cancel</button>
 </div>

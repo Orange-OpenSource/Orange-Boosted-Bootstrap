@@ -4,13 +4,13 @@ Utilities for text alignment, wrapping, weight, size, transform, and decoration.
 
 ## Text alignment
 
-Responsive classes: `.text-{breakpoint}-{start|center|end}`
+Responsive classes: `{breakpoint}:text-{start|center|end}`
 
 ```html
 <p class="text-start">Start aligned text on all viewport sizes.</p>
 <p class="text-center mx-auto">Center aligned text on all viewport sizes.</p>
 <p class="text-end ms-auto">End aligned text on all viewport sizes.</p>
-<p class="text-md-end ms-md-auto">End aligned from MD breakpoint.</p>
+<p class="md:text-end md:ms-auto">End aligned from MD breakpoint.</p>
 ```
 
 Combine `.text-end` with `.ms-auto` (or `.text-center` with `.mx-auto`) for proper alignment.

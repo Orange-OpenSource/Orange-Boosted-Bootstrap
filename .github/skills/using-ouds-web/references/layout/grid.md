@@ -21,7 +21,7 @@
 - **Rows**: wrappers for columns, use negative margins to offset gutter padding
 - **12 columns** per row (e.g. `col-4` spans 4 of 12)
 - **Gutters**: responsive, use `.gx-*`, `.gy-*`, `.g-*` classes with OUDS spacing tokens
-- **Class prefix per breakpoint**: `.col-`, `.col-xs-`, `.col-sm-`, `.col-md-`, `.col-lg-`, `.col-xl-`, `.col-2xl-`, `.col-3xl-`
+- **Class prefix per breakpoint**: `.col-` (base), `.xs:col-`, `.sm:col-`, `.md:col-`, `.lg:col-`, `.xl:col-`, `.2xl:col-`, `.3xl:col-`
 
 With `$enable-bootstrap-compatibility: true`, `.col-xxl-*` is also available.
 
@@ -51,9 +51,9 @@ With `$enable-bootstrap-compatibility: true`, `.col-xxl-*` is also available.
 
 ```html
 <div class="row">
-  <div class="col col-lg-2">Fixed</div>
-  <div class="col-md-auto">Variable width content</div>
-  <div class="col col-lg-2">Fixed</div>
+  <div class="col lg:col-2">Fixed</div>
+  <div class="md:col-auto">Variable width content</div>
+  <div class="col lg:col-2">Fixed</div>
 </div>
 ```
 
@@ -63,8 +63,8 @@ With `$enable-bootstrap-compatibility: true`, `.col-xxl-*` is also available.
 
 ```html
 <div class="row">
-  <div class="col-md-8">.col-md-8</div>
-  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  <div class="md:col-8">.md:col-8</div>
+  <div class="col-6 md:col-4">.col-6 .md:col-4</div>
 </div>
 ```
 
@@ -81,7 +81,7 @@ Control number of columns per row:
 </div>
 
 <!-- Responsive -->
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+<div class="row row-cols-1 sm:row-cols-2 md:row-cols-4">
   <div class="col">Column</div>
   <div class="col">Column</div>
   <div class="col">Column</div>
@@ -93,11 +93,11 @@ Control number of columns per row:
 
 ```html
 <div class="row">
-  <div class="col-sm-3">Level 1</div>
-  <div class="col-sm-9">
+  <div class="sm:col-3">Level 1</div>
+  <div class="sm:col-9">
     <div class="row">
-      <div class="col-8 col-sm-6">Level 2</div>
-      <div class="col-4 col-sm-6">Level 2</div>
+      <div class="col-8 sm:col-6">Level 2</div>
+      <div class="col-4 sm:col-6">Level 2</div>
     </div>
   </div>
 </div>

@@ -40,7 +40,7 @@ More than 12 columns wrap to a new line. Force breaks with:
 ```html
 <div class="w-100"></div>
 <!-- Force column break -->
-<div class="w-100 d-none d-md-block"></div>
+<div class="w-100 d-none md:d-block"></div>
 <!-- Break at md+ only -->
 ```
 
@@ -48,7 +48,7 @@ More than 12 columns wrap to a new line. Force breaks with:
 
 ### Order Classes
 
-`.order-1` through `.order-5`, responsive: `.order-{breakpoint}-{1-5}`.
+`.order-1` through `.order-5`, responsive: `{breakpoint}:order-{1-5}`.
 
 ```html
 <div class="col order-5">Second in DOM, visually last</div>
@@ -60,15 +60,15 @@ Special: `.order-first` (`order: -1`), `.order-last` (`order: 6`).
 ### Offsetting
 
 ```html
-<div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+<div class="md:col-4 md:offset-4">.md:col-4 .md:offset-4</div>
 ```
 
-Reset offsets: `.offset-md-0`.
+Reset offsets: `.md:offset-0`.
 
 ### Margin Utilities
 
 ```html
-<div class="col-md-4 ms-auto">Push right with margin</div>
+<div class="md:col-4 ms-auto">Push right with margin</div>
 ```
 
 ## Standalone Column Classes
@@ -77,5 +77,5 @@ Reset offsets: `.offset-md-0`.
 
 ```html
 <div class="col-3 p-large">width: 25%</div>
-<div class="col-sm-9 p-large">width: 75% above sm</div>
+<div class="sm:col-9 p-large">width: 75% above sm</div>
 ```

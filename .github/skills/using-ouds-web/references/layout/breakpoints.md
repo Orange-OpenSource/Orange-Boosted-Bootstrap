@@ -6,16 +6,22 @@
 
 ## Available Breakpoints
 
-| Breakpoint | Class infix | Min-width        |
-| ---------- | ----------- | ---------------- |
-| 2x-small   | _(none)_    | <320px (default) |
-| X-small    | `xs`        | >=320px          |
-| Small      | `sm`        | >=480px          |
-| Medium     | `md`        | >=736px          |
-| Large      | `lg`        | >=1024px         |
-| X-large    | `xl`        | >=1320px         |
-| 2x-large   | `2xl`       | >=1640px         |
-| 3x-large   | `3xl`       | >=1880px         |
+| Breakpoint | Class prefix | Min-width        |
+| ---------- | ------------ | ---------------- |
+| 2x-small   | _(none)_     | <320px (default) |
+| X-small    | `xs`         | >=320px          |
+| Small      | `sm`         | >=480px          |
+| Medium     | `md`         | >=736px          |
+| Large      | `lg`         | >=1024px         |
+| X-large    | `xl`         | >=1320px         |
+| 2x-large   | `2xl`        | >=1640px         |
+| 3x-large   | `3xl`        | >=1880px         |
+
+> **Breaking change (v1.3.0):** Responsive utilities use a **colon-prefix** format instead of the Bootstrap infix pattern.
+> - Old (Bootstrap-style infix): `.{utility}-{breakpoint}-{value}` → e.g. `.d-md-none`, `.col-lg-6`
+> - New (OUDS Web prefix): `{breakpoint}:{utility}-{value}` → e.g. `.md:d-none`, `.lg:col-6`
+>
+> The base `2xs` breakpoint has no prefix — base classes apply from `2xs` up (e.g. `.d-none`).
 
 With `$enable-bootstrap-compatibility: true`, `xxl` is an alias for `2xl`.
 

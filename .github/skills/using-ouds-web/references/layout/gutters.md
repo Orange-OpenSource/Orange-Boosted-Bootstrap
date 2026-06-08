@@ -60,7 +60,7 @@ Alternatively, wrap with `.overflow-hidden`:
 ## Responsive Gutters
 
 ```html
-<div class="row row-cols-2 row-cols-lg-5 g-small g-lg-medium">
+<div class="row lg:row-cols-5 g-small lg:g-medium">
   <div class="col"><div class="p-large">Column</div></div>
   ...
 </div>
@@ -70,8 +70,8 @@ Alternatively, wrap with `.overflow-hidden`:
 
 ```html
 <div class="row g-none">
-  <div class="col-sm-6 col-md-8">No gutter</div>
-  <div class="col-6 col-md-4">No gutter</div>
+  <div class="sm:col-6 md:col-8">No gutter</div>
+  <div class="col-6 md:col-4">No gutter</div>
 </div>
 ```
 

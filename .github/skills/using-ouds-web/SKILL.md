@@ -12,6 +12,7 @@ OUDS Web is Orange's web implementation of the Orange Unified Design System. It 
 Key differences from standard Bootstrap:
 
 - **8 breakpoints** instead of 6: `2xs`, `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`
+- **Breakpoint prefix syntax** (v1.3.0+): responsive classes use `{breakpoint}:{utility}-{value}` prefix format, **not** the Bootstrap infix format `{utility}-{breakpoint}-{value}`. Example: `md:d-none`, `lg:col-6`, `sm:flex-row` (not `d-md-none`, `col-lg-6`, `flex-sm-row`)
 - **OUDS design tokens** for spacing, typography, and colors (e.g., `none`, `3xsmall`, `2xsmall`, `xsmall`, `small`, `medium`, `large`, `xlarge`, `2xlarge`, `3xlarge`)
 - **Semantic color system** with `bg-surface-*`, `text-*`, `border-*` token-based classes
 - **4 color modes**: `light`, `dark`, `root`, `root-inverted` (set via `data-bs-theme`)

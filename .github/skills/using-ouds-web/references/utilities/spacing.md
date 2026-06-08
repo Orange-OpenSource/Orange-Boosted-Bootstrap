@@ -6,7 +6,7 @@ Responsive margin, padding, and gap utilities.
 
 ## Fixed spacing
 
-Format: `{property}{sides}-{size}` or `{property}{sides}-{breakpoint}-{size}`
+Format: `{property}{sides}-{size}` (base) or `{breakpoint}:{property}{sides}-{size}` (responsive)
 
 **Property:** `m` (margin), `p` (padding)
 
@@ -19,7 +19,7 @@ Format: `{property}{sides}-{size}` or `{property}{sides}-{breakpoint}-{size}`
 <div class="p-large">Large padding all sides</div>
 <div class="mx-auto" style="width: 200px;">Horizontally centered</div>
 <div class="px-small">Small horizontal padding</div>
-<div class="mb-medium mb-lg-xlarge">Medium bottom margin, xlarge from LG</div>
+<div class="mb-medium lg:mb-xlarge">Medium bottom margin, xlarge from LG</div>
 ```
 
 ## Scaled spacing
@@ -76,7 +76,7 @@ Two special sizes based on grid layout: `gridgap` and `gridmargin` (responsive v
 Use negative `gridmargin` margin (always available regardless of `$enable-negative-margins`):
 
 ```html
-<div class="mx-ngridmargin mx-lg-none px-gridmargin py-small px-lg-small">
+<div class="mx-ngridmargin lg:mx-none px-gridmargin py-small lg:px-small">
   Edge to edge container on smaller breakpoints
 </div>
 ```

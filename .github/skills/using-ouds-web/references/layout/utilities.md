@@ -7,9 +7,9 @@ Quick reference for layout-related utilities.
 Use display utilities to toggle `display` property responsively:
 
 ```html
-<div class="d-none d-md-block">Hidden below md</div>
+<div class="d-none md:d-block">Hidden below md</div>
 <div class="d-flex">Flexbox container</div>
-<div class="d-sm-flex">Flexbox from sm up</div>
+<div class="sm:d-flex">Flexbox from sm up</div>
 ```
 
 See: [Display utilities](../utilities/display.md)
@@ -26,7 +26,7 @@ See: [Flex utilities](../utilities/flex.md)
 
 ```html
 <div class="me-large">margin-right: large</div>
-<div class="me-md-large">margin-right: large from md up</div>
+<div class="md:me-large">margin-right: large from md up</div>
 ```
 
 See: [Spacing utilities](../utilities/spacing.md)

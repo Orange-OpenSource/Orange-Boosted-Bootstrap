@@ -72,7 +72,7 @@ Add `.control-item-reverse` to `.checkbox-item`.
 Use flex utilities on a wrapper inside `.control-items-list`:
 
 ```html
-<div class="d-lg-flex flex-row gap-small">
+<div class="lg:d-flex flex-row gap-small">
   <div class="checkbox-item flex-fill">...</div>
   <div class="checkbox-item flex-fill">...</div>
 </div>

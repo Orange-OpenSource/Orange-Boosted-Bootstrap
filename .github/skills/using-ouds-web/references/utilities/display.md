@@ -5,7 +5,7 @@ Responsive display utility classes to toggle the CSS `display` property.
 ## Notation
 
 - `.d-{value}` — applies from `2xs` (min-width: 0) and up
-- `.d-{breakpoint}-{value}` — applies from that breakpoint up
+- `{breakpoint}:d-{value}` — applies from that breakpoint up
 
 > **Not Bootstrap:** OUDS Web breakpoints are `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl` (the base `2xs` has no abbreviation). Bootstrap uses `sm`, `md`, `lg`, `xl`, `xxl`.
 
@@ -30,16 +30,16 @@ Responsive display utility classes to toggle the CSS `display` property.
 | ------------------- | -------------------------------- |
 | Hidden on all       | `.d-none`                        |
 | Visible on all      | `.d-block`                       |
-| Hidden only on 2xs  | `.d-none .d-xs-block`            |
-| Hidden only on xs   | `.d-xs-none .d-sm-block`         |
-| Hidden only on sm   | `.d-sm-none .d-md-block`         |
-| Hidden only on md   | `.d-md-none .d-lg-block`         |
-| Hidden only on lg   | `.d-lg-none .d-xl-block`         |
-| Hidden only on xl   | `.d-xl-none .d-2xl-block`        |
-| Hidden only on 2xl  | `.d-2xl-none .d-3xl-block`       |
-| Hidden only on 3xl  | `.d-3xl-none`                    |
-| Visible only on 2xs | `.d-block .d-xs-none`            |
-| Visible only on md  | `.d-none .d-md-block .d-lg-none` |
+| Hidden only on 2xs  | `.d-none .xs:d-block`              |
+| Hidden only on xs   | `.xs:d-none .sm:d-block`           |
+| Hidden only on sm   | `.sm:d-none .md:d-block`           |
+| Hidden only on md   | `.md:d-none .lg:d-block`           |
+| Hidden only on lg   | `.lg:d-none .xl:d-block`           |
+| Hidden only on xl   | `.xl:d-none .2xl:d-block`          |
+| Hidden only on 2xl  | `.2xl:d-none .3xl:d-block`         |
+| Hidden only on 3xl  | `.3xl:d-none`                      |
+| Visible only on 2xs | `.d-block .xs:d-none`              |
+| Visible only on md  | `.d-none .md:d-block .lg:d-none`   |
 
 ## Print display
 
@@ -50,7 +50,7 @@ Responsive display utility classes to toggle the CSS `display` property.
 Combine print and responsive classes:
 
 ```html
-<div class="d-none d-lg-block d-print-block">
+<div class="d-none lg:d-block d-print-block">
   Hide up to large on screen, always show on print
 </div>
 ```

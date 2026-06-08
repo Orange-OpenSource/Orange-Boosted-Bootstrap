@@ -1,6 +1,6 @@
 # Flex
 
-Full suite of responsive flexbox utilities. All flex utilities support responsive variants with breakpoint infixes: `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`.
+Full suite of responsive flexbox utilities. All flex utilities support responsive variants with breakpoint prefixes: `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`.
 
 ## Enable flex
 
@@ -9,14 +9,14 @@ Full suite of responsive flexbox utilities. All flex utilities support responsiv
 <div class="d-inline-flex">...</div>
 ```
 
-Responsive: `.d-{breakpoint}-flex`, `.d-{breakpoint}-inline-flex`
+Responsive: `{breakpoint}:d-flex`, `{breakpoint}:d-inline-flex`
 
 ## Direction
 
 - `.flex-row`, `.flex-row-reverse`
 - `.flex-column`, `.flex-column-reverse`
 
-Responsive: `.flex-{breakpoint}-row`, `.flex-{breakpoint}-column`, etc.
+Responsive: `{breakpoint}:flex-row`, `{breakpoint}:flex-column`, etc.
 
 ## Justify content
 
@@ -27,7 +27,7 @@ Responsive: `.flex-{breakpoint}-row`, `.flex-{breakpoint}-column`, etc.
 - `.justify-content-around`
 - `.justify-content-evenly`
 
-Responsive: `.justify-content-{breakpoint}-{value}`
+Responsive: `{breakpoint}:justify-content-{value}`
 
 ## Align items
 
@@ -37,7 +37,7 @@ Responsive: `.justify-content-{breakpoint}-{value}`
 - `.align-items-baseline`
 - `.align-items-stretch`
 
-Responsive: `.align-items-{breakpoint}-{value}`
+Responsive: `{breakpoint}:align-items-{value}`
 
 ## Align self
 
@@ -47,20 +47,20 @@ Responsive: `.align-items-{breakpoint}-{value}`
 - `.align-self-baseline`
 - `.align-self-stretch`
 
-Responsive: `.align-self-{breakpoint}-{value}`
+Responsive: `{breakpoint}:align-self-{value}`
 
 ## Fill
 
 `.flex-fill` — forces sibling elements to widths equal to their content while using all available space.
 
-Responsive: `.flex-{breakpoint}-fill`
+Responsive: `{breakpoint}:flex-fill`
 
 ## Grow and shrink
 
 - `.flex-grow-0`, `.flex-grow-1`
 - `.flex-shrink-0`, `.flex-shrink-1`
 
-Responsive: `.flex-{breakpoint}-grow-{0|1}`, `.flex-{breakpoint}-shrink-{0|1}`
+Responsive: `{breakpoint}:flex-grow-{0|1}`, `{breakpoint}:flex-shrink-{0|1}`
 
 ## Auto margins
 
@@ -88,14 +88,14 @@ Combine with `align-items` and `flex-column` for vertical auto-margin:
 - `.flex-wrap`
 - `.flex-wrap-reverse`
 
-Responsive: `.flex-{breakpoint}-nowrap`, `.flex-{breakpoint}-wrap`, `.flex-{breakpoint}-wrap-reverse`
+Responsive: `{breakpoint}:flex-nowrap`, `{breakpoint}:flex-wrap`, `{breakpoint}:flex-wrap-reverse`
 
 ## Order
 
 - `.order-0` through `.order-5`
 - `.order-first` (`order: -1`), `.order-last` (`order: 6`)
 
-Responsive: `.order-{breakpoint}-{0-5}`, `.order-{breakpoint}-first`, `.order-{breakpoint}-last`
+Responsive: `{breakpoint}:order-{0-5}`, `{breakpoint}:order-first`, `{breakpoint}:order-last`
 
 ## Align content
 
@@ -108,4 +108,4 @@ For multi-line flex containers (requires `flex-wrap`):
 - `.align-content-around`
 - `.align-content-stretch`
 
-Responsive: `.align-content-{breakpoint}-{value}`
+Responsive: `{breakpoint}:align-content-{value}`

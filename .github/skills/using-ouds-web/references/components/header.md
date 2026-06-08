@@ -8,7 +8,7 @@ Draft component — design not finalized. Based on Boosted Orange Navbar with OU
 <header>
   <nav class="navbar navbar-expand-lg" aria-label="Global navigation">
     <div class="container-fluid container-max-width">
-      <div class="navbar-brand me-auto me-lg-xlarge">
+      <div class="navbar-brand me-auto lg:me-xlarge">
         <a class="stretched-link" href="#">
           <img
             src="path/to/logo.svg"
@@ -33,7 +33,7 @@ Draft component — design not finalized. Based on Boosted Orange Navbar with OU
       </button>
       <div
         id="global-header-1.1"
-        class="navbar-collapse collapse me-lg-auto global-header-1"
+        class="navbar-collapse collapse lg:me-auto global-header-1"
       >
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -44,7 +44,7 @@ Draft component — design not finalized. Based on Boosted Orange Navbar with OU
       </div>
       <div
         id="global-header-1.2"
-        class="navbar-collapse collapse d-sm-flex global-header-1"
+        class="navbar-collapse collapse sm:d-flex global-header-1"
       >
         <ul class="navbar-nav flex-row">
           <li class="nav-item">

@@ -44,9 +44,9 @@ Use `.translate-middle-x` or `.translate-middle-y` for single-axis centering.
 <div class="sticky-bottom">...</div>
 ```
 
-> **Not Bootstrap:** Responsive sticky uses OUDS Web breakpoints: `.sticky-{xs|sm|md|lg|xl|2xl|3xl}-top` and `.sticky-{xs|sm|md|lg|xl|2xl|3xl}-bottom`.
+> **Not Bootstrap:** Responsive sticky uses OUDS Web breakpoints: `{xs|sm|md|lg|xl|2xl|3xl}:sticky-top` and `{xs|sm|md|lg|xl|2xl|3xl}:sticky-bottom`.
 
 ```html
-<div class="sticky-md-top">Sticky top from MD breakpoint</div>
-<div class="sticky-lg-bottom">Sticky bottom from LG breakpoint</div>
+<div class="md:sticky-top">Sticky top from MD breakpoint</div>
+<div class="lg:sticky-bottom">Sticky bottom from LG breakpoint</div>
 ```

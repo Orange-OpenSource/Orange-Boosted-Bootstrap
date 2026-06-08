@@ -20,13 +20,13 @@ Control how replaced elements (`<img>`, `<video>`) are resized to fit their cont
 
 ## Responsive variants
 
-`.object-fit-{breakpoint}-{value}`
+`{breakpoint}:object-fit-{value}`
 
 > **Not Bootstrap:** OUDS Web breakpoints are `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`.
 
 ```html
-<img src="..." class="object-fit-md-contain" />
-<img src="..." class="object-fit-xl-cover" />
+<img src="..." class="md:object-fit-contain" />
+<img src="..." class="xl:object-fit-cover" />
 ```
 
 ## Video

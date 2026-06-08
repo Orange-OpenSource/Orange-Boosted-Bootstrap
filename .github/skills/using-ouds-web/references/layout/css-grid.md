@@ -38,9 +38,9 @@ $enable-cssgrid: true;
 
 ```html
 <div class="grid text-center">
-  <div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
-  <div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
-  <div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
+  <div class="g-col-6 md:g-col-4">.g-col-6 .md:g-col-4</div>
+  <div class="g-col-6 md:g-col-4">.g-col-6 .md:g-col-4</div>
+  <div class="g-col-6 md:g-col-4">.g-col-6 .md:g-col-4</div>
 </div>
 ```
 
