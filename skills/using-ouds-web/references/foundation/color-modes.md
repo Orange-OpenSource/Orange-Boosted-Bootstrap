@@ -109,7 +109,7 @@ For frameworks like Angular where `<html>` is not easily accessible:
 
 ```scss
 $ouds-root-selector: "#app";
-@import "@ouds/web-orange/scss/ouds-web";
+@import "../../../../node_modules/@ouds/web-orange/scss/ouds-web";
 ```
 
 ## JavaScript Color Mode Toggler

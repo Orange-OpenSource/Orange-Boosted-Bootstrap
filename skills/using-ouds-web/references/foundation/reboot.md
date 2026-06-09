@@ -44,7 +44,7 @@ Custom fonts loaded from CDN with native font stack as fallback. Font faces gene
 <a href="#">Normal link</a>
 <a aria-disabled="true">Disabled link</a>
 <div class="visited-links">
-  <a href=".">Visited link</a>
+    <a href="">Visited link</a>
 </div>
 ```
 

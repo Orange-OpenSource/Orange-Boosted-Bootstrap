@@ -28,17 +28,19 @@ OUDS Web CSS works with any framework.
 For import maps with Popper:
 
 ```html
+
 <script type="importmap">
-  {
-    "imports": {
-      "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core/dist/esm/popper.min.js",
-      "@ouds/web-common": "https://cdn.jsdelivr.net/npm/@ouds/web-common/dist/js/ouds-web.esm.min.js"
+    {
+      "imports": {
+        "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core/dist/esm/popper.min.js",
+        "@ouds/web-common": "https://cdn.jsdelivr.net/npm/@ouds/web-common/dist/js/ouds-web.esm.min.js"
+      }
     }
-  }
 </script>
 <script type="module">
-  import * as oudsWeb from "@ouds/web-common";
-  new oudsWeb.Popover(document.getElementById("popoverButton"));
+    import * as oudsWeb from "dist/js/ouds-web.esm";
+
+    new oudsWeb.Popover(document.getElementById("popoverButton"));
 </script>
 ```
 
