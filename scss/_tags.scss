@@ -32,7 +32,7 @@
   min-height: var(--#{$prefix}tag-min-height);
   padding: calc(var(--#{$prefix}tag-padding-y) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-end) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-y) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-start) - var(--#{$prefix}tag-border-width));
   margin: 0;
-  font-weight: 700;
+  font-weight: $ouds-font-weight-web-label-strong;
   color: var(--#{$prefix}tag-color);
   white-space: nowrap;
   background-color: var(--#{$prefix}tag-background-color);
@@ -240,7 +240,7 @@
   --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-loader-small};
   --#{$prefix}tag-font-size-icon: #{$ouds-font-size-label-small};
   @include get-font-size("label-small");
-  font-weight: 500;
+  font-weight: $ouds-font-weight-web-label-moderate;
 }
 
 .tag-input {
@@ -251,7 +251,7 @@
   --#{$prefix}tag-padding-end: var(--#{$prefix}tag-padding-asset);
 
   margin: calc(($ouds-tag-size-min-height-interactive-area - var(--#{$prefix}tag-min-height)) / 2) 0;
-  font-weight: 500;
+  font-weight: $ouds-font-weight-web-label-moderate;
   border: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-border-color);
 
   &::before {
