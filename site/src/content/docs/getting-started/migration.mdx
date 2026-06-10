@@ -9,20 +9,30 @@ aliases:
 toc: true
 ---
 
-## v1.3.0
+<Callout type="info">
+  The [`@ouds/web-migrate`](https://www.npmjs.com/package/@ouds/web-migrate) CLI can help update to the latest version. Run it against your project files and review the diff afterward:
+
+  ```bash
+  npx @ouds/web-migrate "src/**/*.{css,scss,html}"
+  ```
+</Callout>
+
+## v1.4.0
 
 <hr />
 
+### Components
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Filter chip and suggestion chip components have been updated to 1.4.0 with no outward changes. Read more in the [filter chip design changelog](https://r.orange.fr/r/S-ouds-doc-filter-chip_changelog) and [suggestion chip design changelog](https://r.orange.fr/r/S-ouds-doc-suggestion-chip_changelog).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Text input component have been updated to 1.4.0 with no outward changes. Read more in the [design changelog](https://r.orange.fr/r/S-ouds-doc-text-input_changelog).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Password input component have been updated to 1.3.0 with no outward changes. Read more in the [design changelog](https://r.orange.fr/r/S-ouds-doc-password-input_changelog).
+
 ### CSS and Sass variables
 
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `scss/vendor/_rfs.scss` has been removed. It was deprecated and should not have been used.
-
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `font-size()` mixin has been removed. Please refer to `get-font-size()` mixin instead.
-
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Some variables have been renamed or removed.
-
 - <details class="mb-small">
-    <summary><span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Renamed Sass variables:</summary>
+    <summary><span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Some variables have been renamed:</summary>
     <ul>
       <li><code>$ouds-elevation-default</code>  → <code>$ouds-elevation-elevated</code></li>
       <li><code>$ouds-elevation-x-default</code>  → <code>$ouds-elevation-x-elevated</code></li>
@@ -66,11 +76,41 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-small">
-    <summary><span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Removed Sass variables:</summary>
-    <ul>
-    </ul>
-  </details>
+## v1.3.0
+
+<hr />
+
+### Components
+
+#### Table
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> OUDS Web now supports a draft table component. It comes from Boosted directly with small tweaks. It is intended as a placeholder for projects that need it urgently but be aware that it will change in the future. Read more in our [table page]([[docsref:/components/table]]).
+
+### Tools
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> We have created a new CLI tool to update your project files automatically. Read more in our [CLI tool readme](https://www.npmjs.com/package/@ouds/web-migrate).
+
+### Utilities
+
+#### Breakpoint prefixes
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Responsive utilities now use a breakpoint prefix instead of an infix. All classes that previously used `.{utility}-{breakpoint}-{value}` must be updated to `.{breakpoint}:{utility}-{value}`. Following are some examples of the changes to apply:
+  - `.d-sm-none` → `.sm:d-none`
+  - `.d-md-flex` → `.md:d-flex`
+  - `.flex-lg-row` → `.lg:flex-row`
+  - `.col-md-6` → `.md:col-6`
+  - `.float-xl-end` → `.xl:float-end`
+  - `.object-fit-2xl-cover` → `.2xl:object-fit-cover`
+
+  Read more in our [display]([[docsref:/utilities/display]]), [flex]([[docsref:/utilities/flex]]) or [spacing]([[docsref:/utilities/spacing]]) pages.
+
+### CSS and Sass variables
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `scss/vendor/_rfs.scss` has been removed. It was deprecated and should not have been used.
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `font-size()` mixin has been removed. Please refer to `get-font-size()` mixin instead.
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `generate-utility()` mixin signature was modified, and the `$is-rfs-media-query` parameter was removed. If you were using it, please make sure to update your code. For Bootstrap compatibility mode, the breakpoint is still the trailing parameter of `generate-utility()`, which lets you keep using the infix form for your custom utilities. You can check how we use it in `scss/utilities/_breakpoints.scss` for reference.
 
 ### Dual mode
 
@@ -84,7 +124,7 @@ toc: true
 
 #### Chips
 
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> Since filter and suggestion chips can be used inside forms, the chips buttons should have the `type="button"` attribute. We have added this to our examples. Read more in our [chips page]([[docsref:/components/chips]]).
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Since filter and suggestion chips can be used inside forms, the chips buttons should have the `type="button"` attribute. We have added this to our examples. Read more in our [chips page]([[docsref:/components/chips]]).
 
 #### Footer
 
@@ -100,8 +140,8 @@ toc: true
 
 #### Password input
 
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> Since password inputs are usually used inside forms, the "show password" button should have the `type="button"` attribute. We have added this to our examples. Read more in our [password input page]([[docsref:/components/password-input]]).
-- <span class="tag tag-small rounded-none tag-positive">New</span> A new live example about how to handle show/hide password buttons has been added. Read more in our [password input page]([[docsref:/components/password-input#live-example]]).
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Since password inputs are usually used inside forms, the "show password" button should have the `type="button"` attribute. We have added this to our examples. Read more in our [password input page]([[docsref:/components/password-input]]).
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> A new live example about how to handle show/hide password buttons has been added. Read more in our [password input page]([[docsref:/components/password-input#live-example]]).
 
 #### Skeleton
 
@@ -109,7 +149,7 @@ toc: true
 
 #### Text input
 
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> Since text inputs are usually used inside forms, the trailing action button should have the `type="button"` attribute. We have added this to our examples. Read more in our [text input page]([[docsref:/components/text-input]]).
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Since text inputs are usually used inside forms, the trailing action button should have the `type="button"` attribute. We have added this to our examples. Read more in our [text input page]([[docsref:/components/text-input]]).
 
 ### Foundations
 
