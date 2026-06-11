@@ -152,204 +152,6 @@ To display a description text, add a `.control-item-description` as a sibling of
     </div>
   </fieldset>`} />
 
-## Layout
-
-### Default
-
-It's recommended to keep checkbox label to no more than three words. When space is limited or when a long label or description text is required, the text can wrap, as this is preferable to truncation. The checkbox indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
-
-<Example buttonLabel="checkboxes with long texts" code={`<div class="row">
-    <div class="col-8 md:col-6 xl:col-5">
-      <fieldset class="control-items-list">
-        <div class="checkbox-item control-item-divider">
-          <div class="control-item-assets-container">
-            <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayout1" aria-describedby="checkboxLayout1Description" />
-          </div>
-          <div class="control-item-text-container">
-            <label class="control-item-label" for="checkboxLayout1">Label</label>
-            <p class="control-item-description" id="checkboxLayout1Description">Description text</p>
-          </div>
-          <div class="control-item-assets-container">
-            <svg aria-hidden="true">
-              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-            </svg>
-          </div>
-        </div>
-        <div class="checkbox-item control-item-divider">
-          <div class="control-item-assets-container">
-            <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayout2" aria-describedby="checkboxLayout2Description" />
-          </div>
-          <div class="control-item-text-container">
-            <label class="control-item-label" for="checkboxLayout2">A short label</label>
-            <p class="control-item-description" id="checkboxLayout2Description">A longer description text that can wrap to another line to show the behaviour</p>
-          </div>
-          <div class="control-item-assets-container">
-            <svg aria-hidden="true">
-              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-            </svg>
-          </div>
-        </div>
-        <div class="checkbox-item control-item-divider">
-          <div class="control-item-assets-container">
-            <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayout3" aria-describedby="checkboxLayout3Description" checked />
-          </div>
-          <div class="control-item-text-container">
-            <label class="control-item-label" for="checkboxLayout3">A longer label for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
-            <p class="control-item-description" id="checkboxLayout3Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
-          </div>
-          <div class="control-item-assets-container">
-            <svg aria-hidden="true">
-              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-            </svg>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-  </div>`} />
-
-### Reverse
-
-To reverse the component, simply add `.control-item-reverse` to a `.checkbox-item`.
-
-<Example buttonLabel="reversed checkboxes" code={`<div class="row">
-    <div class="col-8 md:col-6 xl:col-5">
-      <fieldset class="control-items-list">
-        <div class="checkbox-item control-item-divider control-item-reverse">
-          <div class="control-item-assets-container">
-            <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRev1" aria-describedby="checkboxLayoutRev1Description" />
-          </div>
-          <div class="control-item-text-container">
-            <label class="control-item-label" for="checkboxLayoutRev1">Label with reverse layout</label>
-            <p class="control-item-description" id="checkboxLayoutRev1Description">Description text</p>
-          </div>
-          <div class="control-item-assets-container">
-            <svg aria-hidden="true">
-              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-            </svg>
-          </div>
-        </div>
-        <div class="checkbox-item control-item-divider control-item-reverse">
-          <div class="control-item-assets-container">
-            <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRev2" aria-describedby="checkboxLayoutRev2Description" checked />
-          </div>
-          <div class="control-item-text-container">
-            <label class="control-item-label" for="checkboxLayoutRev2">A longer label with reverse layout for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
-            <p class="control-item-description" id="checkboxLayoutRev2Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
-          </div>
-          <div class="control-item-assets-container">
-            <svg aria-hidden="true">
-              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-            </svg>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-  </div>`} />
-
-<BootstrapCompatibility>
-
-Put your checkboxes on the opposite side with the `.form-check-reverse` modifier class.
-
-<Example buttonLabel="Bootstrap compatibility: reversed checkboxes" code={`<div class="form-check form-check-reverse">
-    <input class="form-check-input" type="checkbox" value="" id="reverseCheck" checked />
-    <label class="form-check-label" for="reverseCheck">
-      Checked reverse checkbox (Bootstrap compatible)
-    </label>
-  </div>`} />
-</BootstrapCompatibility>
-
-### Horizontal
-
-You can align horizontally up to three checkboxes if their labels are short, add sufficient space (for example by using `.gap-small`) between the controls to ensure a clear association of each labels with their corresponding indicator.
-
-<Example buttonLabel="horizontal checkboxes" code={`<fieldset class="control-items-list">
-    <div class="lg:d-flex flex-row gap-small">
-      <div class="checkbox-item flex-fill">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow1" />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="checkboxLayoutRow1">Option 1</label>
-        </div>
-      </div>
-      <div class="checkbox-item flex-fill">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow2" checked />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="checkboxLayoutRow2">Option 2</label>
-        </div>
-      </div>
-      <div class="checkbox-item flex-fill">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow3" checked />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="checkboxLayoutRow3">Option 3</label>
-        </div>
-      </div>
-    </div>
-  </fieldset>`} />
-
-### Max width
-
-By default, checkboxes will span the whole width of their parent container, to limit the width of the checkbox on wider parent container, add a `.component-max-width` to the `.checkbox-item` container. More information on checkbox sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox-responsiveness).
-
-<Example buttonLabel="checkboxes max width" code={`<fieldset class="control-items-list">
-    <div class="checkbox-item component-max-width">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxMWDescription" id="checkboxWithMaxWidth" value="" />
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="checkboxWithMaxWidth">Default checkbox</label>
-        <p class="control-item-description" id="checkboxMWDescription">Description text</p>
-      </div>
-    </div>
-    <div class="checkbox-item component-max-width">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxWithMaxWidth2Description" id="checkboxWithMaxWidth2" value="" checked />
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="checkboxWithMaxWidth2">Checked checkbox</label>
-        <p class="control-item-description" id="checkboxWithMaxWidth2Description">Description text</p>
-      </div>
-    </div>
-  </fieldset>`} />
-
-## Indeterminate
-
-This is often used to indicate a partial selection within a group of choices. For instance, in a nested (hierarchical) list, a parent checkbox can be indeterminate if some, but not all, sub-options are selected. [Learn more about nesting in the design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox-indeterminate).
-
-Users cannot set a checkbox as indeterminate directly. This must be calculated by the system and set via JavaScript (there is no available HTML attribute available for specifying it). Then, checkboxes use the `:indeterminate` pseudo class for styling.
-
-Indeterminate state can be used in conjunction with all the other states below.
-
-<Example buttonLabel="indeterminate checkbox" class="bd-example-indeterminate" addStackblitzJs code={`<fieldset class="control-items-list">
-    <div class="checkbox-item">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="checkbox" value="" id="checkboxIndeterminate" />
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="checkboxIndeterminate">Indeterminate checkbox</label>
-      </div>
-    </div>
-  </fieldset>`} />
-
-Here is the associated JavaScript to set a checkbox as indeterminate.
-
-<Code buttonLabel="JavaScript to set a checkbox as indeterminate" lang="js" code={`const checkbox = document.getElementById('checkboxIndeterminate')
-
-  checkbox.indeterminate = true`} />
-
-<BootstrapCompatibility>
-  <Example buttonLabel="Bootstrap compatibility: indeterminate checkbox" class="bd-example-indeterminate" addStackblitzJs code={`<div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="checkIndeterminate" />
-    <label class="form-check-label" for="checkIndeterminate">
-      Indeterminate checkbox (Bootstrap compatible)
-    </label>
-  </div>`} />
-</BootstrapCompatibility>
-
 ## States
 
 ### Disabled
@@ -593,6 +395,204 @@ If you have a checkbox that is not part of a group but needs validation control,
       </div>
     </div>
   </div>`} />
+
+## Layout
+
+### Default
+
+It's recommended to keep checkbox label to no more than three words. When space is limited or when a long label or description text is required, the text can wrap, as this is preferable to truncation. The checkbox indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
+
+<Example buttonLabel="checkboxes with long texts" code={`<div class="row">
+    <div class="col-8 md:col-6 xl:col-5">
+      <fieldset class="control-items-list">
+        <div class="checkbox-item control-item-divider">
+          <div class="control-item-assets-container">
+            <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayout1" aria-describedby="checkboxLayout1Description" />
+          </div>
+          <div class="control-item-text-container">
+            <label class="control-item-label" for="checkboxLayout1">Label</label>
+            <p class="control-item-description" id="checkboxLayout1Description">Description text</p>
+          </div>
+          <div class="control-item-assets-container">
+            <svg aria-hidden="true">
+              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+            </svg>
+          </div>
+        </div>
+        <div class="checkbox-item control-item-divider">
+          <div class="control-item-assets-container">
+            <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayout2" aria-describedby="checkboxLayout2Description" />
+          </div>
+          <div class="control-item-text-container">
+            <label class="control-item-label" for="checkboxLayout2">A short label</label>
+            <p class="control-item-description" id="checkboxLayout2Description">A longer description text that can wrap to another line to show the behaviour</p>
+          </div>
+          <div class="control-item-assets-container">
+            <svg aria-hidden="true">
+              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+            </svg>
+          </div>
+        </div>
+        <div class="checkbox-item control-item-divider">
+          <div class="control-item-assets-container">
+            <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayout3" aria-describedby="checkboxLayout3Description" checked />
+          </div>
+          <div class="control-item-text-container">
+            <label class="control-item-label" for="checkboxLayout3">A longer label for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
+            <p class="control-item-description" id="checkboxLayout3Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
+          </div>
+          <div class="control-item-assets-container">
+            <svg aria-hidden="true">
+              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+            </svg>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>`} />
+
+### Reverse
+
+To reverse the component, simply add `.control-item-reverse` to a `.checkbox-item`.
+
+<Example buttonLabel="reversed checkboxes" code={`<div class="row">
+    <div class="col-8 md:col-6 xl:col-5">
+      <fieldset class="control-items-list">
+        <div class="checkbox-item control-item-divider control-item-reverse">
+          <div class="control-item-assets-container">
+            <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRev1" aria-describedby="checkboxLayoutRev1Description" />
+          </div>
+          <div class="control-item-text-container">
+            <label class="control-item-label" for="checkboxLayoutRev1">Label with reverse layout</label>
+            <p class="control-item-description" id="checkboxLayoutRev1Description">Description text</p>
+          </div>
+          <div class="control-item-assets-container">
+            <svg aria-hidden="true">
+              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+            </svg>
+          </div>
+        </div>
+        <div class="checkbox-item control-item-divider control-item-reverse">
+          <div class="control-item-assets-container">
+            <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRev2" aria-describedby="checkboxLayoutRev2Description" checked />
+          </div>
+          <div class="control-item-text-container">
+            <label class="control-item-label" for="checkboxLayoutRev2">A longer label with reverse layout for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
+            <p class="control-item-description" id="checkboxLayoutRev2Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
+          </div>
+          <div class="control-item-assets-container">
+            <svg aria-hidden="true">
+              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+            </svg>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>`} />
+
+<BootstrapCompatibility>
+
+Put your checkboxes on the opposite side with the `.form-check-reverse` modifier class.
+
+<Example buttonLabel="Bootstrap compatibility: reversed checkboxes" code={`<div class="form-check form-check-reverse">
+    <input class="form-check-input" type="checkbox" value="" id="reverseCheck" checked />
+    <label class="form-check-label" for="reverseCheck">
+      Checked reverse checkbox (Bootstrap compatible)
+    </label>
+  </div>`} />
+</BootstrapCompatibility>
+
+### Horizontal
+
+You can align horizontally up to three checkboxes if their labels are short, add sufficient space (for example by using `.gap-small`) between the controls to ensure a clear association of each labels with their corresponding indicator.
+
+<Example buttonLabel="horizontal checkboxes" code={`<fieldset class="control-items-list">
+    <div class="lg:d-flex flex-row gap-small">
+      <div class="checkbox-item flex-fill">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow1" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checkboxLayoutRow1">Option 1</label>
+        </div>
+      </div>
+      <div class="checkbox-item flex-fill">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow2" checked />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checkboxLayoutRow2">Option 2</label>
+        </div>
+      </div>
+      <div class="checkbox-item flex-fill">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow3" checked />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checkboxLayoutRow3">Option 3</label>
+        </div>
+      </div>
+    </div>
+  </fieldset>`} />
+
+### Max width
+
+By default, checkboxes will span the whole width of their parent container, to limit the width of the checkbox on wider parent container, add a `.component-max-width` to the `.checkbox-item` container. More information on checkbox sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox-responsiveness).
+
+<Example buttonLabel="checkboxes max width" code={`<fieldset class="control-items-list">
+    <div class="checkbox-item component-max-width">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxMWDescription" id="checkboxWithMaxWidth" value="" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxWithMaxWidth">Default checkbox</label>
+        <p class="control-item-description" id="checkboxMWDescription">Description text</p>
+      </div>
+    </div>
+    <div class="checkbox-item component-max-width">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxWithMaxWidth2Description" id="checkboxWithMaxWidth2" value="" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxWithMaxWidth2">Checked checkbox</label>
+        <p class="control-item-description" id="checkboxWithMaxWidth2Description">Description text</p>
+      </div>
+    </div>
+  </fieldset>`} />
+
+## Indeterminate
+
+This is often used to indicate a partial selection within a group of choices. For instance, in a nested (hierarchical) list, a parent checkbox can be indeterminate if some, but not all, sub-options are selected. [Learn more about nesting in the design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox-indeterminate).
+
+Users cannot set a checkbox as indeterminate directly. This must be calculated by the system and set via JavaScript (there is no available HTML attribute available for specifying it). Then, checkboxes use the `:indeterminate` pseudo class for styling.
+
+Indeterminate state can be used in conjunction with all the other states below.
+
+<Example buttonLabel="indeterminate checkbox" class="bd-example-indeterminate" addStackblitzJs code={`<fieldset class="control-items-list">
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxIndeterminate" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxIndeterminate">Indeterminate checkbox</label>
+      </div>
+    </div>
+  </fieldset>`} />
+
+Here is the associated JavaScript to set a checkbox as indeterminate.
+
+<Code buttonLabel="JavaScript to set a checkbox as indeterminate" lang="js" code={`const checkbox = document.getElementById('checkboxIndeterminate')
+
+  checkbox.indeterminate = true`} />
+
+<BootstrapCompatibility>
+  <Example buttonLabel="Bootstrap compatibility: indeterminate checkbox" class="bd-example-indeterminate" addStackblitzJs code={`<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="checkIndeterminate" />
+    <label class="form-check-label" for="checkIndeterminate">
+      Indeterminate checkbox (Bootstrap compatible)
+    </label>
+  </div>`} />
+</BootstrapCompatibility>
 
 ## Fieldset `<legend>`
 

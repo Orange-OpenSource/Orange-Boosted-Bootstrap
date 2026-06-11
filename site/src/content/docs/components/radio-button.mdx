@@ -201,158 +201,6 @@ To display outlined radio buttons, add `.radio-button-item-outlined` to a `.radi
     </div>
   </fieldset>`} />
 
-## Layout
-
-### Default
-
-It's recommended to keep radio button label to no more than three words. When space is limited or when a long label, extra label or description text is required, the text can wrap, as this is preferable to truncation. The radio button indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
-
-<Example buttonLabel="radio buttons with long texts" code={`<div class="row">
-    <div class="col-8 md:col-6 xl:col-5">
-      <fieldset class="control-items-list">
-        <div class="radio-button-item control-item-divider">
-          <div class="control-item-assets-container">
-            <input class="control-item-indicator" type="radio" value="" id="radioLayout1" name="radioLayout" aria-describedby="radioLayout1ExtraLabel radioLayout1Description" />
-          </div>
-          <div class="control-item-text-container">
-            <label class="control-item-label" for="radioLayout1">Label</label>
-            <p class="radio-button-extra-label" id="radioLayout1ExtraLabel">Extra label</p>
-            <p class="control-item-description" id="radioLayout1Description">Description text</p>
-          </div>
-          <div class="control-item-assets-container">
-            <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-            </svg>
-          </div>
-        </div>
-        <div class="radio-button-item control-item-divider">
-          <div class="control-item-assets-container">
-            <input class="control-item-indicator" type="radio" value="" id="radioLayout2" name="radioLayout"  aria-describedby="radioLayout2ExtraLabel radioLayout2Description" checked />
-          </div>
-          <div class="control-item-text-container">
-            <label class="control-item-label" for="radioLayout2">A longer label for showing behavior in this case</label>
-            <p class="radio-button-extra-label" id="radioLayout2ExtraLabel">Radio button indicator and icon will stick to the top area of the component</p>
-            <p class="control-item-description" id="radioLayout2Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
-          </div>
-          <div class="control-item-assets-container">
-            <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-            </svg>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-  </div>`} />
-
-### Reverse
-
-To reverse the component, simply add `.control-item-reverse` to a `.radio-button-item`.
-
-<Example buttonLabel="reversed radio buttons" code={`<div class="row">
-    <div class="col-8 md:col-6 xl:col-5">
-      <fieldset class="control-items-list">
-        <div class="radio-button-item control-item-divider control-item-reverse">
-          <div class="control-item-assets-container">
-            <input class="control-item-indicator" type="radio" value="" id="radioLayoutRev1" name="radioLayoutRev" aria-describedby="radioLayoutRev1ExtraLabel radioLayoutRev1Description" />
-          </div>
-          <div class="control-item-text-container">
-            <label class="control-item-label" for="radioLayoutRev1">Label with reverse layout</label>
-            <p class="radio-button-extra-label" id="radioLayoutRev1ExtraLabel">Extra label</p>
-            <p class="control-item-description" id="radioLayoutRev1Description">Description text</p>
-          </div>
-          <div class="control-item-assets-container">
-            <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-            </svg>
-          </div>
-        </div>
-        <div class="radio-button-item control-item-divider control-item-reverse">
-          <div class="control-item-assets-container">
-            <input class="control-item-indicator" type="radio" value="" id="radioLayoutRev2" name="radioLayoutRev"  aria-describedby="radioLayoutRev2ExtraLabel radioLayoutRev2Description" checked />
-          </div>
-          <div class="control-item-text-container">
-            <label class="control-item-label" for="radioLayoutRev2">A longer label with reverse layout for showing behavior in this case</label>
-            <p class="radio-button-extra-label" id="radioLayoutRev2ExtraLabel">Radio button indicator and icon will stick to the top area of the component</p>
-            <p class="control-item-description" id="radioLayoutRev2Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
-          </div>
-          <div class="control-item-assets-container">
-            <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-            </svg>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-  </div>`} />
-
-<BootstrapCompatibility>
-
-Put your radio buttons on the opposite side with the `.form-check-reverse` modifier class.
-
-<Example buttonLabel="Bootstrap compatibility: reversed radio buttons" code={`<div class="form-check form-check-reverse">
-    <input class="form-check-input" type="radio" value="" id="reverseCheck1" name="radioReverseBs" />
-    <label class="form-check-label" for="reverseCheck1">
-      Default reverse radio button (Bootstrap compatible)
-    </label>
-  </div>
-  <div class="form-check form-check-reverse">
-    <input class="form-check-input" type="radio" value="" id="reverseCheck2" name="radioReverseBs" checked />
-    <label class="form-check-label" for="reverseCheck2">
-      Checked reverse radio button (Bootstrap compatible)
-    </label>
-  </div>`} />
-</BootstrapCompatibility>
-
-### Horizontal
-
-You can align horizontally up to three radio buttons if their labels are short, add sufficient space (for example by using `.gap-small`) between the controls to ensure a clear association of each labels with their corresponding indicator.
-
-<Example buttonLabel="horizontal radio buttons" code={`<fieldset class="control-items-list">
-    <div class="d-flex flex-row gap-small w-50">
-      <div class="radio-button-item flex-fill">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" id="radioLayoutRow1" name="radioLayoutRow" />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="radioLayoutRow1">Option 1</label>
-        </div>
-      </div>
-      <div class="radio-button-item flex-fill">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" id="radioLayoutRow2" name="radioLayoutRow" checked />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="radioLayoutRow2">Option 2</label>
-        </div>
-      </div>
-    </div>
-  </fieldset>`} />
-
-### Max width
-
-By default, radio buttons will span the whole width of their parent container, to limit the width of the radio button on wider parent container, add a `.component-max-width` to the `.radio-button-item` container. More information on radio button sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-radio-button-responsiveness).
-
-<Example buttonLabel="radio buttons max width" code={`<fieldset class="control-items-list">
-    <div class="radio-button-item component-max-width">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="radio" aria-describedby="radioMWDescription" id="radioWithMaxWidth" value="" name="radioMaxWidth" />
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="radioWithMaxWidth">Default radio</label>
-        <p class="control-item-description" id="radioMWDescription">Description text</p>
-      </div>
-    </div>
-    <div class="radio-button-item component-max-width">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="radio" aria-describedby="radioWithMaxWidth2Description" id="radioWithMaxWidth2" value="" name="radioMaxWidth" checked />
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="radioWithMaxWidth2">Checked radio</label>
-        <p class="control-item-description" id="radioWithMaxWidth2Description">Description text</p>
-      </div>
-    </div>
-  </fieldset>`} />
-
 ## States
 
 ### Disabled
@@ -539,6 +387,158 @@ If the layout is horizontal, the `<fieldset>` must enclose the flex containers s
       </div>
     </fieldset>
   </div>`} />
+
+## Layout
+
+### Default
+
+It's recommended to keep radio button label to no more than three words. When space is limited or when a long label, extra label or description text is required, the text can wrap, as this is preferable to truncation. The radio button indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
+
+<Example buttonLabel="radio buttons with long texts" code={`<div class="row">
+    <div class="col-8 md:col-6 xl:col-5">
+      <fieldset class="control-items-list">
+        <div class="radio-button-item control-item-divider">
+          <div class="control-item-assets-container">
+            <input class="control-item-indicator" type="radio" value="" id="radioLayout1" name="radioLayout" aria-describedby="radioLayout1ExtraLabel radioLayout1Description" />
+          </div>
+          <div class="control-item-text-container">
+            <label class="control-item-label" for="radioLayout1">Label</label>
+            <p class="radio-button-extra-label" id="radioLayout1ExtraLabel">Extra label</p>
+            <p class="control-item-description" id="radioLayout1Description">Description text</p>
+          </div>
+          <div class="control-item-assets-container">
+            <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+            </svg>
+          </div>
+        </div>
+        <div class="radio-button-item control-item-divider">
+          <div class="control-item-assets-container">
+            <input class="control-item-indicator" type="radio" value="" id="radioLayout2" name="radioLayout"  aria-describedby="radioLayout2ExtraLabel radioLayout2Description" checked />
+          </div>
+          <div class="control-item-text-container">
+            <label class="control-item-label" for="radioLayout2">A longer label for showing behavior in this case</label>
+            <p class="radio-button-extra-label" id="radioLayout2ExtraLabel">Radio button indicator and icon will stick to the top area of the component</p>
+            <p class="control-item-description" id="radioLayout2Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
+          </div>
+          <div class="control-item-assets-container">
+            <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+            </svg>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>`} />
+
+### Reverse
+
+To reverse the component, simply add `.control-item-reverse` to a `.radio-button-item`.
+
+<Example buttonLabel="reversed radio buttons" code={`<div class="row">
+    <div class="col-8 md:col-6 xl:col-5">
+      <fieldset class="control-items-list">
+        <div class="radio-button-item control-item-divider control-item-reverse">
+          <div class="control-item-assets-container">
+            <input class="control-item-indicator" type="radio" value="" id="radioLayoutRev1" name="radioLayoutRev" aria-describedby="radioLayoutRev1ExtraLabel radioLayoutRev1Description" />
+          </div>
+          <div class="control-item-text-container">
+            <label class="control-item-label" for="radioLayoutRev1">Label with reverse layout</label>
+            <p class="radio-button-extra-label" id="radioLayoutRev1ExtraLabel">Extra label</p>
+            <p class="control-item-description" id="radioLayoutRev1Description">Description text</p>
+          </div>
+          <div class="control-item-assets-container">
+            <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+            </svg>
+          </div>
+        </div>
+        <div class="radio-button-item control-item-divider control-item-reverse">
+          <div class="control-item-assets-container">
+            <input class="control-item-indicator" type="radio" value="" id="radioLayoutRev2" name="radioLayoutRev"  aria-describedby="radioLayoutRev2ExtraLabel radioLayoutRev2Description" checked />
+          </div>
+          <div class="control-item-text-container">
+            <label class="control-item-label" for="radioLayoutRev2">A longer label with reverse layout for showing behavior in this case</label>
+            <p class="radio-button-extra-label" id="radioLayoutRev2ExtraLabel">Radio button indicator and icon will stick to the top area of the component</p>
+            <p class="control-item-description" id="radioLayoutRev2Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
+          </div>
+          <div class="control-item-assets-container">
+            <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+              <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+            </svg>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>`} />
+
+<BootstrapCompatibility>
+
+Put your radio buttons on the opposite side with the `.form-check-reverse` modifier class.
+
+<Example buttonLabel="Bootstrap compatibility: reversed radio buttons" code={`<div class="form-check form-check-reverse">
+    <input class="form-check-input" type="radio" value="" id="reverseCheck1" name="radioReverseBs" />
+    <label class="form-check-label" for="reverseCheck1">
+      Default reverse radio button (Bootstrap compatible)
+    </label>
+  </div>
+  <div class="form-check form-check-reverse">
+    <input class="form-check-input" type="radio" value="" id="reverseCheck2" name="radioReverseBs" checked />
+    <label class="form-check-label" for="reverseCheck2">
+      Checked reverse radio button (Bootstrap compatible)
+    </label>
+  </div>`} />
+</BootstrapCompatibility>
+
+### Horizontal
+
+You can align horizontally up to three radio buttons if their labels are short, add sufficient space (for example by using `.gap-small`) between the controls to ensure a clear association of each labels with their corresponding indicator.
+
+<Example buttonLabel="horizontal radio buttons" code={`<fieldset class="control-items-list">
+    <div class="d-flex flex-row gap-small w-50">
+      <div class="radio-button-item flex-fill">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="radio" value="" id="radioLayoutRow1" name="radioLayoutRow" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="radioLayoutRow1">Option 1</label>
+        </div>
+      </div>
+      <div class="radio-button-item flex-fill">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="radio" value="" id="radioLayoutRow2" name="radioLayoutRow" checked />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="radioLayoutRow2">Option 2</label>
+        </div>
+      </div>
+    </div>
+  </fieldset>`} />
+
+### Max width
+
+By default, radio buttons will span the whole width of their parent container, to limit the width of the radio button on wider parent container, add a `.component-max-width` to the `.radio-button-item` container. More information on radio button sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-radio-button-responsiveness).
+
+<Example buttonLabel="radio buttons max width" code={`<fieldset class="control-items-list">
+    <div class="radio-button-item component-max-width">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="radio" aria-describedby="radioMWDescription" id="radioWithMaxWidth" value="" name="radioMaxWidth" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="radioWithMaxWidth">Default radio</label>
+        <p class="control-item-description" id="radioMWDescription">Description text</p>
+      </div>
+    </div>
+    <div class="radio-button-item component-max-width">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="radio" aria-describedby="radioWithMaxWidth2Description" id="radioWithMaxWidth2" value="" name="radioMaxWidth" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="radioWithMaxWidth2">Checked radio</label>
+        <p class="control-item-description" id="radioWithMaxWidth2Description">Description text</p>
+      </div>
+    </div>
+  </fieldset>`} />
 
 ## Fieldset `<legend>`
 
