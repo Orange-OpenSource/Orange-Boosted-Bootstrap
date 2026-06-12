@@ -32,7 +32,7 @@
   min-height: var(--#{$prefix}tag-min-height);
   padding: calc(var(--#{$prefix}tag-padding-y) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-end) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-y) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-start) - var(--#{$prefix}tag-border-width));
   margin: 0;
-  font-weight: 700;
+  font-weight: $ouds-font-weight-web-label-strong;
   color: var(--#{$prefix}tag-color);
   white-space: nowrap;
   background-color: var(--#{$prefix}tag-background-color);
