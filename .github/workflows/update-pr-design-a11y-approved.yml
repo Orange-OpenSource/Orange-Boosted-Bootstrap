@@ -5,6 +5,9 @@ on:
       - labeled
       - unlabeled
 
+permissions:
+  contents: read
+
 jobs:
   design_or_a11y_approved:
     if: (contains(github.event.*.labels.*.name, 'passed a11y review') || contains(github.event.*.labels.*.name, 'passed design review')) && !(contains(github.event.*.labels.*.name, 'ready for a11y review') || contains(github.event.*.labels.*.name, 'ready for design review'))
