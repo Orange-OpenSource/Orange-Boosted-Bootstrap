@@ -86,21 +86,21 @@
     width: var(--#{$prefix}badge-size);
     height: var(--#{$prefix}badge-size);
     padding: 0;
+  }
+}
 
-    .badge-status-icon {
-      &::before,
-      &::after {
-        position: absolute;
-        inset: 0;
-        content: "";
-        mask: no-repeat center / contain;
-      }
+.badge-status-icon {
+  &::before,
+  &::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    mask: no-repeat center / contain;
+  }
 
-      &::before {
-        background-color: currentcolor;
-        mask-image: var(--#{$prefix}badge-icon);
-      }
-    }
+  &::before {
+    background-color: currentcolor;
+    mask-image: var(--#{$prefix}badge-icon);
   }
 }
 
