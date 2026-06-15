@@ -1,55 +1,3 @@
-//
-// Mixins
-//
-
-// Generates color vars + status-icon mask for a status badge variant.
-// $icon: SVG mask icon (required)
-// $icon-internal: SVG mask icon for two-layer icons (optional, for 'warning' case)
-// $icon-internal-color: CSS custom property var for the internal shape color (optional, for 'warning' case)
-@mixin badge-status-variant($color, $bg, $icon, $icon-internal: null, $icon-internal-color: null) {
-  --#{$prefix}badge-color: #{$color};
-  --#{$prefix}badge-background-color: #{$bg};
-
-  &:has(.badge-status-icon) {
-    --#{$prefix}badge-color: #{$bg};
-    --#{$prefix}badge-background-color: #{$color};
-
-    &.badge-disabled {
-      --#{$prefix}badge-color: #{$ouds-color-action-disabled};
-      --#{$prefix}badge-background-color: #{$ouds-color-content-on-action-disabled};
-      background-color: transparent; // Due to transparency of $ouds-color-action-disabled, do not apply background color here
-
-      @if $icon-internal {
-        .badge-status-icon::before {
-          background-color: #{$ouds-color-action-disabled};
-        }
-
-        .badge-status-icon::after {
-          background-color: #{$ouds-color-content-on-action-disabled};
-        }
-      }
-    }
-
-    .badge-status-icon::before {
-      background-color: currentcolor;
-      mask-image: escape-svg($icon);
-    }
-
-    @if $icon-internal {
-      --#{$prefix}badge-background-color: transparent;
-
-      .badge-status-icon::after {
-        background-color: #{$icon-internal-color};
-        mask-image: escape-svg($icon-internal);
-      }
-    }
-  }
-}
-
-//
-// Base styles
-//
-
 .badge {
   // scss-docs-start badge-css-vars
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-medium)};
@@ -59,6 +7,7 @@
   --#{$prefix}badge-padding-y-medium-large: #{$ouds-badge-space-inset-medium-large};
   --#{$prefix}badge-color: #{$ouds-color-content-on-status-negative-emphasized};
   --#{$prefix}badge-background-color: #{$ouds-color-surface-status-negative-emphasized};
+  --#{$prefix}badge-icon: #{escape-svg($badge-icon-negative)};
   // scss-docs-end badge-css-vars
 
   display: inline-block;
@@ -68,7 +17,7 @@
   padding: var(--#{$prefix}badge-padding-y-medium-large) var(--#{$prefix}badge-padding-x-medium-large);
   margin: 0;
   font-style: normal;
-  font-weight: 400;
+  font-weight: $ouds-font-weight-web-label-default;
   color: var(--#{$prefix}badge-color);
   text-align: center;
   background-color: var(--#{$prefix}badge-background-color);
@@ -84,9 +33,54 @@
     font-size: calc(var(--#{$prefix}badge-size) - (2 * var(--#{$prefix}badge-padding-x-medium-large)));
   }
 
+  &.badge-neutral {
+    --#{$prefix}badge-color: #{$ouds-color-content-inverse};
+    --#{$prefix}badge-background-color: #{$ouds-color-surface-inverse-high};
+  }
+
+  &.badge-accent {
+    --#{$prefix}badge-color: #{$ouds-color-content-on-status-accent-emphasized};
+    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-accent-emphasized};
+  }
+
+  &.badge-positive {
+    --#{$prefix}badge-color: #{$ouds-color-content-on-status-positive-emphasized};
+    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-positive-emphasized};
+    --#{$prefix}badge-icon: #{escape-svg($badge-icon-positive)};
+
+    &:has(.badge-status-icon) {
+      --#{$prefix}badge-color: #{$ouds-color-surface-status-positive-emphasized};
+    }
+  }
+
+  &.badge-info {
+    --#{$prefix}badge-color: #{$ouds-color-content-on-status-info-emphasized};
+    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-info-emphasized};
+    --#{$prefix}badge-icon: #{escape-svg($badge-icon-info)};
+
+    &:has(.badge-status-icon) {
+      --#{$prefix}badge-color: #{$ouds-color-surface-status-info-emphasized};
+    }
+  }
+
+  &.badge-warning {
+    --#{$prefix}badge-color: #{$ouds-color-content-on-status-warning-emphasized};
+    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-warning-emphasized};
+    --#{$prefix}badge-icon: #{escape-svg($badge-icon-warning-external)};
+
+    &:has(.badge-status-icon) {
+      --#{$prefix}badge-color: #{$ouds-color-surface-status-warning-emphasized};
+      .badge-status-icon::after {
+        background-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
+        mask-image: escape-svg($badge-icon-warning-internal);
+      }
+    }
+  }
+
   &:has(.badge-status-icon) {
+    // status icons have a transparent sign so the badge color is applied to what appears to be the icon background
     --#{$prefix}badge-color: #{$ouds-color-surface-status-negative-emphasized};
-    --#{$prefix}badge-background-color: #{$ouds-color-content-on-status-negative-emphasized};
+    --#{$prefix}badge-background-color: transparent;
     position: relative;
     flex-shrink: 0;
     width: var(--#{$prefix}badge-size);
@@ -101,57 +95,31 @@
         content: "";
         mask: no-repeat center / contain;
       }
+
+      &::before {
+        background-color: currentcolor;
+        mask-image: var(--#{$prefix}badge-icon);
+      }
     }
   }
+}
 
-  &.badge-neutral {
-    --#{$prefix}badge-color: #{$ouds-color-content-inverse};
-    --#{$prefix}badge-background-color: #{$ouds-color-surface-inverse-high};
-  }
+.badge.disabled,
+.disabled .badge,
+[disabled] .badge,
+[aria-disabled="true"] .badge {
+  --#{$prefix}badge-color: #{$ouds-color-content-on-action-disabled};
+  --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
 
-  &.badge-accent {
-    --#{$prefix}badge-color: #{$ouds-color-content-on-status-accent-emphasized};
-    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-accent-emphasized};
-  }
+  &:has(.badge-status-icon) {
+    --#{$prefix}badge-color: #{$ouds-color-action-disabled};
+    --#{$prefix}badge-background-color: transparent;
 
-  // Functional variants — each uses the shared mixin
-  &:not(.badge-neutral, .badge-accent) {
-    @include badge-status-variant(
-      $ouds-color-content-on-status-negative-emphasized,
-      $ouds-color-surface-status-negative-emphasized,
-      $badge-icon-negative
-    );
-  }
-
-  &.badge-positive {
-    @include badge-status-variant(
-      $ouds-color-content-on-status-positive-emphasized,
-      $ouds-color-surface-status-positive-emphasized,
-      $badge-icon-positive
-    );
-  }
-
-  &.badge-info {
-    @include badge-status-variant(
-      $ouds-color-content-on-status-info-emphasized,
-      $ouds-color-surface-status-info-emphasized,
-      $badge-icon-info
-    );
-  }
-
-  &.badge-warning {
-    @include badge-status-variant(
-      $ouds-color-content-on-status-warning-emphasized,
-      $ouds-color-surface-status-warning-emphasized,
-      $badge-icon-warning-external,
-      $badge-icon-warning-internal,
-      var(--#{$prefix}icon-color-content-status-warning-internal-shape)
-    );
-  }
-
-  &.badge-disabled {
-    --#{$prefix}badge-color: #{$ouds-color-content-on-action-disabled};
-    --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
+    &.badge-warning {
+      .badge-status-icon::after {
+        background-color: transparent;
+      }
+    }
   }
 }
 
