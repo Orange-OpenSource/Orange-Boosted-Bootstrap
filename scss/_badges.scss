@@ -22,15 +22,6 @@
   background-color: var(--#{$prefix}badge-background-color);
   @include get-font-size("label-small");
   @include border-radius(#{$ouds-border-radius-pill});
-
-  .badge-icon {
-    display: flex;
-    flex: 1 0 0;
-    align-items: center;
-    justify-content: center;
-    aspect-ratio: 1/1;
-    font-size: var(--#{$prefix}badge-icon-font-size);
-  }
 }
 
 //
@@ -132,6 +123,15 @@
     background-color: currentcolor;
     mask-image: var(--#{$prefix}badge-icon);
   }
+}
+
+.badge-icon {
+  display: flex;
+  flex: 1 0 0;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  font-size: var(--#{$prefix}badge-icon-font-size);
 }
 
 //
