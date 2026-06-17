@@ -38,7 +38,7 @@ export const ob1Replacements = [
 
   // Colors
   ['text-primary2', 'text-brand-tertiary'],
-  ['text-primary3', 'text-brand-secondary'],
+  ['text-primary3(-emphasis)?', 'text-brand-secondary'],
   ['text-gray[34]', 'text-muted'],
 
   // Text

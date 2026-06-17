@@ -18,6 +18,10 @@ export const oudsReplacements = [
   // Ratio
   [...warnForClass('ratio')],
 
+  // Components
+  // Badge
+  ['badge-disabled', 'disabled'],
+
   // Form
   [
     ...warnForClass('was-validated', {
