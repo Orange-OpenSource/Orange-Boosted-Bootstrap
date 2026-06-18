@@ -138,6 +138,7 @@
 // Disabled state
 //
 
+.badge.badge-disabled, // @deprecated, will be removed in v1.5.0 https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3607
 .badge.disabled,
 .disabled .badge,
 [disabled] .badge,

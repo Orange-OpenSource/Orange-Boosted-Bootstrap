@@ -153,7 +153,7 @@ The disabled state of a badge appears visually muted to signal that it is not cu
   <p class="badge badge-warning disabled"></p>
   <p class="badge disabled"></p>`} />
 
-If the badge is in a disabled context (for example, inside a disabled button), the badge will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, or the `.disabled` class.
+If the badge is in a disabled context (for example, inside a disabled button), the badge will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, the `[aria-disabled="true"]` attribute, or the `.disabled` class.
 
 <Example buttonLabel="disabled badges in button" code={`
   <button type="button" class="tag tag-input" disabled>
@@ -219,7 +219,7 @@ The disabled state of a badge - count appears visually muted to signal that it i
   <p class="badge badge-warning badge-count disabled">+99<span class="visually-hidden">alerts</span></p>
   <p class="badge badge-count disabled">250<span class="visually-hidden">errors</span></p>`} />
 
-If the badge is in a disabled context (for example, inside a disabled button), the badge will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, or the `.disabled` class.
+If the badge is in a disabled context (for example, inside a disabled button), the badge will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, the `[aria-disabled="true"]` attribute, or the `.disabled` class.
 
 <Example buttonLabel="disabled badges count in button" code={`
   <button type="button" class="tag tag-input" disabled>
@@ -350,6 +350,18 @@ The disabled state of a badge - icon appears visually muted to signal that it is
     <span class="badge-icon si-settings" aria-hidden="true"></span>
     <span class="visually-hidden">Parameters</span>
   </p>`} />
+
+If the badge is in a disabled context (for example, inside a disabled button), the badge will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, the `[aria-disabled="true"]` attribute, or the `.disabled` class.
+
+<Example buttonLabel="disabled badges icon in button" code={`
+  <button type="button" class="tag tag-input" disabled>
+    5G Ready
+    <span class="badge badge-info badge-small">
+      <span class="badge-status-icon"></span>
+      <span class="visually-hidden">Info</span>
+    </span>
+    <span class="visually-hidden">Remove this tag</span>
+  </button>`} />
 
 ### Sizes
 
