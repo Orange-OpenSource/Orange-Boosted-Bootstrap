@@ -31,12 +31,12 @@ if (layout === 'docs' && version === getConfig().docs_version) {
     aria-expanded="false"
     data-bs-display="static"
   >
-    <span class="d-lg-none" aria-hidden="true">OUDS Web</span><span class="visually-hidden">OUDS Web&nbsp;</span> v{
+    <span class="lg:d-none" aria-hidden="true">OUDS Web</span><span class="visually-hidden">OUDS Web&nbsp;</span> v{
       getConfig().docs_version
     }
     <span class="visually-hidden">(switch to other versions)</span>
   </button>
-  <ul class="dropdown-menu dropdown-menu-end mb-small mb-lg-none">
+  <ul class="dropdown-menu dropdown-menu-end mb-small lg:mb-none">
     <li><h6 class="dropdown-header">v1 releases</h6></li>
     <li>
       <a
@@ -47,7 +47,7 @@ if (layout === 'docs' && version === getConfig().docs_version) {
           : `/${getConfig().brand}/docs/${getConfig().docs_version}/${versionsLink}`}
       >
         Latest ({getConfig().docs_version}.x)
-        <svg class="bi" aria-hidden="true"
+        <svg aria-hidden="true"
           ><use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#check2')}></use></svg
         >
       </a>

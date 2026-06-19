@@ -21,6 +21,7 @@ $utilities: map-merge(
     // scss-docs-start utils-float
     "float": (
       responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: float,
       values: (
         start: left,
@@ -33,6 +34,7 @@ $utilities: map-merge(
     // scss-docs-start utils-object-fit
     "object-fit": (
       responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: object-fit,
       values: (
         contain: contain,
@@ -80,6 +82,7 @@ $utilities: map-merge(
     // scss-docs-start utils-display
     "display": (
       responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       print: true,
       property: display,
       class: d,
@@ -335,17 +338,20 @@ $utilities: map-merge(
     // scss-docs-start utils-flex
     "flex": (
       responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: flex,
       values: (fill: 1 1 auto)
     ),
     "flex-direction": (
       responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: flex-direction,
       class: flex,
       values: row column row-reverse column-reverse
     ),
     "flex-grow": (
       responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: flex-grow,
       class: flex,
       values: (
@@ -355,6 +361,7 @@ $utilities: map-merge(
     ),
     "flex-shrink": (
       responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: flex-shrink,
       class: flex,
       values: (
@@ -364,12 +371,14 @@ $utilities: map-merge(
     ),
     "flex-wrap": (
       responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: flex-wrap,
       class: flex,
       values: wrap nowrap wrap-reverse
     ),
     "justify-content": (
       responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: justify-content,
       values: (
         start: flex-start,
@@ -382,6 +391,7 @@ $utilities: map-merge(
     ),
     "align-items": (
       responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: align-items,
       values: (
         start: flex-start,
@@ -393,6 +403,7 @@ $utilities: map-merge(
     ),
     "align-content": (
       responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: align-content,
       values: (
         start: flex-start,
@@ -405,6 +416,7 @@ $utilities: map-merge(
     ),
     "align-self": (
       responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: align-self,
       values: (
         auto: auto,
@@ -417,6 +429,7 @@ $utilities: map-merge(
     ),
     "order": (
       responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: order,
       values: (
         first: -1,
@@ -433,99 +446,99 @@ $utilities: map-merge(
     // scss-docs-start utils-spacing
     // Margin utilities
     "margin": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: margin,
       class: m,
-      values: $spacers, // OUDS mod: `auto` value handled by `margin-ouds`
+      values: map-merge($spacers, (auto: auto)),
       bootstrap-compatibility: true
     ),
     "margin-x": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: margin-inline,
       class: mx,
-      values: $spacers, // OUDS mod: `auto` value handled by `margin-x-ouds`
+      values: map-merge($spacers, (auto: auto)),
       bootstrap-compatibility: true
     ),
     "margin-y": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: margin-block,
       class: my,
-      values: $spacers, // OUDS mod: `auto` value handled by `margin-y-ouds`
+      values: map-merge($spacers, (auto: auto)),
       bootstrap-compatibility: true
     ),
     "margin-top": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: margin-top,
       class: mt,
-      values: $spacers, // OUDS mod: `auto` value handled by `margin-top-ouds`
+      values: map-merge($spacers, (auto: auto)),
       bootstrap-compatibility: true
     ),
     "margin-end": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: margin-right,
       class: me,
-      values: $spacers, // OUDS mod: `auto` value handled by `margin-end-ouds`
+      values: map-merge($spacers, (auto: auto)),
       bootstrap-compatibility: true
     ),
     "margin-bottom": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: margin-bottom,
       class: mb,
-      values: $spacers, // OUDS mod: `auto` value handled by `margin-bottom-ouds`
+      values: map-merge($spacers, (auto: auto)),
       bootstrap-compatibility: true
     ),
     "margin-start": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: margin-left,
       class: ms,
-      values: $spacers, // OUDS mod: `auto` value handled by `margin-start-ouds`
+      values: map-merge($spacers, (auto: auto)),
       bootstrap-compatibility: true
     ),
     // Negative margin utilities
     "negative-margin": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: margin,
       class: m,
       values: $negative-spacers,
       bootstrap-compatibility: true
     ),
     "negative-margin-x": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: margin-inline,
       class: mx,
       values: $negative-spacers,
       bootstrap-compatibility: true
     ),
     "negative-margin-y": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: margin-block,
       class: my,
       values: $negative-spacers,
       bootstrap-compatibility: true
     ),
     "negative-margin-top": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: margin-top,
       class: mt,
       values: $negative-spacers,
       bootstrap-compatibility: true
     ),
     "negative-margin-end": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: margin-right,
       class: me,
       values: $negative-spacers,
       bootstrap-compatibility: true
     ),
     "negative-margin-bottom": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: margin-bottom,
       class: mb,
       values: $negative-spacers,
       bootstrap-compatibility: true
     ),
     "negative-margin-start": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: margin-left,
       class: ms,
       values: $negative-spacers,
@@ -533,49 +546,49 @@ $utilities: map-merge(
     ),
     // Padding utilities
     "padding": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: padding,
       class: p,
       values: $spacers,
       bootstrap-compatibility: true
     ),
     "padding-x": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: padding-inline,
       class: px,
       values: $spacers,
       bootstrap-compatibility: true
     ),
     "padding-y": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: padding-block,
       class: py,
       values: $spacers,
       bootstrap-compatibility: true
     ),
     "padding-top": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: padding-top,
       class: pt,
       values: $spacers,
       bootstrap-compatibility: true
     ),
     "padding-end": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: padding-right,
       class: pe,
       values: $spacers,
       bootstrap-compatibility: true
     ),
     "padding-bottom": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: padding-bottom,
       class: pb,
       values: $spacers,
       bootstrap-compatibility: true
     ),
     "padding-start": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: padding-left,
       class: ps,
       values: $spacers,
@@ -583,21 +596,21 @@ $utilities: map-merge(
     ),
     // Gap utility
     "gap": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: gap,
       class: gap,
       values: $spacers,
       bootstrap-compatibility: true
     ),
     "row-gap": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: row-gap,
       class: row-gap,
       values: $spacers,
       bootstrap-compatibility: true
     ),
     "column-gap": (
-      responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: column-gap,
       class: column-gap,
       values: $spacers,
@@ -919,6 +932,7 @@ $utilities: map-merge(
     ),
     "text-align": (
       responsive: true,
+      responsive-bootstrap: true, // OUDS mod
       property: text-align,
       class: text,
       values: (

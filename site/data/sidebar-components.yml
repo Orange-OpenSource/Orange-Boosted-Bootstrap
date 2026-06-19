@@ -21,6 +21,8 @@
     - title: Select input
     - title: Skeleton
     - title: Switch
+    - title: Table
+      draft: true
     - title: Tags
     - title: Text area
     - title: Text input
@@ -72,8 +74,6 @@
     - title: Stepped process
       coming_soon: true
     - title: Sticker
-      coming_soon: true
-    - title: Table
       coming_soon: true
     - title: Title bar
       coming_soon: true

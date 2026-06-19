@@ -58,7 +58,7 @@
       display: none;
       width: 100%;
       margin-top: $form-feedback-margin-top;
-      @include font-size($form-feedback-font-size);
+      font-size: $form-feedback-font-size;
       font-style: $form-feedback-font-style;
       font-weight: $font-weight-bold; // OUDS mod
       line-height: $form-feedback-line-height; // OUDS mod

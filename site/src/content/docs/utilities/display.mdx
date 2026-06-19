@@ -14,12 +14,12 @@ Change the value of the [`display` property](https://developer.mozilla.org/en-US
 
 ## Notation
 
-Display utility classes that apply to all [breakpoints]([[docsref:/layout/breakpoints]]), from `2xs` to `3xl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0;` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
+Display utility classes that apply to all [breakpoints]([[docsref:/layout/breakpoints]]), from `2xs` to `3xl`, have no breakpoint prefix. This is because those classes are applied from `min-width: 0;` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint prefix.
 
 As such, the classes are named using the format:
 
 - `.d-{value}` for `2xs`
-- `.d-{breakpoint}-{value}` for `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, and `3xl`.
+- `.{breakpoint}:d-{value}` for `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, and `3xl`.
 
 Where *value* is one of:
 
@@ -37,7 +37,7 @@ Where *value* is one of:
 
 The display values can be altered by changing the `display` values defined in `$utilities` and recompiling the SCSS.
 
-The media queries affect screen widths with the given breakpoint *or larger*. For example, `.d-lg-none` sets `display: none;` on `lg`, `xl`, `2xl`, and `3xl` screens.
+The media queries affect screen widths with the given breakpoint *or larger*. For example, `.lg:d-none` sets `display: none;` on `lg`, `xl`, `2xl`, and `3xl` screens.
 
 ## Examples
 
@@ -62,6 +62,37 @@ There's no more clearfix helper in OUDS Web as it's an outdated technique. Inste
 
 For faster mobile-friendly development, use responsive display classes for showing and hiding elements by device. Avoid creating entirely different versions of the same site, instead hide elements responsively for each screen size.
 
+To hide elements simply use the `.d-none` class or one of the `.{xs,sm,md,lg,xl,2xl,3xl}:d-none` classes for any responsive screen variation.
+
+To show an element only on a given interval of screen sizes you can combine one `.*:d-none` class with a `.*:d-*` class, for example `.d-none .md:d-block .xl:d-none` will hide the element for all screen sizes except on medium and large devices.
+
+<BsTable>
+| Screen size | Class |
+| --- | --- |
+| Hidden on all | `.d-none` |
+| Visible on all | `.d-block` |
+| Hidden only on 2xs | `.d-none .xs:d-block` |
+| Hidden only on xs | `.xs:d-none .sm:d-block` |
+| Hidden only on sm | `.sm:d-none .md:d-block` |
+| Hidden only on md | `.md:d-none .lg:d-block` |
+| Hidden only on lg | `.lg:d-none .xl:d-block` |
+| Hidden only on xl | `.xl:d-none .2xl:d-block` |
+| Hidden only on 2xl | `.2xl:d-none .3xl:d-block` |
+| Hidden only on 3xl | `.3xl:d-none` |
+| Visible only on 2xs | `.d-block .xs:d-none` |
+| Visible only on xs | `.d-none .xs:d-block .sm:d-none` |
+| Visible only on sm | `.d-none .sm:d-block .md:d-none` |
+| Visible only on md | `.d-none .md:d-block .lg:d-none` |
+| Visible only on lg | `.d-none .lg:d-block .xl:d-none` |
+| Visible only on xl | `.d-none .xl:d-block .2xl:d-none` |
+| Visible only on 2xl | `.d-none .2xl:d-block .3xl:d-none` |
+| Visible only on 3xl | `.d-none .3xl:d-block` |
+</BsTable>
+
+<Example code={`<div class="lg:d-none">hide on lg and wider screens</div>
+<div class="d-none lg:d-block">hide on screens smaller than lg</div>`} />
+
+<BootstrapCompatibility>
 To hide elements simply use the `.d-none` class or one of the `.d-{xs,sm,md,lg,xl,2xl,3xl}-none` classes for any responsive screen variation.
 
 To show an element only on a given interval of screen sizes you can combine one `.d-*-none` class with a `.d-*-*` class, for example `.d-none .d-md-block .d-xl-none` will hide the element for all screen sizes except on medium and large devices.
@@ -91,10 +122,31 @@ To show an element only on a given interval of screen sizes you can combine one 
 
 <Example code={`<div class="d-lg-none">hide on lg and wider screens</div>
 <div class="d-none d-lg-block">hide on screens smaller than lg</div>`} />
+</BootstrapCompatibility>
 
 ## Display in print
 
 Change the `display` value of elements when printing with our print display utility classes. Includes support for the same `display` values as our responsive `.d-*` utilities.
+
+- `.print:d-none`
+- `.print:d-inline`
+- `.print:d-inline-block`
+- `.print:d-block`
+- `.print:d-grid`
+- `.print:d-inline-grid`
+- `.print:d-table`
+- `.print:d-table-row`
+- `.print:d-table-cell`
+- `.print:d-flex`
+- `.print:d-inline-flex`
+
+The print and display classes can be combined.
+
+<Example code={`<div class="print:d-none">Screen Only (Hide on print only)</div>
+<div class="d-none print:d-block">Print Only (Hide on screen only)</div>
+<div class="d-none lg:d-block print:d-block">Hide up to large on screen, but always show on print</div>`} />
+
+<BootstrapCompatibility>
 
 - `.d-print-none`
 - `.d-print-inline`
@@ -113,3 +165,5 @@ The print and display classes can be combined.
 <Example code={`<div class="d-print-none">Screen Only (Hide on print only)</div>
 <div class="d-none d-print-block">Print Only (Hide on screen only)</div>
 <div class="d-none d-lg-block d-print-block">Hide up to large on screen, but always show on print</div>`} />
+
+</BootstrapCompatibility>

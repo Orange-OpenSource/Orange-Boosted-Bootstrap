@@ -16,7 +16,7 @@ Breadcrumb is a UI element that aids in navigation and identifies the current lo
 
 Use an ordered or unordered list with linked list items to create a minimally styled breadcrumb. It is strongly advised to add `title` attributes on each items.
 
-<Example code={`<nav aria-label="basic breadcrumb">
+<Example buttonLabel="basic breadcrumbs" code={`<nav aria-label="basic breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="#" title="Home">Home</a></li>
       <li class="breadcrumb-item active" aria-current="page"><span title="Library">Library</span></li>
@@ -34,7 +34,7 @@ Use an ordered or unordered list with linked list items to create a minimally st
   </nav>`} />
 
 <BootstrapCompatibility>
-<Example code={`<nav aria-label="breadcrumb bs l2">
+<Example buttonLabel="Bootstrap compatibility: basic breadcrumbs" code={`<nav aria-label="breadcrumb bs l2">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="#">Home</a></li>
       <li class="breadcrumb-item active" aria-current="page">Library</li>
@@ -70,7 +70,7 @@ Breadcrumb will never wrap, the number of displayed items depends on the availab
   The following examples are for small viewport demonstration purpose only.
 </Callout>
 
-<Example code={`<nav aria-label="large breadcrumb">
+<Example buttonLabel="breadcrumbs breakpoints behavior" code={`<nav aria-label="large breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="/" title="Home">Home</a></li>
       <li class="breadcrumb-item"><a href="#" title="Very long subcategory to test responsive">Very long subcategory to test responsive</a></li>
@@ -96,7 +96,7 @@ To prevent a specific item from being truncated, add `.flex-shrink-0` on the `<l
   Be aware that adding this utility to all items would result in an overflow.
 </Callout>
 
-<Example code={`<nav aria-label="very large breadcrumb with no truncation on some items">
+<Example buttonLabel="breadcrumbs avoiding truncation" code={`<nav aria-label="very large breadcrumb with no truncation on some items">
     <ol class="breadcrumb">
       <li class="breadcrumb-item flex-shrink-0"><a href="#" title="Home">Home</a></li>
       <li class="breadcrumb-item flex-shrink-0"><a href="#" title="Very long subcategory to test responsive">Very long subcategory to test responsive</a></li>
