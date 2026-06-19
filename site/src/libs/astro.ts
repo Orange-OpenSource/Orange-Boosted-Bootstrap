@@ -8,7 +8,7 @@ import autoImport from 'astro-auto-import'
 import type { Element, Text } from 'hast'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { getConfig } from './config'
-import { rehypeBsTable } from './rehype'
+import { rehypeBsTable, rehypeHeaderLinksOrder } from './rehype'
 import { remarkBsComp, remarkBsConfig, remarkBsDocsref, remarkBsVersionLink } from './remark'
 import { configurePrism } from './prism'
 import {
@@ -18,6 +18,7 @@ import {
   getDocsStaticFsPath,
   validateVersionedDocsPaths
 } from './path'
+import { isHeading } from './utils.ts'
 
 // A list of directories in `src/components` that contains components that will be auto imported in all pages for
 // convenience.
@@ -78,9 +79,10 @@ export function oudsWeb(): AstroIntegration[] {
                       class: 'anchor-link',
                       ariaLabel: `Link to this section: ${(element.children[0] as Text).value}`
                     }),
-                    test: (element: Element) => element.tagName.match(headingsRangeRegex)
+                    test: (element: Element) => isHeading(element.tagName)
                   }
                 ],
+                rehypeHeaderLinksOrder,
                 rehypeBsTable
               ],
               remarkPlugins: [remarkBsConfig, remarkBsDocsref, remarkBsComp, remarkBsVersionLink]

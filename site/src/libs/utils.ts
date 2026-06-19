@@ -4,6 +4,7 @@ import toString from 'mdast-util-to-string'
 import { remark } from 'remark'
 import remarkHtml from 'remark-html'
 import { getVersionedDocsPath } from './path'
+import { getConfig } from "./config.ts";
 
 export function capitalizeFirstLetter(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1)
@@ -50,4 +51,9 @@ export function getComponentSVG(className: string): string {
 
 export function getVersionLink(version: string): string {
   return `<a class="link float-end pt-none align-content-center" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/${version}-ouds-web">Full changelog</a>`
+}
+
+export function isHeading(tag: string): boolean {
+  const headingsRangeRegex = new RegExp(`^h[${getConfig().anchors.min}-${getConfig().anchors.max}]$`)
+  return !!tag.match(headingsRangeRegex)
 }
