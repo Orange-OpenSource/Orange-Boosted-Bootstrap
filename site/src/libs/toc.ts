@@ -11,6 +11,10 @@ export function generateToc(allHeadings: MarkdownHeading[], types?: string[]) {
   const toc: TocEntry[] = []
 
   for (const heading of headings) {
+    if (heading.text.includes('Full changelog')) {
+      heading.text = heading.text.replace(' Full changelog', '')
+    }
+
     if (toc.length === 0) {
       toc.push({ ...heading, children: [] })
       continue
