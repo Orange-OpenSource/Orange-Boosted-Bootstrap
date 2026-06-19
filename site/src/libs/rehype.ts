@@ -34,7 +34,7 @@ export const rehypeBsTable: Plugin<[], Root> = function () {
   }
 }
 
-// A rehype plugin to add link to changelog
+// A rehype plugin to reorder header anchor and version links
 export const rehypeHeaderLinksOrder: Plugin<[], Root> = function () {
   return function rehypeHeaderLinksOrderPlugin(ast) {
     visit(ast, 'element', (node, index, parent) => {
@@ -42,7 +42,20 @@ export const rehypeHeaderLinksOrder: Plugin<[], Root> = function () {
         return
       }
 
-      const anchorLinkIndex = node.children.findIndex(child => child.type === "element" && child.properties.class?.includes('anchor-link'))
+      const hasAnchorClass = (child: any) => {
+        const childClass = child?.properties?.class
+        if (typeof childClass === 'string') {
+          return childClass.includes('anchor-link')
+        }
+
+        if (Array.isArray(childClass)) {
+          return childClass.some(item => String(item).includes('anchor-link'))
+        }
+
+        return false
+      }
+
+      const anchorLinkIndex = node.children.findIndex(child => child.type === "element" && hasAnchorClass(child))
       const headingIndex = node.children.findIndex(child => child.type === 'text')
       if (anchorLinkIndex === -1 || headingIndex === -1) {
         return

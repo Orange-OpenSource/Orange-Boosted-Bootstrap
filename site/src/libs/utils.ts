@@ -4,7 +4,7 @@ import toString from 'mdast-util-to-string'
 import { remark } from 'remark'
 import remarkHtml from 'remark-html'
 import { getVersionedDocsPath } from './path'
-import { getConfig } from "./config.ts";
+import { getConfig } from './config.ts'
 
 export function capitalizeFirstLetter(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1)
