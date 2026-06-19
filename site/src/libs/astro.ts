@@ -49,8 +49,6 @@ const sitemapExcludes = [
   `/${getConfig().brand}/docs/${getConfig().docs_version}/about`
 ]
 
-const headingsRangeRegex = new RegExp(`^h[${getConfig().anchors.min}-${getConfig().anchors.max}]$`)
-
 export function oudsWeb(): AstroIntegration[] {
   const sitemapExcludedUrls = sitemapExcludes.map((url) => `${getConfig().baseURL}${url}/`)
 
