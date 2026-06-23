@@ -144,14 +144,25 @@ Here is a valid example of use of functional badges:
 
 #### Disabled
 
-The disabled state of a badge appears visually muted to signal that it is not currently active or relevant. To make a disabled badge, simply add the `.badge-disabled` class. Depending on the use case, the `.visually-hidden` text may be unnecessary or require adaptation.
+The disabled state of a badge appears visually muted to signal that it is not currently active or relevant. To make a disabled badge, simply add the `.disabled` class. Depending on the use case, the `.visually-hidden` text may be unnecessary or require adaptation.
 
-<Example buttonLabel="disabled badges" class="d-flex gap-large" code={`<p class="badge badge-neutral badge-disabled"></p>
-  <p class="badge badge-accent badge-disabled"></p>
-  <p class="badge badge-positive badge-disabled"></p>
-  <p class="badge badge-info badge-disabled"></p>
-  <p class="badge badge-warning badge-disabled"></p>
-  <p class="badge badge-disabled"></p>`} />
+<Example buttonLabel="disabled badges" class="d-flex gap-large" code={`<p class="badge badge-neutral disabled"></p>
+  <p class="badge badge-accent disabled"></p>
+  <p class="badge badge-positive disabled"></p>
+  <p class="badge badge-info disabled"></p>
+  <p class="badge badge-warning disabled"></p>
+  <p class="badge disabled"></p>`} />
+
+If the badge is in a disabled context (for example, inside a disabled button), the badge will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, the `[aria-disabled="true"]` attribute, or the `.disabled` class.
+
+<Example buttonLabel="disabled badges in button" code={`
+  <button type="button" class="tag tag-input" disabled>
+    5G Ready
+    <span class="badge badge-info badge-small">
+      <span class="visually-hidden">New</span>
+    </span>
+    <span class="visually-hidden">Remove this tag</span>
+  </button>`} />
 
 ### Sizes
 
@@ -199,14 +210,25 @@ Badges - count can be used with non-functional or functional colors.
 
 #### Disabled
 
-The disabled state of a badge - count appears visually muted to signal that it is not currently active or relevant. To make a disabled badge - count, simply add the `.badge-disabled` class. Depending on the use case, the `.visually-hidden` text may require adaptation.
+The disabled state of a badge - count appears visually muted to signal that it is not currently active or relevant. To make a disabled badge - count, simply add the `.disabled` class. Depending on the use case, the `.visually-hidden` text may require adaptation.
 
-<Example buttonLabel="disabled badges count" class="d-flex gap-large" code={`<p class="badge badge-neutral badge-count badge-disabled">0<span class="visually-hidden">notification</span></p>
-  <p class="badge badge-accent badge-count badge-disabled">1<span class="visually-hidden">notification</span></p>
-  <p class="badge badge-positive badge-count badge-disabled">2<span class="visually-hidden">confirmations</span></p>
-  <p class="badge badge-info badge-count badge-disabled">10<span class="visually-hidden">new emails</span></p>
-  <p class="badge badge-warning badge-count badge-disabled">+99<span class="visually-hidden">alerts</span></p>
-  <p class="badge badge-count badge-disabled">250<span class="visually-hidden">errors</span></p>`} />
+<Example buttonLabel="disabled badges count" class="d-flex gap-large" code={`<p class="badge badge-neutral badge-count disabled">0<span class="visually-hidden">notification</span></p>
+  <p class="badge badge-accent badge-count disabled">1<span class="visually-hidden">notification</span></p>
+  <p class="badge badge-positive badge-count disabled">2<span class="visually-hidden">confirmations</span></p>
+  <p class="badge badge-info badge-count disabled">10<span class="visually-hidden">new emails</span></p>
+  <p class="badge badge-warning badge-count disabled">+99<span class="visually-hidden">alerts</span></p>
+  <p class="badge badge-count disabled">250<span class="visually-hidden">errors</span></p>`} />
+
+If the badge is in a disabled context (for example, inside a disabled button), the badge will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, the `[aria-disabled="true"]` attribute, or the `.disabled` class.
+
+<Example buttonLabel="disabled badges count in button" code={`
+  <button type="button" class="tag tag-input" disabled>
+    5G Ready
+    <span class="badge badge-info badge-count badge-small">
+      10<span class="visually-hidden">compatible</span>
+    </span>
+    <span class="visually-hidden">Remove this tag</span>
+  </button>`} />
 
 ### Sizes
 
@@ -238,8 +260,8 @@ Badge - icon is presented as a coloured shape that displays an icon, and its sel
     <span class="visually-hidden">Favourite</span>
   </p>
   <p class="badge badge-neutral">
-    <span class="badge-icon si si-settings" aria-hidden="true"></span>
-    <span class="visually-hidden">Parameter</span>
+    <span class="badge-icon si-settings" aria-hidden="true"></span>
+    <span class="visually-hidden">Parameters</span>
   </p>`} />
 
 ### Variants
@@ -263,12 +285,12 @@ Non-functional badges - icon are used to display neutral or accent information w
     <span class="visually-hidden">Favourite</span>
   </p>
   <p class="badge badge-neutral">
-    <span class="badge-icon si si-settings" aria-hidden="true"></span>
-    <span class="visually-hidden">Parameter</span>
+    <span class="badge-icon si-settings" aria-hidden="true"></span>
+    <span class="visually-hidden">Parameters</span>
   </p>
   <p class="badge badge-accent">
-    <span class="badge-icon si si-settings" aria-hidden="true"></span>
-    <span class="visually-hidden">Parameter</span>
+    <span class="badge-icon si-settings" aria-hidden="true"></span>
+    <span class="visually-hidden">Parameters</span>
   </p>`} />
 
 ##### Functional
@@ -300,31 +322,94 @@ Functional badges - icon carry a clear meaning related to the status of an objec
 
 #### Disabled
 
-The disabled state of a badge - icon appears visually muted to signal that it is not currently active or relevant. To make a disabled badge - icon, simply add the `.badge-disabled` class. Depending on the use case, the `.visually-hidden` text may be unnecessary or require adaptation.
+The disabled state of a badge - icon appears visually muted to signal that it is not currently active or relevant. To make a disabled badge - icon, simply add the `.disabled` class. Depending on the use case, the `.visually-hidden` text may be unnecessary or require adaptation.
 
-<Example buttonLabel="disabled badges icon" class="d-flex gap-large" code={`<p class="badge badge-disabled">
+<Example buttonLabel="disabled badges icon" class="d-flex gap-large" code={`<p class="badge disabled">
     <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Error</span>
   </p>
-  <p class="badge badge-neutral badge-disabled">
+  <p class="badge badge-positive disabled">
+    <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Success</span>
+  </p>
+  <p class="badge badge-info disabled">
+    <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Info</span>
+  </p>
+  <p class="badge badge-warning disabled">
+    <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Warning</span>
+  </p>
+  <p class="badge badge-neutral disabled">
     <svg class="badge-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
+    <span class="visually-hidden">Badge alt text</span>
   </p>
-  <p class="badge badge-neutral badge-disabled">
-    <span class="badge-icon si si-settings" aria-hidden="true"></span>
+  <p class="badge badge-neutral disabled">
+    <span class="badge-icon si-settings" aria-hidden="true"></span>
+    <span class="visually-hidden">Parameters</span>
   </p>`} />
+
+If the badge is in a disabled context (for example, inside a disabled button), the badge will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, the `[aria-disabled="true"]` attribute, or the `.disabled` class.
+
+<Example buttonLabel="disabled badges icon in button" code={`
+  <button type="button" class="tag tag-input" disabled>
+    5G Ready
+    <span class="badge badge-info badge-small">
+      <span class="badge-status-icon"></span>
+      <span class="visually-hidden">Info</span>
+    </span>
+    <span class="visually-hidden">Remove this tag</span>
+  </button>`} />
 
 ### Sizes
 
-Badges - icon are available in two sizes. Add `.badge-large` to have a larger badge. Default size is medium.
+Badges - icon are available in four sizes. Add `.badge-xsmall`, `.badge-small`, or `.badge-large` to have the size you want. Default size is medium.
 
-<Example buttonLabel="badges icon sizes" class="d-flex align-items-center gap-large" code={`<p class="badge">
+<Example buttonLabel="badges icon sizes" class="sm:d-flex align-items-center column-gap-scaled-xsmall" code={`<p class="badge badge-xsmall">
+    <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Error</span>
+  </p>
+  <p class="badge badge-small">
+    <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Error</span>
+  </p>
+  <p class="badge">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Error</span>
   </p>
   <p class="badge badge-large">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Error</span>
+  </p>
+  <p class="badge badge-xsmall badge-warning">
+    <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Warning</span>
+  </p>
+  <p class="badge badge-small badge-warning">
+    <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Warning</span>
+  </p>
+  <p class="badge badge-warning">
+    <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Warning</span>
+  </p>
+  <p class="badge badge-large badge-warning">
+    <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Warning</span>
+  </p>
+  <p class="badge badge-neutral badge-xsmall">
+    <svg class="badge-icon" aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+    <span class="visually-hidden">Badge alt text</span>
+  </p>
+  <p class="badge badge-neutral badge-small">
+    <svg class="badge-icon" aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+    <span class="visually-hidden">Badge alt text</span>
   </p>
   <p class="badge badge-neutral">
     <svg class="badge-icon" aria-hidden="true">
@@ -338,9 +423,21 @@ Badges - icon are available in two sizes. Add `.badge-large` to have a larger ba
     </svg>
     <span class="visually-hidden">Badge alt text</span>
   </p>
+  <p class="badge badge-neutral badge-xsmall">
+    <span class="badge-icon si-settings" aria-hidden="true"></span>
+    <span class="visually-hidden">Parameters</span>
+  </p>
+  <p class="badge badge-neutral badge-small">
+    <span class="badge-icon si-settings" aria-hidden="true"></span>
+    <span class="visually-hidden">Parameters</span>
+  </p>
+  <p class="badge badge-neutral">
+    <span class="badge-icon si-settings" aria-hidden="true"></span>
+    <span class="visually-hidden">Parameters</span>
+  </p>
   <p class="badge badge-neutral badge-large">
-    <span class="badge-icon si si-settings" aria-hidden="true"></span>
-    <span class="visually-hidden">Parameter</span>
+    <span class="badge-icon si-settings" aria-hidden="true"></span>
+    <span class="visually-hidden">Parameters</span>
   </p>`} />
 
 ## Positioning

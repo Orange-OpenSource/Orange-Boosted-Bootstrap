@@ -1,103 +1,75 @@
-//
-// Base styles
-//
-
 .badge {
   // scss-docs-start badge-css-vars
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-medium)};
-  --#{$prefix}badge-border-radius: #{$ouds-border-radius-pill};
-  --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-inset};
-  --#{$prefix}badge-count-padding-y: #{$ouds-badge-space-inset};
+  --#{$prefix}badge-padding-x-medium-large: #{$ouds-badge-space-inset-medium-large};
+  --#{$prefix}badge-padding-y-medium-large: #{$ouds-badge-space-inset-medium-large};
   --#{$prefix}badge-color: #{$ouds-color-content-on-status-negative-emphasized};
   --#{$prefix}badge-background-color: #{$ouds-color-surface-status-negative-emphasized};
-  --#{$prefix}badge-positive-icon: var(--#{$prefix}success-icon);
-  --#{$prefix}badge-info-icon: var(--#{$prefix}info-icon);
-  --#{$prefix}badge-warning-icon: var(--#{$prefix}warning-icon);
-  --#{$prefix}badge-negative-icon: var(--#{$prefix}error-icon);
+  --#{$prefix}badge-icon: #{escape-svg($badge-icon-negative)};
+  --#{$prefix}badge-icon-font-size: calc(var(--#{$prefix}badge-size) - (2 * var(--#{$prefix}badge-padding-x-medium-large)));
   // scss-docs-end badge-css-vars
 
   display: inline-block;
   min-width: var(--#{$prefix}badge-size);
   height: var(--#{$prefix}badge-size);
   min-height: var(--#{$prefix}badge-size);
-  padding: var(--#{$prefix}badge-count-padding-y) var(--#{$prefix}badge-count-padding-x);
+  padding: var(--#{$prefix}badge-padding-y-medium-large) var(--#{$prefix}badge-padding-x-medium-large);
   margin: 0;
   font-style: normal;
-  font-weight: 400;
+  font-weight: $ouds-font-weight-web-label-default;
   color: var(--#{$prefix}badge-color);
   text-align: center;
   background-color: var(--#{$prefix}badge-background-color);
   @include get-font-size("label-small");
-  @include border-radius(var(--#{$prefix}badge-border-radius));
-
-  .badge-icon,
-  .badge-status-icon {
-    display: flex;
-    flex: 1 0 0;
-    aspect-ratio: 1/1;
-    font-size: calc(var(--#{$prefix}badge-size) - (2 * var(--#{$prefix}badge-count-padding-x)));
-  }
-
-  .badge-status-icon {
-    background-color: var(--#{$prefix}badge-color);
-    background-size: contain;
-  }
-
-  &.badge-neutral {
-    --#{$prefix}badge-color: #{$ouds-color-content-inverse};
-    --#{$prefix}badge-background-color: #{$ouds-color-surface-inverse-high};
-  }
-
-  &.badge-accent {
-    --#{$prefix}badge-color: #{$ouds-color-content-on-status-accent-emphasized};
-    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-accent-emphasized};
-  }
-
-  &:not(.badge-neutral):not(.badge-accent) {
-    .badge-status-icon {
-      mask-image: escape-svg(var(--#{$prefix}badge-negative-icon));
-    }
-
-    &.badge-positive {
-      --#{$prefix}badge-color: #{$ouds-color-content-on-status-positive-emphasized};
-      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-positive-emphasized};
-
-      .badge-status-icon {
-        mask-image: escape-svg(var(--#{$prefix}badge-positive-icon));
-      }
-    }
-
-    &.badge-info {
-      --#{$prefix}badge-color: #{$ouds-color-content-on-status-info-emphasized};
-      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-info-emphasized};
-
-      .badge-status-icon {
-        mask-image: escape-svg(var(--#{$prefix}badge-info-icon));
-      }
-    }
-
-    &.badge-warning {
-      --#{$prefix}badge-color: #{$ouds-color-content-on-status-warning-emphasized};
-      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-warning-emphasized};
-
-      .badge-status-icon {
-        mask-image: escape-svg(var(--#{$prefix}badge-warning-icon));
-      }
-    }
-  }
+  @include border-radius(#{$ouds-border-radius-pill});
 }
 
-.badge-disabled {
-  color: #{$ouds-color-content-on-action-disabled};
-  background-color: #{$ouds-color-action-disabled};
+//
+// Status variants
+//
+
+.badge-neutral {
+  --#{$prefix}badge-color: #{$ouds-color-content-inverse};
+  --#{$prefix}badge-background-color: #{$ouds-color-surface-inverse-high};
 }
 
-.badge-xsmall:not(.badge-count):not(:has(.badge-icon)):not(:has(.badge-status-icon)) {
+.badge-accent {
+  --#{$prefix}badge-color: #{$ouds-color-content-on-status-accent-emphasized};
+  --#{$prefix}badge-background-color: #{$ouds-color-surface-status-accent-emphasized};
+}
+
+.badge-positive {
+  --#{$prefix}badge-color: #{$ouds-color-content-on-status-positive-emphasized};
+  --#{$prefix}badge-background-color: #{$ouds-color-surface-status-positive-emphasized};
+  --#{$prefix}badge-icon: #{escape-svg($badge-icon-positive)};
+}
+
+.badge-info {
+  --#{$prefix}badge-color: #{$ouds-color-content-on-status-info-emphasized};
+  --#{$prefix}badge-background-color: #{$ouds-color-surface-status-info-emphasized};
+  --#{$prefix}badge-icon: #{escape-svg($badge-icon-info)};
+}
+
+.badge-warning {
+  --#{$prefix}badge-color: #{$ouds-color-content-on-status-warning-emphasized};
+  --#{$prefix}badge-background-color: #{$ouds-color-surface-status-warning-emphasized};
+  --#{$prefix}badge-icon: #{escape-svg($badge-icon-warning-external)};
+}
+
+//
+// Size variants
+//
+
+.badge-xsmall:not(.badge-count) {
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-xsmall)};
+  --#{$prefix}badge-icon-font-size: calc(#{$ouds-badge-size-xsmall} - (2 * #{$ouds-badge-space-inset-xsmall}));
+  padding: #{$ouds-badge-space-inset-xsmall};
 }
 
-.badge-small:not(.badge-count):not(:has(.badge-icon)):not(:has(.badge-status-icon)) {
+.badge-small:not(.badge-count) {
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-small)};
+  --#{$prefix}badge-icon-font-size: calc(#{$ouds-badge-size-small} - (2 * #{$ouds-badge-space-inset-small}));
+  padding: #{$ouds-badge-space-inset-small};
 }
 
 .badge-large {
@@ -106,12 +78,96 @@
   @include get-font-size("label-medium");
 }
 
+//
+// Badge - icon
+//
+
+.badge:has(.badge-status-icon) {
+  // status icons have a transparent sign so the badge color is applied to what appears to be the icon background
+  --#{$prefix}badge-color: #{$ouds-color-surface-status-negative-emphasized};
+  --#{$prefix}badge-background-color: transparent;
+  position: relative;
+  flex-shrink: 0;
+  width: var(--#{$prefix}badge-size);
+  height: var(--#{$prefix}badge-size);
+  padding: 0;
+
+  &.badge-warning {
+    --#{$prefix}badge-color: #{$ouds-color-surface-status-warning-emphasized};
+
+    .badge-status-icon::after {
+      background-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
+      mask-image: escape-svg($badge-icon-warning-internal);
+    }
+  }
+
+  &.badge-info {
+    --#{$prefix}badge-color: #{$ouds-color-surface-status-info-emphasized};
+  }
+
+  &.badge-positive {
+    --#{$prefix}badge-color: #{$ouds-color-surface-status-positive-emphasized};
+  }
+}
+
+.badge-status-icon {
+  &::before,
+  &::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    mask: no-repeat center / contain;
+  }
+
+  &::before {
+    background-color: currentcolor;
+    mask-image: var(--#{$prefix}badge-icon);
+  }
+}
+
+.badge-icon {
+  display: flex;
+  flex: 1 0 0;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  font-size: var(--#{$prefix}badge-icon-font-size);
+}
+
+//
+// Disabled state
+//
+
+.badge.badge-disabled, // @deprecated, will be removed in v1.5.0 https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3607
+.badge.disabled,
+.disabled .badge,
+[disabled] .badge,
+[aria-disabled="true"] .badge {
+  --#{$prefix}badge-color: #{$ouds-color-content-on-action-disabled};
+  --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
+
+  &:has(.badge-status-icon) {
+    --#{$prefix}badge-color: #{$ouds-color-action-disabled};
+    --#{$prefix}badge-background-color: transparent;
+
+    &.badge-warning {
+      .badge-status-icon::after {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+//
+// Badge - count
+//
+
 .badge-count {
-  --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-medium};
-  --#{$prefix}badge-count-padding-y: 0;
+  --#{$prefix}badge-padding-x-medium-large: #{$ouds-badge-space-padding-inline-medium};
+  --#{$prefix}badge-padding-y-medium-large: 0;
 
   &.badge-large {
     --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-large)};
-    --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-large};
+    --#{$prefix}badge-padding-x-medium-large: #{$ouds-badge-space-padding-inline-large};
   }
 }
