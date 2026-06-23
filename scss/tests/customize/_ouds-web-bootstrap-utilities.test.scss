@@ -3718,8 +3718,12 @@ $utilities: ();
           color: inherit !important;
         }
 
+        .shadow-default {
+          box-shadow: 0 2px 3px -1px var(--bs-elevation-color-elevated) !important;
+        }
+
         .shadow-elevated {
-          box-shadow: 0 2px 3px -1px var(--bs-elevation-color-default) !important;
+          box-shadow: 0 2px 3px -1px var(--bs-elevation-color-elevated) !important;
         }
 
         .shadow-drag {
@@ -15748,8 +15752,12 @@ $utilities: ();
           box-shadow: var(--bs-box-shadow-lg) !important;
         }
 
+        .shadow-default {
+          box-shadow: 0 2px 3px -1px var(--bs-elevation-color-elevated) !important;
+        }
+
         .shadow-elevated {
-          box-shadow: 0 2px 3px -1px var(--bs-elevation-color-default) !important;
+          box-shadow: 0 2px 3px -1px var(--bs-elevation-color-elevated) !important;
         }
 
         .shadow-drag {
