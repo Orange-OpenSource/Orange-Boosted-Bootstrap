@@ -111,6 +111,7 @@ $ouds-dimension-space-fixed: map-merge(
 
 // scss-docs-start ouds-maps-elevations
 $ouds-elevations: (
+  "default":                    $ouds-elevation-elevated, // @deprecated, will be removed in v1.5.0, use "elevated" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3607
   "elevated":                   $ouds-elevation-elevated,
   "drag":                       $ouds-elevation-drag,
   "emphasized":                 $ouds-elevation-emphasized,
