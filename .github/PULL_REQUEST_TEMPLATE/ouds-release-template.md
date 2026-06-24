@@ -32,7 +32,7 @@
 - [ ] publish documentation on `main` of the [ouds-web-doc](https://github.com/Orange-OpenSource/ouds-web-doc) repo:
   - [ ] run `npm run storybook-build` from `Orange-Boosted-Bootstrap` (be careful that `release-sri` doesn't update `config.yml`s)
   - [ ] remove `storybook` folder from `ouds-web-doc`
-  - [ ] copy `Orange-Boosted-Bootstrap/_site` to the `ouds-web-doc#main` branch
+  - [ ] copy `Orange-Boosted-Bootstrap/_site` to a new branch starting from `ouds-web-doc#main`
   - [ ] check every `index.html` used as redirection, redirect to the new release
   - [ ] when bumping minor or major version: ensure `dist` URLs in examples' HTML has changed
   - [ ] double-check everything before pushing, starting by searching for forgotten old version number occurrences
