@@ -527,3 +527,7 @@
   background-color: currentcolor;
 }
 
+.btn-opaque:hover {
+  background-color: var(--bs-btn-opaque, var(--bs-color-bg-primary));
+  background-image: linear-gradient(var(--#{$prefix}btn-hover-bg));
+}
