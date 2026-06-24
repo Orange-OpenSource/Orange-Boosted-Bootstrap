@@ -1,7 +1,7 @@
 // Components custom properties applications
 // OUDS Core tokens version 1.10.0
 // Orange Core tokens version 1.2.0
-// Orange System tokens version 2.4.0
+// Orange System tokens version 2.5.0
 
 // scss-docs-start ouds-all-component-css-color
 // scss-docs-start ouds-component-css-color
@@ -51,6 +51,7 @@
   --#{$prefix}switch-color-track-selected-interaction: #{$core-ouds-color-functional-malachite-750};
   --#{$prefix}switch-color-track-unselected: #{$core-ouds-color-opacity-black-440};
   --#{$prefix}switch-color-track-unselected-interaction: #{$core-ouds-color-opacity-black-520};
+  --#{$prefix}progress-indicator-color-bg: #{$core-ouds-color-functional-gray-light-400};
   --#{$prefix}link-mono-color-content-enabled: #{$core-ouds-color-functional-black};
   --#{$prefix}link-mono-color-content-hover: #{$core-ouds-color-functional-black};
   --#{$prefix}link-mono-color-content-pressed: #{$core-ouds-color-opacity-black-520};
@@ -112,6 +113,7 @@
   --#{$prefix}switch-color-track-selected-interaction: #{$core-ouds-color-functional-malachite-300};
   --#{$prefix}switch-color-track-unselected: #{$core-ouds-color-opacity-white-640};
   --#{$prefix}switch-color-track-unselected-interaction: #{$core-ouds-color-opacity-white-800};
+  --#{$prefix}progress-indicator-color-bg: #{$core-ouds-color-functional-gray-dark-480};
   --#{$prefix}link-mono-color-content-enabled: #{$core-ouds-color-functional-white};
   --#{$prefix}link-mono-color-content-hover: #{$core-ouds-color-functional-white};
   --#{$prefix}link-mono-color-content-pressed: #{$core-ouds-color-opacity-white-800};
