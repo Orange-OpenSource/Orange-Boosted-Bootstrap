@@ -121,6 +121,11 @@ $badge-icon-warning-internal: url("data:image/svg+xml,<svg xmlns='http://www.w3.
 // badge-icon error-fill v1.6
 $badge-icon-negative: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g clip-path='url(#a)'><path fill-rule='evenodd' d='M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12s5.373 12 12 12 12-5.372 12-12Zm-7.875 4.13a1.087 1.087 0 0 1-1.552 0L12 13.524 9.426 16.13a1.087 1.087 0 0 1-1.55 0 1.12 1.12 0 0 1 0-1.57l2.573-2.606L7.967 9.44a1.12 1.12 0 0 1 0-1.57 1.088 1.088 0 0 1 1.551 0L12 10.382l2.482-2.513a1.088 1.088 0 0 1 1.551 0 1.12 1.12 0 0 1 0 1.57l-2.482 2.514 2.574 2.605a1.12 1.12 0 0 1 0 1.57Z' clip-rule='evenodd'/></g><defs><clipPath id='a'><path fill='#fff' d='M0 0h24v24H0z'/></clipPath></defs></svg>") !default;
 
+// Navigation list item
+$list-item-external-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='M20.253 3a.492.492 0 0 0-.076.006l-3.187.5a.498.498 0 0 0 .154.986l1.98-.31-5.925 6.113a.5.5 0 0 0 .357.848c.13 0 .26-.05.357-.152l3.033-3.13v9.441a.699.699 0 0 1-.697.7H5.997V7.714c0-.385.312-.699.696-.699h7.148a.499.499 0 0 0 0-.998H6.692A1.698 1.698 0 0 0 5 7.715v10.786c0 .275.223.499.498.499H16.25c.933 0 1.692-.762 1.692-1.698V7.11a.49.49 0 0 0-.053-.22l2.033-2.098-.165 2.116a.499.499 0 1 0 .992.077L21 3.788A.749.749 0 0 0 20.253 3Z'/></svg>") !default;
+$list-item-next-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='M8.87 7.882c-.017-.013.012.013 0 0l4.753 4.19-4.754 4.11c-.53.526-.433 1.186 0 1.635-.016-.013.013.016 0 0 .485.458 1.24.432 1.745-.007l5.746-4.966c.472-.41.434-1.098 0-1.544l-5.746-5.027c-.614-.611-1.324-.49-1.745-.08-.42.41-.559 1.144 0 1.689Z'/></svg>") !default;
+$list-item-previous-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='M15.13 16.118c-.012-.013.017.013 0 0l-4.754-4.19 4.755-4.11c.53-.526.433-1.186 0-1.635-.013-.016.016.013 0 0-.486-.458-1.24-.432-1.745.007L7.64 11.156c-.473.41-.434 1.098 0 1.544l5.746 5.027c.614.611 1.324.49 1.745.08.42-.41.559-1.144 0-1.689Z'/></svg>") !default;
+
 //// SVG used several times
 $svg-as-custom-props: (
   "chevron":          $chevron-icon,

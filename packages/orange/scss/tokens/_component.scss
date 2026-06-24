@@ -235,58 +235,58 @@ $ouds-chip-space-padding-inline-icon: $ouds-space-padding-inline-small !default;
 // Control
 
 // scss-docs-start ouds-component-control
-$ouds-control-item-border-radius-current-indicator: $ouds-border-radius-none !default;
-$ouds-control-item-border-radius-default: $ouds-border-radius-default !default;
+// $ouds-control-item-border-radius-current-indicator: $ouds-border-radius-none !default;
+$ouds-control-item-border-radius-default: $ouds-border-radius-default !default; // TODO: Control-item
 $ouds-control-item-border-radius-item-only: $ouds-border-radius-default !default; // Deprecated
 $ouds-control-item-border-radius-media-rounded-corner: $ouds-border-radius-small !default;
 $ouds-control-item-border-radius-media: $ouds-border-radius-default !default;
 $ouds-control-item-border-radius-rounded: $ouds-border-radius-medium !default;
-$ouds-control-item-border-width-current-page: $ouds-border-width-medium !default;
+// $ouds-control-item-border-width-current-page: $ouds-border-width-medium !default;
 $ouds-control-item-border-width-default: $ouds-border-width-default !default;
-$ouds-control-item-color-badge-safety-area: $ouds-color-bg-primary !default;
-$ouds-control-item-color-bg-current-disabled: $ouds-color-action-support-disabled !default;
-$ouds-control-item-color-bg-current-enabled: var(--#{$prefix}control-item-color-bg-current-enabled) !default;
-$ouds-control-item-color-bg-current-focus: $ouds-color-action-support-focus !default;
-$ouds-control-item-color-bg-current-hover: $ouds-color-action-support-hover !default;
-$ouds-control-item-color-bg-current-pressed: $ouds-color-action-support-pressed !default;
-$ouds-control-item-color-bg-focus: var(--#{$prefix}control-item-color-bg-focus) !default;
-$ouds-control-item-color-bg-hover: var(--#{$prefix}control-item-color-bg-hover) !default;
-$ouds-control-item-color-bg-loading: var(--#{$prefix}control-item-color-bg-loading) !default;
-$ouds-control-item-color-bg-pressed: var(--#{$prefix}control-item-color-bg-pressed) !default;
-$ouds-control-item-color-content-current-disabled: $ouds-color-content-default !default;
-$ouds-control-item-color-content-current-enabled: $ouds-color-content-default !default;
-$ouds-control-item-color-content-current-focus: $ouds-color-content-default !default;
-$ouds-control-item-color-content-current-hover: $ouds-color-content-default !default;
-$ouds-control-item-color-content-current-pressed: $ouds-color-content-default !default;
-$ouds-control-item-color-content-loader: var(--#{$prefix}control-item-color-content-loader) !default;
-$ouds-control-item-font-letter-spacing-avatar-initial-xlarge: $core-ouds-font-letter-spacing-450 !default;
-$ouds-control-item-font-line-height-avatar-initial-xlarge: $core-ouds-font-line-height-650 !default;
-$ouds-control-item-font-size-avatar-initial-xlarge: $core-ouds-font-size-450 !default;
-$ouds-control-item-opacity-current-divider: $ouds-opacity-opaque !default;
-$ouds-control-item-opacity-current-indicator: $ouds-opacity-opaque !default;
+// $ouds-control-item-color-badge-safety-area: $ouds-color-bg-primary !default;
+// $ouds-control-item-color-bg-current-disabled: $ouds-color-action-support-disabled !default;
+// $ouds-control-item-color-bg-current-enabled: var(--#{$prefix}control-item-color-bg-current-enabled) !default;
+// $ouds-control-item-color-bg-current-focus: $ouds-color-action-support-focus !default;
+// $ouds-control-item-color-bg-current-hover: $ouds-color-action-support-hover !default;
+// $ouds-control-item-color-bg-current-pressed: $ouds-color-action-support-pressed !default;
+$ouds-control-item-color-bg-focus: var(--#{$prefix}control-item-color-bg-focus) !default; // TODO: Control-item
+$ouds-control-item-color-bg-hover: var(--#{$prefix}control-item-color-bg-hover) !default; // TODO: Control-item
+$ouds-control-item-color-bg-loading: var(--#{$prefix}control-item-color-bg-loading) !default; // TODO: Control-item
+$ouds-control-item-color-bg-pressed: var(--#{$prefix}control-item-color-bg-pressed) !default; // TODO: Control-item
+// $ouds-control-item-color-content-current-disabled: $ouds-color-content-default !default;
+// $ouds-control-item-color-content-current-enabled: $ouds-color-content-default !default;
+// $ouds-control-item-color-content-current-focus: $ouds-color-content-default !default;
+// $ouds-control-item-color-content-current-hover: $ouds-color-content-default !default;
+// $ouds-control-item-color-content-current-pressed: $ouds-color-content-default !default;
+// $ouds-control-item-color-content-loader: var(--#{$prefix}control-item-color-content-loader) !default;
+// $ouds-control-item-font-letter-spacing-avatar-initial-xlarge: $core-ouds-font-letter-spacing-450 !default;
+// $ouds-control-item-font-line-height-avatar-initial-xlarge: $core-ouds-font-line-height-650 !default;
+// $ouds-control-item-font-size-avatar-initial-xlarge: $core-ouds-font-size-450 !default;
+// $ouds-control-item-opacity-current-divider: $ouds-opacity-opaque !default;
+// $ouds-control-item-opacity-current-indicator: $ouds-opacity-opaque !default;
 $ouds-control-item-size-asset-large: $ouds-dimension-medium !default;
 $ouds-control-item-size-asset-medium: $ouds-size-icon-with-label-large-size-medium !default;
 $ouds-control-item-size-asset-small: $ouds-size-icon-with-label-large-size-small !default;
 $ouds-control-item-size-asset-xlarge: $ouds-dimension-3xlarge !default;
-$ouds-control-item-size-control-indicator: $ouds-size-icon-with-label-large-size-xsmall !default;
-$ouds-control-item-size-current-indicator-width: $core-ouds-dimension-50 !default;
+// $ouds-control-item-size-control-indicator: $ouds-size-icon-with-label-large-size-xsmall !default;
+// $ouds-control-item-size-current-indicator-width: $core-ouds-dimension-50 !default;
 $ouds-control-item-size-error-icon: $ouds-size-icon-with-label-large-size-small !default; // Deprecated
-$ouds-control-item-size-flag-height: $ouds-size-icon-with-label-large-size-xsmall !default;
+// $ouds-control-item-size-flag-height: $ouds-size-icon-with-label-large-size-xsmall !default;
 $ouds-control-item-size-icon: $ouds-size-icon-with-label-large-size-medium !default; // Deprecated
 $ouds-control-item-size-loader: $ouds-size-icon-with-label-large-size-small !default; // Deprecated
 $ouds-control-item-size-max-height-assets-container: $core-ouds-dimension-1200 !default; // Deprecated
 $ouds-control-item-size-max-width: $core-ouds-dimension-4000 !default;
 $ouds-control-item-size-min-height-compact: $ouds-size-min-interactive-area !default;
 $ouds-control-item-size-min-height-default: $core-ouds-dimension-750 !default;
-$ouds-control-item-size-min-width: $core-ouds-dimension-2000 !default;
+$ouds-control-item-size-min-width: $core-ouds-dimension-2000 !default; // TODO: Control-item
 $ouds-control-item-space-column-gap: $ouds-space-column-gap-medium !default;
 $ouds-control-item-space-padding-block-bottom-slot: $ouds-space-padding-block-3xsmall !default;
 $ouds-control-item-space-padding-block-default: $ouds-space-padding-block-medium !default; // Deprecated
-$ouds-control-item-space-padding-block-density-compact-bottom-expand-container: $ouds-space-padding-block-2xlarge !default;
+// $ouds-control-item-space-padding-block-density-compact-bottom-expand-container: $ouds-space-padding-block-2xlarge !default;
 $ouds-control-item-space-padding-block-density-compact-top-alignment-top-counterweight: $ouds-space-padding-block-xsmall !default;
 $ouds-control-item-space-padding-block-density-compact-top-alignment-top-text-container: $ouds-space-padding-block-none !default;
 $ouds-control-item-space-padding-block-density-compact: $ouds-space-padding-block-xsmall !default;
-$ouds-control-item-space-padding-block-density-default-bottom-expand-container: $ouds-space-padding-block-3xlarge !default;
+// $ouds-control-item-space-padding-block-density-default-bottom-expand-container: $ouds-space-padding-block-3xlarge !default;
 $ouds-control-item-space-padding-block-density-default-top-alignment-top-counterweight: $ouds-space-padding-block-small !default;
 $ouds-control-item-space-padding-block-density-default-top-alignment-top-text-container: $ouds-space-padding-block-4xsmall !default;
 $ouds-control-item-space-padding-block-density-default: $ouds-space-padding-block-medium !default;
