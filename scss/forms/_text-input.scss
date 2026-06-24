@@ -447,6 +447,7 @@
       width: 100%;
       height: calc($ouds-text-area-space-padding-block + var(--#{$prefix}font-line-height-label-large) * var(--#{$prefix}font-size-label-large) + px-to-rem($ouds-text-area-size-min-height-input * 2) + var(--#{$prefix}text-input-border-width-bottom) - var(--#{$prefix}text-input-border-width-top));
       min-height: calc($ouds-text-area-space-padding-block + var(--#{$prefix}font-line-height-label-large) * var(--#{$prefix}font-size-label-large) + px-to-rem($ouds-text-area-size-min-height-input) + var(--#{$prefix}text-input-border-width-bottom) - var(--#{$prefix}text-input-border-width-top));
+      max-height: calc(px-to-rem($ouds-text-area-size-max-height-input) + $ouds-text-area-space-padding-block * 2 - var(--#{$prefix}font-line-height-label-small) * var(--#{$prefix}font-size-label-small) - var(--#{$prefix}text-input-border-width-bottom) - var(--#{$prefix}text-input-border-width-top));
       padding-top: calc($ouds-text-area-space-padding-block-top-empty + var(--#{$prefix}font-line-height-label-large) * var(--#{$prefix}font-size-label-large) - var(--#{$prefix}text-input-border-width-top));
       padding-right: calc($ouds-text-input-space-column-gap-default + $ouds-button-size-min-width + $ouds-text-input-space-padding-inline-trailing-action - var(--#{$prefix}text-input-border-width-right));
       padding-bottom: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
@@ -488,7 +489,8 @@
       left: 0;
       z-index: 2;
       width: 100%;
-      padding-top: $ouds-text-area-space-padding-block-top-empty;
+      padding-top: calc($ouds-text-area-space-padding-block-top-empty - var(--#{$prefix}text-input-border-width-top));
+      padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right));
       padding-left: calc($ouds-text-input-space-padding-inline-default - var(--#{$prefix}text-input-border-width-left));
       overflow: hidden;
       color: var(--#{$prefix}text-input-label-color);
