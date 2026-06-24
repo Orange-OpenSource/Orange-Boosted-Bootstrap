@@ -1,0 +1,552 @@
+---
+title: List item
+description: List items are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.
+aliases:
+  - "/docs/components/item/"
+toc: true
+---
+
+import { getVersionedDocsPath } from '@libs/path'
+
+<Example code={`<div class="item-wrapper mb-medium">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-leading-container">
+          <svg class="item-leading-container" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+          </svg>
+        </div>
+        <div class="item-text-container">
+          <p class="item-overline">Overline</p>
+          <p class="item-label">Label</p>
+          <p class="item-extra-label">Extra label</p>
+          <p class="item-description">Description</p>
+          <button class="item-slot item-slot-clickable btn btn-strong">Test</button>
+        </div>
+      </div>
+    </div>
+    <p class="item-helper">Helper text</p>
+  </div>
+  <div class="item-wrapper mb-medium">
+    <div class="item item-navigation item-no-divider">
+      <div class="item-main">
+        <svg class="item-leading-container" aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        <div class="item-text-container">
+          <p class="item-overline">Overline</p>
+          <a href="#" class="item-interactive item-label">Label</a>
+          <p class="item-extra-label">Extra label</p>
+          <p class="item-description">Description</p>
+        </div>
+      </div>
+      <button class="item-slot item-slot-clickable btn btn-strong">Test</button>
+    </div>
+  </div>
+  <div class="item-wrapper mb-medium">
+    <a href="#" class="item item-navigation item-external-link item-interactive">
+      <div class="item-main">
+        <svg class="item-leading-container" aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        <div class="item-text-container">
+          <p class="item-overline">Overline</p>
+          <p class="item-label">Label</p>
+          <p class="item-extra-label">Extra label</p>
+          <p class="item-description">Description</p>
+        </div>
+      </div>
+    </a>
+    <p class="item-helper">Helper text</p>
+  </div>
+  <ul class="item-list mb-medium">
+    <li class="item-wrapper">
+      <div class="item">
+        <div class="item-main">
+          <svg class="item-leading-container" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+          </svg>
+          <div class="item-text-container">
+            <p class="item-overline">Overline</p>
+            <p class="item-label">Label</p>
+            <p class="item-extra-label">Extra label</p>
+            <p class="item-description">Description</p>
+            <button class="item-slot item-slot-clickable btn btn-strong">Test</button>
+          </div>
+          <div class="item-trailing-container">
+            <p class="item-label">Label</p>
+            <p class="item-extra-label">Extra label</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item-wrapper">
+      <div class="item">
+        <div class="item-main">
+          <svg class="item-leading-container" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+          </svg>
+          <div class="item-text-container">
+            <p class="item-overline">Overline</p>
+            <p class="item-label">Label</p>
+            <p class="item-extra-label">Extra label</p>
+            <p class="item-description">Description</p>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ul class="item-list mb-medium">
+    <li class="item-wrapper">
+      <div class="item item-navigation">
+        <div class="item-main">
+          <svg class="item-leading-container" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+          </svg>
+          <div class="item-text-container">
+            <p class="item-overline">Overline</p>
+            <a href="#" class="item-interactive item-label item-external-link">Label</a>
+            <p class="item-extra-label">Extra label</p>
+            <p class="item-description">Description</p>
+            <button class="item-slot item-slot-clickable btn btn-strong">Test</button>
+          </div>
+          <div class="item-trailing-container">
+            <p class="item-label">Label</p>
+            <p class="item-extra-label">Extra label</p>
+          </div>
+        </div>
+        <button class="item-slot item-slot-clickable btn btn-strong">Test</button>
+      </div>
+    </li>
+    <li class="item-wrapper">
+      <a href="#" class="item item-navigation item-interactive">
+        <div class="item-main">
+          <svg class="item-leading-container" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+          </svg>
+          <div class="item-text-container">
+            <p class="item-overline">Overline</p>
+            <p class="item-label">Label</p>
+            <p class="item-extra-label">Extra label</p>
+            <p class="item-description">Description</p>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+  <ul class="item-list">
+    <li class="item-wrapper">
+      <div class="item item-navigation">
+        <div class="item-main">
+          <svg class="item-leading-container" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+          </svg>
+          <div class="item-text-container">
+            <p class="item-overline">Overline</p>
+            <a href="#" class="item-interactive item-label item-previous">Label</a>
+            <p class="item-extra-label">Extra label</p>
+            <p class="item-description">Description</p>
+            <div class="item-slot item-slot-clickable"><button class="btn btn-strong">Test</button></div>
+          </div>
+        </div>
+        <div class="item-slot item-slot-clickable"><button class="btn btn-strong">Test</button></div>
+      </div>
+    </li>
+    <li class="item-wrapper">
+      <a href="#" class="item item-navigation item-previous item-interactive">
+
+        <div class="item-main">
+          <svg class="item-leading-container" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+          </svg>
+          <div class="item-text-container">
+            <p class="item-overline">Overline</p>
+            <p class="item-label">Label</p>
+            <p class="item-extra-label">Extra label</p>
+            <p class="item-description">Description</p>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>`} />
+
+## Overview
+
+### Component types
+
+<ul class="list-unstyled row row-cols-1 sm:row-cols-2">
+  <li class="col">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
+          <div class="item-wrapper w-75">
+            <div class="item item-no-bg">
+              <div class="item-main">
+                <div class="item-text-container">
+                  <p class="item-label">Label</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#static-item">Static item</a> is a UI element that displays a unit of information.</div>
+    </div>
+  </li>
+  <li class="col">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
+          <div class="item-wrapper w-75">
+            <div class="item item-navigation">
+              <div class="item-main">
+                <div class="item-text-container">
+                  <a href="#" class="item-label item-interactive">Label</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#navigation-item">Navigation item</a> is a UI element that displays a unit of information and allows users to navigate between different pages or sections within a multi-page interface.</div>
+    </div>
+  </li>
+</ul>
+
+For the two types of items, OUDS Web has a common base `.item`, and `.item-main` classes that set up default styles such as padding and content alignment. The `.item` class is intended to be used in conjunction with our item variants, or to serve as a basis for your own custom styles. The most basic item is the `.item-navigation` variant.
+
+<Example showToolbar={false} code={`<div class="item-wrapper">
+    <div class="item item-no-bg">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+
+<Example showToolbar={false} code={`<div class="item-wrapper">
+    <div class="item item-navigation">
+      <div class="item-main">
+        <div class="item-text-container">
+          <a href="#" class="item-label item-interactive">Label</a>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+
+### Approach
+
+#### Card item
+
+#### List item
+
+### Accessibility
+
+## Static item
+
+### Standard display
+
+<Example buttonLabel="standard static display" class="d-flex flex-column gap-medium" code={`<!-- Card -->
+  <div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- List -->
+  <ul class="item-list">
+    <li class="item-wrapper">
+      <div class="item">
+        <div class="item-main">
+          <div class="item-text-container">
+            <p class="item-label">Label</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item-wrapper">
+      <div class="item">
+        <div class="item-main">
+          <div class="item-text-container">
+            <p class="item-label">Label</p>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>`} />
+
+### Variants
+
+#### With asset
+
+##### Text
+
+There are four text elements that are meant to be used in the `.item-text-container`.
+
+They always appear in the following order:
+1. [Overline](#overline) using `.item-overline` (optional)
+2. [Label](#label) using `.item-label`, that can optionally be bold (using `.fw-bold`) (required)
+3. [Extra label](#extra-label) using `.item-extra-label` (optional)
+4. [Description](#description) using `.item-description` (optional)
+
+<Example buttonLabel="static item text" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-overline">Overline</p>
+          <p class="item-label">Label</p>
+          <p class="item-extra-label">Extra label</p>
+          <p class="item-description">Description</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-overline">Overline</p>
+          <p class="item-label fw-bold">Label</p>
+          <p class="item-extra-label">Extra label</p>
+          <p class="item-description">Description</p>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+
+##### Leading container
+
+The leading container using `.item-leading-container`.
+
+Here is a table of the different assets that we support in the leading container, along with their corresponding classes and notes.
+
+<Callout type="warning">
+  Please note that none of the sizes above should be used in a [small list item](#sizes).
+</Callout>
+
+<BsTable>
+| Asset | Sizes | Ratio | Rounded corners | Extra classes | Notes |
+| --- | ----- | ----- | --------------- | ------------- | ----- |
+| **Icon** | `.item-leading-large` |  |  | you may use `.item-status-positive`, `.item-status-warning`, `.item-status-info` or `.item-status-negative` for color and icon in addition of `.item-icon` | {/*(using our [badge]([[docsref:/components/badge]]))*/} |
+| **Image** | `.item-leading-large`, `.item-leading-xlarge` | [ratio utilities]([[docsref:/utility/aspect-ratio]]) | `.item-leading-rounded` |  | All these classes can be combined as needed and placed on a parent element. |
+| **Video** | `.item-leading-large`<br/>`.item-leading-xlarge` | [ratio utilities]([[docsref:/utility/aspect-ratio]]) | `.item-leading-rounded` |  | All these classes can be combined as needed and placed on a parent element. |
+| **Slot** |  |  | `.item-leading-rounded` |  | `.item-slot` must be combined with `.item-leading-container`. Limited in size to `96px x 96px`. {/* TODO: replace value by token once added */} |
+{/* **Avatar** */}
+{/* **Flag** */}
+</BsTable>
+
+<Example buttonLabel="static item with leading assets" class="d-flex flex-column gap-medium" code={`<!-- Icon -->
+  <div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-leading-container">
+          <svg class="w-100 h-100" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+          </svg>
+        </div>
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-leading-container item-status-positive">
+          <div class="item-icon"></div>
+        </div>
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image -->
+  <div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-leading-container item-leading-xlarge item-leading-rounded">
+          <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover" />
+        </div>
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video -->
+  <div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-leading-container item-leading-large ratio-16x9">
+          <video controls class="w-100 h-100 object-fit-cover" autoplay muted loop>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slot -->
+  <div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-leading-container item-slot">
+          <p class="tag">Tag</p>
+        </div>
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+
+##### Slot
+
+<Example buttonLabel="static slot" class="d-flex flex-column gap-medium" code={``} />
+
+##### Trailing assets
+
+<Example buttonLabel="static trailing assets list" class="d-flex flex-column gap-medium" code={``} />
+
+#### Alignment
+
+<Example buttonLabel="top alignment static item" class="d-flex flex-column gap-medium" code={``} />
+
+#### Helper text
+
+<Example buttonLabel="helper text" class="d-flex flex-column gap-medium" code={``} />
+
+#### With background
+
+<Example buttonLabel="with background" class="d-flex flex-column gap-medium" code={``} />
+
+#### Outlined
+
+<Example buttonLabel="outlined" class="d-flex flex-column gap-medium" code={``} />
+
+#### Rounded corners
+
+<Example buttonLabel="rounded corners" class="d-flex flex-column gap-medium" code={``} />
+
+### States
+
+#### Disabled
+
+<Example buttonLabel="disabled static" class="d-flex flex-column gap-medium" code={``} />
+
+#### Skeleton
+
+<Example buttonLabel="skeleton static" class="d-flex flex-column gap-medium" code={``} />
+
+### Sizes
+
+<Example buttonLabel="sizes" class="d-flex flex-column gap-medium" code={``} />
+
+### Layout
+
+<Example buttonLabel="standalone card layout" class="d-flex flex-column gap-medium" code={``} />
+
+#### Max width
+
+<Example buttonLabel="standalone card layout" class="d-flex flex-column gap-medium" code={``} />
+
+## Navigation item
+
+### Key concepts
+
+<Example buttonLabel="navigation key concepts" class="d-flex flex-column gap-medium" code={``} />
+
+### Base class
+
+<Example buttonLabel="navigation base" class="d-flex flex-column gap-medium" code={``} />
+
+### Standard display
+
+<Example buttonLabel="navigation standard display" class="d-flex flex-column gap-medium" code={``} />
+
+### Variants
+
+#### Back chevron
+
+<Example buttonLabel="back chevron" class="d-flex flex-column gap-medium" code={``} />
+
+#### External link
+
+<Example buttonLabel="external link" class="d-flex flex-column gap-medium" code={``} />
+
+#### Alignment
+
+<Example buttonLabel="navigation alignment" class="d-flex flex-column gap-medium" code={``} />
+
+#### With asset
+
+##### Leading assets
+
+<Example buttonLabel="navigation leading assets list" class="d-flex flex-column gap-medium" code={``} />
+
+##### Text
+
+<Example buttonLabel="navigation text" class="d-flex flex-column gap-medium" code={``} />
+
+##### Slot
+
+<Example buttonLabel="navigation slot" class="d-flex flex-column gap-medium" code={``} />
+
+##### Trailing assets
+
+<Example buttonLabel="navigation trailing assets list" class="d-flex flex-column gap-medium" code={``} />
+
+#### Helper text
+
+<Example buttonLabel="navigation helper text" class="d-flex flex-column gap-medium" code={``} />
+
+#### With background
+
+<Example buttonLabel="navigation with background" class="d-flex flex-column gap-medium" code={``} />
+
+#### Outlined
+
+<Example buttonLabel="navigation outlined" class="d-flex flex-column gap-medium" code={``} />
+
+#### Rounded corners
+
+<Example buttonLabel="navigation rounded corners" class="d-flex flex-column gap-medium" code={``} />
+
+### States
+
+#### Disabled
+
+<Example buttonLabel="navigation disabled" class="d-flex flex-column gap-medium" code={``} />
+
+#### Skeleton
+
+<Example buttonLabel="navigation skeleton" class="d-flex flex-column gap-medium" code={``} />
+
+### Sizes
+
+<Example buttonLabel="navigation sizes" class="d-flex flex-column gap-medium" code={``} />
+
+### Layout
+
+#### List
+
+<Example buttonLabel="navigation list layout" class="d-flex flex-column gap-medium" code={``} />
+
+#### Standalone (card)
+
+<Example buttonLabel="navigation standalone card" class="d-flex flex-column gap-medium" code={``} />

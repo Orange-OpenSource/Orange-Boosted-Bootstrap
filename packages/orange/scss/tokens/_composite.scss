@@ -133,6 +133,11 @@ $badge-icon-warning-internal: url("data:image/svg+xml,<svg xmlns='http://www.w3.
 // badge-icon error-fill v1.6
 $badge-icon-negative: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g clip-path='url(#a)'><path d='M12 0C5.372 0 0 5.373 0 12c0 6.628 5.372 12 12 12s12-5.372 12-12c0-6.627-5.372-12-12-12Zm5.133 17.134c-.707.707-1.578.543-2.627-.506L12 14.122l-2.52 2.52c-1.05 1.049-1.906 1.2-2.613.492-.707-.707-.556-1.564.493-2.613l2.52-2.52L7.357 9.48c-1.05-1.05-1.2-1.907-.493-2.614.707-.706 1.564-.556 2.613.493L12 9.881l2.509-2.509c1.05-1.05 1.907-1.227 2.627-.507.707.707.542 1.578-.507 2.628L14.12 12l2.506 2.506c1.05 1.05 1.228 1.907.507 2.627Z'/></g><defs><clipPath id='a'><path fill='#fff' d='M0 0h24v24H0z'/></clipPath></defs></svg>") !default;
 
+// Navigation list item
+$list-item-external-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='M17.3 16.967a.936.936 0 0 1-.933.933H7.033a.936.936 0 0 1-.933-.933V7.633a.936.936 0 0 1 .933-.933h5.741l1.6-1.6H6.42c-1.056 0-1.92.864-1.92 1.92v10.56c0 1.056.864 1.92 1.92 1.92h10.56c1.056 0 1.92-.864 1.92-1.92V9.625l-1.6 1.6v5.742ZM19.334 3.5H14.09l1.75 1.75-3.528 3.527c-.46.46-.46 1.204 0 1.664l1.248 1.248c.46.46 1.204.46 1.664 0L18.75 8.16l1.75 1.75V4.666c0-.644-.522-1.166-1.166-1.166Z'/></svg>") !default;
+$list-item-next-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='m10.461 18.1 6.235-6.1-6.235-6.1L8.68 7.642 13.134 12 8.68 16.356l1.781 1.744Z'/></svg>") !default;
+$list-item-previous-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='M13.534 5.9 7.3 12l6.234 6.1 1.782-1.742L10.862 12l4.454-4.356L13.534 5.9Z'/></svg>") !default;
+
 //// SVG used several times
 $svg-as-custom-props: (
   "chevron":          $chevron-icon,

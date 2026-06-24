@@ -16,6 +16,7 @@
       draft: true
     - title: Icon
     - title: Links
+    - title: List item
     - title: Password input
     - title: Radio button
     - title: Select input
