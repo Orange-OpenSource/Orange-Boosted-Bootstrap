@@ -3508,6 +3508,38 @@ $utilities: ();
 
         /* rtl:end:remove */
 
+        .fs-lxl {
+          font-size: var(--bs-font-size-label-xlarge);
+          line-height: var(--bs-font-line-height-label-xlarge);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-label-xlarge);
+        }
+
+        .fs-ll {
+          font-size: var(--bs-font-size-label-large);
+          line-height: var(--bs-font-line-height-label-large);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-label-large);
+        }
+
+        .fs-lm {
+          font-size: var(--bs-font-size-label-medium);
+          line-height: var(--bs-font-line-height-label-medium);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-label-medium);
+        }
+
+        .fs-ls {
+          font-size: var(--bs-font-size-label-small);
+          line-height: var(--bs-font-line-height-label-small);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-label-small);
+        }
+
         .fs-cm {
           font-size: var(--bs-font-size-code-medium);
           line-height: var(--bs-font-line-height-code-medium);
@@ -15429,6 +15461,38 @@ $utilities: ();
         }
 
         /* rtl:end:remove */
+
+        .fs-lxl {
+          font-size: var(--bs-font-size-label-xlarge);
+          line-height: var(--bs-font-line-height-label-xlarge);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-label-xlarge);
+        }
+
+        .fs-ll {
+          font-size: var(--bs-font-size-label-large);
+          line-height: var(--bs-font-line-height-label-large);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-label-large);
+        }
+
+        .fs-lm {
+          font-size: var(--bs-font-size-label-medium);
+          line-height: var(--bs-font-line-height-label-medium);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-label-medium);
+        }
+
+        .fs-ls {
+          font-size: var(--bs-font-size-label-small);
+          line-height: var(--bs-font-line-height-label-small);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-label-small);
+        }
 
         .fs-cm {
           font-size: var(--bs-font-size-code-medium);
