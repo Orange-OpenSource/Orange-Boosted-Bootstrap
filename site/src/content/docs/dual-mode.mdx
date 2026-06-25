@@ -43,7 +43,9 @@ Here is a non exhaustive list of advantages of using this dual-mode:
 
 ### JavaScript
 
-As there is no diff on any javascript component at the moment, we encourage you to take the JavaScript from `@ouds/web-common`. So replace any import like `boosted/dist/js/boosted.bundle.min.js` by `@ouds/web-common/dist/js/ouds-web.bundle.min.js`, and you should be good to go.
+We encourage you to take the JavaScript from `@ouds/web-common` for a smoother integration with OUDS Web. So replace any import like `boosted/dist/js/boosted.bundle.min.js` by `@ouds/web-common/dist/js/ouds-web.bundle.min.js`.
+
+However, please note that OUDS Web no longer maintain jQuery compatibility. If your project still depends on jQuery plugins or requires jQuery compatibility, you should continue using Boosted's JavaScript (`boosted/dist/js/boosted.bundle.min.js`) until you can eliminate the jQuery dependency.
 
 ### CSS
 
