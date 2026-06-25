@@ -91,7 +91,7 @@ Use `.g-*` classes (`*` being among `none`, `3xsmall`, `2xsmall`, `xsmall`, `sma
 Gutter classes can also be added to [row columns]([[docsref:/layout/grid#row-columns]]). In the following example, we use responsive row columns and responsive gutter classes.
 
 <Example class="bd-example-cols" code={`<div class="container-fluid text-center">
-    <div class="row row-cols-2 row-cols-lg-5 g-small g-lg-medium">
+    <div class="row row-cols-2 lg:row-cols-5 g-small lg:g-medium">
       <div class="col">
         <div class="p-large">Row column</div>
       </div>
@@ -134,8 +134,8 @@ The gutters between columns in our predefined grid classes can be removed with `
 In practice, here’s how it looks. Note that you can continue to use this with all other predefined grid classes (including column widths, responsive tiers, reorders, and more).
 
 <Example class="bd-example-row" code={`<div class="row g-none text-center">
-    <div class="col-sm-6 col-md-8">.col-sm-6 .col-md-8</div>
-    <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    <div class="sm:col-6 md:col-8">.sm:col-6 .md:col-8</div>
+    <div class="col-6 md:col-4">.col-6 .md:col-4</div>
   </div>`} />
 
 ## Nesting
@@ -143,9 +143,9 @@ In practice, here’s how it looks. Note that you can continue to use this with 
 Nested `.row`s will reset their own gutters to follow the main grid gutters. Here is an example with a `.gx-none` on the upper `.row`.
 
 <Example class="bd-example-cols" code={`<div class="row gx-none text-center">
-    <div class="col-12 col-md-8">
+    <div class="col-12 md:col-8">
       <div>
-        <p>.col-12 .col-md-8</p>
+        <p>.col-12 .md:col-8</p>
         <div class="row">
           <div class="col-3"><div>.col-3</div></div>
           <div class="col-3"><div>.col-3</div></div>
@@ -154,7 +154,7 @@ Nested `.row`s will reset their own gutters to follow the main grid gutters. Her
         </div>
       </div>
     </div>
-    <div class="col-6 col-md-4">
-      <div>.col-6 .col-md-4</div>
+    <div class="col-6 md:col-4">
+      <div>.col-6 .md:col-4</div>
     </div>
   </div>`} />

@@ -16,7 +16,7 @@
     })
 
     tac.querySelectorAll('.tarteaucitronDeny').forEach(button => {
-      button.classList.add('btn', 'btn-negative', 'mt-2xsmall', 'mt-md-none', 'ms-md-large')
+      button.classList.add('btn', 'btn-negative', 'mt-2xsmall', 'md:mt-none', 'md:ms-large')
       button.innerHTML = tarteaucitron.lang.denyAll
     })
 
@@ -32,10 +32,10 @@
 
     alert.setAttribute('data-bs-theme', 'dark')
 
-    document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-default', 'ms-lg-small')
-    alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-strong', 'mx-sm-small', 'ms-lg-auto', 'my-small', 'my-lg-none')
+    document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-default', 'lg:ms-small')
+    alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-strong', 'sm:mx-small', 'lg:ms-auto', 'my-small', 'lg:my-none')
     alert.querySelector('.tarteaucitronAllow').innerHTML = tarteaucitron.lang.acceptAll
-    alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-negative', 'mx-sm-small', 'my-small', 'my-lg-none')
+    alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-negative', 'sm:mx-small', 'my-small', 'lg:my-none')
     alert.querySelector('.tarteaucitronDeny').innerHTML = tarteaucitron.lang.denyAll
   }, { once: true })
 
@@ -107,13 +107,14 @@ if (typeof tarteaucitron !== 'undefined') {
     orientation: 'bottom',
     bodyPosition: 'top',
     cookieslist: true,
-    highPrivacy: false,
+    highPrivacy: true,
     showIcon: false,
     handleBrowserDNTRequest: true,
     useExternalCss: true,
     mandatory: false,
     googleConsentMode: false,
-    partnersList: true
+    partnersList: true,
+    alwaysNeedConsent: true
   })
 
   tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
