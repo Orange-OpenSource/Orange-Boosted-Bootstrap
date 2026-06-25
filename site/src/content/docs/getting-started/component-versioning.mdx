@@ -29,8 +29,8 @@ You can find [OUDS components statuses here](https://unified-design-system.orang
   <tbody>
   {
     componentsDetails
+      .filter((component) => !component.excludeFromVersioning )
       .map((component) => ({...component, version: getData('_components-versions').find((vers) => vers.name === (component.slug ?? component.name.toLowerCase()))}))
-      .filter((component) => component.version) // drops components that are not in components-versions.yml like Icon
       .map((component) => (
         <tr>
           <td>
@@ -38,12 +38,15 @@ You can find [OUDS components statuses here](https://unified-design-system.orang
               `/components/${component.link ?? component.slug ?? component.name.toLowerCase()}`
             )}>{component.name}</a>
           </td>
-          <td>
-            <span class="tag tag-info tag-muted">{component.version.value}</span>&nbsp;
-            <a href={`https://r.orange.fr/r/S-ouds-doc-${component.slug ?? component.name.toLowerCase()}_changelog`}>
-              changelog<span class="visually-hidden">for {component.name}</span>
-            </a>
-          </td>
+            {
+              !!component.version ?
+                <td>
+                  <span class="tag tag-info tag-muted">{component.version.value}</span>&nbsp;
+                  <a href={`https://r.orange.fr/r/S-ouds-doc-${component.slug ?? component.name.toLowerCase()}_changelog`}>
+            changelog<span class="visually-hidden">for {component.name}</span></a>
+                </td> :
+                <td><span class="tag tag-warning tag-muted">draft</span></td>
+            }
         </tr>
       ))
   }
