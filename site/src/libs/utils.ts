@@ -50,7 +50,12 @@ export function getComponentSVG(className: string): string {
 }
 
 export function getVersionLink(version: string): string {
-  return `<a class="link float-end pt-none align-content-center" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/${version}-ouds-web">Full changelog</a>`
+    return `<a class="link icon-link float-end pt-none" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/${version}-ouds-web"" target="_blank">
+      Full changelog
+      <svg class="m-none ms-xsmall" aria-hidden="true">
+        <use xlink:href="/orange/docs/1.3/assets/img/ouds-web-sprite.svg#external-link"/>
+      </svg>
+  </a>`
 }
 
 export function isHeading(tag: string): boolean {
