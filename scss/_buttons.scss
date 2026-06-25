@@ -527,7 +527,35 @@
   background-color: currentcolor;
 }
 
-.btn-opaque:hover {
-  background-color: var(--bs-btn-opaque, var(--bs-color-bg-primary));
-  background-image: linear-gradient(var(--#{$prefix}btn-hover-bg));
+.btn-opaque {
+  --#{$prefix}btn-border-width: #{$ouds-border-width-none};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-border-width-none};
+
+  @include button-variant(
+    $ouds-button-mono-color-bg-strong-enabled,
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-mono-color-content-strong-enabled,
+    $ouds-button-mono-color-bg-strong-hover,
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-mono-color-content-strong-hover,
+    $ouds-button-mono-color-bg-strong-pressed,
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-mono-color-content-strong-pressed,
+    $ouds-button-mono-color-bg-strong-disabled,
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-mono-color-content-strong-disabled,
+    $ouds-button-mono-color-bg-strong-focus,
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-mono-color-content-strong-focus,
+    $ouds-button-mono-color-bg-strong-loading,
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-mono-color-content-strong-loading
+  );
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    background-color: var(--bs-btn-opaque, var(--bs-color-bg-primary));
+    background-image: linear-gradient(var(--#{$prefix}btn-hover-bg));
+  }
 }
