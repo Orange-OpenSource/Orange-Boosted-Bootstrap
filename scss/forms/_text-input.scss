@@ -85,7 +85,7 @@
       z-index: 2;
       overflow: hidden;
       color: var(--#{$prefix}text-input-label-color);
-      @include transition(font-size .1s ease-out);
+      @include transition(font-size .15s ease-out);
 
       // Allow the whole text-input-container to be clickable to focus the input
       &::before {
@@ -496,7 +496,7 @@
       color: var(--#{$prefix}text-input-label-color);
       text-overflow: ellipsis;
       white-space: nowrap;
-      @include transition(font-size .1s ease-out);
+      @include transition(font-size .15s ease-out);
       @include get-font-size("label-large");
 
       // Allow the whole text-area-container to be clickable to focus the input
