@@ -84,8 +84,14 @@
   flex-shrink: 0;
   row-gap: var(--#{$prefix}list-item-container-row-gap, $ouds-control-item-space-row-gap);
   align-items: var(--#{$prefix}list-item-align-items, center);
-  min-height: $ouds-control-item-size-asset-medium;
+  overflow: hidden;
   white-space: nowrap;
+  @include border-radius(var(--#{$prefix}list-item-trailing-container-border-radius, $ouds-control-item-border-radius-media), var(--#{$prefix}list-item-trailing-container-border-radius, $ouds-control-item-border-radius-media));
+
+  &:has(svg, img, .icon, .item-icon, video) {
+    height: var(--#{$prefix}list-item-trailing-container-size, $ouds-control-item-size-asset-medium);
+    aspect-ratio: 1;
+  }
 }
 
 .item-overline {
@@ -237,7 +243,7 @@
 }
 
 .item-status-positive {
-  --#{$prefix}list-item-icon: #{$alert-icon-success};
+  --#{$prefix}list-item-icon: #{$alert-icon-success}; // TODO: Decide if we make a common css variable with alert
   --#{$prefix}list-item-icon-color: #{$ouds-color-content-status-positive};
 }
 
