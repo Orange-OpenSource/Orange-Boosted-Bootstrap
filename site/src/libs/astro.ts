@@ -71,7 +71,7 @@ export function oudsWeb(): AstroIntegration[] {
                 [
                   rehypeAutolinkHeadings,
                   {
-                    behavior: 'append',
+                    behavior: 'prepend',
                     content: [{ type: 'text', value: ' '}],
                     properties: (element: Element) => ({
                       class: 'anchor-link',
@@ -80,7 +80,6 @@ export function oudsWeb(): AstroIntegration[] {
                     test: (element: Element) => isHeading(element.tagName)
                   }
                 ],
-                rehypeHeaderLinksOrder,
                 rehypeBsTable
               ],
               remarkPlugins: [remarkBsConfig, remarkBsDocsref, remarkBsComp, remarkBsVersionLink]

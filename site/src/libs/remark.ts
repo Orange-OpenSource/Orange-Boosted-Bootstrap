@@ -14,8 +14,8 @@ const configRegExp = /\[\[config:(?<name>[\w\.]+)]]/g
 const docsrefRegExp = /\[\[docsref:(?<path>[\w\.\/#-]+)]]/g
 // [[comp]]
 const compRegExp = /\[\[comp\]\]\s*/
-// [[version-link]]
-const versionLinkRegExp = /\[\[version-link\]\]\s*/
+// [[version-changelog-link]]
+const versionLinkRegExp = /\[\[version-changelog-link\]\]\s*/
 
 // A remark plugin to replace config values embedded in markdown (or MDX) files.
 // For example, [[config:foo]] will be replaced with the value of the `foo` key in the `config.yml` file.
