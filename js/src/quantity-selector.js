@@ -8,7 +8,6 @@
 import BaseComponent from './base-component.js'
 import EventHandler from './dom/event-handler.js'
 import SelectorEngine from './dom/selector-engine.js'
-import { defineJQueryPlugin } from './util/index.js'
 
 /**
  * Constants
@@ -113,22 +112,6 @@ class QuantitySelector extends BaseComponent {
       btnUp.setAttribute('disabled', '')
     }
   }
-
-  static jQueryInterface(config) {
-    return this.each(function () {
-      const data = QuantitySelector.getOrCreateInstance(this, config)
-
-      if (typeof config !== 'string') {
-        return
-      }
-
-      if (typeof data[config] === 'undefined') {
-        throw new TypeError(`No method named "${config}"`)
-      }
-
-      data[config]()
-    })
-  }
 }
 
 /**
@@ -144,11 +127,5 @@ EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
     QuantitySelector.getOrCreateInstance(el).ValueOnLoad(el)
   }
 })
-
-/**
- * jQuery
- */
-
-defineJQueryPlugin(QuantitySelector)
 
 export default QuantitySelector
