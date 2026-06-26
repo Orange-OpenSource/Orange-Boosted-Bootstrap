@@ -75,15 +75,21 @@
 }
 
 .item-text-container {
+  display: flex;
   flex-grow: 1;
+  flex-direction: column;
   row-gap: var(--#{$prefix}list-item-container-row-gap, $ouds-control-item-space-row-gap);
-  align-items: var(--#{$prefix}list-item-align-items, center);
+  justify-content: center;
 }
 
 .item-trailing-container {
+  display: flex;
   flex-shrink: 0;
+  flex-direction: column;
   row-gap: var(--#{$prefix}list-item-container-row-gap, $ouds-control-item-space-row-gap);
-  align-items: var(--#{$prefix}list-item-align-items, center);
+  align-items: flex-end;
+  justify-content: center;
+  min-height: var(--#{$prefix}list-item-trailing-container-size, $ouds-control-item-size-asset-medium);
   overflow: hidden;
   white-space: nowrap;
   @include border-radius(var(--#{$prefix}list-item-trailing-container-border-radius, $ouds-control-item-border-radius-media), var(--#{$prefix}list-item-trailing-container-border-radius, $ouds-control-item-border-radius-media));
@@ -206,14 +212,15 @@
 .item-outlined {
   --#{$prefix}list-item-outlined-bg: transparent;
   --#{$prefix}list-item-border-width: #{$ouds-control-item-border-width-default};
-  --#{$prefix}list-item-border-width: var(--#{$prefix}list-item-arrow-color);
+  --#{$prefix}list-item-border-color: var(--#{$prefix}list-item-arrow-color);
 }
 
 .item-top {
   --#{$prefix}list-item-align-items: flex-start;
   --#{$prefix}list-item-padding-top: var(--#{$prefix}list-item-counterweight-padding-top, #{$ouds-control-item-space-padding-block-density-default-top-alignment-top-counterweight});
 
-  .item-text-container { // TODO: CSS variable here or keep it like that ?
+  .item-text-container,
+  .item-trailing-container:has(.item-label) { // TODO: CSS variable here
     margin-top: var(--#{$prefix}list-item-text-container-margin-top, $ouds-control-item-space-padding-block-density-default-top-alignment-top-text-container);
   }
 }
