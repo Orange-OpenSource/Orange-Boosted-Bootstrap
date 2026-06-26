@@ -436,6 +436,7 @@
     position: relative;
     display: flex; // removes space under textarea
     min-width: var(--#{$prefix}text-input-min-width);
+    padding-top: calc($ouds-text-area-space-padding-block + var(--#{$prefix}font-line-height-label-small) * var(--#{$prefix}font-size-label-small) - var(--#{$prefix}text-input-border-width-top));
     background-color: var(--#{$prefix}text-input-background-color);
     background-clip: border-box;
     border-color: var(--#{$prefix}text-input-border-color);
@@ -445,10 +446,10 @@
 
     .text-area-field {
       width: 100%;
-      height: calc(px-to-rem($ouds-text-area-size-min-height-input * 2) + $ouds-text-area-space-padding-block * 2 - var(--#{$prefix}text-input-border-width-bottom) - var(--#{$prefix}text-input-border-width-top) + var(--#{$prefix}font-line-height-label-small) * var(--#{$prefix}font-size-label-small));
-      min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) + $ouds-text-area-space-padding-block * 2 - var(--#{$prefix}text-input-border-width-bottom) - var(--#{$prefix}text-input-border-width-top) + var(--#{$prefix}font-line-height-label-small) * var(--#{$prefix}font-size-label-small));
-      max-height: calc(px-to-rem($ouds-text-area-size-max-height-input) + $ouds-text-area-space-padding-block * 2 - var(--#{$prefix}font-line-height-label-small) * var(--#{$prefix}font-size-label-small) - var(--#{$prefix}text-input-border-width-bottom) - var(--#{$prefix}text-input-border-width-top));
-      padding-top: calc($ouds-text-area-space-padding-block + var(--#{$prefix}font-line-height-label-small) * var(--#{$prefix}font-size-label-small) - var(--#{$prefix}text-input-border-width-top));
+      height: calc(px-to-rem($ouds-text-area-size-min-height-input * 2) + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
+      min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
+      max-height: calc(px-to-rem($ouds-text-area-size-max-height-input) + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
+      padding-top: 0;
       padding-right: calc($ouds-text-input-space-column-gap-default + $ouds-button-size-min-width + $ouds-text-input-space-padding-inline-trailing-action - var(--#{$prefix}text-input-border-width-right));
       padding-bottom: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
       padding-left: calc($ouds-text-input-space-padding-inline-default - var(--#{$prefix}text-input-border-width-left));
@@ -522,9 +523,7 @@
     }
 
     &:has(label.visually-hidden) {
-      .text-area-field {
-        padding-top: calc($ouds-text-area-space-padding-block-top-empty - var(--#{$prefix}text-input-border-width-top));
-      }
+      padding-top: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-top));
     }
 
     &:has(.text-area-field:placeholder-shown:not([placeholder=" "]), .text-area-field[placeholder]:not(:placeholder-shown), .text-area-field:focus:not(:read-only)) {
