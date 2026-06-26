@@ -169,16 +169,16 @@
 /* rtl:end:ignore */
 
 .bs-popover-auto {
-  &[data-popper-placement^="top"] {
+  &[data-bs-placement^="top"] {
     @extend .bs-popover-top;
   }
-  &[data-popper-placement^="right"] {
+  &[data-bs-placement^="right"] {
     @extend .bs-popover-end;
   }
-  &[data-popper-placement^="bottom"] {
+  &[data-bs-placement^="bottom"] {
     @extend .bs-popover-bottom;
   }
-  &[data-popper-placement^="left"] {
+  &[data-bs-placement^="left"] {
     @extend .bs-popover-start;
   }
 }

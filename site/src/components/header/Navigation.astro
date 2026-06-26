@@ -133,7 +133,7 @@ const { addedIn, layout, title } = Astro.props
               type="button"
               aria-expanded="false"
               data-bs-toggle="dropdown"
-              data-bs-display="static"
+              data-bs-placement="bottom-end"
               aria-label={`Toggle brand (${getConfig().brand})`}
             >
               <svg class="bi ms-auto" aria-hidden="true">
@@ -141,7 +141,7 @@ const { addedIn, layout, title } = Astro.props
               </svg>
               <span class="d-lg-none ms-small" id="bd-brand-text">Toggle brand</span>
             </button>
-            <ul class=`dropdown-menu dropdown-menu-end mb-small` aria-labelledby="bd-brand-text">
+            <ul class=`dropdown-menu mb-small` aria-labelledby="bd-brand-text">
               <li>
                 <a
                   href={Astro.url}

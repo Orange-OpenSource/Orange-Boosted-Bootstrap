@@ -89,7 +89,7 @@
     "storybook-build": "npm run storybook-generate && storybook build -o ./_site/storybook"
   },
   "peerDependencies": {
-    "@popperjs/core": "^2.11.8"
+    "@floating-ui/dom": "^1.7.6"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
@@ -101,7 +101,7 @@
     "@babel/core": "^7.28.3",
     "@babel/preset-env": "^7.28.3",
     "@docsearch/js": "^3.9.0",
-    "@popperjs/core": "^2.11.8",
+    "@floating-ui/dom": "^1.7.6",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.6",
     "@rollup/plugin-node-resolve": "^16.0.1",
@@ -195,13 +195,13 @@
     "shim": {
       "js/ouds-web": {
         "deps": [
-          "@popperjs/core"
+          "@floating-ui/dom"
         ]
       }
     },
     "dependencies": {},
     "peerDependencies": {
-      "@popperjs/core": "^2.11.8"
+      "@floating-ui/dom": "^1.7.6"
     }
   },
   "overrides": {
