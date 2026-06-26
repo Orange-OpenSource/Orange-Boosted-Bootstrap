@@ -83,8 +83,13 @@
 
     > label {
       z-index: 2;
+      display: -webkit-box;
+      max-height: #{$ouds-text-input-size-label-max-height};
       overflow: hidden;
       color: var(--#{$prefix}text-input-label-color);
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
       @include transition(font-size .15s ease-out);
 
       // Allow the whole text-input-container to be clickable to focus the input
@@ -197,8 +202,9 @@
 
     &:has(.text-input-field:placeholder-shown:not([placeholder=" "]), .text-input-field[placeholder]:not(:placeholder-shown), .text-input-field:focus:not(:read-only)) {
       > label {
-        text-overflow: ellipsis;
+        display: initial;
         white-space: nowrap;
+        --webkit-box-orient: unset;
         @include get-font-size("label-small");
 
         // stylelint-disable-next-line selector-no-qualifying-type
@@ -489,6 +495,7 @@
       top: 0;
       left: 0;
       z-index: 2;
+      display: -webkit-box;
       width: 100%;
       padding-top: calc($ouds-text-area-space-padding-block-top-empty - var(--#{$prefix}text-input-border-width-top));
       padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right));
@@ -496,7 +503,8 @@
       overflow: hidden;
       color: var(--#{$prefix}text-input-label-color);
       text-overflow: ellipsis;
-      white-space: nowrap;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
       @include transition(font-size .15s ease-out);
       @include get-font-size("label-large");
 
@@ -530,7 +538,10 @@
       &:not(:has(label.visually-hidden)) {
 
         > label {
+          display: initial;
           padding-top: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-top));
+          white-space: nowrap;
+          -webkit-box-orient: unset;
           @include get-font-size("label-small");
         }
       }
