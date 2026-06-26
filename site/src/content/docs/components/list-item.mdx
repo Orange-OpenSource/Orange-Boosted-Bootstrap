@@ -360,6 +360,7 @@ Here is a table of the different assets that we support in the leading container
         <div class="item-leading-container item-leading-large ratio-16x9">
           <video controls class="w-100 h-100 object-fit-cover" autoplay muted loop>
             <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <track kind="captions" src="" srclang="en" label="English">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -452,6 +453,21 @@ Optionally, a slot can be added at the end of the text container using `.item-sl
 
 ##### Trailing container
 
+<ul class="nav nav-underline">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+  </li>
+</ul>
+
 The trailing container using `.item-trailing-container`.
 
 Here is a table of the different assets that we support in the trailing container, along with their corresponding classes and notes.
@@ -459,6 +475,8 @@ Here is a table of the different assets that we support in the trailing containe
 <Callout type="warning">
   Please note that the sizes below shouldn't be used in a [small list item](#sizes). The slot shouldn't be used as well in this size.
 </Callout>
+
+{/* TODO: Try to have a filter with only one of them displ */}
 
 <BsTable>
 | Asset | Sizes | Ratio | Rounded corners | Notes |
@@ -570,6 +588,7 @@ Here is a table of the different assets that we support in the trailing containe
         <div class="item-trailing-container item-trailing-large ratio-16x9">
           <video controls class="w-100 h-100 object-fit-cover" autoplay muted loop>
             <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <track kind="captions" src="" srclang="en" label="English">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -599,7 +618,7 @@ Here is a small resume of the slots that can be used in a static item:
 * [Leading container](#leading-container) using `.item-slot` (optional)
 * [Text container](#text) using `.item-slot` (optional)
 * [Trailing container](#trailing-container) using `.item-slot` (optional)
-* A slot outside of the main container using `.item-slot` (optional)
+* A slot outside of the main container, direct child of `.item` using `.item-slot` (optional)
 
 <Example buttonLabel="static item using a slot outside of the main content of the item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
@@ -623,19 +642,116 @@ Here is a small resume of the slots that can be used in a static item:
 
 #### Alignment
 
-<Example buttonLabel="top alignment static item" class="d-flex flex-column gap-medium" code={``} />
+By default all static item are vertically centered. You can change the alignment of the content using `.item-top` by setting it on the `.item-main` or any ancestors.
+
+<Example buttonLabel="top alignment static item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    <div class="item item-top">
+      <div class="item-main">
+        <div class="item-leading-container">
+          <svg class="w-100 h-100" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+          </svg>
+        </div>
+        <div class="item-text-container">
+          <p class="item-overline">Overline</p>
+          <p class="item-label">Label</p>
+          <p class="item-extra-label">Extra label</p>
+          <p class="item-description">Description</p>
+        </div>
+        <div class="item-trailing-container">
+          <p class="badge badge-count badge-large">1<span class="visually-hidden">errors</span></p>
+        </div>
+      </div>
+      <div class="item-slot">
+        <div class="alert alert-message alert-negative">
+          <div class="alert-icon"><p class="visually-hidden">Negative alert</p></div>
+          <div class="alert-container">
+            <div class="alert-text-container">
+              <h3 class="alert-label">Alert message</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`} />
 
 #### Helper text
 
-<Example buttonLabel="helper text" class="d-flex flex-column gap-medium" code={``} />
+Optionally, a helper text can be added below the main `.item` container using `.item-helper`.
 
-#### With background
+<Example buttonLabel="static item with helper text" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </div>
+    <p class="item-helper">Helper text</p>
+  </div>`} />
 
-<Example buttonLabel="with background" class="d-flex flex-column gap-medium" code={``} />
+#### Background
+
+By default, alone items have a background-color, while list items don't. This behavior can be modified by using `.item-no-bg` or `.item-bg` on the element `.item` or any ancestors up to the `.item-list` container if it exists.
+
+<Example buttonLabel="static items with background modifications" class="d-flex flex-column gap-medium" code={`<!-- Alone -->
+  <div class="item-wrapper">
+    <div class="item item-no-bg">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- List -->
+  <ul class="item-list item-bg">
+    <li class="item-wrapper">
+      <div class="item">
+        <div class="item-main">
+          <div class="item-text-container">
+            <p class="item-label">Label</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item-wrapper">
+      <div class="item">
+        <div class="item-main">
+          <div class="item-text-container">
+            <p class="item-label">Label</p>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>`} />
 
 #### Outlined
 
-<Example buttonLabel="outlined" class="d-flex flex-column gap-medium" code={``} />
+By default every item comes with a divider. The divider may be removed or transformed into an outline using `.item-no-divider` or `.item-outlined` on the element `.item` or any ancestors.
+
+<Example buttonLabel="outlined" class="d-flex flex-column gap-medium" code={`<!-- Without divider -->
+  <div class="item-wrapper">
+    <div class="item item-no-divider">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Outlined -->
+  <div class="item-wrapper">
+    <div class="item item-outlined">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>`} />
 
 #### Rounded corners
 
