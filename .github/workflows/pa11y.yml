@@ -13,7 +13,8 @@ on:
 
 env:
   FORCE_COLOR: 2
-  NODE: 22
+  NODE: 24
+  PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium-browser
 
 jobs:
   pa11y:

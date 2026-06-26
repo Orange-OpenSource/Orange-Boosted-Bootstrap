@@ -50,18 +50,7 @@ const { name, type = 'info', title, titleLevel, action, actionHref = '#', class:
 
 let Content: MarkdownInstance<{}>['Content'] | undefined
 let titleToDisplay: string = title as string
-let titleTag: string
-
-if (name) {
-  const callout = await getCalloutByName(name)
-
-  if (!callout) {
-    throw new Error(`Could not find callout with name '${name}'.`)
-  }
-
-  const namedCallout = await callout.render()
-  Content = namedCallout.Content
-}
+let titleTag: string = 'p'
 
 // Set default title
 switch (type) {
@@ -76,7 +65,21 @@ switch (type) {
     break
 }
 
-titleLevel ? (titleTag = `h${titleLevel}`) : (titleTag = 'p')
+if (name) {
+  const callout = await getCalloutByName(name)
+
+  if (!callout) {
+    throw new Error(`Could not find callout with name '${name}'.`)
+  }
+
+  const namedCallout = await callout.render()
+  if (namedCallout.remarkPluginFrontmatter && namedCallout.remarkPluginFrontmatter.title) {
+    titleToDisplay = namedCallout.remarkPluginFrontmatter.title
+  }
+  Content = namedCallout.Content
+}
+
+titleLevel && (titleTag = `h${titleLevel}`)
 ---
 
 <div class={`alert alert-message alert-${type} ${className ? className : 'my-medium'}`}>

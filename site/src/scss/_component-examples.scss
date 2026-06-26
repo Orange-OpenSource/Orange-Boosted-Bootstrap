@@ -135,6 +135,8 @@
 
 .bd-example-row [class^="col"],
 .bd-example-cols [class^="col"] > *,
+.bd-example-row [class*=":col"], // OUDS mod: for responsive row columns
+.bd-example-cols [class*=":col"] > *, // OUDS mod: for responsive row columns
 .bd-example-cssgrid [class*="grid"] > * {
   padding-top: .75rem;
   padding-bottom: .75rem;
@@ -398,7 +400,7 @@
   }
 
   pre code {
-    @include font-size(inherit);
+    font-size: inherit;
     color: var(--#{$prefix}color-content-default); // OUDS mod: instead of `var(--bs-body-color)`
     word-wrap: normal;
   }

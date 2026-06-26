@@ -26,7 +26,7 @@ export function getStaticPaths() {
     {
       getVersionsSortedDesc(getData('docs-versions'), 'group').map((docsVersion) => {
         return (
-          <div class="col-md-6 col-lg-4 col-xl mb-2xlarge">
+          <div class="md:col-6 lg:col-4 xl:col mb-2xlarge">
             <h2>{docsVersion.group}</h2>
             <p>{docsVersion.description}</p>
             <div class="list-group">
@@ -39,10 +39,10 @@ export function getStaticPaths() {
                   return (
                     <a
                       class:list={[
-                        'list-group-item list-group-item-action py-sm',
+                        'list-group-item list-group-item-action py-small',
                         isCurrentVersion && 'd-flex justify-content-between align-items-center'
                       ]}
-                      href={`${docsVersion.baseurl}/${version}/`}
+                      href={`${docsVersion.baseurl.replaceAll('[brand]', getConfig().brand)}/${version}/`}
                     >
                       {version}
                       {isCurrentVersion && <span class="tag tag-accent">Latest</span>}

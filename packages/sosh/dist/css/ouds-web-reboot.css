@@ -1,5 +1,5 @@
 /*!
- * OUDS Web Reboot v1.1.0 (https://web.unified-design-system.orange.com/)
+ * OUDS Web Reboot v1.3.0 (https://web.unified-design-system.orange.com/)
  * Copyright 2014-2026 The OUDS Web Authors
  * Copyright 2014-2026 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
@@ -1170,11 +1170,11 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  max-width: var(--bs-font-max-width-heading-xlarge);
-  font-size: var(--bs-font-size-heading-xlarge);
-  line-height: var(--bs-font-line-height-heading-xlarge);
+  max-width: var(--bs-font-max-width-heading-small);
+  font-size: var(--bs-font-size-heading-small);
+  line-height: var(--bs-font-line-height-heading-small);
   /* rtl:remove */
-  letter-spacing: var(--bs-font-letter-spacing-heading-xlarge);
+  letter-spacing: var(--bs-font-letter-spacing-heading-small);
   font-weight: 700;
   color: var(--bs-caption-color, var(--bs-emphasis-color));
   text-align: left;
@@ -1269,7 +1269,7 @@ textarea {
 }
 
 fieldset {
-  min-width: 0;
+  min-inline-size: 0;
   padding: 0;
   margin: 0;
   border: 0;
@@ -1277,7 +1277,6 @@ fieldset {
 
 legend {
   float: left;
-  width: 100%;
   padding: 0;
   margin-bottom: 0.25rem;
   font-weight: 700;

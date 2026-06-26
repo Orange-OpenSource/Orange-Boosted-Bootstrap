@@ -14,7 +14,7 @@ import sh from 'shelljs'
 import { format } from 'prettier'
 
 // eslint-disable-next-line unicorn/no-await-expression-member
-const BRANDS = (await fs.readdir('packages', { withFileTypes: true })).filter(file => file.isDirectory()).map(dir => dir.name)
+const BRANDS = (await fs.readdir('packages', { withFileTypes: true })).filter(file => file.isDirectory() && file.name !== 'migrate').map(dir => dir.name)
 
 BRANDS.map(async brand => {
   const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -22,7 +22,7 @@ BRANDS.map(async brand => {
   const pkgJson = path.join(__dirname, '../package.json')
   const pkg = JSON.parse(await fs.readFile(pkgJson, 'utf8'))
 
-  const versionShort = pkg.config.version_short
+  const versionShort = pkg.version_short
   const distFolder = `ouds-web-${brand}-${pkg.version}-examples`
   const rootDocsDir = '_site'
   const docsDir = `${rootDocsDir}/${brand}/docs/${versionShort}/`
