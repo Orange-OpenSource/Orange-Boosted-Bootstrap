@@ -14,7 +14,7 @@
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-grid.min.css",
-      "maxSize": "8.5 kB"
+      "maxSize": "7.25 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-reboot.css",
@@ -50,7 +50,7 @@
     },
     {
       "path": "./dist/js/ouds-web.esm.js",
-      "maxSize": "29.25 kB"
+      "maxSize": "29.5 kB"
     },
     {
       "path": "./dist/js/ouds-web.esm.min.js",
