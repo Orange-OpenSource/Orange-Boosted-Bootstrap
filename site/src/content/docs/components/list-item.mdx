@@ -453,20 +453,225 @@ Optionally, a slot can be added at the end of the text container using `.item-sl
 
 ##### Trailing container
 
-<ul class="nav nav-underline">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+The trailing container using `.item-trailing-container`.
+
+Here is a list of the different assets that we support in the trailing container, along with their corresponding classes and notes.
+
+<Callout type="warning">
+  Please note that the sizes below shouldn't be used in a [small list item](#sizes). The slot shouldn't be used as well in this size.
+</Callout>
+
+<ul class="nav nav-pills" id="pills-tab" role="tablist">
+  <li class="nav-item chip chip filter" role="presentation">
+    <button class="chip-interactive active" id="pills-text-tab" data-bs-toggle="pill" data-bs-target="#pills-text" type="button" role="tab" aria-controls="pills-text" aria-selected="true">Text</button>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="nav-item chip chip filter" role="presentation">
+    <button class="chip-interactive" id="pills-badge-tab" data-bs-toggle="pill" data-bs-target="#pills-badge" type="button" role="tab" aria-controls="pills-badge" aria-selected="false">Badge</button>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="nav-item chip chip filter" role="presentation">
+    <button class="chip-interactive" id="pills-tag-tab" data-bs-toggle="pill" data-bs-target="#pills-tag" type="button" role="tab" aria-controls="pills-tag" aria-selected="false">Tag</button>
   </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+  <li class="nav-item chip chip filter" role="presentation">
+    <button class="chip-interactive" id="pills-icon-tab" data-bs-toggle="pill" data-bs-target="#pills-icon" type="button" role="tab" aria-controls="pills-icon" aria-selected="false">Icon</button>
+  </li>
+  <li class="nav-item chip chip filter" role="presentation">
+    <button class="chip-interactive" id="pills-image-tab" data-bs-toggle="pill" data-bs-target="#pills-image" type="button" role="tab" aria-controls="pills-image" aria-selected="false">Image</button>
+  </li>
+  <li class="nav-item chip chip filter" role="presentation">
+    <button class="chip-interactive" id="pills-video-tab" data-bs-toggle="pill" data-bs-target="#pills-video" type="button" role="tab" aria-controls="pills-video" aria-selected="false">Video</button>
+  </li>
+  <li class="nav-item chip chip filter" role="presentation">
+    <button class="chip-interactive" id="pills-slot-tab" data-bs-toggle="pill" data-bs-target="#pills-slot" type="button" role="tab" aria-controls="pills-slot" aria-selected="false">Slot</button>
   </li>
 </ul>
+<div class="tab-content mb-medium border-default" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-text" role="tabpanel" aria-labelledby="pills-text-tab" tabindex="0">
+    Text should use `.item-label` with either `.item-extra-label` (only if not item small), `.text-muted`, or `.fw-bold`.
+
+    <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+        <div class="item-trailing-container">
+          <p class="item-label">Label</p>
+          <p class="item-extra-label">Extra label</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+        <div class="item-trailing-container">
+          <p class="item-label fw-bold">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+        <div class="item-trailing-container">
+          <p class="item-label text-muted">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+  </div>
+  <div class="tab-pane fade" id="pills-badge" role="tabpanel" aria-labelledby="pills-badge-tab" tabindex="0">
+    All variants of [Badge]([[docsref:/components/badge#badge]]) and [Badge - count]([[docsref:/components/badge#badge---count]]) are allowed.
+
+    <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+        <div class="item-trailing-container">
+          <p class="badge badge-count">12<span class="visually-hidden">errors</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+        <div class="item-trailing-container">
+          <span class="badge badge-large"></span>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+  </div>
+  <div class="tab-pane fade" id="pills-tag" role="tabpanel" aria-labelledby="pills-tag-tab" tabindex="0">
+    All variants of [tags]([[docsref:/components/tag#tag]]) are allowed.
+
+    <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+        <div class="item-trailing-container">
+          <p class="tag">Tag</p>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+  </div>
+  <div class="tab-pane fade" id="pills-icon" role="tabpanel" aria-labelledby="pills-icon-tab" tabindex="0">
+    The icon may be large using `.item-trailing-large` (only if not small item). If you need to use any of the status icon, you may use `.item-status-positive`, `.item-status-warning`, `.item-status-info` or `.item-status-negative` for color and icon in addition of `.item-icon`.
+
+    <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+        <div class="item-trailing-container item-trailing-large">
+          <svg class="w-100 h-100" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+        <div class="item-trailing-container item-status-positive">
+          <div class="item-icon"></div>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+  </div>
+  <div class="tab-pane fade" id="pills-image" role="tabpanel" aria-labelledby="pills-image-tab" tabindex="0">
+    Images can be sized with `item-trailing-large` or `item-trailing-xlarge` and can use [ratio utilities]([[docsref:/utilities/aspect-ratio]]) and `.item-trailing-rounded`. All these classes can be combined as needed and placed on a parent element.
+
+    <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+        <div class="item-trailing-container item-trailing-xlarge item-trailing-rounded">
+          <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+        <div class="item-trailing-container ratio-16x9">
+          <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover" />
+        </div>
+      </div>
+    </div>
+  </div>`} />
+  </div>
+  <div class="tab-pane fade" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab" tabindex="0">
+    Videos can be sized with `item-trailing-large` or `item-trailing-xlarge` and can use [ratio utilities]([[docsref:/utilities/aspect-ratio]]) and `.item-trailing-rounded`. All these classes can be combined as needed and placed on a parent element.
+
+    <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+        <div class="item-trailing-container item-trailing-large ratio-16x9 item-trailing-rounded">
+          <video controls class="w-100 h-100 object-fit-cover" autoplay muted loop>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <track kind="captions" src="" srclang="en" label="English">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+  </div>
+  <div class="tab-pane fade" id="pills-slot" role="tabpanel" aria-labelledby="pills-slot-tab" tabindex="0">
+    To add a slot, `item-slot` must be combined with `.item-trailing-container`. Limited in size to `96px x 96px`. {/* TODO: replace value by token once added */} A slot can be rounded using `item-trailing-rounded`.
+
+    <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+        <div class="item-trailing-container item-slot">
+          <button class="btn btn-strong">Slot</button>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+  </div>
+</div>
+
+##### Trailing container 2
 
 The trailing container using `.item-trailing-container`.
 
@@ -640,41 +845,6 @@ Here is a small resume of the slots that can be used in a static item:
     </div>
   </div>`} />
 
-#### Alignment
-
-By default all static item are vertically centered. You can change the alignment of the content using `.item-top` by setting it on the `.item-main` or any ancestors.
-
-<Example buttonLabel="top alignment static item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
-    <div class="item item-top">
-      <div class="item-main">
-        <div class="item-leading-container">
-          <svg class="w-100 h-100" aria-hidden="true">
-            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-          </svg>
-        </div>
-        <div class="item-text-container">
-          <p class="item-overline">Overline</p>
-          <p class="item-label">Label</p>
-          <p class="item-extra-label">Extra label</p>
-          <p class="item-description">Description</p>
-        </div>
-        <div class="item-trailing-container">
-          <p class="badge badge-count badge-large">1<span class="visually-hidden">errors</span></p>
-        </div>
-      </div>
-      <div class="item-slot">
-        <div class="alert alert-message alert-negative">
-          <div class="alert-icon"><p class="visually-hidden">Negative alert</p></div>
-          <div class="alert-container">
-            <div class="alert-text-container">
-              <h3 class="alert-label">Alert message</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>`} />
-
 #### Helper text
 
 Optionally, a helper text can be added below the main `.item` container using `.item-helper`.
@@ -753,31 +923,218 @@ By default every item comes with a divider. The divider may be removed or transf
     </div>
   </div>`} />
 
+<BrandSpecific brand={['orange', 'orange-compact']}>
 #### Rounded corners
 
-<Example buttonLabel="rounded corners" class="d-flex flex-column gap-medium" code={``} />
+Rounded corners items is a project-wide option therefore all your items should either be rounded or not. Add `.use-rounded-corner-items` on a top container (for example `<body>`) to use rounded corners.
+
+<Callout type="warning">
+  Rounded corners could be used in more emotional, immersive contexts or those tied to specific visual identities. **For standard or business-oriented usage, keep the default square corners.**
+</Callout>
+
+<Callout type="info">
+  We use a `<div>` as a parent container because we cannot use `<body>` in an example.
+</Callout>
+
+<Callout type="info">
+  Items in a list won't have rounded corners even using this class.
+</Callout>
+
+<Example buttonLabel="rounded items" class="bd-btn-example" code={`<div class="use-rounded-corner-items">
+    <!-- Alone -->
+    <div class="item-wrapper mb-medium">
+      <div class="item">
+        <div class="item-main">
+          <div class="item-text-container">
+            <p class="item-label">Label</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- List -->
+    <ul class="item-list item-bg">
+      <li class="item-wrapper">
+        <div class="item">
+          <div class="item-main">
+            <div class="item-text-container">
+              <p class="item-label">Label</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="item-wrapper">
+        <div class="item">
+          <div class="item-main">
+            <div class="item-text-container">
+              <p class="item-label">Label</p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>`} />
+</BrandSpecific>
 
 ### States
 
 #### Disabled
 
-<Example buttonLabel="disabled static" class="d-flex flex-column gap-medium" code={``} />
+{/* TODO */}
+
+Static items can be disabled by using `.disabled` on the element `.item-wrapper` or any ancestors.The disabled state is also applied to all interactive elements inside the item.
+
+If the static item is in a disabled context, the static item will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, the `[aria-disabled="true"]` attribute, or the `.disabled` class.
+
+<Example buttonLabel="disabled static item" class="d-flex flex-column gap-medium" code={`<div class="disabled">
+    <div class="item-wrapper">
+      <div class="item">
+        <div class="item-main">
+          <div class="item-text-container">
+            <p class="item-label">Label</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`} />
 
 #### Skeleton
 
-<Example buttonLabel="skeleton static" class="d-flex flex-column gap-medium" code={``} />
+<SkeletonRedirect component="static item" />
+
+<Example buttonLabel="static item skeleton" class="d-flex flex-column gap-medium" code={`<div aria-busy="true" inert>
+    <div class="item-wrapper">
+      <div class="item">
+        <div class="item-main">
+          <div class="item-text-container">
+            <p class="item-label">Label</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`} />
 
 ### Sizes
 
-<Example buttonLabel="sizes" class="d-flex flex-column gap-medium" code={``} />
+By default every item comes with a default size. The size can be adapted using `.item-small` on the element `.item-wrapper` or any ancestors.
+
+{/* TODO: Which element to document in every paragraph ? */}
+
+<Callout type="warning">
+  The small size come with some restrictions:
+
+  * The [assets](#with-asset) not being components shouldn't use any size classes
+  * There shouldn't be any [slot](#slot) in the item
+</Callout>
+
+<Example buttonLabel="static item small sizes" class="d-flex flex-column gap-medium" code={`<!-- Alone -->
+  <div class="item-wrapper item-small">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- List -->
+  <ul class="item-list item-small">
+    <li class="item-wrapper">
+      <div class="item">
+        <div class="item-main">
+          <div class="item-text-container">
+            <p class="item-label">Label</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item-wrapper">
+      <div class="item">
+        <div class="item-main">
+          <div class="item-text-container">
+            <p class="item-label">Label</p>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>`} />
 
 ### Layout
 
-<Example buttonLabel="standalone card layout" class="d-flex flex-column gap-medium" code={``} />
+#### Alignment
+
+By default all static item are vertically centered. You can change the alignment of the content using `.item-top` by setting it on the `.item-main` or any ancestors.
+
+<Example buttonLabel="top alignment static item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    <div class="item item-top">
+      <div class="item-main">
+        <div class="item-leading-container">
+          <svg class="w-100 h-100" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+          </svg>
+        </div>
+        <div class="item-text-container">
+          <p class="item-overline">Overline</p>
+          <p class="item-label">Label</p>
+          <p class="item-extra-label">Extra label</p>
+          <p class="item-description">Description</p>
+        </div>
+        <div class="item-trailing-container">
+          <p class="badge badge-count badge-large">1<span class="visually-hidden">errors</span></p>
+        </div>
+      </div>
+      <div class="item-slot">
+        <div class="alert alert-message alert-negative">
+          <div class="alert-icon"><p class="visually-hidden">Negative alert</p></div>
+          <div class="alert-container">
+            <div class="alert-text-container">
+              <h3 class="alert-label">Alert message</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`} />
 
 #### Max width
 
-<Example buttonLabel="standalone card layout" class="d-flex flex-column gap-medium" code={``} />
+By default, static items will span the whole width of their parent container, to limit the width of the static item on wider parent container, add a `.component-max-width` to the `.item-wrapper` or `.item-list` container.
+
+{/* TODO: Not the same size displayed */}
+
+<Example buttonLabel="static item max width" code={`<!-- Alone -->
+  <div class="item-wrapper component-max-width mb-medium">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- List -->
+  <ul class="item-list component-max-width">
+    <li class="item-wrapper">
+      <div class="item">
+        <div class="item-main">
+          <div class="item-text-container">
+            <p class="item-label">Label</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item-wrapper">
+      <div class="item">
+        <div class="item-main">
+          <div class="item-text-container">
+            <p class="item-label">Label</p>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>`} />
 
 ## Navigation item
 
