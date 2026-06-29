@@ -198,9 +198,7 @@
 
     &:has(.text-input-field:placeholder-shown:not([placeholder=" "]), .text-input-field[placeholder]:not(:placeholder-shown), .text-input-field:focus:not(:read-only)) {
       > label {
-        display: initial;
         white-space: nowrap;
-        --webkit-box-orient: unset;
         @include get-font-size("label-small");
 
         // stylelint-disable-next-line selector-no-qualifying-type
