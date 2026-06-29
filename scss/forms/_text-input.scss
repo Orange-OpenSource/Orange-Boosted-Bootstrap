@@ -114,6 +114,10 @@
       opacity: 0;
       transform: translate(0, -50%);
 
+      &::placeholder {
+        font-weight: $ouds-font-weight-system-web-default;
+      }
+
       &:placeholder-shown:not([placeholder=" "]),
       &[placeholder]:not(:placeholder-shown),
       &:focus:not(:read-only),
@@ -468,6 +472,10 @@
       @supports (field-sizing: content) {
         height: unset;
         field-sizing: content;  // Not yet baseline, but supported in most browsers
+      }
+
+      &::placeholder {
+        font-weight: $ouds-font-weight-system-web-default;
       }
 
       &:focus,
