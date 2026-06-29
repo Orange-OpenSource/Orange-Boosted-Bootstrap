@@ -7,6 +7,7 @@
   background-color: var(--#{$prefix}list-item-outlined-bg, var(--#{$prefix}list-item-bg, $ouds-color-action-support-enabled));
   border: var(--#{$prefix}list-item-border-width, 0) solid var(--#{$prefix}list-item-border-color, $ouds-color-border-default);
   border-bottom-width: var(--#{$prefix}list-item-border-width, $ouds-control-item-border-width-default);
+  @include border-radius(var(--#{$prefix}list-item-border-radius, $ouds-control-item-border-radius-default), var(--#{$prefix}list-item-border-radius, $ouds-control-item-border-radius-default));
 
   &.item-interactive:focus-visible,
   &:has(.item-interactive:focus-visible) {
@@ -23,8 +24,7 @@
 }
 
 .item-list,
-.item-wrapper,
-.item {
+.item-wrapper {
   &.component-max-width {
     max-width: px-to-rem($ouds-control-item-size-max-width);
   }
@@ -35,6 +35,7 @@
   width: calc(100% - $ouds-control-item-space-padding-inline * 2);
   min-height: $ouds-control-item-size-asset-medium;
   margin: 0 $ouds-control-item-space-padding-inline 16px; // TODO: Add token when available
+  opacity: var(--#{$prefix}list-item-disabled-opacity, 1);
 }
 
 .item-text-container .item-slot {
@@ -184,6 +185,10 @@
 }
 
 // Variants
+.use-rounded-corner-items {
+  --#{$prefix}list-item-border-radius: #{$ouds-control-item-border-radius-rounded};
+}
+
 .item-list {
   --#{$prefix}list-item-border-radius: 0px;
   --#{$prefix}list-item-bg: transparent;
@@ -191,10 +196,6 @@
   @include list-unstyled();
   padding: 5px; // Workaround to handle focus outline correctly
   margin: -5px;
-}
-
-.use-rounded-corner-item {
-  --#{$prefix}list-item-border-radius: #{$ouds-control-item-border-radius-rounded};
 }
 
 .item-bg {
