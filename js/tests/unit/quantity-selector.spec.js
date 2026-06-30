@@ -1,6 +1,6 @@
 import QuantitySelector from '../../src/quantity-selector.js'
 import {
-  clearFixture, getFixture, createEvent, jQueryMock
+  clearFixture, getFixture, createEvent
 } from '../helpers/fixture.js'
 
 describe('QuantitySelector', () => {
@@ -35,49 +35,6 @@ describe('QuantitySelector', () => {
   describe('DATA_KEY', () => {
     it('should return plugin data key', () => {
       expect(QuantitySelector.DATA_KEY).toEqual('bs.quantityselector')
-    })
-  })
-
-  describe('jQueryInterface', () => {
-    it('should create a quantity selector', () => {
-      fixtureEl.innerHTML = '<div></div>'
-
-      const div = fixtureEl.querySelector('div')
-
-      jQueryMock.fn.quantitySelector = QuantitySelector.jQueryInterface
-      jQueryMock.elements = [div]
-
-      jQueryMock.fn.quantitySelector.call(jQueryMock)
-
-      expect(QuantitySelector.getInstance(div)).not.toBeNull()
-    })
-
-    it('should not re create a quantity selector', () => {
-      fixtureEl.innerHTML = '<div></div>'
-
-      const div = fixtureEl.querySelector('div')
-      const quantitySelector = new QuantitySelector(div)
-
-      jQueryMock.fn.quantitySelector = QuantitySelector.jQueryInterface
-      jQueryMock.elements = [div]
-
-      jQueryMock.fn.quantitySelector.call(jQueryMock)
-
-      expect(QuantitySelector.getInstance(div)).toEqual(quantitySelector)
-    })
-
-    it('should throw error on undefined method', () => {
-      fixtureEl.innerHTML = '<div></div>'
-
-      const div = fixtureEl.querySelector('div')
-      const action = 'undefinedMethod'
-
-      jQueryMock.fn.quantitySelector = QuantitySelector.jQueryInterface
-      jQueryMock.elements = [div]
-
-      expect(() => {
-        jQueryMock.fn.quantitySelector.call(jQueryMock, action)
-      }).toThrowError(TypeError, `No method named "${action}"`)
     })
   })
 

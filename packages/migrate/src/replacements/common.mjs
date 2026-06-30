@@ -120,7 +120,7 @@ export const commonReplacements = [
   ['opacity-100', 'opacity-opaque'],
 
   // Shadow
-  ['shadow(-sm)?', 'shadow-default'],
+  ['shadow(-sm)?', 'shadow-elevated'],
   ['shadow-lg', 'shadow-emphasized'],
 
   // Text

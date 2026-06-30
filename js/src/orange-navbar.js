@@ -8,7 +8,6 @@
 import BaseComponent from './base-component.js'
 import EventHandler from './dom/event-handler.js'
 import SelectorEngine from './dom/selector-engine.js'
-import { defineJQueryPlugin } from './util/index.js'
 
 /**
  * Constants
@@ -41,22 +40,6 @@ class OrangeNavbar extends BaseComponent {
       el.classList.remove('header-minimized')
     }
   }
-
-  static jQueryInterface(config) {
-    return this.each(function () {
-      const data = OrangeNavbar.getOrCreateInstance(this, config)
-
-      if (typeof config !== 'string') {
-        return
-      }
-
-      if (typeof data[config] === 'undefined') {
-        throw new TypeError(`No method named "${config}"`)
-      }
-
-      data[config]()
-    })
-  }
 }
 
 /**
@@ -74,11 +57,5 @@ EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
     OrangeNavbar.enableMinimizing(el)
   }
 })
-
-/**
- * jQuery
- */
-
-defineJQueryPlugin(OrangeNavbar)
 
 export default OrangeNavbar

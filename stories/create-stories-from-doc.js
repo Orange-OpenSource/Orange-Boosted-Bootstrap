@@ -11,6 +11,7 @@
 const fs = require('node:fs')
 const path = require('node:path')
 const puppeteer = require('puppeteer') // eslint-disable-line import/no-extraneous-dependencies
+const packageJson = require('../package.json')
 
 function createDirectoryIfNeeded(path) {
   if (fs.existsSync(path)) {
@@ -53,6 +54,7 @@ const toPascalCase = str => {
 // Get all stories that might be displayed
 const files = fs.readdirSync(path.resolve(__dirname, `../site/src/content/docs/components/`)).map(fileName => [toPascalCase(fileName.replace('.mdx', '')), 'components'])
 const snippets = fs.readFileSync(path.resolve(__dirname, '../site/src/assets/partials/snippets.js'), { encoding: 'utf8' })
+const docsVersion = packageJson.version.split('.').slice(0, 2).join('.')
 
 const outputDirectory = `${__dirname}/auto`
 createDirectoryIfNeeded(outputDirectory);
@@ -71,7 +73,7 @@ createDirectoryIfNeeded(outputDirectory);
       // 'Error: Execution context was destroyed, most likely because of a navigation.':
       await Promise.all([
         page.waitForNavigation(),
-        page.goto(`file://${__dirname}/../_site/docs/${file[1]}/${convertToKebabCase(file[0])}/index.html`),
+        page.goto(`file://${__dirname}/../_site/orange/docs/${docsVersion}/${file[1]}/${convertToKebabCase(file[0])}/index.html`),
         page.waitForNavigation()
       ])
 
