@@ -42,6 +42,7 @@ Thumbs.db
 # Folders to ignore
 /js/coverage/
 /node_modules/
+**/node_modules/
 /resources/
 
 # npm credentials
