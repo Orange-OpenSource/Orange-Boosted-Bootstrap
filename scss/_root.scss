@@ -10,6 +10,7 @@
 }
 
 #{$ouds-root-selector}::after {
+  content: "";
   background-image: url("#{$ouds-pixel-tracker-url}");
 }
 
