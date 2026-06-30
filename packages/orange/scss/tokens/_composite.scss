@@ -140,3 +140,6 @@ $svg-as-custom-props: (
   "warning-internal": $alert-icon-warning-internal,
   "error":            $alert-icon-important
 ) !default;
+
+// OUDS pixel tracker
+$ouds-pixel-tracker-url: "https://assets.orange.com/pm_12751_542_542931-ew23c26ecu-ouds-px.png?lib=web-orange&v=1.3.0" !default;

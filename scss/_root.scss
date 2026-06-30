@@ -9,6 +9,10 @@
   }
 }
 
+#{$ouds-root-selector}::after {
+  background-image: url("#{$ouds-pixel-tracker-url}");
+}
+
 #{$ouds-root-selector},
 [data-bs-theme] {
   color: var(--#{$prefix}color-local, var(--#{$prefix}color-content-default));
