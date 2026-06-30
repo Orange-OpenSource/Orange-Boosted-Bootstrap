@@ -19,7 +19,7 @@
   display: flex;
   column-gap: $ouds-control-item-space-column-gap;
   align-items: var(--#{$prefix}list-item-align-items, center);
-  min-height: var(--#{$prefix}list-item-min-height, $ouds-control-item-size-min-height-default);
+  min-height: calc(var(--#{$prefix}list-item-min-height, $ouds-control-item-size-min-height-default) - 2 * var(--#{$prefix}list-item-border-width, $ouds-control-item-border-width-default / 2));
   padding: calc(var(--#{$prefix}list-item-padding-top, $ouds-control-item-space-padding-block-density-default) - var(--#{$prefix}list-item-border-width, 0px)) calc($ouds-control-item-space-padding-inline - var(--#{$prefix}list-item-border-width, 0px)) calc(var(--#{$prefix}list-item-padding-bottom, $ouds-control-item-space-padding-block-density-default) - var(--#{$prefix}list-item-border-width, $ouds-control-item-border-width-default));
 }
 
@@ -52,12 +52,18 @@
 .item-leading-container,
 .item-trailing-container {
   &.item-slot {
+    box-sizing: content-box;
     max-width: 96px; // TODO: Add token when available
     height: unset;
     max-height: 96px; // TODO: Add token when available
     aspect-ratio: unset;
     padding: 5px;
     margin: -5px; // Workaround to handle focus outline correctly
+  }
+
+  img,
+  video {
+    opacity: var(--#{$prefix}list-item-disabled-opacity, 1);
   }
 }
 
@@ -71,7 +77,7 @@
   height: var(--#{$prefix}list-item-leading-container-size, $ouds-control-item-size-asset-medium);
   aspect-ratio: 1;
   overflow: hidden;
-  color: $ouds-color-content-default;
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
   @include border-radius(var(--#{$prefix}list-item-leading-container-border-radius, $ouds-control-item-border-radius-media), var(--#{$prefix}list-item-leading-container-border-radius, $ouds-control-item-border-radius-media));
 }
 
@@ -92,6 +98,7 @@
   justify-content: center;
   min-height: var(--#{$prefix}list-item-trailing-container-size, $ouds-control-item-size-asset-medium);
   overflow: hidden;
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
   white-space: nowrap;
   @include border-radius(var(--#{$prefix}list-item-trailing-container-border-radius, $ouds-control-item-border-radius-media), var(--#{$prefix}list-item-trailing-container-border-radius, $ouds-control-item-border-radius-media));
 
@@ -106,7 +113,7 @@
   margin-bottom: 0;
   @include get-font-size("label-small");
   font-weight: $ouds-font-weight-web-label-moderate;
-  color: $ouds-color-content-muted;
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-muted);
 }
 
 .item-label {
@@ -114,7 +121,7 @@
   margin-bottom: 0;
   @include get-font-size("label-large");
   font-weight: $ouds-font-weight-web-label-default;
-  color: $ouds-color-content-default;
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
 }
 
 .item-extra-label {
@@ -122,7 +129,7 @@
   margin-bottom: 0;
   @include get-font-size("label-medium");
   font-weight: $ouds-font-weight-web-label-strong;
-  color: $ouds-color-content-default;
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
 }
 
 .item-description {
@@ -130,16 +137,16 @@
   margin-bottom: 0;
   @include get-font-size("label-medium");
   font-weight: $ouds-font-weight-web-label-default;
-  color: $ouds-color-content-muted;
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-muted);
 }
 
 .item-helper {
   display: block;
   padding: $ouds-control-item-space-padding-block-top-helper-text $ouds-control-item-space-padding-inline 0;
   margin-bottom: 0;
-  font-weight: $ouds-font-weight-web-label-default;
-  color: $ouds-color-content-muted;
   @include get-font-size("label-medium");
+  font-weight: $ouds-font-weight-web-label-default;
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-muted);
 }
 
 .item-interactive {
@@ -185,15 +192,35 @@
 }
 
 // Variants
+:disabled,
+[aria-disabled="true"],
+.disabled {
+  &.item-wrapper,
+  .item-wrapper {
+    --#{$prefix}list-item-bg: #{$ouds-color-action-support-disabled};
+    --#{$prefix}list-item-border-color: #{$ouds-color-border-muted};
+    --#{$prefix}list-item-disabled-color: #{$ouds-color-action-disabled};
+    --#{$prefix}list-item-disabled-opacity: #{$ouds-opacity-disabled};
+  }
+
+  .item-icon {
+    --#{$prefix}list-item-icon-color: #{$ouds-color-action-disabled};
+    --#{$prefix}list-item-icon-color-internal: transparent;
+  }
+}
+
 .use-rounded-corner-items {
   --#{$prefix}list-item-border-radius: #{$ouds-control-item-border-radius-rounded};
 }
 
 .item-list {
-  --#{$prefix}list-item-border-radius: 0px;
-  --#{$prefix}list-item-bg: transparent;
+  .item-wrapper { // Handle disabled state for the whole list
+    --#{$prefix}list-item-border-radius: 0px;
+    --#{$prefix}list-item-bg: transparent;
+  }
 
   @include list-unstyled();
+  box-sizing: content-box;
   padding: 5px; // Workaround to handle focus outline correctly
   margin: -5px;
 }
@@ -215,6 +242,10 @@
   --#{$prefix}list-item-border-width: #{$ouds-control-item-border-width-default};
   --#{$prefix}list-item-border-color: var(--#{$prefix}list-item-arrow-color);
 }
+
+// .item-no-outline:not(:has(.item-interactive:hover, .item-interactive:focus-visible, .item-interactive:active)) {
+//   --#{$prefix}list-item-border-width: 0px;
+// }
 
 .item-top {
   --#{$prefix}list-item-align-items: flex-start;
@@ -251,24 +282,24 @@
 }
 
 .item-status-positive {
-  --#{$prefix}list-item-icon: #{$alert-icon-success}; // TODO: Decide if we make a common css variable with alert
+  --#{$prefix}list-item-icon: var(--#{$prefix}success-icon);
   --#{$prefix}list-item-icon-color: #{$ouds-color-content-status-positive};
 }
 
 .item-status-info {
-  --#{$prefix}list-item-icon: #{$alert-icon-info};
+  --#{$prefix}list-item-icon: var(--#{$prefix}info-icon);
   --#{$prefix}list-item-icon-color: #{$ouds-color-content-status-info};
 }
 
 .item-status-warning {
-  --#{$prefix}list-item-icon: #{$alert-icon-warning-external};
+  --#{$prefix}list-item-icon: var(--#{$prefix}warning-icon);
   --#{$prefix}list-item-icon-color: var(--#{$prefix}icon-color-content-status-warning-external-shape);
-  --#{$prefix}list-item-icon-internal: #{$alert-icon-warning-internal};
+  --#{$prefix}list-item-icon-internal: var(--#{$prefix}warning-internal-icon);
   --#{$prefix}list-item-icon-color-internal: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
 }
 
 .item-status-negative {
-  --#{$prefix}list-item-icon: #{$alert-icon-important};
+  --#{$prefix}list-item-icon: var(--#{$prefix}error-icon);
   --#{$prefix}list-item-icon-color: #{$ouds-color-content-status-negative};
 }
 
@@ -286,7 +317,7 @@
 //
 // Navigation specific styles
 //
-
+// TODO: refactor to set the interactive part in the common part.
 .item-navigation {
   position: relative;
 
@@ -343,12 +374,5 @@
     &.item-outlined {
       --#{$prefix}list-item-border-color: #{$ouds-color-action-pressed};
     }
-  }
-}
-
-// TODO
-@if $enable-bootstrap-compatibility {
-  .list-group {
-    display: block;
   }
 }
