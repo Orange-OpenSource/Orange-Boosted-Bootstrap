@@ -605,7 +605,7 @@ Here is a list of the different assets that we support in the trailing container
   </div>`} />
   </div>
   <div class="tab-pane fade" id="pills-image" role="tabpanel" aria-labelledby="pills-image-tab" tabindex="0">
-    Images can be sized with `item-trailing-large` or `item-trailing-xlarge` and can use [ratio utilities]([[docsref:/utilities/aspect-ratio]]) and `.item-trailing-rounded`. All these classes can be combined as needed and placed on a parent element.
+    Images can be sized with `item-trailing-large` (only if not item small) or `item-trailing-xlarge` (only if not item small) and can use [ratio utilities]([[docsref:/utilities/aspect-ratio]]) and `.item-trailing-rounded`. All these classes can be combined as needed and placed on a parent element.
 
     <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
@@ -634,7 +634,7 @@ Here is a list of the different assets that we support in the trailing container
   </div>`} />
   </div>
   <div class="tab-pane fade" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab" tabindex="0">
-    Videos can be sized with `item-trailing-large` or `item-trailing-xlarge` and can use [ratio utilities]([[docsref:/utilities/aspect-ratio]]) and `.item-trailing-rounded`. All these classes can be combined as needed and placed on a parent element.
+    Videos can be sized with `item-trailing-large` (only if not item small) or `item-trailing-xlarge` (only if not item small) and can use [ratio utilities]([[docsref:/utilities/aspect-ratio]]) and `.item-trailing-rounded`. All these classes can be combined as needed and placed on a parent element.
 
     <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
@@ -899,7 +899,7 @@ By default, alone items have a background-color, while list items don't. This be
 
 #### Outlined
 
-By default every item comes with a divider. The divider may be removed or transformed into an outline using `.item-no-divider` or `.item-outlined` on the element `.item` or any ancestors.
+By default every item comes with a divider. The divider may be removed or transformed into an outline using `.item-no-divider` or `.item-outlined` on the element `.item` or any ancestors. {/* TODO: You may remove the outline on default state by using `.item-no-outline` on the element `.item` or any ancestors. */}
 
 <Example buttonLabel="outlined" class="d-flex flex-column gap-medium" code={`<!-- Without divider -->
   <div class="item-wrapper">
@@ -980,18 +980,47 @@ Rounded corners items is a project-wide option therefore all your items should e
 
 #### Disabled
 
-{/* TODO */}
-
-Static items can be disabled by using `.disabled` on the element `.item-wrapper` or any ancestors.The disabled state is also applied to all interactive elements inside the item.
+Static items can be disabled by using `.disabled` on the element `.item-wrapper` or any ancestors. The disabled state is also applied to all interactive elements inside the item.
 
 If the static item is in a disabled context, the static item will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, the `[aria-disabled="true"]` attribute, or the `.disabled` class.
 
+You may handle on your own the [slots](#slot) regarding accessibility or design. For example, if you have a slot with a button, you may want to disable the button to apply the right behavior and the correct visual state.
+
+<Callout type="info">
+  The images and videos inside the disabled static item will be grayed out using opacity. You'll still need to handle it correclty from an accessibility point of view.
+</Callout>
+
 <Example buttonLabel="disabled static item" class="d-flex flex-column gap-medium" code={`<div class="disabled">
-    <div class="item-wrapper">
+    <div class="item-wrapper mb-medium">
       <div class="item">
         <div class="item-main">
+          <div class="item-leading-container item-status-warning">
+            <div class="item-icon"></div>
+          </div>
           <div class="item-text-container">
             <p class="item-label">Label</p>
+          </div>
+          <div class="item-trailing-container item-trailing-xlarge item-trailing-rounded">
+            <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-wrapper">
+      <div class="item item-no-bg">
+        <div class="item-main">
+          <div class="item-leading-container item-slot">
+            <!-- Disabled via its attribute -->
+            <button class="btn btn-strong" disabled>Slot</button>
+          </div>
+          <div class="item-text-container">
+            <p class="item-label">Label</p>
+            <p class="item-extra-label">Extra label</p>
+          </div>
+          <div class="item-trailing-container">
+            <!-- Disabled via its style -->
+            <p class="tag">Tag</p>
           </div>
         </div>
       </div>
@@ -1100,8 +1129,6 @@ By default all static item are vertically centered. You can change the alignment
 #### Max width
 
 By default, static items will span the whole width of their parent container, to limit the width of the static item on wider parent container, add a `.component-max-width` to the `.item-wrapper` or `.item-list` container.
-
-{/* TODO: Not the same size displayed */}
 
 <Example buttonLabel="static item max width" code={`<!-- Alone -->
   <div class="item-wrapper component-max-width mb-medium">
