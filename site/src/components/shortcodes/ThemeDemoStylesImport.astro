@@ -3,18 +3,16 @@
 ---
 
 <style is:global lang="scss">
-  div#theme-demo-orange > * {
-    $ouds-root-selector: '[id="theme-demo-orange"]';
+  $ouds-root-selector: '&';
+  div#theme-demo-orange {
     @import '../../../../packages/orange/scss/ouds-web.scss';
     @import '../../../static/orange/docs/[version]/assets/fonts/solaris-icons';
   }
-  div#theme-demo-orange-compact > * {
-    $ouds-root-selector: '[id="theme-demo-orange-compact"]';
+  div#theme-demo-orange-compact {
     @import '../../../../packages/orange-compact/scss/ouds-web.scss';
     @import '../../../static/orange-compact/docs/[version]/assets/fonts/solaris-icons';
   }
-  div#theme-demo-sosh > * {
-    $ouds-root-selector: '[id="theme-demo-sosh"]';
+  div#theme-demo-sosh {
     @import '../../../../packages/sosh/scss/ouds-web.scss';
     @import '../../../static/sosh/docs/[version]/assets/fonts/solaris-icons';
   }
