@@ -7,7 +7,6 @@
 
 import BaseComponent from './base-component.js'
 import EventHandler from './dom/event-handler.js'
-import { defineJQueryPlugin } from './util/index.js'
 
 /**
  * Constants
@@ -34,19 +33,30 @@ class Button extends BaseComponent {
 
   // Public
   toggle() {
-    // Toggle class and sync the `aria-pressed` attribute with the return value of the `.toggle()` method
-    this._element.setAttribute('aria-pressed', this._element.classList.toggle(CLASS_NAME_ACTIVE))
-  }
+    // OUDS mod: Determine current pressed state from aria-pressed attribute if present or active class as a fallback
+    const ariaPressed = this._element.getAttribute('aria-pressed')
+    const hasActiveClass = this._element.classList.contains(CLASS_NAME_ACTIVE)
 
-  // Static
-  static jQueryInterface(config) {
-    return this.each(function () {
-      const data = Button.getOrCreateInstance(this)
+    // Determine new pressed state
+    let newPressedState
+    // eslint-disable-next-line unicorn/prefer-ternary
+    if (ariaPressed === 'true' || ariaPressed === 'false') {
+      // Toggle existing aria-pressed value
+      newPressedState = ariaPressed !== 'true'
+    } else {
+      // Convert active class presence to aria-pressed state
+      newPressedState = !hasActiveClass
+    }
 
-      if (config === 'toggle') {
-        data[config]()
-      }
-    })
+    // Update aria-pressed attribute
+    this._element.setAttribute('aria-pressed', String(newPressedState))
+
+    // Add or remove active class
+    if (newPressedState) {
+      this._element.classList.add(CLASS_NAME_ACTIVE)
+    } else {
+      this._element.classList.remove(CLASS_NAME_ACTIVE)
+    }
   }
 }
 
@@ -62,11 +72,5 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, event => {
 
   data.toggle()
 })
-
-/**
- * jQuery
- */
-
-defineJQueryPlugin(Button)
 
 export default Button
