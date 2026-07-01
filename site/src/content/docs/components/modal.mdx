@@ -1,9 +1,49 @@
 ---
 title: Modal
-description: Use OUDS Web’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.
+description: Use native HTML dialog with invoker commands to display focused modal interactions.
 aliases:
   - "/docs/components/modal/"
 toc: true
 ---
 
-<CalloutSoon />
+## Overview
+
+Modal is built on the native `<dialog>` element and opened/closed declaratively with invoker commands.
+
+Use:
+- `commandfor="dialog-id" command="show-modal"` to open.
+- `commandfor="dialog-id" command="close"` to close.
+
+## Minimal example
+
+<Example buttonLabel="dialog modal basic" code={`<dialog id="demoModal" class="modal" aria-label="Demo modal dialog">
+    <div class="modal-header">
+      <a class="link link-chevron back" href="#">Return</a>
+      <button type="button" class="btn btn-close" commandfor="demoModal" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h3>Modal title</h3>
+      <p>Dialog content.</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" commandfor="demoModal" command="close">Cancel</button>
+      <button type="button" class="btn btn-primary" commandfor="demoModal" command="close">Confirm</button>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="demoModal" command="show-modal">
+    Open modal
+  </button>`} />
+
+## Accessibility
+
+- Provide an accessible name with `aria-labelledby` or `aria-label`.
+- Keep a visible close control.
+- Native dialog handles Escape and focus behavior by default.
+
+## Notes
+
+- Use `data-bs-role="modal"` on dialogs styled as OUDS modal.
+- Use `data-bs-backdrop-static` on the dialog to prevent backdrop click dismissal.

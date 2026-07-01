@@ -161,9 +161,12 @@ export default () => {
   // storybook-start modal
   // js-docs-start varying-modal-content
   if (document.getElementById('exampleModal')) {
-    document.getElementById('exampleModal').addEventListener('show.bs.modal', event => {
-      // Button that triggered the modal
-      const button = event.relatedTarget
+    document.getElementById('exampleModal').addEventListener('modal:after-open', event => {
+      // Button that triggered the dialog
+      const button = event.detail?.trigger
+      if (!button) {
+        return
+      }
       // Extract info from data-bs-* attributes
       const recipient = button.getAttribute('data-bs-whatever')
       // If necessary, you could initiate an Ajax request here
