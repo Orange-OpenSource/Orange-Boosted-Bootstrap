@@ -65,6 +65,10 @@
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
 .modal-body {
   padding-inline: var(--#{$prefix}space-scaled-3xlarge);
+
+  > * {
+    margin-bottom: var(--#{$prefix}space-scaled-small);
+  }
 }
 
 // Footer (for actions)
