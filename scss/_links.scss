@@ -37,6 +37,7 @@
     line-height: 1;
   }
   &.opacify {
+    &:hover,
     &:active,
     &:focus-visible {
       background-color: var(--bs-color-bg-primary);
