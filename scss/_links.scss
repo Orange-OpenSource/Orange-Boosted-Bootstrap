@@ -36,6 +36,7 @@
     font-size: var(--#{$prefix}link-icon-size);
     line-height: 1;
   }
+
   &.opacify {
     &:hover,
     &:active,
@@ -122,14 +123,6 @@
   --#{$prefix}link-chevron-focus-color: #{$ouds-link-mono-color-content-focus};
   --#{$prefix}link-chevron-pressed-color: #{$ouds-link-mono-color-content-pressed};
   --#{$prefix}link-chevron-disabled-color: #{$ouds-link-mono-color-content-disabled};
-
-  &.opacify {
-    &:active,
-    &:focus-visible {
-      background-color: var(--bs-color-bg-primary);
-      background-clip: text;
-    }
-  }
 }
 
 .link-small {
