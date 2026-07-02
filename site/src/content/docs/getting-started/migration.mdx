@@ -10,12 +10,97 @@ toc: true
 ---
 
 <Callout type="info">
-  The [`@ouds/web-migrate`](https://www.npmjs.com/package/@ouds/web-migrate) CLI can help update from one version to another. Run it against your project files and review the diff afterward:
+  The [`@ouds/web-migrate`](https://www.npmjs.com/package/@ouds/web-migrate) CLI can help update to the latest version. Run it against your project files and review the diff afterward:
 
   ```bash
   npx @ouds/web-migrate "src/**/*.{css,scss,html}"
   ```
 </Callout>
+
+## v1.4.0
+
+<hr />
+
+### Components
+
+#### Badges
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.badge-disabled` has been deprecated in favor of `.disabled`. It will be removed in v1.5.0. Read more in our [badges page]([[docsref:/components/badges#disabled]]).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Badge - icon component has been updated to 1.3.0. Read more in the [badge - icon design changelog](https://r.orange.fr/r/S-ouds-doc-badge-icon_changelog).
+
+#### Chips
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Suggestion chip component has been updated to 1.4.0 with no outward changes. Read more in the [suggestion chip design changelog](https://r.orange.fr/r/S-ouds-doc-suggestion-chip_changelog).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Filter chip component has been updated to 1.4.0 with no outward changes. Read more in the [filter chip design changelog](https://r.orange.fr/r/S-ouds-doc-filter-chip_changelog).
+
+#### Password input
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Password input component has been updated to 1.3.0 with no outward changes. Read more in the [password input design changelog](https://r.orange.fr/r/S-ouds-doc-password-input_changelog).
+
+#### Tags
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Input tag component has been updated to 1.2.0 with no outward changes. Read more in the [input tag design changelog](https://r.orange.fr/r/S-ouds-doc-input-tag_changelog).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Tag component has been updated to 1.5.0 with no outward changes. Read more in the [tag design changelog](https://r.orange.fr/r/S-ouds-doc-tag_changelog).
+
+#### Text input
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Text input component has been updated to 1.4.0 with no outward changes. Read more in the [design changelog](https://r.orange.fr/r/S-ouds-doc-text-input_changelog).
+
+### Utilities
+
+#### Shadow
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.shadow-default` has been deprecated in favor of `.shadow-elevated`. It will be removed in v1.5.0. Read more in our [shadow page]([[docsref:/utilities/shadow]]).
+
+### CSS and Sass variables
+
+- <details class="mb-small">
+    <summary><span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Some variables have been renamed:</summary>
+    <ul>
+      <li><code>$ouds-elevation-default</code>  → <code>$ouds-elevation-elevated</code></li>
+      <li><code>$ouds-elevation-x-default</code>  → <code>$ouds-elevation-x-elevated</code></li>
+      <li><code>$ouds-elevation-y-default</code>  → <code>$ouds-elevation-y-elevated</code></li>
+      <li><code>$ouds-elevation-blur-default</code>  → <code>$ouds-elevation-blur-elevated</code></li>
+      <li><code>$ouds-elevation-spread-default</code>  → <code>$ouds-elevation-spread-elevated</code></li>
+      <li><code>$ouds-control-item-size-min-height</code>  → <code>$ouds-control-item-size-min-height-default</code></li>
+      <li><code>$ouds-size-max-width-type-body-large-desktop</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-large-mobile</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-large-tablet</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-medium-desktop</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-medium-mobile</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-medium-tablet</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-small-desktop</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-small-mobile</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-small-tablet</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-display-large-desktop</code>  → <code>$ouds-size-max-width-display-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-display-large-mobile</code>  → <code>$ouds-size-max-width-display-large-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-display-large-tablet</code>  → <code>$ouds-size-max-width-display-large-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-display-medium-desktop</code>  → <code>$ouds-size-max-width-display-medium-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-display-medium-mobile</code>  → <code>$ouds-size-max-width-display-medium-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-display-medium-tablet</code>  → <code>$ouds-size-max-width-display-medium-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-display-small-desktop</code>  → <code>$ouds-size-max-width-display-small-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-display-small-mobile</code>  → <code>$ouds-size-max-width-display-small-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-display-small-tablet</code>  → <code>$ouds-size-max-width-display-small-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-heading-large-desktop</code>  → <code>$ouds-size-max-width-heading-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-heading-large-mobile</code>  → <code>$ouds-size-max-width-heading-large-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-heading-large-tablet</code>  → <code>$ouds-size-max-width-heading-large-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-heading-medium-desktop</code>  → <code>$ouds-size-max-width-heading-medium-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-heading-medium-mobile</code>  → <code>$ouds-size-max-width-heading-medium-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-heading-medium-tablet</code>  → <code>$ouds-size-max-width-heading-medium-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-heading-small-desktop</code>  → <code>$ouds-size-max-width-heading-small-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-heading-small-mobile</code>  → <code>$ouds-size-max-width-heading-small-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-heading-small-tablet</code>  → <code>$ouds-size-max-width-heading-small-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-heading-xlarge-desktop</code>  → <code>$ouds-size-max-width-heading-xlarge-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-heading-xlarge-mobile</code>  → <code>$ouds-size-max-width-heading-xlarge-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-heading-xlarge-tablet</code>  → <code>$ouds-size-max-width-heading-xlarge-tablet</code></li>
+      <li><code>$ouds-control-item-space-padding-block-top-error-text</code>  → <code>$ouds-control-item-space-padding-block-top-helper-text</code></li>
+      <li><code>$ouds-control-item-border-radius</code>  → <code>$ouds-control-item-border-radius-default</code></li>
+      <li><code>$ouds-badge-space-inset</code>  → <code>$ouds-badge-space-inset-medium-large</code></li>
+    </ul>
+  </details>
 
 ## v1.3.0
 
@@ -60,6 +145,10 @@ toc: true
 ## v1.2.0
 
 <hr />
+
+### Foundations
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> jQuery support has been removed from the library.
 
 ### Components
 
@@ -122,7 +211,7 @@ toc: true
 
 #### Alerts
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Alert message and inline alert has been implemented. Read more in our [alerts page]([[docsref:/components/alerts]]).
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Alert message and inline alert have been implemented. Read more in our [alerts page]([[docsref:/components/alerts]]).
 
 ### Helpers
 

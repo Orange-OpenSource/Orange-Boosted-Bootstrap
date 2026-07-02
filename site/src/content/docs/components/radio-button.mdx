@@ -201,6 +201,193 @@ To display outlined radio buttons, add `.radio-button-item-outlined` to a `.radi
     </div>
   </fieldset>`} />
 
+## States
+
+### Disabled
+
+Add the `disabled` attribute to the input, then the radio button and the associated `<label>` are automatically styled to match with a lighter color to help indicate the input’s state.
+
+<Example buttonLabel="disabled radio buttons" code={`<fieldset class="control-items-list">
+    <div class="radio-button-item">
+      <div class="control-item-assets-container">
+        <input disabled class="control-item-indicator" type="radio" value="" id="radioDisabled" name="radioDisabled" aria-describedby="radioDisabledExtraLabel radioDisabledDescription"/>
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="radioDisabled">Default disabled radio button</label>
+        <p class="radio-button-extra-label" id="radioDisabledExtraLabel">Extra label</p>
+        <p class="control-item-description" id="radioDisabledDescription">Description text</p>
+      </div>
+    </div>
+    <div class="radio-button-item">
+      <div class="control-item-assets-container">
+        <input disabled class="control-item-indicator" type="radio" value="" id="radioCheckedDisabled" name="radioDisabled" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="radioCheckedDisabled">Checked disabled radio button</label>
+      </div>
+    </div>
+  </fieldset>`} />
+
+<BootstrapCompatibility>
+<Example buttonLabel="Bootstrap compatibility: disabled radio buttons" code={`<div class="form-check">
+    <input disabled class="form-check-input" type="radio" value="" id="checkDisabled" name="radioDisabledBs" />
+    <label class="form-check-label" for="checkDisabled">
+      Default disabled radio button
+    </label>
+  </div>
+  <div class="form-check">
+    <input disabled class="form-check-input" type="radio" value="" id="checkCheckedDisabled" name="radioDisabledBs" checked />
+    <label class="form-check-label" for="checkCheckedDisabled">
+      Checked disabled radio button
+    </label>
+  </div>`} />
+</BootstrapCompatibility>
+
+### Read only
+
+To create a read only radio button, the input should be replaced by a `span` element with `role="radio"` and `aria-disabled="true"` attributes. All the radio buttons in the group must be surrounded by a container with `role="radiogroup"` and `aria-readonly="true"` attributes. This is the only way to be compliant with ARIA specifications. The radio button will be accessible to keyboard navigation and assistive technologies, thanks to `aria-labelledby` and `tabindex`, but other interactions will be prevented.
+
+<Example buttonLabel="readonly radio buttons" code={`<fieldset class="control-items-list">
+    <div role="radiogroup" aria-readonly="true">
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="radioReadonlyLabel" aria-describedby="radioReadonlyExtraLabel radioReadonlyDescription"></span>
+        </div>
+        <div class="control-item-text-container">
+          <p class="control-item-label" id="radioReadonlyLabel">Default readonly radio button</p>
+          <p class="radio-button-extra-label" id="radioReadonlyExtraLabel">Extra label</p>
+          <p class="control-item-description" id="radioReadonlyDescription">Description text</p>
+        </div>
+      </div>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="radioReadonlyCheckedLabel"></span>
+        </div>
+        <div class="control-item-text-container">
+          <p class="control-item-label" id="radioReadonlyCheckedLabel">Checked readonly radio button</p>
+        </div>
+      </div>
+    </div>
+  </fieldset>`} />
+
+### Invalid
+
+<Callout type="info" name="input-invalid" />
+
+<Callout title="Prefer built-in form validation to handle client-side validation" type="info" name="form-field-validation" />
+
+To manually mark a radio button as invalid, add the `aria-invalid="true"` attribute to a `.control-item-indicator`. An error icon will be automatically shown, if there is a decorative icon specified it will be hidden.
+
+<Example buttonLabel="invalid radio buttons" code={`<fieldset class="control-items-list">
+    <div class="radio-button-item control-item-divider">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="radioInvalid" id="radioInvalid" aria-describedby="radioInvalidExtraLabel radioInvalidDescription radioInvalidErrorText" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="radioInvalid">Default invalid radio button</label>
+        <p class="radio-button-extra-label" id="radioInvalidExtraLabel">Extra label</p>
+        <p class="control-item-description" id="radioInvalidDescription">Description text</p>
+      </div>
+    </div>
+    <div class="radio-button-item control-item-divider">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="radioInvalid" id="radioInvalid2" aria-describedby="radioInvalid2Description radioInvalidErrorText" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="radioInvalid2">Checked invalid radio button</label>
+        <p class="control-item-description" id="radioInvalid2Description">Description text</p>
+      </div>
+    </div>
+    <p class="control-item-error-message" id="radioInvalidErrorText">There is an error.</p>
+  </fieldset>`} />
+
+<BootstrapCompatibility>
+
+To display an invalid radio button, add `.is-invalid` to a `.form-check-input`.
+
+<Example buttonLabel="Bootstrap compatibility: invalid radio buttons" code={`<div class="form-check">
+    <input class="form-check-input is-invalid" type="radio" value="" id="radioInvalidBootstrap" />
+    <label class="form-check-label" for="radioInvalidBootstrap">
+      Invalid radio
+    </label>
+  </div>`} />
+</BootstrapCompatibility>
+
+#### Outlined
+
+This also works for outlined variant of the component.
+
+<Example buttonLabel="outlined invalid radio buttons" code={`<fieldset class="control-items-list">
+    <div class="radio-button-item radio-button-item-outlined">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="outlinedInvalid" id="outlinedInvalid1" aria-describedby="radioLayoutOutlinedInvalidErrorText" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="outlinedInvalid1">Default invalid outlined radio button</label>
+      </div>
+    </div>
+    <div class="radio-button-item radio-button-item-outlined">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="outlinedInvalid" id="outlinedInvalid2" checked aria-describedby="radioLayoutOutlinedInvalidErrorText" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="outlinedInvalid2">Checked invalid outlined radio button</label>
+      </div>
+    </div>
+    <p class="control-item-error-message" id="radioLayoutOutlinedInvalidErrorText">Forbidden choice.</p>
+  </fieldset>`} />
+
+#### Horizontal
+
+If the [layout is horizontal](#horizontal-1), the `<fieldset>` must enclose the flex containers so the error message is displayed under the first item.
+
+<Example buttonLabel="invalid radio buttons in an horizontal layout" code={`<fieldset class="control-items-list">
+    <div class="d-flex flex-row gap-small w-50">
+      <div class="radio-button-item flex-fill">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" aria-invalid="true" type="radio" value="" id="radioLayoutRowInvalid1" name="radioLayoutRowInvalid" aria-describedby="radioLayoutRowInvalidErrorText" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="radioLayoutRowInvalid1">Option 1</label>
+        </div>
+      </div>
+      <div class="radio-button-item flex-fill">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" aria-invalid="true" type="radio" value="" id="radioLayoutRowInvalid2" name="radioLayoutRowInvalid" aria-describedby="radioLayoutRowInvalidErrorText" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="radioLayoutRowInvalid2">Option 2</label>
+        </div>
+      </div>
+    </div>
+    <p class="control-item-error-message" id="radioLayoutRowInvalidErrorText">Please make a choice.</p>
+  </fieldset>`} />
+
+### Skeleton
+
+<SkeletonRedirect component="radio button item" />
+
+<Example buttonLabel="radio button item skeleton" code={`<div aria-busy="true" inert>
+    <fieldset class="control-items-list">
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="radio" value="" id="radioSkeleton" name="radioSkeleton" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="radioSkeleton">Default radio button</label>
+        </div>
+      </div>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <input checked class="control-item-indicator" type="radio" value="" id="radioSkeleton2" name="radioSkeleton" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="radioSkeleton2">Checked radio button</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>`} />
+
 ## Layout
 
 ### Default
@@ -352,193 +539,6 @@ By default, radio buttons will span the whole width of their parent container, t
       </div>
     </div>
   </fieldset>`} />
-
-## States
-
-### Disabled
-
-Add the `disabled` attribute to the input, then the radio button and the associated `<label>` are automatically styled to match with a lighter color to help indicate the input’s state.
-
-<Example buttonLabel="disabled radio buttons" code={`<fieldset class="control-items-list">
-    <div class="radio-button-item">
-      <div class="control-item-assets-container">
-        <input disabled class="control-item-indicator" type="radio" value="" id="radioDisabled" name="radioDisabled" aria-describedby="radioDisabledExtraLabel radioDisabledDescription"/>
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="radioDisabled">Default disabled radio button</label>
-        <p class="radio-button-extra-label" id="radioDisabledExtraLabel">Extra label</p>
-        <p class="control-item-description" id="radioDisabledDescription">Description text</p>
-      </div>
-    </div>
-    <div class="radio-button-item">
-      <div class="control-item-assets-container">
-        <input disabled class="control-item-indicator" type="radio" value="" id="radioCheckedDisabled" name="radioDisabled" checked />
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="radioCheckedDisabled">Checked disabled radio button</label>
-      </div>
-    </div>
-  </fieldset>`} />
-
-<BootstrapCompatibility>
-<Example buttonLabel="Bootstrap compatibility: disabled radio buttons" code={`<div class="form-check">
-    <input disabled class="form-check-input" type="radio" value="" id="checkDisabled" name="radioDisabledBs" />
-    <label class="form-check-label" for="checkDisabled">
-      Default disabled radio button
-    </label>
-  </div>
-  <div class="form-check">
-    <input disabled class="form-check-input" type="radio" value="" id="checkCheckedDisabled" name="radioDisabledBs" checked />
-    <label class="form-check-label" for="checkCheckedDisabled">
-      Checked disabled radio button
-    </label>
-  </div>`} />
-</BootstrapCompatibility>
-
-### Read only
-
-To create a read only radio button, the input should be replaced by a `span` element with `role="radio"` and `aria-disabled="true"` attributes. All the radio buttons in the group must be surrounded by a container with `role="radiogroup"` and `aria-readonly="true"` attributes. This is the only way to be compliant with ARIA specifications. The radio button will be accessible to keyboard navigation and assistive technologies, thanks to `aria-labelledby` and `tabindex`, but other interactions will be prevented.
-
-<Example buttonLabel="readonly radio buttons" code={`<fieldset class="control-items-list">
-    <div role="radiogroup" aria-readonly="true">
-      <div class="radio-button-item">
-        <div class="control-item-assets-container">
-          <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="radioReadonlyLabel" aria-describedby="radioReadonlyExtraLabel radioReadonlyDescription"></span>
-        </div>
-        <div class="control-item-text-container">
-          <p class="control-item-label" id="radioReadonlyLabel">Default readonly radio button</p>
-          <p class="radio-button-extra-label" id="radioReadonlyExtraLabel">Extra label</p>
-          <p class="control-item-description" id="radioReadonlyDescription">Description text</p>
-        </div>
-      </div>
-      <div class="radio-button-item">
-        <div class="control-item-assets-container">
-          <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="radioReadonlyCheckedLabel"></span>
-        </div>
-        <div class="control-item-text-container">
-          <p class="control-item-label" id="radioReadonlyCheckedLabel">Checked readonly radio button</p>
-        </div>
-      </div>
-    </div>
-  </fieldset>`} />
-
-### Invalid
-
-<Callout type="info" name="input-invalid" />
-
-<Callout title="Prefer built-in form validation to handle client-side validation" type="info" name="form-field-validation" />
-
-To manually mark a radio button as invalid, add the `aria-invalid="true"` attribute to a `.control-item-indicator`. An error icon will be automatically shown, if there is a decorative icon specified it will be hidden.
-
-<Example buttonLabel="invalid radio buttons" code={`<fieldset class="control-items-list">
-    <div class="radio-button-item control-item-divider">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="radioInvalid" id="radioInvalid" aria-describedby="radioInvalidExtraLabel radioInvalidDescription radioInvalidErrorText" />
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="radioInvalid">Default invalid radio button</label>
-        <p class="radio-button-extra-label" id="radioInvalidExtraLabel">Extra label</p>
-        <p class="control-item-description" id="radioInvalidDescription">Description text</p>
-      </div>
-    </div>
-    <div class="radio-button-item control-item-divider">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="radioInvalid" id="radioInvalid2" aria-describedby="radioInvalid2Description radioInvalidErrorText" checked />
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="radioInvalid2">Checked invalid radio button</label>
-        <p class="control-item-description" id="radioInvalid2Description">Description text</p>
-      </div>
-    </div>
-    <p class="control-item-error-message" id="radioInvalidErrorText">There is an error.</p>
-  </fieldset>`} />
-
-<BootstrapCompatibility>
-
-To display an invalid radio button, add `.is-invalid` to a `.form-check-input`.
-
-<Example buttonLabel="Bootstrap compatibility: invalid radio buttons" code={`<div class="form-check">
-    <input class="form-check-input is-invalid" type="radio" value="" id="radioInvalidBootstrap" />
-    <label class="form-check-label" for="radioInvalidBootstrap">
-      Invalid radio
-    </label>
-  </div>`} />
-</BootstrapCompatibility>
-
-#### Outlined
-
-This also works for outlined variant of the component.
-
-<Example buttonLabel="outlined invalid radio buttons" code={`<fieldset class="control-items-list">
-    <div class="radio-button-item radio-button-item-outlined">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="outlinedInvalid" id="outlinedInvalid1" aria-describedby="radioLayoutOutlinedInvalidErrorText" />
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="outlinedInvalid1">Default invalid outlined radio button</label>
-      </div>
-    </div>
-    <div class="radio-button-item radio-button-item-outlined">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="outlinedInvalid" id="outlinedInvalid2" checked aria-describedby="radioLayoutOutlinedInvalidErrorText" />
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="outlinedInvalid2">Checked invalid outlined radio button</label>
-      </div>
-    </div>
-    <p class="control-item-error-message" id="radioLayoutOutlinedInvalidErrorText">Forbidden choice.</p>
-  </fieldset>`} />
-
-#### Horizontal
-
-If the layout is horizontal, the `<fieldset>` must enclose the flex containers so the error message is displayed under the first item.
-
-<Example buttonLabel="invalid radio buttons in an horizontal layout" code={`<fieldset class="control-items-list">
-    <div class="d-flex flex-row gap-small w-50">
-      <div class="radio-button-item flex-fill">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" aria-invalid="true" type="radio" value="" id="radioLayoutRowInvalid1" name="radioLayoutRowInvalid" aria-describedby="radioLayoutRowInvalidErrorText" />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="radioLayoutRowInvalid1">Option 1</label>
-        </div>
-      </div>
-      <div class="radio-button-item flex-fill">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" aria-invalid="true" type="radio" value="" id="radioLayoutRowInvalid2" name="radioLayoutRowInvalid" aria-describedby="radioLayoutRowInvalidErrorText" />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="radioLayoutRowInvalid2">Option 2</label>
-        </div>
-      </div>
-    </div>
-    <p class="control-item-error-message" id="radioLayoutRowInvalidErrorText">Please make a choice.</p>
-  </fieldset>`} />
-
-### Skeleton
-
-<SkeletonRedirect component="radio button item" />
-
-<Example buttonLabel="radio button item skeleton" code={`<div aria-busy="true" inert>
-    <fieldset class="control-items-list">
-      <div class="radio-button-item">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" id="radioSkeleton" name="radioSkeleton" />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="radioSkeleton">Default radio button</label>
-        </div>
-      </div>
-      <div class="radio-button-item">
-        <div class="control-item-assets-container">
-          <input checked class="control-item-indicator" type="radio" value="" id="radioSkeleton2" name="radioSkeleton" />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for="radioSkeleton2">Checked radio button</label>
-        </div>
-      </div>
-    </fieldset>
-  </div>`} />
 
 ## Fieldset `<legend>`
 
