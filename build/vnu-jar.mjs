@@ -45,9 +45,10 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     'Element “style” not allowed as child of element “div” in this context.*',
     // Allow empty option in select
     'Element “option” without attribute “label” must not be empty.',
-    'The heading “.*” (with computed level *) follows the heading “h.*” (with computed level .*), skipping .* heading levels.',
+    'The heading “.” (with computed level .) follows the heading “h.” (with computed level .), skipping . heading levels.',
     'The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.',
-    'The element “a” .* must not appear as a descendant of an element with the attribute “role=tab”'
+    'The element “a” must not appear as a descendant of an element with the attribute “role=tab”',
+    'The element “a” with the attribute “href” must not appear as a descendant of an element with the attribute “role=tab”'
     // End mod
   ].join('|')
 
