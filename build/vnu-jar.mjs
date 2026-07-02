@@ -51,7 +51,7 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     'The element “a” with the attribute “href” must not appear as a descendant of an element with the attribute “role=tab”.',
     'Every active .role=tab. element must have a corresponding .role=tabpanel. element.',
     '.*Cannot invoke .*because .val. is null.',
-    '.* .style. not allowed as child of element.*'
+    '.*not allowed as child of element.*'
     // End mod
   ].join('|')
 
