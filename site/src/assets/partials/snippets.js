@@ -167,6 +167,7 @@ export default () => {
       if (!button) {
         return
       }
+
       // Extract info from data-bs-* attributes
       const recipient = button.getAttribute('data-bs-whatever')
       // If necessary, you could initiate an Ajax request here
