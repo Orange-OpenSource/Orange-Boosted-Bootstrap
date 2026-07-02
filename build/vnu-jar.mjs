@@ -46,7 +46,7 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     // Allow empty option in select
     'Element “option” without attribute “label” must not be empty.',
     // eslint-disable-next-line no-useless-escape
-    'The heading “[1-9]” \(with computed level [1-9]\) follows the heading “h[1-9]” \(with computed level [1-9]\), skipping [1-9] heading levels.',
+    'The heading “h[1-9]” \(with computed level [1-9]\) follows the heading “h[1-9]” \(with computed level [1-9]\), skipping [1-9] heading levels.',
     'The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.',
     'The element “a” must not appear as a descendant of an element with the attribute “role=tab”.',
     'The element “a” with the attribute “href” must not appear as a descendant of an element with the attribute “role=tab”.'
