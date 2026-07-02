@@ -42,7 +42,7 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.',
     // Allow `switch` attribute.
     'Attribute “switch” not allowed on element “input” at this point.',
-    '.*not allowed.*',
+    '.*style. not allowed as child of element.*',
     // Allow empty option in select
     'Element “option” without attribute “label” must not be empty.',
     'The heading .*skipping [1-6] heading level.*',
