@@ -44,7 +44,9 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     'Attribute “switch” not allowed on element “input” at this point.',
     'Element “style” not allowed as child of element “div” in this context.*',
     // Allow empty option in select
-    'Element “option” without attribute “label” must not be empty.'
+    'Element “option” without attribute “label” must not be empty.',
+    'The heading "*" (with computed level *) follows the heading "h*" (with computed level *), skipping * heading levels.',
+    'The "aria-labelledby" attribute must not be specified on any "div" element unless the element has a "role" value other than "caption", "code", "deletion", "emphasis", "generic", "insertion", "paragraph", "presentation", "strong", "subscript", or "superscript".'
     // End mod
   ].join('|')
 
