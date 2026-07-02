@@ -51,7 +51,7 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     'The element “a” with the attribute “href” must not appear as a descendant of an element with the attribute “role=tab”.',
     'Every active .role=tab. element must have a corresponding .role=tabpanel. element.',
     '.*Cannot invoke .*because .val. is null.',
-    'This document has heading elements but none of them has a computed heading level of 1'
+    'This document has heading elements but none of them has a computed heading level of 1.'
     // End mod
   ].join('|')
 
