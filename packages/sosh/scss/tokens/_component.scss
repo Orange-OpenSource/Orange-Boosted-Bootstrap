@@ -1,8 +1,8 @@
 // Component application
 // Depends on semantic applications
 // OUDS Core tokens version 1.10.0
-// Sosh Core tokens version 1.3.0
-// Sosh System tokens version 2.4.0
+// Sosh Core tokens version 1.4.0
+// Sosh System tokens version 2.5.0
 
 // Alert
 
@@ -366,6 +366,12 @@ $ouds-pin-code-input-size-min-width: $ouds-dimension-large !default;
 $ouds-pin-code-input-space-column-gap-digit-input: $ouds-space-column-gap-medium !default;
 // scss-docs-end ouds-component-pin
 
+// Progress
+
+// scss-docs-start ouds-component-progress
+$ouds-progress-indicator-color-bg: var(--#{$prefix}progress-indicator-color-bg) !default;
+// scss-docs-end ouds-component-progress
+
 // Quantity
 
 // scss-docs-start ouds-component-quantity
@@ -470,7 +476,9 @@ $ouds-text-area-size-max-height-assets-container: $core-ouds-dimension-1100 !def
 $ouds-text-area-size-max-height-input: $core-ouds-dimension-2500 !default;
 $ouds-text-area-size-max-width: $core-ouds-dimension-6000 !default;
 $ouds-text-area-size-min-height-input: $core-ouds-dimension-900 !default;
+$ouds-text-area-space-padding-block-empty-trailing-container: $ouds-space-padding-block-xsmall !default;
 $ouds-text-area-space-padding-block-top-empty: $ouds-space-padding-block-medium !default;
+$ouds-text-area-space-padding-block-trailing-container: $ouds-space-padding-block-small !default;
 $ouds-text-area-space-padding-block: $ouds-space-padding-block-small !default;
 $ouds-text-input-border-radius-default: $ouds-border-radius-default !default;
 $ouds-text-input-border-radius-rounded: $ouds-border-radius-default !default;
