@@ -1,0 +1,62 @@
+---
+/*
+ * Outputs badge to identify the first version something was added
+ */
+interface Props {
+  id: string
+}
+
+const { id } = Astro.props
+
+const html = await Astro.slots.render('default')
+
+const tabRegex = /data-tab-name="([^"]+)"/g
+const tabs: { name: string; kebabName: string }[] = []
+let match
+
+while ((match = tabRegex.exec(html)) !== null) {
+  tabs.push({ name: match[1], kebabName: match[1].replace(/\s+/g, '-').toLowerCase() })
+}
+---
+
+<ul
+  class="nav nav-pills border border-default px-large pt-medium overflow-x-scroll border-bottom-none flex-nowrap mw-100"
+  id={id}
+  role="tablist"
+>
+  {
+    tabs.map((tab, index) => (
+      <li class="nav-item chip chip-filter" role="presentation">
+        <button
+          class:list={['chip-interactive', { active: index === 0 }]}
+          id={`${id}-${tab.kebabName}`}
+          data-bs-toggle="pill"
+          data-bs-target={`#${id}-tab-${tab.kebabName}`}
+          type="button"
+          role="tab"
+          aria-controls={`#${id}-tab-${tab.kebabName}`}
+          aria-selected={index === 0}
+        >
+          {tab.name}
+        </button>
+      </li>
+    ))
+  }
+</ul>
+<div class="tab-content mb-medium border-default px-large" id={`${id}-tabContent`}>
+  {
+    tabs.map((tab, index) => (
+      <div
+        class:list={['tab-pane fade', { 'show active': index === 0 }]}
+        role="tabpanel"
+        tabindex="0"
+        aria-labelledby={`${id}-${tab.kebabName}`}
+        id={`${id}-tab-${tab.kebabName}`}
+      >
+        <Fragment
+          set:html={html.match(new RegExp(`<div data-tab-name="${tab.name}"[^>]*>([\\s\\S]*?)<\\/div>`))?.[1] ?? ''}
+        />
+      </div>
+    ))
+  }
+</div>
