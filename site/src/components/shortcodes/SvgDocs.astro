@@ -32,7 +32,7 @@ const { theme = 'orange' } = Astro.props
 const { file = `${theme}-logo`, downloadable = true, buttonLabel } = Astro.props
 
 const filePath = `site/static/[brand]/docs/[version]/assets/brand/${file}`
-const svgFormattedPath = `${filePath}.svg`
+const svgFormattedPath = `${filePath}-formatted.svg`
 const svgPath = `${filePath}.svg`
 
 const svg = fs.readFileSync(svgPath, 'utf8')
