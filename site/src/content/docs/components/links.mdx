@@ -107,6 +107,20 @@ Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left o
   </a>`} />
 </BootstrapCompatibility>
 
+### Opaque links
+
+On image background, you can use the `.opacify` class to make links more readable. This class adds an opaque background to the link for the `:hover`, `:focus-visible`, and `:active` states, improving contrast and visibility against complex backgrounds.
+
+<Example buttonLabel="links on colored backgrounds" class="p-none bd-btn-example bd-first-rounded" code={`<div class="bg-surface-brand-primary p-large d-flex gap-medium flex-wrap" style="background-image: url('https://fastly.picsum.photos/id/628/1000/300.jpg?hmac=scpBB5Z4eJBipw0O_j2T60oQcGjH8xoOA0OG42tW0go')">
+    <div data-bs-theme="light">
+      <a class="link opacify" href="#">Link</a>
+    </div>
+    <div data-bs-theme="dark">
+      <a class="link opacify" href="#">Link</a>
+    </div>
+  </div>`} />
+
+
 ## States
 
 ### Disabled

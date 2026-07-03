@@ -325,6 +325,15 @@
     var(--#{$prefix}color-opacity-transparent),
     var(--#{$prefix}color-content-on-action-loading)
   );
+
+  &.opacify {
+    &:hover,
+    &:active,
+    &:focus-visible {
+      background-color: var(--bs-color-bg-primary);
+      background-image: linear-gradient(var(--#{$prefix}btn-hover-bg));
+    }
+  }
 }
 
 .btn-negative {
@@ -526,4 +535,3 @@
   height: var(--#{$prefix}btn-icon-size);
   background-color: currentcolor;
 }
-

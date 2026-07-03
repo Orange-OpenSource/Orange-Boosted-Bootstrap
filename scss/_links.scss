@@ -36,6 +36,15 @@
     font-size: var(--#{$prefix}link-icon-size);
     line-height: 1;
   }
+
+  &.opacify {
+    &:hover,
+    &:active,
+    &:focus-visible {
+      background-color: var(--bs-color-bg-primary);
+      background-clip: text;
+    }
+  }
 }
 
 .link-chevron {
