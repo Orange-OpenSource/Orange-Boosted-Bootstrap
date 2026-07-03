@@ -127,16 +127,18 @@ To display a helper link below text areas, use a standard small link [with `.lin
 
 ### Hidden label
 
-The label is optional from a visual perspective, but for accessibility reasons, it is mandatory to keep a `.visually-hidden` label.
+The label is optional from a visual perspective, but for accessibility reasons, it is mandatory to keep a `.visually-hidden` label and add a `title` attribute to the text area.
 
-<Callout type="negative">
-  Hiding the label should be reserved when the purpose of the text area is obvious thanks to a placeholder or contextual icon.
+<Callout type="negative" title="Accessibility warning">
+  The `.visually-hidden` `<label>` and the `[title]` attribute of the text area must both be present and have the same value.
+
+  This variant should be reserved when the purpose of the text area is obvious.
 </Callout>
 
 <Example buttonLabel="text area with hidden label" code={`<div class="text-area">
     <div class="text-area-container">
       <label for="textAreaWithoutLabel" class="visually-hidden">Hidden label</label>
-      <textarea id="textAreaWithoutLabel" class="text-area-field" placeholder="Please enter a comment"></textarea>
+      <textarea id="textAreaWithoutLabel" class="text-area-field" title="Hidden label" placeholder="Please enter a comment"></textarea>
     </div>
   </div>`} />
 
