@@ -131,10 +131,10 @@ const {theme = 'orange'} = Astro.props
       </fieldset>
       <div class="switch-item mb-scaled-small">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchWithSVG" />
+          <input class="control-item-indicator" type="checkbox" role="switch" value="" id={`switch-${theme}`} />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="switchWithSVG">Switch with icon</label>
+          <label class="control-item-label" for={`switch-${theme}`}>Switch with icon</label>
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
@@ -163,20 +163,20 @@ const {theme = 'orange'} = Astro.props
       <div role="group" aria-label="Filter by" class="mb-scaled-medium">
         <ul class="chips-container">
           <li class="chip chip-filter">
-            <input type="checkbox" id="appleCheck" checked />
-            <label class="chip-interactive" for="appleCheck">
+            <input type="checkbox" id={`ap-${theme}`} checked />
+            <label class="chip-interactive" for={`ap-${theme}`}>
               Apple
             </label>
           </li>
           <li class="chip chip-filter">
-            <input type="checkbox" id="samsungCheck" />
-            <label class="chip-interactive" for="samsungCheck">
+            <input type="checkbox" id={`sa-${theme}`} />
+            <label class="chip-interactive" for={`sa-${theme}`}>
               Samsung
             </label>
           </li>
           <li class="chip chip-filter">
-            <input type="checkbox" id="xiaomiCheck" />
-            <label class="chip-interactive" for="xiaomiCheck">
+            <input type="checkbox" id={`xi-${theme}`} />
+            <label class="chip-interactive" for={`xi-${theme}`}>
               Xiaomi
             </label>
           </li>
@@ -188,8 +188,7 @@ const {theme = 'orange'} = Astro.props
           <input type="password" id={`pwd-${theme}`} class="text-input-field" placeholder=" ">
           <button class="btn btn-minimal btn-icon" aria-pressed="false" type="button">
             <svg aria-hidden="true">
-              <use
-                xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#accessibility-vision`/>
+              <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#accessibility-vision`/>
             </svg>
             <span class="visually-hidden">Show password</span>
           </button>
@@ -197,8 +196,8 @@ const {theme = 'orange'} = Astro.props
       </div>
       <div class="select-input mb-scaled-medium">
         <div class="select-input-container">
-          <label for="select">Default select</label>
-          <select class="select-input-field" id="select">
+          <label for={`sel-${theme}`}>Default select</label>
+          <select class="select-input-field" id={`sel-${theme}`}>
             <option value="" disabled selected></option>
             <option value="1">One</option>
             <option value="2">Two</option>
