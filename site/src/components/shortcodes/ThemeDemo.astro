@@ -14,13 +14,12 @@ interface Props {
 const {theme = 'orange'} = Astro.props
 ---
 
-<link rel="preload" href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg` as="image"
-      type="image/svg+xml"/>
+<link rel="preload" href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg` as="image" type="image/svg+xml"/>
 
 
 <div data-bs-brand={theme} id={`theme-demo-${theme}`} class="py-scaled-large">
   <div class="row mb-scaled-medium">
-    <div class="col-12">
+    <div class="col-12 sm:col-10 md:col-12 xl:col-10">
       <div class="alert alert-message alert-positive mb-medium">
         <div class="alert-icon"></div>
         <div class="alert-container">
@@ -40,7 +39,7 @@ const {theme = 'orange'} = Astro.props
     </div>
   </div>
   <div class="row mb-scaled-medium">
-    <div class="col-12 d-flex justify-content-between flex-wrap gap-xsmall">
+    <div class="col-12 sm:col-10 md:col-12 xl:col-10 d-flex justify-content-between flex-wrap gap-xsmall">
       <button type="button" class="btn btn-default">Default</button>
       <button type="button" class="btn btn-brand">
         <svg aria-hidden="true">
@@ -71,7 +70,7 @@ const {theme = 'orange'} = Astro.props
     </div>
   </div>
   <div class="row mb-scaled-medium">
-    <div class="col-12 d-flex gap-scaled-medium align-items-center">
+    <div class="col-12 sm:col-10 md:col-12 xl:col-10 d-flex gap-scaled-medium align-items-center flex-wrap">
       <div class="d-inline-flex gap-medium">
         <p class="badge badge-positive badge-large"><span class="visually-hidden">Success</span></p>
         <p class="badge badge-info badge-large"><span class="visually-hidden">Info</span></p>
@@ -100,7 +99,7 @@ const {theme = 'orange'} = Astro.props
     </div>
   </div>
   <div class="row mb-scaled-medium">
-    <div class="col-12 md:col-6 mb-scaled-medium">
+    <div class="col-12 sm:col-10 md:col-6 xl:col-5 mb-scaled-medium">
       <div class="checkbox-item mb-scaled-small">
         <div class="control-item-assets-container">
           <input checked class="control-item-indicator" type="checkbox" value="" id={`cb-${theme}`}/>
@@ -152,13 +151,13 @@ const {theme = 'orange'} = Astro.props
         </a>
       </div>
     </div>
-    <div class="col-12 md:col-6">
+    <div class="col-12 sm:col-10 md:col-6 xl:col-5">
       <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium mb-scaled-medium"
           aria-label="Statuses">
-        <li class="tag tag-positive"><span class="tag-status-icon"></span>Positive</li>
+        <li class="tag tag-positive"><span class="tag-status-icon"></span>Success</li>
         <li class="tag tag-info"><span class="tag-status-icon"></span>Info</li>
         <li class="tag tag-warning tag-muted"><span class="tag-status-icon"></span>Warning</li>
-        <li class="tag tag-negative tag-muted"><span class="tag-status-icon"></span>Negative</li>
+        <li class="tag tag-negative tag-muted"><span class="tag-status-icon"></span>Error</li>
       </ul>
       <div role="group" aria-label="Filter by" class="mb-scaled-medium">
         <ul class="chips-container">
