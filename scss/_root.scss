@@ -10,8 +10,15 @@
 }
 
 #{$ouds-root-selector}::after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
   content: "";
   background-image: url("#{$ouds-pixel-tracker-url}");
+  opacity: 0;
 }
 
 #{$ouds-root-selector},
