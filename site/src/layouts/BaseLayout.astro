@@ -72,6 +72,11 @@ const mainProps = overrides?.main ?? {}
     <Footer layout={layout} title={title} />
 
     <Scripts layout={layout} />
+    <script
+      type="module"
+      async
+      src="https://unpkg.com/invokers-polyfill@latest/invoker.min.js"
+    ></script>
 
     {frontmatter?.extra_js && frontmatter.extra_js.map((js) => <script is:inline async={js.async} src={js.src} />)}
 
