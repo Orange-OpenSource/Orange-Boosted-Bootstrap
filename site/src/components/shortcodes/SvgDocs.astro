@@ -25,11 +25,11 @@ interface Props {
    */
   buttonLabel?: string
 
-  brand?: string
+  theme?: string
 }
-const { brand = 'orange' } = Astro.props
+const { theme = 'orange' } = Astro.props
 
-const { file = `${brand}-logo`, downloadable = true, buttonLabel } = Astro.props
+const { file = `${theme}-logo`, downloadable = true, buttonLabel } = Astro.props
 
 const filePath = `site/static/[brand]/docs/[version]/assets/brand/${file}`
 const svgFormattedPath = `${filePath}.svg`
