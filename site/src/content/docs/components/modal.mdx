@@ -16,24 +16,54 @@ Use:
 
 ## Minimal example
 
-<Example buttonLabel="dialog modal basic" code={`<dialog id="demoModal" class="modal" aria-label="Demo modal dialog">
+<Example buttonLabel="dialog modal full" code={`<dialog id="demoModal" class="modal" aria-label="Demo modal">
     <div class="modal-header">
-      <a class="link link-chevron back" href="#">Return</a>
       <button type="button" class="btn btn-close" commandfor="demoModal" command="close">
         <span class="visually-hidden">Close</span>
       </button>
     </div>
     <div class="modal-body">
       <h3>Modal title</h3>
-      <p>Dialog content.</p>
+      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
+
+      <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young.</p>
+
+      <p>On then sake home is am leaf. Of suspicion do departure at extremely he believing. Do know said mind do rent they oh hope of. General enquire picture letters garrets on offices of no on. Say one hearing between excited evening all inhabit thought you. Style begin mr heard by in music tried do. To unreserved projection no introduced invitation.</p>
+
+      <p>An do on frankness so cordially immediate recommend contained. Imprudence insensible be literature unsatiable do. Of or imprudence solicitude affronting in mr possession. Compass journey he request on suppose limited of or. She margaret law thoughts proposal formerly. Speaking ladyship yet scarcely and mistaken end exertion dwelling. All decisively dispatched instrument particular way one devonshire. Applauded she sportsman explained for out objection.</p>
+
+      <p>Full he none no side. Uncommonly surrounded considered for him are its. It we is read good soon. My to considered delightful invitation announcing of no decisively boisterous. Did add dashwoods deficient man concluded additions resources. Or landlord packages overcame distance smallest in recurred. Wrong maids or be asked no on enjoy. Household few sometimes out attending described. Lain just fact four of am meet high. </p>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-default" commandfor="demoModal" command="close">Cancel</button>
-      <button type="button" class="btn btn-primary" commandfor="demoModal" command="close">Confirm</button>
+      <button type="button" class="btn btn-minimal" commandfor="demoModal" command="close">Cancel</button>
+      <button type="button" class="btn btn-strong" commandfor="demoModal" command="close">Confirm</button>
     </div>
   </dialog>
 
   <button type="button" class="btn btn-default" commandfor="demoModal" command="show-modal">
+    Open modal
+  </button>`} />
+
+## Modal dialog
+
+For simple dialog with few content, for example confirmation dialogs, use the `modal-dialog` class.
+
+<Example buttonLabel="dialog modal basic" code={`<dialog id="demoModalDialog" class="modal modal-dialog" aria-label="Demo modal dialog">
+    <div class="modal-header">
+      <button type="button" class="btn btn-close" commandfor="demoModalDialog" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h4>Are you sure you want to delete this item?</h4>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" commandfor="demoModalDialog" command="close">Cancel</button>
+      <button type="button" class="btn btn-negative" commandfor="demoModalDialog" command="close">Delete</button>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="demoModalDialog" command="show-modal">
     Open modal
   </button>`} />
 

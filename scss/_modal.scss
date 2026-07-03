@@ -1,30 +1,62 @@
 // Dialog modal surface and positioning
 
+$ouds-modal-width-2xs: 360px !default;
+$ouds-modal-width-xs: 390px !default;
+$ouds-modal-width-sm: 480px !default;
+$ouds-modal-width-md: 768px !default;
+$ouds-modal-width-lg: 1024px !default;
+$ouds-modal-width-xl: 1440px !default;
+$ouds-modal-width-2xl: 1680px !default;
+$ouds-modal-width-3xl: 1920px !default;
+
 .modal {
-  --#{$prefix}modal-width: #{$modal-md};
 
   flex-direction: column;
-  width: var(--#{$prefix}modal-width);
   overscroll-behavior: none;
   background-color: #{$modal-content-bg};
   @include border-radius(var(--#{$prefix}modal-border-radius));
+
+  // @include media-breakpoint-up(xs) {
+  //   --#{$prefix}modal-width: #{$ouds-modal-width-xs};
+  // }
+  // @include media-breakpoint-up(sm) {
+  //   --#{$prefix}modal-width: #{$ouds-modal-width-sm};
+  // }
+  // @include media-breakpoint-up(md) {
+  //   --#{$prefix}modal-width: #{$ouds-modal-width-md};
+  //   &.modal-dialog {
+  //     --#{$prefix}modal-width: #{$ouds-modal-width-sm};
+  //   }
+  // }
+  // @include media-breakpoint-up(lg) {
+  //   --#{$prefix}modal-width: #{$ouds-modal-width-lg};
+  // }
+  // @include media-breakpoint-up(xl) {
+  //   --#{$prefix}modal-width: #{$ouds-modal-width-xl};
+  // }
+  // @include media-breakpoint-up(2xl) {
+  //   --#{$prefix}modal-width: #{$ouds-modal-width-2xl};
+  // }
+  // @include media-breakpoint-up(3xl) {
+  //   --#{$prefix}modal-width: #{$ouds-modal-width-3xl};
+  // }
 }
 
-.modal.modal-dialog-scrollable {
-  // scss-docs-start modal-scrollable-css-vars
-  --#{$prefix}modal-scrollable-inner-padding: #{$modal-scrollable-inner-padding}; // OUDS mod
-  --#{$prefix}modal-scrollable-inner-margin: #{$modal-scrollable-inner-margin}; // OUDS mod
-  --#{$prefix}modal-footer-margin-top: #{$modal-scrollable-footer-margin-top}; // OUDS mod
-  // scss-docs-end modal-scrollable-css-vars
+// .modal.modal-dialog-scrollable {
+//   // scss-docs-start modal-scrollable-css-vars
+//   --#{$prefix}modal-scrollable-inner-padding: #{$modal-scrollable-inner-padding}; // OUDS mod
+//   --#{$prefix}modal-scrollable-inner-margin: #{$modal-scrollable-inner-margin}; // OUDS mod
+//   --#{$prefix}modal-footer-margin-top: #{$modal-scrollable-footer-margin-top}; // OUDS mod
+//   // scss-docs-end modal-scrollable-css-vars
 
-  .modal-body {
-    padding: var(--#{$prefix}modal-scrollable-inner-padding); // OUDS mod
-    margin: var(--#{$prefix}modal-scrollable-inner-margin); // OUDS mod
-    overflow-y: auto;
-    border: var(--#{$prefix}modal-border-width) solid var(--#{$prefix}modal-border-color); // OUDS mod
-    border-width: var(--#{$prefix}modal-border-width) 0; // OUDS mod
-  }
-}
+//   .modal-body {
+//     padding: var(--#{$prefix}modal-scrollable-inner-padding); // OUDS mod
+//     margin: var(--#{$prefix}modal-scrollable-inner-margin); // OUDS mod
+//     overflow-y: auto;
+//     border: var(--#{$prefix}modal-border-width) solid var(--#{$prefix}modal-border-color); // OUDS mod
+//     border-width: var(--#{$prefix}modal-border-width) 0; // OUDS mod
+//   }
+// }
 
 // Modal background used by JS fallback mode
 .modal-backdrop {
@@ -48,9 +80,12 @@
 // Modal header
 // Top section of the modal with title and dismiss
 .modal-header {
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding-inline: var(--#{$prefix}space-scaled-3xlarge) var(--#{$prefix}space-scaled-xsmall);
   padding-top: var(--#{$prefix}space-scaled-xsmall);
   border-bottom: if($modal-header-border-color == null, null, var(--#{$prefix}modal-header-border-width) solid var(--#{$prefix}modal-header-border-color)); // OUDS mod
@@ -78,8 +113,8 @@
   flex-wrap: wrap;
   gap: var(--#{$prefix}space-scaled-small);
   align-items: center; // vertically center
-  justify-content: center; // center align action buttons
-  padding-inline: var(--#{$prefix}modal-footer-padding); // OUDS mod
+  justify-content: flex-end; // align action buttons to the end
+  padding-inline: var(--#{$prefix}space-scaled-3xlarge);
   padding-top: $ouds-space-fixed-small;
   margin-bottom: var(--#{$prefix}space-scaled-2xlarge);
   background-color: var(--#{$prefix}modal-footer-bg);
