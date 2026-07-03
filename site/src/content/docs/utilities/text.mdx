@@ -213,7 +213,16 @@ These classes change the `font-size` but also the `line-height`, the `letter-spa
                         <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-${level}-${size}`).slice(0, -2)) / 16}rem</li>
                       </ul>
                     )}
-                  {(level === 'code-medium' || level.includes('label-'))
+                  {(level.includes('label-'))
+                    && (
+                      <ul class="mb-none ps-medium">
+                        <li><code class="text-default">font-size</code>: <b>{(getTokenValue(`$ouds-font-size-${level}`).slice(0, -2)) / 16}rem</b></li>
+                        <li><code>line-height</code>: {Math.round(((getTokenValue(`$ouds-font-line-height-${level}`).slice(0, -2)) / (getTokenValue(`$ouds-font-size-${level}`).slice(0, -2))) * 10000) / 10000}</li>
+                        <li><code>letter-spacing</code>: {(getTokenValue(`$ouds-font-letter-spacing-${level}`).slice(0, -2)) / 16}rem</li>
+                        <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-${level}-${size}`).slice(0, -2)) / 16}rem</li>
+                      </ul>
+                    )}
+                  {(level === 'code-medium')
                     && (
                       <ul class="mb-none ps-medium">
                         <li><code class="text-default">font-size</code>: <b>{(getTokenValue(`$ouds-font-size-${level}`).slice(0, -2)) / 16}rem</b></li>

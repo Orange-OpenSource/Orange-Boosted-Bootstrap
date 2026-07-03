@@ -355,8 +355,7 @@ Since only [headings](#headings), [display headings](#display-headings) and `str
                   <li><code class="text-default">font-size</code>: <b>{(getTokenValue(`$ouds-font-size-${level}${!level.includes('label-') ? '-' + size : ''}`).slice(0, -2)) / 16}rem</b></li>
                   <li><code>line-height</code>: {Math.round(((getTokenValue(`$ouds-font-line-height-${level}${!level.includes('label-') ? '-' + size : ''}`).slice(0, -2)) / (getTokenValue(`$ouds-font-size-${level}${!level.includes('label-') ? '-' + size : ''}`).slice(0, -2))) * 10000) / 10000}</li>
                   <li><code>letter-spacing</code>: {(getTokenValue(`$ouds-font-letter-spacing-${level}${!level.includes('label-') ? '-' + size : ''}`).slice(0, -2)) / 16}rem</li>
-                  {!level.includes('label-')
-                    && (<li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-${level}-${size}`).slice(0, -2)) / 16}rem</li>)}
+                  <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-${level}-${size}`).slice(0, -2)) / 16}rem</li>)
                 </ul>
               </td>
             ))
@@ -506,21 +505,3 @@ Align terms and descriptions horizontally by using our grid system’s predefine
       </dl>
     </dd>
   </dl>`} />
-
-## Text style for custom components
-
-OUDS Web introduces a specific text style for components named `label` with 4 levels: `small`, `medium`, `large` and `xlarge`, it sets `font-size`, `line-height` and `letter-spacing` css properties. We use this style for many components included in OUDS Web, if you need to develop a custom component for your project you can use this font by calling the Scss mixin `get-font-size()`. Following is a call example for this mixin.
-
-<Example showPreview={false}  lang="scss" code={`.my-custom-component {
-    @include get-font-size("label-medium");
-  }`} />
-
-This will result in the following CSS.
-
-<Example showPreview={false}  lang="css" code={`.my-custom-component {
-    font-size: var(--bs-font-size-label-medium);
-    line-height: var(--bs-font-line-height-label-medium);
-
-    // only for ltr
-    letter-spacing: var(--bs-font-letter-spacing-label-medium);
-  }`} />

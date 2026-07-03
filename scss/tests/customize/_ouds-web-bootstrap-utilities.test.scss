@@ -3509,6 +3509,7 @@ $utilities: ();
         /* rtl:end:remove */
 
         .fs-lxl {
+          max-width: var(--bs-font-max-width-label-xlarge);
           font-size: var(--bs-font-size-label-xlarge);
           line-height: var(--bs-font-line-height-label-xlarge);
 
@@ -3517,6 +3518,7 @@ $utilities: ();
         }
 
         .fs-ll {
+          max-width: var(--bs-font-max-width-label-large);
           font-size: var(--bs-font-size-label-large);
           line-height: var(--bs-font-line-height-label-large);
 
@@ -3525,6 +3527,7 @@ $utilities: ();
         }
 
         .fs-lm {
+          max-width: var(--bs-font-max-width-label-medium);
           font-size: var(--bs-font-size-label-medium);
           line-height: var(--bs-font-line-height-label-medium);
 
@@ -3533,6 +3536,7 @@ $utilities: ();
         }
 
         .fs-ls {
+          max-width: var(--bs-font-max-width-label-small);
           font-size: var(--bs-font-size-label-small);
           line-height: var(--bs-font-line-height-label-small);
 
@@ -15463,6 +15467,7 @@ $utilities: ();
         /* rtl:end:remove */
 
         .fs-lxl {
+          max-width: var(--bs-font-max-width-label-xlarge);
           font-size: var(--bs-font-size-label-xlarge);
           line-height: var(--bs-font-line-height-label-xlarge);
 
@@ -15471,6 +15476,7 @@ $utilities: ();
         }
 
         .fs-ll {
+          max-width: var(--bs-font-max-width-label-large);
           font-size: var(--bs-font-size-label-large);
           line-height: var(--bs-font-line-height-label-large);
 
@@ -15479,6 +15485,7 @@ $utilities: ();
         }
 
         .fs-lm {
+          max-width: var(--bs-font-max-width-label-medium);
           font-size: var(--bs-font-size-label-medium);
           line-height: var(--bs-font-line-height-label-medium);
 
@@ -15487,6 +15494,7 @@ $utilities: ();
         }
 
         .fs-ls {
+          max-width: var(--bs-font-max-width-label-small);
           font-size: var(--bs-font-size-label-small);
           line-height: var(--bs-font-line-height-label-small);
 
