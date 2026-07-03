@@ -19,10 +19,16 @@ Text area includes a visible label, placeholder text, character limits, and resi
 
 Use a `.text-area` wrapper to create a text area with OUDS styles, then wrap a pair of `<textarea class="text-area-field">` and `<label>` elements in `.text-area-container`. Note that the `<label>` must come before the `<textarea>`.
 
+A `placeholder` attribute is required on each `<textarea>` as our CSS-only floating label implementation relies on the `:placeholder-shown` pseudo-element to detect when the textarea is empty.
+
+<Callout type="info">
+  Even if you don't need a placeholder, **you must always define the placeholder attribute with a single space character**. This ensures the label behaves correctly by changing the label font size when the textarea is filled.
+</Callout>
+
 <Example buttonLabel="text areas with and without placeholder" code={`<div class="text-area mb-medium">
     <div class="text-area-container">
       <label for="exampleTextArea">Additional comments</label>
-      <textarea class="text-area-field" id="exampleTextArea"></textarea>
+      <textarea class="text-area-field" id="exampleTextArea" placeholder=" "></textarea>
     </div>
   </div>
   <div class="text-area">
@@ -41,7 +47,7 @@ Add `.text-area-container-outlined` for a minimalist text area with a transparen
 <Example buttonLabel="outlined text area" code={`<div class="text-area">
     <div class="text-area-container text-area-container-outlined">
       <label for="exampleTextAreaOutlined">Additional comments</label>
-      <textarea class="text-area-field" id="exampleTextAreaOutlined"></textarea>
+      <textarea class="text-area-field" id="exampleTextAreaOutlined" placeholder=" "></textarea>
     </div>
   </div>`} />
 
@@ -58,13 +64,13 @@ Rounded corners inputs is a project-wide option therefore all your inputs should
     <div class="text-area mb-medium">
       <div class="text-area-container">
         <label for="exampleTextAreaRounded">Additional comments</label>
-        <textarea class="text-area-field" id="exampleTextAreaRounded"></textarea>
+        <textarea class="text-area-field" id="exampleTextAreaRounded" placeholder=" "></textarea>
       </div>
     </div>
     <div class="text-area">
       <div class="text-area-container text-area-container-outlined">
         <label for="exampleTextAreaRoundedAlt">Additional comments</label>
-        <textarea class="text-area-field" id="exampleTextAreaRoundedAlt"></textarea>
+        <textarea class="text-area-field" id="exampleTextAreaRoundedAlt" placeholder=" "></textarea>
       </div>
     </div>
   </div>`} />
@@ -81,7 +87,7 @@ To display a helper text below text areas, add a `.helper-text` as a sibling of 
 <Example buttonLabel="text area with helper text" code={`<div class="text-area">
     <div class="text-area-container">
       <label for="textAreaWithHelperText">Additional comments</label>
-      <textarea id="textAreaWithHelperText" class="text-area-field" aria-describedby="textAreaWithHelperTextHelpBlock"></textarea>
+      <textarea id="textAreaWithHelperText" class="text-area-field" aria-describedby="textAreaWithHelperTextHelpBlock" placeholder=" "></textarea>
     </div>
     <p id="textAreaWithHelperTextHelpBlock" class="helper-text">
       Please be concise and limit your comment to <strong>180</strong> characters.
@@ -100,7 +106,7 @@ To display a helper link below text areas, use a standard small link [with `.lin
 <Example buttonLabel="text areas with helper link" code={`<div class="text-area mb-medium">
     <div class="text-area-container">
       <label id="labelTextAreaWithHelperTextLink" for="textAreaWithHelperTextLink">Additional comments</label>
-      <textarea id="textAreaWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" class="text-area-field"></textarea>
+      <textarea id="textAreaWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" class="text-area-field" placeholder=" "></textarea>
     </div>
     <p id="feedbackTextHelpBlock" class="helper-text">
       Please be concise and limit your comment to <strong>180</strong> characters.
@@ -112,11 +118,47 @@ To display a helper link below text areas, use a standard small link [with `.lin
   <div class="text-area">
     <div class="text-area-container mt-large">
       <label id="labelTextAreaHelperLink" for="textAreaHelperLink">Additional comments</label>
-      <textarea id="textAreaHelperLink" class="text-area-field"></textarea>
+      <textarea id="textAreaHelperLink" class="text-area-field" placeholder=" "></textarea>
     </div>
     <a href="#" id="feedbackTextHelpMoreLink" aria-labelledby="feedbackTextHelpMoreLink labelTextAreaHelperLink" class="link link-small">
       More information <span class="visually-hidden">on</span>
     </a>
+  </div>`} />
+
+### Hidden label
+
+The label is optional from a visual perspective, but for accessibility reasons, it is mandatory to keep a `.visually-hidden` label and add a `[title]` attribute to the text area.
+
+<Callout type="negative" title="Accessibility warning">
+  The `.visually-hidden` `<label>` and the `[title]` attribute of the text area must both be present and have the same value.
+
+  This variant should be reserved when the purpose of the text area is obvious.
+</Callout>
+
+<Example buttonLabel="text area with hidden label" code={`<div class="text-area">
+    <div class="text-area-container">
+      <label for="textAreaWithoutLabel" class="visually-hidden">Hidden label</label>
+      <textarea id="textAreaWithoutLabel" class="text-area-field" title="Hidden label" placeholder="Please enter a comment"></textarea>
+    </div>
+  </div>`} />
+
+### No manual resizing
+
+<Callout type="info">
+  The resize handle is always automatically hidden on touch devices.
+</Callout>
+
+Sometimes it is necessary to prevent users from resizing a text area. To do this, add the `.text-area-no-resize` class to the `.text-area` container.
+
+<Callout type="warning">
+  Preventing resizing can cause accessibility issues for users who rely on resizing to interact with the text area. Before hiding the resize handle, consider whether it is necessary for your use case and if there are alternative solutions that would still allow users to resize the text area if needed.
+</Callout>
+
+<Example buttonLabel="text area without resizing" code={`<div class="text-area text-area-no-resize">
+    <div class="text-area-container">
+      <label for="textAreaWithoutResizeHandle">This text area cannot be resized</label>
+      <textarea id="textAreaWithoutResizeHandle" class="text-area-field" placeholder=" "></textarea>
+    </div>
   </div>`} />
 
 ## States
@@ -128,13 +170,13 @@ Add the `disabled` boolean attribute on a text area to give it a grayed out appe
 <Example buttonLabel="disabled text areas" code={`<div class="text-area mb-medium">
     <div class="text-area-container">
       <label for="exampleTextAreaDisabled">Additional comments</label>
-      <textarea disabled class="text-area-field" id="exampleTextAreaDisabled">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+      <textarea disabled class="text-area-field" id="exampleTextAreaDisabled" placeholder=" ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
   </div>
   <div class="text-area">
     <div class="text-area-container text-area-container-outlined">
       <label for="exampleTextAreaOutlinedDisabled">Additional comments</label>
-      <textarea disabled class="text-area-field" id="exampleTextAreaOutlinedDisabled">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+      <textarea disabled class="text-area-field" id="exampleTextAreaOutlinedDisabled" placeholder=" ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
   </div>`} />
 
@@ -145,13 +187,13 @@ Add the `readonly` boolean attribute on a text area to prevent modification of t
 <Example buttonLabel="readonly text areas" code={`<div class="text-area mb-medium">
     <div class="text-area-container">
       <label for="exampleTextAreaReadonly">Additional comments</label>
-      <textarea readonly class="text-area-field" id="exampleTextAreaReadonly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+      <textarea readonly class="text-area-field" id="exampleTextAreaReadonly" placeholder=" ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
   </div>
   <div class="text-area">
     <div class="text-area-container text-area-container-outlined">
       <label for="exampleTextAreaOutlinedReadonly">Additional comments</label>
-      <textarea readonly class="text-area-field" id="exampleTextAreaOutlinedReadonly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+      <textarea readonly class="text-area-field" id="exampleTextAreaOutlinedReadonly" placeholder=" ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
   </div>`} />
 
@@ -170,7 +212,7 @@ To manually mark a  text area as invalid, add `aria-invalid="true"` to a `.text-
 <Example buttonLabel="invalid text areas" code={`<div class="text-area mb-medium">
     <div class="text-area-container">
       <label id="labelTextAreaInvalid" for="exampleTextAreaInvalid">Additional comments</label>
-      <textarea class="text-area-field" aria-invalid="true" id="exampleTextAreaInvalid" aria-describedby="commentFeedback"></textarea>
+      <textarea class="text-area-field" aria-invalid="true" id="exampleTextAreaInvalid" aria-describedby="commentFeedback" placeholder=" "></textarea>
     </div>
     <p id="commentTextHelpBlock" class="helper-text">
       Please be concise and limit your comment to <strong>180</strong> characters.
@@ -182,7 +224,7 @@ To manually mark a  text area as invalid, add `aria-invalid="true"` to a `.text-
   <div class="text-area">
     <div class="text-area-container text-area-container-outlined">
       <label for="labelTextAreaOutlinedInvalid">Additional comments</label>
-      <textarea class="text-area-field" aria-invalid="true" id="labelTextAreaOutlinedInvalid" aria-describedby="commentFeedbackOutlined">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+      <textarea class="text-area-field" aria-invalid="true" id="labelTextAreaOutlinedInvalid" aria-describedby="commentFeedbackOutlined" placeholder=" ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
     <p id="commentTextHelpBlockOutlined" class="helper-text">
       Please be concise and limit your comment to <strong>180</strong> characters.
@@ -203,7 +245,7 @@ To manually mark a  text area as invalid, add `aria-invalid="true"` to a `.text-
     <div class="text-area">
       <div class="text-area-container">
         <label for="skeletonTextArea">Additional comments</label>
-        <textarea class="text-area-field" id="skeletonTextArea"></textarea>
+        <textarea class="text-area-field" id="skeletonTextArea" placeholder=" "></textarea>
       </div>
     </div>
   </div>`} />
@@ -217,7 +259,7 @@ By default, text areas will span the whole width of their parent container, to l
 <Example buttonLabel="text areas max width" code={`<div class="text-area component-max-width">
     <div class="text-area-container">
       <label for="textAreaWithMaxWidth">Additional comments</label>
-      <textarea id="textAreaWithMaxWidth" class="text-area-field" aria-describedby="textAreaWithMaxWidthText"></textarea>
+      <textarea id="textAreaWithMaxWidth" class="text-area-field" aria-describedby="textAreaWithMaxWidthText" placeholder=" "></textarea>
     </div>
     <p id="textAreaWithMaxWidthText" class="helper-text">
       Please be concise and limit your comment to <strong>180</strong> characters.
@@ -231,6 +273,6 @@ By default, text areas will span the whole width of their parent container, to l
 <Example buttonLabel="mandatory text area indication" code={`<div class="text-area mb-medium">
     <div class="text-area-container">
       <label for="mandatoryTextArea" class="is-required">Additional comments</label>
-      <textarea class="text-area-field" id="mandatoryTextArea" required></textarea>
+      <textarea class="text-area-field" id="mandatoryTextArea" required placeholder=" "></textarea>
     </div>
   </div>`} />

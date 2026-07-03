@@ -959,7 +959,7 @@ $utilities: ();
           --bs-color-bg-inverse-low: #333;
           --bs-color-bg-primary: #141414;
           --bs-color-bg-secondary: #1f1f1f;
-          --bs-color-bg-tertiary: #353228;
+          --bs-color-bg-tertiary: #23211a;
           --bs-color-border-brand-primary: #ff7900;
           --bs-color-border-default: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-emphasized: #eee;
@@ -1086,6 +1086,7 @@ $utilities: ();
           --bs-switch-color-track-selected-interaction: #138126;
           --bs-switch-color-track-unselected: rgba(0, 0, 0, 0.44); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-switch-color-track-unselected-interaction: rgba(0, 0, 0, 0.52); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-progress-indicator-color-bg: #ccc;
           --bs-link-mono-color-content-enabled: #000;
           --bs-link-mono-color-content-hover: #000;
           --bs-link-mono-color-content-pressed: rgba(0, 0, 0, 0.52); // stylelint-disable-line @stylistic/number-leading-zero
@@ -1149,6 +1150,7 @@ $utilities: ();
           --bs-switch-color-track-selected-interaction: #94f0a4;
           --bs-switch-color-track-unselected: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-switch-color-track-unselected-interaction: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-progress-indicator-color-bg: #444;
           --bs-link-mono-color-content-enabled: #fff;
           --bs-link-mono-color-content-hover: #fff;
           --bs-link-mono-color-content-pressed: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
@@ -12194,7 +12196,7 @@ $utilities: ();
           --bs-color-bg-inverse-low: #333;
           --bs-color-bg-primary: #141414;
           --bs-color-bg-secondary: #1f1f1f;
-          --bs-color-bg-tertiary: #353228;
+          --bs-color-bg-tertiary: #23211a;
           --bs-color-border-brand-primary: #ff7900;
           --bs-color-border-default: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-emphasized: #eee;
@@ -12321,6 +12323,7 @@ $utilities: ();
           --bs-switch-color-track-selected-interaction: #138126;
           --bs-switch-color-track-unselected: rgba(0, 0, 0, 0.44); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-switch-color-track-unselected-interaction: rgba(0, 0, 0, 0.52); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-progress-indicator-color-bg: #ccc;
           --bs-link-mono-color-content-enabled: #000;
           --bs-link-mono-color-content-hover: #000;
           --bs-link-mono-color-content-pressed: rgba(0, 0, 0, 0.52); // stylelint-disable-line @stylistic/number-leading-zero
@@ -12384,6 +12387,7 @@ $utilities: ();
           --bs-switch-color-track-selected-interaction: #94f0a4;
           --bs-switch-color-track-unselected: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-switch-color-track-unselected-interaction: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-progress-indicator-color-bg: #444;
           --bs-link-mono-color-content-enabled: #fff;
           --bs-link-mono-color-content-hover: #fff;
           --bs-link-mono-color-content-pressed: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero

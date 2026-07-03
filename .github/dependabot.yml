@@ -67,7 +67,6 @@ updates:
       - dependency-name: "image-size"
       - dependency-name: "ip"
       - dependency-name: "jasmine"
-      - dependency-name: "jquery"
       - dependency-name: "js-yaml"
       - dependency-name: "karma"
       - dependency-name: "karma-browserstack-launcher"
