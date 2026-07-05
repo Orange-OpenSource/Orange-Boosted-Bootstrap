@@ -63,8 +63,6 @@
     height: unset;
     max-height: px-to-rem(96px); // TODO: Add token when available
     aspect-ratio: unset;
-    padding: 5px;
-    margin: -5px; // Workaround to handle focus outline correctly
   }
 
   img,
@@ -76,6 +74,8 @@
 .item-slot-clickable {
   position: relative;
   z-index: 2;
+  padding: 5px;
+  margin: -5px; // Workaround to handle focus outline correctly
 }
 
 // Containers
