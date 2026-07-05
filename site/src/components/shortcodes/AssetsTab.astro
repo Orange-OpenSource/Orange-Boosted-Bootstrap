@@ -10,13 +10,6 @@ interface Props {
 const { name, active } = Astro.props
 ---
 
-<div
-  data-tab-name={name}
-  class={`tab-pane fade${active ? ' show active' : ''}`}
-  role="tabpanel"
-  tabindex="0"
-  aria-labelledby={`${name}-nav`}
-  id={name}
->
+<section data-tab-name={name}>
   <slot />
-</div>
+</section>

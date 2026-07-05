@@ -20,7 +20,7 @@ while ((match = tabRegex.exec(html)) !== null) {
 ---
 
 <ul
-  class="nav nav-pills border border-default px-large pt-medium overflow-x-scroll border-bottom-none flex-nowrap mw-100"
+  class="nav nav-pills border border-default chips-container m-none px-large pt-medium border-bottom-none mw-100"
   id={id}
   role="tablist"
 >
@@ -54,9 +54,33 @@ while ((match = tabRegex.exec(html)) !== null) {
         id={`${id}-tab-${tab.kebabName}`}
       >
         <Fragment
-          set:html={html.match(new RegExp(`<div data-tab-name="${tab.name}"[^>]*>([\\s\\S]*?)<\\/div>`))?.[1] ?? ''}
+          set:html={html.match(new RegExp(`<section data-tab-name="${tab.name}"[^>]*>([\\s\\S]*?)<\\/section>`))?.[1] ?? ''}
         />
       </div>
     ))
   }
 </div>
+
+<script>
+  function scrollToHash(hash: string) {
+    const targetTab = document.getElementById(hash)?.closest('.tab-pane')?.getAttribute('aria-labelledby')
+    if (targetTab) {
+      document.addEventListener('show.bs.tab', (event) => {
+        (event.target as HTMLElement)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, { once: true })
+      oudsWeb.Tab.getOrCreateInstance(`#${targetTab}`).show()
+    }
+  }
+
+  window.addEventListener('hashchange', (event) => {
+    if (event.newURL.includes('#')) {
+      scrollToHash(event.newURL.split('#')[1])
+    }
+  })
+
+  window.addEventListener('DOMContentLoaded', () => {
+    if (window.location.hash) {
+      scrollToHash(window.location.hash.substring(1))
+    }
+  })
+</script>
