@@ -1,6 +1,6 @@
 ---
-import {getDocsPublicFsPath, getVersionedDocsPath} from "@libs/path.ts";
-import {getConfig} from "@libs/config.ts";
+import { getDocsPublicFsPath, getVersionedDocsPath } from '@libs/path.ts'
+import { getConfig } from '@libs/config.ts'
 
 interface Props {
   /**
@@ -8,14 +8,17 @@ interface Props {
    * @default 'orange'
    */
   theme?: 'orange' | 'orange-compact' | 'sosh'
-
 }
 
-const {theme = 'orange'} = Astro.props
+const { theme = 'orange' } = Astro.props
 ---
 
-<link rel="preload" href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg` as="image" type="image/svg+xml"/>
-
+<link
+  rel="preload"
+  href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg`
+  as="image"
+  type="image/svg+xml"
+/>
 
 <div data-bs-brand={theme} id={`theme-demo-${theme}`} class="py-scaled-large">
   <div class="row mb-scaled-medium">
@@ -43,25 +46,25 @@ const {theme = 'orange'} = Astro.props
       <button type="button" class="btn btn-default">Default</button>
       <button type="button" class="btn btn-brand">
         <svg aria-hidden="true">
-          <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`/>
+          <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`></use>
         </svg>
         Brand
       </button>
       <button type="button" class="btn btn-icon btn-strong">
         <svg aria-hidden="true">
-          <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`/>
+          <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`></use>
         </svg>
         <span class="visually-hidden">Brand</span>
       </button>
       <button type="button" class="btn btn-icon btn-negative">
         <svg aria-hidden="true">
-          <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`/>
+          <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`></use>
         </svg>
         <span class="visually-hidden">Brand</span>
       </button>
       <button type="button" class="btn btn-icon btn-minimal">
         <svg aria-hidden="true">
-          <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`/>
+          <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`></use>
         </svg>
         <span class="visually-hidden">Brand</span>
       </button>
@@ -70,7 +73,9 @@ const {theme = 'orange'} = Astro.props
     </div>
   </div>
   <div class="row mb-scaled-medium">
-    <div class="col-12 sm:col-10 md:col-12 xl:col-10 d-flex gap-scaled-medium align-items-center flex-wrap">
+    <div
+      class="col-12 sm:col-10 md:col-12 xl:col-10 d-flex gap-scaled-medium align-items-center flex-wrap justify-content-between"
+    >
       <div class="d-inline-flex gap-medium">
         <p class="badge badge-positive badge-large"><span class="visually-hidden">Success</span></p>
         <p class="badge badge-info badge-large"><span class="visually-hidden">Info</span></p>
@@ -102,7 +107,7 @@ const {theme = 'orange'} = Astro.props
     <div class="col-12 sm:col-10 md:col-6 xl:col-5 mb-scaled-medium">
       <div class="checkbox-item mb-scaled-small">
         <div class="control-item-assets-container">
-          <input checked class="control-item-indicator" type="checkbox" value="" id={`cb-${theme}`}/>
+          <input checked class="control-item-indicator" type="checkbox" value="" id={`cb-${theme}`} />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for={`cb-${theme}`}>Checkbox</label>
@@ -112,7 +117,14 @@ const {theme = 'orange'} = Astro.props
         <div class="d-flex flex-row gap-small w-50">
           <div class="radio-button-item flex-fill">
             <div class="control-item-assets-container">
-              <input class="control-item-indicator" type="radio" value="" id={`rb1-${theme}`} name={`radio-${theme}`} checked />
+              <input
+                class="control-item-indicator"
+                type="radio"
+                value=""
+                id={`rb1-${theme}`}
+                name={`radio-${theme}`}
+                checked
+              />
             </div>
             <div class="control-item-text-container">
               <label class="control-item-label" for={`rb1-${theme}`}>Yes</label>
@@ -137,7 +149,8 @@ const {theme = 'orange'} = Astro.props
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
-            <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`/>
+            <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`
+            ></use>
           </svg>
         </div>
       </div>
@@ -145,15 +158,18 @@ const {theme = 'orange'} = Astro.props
         <a class="link link-chevron" href="#">Link with chevron</a>
         <a class="link icon-link" href="#">
           <svg aria-hidden="true">
-            <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`/>
+            <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`
+            ></use>
           </svg>
           Link with icon
         </a>
       </div>
     </div>
     <div class="col-12 sm:col-10 md:col-6 xl:col-5">
-      <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium mb-scaled-medium"
-          aria-label="Statuses">
+      <ul
+        class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium mb-scaled-medium"
+        aria-label="Statuses"
+      >
         <li class="tag tag-positive"><span class="tag-status-icon"></span>Success</li>
         <li class="tag tag-info"><span class="tag-status-icon"></span>Info</li>
         <li class="tag tag-warning tag-muted"><span class="tag-status-icon"></span>Warning</li>
@@ -163,31 +179,27 @@ const {theme = 'orange'} = Astro.props
         <ul class="chips-container">
           <li class="chip chip-filter">
             <input type="checkbox" id={`ap-${theme}`} checked />
-            <label class="chip-interactive" for={`ap-${theme}`}>
-              Apple
-            </label>
+            <label class="chip-interactive" for={`ap-${theme}`}> Apple </label>
           </li>
           <li class="chip chip-filter">
             <input type="checkbox" id={`sa-${theme}`} />
-            <label class="chip-interactive" for={`sa-${theme}`}>
-              Samsung
-            </label>
+            <label class="chip-interactive" for={`sa-${theme}`}> Samsung </label>
           </li>
           <li class="chip chip-filter">
             <input type="checkbox" id={`xi-${theme}`} />
-            <label class="chip-interactive" for={`xi-${theme}`}>
-              Xiaomi
-            </label>
+            <label class="chip-interactive" for={`xi-${theme}`}> Xiaomi </label>
           </li>
         </ul>
       </div>
       <div class="text-input mb-scaled-medium">
         <div class="text-input-container">
           <label for={`pwd-${theme}`}>Password</label>
-          <input type="password" id={`pwd-${theme}`} class="text-input-field" placeholder=" ">
+          <input type="password" id={`pwd-${theme}`} class="text-input-field" placeholder=" " />
           <button class="btn btn-minimal btn-icon" aria-pressed="false" type="button">
             <svg aria-hidden="true">
-              <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#accessibility-vision`/>
+              <use
+                xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#accessibility-vision`
+              ></use>
             </svg>
             <span class="visually-hidden">Show password</span>
           </button>
@@ -207,5 +219,3 @@ const {theme = 'orange'} = Astro.props
     </div>
   </div>
 </div>
-
-

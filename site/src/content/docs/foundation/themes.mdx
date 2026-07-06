@@ -12,7 +12,7 @@ import { getConfig } from '@libs/config'
 
 The OUDS Web design system offers three distinct themes: Orange, Orange Compact, and Sosh, representing two brands—Orange and Sosh. Each theme is applied consistently across all elements of the design system, featuring its own color scheme, typography, grid, logo, and more. These themes are intended for use in different contexts and for various purposes, and they should not be mixed within the same project. Each project must select one theme and apply it uniformly across all screens.
 
-This page introduces the three OUDS Web themes. Throughout the rest of the documentation, you can switch themes using the menu at the top.
+This page introduces the three OUDS Web themes. Throughout the rest of the documentation, you can switch themes using the menu in the header.
 
 <Callout type="negative" title="Using multiple themes in the same project">
   OUDS Web is designed for use with a single theme per project. However, this page demonstrates multiple themes as a demo. This practice should not be replicated in actual projects, as it can create confusion and inconsistency in design.
@@ -33,7 +33,7 @@ OUDS Web provides a single SVG file for both master and small Orange logos, sinc
 
 <img src={getVersionedDocsPath('assets/brand/orange-logo.svg')} class="figure-img img-fluid m-auto mb-medium" width="50" height="50" alt="Orange logos" loading="lazy" />
 
-<SvgDocs brand="orange" buttonLabel="Orange logo"/>
+<SvgDocs theme="orange" buttonLabel="Orange logo"/>
 
 ## Orange compact
 
@@ -47,7 +47,7 @@ OUDS Web provides a single SVG file for both master and small Orange logos, sinc
 
 <img src={getVersionedDocsPath('assets/brand/orange-logo.svg')} class="figure-img img-fluid m-auto mb-medium" width="50" height="50" alt="Orange logos" loading="lazy" />
 
-<SvgDocs brand="orange-compact" buttonLabel="Orange logo"/>
+<SvgDocs theme="orange-compact" buttonLabel="Orange logo"/>
 
 ## Sosh
 
@@ -61,4 +61,4 @@ OUDS Web provides an SVG file for the logo. Here is the unminified SVG content:
 
 <img src={getVersionedDocsPath('assets/brand/sosh-logo.svg')} class="figure-img img-fluid m-auto" width="80" height="80" alt="Sosh logo" loading="lazy" />
 
-<SvgDocs brand="sosh" buttonLabel="Sosh logo"/>
+<SvgDocs theme="sosh" buttonLabel="Sosh logo"/>
