@@ -1,5 +1,4 @@
 ---
-import { getDocsPublicFsPath, getVersionedDocsPath } from '@libs/path.ts'
 import { getConfig } from '@libs/config.ts'
 
 interface Props {
@@ -15,7 +14,7 @@ const { theme = 'orange' } = Astro.props
 
 <link
   rel="preload"
-  href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg`
+  href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg`}
   as="image"
   type="image/svg+xml"
 />
@@ -46,25 +45,29 @@ const { theme = 'orange' } = Astro.props
       <button type="button" class="btn btn-default">Default</button>
       <button type="button" class="btn btn-brand">
         <svg aria-hidden="true">
-          <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`></use>
+          <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
+          ></use>
         </svg>
         Brand
       </button>
       <button type="button" class="btn btn-icon btn-strong">
         <svg aria-hidden="true">
-          <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`></use>
+          <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
+          ></use>
         </svg>
         <span class="visually-hidden">Brand</span>
       </button>
       <button type="button" class="btn btn-icon btn-negative">
         <svg aria-hidden="true">
-          <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`></use>
+          <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
+          ></use>
         </svg>
         <span class="visually-hidden">Brand</span>
       </button>
       <button type="button" class="btn btn-icon btn-minimal">
         <svg aria-hidden="true">
-          <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`></use>
+          <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
+          ></use>
         </svg>
         <span class="visually-hidden">Brand</span>
       </button>
@@ -149,7 +152,7 @@ const { theme = 'orange' } = Astro.props
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
-            <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`
+            <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
             ></use>
           </svg>
         </div>
@@ -158,7 +161,7 @@ const { theme = 'orange' } = Astro.props
         <a class="link link-chevron" href="#">Link with chevron</a>
         <a class="link icon-link" href="#">
           <svg aria-hidden="true">
-            <use xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`
+            <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
             ></use>
           </svg>
           Link with icon
@@ -198,7 +201,7 @@ const { theme = 'orange' } = Astro.props
           <button class="btn btn-minimal btn-icon" aria-pressed="false" type="button">
             <svg aria-hidden="true">
               <use
-                xlink:href=`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#accessibility-vision`
+                xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#accessibility-vision`}
               ></use>
             </svg>
             <span class="visually-hidden">Show password</span>

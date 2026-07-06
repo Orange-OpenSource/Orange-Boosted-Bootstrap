@@ -1,7 +1,6 @@
 ---
 import fs from 'node:fs'
 import Code from '@shortcodes/Code.astro'
-import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
 
 /**
@@ -10,7 +9,7 @@ import { getVersionedDocsPath } from '@libs/path'
 interface Props {
   /**
    * File path to the SVG file without file extension.
-   * @default "brand-logo"
+   * @default "${theme}-logo"
    */
   file?: string
 
@@ -25,7 +24,7 @@ interface Props {
    */
   buttonLabel?: string
 
-  theme?: string
+  theme?: 'orange' | 'orange-compact' | 'sosh'
 }
 const { theme = 'orange' } = Astro.props
 
