@@ -19,9 +19,9 @@ const { theme = 'orange' } = Astro.props
   type="image/svg+xml"
 />
 
-<div data-bs-brand={theme} id={`theme-demo-${theme}`} class="py-scaled-large">
+<div data-bs-brand={theme} id={`theme-demo-${theme}`} class="p-medium border border-default">
   <div class="row mb-scaled-medium">
-    <div class="col-12 sm:col-10 md:col-12 xl:col-10">
+    <div class="col-12">
       <div class="alert alert-message alert-positive mb-medium">
         <div class="alert-icon"></div>
         <div class="alert-container">
@@ -41,7 +41,7 @@ const { theme = 'orange' } = Astro.props
     </div>
   </div>
   <div class="row mb-scaled-medium">
-    <div class="col-12 sm:col-10 md:col-12 xl:col-10 d-flex justify-content-between flex-wrap gap-xsmall">
+    <div class="col-12 d-flex justify-content-between flex-wrap gap-xsmall">
       <button type="button" class="btn btn-default">Default</button>
       <button type="button" class="btn btn-brand">
         <svg aria-hidden="true">
@@ -76,9 +76,7 @@ const { theme = 'orange' } = Astro.props
     </div>
   </div>
   <div class="row mb-scaled-medium">
-    <div
-      class="col-12 sm:col-10 md:col-12 xl:col-10 d-flex gap-scaled-medium align-items-center flex-wrap justify-content-between"
-    >
+    <div class="col-12 d-flex gap-scaled-medium align-items-center flex-wrap justify-content-between">
       <div class="d-inline-flex gap-medium">
         <p class="badge badge-positive badge-large"><span class="visually-hidden">Success</span></p>
         <p class="badge badge-info badge-large"><span class="visually-hidden">Info</span></p>
@@ -106,8 +104,8 @@ const { theme = 'orange' } = Astro.props
       </nav>
     </div>
   </div>
-  <div class="row mb-scaled-medium">
-    <div class="col-12 sm:col-10 md:col-6 xl:col-5 mb-scaled-medium">
+  <div class="row">
+    <div class="col-12 md:col-6 mb-lg-medium">
       <div class="checkbox-item mb-scaled-small">
         <div class="control-item-assets-container">
           <input checked class="control-item-indicator" type="checkbox" value="" id={`cb-${theme}`} />
@@ -168,7 +166,7 @@ const { theme = 'orange' } = Astro.props
         </a>
       </div>
     </div>
-    <div class="col-12 sm:col-10 md:col-6 xl:col-5">
+    <div class="col-12 md:col-6">
       <ul
         class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium mb-scaled-medium"
         aria-label="Statuses"
@@ -208,7 +206,7 @@ const { theme = 'orange' } = Astro.props
           </button>
         </div>
       </div>
-      <div class="select-input mb-scaled-medium">
+      <div class="select-input">
         <div class="select-input-container">
           <label for={`sel-${theme}`}>Default select</label>
           <select class="select-input-field" id={`sel-${theme}`}>
