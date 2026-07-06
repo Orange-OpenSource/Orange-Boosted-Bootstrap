@@ -41,7 +41,7 @@
   min-width: $ouds-chip-size-min-width;
   min-height: $ouds-chip-size-min-height;
   padding: calc(var(--#{$prefix}chip-padding-block) - var(--#{$prefix}chip-border-width)) calc(var(--#{$prefix}chip-padding-end) - var(--#{$prefix}chip-border-width)) calc(var(--#{$prefix}chip-padding-block) - var(--#{$prefix}chip-border-width)) calc(var(--#{$prefix}chip-padding-start) - var(--#{$prefix}chip-border-width));
-  @include get-font-size("label-medium");
+  @include get-font-size("label-medium", false);
   font-weight: $ouds-font-weight-web-label-moderate;
   color: var(--#{$prefix}chip-color);
   background-color: var(--#{$prefix}chip-bg);

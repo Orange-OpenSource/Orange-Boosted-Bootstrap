@@ -9,7 +9,7 @@
   // scss-docs-end link-css-vars
 
   @extend %link-properties;
-  @include get-font-size("label-large");
+  @include get-font-size("label-large", false);
   display: inline-flex;
   align-items: center;
   min-width: $ouds-link-size-min-width-default;
@@ -121,7 +121,7 @@
   --#{$prefix}link-icon-gap: #{$ouds-link-space-column-gap-icon-small};
   --#{$prefix}link-chevron-gap: #{$ouds-link-space-column-gap-chevron-small};
 
-  @include get-font-size("label-medium");
+  @include get-font-size("label-medium", false);
   min-width: $ouds-link-size-min-width-small;
   min-height: $ouds-link-size-min-height-small;
 }

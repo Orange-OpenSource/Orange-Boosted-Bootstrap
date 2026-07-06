@@ -71,7 +71,7 @@
     border-color: var(--#{$prefix}text-input-border-color);
     border-style: solid;
     border-width: var(--#{$prefix}text-input-border-width-top) var(--#{$prefix}text-input-border-width-right) var(--#{$prefix}text-input-border-width-bottom) var(--#{$prefix}text-input-border-width-left);
-    @include get-font-size("label-large");
+    @include get-font-size("label-large", false);
     @include border-radius(var(--#{$prefix}text-input-border-radius), 0);
 
     &.text-input-container-outlined {
@@ -203,7 +203,7 @@
     &:has(.text-input-field:placeholder-shown:not([placeholder=" "]), .text-input-field[placeholder]:not(:placeholder-shown), .text-input-field:focus:not(:read-only)) {
       > label {
         white-space: nowrap;
-        @include get-font-size("label-small");
+        @include get-font-size("label-small", false);
 
         // stylelint-disable-next-line selector-no-qualifying-type
         &.is-required {
@@ -462,7 +462,7 @@
       caret-color: var(--#{$prefix}text-input-caret-color);
       background-color: transparent;
       border: 0;
-      @include get-font-size("label-large");
+      @include get-font-size("label-large", false);
 
       // Disable resize on touch devices
       @media (pointer: coarse) and (not (any-pointer: fine)) {
@@ -505,7 +505,7 @@
       color: var(--#{$prefix}text-input-label-color);
       text-overflow: ellipsis;
       @include transition(font-size .15s ease-out);
-      @include get-font-size("label-large");
+      @include get-font-size("label-large", false);
 
       // Allow the whole text-area-container to be clickable to focus the input
       &::before {
@@ -539,7 +539,7 @@
         > label {
           padding-top: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-top));
           white-space: nowrap;
-          @include get-font-size("label-small");
+          @include get-font-size("label-small", false);
 
           &.is-required {
             &::after {
@@ -699,7 +699,7 @@
   margin-top: var(--#{$prefix}text-input-message-margin-top);
   margin-bottom: 0;
   color: var(--#{$prefix}color-content-muted);
-  @include get-font-size("label-medium");
+  @include get-font-size("label-medium", false);
 }
 
 // Error text message
@@ -709,5 +709,5 @@
   margin-top: var(--#{$prefix}text-input-message-margin-top);
   margin-bottom: 0;
   color: var(--#{$prefix}color-content-status-negative);
-  @include get-font-size("label-medium");
+  @include get-font-size("label-medium", false);
 }

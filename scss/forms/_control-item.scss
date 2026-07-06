@@ -20,7 +20,7 @@
 .control-item-error-message {
   padding: $ouds-control-item-space-padding-block-top-helper-text $ouds-control-item-space-padding-inline 0;
   color: var(--#{$prefix}color-content-status-negative);
-  @include get-font-size("label-medium");
+  @include get-font-size("label-medium", false);
 }
 
 //
@@ -158,7 +158,7 @@
   margin: 0;
   color: var(--#{$prefix}control-item-label-color, $ouds-color-content-default);
   cursor: $form-check-label-cursor;
-  @include get-font-size("label-large");
+  @include get-font-size("label-large", false);
 
   &::before {
     position: absolute;
@@ -175,7 +175,7 @@
 .control-item-description {
   margin: 0;
   color: $ouds-color-content-muted;
-  @include get-font-size("label-medium");
+  @include get-font-size("label-medium", false);
 }
 
 // Indicator
@@ -590,7 +590,7 @@
   margin: 0;
   font-weight: $ouds-font-weight-system-web-strong;
   color: $ouds-color-content-default;
-  @include get-font-size("label-medium");
+  @include get-font-size("label-medium", false);
 }
 
 .radio-button-item-outlined {

@@ -20,7 +20,7 @@
   color: var(--#{$prefix}badge-color);
   text-align: center;
   background-color: var(--#{$prefix}badge-background-color);
-  @include get-font-size("label-small");
+  @include get-font-size("label-small", false);
   @include border-radius(#{$ouds-border-radius-pill});
 }
 
@@ -75,7 +75,7 @@
 .badge-large {
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-large)};
 
-  @include get-font-size("label-medium");
+  @include get-font-size("label-medium", false);
 }
 
 //

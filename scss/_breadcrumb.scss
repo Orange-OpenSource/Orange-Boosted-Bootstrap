@@ -11,7 +11,7 @@
 
   @include list-unstyled();
   display: flex;
-  @include get-font-size("label-medium");
+  @include get-font-size("label-medium", false);
 
   .breadcrumb-item {
     display: none;

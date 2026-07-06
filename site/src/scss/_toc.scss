@@ -14,7 +14,7 @@
   }
 
   nav {
-    @include get-font-size("label-medium"); // OUDS mod: instead of `.875rem`
+    @include get-font-size("label-medium", false); // OUDS mod: instead of `.875rem`
 
     ul {
       @include list-unstyled(); // OUDS mod

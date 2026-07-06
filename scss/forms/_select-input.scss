@@ -90,7 +90,7 @@
   padding-bottom: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-bottom));
   padding-left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left));
   color: $ouds-color-content-muted;
-  @include get-font-size("label-large");
+  @include get-font-size("label-large", false);
 
   &::after {
     position: absolute;
@@ -167,7 +167,7 @@
     > label {
       top: calc(var(--#{$prefix}text-input-padding-y) + .5 * (var(--#{$prefix}font-size-label-small) * var(--#{$prefix}font-line-height-label-small)) + .5 * (var(--#{$prefix}text-input-min-height) - 2 * var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}font-size-label-small) * var(--#{$prefix}font-line-height-label-small) - var(--#{$prefix}font-size-label-large) * var(--#{$prefix}font-line-height-label-large)));
       white-space: nowrap;
-      @include get-font-size("label-small");
+      @include get-font-size("label-small", false);
     }
   }
 

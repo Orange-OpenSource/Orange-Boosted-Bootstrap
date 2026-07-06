@@ -107,7 +107,6 @@
   gap: $ouds-alert-space-row-gap;
 
   > * { // To handle any content inside this text-container.
-    max-width: var(--#{$prefix}font-max-width-label-medium);
     margin-bottom: 0;
     @include get-font-size("label-medium");
     font-weight: $ouds-font-weight-web-label-default;
@@ -162,7 +161,6 @@
 }
 
 .alert-label {
-  max-width: var(--#{$prefix}font-max-width-label-large);
   margin-bottom: 0;
   @include get-font-size("label-large");
   font-weight: $ouds-font-weight-web-label-moderate;
