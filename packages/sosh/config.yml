@@ -40,13 +40,13 @@ download:
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
   css:                            "https://cdn.jsdelivr.net/npm/@ouds/web-sosh@1.4.0/dist/css/ouds-web.min.css"
-  css_hash:                       "sha384-tTc6uVUU15Pml4kU4d7JrVVpRz1OXBUlxpSFsbe+TN5QlHVwDOnBNXejUs10DntZ"
+  css_hash:                       "sha384-AYOP9cwxe5tD0OrwidiGv1H6kqAG+PrnEaQbWskssrk9AWn9BHEfAq+HR/yjihmU"
   css_bootstrap:                  "https://cdn.jsdelivr.net/npm/@ouds/web-sosh@1.4.0/dist/css/ouds-web-bootstrap.min.css"
-  css_bootstrap_hash:             "sha384-WU/tmpAwPLWjMMiXSDZXYlgzxCDcR9VJloIpIil9rSZZWtCA/2ZD9G5dHZB+PlOB"
+  css_bootstrap_hash:             "sha384-YsX0zfP6t9TlyJcM1rxZozLCQkfV17UAe9S+Vhtw7SNPsiD7Wq1/PaHUTKxsMViR"
   css_bootstrap_rtl:              "https://cdn.jsdelivr.net/npm/@ouds/web-sosh@1.4.0/dist/css/ouds-web-bootstrap.rtl.min.css"
-  css_bootstrap_rtl_hash:         "sha384-WsBz0BPXfykeaPtDPEN2tt/750Z0IilqsQP9xRjnorWuUP38Io/B9VG9QpLc33bX"
+  css_bootstrap_rtl_hash:         "sha384-O9GgBBKPx2pLTtvihNAfvjZPXpVeQjwdlPvBRUx5M8BEdsONR45Kv1DtXXVxUZWA"
   css_rtl:                        "https://cdn.jsdelivr.net/npm/@ouds/web-sosh@1.4.0/dist/css/ouds-web.rtl.min.css"
-  css_rtl_hash:                   "sha384-4VicL9dWSv4GtNr5IpFCGtVbEhKNeC3W5+cZV6ufxUFvl7kkiUVCTbCtY46oQR9x"
+  css_rtl_hash:                   "sha384-AZwEKaYPT7oNRjkO/M8v65eZE042FXuO6RYavbxQVxQFnpfOV1PUKvUOQOJHC/27"
   js:                             "https://cdn.jsdelivr.net/npm/@ouds/web-common@1.4.0/dist/js/ouds-web.min.js"
   js_hash:                        "sha384-+ksEGsGkRigKgGKQXYzs5/PaAxr51vgr27V/tEE9nyt6druO9NTtktQNKakDock0"
   js_bundle:                      "https://cdn.jsdelivr.net/npm/@ouds/web-common@1.4.0/dist/js/ouds-web.bundle.min.js"
