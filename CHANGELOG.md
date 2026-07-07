@@ -1,3 +1,23 @@
+# [1.4.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v1.3.0-ouds-web...v1.4.0) (2026-07-07)
+
+
+### Bug Fixes
+
+* **docs:** text area invalid label issue ids ([#3658](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3658)) ([c31c620](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c31c620d402dd19908b390322c8adb6b384f1092))
+* **docs:** updated navbar utilities item active condition ([#3603](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3603)) ([7ddd5eb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7ddd5eba57fc7e1a81acb77f9f184e0ab3fda10e))
+* **lib:** use font-weight tokens instead of hard coded values ([#3602](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3602)) ([4dce00e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4dce00ed170551422fc7fa4e40be599eca684f87))
+
+
+### Features
+
+* **doc:** Add Brands section([#3552](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3552)) ([71cad04](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/71cad04f062d9509fbf67a05f373a3a2caf4b22e))
+* **docs:** reorder states and layout sections in components documentation ([#3601](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3601)) ([89395d0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/89395d0ecfc32c4b68db09586e77804ac67e9c70))
+* **lib:** add Label references ([#3621](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3621)) ([cbcb866](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cbcb86629166a06436c1cfd3e0c263c8f5c0dd7a))
+* **lib:** Remove jQuery support ([#3498](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3498)) ([d81f481](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d81f481a61c558e0549941e13557a497b722cd2d))
+
+
+
+
 # [1.3.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v1.2.0-ouds-web...v1.3.0) (2026-05-27)
 
 
