@@ -108,7 +108,7 @@
 
   > * { // To handle any content inside this text-container.
     margin-bottom: 0;
-    @include get-font-size("label-medium");
+    @include get-font-size("label-medium", true);
     font-weight: $ouds-font-weight-web-label-default;
   }
 
@@ -162,7 +162,7 @@
 
 .alert-label {
   margin-bottom: 0;
-  @include get-font-size("label-large");
+  @include get-font-size("label-large", true);
   font-weight: $ouds-font-weight-web-label-moderate;
 }
 

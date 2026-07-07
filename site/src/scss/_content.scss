@@ -52,7 +52,7 @@
   }
 
   > details {
-    @include get-font-size("label-large", false);
+    @include get-font-size("label-large");
     padding: 0 10px; // static even when zoomed
     line-height: 1.5;
     border: var(--bs-color-border-emphasized) dashed calc(var(--bs-border-width) * .5);

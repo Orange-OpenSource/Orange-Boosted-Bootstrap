@@ -75,7 +75,7 @@
 }
 
 @include tac("DisclaimerAlert") {
-  @include get-font-size("label-small", false);
+  @include get-font-size("label-small");
 }
 
 @include tac("ClosePanel") {
@@ -122,7 +122,7 @@
 }
 
 @include tac("Name", true) {
-  @include get-font-size("label-small", false);
+  @include get-font-size("label-small");
   color: var(--#{$prefix}color-content-muted);
 }
 
