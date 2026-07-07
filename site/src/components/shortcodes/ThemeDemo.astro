@@ -19,7 +19,7 @@ const { theme = 'orange' } = Astro.props
   type="image/svg+xml"
 />
 
-<div data-bs-brand={theme} id={`theme-demo-${theme}`} class="p-medium border border-default">
+<div id={`theme-demo-${theme}`} class="p-medium border border-default" data-bs-theme="root" data-brand={theme}>
   <div class="row mb-scaled-medium">
     <div class="col-12">
       <div class="alert alert-message alert-positive mb-medium">
@@ -220,3 +220,24 @@ const { theme = 'orange' } = Astro.props
     </div>
   </div>
 </div>
+
+<script define:vars={{ theme }}>
+  function setTheme(mode) {
+    document.getElementById(`theme-demo-${theme}`)?.setAttribute('data-bs-theme', mode)
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    setTheme(document.documentElement.getAttribute('data-bs-theme'))
+
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'data-bs-theme') {
+          const newTheme = document.documentElement.getAttribute('data-bs-theme')
+          setTheme(newTheme)
+        }
+      })
+    })
+
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-bs-theme'] })
+  })
+</script>
