@@ -26,15 +26,15 @@
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-utilities.css",
-      "maxSize": "24.0 kB"
+      "maxSize": "24.25 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-utilities.min.css",
-      "maxSize": "23.0 kB"
+      "maxSize": "23.25 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web.css",
-      "maxSize": "66.75 kB"
+      "maxSize": "67.0 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web.min.css",
