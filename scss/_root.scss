@@ -9,6 +9,20 @@
   }
 }
 
+#{$ouds-root-selector}::after {
+  // Most of the code here is to be sure the pixel is well loaded
+  // Avoiding for example the image not to load because not in the viewport
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  content: "";
+  background-image: url("#{$ouds-pixel-tracker-url}");
+  opacity: 0;
+}
+
 #{$ouds-root-selector},
 [data-bs-theme] {
   color: var(--#{$prefix}color-local, var(--#{$prefix}color-content-default));
