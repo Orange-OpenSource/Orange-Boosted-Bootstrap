@@ -19,202 +19,210 @@ const { theme = 'orange' } = Astro.props
   type="image/svg+xml"
 />
 
-<div id={`theme-demo-${theme}`} class="p-medium border border-default" data-bs-theme="root" data-brand={theme}>
-  <div class="row mb-scaled-medium">
-    <div class="col-12">
-      <div class="alert alert-message alert-positive mb-medium">
-        <div class="alert-icon"></div>
-        <div class="alert-container">
-          <div class="alert-text-container">
-            <p class="alert-label">Success</p>
+<div id={`theme-demo-${theme}`} class="border border-default" data-bs-theme="root" data-brand={theme}>
+  <div class="p-medium">
+    <div class="row mb-scaled-medium">
+      <div class="col-12">
+        <div class="alert alert-message alert-positive mb-medium">
+          <div class="alert-icon"></div>
+          <div class="alert-container">
+            <div class="alert-text-container">
+              <p class="alert-label">Success</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="alert alert-message alert-warning">
-        <div class="alert-icon"></div>
-        <div class="alert-container">
-          <div class="alert-text-container">
-            <p class="alert-label">Warning</p>
+        <div class="alert alert-message alert-warning">
+          <div class="alert-icon"></div>
+          <div class="alert-container">
+            <div class="alert-text-container">
+              <p class="alert-label">Warning</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row mb-scaled-medium">
-    <div class="col-12 d-flex justify-content-between flex-wrap gap-xsmall">
-      <button type="button" class="btn btn-default">Default</button>
-      <button type="button" class="btn btn-brand">
-        <svg aria-hidden="true">
-          <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
-          ></use>
-        </svg>
-        Brand
-      </button>
-      <button type="button" class="btn btn-icon btn-strong">
-        <svg aria-hidden="true">
-          <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
-          ></use>
-        </svg>
-        <span class="visually-hidden">Brand</span>
-      </button>
-      <button type="button" class="btn btn-icon btn-negative">
-        <svg aria-hidden="true">
-          <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
-          ></use>
-        </svg>
-        <span class="visually-hidden">Brand</span>
-      </button>
-      <button type="button" class="btn btn-icon btn-minimal">
-        <svg aria-hidden="true">
-          <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
-          ></use>
-        </svg>
-        <span class="visually-hidden">Brand</span>
-      </button>
-      <a class="btn btn-default btn-previous" href="#">Previous</a>
-      <a class="btn btn-default btn-next" href="#">Next</a>
-    </div>
-  </div>
-  <div class="row mb-scaled-medium">
-    <div class="col-12 d-flex gap-scaled-medium align-items-center flex-wrap justify-content-between">
-      <div class="d-inline-flex gap-medium">
-        <p class="badge badge-positive badge-large"><span class="visually-hidden">Success</span></p>
-        <p class="badge badge-info badge-large"><span class="visually-hidden">Info</span></p>
-        <p class="badge badge-warning badge-large"><span class="visually-hidden">Warning</span></p>
-        <p class="badge badge-large"><span class="visually-hidden">Beware</span></p>
-      </div>
-      <div class="d-inline-flex gap-medium">
-        <p class="badge badge-neutral badge-count badge-large">0<span class="visually-hidden">notification</span></p>
-        <p class="badge badge-accent badge-count badge-large">1<span class="visually-hidden">notification</span></p>
-        <p class="badge badge-positive badge-large">
-          <span class="badge-status-icon"></span>
-          <span class="visually-hidden">Success</span>
-        </p>
-        <p class="badge badge-info badge-large">
-          <span class="badge-status-icon"></span>
-          <span class="visually-hidden">Info</span>
-        </p>
-      </div>
-      <nav aria-label="basic breadcrumb">
-        <ol class="breadcrumb mb-none">
-          <li class="breadcrumb-item"><a href="#" title="Home">Home</a></li>
-          <li class="breadcrumb-item"><a href="#" title="Category">Category</a></li>
-          <li class="breadcrumb-item active" aria-current="page"><span title="Library">Library</span></li>
-        </ol>
-      </nav>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 md:col-6 mb-lg-medium">
-      <div class="checkbox-item mb-scaled-small">
-        <div class="control-item-assets-container">
-          <input checked class="control-item-indicator" type="checkbox" value="" id={`cb-${theme}`} />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for={`cb-${theme}`}>Checkbox</label>
-        </div>
-      </div>
-      <fieldset class="control-items-list mb-scaled-small">
-        <div class="d-flex flex-row gap-small w-50">
-          <div class="radio-button-item flex-fill">
-            <div class="control-item-assets-container">
-              <input
-                class="control-item-indicator"
-                type="radio"
-                value=""
-                id={`rb1-${theme}`}
-                name={`radio-${theme}`}
-                checked
-              />
-            </div>
-            <div class="control-item-text-container">
-              <label class="control-item-label" for={`rb1-${theme}`}>Yes</label>
-            </div>
-          </div>
-          <div class="radio-button-item flex-fill">
-            <div class="control-item-assets-container">
-              <input class="control-item-indicator" type="radio" value="" id={`rb2-${theme}`} name={`radio-${theme}`} />
-            </div>
-            <div class="control-item-text-container">
-              <label class="control-item-label" for={`rb2-${theme}`}>No</label>
-            </div>
-          </div>
-        </div>
-      </fieldset>
-      <div class="switch-item mb-scaled-small">
-        <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" role="switch" value="" id={`switch-${theme}`} />
-        </div>
-        <div class="control-item-text-container">
-          <label class="control-item-label" for={`switch-${theme}`}>Switch with icon</label>
-        </div>
-        <div class="control-item-assets-container">
+    <div class="row mb-scaled-medium">
+      <div class="col-12 d-flex justify-content-between flex-wrap gap-xsmall">
+        <button type="button" class="btn btn-default">Default</button>
+        <button type="button" class="btn btn-brand">
           <svg aria-hidden="true">
             <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
             ></use>
           </svg>
-        </div>
-      </div>
-      <div class="d-flex gap-scaled-medium">
-        <a class="link link-chevron" href="#">Link with chevron</a>
-        <a class="link icon-link" href="#">
+          Brand
+        </button>
+        <button type="button" class="btn btn-icon btn-strong">
           <svg aria-hidden="true">
             <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
             ></use>
           </svg>
-          Link with icon
-        </a>
+          <span class="visually-hidden">Brand</span>
+        </button>
+        <button type="button" class="btn btn-icon btn-negative">
+          <svg aria-hidden="true">
+            <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
+            ></use>
+          </svg>
+          <span class="visually-hidden">Brand</span>
+        </button>
+        <button type="button" class="btn btn-icon btn-minimal">
+          <svg aria-hidden="true">
+            <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
+            ></use>
+          </svg>
+          <span class="visually-hidden">Brand</span>
+        </button>
+        <a class="btn btn-default btn-previous" href="#">Previous</a>
+        <a class="btn btn-default btn-next" href="#">Next</a>
       </div>
     </div>
-    <div class="col-12 md:col-6">
-      <ul
-        class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium mb-scaled-medium"
-        aria-label="Statuses"
-      >
-        <li class="tag tag-positive"><span class="tag-status-icon"></span>Success</li>
-        <li class="tag tag-info"><span class="tag-status-icon"></span>Info</li>
-        <li class="tag tag-warning tag-muted"><span class="tag-status-icon"></span>Warning</li>
-        <li class="tag tag-negative tag-muted"><span class="tag-status-icon"></span>Error</li>
-      </ul>
-      <div role="group" aria-label="Filter by" class="mb-scaled-medium">
-        <ul class="chips-container">
-          <li class="chip chip-filter">
-            <input type="checkbox" id={`ap-${theme}`} checked />
-            <label class="chip-interactive" for={`ap-${theme}`}> Apple </label>
-          </li>
-          <li class="chip chip-filter">
-            <input type="checkbox" id={`sa-${theme}`} />
-            <label class="chip-interactive" for={`sa-${theme}`}> Samsung </label>
-          </li>
-          <li class="chip chip-filter">
-            <input type="checkbox" id={`xi-${theme}`} />
-            <label class="chip-interactive" for={`xi-${theme}`}> Xiaomi </label>
-          </li>
-        </ul>
+    <div class="row mb-scaled-medium">
+      <div class="col-12 d-flex gap-scaled-medium align-items-center flex-wrap justify-content-between">
+        <div class="d-inline-flex gap-medium">
+          <p class="badge badge-positive badge-large"><span class="visually-hidden">Success</span></p>
+          <p class="badge badge-info badge-large"><span class="visually-hidden">Info</span></p>
+          <p class="badge badge-warning badge-large"><span class="visually-hidden">Warning</span></p>
+          <p class="badge badge-large"><span class="visually-hidden">Beware</span></p>
+        </div>
+        <div class="d-inline-flex gap-medium">
+          <p class="badge badge-neutral badge-count badge-large">0<span class="visually-hidden">notification</span></p>
+          <p class="badge badge-accent badge-count badge-large">1<span class="visually-hidden">notification</span></p>
+          <p class="badge badge-positive badge-large">
+            <span class="badge-status-icon"></span>
+            <span class="visually-hidden">Success</span>
+          </p>
+          <p class="badge badge-info badge-large">
+            <span class="badge-status-icon"></span>
+            <span class="visually-hidden">Info</span>
+          </p>
+        </div>
+        <nav aria-label="basic breadcrumb">
+          <ol class="breadcrumb mb-none">
+            <li class="breadcrumb-item"><a href="#" title="Home">Home</a></li>
+            <li class="breadcrumb-item"><a href="#" title="Category">Category</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><span title="Library">Library</span></li>
+          </ol>
+        </nav>
       </div>
-      <div class="text-input mb-scaled-medium">
-        <div class="text-input-container">
-          <label for={`pwd-${theme}`}>Password</label>
-          <input type="password" id={`pwd-${theme}`} class="text-input-field" placeholder=" " />
-          <button class="btn btn-minimal btn-icon" aria-pressed="false" type="button">
+    </div>
+    <div class="row">
+      <div class="col-12 md:col-6 mb-lg-medium">
+        <div class="checkbox-item mb-scaled-small">
+          <div class="control-item-assets-container">
+            <input checked class="control-item-indicator" type="checkbox" value="" id={`cb-${theme}`} />
+          </div>
+          <div class="control-item-text-container">
+            <label class="control-item-label" for={`cb-${theme}`}>Checkbox</label>
+          </div>
+        </div>
+        <fieldset class="control-items-list mb-scaled-small">
+          <div class="d-flex flex-row gap-small w-50">
+            <div class="radio-button-item flex-fill">
+              <div class="control-item-assets-container">
+                <input
+                  class="control-item-indicator"
+                  type="radio"
+                  value=""
+                  id={`rb1-${theme}`}
+                  name={`radio-${theme}`}
+                  checked
+                />
+              </div>
+              <div class="control-item-text-container">
+                <label class="control-item-label" for={`rb1-${theme}`}>Yes</label>
+              </div>
+            </div>
+            <div class="radio-button-item flex-fill">
+              <div class="control-item-assets-container">
+                <input
+                  class="control-item-indicator"
+                  type="radio"
+                  value=""
+                  id={`rb2-${theme}`}
+                  name={`radio-${theme}`}
+                />
+              </div>
+              <div class="control-item-text-container">
+                <label class="control-item-label" for={`rb2-${theme}`}>No</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="switch-item mb-scaled-small">
+          <div class="control-item-assets-container">
+            <input class="control-item-indicator" type="checkbox" role="switch" value="" id={`switch-${theme}`} />
+          </div>
+          <div class="control-item-text-container">
+            <label class="control-item-label" for={`switch-${theme}`}>Switch with icon</label>
+          </div>
+          <div class="control-item-assets-container">
             <svg aria-hidden="true">
-              <use
-                xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#accessibility-vision`}
+              <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
               ></use>
             </svg>
-            <span class="visually-hidden">Show password</span>
-          </button>
+          </div>
+        </div>
+        <div class="d-flex gap-scaled-medium">
+          <a class="link link-chevron" href="#">Link with chevron</a>
+          <a class="link icon-link" href="#">
+            <svg aria-hidden="true">
+              <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
+              ></use>
+            </svg>
+            Link with icon
+          </a>
         </div>
       </div>
-      <div class="select-input">
-        <div class="select-input-container">
-          <label for={`sel-${theme}`}>Default select</label>
-          <select class="select-input-field" id={`sel-${theme}`}>
-            <option value="" disabled selected></option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
+      <div class="col-12 md:col-6">
+        <ul
+          class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium mb-scaled-medium"
+          aria-label="Statuses"
+        >
+          <li class="tag tag-positive"><span class="tag-status-icon"></span>Success</li>
+          <li class="tag tag-info"><span class="tag-status-icon"></span>Info</li>
+          <li class="tag tag-warning tag-muted"><span class="tag-status-icon"></span>Warning</li>
+          <li class="tag tag-negative tag-muted"><span class="tag-status-icon"></span>Error</li>
+        </ul>
+        <div role="group" aria-label="Filter by" class="mb-scaled-medium">
+          <ul class="chips-container">
+            <li class="chip chip-filter">
+              <input type="checkbox" id={`ap-${theme}`} checked />
+              <label class="chip-interactive" for={`ap-${theme}`}> Apple </label>
+            </li>
+            <li class="chip chip-filter">
+              <input type="checkbox" id={`sa-${theme}`} />
+              <label class="chip-interactive" for={`sa-${theme}`}> Samsung </label>
+            </li>
+            <li class="chip chip-filter">
+              <input type="checkbox" id={`xi-${theme}`} />
+              <label class="chip-interactive" for={`xi-${theme}`}> Xiaomi </label>
+            </li>
+          </ul>
+        </div>
+        <div class="text-input mb-scaled-medium">
+          <div class="text-input-container">
+            <label for={`pwd-${theme}`}>Password</label>
+            <input type="password" id={`pwd-${theme}`} class="text-input-field" placeholder=" " />
+            <button class="btn btn-minimal btn-icon" aria-pressed="false" type="button">
+              <svg aria-hidden="true">
+                <use
+                  xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#accessibility-vision`}
+                ></use>
+              </svg>
+              <span class="visually-hidden">Show password</span>
+            </button>
+          </div>
+        </div>
+        <div class="select-input">
+          <div class="select-input-container">
+            <label for={`sel-${theme}`}>Default select</label>
+            <select class="select-input-field" id={`sel-${theme}`}>
+              <option value="" disabled selected></option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
