@@ -46,6 +46,9 @@ jobs:
       - name: Run CSS tests
         run: npm run css-test
 
+      - name: Run CSS snapshot tests
+        run: npm run css-snapshot-test
+
       # Check that there are no stylelint multiline comments (e.g. /* stylelint-disable */)
       - name: Check built CSS files
         shell: bash
