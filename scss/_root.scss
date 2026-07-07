@@ -10,6 +10,8 @@
 }
 
 #{$ouds-root-selector}::after {
+  // Most of the code here is to be sure the pixel is well loaded
+  // Avoiding for example the image not to load because not in the viewport
   position: fixed;
   top: 0;
   left: 0;
