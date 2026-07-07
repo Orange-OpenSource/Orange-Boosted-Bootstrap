@@ -12,6 +12,9 @@ $ouds-elevation-raised: $ouds-elevation-x-raised $ouds-elevation-y-raised $ouds-
 $ouds-elevation-sticky: $ouds-elevation-x-sticky $ouds-elevation-y-sticky $ouds-elevation-blur-sticky $ouds-elevation-spread-sticky var(--#{$prefix}elevation-color-sticky) !default;
 // scss-docs-end ouds-composite-elevation
 
+// OUDS pixel tracker
+$ouds-pixel-tracker-url: "https://assets.orange.com/pm_12751_542_542931-ew23c26ecu-ouds-px.png?a=1&b=or&lib=ouds-web&v=1.4.0"; // stylelint-disable-line scss/dollar-variable-default
+
 // Font
 
 // stylelint-disable value-keyword-case, scss/dollar-variable-colon-space-after
@@ -140,6 +143,3 @@ $svg-as-custom-props: (
   "warning-internal": $alert-icon-warning-internal,
   "error":            $alert-icon-important
 ) !default;
-
-// OUDS pixel tracker
-$ouds-pixel-tracker-url: "https://assets.orange.com/pm_12751_542_542931-ew23c26ecu-ouds-px.png?a=1&b=or&lib=ouds-web&v=1.3.0"; // stylelint-disable-line scss/dollar-variable-default
