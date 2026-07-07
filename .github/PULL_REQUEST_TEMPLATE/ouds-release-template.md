@@ -5,6 +5,7 @@
     - [ ] Manually search and replace `$current_version` in all files, meaning changes should happen in:
       - [ ] The style sheet loaded in `.storybook/preview-head.html`
       - [ ] `docs_version` in `config.yml` and other references to the previous version
+      - [ ] Update the pixel tracker URL in all `packages/**/scss/_composite.scss`
       - [ ] `scss/docs.scss`
       - [ ] Several markdown files and markdown extended files
       - [ ] Add docs version to `site/data/docs-versions.yml`
