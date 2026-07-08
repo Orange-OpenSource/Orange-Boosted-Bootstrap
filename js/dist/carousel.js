@@ -1,10 +1,10 @@
 /*!
-  * OUDS Web v1.3.0 (https://web.unified-design-system.orange.com/)
+  * OUDS Web v1.4.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2015-2026 The OUDS Web Authors
   * Copyright 2015-2026 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap carousel.js v1.3.0 (https://web.unified-design-system.orange.com/)
+  * Bootstrap carousel.js v1.4.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2011-2026 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -479,22 +479,6 @@
       }
     }
     // End mod
-
-    static jQueryInterface(config) {
-      return this.each(function () {
-        const data = Carousel.getOrCreateInstance(this, config);
-        if (typeof config === 'number') {
-          data.to(config);
-          return;
-        }
-        if (typeof config === 'string') {
-          if (data[config] === undefined || config.startsWith('_') || config === 'constructor') {
-            throw new TypeError(`No method named "${config}"`);
-          }
-          data[config]();
-        }
-      });
-    }
   }
 
   /**
@@ -530,12 +514,6 @@
       Carousel.getOrCreateInstance(carousel);
     }
   });
-
-  /**
-   * jQuery
-   */
-
-  index_js.defineJQueryPlugin(Carousel);
 
   return Carousel;
 

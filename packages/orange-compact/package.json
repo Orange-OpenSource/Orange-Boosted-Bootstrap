@@ -1,8 +1,8 @@
 {
   "name": "@ouds/web-orange-compact",
   "description": "OUDS Web Orange Compact is a Bootstrap based, Orange Compact branded accessible and ergonomic components library.",
-  "version": "1.3.0",
-  "version_short": "1.3",
+  "version": "1.4.0",
+  "version_short": "1.4",
   "sass": "scss/ouds-web.scss",
   "style": "dist/css/ouds-web.css",
   "keywords": [

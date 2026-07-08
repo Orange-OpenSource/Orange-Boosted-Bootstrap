@@ -1,10 +1,10 @@
 /*!
-  * OUDS Web v1.3.0 (https://web.unified-design-system.orange.com/)
+  * OUDS Web v1.4.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2015-2026 The OUDS Web Authors
   * Copyright 2015-2026 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap dropdown.js v1.3.0 (https://web.unified-design-system.orange.com/)
+  * Bootstrap dropdown.js v1.4.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2011-2026 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -309,18 +309,6 @@
     }
 
     // Static
-    static jQueryInterface(config) {
-      return this.each(function () {
-        const data = Dropdown.getOrCreateInstance(this, config);
-        if (typeof config !== 'string') {
-          return;
-        }
-        if (typeof data[config] === 'undefined') {
-          throw new TypeError(`No method named "${config}"`);
-        }
-        data[config]();
-      });
-    }
     static clearMenus(event) {
       if (event.button === RIGHT_MOUSE_BUTTON || event.type === 'keyup' && event.key !== TAB_KEY) {
         return;
@@ -395,12 +383,6 @@
     event.preventDefault();
     Dropdown.getOrCreateInstance(this).toggle();
   });
-
-  /**
-   * jQuery
-   */
-
-  index_js.defineJQueryPlugin(Dropdown);
 
   return Dropdown;
 
