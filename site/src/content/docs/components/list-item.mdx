@@ -5,172 +5,13 @@ aliases:
   - "/docs/components/item/"
 toc: true
 types:
-  - Static item
-  - Navigation item
+  - Navigation card item
+  - Navigation list item
+  - Static card item
+  - Static list item
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
-
-<Example code={`<div class="item-wrapper mb-medium">
-    <div class="item">
-      <div class="item-main">
-        <div class="item-leading-container">
-          <svg class="item-leading-container" aria-hidden="true">
-            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-          </svg>
-        </div>
-        <div class="item-text-container">
-          <p class="item-overline">Overline</p>
-          <p class="item-label">Label</p>
-          <p class="item-extra-label">Extra label</p>
-          <p class="item-description">Description</p>
-          <button class="item-slot item-slot-clickable btn btn-strong">Test</button>
-        </div>
-      </div>
-    </div>
-    <p class="item-helper">Helper text</p>
-  </div>
-  <div class="item-wrapper item-navigation mb-medium">
-    <div class="item item-no-divider">
-      <div class="item-main">
-        <svg class="item-leading-container" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-        </svg>
-        <div class="item-text-container">
-          <p class="item-overline">Overline</p>
-          <a href="#" class="item-interactive item-label">Label</a>
-          <p class="item-extra-label">Extra label</p>
-          <p class="item-description">Description</p>
-        </div>
-      </div>
-      <button class="item-slot item-slot-clickable btn btn-strong">Test</button>
-    </div>
-  </div>
-  <div class="item-wrapper item-navigation item-external-link mb-medium">
-    <a href="#" class="item item-interactive">
-      <div class="item-main">
-        <svg class="item-leading-container" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-        </svg>
-        <div class="item-text-container">
-          <p class="item-overline">Overline</p>
-          <p class="item-label">Label</p>
-          <p class="item-extra-label">Extra label</p>
-          <p class="item-description">Description</p>
-        </div>
-      </div>
-    </a>
-    <p class="item-helper">Helper text</p>
-  </div>
-  <ul class="item-list mb-medium">
-    <li class="item-wrapper">
-      <div class="item">
-        <div class="item-main">
-          <svg class="item-leading-container" aria-hidden="true">
-            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-          </svg>
-          <div class="item-text-container">
-            <p class="item-overline">Overline</p>
-            <p class="item-label">Label</p>
-            <p class="item-extra-label">Extra label</p>
-            <p class="item-description">Description</p>
-            <button class="item-slot item-slot-clickable btn btn-strong">Test</button>
-          </div>
-          <div class="item-trailing-container">
-            <p class="item-label">Label</p>
-            <p class="item-extra-label">Extra label</p>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="item-wrapper">
-      <div class="item">
-        <div class="item-main">
-          <svg class="item-leading-container" aria-hidden="true">
-            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-          </svg>
-          <div class="item-text-container">
-            <p class="item-overline">Overline</p>
-            <p class="item-label">Label</p>
-            <p class="item-extra-label">Extra label</p>
-            <p class="item-description">Description</p>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-  <ul class="item-list mb-medium">
-    <li class="item-wrapper item-navigation item-external-link">
-      <div class="item">
-        <div class="item-main">
-          <svg class="item-leading-container" aria-hidden="true">
-            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-          </svg>
-          <div class="item-text-container">
-            <p class="item-overline">Overline</p>
-            <a href="#" class="item-interactive item-label">Label</a>
-            <p class="item-extra-label">Extra label</p>
-            <p class="item-description">Description</p>
-            <button class="item-slot item-slot-clickable btn btn-strong">Test</button>
-          </div>
-          <div class="item-trailing-container">
-            <p class="item-label">Label</p>
-            <p class="item-extra-label">Extra label</p>
-          </div>
-        </div>
-        <button class="item-slot item-slot-clickable btn btn-strong">Test</button>
-      </div>
-    </li>
-    <li class="item-wrapper item-navigation">
-      <a href="#" class="item item-interactive">
-        <div class="item-main">
-          <svg class="item-leading-container" aria-hidden="true">
-            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-          </svg>
-          <div class="item-text-container">
-            <p class="item-overline">Overline</p>
-            <p class="item-label">Label</p>
-            <p class="item-extra-label">Extra label</p>
-            <p class="item-description">Description</p>
-          </div>
-        </div>
-      </a>
-    </li>
-  </ul>
-  <ul class="item-list">
-    <li class="item-wrapper item-navigation item-previous">
-      <div class="item">
-        <div class="item-main">
-          <svg class="item-leading-container" aria-hidden="true">
-            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-          </svg>
-          <div class="item-text-container">
-            <p class="item-overline">Overline</p>
-            <a href="#" class="item-interactive item-label">Label</a>
-            <p class="item-extra-label">Extra label</p>
-            <p class="item-description">Description</p>
-            <div class="item-slot item-slot-clickable"><button class="btn btn-strong">Test</button></div>
-          </div>
-        </div>
-        <div class="item-slot item-slot-clickable"><button class="btn btn-strong">Test</button></div>
-      </div>
-    </li>
-    <li class="item-wrapper item-navigation item-previous">
-      <a href="#" class="item item-interactive">
-        <div class="item-main">
-          <svg class="item-leading-container" aria-hidden="true">
-            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-          </svg>
-          <div class="item-text-container">
-            <p class="item-overline">Overline</p>
-            <p class="item-label">Label</p>
-            <p class="item-extra-label">Extra label</p>
-            <p class="item-description">Description</p>
-          </div>
-        </div>
-      </a>
-    </li>
-  </ul>`} />
 
 ## Overview
 
@@ -182,7 +23,7 @@ import { getVersionedDocsPath } from '@libs/path'
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
           <div class="item-wrapper w-75">
-            <div class="item item-no-bg">
+            <div class="item">
               <div class="item-main">
                 <div class="item-text-container">
                   <p class="item-label">Label</p>
@@ -192,15 +33,15 @@ import { getVersionedDocsPath } from '@libs/path'
           </div>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#static-item">Static item</a> is a UI element that displays a unit of information.</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#static-list-item">Static item</a> is a UI element that displays a unit of information.</div>
     </div>
   </li>
   <li class="col">
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
-          <div class="item-wrapper w-75">
-            <div class="item item-navigation">
+          <div class="item-wrapper item-navigation w-75">
+            <div class="item">
               <div class="item-main">
                 <div class="item-text-container">
                   <a href="#" class="item-label item-interactive">Label</a>
@@ -210,7 +51,7 @@ import { getVersionedDocsPath } from '@libs/path'
           </div>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#navigation-item">Navigation item</a> is a UI element that displays a unit of information and allows users to navigate.</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#navigation-list-item">Navigation item</a> is a UI element that displays a unit of information and allows users to navigate.</div>
     </div>
   </li>
 </ul>
@@ -218,7 +59,7 @@ import { getVersionedDocsPath } from '@libs/path'
 For the two types of items, OUDS Web has a common base `.item`, and `.item-main` classes that set up default styles such as padding and content alignment. The `.item` class is intended to be used in conjunction with our item variants, or to serve as a basis for your own custom styles. The most basic item is the `.item-navigation` variant.
 
 <Example showToolbar={false} code={`<div class="item-wrapper">
-    <div class="item item-no-bg">
+    <div class="item">
       <div class="item-main">
         <div class="item-text-container">
           <p class="item-label">Label</p>
@@ -227,8 +68,8 @@ For the two types of items, OUDS Web has a common base `.item`, and `.item-main`
     </div>
   </div>`} />
 
-<Example showToolbar={false} code={`<div class="item-wrapper">
-    <div class="item item-navigation">
+<Example showToolbar={false} code={`<div class="item-wrapper item-navigation">
+    <div class="item">
       <div class="item-main">
         <div class="item-text-container">
           <a href="#" class="item-label item-interactive">Label</a>
@@ -243,37 +84,44 @@ There are 2 main categories inside the item group of components:
 - The [card item](#card-item) is a single item that can be used as a standalone component.
 - The [list item](#list-item) is designed to be used within a list, allowing multiple items to be displayed together.
 
-[Static items](#static-item) and [Navigation items](#navigation-item) can be used in both categories.
+[Static items](#static-list-item) and [Navigation items](#navigation-list-item) can be used in both categories.
 
-Consider [Navigation items](#navigation-item) as an extension of [Static items](#static-item), with the added functionality of being able to navigate to different pages or sections within a multi-page interface.
+Consider [Navigation items](#navigation-list-item) as an extension of [Static items](#static-list-item), with the added functionality of being able to navigate to different pages or sections within a multi-page interface.
 
-{/* TODO explain the basic structure */}
+The basic structure includes:
+* `.item-wrapper` as the outermost container, which is used to add additional styles or behavior.
+* `.item` as the container before the divider.
+* `.item-main` as the main container for the primary content of the item.
+* `.item-text-container` as the container for the text content of the item.
+* `.item-interactive` as the class for interactive elements within the item, such as links or buttons. It's mandatory on the link for the [navigation item](#navigation-list-item).
 
 #### Card item
 
 The card item is the default item when the item components are used.
 
-It is not meant to be used in a list. Most of the variants can be applied to this kind of item. It comes with a background and a divider by default.
+Its behavior change once used in a list. Most of the variants can be applied to this kind of item. It comes with a background and a divider by default.
 
 #### List item
 
-The list item is designed to be used within a list, allowing multiple items to be displayed together. By default, they have a divider but no background. Add `.item-list` to the `<ul>` element.
+The list item is designed to be used within a list, allowing multiple items [card items](#card-item) to be displayed together. By default, they have a divider but no background. They are surrounded by `.item-list` added to the `<ul>` element.
 
 Some variants shouldn't be applied to this kind of item. Warning will be done about it in:
 - [Outlined](#outlined) variants
 <BrandSpecific brand={['orange', 'orange-compact']}>
-- [Rounded](#rounded) variant
+- [Rounded](#rounded-corners) variant
 </BrandSpecific>
 
 ### Accessibility
 
-## [[comp]] Static item
+## [[comp]] Static list item
 
 This is used to display a unit of information without any interaction. It can be used as a [standalone component](#card-item) or within a [list](#list-item).
 
-### Standard display
+Here is the base DOM and classes you should use for a static item.
 
-<Example buttonLabel="standard static display" class="d-flex flex-column gap-medium" code={`<!-- Card -->
+All the available variants can be found in the [common parts section](#common-parts).
+
+<Example buttonLabel="standard static items display" class="d-flex flex-column gap-medium" code={`<!-- Card -->
   <div class="item-wrapper">
     <div class="item">
       <div class="item-main">
@@ -306,20 +154,113 @@ This is used to display a unit of information without any interaction. It can be
     </li>
   </ul>`} />
 
+## [[comp]] Navigation list item
+
+This is used to display a unit of information and allow to navigate. It can be used as a [standalone component](#card-item) or within a [list](#list-item).
+
+Here is the base DOM and classes you should use for a navigation item. It needs an `.item-navigation` at the `.item-wrapper` level and an `.item-interactive` at the link level.
+
+All the available variants can be found in the [common parts section](#common-parts).
+
+<Example buttonLabel="standard navigation item display" class="d-flex flex-column gap-medium" code={`<!-- Card -->
+  <div class="item-wrapper item-navigation">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <a href="#" class="item-label item-interactive">Label</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- List -->
+  <ul class="item-list">
+    <li class="item-wrapper item-navigation">
+      <div class="item">
+        <div class="item-main">
+          <div class="item-text-container">
+            <a href="#" class="item-label item-interactive">Label</a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item-wrapper item-navigation">
+      <div class="item">
+        <div class="item-main">
+          <div class="item-text-container">
+            <a href="#" class="item-label item-interactive">Label</a>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>`} />
+
+### Exclusive variants
+
+These variants are exclusive to the navigation item. They are used to indicate a specific type of navigation.
+
+#### Back chevron
+
+Add `.item-previous` to the `.item-navigation` to indicate that the item is a back navigation item. This will add a back chevron icon to the start of the item.
+
+<Example buttonLabel="navigation item with back chevron" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation item-previous">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <a href="#" class="item-label item-interactive">Label</a>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+
+#### External link
+
+Add `.item-external` to the `.item-navigation` to indicate that the item is an external link. This will add an external link icon to the end of the item.
+
+<Example buttonLabel="navigation item with external link" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation item-external">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <a href="#" class="item-label item-interactive">Label</a>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+
+### Layout
+
+#### Using `<a>` around
+
+Optionally, the `<a>` element can wrap the entire `.item` instead of just the label.
+
+<Example buttonLabel="navigation item with link wrapping entire item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation">
+    <a href="#" class="item item-interactive">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </a>
+  </div>`} />
+
+## Common parts
+
+These variants can be used in both [Static items](#static-list-item) and [Navigation items](#navigation-list-item) whether they are [Card items](#card-item) or [List items](#list-item).
+
 ### Variants
 
 #### With asset
 
 The main container `.item-main` of an item can contain up to 3 elements. They always appear in the following order:
 1. [Leading container](#leading-container) using `.item-leading-container` (optional)
-2. [Text container](#text) using `.item-text-container` (required)
+2. [Text container](#texts) using `.item-text-container` (required)
 3. [Trailing container](#trailing-container) using `.item-trailing-container` (optional)
 
 ##### Leading container
 
-The leading container using `.item-leading-container`.
+The leading container uses `.item-leading-container`.
 
-Here is a table of the different assets that we support in the leading container, along with their corresponding classes and notes.
+Here is a list of the different assets that we support in the leading container, along with their corresponding classes and notes.
 
 You can navigate through the different assets using the tabs below.
 
@@ -331,9 +272,11 @@ You can navigate through the different assets using the tabs below.
   <AssetsTab name="Icon" active="true">
     ###### Icon
 
-    Icons can be sized with `item-leading-large` (only if not [small item](#small-item)). For status icons, add `.item-icon` with one of these classes: `.item-status-positive`, `.item-status-warning`, `.item-status-info`, or `.item-status-negative`.
+    Icons can be sized with `item-leading-large` (only if not [small item](#sizes)).
 
-    <Example buttonLabel="static items with leading asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    For status icons, add `.item-icon` with one of these classes: `.item-status-positive`, `.item-status-warning`, `.item-status-info`, or `.item-status-negative`.
+
+    <Example buttonLabel="items with leading icon" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
         <div class="item-leading-container item-leading-large">
@@ -365,25 +308,16 @@ You can navigate through the different assets using the tabs below.
   <AssetsTab name="Image">
     ###### Image
 
-    Images can be sized with `item-leading-large` (only if not [small item](#small-item)) or `item-leading-xlarge` (only if not [small item](#small-item)) and can use [ratio utilities]([[docsref:/utilities/aspect-ratio]]) and `.item-leading-rounded`. All these classes can be combined as needed and placed on a parent element.
+    Images can be sized with `item-leading-large` (only if not [small item](#sizes)) or `item-leading-xlarge` (only if not [small item](#sizes)).
 
-    <Example buttonLabel="static items with leading asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    [Ratio utilities]([[docsref:/utilities/aspect-ratio]]) may also be used along with `.item-leading-rounded`.
+
+    All these classes can be combined as needed and placed on `.item-leading-container`.
+
+    <Example buttonLabel="items with leading image" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
-        <div class="item-leading-container item-leading-xlarge item-leading-rounded">
-          <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover" />
-        </div>
-        <div class="item-text-container">
-          <p class="item-label">Label</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
-        <div class="item-leading-container ratio-16x9">
+        <div class="item-leading-container item-leading-xlarge item-leading-rounded ratio-16x9">
           <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover" />
         </div>
         <div class="item-text-container">
@@ -397,9 +331,13 @@ You can navigate through the different assets using the tabs below.
   <AssetsTab name="Video">
     ###### Video
 
-    Videos can be sized with `item-leading-large` (only if not [small item](#small-item)) or `item-leading-xlarge` (only if not [small item](#small-item)) and can use [ratio utilities]([[docsref:/utilities/aspect-ratio]]) and `.item-leading-rounded`. All these classes can be combined as needed and placed on a parent element such as an [`.item-list`](#list-item).
+    Videos can be sized with `item-leading-large` (only if not [small item](#sizes)) or `item-leading-xlarge` (only if not [small item](#sizes)).
 
-    <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    [Ratio utilities]([[docsref:/utilities/aspect-ratio]]) may also be used along with `.item-leading-rounded`.
+
+    All these classes can be combined as needed and placed on `.item-leading-container`.
+
+    <Example buttonLabel="item with leading video" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
         <div class="item-leading-container item-leading-large ratio-16x9 item-leading-rounded">
@@ -424,9 +362,11 @@ You can navigate through the different assets using the tabs below.
       The slot shouldn't be used in a [small list item](#sizes).
     </Callout>
 
-    To add a slot, `item-slot` must be combined with `.item-leading-container`. Limited in size to `96px x 96px`. A slot can be rounded using `item-leading-rounded`. {/* TODO: replace value by token once added */}
+    To add a slot, `item-slot` must be combined with `.item-leading-container`.
 
-    <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    Its size is limited to `96px x 96px`. A slot can be rounded using `item-leading-rounded`. {/* TODO: replace value by token once added */}
+
+    <Example buttonLabel="item with leading slot" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
         <div class="item-leading-container item-slot">
@@ -441,19 +381,19 @@ You can navigate through the different assets using the tabs below.
   </AssetsTab>
 </AssetsNavTab>
 
-##### Text
+##### Texts
 
-There are four text elements that are meant to be used in the `.item-text-container` (required) which is placed directly inside the `.item-main` container.
+There are 4 text elements that are meant to be used in the `.item-text-container`.
 
 They always appear in the following order:
-1. [Overline](#overline) using `.item-overline` (optional) (only if not [small item](#small-item))
-2. [Label](#label) using `.item-label`, that can optionally be bold (using `.fw-bold`) (required)
-3. [Extra label](#extra-label) using `.item-extra-label` (optional) (only if not [small item](#small-item))
-4. [Description](#description) using `.item-description` (optional)
+1. Overline using `.item-overline` (optional) (only if not [small item](#sizes))
+2. Label using `.item-label`, that can optionally be bold (using `.fw-bold`) (required)
+3. Extra label using `.item-extra-label` (optional) (only if not [small item](#sizes))
+4. Description using `.item-description` (optional)
 
 Optionally, a slot can be added at the end of the text container using `.item-slot` and/or in place of the `.item-label` if it replaces it.
 
-<Example buttonLabel="static item text" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+<Example buttonLabel="item text" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
         <div class="item-text-container">
@@ -511,11 +451,11 @@ Optionally, a slot can be added at the end of the text container using `.item-sl
 
 ##### Trailing container
 
-The trailing container using `.item-trailing-container`.
+The trailing container uses `.item-trailing-container`.
 
 Here is a list of the different assets that we support in the trailing container, along with their corresponding classes and notes.
 
-<Callout type="warning">
+<Callout type="warning" title="Small list item">
   Please note that the sizes below shouldn't be used in a [small list item](#sizes). The slot shouldn't be used as well in this size.
 </Callout>
 
@@ -523,9 +463,9 @@ Here is a list of the different assets that we support in the trailing container
   <AssetsTab name="Text" active="true">
     ###### Text
 
-    Text should use `.item-label` with either `.item-extra-label` (only if not item small), `.text-muted`, `.fw-bold`, or nothing.
+    Text should use `.item-label`. Optionally you can use it with either `.item-extra-label` (only if not [small item](#sizes)), `.text-muted`, or `.fw-bold`.
 
-    <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    <Example buttonLabel="items with trailing text" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
         <div class="item-text-container">
@@ -571,7 +511,7 @@ Here is a list of the different assets that we support in the trailing container
 
     All variants of [Badge]([[docsref:/components/badge#badge]]) and [Badge - count]([[docsref:/components/badge#badge---count]]) are allowed.
 
-    <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    <Example buttonLabel="items with trailing badge" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
         <div class="item-text-container">
@@ -602,7 +542,7 @@ Here is a list of the different assets that we support in the trailing container
 
     All variants of [tags]([[docsref:/components/tag#tag]]) are allowed.
 
-    <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    <Example buttonLabel="item with trailing tag" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
         <div class="item-text-container">
@@ -618,9 +558,11 @@ Here is a list of the different assets that we support in the trailing container
   <AssetsTab name="Icon">
     ###### Icon
 
-    Icons can be sized with `item-leading-large` (only if not [small item](#small-item)). For status icons, add `.item-icon` with one of these classes: `.item-status-positive`, `.item-status-warning`, `.item-status-info`, or `.item-status-negative`.
+    Icons can be sized with `item-trailing-large` (only if not [small item](#sizes)).
 
-    <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    For status icons, add `.item-icon` with one of these classes: `.item-status-positive`, `.item-status-warning`, `.item-status-info`, or `.item-status-negative`.
+
+    <Example buttonLabel="items with trailing icon" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
         <div class="item-text-container">
@@ -651,28 +593,19 @@ Here is a list of the different assets that we support in the trailing container
   <AssetsTab name="Image">
     ###### Image
 
-    Images can be sized with `item-trailing-large` (only if not [small item](#small-item)) or `item-trailing-xlarge` (only if not [small item](#small-item)) and can use [ratio utilities]([[docsref:/utilities/aspect-ratio]]) and `.item-trailing-rounded`. All these classes can be combined as needed and placed on a parent element.
+    Images can be sized with `item-trailing-large` (only if not [small item](#sizes)) or `item-trailing-xlarge` (only if not [small item](#sizes)).
 
-    <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    [Ratio utilities]([[docsref:/utilities/aspect-ratio]]) may also be used along with `.item-trailing-rounded`.
+
+    All these classes can be combined as needed and placed on `.item-trailing-container`.
+
+    <Example buttonLabel="item with trailing image" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
-        <div class="item-trailing-container item-trailing-xlarge item-trailing-rounded">
-          <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover" />
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
-        <div class="item-text-container">
-          <p class="item-label">Label</p>
-        </div>
-        <div class="item-trailing-container ratio-16x9">
+        <div class="item-trailing-container item-trailing-xlarge ratio-16x9 item-trailing-rounded">
           <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover" />
         </div>
       </div>
@@ -682,9 +615,13 @@ Here is a list of the different assets that we support in the trailing container
   <AssetsTab name="Video">
     ###### Video
 
-    Videos can be sized with `item-trailing-large` (only if not [small item](#small-item)) or `item-trailing-xlarge` (only if not [small item](#small-item)) and can use [ratio utilities]([[docsref:/utilities/aspect-ratio]]) and `.item-trailing-rounded`. All these classes can be combined as needed and placed on a parent element such as an [`.item-list`](#list-item).
+    Videos can be sized with `item-trailing-large` (only if not [small item](#sizes)) or `item-trailing-xlarge` (only if not [small item](#sizes)).
 
-    <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    [Ratio utilities]([[docsref:/utilities/aspect-ratio]]) may also be used along with `.item-trailing-rounded`.
+
+    All these classes can be combined as needed and placed on `.item-trailing-container`.
+
+    <Example buttonLabel="item with trailing video" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
         <div class="item-text-container">
@@ -704,9 +641,11 @@ Here is a list of the different assets that we support in the trailing container
   <AssetsTab name="Slot">
     ###### Slot
 
-    To add a slot, `item-slot` must be combined with `.item-leading-container`. Limited in size to `96px x 96px`. A slot can be rounded using `item-leading-rounded`. {/* TODO: replace value by token once added */}
+    To add a slot, `item-slot` must be combined with `.item-trailing-container`.
 
-    <Example buttonLabel="static items with trailing asset" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    Its size is limited to `96px x 96px`. A slot can be rounded using `item-trailing-rounded`. {/* TODO: replace value by token once added */}
+
+    <Example buttonLabel="item with trailing slot" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
         <div class="item-text-container">
@@ -723,7 +662,7 @@ Here is a list of the different assets that we support in the trailing container
 
 ##### Slots
 
-This component contains many slots that can be used to add custom content. The main slots are located in the leading container, the text container, and the trailing container. The slots are intended to be used for custom content that is not covered by the other elements of the component. We can add another slot outside of the main container as well.
+This component contains many slots that can be used to add custom content. The main slots are located in the [leading container](#leading-container), the [text container](#texts), and the [trailing container](#trailing-container). The slots are intended to be used for custom content that is not covered by the other elements of the component. We can add another slot outside of the `.item-main` container as well.
 
 <Callout type="warning" title="Small list item">
   The slots shouldn't be used in a [small list item](#sizes).
@@ -731,13 +670,13 @@ This component contains many slots that can be used to add custom content. The m
 
 Here is a small resume of the slots that can be used in a static item:
 * [Leading container](#leading-container) using `.item-slot` (optional)
-* [Text container](#text) using `.item-slot` (optional)
+* [Text container](#texts) using `.item-slot` (optional)
 * [Trailing container](#trailing-container) using `.item-slot` (optional)
-* A slot outside of the main container, direct child of `.item` using `.item-slot` (optional)
+* A slot outside of the `.item-main` container, direct child of `.item` using `.item-slot` (optional)
 
-Optionally, if a slot is interactive you can add `.item-slot-clickable` to the slot. Please note that the slot won't be [rounded](#rounded-corners) anymore.
+Optionally, if the item is  and a slot is also interactive, you can add `.item-slot-clickable` to the slot.<BrandSpecific brand={['orange', 'orange-compact']}> Please note that the slot won't be [rounded](#rounded-corners) anymore.</BrandSpecific>
 
-<Example buttonLabel="static item using a slot outside of the main content of the item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+<Example buttonLabel="item using a slot outside of the main content of the item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
         <div class="item-text-container">
@@ -761,7 +700,7 @@ Optionally, if a slot is interactive you can add `.item-slot-clickable` to the s
 
 Optionally, a helper text can be added below the main `.item` container using `.item-helper`.
 
-<Example buttonLabel="static item with helper text" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+<Example buttonLabel="item with helper text" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
         <div class="item-text-container">
@@ -774,14 +713,14 @@ Optionally, a helper text can be added below the main `.item` container using `.
 
 #### Background
 
-By default, alone items have a background-color, while list items don't. This behavior can be modified by using `.item-no-bg` or `.item-bg` on the element `.item` or any ancestors up to the `.item-list` container if it exists.
+By default, [card items](#card-item) have a background-color, while [list items](#list-item) don't. This behavior can be modified by using `.item-no-bg` or `.item-bg` on the `.item-wrapper` or `.item-list` container. These modifiers only modify the no interaction background of the items.
 
-<Example buttonLabel="static items with background modifications" class="d-flex flex-column gap-medium" code={`<!-- Alone -->
-  <div class="item-wrapper">
-    <div class="item item-no-bg">
+<Example buttonLabel="items with background modifications" class="d-flex flex-column gap-medium" code={`<!-- Card -->
+  <div class="item-wrapper item-navigation item-no-bg">
+    <div class="item">
       <div class="item-main">
         <div class="item-text-container">
-          <p class="item-label">Label</p>
+          <a href="#" class="item-label item-interactive">Label</a>
         </div>
       </div>
     </div>
@@ -798,22 +737,22 @@ By default, alone items have a background-color, while list items don't. This be
         </div>
       </div>
     </li>
-    <li class="item-wrapper">
+    <li class="item-wrapper item-navigation">
       <div class="item">
         <div class="item-main">
           <div class="item-text-container">
-            <p class="item-label">Label</p>
+            <a href="#" class="item-label item-interactive">Label</a>
           </div>
         </div>
       </div>
     </li>
   </ul>`} />
 
-#### Outlined
+#### Divider
 
-By default every item comes with a divider. The divider may be removed or transformed into an outline using `.item-no-divider` or `.item-outlined` or `.item-no-outline` on the element `.item` or any ancestors. It applies only on Card element. {/* TODO: You may remove the outline on default state by using `.item-no-outline` on the element `.item` or any ancestors. */}
+You can remove the divider by using `.item-no-divider` on the `.item-wrapper` or `.item-list`.
 
-<Example buttonLabel="outlined" class="d-flex flex-column gap-medium" code={`<!-- Without divider -->
+<Example buttonLabel="items with no divider" class="d-flex flex-column gap-medium" code={`<!-- Card -->
   <div class="item-wrapper item-no-divider">
     <div class="item">
       <div class="item-main">
@@ -824,22 +763,61 @@ By default every item comes with a divider. The divider may be removed or transf
     </div>
   </div>
 
-  <!-- Outlined -->
-  <div class="item-wrapper item-outlined">
+  <!-- List -->
+  <ul class="item-list item-no-divider">
+    <li class="item-wrapper">
+      <div class="item">
+        <div class="item-main">
+          <div class="item-text-container">
+            <p class="item-label">Label</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item-wrapper item-navigation">
+      <div class="item">
+        <div class="item-main">
+          <div class="item-text-container">
+            <a href="#" class="item-label item-interactive">Label</a>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>`} />
+
+#### Outlined
+
+<Callout type="warning" title="Card item only" action="Card item" actionHref="#card-item" />
+
+By default every item comes with a divider. The divider may be removed or transformed into an outline using `.item-outlined` and/or `.item-no-outline` on the element `.item-wrapper` or any ancestors. `.item-no-divider` can also be applied for another rendering.
+
+[Static items](#static-list-item) only have the non-interactive version.
+
+<Example buttonLabel="items outlined" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation item-outlined">
     <div class="item">
       <div class="item-main">
         <div class="item-text-container">
-          <p class="item-label">Label</p>
+          <a href="#" class="item-label item-interactive">Label</a>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="item-wrapper item-outlined item-no-outline">
+  <div class="item-wrapper item-navigation item-outlined item-no-outline">
     <div class="item">
       <div class="item-main">
         <div class="item-text-container">
-          <p class="item-label">Label</p>
+          <a href="#" class="item-label item-interactive">Label</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item-wrapper item-navigation item-outlined item-no-divider">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <a href="#" class="item-label item-interactive">Label</a>
         </div>
       </div>
     </div>
@@ -859,11 +837,11 @@ Rounded corners items is a project-wide option therefore all your items should e
 </Callout>
 
 <Callout type="info">
-  Items in a list won't have rounded corners even using this class.
+  Items in a [list](#list-item) won't have rounded corners even using this class.
 </Callout>
 
 <Example buttonLabel="rounded items" class="bd-btn-example" code={`<div class="use-rounded-corner-items">
-    <!-- Alone -->
+    <!-- Card -->
     <div class="item-wrapper mb-medium">
       <div class="item">
         <div class="item-main">
@@ -902,17 +880,17 @@ Rounded corners items is a project-wide option therefore all your items should e
 
 #### Disabled
 
-Static items can be disabled by using `.disabled` on the element `.item-wrapper` or any ancestors. The disabled state is also applied to all interactive elements inside the item.
+Items can be disabled by using `.disabled` on the element `.item-wrapper` or any ancestors. The disabled style is also applied to all interactive elements inside the item.
 
-If the static item is in a disabled context, the static item will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, the `[aria-disabled="true"]` attribute, or the `.disabled` class.
+If the item is in a disabled context, the item will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, the `[aria-disabled="true"]` attribute, or the `.disabled` class.
 
-You may handle on your own the [slots](#slot) regarding accessibility or design. For example, if you have a slot with a button, you may want to disable the button to apply the right behavior and the correct visual state.
+You may handle on your own the [slots](#slot) regarding accessibility and design. For example, if you have a slot with a button, you may want to disable the button to apply the right behavior and the correct visual state.
 
 <Callout type="info">
   The images and videos inside the disabled static item will be grayed out using opacity. You'll still need to handle it correclty from an accessibility point of view.
 </Callout>
 
-<Example buttonLabel="disabled static item" class="d-flex flex-column gap-medium" code={`<div class="disabled">
+<Example buttonLabel="disabled items" class="d-flex flex-column gap-medium" code={`<div class="disabled">
     <div class="item-wrapper mb-medium">
       <div class="item">
         <div class="item-main">
@@ -951,9 +929,9 @@ You may handle on your own the [slots](#slot) regarding accessibility or design.
 
 #### Skeleton
 
-<SkeletonRedirect component="static item" />
+<SkeletonRedirect component="item" />
 
-<Example buttonLabel="static item skeleton" class="d-flex flex-column gap-medium" code={`<div aria-busy="true" inert>
+<Example buttonLabel="item skeleton" class="d-flex flex-column gap-medium" code={`<div aria-busy="true" inert>
     <div class="item-wrapper">
       <div class="item">
         <div class="item-main">
@@ -967,19 +945,17 @@ You may handle on your own the [slots](#slot) regarding accessibility or design.
 
 ### Sizes
 
-By default every item comes with a default size. The size can be adapted using `.item-small` on the element `.item-wrapper` or any ancestors.
-
-{/* TODO: Which element to document in every paragraph ? */}
+By default every item comes with a default size. The size can be adapted using `.item-small` on the element `.item-wrapper` or `.item-list`.
 
 <Callout type="warning">
   The small size come with some restrictions:
 
-  * The [assets](#with-asset) not being components shouldn't use any size classes
-  * There shouldn't be any [slot](#slot) in the item
-  * The [text](#text) should only use the [label](#label), or [description](#description) and not the [overline](#overline), or [extra label](#extra-label)
+  * The assets within the [leading container](#leading-container) and the [trailing container](#trailing-container) not being components shouldn't use any size classes
+  * There shouldn't be any [slot](#slots) in the item
+  * The [text container](#texts) should only have the label, or description inside and not the overline, or extra label
 </Callout>
 
-<Example buttonLabel="static item small sizes" class="d-flex flex-column gap-medium" code={`<!-- Alone -->
+<Example buttonLabel="items small" class="d-flex flex-column gap-medium" code={`<!-- Card -->
   <div class="item-wrapper item-small">
     <div class="item">
       <div class="item-main">
@@ -1016,10 +992,10 @@ By default every item comes with a default size. The size can be adapted using `
 
 #### Alignment
 
-By default all static item are vertically centered. You can change the alignment of the content using `.item-top` by setting it on the `.item-main` or any ancestors.
+By default all items are vertically centered. You can change the alignment of the content using `.item-top` by setting it on the `.item-wrapper` or `.item-list`.
 
-<Example buttonLabel="top alignment static item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
-    <div class="item item-top">
+<Example buttonLabel="top alignment item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation item-top">
+    <div class="item">
       <div class="item-main">
         <div class="item-leading-container">
           <svg class="w-100 h-100" aria-hidden="true">
@@ -1028,7 +1004,7 @@ By default all static item are vertically centered. You can change the alignment
         </div>
         <div class="item-text-container">
           <p class="item-overline">Overline</p>
-          <p class="item-label">Label</p>
+          <a href="#" class="item-label item-interactive">Label</a>
           <p class="item-extra-label">Extra label</p>
           <p class="item-description">Description</p>
         </div>
@@ -1051,9 +1027,9 @@ By default all static item are vertically centered. You can change the alignment
 
 #### Max width
 
-By default, static items will span the whole width of their parent container, to limit the width of the static item on wider parent container, add a `.component-max-width` to the `.item-wrapper` or `.item-list` container.
+By default, items will span the whole width of their parent container, to limit the width of the item on wider parent container, add a `.component-max-width` to the `.item-wrapper` or `.item-list` container.
 
-<Example buttonLabel="static item max width" code={`<!-- Alone -->
+<Example buttonLabel="items max width" code={`<!-- Card -->
   <div class="item-wrapper component-max-width mb-medium">
     <div class="item">
       <div class="item-main">
@@ -1085,85 +1061,3 @@ By default, static items will span the whole width of their parent container, to
       </div>
     </li>
   </ul>`} />
-
-## [[comp]] Navigation item
-
-### Key concepts
-
-<Example buttonLabel="navigation key concepts" class="d-flex flex-column gap-medium" code={``} />
-
-### Base class
-
-<Example buttonLabel="navigation base" class="d-flex flex-column gap-medium" code={``} />
-
-### Standard display
-
-<Example buttonLabel="navigation standard display" class="d-flex flex-column gap-medium" code={``} />
-
-### Variants
-
-#### Back chevron
-
-<Example buttonLabel="back chevron" class="d-flex flex-column gap-medium" code={``} />
-
-#### External link
-
-<Example buttonLabel="external link" class="d-flex flex-column gap-medium" code={``} />
-
-#### Alignment
-
-<Example buttonLabel="navigation alignment" class="d-flex flex-column gap-medium" code={``} />
-
-#### With asset
-
-##### Leading assets
-
-<Example buttonLabel="navigation leading assets list" class="d-flex flex-column gap-medium" code={``} />
-
-##### Text
-
-<Example buttonLabel="navigation text" class="d-flex flex-column gap-medium" code={``} />
-
-##### Slot
-
-<Example buttonLabel="navigation slot" class="d-flex flex-column gap-medium" code={``} />
-
-##### Trailing assets
-
-<Example buttonLabel="navigation trailing assets list" class="d-flex flex-column gap-medium" code={``} />
-
-#### Helper text
-
-<Example buttonLabel="navigation helper text" class="d-flex flex-column gap-medium" code={``} />
-
-#### With background
-
-<Example buttonLabel="navigation with background" class="d-flex flex-column gap-medium" code={``} />
-
-#### Outlined
-
-<Example buttonLabel="navigation outlined" class="d-flex flex-column gap-medium" code={``} />
-
-#### Rounded corners
-
-<Example buttonLabel="navigation rounded corners" class="d-flex flex-column gap-medium" code={``} />
-
-### States
-
-#### Disabled
-
-<Example buttonLabel="navigation disabled" class="d-flex flex-column gap-medium" code={``} />
-
-#### Skeleton
-
-<Example buttonLabel="navigation skeleton" class="d-flex flex-column gap-medium" code={``} />
-
-### Sizes
-
-<Example buttonLabel="navigation sizes" class="d-flex flex-column gap-medium" code={``} />
-
-### Layout
-
-#### Max width
-
-#### Using `<a>` around
