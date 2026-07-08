@@ -1,7 +1,6 @@
 ---
 import fs from 'node:fs'
 import Code from '@shortcodes/Code.astro'
-import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
 
 /**
@@ -10,7 +9,7 @@ import { getVersionedDocsPath } from '@libs/path'
 interface Props {
   /**
    * File path to the SVG file without file extension.
-   * @default "brand-logo"
+   * @default "${theme}-logo"
    */
   file?: string
 
@@ -19,15 +18,19 @@ interface Props {
    * @default true
    */
   downloadable?: boolean
+
   /**
    * Defines label to complete 'Copy SVG to clipboard' button aria-label.
    */
   buttonLabel?: string
+
+  theme?: 'orange' | 'orange-compact' | 'sosh'
 }
+const { theme = 'orange' } = Astro.props
 
-const { file = `${getConfig().brand}-logo`, downloadable = true, buttonLabel } = Astro.props
+const { file = `${theme}-logo`, downloadable = true, buttonLabel } = Astro.props
 
-const filePath = `site/${getConfig().brand}/static/docs/[version]/assets/brand/${file}`
+const filePath = `site/static/[brand]/docs/[version]/assets/brand/${file}`
 const svgFormattedPath = `${filePath}-formatted.svg`
 const svgPath = `${filePath}.svg`
 
@@ -37,7 +40,7 @@ const size = fs.statSync(svgPath).size
 const clipboardLabel = buttonLabel
   ? `Copy ${buttonLabel} SVG to clipboard`
   : file
-    ? `Copy ${file}.svg file to clipboard`
+    ? `Copy ${file}.svg content to clipboard`
     : 'Copy SVG to clipboard'
 ---
 
