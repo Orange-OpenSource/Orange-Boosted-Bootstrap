@@ -38,7 +38,7 @@
     "css-dev-orange-compact": "npm run css -w packages/orange-compact",
     "css-dev-sosh": "npm run css -w packages/sosh",
     "css-lint": "npm-run-all --aggregate-output --continue-on-error --parallel css-lint-*",
-    "css-lint-stylelint": "stylelint \"**(!snapshot)/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache",
+    "css-lint-stylelint": "stylelint \"**/*.{css,scss}\" --ignore-pattern \"__snapshots__\" --cache --cache-location .cache/.stylelintcache",
     "css-prefix-examples": "postcss --config build/postcss.config.mjs --replace \"site/src/assets/examples/**/*.css\"",
     "css-test": "jasmine --config=scss/tests/jasmine.js",
     "css-snapshot-test": "vitest --config=scss/tests/snapshot-tests/vitest.config.ts",
