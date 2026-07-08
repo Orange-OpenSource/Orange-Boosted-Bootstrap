@@ -2,7 +2,6 @@ import type { Root } from 'hast'
 import type { Plugin } from 'unified'
 import { SKIP, visit } from 'unist-util-visit'
 import { isHeading } from './utils.ts'
-import toString from 'mdast-util-to-string'
 
 // A rehype plugin to apply CSS classes to tables rendered in markdown (or MDX) files when wrapped in a `<BsTable />`
 // component.
