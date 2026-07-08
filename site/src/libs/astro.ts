@@ -8,7 +8,7 @@ import autoImport from 'astro-auto-import'
 import type { Element, Text } from 'hast'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { getConfig } from './config'
-import { rehypeBsTable, rehypeHeaderLinksOrder } from './rehype'
+import { rehypeBsTable, rehypeCustomHeaderSlug, rehypeHeaderLinksOrder } from './rehype'
 import { remarkBsComp, remarkBsConfig, remarkBsDocsref, remarkBsVersionLink } from './remark'
 import { configurePrism } from './prism'
 import {
@@ -68,6 +68,7 @@ export function oudsWeb(): AstroIntegration[] {
             markdown: {
               rehypePlugins: [
                 rehypeHeadingIds,
+                rehypeCustomHeaderSlug,
                 [
                   rehypeAutolinkHeadings,
                   {
@@ -80,6 +81,7 @@ export function oudsWeb(): AstroIntegration[] {
                     test: (element: Element) => isHeading(element.tagName)
                   }
                 ],
+                rehypeHeaderLinksOrder,
                 rehypeBsTable
               ],
               remarkPlugins: [remarkBsConfig, remarkBsDocsref, remarkBsComp, remarkBsVersionLink]
