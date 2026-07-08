@@ -85,7 +85,8 @@
       z-index: 2;
       overflow: hidden;
       color: var(--#{$prefix}text-input-label-color);
-      @include transition(font-size .1s ease-out);
+      text-overflow: ellipsis;
+      @include transition(font-size .15s ease-out);
 
       // Allow the whole text-input-container to be clickable to focus the input
       &::before {
@@ -112,6 +113,10 @@
       box-shadow: none;
       opacity: 0;
       transform: translate(0, -50%);
+
+      &::placeholder {
+        font-weight: $ouds-font-weight-system-web-default;
+      }
 
       &:placeholder-shown:not([placeholder=" "]),
       &[placeholder]:not(:placeholder-shown),
@@ -142,10 +147,7 @@
       opacity: 0;
       transform: translate(0, -50%);
 
-      &:has(.text-input-field:placeholder-shown:not([placeholder=" "])),
-      &:has(.text-input-field[placeholder]:not(:placeholder-shown)),
-      &:has(.text-input-field:focus),
-      &:has(.text-input-field:focus-visible) {
+      &:has(.text-input-field:placeholder-shown:not([placeholder=" "]), .text-input-field[placeholder]:not(:placeholder-shown), .text-input-field:focus, .text-input-field:focus-visible) {
         position: static;
         width: 100%;
         opacity: 1;
@@ -198,11 +200,8 @@
       }
     }
 
-    &:has(.text-input-field:placeholder-shown:not([placeholder=" "])),
-    &:has(.text-input-field[placeholder]:not(:placeholder-shown)),
-    &:has(.text-input-field:focus:not(:read-only)) {
+    &:has(.text-input-field:placeholder-shown:not([placeholder=" "]), .text-input-field[placeholder]:not(:placeholder-shown), .text-input-field:focus:not(:read-only)) {
       > label {
-        text-overflow: ellipsis;
         white-space: nowrap;
         @include get-font-size("label-small");
 
@@ -439,18 +438,52 @@
 
   .text-area-container {
     position: relative;
-    display: flex;
-    flex-direction: column;
+    display: flex; // removes space under textarea
     min-width: var(--#{$prefix}text-input-min-width);
-
-    padding-top: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-top));
+    padding-top: calc($ouds-text-area-space-padding-block + var(--#{$prefix}font-line-height-label-small) * var(--#{$prefix}font-size-label-small) - var(--#{$prefix}text-input-border-width-top));
     background-color: var(--#{$prefix}text-input-background-color);
-    background-clip: padding-box;
+    background-clip: border-box;
     border-color: var(--#{$prefix}text-input-border-color);
     border-style: solid;
     border-width: var(--#{$prefix}text-input-border-width-top) var(--#{$prefix}text-input-border-width-right) var(--#{$prefix}text-input-border-width-bottom) var(--#{$prefix}text-input-border-width-left);
-    @include get-font-size("label-large");
     @include border-radius(var(--#{$prefix}text-input-border-radius), 0);
+
+    .text-area-field {
+      width: 100%;
+      height: calc(px-to-rem($ouds-text-area-size-min-height-input * 2) + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
+      min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
+      max-height: calc(px-to-rem($ouds-text-area-size-max-height-input) + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
+      padding-top: 0;
+      padding-right: calc($ouds-text-input-space-column-gap-default + $ouds-button-size-min-width + $ouds-text-input-space-padding-inline-trailing-action - var(--#{$prefix}text-input-border-width-right));
+      padding-bottom: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
+      padding-left: calc($ouds-text-input-space-padding-inline-default - var(--#{$prefix}text-input-border-width-left));
+      font-weight: $ouds-font-weight-system-web-moderate;
+      color: var(--#{$prefix}text-input-color);
+      caret-color: var(--#{$prefix}text-input-caret-color);
+      background-color: transparent;
+      border: 0;
+      @include get-font-size("label-large");
+
+      // Disable resize on touch devices
+      @media (pointer: coarse) and (not (any-pointer: fine)) {
+        resize: none;
+      }
+
+      @supports (field-sizing: content) {
+        height: unset;
+        field-sizing: content;  // Not yet baseline, but supported in most browsers
+      }
+
+      &::placeholder {
+        font-weight: $ouds-font-weight-system-web-default;
+      }
+
+      &:focus,
+      &:focus-visible {
+        outline: 0;
+        box-shadow: none;
+      }
+    }
 
     &.text-area-container-outlined {
       --#{$prefix}text-input-background-color: transparent;
@@ -460,14 +493,19 @@
     }
 
     > label {
+      position: absolute;
+      top: 0;
+      left: 0;
       z-index: 2;
+      max-width: 100%;
+      padding-top: calc($ouds-text-area-space-padding-block-top-empty - var(--#{$prefix}text-input-border-width-top));
       padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right));
-      padding-left: calc(#{$ouds-text-input-space-padding-inline-default} - var(--#{$prefix}text-input-border-width-left));
+      padding-left: calc($ouds-text-input-space-padding-inline-default - var(--#{$prefix}text-input-border-width-left));
       overflow: hidden;
       color: var(--#{$prefix}text-input-label-color);
       text-overflow: ellipsis;
-      white-space: nowrap;
-      @include get-font-size("label-small");
+      @include transition(font-size .15s ease-out);
+      @include get-font-size("label-large");
 
       // Allow the whole text-area-container to be clickable to focus the input
       &::before {
@@ -481,54 +519,37 @@
         background-color: transparent;
       }
 
-      // stylelint-disable-next-line selector-no-qualifying-type
+      // stylelint-disable selector-no-qualifying-type
       &.is-required {
-        position: relative;
-        width: fit-content;
-        max-width: 100%;
-        padding-right: 7px;
+        padding-right: calc(5px + $ouds-text-input-space-column-gap-label-small-asterisk + $ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right));
 
         &::after {
-          right: 0;
-          margin-left: 3px;
+          margin-left: $ouds-text-input-space-column-gap-label-small-asterisk;
         }
       }
     }
 
-    .text-area-field {
-      z-index: 3;
-      width: 100%;
-      height: calc(px-to-rem($ouds-text-area-size-min-height-input) * 2 + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
-      min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
-      max-height: px-to-rem($ouds-text-area-size-max-height-input);
-      padding: 0;
-      padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right));
-      padding-bottom: calc(#{$ouds-text-area-space-padding-block} - var(--#{$prefix}text-input-border-width-bottom));
-      padding-left: calc(#{$ouds-text-input-space-padding-inline-default} - var(--#{$prefix}text-input-border-width-left));
-      font-weight: $ouds-font-weight-system-web-moderate;
-      color: var(--#{$prefix}text-input-color);
-      appearance: none;
-      caret-color: var(--#{$prefix}text-input-caret-color);
-      resize: vertical;
-      background-color: transparent;
-      border: 0;
-      box-shadow: none;
+    &:has(label.visually-hidden) {
+      padding-top: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-top));
+    }
 
-      // Disable resize on touch devices
-      @media (pointer: coarse) and (not (any-pointer: fine)) {
-        resize: none;
-      }
+    &:has(.text-area-field:placeholder-shown:not([placeholder=" "]), .text-area-field[placeholder]:not(:placeholder-shown), .text-area-field:focus:not(:read-only)) {
+      &:not(:has(label.visually-hidden)) {
 
-      @supports (field-sizing: content) {
-        height: unset;
-        field-sizing: content;  // Not yet standard, but supported in some browsers
-      }
+        > label {
+          padding-top: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-top));
+          white-space: nowrap;
+          @include get-font-size("label-small");
 
-      &:focus,
-      &:focus-visible {
-        outline: 0;
+          &.is-required {
+            &::after {
+              right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right));
+            }
+          }
+        }
       }
     }
+    // stylelint-enable selector-no-qualifying-type
 
     // Hover state styles
     &:hover:has(.text-area-field:not(:focus, :disabled, :read-only, :user-invalid, [aria-invalid="true"])) {
@@ -547,6 +568,11 @@
         --#{$prefix}text-input-border-width-top: #{$ouds-text-input-border-width-focus};
         --#{$prefix}text-input-border-width-right: #{$ouds-text-input-border-width-focus};
         --#{$prefix}text-input-border-width-left: #{$ouds-text-input-border-width-focus};
+      }
+
+      // Prevent label flickering when input already focused
+      > label {
+        pointer-events: none;
       }
     }
 
@@ -601,17 +627,12 @@
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-enabled);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-enabled);
 
-      .text-area-field,
-      label {
-        padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
-      }
-
       &::after {
         position: absolute;
-        top: calc(px-to-rem($ouds-text-area-size-max-height-assets-container) / 2 + ($ouds-text-area-space-padding-block) - var(--#{$prefix}text-input-border-width-top));
-        right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
+        top: calc($ouds-text-area-space-padding-block-top-empty - var(--#{$prefix}text-input-border-width-top));
+        right: calc($ouds-text-input-space-padding-inline-trailing-action - var(--#{$prefix}text-input-border-width-right));
         width: var(--#{$prefix}text-input-trailing-action-width);
-        height: var(--#{$prefix}text-input-trailing-action-height);
+        height: calc(px-to-rem($ouds-button-size-icon-only) + $ouds-text-area-space-padding-block-empty-trailing-container * 2);
         overflow: hidden;
         font-size: px-to-rem($ouds-button-size-icon-only);
         line-height: 1;
@@ -619,7 +640,6 @@
         content: "";
         background-color: currentcolor;
         mask: escape-svg(var(--#{$prefix}error-icon)) no-repeat 50% / px-to-rem($ouds-button-size-icon-only);
-        transform: translateY(-50%);
       }
 
       &:not(.text-area-container-outlined) {
@@ -651,6 +671,12 @@
 
   .text-area-container:has(.text-area-field:is(:user-invalid, [aria-invalid="true"])) ~ .error-text {
     display: block;
+  }
+
+  &.text-area-no-resize {
+    .text-area-field {
+      resize: none;
+    }
   }
 }
 

@@ -2,11 +2,11 @@
   "files": [
     {
       "path": "./packages/orange/dist/css/ouds-web-bootstrap.css",
-      "maxSize": "85.0 kB"
+      "maxSize": "85.25 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-bootstrap.min.css",
-      "maxSize": "81.0 kB"
+      "maxSize": "81.5 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-grid.css",
@@ -14,11 +14,11 @@
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-grid.min.css",
-      "maxSize": "8.5 kB"
+      "maxSize": "7.25 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-reboot.css",
-      "maxSize": "7.5 kB"
+      "maxSize": "7.75 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-reboot.min.css",
@@ -26,43 +26,43 @@
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-utilities.css",
-      "maxSize": "24.0 kB"
+      "maxSize": "24.25 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-utilities.min.css",
-      "maxSize": "23.0 kB"
+      "maxSize": "23.25 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web.css",
-      "maxSize": "68.5 kB"
+      "maxSize": "68.75 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web.min.css",
-      "maxSize": "64.25 kB"
+      "maxSize": "64.75 kB"
     },
     {
       "path": "./dist/js/ouds-web.bundle.js",
-      "maxSize": "45.5 kB"
+      "maxSize": "44.25 kB"
     },
     {
       "path": "./dist/js/ouds-web.bundle.min.js",
-      "maxSize": "24.75 kB"
+      "maxSize": "24 kB"
     },
     {
       "path": "./dist/js/ouds-web.esm.js",
-      "maxSize": "30.5 kB"
+      "maxSize": "29.5 kB"
     },
     {
       "path": "./dist/js/ouds-web.esm.min.js",
-      "maxSize": "19.75 kB"
+      "maxSize": "19 kB"
     },
     {
       "path": "./dist/js/ouds-web.js",
-      "maxSize": "31.25 kB"
+      "maxSize": "30 kB"
     },
     {
       "path": "./dist/js/ouds-web.min.js",
-      "maxSize": "17.5 kB"
+      "maxSize": "17 kB"
     }
   ],
   "ci": {

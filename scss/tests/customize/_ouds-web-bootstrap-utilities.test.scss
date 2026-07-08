@@ -3510,6 +3510,42 @@ $utilities: ();
 
         /* rtl:end:remove */
 
+        .fs-lxl {
+          max-width: var(--bs-font-max-width-label-xlarge);
+          font-size: var(--bs-font-size-label-xlarge);
+          line-height: var(--bs-font-line-height-label-xlarge);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-label-xlarge);
+        }
+
+        .fs-ll {
+          max-width: var(--bs-font-max-width-label-large);
+          font-size: var(--bs-font-size-label-large);
+          line-height: var(--bs-font-line-height-label-large);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-label-large);
+        }
+
+        .fs-lm {
+          max-width: var(--bs-font-max-width-label-medium);
+          font-size: var(--bs-font-size-label-medium);
+          line-height: var(--bs-font-line-height-label-medium);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-label-medium);
+        }
+
+        .fs-ls {
+          max-width: var(--bs-font-max-width-label-small);
+          font-size: var(--bs-font-size-label-small);
+          line-height: var(--bs-font-line-height-label-small);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-label-small);
+        }
+
         .fs-cm {
           font-size: var(--bs-font-size-code-medium);
           line-height: var(--bs-font-line-height-code-medium);
@@ -15433,6 +15469,42 @@ $utilities: ();
         }
 
         /* rtl:end:remove */
+
+        .fs-lxl {
+          max-width: var(--bs-font-max-width-label-xlarge);
+          font-size: var(--bs-font-size-label-xlarge);
+          line-height: var(--bs-font-line-height-label-xlarge);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-label-xlarge);
+        }
+
+        .fs-ll {
+          max-width: var(--bs-font-max-width-label-large);
+          font-size: var(--bs-font-size-label-large);
+          line-height: var(--bs-font-line-height-label-large);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-label-large);
+        }
+
+        .fs-lm {
+          max-width: var(--bs-font-max-width-label-medium);
+          font-size: var(--bs-font-size-label-medium);
+          line-height: var(--bs-font-line-height-label-medium);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-label-medium);
+        }
+
+        .fs-ls {
+          max-width: var(--bs-font-max-width-label-small);
+          font-size: var(--bs-font-size-label-small);
+          line-height: var(--bs-font-line-height-label-small);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-label-small);
+        }
 
         .fs-cm {
           font-size: var(--bs-font-size-code-medium);
