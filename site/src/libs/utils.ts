@@ -31,6 +31,10 @@ export function getSlug(str: string) {
   return slug(str).replace(/--+/g, '-')
 }
 
+export function getHeadingSlug(str: string) {
+  return str.replace(/-------full-changelog---------------------/g, '')
+}
+
 export function trimLeadingAndTrailingSlashes(str: string) {
   return str.replace(/^\/+|\/+$/g, '')
 }
@@ -50,10 +54,10 @@ export function getComponentSVG(className: string): string {
 }
 
 export function getVersionLink(version: string): string {
-    return `<a class="link icon-link float-end p-none" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/${version}-ouds-web"" target="_blank">
+    return `<a class="link icon-link float-end p-none" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/${version}-ouds-web" target="_blank">
       Full changelog
       <svg class="m-none ms-xsmall" aria-hidden="true">
-        <use xlink:href="/orange/docs/1.3/assets/img/ouds-web-sprite.svg#external-link"/>
+        <use xlink:href="${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#external-link')}"/>
       </svg>
   </a>`
 }
