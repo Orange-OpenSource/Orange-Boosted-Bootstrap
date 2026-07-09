@@ -16,6 +16,9 @@ env:
   NODE: 24
   PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium-browser
 
+permissions:
+  contents: read
+
 jobs:
   pa11y:
     runs-on: ubuntu-latest
