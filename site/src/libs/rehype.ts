@@ -1,7 +1,7 @@
 import type { Root } from 'hast'
 import type { Plugin } from 'unified'
 import { SKIP, visit } from 'unist-util-visit'
-import { getHeadingSlug, isHeading } from './utils.ts'
+import { getHeadingSlug, isHeading } from './utils'
 
 // A rehype plugin to apply CSS classes to tables rendered in markdown (or MDX) files when wrapped in a `<BsTable />`
 // component.
@@ -71,7 +71,7 @@ export const rehypeHeaderLinksOrder: Plugin<[], Root> = function () {
 export const rehypeCustomHeaderSlug: Plugin<[], Root> = function () {
   return function rehypeCustomHeaderSlugPlugin(ast) {
     visit(ast, 'element', (node) => {
-      if (/^h[1-6]$/.test(node.tagName) && typeof node.properties.id === 'string') {
+      if (/^h[1-6]$/.test(node.tagName) && node?.properties?.id && typeof node.properties.id === 'string') {
         node.properties = { ...node.properties, id: getHeadingSlug(node.properties.id) }
       }
     })
