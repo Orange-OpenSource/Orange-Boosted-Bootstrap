@@ -21,7 +21,7 @@ const preview = {
         date: /Date$/i,
       },
     },
-    viewport: { viewports: INITIAL_VIEWPORTS },
+    viewport: { options: INITIAL_VIEWPORTS },
   },
   tags: ['autodocs'],
 };
