@@ -1,18 +1,18 @@
 /*!
-  * OUDS Web v1.3.0 (https://web.unified-design-system.orange.com/)
+  * OUDS Web v1.4.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2015-2026 The OUDS Web Authors
   * Copyright 2015-2026 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap quantity-selector.js v1.3.0 (https://web.unified-design-system.orange.com/)
+  * Bootstrap quantity-selector.js v1.4.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2011-2026 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./base-component.js'), require('./dom/event-handler.js'), require('./dom/selector-engine.js'), require('./util/index.js')) :
-  typeof define === 'function' && define.amd ? define(['./base-component', './dom/event-handler', './dom/selector-engine', './util/index'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.QuantitySelector = factory(global.BaseComponent, global.EventHandler, global.SelectorEngine, global.Index));
-})(this, (function (BaseComponent, EventHandler, SelectorEngine, index_js) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./base-component.js'), require('./dom/event-handler.js'), require('./dom/selector-engine.js')) :
+  typeof define === 'function' && define.amd ? define(['./base-component', './dom/event-handler', './dom/selector-engine'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.QuantitySelector = factory(global.BaseComponent, global.EventHandler, global.SelectorEngine));
+})(this, (function (BaseComponent, EventHandler, SelectorEngine) { 'use strict';
 
   /**
    * --------------------------------------------------------------------------
@@ -106,18 +106,6 @@
         btnUp.setAttribute('disabled', '');
       }
     }
-    static jQueryInterface(config) {
-      return this.each(function () {
-        const data = QuantitySelector.getOrCreateInstance(this, config);
-        if (typeof config !== 'string') {
-          return;
-        }
-        if (typeof data[config] === 'undefined') {
-          throw new TypeError(`No method named "${config}"`);
-        }
-        data[config]();
-      });
-    }
   }
 
   /**
@@ -132,12 +120,6 @@
       QuantitySelector.getOrCreateInstance(el).ValueOnLoad(el);
     }
   });
-
-  /**
-   * jQuery
-   */
-
-  index_js.defineJQueryPlugin(QuantitySelector);
 
   return QuantitySelector;
 
