@@ -6,6 +6,9 @@ on:
      - opened
      - reopened
 
+permissions:
+  contents: read
+
 jobs:
   move_card_to_need_dev_review:
     if: github.event.pull_request.draft == false
