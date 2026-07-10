@@ -99,7 +99,7 @@ The basic structure includes:
 
 The card item is the default item when the item components are used.
 
-Its behavior change once used in a list. Most of the variants can be applied to this kind of item. It comes with a background and a divider by default.
+Its behavior changes once used in a list. Most of the variants can be applied to this kind of item. It comes with a background and a divider by default.
 
 #### List item
 
@@ -672,7 +672,7 @@ Here is a small resume of the slots that can be used in a static item:
 * [Trailing container](#trailing-container) using `.item-slot` (optional)
 * A slot outside of the `.item-main` container, direct child of `.item` using `.item-slot` (optional)
 
-Optionally, if the item is  and a slot is also interactive, you can add `.item-slot-clickable` to the slot.<BrandSpecific brand={['orange', 'orange-compact']}> Please note that the slot won't be [rounded](#rounded-corners) anymore.</BrandSpecific>
+Optionally, if the item is a [navigation item](#navigation-item) and a slot is also interactive, you can add `.item-slot-clickable` to the slot.<BrandSpecific brand={['orange', 'orange-compact']}> Please note that the slot won't be [rounded](#rounded-corners) anymore.</BrandSpecific>
 
 <Example buttonLabel="item using a slot outside of the main content of the item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
@@ -882,10 +882,10 @@ Items can be disabled by using `.disabled` on the element `.item-wrapper` or any
 
 If the item is in a disabled context, the item will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, the `[aria-disabled="true"]` attribute, or the `.disabled` class.
 
-You may handle on your own the [slots](#slot) regarding accessibility and design. For example, if you have a slot with a button, you may want to disable the button to apply the right behavior and the correct visual state.
+You may handle on your own the [slots](#slots) regarding accessibility and design. For example, if you have a slot with a button, you may want to disable the button to apply the right behavior and the correct visual state.
 
 <Callout type="info">
-  The images and videos inside the disabled static item will be grayed out using opacity. You'll still need to handle it correclty from an accessibility point of view.
+  The images and videos inside the disabled static item will be grayed out using opacity. You'll still need to handle it correctly from an accessibility point of view.
 </Callout>
 
 <Example buttonLabel="disabled items" class="d-flex flex-column gap-medium" code={`<div class="disabled">
