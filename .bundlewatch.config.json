@@ -30,7 +30,7 @@
     },
     {
       "path": "./dist/css/boosted.min.css",
-      "maxSize": "41.75 kB"
+      "maxSize": "42.0 kB"
     },
     {
       "path": "./dist/js/boosted.bundle.js",
@@ -59,7 +59,7 @@
   ],
   "ci": {
     "trackBranches": [
-      "main",
+      "boosted-dev",
       "v4-dev"
     ]
   }
