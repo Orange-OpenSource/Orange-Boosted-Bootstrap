@@ -74,8 +74,8 @@
 .item-slot-clickable {
   position: relative;
   z-index: 2;
-  padding: 5px;
-  margin: -5px; // Workaround to handle focus outline correctly
+  padding: calc($focus-visible-outer-width + $focus-visible-inner-width); // Workaround to handle focus outline correctly
+  margin: calc(-1 * ($focus-visible-outer-width + $focus-visible-inner-width));
 }
 
 // Containers
@@ -237,13 +237,13 @@
 }
 
 .item-list { // Needs to be after .use-rounded-corner-items to override the variable
-  --#{$prefix}list-item-border-radius: 0px;
+  --#{$prefix}list-item-border-radius: #{$ouds-border-radius-none};
   --#{$prefix}list-item-bg: transparent;
 
   @include list-unstyled();
   box-sizing: content-box;
-  padding: 5px; // Workaround to handle focus outline correctly
-  margin: -5px;
+  padding: calc($focus-visible-outer-width + $focus-visible-inner-width); // Workaround to handle focus outline correctly
+  margin: calc(-1 * ($focus-visible-outer-width + $focus-visible-inner-width));
 }
 
 .item-bg { // Needs to be after .item-list to override the variable
@@ -352,8 +352,7 @@
     min-height: px-to-rem($ouds-control-item-size-asset-medium);
     content: "";
     background-color: var(--#{$prefix}list-item-disabled-icon-color, var(--#{$prefix}list-item-chevron-color, $ouds-link-color-chevron-enabled));
-    mask-image: var(--#{$prefix}list-item-nav-icon, $list-item-next-icon);
-    mask-position: center;
+    mask: var(--#{$prefix}list-item-nav-icon, $list-item-next-icon) center / contain no-repeat;
   }
 
   &.item-interactive:hover,

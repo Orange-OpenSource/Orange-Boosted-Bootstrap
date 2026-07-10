@@ -1,13 +1,12 @@
 ---
 /*
- * Outputs badge to identify the first version something was added
+ * Outputs a tab for AssetsNavTab.astro.
  */
 interface Props {
   name: string
-  active?: boolean
 }
 
-const { name, active } = Astro.props
+const { name } = Astro.props
 ---
 
 <section data-tab-name={name}>

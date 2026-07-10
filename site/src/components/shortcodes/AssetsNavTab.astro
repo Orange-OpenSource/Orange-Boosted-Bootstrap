@@ -1,6 +1,6 @@
 ---
 /*
- * Outputs badge to identify the first version something was added
+ * Outputs a tabbed navigation wrapper for asset examples.
  */
 interface Props {
   id: string
@@ -66,7 +66,7 @@ while ((match = tabRegex.exec(html)) !== null) {
     const targetTab = document.getElementById(hash)?.closest('.tab-pane')?.getAttribute('aria-labelledby')
     if (targetTab) {
       document.addEventListener('show.bs.tab', (event) => {
-        (event.target as HTMLElement)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        (event.target as HTMLElement)?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' })
       }, { once: true })
       oudsWeb.Tab.getOrCreateInstance(`#${targetTab}`).show()
     }
