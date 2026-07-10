@@ -58,6 +58,7 @@ Read the [Getting started page](https://web.unified-design-system.orange.com/doc
 [![JS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main/dist/js/ouds-web.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/dist/js/ouds-web.min.js)
 [![JS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main/dist/js/ouds-web.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/dist/js/ouds-web.min.js)
 [![JSDelivr](https://data.jsdelivr.com/v1/package/npm/@ouds/web-common/badge)](https://www.jsdelivr.com/package/npm/@ouds/web-common)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/badge)](https://scorecard.dev/viewer/?uri=github.com/Orange-OpenSource/Orange-Boosted-Bootstrap)
 
 ## What’s included
 

@@ -24,6 +24,17 @@ function createDirectoryIfNeeded(path) {
   })
 }
 
+function removeHtmlCommentsCompletely(input) {
+  const htmlCommentPattern = /<!--[\S\s]*?-->/gm
+  let current = input
+  let previous
+  do {
+    previous = current
+    current = current.replace(htmlCommentPattern, '')
+  } while (current !== previous)
+  return current
+}
+
 function createTemplate(component) {
   return `export default {\n\
     title: 'Components/${component}',\n\
@@ -96,7 +107,7 @@ createDirectoryIfNeeded(outputDirectory);
         mdxContent += `<Canvas>\n<Story of={${file[0]}_Stories.${file[0]}_${index}}/>\n</Canvas>\n\n`
 
         // Automatically remove HTML comments that would break the story
-        example[0] = `<div class="${Object.values(example[1]).join(' ')} m-none border-none">${example[0].replace(/<!--[\S\s]*?-->/gm, '').replaceAll('`', '\\`').replaceAll('${', '\\${')}</div>`
+        example[0] = `<div class="${Object.values(example[1]).join(' ')} m-none border-none">${removeHtmlCommentsCompletely(example[0]).replaceAll('`', '\\`').replaceAll('${', '\\${')}</div>`
 
         // Insert some specific JavaScript
         example[0] += '\n<script type="text/javascript">\n  /* global oudsWeb: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>' // Remove links behavior
