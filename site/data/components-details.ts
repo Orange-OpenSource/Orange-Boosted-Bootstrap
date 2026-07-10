@@ -193,23 +193,7 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `<a class="link" href="#">Label</a>`
   },
   {
-    name: 'Static list item',
-    slug: 'static-list-item',
-    link: 'list-item#static-list-item',
-    category: 'Control',
-    snippet: `
-      <div class="item-wrapper w-75">
-        <div class="item">
-          <div class="item-main">
-            <div class="item-text-container">
-              <p class="item-label">Label</p>
-            </div>
-          </div>
-        </div>
-      </div>`
-  },
-  {
-    name: 'Navigation list item',
+    name: 'Navigation card item',
     slug: 'navigation-list-item',
     link: 'list-item#navigation-list-item',
     category: 'Control',
@@ -223,6 +207,24 @@ export const componentsDetails: ComponentCardData[] = [
           </div>
         </div>
       </div>`
+  },
+  {
+    name: 'Navigation list item',
+    slug: 'navigation-list-item',
+    link: 'list-item#navigation-list-item',
+    category: 'Control',
+    snippet: `
+      <ul class="item-list w-75">
+        <li class="item-wrapper item-navigation">
+          <div class="item">
+            <div class="item-main">
+              <div class="item-text-container">
+                <a href="#" class="item-label item-interactive">Label</a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>`
   },
   {
     name: 'Navigation button',
@@ -298,6 +300,40 @@ export const componentsDetails: ComponentCardData[] = [
           <button class="chip-interactive">
             Label
           </button>
+        </li>
+      </ul>`
+  },
+  {
+    name: 'Static card item',
+    slug: 'static-list-item',
+    link: 'list-item#static-list-item',
+    category: 'Control',
+    snippet: `
+      <div class="item-wrapper w-75">
+        <div class="item">
+          <div class="item-main">
+            <div class="item-text-container">
+              <p class="item-label">Label</p>
+            </div>
+          </div>
+        </div>
+      </div>`
+  },
+  {
+    name: 'Static list item',
+    slug: 'static-list-item',
+    link: 'list-item#static-list-item',
+    category: 'Control',
+    snippet: `
+      <ul class="item-list w-75">
+        <li class="item-wrapper">
+          <div class="item">
+            <div class="item-main">
+              <div class="item-text-container">
+                <p class="item-label">Label</p>
+              </div>
+            </div>
+          </div>
         </li>
       </ul>`
   },

@@ -34,7 +34,7 @@ while ((match = tabRegex.exec(html)) !== null) {
           data-bs-target={`#${id}-tab-${tab.kebabName}`}
           type="button"
           role="tab"
-          aria-controls={`#${id}-tab-${tab.kebabName}`}
+          aria-controls={`${id}-tab-${tab.kebabName}`}
           aria-selected={index === 0}
         >
           {tab.name}
