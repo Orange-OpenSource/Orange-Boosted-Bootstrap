@@ -29,7 +29,7 @@ You can find [OUDS components statuses here](https://unified-design-system.orang
   <tbody>
   {
     componentsDetails
-      .filter((component) => !component.excludeFromVersioning )
+      .filter((component) => !component.excludeFromVersioning)
       .map((component) => ({...component, version: getData('_components-versions').find((vers) => vers.name === (component.slug ?? component.name.toLowerCase()))}))
       .map((component) => (
         <tr>
@@ -39,7 +39,7 @@ You can find [OUDS components statuses here](https://unified-design-system.orang
             )}>{component.name}</a>
           </td>
             {
-              !!component.version ?
+              component.version ?
                 <td>
                   <span class="tag tag-info tag-muted">{component.version.value}</span>&nbsp;
                   <a href={`https://r.orange.fr/r/S-ouds-doc-${component.slug ?? component.name.toLowerCase()}_changelog`}>
