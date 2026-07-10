@@ -2,7 +2,7 @@ name: CSS
 on:
   push:
     branches:
-      - ouds/main
+      - main
     paths:
       - "scss/**"
       - "packages/**/scss/**"
@@ -45,6 +45,9 @@ jobs:
 
       - name: Run CSS tests
         run: npm run css-test
+
+      - name: Run CSS snapshot tests
+        run: npm run css-snapshot-test
 
       # Check that there are no stylelint multiline comments (e.g. /* stylelint-disable */)
       - name: Check built CSS files
