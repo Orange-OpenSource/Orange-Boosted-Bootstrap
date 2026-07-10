@@ -12592,10 +12592,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
   min-height: 1.75rem;
   content: "";
   background-color: var(--bs-list-item-disabled-icon-color, var(--bs-list-item-chevron-color, var(--bs-color-content-brand-primary)));
-  -webkit-mask-image: var(--bs-list-item-nav-icon, url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='m10.461 18.1 6.235-6.1-6.235-6.1L8.68 7.642 13.134 12 8.68 16.356l1.781 1.744Z'/></svg>"));
-  mask-image: var(--bs-list-item-nav-icon, url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='m10.461 18.1 6.235-6.1-6.235-6.1L8.68 7.642 13.134 12 8.68 16.356l1.781 1.744Z'/></svg>"));
-  -webkit-mask-position: center;
-  mask-position: center;
+  -webkit-mask: var(--bs-list-item-nav-icon, url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='m10.461 18.1 6.235-6.1-6.235-6.1L8.68 7.642 13.134 12 8.68 16.356l1.781 1.744Z'/></svg>")) center/contain no-repeat;
+  mask: var(--bs-list-item-nav-icon, url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='m10.461 18.1 6.235-6.1-6.235-6.1L8.68 7.642 13.134 12 8.68 16.356l1.781 1.744Z'/></svg>")) center/contain no-repeat;
 }
 .item-navigation.item-interactive:hover, .item-navigation:has(.item-interactive:hover) {
   --bs-list-item-chevron-color: var(--bs-color-action-hover);
