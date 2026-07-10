@@ -3,7 +3,7 @@ name: cspell
 on:
   push:
     branches:
-      - ouds/main
+      - main
   pull_request:
     types: [opened, reopened, synchronize]
   workflow_dispatch:

@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2015-2026 Orange SA
  * Copyright (c) 2015-2026 The OUDS Web Authors
- * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  */
 
 'use strict'

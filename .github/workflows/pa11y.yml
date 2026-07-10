@@ -2,7 +2,7 @@ name: Pa11y
 on:
   push:
     branches:
-      - ouds/main
+      - main
     paths:
       - 'js/**'
       - 'scss/**'
