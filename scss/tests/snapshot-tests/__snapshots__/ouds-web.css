@@ -3989,6 +3989,7 @@ textarea.form-control-lg {
   font-size: 28px;
   line-height: 1;
   color: var(--bs-control-item-label-color);
+  pointer-events: none;
   background-color: currentcolor;
   -webkit-mask: var(--bs-error-icon) no-repeat center;
   mask: var(--bs-error-icon) no-repeat center;
