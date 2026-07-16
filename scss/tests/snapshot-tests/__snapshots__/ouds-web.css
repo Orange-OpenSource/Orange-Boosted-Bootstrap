@@ -3,7 +3,7 @@
  * OUDS Web  v1.4.0 (https://web.unified-design-system.orange.com/)
  * Copyright 2014-2026 The OUDS Web Authors
  * Copyright 2014-2026 Orange SA
- * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
  * Bootstrap  v5.3.5 (https://getbootstrap.com/)
  * Copyright 2011-2026 The Bootstrap Authors
@@ -1434,12 +1434,14 @@ dialog,
 .list-unstyled {
   max-width: initial;
   padding-left: 0;
+  margin-bottom: 0;
   list-style: none;
 }
 
 .list-inline {
   max-width: initial;
   padding-left: 0;
+  margin-bottom: 0;
   list-style: none;
 }
 
@@ -3881,6 +3883,7 @@ textarea.form-control-lg {
 .checkbox-item-container {
   max-width: initial;
   padding-left: 0;
+  margin-bottom: 0;
   list-style: none;
   margin: 0;
 }
@@ -6271,6 +6274,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .chips-container {
   max-width: initial;
   padding-left: 0;
+  margin-bottom: 0;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -7352,11 +7356,11 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
   max-width: initial;
   padding-left: 0;
+  margin-bottom: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
   padding: var(--bs-navbar-nav-padding-top) var(--bs-navbar-nav-padding-x) var(--bs-navbar-nav-padding-bottom);
-  margin-bottom: 0;
   font-size: var(--bs-navbar-nav-font-size);
   line-height: var(--bs-navbar-nav-line-height, var(--bs-font-line-height-body-medium));
   letter-spacing: var(--bs-navbar-nav-letter-spacing, var(--bs-font-letter-spacing-body-medium));
@@ -8683,6 +8687,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-breadcrumb-item-gap: 4px;
   max-width: initial;
   padding-left: 0;
+  margin-bottom: 0;
   list-style: none;
   display: flex;
   font-size: var(--bs-font-size-label-medium);
@@ -8785,12 +8790,13 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-pagination-icon-width: calc(0.5rem + 1px);
   --bs-pagination-icon-height: calc(1rem - 1px);
   display: flex;
+  max-width: initial;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
   flex-wrap: wrap;
   margin: var(--bs-pagination-margin-y) 0;
   background-color: transparent;
-  max-width: initial;
-  padding-left: 0;
-  list-style: none;
 }
 
 .page-link {
