@@ -113,6 +113,7 @@
     font-size: $ouds-control-item-size-icon;
     line-height: 1;
     color: var(--#{$prefix}control-item-label-color);
+    pointer-events: none;
     background-color: currentcolor;
     mask: var(--#{$prefix}error-icon) no-repeat center;
   }
