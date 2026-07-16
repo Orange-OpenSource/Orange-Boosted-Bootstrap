@@ -14,6 +14,10 @@ OUDS components are first designed on Figma and then developed on each platform 
 
 This is why we list the "design version" of every components in our documentation, this way you can check if we have parity with the component available for the designers. To find the global changelog for a particular component (and its current Figma version), please go to the component specification page (see below) and go to the Changelog tab. As components' design versions are fixed for a specific OUDS Web version, you might need to update the library to benefit from the updated component.
 
+<Callout type="info" title="Draft components">
+  Some components are marked as draft because they have not been designed yet. They are available in OUDS Web to speed up development but are subject to change in the future.
+</Callout>
+
 You can find [OUDS components statuses here](https://unified-design-system.orange.com/472794e18/p/73c701-components).
 
 <table class="table">
@@ -29,8 +33,8 @@ You can find [OUDS components statuses here](https://unified-design-system.orang
   <tbody>
   {
     componentsDetails
+      .filter((component) => !component.excludeFromVersioning)
       .map((component) => ({...component, version: getData('_components-versions').find((vers) => vers.name === (component.slug ?? component.name.toLowerCase()))}))
-      .filter((component) => component.version) // drops components that are not in components-versions.yml like Icon
       .map((component) => (
         <tr>
           <td>
@@ -38,12 +42,15 @@ You can find [OUDS components statuses here](https://unified-design-system.orang
               `/components/${component.link ?? component.slug ?? component.name.toLowerCase()}`
             )}>{component.name}</a>
           </td>
-          <td>
-            <span class="tag tag-info tag-muted">{component.version.value}</span>&nbsp;
-            <a href={`https://r.orange.fr/r/S-ouds-doc-${component.slug ?? component.name.toLowerCase()}_changelog`}>
-              changelog<span class="visually-hidden">for {component.name}</span>
-            </a>
-          </td>
+            {
+              component.version ?
+                <td>
+                  <span class="tag tag-info tag-muted">{component.version.value}</span>&nbsp;
+                  <a href={`https://r.orange.fr/r/S-ouds-doc-${component.slug ?? component.name.toLowerCase()}_changelog`}>
+            changelog<span class="visually-hidden">for {component.name}</span></a>
+                </td> :
+                <td><span class="tag tag-warning tag-muted">draft</span></td>
+            }
         </tr>
       ))
   }

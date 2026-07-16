@@ -166,7 +166,8 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <svg class="text-status-accent decorative-small-icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-      </svg>`
+      </svg>`,
+    excludeFromVersioning: true
   },
   {
     name: 'Inline alert',
