@@ -1,9 +1,9 @@
 // Lists
 
-// Unstyled keeps list items block level, just removes default browser padding and list-style
+// Unstyled keeps list items block level, just removes default browser padding, margin bottom, and list-style
 @mixin list-unstyled {
   max-width: initial;
   padding-left: 0;
-  margin-bottom: 0;
+  margin-bottom: 0; // OUDS mod
   list-style: none;
 }
