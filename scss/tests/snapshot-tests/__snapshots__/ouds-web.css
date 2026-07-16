@@ -4860,13 +4860,13 @@ textarea.form-control-lg {
   padding-left: calc(var(--bs-text-input-padding-x) - var(--bs-text-input-border-width-left));
   font-weight: 500;
   color: var(--bs-color-content-default);
+  text-overflow: ellipsis;
   -webkit-appearance: none;
   appearance: none;
   background-color: var(--bs-text-input-background-color);
   border-color: var(--bs-text-input-border-color);
   border-style: solid;
   border-width: var(--bs-text-input-border-width-top) var(--bs-text-input-border-width-right) var(--bs-text-input-border-width-bottom) var(--bs-text-input-border-width-left);
-  text-overflow: ellipsis;
   border-radius: var(--bs-text-input-border-radius);
 }
 .select-input-field:hover {
