@@ -16,7 +16,7 @@ export function generateToc(allHeadings: MarkdownHeading[], types?: string[]) {
       continue
     }
 
-    if (hasComponentTypes && heading.depth === 2 && types?.includes(heading.text)) {
+    if (hasComponentTypes && types?.includes(heading.text)) {
       heading.text = `[[comp]] ${heading.text}`
     }
 
