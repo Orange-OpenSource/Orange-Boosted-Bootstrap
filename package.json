@@ -138,7 +138,7 @@
     "image-size": "^2.0.2",
     "ip": "^2.0.0",
     "jasmine": "^5.9.0",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.2.0",
     "karma": "^6.4.4",
     "karma-browserstack-launcher": "1.4.0",
     "karma-chrome-launcher": "^3.2.0",
