@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2015-2026 Orange SA
  * Copyright (c) 2015-2026 The OUDS Web Authors
- * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  */
 
 'use strict'
@@ -22,6 +22,17 @@ function createDirectoryIfNeeded(path) {
       throw new Error(error)
     }
   })
+}
+
+function removeHtmlCommentsCompletely(input) {
+  const htmlCommentPattern = /<!--[\S\s]*?-->/gm
+  let current = input
+  let previous
+  do {
+    previous = current
+    current = current.replace(htmlCommentPattern, '')
+  } while (current !== previous)
+  return current
 }
 
 function createTemplate(component) {
@@ -96,7 +107,7 @@ createDirectoryIfNeeded(outputDirectory);
         mdxContent += `<Canvas>\n<Story of={${file[0]}_Stories.${file[0]}_${index}}/>\n</Canvas>\n\n`
 
         // Automatically remove HTML comments that would break the story
-        example[0] = `<div class="${Object.values(example[1]).join(' ')} m-none border-none">${example[0].replace(/<!--[\S\s]*?-->/gm, '').replaceAll('`', '\\`').replaceAll('${', '\\${')}</div>`
+        example[0] = `<div class="${Object.values(example[1]).join(' ')} m-none border-none">${removeHtmlCommentsCompletely(example[0]).replaceAll('`', '\\`').replaceAll('${', '\\${')}</div>`
 
         // Insert some specific JavaScript
         example[0] += '\n<script type="text/javascript">\n  /* global oudsWeb: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>' // Remove links behavior

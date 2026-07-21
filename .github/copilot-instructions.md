@@ -11,7 +11,7 @@ applyTo: "**"
 | Key | Value |
 |---|---|
 | Version | 1.1.0 |
-| Main branch | `ouds/main` |
+| Main branch | `main` |
 | CSS prefix | `--bs-` (via `$prefix`) |
 | Build | `npm run dist` |
 | Lint | `npm run lint` |
