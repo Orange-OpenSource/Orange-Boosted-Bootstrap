@@ -270,7 +270,7 @@ class ScrollSpy extends BaseComponent {
 
     const sentinel = document.createElement('div')
     sentinel.setAttribute('aria-hidden', 'true')
-    sentinel.style.cssText = 'position:absolute;bottom:50px;width:0;height:0;margin:0;padding:0;border:0;visibility:hidden;'
+    sentinel.style.cssText = 'position:relative;width:0;height:1px;margin:0;padding:0;border:0;visibility:hidden;'
     this._element.append(sentinel)
     this._sentinel = sentinel
 
