@@ -33,8 +33,11 @@ const CLASS_NAME_ACTIVE = 'active'
 
 const SELECTOR_DATA_SPY = '[data-bs-spy="scroll"]'
 const SELECTOR_TARGET_LINKS = '[href]'
-const SELECTOR_NAV_LIST_GROUP = '.nav, .list-group'
-const SELECTOR_NAV_LINKS = '.nav-link'
+// OUDS mod @todo https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3711
+// we set these to ul and a to handle our TOC structure but for the final ScrollSpy
+// we should determine what is the best way to handle this
+const SELECTOR_NAV_LIST_GROUP = 'ul, .list-group'
+const SELECTOR_NAV_LINKS = 'a'
 const SELECTOR_NAV_ITEMS = '.nav-item'
 const SELECTOR_LIST_ITEMS = '.list-group-item'
 const SELECTOR_LINK_ITEMS = `${SELECTOR_NAV_LINKS}, ${SELECTOR_NAV_ITEMS} > ${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ITEMS}`
