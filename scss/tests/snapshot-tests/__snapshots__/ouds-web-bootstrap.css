@@ -6958,7 +6958,6 @@ textarea.form-control-lg {
   max-height: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
   pointer-events: none;
   transform: translate(0, -50%);
   transition: font-size 0.15s ease-in-out, top 0.15s ease-out;
