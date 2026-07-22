@@ -10,7 +10,7 @@
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-default};
   --#{$prefix}tag-icon-padding: #{$ouds-tag-space-inset-icon-default};
   --#{$prefix}tag-bullet-padding: #{$ouds-tag-space-inset-bullet-default};
-  --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-loader-default};
+  --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-progress-indicator-default};
   --#{$prefix}tag-font-size-icon: #{$ouds-font-size-label-medium};
   --#{$prefix}tag-color: #{$ouds-color-content-inverse};
   --#{$prefix}tag-border-width: 0px;
@@ -237,7 +237,7 @@
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-small};
   --#{$prefix}tag-icon-padding: #{$ouds-tag-space-inset-icon-small};
   --#{$prefix}tag-bullet-padding: #{$ouds-tag-space-inset-bullet-small};
-  --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-loader-small};
+  --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-progress-indicator-small};
   --#{$prefix}tag-font-size-icon: #{$ouds-font-size-label-small};
   @include get-font-size("label-small");
   font-weight: $ouds-font-weight-web-label-moderate;

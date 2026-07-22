@@ -42,7 +42,7 @@
       @extend %link-properties;
       display: inline-block;
       min-width: #{$ouds-link-size-min-width-small};
-      padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
+      padding: $ouds-link-space-padding-block-default $ouds-link-space-padding-inline;
       overflow: hidden;
       text-overflow: ellipsis;
     }

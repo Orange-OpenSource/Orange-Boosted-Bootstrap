@@ -1,11 +1,16 @@
 // Components custom properties applications
 // OUDS Core tokens version 1.10.0
 // Sosh Core tokens version 1.4.0
-// Sosh System tokens version 2.5.0
+// Sosh System tokens version 2.6.0
 
 // scss-docs-start ouds-all-component-css-color
 // scss-docs-start ouds-component-css-color
 @include color-mode(light, true) {
+  --#{$prefix}link-mono-color-content-enabled: #{$core-ouds-color-functional-black};
+  --#{$prefix}link-mono-color-content-hover: #{$core-ouds-color-functional-black};
+  --#{$prefix}link-mono-color-content-pressed: #{$core-sosh-color-opacity-black-520};
+  --#{$prefix}link-mono-color-content-disabled: #{$core-sosh-color-opacity-black-280};
+  --#{$prefix}link-mono-color-content-focus: #{$core-ouds-color-functional-black};
   --#{$prefix}button-color-bg-brand-pressed: #{$core-sosh-color-raspberry-500};
   --#{$prefix}button-color-bg-brand-loading: #{$core-sosh-color-raspberry-500};
   --#{$prefix}button-color-content-brand-pressed: #{$core-ouds-color-functional-white};
@@ -43,32 +48,36 @@
   --#{$prefix}button-mono-color-content-strong-focus: #{$core-ouds-color-functional-white};
   --#{$prefix}button-mono-color-border-default-enabled: #{$core-ouds-color-functional-black};
   --#{$prefix}button-mono-color-border-default-disabled: #{$core-sosh-color-opacity-black-280};
-  --#{$prefix}icon-color-content-status-warning-external-shape: #{$core-sosh-color-turbo-500};
-  --#{$prefix}icon-color-content-status-warning-internal-shape: #{$core-sosh-color-turbo-750};
-  --#{$prefix}icon-color-content-status-warning-inverse-external-shape: #{$core-sosh-color-turbo-300};
   --#{$prefix}switch-color-cursor: #{$core-ouds-color-functional-white};
   --#{$prefix}switch-color-track-selected: #{$core-sosh-color-lochmara-dark-240};
   --#{$prefix}switch-color-track-selected-interaction: #{$core-sosh-color-lochmara-dark-480};
   --#{$prefix}switch-color-track-unselected: #{$core-sosh-color-opacity-black-440};
   --#{$prefix}switch-color-track-unselected-interaction: #{$core-sosh-color-opacity-black-520};
-  --#{$prefix}progress-indicator-color-bg: #{$core-ouds-color-functional-gray-light-400};
-  --#{$prefix}link-mono-color-content-enabled: #{$core-ouds-color-functional-black};
-  --#{$prefix}link-mono-color-content-hover: #{$core-ouds-color-functional-black};
-  --#{$prefix}link-mono-color-content-pressed: #{$core-sosh-color-opacity-black-520};
-  --#{$prefix}link-mono-color-content-disabled: #{$core-sosh-color-opacity-black-280};
-  --#{$prefix}link-mono-color-content-focus: #{$core-ouds-color-functional-black};
+  --#{$prefix}progress-indicator-color-content-track: #{$core-ouds-color-functional-gray-light-400};
+  --#{$prefix}progress-indicator-mono-color-content-track: #{$core-ouds-color-functional-gray-light-400};
+  --#{$prefix}progress-indicator-mono-color-content-indicator: #{$core-ouds-color-functional-black};
+  --#{$prefix}icon-color-content-status-warning-external-shape: #{$core-sosh-color-turbo-500};
+  --#{$prefix}icon-color-content-status-warning-internal-shape: #{$core-sosh-color-turbo-750};
+  --#{$prefix}icon-color-content-status-warning-inverse-external-shape: #{$core-sosh-color-turbo-300};
+  --#{$prefix}link-color-chevron-hover: #{$ouds-color-action-hover-light}; // deprecated
+  --#{$prefix}link-color-chevron-pressed: #{$ouds-color-action-pressed-light}; // deprecated
+  --#{$prefix}link-color-chevron-focus: #{$ouds-color-action-focus-light}; // deprecated
   --#{$prefix}button-color-bg-brand-enabled: #{$ouds-color-surface-brand-secondary-light};
+  --#{$prefix}list-item-color-bg-hover: #{$ouds-color-action-support-hover-light}; // deprecated
+  --#{$prefix}list-item-color-bg-pressed: #{$ouds-color-action-support-pressed-light}; // deprecated
+  --#{$prefix}list-item-color-bg-loading: #{$ouds-color-action-support-loading-light}; // deprecated
+  --#{$prefix}list-item-color-bg-focus: #{$ouds-color-action-support-focus-light}; // deprecated
+  --#{$prefix}list-item-color-content-loader: #{$ouds-color-content-default-light}; // deprecated
   --#{$prefix}icon-color-content-status-warning-inverse-internal-shape: #{$ouds-color-opacity-transparent-dark};
-  --#{$prefix}control-item-color-bg-hover: #{$ouds-color-action-support-hover-light}; // Deprecated
-  --#{$prefix}control-item-color-bg-pressed: #{$ouds-color-action-support-pressed-light}; // Deprecated
-  --#{$prefix}control-item-color-bg-loading: #{$ouds-color-action-support-loading-light}; // Deprecated
-  --#{$prefix}control-item-color-bg-focus: #{$ouds-color-action-support-focus-light}; // Deprecated
-  --#{$prefix}control-item-color-content-loader: #{$ouds-color-content-default-light}; // Deprecated
-  --#{$prefix}link-color-chevron-hover: #{$ouds-color-content-brand-primary-light};
 }
 // scss-docs-end ouds-component-css-color
 
 @include color-mode(dark, true) {
+  --#{$prefix}link-mono-color-content-enabled: #{$core-ouds-color-functional-white};
+  --#{$prefix}link-mono-color-content-hover: #{$core-ouds-color-functional-white};
+  --#{$prefix}link-mono-color-content-pressed: #{$core-sosh-color-opacity-white-800};
+  --#{$prefix}link-mono-color-content-disabled: #{$core-sosh-color-opacity-white-440};
+  --#{$prefix}link-mono-color-content-focus: #{$core-ouds-color-functional-white};
   --#{$prefix}button-color-bg-brand-pressed: #{$core-sosh-color-lochmara-light-640};
   --#{$prefix}button-color-bg-brand-loading: #{$core-sosh-color-lochmara-light-640};
   --#{$prefix}button-color-content-brand-pressed: #{$core-ouds-color-functional-black};
@@ -106,27 +115,26 @@
   --#{$prefix}button-mono-color-content-strong-focus: #{$core-ouds-color-functional-black};
   --#{$prefix}button-mono-color-border-default-enabled: #{$core-ouds-color-functional-white};
   --#{$prefix}button-mono-color-border-default-disabled: #{$core-sosh-color-opacity-white-440};
-  --#{$prefix}icon-color-content-status-warning-external-shape: #{$core-sosh-color-turbo-300};
-  --#{$prefix}icon-color-content-status-warning-internal-shape: #{$ouds-color-opacity-transparent-dark};
-  --#{$prefix}icon-color-content-status-warning-inverse-external-shape: #{$core-sosh-color-turbo-500};
   --#{$prefix}switch-color-cursor: #{$core-sosh-color-functional-gray-dark-880};
   --#{$prefix}switch-color-track-selected: #{$core-sosh-color-lochmara-light-640};
   --#{$prefix}switch-color-track-selected-interaction: #{$core-sosh-color-lochmara-light-80};
   --#{$prefix}switch-color-track-unselected: #{$core-sosh-color-opacity-white-640};
   --#{$prefix}switch-color-track-unselected-interaction: #{$core-sosh-color-opacity-white-800};
-  --#{$prefix}progress-indicator-color-bg: #{$core-ouds-color-functional-gray-dark-480};
-  --#{$prefix}link-mono-color-content-enabled: #{$core-ouds-color-functional-white};
-  --#{$prefix}link-mono-color-content-hover: #{$core-ouds-color-functional-white};
-  --#{$prefix}link-mono-color-content-pressed: #{$core-sosh-color-opacity-white-800};
-  --#{$prefix}link-mono-color-content-disabled: #{$core-sosh-color-opacity-white-440};
-  --#{$prefix}link-mono-color-content-focus: #{$core-ouds-color-functional-white};
+  --#{$prefix}progress-indicator-color-content-track: #{$core-ouds-color-functional-gray-dark-480};
+  --#{$prefix}progress-indicator-mono-color-content-track: #{$core-ouds-color-functional-gray-dark-480};
+  --#{$prefix}progress-indicator-mono-color-content-indicator: #{$core-ouds-color-functional-white};
+  --#{$prefix}icon-color-content-status-warning-external-shape: #{$core-sosh-color-turbo-300};
+  --#{$prefix}icon-color-content-status-warning-internal-shape: #{$ouds-color-opacity-transparent-dark};
+  --#{$prefix}icon-color-content-status-warning-inverse-external-shape: #{$core-sosh-color-turbo-500};
+  --#{$prefix}link-color-chevron-hover: #{$ouds-color-action-hover-dark}; // deprecated
+  --#{$prefix}link-color-chevron-pressed: #{$ouds-color-action-pressed-dark}; // deprecated
+  --#{$prefix}link-color-chevron-focus: #{$ouds-color-action-focus-dark}; // deprecated
   --#{$prefix}button-color-bg-brand-enabled: #{$ouds-color-surface-brand-tertiary-dark};
+  --#{$prefix}list-item-color-bg-hover: #{$ouds-color-action-support-hover-dark}; // deprecated
+  --#{$prefix}list-item-color-bg-pressed: #{$ouds-color-action-support-pressed-dark}; // deprecated
+  --#{$prefix}list-item-color-bg-loading: #{$ouds-color-action-support-loading-dark}; // deprecated
+  --#{$prefix}list-item-color-bg-focus: #{$ouds-color-action-support-focus-dark}; // deprecated
+  --#{$prefix}list-item-color-content-loader: #{$ouds-color-content-default-dark}; // deprecated
   --#{$prefix}icon-color-content-status-warning-inverse-internal-shape: #{$core-sosh-color-turbo-750};
-  --#{$prefix}control-item-color-bg-hover: #{$ouds-color-action-support-hover-dark}; // Deprecated
-  --#{$prefix}control-item-color-bg-pressed: #{$ouds-color-action-support-pressed-dark}; // Deprecated
-  --#{$prefix}control-item-color-bg-loading: #{$ouds-color-action-support-loading-dark}; // Deprecated
-  --#{$prefix}control-item-color-bg-focus: #{$ouds-color-action-support-focus-dark}; // Deprecated
-  --#{$prefix}control-item-color-content-loader: #{$ouds-color-content-default-dark}; // Deprecated
-  --#{$prefix}link-color-chevron-hover: #{$ouds-color-action-enabled-dark};
 }
 // scss-docs-end ouds-all-component-css-color

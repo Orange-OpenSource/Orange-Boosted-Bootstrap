@@ -27,8 +27,8 @@
 
   --#{$prefix}text-input-icon-size: #{$ouds-text-input-size-leading-icon};
 
-  --#{$prefix}text-input-trailing-action-width: #{$ouds-button-size-min-width};
-  --#{$prefix}text-input-trailing-action-height: #{$ouds-button-size-max-height-icon-only};
+  --#{$prefix}text-input-trailing-action-width: #{$ouds-button-size-min-width-default};
+  --#{$prefix}text-input-trailing-action-height: #{$ouds-button-size-max-size-icon-only-default};
   --#{$prefix}text-input-trailing-action-padding-right: #{$ouds-text-input-space-padding-inline-trailing-action};
 
   --#{$prefix}text-input-label-color: var(--#{$prefix}color-content-muted);
@@ -319,7 +319,7 @@
 
       &:has(> button),
       &:has(.loading-indeterminate, .loading-determinate) {
-        padding-right: calc($ouds-button-size-icon-only + var(--#{$prefix}text-input-column-gap-trailing-error) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
+        padding-right: calc($ouds-button-size-icon-only-default + var(--#{$prefix}text-input-column-gap-trailing-error) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
       }
 
       &::after {
@@ -329,18 +329,18 @@
         width: var(--#{$prefix}text-input-trailing-action-width);
         height: var(--#{$prefix}text-input-trailing-action-height);
         overflow: hidden;
-        font-size: px-to-rem($ouds-button-size-icon-only);
+        font-size: px-to-rem($ouds-button-size-icon-only-default);
         line-height: 1;
         color: var(--#{$prefix}text-input-label-color);
         content: "";
         background-color: currentcolor;
-        mask: var(--#{$prefix}error-icon) no-repeat 50% / px-to-rem($ouds-button-size-icon-only);
+        mask: var(--#{$prefix}error-icon) no-repeat 50% / px-to-rem($ouds-button-size-icon-only-default);
       }
 
       &:has(> button)::after,
       &:has(.loading-indeterminate, .loading-determinate)::after {
         right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap-trailing-error) - var(--#{$prefix}text-input-border-width-left));
-        width: px-to-rem($ouds-button-size-icon-only);
+        width: px-to-rem($ouds-button-size-icon-only-default);
       }
 
       &:not(.text-input-container-outlined) {
@@ -362,11 +362,11 @@
     .loader {
       position: absolute;
       top: 50%;
-      right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) + $ouds-button-space-inset-icon-only);
+      right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) + $ouds-button-space-inset-icon-only-default);
       left: auto;
       display: none;
-      width: px-to-rem($ouds-button-size-loader);
-      height: px-to-rem($ouds-button-size-loader);
+      width: px-to-rem($ouds-button-size-progress-indicator-default);
+      height: px-to-rem($ouds-button-size-progress-indicator-default);
       pointer-events: none;
       transform: translate(0, -50%) rotate(-90deg);
 
@@ -454,7 +454,7 @@
       min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
       max-height: calc(px-to-rem($ouds-text-area-size-max-height-input) + $ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
       padding-top: 0;
-      padding-right: calc($ouds-text-input-space-column-gap-default + $ouds-button-size-min-width + $ouds-text-input-space-padding-inline-trailing-action - var(--#{$prefix}text-input-border-width-right));
+      padding-right: calc($ouds-text-input-space-column-gap-default + $ouds-button-size-min-width-default + $ouds-text-input-space-padding-inline-trailing-action - var(--#{$prefix}text-input-border-width-right));
       padding-bottom: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom));
       padding-left: calc($ouds-text-input-space-padding-inline-default - var(--#{$prefix}text-input-border-width-left));
       font-weight: $ouds-font-weight-system-web-moderate;
@@ -632,14 +632,14 @@
         top: calc($ouds-text-area-space-padding-block-top-empty - var(--#{$prefix}text-input-border-width-top));
         right: calc($ouds-text-input-space-padding-inline-trailing-action - var(--#{$prefix}text-input-border-width-right));
         width: var(--#{$prefix}text-input-trailing-action-width);
-        height: calc(px-to-rem($ouds-button-size-icon-only) + $ouds-text-area-space-padding-block-empty-trailing-container * 2);
+        height: calc(px-to-rem($ouds-button-size-icon-only-default) + $ouds-text-area-space-padding-block-empty-trailing-container * 2);
         overflow: hidden;
-        font-size: px-to-rem($ouds-button-size-icon-only);
+        font-size: px-to-rem($ouds-button-size-icon-only-default);
         line-height: 1;
         color: var(--#{$prefix}text-input-label-color);
         content: "";
         background-color: currentcolor;
-        mask: escape-svg(var(--#{$prefix}error-icon)) no-repeat 50% / px-to-rem($ouds-button-size-icon-only);
+        mask: escape-svg(var(--#{$prefix}error-icon)) no-repeat 50% / px-to-rem($ouds-button-size-icon-only-default);
       }
 
       &:not(.text-area-container-outlined) {

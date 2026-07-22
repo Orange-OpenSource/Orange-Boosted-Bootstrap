@@ -2,7 +2,7 @@
 // Depends on raw primitive values
 // OUDS Core tokens version 1.10.0
 // Orange Compact Core tokens version 1.2.0
-// Orange Compact System tokens version 2.5.0
+// Orange Compact System tokens version 2.6.0
 
 // Border
 
@@ -126,6 +126,14 @@ $ouds-color-action-support-pressed-dark: $core-ouds-color-opacity-white-120 !def
 $ouds-color-action-support-pressed-light: $core-ouds-color-opacity-black-120 !default;
 $ouds-color-action-visited-dark: $core-ouds-color-functional-amethyst-400 !default;
 $ouds-color-action-visited-light: $core-ouds-color-functional-amethyst-600 !default;
+$ouds-color-ai-primary-dark: $core-orange-color-orange-500 !default;
+$ouds-color-ai-primary-light: $core-orange-color-orange-550 !default;
+$ouds-color-ai-quaternary-dark: $core-orange-color-decorative-sky-400 !default;
+$ouds-color-ai-quaternary-light: $core-orange-color-decorative-sky-400 !default;
+$ouds-color-ai-secondary-dark: $core-orange-color-decorative-shocking-pink-200 !default;
+$ouds-color-ai-secondary-light: $core-orange-color-decorative-shocking-pink-200 !default;
+$ouds-color-ai-tertiary-dark: $core-orange-color-decorative-amethyst-400 !default;
+$ouds-color-ai-tertiary-light: $core-orange-color-decorative-amethyst-400 !default;
 $ouds-color-always-black: $core-ouds-color-functional-black !default;
 $ouds-color-always-on-black: $core-ouds-color-functional-gray-light-160 !default;
 $ouds-color-always-on-white: $core-ouds-color-functional-black !default;
@@ -152,8 +160,8 @@ $ouds-color-border-focus-inset-light: $core-ouds-color-functional-white !default
 $ouds-color-border-focus-light: $core-ouds-color-functional-black !default;
 $ouds-color-border-minimal-dark: $core-ouds-color-opacity-white-40 !default;
 $ouds-color-border-minimal-light: $core-ouds-color-opacity-black-40 !default;
-$ouds-color-border-muted-dark: $core-ouds-color-opacity-white-80 !default;
-$ouds-color-border-muted-light: $core-ouds-color-opacity-black-80 !default;
+$ouds-color-border-muted-dark: $core-ouds-color-opacity-white-120 !default;
+$ouds-color-border-muted-light: $core-ouds-color-opacity-black-120 !default;
 $ouds-color-border-on-brand-primary-dark: $core-ouds-color-functional-black !default;
 $ouds-color-border-on-brand-primary-light: $core-ouds-color-functional-black !default;
 $ouds-color-border-status-accent-dark: $core-orange-color-orange-500 !default;
@@ -237,6 +245,8 @@ $ouds-color-opacity-lower-light: $core-ouds-color-opacity-black-80 !default;
 $ouds-color-opacity-lowest-dark: $core-ouds-color-opacity-white-40 !default;
 $ouds-color-opacity-lowest-light: $core-ouds-color-opacity-black-40 !default;
 $ouds-color-opacity-transparent-dark: $core-ouds-color-opacity-white-0 !default;
+$ouds-color-opacity-transparent-inverse-dark: $core-ouds-color-opacity-black-0 !default;
+$ouds-color-opacity-transparent-inverse-light: $core-ouds-color-opacity-white-0 !default;
 $ouds-color-opacity-transparent-light: $core-ouds-color-opacity-black-0 !default;
 $ouds-color-overlay-backdrop-dark: $core-ouds-color-opacity-black-680 !default;
 $ouds-color-overlay-backdrop-light: $core-ouds-color-opacity-black-680 !default;
@@ -244,6 +254,8 @@ $ouds-color-overlay-drag-dark: $core-ouds-color-opacity-white-80 !default;
 $ouds-color-overlay-drag-light: $core-ouds-color-opacity-black-40 !default;
 $ouds-color-overlay-dropdown-dark: $core-ouds-color-functional-gray-dark-560 !default;
 $ouds-color-overlay-dropdown-light: $core-ouds-color-functional-white !default;
+$ouds-color-overlay-floating-dark: $core-ouds-color-functional-gray-dark-560 !default;
+$ouds-color-overlay-floating-light: $core-ouds-color-functional-white !default;
 $ouds-color-overlay-modal-sheet-dark: $core-ouds-color-functional-gray-dark-720 !default;
 $ouds-color-overlay-modal-sheet-light: $core-ouds-color-functional-white !default;
 $ouds-color-overlay-tooltip-dark: $core-ouds-color-functional-gray-dark-560 !default;
@@ -341,8 +353,8 @@ $ouds-elevation-color-raised-light: $core-ouds-color-opacity-black-240 !default;
 $ouds-elevation-color-sticky-dark: $core-ouds-color-opacity-black-160 !default;
 $ouds-elevation-color-sticky-light: $core-ouds-color-opacity-black-160 !default;
 $ouds-elevation-spread-drag: $core-ouds-elevation-spread-n100 !default;
-$ouds-elevation-spread-elevated: $core-ouds-elevation-spread-n100 !default;
-$ouds-elevation-spread-emphasized: $core-ouds-elevation-spread-n300 !default;
+$ouds-elevation-spread-elevated: $core-ouds-elevation-spread-0 !default;
+$ouds-elevation-spread-emphasized: $core-ouds-elevation-spread-n200 !default;
 $ouds-elevation-spread-none: $core-ouds-elevation-spread-0 !default;
 $ouds-elevation-spread-raised: $core-ouds-elevation-spread-0 !default;
 $ouds-elevation-spread-sticky: $core-ouds-elevation-spread-n100 !default;
@@ -663,7 +675,9 @@ $ouds-size-max-width-label-small-tablet: $core-ouds-dimension-6000 !default;
 $ouds-size-max-width-label-xlarge-desktop: $core-ouds-dimension-7000 !default;
 $ouds-size-max-width-label-xlarge-mobile: $core-ouds-dimension-6000 !default;
 $ouds-size-max-width-label-xlarge-tablet: $core-ouds-dimension-6000 !default;
-$ouds-size-min-interactive-area: $core-ouds-dimension-500 !default;
+$ouds-size-min-interactive-area-default: $core-ouds-dimension-500 !default;
+$ouds-size-min-interactive-area-small: $core-ouds-dimension-450 !default;
+$ouds-size-min-interactive-area-smallest: $core-ouds-dimension-300 !default;
 $ouds-size-icon-decorative-2xlarge: $ouds-dimension-6xlarge !default;
 $ouds-size-icon-decorative-2xsmall: $ouds-dimension-4xsmall !default;
 $ouds-size-icon-decorative-3xsmall: $ouds-dimension-5xsmall !default;
@@ -717,16 +731,17 @@ $ouds-space-column-gap-small: $ouds-dimension-8xsmall !default;
 $ouds-space-column-gap-xlarge: $ouds-dimension-4xsmall !default;
 $ouds-space-column-gap-xsmall: $ouds-dimension-9xsmall !default;
 $ouds-space-inset-2xlarge: $ouds-dimension-xsmall !default;
-$ouds-space-inset-2xsmall: $ouds-dimension-10xsmall !default;
+$ouds-space-inset-2xsmall: $ouds-dimension-9xsmall !default;
 $ouds-space-inset-3xlarge: $ouds-dimension-medium !default;
-$ouds-space-inset-3xsmall: $ouds-dimension-11xsmall !default;
-$ouds-space-inset-4xsmall: $ouds-dimension-12xsmall !default;
+$ouds-space-inset-3xsmall: $ouds-dimension-10xsmall !default;
+$ouds-space-inset-4xsmall: $ouds-dimension-11xsmall !default;
+$ouds-space-inset-5xsmall: $ouds-dimension-12xsmall !default;
 $ouds-space-inset-large: $ouds-dimension-5xsmall !default;
 $ouds-space-inset-medium: $ouds-dimension-6xsmall !default;
 $ouds-space-inset-none: $ouds-dimension-none !default;
-$ouds-space-inset-small: $ouds-dimension-8xsmall !default;
+$ouds-space-inset-small: $ouds-dimension-7xsmall !default;
 $ouds-space-inset-xlarge: $ouds-dimension-3xsmall !default;
-$ouds-space-inset-xsmall: $ouds-dimension-9xsmall !default;
+$ouds-space-inset-xsmall: $ouds-dimension-8xsmall !default;
 $ouds-space-padding-block-2xlarge: $ouds-dimension-3xsmall !default;
 $ouds-space-padding-block-2xsmall: $ouds-dimension-9xsmall !default;
 $ouds-space-padding-block-3xlarge: $ouds-dimension-2xsmall !default;

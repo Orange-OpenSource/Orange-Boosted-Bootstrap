@@ -65,7 +65,7 @@
 .select-input-field:is(:user-invalid, [aria-invalid="true"]) {
   --#{$prefix}text-input-background-color: #{$ouds-color-surface-status-negative-muted};
   --#{$prefix}text-input-border-color: #{$ouds-color-action-negative-enabled};
-  padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-right) + var(--#{$prefix}text-input-column-gap) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap-trailing-error) + px-to-rem($ouds-button-size-icon-only));
+  padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-right) + var(--#{$prefix}text-input-column-gap) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap-trailing-error) + px-to-rem($ouds-button-size-icon-only-default));
 
   &:hover {
     --#{$prefix}text-input-border-color: #{$ouds-color-action-negative-hover};
@@ -95,14 +95,14 @@
   &::after {
     position: absolute;
     top: 50%;
-    right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) + $ouds-button-space-inset-icon-only);
+    right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) + $ouds-button-space-inset-icon-only-default);
     display: block;
-    width: px-to-rem($ouds-button-size-icon-only);
-    height: px-to-rem($ouds-button-size-icon-only);
+    width: px-to-rem($ouds-button-size-icon-only-default);
+    height: px-to-rem($ouds-button-size-icon-only-default);
     pointer-events: none;
     content: "";
     background-color: var(--#{$prefix}color-content-default);
-    mask: $select-input-chevron no-repeat 50% / px-to-rem($ouds-button-size-icon-only);
+    mask: $select-input-chevron no-repeat 50% / px-to-rem($ouds-button-size-icon-only-default);
     transform: translate(0, -50%);
   }
 
@@ -174,11 +174,11 @@
   .loader {
     position: absolute;
     top: 50%;
-    right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) + $ouds-button-space-inset-icon-only);
+    right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) + $ouds-button-space-inset-icon-only-default);
     left: auto;
     display: none;
-    width: px-to-rem($ouds-button-size-loader);
-    height: px-to-rem($ouds-button-size-loader);
+    width: px-to-rem($ouds-button-size-progress-indicator-default);
+    height: px-to-rem($ouds-button-size-progress-indicator-default);
     pointer-events: none;
     transform: translate(0, -50%) rotate(-90deg);
 
@@ -226,12 +226,12 @@
     right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-trailing-action-padding-right) + var(--#{$prefix}text-input-column-gap-trailing-error));
     z-index: 5;
     display: block;
-    width: px-to-rem($ouds-button-size-icon-only);
-    height: px-to-rem($ouds-button-size-icon-only);
+    width: px-to-rem($ouds-button-size-icon-only-default);
+    height: px-to-rem($ouds-button-size-icon-only-default);
     pointer-events: none;
     content: "";
     background-color: currentcolor;
-    mask: var(--#{$prefix}error-icon) no-repeat 50% / px-to-rem($ouds-button-size-icon-only);
+    mask: var(--#{$prefix}error-icon) no-repeat 50% / px-to-rem($ouds-button-size-icon-only-default);
     transform: translate(0, -50%);
   }
 
@@ -249,7 +249,7 @@
   }
 
   > label {
-    max-width: calc(100% - var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-trailing-action-width) - var(--#{$prefix}text-input-column-gap) - px-to-rem($ouds-button-size-icon-only) - var(--#{$prefix}text-input-column-gap-trailing-error));
+    max-width: calc(100% - var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-trailing-action-width) - var(--#{$prefix}text-input-column-gap) - px-to-rem($ouds-button-size-icon-only-default) - var(--#{$prefix}text-input-column-gap-trailing-error));
   }
 
   ~ .helper-text {
