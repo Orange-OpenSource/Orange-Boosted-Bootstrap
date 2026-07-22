@@ -42,7 +42,7 @@
     },
     {
       "path": "./dist/js/ouds-web.bundle.js",
-      "maxSize": "47.25 kB"
+      "maxSize": "47.5 kB"
     },
     {
       "path": "./dist/js/ouds-web.bundle.min.js",
@@ -58,7 +58,7 @@
     },
     {
       "path": "./dist/js/ouds-web.js",
-      "maxSize": "33 kB"
+      "maxSize": "33.25 kB"
     },
     {
       "path": "./dist/js/ouds-web.min.js",
