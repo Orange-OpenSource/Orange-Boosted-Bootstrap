@@ -32,7 +32,9 @@ The `.text-brand-primary` color on dark background (`#ff7900`) can be used in an
 
 Here are some compliant combinations examples for texts:
 
-<Example code={[...allTokens.filter(token => token.name.match(/\$ouds-color-content-/) && !token.name.match(/-action-/) && token.name.match(/-light/) && token.compiledValue).map(token => {
+<Example code={[...allTokens
+  .filter(token => token.name.match(/\$ouds-color-content-/) && !token.name.match(/-action-/) && !token.name.match(/-inverse-/) && token.name.match(/-light/) && token.compiledValue)
+  .map(token => {
     if (token.name.match(/-on-/)) {
       return `<p class="bg-surface-${token.name.split('-').slice(4, -1).join('-')} text-${token.name.split('-').slice(3, -1).join('-')} p-small fs-hl">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
     }
