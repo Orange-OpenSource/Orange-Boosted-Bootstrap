@@ -3551,8 +3551,8 @@ dialog,
 }
 .table tr .radio-button-standalone,
 .table tr .checkbox-standalone {
-  width: -moz-available;
   width: -webkit-fill-available;
+  width: -moz-available;
   width: stretch;
 }
 .table svg,
