@@ -5422,8 +5422,8 @@ dialog,
 }
 .table tr .radio-button-standalone,
 .table tr .checkbox-standalone {
-  width: -webkit-fill-available;
   width: -moz-available;
+  width: -webkit-fill-available;
   width: stretch;
 }
 .table svg,
@@ -11622,6 +11622,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   gap: 4px;
   align-items: flex-start;
   justify-content: center;
+  width: 20%;
   min-height: 48px;
   padding-block: 12px;
 }
@@ -11630,6 +11631,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .alert-text-container > * {
   margin-bottom: 0;

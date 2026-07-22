@@ -97,6 +97,7 @@
   gap: $ouds-alert-space-row-gap-action;
   align-items: flex-start;
   justify-content: center; // To handle weird edge cases in de-zoom one line title alert
+  width: 20%;
   min-height: $ouds-alert-size-min-height; // To handle weird edge cases in de-zoom one line title alert
   padding-block: $ouds-alert-space-padding-block;
 }
@@ -105,6 +106,7 @@
   display: flex;
   flex-direction: column;
   gap: $ouds-alert-space-row-gap;
+  width: 100%;
 
   > * { // To handle any content inside this text-container.
     margin-bottom: 0;
