@@ -122,5 +122,5 @@ export function getData<TType extends DataType>(type: TType): z.infer<(typeof da
   }
 }
 
-type DataType = keyof typeof dataDefinitions
+export type DataType = keyof typeof dataDefinitions
 type DataSchema = z.ZodTypeAny

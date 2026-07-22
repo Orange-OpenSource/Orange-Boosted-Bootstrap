@@ -1,22 +1,23 @@
 ---
-import { getData } from '@libs/data'
+import { getData, type DataType } from '@libs/data'
 import { getConfig } from '@libs/config'
 import { docsPages } from '@libs/content'
 import { getSlug } from '@libs/utils'
 import { getVersionedDocsPath } from '@libs/path'
+import type { zSidebar } from '@libs/validation'
+import type z from 'zod'
 
 const slug = Astro.url.pathname.split('/')[4]
 
-const sidebarMap = {
-  'getting-started': 'getting-started',
-  foundation: 'foundation',
-  components: 'components',
-  utilities: 'utilities',
-  layout: 'layout',
-  about: ''
+const sidebars = ['getting-started', 'foundation', 'components', 'utilities', 'layout'] as const
+type Sidebar = z.infer<typeof zSidebar>
+
+let sidebar:Sidebar = []
+
+if(slug && sidebars.includes(slug as typeof sidebars[number])) {
+  sidebar = getData(`sidebar-${slug}` as DataType) as Sidebar
 }
 
-const sidebar = sidebarMap[slug] ? getData(`sidebar-${sidebarMap[slug]}`) : []
 ---
 
 <nav class="bd-links w-100" id="bd-docs-nav" aria-labelledby="docs-nav">
@@ -65,7 +66,7 @@ const sidebar = sidebarMap[slug] ? getData(`sidebar-${sidebarMap[slug]}`) : []
                     // This test should not be necessary, see comments for `getSlug()` in `src/libs/utils.ts`.
                     if (!page.direct_url && !generatedPage) {
                       throw new Error(
-                        `The page '${page.title}' referenced in 'site/data/sidebar${sidebarMap[slug]}.yml' does not exist at '${url}'.`
+                        `The page '${page.title}' referenced in 'site/data/sidebar-${slug}.yml' does not exist at '${url}'.`
                       )
                     }
 
