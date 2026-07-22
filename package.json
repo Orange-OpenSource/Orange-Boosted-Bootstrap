@@ -40,7 +40,7 @@
     "css-lint": "npm-run-all --aggregate-output --continue-on-error --parallel css-lint-*",
     "css-lint-stylelint": "stylelint \"**/*.{css,scss}\" --ignore-pattern \"__snapshots__\" --cache --cache-location .cache/.stylelintcache",
     "css-prefix-examples": "postcss --config build/postcss.config.mjs --replace \"site/src/assets/examples/**/*.css\"",
-    "css-snapshot-refresh": "npm run css && cp packages/orange/dist/css/ouds-web.css scss/tests/snapshot-tests/__snapshots__/ouds-web.css && cp packages/orange/dist/css/ouds-web-bootstrap.css scss/tests/snapshot-tests/__snapshots__/ouds-web-bootstrap.css && git restore packages/*/dist",
+    "css-snapshot-refresh": "npm run css-dev-orange && cp packages/orange/dist/css/ouds-web.css scss/tests/snapshot-tests/__snapshots__/ouds-web.css && cp packages/orange/dist/css/ouds-web-bootstrap.css scss/tests/snapshot-tests/__snapshots__/ouds-web-bootstrap.css && git restore packages/orange/dist",
     "css-test": "jasmine --config=scss/tests/jasmine.js",
     "css-snapshot-test": "vitest --config=scss/tests/snapshot-tests/vitest.config.ts",
     "js": "npm-run-all js-compile js-minify",

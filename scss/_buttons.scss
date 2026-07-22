@@ -46,13 +46,13 @@
   // Additional OUDS variables
   --#{$prefix}btn-padding-start: #{$btn-padding-x};
   --#{$prefix}btn-padding-end: #{$btn-padding-x};
-  --#{$prefix}btn-min-width: #{$ouds-button-size-min-width};
-  --#{$prefix}btn-min-height: #{$ouds-button-size-min-height};
+  --#{$prefix}btn-min-width: #{$ouds-button-size-min-width-default};
+  --#{$prefix}btn-min-height: #{$ouds-button-size-min-height-default};
   --#{$prefix}btn-interaction-border-width: #{$btn-border-width};
-  --#{$prefix}btn-icon-size: #{$ouds-button-size-icon};
-  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon};
+  --#{$prefix}btn-icon-size: #{$ouds-button-size-icon-default};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon-default};
   --#{$prefix}btn-focus-border-color: var(--#{$prefix}btn-hover-border-color);
-  --#{$prefix}btn-loading-size: #{px-to-rem($ouds-button-size-loader)};
+  --#{$prefix}btn-loading-size: #{px-to-rem($ouds-button-size-progress-indicator-default)};
   --#{$prefix}btn-loading-dasharray: 96;
   --#{$prefix}btn-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
   // End mod
@@ -196,19 +196,19 @@
   &:has(svg:not(.loader)),
   &:has(img:not(.loader)),
   &:has(.icon:not(.loader)) {
-    --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start};
-    --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end};
+    --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start-default};
+    --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end-default};
   }
 
   // icon button (icon only, without text)
   &.btn-icon.btn-icon { // Double the class selector to artificially increase the selector's specificity
-    --#{$prefix}btn-padding-start: #{$ouds-button-space-inset-icon-only};
-    --#{$prefix}btn-padding-end: #{$ouds-button-space-inset-icon-only};
-    --#{$prefix}btn-padding-y: #{$ouds-button-space-inset-icon-only};
+    --#{$prefix}btn-padding-start: #{$ouds-button-space-inset-icon-only-default};
+    --#{$prefix}btn-padding-end: #{$ouds-button-space-inset-icon-only-default};
+    --#{$prefix}btn-padding-y: #{$ouds-button-space-inset-icon-only-default};
     --#{$prefix}btn-icon-gap: 0;
-    --#{$prefix}btn-icon-size: #{px-to-rem($ouds-button-size-icon-only)};
+    --#{$prefix}btn-icon-size: #{px-to-rem($ouds-button-size-icon-only-default)};
 
-    max-height: $ouds-button-size-max-height-icon-only;
+    max-height: $ouds-button-size-max-size-icon-only-default;
   }
   // End mod
 }
@@ -493,8 +493,8 @@
 //
 
 .btn-previous {
-  --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-chevron-start};
-  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-end-icon-start};
+  --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-chevron-start-default};
+  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-end-icon-start-default};
 
   &::before {
     content: "";
@@ -502,13 +502,13 @@
   }
 
   &:not(.btn-icon)::before {
-    margin-right: $ouds-button-space-column-gap-chevron;
+    margin-right: $ouds-button-space-column-gap-chevron-default;
   }
 }
 
 .btn-next {
-  --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-start-icon-end};
-  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-chevron-end};
+  --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-start-icon-end-default};
+  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-chevron-end-default};
 
   &::after {
     content: "";
@@ -516,7 +516,7 @@
   }
 
   &:not(.btn-icon)::after {
-    margin-left: $ouds-button-space-column-gap-chevron;
+    margin-left: $ouds-button-space-column-gap-chevron-default;
   }
 }
 

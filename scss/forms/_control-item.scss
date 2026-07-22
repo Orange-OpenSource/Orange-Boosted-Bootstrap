@@ -18,7 +18,7 @@
 }
 
 .control-item-error-message {
-  padding: $ouds-control-item-space-padding-block-top-helper-text $ouds-control-item-space-padding-inline 0;
+  padding: $ouds-list-item-space-padding-block-top-helper-text $ouds-list-item-space-padding-inline 0;
   color: var(--#{$prefix}color-content-status-negative);
   @include get-font-size("label-medium");
 }
@@ -29,20 +29,20 @@
 
 %control-item {
   --#{$prefix}control-item-label-color: #{$ouds-color-content-default};
-  --#{$prefix}control-item-error-icon-offset: #{$ouds-control-item-space-padding-inline + $ouds-control-item-space-padding-inline-error-icon};
+  --#{$prefix}control-item-error-icon-offset: #{$ouds-list-item-space-padding-inline + $ouds-list-item-space-padding-inline-error-icon};
   --#{$prefix}control-item-error-icon-offset-right: var(--#{$prefix}control-item-error-icon-offset);
   --#{$prefix}control-item-error-icon-offset-left: unset;
 
   position: relative;
   display: flex;
-  gap: $ouds-control-item-space-column-gap;
-  min-width: px-to-rem($ouds-control-item-size-min-width);
+  gap: $ouds-list-item-space-column-gap;
+  min-width: px-to-rem($ouds-list-item-size-min-width);
   min-height: $form-check-min-height;
-  padding: $ouds-control-item-space-padding-block-default $ouds-control-item-space-padding-inline;
-  @include border-radius($ouds-control-item-border-radius-default);
+  padding: $ouds-list-item-space-padding-block-default $ouds-list-item-space-padding-inline;
+  @include border-radius($ouds-list-item-border-radius-default);
 
   &.component-max-width {
-    max-width: px-to-rem($ouds-control-item-size-max-width);
+    max-width: px-to-rem($ouds-list-item-size-max-width);
   }
 
   // Handle focus
@@ -72,14 +72,14 @@
   &:has(input:hover),
   &:has(input:focus-visible),
   &:has(input:active) {
-    background-color: $ouds-control-item-color-bg-hover;
+    background-color: $ouds-list-item-color-bg-hover;
   }
 
   // Handle invalid state
   &:has(input:is([aria-invalid="true"], :user-invalid)) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
 
-    padding-right: #{$ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
+    padding-right: #{$ouds-list-item-space-padding-inline + $ouds-list-item-size-icon + $ouds-list-item-space-column-gap};
 
     .control-item-assets-container:last-child {
       display: none;
@@ -104,13 +104,13 @@
 
   &::after {
     position: absolute;
-    top: $ouds-control-item-space-padding-block-default;
+    top: $ouds-list-item-space-padding-block-default;
     right: var(--#{$prefix}control-item-error-icon-offset-right);
     left: var(--#{$prefix}control-item-error-icon-offset-left);
-    width: $ouds-control-item-size-icon - 2 * $ouds-control-item-space-padding-inline-error-icon;
-    height: calc(100% - 2 * $ouds-control-item-space-padding-block-default);
-    max-height: px-to-rem($ouds-control-item-size-max-height-assets-container);
-    font-size: $ouds-control-item-size-icon;
+    width: $ouds-list-item-size-icon - 2 * $ouds-list-item-space-padding-inline-error-icon;
+    height: calc(100% - 2 * $ouds-list-item-space-padding-block-default);
+    max-height: px-to-rem($ouds-list-item-size-max-height-assets-container);
+    font-size: $ouds-list-item-size-icon;
     line-height: 1;
     color: var(--#{$prefix}control-item-label-color);
     background-color: currentcolor;
@@ -127,7 +127,7 @@
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  max-height: px-to-rem($ouds-control-item-size-max-height-assets-container);
+  max-height: px-to-rem($ouds-list-item-size-max-height-assets-container);
 
   svg,
   img,
@@ -135,7 +135,7 @@
     width: 1em;
     height: 1em;
     overflow: hidden;
-    font-size: $ouds-control-item-size-icon;
+    font-size: $ouds-list-item-size-icon;
     line-height: 1;
   }
 }
@@ -144,7 +144,7 @@
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  row-gap: $ouds-control-item-space-row-gap;
+  row-gap: $ouds-list-item-space-row-gap;
   justify-content: center;
 }
 
@@ -398,7 +398,7 @@
 //
 
 .control-item-divider {
-  padding-bottom: calc($ouds-control-item-space-padding-block-default - $ouds-divider-border-width);
+  padding-bottom: calc($ouds-list-item-space-padding-block-default - $ouds-divider-border-width);
   border-bottom: $ouds-divider-border-width solid $ouds-color-border-default;
 
   &:has(input:is([aria-invalid="true"], :user-invalid)) {
@@ -413,8 +413,8 @@
     --#{$prefix}control-item-error-icon-offset-right: unset;
     --#{$prefix}control-item-error-icon-offset-left: var(--#{$prefix}control-item-error-icon-offset);
 
-    padding-right: $ouds-control-item-space-padding-inline;
-    padding-left: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap);
+    padding-right: $ouds-list-item-space-padding-inline;
+    padding-left: calc($ouds-list-item-space-padding-inline + $ouds-list-item-size-icon + $ouds-list-item-space-column-gap);
   }
 }
 
@@ -557,7 +557,7 @@
   justify-content: center;
   min-width: $ouds-checkbox-size-min-width;
   min-height: $ouds-checkbox-size-min-height;
-  @include border-radius($ouds-control-item-border-radius-item-only);
+  @include border-radius($ouds-list-item-border-radius-item-only);
 }
 
 
@@ -597,12 +597,12 @@
   &:hover,
   &:active,
   &:has(input:checked) {
-    padding-block: calc($ouds-control-item-space-padding-block-default - $ouds-divider-border-width);
-    padding-inline: calc($ouds-control-item-space-padding-inline - $ouds-divider-border-width);
+    padding-block: calc($ouds-list-item-space-padding-block-default - $ouds-divider-border-width);
+    padding-inline: calc($ouds-list-item-space-padding-inline - $ouds-divider-border-width);
     border: $ouds-divider-border-width solid $ouds-color-border-default;
 
     &:has(input:is([aria-invalid="true"], :user-invalid)) {
-      --#{$prefix}control-item-error-icon-offset: #{$ouds-control-item-space-padding-inline + $ouds-control-item-space-padding-inline-error-icon - $ouds-divider-border-width};
+      --#{$prefix}control-item-error-icon-offset: #{$ouds-list-item-space-padding-inline + $ouds-list-item-space-padding-inline-error-icon - $ouds-divider-border-width};
     }
   }
 
@@ -631,7 +631,7 @@
   }
 
   &:has(input:focus-visible) {
-    padding: $ouds-control-item-space-padding-block-default $ouds-control-item-space-padding-inline;
+    padding: $ouds-list-item-space-padding-block-default $ouds-list-item-space-padding-inline;
     border-width: 0;
   }
 }
@@ -650,8 +650,8 @@
     --#{$prefix}control-item-error-icon-offset-right: unset;
     --#{$prefix}control-item-error-icon-offset-left: var(--#{$prefix}control-item-error-icon-offset);
 
-    padding-right: $ouds-control-item-space-padding-inline;
-    padding-left: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap);
+    padding-right: $ouds-list-item-space-padding-inline;
+    padding-left: calc($ouds-list-item-space-padding-inline + $ouds-list-item-size-icon + $ouds-list-item-space-column-gap);
   }
 
   &.control-item-reverse {
@@ -661,8 +661,8 @@
       --#{$prefix}control-item-error-icon-offset-right: var(--#{$prefix}control-item-error-icon-offset);
       --#{$prefix}control-item-error-icon-offset-left: unset;
 
-      padding-right: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap);
-      padding-left: $ouds-control-item-space-padding-inline;
+      padding-right: calc($ouds-list-item-space-padding-inline + $ouds-list-item-size-icon + $ouds-list-item-space-column-gap);
+      padding-left: $ouds-list-item-space-padding-inline;
     }
   }
 }
