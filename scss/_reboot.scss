@@ -627,7 +627,7 @@ fieldset {
   min-inline-size: 0; // 1
   padding: 0; // 2
   margin: 0; // 2
-  border: 0; // 2
+  border: unset; // 2
 }
 
 // 1. By using `float: left`, the legend will behave like a block element.

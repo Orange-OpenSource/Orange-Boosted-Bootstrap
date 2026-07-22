@@ -15,6 +15,7 @@ export declare global {
   export const Code: typeof import('@shortcodes/Code.astro').default
   export const ColorTable: typeof import('@shortcodes/ColorTable.astro').default
   export const ComponentCard: typeof import('@shortcodes/ComponentCard.astro').default
+  export const ComponentFinder: typeof import('@shortcodes/ComponentFinder.astro').default
   export const DeprecatedIn: typeof import('@shortcodes/DeprecatedIn.astro').default
   export const Details: typeof import('@shortcodes/Details.astro').default
   export const EnableBtnCloseTooltip: typeof import('@shortcodes/EnableBtnCloseTooltip.astro').default
