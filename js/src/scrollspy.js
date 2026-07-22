@@ -147,7 +147,11 @@ class ScrollSpy extends BaseComponent {
 
   // Private
   _configAfterMerge(config) {
-    config.target = getElement(config.target) || document.body
+    config.target = getElement(config.target)
+
+    if (!config.target) {
+      throw new TypeError(`${this.constructor.NAME.toUpperCase()}: Option "target" is required and must be an existing element.`)
+    }
 
     if (typeof config.threshold === 'string') {
       config.threshold = config.threshold.split(',').map(value => Number.parseFloat(value))
@@ -266,7 +270,7 @@ class ScrollSpy extends BaseComponent {
 
     const sentinel = document.createElement('div')
     sentinel.setAttribute('aria-hidden', 'true')
-    sentinel.style.cssText = 'position:relative;width:0;height:0;margin:0;padding:0;border:0;visibility:hidden;'
+    sentinel.style.cssText = 'position:absolute;bottom:50px;width:0;height:0;margin:0;padding:0;border:0;visibility:hidden;'
     this._element.append(sentinel)
     this._sentinel = sentinel
 
