@@ -1,7 +1,7 @@
 // Semantic custom properties applications
 // OUDS Core tokens version 1.10.0
 // Sosh Core tokens version 1.4.0
-// Sosh System tokens version 2.5.0
+// Sosh System tokens version 2.6.0
 
 // scss-docs-start ouds-all-semantic-css-color
 // scss-docs-start ouds-semantic-css-color
@@ -28,6 +28,10 @@
   --#{$prefix}color-action-support-loading: #{$ouds-color-action-support-loading-light};
   --#{$prefix}color-action-support-pressed: #{$ouds-color-action-support-pressed-light};
   --#{$prefix}color-action-visited: #{$ouds-color-action-visited-light};
+  --#{$prefix}color-ai-primary: #{$ouds-color-ai-primary-light};
+  --#{$prefix}color-ai-quaternary: #{$ouds-color-ai-quaternary-light};
+  --#{$prefix}color-ai-secondary: #{$ouds-color-ai-secondary-light};
+  --#{$prefix}color-ai-tertiary: #{$ouds-color-ai-tertiary-light};
   --#{$prefix}color-always-black: #{$ouds-color-always-black};
   --#{$prefix}color-always-on-black: #{$ouds-color-always-on-black};
   --#{$prefix}color-always-on-white: #{$ouds-color-always-on-white};
@@ -93,10 +97,12 @@
   --#{$prefix}color-content-status-warning: #{$ouds-color-content-status-warning-light};
   --#{$prefix}color-opacity-lower: #{$ouds-color-opacity-lower-light};
   --#{$prefix}color-opacity-lowest: #{$ouds-color-opacity-lowest-light};
+  --#{$prefix}color-opacity-transparent-inverse: #{$ouds-color-opacity-transparent-inverse-light};
   --#{$prefix}color-opacity-transparent: #{$ouds-color-opacity-transparent-light};
   --#{$prefix}color-overlay-backdrop: #{$ouds-color-overlay-backdrop-light};
   --#{$prefix}color-overlay-drag: #{$ouds-color-overlay-drag-light};
   --#{$prefix}color-overlay-dropdown: #{$ouds-color-overlay-dropdown-light};
+  --#{$prefix}color-overlay-floating: #{$ouds-color-overlay-floating-light};
   --#{$prefix}color-overlay-modal-sheet: #{$ouds-color-overlay-modal-sheet-light};
   --#{$prefix}color-overlay-tooltip: #{$ouds-color-overlay-tooltip-light};
   --#{$prefix}color-surface-brand-primary: #{$ouds-color-surface-brand-primary-light};
@@ -149,6 +155,10 @@
   --#{$prefix}color-action-support-loading: #{$ouds-color-action-support-loading-dark};
   --#{$prefix}color-action-support-pressed: #{$ouds-color-action-support-pressed-dark};
   --#{$prefix}color-action-visited: #{$ouds-color-action-visited-dark};
+  --#{$prefix}color-ai-primary: #{$ouds-color-ai-primary-dark};
+  --#{$prefix}color-ai-quaternary: #{$ouds-color-ai-quaternary-dark};
+  --#{$prefix}color-ai-secondary: #{$ouds-color-ai-secondary-dark};
+  --#{$prefix}color-ai-tertiary: #{$ouds-color-ai-tertiary-dark};
   --#{$prefix}color-bg-inverse-high: #{$ouds-color-bg-inverse-high-dark};
   --#{$prefix}color-bg-inverse-low: #{$ouds-color-bg-inverse-low-dark};
   --#{$prefix}color-bg-primary: #{$ouds-color-bg-primary-dark};
@@ -211,9 +221,11 @@
   --#{$prefix}color-opacity-lower: #{$ouds-color-opacity-lower-dark};
   --#{$prefix}color-opacity-lowest: #{$ouds-color-opacity-lowest-dark};
   --#{$prefix}color-opacity-transparent: #{$ouds-color-opacity-transparent-dark};
+  --#{$prefix}color-opacity-transparent-inverse: #{$ouds-color-opacity-transparent-inverse-dark};
   --#{$prefix}color-overlay-backdrop: #{$ouds-color-overlay-backdrop-dark};
   --#{$prefix}color-overlay-drag: #{$ouds-color-overlay-drag-dark};
   --#{$prefix}color-overlay-dropdown: #{$ouds-color-overlay-dropdown-dark};
+  --#{$prefix}color-overlay-floating: #{$ouds-color-overlay-floating-dark};
   --#{$prefix}color-overlay-modal-sheet: #{$ouds-color-overlay-modal-sheet-dark};
   --#{$prefix}color-overlay-tooltip: #{$ouds-color-overlay-tooltip-dark};
   --#{$prefix}color-surface-brand-primary: #{$ouds-color-surface-brand-primary-dark};
@@ -264,6 +276,10 @@ $ouds-color-action-support-hover: var(--#{$prefix}color-action-support-hover) !d
 $ouds-color-action-support-loading: var(--#{$prefix}color-action-support-loading) !default;
 $ouds-color-action-support-pressed: var(--#{$prefix}color-action-support-pressed) !default;
 $ouds-color-action-visited: var(--#{$prefix}color-action-visited) !default;
+$ouds-color-ai-primary: var(--#{$prefix}color-ai-primary) !default;
+$ouds-color-ai-quaternary: var(--#{$prefix}color-ai-quaternary) !default;
+$ouds-color-ai-secondary: var(--#{$prefix}color-ai-secondary) !default;
+$ouds-color-ai-tertiary: var(--#{$prefix}color-ai-tertiary) !default;
 $ouds-color-always-black: var(--#{$prefix}color-always-black) !default;
 $ouds-color-always-on-black: var(--#{$prefix}color-always-on-black) !default;
 $ouds-color-always-on-white: var(--#{$prefix}color-always-on-white) !default;
@@ -329,10 +345,12 @@ $ouds-color-content-status-positive: var(--#{$prefix}color-content-status-positi
 $ouds-color-content-status-warning: var(--#{$prefix}color-content-status-warning) !default;
 $ouds-color-opacity-lower: var(--#{$prefix}color-opacity-lower) !default;
 $ouds-color-opacity-lowest: var(--#{$prefix}color-opacity-lowest) !default;
+$ouds-color-opacity-transparent-inverse: var(--#{$prefix}color-opacity-transparent-inverse) !default;
 $ouds-color-opacity-transparent: var(--#{$prefix}color-opacity-transparent) !default;
 $ouds-color-overlay-backdrop: var(--#{$prefix}color-overlay-backdrop) !default;
 $ouds-color-overlay-drag: var(--#{$prefix}color-overlay-drag) !default;
 $ouds-color-overlay-dropdown: var(--#{$prefix}color-overlay-dropdown) !default;
+$ouds-color-overlay-floating: var(--#{$prefix}color-overlay-floating) !default;
 $ouds-color-overlay-modal-sheet: var(--#{$prefix}color-overlay-modal-sheet) !default;
 $ouds-color-overlay-tooltip: var(--#{$prefix}color-overlay-tooltip) !default;
 $ouds-color-surface-brand-primary: var(--#{$prefix}color-surface-brand-primary) !default;
