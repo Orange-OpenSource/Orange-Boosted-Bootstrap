@@ -4,7 +4,7 @@ import type { Plugin } from 'unified'
 import { visit } from 'unist-util-visit'
 import { getConfig } from './config'
 import { getVersionedDocsPath } from './path'
-import { getComponentSVG } from './utils'
+import { getComponentSVG, getVersionLink } from './utils'
 
 // [[config:foo]]
 // [[config:foo.bar]]
@@ -14,6 +14,8 @@ const configRegExp = /\[\[config:(?<name>[\w\.]+)]]/g
 const docsrefRegExp = /\[\[docsref:(?<path>[\w\.\/#-]+)]]/g
 // [[comp]]
 const compRegExp = /\[\[comp\]\]\s*/
+// [[version-changelog-link]]
+const versionLinkRegExp = /\[\[version-changelog-link\]\]\s*/
 
 // A remark plugin to replace config values embedded in markdown (or MDX) files.
 // For example, [[config:foo]] will be replaced with the value of the `foo` key in the `config.yml` file.
@@ -102,7 +104,7 @@ export const remarkBsComp: Plugin<[], Root> = function () {
               type: 'html',
               value: getComponentSVG('hl-small-icon me-scaled-2xsmall mb-xsmall')
             }, ...parent.children]
-            node.value = replaceCompInText(node.value)
+            node.value = replaceRegexInText(node.value, compRegExp)
           }
           break
         }
@@ -111,8 +113,32 @@ export const remarkBsComp: Plugin<[], Root> = function () {
   }
 }
 
-function replaceCompInText(text: string) {
-  return text.replace(compRegExp, (_match, path) => {
+// A remark plugin to add a link to changelog to version titles.
+export const remarkBsVersionLink: Plugin<[], Root> = function () {
+  return function remarkBsVersionLinkPlugin(ast) {
+    // https://github.com/syntax-tree/mdast#nodes
+    // https://github.com/syntax-tree/mdast-util-mdx-jsx#nodes
+    visit(ast, ['text'], (node, index, parent) => {
+      switch (node.type) {
+        case 'text': {
+          const regexMatch = node.value.match(versionLinkRegExp)
+          if (regexMatch) {
+            const version = node.value.replace(' ' + regexMatch[0], '')
+            parent.children = [...parent.children, {
+              type: 'html',
+              value: getVersionLink(version)
+            }]
+            node.value = replaceRegexInText(node.value, versionLinkRegExp)
+          }
+          break
+        }
+      }
+    })
+  }
+}
+
+function replaceRegexInText(text: string, regex: RegExp) {
+  return text.replace(regex, (_match, path) => {
     return ``
   })
 }
