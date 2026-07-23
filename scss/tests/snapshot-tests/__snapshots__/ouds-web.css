@@ -4860,6 +4860,7 @@ textarea.form-control-lg {
   padding-left: calc(var(--bs-text-input-padding-x) - var(--bs-text-input-border-width-left));
   font-weight: 500;
   color: var(--bs-color-content-default);
+  text-overflow: ellipsis;
   -webkit-appearance: none;
   appearance: none;
   background-color: var(--bs-text-input-background-color);

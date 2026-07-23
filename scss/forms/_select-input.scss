@@ -20,6 +20,7 @@
   padding-left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left));
   font-weight: $ouds-font-weight-system-web-moderate;
   color: $ouds-color-content-default;
+  text-overflow: ellipsis;
   appearance: none;
   background-color: var(--#{$prefix}text-input-background-color);
   border-color: var(--#{$prefix}text-input-border-color);
