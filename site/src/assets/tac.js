@@ -32,7 +32,7 @@
 
     alert.setAttribute('data-bs-theme', 'dark')
 
-    document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-default', 'lg:ms-small')
+    document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-default', 'btn-small', 'lg:ms-small')
     alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-strong', 'btn-small', 'sm:mx-small', 'lg:ms-auto', 'my-small', 'lg:my-none')
     alert.querySelector('.tarteaucitronAllow').innerHTML = tarteaucitron.lang.acceptAll
     alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-negative', 'btn-small', 'sm:mx-small', 'my-small', 'lg:my-none')
