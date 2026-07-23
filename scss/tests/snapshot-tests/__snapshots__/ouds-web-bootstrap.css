@@ -6794,12 +6794,12 @@ textarea.form-control-lg {
   padding-right: calc(calc(20px - var(--bs-border-width) + 2px) - var(--bs-border-width));
   border-right-width: var(--bs-border-width);
 }
-.quantity-selector button:first-of-type.btn-sm {
+.quantity-selector button:first-of-type.btn-small {
   padding-right: calc(20px - var(--bs-border-width) + 2px);
   min-width: 1rem;
   min-height: 1rem;
 }
-.quantity-selector button:first-of-type.btn-sm::after {
+.quantity-selector button:first-of-type.btn-small::after {
   display: block;
   min-width: inherit;
   min-height: inherit;
@@ -6809,7 +6809,7 @@ textarea.form-control-lg {
   mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 2'><path d='M0 0h10v2H0z'/></svg>") no-repeat 50%/0.625rem 0.125rem;
 }
 
-.quantity-selector button:first-of-type.btn-sm:focus-visible {
+.quantity-selector button:first-of-type.btn-small:focus-visible {
   padding-right: calc(calc(20px - var(--bs-border-width) + 2px) - var(--bs-border-width));
 }
 .quantity-selector button:last-of-type {
@@ -6832,12 +6832,12 @@ textarea.form-control-lg {
   padding-left: calc(calc(20px - var(--bs-border-width) + 2px) - var(--bs-border-width));
   border-left-width: var(--bs-border-width);
 }
-.quantity-selector button:last-of-type.btn-sm {
+.quantity-selector button:last-of-type.btn-small {
   padding-left: calc(20px - var(--bs-border-width) + 2px);
   min-width: 1rem;
   min-height: 1rem;
 }
-.quantity-selector button:last-of-type.btn-sm::after {
+.quantity-selector button:last-of-type.btn-small::after {
   display: block;
   min-width: inherit;
   min-height: inherit;
@@ -6847,7 +6847,7 @@ textarea.form-control-lg {
   mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path d='M10 4H6V0H4v4H0v2h4v4h2V6h4V4z'/></svg>") no-repeat 50%/0.625rem 0.625rem;
 }
 
-.quantity-selector button:last-of-type.btn-sm:focus-visible {
+.quantity-selector button:last-of-type.btn-small:focus-visible {
   padding-left: calc(calc(20px - var(--bs-border-width) + 2px) - var(--bs-border-width));
 }
 
@@ -8068,6 +8068,32 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-btn-icon-gap: 0;
   --bs-btn-icon-size: 1.5rem;
   max-height: 48px;
+}
+.btn.btn-small, .btn-small.btn-close {
+  --bs-btn-min-width: 40px;
+  --bs-btn-min-height: 40px;
+  --bs-btn-padding-start: 24px;
+  --bs-btn-padding-end: 24px;
+  --bs-btn-padding-y: 10px;
+  --bs-btn-icon-size: 16px;
+  --bs-btn-icon-gap: 6px;
+  --bs-btn-loading-size: 1rem;
+  font-size: var(--bs-font-size-label-medium);
+  line-height: var(--bs-font-line-height-label-medium);
+  /* rtl:remove */
+  letter-spacing: var(--bs-font-letter-spacing-label-medium);
+}
+.btn.btn-small:has(svg:not(.loader)), .btn-small.btn-close:has(svg:not(.loader)), .btn.btn-small:has(img:not(.loader)), .btn-small.btn-close:has(img:not(.loader)), .btn.btn-small:has(.icon:not(.loader)), .btn-small.btn-close:has(.icon:not(.loader)) {
+  --bs-btn-padding-start: 16px;
+  --bs-btn-padding-end: 24px;
+}
+.btn.btn-small.btn-icon.btn-icon, .btn-small.btn-close {
+  --bs-btn-padding-start: 10px;
+  --bs-btn-padding-end: 10px;
+  --bs-btn-padding-y: 10px;
+  --bs-btn-icon-gap: 0;
+  --bs-btn-icon-size: 1.25rem;
+  max-height: 40px;
 }
 
 .use-rounded-corner-buttons {

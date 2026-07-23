@@ -211,6 +211,36 @@
     max-height: $ouds-button-size-max-size-icon-only-default;
   }
   // End mod
+
+  &.btn-small {
+    --#{$prefix}btn-min-width: #{$ouds-button-size-min-width-small};
+    --#{$prefix}btn-min-height: #{$ouds-button-size-min-height-small};
+    --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-none-small};
+    --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-icon-none-small};
+    --#{$prefix}btn-padding-y: #{$ouds-button-space-padding-block-small};
+    --#{$prefix}btn-icon-size: #{$ouds-button-size-icon-small};
+    --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon-small};
+    --#{$prefix}btn-loading-size: #{px-to-rem($ouds-button-size-progress-indicator-small)};
+
+    @include get-font-size("label-medium"); // OUDS mod
+
+    &:has(svg:not(.loader)),
+    &:has(img:not(.loader)),
+    &:has(.icon:not(.loader)) {
+      --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start-small};
+      --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end-small};
+    }
+
+    &.btn-icon.btn-icon { // Double the class selector to artificially increase the selector's specificity
+      --#{$prefix}btn-padding-start: #{$ouds-button-space-inset-icon-only-small};
+      --#{$prefix}btn-padding-end: #{$ouds-button-space-inset-icon-only-small};
+      --#{$prefix}btn-padding-y: #{$ouds-button-space-inset-icon-only-small};
+      --#{$prefix}btn-icon-gap: 0;
+      --#{$prefix}btn-icon-size: #{px-to-rem($ouds-button-size-icon-only-small)};
+
+      max-height: $ouds-button-size-max-size-icon-only-small;
+    }
+  }
 }
 
 .use-rounded-corner-buttons {

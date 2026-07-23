@@ -556,6 +556,39 @@ Loading state can also be combined with all kind of buttons, including icons.
     <button type="button" class="btn btn-default">Default</button>
   </div>`} />
 
+### Sizes
+
+Buttons are available in two sizes. Add `.btn-small` to have a smaller button. Default size is medium.
+
+<Example buttonLabel="small buttons" code={`<button type="button" class="btn btn-default btn-small">Default</button>
+
+  <button type="button" class="btn btn-minimal btn-small">
+    <svg aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+    Minimal
+  </button>
+
+  <button type="button" class="btn btn-brand btn-icon btn-small">
+    <svg aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+    <span class="visually-hidden">Brand</span>
+  </button>
+
+  <button type="button" class="btn btn-negative btn-small">
+    <span class="icon si si-settings" aria-hidden="true"></span>
+    Negative
+  </button>
+
+  <button type="button" class="btn btn-strong loading-indeterminate btn-small" id="loading-btn-small" disabled>
+    Strong
+    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-btn-small-msg" class="visually-hidden">Downloading file 3</span>
+  </button>`} />
+
 ### Layout
 
 #### Block buttons
