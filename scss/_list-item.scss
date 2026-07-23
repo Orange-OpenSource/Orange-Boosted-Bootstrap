@@ -1,0 +1,405 @@
+//
+// Base styles
+//
+
+.item {
+  display: block;
+  background-color: var(--#{$prefix}list-item-outlined-bg, var(--#{$prefix}list-item-disabled-bg, var(--#{$prefix}list-item-bg, $ouds-color-action-support-enabled)));
+  border-color: var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, transparent)) var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, transparent)) var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, $ouds-color-border-default));
+  border-style: solid;
+  border-width: var(--#{$prefix}list-item-border-width, 0) var(--#{$prefix}list-item-border-width, 0) var(--#{$prefix}list-item-border-width, $ouds-control-item-border-width-default);
+  @include border-radius(var(--#{$prefix}list-item-border-radius, $ouds-control-item-border-radius-default), var(--#{$prefix}list-item-border-radius, $ouds-control-item-border-radius-default));
+
+  &.item-interactive:focus-visible,
+  &:has(.item-interactive:focus-visible) {
+    @include focus-visible();
+  }
+}
+
+.item-main {
+  display: flex;
+  column-gap: $ouds-control-item-space-column-gap;
+  align-items: var(--#{$prefix}list-item-align-items, center);
+  min-height: calc(var(--#{$prefix}list-item-min-height, $ouds-control-item-size-min-height-default) - 2 * var(--#{$prefix}list-item-border-width, $ouds-control-item-border-width-default / 2));
+  padding: calc(var(--#{$prefix}list-item-padding-top, $ouds-control-item-space-padding-block-density-default) - var(--#{$prefix}list-item-border-width, 0px)) calc($ouds-control-item-space-padding-inline - var(--#{$prefix}list-item-border-width, 0px)) calc(var(--#{$prefix}list-item-padding-bottom, $ouds-control-item-space-padding-block-density-default) - var(--#{$prefix}list-item-border-width, $ouds-control-item-border-width-default));
+}
+
+.item-list,
+.item-wrapper {
+  &.component-max-width {
+    max-width: px-to-rem($ouds-control-item-size-max-width);
+  }
+}
+
+
+//
+// Building blocks
+//
+
+// Slots
+
+.item > .item-slot {
+  width: calc(100% - $ouds-control-item-space-padding-inline * 2);
+  min-height: $ouds-control-item-size-asset-medium;
+  margin: 0 $ouds-control-item-space-padding-inline 16px; // TODO: Add token when available
+}
+
+.item-text-container .item-slot {
+  width: 100%;
+  margin-top: 4px; // TODO: Add token when available
+  margin-bottom: 4px; // TODO: Add token when available
+
+  &:last-child:not(:only-child) {
+    margin-top: $ouds-control-item-space-padding-block-default;
+    margin-bottom: $ouds-control-item-space-padding-block-bottom-slot;
+  }
+}
+
+.item-leading-container,
+.item-trailing-container {
+  &.item-slot {
+    box-sizing: content-box;
+    max-width: px-to-rem(96px); // TODO: Add token when available
+    height: unset;
+    max-height: px-to-rem(96px); // TODO: Add token when available
+    aspect-ratio: unset;
+  }
+
+  img,
+  video {
+    opacity: var(--#{$prefix}list-item-disabled-opacity, 1);
+  }
+}
+
+.item-slot-clickable {
+  position: relative;
+  z-index: 2;
+  padding: calc($focus-visible-outer-width + $focus-visible-inner-width); // Workaround to handle focus outline correctly
+  margin: calc(-1 * ($focus-visible-outer-width + $focus-visible-inner-width));
+}
+
+// Containers
+
+.item-leading-container {
+  flex-shrink: 0;
+  height: var(--#{$prefix}list-item-leading-container-size, px-to-rem($ouds-control-item-size-asset-medium));
+  aspect-ratio: 1;
+  overflow: hidden;
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
+  @include border-radius(var(--#{$prefix}list-item-leading-container-border-radius, $ouds-control-item-border-radius-media), var(--#{$prefix}list-item-leading-container-border-radius, $ouds-control-item-border-radius-media));
+}
+
+.item-text-container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  row-gap: var(--#{$prefix}list-item-container-row-gap, $ouds-control-item-space-row-gap);
+  justify-content: center;
+  margin-top: var(--#{$prefix}list-item-top-text-container-margin-top, 0);
+}
+
+.item-trailing-container {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  row-gap: var(--#{$prefix}list-item-container-row-gap, $ouds-control-item-space-row-gap);
+  align-items: flex-end;
+  justify-content: center;
+  min-height: var(--#{$prefix}list-item-trailing-container-size, px-to-rem($ouds-control-item-size-asset-medium));
+  overflow: hidden;
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
+  white-space: nowrap;
+  @include border-radius(var(--#{$prefix}list-item-trailing-container-border-radius, $ouds-control-item-border-radius-media), var(--#{$prefix}list-item-trailing-container-border-radius, $ouds-control-item-border-radius-media));
+
+  &:has(svg, img, .icon, .item-icon, video) {
+    height: var(--#{$prefix}list-item-trailing-container-size, px-to-rem($ouds-control-item-size-asset-medium));
+    aspect-ratio: 1;
+  }
+
+  &:has(.item-label) {
+    margin-top: var(--#{$prefix}list-item-top-text-container-margin-top, 0);
+  }
+}
+
+// Texts
+
+.item-overline {
+  display: block;
+  margin-bottom: 0;
+  @include get-font-size("label-small");
+  font-weight: $ouds-font-weight-web-label-moderate;
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-muted);
+}
+
+.item-label {
+  display: block;
+  margin-bottom: 0;
+  @include get-font-size("label-large");
+  font-weight: $ouds-font-weight-web-label-default;
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
+}
+
+.item-extra-label {
+  display: block;
+  margin-bottom: 0;
+  @include get-font-size("label-medium");
+  font-weight: $ouds-font-weight-web-label-strong;
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
+}
+
+.item-description {
+  display: block;
+  margin-bottom: 0;
+  @include get-font-size("label-medium");
+  font-weight: $ouds-font-weight-web-label-default;
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-muted);
+}
+
+.item-helper {
+  display: block;
+  padding: $ouds-control-item-space-padding-block-top-helper-text $ouds-control-item-space-padding-inline 0;
+  margin-bottom: 0;
+  @include get-font-size("label-medium");
+  font-weight: $ouds-font-weight-web-label-default;
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-muted);
+}
+
+// Icon
+
+.item-icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-color: var(--#{$prefix}list-item-disabled-icon-color, var(--#{$prefix}list-item-icon-color));
+    mask: var(--#{$prefix}list-item-icon) center / contain no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-color: var(--#{$prefix}list-item-disabled-icon-color-internal, var(--#{$prefix}list-item-icon-color-internal));
+    mask: var(--#{$prefix}list-item-icon-internal) center / contain no-repeat;
+  }
+}
+
+// Interactive
+
+.item-interactive {
+  text-decoration: none;
+  pointer-events: var(--#{$prefix}list-item-disabled-interactive, auto);
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    content: "";
+  }
+
+  &,
+  &:hover,
+  &:focus-visible,
+  &:active {
+    color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+
+//
+// Variants
+//
+
+// States
+
+:disabled,
+[aria-disabled="true"],
+.disabled {
+  --#{$prefix}list-item-disabled-bg: #{$ouds-color-action-support-disabled};
+  --#{$prefix}list-item-disabled-border-color: #{$ouds-color-border-muted};
+  --#{$prefix}list-item-disabled-color: #{$ouds-color-action-disabled};
+  --#{$prefix}list-item-disabled-opacity: #{$ouds-opacity-disabled};
+  --#{$prefix}list-item-disabled-icon-color: #{$ouds-color-action-disabled};
+  --#{$prefix}list-item-disabled-icon-color-internal: transparent;
+  --#{$prefix}list-item-disabled-interactive: none;
+}
+
+// Structure
+
+.use-rounded-corner-items {
+  --#{$prefix}list-item-border-radius: #{$ouds-control-item-border-radius-rounded};
+}
+
+.item-list { // Needs to be after .use-rounded-corner-items to override the variable
+  --#{$prefix}list-item-border-radius: #{$ouds-border-radius-none};
+  --#{$prefix}list-item-bg: transparent;
+
+  @include list-unstyled();
+  box-sizing: content-box;
+  padding: calc($focus-visible-outer-width + $focus-visible-inner-width); // Workaround to handle focus outline correctly
+  margin: calc(-1 * ($focus-visible-outer-width + $focus-visible-inner-width));
+}
+
+.item-bg { // Needs to be after .item-list to override the variable
+  --#{$prefix}list-item-bg: #{$ouds-color-action-support-enabled};
+}
+
+.item-no-bg { // Needs to be after .item-list to override the variable
+  --#{$prefix}list-item-bg: transparent;
+}
+
+.item-outlined {
+  --#{$prefix}list-item-outlined-bg: transparent;
+  --#{$prefix}list-item-border-width: #{$ouds-control-item-border-width-default};
+  --#{$prefix}list-item-border-color: #{$ouds-color-border-default};
+}
+
+.item-no-outline { // Needs to be after .item-outlined to override the variable
+  --#{$prefix}list-item-border-color: initial;
+}
+
+.item-no-divider { // Needs to be after .item-outlined to override the variable
+  --#{$prefix}list-item-border-color: transparent;
+}
+
+.item-top {
+  --#{$prefix}list-item-align-items: flex-start;
+  --#{$prefix}list-item-padding-top: var(--#{$prefix}list-item-counterweight-padding-top, #{$ouds-control-item-space-padding-block-density-default-top-alignment-top-counterweight});
+  --#{$prefix}list-item-top-text-container-margin-top: var(--#{$prefix}list-item-text-container-margin-top, #{$ouds-control-item-space-padding-block-density-default-top-alignment-top-text-container});
+}
+
+// Assets
+
+.item-leading-large {
+  --#{$prefix}list-item-leading-container-size: #{px-to-rem($ouds-control-item-size-asset-large)};
+}
+
+.item-leading-xlarge {
+  --#{$prefix}list-item-leading-container-size: #{px-to-rem($ouds-control-item-size-asset-xlarge)};
+}
+
+.item-leading-rounded {
+  --#{$prefix}list-item-leading-container-border-radius: #{$ouds-control-item-border-radius-media-rounded-corner};
+}
+
+.item-trailing-large {
+  --#{$prefix}list-item-trailing-container-size: #{px-to-rem($ouds-control-item-size-asset-large)};
+}
+
+.item-trailing-xlarge {
+  --#{$prefix}list-item-trailing-container-size: #{px-to-rem($ouds-control-item-size-asset-xlarge)};
+}
+
+.item-trailing-rounded {
+  --#{$prefix}list-item-trailing-container-border-radius: #{$ouds-control-item-border-radius-media-rounded-corner};
+}
+
+.item-status-positive {
+  --#{$prefix}list-item-icon: var(--#{$prefix}success-icon);
+  --#{$prefix}list-item-icon-color: #{$ouds-color-content-status-positive};
+}
+
+.item-status-info {
+  --#{$prefix}list-item-icon: var(--#{$prefix}info-icon);
+  --#{$prefix}list-item-icon-color: #{$ouds-color-content-status-info};
+}
+
+.item-status-warning {
+  --#{$prefix}list-item-icon: var(--#{$prefix}warning-icon);
+  --#{$prefix}list-item-icon-color: var(--#{$prefix}icon-color-content-status-warning-external-shape);
+  --#{$prefix}list-item-icon-internal: var(--#{$prefix}warning-internal-icon);
+  --#{$prefix}list-item-icon-color-internal: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
+}
+
+.item-status-negative {
+  --#{$prefix}list-item-icon: var(--#{$prefix}error-icon);
+  --#{$prefix}list-item-icon-color: #{$ouds-color-content-status-negative};
+}
+
+// Size
+
+.item-small {
+  --#{$prefix}list-item-min-height: #{$ouds-control-item-size-min-height-compact};
+  --#{$prefix}list-item-padding-top: #{$ouds-control-item-space-padding-block-density-compact};
+  --#{$prefix}list-item-counterweight-padding-top: #{$ouds-control-item-space-padding-block-density-compact-top-alignment-top-counterweight};
+  --#{$prefix}list-item-padding-bottom: #{$ouds-control-item-space-padding-block-density-compact};
+  --#{$prefix}list-item-container-row-gap: 0;
+  --#{$prefix}list-item-text-container-margin-top: #{$ouds-control-item-space-padding-block-density-compact-top-alignment-top-text-container};
+  --#{$prefix}list-item-leading-container-size: #{px-to-rem($ouds-control-item-size-asset-small)};
+}
+
+
+//
+// Navigation specific styles
+//
+
+.item-navigation {
+  .item {
+    position: relative;
+  }
+
+  .item-main::after {
+    display: flex;
+    flex-shrink: 0;
+    order: var(--#{$prefix}list-item-nav-order, 1);
+    width: px-to-rem($ouds-control-item-size-asset-small);
+    min-height: px-to-rem($ouds-control-item-size-asset-medium);
+    content: "";
+    background-color: var(--#{$prefix}list-item-disabled-icon-color, var(--#{$prefix}list-item-chevron-color, $ouds-link-color-chevron-enabled));
+    mask: var(--#{$prefix}list-item-nav-icon, $list-item-next-icon) center / contain no-repeat;
+  }
+
+  &.item-interactive:hover,
+  &:has(.item-interactive:hover) {
+    --#{$prefix}list-item-chevron-color: #{$ouds-color-action-hover};
+    --#{$prefix}list-item-bg: #{$ouds-color-action-support-hover};
+  }
+
+  &.item-interactive:focus-visible,
+  &:has(.item-interactive:focus-visible) {
+    --#{$prefix}list-item-chevron-color: #{$ouds-color-action-focus};
+    --#{$prefix}list-item-bg: #{$ouds-color-action-support-focus};
+  }
+
+  &.item-interactive:active,
+  &:has(.item-interactive:active) {
+    --#{$prefix}list-item-chevron-color: #{$ouds-color-action-pressed};
+    --#{$prefix}list-item-bg: #{$ouds-color-action-support-pressed};
+  }
+}
+
+// Needed outside since the outlined could be project wide
+.item-outlined.item-navigation,
+.item-outlined .item-navigation {
+  &.item-interactive:hover,
+  &:has(.item-interactive:hover) {
+    --#{$prefix}list-item-border-color: #{$ouds-color-action-hover};
+  }
+
+  &.item-interactive:focus-visible,
+  &:has(.item-interactive:focus-visible) {
+    --#{$prefix}list-item-border-color: #{$ouds-color-action-focus};
+  }
+
+  &.item-interactive:active,
+  &:has(.item-interactive:active) {
+    --#{$prefix}list-item-border-color: #{$ouds-color-action-pressed};
+  }
+}
+
+// Navigation variants
+
+.item-external {
+  --#{$prefix}list-item-nav-icon: #{$list-item-external-icon};
+}
+
+.item-previous {
+  --#{$prefix}list-item-nav-order: -1;
+  --#{$prefix}list-item-nav-icon: #{$list-item-previous-icon};
+}

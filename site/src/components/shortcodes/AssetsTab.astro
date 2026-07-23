@@ -1,0 +1,14 @@
+---
+/*
+ * Outputs a tab for AssetsNavTab.astro.
+ */
+interface Props {
+  name: string
+}
+
+const { name } = Astro.props
+---
+
+<section data-tab-name={name}>
+  <slot />
+</section>
