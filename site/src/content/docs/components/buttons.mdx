@@ -564,20 +564,21 @@ Buttons are available in two sizes. Add `.btn-small` to have a smaller button. D
 
   <button type="button" class="btn btn-minimal btn-small">
     <svg aria-hidden="true">
-      <use xlink:href="/orange/docs/1.4/assets/img/ouds-web-sprite.svg#heart-empty"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     Minimal
   </button>
 
   <button type="button" class="btn btn-brand btn-icon btn-small">
     <svg aria-hidden="true">
-      <use xlink:href="/orange/docs/1.4/assets/img/ouds-web-sprite.svg#heart-empty"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
+    <span class="visually-hidden">Brand</span>
   </button>
 
   <button type="button" class="btn btn-negative btn-small">
     <span class="icon si si-settings" aria-hidden="true"></span>
-    Strong
+    Negative
   </button>
 
   <button type="button" class="btn btn-strong loading-indeterminate btn-small" id="loading-btn-small" disabled>
