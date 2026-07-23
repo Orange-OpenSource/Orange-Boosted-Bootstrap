@@ -16,6 +16,11 @@ You can find our supported range of browsers and their versions [in our `.browse
 
 <Code lang="plaintext" filePath=".browserslistrc" />
 
+<Callout type="info">
+  We strongly suggest using our <code>.browserlistrc</code> in projects using OUDS SCSS. This will avoid any potential issues that might arise because of browsers specificity.<br/><br/>
+  For most projects, you will simply need to add the file to the root of the repository, some might need a more complex config.
+</Callout>
+
 We use [Autoprefixer](https://github.com/postcss/autoprefixer) to handle intended browser support via CSS prefixes, which uses [Browserslist](https://github.com/browserslist/browserslist) to manage these browser versions. Consult their documentation for how to integrate these tools into your projects.
 
 ### Mobile devices

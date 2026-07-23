@@ -25,6 +25,10 @@ A `placeholder` attribute is required on each `<textarea>` as our CSS-only float
   Even if you don't need a placeholder, **you must always define the placeholder attribute with a single space character**. This ensures the label behaves correctly by changing the label font size when the textarea is filled.
 </Callout>
 
+<Callout type="warning">
+  Please note an issue prevents floating labels to work on all browsers by default. We suggest using our <code>.browserslistrc</code> file to ensure compatibility. Please refer to the [browsers and devices documentation]([[docsref:/getting-started/browsers-devices]]) for more details.
+</Callout>
+
 <Example buttonLabel="text areas with and without placeholder" code={`<div class="text-area mb-medium">
     <div class="text-area-container">
       <label for="exampleTextArea">Additional comments</label>
