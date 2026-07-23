@@ -4,8 +4,8 @@ import { getConfig } from '@libs/config'
 import { docsPages } from '@libs/content'
 import { getSlug } from '@libs/utils'
 import { getVersionedDocsPath } from '@libs/path'
-import type { zSidebar } from '@libs/validation'
-import type z from 'zod'
+import { zSidebar } from '@libs/validation'
+import { type z } from 'zod'
 
 const slug = Astro.url.pathname.split('/')[4]
 
