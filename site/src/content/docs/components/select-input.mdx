@@ -24,9 +24,7 @@ Use a `.select-input` wrapper to create a select form field with OUDS styles, th
 
 An empty placeholder `<option>` with an empty value is required on each `<select>` as our CSS-only floating label implementation relies on it to detect when the select is empty. This one should be disabled so users won't be able to select it.
 
-<Callout type="warning">
-  Please note that a known issue can prevent floating labels from working in all browsers with the default configuration. We suggest using our <code>.browserslistrc</code> file to ensure compatibility. Please refer to the [Browsers and devices documentation]([[docsref:/getting-started/browsers-devices]]) for more details.
-</Callout>
+<Callout type="info" name="info-floating-label-browserslist" action="Please refer to the Browsers documentation for more details." actionHref={getVersionedDocsPath('/getting-started/browsers-devices')} />
 
 <Example buttonLabel="default select" code={`<div class="select-input">
     <div class="select-input-container">

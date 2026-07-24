@@ -1,0 +1,1 @@
+Please note a default Autoprefixer configuration could prevent floating labels from working in some browsers when using OUDS Web SCSS. We suggest using our <code>.browserslistrc</code> file to ensure compatibility.

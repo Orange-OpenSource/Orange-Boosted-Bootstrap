@@ -7,6 +7,8 @@ aliases:
 toc: true
 ---
 
+import { getVersionedDocsPath } from '@libs/path'
+
 <Callout type="info">
   You can find here the OUDS [text area design guidelines](https://r.orange.fr/r/S-ouds-doc-text-area).
 </Callout>
@@ -25,9 +27,7 @@ A `placeholder` attribute is required on each `<textarea>` as our CSS-only float
   Even if you don't need a placeholder, **you must always define the placeholder attribute with a single space character**. This ensures the label behaves correctly by changing the label font size when the textarea is filled.
 </Callout>
 
-<Callout type="warning">
-  Please note that a known issue can prevent floating labels from working in all browsers with the default configuration. We suggest using our <code>.browserslistrc</code> file to ensure compatibility. Please refer to the [Browsers and devices documentation]([[docsref:/getting-started/browsers-devices]]) for more details.
-</Callout>
+<Callout type="info" name="info-floating-label-browserslist" action="Please refer to the Browsers documentation for more details." actionHref={getVersionedDocsPath('/getting-started/browsers-devices')} />
 
 <Example buttonLabel="text areas with and without placeholder" code={`<div class="text-area mb-medium">
     <div class="text-area-container">
