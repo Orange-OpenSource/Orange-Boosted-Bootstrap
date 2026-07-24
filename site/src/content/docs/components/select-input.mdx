@@ -24,6 +24,8 @@ Use a `.select-input` wrapper to create a select form field with OUDS styles, th
 
 An empty placeholder `<option>` with an empty value is required on each `<select>` as our CSS-only floating label implementation relies on it to detect when the select is empty. This one should be disabled so users won't be able to select it.
 
+<Callout type="info" name="info-floating-label-browserslist" action="Please refer to the Browsers documentation for more details." actionHref={getVersionedDocsPath('/getting-started/browsers-devices')} />
+
 <Example buttonLabel="default select" code={`<div class="select-input">
     <div class="select-input-container">
       <label for="exampleSelect">Default select example</label>
@@ -384,7 +386,7 @@ At the end of the loading, you should:
 - Set a final status message in `<span>`, indicating the loading has ended.
 - Put the focus back on the select to ensure similar behavior across browsers and not lose the user after changes.
 
-<Callout type="info" title="Execption">
+<Callout type="info" title="Exception">
   The select can be disabled or not during the loading time depending on the context of use.
 </Callout>
 
