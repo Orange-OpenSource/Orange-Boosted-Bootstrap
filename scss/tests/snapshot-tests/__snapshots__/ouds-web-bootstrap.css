@@ -19285,11 +19285,11 @@ ol.bullet-list > li > ol > li > ol > li::before {
   user-select: none !important;
 }
 
-.pe-none {
+.pointer-events-none {
   pointer-events: none !important;
 }
 
-.pe-auto {
+.pointer-events-auto {
   pointer-events: auto !important;
 }
 

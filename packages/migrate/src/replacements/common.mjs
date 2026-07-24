@@ -102,6 +102,10 @@ export const commonReplacements = [
   ['text-white-50', 'text-muted'],
   [...warnForClass('text-opacity-[0-9]+', { remove: true, link: 'https://web.unified-design-system.orange.com/docs/utilities/text' })],
 
+  // Interactions
+  ['pe-none', 'pointer-events-none'],
+  ['pe-auto', 'pointer-events-auto'],
+
   // Link
   [...warnForClass('link-opacity-[0-9]+(-hover)?', { link: 'https://web.unified-design-system.orange.com/docs/components/links' })],
   [...warnForClass('link-offset-[0-9]+(-hover)?', { link: 'https://web.unified-design-system.orange.com/docs/components/links' })],
