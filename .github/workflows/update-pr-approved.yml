@@ -4,6 +4,9 @@ on:
     types:
       - submitted
 
+permissions:
+  contents: read
+
 jobs:
   move_card_to_next_review:
     if: github.event.review.state == 'approved'

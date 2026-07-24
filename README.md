@@ -36,11 +36,11 @@ The theming library have the specific Scss files containing all the tokens to ap
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v1.3.0-ouds-web.zip)
+- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v1.4.0-ouds-web.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git && git switch ouds/main`
-- Install with [npm](https://www.npmjs.com/): `npm install @ouds/web-common@1.3.0 @ouds/web-orange@1.3.0`
-- Install with [yarn](https://yarnpkg.com/): `yarn add @ouds/web-common@1.3.0 @ouds/web-orange@1.3.0`
-- Install with [Bun](https://bun.sh/): `bun add @ouds/web-common@1.3.0 @ouds/web-orange@1.3.0`
+- Install with [npm](https://www.npmjs.com/): `npm install @ouds/web-common@1.4.0 @ouds/web-orange@1.4.0`
+- Install with [yarn](https://yarnpkg.com/): `yarn add @ouds/web-common@1.4.0 @ouds/web-orange@1.4.0`
+- Install with [Bun](https://bun.sh/): `bun add @ouds/web-common@1.4.0 @ouds/web-orange@1.4.0`
 - Install with [Composer](https://getcomposer.org/): `composer require orange-opensource/orange-boosted-bootstrap:dev-ouds/main`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package ouds-web-common ouds-web-orange` Sass: `Install-Package ouds-web-common.sass ouds-web-orange.sass`
 
@@ -58,6 +58,7 @@ Read the [Getting started page](https://web.unified-design-system.orange.com/doc
 [![JS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main/dist/js/ouds-web.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/dist/js/ouds-web.min.js)
 [![JS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main/dist/js/ouds-web.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/dist/js/ouds-web.min.js)
 [![JSDelivr](https://data.jsdelivr.com/v1/package/npm/@ouds/web-common/badge)](https://www.jsdelivr.com/package/npm/@ouds/web-common)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/badge)](https://scorecard.dev/viewer/?uri=github.com/Orange-OpenSource/Orange-Boosted-Bootstrap)
 
 ## What’s included
 

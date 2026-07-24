@@ -107,9 +107,8 @@
   gap: $ouds-alert-space-row-gap;
 
   > * { // To handle any content inside this text-container.
-    max-width: var(--#{$prefix}font-max-width-label-medium);
     margin-bottom: 0;
-    @include get-font-size("label-medium");
+    @include get-font-size("label-medium", true);
     font-weight: $ouds-font-weight-web-label-default;
   }
 
@@ -149,8 +148,8 @@
 
 .alert-close-container {
   align-self: stretch; // To have the alert-close-container height defined on the alert-message height
-  width: calc(2 * $ouds-button-space-inset-icon-only + px-to-rem($ouds-button-size-icon-only));
-  min-width: $ouds-button-size-min-width; // To handle some zoom '-' issues
+  width: calc(2 * $ouds-button-space-inset-icon-only-default + px-to-rem($ouds-button-size-icon-only-default));
+  min-width: $ouds-button-size-min-width-default; // To handle some zoom '-' issues
   container-type: size;
 
   // Complete the border-radius of the button
@@ -162,9 +161,8 @@
 }
 
 .alert-label {
-  max-width: var(--#{$prefix}font-max-width-label-large);
   margin-bottom: 0;
-  @include get-font-size("label-large");
+  @include get-font-size("label-large", true);
   font-weight: $ouds-font-weight-web-label-moderate;
 }
 

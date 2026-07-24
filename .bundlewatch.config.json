@@ -2,31 +2,31 @@
   "files": [
     {
       "path": "./packages/orange/dist/css/ouds-web-bootstrap.css",
-      "maxSize": "82.0 kB"
+      "maxSize": "83.5 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-bootstrap.min.css",
-      "maxSize": "78.25 kB"
+      "maxSize": "79.75 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-grid.css",
-      "maxSize": "9.5 kB"
+      "maxSize": "8.0 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-grid.min.css",
-      "maxSize": "8.5 kB"
-    },
-    {
-      "path": "./packages/orange/dist/css/ouds-web-reboot.css",
       "maxSize": "7.5 kB"
     },
     {
+      "path": "./packages/orange/dist/css/ouds-web-reboot.css",
+      "maxSize": "7.75 kB"
+    },
+    {
       "path": "./packages/orange/dist/css/ouds-web-reboot.min.css",
-      "maxSize": "7 kB"
+      "maxSize": "7.5 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-utilities.css",
-      "maxSize": "24.0 kB"
+      "maxSize": "24.25 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-utilities.min.css",
@@ -34,38 +34,40 @@
     },
     {
       "path": "./packages/orange/dist/css/ouds-web.css",
-      "maxSize": "66 kB"
+      "maxSize": "67.0 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web.min.css",
-      "maxSize": "62 kB"
+      "maxSize": "63.0 kB"
     },
     {
       "path": "./dist/js/ouds-web.bundle.js",
-      "maxSize": "48.5 kB"
+      "maxSize": "44.25 kB"
     },
     {
       "path": "./dist/js/ouds-web.bundle.min.js",
-      "maxSize": "25.5 kB"
+      "maxSize": "24 kB"
     },
     {
       "path": "./dist/js/ouds-web.esm.js",
-      "maxSize": "33.25 kB"
+      "maxSize": "29.5 kB"
     },
     {
       "path": "./dist/js/ouds-web.esm.min.js",
-      "maxSize": "20.5 kB"
+      "maxSize": "19 kB"
     },
     {
       "path": "./dist/js/ouds-web.js",
-      "maxSize": "34.0 kB"
+      "maxSize": "30 kB"
     },
     {
       "path": "./dist/js/ouds-web.min.js",
-      "maxSize": "18.25 kB"
+      "maxSize": "17 kB"
     }
   ],
   "ci": {
-    "trackBranches": ["ouds/main"]
+    "trackBranches": [
+      "ouds/main"
+    ]
   }
 }

@@ -4,13 +4,16 @@
 // Elevation
 
 // scss-docs-start ouds-composite-elevation
-$ouds-elevation-default: $ouds-elevation-x-default $ouds-elevation-y-default $ouds-elevation-blur-default $ouds-elevation-spread-default var(--#{$prefix}elevation-color-default) !default;
+$ouds-elevation-elevated: $ouds-elevation-x-elevated $ouds-elevation-y-elevated $ouds-elevation-blur-elevated $ouds-elevation-spread-elevated var(--#{$prefix}elevation-color-elevated) !default;
 $ouds-elevation-drag: $ouds-elevation-x-drag $ouds-elevation-y-drag $ouds-elevation-blur-drag $ouds-elevation-spread-drag var(--#{$prefix}elevation-color-drag) !default;
 $ouds-elevation-emphasized: $ouds-elevation-x-emphasized $ouds-elevation-y-emphasized $ouds-elevation-blur-emphasized $ouds-elevation-spread-emphasized var(--#{$prefix}elevation-color-emphasized) !default;
 $ouds-elevation-none: $ouds-elevation-x-none $ouds-elevation-y-none $ouds-elevation-blur-none $ouds-elevation-spread-none var(--#{$prefix}elevation-color-none) !default;
 $ouds-elevation-raised: $ouds-elevation-x-raised $ouds-elevation-y-raised $ouds-elevation-blur-raised $ouds-elevation-spread-raised var(--#{$prefix}elevation-color-raised) !default;
 $ouds-elevation-sticky: $ouds-elevation-x-sticky $ouds-elevation-y-sticky $ouds-elevation-blur-sticky $ouds-elevation-spread-sticky var(--#{$prefix}elevation-color-sticky) !default;
 // scss-docs-end ouds-composite-elevation
+
+// OUDS pixel tracker
+$ouds-pixel-tracker-url: "https://assets.orange.com/pm_12751_542_542931-ew23c26ecu-ouds-px.png?a=1&b=ssh&lib=ouds-web&v=1.4.0"; // stylelint-disable-line scss/dollar-variable-default
 
 // Font
 
@@ -20,8 +23,8 @@ $custom-font-name: "Sosh" !default;
 
 // Map of CDN URLs for custom font, with weight as keys
 $custom-font-cdn-urls: (
-  $ouds-font-weight-system-web-moderate: "https://mastermedia.dam-broadcast.com/pm_12751_481_481818-a5ae2tmj13--Sosh-Medium.woff2",
-  $ouds-font-weight-system-web-strong: "https://mastermedia.dam-broadcast.com/pm_12751_481_481815-qd9nelrt7o--Sosh-Bold.woff2"
+  $ouds-font-weight-system-web-moderate: "https://assets.orange.com/pm_12751_481_481818-a5ae2tmj13--Sosh-Medium.woff2?a=1",
+  $ouds-font-weight-system-web-strong: "https://assets.orange.com/pm_12751_481_481815-qd9nelrt7o--Sosh-Bold.woff2?a=1"
 ) !default;
 
 $ouds-font-family-sans-serif-stack:
@@ -110,9 +113,17 @@ $btn-previous-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/s
 // icon button next v1.4
 $btn-next-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path fill-rule='evenodd' d='M7.431 7.378c-.019-.015.015.015 0 0l5.55 4.905-5.55 4.811c-.619.615-.506 1.388 0 1.913-.019-.015.015.019 0 0 .566.536 1.448.506 2.036-.008l6.709-5.812c.551-.48.506-1.286 0-1.808L9.467 5.496c-.716-.717-1.545-.574-2.036-.094-.491.48-.652 1.339 0 1.976Z' clip-rule='evenodd'/></svg>") !default;
 
-// Select input
-$select-input-chevron:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M17.019 7.431c-.015.015.015-.019 0 0l-4.905 5.55-4.811-5.55c-.615-.619-1.388-.506-1.913 0-.019.015.015-.019 0 0-.536.566-.506 1.448.008 2.036l5.812 6.709c.48.551 1.286.506 1.808 0L18.9 9.467c.717-.716.574-1.545.094-2.036-.48-.491-1.339-.652-1.976 0Z'/></svg>") !default;
-$select-input-expanded-chevron: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M7.378 16.142c-.015.018.015-.015 0 0l4.905-5.55 4.811 5.55c.615.618 1.388.506 1.913 0-.015.018.019-.015 0 0 .536-.566.506-1.448-.008-2.037l-5.812-6.708c-.48-.552-1.286-.507-1.808 0l-5.883 6.708c-.717.717-.574 1.545-.094 2.037.48.491 1.339.652 1.976 0Z'/></svg>") !default;
+// Badge
+// badge-icon tick-confirmation-fill v1.6
+$badge-icon-positive: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g clip-path='url(#a)'><path fill-rule='evenodd' d='M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0Zm5.878 6.363a1.054 1.054 0 0 0-1.485.142l-6.902 8.363-1.75-3.709a1.055 1.055 0 1 0-1.908.901l2.46 5.21a1.055 1.055 0 0 0 1.767.221l7.96-9.643a1.053 1.053 0 0 0-.142-1.485Z' clip-rule='evenodd'/></g><defs><clipPath id='a'><path fill='#fff' d='M0 0h24v24H0z'/></clipPath></defs></svg>") !default;
+// badge-icon info-fill v1.6
+$badge-icon-info: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g clip-path='url(#a)'><path fill-rule='evenodd' d='M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0Zm-1.5 9.3v8.919c.038.712.696 1.281 1.5 1.281.803 0 1.462-.569 1.5-1.281V9.3h-3ZM12 4.5c-.418 0-.772.147-1.063.44A1.45 1.45 0 0 0 10.5 6c0 .4.145.75.437 1.05.29.3.645.45 1.063.45.417 0 .772-.15 1.063-.45.291-.3.437-.65.437-1.05a1.45 1.45 0 0 0-.437-1.06A1.439 1.439 0 0 0 12 4.5Z' clip-rule='evenodd'/></g><defs><clipPath id='a'><path fill='#fff' d='M0 0h24v24H0z'/></clipPath></defs></svg>") !default;
+// badge-icon warning-external-shape v1.6
+$badge-icon-warning-external: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g clip-path='url(#a)'><path fill-rule='evenodd' d='M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0Zm0 16.5c-.417 0-.772.15-1.063.45-.29.3-.437.65-.437 1.05 0 .413.146.766.437 1.06.274.286.66.446 1.063.44a1.44 1.44 0 0 0 1.063-.44A1.45 1.45 0 0 0 13.5 18c0-.4-.145-.75-.437-1.05-.29-.3-.645-.45-1.063-.45Zm.001-12c-.803 0-1.463.569-1.5 1.281l.3 8.92H13.2l.3-8.92c-.038-.712-.695-1.281-1.499-1.281Z' clip-rule='evenodd'/></g><defs><clipPath id='a'><path fill='#fff' d='M0 0h24v24H0z'/></clipPath></defs></svg>") !default;
+// badge-icon warning-internal-shape v1.6
+$badge-icon-warning-internal: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='M12 16.5c-.417 0-.772.15-1.063.45-.291.3-.437.65-.437 1.05 0 .413.146.766.437 1.06.273.286.66.446 1.063.44a1.44 1.44 0 0 0 1.063-.44c.292-.294.437-.647.437-1.06 0-.4-.145-.75-.437-1.05-.29-.3-.645-.45-1.063-.45Zm.001-12c-.803 0-1.463.569-1.501 1.281l.3 8.919h2.4l.3-8.919c-.038-.712-.696-1.281-1.499-1.281Z' clip-rule='evenodd'/></svg>") !default;
+// badge-icon error-fill v1.6
+$badge-icon-negative: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g clip-path='url(#a)'><path fill-rule='evenodd' d='M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12s5.373 12 12 12 12-5.372 12-12Zm-7.875 4.13a1.087 1.087 0 0 1-1.552 0L12 13.524 9.426 16.13a1.087 1.087 0 0 1-1.55 0 1.12 1.12 0 0 1 0-1.57l2.573-2.606L7.967 9.44a1.12 1.12 0 0 1 0-1.57 1.088 1.088 0 0 1 1.551 0L12 10.382l2.482-2.513a1.088 1.088 0 0 1 1.551 0 1.12 1.12 0 0 1 0 1.57l-2.482 2.514 2.574 2.605a1.12 1.12 0 0 1 0 1.57Z' clip-rule='evenodd'/></g><defs><clipPath id='a'><path fill='#fff' d='M0 0h24v24H0z'/></clipPath></defs></svg>") !default;
 
 //// SVG used several times
 $svg-as-custom-props: (

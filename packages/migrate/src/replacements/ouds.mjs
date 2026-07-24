@@ -15,8 +15,15 @@ export const oudsReplacements = [
   // Clearfix
   ['clearfix', 'd-flow-root'],
 
+  // Shadow
+  ['shadow-default', 'shadow-elevated'],
+
   // Ratio
   [...warnForClass('ratio')],
+
+  // Components
+  // Badge
+  ['badge-disabled', 'disabled'],
 
   // Form
   [
