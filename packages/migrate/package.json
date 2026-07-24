@@ -18,6 +18,6 @@
     "replace-in-file": "^8.4.0"
   },
   "devDependencies": {
-    "vitest": "^4.1.5"
+    "vitest": "^4.1.10"
   }
 }
