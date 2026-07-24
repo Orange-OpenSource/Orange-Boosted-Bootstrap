@@ -60,6 +60,7 @@
 
   display: inline-flex; // OUDS mod: instead of `inline-block`
   flex-shrink: 0;
+  gap: var(--#{$prefix}btn-icon-gap);
   align-items: center; // OUDS mod
   justify-content: center; // OUDS mod
   min-width: var(--#{$prefix}btn-min-width); // OUDS mod
@@ -187,7 +188,6 @@
     flex-shrink: 0;
     width: 1em;
     height: 1em;
-    margin-right: var(--#{$prefix}btn-icon-gap);
     overflow: hidden;
     font-size: var(--#{$prefix}btn-icon-size);
     line-height: 1;
@@ -556,4 +556,3 @@
   height: var(--#{$prefix}btn-icon-size);
   background-color: currentcolor;
 }
-
