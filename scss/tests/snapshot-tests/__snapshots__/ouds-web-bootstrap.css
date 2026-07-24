@@ -8329,6 +8329,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .btn-assistant {
   --bs-btn-padding-start: 20px;
   --bs-btn-padding-end: 28px;
+  --bs-btn-border-width: 1px;
   --bs-btn-interaction-border-width: 2px;
   --bs-btn-color: var(--bs-color-action-enabled);
   --bs-btn-bg: initial;
