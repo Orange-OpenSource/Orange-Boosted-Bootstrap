@@ -916,13 +916,13 @@ You can use `.btn-assistant` class to indicate AI actions in a process or a flow
   Due to technical limitations, an Assistant button does not have a transparent background. To simulate transparency, set `--bs-btn-bg` to its container background color. Make sure that the used variable isn't semi-transparent (ie. use background tokens instead of surface tokens).
 </Callout>
 
-<Example buttonLabel="Assistant button simulated transparent background" class="bd-btn-example" code={`<div class="bg-surface-secondary">
+<Example buttonLabel="Assistant button simulated transparent background" class="bd-btn-example" code={`<div class="bg-tertiary">
 
     <button class="btn btn-assistant">
       Default
     </button>
 
-    <button class="btn btn-assistant" style="--bs-btn-bg: var(--bs-color-bg-secondary);">
+    <button class="btn btn-assistant" style="--bs-btn-bg: var(--bs-color-bg-tertiary);">
       Default
     </button>
 

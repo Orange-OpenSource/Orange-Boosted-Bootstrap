@@ -558,16 +558,17 @@
 }
 
 .btn-assistant {
-  --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start};
-  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end};
-  --#{$prefix}btn-interaction-border-width: #{$ouds-button-border-width-default-interaction};
-  --#{$prefix}btn-color: #{$ouds-button-mono-color-content-default-enabled};
+  --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start-default};
+  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end-default};
+  --#{$prefix}btn-border-width: #{$ouds-button-border-width-ai};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-button-border-width-ai-interaction};
+  --#{$prefix}btn-color: #{$ouds-button-color-content-ai-enabled};
   --#{$prefix}btn-bg: initial;
-  --#{$prefix}btn-hover-color: #{$ouds-button-color-content-default-hover};
-  --#{$prefix}btn-active-color: #{$ouds-button-color-content-default-pressed};
-  --#{$prefix}btn-disabled-color: #{$ouds-button-color-content-default-disabled};
-  --#{$prefix}btn-focus-color: #{$ouds-button-color-content-default-focus};
-  --#{$prefix}btn-loading-color: #{$ouds-button-color-content-default-loading};
+  --#{$prefix}btn-hover-color: #{$ouds-button-color-content-ai-hover};
+  --#{$prefix}btn-active-color: #{$ouds-button-color-content-ai-pressed};
+  --#{$prefix}btn-disabled-color: #{$ouds-button-color-content-ai-disabled};
+  --#{$prefix}btn-focus-color: #{$ouds-button-color-content-ai-focus};
+  --#{$prefix}btn-loading-color: #{$ouds-button-color-content-ai-loading};
 
   &::before {
     width: var(--#{$prefix}btn-icon-size);
@@ -577,7 +578,7 @@
     mask-image: $btn-assistant-icon;
   }
 
-  background: linear-gradient(var(--#{$prefix}btn-bg, var(--#{$prefix}color-bg-primary))) padding-box, conic-gradient($ouds-button-color-border-secondary 0deg 82deg, $ouds-button-color-border-tertiary 82deg 118deg, $ouds-button-color-border-quaternary 118deg 242deg, $ouds-button-color-border-primary 242deg 360deg) border-box;
+  background: linear-gradient(var(--#{$prefix}btn-bg, var(--#{$prefix}color-bg-primary))) padding-box, conic-gradient($ouds-color-ai-secondary 0deg 82deg, $ouds-color-ai-tertiary 82deg 118deg, $ouds-color-ai-quaternary 118deg 242deg, $ouds-color-ai-primary 242deg 360deg) border-box;
   background-origin: border-box;
   border-color: transparent;
 
@@ -589,7 +590,6 @@
 
   &:disabled:not(&.loading-indeterminate, &.loading-determinate) {
     background: initial;
-    // border-color: transparent;
   }
 
   &.btn-icon {
