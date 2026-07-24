@@ -404,16 +404,6 @@
     color: var(--#{$prefix}color-content-default); // OUDS mod: instead of `var(--bs-body-color)`
     word-wrap: normal;
   }
-
-  // no skeleton in code snippets (necessary for Scss placeholder that get a .placeholder class)
-  .placeholder {
-    display: inline;
-    color: inherit;
-    &::after,
-    &::before {
-      display: none;
-    }
-  }
 }
 
 .bd-example-snippet .highlight pre {
