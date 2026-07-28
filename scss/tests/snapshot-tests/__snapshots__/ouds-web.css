@@ -9452,7 +9452,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   gap: 4px;
   align-items: flex-start;
   justify-content: center;
-  width: 20%;
+  width: 1%;
   min-height: 48px;
   padding-block: 12px;
 }
