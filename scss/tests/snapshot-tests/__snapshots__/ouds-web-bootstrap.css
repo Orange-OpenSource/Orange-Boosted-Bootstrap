@@ -1329,8 +1329,8 @@ a > :is(var, code) {
 kbd {
   padding: 0.125rem 0.25rem;
   font-size: 0.875em;
-  color: var(--bs-color-content-on-status-neutral-emphasized);
-  background-color: var(--bs-color-surface-status-neutral-emphasized);
+  color: var(--bs-body-color);
+  background-color: var(--bs-color-bg-secondary);
   border-radius: 4px;
 }
 kbd kbd {
