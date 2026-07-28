@@ -43,7 +43,7 @@
 - name: 'interactive-icon'
   value: '1.0.0'
 - name: 'link'
-  value: '2.3.0'
+  value: '2.4.0'
 - name: 'modal-dialog'
   value: '0.0.0'
 - name: 'navigation-bar'

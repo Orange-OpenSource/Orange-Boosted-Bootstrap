@@ -60,13 +60,13 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 
 ### With chevron
 
-Add `.link-chevron` to enhance your link with a chevron on the right side. Use the additional `.back` class to display the chevron on the left side.
+Add `.link-chevron` to enhance your link with a chevron on the right side. Use the additional `.link-previous` class to display the chevron on the left side.
 
 <Example buttonLabel="links with chevron" code={`<div><a class="link link-chevron" href="#">Link with chevron</a></div>
-  <div><a class="link link-chevron back" href="#">Link with a back chevron</a></div>
+  <div><a class="link link-chevron link-previous" href="#">Link with a previous chevron</a></div>
   <div style="width:20rem;">
     <div><a class="link link-chevron" href="#">This is an example of a link on multiple lines with chevron</a></div>
-    <div><a class="link link-chevron back" href="#">This is an example of a link on multiple lines with a back chevron</a></div>
+    <div><a class="link link-chevron link-previous" href="#">This is an example of a link on multiple lines with a previous chevron</a></div>
   </div>`} />
 
 ### With icon
@@ -107,6 +107,12 @@ Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left o
   </a>`} />
 </BootstrapCompatibility>
 
+### External
+
+Add `.link-external` to enhance your link with an external icon on the right side.
+
+<Example buttonLabel="links with external icon" code={`<a class="link link-external" href="#">Link with external icon</a>`} />
+
 ## States
 
 ### Disabled
@@ -146,7 +152,13 @@ However, if the disabled link conveys useful information for users, it must rema
 
 ## Sizes
 
-Links are available in two sizes. Add `.link-small` for small size.
+Links are available in two sizes and two densities. Add `.link-small` for small size link. Add `.link-compact` for compact density link. You can combine both classes to have a small and compact link.
 
-<Example buttonLabel="links sizes" code={`<div><a class="link" href="#">This is an example of a link</a></div>
-  <div><a class="link link-small" href="#">This is an example of a small link</a></div>`} />
+<Callout type="warning">
+  Compact and small sizes are not recommended for accessibility reasons because of the interactive area being reduced.
+</Callout>
+
+<Example buttonLabel="links sizes" class="d-flex flex-column align-items-start gap-xsmall" code={`<a class="link" href="#">This is an example of a link</a>
+  <a class="link link-small" href="#">This is an example of a small link</a>
+  <a class="link link-compact" href="#">This is an example of a compact link</a>
+  <a class="link link-compact link-small" href="#">This is an example of a small compact link</a>`} />
