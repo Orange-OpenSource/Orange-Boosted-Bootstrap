@@ -11,6 +11,7 @@ import {
   getDocsStaticFsPath,
   validateVersionedDocsPaths
 } from './path'
+import { isHeading } from './utils.ts'
 
 // A list of static file paths that will be aliased to a different path.
 const staticFileAliases = {
