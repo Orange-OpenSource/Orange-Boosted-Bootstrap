@@ -623,9 +623,24 @@ Additional utilities can be used to adjust the alignment of buttons when horizon
     <button class="btn btn-default" type="button">Button</button>
   </div>`} />
 
-#### Disable text wrapping
+#### Text wrapping
+
+A button's text should not exceed one line, but will automatically wrap if necessary. It also natively supports `<br/>` tags to break the text into multiple lines. Read more about [text wrapping in a button](https://r.orange.fr/r/S-ouds-doc-button/t/b29aae8b37).
 
 If you don’t want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
+
+<Example buttonLabel="buttons with wrapped text" class="bd-btn-example d-flex flex-column align-items-start" code={`<button class="btn btn-default md:me-xsmall" type="button">
+    <svg aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+    The label remains centered in<br/>multiline mode with an icon
+  </button>
+  <button class="btn btn-default" type="button">
+    <svg aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+    In small contexts the button text wraps automatically to adapt its behavior
+  </button>`} />
 
 ## [[comp]] Navigation button
 
