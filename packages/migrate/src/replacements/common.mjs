@@ -104,7 +104,6 @@ export const commonReplacements = [
 
   // Interactions
   ['pe-none', 'pointer-events-none'],
-  ['pe-auto', 'pointer-events-auto'],
 
   // Link
   [...warnForClass('link-opacity-[0-9]+(-hover)?', { link: 'https://web.unified-design-system.orange.com/docs/components/links' })],
