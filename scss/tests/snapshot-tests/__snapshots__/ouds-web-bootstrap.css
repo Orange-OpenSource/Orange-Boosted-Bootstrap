@@ -8321,6 +8321,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .btn-previous::before,
 .btn-next::after {
+  flex-shrink: 0;
   width: var(--bs-btn-icon-size);
   height: var(--bs-btn-icon-size);
   background-color: currentcolor;
