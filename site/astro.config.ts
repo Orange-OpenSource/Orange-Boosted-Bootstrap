@@ -11,7 +11,7 @@ import { rehypeHeadingIds, unified } from '@astrojs/markdown-remark'
 import { rehypeBsTable, rehypeCustomHeaderSlug, rehypeHeaderLinksOrder } from './src/libs/rehype'
 import { remarkBsComp, remarkBsConfig, remarkBsDocsref, remarkBsVersionLink } from './src/libs/remark'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import { isHeading } from '@libs/utils'
+import { isHeading } from './src/libs/utils'
 
 const isDev = process.env.NODE_ENV === 'development'
 
