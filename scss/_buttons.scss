@@ -442,7 +442,7 @@
     height: var(--#{$prefix}btn-icon-size);
     content: "";
     background-color: currentcolor;
-    mask-image: var(--#{$prefix}close-icon);
+    mask-image: $btn-expurge-icon;
   }
 }
 

@@ -1939,7 +1939,6 @@ $btn-close-padding:             var(--#{$prefix}icon-spacing, #{$btn-icon-paddin
 $btn-close-border-width:        var(--#{$prefix}border-width) !default; // OUDS mod
 $btn-close-border-color:        transparent !default; // OUDS mod
 $btn-close-color:               var(--#{$prefix}emphasis-color) !default;
-$btn-close-bg:                  var(--#{$prefix}close-icon) !default; // OUDS mod
 // OUDS mod: deprecated in OUDS Web, kept for Bootstrap compatibility
 // fusv-disable
 $btn-close-focus-shadow:        $btn-focus-box-shadow !default;
