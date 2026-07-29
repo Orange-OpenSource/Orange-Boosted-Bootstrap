@@ -655,7 +655,7 @@ Loading state can also be combined with all kind of buttons, including icons.
 
 ### Sizes
 
-Buttons are available in two sizes. Add `.btn-small` to have a smaller button. Default size is medium.
+Buttons are available in two sizes. Add `.btn-small` to have a smaller button.
 
 <Example buttonLabel="small buttons" code={`<button type="button" class="btn btn-default btn-small">Default</button>
 
@@ -732,9 +732,24 @@ Additional utilities can be used to adjust the alignment of buttons when horizon
 
   </div>`} />
 
-#### Disable text wrapping
+#### Text wrapping
 
-If you don’t want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
+A button's text should not exceed one line, but will automatically wrap if necessary. It also natively supports `<br/>` tags to break the text into multiple lines. Read more about [text wrapping in a button](https://r.orange.fr/r/S-ouds-doc-button/t/b29aae8b37).
+
+If you don’t want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for all buttons.
+
+<Example buttonLabel="buttons with wrapped text" class="bd-btn-example d-flex flex-column align-items-start" code={`<button class="btn btn-default" type="button">
+    <svg aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+    The label remains centered in<br/>multiline mode with an icon
+  </button>
+  <button class="btn btn-default" type="button">
+    <svg aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+    In small contexts the button text wraps automatically to adapt its behavior
+  </button>`} />
 
 ## [[comp]] Navigation button
 
@@ -900,6 +915,17 @@ Please refer to the [loading state section of the button component](#loading) fo
     <button type="button" class="btn btn-default btn-previous">Previous</button>
   </div>`} />
 
+### Layout
+
+#### Text wrapping
+
+A button's text should not exceed one line, but will automatically wrap if necessary. It also natively supports `<br/>` tags to break the text into multiple lines. Read more about [text wrapping in a button](https://r.orange.fr/r/S-ouds-doc-navigation-button/t/99e6bc9526).
+
+If you don’t want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
+
+<Example buttonLabel="navigation buttons with wrapped text" class="bd-btn-example d-flex flex-column align-items-start" code={`<button class="btn btn-default btn-next" type="button">The label remains centered in<br/>multiline mode with an icon</button>
+  <button class="btn btn-default btn-previous" type="button">In small contexts the button text wraps automatically to adapt its behavior</button>`} />
+
 ## [[comp]] Assistant button
 
 An AI assistant button is a UI element used to trigger an interaction with an AI-powered feature, such as conversational assistance, content generation, or contextual suggestions.
@@ -1000,3 +1026,14 @@ Please refer to the [loading state section of the button component](#loading) fo
     <button type="button" class="btn btn-assistant">Default</button>
 
   </div>`} />
+
+### Layout
+
+#### Text wrapping
+
+A button's text should not exceed one line, but will automatically wrap if necessary. It also natively supports `<br/>` tags to break the text into multiple lines. Read more about [text wrapping in a button](https://r.orange.fr/r/S-ouds-doc-navigation-button/t/99e6bc9526).
+
+If you don’t want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
+
+<Example buttonLabel="navigation buttons with wrapped text" class="bd-btn-example d-flex flex-column align-items-start" code={`<button class="btn btn-assistant" type="button">The label remains centered in<br/>multiline mode with an icon</button>
+  <button class="btn btn-assistant" type="button">In small contexts the button text wraps automatically to adapt its behavior</button>`} />

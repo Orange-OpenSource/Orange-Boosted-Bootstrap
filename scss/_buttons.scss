@@ -552,6 +552,7 @@
 
 .btn-previous::before,
 .btn-next::after {
+  flex-shrink: 0;
   width: var(--#{$prefix}btn-icon-size);
   height: var(--#{$prefix}btn-icon-size);
   background-color: currentcolor;
