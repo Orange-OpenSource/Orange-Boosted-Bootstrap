@@ -13,7 +13,7 @@ $ouds-elevation-sticky: $ouds-elevation-x-sticky $ouds-elevation-y-sticky $ouds-
 // scss-docs-end ouds-composite-elevation
 
 // OUDS pixel tracker
-$ouds-pixel-tracker-url: "https://assets.orange.com/pm_12751_542_542931-ew23c26ecu-ouds-px.png?a=1&b=or&lib=ouds-web&v=1.4.0"; // stylelint-disable-line scss/dollar-variable-default
+$ouds-pixel-tracker-url: "https://assets.orange.com/pm_12751_542_542931-ew23c26ecu-ouds-px.png?a=1&b=orc&lib=ouds-web&v=1.4.0"; // stylelint-disable-line scss/dollar-variable-default
 
 // Font
 
@@ -31,20 +31,20 @@ $custom-font-cdn-urls: (
 $ouds-font-family-sans-serif-stack:
   // OUDS custom font
   $custom-font-name,
-    // Older macOS and iOS
+  // Older macOS and iOS
   "Helvetica Neue",
-    // Some Windows
+  // Some Windows
   Helvetica,
-    // Safari for macOS and iOS
+  // Safari for macOS and iOS
   "SF Pro",
-    // Android
+  // Android
   Roboto,
-    // Basic web fallback
+  // Basic web fallback
   Arial,
   "Noto Sans",
   "Liberation Sans",
   sans-serif,
-    // Emojis fonts
+  // Emojis fonts
   "Apple Color Emoji",
   "Segoe UI Emoji",
   "Segoe UI Symbol",
@@ -54,11 +54,11 @@ $ouds-font-family-sans-serif-stack:
 $ouds-font-family-monospace-stack:
   // Windows
   Consolas,
-    // Safari for macOS and iOS
+  // Safari for macOS and iOS
   "SFMono-Regular",
-    // Android
+  // Android
   "Roboto Mono",
-    // Basic web fallback
+  // Basic web fallback
   "Liberation Mono",
   Menlo,
   monospace !default;
