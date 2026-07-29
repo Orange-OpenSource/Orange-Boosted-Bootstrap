@@ -23,13 +23,11 @@
   background-origin: border-box;
   border-color: transparent;
 
-  &:hover,
-  &:active,
-  &:focus-visible {
+  &:is(:hover, :active, :focus-visible) {
     border-color: transparent;
   }
 
-  &:disabled:not(&.loading-indeterminate, &.loading-determinate) {
+  &:is(:disabled, [aria-disabled="true"]):not(.loading-indeterminate, .loading-determinate) {
     background: initial;
   }
 

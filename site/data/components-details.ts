@@ -7,8 +7,8 @@ export const componentsDetails: ComponentCardData[] = [
     name: 'Assistant button',
     slug: 'assistant-button',
     link: 'buttons#assistant-button',
-    category: 'Actions',
-    snippet: `<button type="button" class="btn btn-default btn-assistant">Label</button>`
+    category: 'Assistant',
+    snippet: `<button type="button" class="btn btn-assistant">Label</button>`
   },
   {
     name: 'Alert message',
