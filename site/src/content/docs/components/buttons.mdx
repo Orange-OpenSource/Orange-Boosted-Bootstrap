@@ -744,6 +744,7 @@ If you don’t want the button text to wrap, you can add the `.text-nowrap` clas
     </svg>
     The label remains centered in<br/>multiline mode with an icon
   </button>
+
   <button class="btn btn-default" type="button">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -923,8 +924,13 @@ A button's text should not exceed one line, but will automatically wrap if neces
 
 If you don’t want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
 
-<Example buttonLabel="navigation buttons with wrapped text" class="bd-btn-example d-flex flex-column align-items-start" code={`<button class="btn btn-default btn-next" type="button">The label remains centered in<br/>multiline mode with an icon</button>
-  <button class="btn btn-default btn-previous" type="button">In small contexts the button text wraps automatically to adapt its behavior</button>`} />
+<Example buttonLabel="navigation buttons with wrapped text" class="bd-btn-example d-flex flex-column align-items-start" code={`<button class="btn btn-default btn-next" type="button">
+    The label remains centered in<br/>multiline mode with an icon
+  </button>
+
+  <button class="btn btn-default btn-previous" type="button">
+    In small contexts the button text wraps automatically to adapt its behavior
+  </button>`} />
 
 ## [[comp]] Assistant button
 
@@ -1035,5 +1041,10 @@ A button's text should not exceed one line, but will automatically wrap if neces
 
 If you don’t want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
 
-<Example buttonLabel="navigation buttons with wrapped text" class="bd-btn-example d-flex flex-column align-items-start" code={`<button class="btn btn-assistant" type="button">The label remains centered in<br/>multiline mode with an icon</button>
-  <button class="btn btn-assistant" type="button">In small contexts the button text wraps automatically to adapt its behavior</button>`} />
+<Example buttonLabel="navigation buttons with wrapped text" class="bd-btn-example d-flex flex-column align-items-start" code={`<button class="btn btn-assistant" type="button">
+    The label remains centered in<br/>multiline mode with an icon
+  </button>
+
+  <button class="btn btn-assistant" type="button">
+    In small contexts the button text wraps automatically to adapt its behavior
+  </button>`} />
