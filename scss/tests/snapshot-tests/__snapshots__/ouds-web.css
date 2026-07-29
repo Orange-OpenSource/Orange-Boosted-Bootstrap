@@ -8770,7 +8770,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .breadcrumb .breadcrumb-item {
   display: none;
   align-items: center;
-  min-width: calc(40px + 2 * var(--bs-breadcrumb-item-gap) + 16px);
+  min-width: calc(32px + 2 * var(--bs-breadcrumb-item-gap) + 16px);
   padding-right: var(--bs-breadcrumb-item-gap);
   white-space: nowrap;
 }
@@ -8791,7 +8791,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 .breadcrumb .breadcrumb-item a {
   display: inline-block;
-  min-width: 40px;
+  min-width: 32px;
   padding: 12px 0px;
   overflow: hidden;
   text-overflow: ellipsis;
