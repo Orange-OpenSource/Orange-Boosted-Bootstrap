@@ -12,6 +12,7 @@ types:
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
+import { getTokenValue } from '@libs/sass-variables'
 
 ## Overview
 
@@ -131,8 +132,8 @@ The following table summarizes the different types of items and their categories
 <BsTable>
   | Categories     | Card                 | List                 |
   | -------------- | -------------------- | -------------------- |
-  | *Static*       | Static card item     | Static list item     |
-  | *Navigation*   | Navigation card item | Navigation list item |
+  | *Static*       | [Static card item](#static-card-item)     | [Static list item](#static-list-item)     |
+  | *Navigation*   | [Navigation card item](#navigation-card-item) | [Navigation list item](#navigation-list-item) |
 </BsTable>
 
 The basic structure includes:
@@ -148,16 +149,19 @@ TBD
 
 ## Card items
 
-Card items are self-contained UI elements that can be used to present a group of related content. They can be used independently or within a card-based layout.
+Card item is a UI element that displays a unit of information either in an interactive or non-interactive card, within a card layout or independently.
 
 ### [[comp]] Static card item
 
-Static card item is a non-interactive UI element used to present a self-contained group or related content.
-The card surface does not navigate, trigger an action or receive interactive state. When additional navigation is required, consider using a [navigation card item](#navigation-card-item) instead.
+Static card item is a UI element that displays a unit of information in a non-interactive, self-contained card, that does not navigate, trigger actions or have interactive states.
+
+The static card item card may be displayed independently or within a card-based layout. It can include supporting text, leading or trailing content, and status information.
+
+When additional navigation is required, consider using a [navigation card item](#navigation-card-item) instead.
 
 All the available variants can be found in the [common variants](#common-variants).
 
-<Example buttonLabel="standard static items display" class="d-flex flex-column gap-medium" code={`
+<Example buttonLabel="standard static card item display" class="d-flex flex-column gap-medium" code={`
   <div class="item-wrapper">
     <div class="item">
       <div class="item-main">
@@ -170,16 +174,15 @@ All the available variants can be found in the [common variants](#common-variant
 
 ### [[comp]] Navigation card item
 
-A navigation card item is an interactive, self-contained card UI element that takes users to one internal or external destination.
-Use it when navigational content requires stronger visual grouping or prominence than a standard [navigation list item](#navigation-list-item).
+Navigation card item is a UI element that displays a unit of information in an interactive, self-contained card, taking users to an internal or external destination.
 
-The card may be displayed independently or within a card-based layout and may use a distinct background, outline or rounded corners. The entire card acts as a single navigation target and supports the required hover, focus and pressed states. Do not use a Navigation card item when the card must contain several destinations or independent interactive controls.
+The navigation card item is used when the content requires stronger visual grouping or prominence than a standard [navigation list item](#navigation-list-item). It may be displayed independently or within a card-based layout. Each card acts as a single navigation target and supports the necessary hover, pressed, and keyboard focus states.
 
 Add a `.item-navigation` on the `.item-wrapper` level and an `.item-interactive` at the link level to create a navigation card item.
 
 Available variants can be found in the [common variants section](#common-variants) and [navigation items variants section](#navigation-items-variants).
 
-<Example buttonLabel="standard navigation item display" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation">
+<Example buttonLabel="standard navigation card item display" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation">
     <div class="item">
       <div class="item-main">
         <div class="item-text-container">
@@ -189,21 +192,11 @@ Available variants can be found in the [common variants section](#common-variant
     </div>
   </div>`} />
 
-Optionally, the `<a>` element can wrap the entire `.item` instead of just the label.
-
-<Example buttonLabel="navigation item with link wrapping entire item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation">
-    <a href="#" class="item item-interactive">
-      <div class="item-main">
-        <div class="item-text-container">
-          <p class="item-label">Label</p>
-        </div>
-      </div>
-    </a>
-  </div>`} />
-
 ## List items
 
-The list items are UI elements used inside structured lists. They are surrounded by `.item-list` added to the `<ul>` element.
+List item is a UI element that displays a unit of information either in an interactive or non-interactive row, within a structured list.
+
+They are surrounded by `.item-list` added to the `<ul>` element.
 
 Some variants shouldn't be applied to this kind of items. Warning will be done about it in:
 - [Outlined](#outlined) variants
@@ -213,12 +206,13 @@ Some variants shouldn't be applied to this kind of items. Warning will be done a
 
 ### [[comp]] Static list item
 
-A static list item is a non-interactive horizontal row UI element used to present a unit of information within a structured list.
-It supports quick scanning and comparison between related items and may include supporting text, leading or trailing content, and status information. It does not navigate, trigger an action, or receive interactive states.
+Static list item is a UI element that displays a unit of information in a non-interactive horizontal row within a structured list, and does not navigate, trigger actions, or have interactive states.
+
+The static list item allow quick scanning and comparison of related items. It can include supporting text, leading or trailing content, and status information.
 
 All the available variants can be found in the [common variants section](#common-variants).
 
-<Example buttonLabel="standard static items display" class="d-flex flex-column gap-medium" code={`<ul class="item-list">
+<Example buttonLabel="standard static list item display" class="d-flex flex-column gap-medium" code={`<ul class="item-list">
     <li class="item-wrapper">
       <div class="item">
         <div class="item-main">
@@ -241,16 +235,15 @@ All the available variants can be found in the [common variants section](#common
 
 ### [[comp]] Navigation list item
 
-A navigation list item is an interactive horizontal row UI element that takes users to another internal or external destination
-when activated.
+Navigation list item is a UI element that displays a unit of information in an interactive horizontal row within a structured list, taking users to an internal or external destination.
 
-It is intended for structured lists where users need to scan and access related destinations quickly. The entire item acts as a single navigation target and supports the required hover, pressed and keyboard focus states.
+The navigation item list allows quick scanning and access to related destinations. Each item acts as a single navigation target and supports the necessary hover, pressed, and keyboard focus states.
 
-Add a `.item-navigation` on the `.item-wrapper` level and an `.item-interactive` at the link level.
+Add an `.item-navigation` on the `.item-wrapper` level and an `.item-interactive` at the link level.
 
 Available variants can be found in the [common variants section](#common-variants) and [navigation items variants section](#navigation-items-variants).
 
-<Example buttonLabel="standard navigation item display" class="d-flex flex-column gap-medium" code={`<ul class="item-list">
+<Example buttonLabel="standard navigation list item display" class="d-flex flex-column gap-medium" code={`<ul class="item-list">
     <li class="item-wrapper item-navigation">
       <div class="item">
         <div class="item-main">
@@ -271,38 +264,6 @@ Available variants can be found in the [common variants section](#common-variant
     </li>
   </ul>`} />
 
-## Navigation items variants
-
-These variants are exclusive to the navigation items. They are used to indicate a specific type of navigation. The other common variants can be found in the [common variants section](#common-variants).
-
-### Back chevron
-
-Add `.item-previous` to the `.item-navigation` to indicate that the item is a back navigation item. This will add a back chevron icon to the start of the item.
-
-<Example buttonLabel="navigation item with back chevron" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation item-previous">
-    <div class="item">
-      <div class="item-main">
-        <div class="item-text-container">
-          <a href="#" class="item-label item-interactive">Label</a>
-        </div>
-      </div>
-    </div>
-  </div>`} />
-
-### External link
-
-Add `.item-external` to the `.item-navigation` to indicate that the item is an external link. This will add an external link icon to the end of the item.
-
-<Example buttonLabel="navigation item with external link" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation item-external">
-    <div class="item">
-      <div class="item-main">
-        <div class="item-text-container">
-          <a href="#" class="item-label item-interactive">Label</a>
-        </div>
-      </div>
-    </div>
-  </div>`} />
-
 ## Common variants
 
 These variants can be used in all types of items.
@@ -322,8 +283,8 @@ Here is a list of the different assets that we support in the leading container,
 
 You can navigate through the different assets using the tabs below.
 
-<Callout type="warning" title="Small list item">
-  Please note that the sizes below shouldn't be used in a [small list item](#sizes). The slot shouldn't be used as well in this size.
+<Callout type="warning" title="Small item">
+  Please note that the sizes below shouldn't be used in a [small item](#sizes), only the assets without sizing class should be used in small items. The slot shouldn't be used as well in this size.
 </Callout>
 
 <AssetsNavTab id="leading">
@@ -415,13 +376,12 @@ You can navigate through the different assets using the tabs below.
   <AssetsTab name="Slot">
     ##### Slot
 
-    <Callout type="warning" title="Small list item">
-      The slot shouldn't be used in a [small list item](#sizes).
+    <Callout type="warning" title="Small item">
+      The slot shouldn't be used in a [small item](#sizes).
     </Callout>
 
     To add a slot, `item-slot` must be combined with `.item-leading-container`.
-
-    Its size is limited to `96px x 96px`. A slot can be rounded using `item-leading-rounded`. {/* TODO: replace value by token once added */}
+    Its size is limited to <code>{getTokenValue('$ouds-dimension-8xlarge').slice(0, -2) / 16}rem ({getTokenValue('$ouds-dimension-8xlarge')}) x {getTokenValue('$ouds-dimension-8xlarge').slice(0, -2) / 16}rem ({getTokenValue('$ouds-dimension-8xlarge')})</code>. A slot can be rounded using `item-leading-rounded`.
 
     <Example buttonLabel="item with leading slot" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
@@ -512,8 +472,8 @@ The trailing container uses `.item-trailing-container`.
 
 Here is a list of the different assets that we support in the trailing container, along with their corresponding classes and notes.
 
-<Callout type="warning" title="Small list item">
-  Please note that the sizes below shouldn't be used in a [small list item](#sizes). The slot shouldn't be used as well in this size.
+<Callout type="warning" title="Small item">
+  Please note that the sizes below shouldn't be used in a [small item](#sizes). The slot shouldn't be used as well in this size.
 </Callout>
 
 <AssetsNavTab id="trailing">
@@ -613,7 +573,7 @@ Here is a list of the different assets that we support in the trailing container
   </div>`} />
   </AssetsTab>
   <AssetsTab name="Icon">
-    ###### Icon
+    ##### Icon
 
     Icons can be sized with `item-trailing-large` (only if not [small item](#sizes)).
 
@@ -699,7 +659,7 @@ Here is a list of the different assets that we support in the trailing container
 
     To add a slot, `item-slot` must be combined with `.item-trailing-container`.
 
-    Its size is limited to `96px x 96px`. A slot can be rounded using `item-trailing-rounded`. {/* TODO: replace value by token once added */}
+    Its size is limited to <code>{getTokenValue('$ouds-dimension-8xlarge').slice(0, -2) / 16}rem ({getTokenValue('$ouds-dimension-8xlarge')}) x {getTokenValue('$ouds-dimension-8xlarge').slice(0, -2) / 16}rem ({getTokenValue('$ouds-dimension-8xlarge')})</code>. A slot can be rounded using `item-trailing-rounded`.
 
     <Example buttonLabel="item with trailing slot" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
@@ -720,17 +680,17 @@ Here is a list of the different assets that we support in the trailing container
 
 This component contains many slots that can be used to add custom content. The main slots are located in the [leading container](#leading-container), the [text container](#texts), and the [trailing container](#trailing-container). The slots are intended to be used for custom content that is not covered by the other elements of the component. We can add another slot outside of the `.item-main` container as well.
 
-<Callout type="warning" title="Small list item">
-  The slots shouldn't be used in a [small list item](#sizes).
+<Callout type="warning" title="Small item">
+  The slots shouldn't be used in a [small item](#sizes).
 </Callout>
 
-Here is a small resume of the slots that can be used in a static item:
+Here is a small resume of the slots that can be used in an item:
 * [Leading container](#leading-container) using `.item-slot` (optional)
 * [Text container](#texts) using `.item-slot` (optional)
 * [Trailing container](#trailing-container) using `.item-slot` (optional)
 * A slot outside of the `.item-main` container, direct child of `.item` using `.item-slot` (optional)
 
-Optionally, if the item is a [navigation item](#navigation-item) and a slot is also interactive, you can add `.item-slot-clickable` to the slot.<BrandSpecific brand={['orange', 'orange-compact']}> Please note that the slot won't be [rounded](#rounded-corners) anymore.</BrandSpecific>
+Optionally, if the item is a navigation item and a slot is also interactive, you can add `.item-slot-focusable` to the slot.<BrandSpecific brand={['orange', 'orange-compact']}> Please note that the slot won't be [rounded](#rounded-corners) anymore.</BrandSpecific>
 
 <Example buttonLabel="item using a slot outside of the main content of the item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
@@ -752,7 +712,7 @@ Optionally, if the item is a [navigation item](#navigation-item) and a slot is a
     </div>
   </div>`} />
 
-### Helper text
+#### Helper text
 
 Optionally, a helper text can be added below the main `.item` container using `.item-helper`.
 
@@ -769,7 +729,7 @@ Optionally, a helper text can be added below the main `.item` container using `.
 
 ### Background
 
-By default, [card items](#card-item) have a background-color, while [list items](#list-item) don't. This behavior can be modified by using `.item-no-bg` or `.item-bg` on the `.item-wrapper` or `.item-list` container. These modifiers only modify the no interaction background of the items.
+By default, [card items](#card-items) have a background-color, while [list items](#list-items) don't. This behavior can be modified by using `.item-no-bg` or `.item-bg` on the `.item-wrapper` or `.item-list` container. These modifiers only modify the no interaction background of the items.
 
 <Example buttonLabel="items with background modifications" class="d-flex flex-column gap-medium" code={`<!-- Card -->
   <div class="item-wrapper item-navigation item-no-bg">
@@ -843,11 +803,11 @@ You can remove the divider by using `.item-no-divider` on the `.item-wrapper` or
 
 ### Outlined
 
-<Callout type="warning" title="Card item only" action="Card item" actionHref="#card-item" />
+<Callout type="warning" title="Card item only" action="Card item" actionHref="#card-items" />
 
 By default every item comes with a divider. The divider may be removed or transformed into an outline using `.item-outlined` and/or `.item-no-outline` on the element `.item-wrapper` or any ancestors. `.item-no-divider` can also be applied for another rendering.
 
-[Static items](#static-list-item) only have the non-interactive version.
+Static items only have the non-interactive version.
 
 <Example buttonLabel="items outlined" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation item-outlined">
     <div class="item">
@@ -893,7 +853,7 @@ Rounded corners items is a project-wide option therefore all your items should e
 </Callout>
 
 <Callout type="info">
-  Items in a [list](#list-item) won't have rounded corners even using this class.
+  [Items in a list](#list-items) won't have rounded corners even using this class.
 </Callout>
 
 <Example buttonLabel="rounded items" class="bd-btn-example" code={`<div class="use-rounded-corner-items">
@@ -909,7 +869,7 @@ Rounded corners items is a project-wide option therefore all your items should e
     </div>
 
     <!-- List -->
-    <ul class="item-list item-bg">
+    <ul class="item-list">
       <li class="item-wrapper">
         <div class="item">
           <div class="item-main">
@@ -932,18 +892,18 @@ Rounded corners items is a project-wide option therefore all your items should e
   </div>`} />
 </BrandSpecific>
 
-## States
+### States
 
-### Disabled
+#### Disabled
 
-Items can be disabled by using `.disabled` on the element `.item-wrapper` or any ancestors. The disabled style is also applied to all interactive elements inside the item.
+Items can be disabled by using `.disabled` on the element `.item-wrapper` or any ancestors.
 
 If the item is in a disabled context, the item will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, the `[aria-disabled="true"]` attribute, or the `.disabled` class.
 
 You may handle on your own the [slots](#slots) regarding accessibility and design. For example, if you have a slot with a button, you may want to disable the button to apply the right behavior and the correct visual state.
 
 <Callout type="info">
-  The images and videos inside the disabled static item will be grayed out using opacity. You'll still need to handle it correctly from an accessibility point of view.
+  The images and videos inside the disabled item will be grayed out using opacity. You'll still need to handle it correctly from an accessibility point of view.
 </Callout>
 
 <Example buttonLabel="disabled items" class="d-flex flex-column gap-medium" code={`<div class="disabled">
@@ -983,7 +943,7 @@ You may handle on your own the [slots](#slots) regarding accessibility and desig
     </div>
   </div>`} />
 
-### Skeleton
+#### Skeleton
 
 <SkeletonRedirect component="item" />
 
@@ -999,7 +959,7 @@ You may handle on your own the [slots](#slots) regarding accessibility and desig
     </div>
   </div>`} />
 
-## Sizes
+### Sizes
 
 By default every item comes with a default size. The size can be adapted using `.item-small` on the element `.item-wrapper` or `.item-list`.
 
@@ -1044,9 +1004,9 @@ By default every item comes with a default size. The size can be adapted using `
     </li>
   </ul>`} />
 
-## Layout
+### Layout
 
-### Alignment
+#### Alignment
 
 By default all items are vertically centered. You can change the alignment of the content using `.item-top` by setting it on the `.item-wrapper` or `.item-list`.
 
@@ -1081,7 +1041,7 @@ By default all items are vertically centered. You can change the alignment of th
     </div>
   </div>`} />
 
-### Max width
+#### Max width
 
 By default, items will span the whole width of their parent container, to limit the width of the item on wider parent container, add a `.component-max-width` to the `.item-wrapper` or `.item-list` container.
 
@@ -1117,3 +1077,49 @@ By default, items will span the whole width of their parent container, to limit 
       </div>
     </li>
   </ul>`} />
+
+## Navigation items variants
+
+These variants are exclusive to the navigation items. They are used to indicate a specific type of navigation. The other common variants can be found in the [common variants section](#common-variants).
+
+### Back chevron
+
+Add `.item-previous` to the `.item-navigation` to indicate that the item is a back navigation item. This will add a back chevron icon to the start of the item.
+
+<Example buttonLabel="navigation card item with back chevron" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation item-previous">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <a href="#" class="item-label item-interactive">Label</a>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+
+### External link
+
+Add `.item-external` to the `.item-navigation` to indicate that the item is an external link. This will add an external link icon to the end of the item.
+
+<Example buttonLabel="navigation card item with external link" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation item-external">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <a href="#" class="item-label item-interactive">Label</a>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+
+### Wrapping link
+
+Optionally, the `<a>` element can wrap the entire `.item` instead of just the label.
+
+<Example buttonLabel="navigation card item with link wrapping entire item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation">
+    <a href="#" class="item item-interactive">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </a>
+  </div>`} />

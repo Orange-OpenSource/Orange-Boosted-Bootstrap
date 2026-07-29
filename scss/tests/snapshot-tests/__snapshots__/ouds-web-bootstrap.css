@@ -12352,7 +12352,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   opacity: var(--bs-list-item-disabled-opacity, 1);
 }
 
-.item-slot-clickable {
+.item-slot-focusable {
   position: relative;
   z-index: 2;
   padding: 5px;
