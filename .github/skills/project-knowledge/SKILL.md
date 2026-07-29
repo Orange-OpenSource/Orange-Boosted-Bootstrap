@@ -12,7 +12,7 @@ description: 'OUDS Web project knowledge base: glossary of 154 terms, build pipe
 | Key | Value |
 |---|---|
 | Version | 1.1.0 |
-| Main branch | `ouds/main` |
+| Main branch | `main` |
 | Brands | Orange, Sosh, Orange Compact |
 | JS components | 15 (all extend BaseComponent) |
 | SCSS components | ~40 + 11 forms |
