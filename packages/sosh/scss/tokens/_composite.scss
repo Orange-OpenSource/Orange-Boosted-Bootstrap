@@ -93,7 +93,7 @@ $breadcrumb-divider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/
 $btn-previous-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='M15.672 16.819c-.015-.015.019.015 0 0l-5.55-4.905 5.55-4.811c.619-.615.506-1.388 0-1.913-.015-.019.019.015 0 0-.566-.536-1.447-.506-2.036.008L6.927 11.01c-.551.48-.506 1.286 0 1.808l6.709 5.883c.716.717 1.545.574 2.036.094.491-.48.652-1.339 0-1.976Z' clip-rule='evenodd'/></svg>") !default;
 // OUDS icon sosh/Component/button/next v2.1
 $btn-next-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='M8.331 7.178c-.018-.015.015.015 0 0l5.55 4.905-5.55 4.812c-.618.615-.506 1.387 0 1.912-.018-.015.015.019 0 0 .567.536 1.448.506 2.037-.008l6.708-5.812c.552-.48.507-1.286 0-1.807l-6.708-5.884c-.717-.717-1.545-.574-2.037-.094-.49.48-.652 1.339 0 1.976Z' clip-rule='evenodd'/></svg>") !default;
-// OUDS icon orange/Component/button/expurge v2.1
+// OUDS icon sosh/Component/button/expurge v2.1
 $btn-expurge-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='M18.397 5.603c.47.47.47 1.235 0 1.706l-4.691 4.69 4.69 4.692a1.207 1.207 0 0 1-1.705 1.706L12 13.705l-4.691 4.692a1.207 1.207 0 0 1-1.706-1.706l4.691-4.692-4.69-4.69a1.207 1.207 0 0 1 1.705-1.706L12 10.293l4.691-4.69c.47-.47 1.235-.47 1.706 0Z' clip-rule='evenodd'/></svg>") !default;
 
 // * Bullet list *
@@ -114,16 +114,16 @@ $chip-tick-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
 
 // * Control item *
 // OUDS icon sosh/Component/checkbox/checkbox-selected v2.1
-$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g clip-path='url(#a)'><path fill-rule='evenodd' d='M24 0c0-1.988 1.988 0 0 0v24c0 1.988 1.988 0 0 0H0c-1.988 0 0 1.988 0 0V0c-1.988 0 0-1.988 0 0h24Zm-6.773 6.345-7.636 8.46L6.75 11.66c-.366-.39-1.13-.536-1.614.01-.478.543-.402 1.418-.038 1.805L8.78 17.56c.183.195.587.441.827.441s.592-.212.775-.407l8.52-9.42c.364-.389.444-1.29-.043-1.819-.494-.539-1.266-.398-1.632-.009Z' clip-rule='evenodd'/></g><defs><clipPath id='a'><path fill='#fff' d='M0 0h24v24H0z'/></clipPath></defs></svg>") !default;
+$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g clip-path='url(#a)'><path fill-rule='evenodd' d='M24 0c0-1.988 1.988 0 0 0v24c0 1.988 1.988 0 0 0H0c-1.988 0 0 1.988 0 0V0c-1.988 0 0-1.988 0 0h24Zm-6.773 6.345-7.636 8.46L6.75 11.66c-.366-.39-1.13-.536-1.614.01-.478.543-.402 1.418-.038 1.805L8.78 17.56c.183.195.587.441.827.441s.592-.212.775-.407l8.52-9.42c.364-.389.444-1.29-.043-1.819-.494-.539-1.266-.398-1.632-.009Z' clip-rule='evenodd'/></g><defs><clipPath id='a'><path d='M0 0h24v24H0z'/></clipPath></defs></svg>") !default;
 // OUDS icon sosh/Component/radio-button/radio-button-selected v2.1
-$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g clip-path='url(#a)'><path fill-rule='evenodd' d='M24 24H0V0h24v24ZM12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6Z' clip-rule='evenodd'/></g><defs><clipPath id='a'><path fill='#fff' d='M0 0h24v24H0z'/></clipPath></defs></svg>") !default;
+$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g clip-path='url(#a)'><path fill-rule='evenodd' d='M24 24H0V0h24v24ZM12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6Z' clip-rule='evenodd'/></g><defs><clipPath id='a'><path d='M0 0h24v24H0z'/></clipPath></defs></svg>") !default;
 // OUDS icon sosh/Component/checkbox/checkbox-undetermined v2.1
-$form-check-input-indeterminate-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g clip-path='url(#a)'><path fill-rule='evenodd' d='M24 0c0-1.988 1.988 0 0 0v24c0 1.988 1.988 0 0 0H0c-1.988 0 0 1.988 0 0V0c-1.988 0 0-1.988 0 0h24Zm-6 10.8H6a1.2 1.2 0 0 0 0 2.4h12a1.2 1.2 0 0 0 0-2.4Z' clip-rule='evenodd'/></g><defs><clipPath id='a'><path fill='#fff' d='M0 0h24v24H0z'/></clipPath></defs></svg>") !default;
+$form-check-input-indeterminate-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g clip-path='url(#a)'><path fill-rule='evenodd' d='M24 0c0-1.988 1.988 0 0 0v24c0 1.988 1.988 0 0 0H0c-1.988 0 0 1.988 0 0V0c-1.988 0 0-1.988 0 0h24Zm-6 10.8H6a1.2 1.2 0 0 0 0 2.4h12a1.2 1.2 0 0 0 0-2.4Z' clip-rule='evenodd'/></g><defs><clipPath id='a'><path d='M0 0h24v24H0z'/></clipPath></defs></svg>") !default;
 // OUDS icon sosh/Component/switch/selected-switch v2.1
 $form-switch-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='m16.047 7.722-5.913 6.372-2.201-2.369c-.283-.293-.961-.326-1.335.085-.371.41-.227.99.056 1.282l2.851 3.076c.142.147.455.332.64.332.186 0 .46-.16.601-.306l6.597-7.096c.283-.292.434-.896.057-1.295-.383-.406-1.07-.374-1.353-.081Z' clip-rule='evenodd'/></svg>") !default;
 
 // * Link *
-// OUDS icon sosh/Component/link/next v2.1
+// OUDS icon sosh/Component/link/previous v2.1
 $link-previous: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='M15.672 16.819c-.015-.015.019.015 0 0l-5.55-4.905 5.55-4.811c.619-.616.506-1.388 0-1.913-.015-.019.019.015 0 0-.566-.536-1.447-.506-2.036.008L6.927 11.01c-.551.48-.506 1.286 0 1.808l6.709 5.883c.716.717 1.545.574 2.036.094.491-.48.652-1.339 0-1.976Z' clip-rule='evenodd'/></svg>") !default;
 
 // * Select input *
