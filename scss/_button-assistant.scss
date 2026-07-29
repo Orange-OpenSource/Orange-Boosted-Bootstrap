@@ -16,7 +16,7 @@
     height: var(--#{$prefix}btn-icon-size);
     content: "";
     background-color: currentcolor;
-    mask-image: $btn-assistant-icon;
+    mask: $btn-assistant-icon center;
   }
 
   background: linear-gradient(var(--#{$prefix}btn-bg, var(--#{$prefix}color-bg-primary))) padding-box, conic-gradient($ouds-color-ai-secondary 0deg 82deg, $ouds-color-ai-tertiary 82deg 118deg, $ouds-color-ai-quaternary 118deg 242deg, $ouds-color-ai-primary 242deg 360deg) border-box;
