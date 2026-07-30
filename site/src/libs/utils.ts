@@ -4,6 +4,7 @@ import toString from 'mdast-util-to-string'
 import { remark } from 'remark'
 import remarkHtml from 'remark-html'
 import { getVersionedDocsPath } from './path'
+import { getConfig } from './config'
 
 export function capitalizeFirstLetter(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1)
@@ -30,6 +31,10 @@ export function getSlug(str: string) {
   return slug(str).replace(/--+/g, '-')
 }
 
+export function getHeadingSlug(str: string) {
+  return str.replace(/-------full-changelog---------------------/g, '')
+}
+
 export function trimLeadingAndTrailingSlashes(str: string) {
   return str.replace(/^\/+|\/+$/g, '')
 }
@@ -46,4 +51,18 @@ export function processMarkdownToHtml(markdown: string): string {
 
 export function getComponentSVG(className: string): string {
   return `<svg class="${className}" width="1rem" height="1rem" aria-label=" - component type - "><use xlink:href="${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')}" /></svg>`
+}
+
+export function getVersionLink(version: string): string {
+    return `<a class="link icon-link float-end p-none" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/${version}-ouds-web" target="_blank" rel="noopener">
+      Full changelog
+      <svg class="m-none ms-xsmall" aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#external-link')}"/>
+      </svg>
+  </a>`
+}
+
+export function isHeading(tag: string): boolean {
+  const headingsRangeRegex = new RegExp(`^h[${getConfig().anchors.min}-${getConfig().anchors.max}]$`)
+  return !!tag.match(headingsRangeRegex)
 }
