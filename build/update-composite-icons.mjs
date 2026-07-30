@@ -3,9 +3,10 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
+import readline from 'node:readline/promises'
+import { fileURLToPath } from 'node:url'
 
-const DEFAULT_ICONS_ROOT = 'OUDS Icons V2.1'
-const DEFAULT_VERSION = '2.1'
+const DEFAULT_ICONS_ROOT = 'OUDS Icons V'
 
 const BRAND_CONFIGS = [
   { packageName: 'orange', sourceName: 'orange' },
@@ -16,14 +17,13 @@ const BRAND_CONFIGS = [
 const COMPONENT_BLOCK_START = /^\/\/\/ \*\*\* OUDS components icons[^\r\n]*$/m
 const COMPONENT_BLOCK_END = /^\s*\/\/\/ \*\*\* (Legacy icons|Icons for draft components)/m
 const SECTION_TITLE = /^\/\/ \* .+ \*$/
-const ICON_COMMENT = /^\/\/ OUDS icon ([^ ]+) v[0-9.]+$/
+const ICON_COMMENT = /^\/\/ (?:OUDS icon )?([^ ]+) v[0-9.]+$/
 const VARIABLE_LINE = /^\s*(\$[a-z0-9-]+):\s*url\("data:image\/svg\+xml,([^"]*)"\)\s*!default;$/i
+const SCRIPT_DIRECTORY = path.dirname(fileURLToPath(import.meta.url))
+const REPOSITORY_ROOT = path.resolve(SCRIPT_DIRECTORY, '..')
 
 function parseArgs(args) {
-  const result = {
-    iconsRoot: DEFAULT_ICONS_ROOT,
-    version: DEFAULT_VERSION
-  }
+  const result = {}
 
   for (let index = 0; index < args.length; index++) {
     const argument = args[index]
@@ -42,8 +42,52 @@ function parseArgs(args) {
   return result
 }
 
+function normalizeVersionInput(input) {
+  return input.trim()
+}
+
+async function promptVersion() {
+  const interfaceInstance = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  })
+
+  try {
+    const response = await interfaceInstance.question('New icons version: ')
+    const nextVersion = normalizeVersionInput(response)
+    if (!nextVersion) {
+      throw new Error('Icons version is required. Script stopped.')
+    }
+
+    return nextVersion
+  } finally {
+    interfaceInstance.close()
+  }
+}
+
+async function resolveVersion(versionFromArgs) {
+  if (versionFromArgs) {
+    return versionFromArgs
+  }
+
+  if (!process.stdin.isTTY || !process.stdout.isTTY) {
+    throw new Error('A version is required in non-interactive mode. Pass --version <x.y>')
+  }
+
+  return promptVersion()
+}
+
+function resolveIconsRoot(iconsRootFromArgs, version) {
+  const rawIconsRoot = iconsRootFromArgs || `${DEFAULT_ICONS_ROOT}${version}`
+  if (path.isAbsolute(rawIconsRoot)) {
+    return rawIconsRoot
+  }
+
+  return path.join(REPOSITORY_ROOT, rawIconsRoot)
+}
+
 function getCompositePath(packageName) {
-  return path.join('packages', packageName, 'scss', 'tokens', '_composite.scss')
+  return path.join(REPOSITORY_ROOT, 'packages', packageName, 'scss', 'tokens', '_composite.scss')
 }
 
 function removeSvgExtension(iconPath) {
@@ -88,7 +132,7 @@ function buildIconDeclarationLine(variable, dataUriValue) {
 }
 
 function buildIconCommentLine(commentPath, version) {
-  return `// OUDS icon ${commentPath} v${version}`
+  return `// ${commentPath} v${version}`
 }
 
 function getComponentBlockBounds(fileContent) {
@@ -162,8 +206,9 @@ function parseReferenceInventory(fileContent) {
       continue
     }
 
-    if (line.startsWith('// OUDS icon ')) {
-      pendingCommentPath = parseIconCommentPath(line)
+    const parsedCommentPath = parseIconCommentPath(line)
+    if (parsedCommentPath) {
+      pendingCommentPath = parsedCommentPath
       pendingInlineComment = null
       continue
     }
@@ -216,6 +261,31 @@ function parseCompositeVariableSet(fileContent) {
   return variableSet
 }
 
+function extractSvgPathData(dataUriValue) {
+  const paths = [...dataUriValue.matchAll(/\sd='([^']+)'/g)].map(match => match[1])
+  return paths.length > 0 ? paths : ['(no <path d>)']
+}
+
+function findUpdatedSvgPaths(previousDataUriMap, nextDataUriMap, iconPathMap) {
+  const updates = []
+
+  for (const [variable, nextDataUri] of nextDataUriMap) {
+    const previousDataUri = previousDataUriMap.get(variable)
+    if (!previousDataUri || previousDataUri === nextDataUri) {
+      continue
+    }
+
+    updates.push({
+      variable,
+      iconPath: iconPathMap.get(variable) || variable,
+      previousSvgPaths: extractSvgPathData(previousDataUri),
+      nextSvgPaths: extractSvgPathData(nextDataUri)
+    })
+  }
+
+  return updates
+}
+
 function validateCompositeCoverage(referenceSet, currentSet, packageName) {
   const missing = [...referenceSet].filter(variable => !currentSet.has(variable))
   if (missing.length === 0) {
@@ -265,6 +335,8 @@ async function buildComponentIconsBlock({
   existingDataUriMap,
   inventory
 }) {
+  const iconPathMap = new Map()
+  const dataUriMap = new Map()
   const sectionLines = await Promise.all(inventory.sections.map(async section => {
     const iconLines = await Promise.all(section.icons.map(async icon => {
       if (!icon.relPath) {
@@ -273,6 +345,7 @@ async function buildComponentIconsBlock({
           throw new Error(`Missing existing data URI for ${icon.variable}`)
         }
 
+        dataUriMap.set(icon.variable, existing)
         return [
           icon.inlineComment || '// Specific empty marker for bullet list',
           buildIconDeclarationLine(icon.variable, existing)
@@ -280,6 +353,8 @@ async function buildComponentIconsBlock({
       }
 
       const iconData = await loadDataUriFromIconFile(iconsRoot, sourceName, icon.relPath)
+      iconPathMap.set(icon.variable, iconData.commentPath)
+      dataUriMap.set(icon.variable, iconData.dataUriValue)
       return [
         buildIconCommentLine(iconData.commentPath, version),
         buildIconDeclarationLine(icon.variable, iconData.dataUriValue)
@@ -293,11 +368,15 @@ async function buildComponentIconsBlock({
     ]
   }))
 
-  return [
-    inventory.headerLine,
-    '',
-    ...sectionLines.flat()
-  ].join('\n')
+  return {
+    componentBlock: [
+      inventory.headerLine,
+      '',
+      ...sectionLines.flat()
+    ].join('\n'),
+    iconPathMap,
+    dataUriMap
+  }
 }
 
 async function updateCompositeFile({
@@ -310,22 +389,51 @@ async function updateCompositeFile({
   const compositePath = getCompositePath(packageName)
   const originalContent = await fs.readFile(compositePath, 'utf8')
   const existingDataUriMap = parseExistingDataUriMap(originalContent)
-  const componentBlock = await buildComponentIconsBlock({
+  const { componentBlock, iconPathMap, dataUriMap } = await buildComponentIconsBlock({
     iconsRoot,
     sourceName,
     version,
     existingDataUriMap,
     inventory
   })
+  const updatedSvgPaths = findUpdatedSvgPaths(existingDataUriMap, dataUriMap, iconPathMap)
   const nextContent = replaceComponentIconsBlock(originalContent, componentBlock)
 
   if (nextContent !== originalContent) {
     await fs.writeFile(compositePath, nextContent, 'utf8')
   }
+
+  return { packageName, updatedSvgPaths }
+}
+
+function reportUpdatedSvgPaths(updateResults) {
+  const updates = updateResults
+    .flatMap(result => result.updatedSvgPaths.map(update => ({ ...update, packageName: result.packageName })))
+    .sort((left, right) => left.variable.localeCompare(right.variable))
+
+  if (updates.length === 0) {
+    process.stdout.write('No SVG path changes detected.\n')
+    return
+  }
+
+  process.stdout.write('Updated SVG paths:\n')
+  for (const update of updates) {
+    process.stdout.write(
+      `- [${update.packageName}] ${update.variable} (${update.iconPath})\n`
+    )
+    process.stdout.write(
+      `  previous: ${update.previousSvgPaths.join(' | ')}\n`
+    )
+    process.stdout.write(
+      `  next: ${update.nextSvgPaths.join(' | ')}\n`
+    )
+  }
 }
 
 async function main() {
-  const { iconsRoot, version } = parseArgs(process.argv.slice(2))
+  const { iconsRoot: iconsRootFromArgs, version: versionFromArgs } = parseArgs(process.argv.slice(2))
+  const version = await resolveVersion(versionFromArgs)
+  const iconsRoot = resolveIconsRoot(iconsRootFromArgs, version)
   const orangeCompositePath = getCompositePath('orange')
   const orangeCompositeContent = await fs.readFile(orangeCompositePath, 'utf8')
   const inventory = parseReferenceInventory(orangeCompositeContent)
@@ -341,8 +449,8 @@ async function main() {
 
   await validateSourceFilesExistence({ inventory, iconsRoot })
 
-  await Promise.all(BRAND_CONFIGS.map(async brand => {
-    await updateCompositeFile({
+  const updateResults = await Promise.all(BRAND_CONFIGS.map(async brand => {
+    return updateCompositeFile({
       packageName: brand.packageName,
       sourceName: brand.sourceName,
       iconsRoot,
@@ -350,6 +458,8 @@ async function main() {
       inventory
     })
   }))
+
+  reportUpdatedSvgPaths(updateResults)
 }
 
 main().catch(error => {
