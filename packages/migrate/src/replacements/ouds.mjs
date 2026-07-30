@@ -26,7 +26,7 @@ export const oudsReplacements = [
   ['badge-disabled', 'disabled'],
 
   // Link
-  ['back', 'link-previous'],
+  ['(link-chevron.*)?back(.*link-chevron)?', '$1link-previous$2'],
   ['colored-bg', 'link-on-colored-bg'],
 
   // Form
