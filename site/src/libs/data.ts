@@ -47,7 +47,7 @@ const dataDefinitions = {
   'docs-versions': z
     .object({
       group: z.string(),
-      baseurl: z.string().url(),
+      baseurl: z.url(),
       description: z.string(),
       versions: z.union([zVersionSemver, zVersionMajorMinor]).array()
     })

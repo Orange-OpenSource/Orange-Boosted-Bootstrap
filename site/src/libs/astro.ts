@@ -1,15 +1,10 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { rehypeHeadingIds } from '@astrojs/markdown-remark'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import type { AstroIntegration } from 'astro'
 import autoImport from 'astro-auto-import'
-import type { Element, Text } from 'hast'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { getConfig } from './config'
-import { rehypeBsTable, rehypeCustomHeaderSlug, rehypeHeaderLinksOrder } from './rehype'
-import { remarkBsComp, remarkBsConfig, remarkBsDocsref, remarkBsVersionLink } from './remark'
 import { configurePrism } from './prism'
 import {
   docsDirectory,
@@ -18,7 +13,6 @@ import {
   getDocsStaticFsPath,
   validateVersionedDocsPaths
 } from './path'
-import { isHeading } from './utils.ts'
 
 // A list of directories in `src/components` that contains components that will be auto imported in all pages for
 // convenience.
@@ -59,34 +53,9 @@ export function oudsWeb(): AstroIntegration[] {
     {
       name: 'ouds-web-integration',
       hooks: {
-        'astro:config:setup': ({ addWatchFile, updateConfig }) => {
+        'astro:config:setup': ({ addWatchFile }) => {
           // Reload the config when the integration is modified.
           addWatchFile(path.join(getDocsFsPath(), 'src/libs/astro.ts'))
-
-          // Add the remark and rehype plugins.
-          updateConfig({
-            markdown: {
-              rehypePlugins: [
-                rehypeHeadingIds,
-                rehypeCustomHeaderSlug,
-                [
-                  rehypeAutolinkHeadings,
-                  {
-                    behavior: 'prepend',
-                    content: [{ type: 'text', value: ' '}],
-                    properties: (element: Element) => ({
-                      class: 'anchor-link',
-                      ariaLabel: `Link to this section: ${(element.children[0] as Text).value}`
-                    }),
-                    test: (element: Element) => isHeading(element.tagName)
-                  }
-                ],
-                rehypeHeaderLinksOrder,
-                rehypeBsTable
-              ],
-              remarkPlugins: [remarkBsConfig, remarkBsDocsref, remarkBsComp, remarkBsVersionLink]
-            }
-          })
         },
         'astro:config:done': () => {
           cleanPublicDirectory()

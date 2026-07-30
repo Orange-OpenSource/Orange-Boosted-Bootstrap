@@ -1329,8 +1329,8 @@ a > :is(var, code) {
 kbd {
   padding: 0.125rem 0.25rem;
   font-size: 0.875em;
-  color: var(--bs-color-content-on-status-neutral-emphasized);
-  background-color: var(--bs-color-surface-status-neutral-emphasized);
+  color: var(--bs-color-content-inverse);
+  background-color: var(--bs-color-surface-inverse-high);
   border-radius: 4px;
 }
 kbd kbd {
@@ -5424,8 +5424,8 @@ dialog,
 }
 .table tr .radio-button-standalone,
 .table tr .checkbox-standalone {
-  width: -webkit-fill-available;
   width: -moz-available;
+  width: -webkit-fill-available;
   width: stretch;
 }
 .table svg,
@@ -6860,6 +6860,7 @@ textarea.form-control-lg {
   padding-left: calc(var(--bs-text-input-padding-x) - var(--bs-text-input-border-width-left));
   font-weight: 500;
   color: var(--bs-color-content-default);
+  text-overflow: ellipsis;
   -webkit-appearance: none;
   appearance: none;
   background-color: var(--bs-text-input-background-color);
@@ -11628,6 +11629,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   gap: 4px;
   align-items: flex-start;
   justify-content: center;
+  width: 1%;
   min-height: 48px;
   padding-block: 12px;
 }
@@ -11636,6 +11638,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .alert-text-container > * {
   margin-bottom: 0;
@@ -19284,11 +19287,11 @@ ol.bullet-list > li > ol > li > ol > li::before {
   user-select: none !important;
 }
 
-.pe-none {
+.pointer-events-none {
   pointer-events: none !important;
 }
 
-.pe-auto {
+.pointer-events-auto {
   pointer-events: auto !important;
 }
 
