@@ -7778,48 +7778,33 @@ optgroup {
 
 .link-on-colored-bg.link, .link-on-colored-bg.icon-link, .link-on-colored-bg.link-chevron,
 .link-on-colored-bg.link-external,
-.link-on-colored-bg .link,
-.link-on-colored-bg .icon-link,
-.link-on-colored-bg .link-chevron,
-.link-on-colored-bg .link-external,
-.link-on-colored-bg a {
+.link-on-colored-bg :is(.link, .icon-link, .link-chevron,
+.link-external, a) {
   --bs-link-color: var(--bs-link-mono-color-content-enabled);
   --bs-link-chevron-color: var(--bs-link-color);
 }
 .link-on-colored-bg.link:hover, .link-on-colored-bg.icon-link:hover, .link-on-colored-bg.link-chevron:hover,
 .link-on-colored-bg.link-external:hover,
-.link-on-colored-bg .link:hover,
-.link-on-colored-bg .icon-link:hover,
-.link-on-colored-bg .link-chevron:hover,
-.link-on-colored-bg .link-external:hover,
-.link-on-colored-bg a:hover {
+.link-on-colored-bg :is(.link, .icon-link, .link-chevron,
+.link-external, a):hover {
   --bs-link-color: var(--bs-link-mono-color-content-hover);
 }
 .link-on-colored-bg.link:focus-visible, .link-on-colored-bg.icon-link:focus-visible, .link-on-colored-bg.link-chevron:focus-visible,
 .link-on-colored-bg.link-external:focus-visible,
-.link-on-colored-bg .link:focus-visible,
-.link-on-colored-bg .icon-link:focus-visible,
-.link-on-colored-bg .link-chevron:focus-visible,
-.link-on-colored-bg .link-external:focus-visible,
-.link-on-colored-bg a:focus-visible {
+.link-on-colored-bg :is(.link, .icon-link, .link-chevron,
+.link-external, a):focus-visible {
   --bs-link-color: var(--bs-link-mono-color-content-focus);
 }
 .link-on-colored-bg.link:active, .link-on-colored-bg.icon-link:active, .link-on-colored-bg.link-chevron:active,
 .link-on-colored-bg.link-external:active,
-.link-on-colored-bg .link:active,
-.link-on-colored-bg .icon-link:active,
-.link-on-colored-bg .link-chevron:active,
-.link-on-colored-bg .link-external:active,
-.link-on-colored-bg a:active {
+.link-on-colored-bg :is(.link, .icon-link, .link-chevron,
+.link-external, a):active {
   --bs-link-color: var(--bs-link-mono-color-content-pressed);
 }
 .link-on-colored-bg.link[aria-disabled=true], .link-on-colored-bg[aria-disabled=true].icon-link, .link-on-colored-bg[aria-disabled=true].link-chevron,
 .link-on-colored-bg[aria-disabled=true].link-external,
-.link-on-colored-bg .link[aria-disabled=true],
-.link-on-colored-bg [aria-disabled=true].icon-link,
-.link-on-colored-bg [aria-disabled=true].link-chevron,
-.link-on-colored-bg [aria-disabled=true].link-external,
-.link-on-colored-bg a[aria-disabled=true] {
+.link-on-colored-bg :is(.link, .icon-link, .link-chevron,
+.link-external, a)[aria-disabled=true] {
   --bs-link-color: var(--bs-link-mono-color-content-disabled);
 }
 
@@ -9121,7 +9106,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-nav-link-font-size: ;
   --bs-nav-link-font-weight: 700;
   --bs-nav-link-color: inherit;
-  --bs-nav-link-hover-color: var(--bs-link-hover-color);
+  --bs-nav-link-hover-color: var(--bs-color-action-selected);
   --bs-nav-link-disabled-color: var(--bs-color-content-disabled);
   display: flex;
   flex-wrap: wrap;
@@ -9225,7 +9210,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-nav-underline-border-color: var(--bs-color-border-default);
   --bs-nav-underline-border-radius: var(--bs-border-radius);
   --bs-nav-underline-link-padding-x: 1.8125rem;
-  --bs-nav-underline-link-hover-color: var(--bs-link-hover-color);
+  --bs-nav-underline-link-hover-color: var(--bs-color-action-selected);
   --bs-nav-underline-link-hover-bg: transparent;
   --bs-nav-underline-link-border-width: 0 0 calc(var(--bs-nav-underline-border-width) * 4);
   --bs-nav-underline-link-hover-border-color: transparent;
@@ -9308,7 +9293,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-navbar-border-color: var(--bs-color-border-default);
   --bs-navbar-bg: var(--bs-highlight-color);
   --bs-navbar-color: var(--bs-emphasis-color);
-  --bs-navbar-hover-color: var(--bs-link-active-color);
+  --bs-navbar-hover-color: var(--bs-color-action-selected);
   --bs-navbar-disabled-color: var(--bs-color-content-disabled);
   --bs-navbar-active-color: var(--bs-color-action-selected);
   --bs-navbar-brand-padding-y: 0;
@@ -9335,7 +9320,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-navbar-toggler-font-size: 1.04166666rem;
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3e%3cpath d='M2 19h21v-2H2v2Zm0-6h21v-2H2v2Zm0-6h21V5H2v2Z'/%3e%3c/svg%3e");
   --bs-navbar-toggler-icon-color: var(--bs-emphasis-color);
-  --bs-navbar-toggler-icon-hover-color: var(--bs-link-active-color);
+  --bs-navbar-toggler-icon-hover-color: var(--bs-color-action-selected);
   --bs-navbar-toggler-border-color: ;
   --bs-navbar-toggler-border-radius: 0px;
   --bs-navbar-toggler-focus-width: ;
@@ -14544,7 +14529,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-local-nav-padding-y: 16px;
   --bs-local-nav-color: ;
   --bs-local-nav-bg: var(--bs-body-bg);
-  --bs-local-nav-hover-color: var(--bs-link-hover-color);
+  --bs-local-nav-hover-color: var(--bs-color-action-selected);
   --bs-local-nav-hover-bg: var(--bs-secondary-bg);
   --bs-local-nav-active-color: var(--bs-primary);
   --bs-local-nav-active-bg: var(--bs-color-action-primary-pressed);
