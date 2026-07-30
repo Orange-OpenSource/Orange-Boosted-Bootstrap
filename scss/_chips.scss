@@ -10,7 +10,7 @@
 
 .chip {
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex-shrink: 0;
   align-items: center;
   min-height: px-to-rem($ouds-chip-size-min-height-interactive-area);

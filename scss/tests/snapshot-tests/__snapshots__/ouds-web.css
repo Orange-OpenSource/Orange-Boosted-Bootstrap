@@ -6303,7 +6303,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .chip {
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex-shrink: 0;
   align-items: center;
   min-height: 3rem;
