@@ -23,7 +23,7 @@ import { getMode } from '@libs/sass-variables'
 
 ### Component types
 
-<ul class="list-unstyled row row-cols-1 sm:row-cols-2 xl:row-cols-3">
+<ul class="list-unstyled row row-cols-1 md:row-cols-3">
   <li class="col">
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
@@ -48,7 +48,7 @@ import { getMode } from '@libs/sass-variables'
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
-          <a class="btn btn-assistant" href="#">Default</a>
+          <button type="button" class="btn btn-assistant">Assistant</button>
         </div>
       </div>
       <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#assistant-button">Assistant button</a> is a UI element that triggers an AI-related action or event.</div>
@@ -62,7 +62,7 @@ For the three types of button, OUDS Web has a common base `.btn` class that sets
 
 <Example showToolbar={false} code={`<button type="button" class="btn btn-next btn-default">Next</button>`} />
 
-<Example showToolbar={false} code={`<button type="button" class="btn btn-assistant">Default</button>`} />
+<Example showToolbar={false} code={`<button type="button" class="btn btn-assistant">Assistant</button>`} />
 
 ### Accessibility (semantics)
 
@@ -940,22 +940,22 @@ The assistant button combines standard button functions with AI-specific visual 
 
 You can use `.btn-assistant` class to indicate AI actions in a process or a flow. This class will add an icon before the button text and a specific border color. As Assistant buttons generally indicate an AI-related action, in our examples, we have used `<button>` elements, but this could be adapted to your own context (in that case, don't forget to add an `href` attribute to make the element focusable). The visual rendering will remain the same anyway:
 
-<Example buttonLabel="basic Assistant buttons" class="bd-btn-example" code={`<a class="btn btn-assistant" href="#">Default</a>
+<Example buttonLabel="basic assistant buttons" class="bd-btn-example" code={`<a class="btn btn-assistant" href="#">Assistant</a>
 
-  <button type="button" class="btn btn-assistant">Default</button>`} />
+  <button type="button" class="btn btn-assistant">Assistant</button>`} />
 
 <Callout type="info">
-  Due to technical limitations, an Assistant button does not have a transparent background. To simulate transparency, set `--bs-btn-bg` to its container background color. Make sure that the used variable isn't semi-transparent (ie. use background tokens instead of surface tokens).
+  Due to technical limitations, an assistant button does not have a transparent background. To simulate transparency, set `--bs-btn-bg` to its container background color. Make sure that the used variable isn't semi-transparent (ie. use background tokens instead of surface tokens).
 </Callout>
 
-<Example buttonLabel="Assistant button simulated transparent background" class="bd-btn-example" code={`<div class="bg-tertiary">
+<Example buttonLabel="assistant button simulated transparent background" class="bd-btn-example" code={`<div class="bg-tertiary">
 
     <button class="btn btn-assistant">
-      Default
+      Assistant
     </button>
 
     <button class="btn btn-assistant" style="--bs-btn-bg: var(--bs-color-bg-tertiary);">
-      Default
+      Assistant
     </button>
 
   </div>`} />
@@ -966,14 +966,14 @@ You can use `.btn-assistant` class to indicate AI actions in a process or a flow
 
 Add the class `.btn-icon` to get a icon-only assistant button. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or an `aria-label` attribute. Icon-only assistant buttons are always completely circular.
 
-<Example buttonLabel="Assistant button icon-only" class="bd-btn-example" code={`<button class="btn btn-assistant btn-icon">
-    <span class="visually-hidden">Default</span>
+<Example buttonLabel="assistant button icon-only" class="bd-btn-example" code={`<button class="btn btn-assistant btn-icon">
+    <span class="visually-hidden">Assistant</span>
   </button>`} />
 
 <BrandSpecific brand={['orange', 'orange-compact']}>
   #### Rounded corners
 
-  Rounded corners Assistant buttons is a project-wide option therefore all your buttons should either be rounded or not. Add `.use-rounded-corner-buttons` on a top container (for example `<body>`) to use rounded corners.
+  Rounded corners assistant buttons is a project-wide option therefore all your buttons should either be rounded or not. Add `.use-rounded-corner-buttons` on a top container (for example `<body>`) to use rounded corners.
 
 <Callout type="warning">
   Rounded corners could be used in more emotional, immersive contexts or those tied to specific visual identities. **For standard or business-oriented usage, keep the default square corners.**
@@ -983,9 +983,9 @@ Add the class `.btn-icon` to get a icon-only assistant button. Make sure to prov
   We use a `<div>` as a parent container because we cannot use `<body>` in an example.
 </Callout>
 
-<Example buttonLabel="rounded Assistant buttons" class="bd-btn-example" code={`<div class="use-rounded-corner-buttons">
+<Example buttonLabel="rounded assistant buttons" class="bd-btn-example" code={`<div class="use-rounded-corner-buttons">
 
-    <button class="btn btn-assistant">Default</button>
+    <button class="btn btn-assistant">Assistant</button>
 
   </div>`} />
 </BrandSpecific>
@@ -994,22 +994,22 @@ Add the class `.btn-icon` to get a icon-only assistant button. Make sure to prov
 
 #### Disabled
 
-Assistant buttons typically use the `<button>` element. To disable an Assistant button, add the `[disabled]` boolean attribute. Disabled Assistant buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
+Assistant buttons typically use the `<button>` element. To disable an assistant button, add the `[disabled]` boolean attribute. Disabled assistant buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
-<Example buttonLabel="disabled Assistant buttons using `<button>` tag" class="bd-btn-example" code={`<button type="button" class="btn btn-assistant" disabled>Default</button>
+<Example buttonLabel="disabled assistant buttons using `<button>` tag" class="bd-btn-example" code={`<button type="button" class="btn btn-assistant" disabled>Assistant</button>
 
   <button type="button" class="btn btn-assistant btn-icon" disabled>
-    <span class="visually-hidden">Default</span>
+    <span class="visually-hidden">Assistant</span>
   </button>`} />
 
 #### Loading
 
-The loading state of an Assistant button indicates that an action is currently processing or taking place. This state provides feedback to users, enhancing user experience.
+The loading state of an assistant button indicates that an action is currently processing or taking place. This state provides feedback to users, enhancing user experience.
 
 Please refer to the [loading state section of the button component](#loading) for guidelines on how to implement loading states, as well as a JavaScript example and a live demo.
 
-<Example buttonLabel="loading Assistant buttons" class="bd-btn-example" code={`<button class="btn btn-assistant loading-indeterminate" id="loading-ai-btn-1" disabled>
-    Default
+<Example buttonLabel="loading assistant buttons" class="bd-btn-example" code={`<button class="btn btn-assistant loading-indeterminate" id="loading-ai-btn-1" disabled>
+    Assistant
     <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
@@ -1027,11 +1027,22 @@ Please refer to the [loading state section of the button component](#loading) fo
 
 <SkeletonRedirect component="assistant button" />
 
-<Example buttonLabel="Assistant button skeleton" code={`<div aria-busy="true" inert>
+<Example buttonLabel="assistant button skeleton" code={`<div aria-busy="true" inert>
 
-    <button type="button" class="btn btn-assistant">Default</button>
+    <button type="button" class="btn btn-assistant">Assistant</button>
 
   </div>`} />
+
+
+### Sizes
+
+Assistant buttons are available in two sizes. Add `.btn-small` to have a smaller button.
+
+<Example buttonLabel="small assistant buttons" code={`<button type="button" class="btn btn-assistant btn-small">Assistant</button>
+
+  <button type="button" class="btn btn-assistant btn-icon btn-small">
+    <span class="visually-hidden">Assistant</span>
+  </button>`} />
 
 ### Layout
 

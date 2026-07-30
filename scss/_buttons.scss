@@ -525,28 +525,22 @@
 .btn-previous {
   --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-chevron-start-default};
   --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-end-icon-start-default};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-chevron-default};
 
   &::before {
     content: "";
     mask-image: $btn-previous-icon;
-  }
-
-  &:not(.btn-icon)::before {
-    margin-right: $ouds-button-space-column-gap-chevron-default;
   }
 }
 
 .btn-next {
   --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-start-icon-end-default};
   --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-chevron-end-default};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-chevron-default};
 
   &::after {
     content: "";
     mask-image: $btn-next-icon;
-  }
-
-  &:not(.btn-icon)::after {
-    margin-left: $ouds-button-space-column-gap-chevron-default;
   }
 }
 

@@ -1,6 +1,6 @@
 .btn-assistant {
   --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start-default};
-  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end-default};
+  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-end-icon-start-default};
   --#{$prefix}btn-border-width: #{$ouds-button-border-width-ai};
   --#{$prefix}btn-interaction-border-width: #{$ouds-button-border-width-ai-interaction};
   --#{$prefix}btn-color: #{$ouds-button-color-content-ai-enabled};
@@ -12,6 +12,7 @@
   --#{$prefix}btn-loading-color: #{$ouds-button-color-content-ai-loading};
 
   &::before {
+    flex-shrink: 0;
     width: var(--#{$prefix}btn-icon-size);
     height: var(--#{$prefix}btn-icon-size);
     content: "";
@@ -32,6 +33,6 @@
   }
 
   &.btn-icon {
-    --#{$prefix}btn-border-radius: 50%;
+    --#{$prefix}btn-border-radius: #{$ouds-button-border-radius-ai-icon-only};
   }
 }
