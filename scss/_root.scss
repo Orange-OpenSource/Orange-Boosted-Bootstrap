@@ -83,7 +83,7 @@
 
   // OUDS mod
   @each $icon, $svg in $svg-as-custom-props {
-    --#{$prefix}#{$icon}-icon: #{escape-svg($svg)};
+    --#{$prefix}#{$icon}: #{escape-svg($svg)};
   }
   // End mod
 

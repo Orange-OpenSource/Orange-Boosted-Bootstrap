@@ -147,10 +147,10 @@ $helper-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 
 // *** Expose SVG used several times as custom props (CSS vars like --bs-success-icon)
 $svg-as-custom-props: (
-  "chevron":          $chevron-icon,
-  "success":          $alert-icon-success,
-  "info":             $alert-icon-info,
-  "warning":          $alert-icon-warning-external,
-  "warning-internal": $alert-icon-warning-internal,
-  "error":            $alert-icon-important
+  "chevron-icon":          $chevron-icon,
+  "success-icon":          $alert-icon-success,
+  "info-icon":             $alert-icon-info,
+  "warning-icon":          $alert-icon-warning-external,
+  "warning-internal-icon": $alert-icon-warning-internal,
+  "error-icon":            $alert-icon-important
 ) !default;
