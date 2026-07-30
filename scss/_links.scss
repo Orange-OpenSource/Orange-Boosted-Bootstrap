@@ -115,8 +115,7 @@
 
 .link-on-colored-bg {
   &.link,
-  .link,
-  a {
+  :is(.link, a) {
     --#{$prefix}link-color: #{$ouds-link-mono-color-content-enabled};
     --#{$prefix}link-chevron-color: var(--#{$prefix}link-color);
 
@@ -132,7 +131,6 @@
       --#{$prefix}link-color: #{$ouds-link-mono-color-content-pressed}; // OUDS mod
     }
 
-    // stylelint-disable-next-line selector-no-qualifying-type
     &[aria-disabled="true"] {
       --#{$prefix}link-color: #{$ouds-link-mono-color-content-disabled}; // OUDS mod
     }
