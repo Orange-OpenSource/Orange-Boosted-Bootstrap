@@ -6309,7 +6309,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .chip {
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex-shrink: 0;
   align-items: center;
   min-height: 3rem;
@@ -6343,6 +6343,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   letter-spacing: var(--bs-font-letter-spacing-label-medium);
   font-weight: 500;
   color: var(--bs-chip-color);
+  text-align: start;
   background-color: var(--bs-chip-bg);
   border: var(--bs-chip-border-width) solid var(--bs-chip-border-color);
   border-radius: 2000px;
