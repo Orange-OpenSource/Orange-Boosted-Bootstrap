@@ -40,8 +40,9 @@ const BRANDS = [
 
 const COMPONENT_BLOCK_START = /^\/\/\/ \*\*\* OUDS components icons[^\r\n]*$/m
 const COMPONENT_BLOCK_END = /^\s*\/\/\/ \*\*\* (Legacy icons|Icons for draft components)/m
-const ICON_COMMENT = /^\s*\/\/\s+([^ ]+)(?:\s+v[0-9.]+)?\s*$/
+const ICON_COMMENT = /^\s*\/\/\s+([^ ]+)(?:\s+v[0-9.]+)?(?:\s+—\s+same icon as \$[a-z0-9-]+)?\s*$/i
 const VARIABLE_LINE = /^(\s*)(\$[a-z0-9-]+):\s*url\("data:image\/svg\+xml,([^"]*)"\)\s*!default;\s*$/i
+const DEDUP_VARIABLE_LINE = /^(\s*)(\$[a-z0-9-]+):\s*(\$[a-z0-9-]+)\s*!default;\s*$/i
 const DEDUP_SUFFIX_PATTERN = /\s+—\s+same icon as \$[a-z0-9-]+/i
 
 const SCRIPT_DIRECTORY = path.dirname(fileURLToPath(import.meta.url))
@@ -227,7 +228,8 @@ function createEmptyBrandReport(packageName) {
     packageName,
     identical: [],
     missing: [],
-    replaced: []
+    replaced: [],
+    alreadyDeduplicated: []
   }
 }
 
@@ -263,7 +265,9 @@ async function compareAndReplaceBrand({
     }
 
     const variableMatch = line.match(VARIABLE_LINE)
-    if (!variableMatch) {
+    const dedupMatch = !variableMatch && line.match(DEDUP_VARIABLE_LINE)
+
+    if (!variableMatch && !dedupMatch) {
       if (line.trim().startsWith('//')) {
         pendingComment = null
       }
@@ -271,9 +275,10 @@ async function compareAndReplaceBrand({
       continue
     }
 
-    const indent = variableMatch[1]
-    const variable = variableMatch[2]
-    const existingDataUri = variableMatch[3]
+    const indent = variableMatch ? variableMatch[1] : dedupMatch[1]
+    const variable = variableMatch ? variableMatch[2] : dedupMatch[2]
+    const existingDataUri = variableMatch ? variableMatch[3] : null
+    const referencedVariable = dedupMatch ? dedupMatch[3] : null
     const iconPathForReport = pendingComment ? `${sourceName}/${pendingComment.relativeIconPath}` : variable
 
     if (!pendingComment) {
@@ -290,7 +295,9 @@ async function compareAndReplaceBrand({
       existingDataUri,
       relativeIconPath: pendingComment.relativeIconPath,
       commentPath: `${sourceName}/${pendingComment.relativeIconPath}`,
-      iconPathForReport
+      iconPathForReport,
+      wasDeduplicated: Boolean(dedupMatch),
+      referencedVariable
     })
 
     pendingComment = null
@@ -299,6 +306,16 @@ async function compareAndReplaceBrand({
   const results = await Promise.all(checks.map(async check => {
     try {
       const sourceDataUri = await loadSourceDataUri(iconsRoot, sourceName, check.relativeIconPath)
+
+      if (check.wasDeduplicated) {
+        // Status determined below after all source data URIs are resolved
+        return {
+          ...check,
+          status: 'pending-dedup',
+          sourceDataUri
+        }
+      }
+
       return {
         ...check,
         status: sourceDataUri === check.existingDataUri ? 'identical' : 'replaced',
@@ -312,9 +329,47 @@ async function compareAndReplaceBrand({
     }
   }))
 
+  // Build a lookup from variable name to its resolved result
+  const resultByVariable = new Map()
+  for (const result of results) {
+    resultByVariable.set(result.variable, result)
+  }
+
+  // Determine status for previously-deduplicated entries:
+  // "already-deduplicated" if the referenced variable's icon hasn't changed AND the
+  // source SVG for this entry still matches (dedup stays valid — counted in deduplicated).
+  // Otherwise "replaced" (icon changed — expanded to url(...) then re-deduplicated if needed).
+  for (const result of results) {
+    if (result.status !== 'pending-dedup') {
+      continue
+    }
+
+    const referencedResult = resultByVariable.get(result.referencedVariable)
+    if (
+      referencedResult &&
+      referencedResult.status === 'identical' &&
+      result.sourceDataUri === referencedResult.existingDataUri
+    ) {
+      result.status = 'already-deduplicated'
+    } else {
+      result.status = 'replaced'
+    }
+  }
+
   for (const result of results) {
     if (result.status === 'identical') {
       pushReportEntry(report.identical, result.variable, result.iconPathForReport)
+      nextLines[result.commentLineIndex] = buildCommentLine(result.commentPath, version)
+      nextLines[result.lineIndex] = result.line
+      continue
+    }
+
+    if (result.status === 'already-deduplicated') {
+      // Keep original dedup line unchanged; will be counted in deduplicated report
+      report.alreadyDeduplicated.push({
+        variable: result.variable,
+        referencesVariable: result.referencedVariable
+      })
       nextLines[result.commentLineIndex] = buildCommentLine(result.commentPath, version)
       nextLines[result.lineIndex] = result.line
       continue
@@ -328,6 +383,12 @@ async function compareAndReplaceBrand({
     }
 
     pushReportEntry(report.missing, result.variable, result.iconPathForReport)
+    if (result.commentLineIndex !== null) {
+      let commentLine = nextLines[result.commentLineIndex]
+      commentLine = commentLine.replace(DEDUP_SUFFIX_PATTERN, '')
+      nextLines[result.commentLineIndex] = commentLine
+    }
+
     nextLines[result.lineIndex] = result.line
   }
 
@@ -461,7 +522,7 @@ async function main() {
   }))
 
   for (const [index, report] of reports.entries()) {
-    report.deduplicated = dedupResults[index]
+    report.deduplicated = [...report.alreadyDeduplicated, ...dedupResults[index]]
   }
 
   writeReport(reports)
