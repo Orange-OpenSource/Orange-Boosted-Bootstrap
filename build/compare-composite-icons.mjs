@@ -8,6 +8,11 @@
 // the version comment is updated. Missing source files are reported but do
 // not block execution.
 //
+// After replacing, a deduplication pass detects icons that share the exact
+// same SVG path within a single composite file. Duplicates are replaced with
+// a Sass variable reference to the first found. The corresponding comment
+// is annotated with "— same icon as $first-variable".
+//
 // The icons directory must contain subdirectories: orange/, sosh/, wireframe/
 // Brand mapping: orange → orange/, sosh → sosh/, orange-compact → orange/
 //
@@ -19,8 +24,8 @@
 // The version is derived automatically from the folder name (e.g. "OUDS Icons V2.1"
 // → v2.1) or can be set explicitly with --version.
 //
-// Output: a detailed report (identical / missing / replaced) per brand, followed
-// by a summary with counts.
+// Output: a detailed report (identical / missing / replaced / deduplicated)
+// per brand, followed by a summary with counts.
 
 import fs from 'node:fs/promises'
 import path from 'node:path'
@@ -37,6 +42,7 @@ const COMPONENT_BLOCK_START = /^\/\/\/ \*\*\* OUDS components icons[^\r\n]*$/m
 const COMPONENT_BLOCK_END = /^\s*\/\/\/ \*\*\* (Legacy icons|Icons for draft components)/m
 const ICON_COMMENT = /^\s*\/\/\s+([^ ]+)(?:\s+v[0-9.]+)?\s*$/
 const VARIABLE_LINE = /^(\s*)(\$[a-z0-9-]+):\s*url\("data:image\/svg\+xml,([^"]*)"\)\s*!default;\s*$/i
+const DEDUP_SUFFIX_PATTERN = /\s+—\s+same icon as \$[a-z0-9-]+/i
 
 const SCRIPT_DIRECTORY = path.dirname(fileURLToPath(import.meta.url))
 const REPOSITORY_ROOT = path.resolve(SCRIPT_DIRECTORY, '..')
@@ -335,6 +341,65 @@ async function compareAndReplaceBrand({
   return report
 }
 
+async function deduplicateIconsInBrand(packageName) {
+  const compositePath = getCompositePath(packageName)
+  const content = await fs.readFile(compositePath, 'utf8')
+  const bounds = getComponentBlockBounds(content)
+  const block = content.slice(bounds.startIndex, bounds.endIndex)
+  const lines = block.split(/\r?\n/)
+
+  const dataUriToFirst = new Map()
+  const deduplications = []
+
+  const variableEntries = []
+  for (const [lineIndex, line] of lines.entries()) {
+    const match = line.match(VARIABLE_LINE)
+    if (!match) {
+      continue
+    }
+
+    const indent = match[1]
+    const variable = match[2]
+    const dataUri = match[3]
+
+    let commentLineIndex = null
+    if (lineIndex > 0 && lines[lineIndex - 1].trim().startsWith('//')) {
+      commentLineIndex = lineIndex - 1
+    }
+
+    variableEntries.push({ lineIndex, indent, variable, dataUri, commentLineIndex })
+  }
+
+  for (const entry of variableEntries) {
+    if (dataUriToFirst.has(entry.dataUri)) {
+      const firstVariable = dataUriToFirst.get(entry.dataUri)
+
+      lines[entry.lineIndex] = `${entry.indent}${entry.variable}: ${firstVariable} !default;`
+
+      if (entry.commentLineIndex !== null) {
+        let commentLine = lines[entry.commentLineIndex]
+        commentLine = commentLine.replace(DEDUP_SUFFIX_PATTERN, '')
+        lines[entry.commentLineIndex] = `${commentLine} — same icon as ${firstVariable}`
+      }
+
+      deduplications.push({
+        variable: entry.variable,
+        referencesVariable: firstVariable
+      })
+    } else {
+      dataUriToFirst.set(entry.dataUri, entry.variable)
+    }
+  }
+
+  if (deduplications.length > 0) {
+    const nextBlock = lines.join('\n')
+    const nextContent = `${content.slice(0, bounds.startIndex)}${nextBlock}${content.slice(bounds.endIndex)}`
+    await fs.writeFile(compositePath, nextContent, 'utf8')
+  }
+
+  return deduplications
+}
+
 function writeReportEntryLines(entries, label) {
   process.stdout.write(`${label} (${entries.length})\n`)
   if (entries.length === 0) {
@@ -346,21 +411,33 @@ function writeReportEntryLines(entries, label) {
   }
 }
 
+function writeDeduplicatedEntryLines(entries) {
+  process.stdout.write(`Deduplicated (${entries.length})\n`)
+  if (entries.length === 0) {
+    return
+  }
+
+  for (const entry of entries.sort((left, right) => left.variable.localeCompare(right.variable))) {
+    process.stdout.write(`- ${entry.variable} → ${entry.referencesVariable}\n`)
+  }
+}
+
 function writeReport(reports) {
   process.stdout.write('\nSVG comparison report\n')
   process.stdout.write('=====================\n')
 
   for (const report of reports) {
     process.stdout.write(`\n[${report.packageName}]\n`)
-    writeReportEntryLines(report.identical, 'Identiques')
-    writeReportEntryLines(report.missing, 'Manquants')
-    writeReportEntryLines(report.replaced, 'Remplaces')
+    writeReportEntryLines(report.identical, 'Identical')
+    writeReportEntryLines(report.missing, 'Missing')
+    writeReportEntryLines(report.replaced, 'Replaced')
+    writeDeduplicatedEntryLines(report.deduplicated)
   }
 
   process.stdout.write('\nSummary\n')
   process.stdout.write('-------\n')
   for (const report of reports) {
-    process.stdout.write(`[${report.packageName}] Identiques: ${report.identical.length} | Manquants: ${report.missing.length} | Remplaces: ${report.replaced.length}\n`)
+    process.stdout.write(`[${report.packageName}] Identical: ${report.identical.length} | Missing: ${report.missing.length} | Replaced: ${report.replaced.length} | Deduplicated: ${report.deduplicated.length}\n`)
   }
 }
 
@@ -378,6 +455,14 @@ async function main() {
       version
     })
   }))
+
+  const dedupResults = await Promise.all(BRANDS.map(async brand => {
+    return deduplicateIconsInBrand(brand.packageName)
+  }))
+
+  for (const [index, report] of reports.entries()) {
+    report.deduplicated = dedupResults[index]
+  }
 
   writeReport(reports)
 }
