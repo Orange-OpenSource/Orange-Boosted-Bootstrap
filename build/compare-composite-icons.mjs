@@ -196,10 +196,22 @@ function parseCommentPath(line) {
   }
 }
 
+function stripAll(string, pattern) {
+  let previous = string
+  let next = previous.replace(pattern, '')
+  while (next !== previous) {
+    previous = next
+    next = previous.replace(pattern, '')
+  }
+
+  return next
+}
+
 function normalizeSvg(svgContent) {
-  return svgContent
-    .replace(/<\?xml[\s\S]*?\?>/g, '')
-    .replace(/<!--[\s\S]*?-->/g, '')
+  let result = svgContent
+  result = stripAll(result, /<\?xml[\s\S]*?\?>/g)
+  result = stripAll(result, /<!--[\s\S]*?-->/g)
+  return result
     .replace(/\s(?:width|height|fill)=("[^"]*"|'[^']*')/g, '')
     .replace(/\r?\n/g, ' ')
     .replace(/>\s+</g, '><')
