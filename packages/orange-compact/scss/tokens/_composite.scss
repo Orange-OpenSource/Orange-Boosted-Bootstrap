@@ -142,24 +142,30 @@ $select-input-chevron: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/200
 $select-input-expanded-chevron: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19.124 14.023 12 6.75l-7.125 7.273 2.035 2.079L12 10.905l5.088 5.197 2.037-2.079Z'/></svg>") !default;
 
 /// *** Legacy icons for draft components, Bootstrap compatibility and Boosted components (not yet updated)
+// For pagination, carousel and back-to-top legacy components
 $chevron-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M597.22 225 402.78 421.43 325 500l77.78 78.57L597.22 775 675 696.43 480.56 500 675 303.57z'/></svg>") !default;
 $cross-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='m15 17.121-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
+// For header draft component
 $burger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='M28 21v2H2v-2h26Zm0-7v2H2v-2h26Zm0-7v2H2V7h26Z'/></svg>") !default;
 $burger-icon-small:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path d='M2 19h21v-2H2v2Zm0-6h21v-2H2v2Zm0-6h21V5H2v2Z'/></svg>") !default;
+// For quantity-selector legacy component
 $add-icon:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'><path fill='currentColor' d='M14 6H8V0H6v6H0v2h6v6h2V8h6V6z'/></svg>") !default;
 $remove-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 2'><path fill='currentColor' d='M0 0h14v2H0z'/></svg>") !default;
 $add-icon-sm:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path d='M10 4H6V0H4v4H0v2h4v4h2V6h4V4z'/></svg>") !default;
 $remove-icon-sm:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 2'><path d='M0 0h10v2H0z'/></svg>") !default;
+// For carousel legacy component
 $play-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M12.138 16.8 3 21.6V2.4l9.138 4.8L21 12z' fill-rule='evenodd'/></svg>") !default;
 $pause-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M10.2 21H3V3h7.2v18ZM21 21h-7.2V3H21v18Z' fill-rule='evenodd'/></svg>") !default;
+// For text-input Bootstrap compatibility
 $helper-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M500 75C265.277 75 75 265.279 75 500s190.277 425 425 425 425-190.279 425-425S734.721 75 500 75Zm30.8 680.633a54.149 54.149 0 0 1-37.069 14.267 56.1 56.1 0 0 1-37.95-14.085q-16.233-14.079-16.226-39.384 0-22.458 15.679-37.781t38.5-15.324q22.464 0 37.789 15.324t15.324 37.781q-.003 24.951-16.047 39.202Zm133.12-330.046a162.251 162.251 0 0 1-29.23 39.38q-16.92 16.574-60.772 55.785A248.236 248.236 0 0 0 554.5 540.18a79.146 79.146 0 0 0-10.868 15.32 75.1 75.1 0 0 0-5.529 13.9q-1.953 6.954-5.879 24.42-6.762 37.068-42.413 37.069-18.541 0-31.192-12.119t-12.647-36q0-29.945 9.262-51.863a131.346 131.346 0 0 1 24.6-38.491q15.319-16.577 41.35-39.4 22.789-19.946 32.962-30.113a101.987 101.987 0 0 0 17.105-22.632 54.714 54.714 0 0 0 6.955-27.086q0-28.517-21.213-48.119t-54.7-19.6q-39.213 0-57.743 19.783t-31.359 58.272Q401.059 423.8 367.2 423.8q-19.964 0-33.683-14.079T319.8 379.248q0-33.852 21.739-68.606t63.447-57.562q41.7-22.814 97.3-22.813 51.66 0 91.244 19.069 39.549 19.074 61.119 51.856t21.571 71.286q.004 30.297-12.297 53.109Z'/></svg>") !default;
 
 // *** Expose SVG used several times as custom props (CSS vars like --bs-success-icon)
+// /!\ convention: the key name must end by "-icon"
 $svg-as-custom-props: (
-  "chevron-icon":          $chevron-icon,
-  "success-icon":          $alert-icon-success,
-  "info-icon":             $alert-icon-info,
-  "warning-icon":          $alert-icon-warning-external,
-  "warning-internal-icon": $alert-icon-warning-internal,
-  "error-icon":            $alert-icon-important
+  "chevron-icon":          $chevron-icon, // For legacy usages only
+  "success-icon":          $alert-icon-success, // Used by alerts and tags
+  "info-icon":             $alert-icon-info, // Used by alerts and tags
+  "warning-icon":          $alert-icon-warning-external, // Used by alerts and tags
+  "warning-internal-icon": $alert-icon-warning-internal, // Used by alerts and tags
+  "error-icon":            $alert-icon-important // Used by alerts and tags
 ) !default;
