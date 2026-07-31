@@ -6350,6 +6350,10 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .btn-assistant.btn-icon, .btn-assistant.btn-close {
   --bs-btn-border-radius: 2000px;
 }
+.btn-assistant.btn-small {
+  --bs-btn-padding-start: 16px;
+  --bs-btn-padding-end: 24px;
+}
 
 .chips-container {
   max-width: initial;
