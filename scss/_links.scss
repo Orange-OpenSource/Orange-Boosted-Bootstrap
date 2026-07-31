@@ -71,7 +71,7 @@
     vertical-align: middle;
     content: "";
     background-color: var(--#{$prefix}link-chevron-color);
-    mask: $link-previous center no-repeat;
+    mask: $link-previous-icon center no-repeat;
     mask-size: var(--#{$prefix}link-icon-size);
   }
 

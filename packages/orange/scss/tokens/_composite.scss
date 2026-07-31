@@ -117,29 +117,33 @@ $bullet-list-empty-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org
 // orange/Component/bullet-list/bullet-tick v2.1
 $bullet-list-marker-tick: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='m19.938 7.57-9.104 10.5c-.26.3-.661.492-1.11.492-.45 0-.85-.192-1.111-.492L4.06 12.82a1.246 1.246 0 0 1-.312-.82c0-.362.16-.69.417-.928l.569-.525a1.48 1.48 0 0 1 1.006-.385c.353 0 .676.12.925.317l2.773 2.834 8.415-7.52c.254-.22.597-.356.973-.356.785 0 1.422.588 1.422 1.313 0 .31-.116.595-.311.82Z' clip-rule='evenodd'/></svg>") !default;
 
+// * Checkbox *
+// orange/Component/checkbox/checkbox-selected v2.1
+$checkbox-selected-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M17.433 6.75c.625 0 1.132.47 1.132 1.05a1 1 0 0 1-.248.656l-7.245 8.4c-.207.24-.526.394-.883.394-.358 0-.676-.154-.884-.394l-3.622-4.2A1 1 0 0 1 5.435 12c0-.29.127-.552.331-.742l.453-.42c.205-.19.488-.308.8-.308.282 0 .539.095.737.252l2.206 2.268 6.697-6.016c.202-.176.475-.284.774-.284Z'/></svg>") !default;
+// orange/Component/checkbox/checkbox-undetermined v2.1
+$checkbox-undetermined-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M5.5 11.1a.6.6 0 0 1 .6-.6h11.8a.6.6 0 0 1 .6.6v1.8a.6.6 0 0 1-.6.6H6.1a.6.6 0 0 1-.6-.6v-1.8Z'/></svg>") !default;
+
 // * Chip *
 // orange/Component/chip/tick v2.1
 $chip-tick-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='m19.938 7.57-9.103 10.5c-.26.3-.662.492-1.11.492-.45 0-.85-.192-1.111-.492l-4.552-5.25A1.246 1.246 0 0 1 3.75 12c0-.362.16-.69.417-.928l.569-.525a1.48 1.48 0 0 1 1.005-.385c.354 0 .677.12.926.317l2.773 2.834 8.415-7.52c.254-.22.596-.356.973-.356.785 0 1.422.588 1.422 1.313 0 .31-.117.595-.312.82Z' clip-rule='evenodd'/></svg>") !default;
 
-// * Control item *
-// orange/Component/checkbox/checkbox-selected v2.1
-$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M17.433 6.75c.625 0 1.132.47 1.132 1.05a1 1 0 0 1-.248.656l-7.245 8.4c-.207.24-.526.394-.883.394-.358 0-.676-.154-.884-.394l-3.622-4.2A1 1 0 0 1 5.435 12c0-.29.127-.552.331-.742l.453-.42c.205-.19.488-.308.8-.308.282 0 .539.095.737.252l2.206 2.268 6.697-6.016c.202-.176.475-.284.774-.284Z'/></svg>") !default;
-// orange/Component/radio-button/radio-button-selected v2.1
-$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M16.875 12a4.875 4.875 0 1 1-9.75 0 4.875 4.875 0 0 1 9.75 0Z'/></svg>") !default;
-// orange/Component/checkbox/checkbox-undetermined v2.1
-$form-check-input-indeterminate-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M5.5 11.1a.6.6 0 0 1 .6-.6h11.8a.6.6 0 0 1 .6.6v1.8a.6.6 0 0 1-.6.6H6.1a.6.6 0 0 1-.6-.6v-1.8Z'/></svg>") !default;
-// orange/Component/switch/selected-switch v2.1
-$form-switch-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='m17.413 8.962-6.207 7.2a.998.998 0 0 1-.758.338.997.997 0 0 1-.757-.338l-3.103-3.6A.857.857 0 0 1 6.375 12c0-.248.109-.473.284-.636l.388-.36c.175-.163.418-.264.686-.264.24 0 .461.082.63.217l1.891 1.943 5.738-5.157c.173-.15.407-.243.663-.243.536 0 .97.403.97.9a.86.86 0 0 1-.212.562Z' clip-rule='evenodd'/></svg>") !default;
-
 // * Link *
 // orange/Component/link/previous v2.1
-$link-previous: $btn-previous-icon !default;
+$link-previous-icon: $btn-previous-icon !default;
+
+// * Radio button *
+// orange/Component/radio-button/radio-button-selected v2.1
+$radio-button-selected-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M16.875 12a4.875 4.875 0 1 1-9.75 0 4.875 4.875 0 0 1 9.75 0Z'/></svg>") !default;
 
 // * Select input *
 // orange/Component/select-input/expanded-false v2.1
 $select-input-chevron: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M4.874 9.977 12 17.25l7.125-7.273-2.034-2.079L12 13.095 6.91 7.898 4.874 9.977Z'/></svg>") !default;
 // orange/Component/select-input/expanded-true v2.1
 $select-input-expanded-chevron: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19.124 14.023 12 6.75l-7.125 7.273 2.035 2.079L12 10.905l5.088 5.197 2.037-2.079Z'/></svg>") !default;
+
+// * Switch *
+// orange/Component/switch/selected-switch v2.1
+$switch-selected-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='m17.413 8.962-6.207 7.2a.998.998 0 0 1-.758.338.997.997 0 0 1-.757-.338l-3.103-3.6A.857.857 0 0 1 6.375 12c0-.248.109-.473.284-.636l.388-.36c.175-.163.418-.264.686-.264.24 0 .461.082.63.217l1.891 1.943 5.738-5.157c.173-.15.407-.243.663-.243.536 0 .97.403.97.9a.86.86 0 0 1-.212.562Z' clip-rule='evenodd'/></svg>") !default;
 
 /// *** Legacy icons for draft components, Bootstrap compatibility and Boosted components (not yet updated)
 // For pagination, carousel and back-to-top legacy components

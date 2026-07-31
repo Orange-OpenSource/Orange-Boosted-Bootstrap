@@ -183,7 +183,7 @@
 .control-item-indicator {
   --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-unselected)};
   --#{$prefix}control-item-indicator-color: #{$ouds-color-border-emphasized};
-  --#{$prefix}checkbox-check-icon: #{escape-svg($form-check-input-checked-bg-image)};
+  --#{$prefix}checkbox-check-icon: #{escape-svg($checkbox-selected-icon)};
 
   position: relative;
   flex-shrink: 0;
@@ -251,7 +251,7 @@
 
     &::before {
       background-color: currentcolor;
-      mask-image: escape-svg($form-check-input-indeterminate-bg-image);
+      mask-image: escape-svg($checkbox-undetermined-icon);
     }
   }
 
@@ -281,7 +281,7 @@
       --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-selected)};
 
       &::before {
-        mask-image: escape-svg($form-check-radio-checked-bg-image);
+        mask-image: escape-svg($radio-button-selected-icon);
       }
     }
 
@@ -374,7 +374,7 @@
 
     &::before {
       background-color: currentcolor;
-      mask-image: escape-svg($form-check-radio-checked-bg-image);
+      mask-image: escape-svg($radio-button-selected-icon);
     }
   }
 
@@ -501,7 +501,7 @@
       content: "";
       background-color: $ouds-switch-color-check;
       opacity: $ouds-switch-opacity-check;
-      mask: escape-svg($form-switch-checked-bg-image);
+      mask: escape-svg($switch-selected-icon);
       transform: translateY(-50%);
       animation: .15s linear 0s switch-check-in;
 
