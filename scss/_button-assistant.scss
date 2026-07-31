@@ -37,4 +37,9 @@
   &.btn-icon {
     --#{$prefix}btn-border-radius: #{$ouds-button-border-radius-ai-icon-only};
   }
+
+  &.btn-small {
+    --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start-small};
+    --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end-small};
+  }
 }
