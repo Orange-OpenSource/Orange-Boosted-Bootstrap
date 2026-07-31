@@ -101,9 +101,9 @@ $breadcrumb-divider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/
 // orange/Component/button/previous v2.1
 $btn-previous-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M14.023 4.875 6.75 12l7.273 7.125 2.079-2.035L10.905 12l5.197-5.088-2.079-2.037Z'/></svg>") !default;
 // orange/Component/button/next v2.1
-$btn-next-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M9.977 19.125 17.25 12 9.977 4.875 7.898 6.91 13.095 12l-5.197 5.088 2.079 2.037Z'/></svg>") !default;
+$btn-next-icon: $breadcrumb-divider !default;
 // orange/Component/button/expurge v2.1
-$btn-expurge-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m18.75 7.178-1.928-1.929L12 10.071 7.178 5.25 5.249 7.18 10.071 12 5.25 16.822l1.93 1.929L12 13.929l4.822 4.822 1.929-1.929L13.929 12l4.822-4.822Z'/></svg>") !default;
+$btn-expurge-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2.4A9.6 9.6 0 0 0 2.4 12a9.6 9.6 0 0 0 9.6 9.6 9.6 9.6 0 0 0 9.6-9.6A9.6 9.6 0 0 0 12 2.4Zm4.107 13.708c-.566.565-1.263.433-2.102-.406L12 13.697l-2.016 2.016c-.84.84-1.525.96-2.09.395-.566-.566-.445-1.252.394-2.091L10.304 12 8.286 9.983c-.84-.84-.96-1.525-.395-2.09.565-.566 1.252-.445 2.091.394L12 10.305l2.007-2.007c.84-.84 1.526-.982 2.102-.406.565.566.434 1.263-.406 2.102l-2.007 2.007 2.005 2.005c.84.84.982 1.525.405 2.102Z'/></svg>") !default;
 
 // * Bullet list *
 // orange/Component/bullet-list/bullet-level-0 v2.1
@@ -133,7 +133,7 @@ $form-switch-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3
 
 // * Link *
 // orange/Component/link/previous v2.1
-$link-previous: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M14.023 4.875 6.75 12l7.273 7.125 2.079-2.035L10.905 12l5.197-5.088-2.079-2.037Z'/></svg>") !default;
+$link-previous: $btn-previous-icon !default;
 
 // * Select input *
 // orange/Component/select-input/expanded-false v2.1
