@@ -240,20 +240,7 @@ function pushReportEntry(list, variable, iconPath) {
   })
 }
 
-async function compareAndReplaceBrand({
-  packageName,
-  sourceName,
-  iconsRoot,
-  version
-}) {
-  const compositePath = getCompositePath(packageName)
-  const originalContent = await fs.readFile(compositePath, 'utf8')
-  const bounds = getComponentBlockBounds(originalContent)
-  const block = originalContent.slice(bounds.startIndex, bounds.endIndex)
-  const lines = block.split(/\r?\n/)
-
-  const report = createEmptyBrandReport(packageName)
-  const nextLines = [...lines]
+function collectChecksFromBlock(lines, sourceName, report) {
   const checks = []
   let pendingComment = null
 
@@ -303,6 +290,25 @@ async function compareAndReplaceBrand({
     pendingComment = null
   }
 
+  return checks
+}
+
+async function compareAndReplaceBrand({
+  packageName,
+  sourceName,
+  iconsRoot,
+  version
+}) {
+  const compositePath = getCompositePath(packageName)
+  const originalContent = await fs.readFile(compositePath, 'utf8')
+  const bounds = getComponentBlockBounds(originalContent)
+  const block = originalContent.slice(bounds.startIndex, bounds.endIndex)
+  const lines = block.split(/\r?\n/)
+
+  const report = createEmptyBrandReport(packageName)
+  const nextLines = [...lines]
+  const checks = collectChecksFromBlock(lines, sourceName, report)
+
   const results = await Promise.all(checks.map(async check => {
     try {
       const sourceDataUri = await loadSourceDataUri(iconsRoot, sourceName, check.relativeIconPath)
@@ -345,15 +351,13 @@ async function compareAndReplaceBrand({
     }
 
     const referencedResult = resultByVariable.get(result.referencedVariable)
-    if (
+    result.status = (
       referencedResult &&
       referencedResult.status === 'identical' &&
       result.sourceDataUri === referencedResult.existingDataUri
-    ) {
-      result.status = 'already-deduplicated'
-    } else {
-      result.status = 'replaced'
-    }
+    ) ?
+      'already-deduplicated' :
+      'replaced'
   }
 
   for (const result of results) {
@@ -428,7 +432,13 @@ async function deduplicateIconsInBrand(packageName) {
       commentLineIndex = lineIndex - 1
     }
 
-    variableEntries.push({ lineIndex, indent, variable, dataUri, commentLineIndex })
+    variableEntries.push({
+      lineIndex,
+      indent,
+      variable,
+      dataUri,
+      commentLineIndex
+    })
   }
 
   for (const entry of variableEntries) {
