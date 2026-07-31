@@ -18,11 +18,11 @@
   --#{$prefix}tag-asset-color: currentcolor;
   --#{$prefix}tag-loading-dasharray: 92;
   --#{$prefix}tag-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
-  --#{$prefix}tag-positive-icon: var(--#{$prefix}success-icon);
-  --#{$prefix}tag-info-icon: var(--#{$prefix}info-icon);
-  --#{$prefix}tag-warning-external-icon: var(--#{$prefix}warning-icon);
-  --#{$prefix}tag-warning-internal-icon: var(--#{$prefix}warning-internal-icon);
-  --#{$prefix}tag-negative-icon: var(--#{$prefix}error-icon);
+  --#{$prefix}tag-positive-icon: var(--#{$prefix}alert-success-icon);
+  --#{$prefix}tag-info-icon: var(--#{$prefix}alert-info-icon);
+  --#{$prefix}tag-warning-external-icon: var(--#{$prefix}alert-warning-icon);
+  --#{$prefix}tag-warning-internal-icon: var(--#{$prefix}alert-warning-internal-icon);
+  --#{$prefix}tag-negative-icon: var(--#{$prefix}alert-error-icon);
 
   position: relative;
   display: inline-flex;

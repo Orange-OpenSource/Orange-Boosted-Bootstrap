@@ -1159,8 +1159,8 @@ $form-feedback-invalid-color:       $danger !default;
 // fusv-enable
 // End mod
 
-$form-feedback-icon-valid:          var(--#{$prefix}success-icon) !default;
-$form-feedback-icon-invalid:        var(--#{$prefix}error-icon) !default;
+$form-feedback-icon-valid:          var(--#{$prefix}alert-success-icon) !default;
+$form-feedback-icon-invalid:        var(--#{$prefix}alert-error-icon) !default;
 $form-feedback-icon-size:           calc($spacer * .25 + $spacer * .5) !default; // OUDS mod
 $form-feedback-line-height:         $line-height-sm !default; // OUDS mod
 $form-feedback-color:               null !default; // OUDS mod
@@ -1793,10 +1793,10 @@ $list-group-action-active-bg:         $list-group-active-bg !default; // OUDS mo
 
 // OUDS mod
 $list-group-icons: (
-  "success": escape-svg($alert-icon-success),
-  "info":    escape-svg($alert-icon-info),
-  "warning": escape-svg($alert-icon-warning-external),
-  "danger":  escape-svg($alert-icon-important)
+  "success": escape-svg($alert-success-icon),
+  "info":    escape-svg($alert-info-icon),
+  "warning": escape-svg($alert-warning-external-icon),
+  "danger":  escape-svg($alert-important-icon)
 ) !default;
 // End mod
 // scss-docs-end list-group-variables

@@ -334,7 +334,7 @@
         color: var(--#{$prefix}text-input-label-color);
         content: "";
         background-color: currentcolor;
-        mask: var(--#{$prefix}error-icon) no-repeat 50% / px-to-rem($ouds-button-size-icon-only);
+        mask: var(--#{$prefix}alert-error-icon) no-repeat 50% / px-to-rem($ouds-button-size-icon-only);
       }
 
       &:has(> button)::after,
@@ -639,7 +639,7 @@
         color: var(--#{$prefix}text-input-label-color);
         content: "";
         background-color: currentcolor;
-        mask: escape-svg(var(--#{$prefix}error-icon)) no-repeat 50% / px-to-rem($ouds-button-size-icon-only);
+        mask: escape-svg(var(--#{$prefix}alert-error-icon)) no-repeat 50% / px-to-rem($ouds-button-size-icon-only);
       }
 
       &:not(.text-area-container-outlined) {
