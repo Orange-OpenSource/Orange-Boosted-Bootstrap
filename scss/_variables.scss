@@ -1793,10 +1793,10 @@ $list-group-action-active-bg:         $list-group-active-bg !default; // OUDS mo
 
 // OUDS mod
 $list-group-icons: (
-  "success": escape-svg($alert-success-icon),
-  "info":    escape-svg($alert-info-icon),
-  "warning": escape-svg($alert-warning-external-icon),
-  "danger":  escape-svg($alert-important-icon)
+  "success": escape-svg(var(--#{$prefix}alert-success-icon)),
+  "info":    escape-svg(var(--#{$prefix}alert-info-icon)),
+  "warning": escape-svg(var(--#{$prefix}alert-warning-external-icon)),
+  "danger":  escape-svg(var(--#{$prefix}alert-important-icon))
 ) !default;
 // End mod
 // scss-docs-end list-group-variables
