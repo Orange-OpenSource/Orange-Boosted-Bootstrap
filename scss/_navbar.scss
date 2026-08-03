@@ -231,7 +231,7 @@
 
     &.active,
     &.show {
-      color: var(--#{$prefix}navbar-active-color);
+      color: var(--#{$prefix}color-content-default);
     }
   }
 
@@ -424,7 +424,7 @@
             left: var(--#{$prefix}navbar-nav-link-padding-x);
             height: 4px;
             content: "";
-            background-color: currentcolor;
+            background-color: var(--#{$prefix}navbar-active-color);
             @include transition($navbar-active-transition);
           }
         }
