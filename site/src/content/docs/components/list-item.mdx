@@ -145,7 +145,28 @@ The basic structure includes:
 
 ### Accessibility
 
-TBD
+For navigation items, a wrapping `<nav>` element can be added if it is an important navigation in the page.
+
+In case of a complex navigation list item, you probably should link all the texts and components together by adding `[aria-describedby]` on the link in order to provide a valid accessible name for the link. The `[aria-describedby]` should point to the id of the element that contains the texts of the link.
+
+In case there is no interactive element inside, you may want to [wrap the entire `.item` in an `<a>`](#wrapping-link) element.
+
+<Example buttonLabel="accessible navigation card item with full text" code={`<div class="item-wrapper item-navigation">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-overline" id="accessible-item-overline">Overline</p>
+          <a href="#" class="item-label item-interactive" aria-describedby="accessible-item-overline accessible-item-extra-label accessible-item-description">Label</a>
+          <p class="item-extra-label" id="accessible-item-extra-label">Extra label</p>
+          <p class="item-description" id="accessible-item-description">Description</p>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+
+Make sure that every text is wrapped inside a semantic element, adapted to its context of use such as `<p>` or `<h*>`.
+
+For every item, the vocalization order of the item should be worked on.
 
 ## Card items
 
@@ -333,11 +354,28 @@ You can navigate through the different assets using the tabs below.
 
     All these classes can be combined as needed and placed on `.item-leading-container`.
 
+    <Callout type="info" title="Accessibility">
+      Please note that a gif can be paused via extensions. If you need to make sure a gif is stoppable, use it in a `<video>` tag with controls on.
+    </Callout>
+
     <Example buttonLabel="items with leading image" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
         <div class="item-leading-container item-leading-xlarge item-leading-rounded ratio-16x9">
           <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover" />
+        </div>
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-leading-container item-leading-large">
+          <img alt="" src="${getVersionedDocsPath('/assets/img/cat-space.gif')}" class="w-100 h-100 object-fit-cover" />
         </div>
         <div class="item-text-container">
           <p class="item-label">Label</p>
@@ -356,14 +394,21 @@ You can navigate through the different assets using the tabs below.
 
     All these classes can be combined as needed and placed on `.item-leading-container`.
 
+    <Callout type="warning" title="Accessibility">
+      Please note that the video should only be used when needed, and that if the video convey information, there should be controls, subtitles (if needed), audio description, and a transcript available. Please refer to [our accessibility guidelines on video](https://a11y-guidelines.orange.com/en/web/develop/non-textual-content/#provide-accessible-audio-or-video-tracks) for more information. Prefer non informative videos that are hidden and replaced by a text when needed or even a gif.
+
+      In any way, it should have controls on it if it has autoplay.
+    </Callout>
+
     <Example buttonLabel="item with leading video" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
         <div class="item-leading-container item-leading-large ratio-16x9 item-leading-rounded">
-          <video controls class="w-100 h-100 object-fit-cover" autoplay muted loop>
+          <video controls class="w-100 h-100 object-fit-cover" autoplay muted loop aria-hidden="true">
             <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
+          <p class="visually-hidden">Video description</p>
         </div>
         <div class="item-text-container">
           <p class="item-label">Label</p>
@@ -409,6 +454,10 @@ They always appear in the following order:
 4. Description using `.item-description` (optional)
 
 Optionally, a slot can be added at the end of the text container using `.item-slot` and/or in place of the `.item-label` if it replaces it.
+
+<Callout type="info">
+  Please note that you might want to apply one of our [color utility]([[docsref:/utilities/color]]) to the text elements (except the `.item-label`), to match the badge for example. Be sure not to convey information only through color.
+</Callout>
 
 <Example buttonLabel="item text" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
@@ -616,7 +665,11 @@ Here is a list of the different assets that we support in the trailing container
 
     All these classes can be combined as needed and placed on `.item-trailing-container`.
 
-    <Example buttonLabel="item with trailing image" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
+    <Callout type="info" title="Accessibility">
+      Please note that a gif can be paused via extensions. If you need to make sure a gif is stoppable, use it in a `<video>` tag with controls on.
+    </Callout>
+
+    <Example buttonLabel="items with trailing image" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
         <div class="item-text-container">
@@ -624,6 +677,19 @@ Here is a list of the different assets that we support in the trailing container
         </div>
         <div class="item-trailing-container item-trailing-xlarge ratio-16x9 item-trailing-rounded">
           <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item-wrapper">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+        <div class="item-trailing-container item-trailing-large">
+          <img alt="" src="${getVersionedDocsPath('/assets/img/cat-space.gif')}" class="w-100 h-100 object-fit-cover" />
         </div>
       </div>
     </div>
@@ -638,6 +704,12 @@ Here is a list of the different assets that we support in the trailing container
 
     All these classes can be combined as needed and placed on `.item-trailing-container`.
 
+    <Callout type="warning" title="Accessibility">
+      Please note that the video should only be used when needed, and that if the video convey information, there should be controls, subtitles (if needed), audio description, and a transcript available. Please refer to [our accessibility guidelines on video](https://a11y-guidelines.orange.com/en/web/develop/non-textual-content/#provide-accessible-audio-or-video-tracks) for more information. Prefer non informative videos that are hidden and replaced by a text when needed or even a gif.
+
+      In any way, it should have controls on it if it has autoplay.
+    </Callout>
+
     <Example buttonLabel="item with trailing video" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
       <div class="item-main">
@@ -645,10 +717,11 @@ Here is a list of the different assets that we support in the trailing container
           <p class="item-label">Label</p>
         </div>
         <div class="item-trailing-container item-trailing-large ratio-16x9 item-trailing-rounded">
-          <video controls class="w-100 h-100 object-fit-cover" autoplay muted loop>
+          <video controls class="w-100 h-100 object-fit-cover" autoplay muted loop aria-hidden="true">
             <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
+          <p class="visually-hidden">Video description</p>
         </div>
       </div>
     </div>
@@ -690,7 +763,7 @@ Here is a small resume of the slots that can be used in an item:
 * [Trailing container](#trailing-container) using `.item-slot` (optional)
 * A slot outside of the `.item-main` container, direct child of `.item` using `.item-slot` (optional)
 
-Optionally, if the item is a navigation item and a slot is also interactive, you can add `.item-slot-focusable` to the slot.<BrandSpecific brand={['orange', 'orange-compact']}> Please note that the slot won't be [rounded](#rounded-corners) anymore.</BrandSpecific>
+Optionally, if the item is a navigation item and a slot is mandatory and also interactive, you can add `.item-slot-focusable` to the slot or the interactive element.<BrandSpecific brand={['orange', 'orange-compact']}> Please note that the slot won't be [rounded](#rounded-corners) anymore.</BrandSpecific>
 
 <Example buttonLabel="item using a slot outside of the main content of the item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
     <div class="item">
@@ -1019,22 +1092,25 @@ By default all items are vertically centered. You can change the alignment of th
           </svg>
         </div>
         <div class="item-text-container">
-          <p class="item-overline">Overline</p>
-          <a href="#" class="item-label item-interactive">Label</a>
-          <p class="item-extra-label">Extra label</p>
-          <p class="item-description">Description</p>
+          <p class="item-overline text-status-negative" id="accessible-item-overline">No credits</p>
+          <a href="#" class="item-label item-interactive" aria-describedby="accessible-item-extra-label accessible-item-description accessible-item-badge-count accessible-item-overline">Your favorite networks</a>
+          <p class="item-extra-label" id="accessible-item-extra-label">Registered networks</p>
+          <p class="item-description" id="accessible-item-description">See and manage your favorite networks from this page</p>
         </div>
         <div class="item-trailing-container">
-          <p class="badge badge-count badge-large">1<span class="visually-hidden">errors</span></p>
+          <p class="badge badge-count badge-large" id="accessible-item-badge-count">1<span class="visually-hidden">error</span></p>
         </div>
       </div>
-      <div class="item-slot">
+      <div class="item-slot item-slot-focusable">
         <div class="alert alert-message alert-negative">
           <div class="alert-icon"><p class="visually-hidden">Negative alert</p></div>
           <div class="alert-container">
             <div class="alert-text-container">
-              <h3 class="alert-label">Alert message</h3>
+              <h3 class="alert-label">You currently have no plan for your favorite networks</h3>
             </div>
+          </div>
+          <div class="alert-action-container">
+            <button class="link">Apply to a plan</button>
           </div>
         </div>
       </div>
@@ -1100,11 +1176,25 @@ Add `.item-previous` to the `.item-navigation` to indicate that the item is a ba
 
 Add `.item-external` to the `.item-navigation` to indicate that the item is an external link. This will add an external link icon to the end of the item.
 
+<Callout type="info">
+  For accessibility reasons, it is recommended to add a visually hidden text (or a visible one if the icon is far from the text) to indicate that the link opens an external resource. Take a look at [some more complete accessibility guidelines](https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#warn-the-user-when-opening-a-new-window).
+</Callout>
+
 <Example buttonLabel="navigation card item with external link" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation item-external">
     <div class="item">
       <div class="item-main">
         <div class="item-text-container">
-          <a href="#" class="item-label item-interactive">Label</a>
+          <a href="#" target="_blank" rel="noopener" class="item-label item-interactive">Label<span class="visually-hidden">&nbsp;(external link, new window)</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item-wrapper item-navigation item-external">
+    <div class="item">
+      <div class="item-main">
+        <div class="item-text-container">
+          <a href="#" target="_blank" rel="noopener" class="item-label item-interactive">Label (external link, new window)</a>
         </div>
       </div>
     </div>
@@ -1113,6 +1203,12 @@ Add `.item-external` to the `.item-navigation` to indicate that the item is an e
 ### Wrapping link
 
 Optionally, the `<a>` element can wrap the entire `.item` instead of just the label.
+
+<Callout type="info" title="Accessibility">
+  ATs will read the entire item as a link. You can use the visually hidden text to provide additional context if needed. You won't need any `[aria-describedby]` as stated in our [accessibility section](#accessibility).
+
+  Make sure to not use any interactive elements inside the item when using this variant, as it will create nested interactive elements which is not valid HTML and can cause accessibility issues.
+</Callout>
 
 <Example buttonLabel="navigation card item with link wrapping entire item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation">
     <a href="#" class="item item-interactive">

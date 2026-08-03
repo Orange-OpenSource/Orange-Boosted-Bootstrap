@@ -37,6 +37,10 @@
 //
 
 // Slots
+.item-slot-focusable {
+  position: relative;
+  z-index: 2;
+}
 
 .item > .item-slot {
   width: calc(100% - $ouds-list-item-space-padding-inline * 2);
@@ -65,17 +69,15 @@
     aspect-ratio: unset;
   }
 
+  &.item-slot-focusable {
+    padding: calc($focus-visible-outer-width + $focus-visible-inner-width); // Workaround to handle focus outline correctly
+    margin: calc(-1 * ($focus-visible-outer-width + $focus-visible-inner-width));
+  }
+
   img,
   video {
     opacity: var(--#{$prefix}list-item-disabled-opacity, 1);
   }
-}
-
-.item-slot-focusable {
-  position: relative;
-  z-index: 2;
-  padding: calc($focus-visible-outer-width + $focus-visible-inner-width); // Workaround to handle focus outline correctly
-  margin: calc(-1 * ($focus-visible-outer-width + $focus-visible-inner-width));
 }
 
 // Containers
@@ -201,10 +203,7 @@
     content: "";
   }
 
-  &,
-  &:hover,
-  &:focus-visible,
-  &:active {
+  &:is(&, :hover, :focus-visible, :active) {
     color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
     outline: 0;
     box-shadow: none;

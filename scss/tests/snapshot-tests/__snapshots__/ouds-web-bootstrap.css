@@ -12321,6 +12321,11 @@ ol.bullet-list > li > ol > li > ol > li::before {
   max-width: 30rem;
 }
 
+.item-slot-focusable {
+  position: relative;
+  z-index: 2;
+}
+
 .item > .item-slot {
   width: calc(100% - 32px);
   min-height: 28px;
@@ -12345,18 +12350,16 @@ ol.bullet-list > li > ol > li > ol > li::before {
   max-height: 6rem;
   aspect-ratio: unset;
 }
+.item-leading-container.item-slot-focusable,
+.item-trailing-container.item-slot-focusable {
+  padding: 5px;
+  margin: -5px;
+}
 .item-leading-container img,
 .item-leading-container video,
 .item-trailing-container img,
 .item-trailing-container video {
   opacity: var(--bs-list-item-disabled-opacity, 1);
-}
-
-.item-slot-focusable {
-  position: relative;
-  z-index: 2;
-  padding: 5px;
-  margin: -5px;
 }
 
 .item-leading-container {
@@ -12486,7 +12489,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   z-index: 1;
   content: "";
 }
-.item-interactive, .item-interactive:hover, .item-interactive:focus-visible, .item-interactive:active {
+.item-interactive:is(.item-interactive, :hover, :focus-visible, :active) {
   color: var(--bs-list-item-disabled-color, var(--bs-color-content-default));
   outline: 0;
   box-shadow: none;
