@@ -154,7 +154,7 @@
   <symbol id="design-token-figma" viewBox="0 0 24 24" fill="currentColor">
       <path fill-rule="evenodd" d="M21.011 7.161a.602.602 0 0 0-.301-.48l-8.405-4.8a.6.6 0 0 0-.596 0l-8.405 4.8A.603.603 0 0 0 3 7.2v9.6a.6.6 0 0 0 .303.521l8.405 4.8a.605.605 0 0 0 .596 0l8.405-4.8a.599.599 0 0 0 .302-.52c-.013-.049.012-9.596 0-9.639Zm-9.004-4.068 7.195 4.108-4.41 2.518c-1.391-1.747-4.18-1.746-5.571 0L4.81 7.2l7.196-4.108ZM14.408 12c.007 1.332-1.109 2.41-2.401 2.4-1.292.01-2.409-1.068-2.402-2.4-.01-1.297 1.08-2.409 2.402-2.4 1.32-.009 2.412 1.103 2.401 2.4Zm-3.002 8.565L4.202 16.45V8.235l4.422 2.525c-.797 2.083.617 4.46 2.782 4.79v5.015Zm8.406-4.114-7.205 4.114V15.55c2.166-.33 3.58-2.707 2.782-4.79l4.423-2.525v8.216Z" clip-rule="evenodd"/>
   </symbol>
-  <!-- functional/navigation/display-grid v2.1 -->
+  <!-- functional/navigation/display-grid-square v2.1 -->
   <symbol id="display-grid" viewBox="0 0 24 24" fill="currentColor">
     <path fill-rule="evenodd" d="M10.8 10.8H3V3h7.8v7.8Zm0 10.2H3v-7.8h7.8V21ZM21 21h-7.8v-7.8H21V21Zm0-10.2h-7.8V3H21v7.8Z" clip-rule="evenodd"/>
   </symbol>
