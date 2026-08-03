@@ -67,7 +67,7 @@
   ],
   "ci": {
     "trackBranches": [
-      "ouds/main"
+      "main"
     ]
   }
 }
