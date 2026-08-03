@@ -163,7 +163,9 @@ Links are available in two sizes and two densities. Add `.link-small` for small 
 <Callout type="warning">
   Compact and small sizes are not recommended for accessibility reasons because of the interactive area being reduced.
 
-  While using a list of compact links, make sure to space them enough to avoid accidental clicks. The minimum height of the link with the spaces above and below should equal 44px.
+  For a WCAG AA criterion on target size and while using a list of compact links, it's ok to keep it as-is.
+
+  For a WCAG AAA criterion on target size and while using a list of compact links, make sure to space them enough to avoid accidental interactions. If you follow the [2.5.8 WCAG guideline](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html), the minimum height of the link with the spaces above and below should equal 44px.
 </Callout>
 
 <Example buttonLabel="links sizes" class="d-flex flex-column align-items-start gap-xsmall" code={`<a class="link" href="#">This is an example of a link</a>
