@@ -132,17 +132,15 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
         {
           frontmatter.toc && headings && headings.length > 0 && (
             <h2 class="mb-none" id="docs-toc">
+              <!-- TODO Hack until we have the expand button -->
               <button
-                class="btn btn-default md:p-none mb-small md:mb-none text-decoration-none md:d-none"
+                class="btn btn-default btn-next md:p-none mb-small md:mb-none text-decoration-none md:d-none"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#tocContents"
                 aria-expanded="false"
                 aria-controls="tocContents"
               >
-                <svg class="md:d-none" aria-hidden="true">
-                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#chevron-expand')} />
-                </svg>
                 On this page
               </button>
               <span class="d-none md:d-block h6 my-small ms-large">On this page</span>
