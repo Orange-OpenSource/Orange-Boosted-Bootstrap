@@ -172,8 +172,7 @@ function resolveVersion(versionFromArgs, iconsRoot) {
 
 function getSpritePath(packageName) {
   return path.join(
-    REPOSITORY_ROOT, 'site', 'static', packageName,
-    'docs', '[version]', 'assets', 'img', 'ouds-web-sprite.svg'
+    REPOSITORY_ROOT, 'site', 'static', packageName, 'docs', '[version]', 'assets', 'img', 'ouds-web-sprite.svg'
   )
 }
 
@@ -275,8 +274,7 @@ function parseSpriteEntries(lines) {
   let symbolStartLine = -1
   let symbolLines = []
 
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i]
+  for (const [i, line] of lines.entries()) {
     const trimmed = line.trim()
 
     if (!inSymbol && trimmed.startsWith('<!--') && trimmed.endsWith('-->')) {
@@ -367,12 +365,16 @@ async function compareAndReplaceBrand({ packageName, sourceName, iconsRoot, vers
     const symbolId = idMatch ? idMatch[1] : 'unknown'
 
     if (!entry.comment || shouldSkipComment(entry.comment)) {
-      return { entry, symbolId, status: 'skipped', reason: entry.comment ? 'special icon' : 'no comment' }
+      return {
+        entry, symbolId, status: 'skipped', reason: entry.comment ? 'special icon' : 'no comment'
+      }
     }
 
     const parsed = parseCommentIconPath(entry.comment, sourceName)
     if (!parsed) {
-      return { entry, symbolId, status: 'skipped', reason: 'unparseable comment' }
+      return {
+        entry, symbolId, status: 'skipped', reason: 'unparseable comment'
+      }
     }
 
     const iconPathDisplay = `${parsed.sourceBrand}/${parsed.iconPath}`
@@ -382,19 +384,27 @@ async function compareAndReplaceBrand({ packageName, sourceName, iconsRoot, vers
       const currentContent = extractSymbolInnerContent(entry.symbolBlock)
 
       if (!currentContent) {
-        return { entry, symbolId, iconPathDisplay, status: 'skipped', reason: 'cannot extract content' }
+        return {
+          entry, symbolId, iconPathDisplay, status: 'skipped', reason: 'cannot extract content'
+        }
       }
 
       const normalizedSource = normalizeForComparison(sourceContent)
       const normalizedCurrent = normalizeForComparison(currentContent)
 
       if (normalizedSource === normalizedCurrent) {
-        return { entry, symbolId, iconPathDisplay, status: 'identical' }
+        return {
+          entry, symbolId, iconPathDisplay, status: 'identical'
+        }
       }
 
-      return { entry, symbolId, iconPathDisplay, status: 'replaced', newInnerContent: sourceContent }
+      return {
+        entry, symbolId, iconPathDisplay, status: 'replaced', newInnerContent: sourceContent
+      }
     } catch {
-      return { entry, symbolId, iconPathDisplay, status: 'missing' }
+      return {
+        entry, symbolId, iconPathDisplay, status: 'missing'
+      }
     }
   }))
 
