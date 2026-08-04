@@ -7667,7 +7667,7 @@ optgroup {
 
 .link, .icon-link, .link-chevron,
 .link-external {
-  --bs-link-icon-size: 20px;
+  --bs-link-icon-size: 1.25rem;
   --bs-link-icon-gap: 8px;
   font-size: var(--bs-font-size-label-large);
   line-height: var(--bs-font-line-height-label-large);
@@ -7744,7 +7744,7 @@ optgroup {
   min-width: var(--bs-link-icon-size);
   height: var(--bs-link-icon-size);
   margin-right: var(--bs-link-chevron-gap);
-  vertical-align: middle;
+  vertical-align: text-bottom;
   content: "";
   background-color: var(--bs-link-chevron-color, var(--bs-color-content-brand-primary));
   -webkit-mask: var(--bs-chevron-icon) center no-repeat;
@@ -7755,7 +7755,7 @@ optgroup {
 .link-chevron:not(.link-previous)::after {
   margin-right: 0;
   margin-left: var(--bs-link-chevron-gap);
-  transform: rotate(180deg) translateY(1px);
+  transform: rotate(180deg);
 }
 
 .link-external {
@@ -7767,7 +7767,7 @@ optgroup {
   min-width: var(--bs-link-icon-size);
   height: var(--bs-link-icon-size);
   margin-left: var(--bs-link-chevron-gap);
-  vertical-align: middle;
+  vertical-align: text-bottom;
   content: "";
   background-color: var(--bs-link-chevron-color, var(--bs-color-content-brand-primary));
   -webkit-mask: var(--bs-external-icon) center no-repeat;
@@ -7811,7 +7811,7 @@ optgroup {
 .link-small {
   --bs-link-min-height: 40px;
   --bs-link-padding-block: 10px;
-  --bs-link-icon-size: 16px;
+  --bs-link-icon-size: 1rem;
   --bs-link-icon-gap: 6px;
   --bs-link-chevron-gap: 4px;
   font-size: var(--bs-font-size-label-medium);

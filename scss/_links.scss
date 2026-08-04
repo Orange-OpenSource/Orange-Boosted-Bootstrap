@@ -4,7 +4,7 @@
 
 .link {
   // scss-docs-start link-css-vars
-  --#{$prefix}link-icon-size: #{$ouds-link-size-icon-default};
+  --#{$prefix}link-icon-size: #{px-to-rem($ouds-link-size-icon-default)};
   --#{$prefix}link-icon-gap: #{$ouds-link-space-column-gap-icon-default};
   // scss-docs-end link-css-vars
 
@@ -82,7 +82,7 @@
     min-width: var(--#{$prefix}link-icon-size);
     height: var(--#{$prefix}link-icon-size);
     margin-right: var(--#{$prefix}link-chevron-gap);
-    vertical-align: middle;
+    vertical-align: text-bottom;
     content: "";
     background-color: var(--#{$prefix}link-chevron-color, $ouds-link-color-chevron-enabled);
     mask: var(--#{$prefix}chevron-icon) center no-repeat;
@@ -92,7 +92,7 @@
   &:not(.link-previous)::after {
     margin-right: 0;
     margin-left: var(--#{$prefix}link-chevron-gap);
-    transform: rotate(180deg) translateY(1px);
+    transform: rotate(180deg);
   }
 }
 
@@ -105,7 +105,7 @@
     min-width: var(--#{$prefix}link-icon-size);
     height: var(--#{$prefix}link-icon-size);
     margin-left: var(--#{$prefix}link-chevron-gap);
-    vertical-align: middle;
+    vertical-align: text-bottom;
     content: "";
     background-color: var(--#{$prefix}link-chevron-color, $ouds-link-color-chevron-enabled);
     mask: var(--#{$prefix}external-icon) center no-repeat;
@@ -140,7 +140,7 @@
 .link-small {
   --#{$prefix}link-min-height: #{$ouds-link-size-min-height-small};
   --#{$prefix}link-padding-block: #{$ouds-link-space-padding-block-small};
-  --#{$prefix}link-icon-size: #{$ouds-link-size-icon-small};
+  --#{$prefix}link-icon-size: #{px-to-rem($ouds-link-size-icon-small)};
   --#{$prefix}link-icon-gap: #{$ouds-link-space-column-gap-icon-small};
   --#{$prefix}link-chevron-gap: #{$ouds-link-space-column-gap-chevron-small};
   @include get-font-size("label-medium");
