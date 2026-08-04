@@ -211,7 +211,6 @@
   display: flex;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
   padding: var(--#{$prefix}navbar-nav-padding-top) var(--#{$prefix}navbar-nav-padding-x) var(--#{$prefix}navbar-nav-padding-bottom); // OUDS mod
-  margin-bottom: 0;
   font-size: var(--#{$prefix}navbar-nav-font-size); // OUDS mod
   line-height: var(--#{$prefix}navbar-nav-line-height, $line-height-base); // OUDS mod
   letter-spacing: var(--#{$prefix}navbar-nav-letter-spacing, $letter-spacing-base); // OUDS mod

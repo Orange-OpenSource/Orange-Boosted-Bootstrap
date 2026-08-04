@@ -139,7 +139,7 @@ js/src/  →  Rollup  →  4 variants:
 |---|---|
 | Version | 1.1.0 |
 | Upstream | Bootstrap 5.3.6 |
-| Main branch | `ouds/main` |
+| Main branch | `main` |
 | License | MIT (code) / CC BY 3.0 (docs) |
 | Docs URL | https://web.unified-design-system.orange.com/ |
 | JS components | 15 (all extend BaseComponent) |

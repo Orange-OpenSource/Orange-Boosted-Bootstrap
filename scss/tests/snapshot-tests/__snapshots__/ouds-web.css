@@ -3,7 +3,7 @@
  * OUDS Web  v1.4.0 (https://web.unified-design-system.orange.com/)
  * Copyright 2014-2026 The OUDS Web Authors
  * Copyright 2014-2026 Orange SA
- * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
  * Bootstrap  v5.3.5 (https://getbootstrap.com/)
  * Copyright 2011-2026 The Bootstrap Authors
@@ -1186,8 +1186,8 @@ a > :is(var, code) {
 kbd {
   padding: 0.125rem 0.25rem;
   font-size: 0.875em;
-  color: var(--bs-color-content-on-status-neutral-emphasized);
-  background-color: var(--bs-color-surface-status-neutral-emphasized);
+  color: var(--bs-color-content-inverse);
+  background-color: var(--bs-color-surface-inverse-high);
   border-radius: 4px;
 }
 kbd kbd {
@@ -1456,12 +1456,14 @@ dialog,
 .list-unstyled {
   max-width: initial;
   padding-left: 0;
+  margin-bottom: 0;
   list-style: none;
 }
 
 .list-inline {
   max-width: initial;
   padding-left: 0;
+  margin-bottom: 0;
   list-style: none;
 }
 
@@ -3551,8 +3553,8 @@ dialog,
 }
 .table tr .radio-button-standalone,
 .table tr .checkbox-standalone {
-  width: -webkit-fill-available;
   width: -moz-available;
+  width: -webkit-fill-available;
   width: stretch;
 }
 .table svg,
@@ -3903,6 +3905,7 @@ textarea.form-control-lg {
 .checkbox-item-container {
   max-width: initial;
   padding-left: 0;
+  margin-bottom: 0;
   list-style: none;
   margin: 0;
 }
@@ -4011,6 +4014,7 @@ textarea.form-control-lg {
   font-size: 28px;
   line-height: 1;
   color: var(--bs-control-item-label-color);
+  pointer-events: none;
   background-color: currentcolor;
   -webkit-mask: var(--bs-error-icon) no-repeat center;
   mask: var(--bs-error-icon) no-repeat center;
@@ -4878,6 +4882,7 @@ textarea.form-control-lg {
   padding-left: calc(var(--bs-text-input-padding-x) - var(--bs-text-input-border-width-left));
   font-weight: 500;
   color: var(--bs-color-content-default);
+  text-overflow: ellipsis;
   -webkit-appearance: none;
   appearance: none;
   background-color: var(--bs-text-input-background-color);
@@ -6358,6 +6363,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .chips-container {
   max-width: initial;
   padding-left: 0;
+  margin-bottom: 0;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -6369,7 +6375,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .chip {
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex-shrink: 0;
   align-items: center;
   min-height: 3rem;
@@ -6403,6 +6409,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   letter-spacing: var(--bs-font-letter-spacing-label-medium);
   font-weight: 500;
   color: var(--bs-chip-color);
+  text-align: start;
   background-color: var(--bs-chip-bg);
   border: var(--bs-chip-border-width) solid var(--bs-chip-border-color);
   border-radius: 2000px;
@@ -7439,11 +7446,11 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
   max-width: initial;
   padding-left: 0;
+  margin-bottom: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
   padding: var(--bs-navbar-nav-padding-top) var(--bs-navbar-nav-padding-x) var(--bs-navbar-nav-padding-bottom);
-  margin-bottom: 0;
   font-size: var(--bs-navbar-nav-font-size);
   line-height: var(--bs-navbar-nav-line-height, var(--bs-font-line-height-body-medium));
   letter-spacing: var(--bs-navbar-nav-letter-spacing, var(--bs-font-letter-spacing-body-medium));
@@ -8770,6 +8777,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-breadcrumb-item-gap: 4px;
   max-width: initial;
   padding-left: 0;
+  margin-bottom: 0;
   list-style: none;
   display: flex;
   font-size: var(--bs-font-size-label-medium);
@@ -8872,12 +8880,13 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-pagination-icon-width: calc(0.5rem + 1px);
   --bs-pagination-icon-height: calc(1rem - 1px);
   display: flex;
+  max-width: initial;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
   flex-wrap: wrap;
   margin: var(--bs-pagination-margin-y) 0;
   background-color: transparent;
-  max-width: initial;
-  padding-left: 0;
-  list-style: none;
 }
 
 .page-link {
@@ -9532,6 +9541,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   gap: 4px;
   align-items: flex-start;
   justify-content: center;
+  width: 1%;
   min-height: 48px;
   padding-block: 12px;
 }
@@ -9540,6 +9550,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .alert-text-container > * {
   margin-bottom: 0;
