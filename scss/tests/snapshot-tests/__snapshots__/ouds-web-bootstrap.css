@@ -11216,7 +11216,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   font-size: var(--bs-badge-icon-font-size);
 }
 
-.badge.badge-disabled,
 .badge.disabled,
 .disabled .badge,
 [disabled] .badge,
@@ -11224,7 +11223,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-badge-color: var(--bs-color-content-on-action-disabled);
   --bs-badge-background-color: var(--bs-color-action-disabled);
 }
-.badge.badge-disabled:has(.badge-status-icon),
 .badge.disabled:has(.badge-status-icon),
 .disabled .badge:has(.badge-status-icon),
 [disabled] .badge:has(.badge-status-icon),
@@ -11232,7 +11230,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-badge-color: var(--bs-color-action-disabled);
   --bs-badge-background-color: transparent;
 }
-.badge.badge-disabled:has(.badge-status-icon).badge-warning .badge-status-icon::after,
 .badge.disabled:has(.badge-status-icon).badge-warning .badge-status-icon::after,
 .disabled .badge:has(.badge-status-icon).badge-warning .badge-status-icon::after,
 [disabled] .badge:has(.badge-status-icon).badge-warning .badge-status-icon::after,
@@ -15605,10 +15602,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .shadow-lg {
   box-shadow: var(--bs-box-shadow-lg) !important;
-}
-
-.shadow-default {
-  box-shadow: 0 2px 3px -1px var(--bs-elevation-color-elevated) !important;
 }
 
 .shadow-elevated {
