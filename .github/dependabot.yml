@@ -20,8 +20,13 @@ updates:
     groups:
       production-dependencies:
         dependency-type: "production"
-      development-dependencies:
-        dependency-type: "development"
+      development-minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+      development-major:
+        update-types:
+          - "major"
     schedule:
       interval: weekly
       day: friday
