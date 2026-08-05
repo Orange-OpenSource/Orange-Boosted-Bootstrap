@@ -71,11 +71,14 @@
 
 .link-chevron {
   // Chevron icon
-  &:not(.link-previous) {
+  &:not(.link-previous),
+  &:not(.back) {
     display: inline-block;
   }
 
   &.link-previous::before,
+  &.back::before,
+  &:not(.back)::after,
   &:not(.link-previous)::after {
     display: inline-block;
     width: var(--#{$prefix}link-icon-size);
@@ -89,6 +92,7 @@
     mask-size: var(--#{$prefix}link-icon-size);
   }
 
+  &:not(.back)::after,
   &:not(.link-previous)::after {
     margin-right: 0;
     margin-left: var(--#{$prefix}link-chevron-gap);
@@ -113,6 +117,7 @@
   }
 }
 
+.colored-bg,
 .link-on-colored-bg {
   &.link,
   :is(.link, a) {
