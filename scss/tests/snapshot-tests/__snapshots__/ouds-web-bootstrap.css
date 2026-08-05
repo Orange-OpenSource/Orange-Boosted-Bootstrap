@@ -12521,6 +12521,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
   padding: 5px;
   margin: -5px;
 }
+.item-list .item-wrapper:has(.item-interactive:focus-visible) {
+  --bs-list-item-border-radius: 0px;
+}
 
 .item-bg {
   --bs-list-item-bg: var(--bs-color-action-support-enabled);

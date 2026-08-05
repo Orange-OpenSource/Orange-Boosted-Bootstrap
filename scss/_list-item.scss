@@ -243,6 +243,10 @@
   box-sizing: content-box;
   padding: calc($focus-visible-outer-width + $focus-visible-inner-width); // Workaround to handle focus outline correctly
   margin: calc(-1 * ($focus-visible-outer-width + $focus-visible-inner-width));
+
+  .item-wrapper:has(.item-interactive:focus-visible) {
+    --#{$prefix}list-item-border-radius: #{$ouds-list-item-border-radius-default};
+  }
 }
 
 .item-bg { // Needs to be after .item-list to override the variable
