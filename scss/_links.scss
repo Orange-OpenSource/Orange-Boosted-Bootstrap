@@ -72,13 +72,13 @@
 .link-chevron {
   // Chevron icon
   &:not(.link-previous),
-  &:not(.back) {
+  &:not(.back) { // @deprecated, will be removed in v1.6.0, use "link-previous" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
     display: inline-block;
   }
 
   &.link-previous::before,
-  &.back::before,
-  &:not(.back)::after,
+  &.back::before, // @deprecated, will be removed in v1.6.0, use "link-previous" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
+  &:not(.back)::after, // @deprecated, will be removed in v1.6.0, use "link-previous" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
   &:not(.link-previous)::after {
     display: inline-block;
     width: var(--#{$prefix}link-icon-size);
@@ -92,7 +92,7 @@
     mask-size: var(--#{$prefix}link-icon-size);
   }
 
-  &:not(.back)::after,
+  &:not(.back)::after, // @deprecated, will be removed in v1.6.0, use "link-previous" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
   &:not(.link-previous)::after {
     margin-right: 0;
     margin-left: var(--#{$prefix}link-chevron-gap);
@@ -117,7 +117,7 @@
   }
 }
 
-.colored-bg,
+.colored-bg, // @deprecated, will be removed in v1.6.0, use "link-on-colored-bg" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
 .link-on-colored-bg {
   &.link,
   :is(.link, a) {
