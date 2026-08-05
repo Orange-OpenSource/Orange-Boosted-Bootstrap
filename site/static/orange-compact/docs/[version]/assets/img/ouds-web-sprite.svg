@@ -129,19 +129,19 @@
 
   <!-- *** EXAMPLES OF ICONS FOR FOOTERS *** -->
   <!-- functional/communications/live-chat v2.1 -->
-  <symbol id="live-chat" viewBox="0 0 1000 1000" fill="currentColor">
+  <symbol id="live-chat" viewBox="0 0 24 24" fill="currentColor">
       <path fill-rule="evenodd" d="M19.8 2.7H2.4v12.6a1.8 1.8 0 0 0 1.8 1.8h2.4v4.2l4.2-4.2h10.8V4.5a1.8 1.8 0 0 0-1.8-1.8Zm-3.67 5.294h-.265C15.275 5.952 13.767 4.5 12 4.5c-1.768 0-3.276 1.452-3.865 3.494H7.87a1.27 1.27 0 0 0-1.27 1.27v1.271c0 .702.569 1.27 1.27 1.27h.265C8.725 13.849 10.232 15.3 12 15.3c1.768 0 3.276-1.452 3.865-3.494h.264a1.27 1.27 0 0 0 1.27-1.27V9.264a1.27 1.27 0 0 0-1.27-1.27Zm-1.178 4.447h-2.054a.953.953 0 1 0 0 .635h1.7a4.515 4.515 0 0 1-.183.256 3.62 3.62 0 0 1-1.115.988c-.806.46-1.794.46-2.6 0a3.625 3.625 0 0 1-1.115-.988 5.067 5.067 0 0 1-.786-1.526 6.335 6.335 0 0 1 0-3.812 5.59 5.59 0 0 1 .173-.464.435.435 0 0 1 .462-.26c.492.07 1.376.34 2.566 1.283 1.442 1.142 2.974.827 3.445.555.033.263.05.527.049.792a6.188 6.188 0 0 1-.294 1.906c-.07.217-.153.429-.248.635Z" clip-rule="evenodd"/>
   </symbol>
   <!-- functional/transport-and-location/location-pin-compass v2.1 -->
-  <symbol id="location-pin-compass" viewBox="0 0 1000 1000" fill="currentColor">
+  <symbol id="location-pin-compass" viewBox="0 0 24 24" fill="currentColor">
       <path fill-rule="evenodd" d="M18.6 8.4a6.6 6.6 0 1 0-12.33 3.277L12 22.2l5.73-10.523A6.57 6.57 0 0 0 18.6 8.4ZM12 13.2a4.8 4.8 0 1 1 0-9.6 4.8 4.8 0 0 1 0 9.6Zm2.963-7.576-6.92 3.068 2.474.73.378 2.825 4.068-6.623Z" clip-rule="evenodd"/>
   </symbol>
   <!-- functional/status-and-indicators/mobile-network-coverage-signal v2.1 -->
-  <symbol id="mobile-network-coverage" viewBox="0 0 1000 1000" fill="currentColor">
+  <symbol id="mobile-network-coverage" viewBox="0 0 24 24" fill="currentColor">
       <path fill-rule="evenodd" d="M18 21.6a.602.602 0 0 0 .6.6h3a.602.602 0 0 0 .6-.6V7.2a.602.602 0 0 0-.6-.6h-3a.602.602 0 0 0-.6.6v14.4Zm-5.4 0a.602.602 0 0 0 .6.6h3a.602.602 0 0 0 .6-.6V10.8a.602.602 0 0 0-.6-.6h-3a.602.602 0 0 0-.6.6v10.8Zm-5.4 0a.602.602 0 0 0 .6.6h3a.602.602 0 0 0 .6-.6v-7.2a.602.602 0 0 0-.6-.6h-3a.602.602 0 0 0-.6.6v7.2Zm-5.4 0a.602.602 0 0 0 .6.6h3a.602.602 0 0 0 .6-.6V18a.602.602 0 0 0-.6-.6h-3a.602.602 0 0 0-.6.6v3.6Z" clip-rule="evenodd"/>
   </symbol>
   <!-- communication/security-and-safety/child-protection v2.1 -->
-  <symbol id="child-protection" viewBox="0 0 1000 1000" fill="currentColor">
+  <symbol id="child-protection" viewBox="0 0 24 24" fill="currentColor">
       <path fill-rule="evenodd" d="M15.946 5.438A3.942 3.942 0 0 1 12 9.375a3.942 3.942 0 0 1-3.946-3.937A3.942 3.942 0 0 1 12 1.5a3.942 3.942 0 0 1 3.946 3.938Zm-.785 3.635a4.831 4.831 0 0 1-6.321 0 4.81 4.81 0 0 0-2.54 4.24v3.5c0 3.14 2.552 5.687 5.7 5.687s5.7-2.546 5.7-5.688v-3.5a4.81 4.81 0 0 0-2.54-4.24Zm-2.77 4.485a1.573 1.573 0 1 1-3.147-.004 1.573 1.573 0 0 1 3.147.004Zm-.21 1.594a2.09 2.09 0 0 1-2.707.017c-.618.359-1 1.02-.999 1.735v1.459a2.367 2.367 0 1 0 4.735 0v-1.459c0-.727-.394-1.398-1.03-1.752Z" clip-rule="evenodd"/>
   </symbol>
 
