@@ -24,9 +24,6 @@ updates:
         update-types:
           - "minor"
           - "patch"
-      development-major:
-        update-types:
-          - "major"
     schedule:
       interval: weekly
       day: friday
