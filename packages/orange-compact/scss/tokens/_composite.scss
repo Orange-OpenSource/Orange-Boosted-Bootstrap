@@ -95,13 +95,13 @@ $badge-icon-negative: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000
 
 // * Breadcrumb *
 // orange/Component/breadcrumb/icon v2.1
-$breadcrumb-divider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M9.977 19.125 17.25 12 9.977 4.875 7.898 6.91 13.095 12l-5.197 5.088 2.079 2.037Z'/></svg>") !default;
+$breadcrumb-divider-icon: var(--#{$prefix}breadcrumb-divider-icon) !default;
 
 // * Button *
 // orange/Component/button/previous v2.1
-$btn-previous-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M14.023 4.875 6.75 12l7.273 7.125 2.079-2.035L10.905 12l5.197-5.088-2.079-2.037Z'/></svg>") !default;
-// orange/Component/button/next v2.1
-$btn-next-icon: $breadcrumb-divider !default;
+$btn-previous-icon: var(--#{$prefix}btn-previous-icon) !default;
+// orange/Component/button/next v2.1 — same icon as $breadcrumb-divider-icon
+$btn-next-icon: var(--#{$prefix}breadcrumb-divider-icon) !default;
 // orange/Component/button/expurge v2.1
 $btn-expurge-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m18.75 7.178-1.928-1.929L12 10.071 7.178 5.25 5.249 7.18 10.071 12 5.25 16.822l1.93 1.929L12 13.929l4.822 4.822 1.929-1.929L13.929 12l4.822-4.822Z'/></svg>") !default;
 
@@ -128,8 +128,8 @@ $checkbox-undetermined-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.o
 $chip-tick-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='m19.938 7.57-9.103 10.5c-.26.3-.662.492-1.11.492-.45 0-.85-.192-1.111-.492l-4.552-5.25A1.246 1.246 0 0 1 3.75 12c0-.362.16-.69.417-.928l.569-.525a1.48 1.48 0 0 1 1.005-.385c.354 0 .677.12.926.317l2.773 2.834 8.415-7.52c.254-.22.596-.356.973-.356.785 0 1.422.588 1.422 1.313 0 .31-.117.595-.312.82Z' clip-rule='evenodd'/></svg>") !default;
 
 // * Link *
-// orange/Component/link/previous v2.1
-$link-previous-icon: $btn-previous-icon !default;
+// orange/Component/link/previous v2.1 — same icon as $btn-previous-icon
+$link-previous-icon: var(--#{$prefix}btn-previous-icon) !default;
 
 // * Radio button *
 // orange/Component/radio-button/radio-button-selected v2.1
@@ -166,11 +166,13 @@ $helper-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 // *** Expose SVG used several times as custom props (CSS vars like --bs-success-icon)
 // /!\ convention: the key name must end by "-icon"
 $svg-as-custom-props: (
-  "chevron-icon":                $chevron-icon, // For legacy usages only
-  "alert-success-icon":          $alert-icon-success, // Used by alerts and tags
-  "alert-info-icon":             $alert-icon-info, // Used by alerts and tags
-  "alert-warning-icon":          $alert-icon-warning-external, // Used by alerts and tags
+  "chevron-icon":  $chevron-icon, // For legacy usages only
+  "alert-success-icon": $alert-icon-success, // Used by alerts and tags
+  "alert-info-icon": $alert-icon-info, // Used by alerts and tags
+  "alert-warning-icon": $alert-icon-warning-external, // Used by alerts and tags
   "alert-warning-internal-icon": $alert-icon-warning-internal, // Used by alerts and tags
-  "alert-error-icon":            $alert-icon-important // Used by alerts and tags
+  "alert-error-icon": $alert-icon-important, // Used by alerts and tags
+  "breadcrumb-divider-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M9.977 19.125 17.25 12 9.977 4.875 7.898 6.91 13.095 12l-5.197 5.088 2.079 2.037Z'/></svg>"), // Duplicated SVG used by $breadcrumb-divider-icon, $btn-next-icon
+  "btn-previous-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M14.023 4.875 6.75 12l7.273 7.125 2.079-2.035L10.905 12l5.197-5.088-2.079-2.037Z'/></svg>") // Duplicated SVG used by $btn-previous-icon, $link-previous-icon
 ) !default;
 

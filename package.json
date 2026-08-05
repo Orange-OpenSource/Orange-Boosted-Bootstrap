@@ -89,8 +89,9 @@
     "storybook": "npm run storybook-generate && storybook dev -p 6006",
     "storybook-generate": "npm run docs-build && node stories/create-stories-from-doc.js",
     "storybook-build": "npm run storybook-generate && storybook build -o ./_site/storybook",
-    "compare-composite-icons": "node build/compare-composite-icons.mjs",
-    "compare-sprite-icons": "node build/compare-sprite-icons.mjs"
+    "compare-composite-icons": "node build/update-composite-icons.mjs",
+    "compare-sprite-icons": "node build/update-sprite-icons.mjs",
+    "update-component-icons": "node build/update-component-icons.mjs"
   },
   "peerDependencies": {
     "@popperjs/core": "^2.11.8"

@@ -15,9 +15,9 @@
 // (e.g., orange/functional/...), that brand is used instead of the default.
 //
 // Usage:
-//   npm run build/compare-sprite-icons.mjs "<icons-directory>"
-//   npm run build/compare-sprite-icons.mjs --icons-root "<icons-directory>"
-//   npm run build/compare-sprite-icons.mjs --icons-root "<icons-directory>" --version 2.1
+//   npm run update-sprite-icons "<icons-directory>"
+//   npm run update-sprite-icons --icons-root "<icons-directory>"
+//   npm run update-sprite-icons --icons-root "<icons-directory>" --version 2.1
 //
 // The version is derived automatically from the folder name (e.g. "OUDS Icons V2.1"
 // → v2.1) or can be set explicitly with --version.

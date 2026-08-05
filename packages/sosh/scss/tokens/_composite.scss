@@ -87,7 +87,7 @@ $badge-icon-negative: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000
 
 // * Breadcrumb *
 // sosh/Component/breadcrumb/icon v2.1
-$breadcrumb-divider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='M7.431 7.178c-.019-.015.015.015 0 0l5.55 4.905-5.55 4.811c-.619.616-.506 1.388 0 1.913-.019-.015.015.019 0 0 .566.536 1.448.506 2.036-.008l6.709-5.812c.551-.48.506-1.286 0-1.808L9.467 5.296c-.716-.717-1.545-.574-2.036-.094-.491.48-.652 1.339 0 1.976Z' clip-rule='evenodd'/></svg>") !default;
+$breadcrumb-divider-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='M7.431 7.178c-.019-.015.015.015 0 0l5.55 4.905-5.55 4.811c-.619.616-.506 1.388 0 1.913-.019-.015.015.019 0 0 .566.536 1.448.506 2.036-.008l6.709-5.812c.551-.48.506-1.286 0-1.808L9.467 5.296c-.716-.717-1.545-.574-2.036-.094-.491.48-.652 1.339 0 1.976Z' clip-rule='evenodd'/></svg>") !default;
 
 // * Button *
 // sosh/Component/button/previous v2.1
@@ -158,10 +158,12 @@ $helper-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 // *** Expose SVG used several times as custom props (CSS vars like --bs-success-icon)
 // /!\ convention: the key name must end by "-icon"
 $svg-as-custom-props: (
-  "chevron-icon":          $chevron-icon, // For legacy usages only
-  "alert-success-icon":          $alert-icon-success, // Used by alerts and tags
-  "alert-info-icon":             $alert-icon-info, // Used by alerts and tags
-  "alert-warning-icon":          $alert-icon-warning-external, // Used by alerts and tags
+  "chevron-icon": $chevron-icon, // For legacy usages only
+  "alert-success-icon": $alert-icon-success, // Used by alerts and tags
+  "alert-info-icon": $alert-icon-info, // Used by alerts and tags
+  "alert-warning-icon": $alert-icon-warning-external, // Used by alerts and tags
   "alert-warning-internal-icon": $alert-icon-warning-internal, // Used by alerts and tags
-  "alert-error-icon":            $alert-icon-important // Used by alerts and tags
+  "alert-error-icon": $alert-icon-important, // Used by alerts and tags
+  "breadcrumb-divider-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='M7.431 7.178c-.019-.015.015.015 0 0l5.55 4.905-5.55 4.811c-.619.616-.506 1.388 0 1.913-.019-.015.015.019 0 0 .566.536 1.448.506 2.036-.008l6.709-5.812c.551-.48.506-1.286 0-1.808L9.467 5.296c-.716-.717-1.545-.574-2.036-.094-.491.48-.652 1.339 0 1.976Z' clip-rule='evenodd'/></svg>"),
+  "btn-previous-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='M15.672 16.819c-.015-.015.019.015 0 0l-5.55-4.905 5.55-4.811c.619-.615.506-1.388 0-1.913-.015-.019.019.015 0 0-.566-.536-1.447-.506-2.036.008L6.927 11.01c-.551.48-.506 1.286 0 1.808l6.709 5.883c.716.717 1.545.574 2.036.094.491-.48.652-1.339 0-1.976Z' clip-rule='evenodd'/></svg>")
 ) !default;

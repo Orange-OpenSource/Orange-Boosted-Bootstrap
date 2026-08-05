@@ -1850,7 +1850,7 @@ $title-bar-border-color:            var(--#{$prefix}color-border-default) !defau
 $breadcrumb-divider-color:          $ouds-color-content-default !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
 // OUDS mod: no `$breadcrumb-active-color`
 // OUDS mod: no `$breadcrumb-divider-filter`
-$breadcrumb-divider-flipped:        $breadcrumb-divider !default;
+$breadcrumb-divider-flipped:        $breadcrumb-divider-icon !default;
 // OUDS mod: no `$breadcrumb-border-radius`
 // scss-docs-end breadcrumb-variables
 
