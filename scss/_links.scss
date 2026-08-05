@@ -53,15 +53,15 @@
   }
 
   &:hover {
-    --#{$prefix}link-chevron-color: #{$ouds-link-color-chevron-hover};
+    --#{$prefix}link-chevron-color: #{$ouds-link-color-content-hover};
   }
 
   &:focus-visible {
-    --#{$prefix}link-chevron-color: #{$ouds-link-color-chevron-focus};
+    --#{$prefix}link-chevron-color: #{$ouds-link-color-content-focus};
   }
 
   &:active {
-    --#{$prefix}link-chevron-color: #{$ouds-link-color-chevron-pressed};
+    --#{$prefix}link-chevron-color: #{$ouds-link-color-content-pressed};
   }
 
   &[aria-disabled="true"] {

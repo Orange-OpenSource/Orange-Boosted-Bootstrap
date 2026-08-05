@@ -5708,15 +5708,15 @@ optgroup {
 }
 .link-chevron:hover,
 .link-external:hover {
-  --bs-link-chevron-color: var(--bs-link-color-chevron-hover);
+  --bs-link-chevron-color: var(--bs-color-action-hover);
 }
 .link-chevron:focus-visible,
 .link-external:focus-visible {
-  --bs-link-chevron-color: var(--bs-link-color-chevron-focus);
+  --bs-link-chevron-color: var(--bs-color-action-focus);
 }
 .link-chevron:active,
 .link-external:active {
-  --bs-link-chevron-color: var(--bs-link-color-chevron-pressed);
+  --bs-link-chevron-color: var(--bs-color-action-pressed);
 }
 .link-chevron[aria-disabled=true],
 .link-external[aria-disabled=true] {
