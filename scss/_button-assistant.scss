@@ -20,18 +20,25 @@
     mask: $btn-assistant-icon center;
   }
 
-  background: linear-gradient(var(--#{$prefix}btn-bg, var(--#{$prefix}color-bg-primary))) padding-box, conic-gradient($ouds-color-ai-secondary 0deg 82deg, $ouds-color-ai-tertiary 82deg 118deg, $ouds-color-ai-quaternary 118deg 242deg, $ouds-color-ai-primary 242deg 360deg) border-box;
-  @supports (background-clip: border-area) {
-    background: conic-gradient($ouds-color-ai-secondary 0deg 82deg, $ouds-color-ai-tertiary 82deg 118deg, $ouds-color-ai-quaternary 118deg 242deg, $ouds-color-ai-primary 242deg 360deg) border-box border-area;
-  }
-  border-color: transparent;
-
-  &:is(:hover, :active, :focus-visible) {
+  // Reduce the noise for people that don't want some
+  @media (prefers-reduced-motion: no-preference) and (prefers-contrast: no-preference) and (forced-colors: none) {
+    background: linear-gradient(var(--#{$prefix}btn-bg, var(--#{$prefix}color-bg-primary))) padding-box, conic-gradient($ouds-color-ai-secondary 0deg 82deg, $ouds-color-ai-tertiary 82deg 118deg, $ouds-color-ai-quaternary 118deg 242deg, $ouds-color-ai-primary 242deg 360deg) border-box;
+    @supports (background-clip: border-area) {
+      background: conic-gradient($ouds-color-ai-secondary 0deg 82deg, $ouds-color-ai-tertiary 82deg 118deg, $ouds-color-ai-quaternary 118deg 242deg, $ouds-color-ai-primary 242deg 360deg) border-box border-area;
+    }
     border-color: transparent;
+
+    &:is(:hover, :active, :focus-visible) {
+      border-color: transparent;
+    }
+
+    &:is(:disabled, [aria-disabled="true"]):not(.loading-indeterminate, .loading-determinate) {
+      background: initial;
+    }
   }
 
-  &:is(:disabled, [aria-disabled="true"]):not(.loading-indeterminate, .loading-determinate) {
-    background: initial;
+  @media (prefers-reduced-motion: reduce), (prefers-contrast: more), (forced-colors: active) {
+    border-color: currentcolor;
   }
 
   &.btn-icon {
