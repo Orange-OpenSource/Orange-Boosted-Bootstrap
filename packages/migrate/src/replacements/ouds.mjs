@@ -25,6 +25,10 @@ export const oudsReplacements = [
   // Badge
   ['badge-disabled', 'disabled'],
 
+  // Link
+  [...warnForClass('back')],
+  ['colored-bg', 'link-on-colored-bg'],
+
   // Form
   [
     ...warnForClass('was-validated', {

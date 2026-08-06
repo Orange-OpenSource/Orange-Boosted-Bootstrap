@@ -60,14 +60,24 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 
 ### With chevron
 
-Add `.link-chevron` to enhance your link with a chevron on the right side. Use the additional `.back` class to display the chevron on the left side.
+Add `.link-chevron` to enhance your link with a chevron on the right side. Use the additional `.link-previous` class to display the chevron on the left side.
 
 <Example buttonLabel="links with chevron" code={`<div><a class="link link-chevron" href="#">Link with chevron</a></div>
-  <div><a class="link link-chevron back" href="#">Link with a back chevron</a></div>
+  <div><a class="link link-chevron link-previous" href="#">Link with a previous chevron</a></div>
   <div style="width:20rem;">
     <div><a class="link link-chevron" href="#">This is an example of a link on multiple lines with chevron</a></div>
-    <div><a class="link link-chevron back" href="#">This is an example of a link on multiple lines with a back chevron</a></div>
+    <div><a class="link link-chevron link-previous" href="#">This is an example of a link on multiple lines with a previous chevron</a></div>
   </div>`} />
+
+### With external icon
+
+Add `.link-external` to enhance your link with an external icon on the right side.
+
+<Callout type="info">
+  For accessibility reasons, it is recommended to add a visually hidden text to indicate that the link opens an external resource. Take a look at [some more complete accessibility guidelines](https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#warn-the-user-when-opening-a-new-window).
+</Callout>
+
+<Example buttonLabel="links with external icon" class="d-flex flex-column gap-medium" code={`<a class="link link-external" href="#">Link with external icon<span class="visually-hidden">&nbsp;(external link)</span></a>`} />
 
 ### With icon
 
@@ -146,7 +156,15 @@ However, if the disabled link conveys useful information for users, it must rema
 
 ## Sizes
 
-Links are available in two sizes. Add `.link-small` for small size.
+Links are available in two sizes and two densities. Add `.link-small` for small font-size link. Add `.link-compact` for smaller padding around the link. You can combine both classes to have a small and compact link.
 
-<Example buttonLabel="links sizes" code={`<div><a class="link" href="#">This is an example of a link</a></div>
-  <div><a class="link link-small" href="#">This is an example of a small link</a></div>`} />
+<Callout type="warning">
+  Compact and small sizes are not recommended for accessibility reasons because of the interactive area being reduced.
+
+  For the 2.5.5 WCAG criterion on target size enhanced and while using a list of compact links, make sure to space them enough to avoid accidental interactions. If you follow the [2.5.5 WCAG criterion](https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html), the minimum height and width of the link with the spaces around should equal `44px x 44px`.
+</Callout>
+
+<Example buttonLabel="links sizes" class="d-flex flex-column align-items-start gap-xsmall" code={`<a class="link" href="#">This is an example of a link</a>
+  <a class="link link-small" href="#">This is an example of a small link</a>
+  <a class="link link-compact" href="#">This is an example of a compact link</a>
+  <a class="link link-compact link-small" href="#">This is an example of a small compact link</a>`} />
