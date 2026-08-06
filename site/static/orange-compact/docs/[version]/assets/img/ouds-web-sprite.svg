@@ -72,10 +72,6 @@
   <symbol id="message-talk" viewBox="0 0 24 24" fill="currentColor">
     <path fill-rule="evenodd" d="M12 2.1c-5.633 0-10.2 3.626-10.2 8.1 0 3.467 2.743 6.425 6.6 7.581v4.12l3.6-3.6c5.633 0 10.2-3.627 10.2-8.1 0-4.475-4.567-8.1-10.2-8.1Zm-5.1 9.6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm5.1 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm5.1 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z" clip-rule="evenodd"/>
   </symbol>
-  <!-- functional/actions/external-link v2.1 (should be removed with new tokens 2.6) -->
-  <symbol id="external-link" viewBox="0 0 24 24" fill="currentColor">
-    <path fill-rule="evenodd" d="M17.3 16.967a.936.936 0 0 1-.933.933H7.033a.936.936 0 0 1-.933-.933V7.633a.936.936 0 0 1 .933-.933h5.741l1.6-1.6H6.42c-1.056 0-1.92.864-1.92 1.92v10.56c0 1.056.864 1.92 1.92 1.92h10.56c1.056 0 1.92-.864 1.92-1.92V9.625l-1.6 1.6v5.742ZM19.334 3.5H14.09l1.75 1.75-3.528 3.527c-.46.46-.46 1.204 0 1.664l1.248 1.248c.46.46 1.204.46 1.664 0L18.75 8.16l1.75 1.75V4.666c0-.644-.522-1.166-1.166-1.166Z" clip-rule="evenodd"/>
-  </symbol>
 
   <!-- *** EXAMPLE OF ICONS FOR ICON PAGE *** -->
   <!-- communication/technology/internet-world-connection v2.1 -->
