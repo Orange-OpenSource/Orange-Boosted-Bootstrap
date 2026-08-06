@@ -1,6 +1,5 @@
 ---
 import Code from '@shortcodes/Code.astro'
-import { getVersionedDocsPath } from '@libs/path'
 
 interface Props {
   name: string
@@ -8,7 +7,6 @@ interface Props {
 
 const { name } = Astro.props
 const withinButtonLabel = `dismissal button within the ${name}`
-const outsideButtonLabel = `dismissal button outside the ${name}`
 ---
 
 <p>
