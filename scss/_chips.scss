@@ -10,7 +10,7 @@
 
 .chip {
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex-shrink: 0;
   align-items: center;
   min-height: px-to-rem($ouds-chip-size-min-height-interactive-area);
@@ -44,6 +44,7 @@
   @include get-font-size("label-medium");
   font-weight: $ouds-font-weight-web-label-moderate;
   color: var(--#{$prefix}chip-color);
+  text-align: start;
   background-color: var(--#{$prefix}chip-bg);
   border: var(--#{$prefix}chip-border-width) solid var(--#{$prefix}chip-border-color);
   border-radius: $ouds-chip-border-radius; // stylelint-disable-line property-disallowed-list
