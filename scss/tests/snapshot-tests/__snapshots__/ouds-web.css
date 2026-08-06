@@ -10043,8 +10043,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
   height: var(--bs-list-group-item-icon-size);
   content: "";
   background-color: currentcolor;
-  -webkit-mask: no-repeat var(--bs-alert-warning-external-icon);
-  mask: no-repeat var(--bs-alert-warning-external-icon);
+  -webkit-mask: no-repeat var(--bs-alert-warning-icon);
+  mask: no-repeat var(--bs-alert-warning-icon);
 }
 
 .list-group-item-danger {
@@ -10058,8 +10058,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
   height: var(--bs-list-group-item-icon-size);
   content: "";
   background-color: currentcolor;
-  -webkit-mask: no-repeat var(--bs-alert-important-icon);
-  mask: no-repeat var(--bs-alert-important-icon);
+  -webkit-mask: no-repeat var(--bs-alert-error-icon);
+  mask: no-repeat var(--bs-alert-error-icon);
 }
 
 .card .list-group {
