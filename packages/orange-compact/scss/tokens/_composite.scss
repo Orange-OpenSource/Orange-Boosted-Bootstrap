@@ -130,6 +130,8 @@ $chip-tick-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
 // * Link *
 // orange/Component/link/previous v2.1 — same icon as $btn-previous-icon
 $link-previous-icon: var(--#{$prefix}btn-previous-icon) !default;
+// orange/Component/link/external-link v2.1
+$link-external-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='M17.3 16.967a.936.936 0 0 1-.933.933H7.033a.936.936 0 0 1-.933-.933V7.633a.936.936 0 0 1 .933-.933h5.741l1.6-1.6H6.42c-1.056 0-1.92.864-1.92 1.92v10.56c0 1.056.864 1.92 1.92 1.92h10.56c1.056 0 1.92-.864 1.92-1.92V9.625l-1.6 1.6v5.742ZM19.334 3.5H14.09l1.75 1.75-3.528 3.527c-.46.46-.46 1.204 0 1.664l1.248 1.248c.46.46 1.204.46 1.664 0L18.75 8.16l1.75 1.75V4.666c0-.644-.522-1.166-1.166-1.166Z' clip-rule='evenodd'/></svg>") !default;
 
 // * Radio button *
 // orange/Component/radio-button/radio-button-selected v2.1

@@ -54,11 +54,8 @@ export function getComponentSVG(className: string): string {
 }
 
 export function getVersionLink(version: string): string {
-    return `<a class="link icon-link float-end p-none" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/${version}-ouds-web" target="_blank" rel="noopener">
+    return `<a class="link link-external float-end" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/${version}-ouds-web" target="_blank" rel="noopener">
       Full changelog
-      <svg class="m-none ms-xsmall" aria-hidden="true">
-        <use xlink:href="${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#external-link')}"/>
-      </svg>
   </a>`
 }
 
