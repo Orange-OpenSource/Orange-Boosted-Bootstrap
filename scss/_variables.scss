@@ -1795,8 +1795,8 @@ $list-group-action-active-bg:         $list-group-active-bg !default; // OUDS mo
 $list-group-icons: (
   "success": escape-svg(var(--#{$prefix}alert-success-icon)),
   "info":    escape-svg(var(--#{$prefix}alert-info-icon)),
-  "warning": escape-svg(var(--#{$prefix}alert-warning-external-icon)),
-  "danger":  escape-svg(var(--#{$prefix}alert-important-icon))
+  "warning": escape-svg(var(--#{$prefix}alert-warning-icon)),
+  "danger":  escape-svg(var(--#{$prefix}alert-error-icon))
 ) !default;
 // End mod
 // scss-docs-end list-group-variables
