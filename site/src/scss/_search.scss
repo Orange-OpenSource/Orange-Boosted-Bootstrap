@@ -193,6 +193,12 @@
   }
 }
 
+// Command keys in the footer
+.DocSearch-Commands-Key {
+  color: var(--#{$prefix}color-content-inverse);
+  background: var(--#{$prefix}color-surface-inverse-high);
+}
+
 // Algolia logo
 .DocSearch-Logo svg .cls-1,
 .DocSearch-Logo svg .cls-2 {
