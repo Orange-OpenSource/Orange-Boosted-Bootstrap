@@ -68,6 +68,8 @@ $ouds-font-family-monospace-stack:
 //// ****** ICONS as data URIs ******
 
 /// *** OUDS components icons v2.1
+/// For each new version of the icon pack, these icons should be updated using the script update-composite-icons.mjs
+// /!\ convention: the var name must start by the component name
 
 // * Alert *
 // orange/Component/alert/tick-confirmation-fill v2.1
