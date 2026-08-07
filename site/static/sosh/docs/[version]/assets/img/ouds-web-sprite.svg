@@ -1,3 +1,6 @@
+<!-- DECORATIVE ICONS FOR OUDS WEB DOCUMENTATION -->
+<!-- This file should be updated from the icon pack using the script update-sprite-icons.mjs -->
+<!-- Each project using OUDS WEB should make his own sprite file using the icons finder https://oran.ge/icons -->
 <svg xmlns="http://www.w3.org/2000/svg">
   <!-- *** FUNCTIONAL ICONS *** -->
   <!-- functional/status-and-indicators/important-fill v2.1 -->
