@@ -516,3 +516,45 @@
 }
 // scss-docs-end icon-warning
 // End mod
+
+.chip-interactive[aria-selected="true"] {
+  --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-enabled};
+  --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-enabled};
+  --#{$prefix}chip-border-width: #{px-to-rem($ouds-chip-border-width-selected)};
+  --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-enabled};
+  --#{$prefix}chip-padding-start: #{$ouds-chip-space-padding-inline-icon};
+  --#{$prefix}chip-tick-color: #{$ouds-chip-color-content-selected-tick-enabled};
+
+  &:hover {
+    --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-hover};
+    --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-hover};
+    --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-hover};
+    --#{$prefix}chip-tick-color: currentcolor;
+  }
+
+  &:focus-visible {
+    --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-focus};
+    --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-focus};
+    --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-focus};
+    --#{$prefix}chip-tick-color: currentcolor;
+  }
+
+  &:active {
+    --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-pressed};
+    --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-pressed};
+    --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-pressed};
+    --#{$prefix}chip-tick-color: currentcolor;
+  }
+
+  &::before {
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    font-size: px-to-rem($ouds-chip-size-icon);
+    line-height: 1;
+    color: var(--#{$prefix}chip-tick-color);
+    content: "";
+    background-color: currentcolor;
+    mask: $chip-tick-icon no-repeat 50% / px-to-rem($ouds-chip-size-icon);
+  }
+}

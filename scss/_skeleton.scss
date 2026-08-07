@@ -57,7 +57,7 @@
   }
 
   // List of components with security margins
-  :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item) {
+  :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .item-wrapper) {
     @extend %skeleton-placeholder;
   }
 }
