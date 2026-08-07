@@ -11,6 +11,8 @@
   --#{$prefix}btn-focus-color: #{$ouds-button-color-content-ai-focus};
   --#{$prefix}btn-loading-color: #{$ouds-button-color-content-ai-loading};
 
+  border-color: currentcolor;
+
   &::before {
     flex-shrink: 0;
     width: var(--#{$prefix}btn-icon-size);
@@ -35,10 +37,6 @@
     &:is(:disabled, [aria-disabled="true"]):not(.loading-indeterminate, .loading-determinate) {
       background: initial;
     }
-  }
-
-  @media (prefers-reduced-motion: reduce), (prefers-contrast: more), (forced-colors: active) {
-    border-color: currentcolor;
   }
 
   &.btn-icon {

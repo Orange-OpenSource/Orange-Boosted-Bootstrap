@@ -946,7 +946,7 @@ You can use `.btn-assistant` class to indicate AI actions in a process or a flow
   <button type="button" class="btn btn-assistant">Assistant</button>`} />
 
 <Callout type="warning" title="Transparency and older browsers">
-  Due to technical limitations, an assistant button does not have a transparent background on older browsers and Firefox.
+  An assistant button does not have a transparent background on older browsers and Firefox because [`background-clip: border-area` is not fully supported](https://caniuse.com/wf-background-clip-border-area).
 
   It's necessary to set `--bs-btn-bg` to its container background color to be compatible with most browsers. Make sure that the used variable isn't semi-transparent (ie. use background tokens instead of surface tokens).
 </Callout>
@@ -955,11 +955,11 @@ If your browser is compatible, the following example will show two transparent a
 
 <Example buttonLabel="assistant button simulated transparent background" class="bd-btn-example" code={`<div class="bg-tertiary">
 
-    <button class="btn btn-assistant">
+    <button type="button" class="btn btn-assistant">
       Assistant
     </button>
 
-    <button class="btn btn-assistant" style="--bs-btn-bg: var(--bs-color-bg-tertiary);">
+    <button type="button" class="btn btn-assistant" style="--bs-btn-bg: var(--bs-color-bg-tertiary);">
       Assistant
     </button>
 
@@ -969,9 +969,9 @@ If your browser is compatible, the following example will show two transparent a
 
 #### Icon only
 
-Add the class `.btn-icon` to get a icon-only assistant button. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or an `aria-label` attribute. Icon-only assistant buttons are always completely circular.
+Add the class `.btn-icon` to get an icon-only assistant button. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or an `aria-label` attribute. Icon-only assistant buttons are always completely circular.
 
-<Example buttonLabel="assistant button icon-only" class="bd-btn-example" code={`<button class="btn btn-assistant btn-icon">
+<Example buttonLabel="assistant button icon-only" class="bd-btn-example" code={`<button type="button" class="btn btn-assistant btn-icon">
     <span class="visually-hidden">Assistant</span>
   </button>`} />
 
@@ -990,7 +990,7 @@ Add the class `.btn-icon` to get a icon-only assistant button. Make sure to prov
 
 <Example buttonLabel="rounded assistant buttons" class="bd-btn-example" code={`<div class="use-rounded-corner-buttons">
 
-    <button class="btn btn-assistant">Assistant</button>
+    <button type="button" class="btn btn-assistant">Assistant</button>
 
   </div>`} />
 </BrandSpecific>
@@ -1013,7 +1013,7 @@ The loading state of an assistant button indicates that an action is currently p
 
 Please refer to the [loading state section of the button component](#loading) for guidelines on how to implement loading states, as well as a JavaScript example and a live demo.
 
-<Example buttonLabel="loading assistant buttons" class="bd-btn-example" code={`<button class="btn btn-assistant loading-indeterminate" id="loading-ai-btn-1" disabled>
+<Example buttonLabel="loading assistant buttons" class="bd-btn-example" code={`<button type="button" class="btn btn-assistant loading-indeterminate" id="loading-ai-btn-1" disabled>
     Assistant
     <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
@@ -1021,7 +1021,7 @@ Please refer to the [loading state section of the button component](#loading) fo
     <span role="status" id="loading-ai-btn-msg-1" class="visually-hidden">Loading answer</span>
   </button>
 
-  <button class="btn btn-assistant btn-icon loading-indeterminate" id="loading-ai-btn-2" disabled>
+  <button type="button" class="btn btn-assistant btn-icon loading-indeterminate" id="loading-ai-btn-2" disabled>
     <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
@@ -1058,10 +1058,10 @@ A button's text should not exceed one line, but will automatically wrap if neces
 
 If you don’t want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
 
-<Example buttonLabel="assistant buttons with wrapped text" class="bd-btn-example d-flex flex-column align-items-start" code={`<button class="btn btn-assistant" type="button">
+<Example buttonLabel="assistant buttons with wrapped text" class="bd-btn-example d-flex flex-column align-items-start" code={`<button type="button" class="btn btn-assistant">
     The label remains centered in<br/>multiline mode with an icon
   </button>
 
-  <button class="btn btn-assistant" type="button">
+  <button type="button" class="btn btn-assistant">
     In small contexts the button text wraps automatically to adapt its behavior
   </button>`} />
