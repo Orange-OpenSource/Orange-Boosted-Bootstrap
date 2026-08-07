@@ -88,7 +88,7 @@
     vertical-align: text-bottom;
     content: "";
     background-color: var(--#{$prefix}link-chevron-color, $ouds-link-color-chevron-enabled);
-    mask: var(--#{$prefix}chevron-icon) center no-repeat;
+    mask: $link-previous-icon center no-repeat;
     mask-size: var(--#{$prefix}link-icon-size);
   }
 
