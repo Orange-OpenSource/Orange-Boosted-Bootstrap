@@ -198,7 +198,7 @@ function extractSvgInnerContent(svgFileContent) {
   result = result.replace(/^\s*<svg[^>]*>/i, '')
   result = result.replace(/<\/svg>\s*$/i, '')
   return result
-    .replace(/\r?\n/g, '\n')
+    .replace(/\r\n|\r|\n/g, '\n')
     .trim()
 }
 
@@ -211,7 +211,7 @@ function extractSymbolInnerContent(symbolBlock) {
 
   return symbolBlock
     .slice(openMatch.index + openMatch[0].length, closeIndex)
-    .replace(/\r?\n/g, '\n')
+    .replace(/\r\n|\r|\n/g, '\n')
     .trim()
 }
 
@@ -258,7 +258,25 @@ function parseCommentIconPath(commentText, defaultSourceBrand) {
 async function loadSourceInnerContent(iconsRoot, sourceBrand, iconPath) {
   const relativeWithExtension = iconPath.endsWith('.svg') ? iconPath : `${iconPath}.svg`
   const svgAbsolutePath = path.join(iconsRoot, sourceBrand, ...relativeWithExtension.split('/'))
-  const raw = await fs.readFile(svgAbsolutePath, 'utf8')
+  const buffer = await fs.readFile(svgAbsolutePath)
+  const raw = buffer.toString('utf8')
+
+  // Guard against OneDrive cloud files returning placeholder data instead of
+  // actual content (known issue when Node.js runs under Git Bash / MSYS2).
+  if (!raw.trimStart().startsWith('<')) {
+    throw new Error(
+      `File does not appear to be a valid SVG (does not start with "<"):\n` +
+      `  ${svgAbsolutePath}\n\n` +
+      `This usually happens when the icons directory is on OneDrive and the\n` +
+      `script is launched from Git Bash. OneDrive cloud-file placeholders are\n` +
+      `not hydrated correctly under MSYS2.\n\n` +
+      `Workarounds:\n` +
+      `  1. Run from PowerShell or cmd instead of Git Bash\n` +
+      `  2. Copy the icons folder to a local (non-OneDrive) path\n` +
+      `  3. Pin the icons folder in OneDrive: right-click → "Always keep on this device"`
+    )
+  }
+
   return extractSvgInnerContent(raw)
 }
 
@@ -401,7 +419,12 @@ async function compareAndReplaceBrand({ packageName, sourceName, iconsRoot, vers
       return {
         entry, symbolId, iconPathDisplay, status: 'replaced', newInnerContent: sourceContent
       }
-    } catch {
+    } catch (error) {
+      // Rethrow OneDrive / invalid-SVG errors so the user sees the message
+      if (error.message && error.message.startsWith('File does not appear to be a valid SVG')) {
+        throw error
+      }
+
       return {
         entry, symbolId, iconPathDisplay, status: 'missing'
       }

@@ -190,7 +190,7 @@ function normalizeSvg(svgContent) {
   result = stripAll(result, /<!--[\s\S]*?-->/g)
   return result
     .replace(/\s(?:width|height|fill)=("[^"]*"|'[^']*')/g, '')
-    .replace(/\r?\n/g, ' ')
+    .replace(/\r\n|\r|\n/g, ' ')
     .replace(/>\s+</g, '><')
     .replace(/\s{2,}/g, ' ')
     .trim()
@@ -202,7 +202,25 @@ function normalizeSvg(svgContent) {
 async function loadSourceSvg(iconsRoot, sourceName, relativeIconPath) {
   const relativeWithExtension = relativeIconPath.endsWith('.svg') ? relativeIconPath : `${relativeIconPath}.svg`
   const svgAbsolutePath = path.join(iconsRoot, sourceName, ...relativeWithExtension.split('/'))
-  const raw = await fs.readFile(svgAbsolutePath, 'utf8')
+  const buffer = await fs.readFile(svgAbsolutePath)
+  const raw = buffer.toString('utf8')
+
+  // Guard against OneDrive cloud files returning placeholder data instead of
+  // actual content (known issue when Node.js runs under Git Bash / MSYS2).
+  if (!raw.trimStart().startsWith('<')) {
+    throw new Error(
+      `File does not appear to be a valid SVG (does not start with "<"):\n` +
+      `  ${svgAbsolutePath}\n\n` +
+      `This usually happens when the icons directory is on OneDrive and the\n` +
+      `script is launched from Git Bash. OneDrive cloud-file placeholders are\n` +
+      `not hydrated correctly under MSYS2.\n\n` +
+      `Workarounds:\n` +
+      `  1. Run from PowerShell or cmd instead of Git Bash\n` +
+      `  2. Copy the icons folder to a local (non-OneDrive) path\n` +
+      `  3. Pin the icons folder in OneDrive: right-click → "Always keep on this device"`
+    )
+  }
+
   return normalizeSvg(raw)
 }
 
@@ -245,7 +263,7 @@ async function processBrand({ packageName, sourceName, iconsRoot, version }) {
   const originalContent = await fs.readFile(compositePath, 'utf8')
   const bounds = getComponentBlockBounds(originalContent)
   const block = originalContent.slice(bounds.startIndex, bounds.endIndex)
-  const lines = block.split(/\r?\n/)
+  const lines = block.split(/\r\n|\r|\n/)
   const nextLines = [...lines]
 
   const iconMap = new Map()
@@ -331,7 +349,12 @@ async function processBrand({ packageName, sourceName, iconsRoot, version }) {
     try {
       const updatedSvg = await loadSourceSvg(iconsRoot, sourceName, entry.relativeIconPath)
       return { ...entry, updatedSvg, found: true }
-    } catch {
+    } catch (error) {
+      // Rethrow OneDrive / invalid-SVG errors so the user sees the message
+      if (error.message && error.message.startsWith('File does not appear to be a valid SVG')) {
+        throw error
+      }
+
       return { ...entry, updatedSvg: null, found: false }
     }
   }))
@@ -515,7 +538,7 @@ async function deduplicateIconsInBrand(packageName) {
 
   const bounds = getComponentBlockBounds(content)
   const block = content.slice(bounds.startIndex, bounds.endIndex)
-  const lines = block.split(/\r?\n/)
+  const lines = block.split(/\r\n|\r|\n/)
 
   const deduplications = []
   const customPropEntries = new Map()
