@@ -60,6 +60,7 @@
 
   display: inline-flex; // OUDS mod: instead of `inline-block`
   flex-shrink: 0;
+  gap: var(--#{$prefix}btn-icon-gap);
   align-items: center; // OUDS mod
   justify-content: center; // OUDS mod
   min-width: var(--#{$prefix}btn-min-width); // OUDS mod
@@ -187,7 +188,6 @@
     flex-shrink: 0;
     width: 1em;
     height: 1em;
-    margin-right: var(--#{$prefix}btn-icon-gap);
     overflow: hidden;
     font-size: var(--#{$prefix}btn-icon-size);
     line-height: 1;
@@ -525,28 +525,22 @@
 .btn-previous {
   --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-chevron-start-default};
   --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-end-icon-start-default};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-chevron-default};
 
   &::before {
     content: "";
     mask-image: $btn-previous-icon;
-  }
-
-  &:not(.btn-icon)::before {
-    margin-right: $ouds-button-space-column-gap-chevron-default;
   }
 }
 
 .btn-next {
   --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-start-icon-end-default};
   --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-chevron-end-default};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-chevron-default};
 
   &::after {
     content: "";
     mask-image: $btn-next-icon;
-  }
-
-  &:not(.btn-icon)::after {
-    margin-left: $ouds-button-space-column-gap-chevron-default;
   }
 }
 
@@ -557,4 +551,3 @@
   height: var(--#{$prefix}btn-icon-size);
   background-color: currentcolor;
 }
-
