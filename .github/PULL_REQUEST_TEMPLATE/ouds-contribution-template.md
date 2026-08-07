@@ -20,7 +20,7 @@ Closes #
 <!-- Go over all the following points, and put an `x` in all the boxes that apply. -->
 <!-- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
 
-- [ ] I have read the [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/.github/CONTRIBUTING.md)
+- [ ] I have read the [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md)
 - [ ] My change follows the [developer guide](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/wiki/Developer-guide)
 - [ ] My change pass all tests
 - [ ] My change is compatible with a responsive display
@@ -44,7 +44,7 @@ Closes #
 - [ ] Code review
 - [ ] Design review
 - [ ] A11y review
-- [ ] Commit on `ouds/main` following [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/)
+- [ ] Commit on `main` following [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/)
 
 ### Live previews
 

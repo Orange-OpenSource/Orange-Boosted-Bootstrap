@@ -21,7 +21,7 @@
   - run `conventional-changelog -p angular -i CHANGELOG.md -s`
   - [ ] Make sure to import all the bad named commits
 - [ ] Commit and push `dist` with a `chore(release): vx.y.z` commit message
-- [ ] Merge on `ouds/main`
+- [ ] Merge on `main`
 - [ ] Tag your version, and push your tag using `git tag -s vx.y.z-ouds-web` and `git push origin vx.y.z-ouds-web`
 - [ ] Pack and publish for the common part and all the brands
   - `npm run pack`

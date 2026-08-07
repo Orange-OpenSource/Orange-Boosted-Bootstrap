@@ -14,7 +14,7 @@ Figma (design decisions)
   → Style Dictionary transformer (per-brand configuration)
   → SCSS files (one set per brand)
   → PR on GitHub
-  → Merged to ouds/main
+  → Merged to main
 ```
 
 ### Generated files per brand (5 files, all read-only)
