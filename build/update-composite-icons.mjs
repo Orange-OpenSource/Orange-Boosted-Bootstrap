@@ -26,9 +26,9 @@
 // Brand mapping: orange → orange/, sosh → sosh/, orange-compact → orange/
 //
 // Usage:
-//   npm run compare-composite-icons -- "<icons-directory>"
-//   npm run compare-composite-icons -- --icons-root "<icons-directory>"
-//   npm run compare-composite-icons -- --icons-root "<icons-directory>" --version 2.1
+//   npm run update-composite-icons -- "<icons-directory>"
+//   npm run update-composite-icons -- --icons-root "<icons-directory>"
+//   npm run update-composite-icons -- --icons-root "<icons-directory>" --version 2.1
 //
 // The version is derived automatically from the folder name (e.g. "OUDS Icons V2.1"
 // → v2.1) or can be set explicitly with --version.
