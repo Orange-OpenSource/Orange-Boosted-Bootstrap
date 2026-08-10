@@ -10,14 +10,170 @@ toc: true
 ---
 
 <Callout type="info">
-  The [`@ouds/web-migrate`](https://www.npmjs.com/package/@ouds/web-migrate) CLI can help update from one version to another. Run it against your project files and review the diff afterward:
+  The [`@ouds/web-migrate`](https://www.npmjs.com/package/@ouds/web-migrate) CLI can help update to the latest version. Run it against your project files and review the diff afterward:
 
   ```bash
   npx @ouds/web-migrate "src/**/*.{css,scss,html}"
   ```
 </Callout>
 
-## v1.3.0
+## v1.5.0 [[version-changelog-link]]
+
+<hr />
+
+### Components
+
+#### Badges
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.badge-disabled` has been removed in favor of `.disabled` after being deprecated in v1.4.0. Read more in our [badges page]([[docsref:/components/badges#disabled]]).
+
+#### Breadcrumb
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Breadcrumb component has been updated to 1.2.0 with no outward changes. Read more in the [breadcrumb design changelog](https://r.orange.fr/r/S-ouds-doc-breadcrumb_changelog).
+
+#### Buttons
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Assistant button has been implemented. Read more in our [buttons page]([[docsref:/components/buttons#assistant-button]]).
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.btn-small` has been added. Read more in our [buttons page]([[docsref:/components/buttons#sizes]]).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Button component has been updated to 3.3.0 with no outward changes. Read more in the [button design changelog](https://r.orange.fr/r/S-ouds-doc-button_changelog).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Navigation button component has been updated to 3.3.0 with no outward changes. Read more in the [button design changelog](https://r.orange.fr/r/S-ouds-doc-button_changelog).
+
+#### Chips
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Suggestion chip component has been updated to 1.5.0 with no outward changes. Read more in the [suggestion chip design changelog](https://r.orange.fr/r/S-ouds-doc-suggestion-chip_changelog).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Filter chip component has been updated to 1.5.0 with no outward changes. Read more in the [filter chip design changelog](https://r.orange.fr/r/S-ouds-doc-filter-chip_changelog).
+
+#### Links
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Link component has been updated to 2.4.0. Read more in the [link design changelog](https://r.orange.fr/r/S-ouds-doc-link_changelog).
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.colored-bg` has been deprecated in favor of `.link-on-colored-bg`. It will be removed in v1.6.0. Read more in our [reboot page]([[docsref:/foundation/reboot#links]]).
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.back` has been deprecated in favor of `.link-previous`. It will be removed in v1.6.0. Read more in our [links page]([[docsref:/components/links#with-chevron]]).
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.link-external` class has been added for external links. [Read more about this variant]([[docsref:/components/links#with-external-icon]]).
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.link-compact` class has been added for more compact links. [Read more about this variant]([[docsref:/components/links#sizes]]).
+
+### Utilities
+
+#### Interactions
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.pe-none` and `.pe-auto` classes have been replaced by `.pointer-events-none` and `.pointer-events-auto` to avoid collision with padding utilities. Read more in our [interactions page]([[docsref:/utilities/interaction#pointer-events]]).
+
+#### Shadow
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.shadow-default` has been removed in favor of `.shadow-elevated` after being deprecated in v1.4.0. Read more in our [shadow page]([[docsref:/utilities/shadow]]).
+
+### Sass mixins
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> The `list-unstyled` mixin has been updated to remove the margin bottom.
+
+## v1.4.0 [[version-changelog-link]]
+
+<hr />
+
+### Components
+
+#### Badges
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.badge-disabled` has been deprecated in favor of `.disabled`. It will be removed in v1.5.0. Read more in our [badges page]([[docsref:/components/badges#disabled]]).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Badge - icon component has been updated to 1.3.0. Read more in the [badge - icon design changelog](https://r.orange.fr/r/S-ouds-doc-badge-icon_changelog).
+
+#### Chips
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> All our chips now use an `inline-flex` display instead of `flex` and it might break your design depending on your implementation. Please take a look at your implementation to fix it if needed.
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Suggestion chip component has been updated to 1.4.0 with no outward changes. Read more in the [suggestion chip design changelog](https://r.orange.fr/r/S-ouds-doc-suggestion-chip_changelog).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Filter chip component has been updated to 1.4.0 with no outward changes. Read more in the [filter chip design changelog](https://r.orange.fr/r/S-ouds-doc-filter-chip_changelog).
+
+#### Password input
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Password input component has been updated to 1.3.0 with no outward changes. Read more in the [password input design changelog](https://r.orange.fr/r/S-ouds-doc-password-input_changelog).
+
+#### Tags
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Input tag component has been updated to 1.2.0 with no outward changes. Read more in the [input tag design changelog](https://r.orange.fr/r/S-ouds-doc-input-tag_changelog).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Tag component has been updated to 1.5.0 with no outward changes. Read more in the [tag design changelog](https://r.orange.fr/r/S-ouds-doc-tag_changelog).
+
+#### Text area
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Text area component has been updated to 1.2.0, it now has a floating label like text input. Read more in the [text area design changelog](https://r.orange.fr/r/S-ouds-doc-text-area_changelog).
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `[placeholder]` attribute is now mandatory for text area component.
+  Read more in our [text area page]([[docsref:/components/text-area#overview]]).
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.text-area-no-resize` class has been added to disable the resizing feature on the text area. Read more in our [text area page]([[docsref:/components/text-area#no-manual-resizing]]).
+
+#### Text input
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Text input component has been updated to 1.4.0 with no outward changes. Read more in the [design changelog](https://r.orange.fr/r/S-ouds-doc-text-input_changelog).
+
+### Utilities
+
+#### Shadow
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.shadow-default` has been deprecated in favor of `.shadow-elevated`. It will be removed in v1.5.0. Read more in our [shadow page]([[docsref:/utilities/shadow]]).
+
+#### Text
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Labels have been added to font size text utilities : `.fs-lxl`, `.fs-ll`, `.fs-lm`, `.fs-ls` are now available. Read more in our [typography page]([[docsref:foundation/typography#regular-texts]]).
+
+### CSS and Sass variables
+
+- <details class="mb-small">
+    <summary><span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Some variables have been renamed:</summary>
+    <ul>
+      <li><code>$ouds-elevation-default</code>  → <code>$ouds-elevation-elevated</code></li>
+      <li><code>$ouds-elevation-x-default</code>  → <code>$ouds-elevation-x-elevated</code></li>
+      <li><code>$ouds-elevation-y-default</code>  → <code>$ouds-elevation-y-elevated</code></li>
+      <li><code>$ouds-elevation-blur-default</code>  → <code>$ouds-elevation-blur-elevated</code></li>
+      <li><code>$ouds-elevation-spread-default</code>  → <code>$ouds-elevation-spread-elevated</code></li>
+      <li><code>$ouds-control-item-size-min-height</code>  → <code>$ouds-control-item-size-min-height-default</code></li>
+      <li><code>$ouds-size-max-width-type-body-large-desktop</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-large-mobile</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-large-tablet</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-medium-desktop</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-medium-mobile</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-medium-tablet</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-small-desktop</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-small-mobile</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-small-tablet</code>  → <code>$ouds-size-max-width-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-display-large-desktop</code>  → <code>$ouds-size-max-width-display-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-display-large-mobile</code>  → <code>$ouds-size-max-width-display-large-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-display-large-tablet</code>  → <code>$ouds-size-max-width-display-large-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-display-medium-desktop</code>  → <code>$ouds-size-max-width-display-medium-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-display-medium-mobile</code>  → <code>$ouds-size-max-width-display-medium-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-display-medium-tablet</code>  → <code>$ouds-size-max-width-display-medium-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-display-small-desktop</code>  → <code>$ouds-size-max-width-display-small-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-display-small-mobile</code>  → <code>$ouds-size-max-width-display-small-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-display-small-tablet</code>  → <code>$ouds-size-max-width-display-small-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-heading-large-desktop</code>  → <code>$ouds-size-max-width-heading-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-heading-large-mobile</code>  → <code>$ouds-size-max-width-heading-large-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-heading-large-tablet</code>  → <code>$ouds-size-max-width-heading-large-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-heading-medium-desktop</code>  → <code>$ouds-size-max-width-heading-medium-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-heading-medium-mobile</code>  → <code>$ouds-size-max-width-heading-medium-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-heading-medium-tablet</code>  → <code>$ouds-size-max-width-heading-medium-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-heading-small-desktop</code>  → <code>$ouds-size-max-width-heading-small-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-heading-small-mobile</code>  → <code>$ouds-size-max-width-heading-small-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-heading-small-tablet</code>  → <code>$ouds-size-max-width-heading-small-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-heading-xlarge-desktop</code>  → <code>$ouds-size-max-width-heading-xlarge-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-heading-xlarge-mobile</code>  → <code>$ouds-size-max-width-heading-xlarge-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-heading-xlarge-tablet</code>  → <code>$ouds-size-max-width-heading-xlarge-tablet</code></li>
+      <li><code>$ouds-control-item-space-padding-block-top-error-text</code>  → <code>$ouds-control-item-space-padding-block-top-helper-text</code></li>
+      <li><code>$ouds-control-item-border-radius</code>  → <code>$ouds-control-item-border-radius-default</code></li>
+      <li><code>$ouds-badge-space-inset</code>  → <code>$ouds-badge-space-inset-medium-large</code></li>
+    </ul>
+  </details>
+
+## v1.3.0 [[version-changelog-link]]
 
 <hr />
 
@@ -57,9 +213,13 @@ toc: true
 
 1. Change the `@include rfs($font-size-base, --#{$prefix}body-font-size);` into `--#{$prefix}body-font-size: #{$font-size-base};`.
 
-## v1.2.0
+## v1.2.0 [[version-changelog-link]]
 
 <hr />
+
+### Foundations
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> jQuery support has been removed from the library.
 
 ### Components
 
@@ -104,7 +264,7 @@ toc: true
 2. Remove `@import "boosted/scss/nav";`, `@import "boosted/scss/navbar";`, `@import "boosted/scss/footer";`, and `@import "boosted/scss/orange-navbar";` from the Boosted custom import stack.
 3. Change the `@include rfs($font-size-base, --#{$prefix}body-font-size);` into `--#{$prefix}body-font-size: #{$font-size-base};`.
 
-## v1.1.0
+## v1.1.0 [[version-changelog-link]]
 
 <hr />
 
@@ -122,7 +282,7 @@ toc: true
 
 #### Alerts
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Alert message and inline alert has been implemented. Read more in our [alerts page]([[docsref:/components/alerts]]).
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Alert message and inline alert have been implemented. Read more in our [alerts page]([[docsref:/components/alerts]]).
 
 ### Helpers
 
@@ -155,7 +315,7 @@ toc: true
 3. Add back `--#{$prefix}highlight-bg` and `--#{$prefix}highlight-color` for light and dark mode and add `--#{$prefix}modal-border-radius: 0px;` for light mode.
 4. Remove `@import "boosted/scss/alert";` and `@import "boosted/scss/close";` from the Boosted custom import stack.
 
-## v1.0.0
+## v1.0.0 [[version-changelog-link]]
 
 <hr />
 
@@ -185,7 +345,7 @@ toc: true
 
 #### Select input
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Select Input has been implemented. Read more in our [text area page]([[docsref:/components/select-input]]).
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Select Input has been implemented. Read more in our [select input page]([[docsref:/components/select-input]]).
 
 #### Switches
 
@@ -242,7 +402,7 @@ toc: true
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Opacity levels values have been changed. Read more in our [opacity page]([[docsref:/utilities/opacity]]).
 
-## v0.6.0
+## v0.6.0 [[version-changelog-link]]
 
 <hr />
 
@@ -336,7 +496,7 @@ toc: true
   - **5xl** is renamed to `5xlarge` : for example `.m-5xl` → `.m-5xlarge`
   - **Negative** these changes apply to negative spacings as well, for example `.m-n3xs` → `.m-n3xsmall`
 
-## v0.5.0
+## v0.5.0 [[version-changelog-link]]
 
 <hr />
 
@@ -409,7 +569,7 @@ toc: true
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> A parameter from the `focus-visible()` mixin has been removed. If you use the `focus-visible()` mixin in your scss files with a `z-index` as a parameter, please adapt your code.
 
-## v0.4.0
+## v0.4.0 [[version-changelog-link]]
 
 <hr />
 
@@ -471,7 +631,7 @@ toc: true
     </ul>
   </details>
 
-## v0.3.0
+## v0.3.0 [[version-changelog-link]]
 
 <hr />
 
@@ -554,7 +714,7 @@ toc: true
     </ul>
   </details>
 
-## v0.2.0
+## v0.2.0 [[version-changelog-link]]
 
 <hr />
 
@@ -712,7 +872,7 @@ toc: true
     </ul>
   </details>
 
-## v0.1.0
+## v0.1.0 [[version-changelog-link]]
 
 <hr />
 
@@ -2333,7 +2493,7 @@ toc: true
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `color-mode({mode}, {root}, {inverted-mode})` mixin.
 
-## v0.0.3
+## v0.0.3 [[version-changelog-link]]
 
 <hr />
 
@@ -2401,7 +2561,7 @@ From now on, by default, OUDS Web won’t embed Bootstrap elements (like helpers
     </ul>
   </details>
 
-## v0.0.1
+## v0.0.1 [[version-changelog-link]]
 
 <hr />
 

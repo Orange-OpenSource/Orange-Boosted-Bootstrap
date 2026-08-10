@@ -37,8 +37,8 @@ export const ob1Replacements = [
   ['border-gray[24]', 'border-default'],
 
   // Colors
-  ['text-primary2', 'text-brand-tertiary'],
-  ['text-primary3', 'text-brand-secondary'],
+  ['text-primary2(-emphasis)?', 'text-brand-tertiary'],
+  ['text-primary3(-emphasis)?', 'text-brand-secondary'],
   ['text-gray[34]', 'text-muted'],
 
   // Text

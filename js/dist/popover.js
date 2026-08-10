@@ -1,18 +1,18 @@
 /*!
-  * OUDS Web v1.3.0 (https://web.unified-design-system.orange.com/)
+  * OUDS Web v1.4.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2015-2026 The OUDS Web Authors
   * Copyright 2015-2026 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap popover.js v1.3.0 (https://web.unified-design-system.orange.com/)
+  * Bootstrap popover.js v1.4.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2011-2026 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./tooltip.js'), require('./util/index.js')) :
-  typeof define === 'function' && define.amd ? define(['./tooltip', './util/index'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Popover = factory(global.Tooltip, global.Index));
-})(this, (function (Tooltip, index_js) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./tooltip.js')) :
+  typeof define === 'function' && define.amd ? define(['./tooltip'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Popover = factory(global.Tooltip));
+})(this, (function (Tooltip) { 'use strict';
 
   /**
    * --------------------------------------------------------------------------
@@ -74,27 +74,7 @@
     _getContent() {
       return this._resolvePossibleFunction(this._config.content);
     }
-
-    // Static
-    static jQueryInterface(config) {
-      return this.each(function () {
-        const data = Popover.getOrCreateInstance(this, config);
-        if (typeof config !== 'string') {
-          return;
-        }
-        if (typeof data[config] === 'undefined') {
-          throw new TypeError(`No method named "${config}"`);
-        }
-        data[config]();
-      });
-    }
   }
-
-  /**
-   * jQuery
-   */
-
-  index_js.defineJQueryPlugin(Popover);
 
   return Popover;
 

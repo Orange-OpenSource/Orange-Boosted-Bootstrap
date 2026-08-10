@@ -182,6 +182,14 @@
   }
 }
 
+@include tac("ReadmoreInfo", true) {
+  display: none;
+}
+
+@include tac("ReadmoreSeparator", true) {
+  display: none;
+}
+
 [role="heading"]:has(.catToggleBtn),
 .#{$tac-prefix}Hidden,
 .#{$tac-prefix}InfoBox,

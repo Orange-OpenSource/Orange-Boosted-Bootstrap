@@ -36,12 +36,12 @@ The theming library have the specific Scss files containing all the tokens to ap
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v1.3.0-ouds-web.zip)
-- Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git && git switch ouds/main`
-- Install with [npm](https://www.npmjs.com/): `npm install @ouds/web-common@1.3.0 @ouds/web-orange@1.3.0`
-- Install with [yarn](https://yarnpkg.com/): `yarn add @ouds/web-common@1.3.0 @ouds/web-orange@1.3.0`
-- Install with [Bun](https://bun.sh/): `bun add @ouds/web-common@1.3.0 @ouds/web-orange@1.3.0`
-- Install with [Composer](https://getcomposer.org/): `composer require orange-opensource/orange-boosted-bootstrap:dev-ouds/main`
+- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v1.4.0-ouds-web.zip)
+- Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git && git switch main`
+- Install with [npm](https://www.npmjs.com/): `npm install @ouds/web-common@1.4.0 @ouds/web-orange@1.4.0`
+- Install with [yarn](https://yarnpkg.com/): `yarn add @ouds/web-common@1.4.0 @ouds/web-orange@1.4.0`
+- Install with [Bun](https://bun.sh/): `bun add @ouds/web-common@1.4.0 @ouds/web-orange@1.4.0`
+- Install with [Composer](https://getcomposer.org/): `composer require orange-opensource/orange-boosted-bootstrap:dev-main`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package ouds-web-common ouds-web-orange` Sass: `Install-Package ouds-web-common.sass ouds-web-orange.sass`
 
 Read the [Getting started page](https://web.unified-design-system.orange.com/docs/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
@@ -49,15 +49,16 @@ Read the [Getting started page](https://web.unified-design-system.orange.com/doc
 
 ## Status
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/Orange-OpenSource/Orange-Boosted-Bootstrap/js.yml?branch=ouds/main&label=JS%20Tests&logo=github)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions/workflows/js.yml?query=workflow%3AJS+branch%3Aouds%2Fmain)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/Orange-OpenSource/Orange-Boosted-Bootstrap/js.yml?branch=main&label=JS%20Tests&logo=github)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions/workflows/js.yml?query=workflow%3AJS+branch%3Aouds%2Fmain)
 [![npm version](https://img.shields.io/npm/v/@ouds/web-common?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@ouds/web-common)
 [![NuGet](https://img.shields.io/nuget/vpre/ouds-web-common?logo=nuget&logoColor=fff)](https://www.nuget.org/packages/ouds-web-common/absoluteLatest)
-[![Coverage Status](https://img.shields.io/coveralls/github/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main?logo=coveralls&logoColor=fff)](https://coveralls.io/github/Orange-OpenSource/Orange-Boosted-Bootstrap?branch=ouds/main)
-[![CSS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main/packages/orange/dist/css/ouds-web.min.css?compression=gzip&label=CSS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/packages/orange/dist/css/ouds-web.min.css)
-[![CSS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main/packages/orange/dist/css/ouds-web.min.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/packages/orange/dist/css/ouds-web.min.css)
-[![JS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main/dist/js/ouds-web.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/dist/js/ouds-web.min.js)
-[![JS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main/dist/js/ouds-web.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/dist/js/ouds-web.min.js)
+[![Coverage Status](https://img.shields.io/coveralls/github/Orange-OpenSource/Orange-Boosted-Bootstrap/main?logo=coveralls&logoColor=fff)](https://coveralls.io/github/Orange-OpenSource/Orange-Boosted-Bootstrap?branch=main)
+[![CSS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/packages/orange/dist/css/ouds-web.min.css?compression=gzip&label=CSS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/packages/orange/dist/css/ouds-web.min.css)
+[![CSS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/packages/orange/dist/css/ouds-web.min.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/packages/orange/dist/css/ouds-web.min.css)
+[![JS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/js/ouds-web.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/js/ouds-web.min.js)
+[![JS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/js/ouds-web.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/js/ouds-web.min.js)
 [![JSDelivr](https://data.jsdelivr.com/v1/package/npm/@ouds/web-common/badge)](https://www.jsdelivr.com/package/npm/@ouds/web-common)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/badge)](https://scorecard.dev/viewer/?uri=github.com/Orange-OpenSource/Orange-Boosted-Bootstrap)
 
 ## What’s included
 
@@ -135,7 +136,7 @@ We also provide a compiled and minified CSS (`ouds-web-bootstrap.*` and `ouds-we
 
 ## Bugs and feature requests
 
-Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/.github/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new/choose).
+Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new/choose).
 
 
 ## Documentation
@@ -162,11 +163,11 @@ You can find all our previous releases docs on <https://web.unified-design-syste
 
 ## Contributing
 
-Please read through our [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/.github/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+Please read through our [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
 
-Moreover, if your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/ouds/main/js/tests). All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
+Moreover, if your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/main/js/tests). All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
 
-Editor preferences are available in the [editor config](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
+Editor preferences are available in the [editor config](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
 
 
 ## Versioning
@@ -210,5 +211,5 @@ Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previ
 
 Code and documentation copyright 2011-2026 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors). Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 
-OUDS Web code and documentation copyright 2015-2026 the [OUDS Web Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA](https://orange.com). Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+OUDS Web code and documentation copyright 2015-2026 the [OUDS Web Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA](https://orange.com). Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 

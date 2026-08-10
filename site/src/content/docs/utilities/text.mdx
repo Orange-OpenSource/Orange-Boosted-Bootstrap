@@ -19,7 +19,11 @@ export const fontSize = [
   "body-large",
   "body-medium",
   "body-small",
-  "code-medium"
+  "code-medium",
+  "label-xlarge",
+  "label-large",
+  "label-medium",
+  "label-small"
 ]
 
 export const screenSize = [
@@ -140,13 +144,17 @@ These classes change the `font-size` but also the `line-height`, the `letter-spa
               {level === 'body-medium' && (<>Body medium (<code>{'.fs-bm'}</code>)</>)}
               {level === 'body-small' && (<>Body small (<code>{'.fs-bs'}</code>)</>)}
               {level === 'code-medium' && (<>Code medium (<code>{'.fs-cm'}</code>)</>)}
+              {level === 'label-xlarge' && (<>Label xlarge (<code>{'.fs-lxl'}</code>)</>)}
+              {level === 'label-large' && (<>Label large (<code>{'.fs-ll'}</code>)</>)}
+              {level === 'label-medium' && (<>Label medium (<code>{'.fs-lm'}</code>)</>)}
+              {level === 'label-small' && (<>Label small (<code>{'.fs-ls'}</code>)</>)}
             </td>
             {
               screenSize.map((size) => (
                 <td>
-                  {level !== 'code-medium'
+                  {(level !== 'code-medium' && !level.includes('label-'))
                     && (<><code>{(getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2)) / 16}rem</code> ({getTokenValue(`$ouds-font-size-${level}-${size}`)})</>)}
-                  {level === 'code-medium'
+                  {(level === 'code-medium' || level.includes('label-'))
                     && (<><code>{(getTokenValue(`$ouds-font-size-${level}`).slice(0, -2)) / 16}rem</code> ({getTokenValue(`$ouds-font-size-${level}`)})</>)}
                 </td>
               ))
@@ -188,20 +196,33 @@ These classes change the `font-size` but also the `line-height`, the `letter-spa
               {level === 'body-medium' && (<>Body medium (<code>{'.fs-bm'}</code>)</>)}
               {level === 'body-small' && (<>Body small (<code>{'.fs-bs'}</code>)</>)}
               {level === 'code-medium' && (<>Code medium (<code>{'.fs-cm'}</code>)</>)}
+              {level === 'label-xlarge' && (<>Label xlarge (<code>{'.fs-lxl'}</code>)</>)}
+              {level === 'label-large' && (<>Label large (<code>{'.fs-ll'}</code>)</>)}
+              {level === 'label-medium' && (<>Label medium (<code>{'.fs-lm'}</code>)</>)}
+              {level === 'label-small' && (<>Label small (<code>{'.fs-ls'}</code>)</>)}
             </td>
             {
               screenSize.map((size) => (
                 <td>
-                  {level !== 'code-medium'
+                  {(level !== 'code-medium' && !level.includes('label-'))
                     && (
                       <ul class="mb-none ps-medium">
                         <li><code class="text-default">font-size</code>: <b>{(getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2)) / 16}rem</b></li>
                         <li><code>line-height</code>: {Math.round(((getTokenValue(`$ouds-font-line-height-${level}-${size}`).slice(0, -2)) / (getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2))) * 10000) / 10000}</li>
                         <li><code>letter-spacing</code>: {(getTokenValue(`$ouds-font-letter-spacing-${level}-${size}`).slice(0, -2)) / 16}rem</li>
-                        <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-type-${level}-${size}`).slice(0, -2)) / 16}rem</li>
+                        <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-${level}-${size}`).slice(0, -2)) / 16}rem</li>
                       </ul>
                     )}
-                  {level === 'code-medium'
+                  {(level.includes('label-'))
+                    && (
+                      <ul class="mb-none ps-medium">
+                        <li><code class="text-default">font-size</code>: <b>{(getTokenValue(`$ouds-font-size-${level}`).slice(0, -2)) / 16}rem</b></li>
+                        <li><code>line-height</code>: {Math.round(((getTokenValue(`$ouds-font-line-height-${level}`).slice(0, -2)) / (getTokenValue(`$ouds-font-size-${level}`).slice(0, -2))) * 10000) / 10000}</li>
+                        <li><code>letter-spacing</code>: {(getTokenValue(`$ouds-font-letter-spacing-${level}`).slice(0, -2)) / 16}rem</li>
+                        <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-${level}-${size}`).slice(0, -2)) / 16}rem</li>
+                      </ul>
+                    )}
+                  {(level === 'code-medium')
                     && (
                       <ul class="mb-none ps-medium">
                         <li><code class="text-default">font-size</code>: <b>{(getTokenValue(`$ouds-font-size-${level}`).slice(0, -2)) / 16}rem</b></li>
@@ -230,7 +251,11 @@ These classes change the `font-size` but also the `line-height`, the `letter-spa
   <p class="fs-bl">.fs-bl text</p>
   <p class="fs-bm">.fs-bm text</p>
   <p class="fs-bs">.fs-bs text</p>
-  <p class="fs-cm font-monospace">.fs-cm.font-monospace text</p>`} />
+  <p class="fs-cm font-monospace">.fs-cm.font-monospace text</p>
+  <p class="fs-lxl">.fs-lxl text</p>
+  <p class="fs-ll">.fs-ll text</p>
+  <p class="fs-lm">.fs-lm text</p>
+  <p class="fs-ls">.fs-ls text</p>`} />
 
 Customize your available `font-size`s by modifying the `$ouds-font-sizes` Sass map.
 

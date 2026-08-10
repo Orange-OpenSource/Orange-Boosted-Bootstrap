@@ -4,6 +4,9 @@ on:
     types:
       - opened
 
+permissions:
+  contents: read
+
 jobs:
   track_pr:
     runs-on: ubuntu-latest

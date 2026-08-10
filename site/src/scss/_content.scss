@@ -159,7 +159,7 @@
     --bs-btn-active-bg: #{darken(mix($gray-600, $blue-400, 50%), 10%)};
     --bs-btn-active-border-color: #{rgba($white, .5)};
     --bs-btn-focus-border-color: #{rgba($white, .5)};
-    --bs-btn-focus-box-shadow: #{$ouds-elevation-default};
+    --bs-btn-focus-box-shadow: #{$ouds-elevation-elevated};
   }
 }
 // scss-docs-end custom-color-mode
