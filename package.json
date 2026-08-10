@@ -49,7 +49,7 @@
     "js-compile-standalone-esm": "rollup --environment ESM:true,BUNDLE:false --config build/rollup.config.mjs --sourcemap",
     "js-compile-bundle": "rollup --environment BUNDLE:true --config build/rollup.config.mjs --sourcemap",
     "js-compile-plugins": "node build/build-plugins.mjs",
-    "js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives .",
+    "js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives --ext .html,.js,.mjs,.md .",
     "js-minify": "npm-run-all --aggregate-output --parallel js-minify-*",
     "js-minify-standalone": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/ouds-web.js.map,includeSources,url=ouds-web.min.js.map\" --output dist/js/ouds-web.min.js dist/js/ouds-web.js",
     "js-minify-standalone-esm": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/ouds-web.esm.js.map,includeSources,url=ouds-web.esm.min.js.map\" --output dist/js/ouds-web.esm.min.js dist/js/ouds-web.esm.js",
