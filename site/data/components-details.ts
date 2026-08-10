@@ -199,9 +199,9 @@ export const componentsDetails: ComponentCardData[] = [
     link: 'list-item#navigation-list-item',
     category: 'Control',
     snippet: `
-      <div class="item-wrapper item-navigation w-75">
-        <div class="item">
-          <div class="item-main">
+      <div class="item item-navigation w-75">
+        <div class="item-container">
+          <div class="item-content">
             <div class="item-text-container">
               <a href="#" class="item-label item-interactive">Label</a>
             </div>
@@ -216,9 +216,9 @@ export const componentsDetails: ComponentCardData[] = [
     category: 'Control',
     snippet: `
       <ul class="item-list w-75">
-        <li class="item-wrapper item-navigation">
-          <div class="item">
-            <div class="item-main">
+        <li class="item item-navigation">
+          <div class="item-container">
+            <div class="item-content">
               <div class="item-text-container">
                 <a href="#" class="item-label item-interactive">Label</a>
               </div>
@@ -310,9 +310,9 @@ export const componentsDetails: ComponentCardData[] = [
     link: 'list-item#static-list-item',
     category: 'Control',
     snippet: `
-      <div class="item-wrapper w-75">
-        <div class="item">
-          <div class="item-main">
+      <div class="item w-75">
+        <div class="item-container">
+          <div class="item-content">
             <div class="item-text-container">
               <p class="item-label">Label</p>
             </div>
@@ -327,9 +327,9 @@ export const componentsDetails: ComponentCardData[] = [
     category: 'Control',
     snippet: `
       <ul class="item-list w-75">
-        <li class="item-wrapper">
-          <div class="item">
-            <div class="item-main">
+        <li class="item">
+          <div class="item-container">
+            <div class="item-content">
               <div class="item-text-container">
                 <p class="item-label">Label</p>
               </div>
