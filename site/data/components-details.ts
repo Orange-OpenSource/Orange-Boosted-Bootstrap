@@ -202,8 +202,8 @@ export const componentsDetails: ComponentCardData[] = [
   },
   {
     name: 'Navigation card item',
-    slug: 'navigation-list-item',
-    link: 'list-item#navigation-list-item',
+    slug: 'navigation-card-item',
+    link: 'items#navigation-card-item',
     category: 'Control',
     snippet: `
       <div class="item item-navigation w-75">
@@ -219,7 +219,7 @@ export const componentsDetails: ComponentCardData[] = [
   {
     name: 'Navigation list item',
     slug: 'navigation-list-item',
-    link: 'list-item#navigation-list-item',
+    link: 'items#navigation-list-item',
     category: 'Control',
     snippet: `
       <ul class="item-list w-75">
@@ -313,8 +313,8 @@ export const componentsDetails: ComponentCardData[] = [
   },
   {
     name: 'Static card item',
-    slug: 'static-list-item',
-    link: 'list-item#static-list-item',
+    slug: 'static-card-item',
+    link: 'items#static-card-item',
     category: 'Control',
     snippet: `
       <div class="item w-75">
@@ -330,7 +330,7 @@ export const componentsDetails: ComponentCardData[] = [
   {
     name: 'Static list item',
     slug: 'static-list-item',
-    link: 'list-item#static-list-item',
+    link: 'items#static-list-item',
     category: 'Control',
     snippet: `
       <ul class="item-list w-75">
