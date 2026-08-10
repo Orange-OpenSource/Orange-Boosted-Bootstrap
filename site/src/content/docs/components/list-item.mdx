@@ -23,9 +23,9 @@ import { getTokenValue } from '@libs/sass-variables'
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
-          <div class="item-wrapper w-75">
-            <div class="item">
-              <div class="item-main">
+          <div class="item w-75">
+            <div class="item-container">
+              <div class="item-content">
                 <div class="item-text-container">
                   <p class="item-label">Label</p>
                 </div>
@@ -41,9 +41,9 @@ import { getTokenValue } from '@libs/sass-variables'
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
-          <div class="item-wrapper item-navigation w-75">
-            <div class="item">
-              <div class="item-main">
+          <div class="item item-navigation w-75">
+            <div class="item-container">
+              <div class="item-content">
                 <div class="item-text-container">
                   <a href="#" class="item-label item-interactive">Label</a>
                 </div>
@@ -60,18 +60,18 @@ import { getTokenValue } from '@libs/sass-variables'
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center py-xsmall ratio-16x9" inert>
           <ul class="item-list w-75">
-            <li class="item-wrapper">
-              <div class="item">
-                <div class="item-main">
+            <li class="item">
+              <div class="item-container">
+                <div class="item-content">
                   <div class="item-text-container">
                     <p class="item-label">Label</p>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="item-wrapper">
-              <div class="item">
-                <div class="item-main">
+            <li class="item">
+              <div class="item-container">
+                <div class="item-content">
                   <div class="item-text-container">
                     <p class="item-label">Label</p>
                   </div>
@@ -89,18 +89,18 @@ import { getTokenValue } from '@libs/sass-variables'
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center py-xsmall ratio-16x9" inert>
           <ul class="item-list item-navigation w-75">
-            <li class="item-wrapper">
-              <div class="item">
-                <div class="item-main">
+            <li class="item">
+              <div class="item-container">
+                <div class="item-content">
                   <div class="item-text-container">
                     <p class="item-label">Label</p>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="item-wrapper">
-              <div class="item">
-                <div class="item-main">
+            <li class="item">
+              <div class="item-container">
+                <div class="item-content">
                   <div class="item-text-container">
                     <p class="item-label">Label</p>
                   </div>
@@ -115,7 +115,7 @@ import { getTokenValue } from '@libs/sass-variables'
   </li>
 </ul>
 
-For each types of items, OUDS Web has a common base `.item`, and `.item-main` classes that set up default styles such as padding and content alignment. The `.item` class is intended to be used in conjunction with our item variants, or to serve as a basis for your own custom styles. The most basic item is the `.item-navigation` variant.
+For each types of items, OUDS Web has a common base `.item-container`, and `.item-content` classes that set up default styles such as padding and content alignment. The `.item-container` class is intended to be used in conjunction with our item variants, or to serve as a basis for your own custom styles. The most basic item is the `.item-navigation` variant.
 
 ### Approach
 
@@ -124,8 +124,8 @@ There are 2 main categories inside the items group of components:
 - [List items](#list-items) are designed to be used within a list, allowing multiple items to be displayed together.
 
 Inside these categories, there are 2 sub-categories:
-- Navigation items, which allow navigation.
 - Static items, which are not interactive.
+- Navigation items, which allow navigation.
 
 The following table summarizes the different types of items and their categories.
 
@@ -137,9 +137,9 @@ The following table summarizes the different types of items and their categories
 </BsTable>
 
 The basic structure includes:
-* `.item-wrapper` as the outermost container, which is used to add additional styles or behavior.
-* `.item` as the container before the divider.
-* `.item-main` as the main container for the primary content of the item.
+* `.item` as the external container, which is used to add additional styles or behavior.
+* `.item-container` as the container before the divider.
+* `.item-content` as the main container for the primary content of the item.
 * `.item-text-container` as the container for the text content of the item.
 * `.item-interactive` as the class for interactive elements within the item, such as links or buttons. It's mandatory on the link for the [navigation item](#navigation-list-item).
 
@@ -147,13 +147,13 @@ The basic structure includes:
 
 For navigation items, a wrapping `<nav>` element can be added if it is an important navigation in the page.
 
-In case of a complex navigation list item, you probably should link all the texts and components together by adding `[aria-describedby]` on the link in order to provide a valid accessible name for the link. The `[aria-describedby]` should point to the id of the element that contains the texts of the link.
+In case of a complex navigation list item, you probably should link all the texts and components together by adding `[aria-describedby]` on the link in order to provide a valid accessible name for the link. The `[aria-describedby]` should point to the ids of the elements that contain the texts of the link.
 
-In case there is no interactive element inside, you may want to [wrap the entire `.item` in an `<a>`](#wrapping-link) element.
+In case there is no interactive element inside, you may want to [wrap the entire `.item-container` in an `<a>`](#wrapping-link) element.
 
-<Example buttonLabel="accessible navigation card item with full text" code={`<div class="item-wrapper item-navigation">
-    <div class="item">
-      <div class="item-main">
+<Example buttonLabel="accessible navigation card item with full text" code={`<div class="item item-navigation">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-overline" id="accessible-item-overline">Overline</p>
           <a href="#" class="item-label item-interactive" aria-describedby="accessible-item-overline accessible-item-extra-label accessible-item-description">Label</a>
@@ -183,9 +183,9 @@ When additional navigation is required, consider using a [navigation card item](
 All the available variants can be found in the [common variants](#common-variants).
 
 <Example buttonLabel="standard static card item display" class="d-flex flex-column gap-medium" code={`
-  <div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+  <div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -199,13 +199,13 @@ Navigation card item is a UI element that displays a unit of information in an i
 
 The navigation card item is used when the content requires stronger visual grouping or prominence than a standard [navigation list item](#navigation-list-item). It may be displayed independently or within a card-based layout. Each card acts as a single navigation target and supports the necessary hover, pressed, and keyboard focus states.
 
-Add a `.item-navigation` on the `.item-wrapper` level and an `.item-interactive` at the link level to create a navigation card item.
+Add a `.item-navigation` on the `.item` level and an `.item-interactive` at the link level to create a navigation card item.
 
 Available variants can be found in the [common variants section](#common-variants) and [navigation items variants section](#navigation-items-variants).
 
-<Example buttonLabel="standard navigation card item display" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation">
-    <div class="item">
-      <div class="item-main">
+<Example buttonLabel="standard navigation card item display" class="d-flex flex-column gap-medium" code={`<div class="item item-navigation">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <a href="#" class="item-label item-interactive">Label</a>
         </div>
@@ -234,18 +234,18 @@ The static list item allow quick scanning and comparison of related items. It ca
 All the available variants can be found in the [common variants section](#common-variants).
 
 <Example buttonLabel="standard static list item display" class="d-flex flex-column gap-medium" code={`<ul class="item-list">
-    <li class="item-wrapper">
-      <div class="item">
-        <div class="item-main">
+    <li class="item">
+      <div class="item-container">
+        <div class="item-content">
           <div class="item-text-container">
             <p class="item-label">Label</p>
           </div>
         </div>
       </div>
     </li>
-    <li class="item-wrapper">
-      <div class="item">
-        <div class="item-main">
+    <li class="item">
+      <div class="item-container">
+        <div class="item-content">
           <div class="item-text-container">
             <p class="item-label">Label</p>
           </div>
@@ -260,23 +260,23 @@ Navigation list item is a UI element that displays a unit of information in an i
 
 The navigation item list allows quick scanning and access to related destinations. Each item acts as a single navigation target and supports the necessary hover, pressed, and keyboard focus states.
 
-Add an `.item-navigation` on the `.item-wrapper` level and an `.item-interactive` at the link level.
+Add an `.item-navigation` on the `.item` level and an `.item-interactive` at the link level.
 
 Available variants can be found in the [common variants section](#common-variants) and [navigation items variants section](#navigation-items-variants).
 
 <Example buttonLabel="standard navigation list item display" class="d-flex flex-column gap-medium" code={`<ul class="item-list">
-    <li class="item-wrapper item-navigation">
-      <div class="item">
-        <div class="item-main">
+    <li class="item item-navigation">
+      <div class="item-container">
+        <div class="item-content">
           <div class="item-text-container">
             <a href="#" class="item-label item-interactive">Label</a>
           </div>
         </div>
       </div>
     </li>
-    <li class="item-wrapper item-navigation">
-      <div class="item">
-        <div class="item-main">
+    <li class="item item-navigation">
+      <div class="item-container">
+        <div class="item-content">
           <div class="item-text-container">
             <a href="#" class="item-label item-interactive">Label</a>
           </div>
@@ -291,7 +291,7 @@ These variants can be used in all types of items.
 
 ### With asset
 
-The main container `.item-main` of an item can contain up to 3 elements. They always appear in the following order:
+The main container `.item-content` of an item can contain up to 3 elements. They always appear in the following order:
 1. [Leading container](#leading-container) using `.item-leading-container` (optional)
 2. [Text container](#texts) using `.item-text-container` (required)
 3. [Trailing container](#trailing-container) using `.item-trailing-container` (optional)
@@ -316,9 +316,9 @@ You can navigate through the different assets using the tabs below.
 
     For status icons, add `.item-icon` with one of these classes: `.item-status-positive`, `.item-status-warning`, `.item-status-info`, or `.item-status-negative`.
 
-    <Example buttonLabel="items with leading icon" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+    <Example buttonLabel="items with leading icon" class="d-flex flex-column gap-medium" code={`<div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-leading-container item-leading-large">
           <svg class="w-100 h-100" aria-hidden="true">
             <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -331,9 +331,9 @@ You can navigate through the different assets using the tabs below.
     </div>
   </div>
 
-  <div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+  <div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-leading-container">
           <div class="item-icon item-status-positive"></div>
         </div>
@@ -358,9 +358,9 @@ You can navigate through the different assets using the tabs below.
       Please note that a gif can be paused via extensions. If you need to make sure a gif is stoppable, use it in a `<video>` tag with controls on.
     </Callout>
 
-    <Example buttonLabel="items with leading image" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+    <Example buttonLabel="items with leading image" class="d-flex flex-column gap-medium" code={`<div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-leading-container item-leading-xlarge item-leading-rounded ratio-16x9">
           <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover" />
         </div>
@@ -371,9 +371,9 @@ You can navigate through the different assets using the tabs below.
     </div>
   </div>
 
-  <div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+  <div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-leading-container item-leading-large">
           <img alt="" src="${getVersionedDocsPath('/assets/img/cat-space.gif')}" class="w-100 h-100 object-fit-cover" />
         </div>
@@ -400,9 +400,9 @@ You can navigate through the different assets using the tabs below.
       In any way, it should have controls on it if it has autoplay.
     </Callout>
 
-    <Example buttonLabel="item with leading video" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+    <Example buttonLabel="item with leading video" class="d-flex flex-column gap-medium" code={`<div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-leading-container item-leading-large ratio-16x9 item-leading-rounded">
           <video controls class="w-100 h-100 object-fit-cover" autoplay muted loop aria-hidden="true">
             <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
@@ -428,9 +428,9 @@ You can navigate through the different assets using the tabs below.
     To add a slot, `item-slot` must be combined with `.item-leading-container`.
     Its size is limited to <code>{getTokenValue('$ouds-dimension-8xlarge').slice(0, -2) / 16}rem ({getTokenValue('$ouds-dimension-8xlarge')}) x {getTokenValue('$ouds-dimension-8xlarge').slice(0, -2) / 16}rem ({getTokenValue('$ouds-dimension-8xlarge')})</code>. A slot can be rounded using `item-leading-rounded`.
 
-    <Example buttonLabel="item with leading slot" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+    <Example buttonLabel="item with leading slot" class="d-flex flex-column gap-medium" code={`<div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-leading-container item-slot">
           <button class="btn btn-strong">Slot</button>
         </div>
@@ -459,9 +459,9 @@ Optionally, a slot can be added at the end of the text container using `.item-sl
   Please note that you might want to apply one of our [color utility]([[docsref:/utilities/color]]) to the text elements (except the `.item-label`), to match the badge for example. Be sure not to convey information only through color.
 </Callout>
 
-<Example buttonLabel="item text" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+<Example buttonLabel="item text" class="d-flex flex-column gap-medium" code={`<div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-overline">Overline</p>
           <p class="item-label">Label</p>
@@ -473,9 +473,9 @@ Optionally, a slot can be added at the end of the text container using `.item-sl
   </div>
 
   <!-- Label bold -->
-  <div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+  <div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-overline">Overline</p>
           <p class="item-label fw-bold">Label</p>
@@ -487,9 +487,9 @@ Optionally, a slot can be added at the end of the text container using `.item-sl
   </div>
 
   <!-- Slot instead of label -->
-  <div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+  <div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-overline">Overline</p>
           <div class="item-slot"><p class="tag">Label</p></div>
@@ -501,9 +501,9 @@ Optionally, a slot can be added at the end of the text container using `.item-sl
   </div>
 
   <!-- Additional slot at the end of the text container -->
-  <div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+  <div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-overline">Overline</p>
           <p class="item-label fw-bold">Label</p>
@@ -521,6 +521,8 @@ The trailing container uses `.item-trailing-container`.
 
 Here is a list of the different assets that we support in the trailing container, along with their corresponding classes and notes.
 
+You can navigate through the different assets using the tabs below.
+
 <Callout type="warning" title="Small item">
   Please note that the sizes below shouldn't be used in a [small item](#sizes). The slot shouldn't be used as well in this size.
 </Callout>
@@ -531,9 +533,9 @@ Here is a list of the different assets that we support in the trailing container
 
     Text should use `.item-label`. Optionally you can use it with either `.item-extra-label` (only if not [small item](#sizes)), `.text-muted`, or `.fw-bold`.
 
-    <Example buttonLabel="items with trailing text" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+    <Example buttonLabel="items with trailing text" class="d-flex flex-column gap-medium" code={`<div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -545,9 +547,9 @@ Here is a list of the different assets that we support in the trailing container
     </div>
   </div>
 
-  <div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+  <div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -558,9 +560,9 @@ Here is a list of the different assets that we support in the trailing container
     </div>
   </div>
 
-  <div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+  <div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -577,9 +579,9 @@ Here is a list of the different assets that we support in the trailing container
 
     All variants of [Badge]([[docsref:/components/badge#badge]]) and [Badge - count]([[docsref:/components/badge#badge---count]]) are allowed.
 
-    <Example buttonLabel="items with trailing badge" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+    <Example buttonLabel="items with trailing badge" class="d-flex flex-column gap-medium" code={`<div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -590,9 +592,9 @@ Here is a list of the different assets that we support in the trailing container
     </div>
   </div>
 
-  <div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+  <div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -608,9 +610,9 @@ Here is a list of the different assets that we support in the trailing container
 
     All variants of [tags]([[docsref:/components/tag#tag]]) are allowed.
 
-    <Example buttonLabel="item with trailing tag" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+    <Example buttonLabel="item with trailing tag" class="d-flex flex-column gap-medium" code={`<div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -628,9 +630,9 @@ Here is a list of the different assets that we support in the trailing container
 
     For status icons, add `.item-icon` with one of these classes: `.item-status-positive`, `.item-status-warning`, `.item-status-info`, or `.item-status-negative`.
 
-    <Example buttonLabel="items with trailing icon" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+    <Example buttonLabel="items with trailing icon" class="d-flex flex-column gap-medium" code={`<div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -643,9 +645,9 @@ Here is a list of the different assets that we support in the trailing container
     </div>
   </div>
 
-  <div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+  <div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -669,9 +671,9 @@ Here is a list of the different assets that we support in the trailing container
       Please note that a gif can be paused via extensions. If you need to make sure a gif is stoppable, use it in a `<video>` tag with controls on.
     </Callout>
 
-    <Example buttonLabel="items with trailing image" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+    <Example buttonLabel="items with trailing image" class="d-flex flex-column gap-medium" code={`<div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -682,9 +684,9 @@ Here is a list of the different assets that we support in the trailing container
     </div>
   </div>
 
-  <div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+  <div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -710,9 +712,9 @@ Here is a list of the different assets that we support in the trailing container
       In any way, it should have controls on it if it has autoplay.
     </Callout>
 
-    <Example buttonLabel="item with trailing video" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+    <Example buttonLabel="item with trailing video" class="d-flex flex-column gap-medium" code={`<div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -734,9 +736,9 @@ Here is a list of the different assets that we support in the trailing container
 
     Its size is limited to <code>{getTokenValue('$ouds-dimension-8xlarge').slice(0, -2) / 16}rem ({getTokenValue('$ouds-dimension-8xlarge')}) x {getTokenValue('$ouds-dimension-8xlarge').slice(0, -2) / 16}rem ({getTokenValue('$ouds-dimension-8xlarge')})</code>. A slot can be rounded using `item-trailing-rounded`.
 
-    <Example buttonLabel="item with trailing slot" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+    <Example buttonLabel="item with trailing slot" class="d-flex flex-column gap-medium" code={`<div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -751,7 +753,7 @@ Here is a list of the different assets that we support in the trailing container
 
 #### Slots
 
-This component contains many slots that can be used to add custom content. The main slots are located in the [leading container](#leading-container), the [text container](#texts), and the [trailing container](#trailing-container). The slots are intended to be used for custom content that is not covered by the other elements of the component. We can add another slot outside of the `.item-main` container as well.
+This component contains many slots that can be used to add custom content. The main slots are located in the [leading container](#leading-container), the [text container](#texts), and the [trailing container](#trailing-container). The slots are intended to be used for custom content that is not covered by the other elements of the component. We can add another slot outside of the `.item-content` container as well.
 
 <Callout type="warning" title="Small item">
   The slots shouldn't be used in a [small item](#sizes).
@@ -761,13 +763,13 @@ Here is a small resume of the slots that can be used in an item:
 * [Leading container](#leading-container) using `.item-slot` (optional)
 * [Text container](#texts) using `.item-slot` (optional)
 * [Trailing container](#trailing-container) using `.item-slot` (optional)
-* A slot outside of the `.item-main` container, direct child of `.item` using `.item-slot` (optional)
+* A slot outside of the `.item-content` container, direct child of `.item-container` using `.item-slot` (optional)
 
 Optionally, if the item is a navigation item and a slot is mandatory and also interactive, you can add `.item-slot-focusable` to the slot or the interactive element.<BrandSpecific brand={['orange', 'orange-compact']}> Please note that the slot won't be [rounded](#rounded-corners) anymore.</BrandSpecific>
 
-<Example buttonLabel="item using a slot outside of the main content of the item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+<Example buttonLabel="item using a slot outside of the main content of the item" class="d-flex flex-column gap-medium" code={`<div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -787,11 +789,11 @@ Optionally, if the item is a navigation item and a slot is mandatory and also in
 
 #### Helper text
 
-Optionally, a helper text can be added below the main `.item` container using `.item-helper`.
+Optionally, a helper text can be added below the main `.item-container` container using `.item-helper`.
 
-<Example buttonLabel="item with helper text" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper">
-    <div class="item">
-      <div class="item-main">
+<Example buttonLabel="item with helper text" class="d-flex flex-column gap-medium" code={`<div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -802,12 +804,12 @@ Optionally, a helper text can be added below the main `.item` container using `.
 
 ### Background
 
-By default, [card items](#card-items) have a background-color, while [list items](#list-items) don't. This behavior can be modified by using `.item-no-bg` or `.item-bg` on the `.item-wrapper` or `.item-list` container. These modifiers only modify the no interaction background of the items.
+By default, [card items](#card-items) have a background-color, while [list items](#list-items) don't. This behavior can be modified by using `.item-no-bg` or `.item-bg` on the `.item` or `.item-list` container. These modifiers only modify the no interaction background of the items.
 
 <Example buttonLabel="items with background modifications" class="d-flex flex-column gap-medium" code={`<!-- Card -->
-  <div class="item-wrapper item-navigation item-no-bg">
-    <div class="item">
-      <div class="item-main">
+  <div class="item item-navigation item-no-bg">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <a href="#" class="item-label item-interactive">Label</a>
         </div>
@@ -817,18 +819,18 @@ By default, [card items](#card-items) have a background-color, while [list items
 
   <!-- List -->
   <ul class="item-list item-bg">
-    <li class="item-wrapper">
-      <div class="item">
-        <div class="item-main">
+    <li class="item">
+      <div class="item-container">
+        <div class="item-content">
           <div class="item-text-container">
             <p class="item-label">Label</p>
           </div>
         </div>
       </div>
     </li>
-    <li class="item-wrapper item-navigation">
-      <div class="item">
-        <div class="item-main">
+    <li class="item item-navigation">
+      <div class="item-container">
+        <div class="item-content">
           <div class="item-text-container">
             <a href="#" class="item-label item-interactive">Label</a>
           </div>
@@ -839,12 +841,12 @@ By default, [card items](#card-items) have a background-color, while [list items
 
 ### Divider
 
-You can remove the divider by using `.item-no-divider` on the `.item-wrapper` or `.item-list`.
+You can remove the divider by using `.item-no-divider` on the `.item` or `.item-list`.
 
 <Example buttonLabel="items with no divider" class="d-flex flex-column gap-medium" code={`<!-- Card -->
-  <div class="item-wrapper item-no-divider">
-    <div class="item">
-      <div class="item-main">
+  <div class="item item-no-divider">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -854,18 +856,18 @@ You can remove the divider by using `.item-no-divider` on the `.item-wrapper` or
 
   <!-- List -->
   <ul class="item-list item-no-divider">
-    <li class="item-wrapper">
-      <div class="item">
-        <div class="item-main">
+    <li class="item">
+      <div class="item-container">
+        <div class="item-content">
           <div class="item-text-container">
             <p class="item-label">Label</p>
           </div>
         </div>
       </div>
     </li>
-    <li class="item-wrapper item-navigation">
-      <div class="item">
-        <div class="item-main">
+    <li class="item item-navigation">
+      <div class="item-container">
+        <div class="item-content">
           <div class="item-text-container">
             <a href="#" class="item-label item-interactive">Label</a>
           </div>
@@ -876,15 +878,17 @@ You can remove the divider by using `.item-no-divider` on the `.item-wrapper` or
 
 ### Outlined
 
-<Callout type="warning" title="Card item only" action="Card item" actionHref="#card-items" />
+<Callout type="warning" title="Card item only" action="Card item" actionHref="#card-items">
+  Since the [list items](#list-items) are sticked, this variant should only be used on [card items](#card-items).
+</Callout>
 
-By default every item comes with a divider. The divider may be removed or transformed into an outline using `.item-outlined` and/or `.item-no-outline` on the element `.item-wrapper` or any ancestors. `.item-no-divider` can also be applied for another rendering.
+By default every item comes with a divider. The divider may be removed or transformed into an outline using `.item-outlined` and/or `.item-no-outline` on the element `.item` or any ancestors. `.item-no-divider` can also be applied for another rendering.
 
 Static items only have the non-interactive version.
 
-<Example buttonLabel="items outlined" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation item-outlined">
-    <div class="item">
-      <div class="item-main">
+<Example buttonLabel="items outlined" class="d-flex flex-column gap-medium" code={`<div class="item item-navigation item-outlined">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <a href="#" class="item-label item-interactive">Label</a>
         </div>
@@ -892,19 +896,9 @@ Static items only have the non-interactive version.
     </div>
   </div>
 
-  <div class="item-wrapper item-navigation item-outlined item-no-outline">
-    <div class="item">
-      <div class="item-main">
-        <div class="item-text-container">
-          <a href="#" class="item-label item-interactive">Label</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item-wrapper item-navigation item-outlined item-no-divider">
-    <div class="item">
-      <div class="item-main">
+  <div class="item item-navigation item-outlined item-no-divider">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <a href="#" class="item-label item-interactive">Label</a>
         </div>
@@ -931,9 +925,9 @@ Rounded corners items is a project-wide option therefore all your items should e
 
 <Example buttonLabel="rounded items" class="bd-btn-example" code={`<div class="use-rounded-corner-items">
     <!-- Card -->
-    <div class="item-wrapper mb-medium">
-      <div class="item">
-        <div class="item-main">
+    <div class="item mb-medium">
+      <div class="item-container">
+        <div class="item-content">
           <div class="item-text-container">
             <p class="item-label">Label</p>
           </div>
@@ -943,18 +937,18 @@ Rounded corners items is a project-wide option therefore all your items should e
 
     <!-- List -->
     <ul class="item-list">
-      <li class="item-wrapper">
-        <div class="item">
-          <div class="item-main">
+      <li class="item">
+        <div class="item-container">
+          <div class="item-content">
             <div class="item-text-container">
               <p class="item-label">Label</p>
             </div>
           </div>
         </div>
       </li>
-      <li class="item-wrapper">
-        <div class="item">
-          <div class="item-main">
+      <li class="item">
+        <div class="item-container">
+          <div class="item-content">
             <div class="item-text-container">
               <p class="item-label">Label</p>
             </div>
@@ -969,7 +963,7 @@ Rounded corners items is a project-wide option therefore all your items should e
 
 #### Disabled
 
-Items can be disabled by using `.disabled` on the element `.item-wrapper` or any ancestors.
+Items can be disabled by using `.disabled` on the element `.item` or any ancestors.
 
 If the item is in a disabled context, the item will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, the `[aria-disabled="true"]` attribute, or the `.disabled` class.
 
@@ -980,9 +974,9 @@ You may handle on your own the [slots](#slots) regarding accessibility and desig
 </Callout>
 
 <Example buttonLabel="disabled items" class="d-flex flex-column gap-medium" code={`<div class="disabled">
-    <div class="item-wrapper mb-medium">
-      <div class="item">
-        <div class="item-main">
+    <div class="item mb-medium">
+      <div class="item-container">
+        <div class="item-content">
           <div class="item-leading-container item-status-warning">
             <div class="item-icon"></div>
           </div>
@@ -996,9 +990,9 @@ You may handle on your own the [slots](#slots) regarding accessibility and desig
       </div>
     </div>
 
-    <div class="item-wrapper">
-      <div class="item item-no-bg">
-        <div class="item-main">
+    <div class="item">
+      <div class="item-container item-no-bg">
+        <div class="item-content">
           <div class="item-leading-container item-slot">
             <!-- Disabled via its attribute -->
             <button class="btn btn-strong" disabled>Slot</button>
@@ -1021,9 +1015,9 @@ You may handle on your own the [slots](#slots) regarding accessibility and desig
 <SkeletonRedirect component="item" />
 
 <Example buttonLabel="item skeleton" class="d-flex flex-column gap-medium" code={`<div aria-busy="true" inert>
-    <div class="item-wrapper">
-      <div class="item">
-        <div class="item-main">
+    <div class="item">
+      <div class="item-container">
+        <div class="item-content">
           <div class="item-text-container">
             <p class="item-label">Label</p>
           </div>
@@ -1034,7 +1028,7 @@ You may handle on your own the [slots](#slots) regarding accessibility and desig
 
 ### Sizes
 
-By default every item comes with a default size. The size can be adapted using `.item-small` on the element `.item-wrapper` or `.item-list`.
+By default every item comes with a default size. The size can be adapted using `.item-small` on the element `.item` or `.item-list`.
 
 <Callout type="warning">
   The small size come with some restrictions:
@@ -1045,9 +1039,9 @@ By default every item comes with a default size. The size can be adapted using `
 </Callout>
 
 <Example buttonLabel="items small" class="d-flex flex-column gap-medium" code={`<!-- Card -->
-  <div class="item-wrapper item-small">
-    <div class="item">
-      <div class="item-main">
+  <div class="item item-small">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -1057,18 +1051,18 @@ By default every item comes with a default size. The size can be adapted using `
 
   <!-- List -->
   <ul class="item-list item-small">
-    <li class="item-wrapper">
-      <div class="item">
-        <div class="item-main">
+    <li class="item">
+      <div class="item-container">
+        <div class="item-content">
           <div class="item-text-container">
             <p class="item-label">Label</p>
           </div>
         </div>
       </div>
     </li>
-    <li class="item-wrapper">
-      <div class="item">
-        <div class="item-main">
+    <li class="item">
+      <div class="item-container">
+        <div class="item-content">
           <div class="item-text-container">
             <p class="item-label">Label</p>
           </div>
@@ -1081,24 +1075,24 @@ By default every item comes with a default size. The size can be adapted using `
 
 #### Alignment
 
-By default all items are vertically centered. You can change the alignment of the content using `.item-top` by setting it on the `.item-wrapper` or `.item-list`.
+By default all items are vertically centered. You can change the alignment of the content using `.item-top` by setting it on the `.item` or `.item-list`.
 
-<Example buttonLabel="top alignment item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation item-top">
-    <div class="item">
-      <div class="item-main">
+<Example buttonLabel="top alignment item" class="d-flex flex-column gap-medium" code={`<div class="item item-navigation item-top">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-leading-container">
           <svg class="w-100 h-100" aria-hidden="true">
             <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
           </svg>
         </div>
         <div class="item-text-container">
-          <p class="item-overline text-status-negative" id="accessible-item-overline">No credits</p>
-          <a href="#" class="item-label item-interactive" aria-describedby="accessible-item-extra-label accessible-item-description accessible-item-badge-count accessible-item-overline">Your favorite networks</a>
-          <p class="item-extra-label" id="accessible-item-extra-label">Registered networks</p>
-          <p class="item-description" id="accessible-item-description">See and manage your favorite networks from this page</p>
+          <p class="item-overline text-status-negative" id="item-01-overline">No credits</p>
+          <a href="#" class="item-label item-interactive" aria-describedby="item-01-extra-label item-01-description item-01-badge-count item-01-overline">Your favorite networks</a>
+          <p class="item-extra-label" id="item-01-extra-label">Registered networks</p>
+          <p class="item-description" id="item-01-description">See and manage your favorite networks from this page</p>
         </div>
         <div class="item-trailing-container">
-          <p class="badge badge-count badge-large" id="accessible-item-badge-count">1<span class="visually-hidden">error</span></p>
+          <p class="badge badge-count badge-large" id="item-01-badge-count">1<span class="visually-hidden">error</span></p>
         </div>
       </div>
       <div class="item-slot item-slot-focusable">
@@ -1119,12 +1113,12 @@ By default all items are vertically centered. You can change the alignment of th
 
 #### Max width
 
-By default, items will span the whole width of their parent container, to limit the width of the item on wider parent container, add a `.component-max-width` to the `.item-wrapper` or `.item-list` container.
+By default, items will span the whole width of their parent container, to limit the width of the item on wider parent container, add a `.component-max-width` to the `.item` or `.item-list` container.
 
 <Example buttonLabel="items max width" code={`<!-- Card -->
-  <div class="item-wrapper component-max-width mb-medium">
-    <div class="item">
-      <div class="item-main">
+  <div class="item component-max-width mb-medium">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>
@@ -1134,18 +1128,18 @@ By default, items will span the whole width of their parent container, to limit 
 
   <!-- List -->
   <ul class="item-list component-max-width">
-    <li class="item-wrapper">
-      <div class="item">
-        <div class="item-main">
+    <li class="item">
+      <div class="item-container">
+        <div class="item-content">
           <div class="item-text-container">
             <p class="item-label">Label</p>
           </div>
         </div>
       </div>
     </li>
-    <li class="item-wrapper">
-      <div class="item">
-        <div class="item-main">
+    <li class="item">
+      <div class="item-container">
+        <div class="item-content">
           <div class="item-text-container">
             <p class="item-label">Label</p>
           </div>
@@ -1162,9 +1156,9 @@ These variants are exclusive to the navigation items. They are used to indicate 
 
 Add `.item-previous` to the `.item-navigation` to indicate that the item is a back navigation item. This will add a back chevron icon to the start of the item.
 
-<Example buttonLabel="navigation card item with back chevron" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation item-previous">
-    <div class="item">
-      <div class="item-main">
+<Example buttonLabel="navigation card item with back chevron" class="d-flex flex-column gap-medium" code={`<div class="item item-navigation item-previous">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <a href="#" class="item-label item-interactive">Label</a>
         </div>
@@ -1177,12 +1171,12 @@ Add `.item-previous` to the `.item-navigation` to indicate that the item is a ba
 Add `.item-external` to the `.item-navigation` to indicate that the item is an external link. This will add an external link icon to the end of the item.
 
 <Callout type="info">
-  For accessibility reasons, it is recommended to add a visually hidden text (or a visible one if the icon is far from the text) to indicate that the link opens an external resource. Take a look at [some more complete accessibility guidelines](https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#warn-the-user-when-opening-a-new-window).
+  For accessibility reasons, it is recommended to add a `.visually-hidden` text (or a visible one if the icon is far from the text) to indicate that the link opens an external resource. Take a look at [some more complete accessibility guidelines](https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#warn-the-user-when-opening-a-new-window).
 </Callout>
 
-<Example buttonLabel="navigation card item with external link" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation item-external">
-    <div class="item">
-      <div class="item-main">
+<Example buttonLabel="navigation card item with external link" class="d-flex flex-column gap-medium" code={`<div class="item item-navigation item-external">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
           <a href="#" target="_blank" rel="noopener" class="item-label item-interactive">Label<span class="visually-hidden">&nbsp;(external link, new window)</span></a>
         </div>
@@ -1190,11 +1184,11 @@ Add `.item-external` to the `.item-navigation` to indicate that the item is an e
     </div>
   </div>
 
-  <div class="item-wrapper item-navigation item-external">
-    <div class="item">
-      <div class="item-main">
+  <div class="item item-navigation item-external">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-text-container">
-          <a href="#" target="_blank" rel="noopener" class="item-label item-interactive">Label (external link, new window)</a>
+          <a href="#" class="item-label item-interactive">Label (external link)</a>
         </div>
       </div>
     </div>
@@ -1202,17 +1196,17 @@ Add `.item-external` to the `.item-navigation` to indicate that the item is an e
 
 ### Wrapping link
 
-Optionally, the `<a>` element can wrap the entire `.item` instead of just the label.
+Optionally, the `<a>` element can wrap the entire `.item-container` instead of just the label.
 
 <Callout type="info" title="Accessibility">
-  ATs will read the entire item as a link. You can use the visually hidden text to provide additional context if needed. You won't need any `[aria-describedby]` as stated in our [accessibility section](#accessibility).
+  Screen readers will read the entire item as a link. You can use the `.visually-hidden` text to provide additional context if needed. You won't need any `[aria-describedby]` as stated in our [accessibility section](#accessibility).
 
-  Make sure to not use any interactive elements inside the item when using this variant, as it will create nested interactive elements which is not valid HTML and can cause accessibility issues.
+  Avoid to use any interactive elements inside the item when using this variant, as it will create nested interactive elements which is not valid HTML and can cause accessibility issues.
 </Callout>
 
-<Example buttonLabel="navigation card item with link wrapping entire item" class="d-flex flex-column gap-medium" code={`<div class="item-wrapper item-navigation">
-    <a href="#" class="item item-interactive">
-      <div class="item-main">
+<Example buttonLabel="navigation card item with link wrapping entire item" class="d-flex flex-column gap-medium" code={`<div class="item item-navigation">
+    <a href="#" class="item-container item-interactive">
+      <div class="item-content">
         <div class="item-text-container">
           <p class="item-label">Label</p>
         </div>

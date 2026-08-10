@@ -2,7 +2,14 @@
 // Base styles
 //
 
+.item-list,
 .item {
+  &.component-max-width {
+    max-width: px-to-rem($ouds-list-item-size-max-width);
+  }
+}
+
+.item-container {
   display: block;
   background-color: var(--#{$prefix}list-item-outlined-bg, var(--#{$prefix}list-item-disabled-bg, var(--#{$prefix}list-item-bg, $ouds-color-action-support-enabled)));
   border-color: var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, transparent)) var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, transparent)) var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, $ouds-color-border-default));
@@ -16,19 +23,12 @@
   }
 }
 
-.item-main {
+.item-content {
   display: flex;
   column-gap: $ouds-list-item-space-column-gap;
   align-items: var(--#{$prefix}list-item-align-items, center);
   min-height: calc(var(--#{$prefix}list-item-min-height, $ouds-list-item-size-min-height-default) - 2 * var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default / 2));
   padding: calc(var(--#{$prefix}list-item-padding-top, $ouds-list-item-space-padding-block-default) - var(--#{$prefix}list-item-border-width, 0px)) calc($ouds-list-item-space-padding-inline - var(--#{$prefix}list-item-border-width, 0px)) calc(var(--#{$prefix}list-item-padding-bottom, $ouds-list-item-space-padding-block-default) - var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default));
-}
-
-.item-list,
-.item-wrapper {
-  &.component-max-width {
-    max-width: px-to-rem($ouds-list-item-size-max-width);
-  }
 }
 
 
@@ -42,7 +42,7 @@
   z-index: 2;
 }
 
-.item > .item-slot {
+.item-container > .item-slot {
   width: calc(100% - $ouds-list-item-space-padding-inline * 2);
   min-height: $ouds-list-item-size-asset-medium;
   margin: 0 $ouds-list-item-space-padding-inline $ouds-list-item-space-padding-block-bottom-slot-list-item-container;
@@ -128,7 +128,7 @@
 .item-overline {
   display: block;
   margin-bottom: 0;
-  @include get-font-size("label-small");
+  @include get-font-size("label-small", true);
   font-weight: $ouds-font-weight-web-label-moderate;
   color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-muted);
 }
@@ -136,7 +136,7 @@
 .item-label {
   display: block;
   margin-bottom: 0;
-  @include get-font-size("label-large");
+  @include get-font-size("label-large", true);
   font-weight: $ouds-font-weight-web-label-default;
   color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
 }
@@ -144,7 +144,7 @@
 .item-extra-label {
   display: block;
   margin-bottom: 0;
-  @include get-font-size("label-medium");
+  @include get-font-size("label-medium", true);
   font-weight: $ouds-font-weight-web-label-strong;
   color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
 }
@@ -152,7 +152,7 @@
 .item-description {
   display: block;
   margin-bottom: 0;
-  @include get-font-size("label-medium");
+  @include get-font-size("label-medium", true);
   font-weight: $ouds-font-weight-web-label-default;
   color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-muted);
 }
@@ -244,7 +244,7 @@
   padding: calc($focus-visible-outer-width + $focus-visible-inner-width); // Workaround to handle focus outline correctly
   margin: calc(-1 * ($focus-visible-outer-width + $focus-visible-inner-width));
 
-  .item-wrapper:has(.item-interactive:focus-visible) {
+  .item:has(.item-interactive:focus-visible) {
     --#{$prefix}list-item-border-radius: #{$ouds-list-item-border-radius-default};
   }
 }
@@ -263,9 +263,13 @@
   --#{$prefix}list-item-border-color: #{$ouds-color-border-default};
 }
 
-.item-no-outline { // Needs to be after .item-outlined to override the variable
-  --#{$prefix}list-item-border-color: initial;
-}
+// TODO: remove or uncomment the `.item-no-outline` once the design is decided
+// .item-no-outline use:
+// <div class="item item-navigation item-outlined item-no-outline">
+
+// .item-no-outline { // Needs to be after .item-outlined to override the variable
+//   --#{$prefix}list-item-border-color: initial;
+// }
 
 .item-no-divider { // Needs to be after .item-outlined to override the variable
   --#{$prefix}list-item-border-color: transparent;
@@ -343,11 +347,11 @@
 //
 
 .item-navigation {
-  .item {
+  .item-container {
     position: relative;
   }
 
-  .item-main::after {
+  .item-content::after {
     display: flex;
     flex-shrink: 0;
     order: var(--#{$prefix}list-item-nav-order, 1);
@@ -358,19 +362,16 @@
     mask: var(--#{$prefix}list-item-nav-icon, $list-item-next-icon) center / contain no-repeat;
   }
 
-  &.item-interactive:hover,
   &:has(.item-interactive:hover) {
     --#{$prefix}list-item-chevron-color: #{$ouds-color-action-hover};
     --#{$prefix}list-item-bg: #{$ouds-color-action-support-hover};
   }
 
-  &.item-interactive:focus-visible,
   &:has(.item-interactive:focus-visible) {
     --#{$prefix}list-item-chevron-color: #{$ouds-color-action-focus};
     --#{$prefix}list-item-bg: #{$ouds-color-action-support-focus};
   }
 
-  &.item-interactive:active,
   &:has(.item-interactive:active) {
     --#{$prefix}list-item-chevron-color: #{$ouds-color-action-pressed};
     --#{$prefix}list-item-bg: #{$ouds-color-action-support-pressed};
@@ -380,17 +381,14 @@
 // Needed outside since the outlined could be project wide
 .item-outlined.item-navigation,
 .item-outlined .item-navigation {
-  &.item-interactive:hover,
   &:has(.item-interactive:hover) {
     --#{$prefix}list-item-border-color: #{$ouds-color-action-hover};
   }
 
-  &.item-interactive:focus-visible,
   &:has(.item-interactive:focus-visible) {
     --#{$prefix}list-item-border-color: #{$ouds-color-action-focus};
   }
 
-  &.item-interactive:active,
   &:has(.item-interactive:active) {
     --#{$prefix}list-item-border-color: #{$ouds-color-action-pressed};
   }
