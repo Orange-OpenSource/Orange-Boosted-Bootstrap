@@ -12,7 +12,7 @@ OUDS Web is maintained by the core team and a small group of invaluable core con
 <ul class="item-list component-max-width mb-large">
   {getData('core-team').map((member) => {
     return (
-      <div class="item item-navigation">
+      <li class="item item-navigation">
         <a class="item-container item-interactive" href={`https://github.com/${member.user}`}>
           <div class="item-content">
             <div class="item-leading-container item-leading-large">
@@ -24,7 +24,7 @@ OUDS Web is maintained by the core team and a small group of invaluable core con
             </div>
           </div>
         </a>
-      </div>
+      </li>
     )
   })}
 </ul>
