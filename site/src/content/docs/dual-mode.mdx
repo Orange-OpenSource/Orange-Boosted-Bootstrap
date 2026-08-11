@@ -59,7 +59,7 @@ This is the preferred scenario and will help you implement the basic concepts of
   **This is the recommended scenario.**
 
   Note that you won’t be able to:
-  - use any Scss variable or mixin from OUDS Web in this scenario. Only the one from Boosted will be available.
+  - use any Sass variable or mixin from OUDS Web in this scenario. Only the one from Boosted will be available.
 
   If you want to have both, you may separate the 2 builds into different files and import the result in the main style file of your project. It will allow you to tree shake OUDS Web as well.
 </Callout>
@@ -369,11 +369,11 @@ In this scenario, you will have access to all the components available in OUDS W
 <Callout type="warning">
   This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to do it.
 
-  You won’t be able:
-  - to use any Scss variable or mixin from OUDS Web in this scenario.
-  - to tree shake Boosted.
-  - to change easily the edge cases and unwanted side effects of OUDS Web.
-  - to use dynamic modes in Boosted.
+  You won’t be able to:
+  - use any Sass variable or mixin from OUDS Web in this scenario.
+  - tree shake Boosted.
+  - change easily the edge cases and unwanted side effects of OUDS Web.
+  - use dynamic modes in Boosted.
 </Callout>
 
 In this scenario, you will have access to OUDS Web on the root, but once a Boosted element is encountered, it will be Boosted. It means that once you’ve set `.boosted` on an element, you’ll have access to Boosted only on its children.
@@ -406,10 +406,10 @@ In this scenario, you will have access to OUDS Web on the root, but once a Boost
 <Callout type="warning">
   This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to do it.
 
-  You won’t be able:
-  - to use any Scss variable or mixin from Boosted in this scenario.
-  - to use OUDS Web containers, grid and utilities.
-  - to use dynamic modes in Boosted.
+  You won’t be able to:
+  - use any Sass variable or mixin from Boosted in this scenario.
+  - use OUDS Web containers, grid and utilities.
+  - use dynamic modes in Boosted.
 </Callout>
 
 In this scenario, you will have access to OUDS Web on defined elements and children. It means that once you’ve set `.ouds-web` on an element, you’ll have access to OUDS Web.
