@@ -53,7 +53,7 @@ However, please note that OUDS Web no longer maintain jQuery compatibility. If y
 
 This is the preferred scenario and will help you implement the basic concepts of OUDS Web.
 
-##### Maximum of OUDS Web
+##### With granular Boosted imports
 
 <Callout type="info">
   **This is the recommended scenario.**
@@ -364,7 +364,7 @@ In this scenario, you will have access to all the components available in OUDS W
 
 5. Add a `.boosted` class near to the root (on `<body>` for example), set the `[data-bs-theme]` (probably to on `root`), and voilà, you should be having the best of two worlds.
 
-##### Minimum of OUDS Web
+##### With full Boosted imports
 
 <Callout type="warning">
   This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to do it.
@@ -373,6 +373,7 @@ In this scenario, you will have access to all the components available in OUDS W
   - to use any Scss variable or mixin from OUDS Web in this scenario.
   - to tree shake Boosted.
   - to change easily the edge cases and unwanted side effects of OUDS Web.
+  - to use dynamic modes in Boosted.
 </Callout>
 
 In this scenario, you will have access to OUDS Web on the root, but once a Boosted element is encountered, it will be Boosted. It means that once you’ve set `.boosted` on an element, you’ll have access to Boosted only on its children.
@@ -408,7 +409,7 @@ In this scenario, you will have access to OUDS Web on the root, but once a Boost
   You won’t be able:
   - to use any Scss variable or mixin from Boosted in this scenario.
   - to use OUDS Web containers, grid and utilities.
-  -
+  - to use dynamic modes in Boosted.
 </Callout>
 
 In this scenario, you will have access to OUDS Web on defined elements and children. It means that once you’ve set `.ouds-web` on an element, you’ll have access to OUDS Web.
