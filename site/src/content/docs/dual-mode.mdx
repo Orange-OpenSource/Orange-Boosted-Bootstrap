@@ -58,7 +58,10 @@ This is the preferred scenario and will help you implement the basic concepts of
 <Callout type="info">
   **This is the recommended scenario.**
 
-  Note that you won’t be able to use any Scss variable or mixin from OUDS Web in this scenario.
+  Note that you won’t be able:
+  - to use any Scss variable or mixin from OUDS Web in this scenario. Only the one from Boosted will be available.
+
+  If you want to have both, you may separate the 2 builds in different files and import the result in the main style file of your project. It will allow you to tree shake OUDS Web as well.
 </Callout>
 
 In this scenario, you will have access to all the components available in OUDS Web, the grid, the utilities, the helpers, and fill the missing parts using Boosted and custom CSS.
@@ -87,6 +90,8 @@ In this scenario, you will have access to all the components available in OUDS W
       // Don’t import Boosted utilities since they are all defined by OUDS Web already
 
       // Declare a custom _root.scss, inspired from Boosted, but linked to OUDS Web evolutions
+      // It will avoid having most edge cases and unwanted side effects of OUDS Web inside Boosted.
+      // It will also allow use the dark mode of OUDS Web inside Boosted.
       [data-bs-theme] {
         color: var(--#{$prefix}body-color);
         background-color: var(--#{$prefix}body-bg);
@@ -312,13 +317,10 @@ In this scenario, you will have access to all the components available in OUDS W
 
       // Import only what’s needed from Boosted to fill in the missing parts
       @import "boosted/scss/images";
-      @import "boosted/scss/tables";
       @import "boosted/scss/forms/labels";
       @import "boosted/scss/forms/form-text";
       @import "boosted/scss/forms/form-control";
-      @import "boosted/scss/forms/form-select";
       @import "boosted/scss/forms/form-range";
-      @import "boosted/scss/forms/input-group";
       @import "boosted/scss/forms/star-rating";
       @import "boosted/scss/forms/validation";
       @import "boosted/scss/forms/quantity-selector";
@@ -367,7 +369,10 @@ In this scenario, you will have access to all the components available in OUDS W
 <Callout type="warning">
   This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to do it.
 
-  You won’t be able to use any Scss variable or mixin from either Boosted or OUDS Web in this scenario.
+  You won’t be able:
+  - to use any Scss variable or mixin from OUDS Web in this scenario.
+  - to tree shake Boosted.
+  - to change easily the edge cases and unwanted side effects of OUDS Web.
 </Callout>
 
 In this scenario, you will have access to OUDS Web on the root, but once a Boosted element is encountered, it will be Boosted. It means that once you’ve set `.boosted` on an element, you’ll have access to Boosted only on its children.
@@ -383,7 +388,8 @@ In this scenario, you will have access to OUDS Web on the root, but once a Boost
 
     // 2. Import all Boosted
     .boosted {
-      @import "boosted/dist/css/boosted";
+      $root-selector: '&';
+      @import "boosted/scss/boosted";
     }
 
     // 3. Import custom components from your project with possible definitions of the variables you need.
@@ -399,7 +405,10 @@ In this scenario, you will have access to OUDS Web on the root, but once a Boost
 <Callout type="warning">
   This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to do it.
 
-  You won’t be able to use any Scss variable or mixin from Boosted in this scenario.
+  You won’t be able:
+  - to use any Scss variable or mixin from Boosted in this scenario.
+  - to use OUDS Web containers, grid and utilities.
+  -
 </Callout>
 
 In this scenario, you will have access to OUDS Web on defined elements and children. It means that once you’ve set `.ouds-web` on an element, you’ll have access to OUDS Web.
@@ -429,25 +438,32 @@ In this scenario, you will have access to OUDS Web on defined elements and child
 
       // Layout & components
       @import "@ouds/web-common/scss/root";
-      @import "@ouds/web-common/scss/containers";
-      @import "@ouds/web-common/scss/grid";
       @import "@ouds/web-common/scss/reboot";
       @import "@ouds/web-common/scss/type";
+      @import "@ouds/web-common/scss/containers";
+      @import "@ouds/web-common/scss/grid";
+      @import "@ouds/web-common/scss/table";
       @import "@ouds/web-common/scss/forms/control-item";
-      @import "@ouds/web-common/scss/forms/input-group";
+      @import "@ouds/web-common/scss/forms/select-input";
+      @import "@ouds/web-common/scss/forms/text-input";
       @import "@ouds/web-common/scss/links";
+      @import "@ouds/web-common/scss/bullet-list";
       @import "@ouds/web-common/scss/buttons";
+      @import "@ouds/web-common/scss/button-assistant";
+      @import "@ouds/web-common/scss/chips";
       @import "@ouds/web-common/scss/breadcrumb";
-      @import "@ouds/web-common/scss/badge";
+      @import "@ouds/web-common/scss/badges";
       @import "@ouds/web-common/scss/tags";
+      @import "@ouds/web-common/scss/alert";
+      @import "@ouds/web-common/scss/skeleton";
 
       @import "@ouds/web-common/scss/helpers";
       @import "@ouds/web-common/scss/utilities/api";
-    }
 
-    [data-bs-theme],
-    &[data-bs-theme] {
-      background: unset;
+      [data-bs-theme],
+      &[data-bs-theme] {
+        background: unset;
+      }
     }
 
     // 3. Import your custom Boosted components
