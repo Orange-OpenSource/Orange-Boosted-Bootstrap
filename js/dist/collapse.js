@@ -1,10 +1,10 @@
 /*!
-  * OUDS Web v1.3.0 (https://web.unified-design-system.orange.com/)
+  * OUDS Web v1.4.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2015-2026 The OUDS Web Authors
   * Copyright 2015-2026 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap collapse.js v1.3.0 (https://web.unified-design-system.orange.com/)
+  * Bootstrap collapse.js v1.4.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2011-2026 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -211,23 +211,6 @@
         element.setAttribute('aria-expanded', isOpen);
       }
     }
-
-    // Static
-    static jQueryInterface(config) {
-      const _config = {};
-      if (typeof config === 'string' && /show|hide/.test(config)) {
-        _config.toggle = false;
-      }
-      return this.each(function () {
-        const data = Collapse.getOrCreateInstance(this, _config);
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
-            throw new TypeError(`No method named "${config}"`);
-          }
-          data[config]();
-        }
-      });
-    }
   }
 
   /**
@@ -245,12 +228,6 @@
       }).toggle();
     }
   });
-
-  /**
-   * jQuery
-   */
-
-  index_js.defineJQueryPlugin(Collapse);
 
   return Collapse;
 

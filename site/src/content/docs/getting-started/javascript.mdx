@@ -242,41 +242,6 @@ If you want to bypass our sanitizer because you prefer to use a dedicated librar
     }
   })`} />
 
-## Optionally using jQuery
-
-**You don't need jQuery in OUDS Web**, but it's still possible to use our components with jQuery. If OUDS Web detects `jQuery` in the `window` object, it'll add all of our components in jQuery's plugin system. This allows you to do the following:
-
-<Code buttonLabel="" lang="js" code={`// to enable tooltips with the default configuration
-  $('[data-bs-toggle="tooltip"]').tooltip()
-
-  // to initialize tooltips with given configuration
-  $('[data-bs-toggle="tooltip"]').tooltip({
-    boundary: 'clippingParents',
-    customClass: 'myClass'
-  })
-
-  // to trigger the \`show\` method
-  $('#myTooltip').tooltip('show')`} />
-
-The same goes for our other components.
-
-### No conflict
-
-Sometimes it is necessary to use OUDS Web plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call `.noConflict` on the plugin you wish to revert the value of.
-
-<Code buttonLabel="" lang="js" code={`const oudsWebButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
-  $.fn.oudsWebBtn = oudsWebButton // give $().oudsWebBtn the OUDS Web functionality`} />
-
-OUDS Web does not officially support third-party JavaScript libraries like Prototype or jQuery UI. Despite `.noConflict` and namespaced events, there may be compatibility problems that you need to fix on your own.
-
-### jQuery events
-
-OUDS Web will detect jQuery if `jQuery` is present in the `window` object and there is no `data-bs-no-jquery` attribute set on `<body>`. If jQuery is found, OUDS Web will emit events thanks to jQuery's event system. So if you want to listen to OUDS Web's events, you'll have to use the jQuery methods (`.on`, `.one`) instead of `addEventListener`.
-
-<Code buttonLabel="" lang="js" code={`$('#myTab a').on('shown.bs.tab', () => {
-    // do something...
-  })`} />
-
 ## Disabled JavaScript
 
 OUDS Web's plugins have no special fallback when JavaScript is disabled. If you care about the user experience in this case, use [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.

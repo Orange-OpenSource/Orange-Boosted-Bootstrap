@@ -4,7 +4,7 @@
 
 .link {
   // scss-docs-start link-css-vars
-  --#{$prefix}link-icon-size: #{$ouds-link-size-icon-default};
+  --#{$prefix}link-icon-size: #{px-to-rem($ouds-link-size-icon-default)};
   --#{$prefix}link-icon-gap: #{$ouds-link-space-column-gap-icon-default};
   // scss-docs-end link-css-vars
 
@@ -12,9 +12,9 @@
   @include get-font-size("label-large");
   display: inline-flex;
   align-items: center;
-  min-width: $ouds-link-size-min-width-default;
-  min-height: $ouds-link-size-min-height-default;
-  padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
+  min-width: $ouds-link-size-min-width;
+  min-height: var(--#{$prefix}link-min-height, $ouds-link-size-min-height-default);
+  padding: var(--#{$prefix}link-padding-block, $ouds-link-space-padding-block-default) $ouds-link-space-padding-inline;
   text-align: start;
   text-wrap: pretty;
   vertical-align: middle;
@@ -47,13 +47,9 @@
   }
 }
 
-.link-chevron {
+.link-chevron,
+.link-external {
   --#{$prefix}link-chevron-gap: #{$ouds-link-space-column-gap-chevron-default};
-  --#{$prefix}link-chevron-color: #{$ouds-link-color-chevron-enabled};
-  --#{$prefix}link-chevron-hover-color: #{$ouds-link-color-chevron-hover};
-  --#{$prefix}link-chevron-focus-color: #{$ouds-link-color-chevron-focus};
-  --#{$prefix}link-chevron-pressed-color: #{$ouds-link-color-chevron-pressed};
-  --#{$prefix}link-chevron-disabled-color: #{$ouds-color-action-disabled};
 
   // Extend for Boosted compatibility in which .link-chevron can be used without .link
   @extend .link;
@@ -65,74 +61,112 @@
     text-decoration: underline;
   }
 
+  &:hover {
+    --#{$prefix}link-chevron-color: #{$ouds-link-color-content-hover};
+  }
+
+  &:focus-visible {
+    --#{$prefix}link-chevron-color: #{$ouds-link-color-content-focus};
+  }
+
+  &:active {
+    --#{$prefix}link-chevron-color: #{$ouds-link-color-content-pressed};
+  }
+
+  &[aria-disabled="true"] {
+    --#{$prefix}link-chevron-color: #{$ouds-color-action-disabled};
+  }
+}
+
+.link-chevron {
   // Chevron icon
-  &:not(.back) {
+  &:not(.link-previous),
+  &:not(.back) { // @deprecated, will be removed in v1.6.0, use "link-previous" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
     display: inline-block;
   }
 
-  &.back::before,
-  &:not(.back)::after {
+  &.link-previous::before,
+  &.back::before, // @deprecated, will be removed in v1.6.0, use "link-previous" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
+  &:not(.back)::after, // @deprecated, will be removed in v1.6.0, use "link-previous" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
+  &:not(.link-previous)::after {
     display: inline-block;
     width: var(--#{$prefix}link-icon-size);
     min-width: var(--#{$prefix}link-icon-size);
     height: var(--#{$prefix}link-icon-size);
     margin-right: var(--#{$prefix}link-chevron-gap);
-    vertical-align: middle;
+    vertical-align: text-bottom;
     content: "";
-    background-color: var(--#{$prefix}link-chevron-color);
+    background-color: var(--#{$prefix}link-chevron-color, $ouds-link-color-chevron-enabled);
     mask: var(--#{$prefix}chevron-icon) center no-repeat;
     mask-size: var(--#{$prefix}link-icon-size);
   }
 
-  &:hover::before,
-  &:hover::after {
-    background-color: var(--#{$prefix}link-chevron-hover-color);
-  }
-
-  &:focus-visible::before,
-  &:focus-visible::after {
-    background-color: var(--#{$prefix}link-chevron-focus-color);
-  }
-
-  &:active::before,
-  &:active::after {
-    background-color: var(--#{$prefix}link-chevron-pressed-color);
-  }
-
-  &:not(.back)::after {
+  &:not(.back)::after, // @deprecated, will be removed in v1.6.0, use "link-previous" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
+  &:not(.link-previous)::after {
     margin-right: 0;
     margin-left: var(--#{$prefix}link-chevron-gap);
-    transform: rotate(180deg) translateY(1px);
-  }
-
-  &[aria-disabled="true"]::before,
-  &[aria-disabled="true"]::after {
-    background-color: var(--#{$prefix}link-chevron-disabled-color);
+    transform: rotate(180deg);
   }
 }
 
+.link-external {
+  display: inline-block;
+
+  &::after {
+    display: inline-block;
+    width: var(--#{$prefix}link-icon-size);
+    min-width: var(--#{$prefix}link-icon-size);
+    height: var(--#{$prefix}link-icon-size);
+    margin-left: var(--#{$prefix}link-chevron-gap);
+    vertical-align: text-bottom;
+    content: "";
+    background-color: var(--#{$prefix}link-chevron-color, $ouds-link-color-chevron-enabled);
+    mask: var(--#{$prefix}external-icon) center no-repeat;
+    mask-size: var(--#{$prefix}link-icon-size);
+  }
+}
+
+.colored-bg, // @deprecated, will be removed in v1.6.0, use "link-on-colored-bg" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
 .link-on-colored-bg {
-  --#{$prefix}link-color: #{$ouds-link-mono-color-content-enabled};
-  --#{$prefix}link-hover-color: #{$ouds-link-mono-color-content-hover};
-  --#{$prefix}link-focus-color: #{$ouds-link-mono-color-content-focus};
-  --#{$prefix}link-active-color: #{$ouds-link-mono-color-content-pressed};
-  --#{$prefix}link-disabled-color: #{$ouds-link-mono-color-content-disabled};
-  --#{$prefix}link-visited-color: #{$ouds-link-mono-color-content-enabled};
-  --#{$prefix}link-chevron-color: #{$ouds-link-mono-color-content-enabled};
-  --#{$prefix}link-chevron-hover-color: #{$ouds-link-mono-color-content-hover};
-  --#{$prefix}link-chevron-focus-color: #{$ouds-link-mono-color-content-focus};
-  --#{$prefix}link-chevron-pressed-color: #{$ouds-link-mono-color-content-pressed};
-  --#{$prefix}link-chevron-disabled-color: #{$ouds-link-mono-color-content-disabled};
+  &.link,
+  :is(.link, a) {
+    --#{$prefix}link-color: #{$ouds-link-mono-color-content-enabled};
+    --#{$prefix}link-chevron-color: var(--#{$prefix}link-color);
+
+    &:hover {
+      --#{$prefix}link-color: #{$ouds-link-mono-color-content-hover}; // OUDS mod
+    }
+
+    &:focus-visible {
+      --#{$prefix}link-color: #{$ouds-link-mono-color-content-focus}; // OUDS mod
+    }
+
+    &:active {
+      --#{$prefix}link-color: #{$ouds-link-mono-color-content-pressed}; // OUDS mod
+    }
+
+    &[aria-disabled="true"] {
+      --#{$prefix}link-color: #{$ouds-link-mono-color-content-disabled}; // OUDS mod
+    }
+  }
 }
 
 .link-small {
-  --#{$prefix}link-icon-size: #{$ouds-link-size-icon-small};
+  --#{$prefix}link-min-height: #{$ouds-link-size-min-height-small};
+  --#{$prefix}link-padding-block: #{$ouds-link-space-padding-block-small};
+  --#{$prefix}link-icon-size: #{px-to-rem($ouds-link-size-icon-small)};
   --#{$prefix}link-icon-gap: #{$ouds-link-space-column-gap-icon-small};
   --#{$prefix}link-chevron-gap: #{$ouds-link-space-column-gap-chevron-small};
-
   @include get-font-size("label-medium");
-  min-width: $ouds-link-size-min-width-small;
-  min-height: $ouds-link-size-min-height-small;
+}
+
+.link-compact {
+  --#{$prefix}link-min-height: #{$ouds-link-size-min-height-compact-density};
+  --#{$prefix}link-padding-block: #{$ouds-link-space-padding-block-compact-density-default};
+
+  &:where(.link-small) {
+    --#{$prefix}link-padding-block: #{$ouds-link-space-padding-block-compact-density-small};
+  }
 }
 
 @if $enable-bootstrap-compatibility {
