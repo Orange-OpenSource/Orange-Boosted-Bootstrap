@@ -58,10 +58,10 @@ This is the preferred scenario and will help you implement the basic concepts of
 <Callout type="info">
   **This is the recommended scenario.**
 
-  Note that you won’t be able:
-  - to use any Scss variable or mixin from OUDS Web in this scenario. Only the one from Boosted will be available.
+  Note that you won’t be able to:
+  - use any Scss variable or mixin from OUDS Web in this scenario. Only the one from Boosted will be available.
 
-  If you want to have both, you may separate the 2 builds in different files and import the result in the main style file of your project. It will allow you to tree shake OUDS Web as well.
+  If you want to have both, you may separate the 2 builds into different files and import the result in the main style file of your project. It will allow you to tree shake OUDS Web as well.
 </Callout>
 
 In this scenario, you will have access to all the components available in OUDS Web, the grid, the utilities, the helpers, and fill the missing parts using Boosted and custom CSS.
@@ -91,7 +91,7 @@ In this scenario, you will have access to all the components available in OUDS W
 
       // Declare a custom _root.scss, inspired from Boosted, but linked to OUDS Web evolutions
       // It will avoid having most edge cases and unwanted side effects of OUDS Web inside Boosted.
-      // It will also allow use the dark mode of OUDS Web inside Boosted.
+      // It will also allow you to use the dark mode of OUDS Web inside Boosted.
       [data-bs-theme] {
         color: var(--#{$prefix}body-color);
         background-color: var(--#{$prefix}body-bg);
