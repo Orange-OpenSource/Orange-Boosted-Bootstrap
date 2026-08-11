@@ -360,7 +360,7 @@
     &:hover,
     &:active,
     &:focus-visible {
-      background-color: var(--bs-color-bg-primary);
+      background-color: var(--#{$prefix}color-bg-primary);
       background-image: linear-gradient(var(--#{$prefix}btn-hover-bg));
     }
   }
