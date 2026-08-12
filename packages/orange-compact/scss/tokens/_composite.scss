@@ -83,6 +83,10 @@ $alert-icon-warning-internal: url("data:image/svg+xml,<svg xmlns='http://www.w3.
 // orange/Component/alert/important-fill v2.2
 $alert-icon-important: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2.4A9.6 9.6 0 0 0 2.4 12a9.6 9.6 0 0 0 9.6 9.6 9.6 9.6 0 0 0 9.6-9.6A9.6 9.6 0 0 0 12 2.4M10.8 8q0-1.7 1.2-1.7c1.2 0 1.2.5 1.2 1.7v4.6q0 1.8-1.2 1.7-1.2 0-1.2-1.7zM12 18.2a1.4 1.4 0 0 1-1.4-1.5 1.4 1.4 0 0 1 1.4-1.3 1.4 1.4 0 0 1 1.4 1.3q-.1 1.3-1.4 1.4'/></svg>") !default;
 
+// * Assistant button *
+// orange/Component/ai-assistant/sparkles v2.2
+$btn-assistant-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M11.5 4.6c.1-.5.9-.5 1 0l.8 2.3a7 7 0 0 0 4.8 4.5l2.5.7c.5.2.5.8 0 1l-2.5.7a7 7 0 0 0-4.8 4.5l-.8 2.3c-.1.5-.9.5-1 0l-.8-2.3a7 7 0 0 0-4.8-4.5l-2.5-.7a.5.5 0 0 1 0-1l2.5-.7a7 7 0 0 0 4.8-4.5zM5 4.9q.1-.1.2 0l.2.6q.3.9 1.1 1l.6.3q.1.1 0 .2l-.6.2a2 2 0 0 0-1 1.1l-.3.6q-.1.2-.2 0l-.2-.6a2 2 0 0 0-1.1-1L3 7q-.2-.1 0-.2l.6-.2a2 2 0 0 0 1-1.1zM17.9 3h.3l.3.8Q18.9 5 20 5.4l.9.3V6l-.9.3a2 2 0 0 0-1.5 1.5l-.3.8h-.3l-.3-.8A2 2 0 0 0 16 6.3l-.8-.3v-.3l.8-.3A2 2 0 0 0 17.6 4z'/></svg>") !default;
+
 // * Badge *
 // orange/Component/badge-icon/tick-confirmation-fill v2.2
 $badge-icon-positive: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24m6.2 10.2-6.7 6.7-.4.4-.1.1-.8.5h-.7l-.7-.5-.2-.1-.3-.4-2.5-2.5q-1.6-1.5-.5-2.6 1-1.1 2.6.5l2 2L16 8q1.5-1.5 2.6-.5t-.5 2.7'/></svg>") !default;
