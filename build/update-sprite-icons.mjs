@@ -196,7 +196,7 @@ function extractSvgInnerContent(svgFileContent) {
   let result = svgFileContent
   result = stripAll(result, /<\?xml[\s\S]*?\?>/g)
   result = stripAll(result, /<!--[\s\S]*?-->/g)
-  result = optimize(result, { multipass: true, floatPrecision: 1 }).data
+  result = optimize(result, { multipass: true, floatPrecision: 2 }).data
   result = result.replace(/^\s*<svg[^>]*>/i, '')
   result = result.replace(/<\/svg>\s*$/i, '')
   return result
