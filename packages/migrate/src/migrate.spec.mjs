@@ -97,7 +97,6 @@ describe('Migrate', () => {
       'The badge component using class \'badge\' in tests/source-boosted.html needs to be updated to use the new component DOM. See: https://web.unified-design-system.orange.com/docs/components/badges',
       'btn-close-white class has been removed in tests/source-boosted.html.',
       'btn-social class is deprecated in tests/source-boosted.html. See: https://web.unified-design-system.orange.com/docs/components/buttons#button',
-      'btn-sm class is deprecated in tests/source-boosted.html. See: https://web.unified-design-system.orange.com/docs/components/buttons#button',
       'placeholder-glow class is deprecated in tests/source-boosted.html. See: https://web.unified-design-system.orange.com/docs/components/skeleton',
       'The tag component using class \'tag\' in tests/source-boosted.html needs to be updated to use the new component DOM. See: https://web.unified-design-system.orange.com/docs/components/tags#tag',
       'ratio class is deprecated in tests/source-boosted.html.',

@@ -1,5 +1,5 @@
 import fs from 'node:fs'
-import yaml from 'js-yaml'
+import * as yaml from 'js-yaml'
 import { z } from 'zod'
 import {
   zHexColor,
@@ -47,7 +47,7 @@ const dataDefinitions = {
   'docs-versions': z
     .object({
       group: z.string(),
-      baseurl: z.string().url(),
+      baseurl: z.url(),
       description: z.string(),
       versions: z.union([zVersionSemver, zVersionMajorMinor]).array()
     })
