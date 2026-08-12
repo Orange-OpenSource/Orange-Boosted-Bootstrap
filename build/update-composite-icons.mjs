@@ -39,6 +39,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
+import { optimize } from 'svgo' // eslint-disable-line import/no-unresolved
 
 const BRANDS = [
   { packageName: 'orange', sourceName: 'orange' },
@@ -188,6 +189,7 @@ function normalizeSvg(svgContent) {
   let result = svgContent
   result = stripAll(result, /<\?xml[\s\S]*?\?>/g)
   result = stripAll(result, /<!--[\s\S]*?-->/g)
+  result = optimize(result, { multipass: true, floatPrecision: 1 }).data
   return result
     .replace(/\s(?:width|height|fill)=("[^"]*"|'[^']*')/g, '')
     .replace(/\r\n|\r|\n/g, ' ')
@@ -209,15 +211,15 @@ async function loadSourceSvg(iconsRoot, sourceName, relativeIconPath) {
   // actual content (known issue when Node.js runs under Git Bash / MSYS2).
   if (!raw.trimStart().startsWith('<')) {
     throw new Error(
-      `File does not appear to be a valid SVG (does not start with "<"):\n` +
+      'File does not appear to be a valid SVG (does not start with "<"):\n' +
       `  ${svgAbsolutePath}\n\n` +
-      `This usually happens when the icons directory is on OneDrive and the\n` +
-      `script is launched from Git Bash. OneDrive cloud-file placeholders are\n` +
-      `not hydrated correctly under MSYS2.\n\n` +
-      `Workarounds:\n` +
-      `  1. Run from PowerShell or cmd instead of Git Bash\n` +
-      `  2. Copy the icons folder to a local (non-OneDrive) path\n` +
-      `  3. Pin the icons folder in OneDrive: right-click → "Always keep on this device"`
+      'This usually happens when the icons directory is on OneDrive and the\n' +
+      'script is launched from Git Bash. OneDrive cloud-file placeholders are\n' +
+      'not hydrated correctly under MSYS2.\n\n' +
+      'Workarounds:\n' +
+      '  1. Run from PowerShell or cmd instead of Git Bash\n' +
+      '  2. Copy the icons folder to a local (non-OneDrive) path\n' +
+      '  3. Pin the icons folder in OneDrive: right-click → "Always keep on this device"'
     )
   }
 
