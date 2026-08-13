@@ -201,3 +201,109 @@
     font-size: px-to-rem($ouds-chip-size-icon);
   }
 }
+
+.chip-expand {
+  .chip-interactive {
+    --#{$prefix}chip-padding-end: #{$ouds-chip-space-padding-inline-icon};
+  }
+
+  .badge {
+    display: none;
+  }
+
+  select {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    color: transparent;
+    appearance: none;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  &:has([value=""]:not(:checked)) {
+    .chip-interactive {
+      --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-enabled};
+      --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-enabled};
+      --#{$prefix}chip-border-width: #{px-to-rem($ouds-chip-border-width-selected)};
+      --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-enabled};
+      --#{$prefix}chip-padding-start: #{$ouds-chip-space-padding-inline-icon};
+      --#{$prefix}chip-tick-color: #{$ouds-chip-color-content-selected-tick-enabled};
+
+      &::before {
+        position: static;
+        width: 1em;
+        height: 1em;
+        overflow: hidden;
+        font-size: px-to-rem($ouds-chip-size-icon);
+        line-height: 1;
+        color: var(--#{$prefix}chip-tick-color, $ouds-chip-color-content-selected-tick-enabled);
+        pointer-events: none;
+        content: "";
+        background-color: currentcolor;
+        mask: $chip-tick-icon no-repeat 50% / px-to-rem($ouds-chip-size-icon);
+      }
+    }
+
+    .badge {
+      display: inline-block;
+    }
+
+    &:hover .chip-interactive {
+      --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-hover};
+      --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-hover};
+      --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-hover};
+      --#{$prefix}chip-tick-color: currentcolor;
+    }
+
+    &:active .chip-interactive {
+      --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-pressed};
+      --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-pressed};
+      --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-pressed};
+      --#{$prefix}chip-tick-color: currentcolor;
+    }
+  }
+
+  .chip-interactive::after {
+    position: static;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    font-size: px-to-rem($ouds-chip-size-icon);
+    line-height: 1;
+    pointer-events: none;
+    content: "";
+    background-color: currentcolor;
+    mask: var(--bs-chevron-icon) no-repeat 50% / px-to-rem($ouds-chip-size-icon);
+    transform: rotate(-90deg);
+  }
+
+  &:has(select:hover) label {
+    --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-hover};
+    --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-hover};
+    --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-hover};
+    --#{$prefix}chip-border-width: #{px-to-rem($ouds-chip-border-width-unselected-interaction)};
+    --#{$prefix}chip-tick-color: currentcolor;
+  }
+
+  &:has(select:focus-visible) label {
+    --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-focus};
+    --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-focus};
+    --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-focus};
+    --#{$prefix}chip-border-width: #{px-to-rem($ouds-chip-border-width-unselected-interaction)};
+    --#{$prefix}chip-tick-color: currentcolor;
+
+    @include focus-visible();
+  }
+
+  &:has(select:active) label {
+    --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-pressed};
+    --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-pressed};
+    --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-pressed};
+    --#{$prefix}chip-border-width: #{px-to-rem($ouds-chip-border-width-unselected-interaction)};
+    --#{$prefix}chip-tick-color: currentcolor;
+  }
+}

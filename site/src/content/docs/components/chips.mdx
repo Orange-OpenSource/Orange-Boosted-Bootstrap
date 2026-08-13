@@ -13,6 +13,31 @@ types:
 
 import { getVersionedDocsPath } from '@libs/path'
 
+<Example buttonLabel="basic filter chips" code={`<ul class="d-flex list-unstyled">
+    <li class="chip chip-expand">
+      <select id="test">
+        <option value="" checked>No option</option>
+        <option value="1">Filter chip 1</option>
+        <option value="2">Filter chip 2</option>
+        <option value="2">Filter chip 1250000 aozindaz kda</option>
+      </select>
+      <label class="chip-interactive" for="test">
+        Apple
+        <span class="badge badge-count badge-neutral">1</span>
+      </label>
+    </li>
+    <li class="chip chip-expand">
+      <button class="chip-interactive" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+        Apple
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Filter chip 1</a>
+        <a class="dropdown-item" href="#">Filter chip 2</a>
+        <a class="dropdown-item" href="#">Filter chip 3</a>
+      </div>
+    </li>
+  </ul>`} />
+
 <Callout type="info">
   You can find the OUDS design guidelines here: [filter chip guidelines](https://r.orange.fr/r/S-ouds-doc-filter-chip), [suggestion chip guidelines](https://r.orange.fr/r/S-ouds-doc-suggestion-chip).
 </Callout>
