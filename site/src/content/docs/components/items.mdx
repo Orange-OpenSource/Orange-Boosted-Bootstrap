@@ -180,11 +180,11 @@ Card item is a UI element that displays a unit of information either in an inter
 
 Static card item is a UI element that displays a unit of information in a non-interactive, self-contained card, that does not navigate, trigger actions or have interactive states.
 
-The static card item card may be displayed independently or within a card-based layout. It can include supporting text, leading or trailing content, and status information.
+The static card item may be displayed independently or within a card-based layout. It can include supporting text, leading or trailing content, and status information.
 
 When additional navigation is required, consider using a [navigation card item](#navigation-card-item) instead.
 
-All the available variants can be found in the [common variants](#common-variants).
+All the available variants can be found in the [common variants section](#common-variants).
 
 <Example buttonLabel="standard static card item display" class="d-flex flex-column gap-medium" code={`
   <div class="item">
@@ -203,7 +203,7 @@ Navigation card item is a UI element that displays a unit of information in an i
 
 The navigation card item is used when the content requires stronger visual grouping or prominence than a standard [navigation list item](#navigation-list-item). It may be displayed independently or within a card-based layout. Each card acts as a single navigation target and supports the necessary hover, pressed, and keyboard focus states.
 
-Add a `.item-navigation` on the `.item` level and an `.item-interactive` at the link level to create a navigation card item.
+Add an `.item-navigation` on the `.item` level and an `.item-interactive` at the link level to create a navigation card item.
 
 Available variants can be found in the [common variants section](#common-variants) and [navigation items variants section](#navigation-items-variants).
 
@@ -221,7 +221,7 @@ Available variants can be found in the [common variants section](#common-variant
 
 List item is a UI element that displays a unit of information either in an interactive or non-interactive row, within a structured list.
 
-They are surrounded by `.item-list` added to the `<ul>` element.
+It is surrounded by `.item-list` added to the `<ul>` element.
 
 Some variants shouldn't be applied to this kind of items. Warning will be done about it in:
 - [Outlined](#outlined) variants
@@ -233,7 +233,7 @@ Some variants shouldn't be applied to this kind of items. Warning will be done a
 
 Static list item is a UI element that displays a unit of information in a non-interactive horizontal row within a structured list, and does not navigate, trigger actions, or have interactive states.
 
-The static list item allow quick scanning and comparison of related items. It can include supporting text, leading or trailing content, and status information.
+The static list item allows quick scanning and comparison of related items. It can include supporting text, leading or trailing content, and status information.
 
 All the available variants can be found in the [common variants section](#common-variants).
 
@@ -666,7 +666,7 @@ This component can contain many slots that can be used to add custom content. Th
   The slots shouldn't be used in a [small item](#sizes).
 </Callout>
 
-Here is a small resume of the slots that can be used in an item:
+Here is a small summary of the slots that can be used in an item:
 * [Leading container](#leading-container) using `.item-slot`
 * [Text container](#texts) using `.item-slot`
 * [Trailing container](#trailing-container) using `.item-slot`
@@ -804,7 +804,7 @@ You can remove the divider by using `.item-no-divider` on the `.item` or `.item-
   Since the [list items](#list-items) are sticked, this variant should only be used on [card items](#card-items).
 </Callout>
 
-By default every item comes with a divider. The divider may be removed or transformed into an outline using `.item-outlined` and/or `.item-no-outline` on the element `.item` or any ancestors. `.item-no-divider` can also be applied for another rendering.
+By default every item comes with a divider. The divider may be removed or transformed into an outline using `.item-outlined` and/or `.item-no-outline` on the `.item` element or any ancestors. `.item-no-divider` can also be applied for another rendering.
 
 Static items only have the non-interactive version.
 
@@ -885,7 +885,7 @@ Rounded corners items is a project-wide option therefore all your items should e
 
 #### Disabled
 
-Items can be disabled by using `[aria-disabled="true"]` on the element `.item` or any ancestors.
+Items can be disabled by using `[aria-disabled="true"]` on the `.item` element or any ancestors.
 
 If the item is in a disabled context, with an ancestor element that has the `[disabled]` attribute or the `[aria-disabled="true"]` attribute, the item will automatically adapt.
 
@@ -946,7 +946,7 @@ You may handle on your own the [slots](#slots) regarding accessibility and desig
 
 ### Sizes
 
-By default every item comes with a default size. The size can be adapted using `.item-small` on the element `.item` or `.item-list`.
+By default every item comes with a default size. The size can be adapted using `.item-small` on the `.item` or `.item-list` element.
 
 <Callout type="warning">
   The small size come with some restrictions:
@@ -1119,7 +1119,7 @@ Optionally, the `<a>` element can wrap the entire `.item-container` instead of j
 <Callout type="info" title="Accessibility">
   Screen readers will read the entire item as a link. You can use the `.visually-hidden` text to provide additional context if needed. You won't need any `[aria-describedby]` as stated in our [accessibility section](#accessibility).
 
-  Avoid to use any interactive elements inside the item when using this variant, as it will create nested interactive elements which is not valid HTML and can cause accessibility issues.
+  Avoid using any interactive elements inside the item when using this variant, as it will create nested interactive elements which is not valid HTML and can cause accessibility issues.
 </Callout>
 
 <Example buttonLabel="navigation card item with link wrapping entire item" class="d-flex flex-column gap-medium" code={`<div class="item item-navigation">
