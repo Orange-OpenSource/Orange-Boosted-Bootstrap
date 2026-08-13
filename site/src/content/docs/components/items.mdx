@@ -149,9 +149,9 @@ The basic structure includes:
 
 ### Accessibility
 
-For navigation items, a wrapping `<nav>` element can be added if it is an important navigation in the page.
+In case of an important navigation of the page, a wrapping `<nav aria-label="">` element can be added around the navigation items.
 
-In case of a complex navigation list item, you probably should link all the texts and components together by adding `[aria-describedby]` on the link in order to provide a valid accessible name for the link. The `[aria-describedby]` should point to the ids of the elements that contain the texts of the link.
+In case of a complex navigation item, you probably should link all the texts and components together by adding `[aria-describedby]` on the link in order to provide a valid accessible name for the link. The `[aria-describedby]` should point to the ids of the elements that contain the texts describing the link.
 
 In case there is no interactive element inside, you may want to [wrap the entire `.item-container` in an `<a>`](#wrapping-link) element.
 
@@ -358,61 +358,11 @@ You can navigate through the different assets using the tabs below.
 
     All these classes can be combined as needed and placed on `.item-leading-container`.
 
-    <Callout type="info" title="Accessibility">
-      Please note that a gif can be paused via extensions. If you need to make sure a gif is stoppable, use it in a `<video>` tag with controls on.
-    </Callout>
-
     <Example buttonLabel="items with leading image" class="d-flex flex-column gap-medium" code={`<div class="item">
     <div class="item-container">
       <div class="item-content">
         <div class="item-leading-container item-leading-xlarge item-leading-rounded ratio-16x9">
           <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover" />
-        </div>
-        <div class="item-text-container">
-          <p class="item-label">Label</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="item-container">
-      <div class="item-content">
-        <div class="item-leading-container item-leading-large">
-          <img alt="" src="${getVersionedDocsPath('/assets/img/cat-space.gif')}" class="w-100 h-100 object-fit-cover" />
-        </div>
-        <div class="item-text-container">
-          <p class="item-label">Label</p>
-        </div>
-      </div>
-    </div>
-  </div>`} />
-  </AssetsTab>
-
-  <AssetsTab name="Video">
-    ##### Video
-
-    Videos can be sized with `item-leading-large` (only if not [small item](#sizes)) or `item-leading-xlarge` (only if not [small item](#sizes)).
-
-    [Ratio utilities]([[docsref:/utilities/aspect-ratio]]) may also be used along with `.item-leading-rounded`.
-
-    All these classes can be combined as needed and placed on `.item-leading-container`.
-
-    <Callout type="warning" title="Accessibility">
-      Please note that the video should only be used when needed, and that if the video convey information, there should be controls, subtitles (if needed), audio description, and a transcript available. Please refer to [our accessibility guidelines on video](https://a11y-guidelines.orange.com/en/web/develop/non-textual-content/#provide-accessible-audio-or-video-tracks) for more information. Prefer non informative videos that are hidden and replaced by a text when needed or even a gif.
-
-      In any way, it should have controls on it if it has autoplay.
-    </Callout>
-
-    <Example buttonLabel="item with leading video" class="d-flex flex-column gap-medium" code={`<div class="item">
-    <div class="item-container">
-      <div class="item-content">
-        <div class="item-leading-container item-leading-large ratio-16x9 item-leading-rounded">
-          <video controls class="w-100 h-100 object-fit-cover" autoplay muted loop aria-hidden="true">
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p class="visually-hidden">Video description</p>
         </div>
         <div class="item-text-container">
           <p class="item-label">Label</p>
@@ -671,10 +621,6 @@ You can navigate through the different assets using the tabs below.
 
     All these classes can be combined as needed and placed on `.item-trailing-container`.
 
-    <Callout type="info" title="Accessibility">
-      Please note that a gif can be paused via extensions. If you need to make sure a gif is stoppable, use it in a `<video>` tag with controls on.
-    </Callout>
-
     <Example buttonLabel="items with trailing image" class="d-flex flex-column gap-medium" code={`<div class="item">
     <div class="item-container">
       <div class="item-content">
@@ -683,51 +629,6 @@ You can navigate through the different assets using the tabs below.
         </div>
         <div class="item-trailing-container item-trailing-xlarge ratio-16x9 item-trailing-rounded">
           <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover" />
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="item-container">
-      <div class="item-content">
-        <div class="item-text-container">
-          <p class="item-label">Label</p>
-        </div>
-        <div class="item-trailing-container item-trailing-large">
-          <img alt="" src="${getVersionedDocsPath('/assets/img/cat-space.gif')}" class="w-100 h-100 object-fit-cover" />
-        </div>
-      </div>
-    </div>
-  </div>`} />
-  </AssetsTab>
-  <AssetsTab name="Video">
-    ##### Video
-
-    Videos can be sized with `item-trailing-large` (only if not [small item](#sizes)) or `item-trailing-xlarge` (only if not [small item](#sizes)).
-
-    [Ratio utilities]([[docsref:/utilities/aspect-ratio]]) may also be used along with `.item-trailing-rounded`.
-
-    All these classes can be combined as needed and placed on `.item-trailing-container`.
-
-    <Callout type="warning" title="Accessibility">
-      Please note that the video should only be used when needed, and that if the video convey information, there should be controls, subtitles (if needed), audio description, and a transcript available. Please refer to [our accessibility guidelines on video](https://a11y-guidelines.orange.com/en/web/develop/non-textual-content/#provide-accessible-audio-or-video-tracks) for more information. Prefer non informative videos that are hidden and replaced by a text when needed or even a gif.
-
-      In any way, it should have controls on it if it has autoplay.
-    </Callout>
-
-    <Example buttonLabel="item with trailing video" class="d-flex flex-column gap-medium" code={`<div class="item">
-    <div class="item-container">
-      <div class="item-content">
-        <div class="item-text-container">
-          <p class="item-label">Label</p>
-        </div>
-        <div class="item-trailing-container item-trailing-large ratio-16x9 item-trailing-rounded">
-          <video controls class="w-100 h-100 object-fit-cover" autoplay muted loop aria-hidden="true">
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p class="visually-hidden">Video description</p>
         </div>
       </div>
     </div>
@@ -757,17 +658,19 @@ You can navigate through the different assets using the tabs below.
 
 #### Slots
 
-This component contains many slots that can be used to add custom content. The main slots are located in the [leading container](#leading-container), the [text container](#texts), and the [trailing container](#trailing-container). The slots are intended to be used for custom content that is not covered by the other elements of the component. We can add another slot outside of the `.item-content` container as well.
+All the slots are optional, but if one is used, it should be indicated via `.item-slot` on the slot container.
+
+This component can contain many slots that can be used to add custom content. The main slots are located in the [leading container](#leading-container), the [text container](#texts), and the [trailing container](#trailing-container). The slots are intended to be used for custom content that is not covered by the other elements of the component. We can add another slot outside of the `.item-content` container as well.
 
 <Callout type="warning" title="Small item">
   The slots shouldn't be used in a [small item](#sizes).
 </Callout>
 
 Here is a small resume of the slots that can be used in an item:
-* [Leading container](#leading-container) using `.item-slot` (optional)
-* [Text container](#texts) using `.item-slot` (optional)
-* [Trailing container](#trailing-container) using `.item-slot` (optional)
-* A slot outside of the `.item-content` container, direct child of `.item-container` using `.item-slot` (optional)
+* [Leading container](#leading-container) using `.item-slot`
+* [Text container](#texts) using `.item-slot`
+* [Trailing container](#trailing-container) using `.item-slot`
+* A slot outside of the `.item-content` container, direct child of `.item-container` using `.item-slot`
 
 Optionally, if the item is a navigation item and a slot is mandatory and also interactive, you can add `.item-slot-focusable` to the slot or the interactive element.<BrandSpecific brand={['orange', 'orange-compact']}> Please note that the slot won't be [rounded](#rounded-corners) anymore.</BrandSpecific>
 
@@ -795,6 +698,10 @@ Optionally, if the item is a navigation item and a slot is mandatory and also in
 
 Optionally, a helper text can be added below the main `.item-container` container using `.item-helper`.
 
+<Callout type="info">
+  If the item is a navigation item, the helper text should be referenced with `[aria-describedby]` on the interactive element.
+</Callout>
+
 <Example buttonLabel="item with helper text" class="d-flex flex-column gap-medium" code={`<div class="item">
     <div class="item-container">
       <div class="item-content">
@@ -804,6 +711,17 @@ Optionally, a helper text can be added below the main `.item-container` containe
       </div>
     </div>
     <p class="item-helper">Helper text</p>
+  </div>
+
+  <div class="item">
+    <a href="#" class="item-container item-interactive" aria-describedby="item-helper-1">
+      <div class="item-content">
+        <div class="item-text-container">
+          <span class="item-label">Label</span>
+        </div>
+      </div>
+    </a>
+    <p class="item-helper" id="item-helper-1">Helper text</p>
   </div>`} />
 
 ### Background
@@ -967,31 +885,28 @@ Rounded corners items is a project-wide option therefore all your items should e
 
 #### Disabled
 
-Items can be disabled by using `.disabled` on the element `.item` or any ancestors.
+Items can be disabled by using `[aria-disabled="true"]` on the element `.item` or any ancestors.
 
-If the item is in a disabled context, the item will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, the `[aria-disabled="true"]` attribute, or the `.disabled` class.
+If the item is in a disabled context, with an ancestor element that has the `[disabled]` attribute or the `[aria-disabled="true"]` attribute, the item will automatically adapt.
 
 You may handle on your own the [slots](#slots) regarding accessibility and design. For example, if you have a slot with a button, you may want to disable the button to apply the right behavior and the correct visual state.
 
-<Callout type="info">
-  The images and videos inside the disabled item will be grayed out using opacity. You'll still need to handle it correctly from an accessibility point of view.
-</Callout>
-
-<Example buttonLabel="disabled items" class="d-flex flex-column gap-medium" code={`<div class="disabled">
-    <div class="item mb-medium">
-      <div class="item-container">
+<Example buttonLabel="disabled items" class="d-flex flex-column gap-medium" code={`<div aria-disabled="true">
+    <div class="item item-navigation mb-medium">
+      <!-- Disabled via its missing attribute -->
+      <a class="item-container item-interactive">
         <div class="item-content">
           <div class="item-leading-container item-status-warning">
             <div class="item-icon"></div>
           </div>
           <div class="item-text-container">
-            <p class="item-label">Label</p>
+            <span class="item-label">Label</span>
           </div>
           <div class="item-trailing-container item-trailing-xlarge item-trailing-rounded">
             <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover" />
           </div>
         </div>
-      </div>
+      </a>
     </div>
 
     <div class="item">
@@ -1006,7 +921,6 @@ You may handle on your own the [slots](#slots) regarding accessibility and desig
             <p class="item-extra-label">Extra label</p>
           </div>
           <div class="item-trailing-container">
-            <!-- Disabled via its style -->
             <p class="tag">Tag</p>
           </div>
         </div>
@@ -1108,7 +1022,7 @@ By default all items are vertically centered. You can change the alignment of th
             </div>
           </div>
           <div class="alert-action-container">
-            <button class="link">Apply to a plan</button>
+            <a href="#" class="link">Apply to a plan</a>
           </div>
         </div>
       </div>
