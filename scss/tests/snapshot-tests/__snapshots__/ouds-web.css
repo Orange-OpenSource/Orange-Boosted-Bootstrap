@@ -9432,6 +9432,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   animation: var(--bs-tag-loading-animation);
 }
 
+[aria-disabled=true] .tag,
 .disabled .tag,
 .tag.disabled {
   color: var(--bs-color-content-on-action-disabled) !important;
