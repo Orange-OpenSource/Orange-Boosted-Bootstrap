@@ -2,7 +2,7 @@ import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import './storybook.scss';
 
-import * as oudsWeb from '../js/index.esm.js';
+import '../js/index.esm.js';
 
 /** @type { import('@storybook/html-vite').Preview } */
 const preview = {
