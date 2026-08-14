@@ -128,7 +128,7 @@
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-markdown": "^5.1.0",
     "eslint-plugin-storybook": "^10.5.7",
-    "eslint-plugin-unicorn": "^56.0.1",
+    "eslint-plugin-unicorn": "^73.0.0",
     "find-unused-sass-variables": "^6.1.0",
     "github-slugger": "^2.0.0",
     "globby": "^16.2.3",
