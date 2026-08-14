@@ -2,6 +2,8 @@ import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import './storybook.scss';
 
+import * as oudsWeb from '../packages/orange/'
+
 /** @type { import('@storybook/html-vite').Preview } */
 const preview = {
   decorators: [
