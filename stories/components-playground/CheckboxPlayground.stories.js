@@ -4,7 +4,6 @@
 
 const states = ['Enabled', 'Read only', 'Disabled']
 const selectionStatuses = ['Unselected', 'Selected']
-const errorOptions = ['True', 'False']
 
 const selectionStatusMap = {
   'Unselected': '',
@@ -29,7 +28,7 @@ const stateMap = {
 
 const renderCheckbox = ({ state, selectionStatus, error }) => {
   const checkedAttr = selectionStatusMap[selectionStatus] ?? ''
-  const invalidAttr = errorMap[error] ?? ''
+  const invalidAttr = errorMap[(error ? 'True' : 'False')] ?? ''
   const stateAttr = stateMap[state] ?? ''
 
   return `<label class="checkbox-standalone">
@@ -50,8 +49,7 @@ export default {
       options: selectionStatuses,
     },
     error: {
-      control: 'select',
-      options: errorOptions,
+      control: 'boolean',
     }
   }
 }
@@ -83,45 +81,6 @@ export const PlaygroundCheckbox = {
   args: {
     state: 'Enabled',
     selectionStatus: 'Unselected',
-    error: 'False'
-  },
-}
-
-// Chaque valeur ci-dessous change réellement le rendu ; les autres sont omises.
-// PlaygroundCheckbox porte les args par défaut : elle tient lieu de story Default.
-
-export const Selected = {
-  parameters: PlaygroundCheckbox.parameters,
-  render: PlaygroundCheckbox.render,
-  args: {
-    ...PlaygroundCheckbox.args,
-    selectionStatus: 'Selected'
-  },
-}
-
-export const Disabled = {
-  parameters: PlaygroundCheckbox.parameters,
-  render: PlaygroundCheckbox.render,
-  args: {
-    ...PlaygroundCheckbox.args,
-    state: 'Disabled'
-  },
-}
-
-export const ReadOnly = {
-  parameters: PlaygroundCheckbox.parameters,
-  render: PlaygroundCheckbox.render,
-  args: {
-    ...PlaygroundCheckbox.args,
-    state: 'Read only'
-  },
-}
-
-export const Error = {
-  parameters: PlaygroundCheckbox.parameters,
-  render: PlaygroundCheckbox.render,
-  args: {
-    ...PlaygroundCheckbox.args,
-    error: 'True'
+    error: false
   },
 }

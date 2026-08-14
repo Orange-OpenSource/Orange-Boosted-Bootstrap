@@ -5,10 +5,6 @@
 
 const inputStatuses = ['Empty', 'Filled']
 const states = ['Enabled', 'Read only', 'Disabled']
-const outlinedOptions = ['True', 'False']
-const errorOptions = ['False', 'True']
-const leadingIconOptions = ['False', 'True']
-const trailingActionOptions = ['False', 'True']
 
 // Propriétés Figma sans traduction dans le HTML : la valeur est figée et
 // aucun contrôle n'est exposé, changer la valeur ne changerait rien au rendu.
@@ -54,12 +50,12 @@ const stateMap = {
 const renderTextInput = ({ inputStatus, state, outlined, error, leadingIcon, trailingAction, label, placeholder }) => {
   const containerClasses = [
     'text-input-container',
-    outlinedClasses[outlined]
+    outlinedClasses[(outlined ? 'True' : 'False')]
   ].filter(Boolean).join(' ')
 
-  if (leadingIcon === 'False' && trailingAction === 'False') {
+  if (!leadingIcon && !trailingAction) {
     const valueAttr = inputStatusMap[inputStatus] ?? ''
-    const invalidAttr = errorMap[error] ?? ''
+    const invalidAttr = errorMap[(error ? 'True' : 'False')] ?? ''
     const stateAttr = stateMap[state] ?? ''
 
     return `<div class="text-input">
@@ -70,9 +66,9 @@ const renderTextInput = ({ inputStatus, state, outlined, error, leadingIcon, tra
 </div>`
   }
 
-  if (leadingIcon === 'True' && trailingAction === 'False') {
+  if (leadingIcon && !trailingAction) {
     const valueAttr = inputStatusMap[inputStatus] ?? ''
-    const invalidAttr = errorMap[error] ?? ''
+    const invalidAttr = errorMap[(error ? 'True' : 'False')] ?? ''
     const stateAttr = stateMap[state] ?? ''
 
     return `<div class="text-input">
@@ -86,9 +82,9 @@ const renderTextInput = ({ inputStatus, state, outlined, error, leadingIcon, tra
 </div>`
   }
 
-  if (leadingIcon === 'False' && trailingAction === 'True') {
+  if (!leadingIcon && trailingAction) {
     const valueAttr = inputStatusMap[inputStatus] ?? ''
-    const invalidAttr = errorMap[error] ?? ''
+    const invalidAttr = errorMap[(error ? 'True' : 'False')] ?? ''
     const stateAttr = stateMap[state] ?? ''
 
     return `<div class="text-input">
@@ -105,9 +101,9 @@ const renderTextInput = ({ inputStatus, state, outlined, error, leadingIcon, tra
 </div>`
   }
 
-  if (leadingIcon === 'True' && trailingAction === 'True') {
+  if (leadingIcon && trailingAction) {
     const valueAttr = inputStatusMap[inputStatus] ?? ''
-    const invalidAttr = errorMap[error] ?? ''
+    const invalidAttr = errorMap[(error ? 'True' : 'False')] ?? ''
     const stateAttr = stateMap[state] ?? ''
 
     return `<div class="text-input">
@@ -156,20 +152,16 @@ export default {
       options: states,
     },
     outlined: {
-      control: 'select',
-      options: outlinedOptions,
+      control: 'boolean',
     },
     error: {
-      control: 'select',
-      options: errorOptions,
+      control: 'boolean',
     },
     leadingIcon: {
-      control: 'select',
-      options: leadingIconOptions,
+      control: 'boolean',
     },
     trailingAction: {
-      control: 'select',
-      options: trailingActionOptions,
+      control: 'boolean',
     },
     label: {
       control: 'text',
@@ -220,50 +212,11 @@ export const PlaygroundTextInput = {
   args: {
     inputStatus: 'Empty',
     state: 'Enabled',
-    outlined: 'False',
-    error: 'False',
-    leadingIcon: 'False',
-    trailingAction: 'False',
+    outlined: false,
+    error: false,
+    leadingIcon: false,
+    trailingAction: false,
     label: 'Label',
     placeholder: 'Placeholder'
-  },
-}
-
-// Chaque valeur ci-dessous change réellement le rendu ; les autres sont omises.
-// PlaygroundTextInput porte les args par défaut : elle tient lieu de story Default.
-
-export const Filled = {
-  parameters: PlaygroundTextInput.parameters,
-  render: PlaygroundTextInput.render,
-  args: {
-    ...PlaygroundTextInput.args,
-    inputStatus: 'Filled'
-  },
-}
-
-export const Disabled = {
-  parameters: PlaygroundTextInput.parameters,
-  render: PlaygroundTextInput.render,
-  args: {
-    ...PlaygroundTextInput.args,
-    state: 'Disabled'
-  },
-}
-
-export const ReadOnly = {
-  parameters: PlaygroundTextInput.parameters,
-  render: PlaygroundTextInput.render,
-  args: {
-    ...PlaygroundTextInput.args,
-    state: 'Read only'
-  },
-}
-
-export const Error = {
-  parameters: PlaygroundTextInput.parameters,
-  render: PlaygroundTextInput.render,
-  args: {
-    ...PlaygroundTextInput.args,
-    error: 'True'
   },
 }

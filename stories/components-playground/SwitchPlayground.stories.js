@@ -3,7 +3,6 @@
 // Docs: https://web.unified-design-system.orange.com/orange/docs/components/switch/#standalone
 
 const states = ['Enabled', 'Read only', 'Disabled']
-const selectedOptions = ['False', 'True']
 
 const selectedMap = {
   'False': '',
@@ -21,7 +20,7 @@ const stateMap = {
 }
 
 const renderSwitch = ({ state, selected }) => {
-  const checkedAttr = selectedMap[selected] ?? ''
+  const checkedAttr = selectedMap[(selected ? 'True' : 'False')] ?? ''
   const stateAttr = stateMap[state] ?? ''
 
   return `<label class="switch-standalone">
@@ -38,8 +37,7 @@ export default {
       options: states,
     },
     selected: {
-      control: 'select',
-      options: selectedOptions,
+      control: 'boolean',
     }
   }
 }
@@ -68,36 +66,6 @@ export const PlaygroundSwitch = {
   },
   args: {
     state: 'Enabled',
-    selected: 'False'
-  },
-}
-
-// Chaque valeur ci-dessous change réellement le rendu ; les autres sont omises.
-// PlaygroundSwitch porte les args par défaut : elle tient lieu de story Default.
-
-export const True = {
-  parameters: PlaygroundSwitch.parameters,
-  render: PlaygroundSwitch.render,
-  args: {
-    ...PlaygroundSwitch.args,
-    selected: 'True'
-  },
-}
-
-export const Disabled = {
-  parameters: PlaygroundSwitch.parameters,
-  render: PlaygroundSwitch.render,
-  args: {
-    ...PlaygroundSwitch.args,
-    state: 'Disabled'
-  },
-}
-
-export const ReadOnly = {
-  parameters: PlaygroundSwitch.parameters,
-  render: PlaygroundSwitch.render,
-  args: {
-    ...PlaygroundSwitch.args,
-    state: 'Read only'
+    selected: false
   },
 }

@@ -3,7 +3,6 @@
 // Docs: https://web.unified-design-system.orange.com/orange/docs/components/chips/#filter-chip
 
 const layouts = ['Text only', 'Text + Icon', 'Icon only']
-const selectedOptions = ['False', 'True']
 const states = ['Enabled', 'Disabled']
 
 const selectedMap = {
@@ -21,7 +20,7 @@ const stateMap = {
 }
 
 const renderFilterChip = ({ layout, selected, state, label }) => {
-  const checkedAttr = selectedMap[selected] ?? ''
+  const checkedAttr = selectedMap[(selected ? 'True' : 'False')] ?? ''
   const disabledAttr = stateMap[state] ?? ''
 
   if (layout === 'Text only') {
@@ -73,8 +72,7 @@ export default {
       options: layouts,
     },
     selected: {
-      control: 'select',
-      options: selectedOptions,
+      control: 'boolean',
     },
     state: {
       control: 'select',
@@ -114,38 +112,8 @@ export const PlaygroundFilterChip = {
   },
   args: {
     layout: 'Text only',
-    selected: 'False',
+    selected: false,
     state: 'Enabled',
     label: 'Label'
-  },
-}
-
-// Chaque valeur ci-dessous change réellement le rendu ; les autres sont omises.
-// PlaygroundFilterChip porte les args par défaut : elle tient lieu de story Default.
-
-export const TextIcon = {
-  parameters: PlaygroundFilterChip.parameters,
-  render: PlaygroundFilterChip.render,
-  args: {
-    ...PlaygroundFilterChip.args,
-    layout: 'Text + Icon'
-  },
-}
-
-export const IconOnly = {
-  parameters: PlaygroundFilterChip.parameters,
-  render: PlaygroundFilterChip.render,
-  args: {
-    ...PlaygroundFilterChip.args,
-    layout: 'Icon only'
-  },
-}
-
-export const Disabled = {
-  parameters: PlaygroundFilterChip.parameters,
-  render: PlaygroundFilterChip.render,
-  args: {
-    ...PlaygroundFilterChip.args,
-    state: 'Disabled'
   },
 }

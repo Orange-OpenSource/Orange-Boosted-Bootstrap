@@ -102,33 +102,3 @@ export const PlaygroundSuggestionChip = {
     label: 'Label'
   },
 }
-
-// Chaque valeur ci-dessous change réellement le rendu ; les autres sont omises.
-// PlaygroundSuggestionChip porte les args par défaut : elle tient lieu de story Default.
-
-export const TextIcon = {
-  parameters: PlaygroundSuggestionChip.parameters,
-  render: PlaygroundSuggestionChip.render,
-  args: {
-    ...PlaygroundSuggestionChip.args,
-    layout: 'Text + icon'
-  },
-}
-
-export const IconOnly = {
-  parameters: PlaygroundSuggestionChip.parameters,
-  render: PlaygroundSuggestionChip.render,
-  args: {
-    ...PlaygroundSuggestionChip.args,
-    layout: 'Icon only'
-  },
-}
-
-export const Disabled = {
-  parameters: PlaygroundSuggestionChip.parameters,
-  render: PlaygroundSuggestionChip.render,
-  args: {
-    ...PlaygroundSuggestionChip.args,
-    state: 'Disabled'
-  },
-}

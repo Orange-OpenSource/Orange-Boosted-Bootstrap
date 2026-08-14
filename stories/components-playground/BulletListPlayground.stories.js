@@ -6,7 +6,6 @@
 
 const types = ['Unordered', 'Ordered', 'Bare']
 const textStyles = ['Body Large', 'Body Medium']
-const boldOptions = ['True', 'False']
 
 // Propriétés Figma sans traduction dans le HTML : la valeur est figée et
 // aucun contrôle n'est exposé, changer la valeur ne changerait rien au rendu.
@@ -31,7 +30,7 @@ const renderBulletList = ({ type, textStyle, bold, label }) => {
     const classes = [
     'bullet-list',
     textStyleClasses[textStyle],
-    boldClasses[bold]
+    boldClasses[(bold ? 'True' : 'False')]
   ].filter(Boolean).join(' ')
 
     return `<ul class="${classes}">
@@ -44,7 +43,7 @@ const renderBulletList = ({ type, textStyle, bold, label }) => {
     const classes = [
     'bullet-list',
     textStyleClasses[textStyle],
-    boldClasses[bold]
+    boldClasses[(bold ? 'True' : 'False')]
   ].filter(Boolean).join(' ')
 
     return `<ol class="${classes}">
@@ -58,7 +57,7 @@ const renderBulletList = ({ type, textStyle, bold, label }) => {
     'bullet-list',
     'bullet-list-bare',
     textStyleClasses[textStyle],
-    boldClasses[bold]
+    boldClasses[(bold ? 'True' : 'False')]
   ].filter(Boolean).join(' ')
 
     return `<ul class="${classes}">
@@ -83,8 +82,7 @@ export default {
       options: textStyles,
     },
     bold: {
-      control: 'select',
-      options: boldOptions,
+      control: 'boolean',
     },
     label: {
       control: 'text',
@@ -121,28 +119,7 @@ export const PlaygroundBulletList = {
   args: {
     type: 'Unordered',
     textStyle: 'Body Large',
-    bold: 'True',
+    bold: true,
     label: 'Label'
-  },
-}
-
-// Chaque valeur ci-dessous change réellement le rendu ; les autres sont omises.
-// PlaygroundBulletList porte les args par défaut : elle tient lieu de story Default.
-
-export const Ordered = {
-  parameters: PlaygroundBulletList.parameters,
-  render: PlaygroundBulletList.render,
-  args: {
-    ...PlaygroundBulletList.args,
-    type: 'Ordered'
-  },
-}
-
-export const Bare = {
-  parameters: PlaygroundBulletList.parameters,
-  render: PlaygroundBulletList.render,
-  args: {
-    ...PlaygroundBulletList.args,
-    type: 'Bare'
   },
 }

@@ -62,15 +62,3 @@ export const PlaygroundInputTag = {
     label: 'Label'
   },
 }
-
-// Chaque valeur ci-dessous change réellement le rendu ; les autres sont omises.
-// PlaygroundInputTag porte les args par défaut : elle tient lieu de story Default.
-
-export const Disabled = {
-  parameters: PlaygroundInputTag.parameters,
-  render: PlaygroundInputTag.render,
-  args: {
-    ...PlaygroundInputTag.args,
-    state: 'Disabled'
-  },
-}

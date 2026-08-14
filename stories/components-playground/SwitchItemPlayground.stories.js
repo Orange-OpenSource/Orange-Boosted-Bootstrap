@@ -3,9 +3,6 @@
 // Docs: https://web.unified-design-system.orange.com/orange/docs/components/switch/
 
 const states = ['Enabled', 'Read only', 'Disabled']
-const selectedOptions = ['False', 'True']
-const errorOptions = ['True', 'False']
-const reverseOptions = ['False', 'True']
 
 // Propriétés Figma sans traduction dans le HTML : la valeur est figée et
 // aucun contrôle n'est exposé, changer la valeur ne changerait rien au rendu.
@@ -42,11 +39,11 @@ const stateMap = {
 }
 
 const renderSwitchItem = ({ state, selected, error, reverse, label, divider }) => {
-  const checkedAttr = selectedMap[selected] ?? ''
-  const invalidAttr = errorMap[error] ?? ''
+  const checkedAttr = selectedMap[(selected ? 'True' : 'False')] ?? ''
+  const invalidAttr = errorMap[(error ? 'True' : 'False')] ?? ''
   const itemClasses = [
     'switch-item',
-    reverseClasses[reverse],
+    reverseClasses[(reverse ? 'True' : 'False')],
     divider ? 'control-item-divider' : ''
   ].filter(Boolean).join(' ')
   const stateAttr = stateMap[state] ?? ''
@@ -69,16 +66,13 @@ export default {
       options: states,
     },
     selected: {
-      control: 'select',
-      options: selectedOptions,
+      control: 'boolean',
     },
     error: {
-      control: 'select',
-      options: errorOptions,
+      control: 'boolean',
     },
     reverse: {
-      control: 'select',
-      options: reverseOptions,
+      control: 'boolean',
     },
     label: {
       control: 'text',
@@ -121,49 +115,10 @@ export const PlaygroundSwitchItem = {
   },
   args: {
     state: 'Enabled',
-    selected: 'False',
-    error: 'False',
-    reverse: 'False',
+    selected: false,
+    error: false,
+    reverse: false,
     label: 'Label',
     divider: false
-  },
-}
-
-// Chaque valeur ci-dessous change réellement le rendu ; les autres sont omises.
-// PlaygroundSwitchItem porte les args par défaut : elle tient lieu de story Default.
-
-export const True = {
-  parameters: PlaygroundSwitchItem.parameters,
-  render: PlaygroundSwitchItem.render,
-  args: {
-    ...PlaygroundSwitchItem.args,
-    selected: 'True'
-  },
-}
-
-export const Disabled = {
-  parameters: PlaygroundSwitchItem.parameters,
-  render: PlaygroundSwitchItem.render,
-  args: {
-    ...PlaygroundSwitchItem.args,
-    state: 'Disabled'
-  },
-}
-
-export const ReadOnly = {
-  parameters: PlaygroundSwitchItem.parameters,
-  render: PlaygroundSwitchItem.render,
-  args: {
-    ...PlaygroundSwitchItem.args,
-    state: 'Read only'
-  },
-}
-
-export const Error = {
-  parameters: PlaygroundSwitchItem.parameters,
-  render: PlaygroundSwitchItem.render,
-  args: {
-    ...PlaygroundSwitchItem.args,
-    error: 'True'
   },
 }

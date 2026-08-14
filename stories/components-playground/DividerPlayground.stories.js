@@ -53,15 +53,3 @@ export const PlaygroundDivider = {
     orientation: 'Horizontal'
   },
 }
-
-// Chaque valeur ci-dessous change réellement le rendu ; les autres sont omises.
-// PlaygroundDivider porte les args par défaut : elle tient lieu de story Default.
-
-export const Vertical = {
-  parameters: PlaygroundDivider.parameters,
-  render: PlaygroundDivider.render,
-  args: {
-    ...PlaygroundDivider.args,
-    orientation: 'Vertical'
-  },
-}

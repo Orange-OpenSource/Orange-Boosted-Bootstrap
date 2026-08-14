@@ -93,33 +93,3 @@ export const PlaygroundBreadcrumb = {
     pageLabel: 'Current page'
   },
 }
-
-// Chaque valeur ci-dessous change réellement le rendu ; les autres sont omises.
-// PlaygroundBreadcrumb porte les args par défaut : elle tient lieu de story Default.
-
-export const N2 = {
-  parameters: PlaygroundBreadcrumb.parameters,
-  render: PlaygroundBreadcrumb.render,
-  args: {
-    ...PlaygroundBreadcrumb.args,
-    drilldown: 'N+2'
-  },
-}
-
-export const N3 = {
-  parameters: PlaygroundBreadcrumb.parameters,
-  render: PlaygroundBreadcrumb.render,
-  args: {
-    ...PlaygroundBreadcrumb.args,
-    drilldown: 'N+3'
-  },
-}
-
-export const N4 = {
-  parameters: PlaygroundBreadcrumb.parameters,
-  render: PlaygroundBreadcrumb.render,
-  args: {
-    ...PlaygroundBreadcrumb.args,
-    drilldown: 'N+4'
-  },
-}

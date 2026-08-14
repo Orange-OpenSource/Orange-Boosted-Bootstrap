@@ -5,10 +5,6 @@
 
 const inputStatuses = ['Empty', 'Filled']
 const states = ['Enabled', 'Read only', 'Disabled']
-const outlinedOptions = ['False', 'True']
-const errorOptions = ['False', 'True']
-const leadingIconOptions = ['False', 'True']
-const hiddenPasswordOptions = ['True', 'False']
 
 // Propriétés Figma sans traduction dans le HTML : la valeur est figée et
 // aucun contrôle n'est exposé, changer la valeur ne changerait rien au rendu.
@@ -57,14 +53,14 @@ const inputStatusMap = {
 const renderPasswordInput = ({ inputStatus, state, outlined, error, leadingIcon, hiddenPassword, label, placeholder }) => {
   const containerClasses = [
     'text-input-container',
-    outlinedClasses[outlined]
+    outlinedClasses[(outlined ? 'True' : 'False')]
   ].filter(Boolean).join(' ')
-  const fieldType = hiddenPasswordMap[hiddenPassword] ?? ''
-  const invalidAttr = errorMap[error] ?? ''
+  const fieldType = hiddenPasswordMap[(hiddenPassword ? 'True' : 'False')] ?? ''
+  const invalidAttr = errorMap[(error ? 'True' : 'False')] ?? ''
   const stateAttr = stateMap[state] ?? ''
   const valueAttr = inputStatusMap[inputStatus] ?? ''
 
-  if (leadingIcon === 'False') {
+  if (!leadingIcon) {
     return `<div class="text-input">
   <div class="${containerClasses}">
     <label for="passwordInput">${label}</label>
@@ -79,7 +75,7 @@ const renderPasswordInput = ({ inputStatus, state, outlined, error, leadingIcon,
 </div>`
   }
 
-  if (leadingIcon === 'True') {
+  if (leadingIcon) {
     return `<div class="text-input">
   <div class="${containerClasses}">
     <svg aria-hidden="true">
@@ -113,20 +109,16 @@ export default {
       options: states,
     },
     outlined: {
-      control: 'select',
-      options: outlinedOptions,
+      control: 'boolean',
     },
     error: {
-      control: 'select',
-      options: errorOptions,
+      control: 'boolean',
     },
     leadingIcon: {
-      control: 'select',
-      options: leadingIconOptions,
+      control: 'boolean',
     },
     hiddenPassword: {
-      control: 'select',
-      options: hiddenPasswordOptions,
+      control: 'boolean',
     },
     label: {
       control: 'text',
@@ -177,50 +169,11 @@ export const PlaygroundPasswordInput = {
   args: {
     inputStatus: 'Empty',
     state: 'Enabled',
-    outlined: 'False',
-    error: 'False',
-    leadingIcon: 'False',
-    hiddenPassword: 'True',
+    outlined: false,
+    error: false,
+    leadingIcon: false,
+    hiddenPassword: true,
     label: 'Password',
     placeholder: 'Minimum 8 characters'
-  },
-}
-
-// Chaque valeur ci-dessous change réellement le rendu ; les autres sont omises.
-// PlaygroundPasswordInput porte les args par défaut : elle tient lieu de story Default.
-
-export const Filled = {
-  parameters: PlaygroundPasswordInput.parameters,
-  render: PlaygroundPasswordInput.render,
-  args: {
-    ...PlaygroundPasswordInput.args,
-    inputStatus: 'Filled'
-  },
-}
-
-export const Disabled = {
-  parameters: PlaygroundPasswordInput.parameters,
-  render: PlaygroundPasswordInput.render,
-  args: {
-    ...PlaygroundPasswordInput.args,
-    state: 'Disabled'
-  },
-}
-
-export const ReadOnly = {
-  parameters: PlaygroundPasswordInput.parameters,
-  render: PlaygroundPasswordInput.render,
-  args: {
-    ...PlaygroundPasswordInput.args,
-    state: 'Read only'
-  },
-}
-
-export const Error = {
-  parameters: PlaygroundPasswordInput.parameters,
-  render: PlaygroundPasswordInput.render,
-  args: {
-    ...PlaygroundPasswordInput.args,
-    error: 'True'
   },
 }

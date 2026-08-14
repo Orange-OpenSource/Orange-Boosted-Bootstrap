@@ -3,10 +3,6 @@
 // Docs: https://web.unified-design-system.orange.com/orange/docs/components/radio-button/
 
 const states = ['Enabled', 'Read only', 'Disabled']
-const selectedOptions = ['False', 'True']
-const errorOptions = ['True', 'False']
-const outlinedOptions = ['False', 'True']
-const reverseOptions = ['False', 'True']
 
 // Propriétés Figma sans traduction dans le HTML : la valeur est figée et
 // aucun contrôle n'est exposé, changer la valeur ne changerait rien au rendu.
@@ -50,12 +46,12 @@ const stateMap = {
 }
 
 const renderRadioButtonItem = ({ state, selected, error, outlined, reverse, label, divider }) => {
-  const checkedAttr = selectedMap[selected] ?? ''
-  const invalidAttr = errorMap[error] ?? ''
+  const checkedAttr = selectedMap[(selected ? 'True' : 'False')] ?? ''
+  const invalidAttr = errorMap[(error ? 'True' : 'False')] ?? ''
   const itemClasses = [
     'radio-button-item',
-    reverseClasses[reverse],
-    outlinedClasses[outlined],
+    reverseClasses[(reverse ? 'True' : 'False')],
+    outlinedClasses[(outlined ? 'True' : 'False')],
     divider ? 'control-item-divider' : ''
   ].filter(Boolean).join(' ')
   const stateAttr = stateMap[state] ?? ''
@@ -78,20 +74,16 @@ export default {
       options: states,
     },
     selected: {
-      control: 'select',
-      options: selectedOptions,
+      control: 'boolean',
     },
     error: {
-      control: 'select',
-      options: errorOptions,
+      control: 'boolean',
     },
     outlined: {
-      control: 'select',
-      options: outlinedOptions,
+      control: 'boolean',
     },
     reverse: {
-      control: 'select',
-      options: reverseOptions,
+      control: 'boolean',
     },
     label: {
       control: 'text',
@@ -136,50 +128,11 @@ export const PlaygroundRadioButtonItem = {
   },
   args: {
     state: 'Enabled',
-    selected: 'False',
-    error: 'False',
-    outlined: 'False',
-    reverse: 'False',
+    selected: false,
+    error: false,
+    outlined: false,
+    reverse: false,
     label: 'Label',
     divider: false
-  },
-}
-
-// Chaque valeur ci-dessous change réellement le rendu ; les autres sont omises.
-// PlaygroundRadioButtonItem porte les args par défaut : elle tient lieu de story Default.
-
-export const True = {
-  parameters: PlaygroundRadioButtonItem.parameters,
-  render: PlaygroundRadioButtonItem.render,
-  args: {
-    ...PlaygroundRadioButtonItem.args,
-    selected: 'True'
-  },
-}
-
-export const Disabled = {
-  parameters: PlaygroundRadioButtonItem.parameters,
-  render: PlaygroundRadioButtonItem.render,
-  args: {
-    ...PlaygroundRadioButtonItem.args,
-    state: 'Disabled'
-  },
-}
-
-export const ReadOnly = {
-  parameters: PlaygroundRadioButtonItem.parameters,
-  render: PlaygroundRadioButtonItem.render,
-  args: {
-    ...PlaygroundRadioButtonItem.args,
-    state: 'Read only'
-  },
-}
-
-export const Error = {
-  parameters: PlaygroundRadioButtonItem.parameters,
-  render: PlaygroundRadioButtonItem.render,
-  args: {
-    ...PlaygroundRadioButtonItem.args,
-    error: 'True'
   },
 }

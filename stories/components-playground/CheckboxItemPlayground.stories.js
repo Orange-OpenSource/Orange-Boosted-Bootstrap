@@ -4,8 +4,6 @@
 
 const states = ['Enabled', 'Read only', 'Disabled']
 const selectionStatuses = ['Unselected', 'Selected']
-const errorOptions = ['True', 'False']
-const reverseOptions = ['False', 'True']
 
 // Propriétés Figma sans traduction dans le HTML : la valeur est figée et
 // aucun contrôle n'est exposé, changer la valeur ne changerait rien au rendu.
@@ -45,10 +43,10 @@ const stateMap = {
 
 const renderCheckboxItem = ({ state, selectionStatus, error, reverse, label, divider }) => {
   const checkedAttr = selectionStatusMap[selectionStatus] ?? ''
-  const invalidAttr = errorMap[error] ?? ''
+  const invalidAttr = errorMap[(error ? 'True' : 'False')] ?? ''
   const itemClasses = [
     'checkbox-item',
-    reverseClasses[reverse],
+    reverseClasses[(reverse ? 'True' : 'False')],
     divider ? 'control-item-divider' : ''
   ].filter(Boolean).join(' ')
   const stateAttr = stateMap[state] ?? ''
@@ -75,12 +73,10 @@ export default {
       options: selectionStatuses,
     },
     error: {
-      control: 'select',
-      options: errorOptions,
+      control: 'boolean',
     },
     reverse: {
-      control: 'select',
-      options: reverseOptions,
+      control: 'boolean',
     },
     label: {
       control: 'text',
@@ -124,48 +120,9 @@ export const PlaygroundCheckboxItem = {
   args: {
     state: 'Enabled',
     selectionStatus: 'Unselected',
-    error: 'False',
-    reverse: 'False',
+    error: false,
+    reverse: false,
     label: 'Label',
     divider: false
-  },
-}
-
-// Chaque valeur ci-dessous change réellement le rendu ; les autres sont omises.
-// PlaygroundCheckboxItem porte les args par défaut : elle tient lieu de story Default.
-
-export const Selected = {
-  parameters: PlaygroundCheckboxItem.parameters,
-  render: PlaygroundCheckboxItem.render,
-  args: {
-    ...PlaygroundCheckboxItem.args,
-    selectionStatus: 'Selected'
-  },
-}
-
-export const Disabled = {
-  parameters: PlaygroundCheckboxItem.parameters,
-  render: PlaygroundCheckboxItem.render,
-  args: {
-    ...PlaygroundCheckboxItem.args,
-    state: 'Disabled'
-  },
-}
-
-export const ReadOnly = {
-  parameters: PlaygroundCheckboxItem.parameters,
-  render: PlaygroundCheckboxItem.render,
-  args: {
-    ...PlaygroundCheckboxItem.args,
-    state: 'Read only'
-  },
-}
-
-export const Error = {
-  parameters: PlaygroundCheckboxItem.parameters,
-  render: PlaygroundCheckboxItem.render,
-  args: {
-    ...PlaygroundCheckboxItem.args,
-    error: 'True'
   },
 }

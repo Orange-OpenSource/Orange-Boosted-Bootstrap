@@ -7,7 +7,6 @@ const statuses = ['Neutral', 'Accent', 'Positive', 'Info', 'Warning', 'Negative'
 const layouts = ['Text only', 'Text + Bullet', 'Text + Icon']
 const sizes = ['Default', 'Small']
 const states = ['Enabled', 'Disabled']
-const roundedCornerOptions = ['False', 'True']
 
 const statusClasses = {
   'Neutral': '',
@@ -46,7 +45,7 @@ const renderTag = ({ appearance, status, layout, size, state, roundedCorner, lab
     statusClasses[status],
     appearanceClasses[appearance],
     sizeClasses[size],
-    roundedCornerClasses[roundedCorner],
+    roundedCornerClasses[(roundedCorner ? 'True' : 'False')],
     stateClasses[state]
   ].filter(Boolean).join(' ')
 
@@ -96,8 +95,7 @@ export default {
       options: states,
     },
     roundedCorner: {
-      control: 'select',
-      options: roundedCornerOptions,
+      control: 'boolean',
     },
     label: {
       control: 'text',
@@ -143,64 +141,7 @@ export const PlaygroundTag = {
     layout: 'Text only',
     size: 'Default',
     state: 'Enabled',
-    roundedCorner: 'True',
+    roundedCorner: true,
     label: 'Label'
-  },
-}
-
-// Chaque valeur ci-dessous change réellement le rendu ; les autres sont omises.
-// PlaygroundTag porte les args par défaut : elle tient lieu de story Default.
-
-export const Accent = {
-  parameters: PlaygroundTag.parameters,
-  render: PlaygroundTag.render,
-  args: {
-    ...PlaygroundTag.args,
-    status: 'Accent'
-  },
-}
-
-export const Positive = {
-  parameters: PlaygroundTag.parameters,
-  render: PlaygroundTag.render,
-  args: {
-    ...PlaygroundTag.args,
-    status: 'Positive'
-  },
-}
-
-export const Info = {
-  parameters: PlaygroundTag.parameters,
-  render: PlaygroundTag.render,
-  args: {
-    ...PlaygroundTag.args,
-    status: 'Info'
-  },
-}
-
-export const Warning = {
-  parameters: PlaygroundTag.parameters,
-  render: PlaygroundTag.render,
-  args: {
-    ...PlaygroundTag.args,
-    status: 'Warning'
-  },
-}
-
-export const Negative = {
-  parameters: PlaygroundTag.parameters,
-  render: PlaygroundTag.render,
-  args: {
-    ...PlaygroundTag.args,
-    status: 'Negative'
-  },
-}
-
-export const Disabled = {
-  parameters: PlaygroundTag.parameters,
-  render: PlaygroundTag.render,
-  args: {
-    ...PlaygroundTag.args,
-    state: 'Disabled'
   },
 }
