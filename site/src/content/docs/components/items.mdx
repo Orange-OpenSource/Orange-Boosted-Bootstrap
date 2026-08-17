@@ -297,7 +297,7 @@ These variants can be used in all types of items.
 
 The main container `.item-content` of an item can contain up to 3 elements. They always appear in the following order:
 1. [Leading container](#leading-container) using `.item-leading-container` (optional)
-2. [Text container](#texts) using `.item-text-container` (required)
+2. [Text container](#text-container) using `.item-text-container` (required)
 3. [Trailing container](#trailing-container) using `.item-trailing-container` (optional)
 
 #### Leading container
@@ -397,7 +397,7 @@ You can navigate through the different assets using the tabs below.
   </AssetsTab>
 </AssetsNavTab>
 
-#### Texts
+#### Text container
 
 There are 4 text elements that are meant to be used in the `.item-text-container`.
 
@@ -446,7 +446,7 @@ Optionally, a slot can be added at the end of the text container using `.item-sl
       <div class="item-content">
         <div class="item-text-container">
           <p class="item-overline">Overline</p>
-          <div class="item-slot"><p class="tag">Label</p></div>
+          <div class="item-slot"><p class="tag">Slot - Label</p></div>
           <p class="item-extra-label">Extra label</p>
           <p class="item-description">Description</p>
         </div>
@@ -660,7 +660,7 @@ You can navigate through the different assets using the tabs below.
 
 All the slots are optional, but if one is used, it should be indicated via `.item-slot` on the slot container.
 
-This component can contain many slots that can be used to add custom content. The main slots are located in the [leading container](#leading-container), the [text container](#texts), and the [trailing container](#trailing-container). The slots are intended to be used for custom content that is not covered by the other elements of the component. We can add another slot outside of the `.item-content` container as well.
+This component can contain many slots that can be used to add custom content. The main slots are located in the [leading container](#leading-container), the [text container](#text-container), and the [trailing container](#trailing-container). The slots are intended to be used for custom content that is not covered by the other elements of the component. We can add another slot outside of the `.item-content` container as well.
 
 <Callout type="warning" title="Small item">
   The slots shouldn't be used in a [small item](#sizes).
@@ -668,7 +668,7 @@ This component can contain many slots that can be used to add custom content. Th
 
 Here is a small summary of the slots that can be used in an item:
 * [Leading container](#leading-container) using `.item-slot`
-* [Text container](#texts) using `.item-slot`
+* [Text container](#text-container) using `.item-slot`
 * [Trailing container](#trailing-container) using `.item-slot`
 * A slot outside of the `.item-content` container, direct child of `.item-container` using `.item-slot`
 
@@ -953,7 +953,7 @@ By default every item comes with a default size. The size can be adapted using `
 
   * The assets within the [leading container](#leading-container) and the [trailing container](#trailing-container) not being components shouldn't use any size classes
   * There shouldn't be any [slot](#slots) in the item
-  * The [text container](#texts) should only have the label, or description inside and not the overline, or extra label
+  * The [text container](#text-container) should only have the label, or description inside and not the overline, or extra label
 </Callout>
 
 <Example buttonLabel="items small" class="d-flex flex-column gap-medium" code={`<!-- Card -->
