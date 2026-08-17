@@ -7,6 +7,13 @@ const layouts = ['Next', 'Previous', 'Text only', 'Text + icon', 'Visited']
 const sizes = ['Default', 'Small']
 const states = ['Enabled', 'Disabled']
 
+// Storybook injecte toujours une option vide « Choose option… » dans un
+// contrôle `select` et ne permet pas de la retirer. La sélectionner remettait
+// l'arg à `undefined` et le rendu tombait dans la branche « combinaison non
+// couverte » → canvas vide. On retombe désormais sur la valeur par défaut.
+const fallback = { layout: 'Next', size: 'Default', state: 'Enabled' }
+const pick = (value, allowed, fallbackValue) => allowed.includes(value) ? value : fallbackValue
+
 // Le rendu inline les icônes : elles s'affichent sans dépendre du sprite
 // hébergé. Le panneau Code montre la référence au sprite, qui est ce que
 // l'on écrit dans une vraie page.
@@ -21,6 +28,16 @@ const spriteIcons = {
 // Propriétés Figma sans traduction dans le HTML : la valeur est figée et
 // aucun contrôle n'est exposé, changer la valeur ne changerait rien au rendu.
 const density = 'Default'
+
+// Chaque Layout n'est qu'une combinaison de classes différente — une table
+// suffit, inutile de dupliquer le gabarit <a> cinq fois.
+const layoutClasses = {
+  'Text only': ['link'],
+  'Visited': ['link'],
+  'Text + icon': ['link', 'icon-link'],
+  'Next': ['link', 'link-chevron'],
+  'Previous': ['link', 'link-chevron', 'back']
+}
 
 const sizeClasses = {
   'Default': '',
@@ -37,65 +54,32 @@ const stateMap = {
 }
 
 const renderLink = ({ layout, size, state, label }, icons = inlineIcons) => {
-  if (layout === 'Text only') {
-    const classes = [
-    'link',
-    sizeClasses[size]
-  ].filter(Boolean).join(' ')
-    const disabledAttr = stateMap[state] ?? ''
+  const currentLayout = pick(layout, layouts, fallback.layout)
+  const currentSize = pick(size, sizes, fallback.size)
+  const currentState = pick(state, states, fallback.state)
 
-    return `<a class="${classes}"${disabledAttr}>${label}</a>`
-  }
-
-  if (layout === 'Visited') {
-    const classes = [
-    'link',
-    sizeClasses[size]
+  const classes = [
+    ...layoutClasses[currentLayout],
+    sizeClasses[currentSize]
   ].filter(Boolean).join(' ')
 
+  if (currentLayout === 'Visited') {
+    // L'état visité vient de la pseudo-classe CSS, pas d'une classe : le
+    // markup est celui de « Text only » et State ne s'y applique pas.
     return `<!-- "Visited" is rendered by the CSS :visited pseudo-class — same markup as Text only -->
 <a class="${classes}" href="#">${label}</a>`
   }
 
-  if (layout === 'Text + icon') {
-    const classes = [
-    'link',
-    'icon-link',
-    sizeClasses[size]
-  ].filter(Boolean).join(' ')
-    const disabledAttr = stateMap[state] ?? ''
+  const attrs = stateMap[currentState] ?? ''
 
-    return `<a class="${classes}"${disabledAttr}>
+  if (currentLayout === 'Text + icon') {
+    return `<a class="${classes}"${attrs}>
   ${icons.heartEmpty}
   ${label}
 </a>`
   }
 
-  if (layout === 'Next') {
-    const classes = [
-    'link',
-    'link-chevron',
-    sizeClasses[size]
-  ].filter(Boolean).join(' ')
-    const disabledAttr = stateMap[state] ?? ''
-
-    return `<a class="${classes}"${disabledAttr}>${label}</a>`
-  }
-
-  if (layout === 'Previous') {
-    const classes = [
-    'link',
-    'link-chevron',
-    'back',
-    sizeClasses[size]
-  ].filter(Boolean).join(' ')
-    const disabledAttr = stateMap[state] ?? ''
-
-    return `<a class="${classes}"${disabledAttr}>${label}</a>`
-  }
-
-  // Le mapping ne couvre pas cette combinaison.
-  return ''
+  return `<a class="${classes}"${attrs}>${label}</a>`
 }
 
 export default {
@@ -104,14 +88,17 @@ export default {
     layout: {
       control: 'select',
       options: layouts,
+      description: '« Choose option… » retombe sur ' + fallback.layout + '.'
     },
     size: {
       control: 'select',
       options: sizes,
+      description: '« Choose option… » retombe sur ' + fallback.size + '.'
     },
     state: {
       control: 'select',
       options: states,
+      description: '« Choose option… » retombe sur ' + fallback.state + '.'
     },
     label: {
       control: 'text',
@@ -124,27 +111,11 @@ export const PlaygroundLink = {
     docs: {
       codePanel: true,
       source: {
-        transform: (_src, context) => {
-          const { layout, size, state, label } = context.args
-
-          return renderLink({
-            layout,
-            size,
-            state,
-            label,
-          }, spriteIcons)
-        },
+        transform: (_src, context) => renderLink(context.args, spriteIcons),
       },
     },
   },
-  render: ({ layout, size, state, label }) => {
-    return renderLink({
-      layout,
-      size,
-      state,
-      label,
-    })
-  },
+  render: args => renderLink(args),
   args: {
     layout: 'Next',
     size: 'Default',
