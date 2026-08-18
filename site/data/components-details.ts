@@ -19,6 +19,13 @@ export const componentsDetails: ComponentCardData[] = [
       </div>`
   },
   {
+    name: 'Assistant button',
+    slug: 'assistant-button',
+    link: 'buttons#assistant-button',
+    category: 'Assistant',
+    snippet: `<button type="button" class="btn btn-assistant">Label</button>`
+  },
+  {
     name: 'Badge',
     link: 'badges#badge',
     category: 'Indicator',

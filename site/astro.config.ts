@@ -32,8 +32,8 @@ export default defineConfig({
   },
   integrations: [oudsWeb()],
   markdown: {
-    smartypants: false,
     processor: unified({
+      smartypants: false,
       rehypePlugins: [
         rehypeHeadingIds,
         rehypeCustomHeaderSlug,
