@@ -7540,6 +7540,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .navbar-nav .nav-link:hover {
   z-index: 1;
 }
+.navbar-nav .nav-link:active {
+  color: var(--bs-navbar-active-color);
+}
 @media (max-width: 1023.98px) {
   .navbar-nav .nav-link {
     outline-offset: -3px;
