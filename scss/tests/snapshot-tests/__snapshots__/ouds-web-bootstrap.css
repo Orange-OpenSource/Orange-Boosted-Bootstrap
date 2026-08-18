@@ -12029,7 +12029,11 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .item-container > .item-slot {
   width: calc(100% - 32px);
   min-height: 28px;
-  margin: 0 16px 16px;
+  margin: 0 calc(16px - var(--bs-list-item-border-width, 0px)) calc(16px - var(--bs-list-item-border-width, 1px));
+}
+
+.item-container:has(> .item-slot) .item-content {
+  padding-bottom: var(--bs-list-item-padding-bottom, 12px);
 }
 
 .item-text-container .item-slot {

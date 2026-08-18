@@ -995,7 +995,38 @@ By default every item comes with a default size. The size can be adapted using `
 
 By default all items are vertically centered. You can change the alignment of the content using `.item-top` by setting it on the `.item` or `.item-list`.
 
-<Example buttonLabel="top alignment item" class="d-flex flex-column gap-medium" code={`<div class="item item-navigation item-top">
+<Example buttonLabel="top alignment items" class="d-flex flex-column gap-medium" code={`<div class="item item-navigation item-top">
+    <a href="#" class="item-container item-interactive">
+      <div class="item-content">
+        <div class="item-leading-container">
+          <svg class="w-100 h-100" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+          </svg>
+        </div>
+        <div class="item-text-container">
+          <span class="item-overline text-status-negative">No credits</span>
+          <span class="item-label">Your favorite networks</span>
+          <span class="item-extra-label">Registered networks</span>
+          <span class="item-description">See and manage your favorite networks from this page</span>
+        </div>
+        <div class="item-trailing-container">
+          <span class="badge badge-count badge-large" id="item-01-badge-count">1<span class="visually-hidden">error</span></span>
+        </div>
+      </div>
+      <div class="item-slot item-slot-focusable">
+        <div class="alert alert-message alert-negative">
+          <div class="alert-icon"><p class="visually-hidden">Negative alert</p></div>
+          <div class="alert-container">
+            <div class="alert-text-container">
+              <p class="alert-label">You currently have no plan for your favorite networks</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="item item-top">
     <div class="item-container">
       <div class="item-content">
         <div class="item-leading-container">
@@ -1004,16 +1035,16 @@ By default all items are vertically centered. You can change the alignment of th
           </svg>
         </div>
         <div class="item-text-container">
-          <p class="item-overline text-status-negative" id="item-01-overline">No credits</p>
-          <a href="#" class="item-label item-interactive" aria-describedby="item-01-extra-label item-01-description item-01-badge-count item-01-overline">Your favorite networks</a>
-          <p class="item-extra-label" id="item-01-extra-label">Registered networks</p>
-          <p class="item-description" id="item-01-description">See and manage your favorite networks from this page</p>
+          <p class="item-overline text-status-negative">No credits</p>
+          <p class="item-label">Your favorite networks</p>
+          <p class="item-extra-label">Registered networks</p>
+          <p class="item-description">See and manage your favorite networks from this page</p>
         </div>
         <div class="item-trailing-container">
-          <p class="badge badge-count badge-large" id="item-01-badge-count">1<span class="visually-hidden">error</span></p>
+          <p class="badge badge-count badge-large">1<span class="visually-hidden">error</span></p>
         </div>
       </div>
-      <div class="item-slot item-slot-focusable">
+      <div class="item-slot">
         <div class="alert alert-message alert-negative">
           <div class="alert-icon"><p class="visually-hidden">Negative alert</p></div>
           <div class="alert-container">
@@ -1130,4 +1161,40 @@ Optionally, the `<a>` element can wrap the entire `.item-container` instead of j
         </div>
       </div>
     </a>
+  </div>`} />
+
+### Focusable slot
+
+`.item-slot-focusable` can be added to the slot or the interactive element to be able to interact with it.
+
+<Callout type="negative">
+  The interactive slot should be avoided inside the navigation item as much as possible.
+</Callout>
+
+<Example buttonLabel="navigation card item with focusable slot" class="d-flex flex-column gap-medium" code={`<div class="item item-navigation">
+    <div class="item-container">
+      <div class="item-content">
+        <div class="item-leading-container">
+          <svg class="w-100 h-100" aria-hidden="true">
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+          </svg>
+        </div>
+        <div class="item-text-container">
+          <a href="#" class="item-label item-interactive">Your favorite networks</a>
+        </div>
+      </div>
+      <div class="item-slot item-slot-focusable">
+        <div class="alert alert-message alert-negative">
+          <div class="alert-icon"><p class="visually-hidden">Negative alert</p></div>
+          <div class="alert-container">
+            <div class="alert-text-container">
+              <h3 class="alert-label">You currently have no plan for your favorite networks</h3>
+            </div>
+          </div>
+          <div class="alert-action-container">
+            <a href="#" class="link">Apply to a plan</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>`} />

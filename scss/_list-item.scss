@@ -45,7 +45,11 @@
 .item-container > .item-slot {
   width: calc(100% - $ouds-list-item-space-padding-inline * 2);
   min-height: $ouds-list-item-size-asset-medium;
-  margin: 0 $ouds-list-item-space-padding-inline $ouds-list-item-space-padding-block-bottom-slot-list-item-container;
+  margin: 0 calc($ouds-list-item-space-padding-inline - var(--#{$prefix}list-item-border-width, 0px)) calc($ouds-list-item-space-padding-block-bottom-slot-list-item-container - var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default));
+}
+
+.item-container:has(> .item-slot) .item-content {
+  padding-bottom: var(--#{$prefix}list-item-padding-bottom, $ouds-list-item-space-padding-block-default);
 }
 
 .item-text-container .item-slot {
