@@ -32,7 +32,7 @@ const toCount = (value) => {
   return Number.isNaN(parsed) ? 0 : Math.max(0, parsed)
 }
 
-const renderBadgeCount = ({ status, size, state, number }) => {
+const renderBadgeCount = ({ status, size, state, number, hiddenLabel }) => {
   const count = toCount(number)
   const classes = [
     'badge',
@@ -42,7 +42,7 @@ const renderBadgeCount = ({ status, size, state, number }) => {
     stateClasses[state]
   ].filter(Boolean).join(' ')
 
-  return `<p class="${classes}">${count}<span class="visually-hidden">error</span></p>`
+  return `<p class="${classes}">${count}<span class="visually-hidden">${hiddenLabel}</span></p>`
 }
 
 export default {
@@ -62,6 +62,11 @@ export default {
     },
     number: {
       control: { type: 'number', min: 0, step: 1 },
+    },
+    hiddenLabel: {
+      name: 'Hidden label',
+      control: 'text',
+      description: 'Carried by the `visually-hidden` span, next to the visible count: it says what the number counts.',
     }
   }
 }
@@ -72,30 +77,33 @@ export const PlaygroundBadgeCount = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { status, size, state, number } = context.args
+          const { status, size, state, number, hiddenLabel } = context.args
 
           return renderBadgeCount({
             status,
             size,
             state,
             number,
+            hiddenLabel,
           })
         },
       },
     },
   },
-  render: ({ status, size, state, number }) => {
+  render: ({ status, size, state, number, hiddenLabel }) => {
     return renderBadgeCount({
       status,
       size,
       state,
       number,
+      hiddenLabel,
     })
   },
   args: {
     status: 'Neutral',
     size: 'Medium',
     state: 'Enabled',
-    number: 1
+    number: 1,
+    hiddenLabel: 'error'
   },
 }

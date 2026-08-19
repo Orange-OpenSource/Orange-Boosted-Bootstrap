@@ -6,19 +6,18 @@ const states = ['Enabled', 'Disabled']
 
 const stateMap = {
   'Enabled': '',
-  'Hover': '',
-  'Pressed-Touch': '',
-  'Focus': '',
-  'Skeleton': '',
+  // Hover, Pressed-Touch, Focus and Skeleton are Figma states with no class in
+  // front of them: they are not values of the control, so they are not entries
+  // here.
   'Disabled': ' disabled'
 }
 
-const renderInputTag = ({ state, label }) => {
+const renderInputTag = ({ state, label, hiddenLabel }) => {
   const disabledAttr = stateMap[state] ?? ''
 
   return `<button type="button" class="tag tag-input"${disabledAttr}>
   ${label}
-  <span class="visually-hidden">Remove this tag</span>
+  <span class="visually-hidden">${hiddenLabel}</span>
 </button>`
 }
 
@@ -31,6 +30,11 @@ export default {
     },
     label: {
       control: 'text',
+    },
+    hiddenLabel: {
+      name: 'Hidden label (remove button)',
+      control: 'text',
+      description: 'Carried by the `visually-hidden` span: it announces what the button does. The visible text is `label`.',
     }
   }
 }
@@ -41,24 +45,27 @@ export const PlaygroundInputTag = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { state, label } = context.args
+          const { state, label, hiddenLabel } = context.args
 
           return renderInputTag({
             state,
             label,
+            hiddenLabel,
           })
         },
       },
     },
   },
-  render: ({ state, label }) => {
+  render: ({ state, label, hiddenLabel }) => {
     return renderInputTag({
       state,
       label,
+      hiddenLabel,
     })
   },
   args: {
     state: 'Enabled',
-    label: 'Label'
+    label: 'Label',
+    hiddenLabel: 'Remove this tag'
   },
 }

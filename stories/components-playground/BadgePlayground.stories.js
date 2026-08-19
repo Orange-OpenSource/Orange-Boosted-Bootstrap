@@ -27,7 +27,7 @@ const stateClasses = {
   'Disabled': 'disabled'
 }
 
-const renderBadge = ({ status, size, state }) => {
+const renderBadge = ({ status, size, state, hiddenLabel }) => {
   const classes = [
     'badge',
     statusClasses[status],
@@ -35,7 +35,7 @@ const renderBadge = ({ status, size, state }) => {
     stateClasses[state]
   ].filter(Boolean).join(' ')
 
-  return `<p class="${classes}"><span class="visually-hidden">Beware</span></p>`
+  return `<p class="${classes}"><span class="visually-hidden">${hiddenLabel}</span></p>`
 }
 
 export default {
@@ -52,6 +52,11 @@ export default {
     state: {
       control: 'select',
       options: states,
+    },
+    hiddenLabel: {
+      name: 'Hidden label',
+      control: 'text',
+      description: 'Carried by the `visually-hidden` span: the badge has no visible text, this is all a screen reader announces.',
     }
   }
 }
@@ -62,27 +67,30 @@ export const PlaygroundBadge = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { status, size, state } = context.args
+          const { status, size, state, hiddenLabel } = context.args
 
           return renderBadge({
             status,
             size,
             state,
+            hiddenLabel,
           })
         },
       },
     },
   },
-  render: ({ status, size, state }) => {
+  render: ({ status, size, state, hiddenLabel }) => {
     return renderBadge({
       status,
       size,
       state,
+      hiddenLabel,
     })
   },
   args: {
     status: 'Neutral',
     size: 'Xsmall',
-    state: 'Enabled'
+    state: 'Enabled',
+    hiddenLabel: 'Beware'
   },
 }
