@@ -260,10 +260,35 @@ const actionDisabled = {
   'Loading determinate': ' disabled'
 }
 
+
+// Retention of what is typed in the canvas. A story is re-rendered from its args
+// on every control change, so a value typed straight into the field would be
+// lost — the most concrete complaint on this component. The field therefore
+// writes each keystroke into a global, and the preview reads it back. Changing
+// the `Value` control wins: it is an explicit intent, the typing is not.
+//
+// `transform` gets none of this: the snippet stays plain OUDS markup. Same
+// split as the icons.
+const store = () => {
+  globalThis.__oudsTyped = globalThis.__oudsTyped || {}
+
+  return globalThis.__oudsTyped
+}
+
+const keptValue = (args, key) => {
+  const kept = store()
+  const changed = kept[`${key}Arg`] !== args.inputText
+  kept[`${key}Arg`] = args.inputText
+
+  return changed ? args.inputText : (kept[key] ?? args.inputText)
+}
+
+const retainAttr = (key) => ` oninput="(globalThis.__oudsTyped = globalThis.__oudsTyped || {})['${key}'] = this.value"`
+
 const renderPasswordInput = ({
   label, inputText, placeholder, helperText, error, errorMessage, required, prefix,
   outlined, rounded, maxWidth, state, loadingTime, hiddenPassword, leadingIcon, hiddenLabel
-}, icons = inlineIcons) => {
+}, icons = inlineIcons, retain = '') => {
   const safeState = orElse(state, states)
   const hiddenKey = hiddenPassword ? 'True' : 'False'
 
@@ -278,7 +303,7 @@ const renderPasswordInput = ({
     stateFieldClasses[safeState] ?? ''
   ].filter(Boolean).join(' ')
 
-  const field = `<input type="${fieldTypes[hiddenKey]}" class="${fieldClasses}" id="passwordInput" placeholder="${placeholderOf(placeholder)}"${valueAttr(inputText)}${errorMap[(error ? 'True' : 'False')]}${requiredMap[(required ? 'True' : 'False')]}${describedBy ? ` aria-describedby="${describedBy}"` : ''}${stateFieldAttrs[safeState] ?? ''}>`
+  const field = `<input type="${fieldTypes[hiddenKey]}" class="${fieldClasses}" id="passwordInput" placeholder="${placeholderOf(placeholder)}"${valueAttr(inputText)}${errorMap[(error ? 'True' : 'False')]}${requiredMap[(required ? 'True' : 'False')]}${describedBy ? ` aria-describedby="${describedBy}"` : ''}${stateFieldAttrs[safeState] ?? ''}${retain}>`
 
   const containerClasses = [
     'text-input-container',
@@ -319,6 +344,16 @@ const renderPasswordInput = ({
 ${rootLines.join('\n')}
 </div>`)
 }
+
+// Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
+// the component itself: every child of that container renders as a skeleton, and
+// `inert` takes it out of the tab order and of the accessibility tree. Same
+// markup for every component of the design system.
+const skeletonWrapper = (markup, skeleton) => (skeleton
+  ? `<div aria-busy="true" inert>
+${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
+</div>`
+  : markup)
 
 export default {
   title: 'Playground/Password input',
@@ -398,6 +433,10 @@ export default {
       name: 'Hidden label (reveal button)',
       control: 'text',
       description: 'Carried by the `visually-hidden` span of the reveal button. Empty: it follows the state, "Show password" or "Hide password".',
+    },
+    skeleton: {
+      control: 'boolean',
+      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -418,13 +457,17 @@ export const PlaygroundPasswordInput = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          return renderPasswordInput(pick(context.args), withCustomIcons(spriteIcons, context.args))
+          return skeletonWrapper(renderPasswordInput(pick(context.args), withCustomIcons(spriteIcons, context.args)), context.args.skeleton)
         },
       },
     },
   },
   render: (args) => {
-    return renderPasswordInput(pick(args), withCustomIcons(inlineIcons, args))
+    return skeletonWrapper(renderPasswordInput(
+      { ...pick(args), inputText: keptValue(args, 'passwordInput') },
+      withCustomIcons(inlineIcons, args),
+      retainAttr('passwordInput')
+    ), args.skeleton)
   },
   args: {
     label: 'Password',
@@ -443,6 +486,7 @@ export const PlaygroundPasswordInput = {
     loadingTime: '5s',
     leadingIcon: false,
     icon: '',
-    hiddenLabel: ''
+    hiddenLabel: '',
+    skeleton: false
   },
 }

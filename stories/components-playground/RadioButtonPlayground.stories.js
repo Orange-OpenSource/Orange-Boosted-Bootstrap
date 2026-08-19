@@ -38,6 +38,16 @@ const renderRadioButton = ({ state, selected, error, hiddenLabel }) => {
 </label>`
 }
 
+// Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
+// the component itself: every child of that container renders as a skeleton, and
+// `inert` takes it out of the tab order and of the accessibility tree. Same
+// markup for every component of the design system.
+const skeletonWrapper = (markup, skeleton) => (skeleton
+  ? `<div aria-busy="true" inert>
+${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
+</div>`
+  : markup)
+
 export default {
   title: 'Playground/Radio button',
   argTypes: {
@@ -55,6 +65,10 @@ export default {
       name: 'Hidden label',
       control: 'text',
       description: 'Carried by the `visually-hidden` span: a standalone radio button has no visible label, this is all a screen reader announces.',
+    },
+    skeleton: {
+      control: 'boolean',
+      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -65,30 +79,31 @@ export const PlaygroundRadioButton = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { state, selected, error, hiddenLabel } = context.args
+          const { state, selected, error, hiddenLabel, skeleton } = context.args
 
-          return renderRadioButton({
+          return skeletonWrapper(renderRadioButton({
             state,
             selected,
             error,
             hiddenLabel,
-          })
+          }), skeleton)
         },
       },
     },
   },
-  render: ({ state, selected, error, hiddenLabel }) => {
-    return renderRadioButton({
+  render: ({ state, selected, error, hiddenLabel, skeleton }) => {
+    return skeletonWrapper(renderRadioButton({
       state,
       selected,
       error,
       hiddenLabel,
-    })
+    }), skeleton)
   },
   args: {
     state: 'Enabled',
     selected: false,
     error: false,
-    hiddenLabel: 'Default standalone radio button'
+    hiddenLabel: 'Default standalone radio button',
+    skeleton: false
   },
 }

@@ -43,6 +43,18 @@ const defaultItems = [
   { label: 'Option 3', extraLabel: '', description: '', selected: false }
 ]
 
+// Three options, three sets of controls. A single `object` control would have
+// been shorter to write, but Storybook renders it as a raw JSON editor: nobody
+// wants to type a label into that. Flat controls are what both surfaces show.
+const OPTIONS = [1, 2, 3]
+
+const itemsOf = (args) => OPTIONS.slice(0, toCount(args.count)).map((index) => ({
+  label: args[`option${index}Label`],
+  extraLabel: args[`option${index}ExtraLabel`],
+  description: args[`option${index}Description`],
+  selected: args[`option${index}Selected`]
+}))
+
 const itemAt = (items, index) => {
   const item = Array.isArray(items) ? items[index] : undefined
   const fallback = defaultItems[index] ?? { label: `Option ${index + 1}`, extraLabel: '', description: '', selected: false }
@@ -303,6 +315,16 @@ ${[...legendLine, groupWrappers[shape](rendered.join('\n')), ...errorLine].join(
 </fieldset>`
 }
 
+// Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
+// the component itself: every child of that container renders as a skeleton, and
+// `inert` takes it out of the tab order and of the accessibility tree. Same
+// markup for every component of the design system.
+const skeletonWrapper = (markup, skeleton) => (skeleton
+  ? `<div aria-busy="true" inert>
+${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
+</div>`
+  : markup)
+
 export default {
   title: 'Playground/Radio button item',
   argTypes: {
@@ -311,10 +333,59 @@ export default {
       control: { type: 'number', min: 1, max: 8, step: 1 },
       description: 'How many radio buttons in the group. One alone cannot be unselected: the exclusive choice only exists from two, and it is the shared `name` that makes it.',
     },
-    items: {
-      name: 'Items detail',
-      control: 'object',
-      description: 'One entry per item: `label`, `extraLabel`, `description` and `selected`. Entries left out fall back on `Option N`.',
+    option1Label: {
+      name: 'Option 1 — label',
+      control: 'text',
+    },
+    option1ExtraLabel: {
+      name: 'Option 1 — extra label',
+      control: 'text',
+      description: 'Rendered as `<span class="radio-button-extra-label">`, after the label. Empty: none.',
+    },
+    option1Description: {
+      name: 'Option 1 — description',
+      control: 'text',
+      description: 'Rendered as `<p class="control-item-description">`, referenced by `aria-describedby`. Empty: none.',
+    },
+    option1Selected: {
+      name: 'Option 1 — selected',
+      control: 'boolean',
+    },
+    option2Label: {
+      name: 'Option 2 — label',
+      control: 'text',
+    },
+    option2ExtraLabel: {
+      name: 'Option 2 — extra label',
+      control: 'text',
+      description: 'Rendered as `<span class="radio-button-extra-label">`, after the label. Empty: none.',
+    },
+    option2Description: {
+      name: 'Option 2 — description',
+      control: 'text',
+      description: 'Rendered as `<p class="control-item-description">`, referenced by `aria-describedby`. Empty: none.',
+    },
+    option2Selected: {
+      name: 'Option 2 — selected',
+      control: 'boolean',
+    },
+    option3Label: {
+      name: 'Option 3 — label',
+      control: 'text',
+    },
+    option3ExtraLabel: {
+      name: 'Option 3 — extra label',
+      control: 'text',
+      description: 'Rendered as `<span class="radio-button-extra-label">`, after the label. Empty: none.',
+    },
+    option3Description: {
+      name: 'Option 3 — description',
+      control: 'text',
+      description: 'Rendered as `<p class="control-item-description">`, referenced by `aria-describedby`. Empty: none.',
+    },
+    option3Selected: {
+      name: 'Option 3 — selected',
+      control: 'boolean',
     },
     legend: {
       control: 'text',
@@ -359,6 +430,10 @@ export default {
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Rendered on every item of the group. Empty: the design system icon.',
       if: { arg: 'showIcon', truthy: true },
+    },
+    skeleton: {
+      control: 'boolean',
+      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -370,13 +445,13 @@ export const PlaygroundRadioButtonItem = {
       source: {
         transform: (_src, context) => {
           const {
-            count, items, legend, state, error, errorMessage, required, reverse,
-            outlined, divider, maxWidth, showIcon, icon
+            count, legend, state, error, errorMessage, required, reverse,
+            outlined, divider, maxWidth, showIcon, icon, skeleton
           } = context.args
 
-          return renderRadioButtonItem({
+          return skeletonWrapper(renderRadioButtonItem({
             count,
-            items,
+            items: itemsOf(context.args),
             legend,
             state,
             error,
@@ -387,15 +462,16 @@ export const PlaygroundRadioButtonItem = {
             divider,
             maxWidth,
             showIcon,
-          }, resolveIcon(icon, spriteIcon))
+          }, resolveIcon(icon, spriteIcon)), skeleton)
         },
       },
     },
   },
-  render: ({ count, items, legend, state, error, errorMessage, required, reverse, outlined, divider, maxWidth, showIcon, icon }) => {
-    return renderRadioButtonItem({
+  render: (args) => {
+    const { count, legend, state, error, errorMessage, required, reverse, outlined, divider, maxWidth, showIcon, icon, skeleton } = args
+    return skeletonWrapper(renderRadioButtonItem({
       count,
-      items,
+      items: itemsOf(args),
       legend,
       state,
       error,
@@ -406,11 +482,22 @@ export const PlaygroundRadioButtonItem = {
       divider,
       maxWidth,
       showIcon,
-    }, resolveIcon(icon, inlineIcon(defaultIconPath)))
+    }, resolveIcon(icon, inlineIcon(defaultIconPath))), skeleton)
   },
   args: {
     count: 3,
-    items: defaultItems,
+    option1Label: 'Option 1',
+    option1ExtraLabel: 'Extra label',
+    option1Description: 'Description text',
+    option1Selected: true,
+    option2Label: 'Option 2',
+    option2ExtraLabel: '',
+    option2Description: 'Description text',
+    option2Selected: false,
+    option3Label: 'Option 3',
+    option3ExtraLabel: '',
+    option3Description: '',
+    option3Selected: false,
     legend: 'Radio buttons group',
     state: 'Enabled',
     required: false,
@@ -421,6 +508,7 @@ export const PlaygroundRadioButtonItem = {
     divider: false,
     maxWidth: false,
     showIcon: false,
-    icon: ''
+    icon: '',
+    skeleton: false
   },
 }

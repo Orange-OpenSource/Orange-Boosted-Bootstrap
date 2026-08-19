@@ -204,17 +204,6 @@ ${lines.map((line) => `  ${line}`).join('\n')}
 </p>`
 }
 
-// An optional width constraint, carried by an ancestor: that is how a page
-// bounds a component the design system leaves full width. `component-max-width`
-// exists too, but the stylesheet reserves it for the form components — text
-// input, text area, select input, and the control items. Empty: no wrapper at
-// all, the markup is unchanged.
-const maxWidthWrapper = (markup, maxWidth) => (String(maxWidth ?? '').trim()
-  ? `<div style="max-width: ${maxWidth}">
-${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
-</div>`
-  : markup)
-
 const renderTag = ({ appearance, status, layout, size, state, roundedCorner, label, maxWidth }, iconMarkup = inlineIcon(defaultIconPath)) => {
   const safeStatus = orElse(status, statuses)
   const safeState = orElse(state, states)
@@ -233,6 +222,26 @@ const renderTag = ({ appearance, status, layout, size, state, roundedCorner, lab
 
   return maxWidthWrapper(tagTemplates[lines.length ? 'lines' : 'bare']({ classes, lines, label }), maxWidth)
 }
+
+// `component-max-width` is the design system class, but the stylesheet only
+// compounds it with the form components — text input, text area, select input,
+// control items. Elsewhere the constraint goes on an ancestor, with the value
+// the class carries: 30rem.
+const maxWidthWrapper = (markup, maxWidth) => (maxWidth
+  ? `<div style="max-width: 30rem">
+${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
+</div>`
+  : markup)
+
+// Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
+// the component itself: every child of that container renders as a skeleton, and
+// `inert` takes it out of the tab order and of the accessibility tree. Same
+// markup for every component of the design system.
+const skeletonWrapper = (markup, skeleton) => (skeleton
+  ? `<div aria-busy="true" inert>
+${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
+</div>`
+  : markup)
 
 export default {
   title: 'Playground/Tag',
@@ -270,8 +279,12 @@ export default {
     },
     maxWidth: {
       name: 'Max width',
-      control: 'text',
-      description: 'Any CSS length — `24rem`, `320px`. Wraps the component in an ancestor carrying the constraint, which is how a page bounds it. `component-max-width` exists in the stylesheet but is reserved for the form components. Empty: no wrapper.',
+      control: 'boolean',
+      description: 'Bounds the component to 30rem, the value of the `component-max-width` class — which the stylesheet reserves for the form components, so here it goes on an ancestor.',
+    },
+    skeleton: {
+      control: 'boolean',
+      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -282,9 +295,9 @@ export const PlaygroundTag = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { appearance, status, layout, size, state, roundedCorner, label, icon, maxWidth } = context.args
+          const { appearance, status, layout, size, state, roundedCorner, label, icon, maxWidth, skeleton } = context.args
 
-          return renderTag({
+          return skeletonWrapper(renderTag({
             appearance,
             status,
             layout,
@@ -293,13 +306,13 @@ export const PlaygroundTag = {
             roundedCorner,
             label,
             maxWidth,
-          }, resolveIcon(icon, spriteIcon))
+          }, resolveIcon(icon, spriteIcon)), skeleton)
         },
       },
     },
   },
-  render: ({ appearance, status, layout, size, state, roundedCorner, label, icon, maxWidth }) => {
-    return renderTag({
+  render: ({ appearance, status, layout, size, state, roundedCorner, label, icon, maxWidth, skeleton }) => {
+    return skeletonWrapper(renderTag({
       appearance,
       status,
       layout,
@@ -308,7 +321,7 @@ export const PlaygroundTag = {
       roundedCorner,
       label,
       maxWidth,
-    }, resolveIcon(icon, inlineIcon(defaultIconPath)))
+    }, resolveIcon(icon, inlineIcon(defaultIconPath))), skeleton)
   },
   args: {
     appearance: 'Muted',
@@ -319,6 +332,7 @@ export const PlaygroundTag = {
     roundedCorner: true,
     label: 'Label',
     icon: '',
-    maxWidth: ''
+    maxWidth: false,
+    skeleton: false
   },
 }

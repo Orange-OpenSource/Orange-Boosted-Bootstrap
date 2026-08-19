@@ -32,6 +32,16 @@ const renderSwitch = ({ state, selected, hiddenLabel }) => {
 </label>`
 }
 
+// Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
+// the component itself: every child of that container renders as a skeleton, and
+// `inert` takes it out of the tab order and of the accessibility tree. Same
+// markup for every component of the design system.
+const skeletonWrapper = (markup, skeleton) => (skeleton
+  ? `<div aria-busy="true" inert>
+${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
+</div>`
+  : markup)
+
 export default {
   title: 'Playground/Switch',
   argTypes: {
@@ -46,6 +56,10 @@ export default {
       name: 'Hidden label',
       control: 'text',
       description: 'Carried by the `visually-hidden` span: a standalone switch has no visible label, this is all a screen reader announces.',
+    },
+    skeleton: {
+      control: 'boolean',
+      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -56,27 +70,28 @@ export const PlaygroundSwitch = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { state, selected, hiddenLabel } = context.args
+          const { state, selected, hiddenLabel, skeleton } = context.args
 
-          return renderSwitch({
+          return skeletonWrapper(renderSwitch({
             state,
             selected,
             hiddenLabel,
-          })
+          }), skeleton)
         },
       },
     },
   },
-  render: ({ state, selected, hiddenLabel }) => {
-    return renderSwitch({
+  render: ({ state, selected, hiddenLabel, skeleton }) => {
+    return skeletonWrapper(renderSwitch({
       state,
       selected,
       hiddenLabel,
-    })
+    }), skeleton)
   },
   args: {
     state: 'Enabled',
     selected: false,
-    hiddenLabel: 'Standalone switch'
+    hiddenLabel: 'Standalone switch',
+    skeleton: false
   },
 }

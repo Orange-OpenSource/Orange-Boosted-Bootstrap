@@ -51,21 +51,28 @@ const ratioClasses = {
 // it, so it is dropped. `Free` with no size at all falls back on the size of the
 // documentation example, otherwise the bar would have no height and stay
 // invisible.
+// Width and height are numbers of pixels, not free text: a length is the only
+// thing that makes sense here, and typing `50%` or `12rem` into a text field was
+// asking for a unit the control could not check. 0 means “not set”.
+const toSize = (value) => Math.max(0, Number.parseInt(value, 10) || 0)
+
 const heightStyle = {
   'ratio': () => '',
-  'given': (height) => `height: ${height};`,
+  'class': () => '',
+  'given': (height) => `height: ${toSize(height)}px;`,
   'fallback': () => 'height: 50px;'
 }
 
 const heightKey = ({ ratio, height, heightClass }) => [
   { key: 'ratio', when: ratioClasses[ratio] !== '' },
-  { key: 'given', when: String(height).trim() !== '' },
+  { key: 'class', when: heightClass !== 'Free' },
+  { key: 'given', when: toSize(height) > 0 },
   { key: 'fallback', when: heightClass === 'Free' }
 ].filter((entry) => entry.when).map((entry) => entry.key)[0] ?? 'ratio'
 
 const styleAttr = ({ width, height, ratio, heightClass }) => {
   const style = [
-    String(width).trim() ? `width: ${width};` : '',
+    toSize(width) ? `width: ${toSize(width)}px;` : '',
     heightStyle[heightKey({ ratio, height, heightClass })](height)
   ].filter(Boolean).join(' ')
 
@@ -123,12 +130,14 @@ export default {
       description: 'Aspect ratio utility, carried by each bar. It computes the height from the width, so the height below is then ignored.',
     },
     width: {
-      control: 'text',
-      description: 'Any CSS length or percentage — `50%`, `12rem`. Empty: full width. A sizing utility (`w-50`, `w-75`, `col-9`) does the same job in a real page.',
+      name: 'Width (px)',
+      control: { type: 'number', min: 0, max: 1200, step: 10 },
+      description: 'In pixels. 0: full width. In a real page a sizing utility — `w-50`, `w-75`, `col-9` — does the same job in relative units.',
     },
     height: {
-      control: 'text',
-      description: 'Any CSS length — `50px`. Ignored when a ratio or a height class is set. Empty and free height: 50px, the value of the documentation example.',
+      name: 'Height (px)',
+      control: { type: 'number', min: 0, max: 400, step: 5 },
+      description: 'In pixels. Ignored when a ratio or a height class is set. 0 with a free height: 50px, the value of the documentation example.',
     }
   }
 }
@@ -168,7 +177,7 @@ export const PlaygroundSkeleton = {
     heightClass: 'Text',
     securityMargin: true,
     ratio: 'None',
-    width: '',
-    height: ''
+    width: 0,
+    height: 0
   },
 }

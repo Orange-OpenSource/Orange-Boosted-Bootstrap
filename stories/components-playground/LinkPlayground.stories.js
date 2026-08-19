@@ -317,6 +317,26 @@ const renderLink = ({ layout, size, density, state, label, background }, icons =
   }), background)
 }
 
+// `component-max-width` is the design system class, but the stylesheet only
+// compounds it with the form components — text input, text area, select input,
+// control items. Elsewhere the constraint goes on an ancestor, with the value
+// the class carries: 30rem.
+const maxWidthWrapper = (markup, maxWidth) => (maxWidth
+  ? `<div style="max-width: 30rem">
+${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
+</div>`
+  : markup)
+
+// Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
+// the component itself: every child of that container renders as a skeleton, and
+// `inert` takes it out of the tab order and of the accessibility tree. Same
+// markup for every component of the design system.
+const skeletonWrapper = (markup, skeleton) => (skeleton
+  ? `<div aria-busy="true" inert>
+${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
+</div>`
+  : markup)
+
 export default {
   title: 'Playground/Link',
   argTypes: {
@@ -351,6 +371,15 @@ export default {
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
       if: { arg: 'layout', eq: 'Text + icon' },
+    },
+    maxWidth: {
+      name: 'Max width',
+      control: 'boolean',
+      description: 'Bounds the component to 30rem, the value of the `component-max-width` class — which the stylesheet reserves for the form components, so here it goes on an ancestor.',
+    },
+    skeleton: {
+      control: 'boolean',
+      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -361,29 +390,29 @@ export const PlaygroundLink = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { layout, size, density, state, label, icon, background } = context.args
+          const { layout, size, density, state, label, icon, background, maxWidth, skeleton } = context.args
 
-          return renderLink({
+          return skeletonWrapper(maxWidthWrapper(renderLink({
             layout,
             size,
             density,
             state,
             label,
             background,
-          }, withCustomIcon(spriteIcons, icon), false)
+          }, withCustomIcon(spriteIcons, icon), false), maxWidth), skeleton)
         },
       },
     },
   },
-  render: ({ layout, size, density, state, label, icon, background }) => {
-    return renderLink({
+  render: ({ layout, size, density, state, label, icon, background, maxWidth, skeleton }) => {
+    return skeletonWrapper(maxWidthWrapper(renderLink({
       layout,
       size,
       density,
       state,
       label,
       background,
-    }, withCustomIcon(inlineIcons, icon))
+    }, withCustomIcon(inlineIcons, icon)), maxWidth), skeleton)
   },
   args: {
     layout: 'Next',
@@ -392,6 +421,8 @@ export const PlaygroundLink = {
     state: 'Enabled',
     background: 'None',
     label: 'Label',
-    icon: ''
+    icon: '',
+    maxWidth: false,
+    skeleton: false
   },
 }

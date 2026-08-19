@@ -178,6 +178,26 @@ const renderBadgeIcon = ({ status, size, state, label }, iconMarkup = inlineIcon
   return badgeTemplate({ classes, markup: statusMarkup[safeStatus] ?? iconMarkup, label })
 }
 
+// `component-max-width` is the design system class, but the stylesheet only
+// compounds it with the form components — text input, text area, select input,
+// control items. Elsewhere the constraint goes on an ancestor, with the value
+// the class carries: 30rem.
+const maxWidthWrapper = (markup, maxWidth) => (maxWidth
+  ? `<div style="max-width: 30rem">
+${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
+</div>`
+  : markup)
+
+// Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
+// the component itself: every child of that container renders as a skeleton, and
+// `inert` takes it out of the tab order and of the accessibility tree. Same
+// markup for every component of the design system.
+const skeletonWrapper = (markup, skeleton) => (skeleton
+  ? `<div aria-busy="true" inert>
+${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
+</div>`
+  : markup)
+
 export default {
   title: 'Playground/Badge icon',
   argTypes: {
@@ -201,6 +221,15 @@ export default {
       name: 'Hidden label',
       control: 'text',
       description: 'Carried by the `visually-hidden` span: the badge has no visible text, this is all a screen reader announces.',
+    },
+    maxWidth: {
+      name: 'Max width',
+      control: 'boolean',
+      description: 'Bounds the component to 30rem, the value of the `component-max-width` class — which the stylesheet reserves for the form components, so here it goes on an ancestor.',
+    },
+    skeleton: {
+      control: 'boolean',
+      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -211,31 +240,33 @@ export const PlaygroundBadgeIcon = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { status, size, state, label, icon } = context.args
+          const { status, size, state, label, icon, maxWidth, skeleton } = context.args
 
-          return renderBadgeIcon({
+          return skeletonWrapper(maxWidthWrapper(renderBadgeIcon({
             status,
             size,
             state,
             label,
-          }, resolveIcon(icon, spriteIcon))
+          }, resolveIcon(icon, spriteIcon)), maxWidth), skeleton)
         },
       },
     },
   },
-  render: ({ status, size, state, label, icon }) => {
-    return renderBadgeIcon({
+  render: ({ status, size, state, label, icon, maxWidth, skeleton }) => {
+    return skeletonWrapper(maxWidthWrapper(renderBadgeIcon({
       status,
       size,
       state,
       label,
-    }, resolveIcon(icon, inlineIcon(defaultIconPath)))
+    }, resolveIcon(icon, inlineIcon(defaultIconPath))), maxWidth), skeleton)
   },
   args: {
     status: 'Neutral',
     size: 'Medium',
     state: 'Enabled',
     icon: '',
-    label: 'Favourite'
+    label: 'Favourite',
+    maxWidth: false,
+    skeleton: false
   },
 }

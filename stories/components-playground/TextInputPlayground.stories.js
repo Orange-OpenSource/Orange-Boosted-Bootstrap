@@ -218,11 +218,36 @@ const actionDisabled = {
   'Loading determinate': ' disabled'
 }
 
+
+// Retention of what is typed in the canvas. A story is re-rendered from its args
+// on every control change, so a value typed straight into the field would be
+// lost — the most concrete complaint on this component. The field therefore
+// writes each keystroke into a global, and the preview reads it back. Changing
+// the `Value` control wins: it is an explicit intent, the typing is not.
+//
+// `transform` gets none of this: the snippet stays plain OUDS markup. Same
+// split as the icons.
+const store = () => {
+  globalThis.__oudsTyped = globalThis.__oudsTyped || {}
+
+  return globalThis.__oudsTyped
+}
+
+const keptValue = (args, key) => {
+  const kept = store()
+  const changed = kept[`${key}Arg`] !== args.inputText
+  kept[`${key}Arg`] = args.inputText
+
+  return changed ? args.inputText : (kept[key] ?? args.inputText)
+}
+
+const retainAttr = (key) => ` oninput="(globalThis.__oudsTyped = globalThis.__oudsTyped || {})['${key}'] = this.value"`
+
 const renderTextInput = ({
   label, inputText, placeholder, helperText, helperLink, error, errorMessage, required,
   prefix, suffix, outlined, rounded, maxWidth, state, loadingTime, leadingIcon,
   trailingAction, hiddenLabel
-}, icons = inlineIcons) => {
+}, icons = inlineIcons, retain = '') => {
   const safeState = orElse(state, states)
 
   // The description comes first, then the error message: the order the
@@ -238,7 +263,7 @@ const renderTextInput = ({
     stateFieldClasses[safeState] ?? ''
   ].filter(Boolean).join(' ')
 
-  const field = `<input type="text" class="${fieldClasses}" id="textInput" placeholder="${placeholderOf(placeholder)}"${valueAttr(inputText)}${errorMap[(error ? 'True' : 'False')]}${requiredMap[(required ? 'True' : 'False')]}${describedBy ? ` aria-describedby="${describedBy}"` : ''}${stateFieldAttrs[safeState] ?? ''}>`
+  const field = `<input type="text" class="${fieldClasses}" id="textInput" placeholder="${placeholderOf(placeholder)}"${valueAttr(inputText)}${errorMap[(error ? 'True' : 'False')]}${requiredMap[(required ? 'True' : 'False')]}${describedBy ? ` aria-describedby="${describedBy}"` : ''}${stateFieldAttrs[safeState] ?? ''}${retain}>`
 
   const containerClasses = [
     'text-input-container',
@@ -291,6 +316,16 @@ ${rootLines.join('\n')}
 
   return roundedWrappers[(rounded ? 'True' : 'False')](markup)
 }
+
+// Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
+// the component itself: every child of that container renders as a skeleton, and
+// `inert` takes it out of the tab order and of the accessibility tree. Same
+// markup for every component of the design system.
+const skeletonWrapper = (markup, skeleton) => (skeleton
+  ? `<div aria-busy="true" inert>
+${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
+</div>`
+  : markup)
 
 export default {
   title: 'Playground/Text input',
@@ -383,6 +418,10 @@ export default {
       control: 'text',
       description: 'Carried by the `visually-hidden` span of the trailing button: it announces what the button does.',
       if: { arg: 'trailingAction', truthy: true },
+    },
+    skeleton: {
+      control: 'boolean',
+      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -403,13 +442,17 @@ export const PlaygroundTextInput = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          return renderTextInput(pick(context.args), withCustomIcons(spriteIcons, context.args))
+          return skeletonWrapper(renderTextInput(pick(context.args), withCustomIcons(spriteIcons, context.args)), context.args.skeleton)
         },
       },
     },
   },
   render: (args) => {
-    return renderTextInput(pick(args), withCustomIcons(inlineIcons, args))
+    return skeletonWrapper(renderTextInput(
+      { ...pick(args), inputText: keptValue(args, 'textInput') },
+      withCustomIcons(inlineIcons, args),
+      retainAttr('textInput')
+    ), args.skeleton)
   },
   args: {
     label: 'Label',
@@ -431,6 +474,7 @@ export const PlaygroundTextInput = {
     icon: '',
     trailingAction: false,
     actionIcon: '',
-    hiddenLabel: 'Add to favorites'
+    hiddenLabel: 'Add to favorites',
+    skeleton: false
   },
 }

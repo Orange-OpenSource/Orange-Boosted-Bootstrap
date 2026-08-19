@@ -45,7 +45,7 @@ const selectionScripts = {
   'Indeterminate': `
 <script>
   document.getElementById('checkboxItem').indeterminate = true
-</script>`
+<\/script>`
 }
 
 const scriptFor = (shape, status) => (shape === 'input' ? selectionScripts[status] ?? '' : '')
@@ -260,6 +260,16 @@ ${[item, ...errorLine].join('\n')}
 </fieldset>${scriptFor(shape, safeStatus)}`
 }
 
+// Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
+// the component itself: every child of that container renders as a skeleton, and
+// `inert` takes it out of the tab order and of the accessibility tree. Same
+// markup for every component of the design system.
+const skeletonWrapper = (markup, skeleton) => (skeleton
+  ? `<div aria-busy="true" inert>
+${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
+</div>`
+  : markup)
+
 export default {
   title: 'Playground/Checkbox item',
   argTypes: {
@@ -311,6 +321,10 @@ export default {
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
       if: { arg: 'showIcon', truthy: true },
+    },
+    skeleton: {
+      control: 'boolean',
+      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -323,10 +337,10 @@ export const PlaygroundCheckboxItem = {
         transform: (_src, context) => {
           const {
             state, selectionStatus, error, errorMessage, required, reverse, divider,
-            maxWidth, label, description, showIcon, icon
+            maxWidth, label, description, showIcon, icon, skeleton
           } = context.args
 
-          return renderCheckboxItem({
+          return skeletonWrapper(renderCheckboxItem({
             state,
             selectionStatus,
             error,
@@ -338,13 +352,13 @@ export const PlaygroundCheckboxItem = {
             label,
             description,
             showIcon,
-          }, resolveIcon(icon, spriteIcon))
+          }, resolveIcon(icon, spriteIcon)), skeleton)
         },
       },
     },
   },
-  render: ({ state, selectionStatus, error, errorMessage, required, reverse, divider, maxWidth, label, description, showIcon, icon }) => {
-    return renderCheckboxItem({
+  render: ({ state, selectionStatus, error, errorMessage, required, reverse, divider, maxWidth, label, description, showIcon, icon, skeleton }) => {
+    return skeletonWrapper(renderCheckboxItem({
       state,
       selectionStatus,
       error,
@@ -356,7 +370,7 @@ export const PlaygroundCheckboxItem = {
       label,
       description,
       showIcon,
-    }, resolveIcon(icon, inlineIcon(defaultIconPath)))
+    }, resolveIcon(icon, inlineIcon(defaultIconPath))), skeleton)
   },
   args: {
     label: 'Label',
@@ -370,6 +384,7 @@ export const PlaygroundCheckboxItem = {
     divider: false,
     maxWidth: false,
     showIcon: false,
-    icon: ''
+    icon: '',
+    skeleton: false
   },
 }
