@@ -1,4 +1,4 @@
-/* global boosted: false */
+/* global oudsWeb: false */
 
 (() => {
   'use strict'
@@ -34,6 +34,6 @@
   // Instantiate the carousel
   document.querySelectorAll('.carousel:not([data-bs-ride="carousel"])')
     .forEach(carousel => {
-      boosted.Carousel.getOrCreateInstance(carousel)
+      oudsWeb.Carousel.getOrCreateInstance(carousel)
     })
 })()
