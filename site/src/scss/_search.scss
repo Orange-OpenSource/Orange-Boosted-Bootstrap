@@ -168,6 +168,14 @@
   color: var(--docsearch-text-color);
 }
 
+.DocSearch-Clear,
+.DocSearch-Close {
+  &:focus-visible {
+    @include focus-visible();
+    border-radius: 0; // stylelint-disable-line property-disallowed-list
+  }
+}
+
 // Hit styles while searching for results
 .DocSearch-Hit {
   a {
