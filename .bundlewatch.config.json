@@ -2,11 +2,11 @@
   "files": [
     {
       "path": "./packages/orange/dist/css/ouds-web-bootstrap.css",
-      "maxSize": "84.0 kB"
+      "maxSize": "84.75 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-bootstrap.min.css",
-      "maxSize": "80.25 kB"
+      "maxSize": "81.25 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-grid.css",
@@ -34,11 +34,11 @@
     },
     {
       "path": "./packages/orange/dist/css/ouds-web.css",
-      "maxSize": "67.5 kB"
+      "maxSize": "68.5 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web.min.css",
-      "maxSize": "63.5 kB"
+      "maxSize": "64.25 kB"
     },
     {
       "path": "./dist/js/ouds-web.bundle.js",

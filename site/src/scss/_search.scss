@@ -64,7 +64,11 @@
   border: 0;
 
   &:hover {
-    color: var(--bs-link-active-color);
+    color: var(--bs-link-mono-color-content-pressed);
+  }
+
+  &:active {
+    color: var(--bs-navbar-active-color);
   }
 
   &:focus-visible {
@@ -133,9 +137,13 @@
 }
 
 // Remove weird focus outline on search input, handled via focus-within
-.DocSearch-Input:focus {
-  outline: 0;
-  box-shadow: none;
+.DocSearch-Input {
+  height: unset;
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
 }
 
 // more specificity to override OUDS ul default margin
@@ -208,4 +216,9 @@
 // No results found
 .DocSearch-NoResults svg {
   stroke: var(--bs-color-content-status-negative);
+}
+
+// Fix an issue on Firefox / MacOS where a scrollbar appears
+.DocSearch-Hit-content-wrapper {
+  overflow: hidden;
 }
