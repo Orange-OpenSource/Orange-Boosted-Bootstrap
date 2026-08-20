@@ -355,6 +355,15 @@
     var(--#{$prefix}color-opacity-transparent),
     var(--#{$prefix}color-content-on-action-loading)
   );
+
+  &.opacify {
+    &:hover,
+    &:active,
+    &:focus-visible {
+      background-color: var(--#{$prefix}color-bg-primary);
+      background-image: linear-gradient(var(--#{$prefix}btn-hover-bg));
+    }
+  }
 }
 
 .btn-negative {

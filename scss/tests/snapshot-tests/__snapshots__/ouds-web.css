@@ -5694,6 +5694,14 @@ optgroup {
   font-size: var(--bs-link-icon-size);
   line-height: 1;
 }
+.link.opacify:hover, .opacify.link-chevron:hover,
+.opacify.link-external:hover, .link.opacify:active, .opacify.link-chevron:active,
+.opacify.link-external:active, .link.opacify:focus-visible, .opacify.link-chevron:focus-visible,
+.opacify.link-external:focus-visible {
+  background-color: var(--bs-color-bg-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
 
 .link-chevron,
 .link-external {
@@ -6255,6 +6263,10 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-btn-loading-color: var(--bs-color-content-on-action-loading);
   --bs-btn-loading-bg: var(--bs-color-action-loading);
   --bs-btn-loading-border-color: var(--bs-color-opacity-transparent);
+}
+.btn-strong.opacify:hover, .btn-strong.opacify:active, .btn-strong.opacify:focus-visible {
+  background-color: var(--bs-color-bg-primary);
+  background-image: linear-gradient(var(--bs-btn-hover-bg));
 }
 
 .btn-negative {
@@ -12990,6 +13002,12 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .decorative-2xlarge-icon {
   font-size: 72px !important;
+}
+
+.text-muted.opacify {
+  background-color: var(--bs-color-bg-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .fixed-top {
