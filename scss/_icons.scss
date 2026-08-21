@@ -1,0 +1,59 @@
+.icon {
+  --#{$prefix}icon-min-width: #{$ouds-size-min-interactive-area-smallest}; // TODO provided token not matching figma size ?
+  --#{$prefix}icon-min-height: #{$ouds-size-min-interactive-area-smallest};
+  --#{$prefix}icon-color: #{$ouds-color-action-enabled};
+  --#{$prefix}icon-hover-color: #{$ouds-color-action-hover};
+  --#{$prefix}icon-active-color: #{$ouds-color-action-pressed};
+  --#{$prefix}icon-disabled-color: #{$ouds-color-action-disabled};
+  --#{$prefix}icon-focus-color: #{$ouds-color-action-focus};
+  --#{$prefix}icon-focus-border-color: #{$ouds-color-border-focus};
+  --#{$prefix}icon-focus-border-width: #{$ouds-border-width-focus};
+  --#{$prefix}icon-focus-color-border-focus-inset: #{$ouds-color-border-focus-inset};
+  --#{$prefix}icon-focus-border-width-focus-inset: #{$ouds-border-width-focus-inset};
+  --#{$prefix}icon-loading-color: #{$ouds-color-action-loading};
+
+  display: inline-flex;
+  align-items: center; // OUDS mod
+  justify-content: center; // OUDS mod
+  min-width: var(--#{$prefix}icon-min-width); // OUDS mod
+  min-height: var(--#{$prefix}icon-min-height); // OUDS mod
+  aspect-ratio: 1;
+  padding: 0;
+  color: var(--#{$prefix}icon-color);
+  background: none;
+  border: 0;
+
+  svg {
+    flex-shrink: 1;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    font-size: 1.5rem;
+    line-height: 0;
+  }
+
+  &:hover {
+    color: var(--#{$prefix}icon-hover-color);
+  }
+
+  &:focus-visible {
+    color: var(--#{$prefix}icon-focus-color);
+    outline: var(--#{$prefix}icon-focus-border-width) solid var(--#{$prefix}icon-focus-border-color);
+    box-shadow: 0 0 0 calc(var(--#{$prefix}icon-focus-border-width-focus-inset) + $focus-visible-inner-width) var(--#{$prefix}icon-focus-color-border-focus-inset);
+  }
+
+  &:active {
+    color: var(--#{$prefix}icon-active-color);
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] { // OUDS mod: Defensive CSS to force a11y
+    color: var(--#{$prefix}icon-disabled-color);
+    pointer-events: none;
+  }
+
+  // OUDS mod: loading icons
+  @include loader(
+    $loading-color: var(--#{$prefix}icon-loading-color)
+  );
+}
