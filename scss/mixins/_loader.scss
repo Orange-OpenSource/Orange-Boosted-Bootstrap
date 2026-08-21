@@ -1,0 +1,64 @@
+// OUDS mod: Animation keyframes
+@keyframes rotate-determinate {
+  0% { stroke-dashoffset: 107 #{"/* rtl:ignore */"}; }
+  100% { stroke-dashoffset: 0 #{"/* rtl:ignore */"}; }
+}
+
+@keyframes rotate1-indeterminate {
+  0%,
+  10% { stroke-dashoffset: 192 #{"/* rtl:ignore */"}; }
+  50%,
+  60% { stroke-dashoffset: 96 #{"/* rtl:ignore */"}; }
+  100% { stroke-dashoffset: 0 #{"/* rtl:ignore */"}; }
+}
+
+@keyframes rotate2-indeterminate {
+  0% { transform: rotate(0deg) #{"/* rtl:ignore */"}; }
+  100% { transform: rotate(360deg) #{"/* rtl:ignore */"}; }
+}
+// End mod
+
+@mixin loader($loading-color) {
+  // OUDS mod: loading icons
+  .loader {
+    display: none;
+  }
+
+  &.loading-indeterminate,
+  &.loading-determinate {
+    position: relative;
+    color: transparent;
+    @content;
+
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      margin: 0;
+      font-size: 100%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+
+      > .loader-inner {
+        fill: none;
+        stroke: $loading-color;
+        stroke-dasharray: var(--#{$prefix}loading-dasharray);
+        stroke-width: 6;
+        transform-origin: center;
+        animation: var(--#{$prefix}loading-animation);
+      }
+    }
+  }
+
+  &.loading-determinate {
+    --#{$prefix}loading-dasharray: 107;
+    --#{$prefix}loading-animation: var(--#{$prefix}loading-time) infinite linear rotate-determinate;
+  }
+
+  &.loading-indeterminate {
+    --#{$prefix}loading-dasharray: 96;
+    --#{$prefix}loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
+
+  }
+
+}
