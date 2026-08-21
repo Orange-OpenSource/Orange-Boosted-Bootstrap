@@ -63,11 +63,11 @@
   color: var(--bs-color-content-default);
   border: 0;
 
-  &:hover {
+  &:hover::before {
     color: var(--bs-link-mono-color-content-pressed);
   }
 
-  &:active {
+  &:active::before {
     color: var(--bs-navbar-active-color);
   }
 
@@ -125,7 +125,22 @@
 // Stretched link in the navbar button and the label in the search bar
 .DocSearch-Button,
 .DocSearch-MagnifierLabel {
+  svg {
+    display: none;
+  }
+
   &::before {
+    display: block;
+    width: 24px;
+    height: 24px;
+    color: var(--bs-color-content-default);
+    content: "";
+    background-color: currentcolor;
+    // orange/functional/actions/search
+    mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M21.42 19.67 16 14.25A7.5 7.5 0 1 0 14.25 16l5.41 5.42a.6.6 0 0 0 .85 0l.9-.9a.6.6 0 0 0 0-.86M9.9 15a5.1 5.1 0 1 1 0-10.2 5.1 5.1 0 0 1 0 10.2'/></svg>") no-repeat center;
+  }
+
+  &::after {
     position: absolute;
     top: 0;
     right: 0;
@@ -224,6 +239,22 @@
 // No results found
 .DocSearch-NoResults svg {
   stroke: var(--bs-color-content-status-negative);
+}
+
+.DocSearch-Screen-Icon {
+  svg {
+    display: none;
+  }
+
+  &::before {
+    display: block;
+    width: 64px;
+    height: 64px;
+    color: var(--bs-color-content-status-negative);
+    content: "";
+    background-color: currentcolor;
+    mask: var(--bs-error-icon) no-repeat center;
+  }
 }
 
 // Fix an issue on Firefox / MacOS where a scrollbar appears
