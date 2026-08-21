@@ -1,6 +1,5 @@
 ---
 import Code from '@shortcodes/Code.astro'
-import { getVersionedDocsPath } from '@libs/path'
 
 interface Props {
   name: string
@@ -8,7 +7,6 @@ interface Props {
 
 const { name } = Astro.props
 const withinButtonLabel = `dismissal button within the ${name}`
-const outsideButtonLabel = `dismissal button outside the ${name}`
 ---
 
 <p>
@@ -18,15 +16,7 @@ const outsideButtonLabel = `dismissal button outside the ${name}`
 </p>
 
 <Code buttonLabel={withinButtonLabel}
-  code={`<button class="btn btn-icon btn-minimal" data-bs-dismiss="${name}">\n  <svg aria-hidden="true"><use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/></svg>\n  <span class="visually-hidden">Close</span>\n</button>`}
+  code={`<button class="btn-close" data-bs-dismiss="${name}">\n  <span class="visually-hidden">Close ${name}</span>\n</button>`}
   lang="html"
 />
 
-<p>
-  or on a button <strong>outside the {name}</strong> using the additional <code>data-bs-target</code> as demonstrated below:
-</p>
-
-<Code buttonLabel={outsideButtonLabel}
-  code={`<button class="btn btn-icon btn-minimal" data-bs-dismiss="${name}" data-bs-target="#my-${name}">\n  <svg aria-hidden="true"><use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}"/></svg>\n  <span class="visually-hidden">Close</span>\n</button>`}
-  lang="html"
-/>

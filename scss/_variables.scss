@@ -1159,8 +1159,8 @@ $form-feedback-invalid-color:       $danger !default;
 // fusv-enable
 // End mod
 
-$form-feedback-icon-valid:          var(--#{$prefix}success-icon) !default;
-$form-feedback-icon-invalid:        var(--#{$prefix}error-icon) !default;
+$form-feedback-icon-valid:          var(--#{$prefix}alert-success-icon) !default;
+$form-feedback-icon-invalid:        var(--#{$prefix}alert-error-icon) !default;
 $form-feedback-icon-size:           calc($spacer * .25 + $spacer * .5) !default; // OUDS mod
 $form-feedback-line-height:         $line-height-sm !default; // OUDS mod
 $form-feedback-color:               null !default; // OUDS mod
@@ -1793,10 +1793,10 @@ $list-group-action-active-bg:         $list-group-active-bg !default; // OUDS mo
 
 // OUDS mod
 $list-group-icons: (
-  "success": escape-svg($alert-icon-success),
-  "info":    escape-svg($alert-icon-info),
-  "warning": escape-svg($alert-icon-warning-external),
-  "danger":  escape-svg($alert-icon-important)
+  "success": var(--#{$prefix}alert-success-icon),
+  "info":    var(--#{$prefix}alert-info-icon),
+  "warning": var(--#{$prefix}alert-warning-icon),
+  "danger":  var(--#{$prefix}alert-error-icon)
 ) !default;
 // End mod
 // scss-docs-end list-group-variables
@@ -1850,7 +1850,7 @@ $title-bar-border-color:            var(--#{$prefix}color-border-default) !defau
 $breadcrumb-divider-color:          $ouds-color-content-default !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
 // OUDS mod: no `$breadcrumb-active-color`
 // OUDS mod: no `$breadcrumb-divider-filter`
-$breadcrumb-divider-flipped:        $breadcrumb-divider !default;
+$breadcrumb-divider-flipped:        $breadcrumb-divider-icon !default;
 // OUDS mod: no `$breadcrumb-border-radius`
 // scss-docs-end breadcrumb-variables
 
@@ -1939,7 +1939,6 @@ $btn-close-padding:             var(--#{$prefix}icon-spacing, #{$btn-icon-paddin
 $btn-close-border-width:        var(--#{$prefix}border-width) !default; // OUDS mod
 $btn-close-border-color:        transparent !default; // OUDS mod
 $btn-close-color:               var(--#{$prefix}emphasis-color) !default;
-$btn-close-bg:                  var(--#{$prefix}close-icon) !default; // OUDS mod
 // OUDS mod: deprecated in OUDS Web, kept for Bootstrap compatibility
 // fusv-disable
 $btn-close-focus-shadow:        $btn-focus-box-shadow !default;
