@@ -296,9 +296,9 @@ These variants can be used in all types of items.
 ### With asset
 
 The main container `.item-content` of an item can contain up to 3 elements. They always appear in the following order:
-1. [Leading container](#leading-container) using `.item-leading-container` (optional)
-2. [Text container](#text-container) using `.item-text-container` (required)
-3. [Trailing container](#trailing-container) using `.item-trailing-container` (optional)
+1. [Leading container](#leading-container) (optional) using `.item-leading-container`
+2. [Text container](#text-container) (required) using `.item-text-container`
+3. [Trailing container](#trailing-container) (optional) using `.item-trailing-container`
 
 #### Leading container
 
@@ -402,10 +402,10 @@ You can navigate through the different assets using the tabs below.
 There are 4 text elements that are meant to be used in the `.item-text-container`.
 
 They always appear in the following order:
-1. Overline using `.item-overline` (optional) (only if not [small item](#sizes))
-2. Label using `.item-label`, that can optionally be bold (using `.fw-bold`) (required)
-3. Extra label using `.item-extra-label` (optional) (only if not [small item](#sizes))
-4. Description using `.item-description` (optional)
+1. Overline (optional) using `.item-overline` (only if not [small item](#sizes))
+2. Label (required) using `.item-label`, that can optionally be bold (using `.fw-bold`)
+3. Extra label (optional) using `.item-extra-label` (only if not [small item](#sizes))
+4. Description using (optional) `.item-description`
 
 Optionally, a slot can be added at the end of the text container using `.item-slot` and/or in place of the `.item-label` if it replaces it.
 
@@ -949,11 +949,11 @@ You may handle on your own the [slots](#slots) regarding accessibility and desig
 By default every item comes with a default size. The size can be adapted using `.item-small` on the `.item` or `.item-list` element.
 
 <Callout type="warning">
-  The small size come with some restrictions:
+  The small size comes with some restrictions:
 
-  * The assets within the [leading container](#leading-container) and the [trailing container](#trailing-container) not being components shouldn't use any size classes
-  * There shouldn't be any [slot](#slots) in the item
-  * The [text container](#text-container) should only have the label, or description inside and not the overline, or extra label
+  * The assets within the [leading container](#leading-container) and the [trailing container](#trailing-container) apart tags and badges mustn't use any size classes
+  * There mustn't be any [slot](#slots) in the item
+  * The [text container](#text-container) must only have the label, and/or description inside and not the overline, or extra label
 </Callout>
 
 <Example buttonLabel="items small" class="d-flex flex-column gap-medium" code={`<!-- Card -->

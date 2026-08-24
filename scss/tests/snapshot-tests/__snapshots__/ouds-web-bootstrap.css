@@ -8574,6 +8574,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 .chip-filter input:checked ~ .chip-interactive,
 .chip-filter .chip-interactive[aria-pressed=true],
+.chip-filter .chip-interactive[aria-selected=true],
 .chip-filter .chip-interactive:has(input:checked) {
   --bs-chip-bg: var(--bs-color-opacity-transparent);
   --bs-chip-border-color: var(--bs-color-action-selected);
@@ -8584,6 +8585,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 .chip-filter input:checked ~ .chip-interactive:hover,
 .chip-filter .chip-interactive[aria-pressed=true]:hover,
+.chip-filter .chip-interactive[aria-selected=true]:hover,
 .chip-filter .chip-interactive:has(input:checked):hover {
   --bs-chip-bg: var(--bs-color-opacity-transparent);
   --bs-chip-border-color: var(--bs-color-action-hover);
@@ -8592,6 +8594,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 .chip-filter input:checked ~ .chip-interactive:active,
 .chip-filter .chip-interactive[aria-pressed=true]:active,
+.chip-filter .chip-interactive[aria-selected=true]:active,
 .chip-filter .chip-interactive:has(input:checked):active {
   --bs-chip-bg: var(--bs-color-opacity-transparent);
   --bs-chip-border-color: var(--bs-color-action-pressed);
@@ -8600,6 +8603,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 .chip-filter input:checked ~ .chip-interactive::before,
 .chip-filter .chip-interactive[aria-pressed=true]::before,
+.chip-filter .chip-interactive[aria-selected=true]::before,
 .chip-filter .chip-interactive:has(input:checked)::before {
   width: 1em;
   height: 1em;
@@ -8614,6 +8618,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 .chip-filter input:checked:focus-visible ~ .chip-interactive,
 .chip-filter .chip-interactive[aria-pressed=true]:focus-visible,
+.chip-filter .chip-interactive[aria-selected=true]:focus-visible,
 .chip-filter .chip-interactive:has(input:checked:focus-visible) {
   --bs-chip-bg: var(--bs-color-opacity-transparent);
   --bs-chip-border-color: var(--bs-color-action-focus);
@@ -8622,6 +8627,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 .chip-filter input:checked:disabled ~ .chip-interactive,
 .chip-filter .chip-interactive[aria-pressed=true]:disabled,
+.chip-filter .chip-interactive[aria-selected=true]:disabled,
 .chip-filter .chip-interactive:has(input:checked:disabled) {
   --bs-chip-bg: var(--bs-color-opacity-transparent);
   --bs-chip-border-color: var(--bs-color-action-disabled);
