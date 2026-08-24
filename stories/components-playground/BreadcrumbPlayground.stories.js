@@ -28,27 +28,6 @@ const toDrilldown = (value) => {
   return Number.isNaN(parsed) ? 1 : Math.min(Math.max(1, parsed), 12)
 }
 
-// Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
-// the component itself: every child of that container renders as a skeleton, and
-// `inert` takes them out of the tab order and of the accessibility tree. Same
-// markup for every component of the design system.
-const skeletonWrappers = {
-  'True': (markup) => `<div aria-busy="true" inert>
-${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
-</div>`,
-  'False': (markup) => markup
-}
-
-// `component-max-width` is the design system class, but the stylesheet only
-// compounds it with the form components — text input, text area, select input,
-// control items. Elsewhere the constraint goes on an ancestor, with the value
-// the class carries: 30rem.
-const maxWidthWrappers = {
-  'True': (markup) => `<div style="max-width: 30rem">
-${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
-</div>`,
-  'False': (markup) => markup
-}
 
 // Preview only — every level stays on screen.
 //
@@ -141,11 +120,7 @@ ${lines.join('\n')}
   </ol>
 </nav>`
 
-  return skeletonWrappers[(args.skeleton ? 'True' : 'False')](
-    maxWidthWrappers[(args.maxWidth ? 'True' : 'False')](
-      surroundings[preview ? 'preview' : 'code'](markup)
-    )
-  )
+  return surroundings[preview ? 'preview' : 'code'](markup)
 }
 
 // One label control and one truncation control per level, built from the same
@@ -187,15 +162,6 @@ export default {
       name: 'Current page',
       control: 'text',
       description: 'Last item. It renders a `<span>`, not a link, and carries `aria-current="page"`.',
-    },
-    maxWidth: {
-      name: 'Max width',
-      control: 'boolean',
-      description: 'Bounds the component to 30rem, the value of the `component-max-width` class — which the stylesheet reserves for the form components, so here it goes on an ancestor.',
-    },
-    skeleton: {
-      control: 'boolean',
-      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state.',
     }
   }
 }
@@ -217,8 +183,6 @@ export const PlaygroundBreadcrumb = {
   args: {
     drilldown: 1,
     ...levelArgs,
-    pageLabel: 'Current page',
-    maxWidth: false,
-    skeleton: false
+    pageLabel: 'Current page'
   },
 }

@@ -354,38 +354,46 @@ export default {
     option2Label: {
       name: 'Option 2 — label',
       control: 'text',
+      if: { arg: 'count', gte: 2 },
     },
     option2ExtraLabel: {
       name: 'Option 2 — extra label',
       control: 'text',
       description: 'Rendered as `<span class="radio-button-extra-label">`, after the label. Empty: none.',
+      if: { arg: 'count', gte: 2 },
     },
     option2Description: {
       name: 'Option 2 — description',
       control: 'text',
       description: 'Rendered as `<p class="control-item-description">`, referenced by `aria-describedby`. Empty: none.',
+      if: { arg: 'count', gte: 2 },
     },
     option2Selected: {
       name: 'Option 2 — selected',
       control: 'boolean',
+      if: { arg: 'count', gte: 2 },
     },
     option3Label: {
       name: 'Option 3 — label',
       control: 'text',
+      if: { arg: 'count', gte: 3 },
     },
     option3ExtraLabel: {
       name: 'Option 3 — extra label',
       control: 'text',
       description: 'Rendered as `<span class="radio-button-extra-label">`, after the label. Empty: none.',
+      if: { arg: 'count', gte: 3 },
     },
     option3Description: {
       name: 'Option 3 — description',
       control: 'text',
       description: 'Rendered as `<p class="control-item-description">`, referenced by `aria-describedby`. Empty: none.',
+      if: { arg: 'count', gte: 3 },
     },
     option3Selected: {
       name: 'Option 3 — selected',
       control: 'boolean',
+      if: { arg: 'count', gte: 3 },
     },
     legend: {
       control: 'text',

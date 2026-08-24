@@ -264,26 +264,41 @@ const actionDisabled = {
 // Retention of what is typed in the canvas. A story is re-rendered from its args
 // on every control change, so a value typed straight into the field would be
 // lost — the most concrete complaint on this component. The field therefore
-// writes each keystroke into a global, and the preview reads it back. Changing
-// the `Value` control wins: it is an explicit intent, the typing is not.
+// writes each keystroke into a global, and the preview reads it back.
 //
-// `transform` gets none of this: the snippet stays plain OUDS markup. Same
-// split as the icons.
+// There is no `Value` control: the field is there to be typed into, and a
+// control that duplicates it only adds a second way to do the same thing.
+//
+// `transform` gets none of this: the snippet stays plain OUDS markup — an empty
+// field, as the documentation writes it. Same split as the icons.
+//
+// The two sides do not necessarily run in the same window: Storybook paints the
+// canvas in the preview iframe, and this playground's standalone preview paints
+// it in a `srcdoc` iframe while `render` runs in the page around it. A store on
+// `globalThis` is therefore two different stores, and everything typed is lost.
+// Both sides resolve the same one instead — the topmost same-origin window,
+// falling back to their own when the top is cross-origin, and to `globalThis`
+// outside a browser, where `check_stories.js` replays the controls.
+const storeWindow = () => {
+  try {
+    return globalThis.top && globalThis.top.document ? globalThis.top : globalThis
+  } catch (error) {
+    return globalThis
+  }
+}
+
 const store = () => {
-  globalThis.__oudsTyped = globalThis.__oudsTyped || {}
+  const win = storeWindow()
+  win.__oudsTyped = win.__oudsTyped || {}
 
-  return globalThis.__oudsTyped
+  return win.__oudsTyped
 }
 
-const keptValue = (args, key) => {
-  const kept = store()
-  const changed = kept[`${key}Arg`] !== args.inputText
-  kept[`${key}Arg`] = args.inputText
+const keptValue = (key) => store()[key] ?? ''
 
-  return changed ? args.inputText : (kept[key] ?? args.inputText)
-}
-
-const retainAttr = (key) => ` oninput="(globalThis.__oudsTyped = globalThis.__oudsTyped || {})['${key}'] = this.value"`
+// The same resolution, written inline: the attribute runs in the canvas, which
+// is where the other window is.
+const retainAttr = (key) => ` oninput="var w; try { w = globalThis.top &amp;&amp; globalThis.top.document ? globalThis.top : globalThis } catch (e) { w = globalThis } (w.__oudsTyped = w.__oudsTyped || {})['${key}'] = this.value"`
 
 const renderPasswordInput = ({
   label, inputText, placeholder, helperText, error, errorMessage, required, prefix,
@@ -345,26 +360,11 @@ ${rootLines.join('\n')}
 </div>`)
 }
 
-// Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
-// the component itself: every child of that container renders as a skeleton, and
-// `inert` takes it out of the tab order and of the accessibility tree. Same
-// markup for every component of the design system.
-const skeletonWrapper = (markup, skeleton) => (skeleton
-  ? `<div aria-busy="true" inert>
-${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
-</div>`
-  : markup)
-
 export default {
   title: 'Playground/Password input',
   argTypes: {
     label: {
       control: 'text',
-    },
-    inputText: {
-      name: 'Value',
-      control: 'text',
-      description: 'What the field contains. It is an arg, so changing another control no longer empties the field — and in this playground, typing in the canvas writes back here.',
     },
     placeholder: {
       control: 'text',
@@ -433,16 +433,12 @@ export default {
       name: 'Hidden label (reveal button)',
       control: 'text',
       description: 'Carried by the `visually-hidden` span of the reveal button. Empty: it follows the state, "Show password" or "Hide password".',
-    },
-    skeleton: {
-      control: 'boolean',
-      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
 
 const ARGS = [
-  'label', 'inputText', 'placeholder', 'helperText', 'error', 'errorMessage', 'required',
+  'label', 'placeholder', 'helperText', 'error', 'errorMessage', 'required',
   'prefix', 'outlined', 'rounded', 'maxWidth', 'state', 'loadingTime', 'hiddenPassword',
   'leadingIcon', 'hiddenLabel'
 ]
@@ -457,21 +453,20 @@ export const PlaygroundPasswordInput = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          return skeletonWrapper(renderPasswordInput(pick(context.args), withCustomIcons(spriteIcons, context.args)), context.args.skeleton)
+          return renderPasswordInput(pick(context.args), withCustomIcons(spriteIcons, context.args))
         },
       },
     },
   },
   render: (args) => {
-    return skeletonWrapper(renderPasswordInput(
-      { ...pick(args), inputText: keptValue(args, 'passwordInput') },
+    return renderPasswordInput(
+      { ...pick(args), inputText: keptValue('passwordInput') },
       withCustomIcons(inlineIcons, args),
       retainAttr('passwordInput')
-    ), args.skeleton)
+    )
   },
   args: {
     label: 'Password',
-    inputText: '',
     placeholder: 'Minimum 8 characters',
     hiddenPassword: true,
     helperText: 'Your password must be between 8 and 20 characters long.',
@@ -486,7 +481,6 @@ export const PlaygroundPasswordInput = {
     loadingTime: '5s',
     leadingIcon: false,
     icon: '',
-    hiddenLabel: '',
-    skeleton: false
+    hiddenLabel: ''
   },
 }

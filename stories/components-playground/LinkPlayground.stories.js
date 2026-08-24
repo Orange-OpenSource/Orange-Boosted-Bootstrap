@@ -19,27 +19,20 @@
 //
 // `Link - On colored bg` used to be a second file. It was the same component:
 // one extra class on the <a>, and a coloured wrapper around it. It is now the
-// `background` control below, so the two are read and compared in one place.
+// `coloredBg` checkbox below, so the two are read and compared in one place.
 
 const layouts = ['Next', 'Previous', 'External', 'Text only', 'Text + icon', 'Visited']
 const densities = ['Default', 'Compact']
 const sizes = ['Default', 'Small']
 const states = ['Enabled', 'Disabled']
 
-// The `background` control. A background utility must always be paired with the
-// colour theme that goes with it, carried by a *child* element so the background
-// itself does not follow the attribute (utilities/background/). Only the
-// pairings the documentation spells out are offered — the others would be
-// guesses. This table is the single source of truth: the options of the control
-// and the wrappers below are both derived from it.
-const backgroundSurfaces = {
-  'Brand primary': { surface: 'bg-surface-brand-primary', theme: 'light' },
-  'Inverse high': { surface: 'bg-surface-inverse-high', theme: 'root-inverted' },
-  'Inverse low': { surface: 'bg-surface-inverse-low', theme: 'dark' },
-  'Status negative emphasized': { surface: 'bg-surface-status-negative-emphasized', theme: 'root-inverted' }
-}
-
-const backgrounds = ['None', ...Object.keys(backgroundSurfaces)]
+// A background utility must always be paired with the colour theme that goes
+// with it, carried by a *child* element so the background itself does not follow
+// the attribute (utilities/background/). The playground offers the pairing the
+// documentation's own `on colored background` example uses: the question the
+// control answers is "what does `link-on-colored-bg` change?", not "which
+// surface". Swap the two values below to check another surface.
+const coloredSurface = { surface: 'bg-surface-brand-primary', theme: 'light' }
 
 const indent = (markup) => markup.split('\n').map((line) => (line ? `    ${line}` : line)).join('\n')
 
@@ -51,17 +44,15 @@ ${indent(markup)}
   </div>
 </div>`
 
-const backgroundWrappers = Object.fromEntries(
-  Object.entries(backgroundSurfaces).map(([name, pair]) => [name, wrapper(pair)])
-)
+// Unchecked leaves the markup alone: the link stands on the page background.
+const backgroundWrappers = {
+  'True': wrapper(coloredSurface),
+  'False': (markup) => markup
+}
 
-// `None` — and anything the table does not cover — leaves the markup alone.
-const asIs = (markup) => markup
+const onBackground = (markup, coloredBg) => backgroundWrappers[coloredBg ? 'True' : 'False'](markup)
 
-const onBackground = (markup, background) => (backgroundWrappers[background] ?? asIs)(markup)
-
-// Any background but `None` puts the on-colored-bg variant on the link.
-const onColoredBgClass = (background) => (backgroundSurfaces[background] ? 'link-on-colored-bg' : '')
+const onColoredBgClass = (coloredBg) => (coloredBg ? 'link-on-colored-bg' : '')
 
 // The canvas inlines the icons: they show up without depending on the hosted
 // sprite. The Code panel shows the sprite reference instead, which is what one
@@ -288,20 +279,20 @@ const previewExtras = {
   'Previous': previousStyle
 }
 
-const notOnBackground = (layout, background) =>
-  (backgroundSurfaces[background] ? layoutOnBackground[layout] : undefined) ?? layout
+const notOnBackground = (layout, coloredBg) =>
+  (coloredBg ? layoutOnBackground[layout] : undefined) ?? layout
 
-const visitedWarning = (layout, background) =>
-  backgroundSurfaces[background] && layout === 'Visited'
+const visitedWarning = (layout, coloredBg) =>
+  coloredBg && layout === 'Visited'
     ? '<!-- OUDS: no visited colour on a colored background — rendered as a plain link. -->\n'
     : ''
 
-const renderLink = ({ layout, size, density, state, label, background }, icons = inlineIcons, preview = true) => {
-  const safeLayout = notOnBackground(orElse(layout, layouts), background)
+const renderLink = ({ layout, size, density, state, label, coloredBg }, icons = inlineIcons, preview = true) => {
+  const safeLayout = notOnBackground(orElse(layout, layouts), coloredBg)
 
   const classes = [
     'link',
-    onColoredBgClass(background),
+    onColoredBgClass(coloredBg),
     ...layoutClasses[safeLayout],
     sizeClasses[orElse(size, sizes)],
     densityClasses[orElse(density, densities)]
@@ -309,23 +300,13 @@ const renderLink = ({ layout, size, density, state, label, background }, icons =
 
   const extras = preview ? (previewExtras[safeLayout] ?? '') : ''
 
-  return extras + visitedWarning(orElse(layout, layouts), background) + onBackground(layoutTemplates[safeLayout]({
+  return extras + visitedWarning(orElse(layout, layouts), coloredBg) + onBackground(layoutTemplates[safeLayout]({
     classes,
     disabledAttr: stateMap[orElse(state, states)],
     label,
     icons
-  }), background)
+  }), coloredBg)
 }
-
-// `component-max-width` is the design system class, but the stylesheet only
-// compounds it with the form components — text input, text area, select input,
-// control items. Elsewhere the constraint goes on an ancestor, with the value
-// the class carries: 30rem.
-const maxWidthWrapper = (markup, maxWidth) => (maxWidth
-  ? `<div style="max-width: 30rem">
-${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
-</div>`
-  : markup)
 
 // Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
 // the component itself: every child of that container renders as a skeleton, and
@@ -357,11 +338,10 @@ export default {
       control: 'select',
       options: states,
     },
-    background: {
-      name: 'Background',
-      control: 'select',
-      options: backgrounds,
-      description: 'Wraps the link in a coloured surface and adds `link-on-colored-bg`. Each value also carries the `data-bs-theme` the documentation pairs with that surface. `None`: the link alone.',
+    coloredBg: {
+      name: 'On colored bg',
+      control: 'boolean',
+      description: 'Adds `link-on-colored-bg` and wraps the link in the surface the documentation pairs it with — `bg-surface-brand-primary` carrying `data-bs-theme="light"` on a child, so the background itself does not follow the theme (utilities/background/). `Visited` has no colour of its own there: it falls back to a plain link, and says so.',
     },
     label: {
       control: 'text',
@@ -371,11 +351,6 @@ export default {
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
       if: { arg: 'layout', eq: 'Text + icon' },
-    },
-    maxWidth: {
-      name: 'Max width',
-      control: 'boolean',
-      description: 'Bounds the component to 30rem, the value of the `component-max-width` class — which the stylesheet reserves for the form components, so here it goes on an ancestor.',
     },
     skeleton: {
       control: 'boolean',
@@ -390,39 +365,38 @@ export const PlaygroundLink = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { layout, size, density, state, label, icon, background, maxWidth, skeleton } = context.args
+          const { layout, size, density, state, label, icon, coloredBg, skeleton } = context.args
 
-          return skeletonWrapper(maxWidthWrapper(renderLink({
+          return skeletonWrapper(renderLink({
             layout,
             size,
             density,
             state,
             label,
-            background,
-          }, withCustomIcon(spriteIcons, icon), false), maxWidth), skeleton)
+            coloredBg,
+          }, withCustomIcon(spriteIcons, icon), false), skeleton)
         },
       },
     },
   },
-  render: ({ layout, size, density, state, label, icon, background, maxWidth, skeleton }) => {
-    return skeletonWrapper(maxWidthWrapper(renderLink({
+  render: ({ layout, size, density, state, label, icon, coloredBg, skeleton }) => {
+    return skeletonWrapper(renderLink({
       layout,
       size,
       density,
       state,
       label,
-      background,
-    }, withCustomIcon(inlineIcons, icon)), maxWidth), skeleton)
+      coloredBg,
+    }, withCustomIcon(inlineIcons, icon)), skeleton)
   },
   args: {
     layout: 'Next',
     size: 'Default',
     density: 'Default',
     state: 'Enabled',
-    background: 'None',
+    coloredBg: false,
     label: 'Label',
     icon: '',
-    maxWidth: false,
     skeleton: false
   },
 }

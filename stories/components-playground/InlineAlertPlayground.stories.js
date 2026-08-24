@@ -157,7 +157,7 @@ const statusClasses = {
   'Warning': 'alert-warning'
 }
 
-const renderInlineAlert = ({ status, label, maxWidth }, iconMarkup = inlineIcon(defaultIconPath)) => {
+const renderInlineAlert = ({ status, label }, iconMarkup = inlineIcon(defaultIconPath)) => {
   const safeStatus = orElse(status, statuses)
   const classes = [
     'alert',
@@ -166,21 +166,11 @@ const renderInlineAlert = ({ status, label, maxWidth }, iconMarkup = inlineIcon(
 
   const iconContent = (iconContents[safeStatus] ?? (() => iconMarkup))()
 
-  return maxWidthWrapper(`<div class="${classes}">
+  return `<div class="${classes}">
   <div class="alert-icon">${iconContent}<p class="visually-hidden">${statusMap[safeStatus]}</p></div>
   <p class="alert-label">${label}</p>
-</div>`, maxWidth)
-}
-
-// `component-max-width` is the design system class, but the stylesheet only
-// compounds it with the form components — text input, text area, select input,
-// control items. Elsewhere the constraint goes on an ancestor, with the value
-// the class carries: 30rem.
-const maxWidthWrapper = (markup, maxWidth) => (maxWidth
-  ? `<div style="max-width: 30rem">
-${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
 </div>`
-  : markup)
+}
 
 // Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
 // the component itself: every child of that container renders as a skeleton, and
@@ -206,11 +196,6 @@ export default {
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Neutral and Accent only: a functional status carries its own icon, from the CSS. Empty: the design system icon.',
     },
-    maxWidth: {
-      name: 'Max width',
-      control: 'boolean',
-      description: 'Bounds the component to 30rem, the value of the `component-max-width` class — which the stylesheet reserves for the form components, so here it goes on an ancestor.',
-    },
     skeleton: {
       control: 'boolean',
       description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
@@ -224,29 +209,26 @@ export const PlaygroundInlineAlert = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { status, label, icon, maxWidth, skeleton } = context.args
+          const { status, label, icon, skeleton } = context.args
 
           return skeletonWrapper(renderInlineAlert({
             status,
             label,
-            maxWidth,
           }, resolveIcon(icon, spriteIcon)), skeleton)
         },
       },
     },
   },
-  render: ({ status, label, icon, maxWidth, skeleton }) => {
+  render: ({ status, label, icon, skeleton }) => {
     return skeletonWrapper(renderInlineAlert({
       status,
       label,
-      maxWidth,
     }, resolveIcon(icon, inlineIcon(defaultIconPath))), skeleton)
   },
   args: {
     status: 'Neutral',
     label: 'Label',
     icon: '',
-    maxWidth: false,
     skeleton: false
   },
 }

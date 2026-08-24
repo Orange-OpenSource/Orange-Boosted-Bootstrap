@@ -2,32 +2,26 @@
 //
 // `Button - On colored bg` used to be a second file. It was the same component:
 // one extra class on the <button>, and a coloured wrapper around it. It is now
-// the `background` control below, so the two are read and compared in one place.
+// the `coloredBg` checkbox below, so the two are read and compared in one place.
 
-const buttonVariants = ['default', 'strong', 'brand', 'minimal', 'negative']
-const layouts = ['Text only', 'Text + Icon', 'Icon only']
+const buttonVariants = ['Default', 'Strong', 'Brand', 'Minimal', 'Negative']
+const layouts = ['Text only', 'Text + icon', 'Icon only']
 const sizes = ['Default', 'Small']
-const states = ['enabled', 'loading indeterminate', 'loading determinate', 'disabled']
+const states = ['Enabled', 'Loading indeterminate', 'Loading determinate', 'Disabled']
 
 // A control left on "Choose option" gives `undefined`. The component must still
 // render, so every select falls back on the first value of its list rather than
 // on an empty output.
 const orElse = (value, options) => (options.includes(value) ? value : options[0])
 
-// The `background` control. A background utility must always be paired with the
-// colour theme that goes with it, carried by a *child* element so the background
-// itself does not follow the attribute (utilities/background/). Only the
-// pairings the documentation spells out are offered — the others would be
-// guesses. This table is the single source of truth: the options of the control
-// and the wrappers below are both derived from it.
-const backgroundSurfaces = {
-  'Brand primary': { surface: 'bg-surface-brand-primary', theme: 'light' },
-  'Inverse high': { surface: 'bg-surface-inverse-high', theme: 'root-inverted' },
-  'Inverse low': { surface: 'bg-surface-inverse-low', theme: 'dark' },
-  'Status negative emphasized': { surface: 'bg-surface-status-negative-emphasized', theme: 'root-inverted' }
-}
-
-const backgrounds = ['None', ...Object.keys(backgroundSurfaces)]
+// A background utility must always be paired with the colour theme that goes
+// with it, carried by a *child* element so the background itself does not follow
+// the attribute (utilities/background/). The documentation writes several
+// pairings; the playground offers the one its own `on colored background`
+// example uses, since the question the control answers is "what does
+// `btn-on-colored-bg` change?", not "which surface". Swap the two values below
+// to check another surface.
+const coloredSurface = { surface: 'bg-surface-brand-primary', theme: 'light' }
 
 const indent = (markup) => markup.split('\n').map((line) => (line ? `    ${line}` : line)).join('\n')
 
@@ -39,17 +33,15 @@ ${indent(markup)}
   </div>
 </div>`
 
-const backgroundWrappers = Object.fromEntries(
-  Object.entries(backgroundSurfaces).map(([name, pair]) => [name, wrapper(pair)])
-)
+// Unchecked leaves the markup alone: the button stands on the page background.
+const backgroundWrappers = {
+  'True': wrapper(coloredSurface),
+  'False': (markup) => markup
+}
 
-// `None` — and anything the table does not cover — leaves the markup alone.
-const asIs = (markup) => markup
+const onBackground = (markup, coloredBg) => backgroundWrappers[coloredBg ? 'True' : 'False'](markup)
 
-const onBackground = (markup, background) => (backgroundWrappers[background] ?? asIs)(markup)
-
-// Any background but `None` puts the on-colored-bg variant on the button.
-const onColoredBgClass = (background) => (backgroundSurfaces[background] ? 'btn-on-colored-bg' : '')
+const onColoredBgClass = (coloredBg) => (coloredBg ? 'btn-on-colored-bg' : '')
 
 // OUDS: "Negative and brand buttons should never be used on colored background."
 // The combination stays reachable — one has to be able to see what it does — so
@@ -57,11 +49,11 @@ const onColoredBgClass = (background) => (backgroundSurfaces[background] ? 'btn-
 // copied along with the markup; the canvas gets a banner, which is not, and
 // which is deliberately styled outside the design system so it cannot be taken
 // for a component.
-const forbiddenOnBackground = ['brand', 'negative']
+const forbiddenOnBackground = ['Brand', 'Negative']
 
-const warningFor = (variant, background) =>
-  backgroundSurfaces[background] && forbiddenOnBackground.includes(variant)
-    ? `OUDS: a ${variant} button should never be used on a colored background.`
+const warningFor = (variant, coloredBg) =>
+  coloredBg && forbiddenOnBackground.includes(variant)
+    ? `OUDS: a ${variant.toLowerCase()} button should never be used on a colored background.`
     : ''
 
 const previewBanner = (warning) =>
@@ -188,6 +180,14 @@ const renderIcon = (icon) => (icon ? inlineIcon(icon) : '')
 // has not typed their own path: in that case theirs is shown, otherwise the
 // snippet would lie about what it renders. `preview` works the same way: the
 // canvas gets the warning banner, the Code panel gets the comment alone.
+const variantClasses = {
+  'Default': 'btn-default',
+  'Strong': 'btn-strong',
+  'Brand': 'btn-brand',
+  'Minimal': 'btn-minimal',
+  'Negative': 'btn-negative'
+}
+
 const sizeClasses = {
   'Default': '',
   'Small': 'btn-small'
@@ -195,7 +195,7 @@ const sizeClasses = {
 
 const layoutClasses = {
   'Text only': '',
-  'Text + Icon': '',
+  'Text + icon': '',
   'Icon only': 'btn-icon'
 }
 
@@ -203,37 +203,37 @@ const layoutClasses = {
 // `visually-hidden` span: it is all a screen reader announces.
 const layoutLines = {
   'Text only': ({ label }) => [label],
-  'Text + Icon': ({ label, iconMarkup }) => [iconMarkup, label],
+  'Text + icon': ({ label, iconMarkup }) => [iconMarkup, label],
   'Icon only': ({ label, iconMarkup }) => [iconMarkup, `<span class="visually-hidden">${label}</span>`]
 }
 
 const stateClasses = {
-  'enabled': '',
-  'loading indeterminate': 'loading-indeterminate',
-  'loading determinate': 'loading-determinate',
-  'disabled': ''
+  'Enabled': '',
+  'Loading indeterminate': 'loading-indeterminate',
+  'Loading determinate': 'loading-determinate',
+  'Disabled': ''
 }
 
 // A loading button is disabled while it loads — that is what the documentation
 // examples do, and what keeps it out of reach during the wait.
 const stateAttrs = {
-  'enabled': '',
-  'loading indeterminate': ' disabled',
-  'loading determinate': ' disabled',
-  'disabled': ' disabled'
+  'Enabled': '',
+  'Loading indeterminate': ' disabled',
+  'Loading determinate': ' disabled',
+  'Disabled': ' disabled'
 }
 
 // Only the determinate loader is timed: `--bs-btn-loading-time` drives the
 // `rotate-determinate` animation, which draws the progress.
 const stateStyles = {
-  'loading determinate': (loadingTime) => ` style="--bs-btn-loading-time: ${loadingTime};"`
+  'Loading determinate': (loadingTime) => ` style="--bs-btn-loading-time: ${loadingTime};"`
 }
 
 // The loader and its status message come after the label, as in the
 // documentation. A state absent from the table adds nothing.
 const stateLines = {
-  'loading indeterminate': (label) => [loadingLoader, `<span role="status" class="visually-hidden">Loading ${label}</span>`],
-  'loading determinate': (label) => [loadingLoader, `<span role="status" class="visually-hidden">Loading ${label}: xx%</span>`]
+  'Loading indeterminate': (label) => [loadingLoader, `<span role="status" class="visually-hidden">Loading ${label}</span>`],
+  'Loading determinate': (label) => [loadingLoader, `<span role="status" class="visually-hidden">Loading ${label}: xx%</span>`]
 }
 
 const nothing = () => ''
@@ -246,17 +246,17 @@ const roundedWrappers = {
   'False': (markup) => markup
 }
 
-const renderButton = ({ label, variant, layout, size, state, icon, rounded, loadingTime, background }, iconOverride, preview = true) => {
+const renderButton = ({ label, variant, layout, size, state, icon, rounded, loadingTime, coloredBg }, iconOverride, preview = true) => {
   const safeLayout = orElse(layout, layouts)
   const safeState = orElse(state, states)
   const safeVariant = orElse(variant, buttonVariants)
 
   const classes = [
     'btn',
-    `btn-${safeVariant}`,
+    variantClasses[safeVariant],
     layoutClasses[safeLayout],
     sizeClasses[orElse(size, sizes)],
-    onColoredBgClass(background),
+    onColoredBgClass(coloredBg),
     stateClasses[safeState]
   ].filter(Boolean).join(' ')
 
@@ -271,21 +271,11 @@ ${lines.map((line) => `  ${line}`).join('\n')}
 </button>`
 
   return warned(
-    onBackground(roundedWrappers[(rounded ? 'True' : 'False')](buttonMarkup), background),
-    warningFor(safeVariant, background),
+    onBackground(roundedWrappers[(rounded ? 'True' : 'False')](buttonMarkup), coloredBg),
+    warningFor(safeVariant, coloredBg),
     preview
   )
 }
-
-// `component-max-width` is the design system class, but the stylesheet only
-// compounds it with the form components — text input, text area, select input,
-// control items. Elsewhere the constraint goes on an ancestor, with the value
-// the class carries: 30rem.
-const maxWidthWrapper = (markup, maxWidth) => (maxWidth
-  ? `<div style="max-width: 30rem">
-${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
-</div>`
-  : markup)
 
 // Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
 // the component itself: every child of that container renders as a skeleton, and
@@ -309,11 +299,10 @@ export default {
       control: 'select',
       options: buttonVariants,
     },
-    background: {
-      name: 'Background',
-      control: 'select',
-      options: backgrounds,
-      description: 'Wraps the button in a coloured surface and adds `btn-on-colored-bg`. Each value also carries the `data-bs-theme` the documentation pairs with that surface — `light` on brand primary, `root-inverted` on inverse high and on status negative emphasized, `dark` on inverse low (utilities/background/). `None`: the button alone. OUDS reserves this variant for `default`, `strong` and `minimal` — the other two stay reachable, with a warning.',
+    coloredBg: {
+      name: 'On colored bg',
+      control: 'boolean',
+      description: 'Adds `btn-on-colored-bg` and wraps the button in the surface the documentation pairs it with — `bg-surface-brand-primary` carrying `data-bs-theme="light"` on a child, so the background itself does not follow the theme (utilities/background/). OUDS reserves this variant for `Default`, `Strong` and `Minimal`; `Brand` and `Negative` stay reachable, with a warning.',
     },
     layout: {
       control: 'select',
@@ -336,17 +325,12 @@ export default {
       name: 'Loading time',
       control: 'text',
       description: 'Determinate loader only: the `--bs-btn-loading-time` custom property, any CSS duration — `5s`, `800ms`.',
-      if: { arg: 'state', eq: 'loading determinate' },
+      if: { arg: 'state', eq: 'Loading determinate' },
     },
     icon: {
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
       if: { arg: 'layout', neq: 'Text only' },
-    },
-    maxWidth: {
-      name: 'Max width',
-      control: 'boolean',
-      description: 'Bounds the component to 30rem, the value of the `component-max-width` class — which the stylesheet reserves for the form components, so here it goes on an ancestor.',
     },
     skeleton: {
       control: 'boolean',
@@ -361,9 +345,9 @@ export const PlaygroundButton = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { label, variant, layout, size, state, icon, rounded, loadingTime, background, maxWidth, skeleton } = context.args
+          const { label, variant, layout, size, state, icon, rounded, loadingTime, coloredBg, skeleton } = context.args
 
-          return skeletonWrapper(maxWidthWrapper(renderButton({
+          return skeletonWrapper(renderButton({
             label,
             variant,
             layout,
@@ -372,14 +356,14 @@ export const PlaygroundButton = {
             icon,
             rounded,
             loadingTime,
-            background,
-          }, icon ? '' : spriteIcon, false), maxWidth), skeleton)
+            coloredBg,
+          }, icon ? '' : spriteIcon, false), skeleton)
         },
       },
     },
   },
-  render: ({ label, variant, layout, size, state, icon, rounded, loadingTime, background, maxWidth, skeleton }) => {
-    return skeletonWrapper(maxWidthWrapper(renderButton({
+  render: ({ label, variant, layout, size, state, icon, rounded, loadingTime, coloredBg, skeleton }) => {
+    return skeletonWrapper(renderButton({
       label,
       variant,
       layout,
@@ -388,20 +372,19 @@ export const PlaygroundButton = {
       icon,
       rounded,
       loadingTime,
-      background,
-    }), maxWidth), skeleton)
+      coloredBg,
+    }), skeleton)
   },
   args: {
     label: 'Label',
-    variant: 'default',
-    background: 'None',
-    layout: 'Text + Icon',
+    variant: 'Default',
+    coloredBg: false,
+    layout: 'Text + icon',
     size: 'Default',
     rounded: false,
-    state: 'enabled',
+    state: 'Enabled',
     loadingTime: '5s',
     icon: '',
-    maxWidth: false,
     skeleton: false
   },
 }

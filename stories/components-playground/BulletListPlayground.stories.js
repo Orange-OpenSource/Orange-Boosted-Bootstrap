@@ -16,7 +16,7 @@
 
 const listTypes = ['Unordered', 'Ordered', 'Bare']
 const markerColors = ['Inherited', 'Default', 'Brand']
-const textStyles = ['Body Large', 'Body Medium']
+const textStyles = ['Body large', 'Body medium']
 
 // Figma properties with no counterpart in the HTML, and nothing to hold either:
 // `Skeleton`, carried by an ancestor `<div aria-busy="true" inert>`, and the
@@ -26,8 +26,8 @@ const textStyles = ['Body Large', 'Body Medium']
 // them.
 
 const textStyleClasses = {
-  'Body Large': '',
-  'Body Medium': 'fs-bm'
+  'Body large': '',
+  'Body medium': 'fs-bm'
 }
 
 const boldClasses = {
@@ -62,18 +62,22 @@ const DEPTHS = [1, 2, 3]
 
 const depthLabels = ['Item', 'Sub item', 'Sub sub item']
 
-const toDepth = (value) => Math.min(Math.max(1, Number.parseInt(value, 10) || 1), 3)
-const toWidth = (value) => Math.min(Math.max(1, Number.parseInt(value, 10) || 1), 5)
+// The shape of the tree is frozen rather than exposed. Depth and width change
+// how much outline there is, not what the markup of a bullet list looks like —
+// and the three marker levels are the thing to look at, so the tree is always
+// deep enough to show all three and narrow enough to fit on screen. Two items
+// per list is the smallest number that still shows a marker sequence.
+const DEPTH = 3
+const ITEMS_PER_LIST = 2
 
-// The tree, built from the two numbers: as many items per list, as deep as
-// asked. Only the last item of each list carries the sublist — a full tree at
-// depth 3 would be unreadable, and the markers are what one is looking at.
-const treeOf = ({ depth, itemsPerLevel }, level = 0) => Array.from(
-  { length: toWidth(itemsPerLevel) },
+// Only the last item of each list carries the sublist — a full tree at depth 3
+// would be unreadable, and the markers are what one is looking at.
+const treeOf = (_args, level = 0) => Array.from(
+  { length: ITEMS_PER_LIST },
   (_, index) => ({
     label: `${depthLabels[level]} ${index + 1}`,
-    children: index === toWidth(itemsPerLevel) - 1 && level < toDepth(depth) - 1
-      ? treeOf({ depth, itemsPerLevel }, level + 1)
+    children: index === ITEMS_PER_LIST - 1 && level < DEPTH - 1
+      ? treeOf(_args, level + 1)
       : []
   })
 )
@@ -181,8 +185,8 @@ ${inner}</li>`
   ].join('\n')
 }
 
-const renderBulletList = ({ tree, lists, textStyle, bold, maxWidth }) => {
-  return maxWidthWrapper(renderList({
+const renderBulletList = ({ tree, lists, textStyle, bold }) => {
+  return renderList({
     nodes: toNodes(tree),
     lists,
     depth: 0,
@@ -190,18 +194,8 @@ const renderBulletList = ({ tree, lists, textStyle, bold, maxWidth }) => {
     parentTag: '',
     textStyle,
     bold
-  }), maxWidth)
+  })
 }
-
-// `component-max-width` is the design system class, but the stylesheet only
-// compounds it with the form components — text input, text area, select input,
-// control items. Elsewhere the constraint goes on an ancestor, with the value
-// the class carries: 30rem.
-const maxWidthWrapper = (markup, maxWidth) => (maxWidth
-  ? `<div style="max-width: 30rem">
-${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
-</div>`
-  : markup)
 
 // Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
 // the component itself: every child of that container renders as a skeleton, and
@@ -216,16 +210,6 @@ ${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
 export default {
   title: 'Playground/Bullet list',
   argTypes: {
-    depth: {
-      name: 'Depth',
-      control: { type: 'number', min: 1, max: 3, step: 1 },
-      description: 'How many nesting levels. OUDS draws three marker levels; deeper lists reuse the third.',
-    },
-    itemsPerLevel: {
-      name: 'Items per list',
-      control: { type: 'number', min: 1, max: 5, step: 1 },
-      description: 'How many items in each list. The last one of each carries the sublist, so the nesting stays readable.',
-    },
     level1Type: {
       name: 'Level 1 — type',
       control: 'select',
@@ -237,11 +221,13 @@ export default {
       control: 'select',
       options: markerColors,
       description: '`Inherited` poses no class; the documentation sets the colour one nesting level at a time.',
+      if: { arg: 'level1Type', neq: 'Bare' },
     },
     level1Icon: {
       name: 'Level 1 — marker icon',
       control: 'text',
       description: 'A whole `<svg>…</svg>` or only its inside, turned into the `--bs-bullet-list-custom-marker` mask. A custom marker inherits into the levels below; `none` puts the design system marker back on a level.',
+      if: { arg: 'level1Type', neq: 'Bare' },
     },
     level2Type: {
       name: 'Level 2 — type',
@@ -254,11 +240,13 @@ export default {
       control: 'select',
       options: markerColors,
       description: '`Inherited` poses no class; the documentation sets the colour one nesting level at a time.',
+      if: { arg: 'level2Type', neq: 'Bare' },
     },
     level2Icon: {
       name: 'Level 2 — marker icon',
       control: 'text',
       description: 'A whole `<svg>…</svg>` or only its inside, turned into the `--bs-bullet-list-custom-marker` mask. A custom marker inherits into the levels below; `none` puts the design system marker back on a level.',
+      if: { arg: 'level2Type', neq: 'Bare' },
     },
     level3Type: {
       name: 'Level 3 — type',
@@ -271,11 +259,13 @@ export default {
       control: 'select',
       options: markerColors,
       description: '`Inherited` poses no class; the documentation sets the colour one nesting level at a time.',
+      if: { arg: 'level3Type', neq: 'Bare' },
     },
     level3Icon: {
       name: 'Level 3 — marker icon',
       control: 'text',
       description: 'A whole `<svg>…</svg>` or only its inside, turned into the `--bs-bullet-list-custom-marker` mask. A custom marker inherits into the levels below; `none` puts the design system marker back on a level.',
+      if: { arg: 'level3Type', neq: 'Bare' },
     },
     textStyle: {
       control: 'select',
@@ -283,11 +273,6 @@ export default {
     },
     bold: {
       control: 'boolean',
-    },
-    maxWidth: {
-      name: 'Max width',
-      control: 'boolean',
-      description: 'Bounds the component to 30rem, the value of the `component-max-width` class — which the stylesheet reserves for the form components, so here it goes on an ancestor.',
     },
     skeleton: {
       control: 'boolean',
@@ -302,33 +287,29 @@ export const PlaygroundBulletList = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { textStyle, bold, maxWidth, skeleton } = context.args
+          const { textStyle, bold, skeleton } = context.args
 
           return skeletonWrapper(renderBulletList({
             tree: treeOf(context.args),
             lists: listsOf(context.args),
             textStyle,
             bold,
-            maxWidth,
           }), skeleton)
         },
       },
     },
   },
   render: (args) => {
-    const { textStyle, bold, maxWidth, skeleton } = args
+    const { textStyle, bold, skeleton } = args
 
     return skeletonWrapper(renderBulletList({
       tree: treeOf(args),
       lists: listsOf(args),
       textStyle,
       bold,
-      maxWidth,
     }), skeleton)
   },
   args: {
-    depth: 3,
-    itemsPerLevel: 3,
     level1Type: 'Unordered',
     level1MarkerColor: 'Default',
     level1Icon: '',
@@ -338,9 +319,8 @@ export const PlaygroundBulletList = {
     level3Type: 'Unordered',
     level3MarkerColor: 'Inherited',
     level3Icon: '',
-    textStyle: 'Body Large',
+    textStyle: 'Body large',
     bold: true,
-    maxWidth: false,
     skeleton: false
   },
 }

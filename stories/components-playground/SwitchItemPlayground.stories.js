@@ -185,7 +185,7 @@ const resolveIcon = (icon, fallback) => (icon ? inlineIcon(icon) : fallback)
 // An optional part is a list: empty, nothing is rendered; filled, one line.
 const maybe = (value) => (value ? [value] : [])
 
-const renderSwitchItem = ({ state, selected, error, errorMessage, required, reverse, divider, maxWidth, label, description, showIcon }, iconMarkup = inlineIcon(defaultIconPath)) => {
+const renderSwitchItem = ({ state, selected, error, errorMessage, required, reverse, divider, maxWidth, label, description, helperText, showIcon }, iconMarkup = inlineIcon(defaultIconPath)) => {
   const safeState = orElse(state, states)
   const shape = shapes[safeState]
   const selectedKey = selected ? 'True' : 'False'
@@ -208,6 +208,7 @@ const renderSwitchItem = ({ state, selected, error, errorMessage, required, reve
   // when the item is invalid — the stylesheet only shows it then.
   const describedBy = [
     description ? 'switchItemDescription' : '',
+    helperText ? 'switchItemHelper' : '',
     error && errorMessage ? 'switchItemErrorText' : ''
   ].filter(Boolean).join(' ')
 
@@ -238,11 +239,19 @@ ${textLines.map((line) => `      ${line}`).join('\n')}
     </div>${iconContainer.join('')}
   </div>`
 
+  // The documentation writes no helper text for a control item — it only has a
+  // description, inside the text container. `.helper-text` is the design system's
+  // generic class for it (`scss/_forms.scss`), so it is used here as the form
+  // components use it: a sibling of the component, before the error message,
+  // referenced by `aria-describedby`.
+  const helperLine = maybe(helperText).map((text) =>
+    `  <p class="helper-text" id="switchItemHelper">${text}</p>`)
+
   const errorLine = maybe(errorMessage).map((text) =>
     `  <p class="control-item-error-message" id="switchItemErrorText">${text}</p>`)
 
   return `<div class="switch-item-container">
-${[item, ...errorLine].join('\n')}
+${[item, ...helperLine, ...errorLine].join('\n')}
 </div>`
 }
 
@@ -265,6 +274,11 @@ export default {
     description: {
       control: 'text',
       description: 'Rendered as `<p class="control-item-description">` inside the text container, and referenced by `aria-describedby`. Empty: no description.',
+    },
+    helperText: {
+      name: 'Helper text',
+      control: 'text',
+      description: 'Rendered as `<p class="helper-text">` after the item, before the error message, and referenced by `aria-describedby`. The documentation has no helper text on a control item; `.helper-text` is the generic class the form components use. Empty: none.',
     },
     selected: {
       control: 'boolean',
@@ -321,7 +335,7 @@ export const PlaygroundSwitchItem = {
         transform: (_src, context) => {
           const {
             state, selected, error, errorMessage, required, reverse, divider,
-            maxWidth, label, description, showIcon, icon, skeleton
+            maxWidth, label, description, helperText, showIcon, icon, skeleton
           } = context.args
 
           return skeletonWrapper(renderSwitchItem({
@@ -335,13 +349,14 @@ export const PlaygroundSwitchItem = {
             maxWidth,
             label,
             description,
+            helperText,
             showIcon,
           }, resolveIcon(icon, spriteIcon)), skeleton)
         },
       },
     },
   },
-  render: ({ state, selected, error, errorMessage, required, reverse, divider, maxWidth, label, description, showIcon, icon, skeleton }) => {
+  render: ({ state, selected, error, errorMessage, required, reverse, divider, maxWidth, label, description, helperText, showIcon, icon, skeleton }) => {
     return skeletonWrapper(renderSwitchItem({
       state,
       selected,
@@ -353,12 +368,14 @@ export const PlaygroundSwitchItem = {
       maxWidth,
       label,
       description,
+      helperText,
       showIcon,
     }, resolveIcon(icon, inlineIcon(defaultIconPath))), skeleton)
   },
   args: {
     label: 'Label',
     description: 'Description text',
+    helperText: 'Helper text.',
     selected: false,
     state: 'Enabled',
     required: false,

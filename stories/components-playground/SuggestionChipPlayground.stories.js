@@ -189,7 +189,7 @@ const disabledAttrs = {
   'False': ''
 }
 
-const renderSuggestionChip = ({ count, chips, layout, icon, maxWidth }, icons = inlineIcons) => {
+const renderSuggestionChip = ({ count, chips, layout, icon }, icons = inlineIcons) => {
   const safeLayout = orElse(layout, layouts)
   const classes = ['chip-interactive', layoutClasses[safeLayout]].filter(Boolean).join(' ')
 
@@ -204,20 +204,10 @@ ${lines.map((line) => `      ${line}`).join('\n')}
   </li>`
   })
 
-  return maxWidthWrapper((`<ul class="chips-container" aria-label="Answer with">
+  return (`<ul class="chips-container" aria-label="Answer with">
 ${items.join('\n')}
-</ul>`), maxWidth)
+</ul>`)
 }
-
-// `component-max-width` is the design system class, but the stylesheet only
-// compounds it with the form components — text input, text area, select input,
-// control items. Elsewhere the constraint goes on an ancestor, with the value
-// the class carries: 30rem.
-const maxWidthWrapper = (markup, maxWidth) => (maxWidth
-  ? `<div style="max-width: 30rem">
-${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
-</div>`
-  : markup)
 
 // Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
 // the component itself: every child of that container renders as a skeleton, and
@@ -250,19 +240,23 @@ export default {
       name: 'Chip 2 — label',
       control: 'text',
       description: 'Interpolated as is, so HTML goes through — paste a `<br>`, or a long sentence, to see the chip on several lines.',
+      if: { arg: 'count', gte: 2 },
     },
     chip2Disabled: {
       name: 'Chip 2 — disabled',
       control: 'boolean',
+      if: { arg: 'count', gte: 2 },
     },
     chip3Label: {
       name: 'Chip 3 — label',
       control: 'text',
       description: 'Interpolated as is, so HTML goes through — paste a `<br>`, or a long sentence, to see the chip on several lines.',
+      if: { arg: 'count', gte: 3 },
     },
     chip3Disabled: {
       name: 'Chip 3 — disabled',
       control: 'boolean',
+      if: { arg: 'count', gte: 3 },
     },
     layout: {
       control: 'select',
@@ -273,11 +267,6 @@ export default {
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
       if: { arg: 'layout', neq: 'Text only' },
-    },
-    maxWidth: {
-      name: 'Max width',
-      control: 'boolean',
-      description: 'Bounds the component to 30rem, the value of the `component-max-width` class — which the stylesheet reserves for the form components, so here it goes on an ancestor.',
     },
     skeleton: {
       control: 'boolean',
@@ -292,28 +281,26 @@ export const PlaygroundSuggestionChip = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { count, layout, icon, maxWidth, skeleton } = context.args
+          const { count, layout, icon, skeleton } = context.args
 
           return skeletonWrapper(renderSuggestionChip({
             count,
             chips: chipsOf(context.args),
             layout,
             icon,
-            maxWidth,
           }, withCustomIcon(spriteIcons, icon)), skeleton)
         },
       },
     },
   },
   render: (args) => {
-    const { count, layout, icon, maxWidth, skeleton } = args
+    const { count, layout, icon, skeleton } = args
 
     return skeletonWrapper(renderSuggestionChip({
       count,
       chips: chipsOf(args),
       layout,
       icon,
-      maxWidth,
     }, withCustomIcon(inlineIcons, icon)), skeleton)
   },
   args: {
@@ -326,7 +313,6 @@ export const PlaygroundSuggestionChip = {
     chip3Disabled: false,
     layout: 'Text only',
     icon: '',
-    maxWidth: false,
     skeleton: false
   },
 }

@@ -222,26 +222,41 @@ const actionDisabled = {
 // Retention of what is typed in the canvas. A story is re-rendered from its args
 // on every control change, so a value typed straight into the field would be
 // lost — the most concrete complaint on this component. The field therefore
-// writes each keystroke into a global, and the preview reads it back. Changing
-// the `Value` control wins: it is an explicit intent, the typing is not.
+// writes each keystroke into a global, and the preview reads it back.
 //
-// `transform` gets none of this: the snippet stays plain OUDS markup. Same
-// split as the icons.
+// There is no `Value` control: the field is there to be typed into, and a
+// control that duplicates it only adds a second way to do the same thing.
+//
+// `transform` gets none of this: the snippet stays plain OUDS markup — an empty
+// field, as the documentation writes it. Same split as the icons.
+//
+// The two sides do not necessarily run in the same window: Storybook paints the
+// canvas in the preview iframe, and this playground's standalone preview paints
+// it in a `srcdoc` iframe while `render` runs in the page around it. A store on
+// `globalThis` is therefore two different stores, and everything typed is lost.
+// Both sides resolve the same one instead — the topmost same-origin window,
+// falling back to their own when the top is cross-origin, and to `globalThis`
+// outside a browser, where `check_stories.js` replays the controls.
+const storeWindow = () => {
+  try {
+    return globalThis.top && globalThis.top.document ? globalThis.top : globalThis
+  } catch (error) {
+    return globalThis
+  }
+}
+
 const store = () => {
-  globalThis.__oudsTyped = globalThis.__oudsTyped || {}
+  const win = storeWindow()
+  win.__oudsTyped = win.__oudsTyped || {}
 
-  return globalThis.__oudsTyped
+  return win.__oudsTyped
 }
 
-const keptValue = (args, key) => {
-  const kept = store()
-  const changed = kept[`${key}Arg`] !== args.inputText
-  kept[`${key}Arg`] = args.inputText
+const keptValue = (key) => store()[key] ?? ''
 
-  return changed ? args.inputText : (kept[key] ?? args.inputText)
-}
-
-const retainAttr = (key) => ` oninput="(globalThis.__oudsTyped = globalThis.__oudsTyped || {})['${key}'] = this.value"`
+// The same resolution, written inline: the attribute runs in the canvas, which
+// is where the other window is.
+const retainAttr = (key) => ` oninput="var w; try { w = globalThis.top &amp;&amp; globalThis.top.document ? globalThis.top : globalThis } catch (e) { w = globalThis } (w.__oudsTyped = w.__oudsTyped || {})['${key}'] = this.value"`
 
 const renderTextInput = ({
   label, inputText, placeholder, helperText, helperLink, error, errorMessage, required,
@@ -333,11 +348,6 @@ export default {
     label: {
       control: 'text',
     },
-    inputText: {
-      name: 'Value',
-      control: 'text',
-      description: 'What the field contains. It is an arg, so changing another control no longer empties the field — and in this playground, typing in the canvas writes back here.',
-    },
     placeholder: {
       control: 'text',
       description: 'OUDS specificity: left empty it is rendered as `placeholder=" "`, a single space. Without it the floating label would sit on top of the value.',
@@ -427,7 +437,7 @@ export default {
 }
 
 const ARGS = [
-  'label', 'inputText', 'placeholder', 'helperText', 'helperLink', 'error', 'errorMessage',
+  'label', 'placeholder', 'helperText', 'helperLink', 'error', 'errorMessage',
   'required', 'prefix', 'suffix', 'outlined', 'rounded', 'maxWidth', 'state', 'loadingTime',
   'leadingIcon', 'trailingAction', 'hiddenLabel'
 ]
@@ -449,14 +459,13 @@ export const PlaygroundTextInput = {
   },
   render: (args) => {
     return skeletonWrapper(renderTextInput(
-      { ...pick(args), inputText: keptValue(args, 'textInput') },
+      { ...pick(args), inputText: keptValue('textInput') },
       withCustomIcons(inlineIcons, args),
       retainAttr('textInput')
     ), args.skeleton)
   },
   args: {
     label: 'Label',
-    inputText: '',
     placeholder: 'Placeholder',
     helperText: 'Helper text.',
     helperLink: 'More information',

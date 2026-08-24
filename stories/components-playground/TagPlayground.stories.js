@@ -4,11 +4,11 @@
 
 const appearances = ['Muted', 'Emphasized']
 const statuses = ['Neutral', 'Accent', 'Positive', 'Info', 'Warning', 'Negative']
-const layouts = ['Text only', 'Text + Bullet', 'Text + Icon']
+const layouts = ['Text only', 'Text + bullet', 'Text + icon']
 const sizes = ['Default', 'Small']
 const states = ['Enabled', 'Loading', 'Disabled']
 
-// Fix — Text + Icon: a functional status (Positive, Info, Warning, Negative)
+// Fix — Text + icon: a functional status (Positive, Info, Warning, Negative)
 // carries its own icon, provided by the CSS through
 // `<span class="tag-status-icon"></span>`; only the two non functional ones
 // (Neutral, Accent) take an icon supplied by the product. Rendering the pasted
@@ -186,8 +186,8 @@ const loader = `<svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' clas
 // documentation example shows.
 const leadingLines = {
   'Text only': () => [],
-  'Text + Bullet': () => ['<span class="tag-bullet"></span>'],
-  'Text + Icon': ({ status, iconMarkup }) => [statusIcons[status] ?? iconMarkup],
+  'Text + bullet': () => ['<span class="tag-bullet"></span>'],
+  'Text + icon': ({ status, iconMarkup }) => [statusIcons[status] ?? iconMarkup],
   'Loading': () => [loader, '<span role="status" class="visually-hidden">Loading</span>']
 }
 
@@ -204,7 +204,7 @@ ${lines.map((line) => `  ${line}`).join('\n')}
 </p>`
 }
 
-const renderTag = ({ appearance, status, layout, size, state, roundedCorner, label, maxWidth }, iconMarkup = inlineIcon(defaultIconPath)) => {
+const renderTag = ({ appearance, status, layout, size, state, roundedCorner, label }, iconMarkup = inlineIcon(defaultIconPath)) => {
   const safeStatus = orElse(status, statuses)
   const safeState = orElse(state, states)
 
@@ -220,18 +220,8 @@ const renderTag = ({ appearance, status, layout, size, state, roundedCorner, lab
   const slot = leadingOverride[safeState] ?? orElse(layout, layouts)
   const lines = leadingLines[slot]({ status: safeStatus, iconMarkup })
 
-  return maxWidthWrapper(tagTemplates[lines.length ? 'lines' : 'bare']({ classes, lines, label }), maxWidth)
+  return tagTemplates[lines.length ? 'lines' : 'bare']({ classes, lines, label })
 }
-
-// `component-max-width` is the design system class, but the stylesheet only
-// compounds it with the form components — text input, text area, select input,
-// control items. Elsewhere the constraint goes on an ancestor, with the value
-// the class carries: 30rem.
-const maxWidthWrapper = (markup, maxWidth) => (maxWidth
-  ? `<div style="max-width: 30rem">
-${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
-</div>`
-  : markup)
 
 // Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
 // the component itself: every child of that container renders as a skeleton, and
@@ -274,13 +264,8 @@ export default {
     },
     icon: {
       control: 'text',
-      description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. `Text + Icon` layout, and Neutral or Accent only: a functional status carries its own icon, from the CSS. Empty: the design system icon.',
-      if: { arg: 'layout', eq: 'Text + Icon' },
-    },
-    maxWidth: {
-      name: 'Max width',
-      control: 'boolean',
-      description: 'Bounds the component to 30rem, the value of the `component-max-width` class — which the stylesheet reserves for the form components, so here it goes on an ancestor.',
+      description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. `Text + icon` layout, and Neutral or Accent only: a functional status carries its own icon, from the CSS. Empty: the design system icon.',
+      if: { arg: 'layout', eq: 'Text + icon' },
     },
     skeleton: {
       control: 'boolean',
@@ -295,7 +280,7 @@ export const PlaygroundTag = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { appearance, status, layout, size, state, roundedCorner, label, icon, maxWidth, skeleton } = context.args
+          const { appearance, status, layout, size, state, roundedCorner, label, icon, skeleton } = context.args
 
           return skeletonWrapper(renderTag({
             appearance,
@@ -305,13 +290,12 @@ export const PlaygroundTag = {
             state,
             roundedCorner,
             label,
-            maxWidth,
           }, resolveIcon(icon, spriteIcon)), skeleton)
         },
       },
     },
   },
-  render: ({ appearance, status, layout, size, state, roundedCorner, label, icon, maxWidth, skeleton }) => {
+  render: ({ appearance, status, layout, size, state, roundedCorner, label, icon, skeleton }) => {
     return skeletonWrapper(renderTag({
       appearance,
       status,
@@ -320,7 +304,6 @@ export const PlaygroundTag = {
       state,
       roundedCorner,
       label,
-      maxWidth,
     }, resolveIcon(icon, inlineIcon(defaultIconPath))), skeleton)
   },
   args: {
@@ -332,7 +315,6 @@ export const PlaygroundTag = {
     roundedCorner: true,
     label: 'Label',
     icon: '',
-    maxWidth: false,
     skeleton: false
   },
 }

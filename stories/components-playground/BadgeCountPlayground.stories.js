@@ -45,26 +45,6 @@ const renderBadgeCount = ({ status, size, state, number, hiddenLabel }) => {
   return `<p class="${classes}">${count}<span class="visually-hidden">${hiddenLabel}</span></p>`
 }
 
-// `component-max-width` is the design system class, but the stylesheet only
-// compounds it with the form components — text input, text area, select input,
-// control items. Elsewhere the constraint goes on an ancestor, with the value
-// the class carries: 30rem.
-const maxWidthWrapper = (markup, maxWidth) => (maxWidth
-  ? `<div style="max-width: 30rem">
-${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
-</div>`
-  : markup)
-
-// Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
-// the component itself: every child of that container renders as a skeleton, and
-// `inert` takes it out of the tab order and of the accessibility tree. Same
-// markup for every component of the design system.
-const skeletonWrapper = (markup, skeleton) => (skeleton
-  ? `<div aria-busy="true" inert>
-${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
-</div>`
-  : markup)
-
 export default {
   title: 'Playground/Badge count',
   argTypes: {
@@ -87,15 +67,6 @@ export default {
       name: 'Hidden label',
       control: 'text',
       description: 'Carried by the `visually-hidden` span, next to the visible count: it says what the number counts.',
-    },
-    maxWidth: {
-      name: 'Max width',
-      control: 'boolean',
-      description: 'Bounds the component to 30rem, the value of the `component-max-width` class — which the stylesheet reserves for the form components, so here it goes on an ancestor.',
-    },
-    skeleton: {
-      control: 'boolean',
-      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -106,35 +77,33 @@ export const PlaygroundBadgeCount = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { status, size, state, number, hiddenLabel, maxWidth, skeleton } = context.args
+          const { status, size, state, number, hiddenLabel } = context.args
 
-          return skeletonWrapper(maxWidthWrapper(renderBadgeCount({
+          return renderBadgeCount({
             status,
             size,
             state,
             number,
             hiddenLabel,
-          }), maxWidth), skeleton)
+          })
         },
       },
     },
   },
-  render: ({ status, size, state, number, hiddenLabel, maxWidth, skeleton }) => {
-    return skeletonWrapper(maxWidthWrapper(renderBadgeCount({
+  render: ({ status, size, state, number, hiddenLabel }) => {
+    return renderBadgeCount({
       status,
       size,
       state,
       number,
       hiddenLabel,
-    }), maxWidth), skeleton)
+    })
   },
   args: {
     status: 'Neutral',
     size: 'Medium',
     state: 'Enabled',
     number: 1,
-    hiddenLabel: 'error',
-    maxWidth: false,
-    skeleton: false
+    hiddenLabel: 'error'
   },
 }

@@ -4,8 +4,10 @@
 //
 // A filter chip is a group component: one chip alone renders a `chips-container`
 // with a single `<li>`, which is not the DOM anyone writes. The playground
-// therefore renders several, and each one carries its own settings — label,
-// form, selected, disabled — in the `chips` control.
+// therefore renders two — enough to show the container, the gap and a selected
+// chip next to an unselected one, which is all the markup has to teach. Only the
+// label and the selected state are per chip; the form and the disabled state are
+// group settings, so they are one control each.
 //
 // Three forms, all documented, all real HTML: a checkbox, a radio button, or a
 // button with `aria-pressed`. They are not three components: `.chip-filter`
@@ -16,45 +18,39 @@
 // Gap — Skeleton: applied on an ancestor, `<div aria-busy="true" inert>`, as the
 // documentation example does. It is a state of the group, not of a chip.
 
-const layouts = ['Text only', 'Text + Icon', 'Icon only']
+const layouts = ['Text only', 'Text + icon', 'Icon only']
 const controls = ['Checkbox', 'Radio', 'Button']
 
-// Three chips, three sets of controls. A single `object` control would have been
-// shorter to write, but Storybook renders it as a raw JSON editor: nobody wants
-// to type a label into that. Flat controls are what both surfaces can show.
-const CHIPS = [1, 2, 3]
+// Two chips, two labels, two selected states. A single `object` control would
+// have been shorter to write, but Storybook renders it as a raw JSON editor:
+// nobody wants to type a label into that. Flat controls are what both surfaces
+// can show. The count is frozen: a third chip adds no markup the second does not
+// already show.
+const CHIPS = [1, 2]
 
 // A control left on "Choose option" gives `undefined`. The component must still
 // render, so every select falls back on the first value of its list rather than
 // on an empty output.
 const orElse = (value, options) => (options.includes(value) ? value : options[0])
 
-// Only a positive integer is allowed for the number of chips.
-const toCount = (value) => {
-  const parsed = Number.parseInt(value, 10)
-
-  return Number.isNaN(parsed) ? 1 : Math.min(Math.max(1, parsed), 8)
-}
-
 // The default group deliberately mixes a selected chip and an unselected one:
 // the selected state is the whole point of a filter, and one chip alone shows
 // neither the gap between chips nor how the group wraps.
 const defaultChips = [
-  { label: 'Apple', control: 'Checkbox', selected: true, disabled: false },
-  { label: 'Samsung', control: 'Checkbox', selected: false, disabled: false },
-  { label: 'Xiaomi', control: 'Checkbox', selected: false, disabled: false }
+  { label: 'Apple', selected: true },
+  { label: 'Samsung', selected: false }
 ]
 
-const chipAt = (chips, index) => {
+const chipAt = (chips, index, control, disabled) => {
   const chip = Array.isArray(chips) ? chips[index] : undefined
-  const fallback = defaultChips[index] ?? { label: `Filter ${index + 1}`, control: 'Checkbox', selected: false, disabled: false }
+  const fallback = defaultChips[index] ?? { label: `Filter ${index + 1}`, selected: false }
   const pick = (key) => (chip && chip[key] !== undefined ? chip[key] : fallback[key])
 
   return {
     label: pick('label'),
-    control: orElse(pick('control'), controls),
+    control: orElse(control, controls),
     selected: Boolean(pick('selected')),
-    disabled: Boolean(pick('disabled'))
+    disabled: Boolean(disabled)
   }
 }
 
@@ -178,13 +174,13 @@ const withCustomIcon = (icons, icon) => (icon ? { heartEmpty: inlineIcon(icon) }
 // icon comes *after* the label — the opposite of a suggestion chip.
 const layoutLines = {
   'Text only': ({ label }) => [label],
-  'Text + Icon': ({ label, icons }) => [label, icons.heartEmpty],
+  'Text + icon': ({ label, icons }) => [label, icons.heartEmpty],
   'Icon only': ({ label, icons }) => [icons.heartEmpty, `<span class="visually-hidden">${label}</span>`]
 }
 
 const layoutClasses = {
   'Text only': '',
-  'Text + Icon': '',
+  'Text + icon': '',
   'Icon only': 'chip-icon'
 }
 
@@ -240,20 +236,18 @@ const controlKinds = {
   'Button': 'button'
 }
 
-// The chips, read from the flat controls: one entry per chip up to `count`.
-const chipsOf = (args) => CHIPS.slice(0, toCount(args.count)).map((index) => ({
+// The chips, read from the flat controls: one entry per chip.
+const chipsOf = (args) => CHIPS.map((index) => ({
   label: args[`chip${index}Label`],
-  control: args[`chip${index}Control`],
-  selected: args[`chip${index}Selected`],
-  disabled: args[`chip${index}Disabled`]
+  selected: args[`chip${index}Selected`]
 }))
 
-const renderFilterChip = ({ count, chips, layout, icon, maxWidth }, icons = inlineIcons) => {
+const renderFilterChip = ({ chips, control, disabled, layout, icon }, icons = inlineIcons) => {
   const safeLayout = orElse(layout, layouts)
   const classes = ['chip-interactive', layoutClasses[safeLayout]].filter(Boolean).join(' ')
 
-  const items = Array.from({ length: toCount(count) }, (_, index) => {
-    const chip = chipAt(chips, index)
+  const items = Array.from({ length: CHIPS.length }, (_, index) => {
+    const chip = chipAt(chips, index, control, disabled)
     const lines = layoutLines[safeLayout]({ label: chip.label, icons })
 
     return `  <li class="chip chip-filter">
@@ -261,20 +255,10 @@ ${controlTemplates[controlKinds[chip.control]]({ id: `filterChip${index + 1}`, c
   </li>`
   })
 
-  return maxWidthWrapper((`<ul class="chips-container" aria-label="Filter by">
+  return (`<ul class="chips-container" aria-label="Filter by">
 ${items.join('\n')}
-</ul>`), maxWidth)
+</ul>`)
 }
-
-// `component-max-width` is the design system class, but the stylesheet only
-// compounds it with the form components — text input, text area, select input,
-// control items. Elsewhere the constraint goes on an ancestor, with the value
-// the class carries: 30rem.
-const maxWidthWrapper = (markup, maxWidth) => (maxWidth
-  ? `<div style="max-width: 30rem">
-${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
-</div>`
-  : markup)
 
 // Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
 // the component itself: every child of that container renders as a skeleton, and
@@ -289,28 +273,13 @@ ${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
 export default {
   title: 'Playground/Filter chip',
   argTypes: {
-    count: {
-      name: 'Chips',
-      control: { type: 'number', min: 1, max: 3, step: 1 },
-      description: 'How many chips in the group, from 1 to 3. A filter chip is never alone in a real page: the container, the gap and the wrapping only show from two.',
-    },
     chip1Label: {
       name: 'Chip 1 — label',
       control: 'text',
       description: 'Interpolated as is, so HTML goes through — a `<br>` shows how the chip behaves on several lines.',
     },
-    chip1Control: {
-      name: 'Chip 1 — control',
-      control: 'select',
-      options: controls,
-      description: 'The form of this chip: a checkbox, a radio button sharing the group `name`, or a button with `aria-pressed`. `.chip-filter` styles the three the same way; they do not behave the same.',
-    },
     chip1Selected: {
       name: 'Chip 1 — selected',
-      control: 'boolean',
-    },
-    chip1Disabled: {
-      name: 'Chip 1 — disabled',
       control: 'boolean',
     },
     chip2Label: {
@@ -318,38 +287,20 @@ export default {
       control: 'text',
       description: 'Interpolated as is, so HTML goes through — a `<br>` shows how the chip behaves on several lines.',
     },
-    chip2Control: {
-      name: 'Chip 2 — control',
-      control: 'select',
-      options: controls,
-      description: 'The form of this chip: a checkbox, a radio button sharing the group `name`, or a button with `aria-pressed`. `.chip-filter` styles the three the same way; they do not behave the same.',
-    },
     chip2Selected: {
       name: 'Chip 2 — selected',
       control: 'boolean',
     },
-    chip2Disabled: {
-      name: 'Chip 2 — disabled',
-      control: 'boolean',
-    },
-    chip3Label: {
-      name: 'Chip 3 — label',
-      control: 'text',
-      description: 'Interpolated as is, so HTML goes through — a `<br>` shows how the chip behaves on several lines.',
-    },
-    chip3Control: {
-      name: 'Chip 3 — control',
+    control: {
+      name: 'Control',
       control: 'select',
       options: controls,
-      description: 'The form of this chip: a checkbox, a radio button sharing the group `name`, or a button with `aria-pressed`. `.chip-filter` styles the three the same way; they do not behave the same.',
+      description: 'The form of every chip in the group: a checkbox, a radio button sharing the group `name`, or a button with `aria-pressed`. `.chip-filter` styles the three the same way; they do not behave the same. It is one control for the whole group — mixing forms inside one `chips-container` is not something a real page does.',
     },
-    chip3Selected: {
-      name: 'Chip 3 — selected',
+    disabled: {
+      name: 'Disabled',
       control: 'boolean',
-    },
-    chip3Disabled: {
-      name: 'Chip 3 — disabled',
-      control: 'boolean',
+      description: 'Shared by every chip: `disabled` on the input or on the button.',
     },
     layout: {
       control: 'select',
@@ -360,11 +311,6 @@ export default {
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
       if: { arg: 'layout', neq: 'Text only' },
-    },
-    maxWidth: {
-      name: 'Max width',
-      control: 'boolean',
-      description: 'Bounds the component to 30rem, the value of the `component-max-width` class — which the stylesheet reserves for the form components, so here it goes on an ancestor.',
     },
     skeleton: {
       control: 'boolean',
@@ -379,47 +325,39 @@ export const PlaygroundFilterChip = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { count, layout, icon, maxWidth, skeleton } = context.args
+          const { control, disabled, layout, icon, skeleton } = context.args
 
           return skeletonWrapper(renderFilterChip({
-            count,
             chips: chipsOf(context.args),
+            control,
+            disabled,
             layout,
             icon,
-            maxWidth,
           }, withCustomIcon(spriteIcons, icon)), skeleton)
         },
       },
     },
   },
   render: (args) => {
-    const { count, layout, icon, maxWidth, skeleton } = args
+    const { control, disabled, layout, icon, skeleton } = args
 
     return skeletonWrapper(renderFilterChip({
-      count,
       chips: chipsOf(args),
+      control,
+      disabled,
       layout,
       icon,
-      maxWidth,
     }, withCustomIcon(inlineIcons, icon)), skeleton)
   },
   args: {
-    count: 3,
     chip1Label: 'Apple',
-    chip1Control: 'Checkbox',
     chip1Selected: true,
-    chip1Disabled: false,
     chip2Label: 'Samsung',
-    chip2Control: 'Checkbox',
     chip2Selected: false,
-    chip2Disabled: false,
-    chip3Label: 'Xiaomi',
-    chip3Control: 'Checkbox',
-    chip3Selected: false,
-    chip3Disabled: false,
+    control: 'Checkbox',
+    disabled: false,
     layout: 'Text only',
     icon: '',
-    maxWidth: false,
     skeleton: false
   },
 }
