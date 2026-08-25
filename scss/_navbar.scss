@@ -211,7 +211,6 @@
   display: flex;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
   padding: var(--#{$prefix}navbar-nav-padding-top) var(--#{$prefix}navbar-nav-padding-x) var(--#{$prefix}navbar-nav-padding-bottom); // OUDS mod
-  margin-bottom: 0;
   font-size: var(--#{$prefix}navbar-nav-font-size); // OUDS mod
   line-height: var(--#{$prefix}navbar-nav-line-height, $line-height-base); // OUDS mod
   letter-spacing: var(--#{$prefix}navbar-nav-letter-spacing, $letter-spacing-base); // OUDS mod
@@ -226,13 +225,17 @@
       z-index: 1;
     }
 
+    &:active {
+      color: var(--#{$prefix}navbar-active-color);
+    }
+
     @include media-breakpoint-down(lg) {
       outline-offset: -$focus-visible-outer-width;
     }
 
     &.active,
     &.show {
-      color: var(--#{$prefix}navbar-active-color);
+      color: var(--#{$prefix}color-content-default);
     }
   }
 
@@ -425,7 +428,7 @@
             left: var(--#{$prefix}navbar-nav-link-padding-x);
             height: 4px;
             content: "";
-            background-color: currentcolor;
+            background-color: var(--#{$prefix}navbar-active-color);
             @include transition($navbar-active-transition);
           }
         }

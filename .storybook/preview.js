@@ -2,6 +2,8 @@ import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import './storybook.scss';
 
+import '../js/index.esm.js';
+
 /** @type { import('@storybook/html-vite').Preview } */
 const preview = {
   decorators: [
@@ -21,7 +23,7 @@ const preview = {
         date: /Date$/i,
       },
     },
-    viewport: { viewports: INITIAL_VIEWPORTS },
+    viewport: { options: INITIAL_VIEWPORTS },
   },
   tags: ['autodocs'],
 };

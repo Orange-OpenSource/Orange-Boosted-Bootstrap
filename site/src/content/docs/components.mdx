@@ -9,6 +9,17 @@ toc: true
 ---
 
 import { componentsDetails } from '../../../data/components-details'
+import { getVersionedDocsPath } from '@libs/path'
+
+<Callout
+  type="info"
+  title="Component versioning"
+  titleLevel={2}
+  action="Check OUDS components status and version"
+  actionHref={getVersionedDocsPath('/getting-started/component-versioning')}
+>
+  OUDS components are versioned to track updates to their design specification, ensuring consistency and traceability for users.
+</Callout>
 
 ## Alphabetical order
 
@@ -35,6 +46,10 @@ export const getComponentListForCategory = (category) => {
 ### Actions
 
 {getComponentListForCategory('Actions')}
+
+### Assistant (AI)
+
+{getComponentListForCategory('Assistant')}
 
 ### Content display
 

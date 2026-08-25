@@ -1,6 +1,6 @@
 {
   "name": "@ouds/web-migrate",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "main": "index.mjs",
   "type": "module",
   "engines": {
@@ -15,7 +15,7 @@
   "description": "",
   "bin": "./index.mjs",
   "dependencies": {
-    "replace-in-file": "^8.4.0"
+    "replace-in-file": "^9.0.0"
   },
   "devDependencies": {
     "vitest": "^4.1.5"

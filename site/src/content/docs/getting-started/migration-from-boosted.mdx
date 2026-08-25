@@ -146,6 +146,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.btn-default`, `.btn-strong`, `.btn-brand`, `.btn-minimal`, and `.btn-negative` have been added.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.btn-previous` and  `.btn-next` have been added.
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.btn-assistant` has been added.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.btn-on-colored-bg` has been added; it can be used with `.btn-default`, `.btn-strong` and `.btn-minimal` to get variants on colored backgrounds (neither primary, nor secondary, nor tertiary, nor emphasized backgrounds).
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.use-rounded-corner-buttons` have been added; it can be added on `<body>` to toggle project-wide rounded corners buttons.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.btn-primary`, `.btn-secondary`, `.btn-success`, `.btn-danger`, `.btn-warning`, `.btn-info`, `.btn-light`, `.btn-dark` and `btn-dropdown` have been removed. You can still have them using `$enable-bootstrap-compatibility`. Here is the visual correspondence:
@@ -158,7 +159,8 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.btn-no-outline` has been removed. You can use `.btn-minimal` instead.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.btn-social` and all its variants have been removed.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.btn-outline-*` have been removed. You can still have them using `$enable-bootstrap-compatibility`. They all look like `.btn-default`.
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.btn-sm` and `.btn-lg` have been removed.
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.btn-lg` has been removed.
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.btn-sm` has been renamed to `.btn-small`.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Loading buttons implementation has changed. You should now use the classes `.loading-indeterminate` and `.loading-determinate` and no more spinner borders.
 <div class="ps-xlarge">
 
@@ -422,7 +424,7 @@ Now you should write:
 <div class="text-area">
   <div class="text-area-container">
     <label for="exampleTextArea">Example textarea</label>
-    <textarea class="text-area-field" id="exampleTextArea"></textarea>
+    <textarea class="text-area-field" id="exampleTextArea" placeholder=" "></textarea>
   </div>
 </div>
 ```
@@ -617,6 +619,10 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> All Boosted responsive float utilities have been renamed to use the colon prefix: `.float-sm-{start|end|none}` → `.sm:float-{start|end|none}`, `.float-md-{start|end|none}` → `.md:float-{start|end|none}`, `.float-lg-{start|end|none}` → `.lg:float-{start|end|none}`, `.float-xl-{start|end|none}` → `.xl:float-{start|end|none}`. You can still have them using `$enable-bootstrap-compatibility`.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `xxl` responsive float utilities have been replaced by `2xl` utilities: `.float-xxl-{start|end|none}` utilities have been replaced by `.2xl:float-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `xs` and `3xl` responsive float utilities have been added:  `.xs:float-{start|end|none}` and  `.3xl:float-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
+
+### Interactions
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.pe-none` and `.pe-auto` classes have been replaced by `.pointer-events-none` and `.pointer-events-auto` to avoid collision with padding utilities. Read more in our [interactions page]([[docsref:/utilities/interaction#pointer-events]]).
 
 ### Link
 
@@ -2617,3 +2623,5 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `button-variant` mixin signature has changed. We now provide extra parameters for focus and loading states colors. We keep it as a warning because we provide default values for these parameters. See more in [our Button documentation]([[docsref:/components/buttons#sass-mixins]]).
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `add` and `subtract` functions have been removed use `calc` instead.
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> The `list-unstyled` mixin has been updated to remove the list margin bottom.
