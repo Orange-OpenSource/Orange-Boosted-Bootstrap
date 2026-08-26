@@ -13,8 +13,13 @@
 //   - No icon control. Like the navigation button's chevron, the AI icon is a
 //     `::before` with a mask. Canvas and Code panel are therefore identical
 //     character for character, and `check_stories.js` reports no divergence.
-//   - No `btn-on-colored-bg`. There is no such variant for this button; the
-//     `Container background` control below is a different thing entirely.
+//   - No `btn-on-colored-bg`. There is no such variant for this button. What
+//     the `On colored background` control below does is put the button on the
+//     surface the documentation's own example uses, so the white centre of the
+//     gradient border becomes visible — a different thing entirely, and a
+//     checkbox for the same reason Button's own colored-background control is
+//     one: the question is what the surface does to the button, not which
+//     background utilities exist.
 //   - No `Max width`. The documentation page shows no `.component-max-width`
 //     on a button, and the stylesheet only compounds that class with the form
 //     components.
@@ -27,8 +32,19 @@
 const elements = ['Button', 'Link']
 const layouts = ['Text only', 'Icon only']
 const sizes = ['Default', 'Small']
-const containerBackgrounds = ['None', 'Primary', 'Secondary', 'Tertiary']
 const states = ['Enabled', 'Loading indeterminate', 'Loading determinate', 'Disabled']
+
+// `Skeleton` is one of the states, not a checkbox beside them. It is a wrapper
+// in the markup — `<div aria-busy="true" inert>` around the component rendered
+// in its first state — but in the Controls panel it answers the same question
+// as the others: what does this look like right now. Two controls for one
+// question is what makes a panel read as two components glued together.
+const stateOptions = [...states, 'Skeleton']
+
+const isSkeleton = (state) => state === 'Skeleton'
+
+const baseState = (state) => (isSkeleton(state) ? states[0] : state)
+
 
 // The trap the documentation covers in a warning callout, and the reason
 // `Opaque background` exists.
@@ -48,11 +64,11 @@ const states = ['Enabled', 'Loading indeterminate', 'Loading determinate', 'Disa
 //
 //   <button class="btn btn-assistant">                          linear-gradient(rgb(255,255,255)), conic-gradient(…)
 //   … style="--bs-btn-bg: var(--bs-color-bg-tertiary);"         linear-gradient(rgb(249,245,240)), conic-gradient(…)
-const backgroundTokens = {
-  'Primary': 'var(--bs-color-bg-primary)',
-  'Secondary': 'var(--bs-color-bg-secondary)',
-  'Tertiary': 'var(--bs-color-bg-tertiary)'
-}
+// The surface is the pairing the documentation's own example uses, held in one
+// constant: swap the two values to check another one. `--bs-btn-bg` must take
+// a **background** token, never a *surface* one — a semi-transparent value
+// would let the conic gradient show through the middle of the button.
+const coloredSurface = { surface: 'bg-tertiary', token: 'var(--bs-color-bg-tertiary)' }
 
 // A control left on "Choose option" gives `undefined`. The component must still
 // render, so every select falls back on the first value of its list rather than
@@ -145,15 +161,11 @@ const shapeOf = (body) => (/[\n<]/.test(body) ? 'block' : 'inline')
 // no padding: behind the button the surface is then invisible and the control
 // looks inert. `p-large` is added for that reason alone.
 const containerWrappers = {
-  'None': (markup) => markup,
-  'Primary': (markup) => wrapInSurface(markup, 'bg-primary'),
-  'Secondary': (markup) => wrapInSurface(markup, 'bg-secondary'),
-  'Tertiary': (markup) => wrapInSurface(markup, 'bg-tertiary')
-}
-
-const wrapInSurface = (markup, surface) => `<div class="${surface} p-large">
+  'True': (markup) => `<div class="${coloredSurface.surface} p-large">
 ${indent(markup, '  ')}
-</div>`
+</div>`,
+  'False': (markup) => markup
+}
 
 const roundedWrappers = {
   'True': (markup) => `<div class="use-rounded-corner-buttons">
@@ -172,11 +184,10 @@ ${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
 </div>`
   : markup)
 
-const renderAssistantButton = ({ label, element, layout, size, containerBackground, opaqueBackground, rounded, state, loadingTime }) => {
+const renderAssistantButton = ({ label, element, layout, size, coloredBg, opaqueBackground, rounded, state, loadingTime }) => {
   const safeElement = orElse(element, elements)
   const safeLayout = orElse(layout, layouts)
   const safeSize = orElse(size, sizes)
-  const safeBackground = orElse(containerBackground, containerBackgrounds)
   const safeState = orElse(state, states)
   const activity = stateActivity[safeState]
 
@@ -188,50 +199,53 @@ const renderAssistantButton = ({ label, element, layout, size, containerBackgrou
     stateClasses[safeState]
   ].filter(Boolean).join(' ')
 
-  const opaque = Boolean(opaqueBackground) && Boolean(backgroundTokens[safeBackground])
+  const opaque = Boolean(opaqueBackground) && Boolean(coloredBg)
   const tag = elementTags[safeElement]
   const loadingAttr = (loadingTimeAttrs[safeState] ?? (() => ''))(loadingTime)
-  const attrs = `${tag.type} class="${classes}"${elementAttrs[safeElement][activity]}${styleAttrs[opaque ? 'True' : 'False'](backgroundTokens[safeBackground])}${loadingAttr}`
+  const attrs = `${tag.type} class="${classes}"${elementAttrs[safeElement][activity]}${styleAttrs[opaque ? 'True' : 'False'](coloredSurface.token)}${loadingAttr}`
   const body = loadingBodies[activity](layoutBodies[safeLayout](label), safeState)
 
   const button = bodyShapes[shapeOf(body)]({ open: tag.open, attrs, close: tag.close, body })
 
-  return containerWrappers[safeBackground](roundedWrappers[rounded ? 'True' : 'False'](button))
+  return containerWrappers[coloredBg ? 'True' : 'False'](roundedWrappers[rounded ? 'True' : 'False'](button))
 }
 
 export default {
   title: 'Playground/Assistant button',
   argTypes: {
     label: {
+      name: 'Label',
       control: 'text',
       description: 'Interpolated as is, so HTML goes through: paste `Line 1<br/>Line 2` to see the label stay centered beside the AI icon. On `Icon only` it becomes the `visually-hidden` text.',
     },
     element: {
+      name: 'Element',
       control: 'select',
       options: elements,
       description: '`Button` renders `<button type="button">`, which is what every example of the documentation uses; `Link` renders `<a href="#">`. The stylesheet covers both inactive forms, so both are offered.',
     },
     layout: {
+      name: 'Layout',
       control: 'select',
       options: layouts,
       description: '`btn-icon` keeps only the AI icon and moves the label into a `visually-hidden` span. "Icon-only assistant buttons are always completely circular" — which is why `Rounded corners` does nothing here, see that control.',
     },
     size: {
+      name: 'Size',
       control: 'select',
       options: sizes,
       description: '`btn-small` — 40 px high, smaller icon. Legitimate on this component because `_button-assistant.scss` re-declares its paddings inside `&.btn-small`; the navigation button has no such rule, which is why its size is frozen. Not in the published 1.4.0 stylesheet yet.',
     },
-    containerBackground: {
-      name: 'Container background',
-      control: 'select',
-      options: containerBackgrounds,
-      description: 'Wraps the button in a `bg-…` surface, so the white centre of the gradient border becomes visible. `p-large` is added to the documentation example so the surface shows around the button.',
+    coloredBg: {
+      name: 'On colored background',
+      control: 'boolean',
+      description: 'Puts the button on `bg-tertiary`, the surface the documentation\u2019s own example uses, so the white centre of the gradient border becomes visible. `p-large` is added to that example so the surface shows around the button. One checkbox rather than a menu of surfaces: the question the playground answers is what the surface does to the button, and `utilities/background/` answers the other one better.',
     },
     opaqueBackground: {
       name: 'Opaque background',
       control: 'boolean',
-      description: 'Adds `--bs-btn-bg` so the opaque layer matches the surface behind. Use a **background** token, never a *surface* one: a semi-transparent value would let the conic gradient show through the middle of the button. Gated on a container, since without one the `--bs-color-bg-primary` fallback already does the job.',
-      if: { arg: 'containerBackground', neq: 'None' },
+      description: 'Adds `--bs-btn-bg` so the opaque layer matches the surface behind. Gated on the colored background, since without one the `--bs-color-bg-primary` fallback already does the job.',
+      if: { arg: 'coloredBg', truthy: true },
     },
     rounded: {
       name: 'Rounded corners',
@@ -239,8 +253,9 @@ export default {
       description: '`use-rounded-corner-buttons` on an ancestor, a product-wide setting. Measured: 0 px to 8 px on a text button, and **no effect on `Icon only`**, where `.btn-assistant.btn-icon` sets `--bs-btn-border-radius` on the element itself and beats the inherited value. That is by design.',
     },
     state: {
+      name: 'State',
       control: 'select',
-      options: states,
+      options: stateOptions,
       description: 'Disabled drops the gradient border entirely (`background: initial`); both loading states keep it — the rule excludes `.loading-indeterminate, .loading-determinate`. The documentation only shows the indeterminate loader here and refers to Button for the rest; `loading-determinate` is a `.btn` class and works, so it is kept.',
     },
     loadingTime: {
@@ -248,10 +263,6 @@ export default {
       control: 'text',
       description: '`--bs-btn-loading-time` on the button itself, which is where `.btn` reads it. Only the determinate loader uses it.',
       if: { arg: 'state', eq: 'Loading determinate' },
-    },
-    skeleton: {
-      control: 'boolean',
-      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -262,46 +273,45 @@ export const PlaygroundAssistantButton = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { label, element, layout, size, containerBackground, opaqueBackground, rounded, state, loadingTime, skeleton } = context.args
+          const { label, element, layout, size, coloredBg, opaqueBackground, rounded, state, loadingTime } = context.args
 
           return skeletonWrapper(renderAssistantButton({
             label,
             element,
             layout,
             size,
-            containerBackground,
+            coloredBg,
             opaqueBackground,
             rounded,
-            state,
+            state: baseState(state),
             loadingTime,
-          }), skeleton)
+          }), isSkeleton(state))
         },
       },
     },
   },
-  render: ({ label, element, layout, size, containerBackground, opaqueBackground, rounded, state, loadingTime, skeleton }) => {
+  render: ({ label, element, layout, size, coloredBg, opaqueBackground, rounded, state, loadingTime }) => {
     return skeletonWrapper(renderAssistantButton({
       label,
       element,
       layout,
       size,
-      containerBackground,
+      coloredBg,
       opaqueBackground,
       rounded,
-      state,
+      state: baseState(state),
       loadingTime,
-    }), skeleton)
+    }), isSkeleton(state))
   },
   args: {
     label: 'Assistant',
     element: 'Button',
     layout: 'Text only',
     size: 'Default',
-    containerBackground: 'Tertiary',
+    coloredBg: true,
     opaqueBackground: false,
     rounded: false,
     state: 'Enabled',
     loadingTime: '5s',
-    skeleton: false
   },
 }

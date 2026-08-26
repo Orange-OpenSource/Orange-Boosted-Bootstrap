@@ -27,7 +27,13 @@ const stateMap = {
   'Disabled': ' disabled'
 }
 
-const renderRadioButton = ({ state, selected, error, hiddenLabel }) => {
+// The `visually-hidden` span is the control's whole accessible name and never
+// varies with anything the panel offers, so it is a constant rather than a
+// control: a text no one ever sees on the canvas is not an axis of the
+// component.
+const hiddenLabel = 'Default standalone radio button'
+
+const renderRadioButton = ({ state, selected, error }) => {
   const checkedAttr = selectedMap[(selected ? 'True' : 'False')] ?? ''
   const invalidAttr = errorMap[(error ? 'True' : 'False')] ?? ''
   const stateAttr = stateMap[state] ?? ''
@@ -42,20 +48,18 @@ export default {
   title: 'Playground/Radio button',
   argTypes: {
     state: {
+      name: 'State',
       control: 'select',
       options: states,
     },
     selected: {
+      name: 'Selected',
       control: 'boolean',
     },
     error: {
+      name: 'Error',
       control: 'boolean',
     },
-    hiddenLabel: {
-      name: 'Hidden label',
-      control: 'text',
-      description: 'Carried by the `visually-hidden` span: a standalone radio button has no visible label, this is all a screen reader announces.',
-    }
   }
 }
 
@@ -65,30 +69,27 @@ export const PlaygroundRadioButton = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { state, selected, error, hiddenLabel } = context.args
+          const { state, selected, error } = context.args
 
           return renderRadioButton({
             state,
             selected,
             error,
-            hiddenLabel,
           })
         },
       },
     },
   },
-  render: ({ state, selected, error, hiddenLabel }) => {
+  render: ({ state, selected, error }) => {
     return renderRadioButton({
       state,
       selected,
       error,
-      hiddenLabel,
     })
   },
   args: {
     state: 'Enabled',
     selected: false,
-    error: false,
-    hiddenLabel: 'Default standalone radio button'
+    error: false
   },
 }

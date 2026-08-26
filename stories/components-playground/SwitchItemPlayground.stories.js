@@ -2,6 +2,11 @@
 // Compiled from code-connect/mapping.yml (ouds-mapping v1.4.0)
 // Docs: https://web.unified-design-system.orange.com/orange/docs/1.4/components/switch/
 //
+// No `Helper text` control. The documentation writes none on a control item:
+// it has a `control-item-description` inside the text container and nothing
+// else. `.helper-text` was borrowed from the form components for a while — a
+// deliberate extension, and one the design system does not back. It is gone.
+//
 // Fix — Read only: it is not an attribute, it is another DOM. The documentation
 // swaps the `<input>` for a `<span role="switch" aria-readonly="true"
 // aria-disabled="true" tabindex="0" aria-checked="…">`, and the `<label>` for a
@@ -19,22 +24,33 @@
 
 const states = ['Enabled', 'Read only', 'Disabled']
 
+// `Skeleton` is one of the states, not a checkbox beside them. It is a wrapper
+// in the markup — `<div aria-busy="true" inert>` around the component rendered
+// in its first state — but in the Controls panel it answers the same question
+// as the others: what does this look like right now. Two controls for one
+// question is what makes a panel read as two components glued together.
+const stateOptions = [...states, 'Skeleton']
+
+const isSkeleton = (state) => state === 'Skeleton'
+
+const baseState = (state) => (isSkeleton(state) ? states[0] : state)
+
+
 
 // A control left on "Choose option" gives `undefined`. The component must still
 // render, so every select falls back on the first value of its list rather than
 // on an empty output.
 const orElse = (value, options) => (options.includes(value) ? value : options[0])
 
-const selectedMap = {
-  'False': '',
-  'True': ' checked'
-}
-
-// What a read only indicator announces in place of `checked`.
-const ariaChecked = {
-  'False': 'false',
-  'True': 'true'
-}
+// THE SWITCH STARTS UNCHECKED AND THERE IS NO `Selected` CONTROL.
+// The item on the canvas is a real `<input type="checkbox" role="switch">`:
+// clicking it is the honest way to see what selected looks like, and a control
+// doing the same thing from the panel is a second lever on one state. What the
+// snippet shows is the initial markup, which the documentation writes
+// unchecked. The read only indicator, which cannot be clicked, announces the
+// same initial value.
+const selectedAttr = ''
+const ariaChecked = 'false'
 
 const errorMap = {
   'False': '',
@@ -185,10 +201,9 @@ const resolveIcon = (icon, fallback) => (icon ? inlineIcon(icon) : fallback)
 // An optional part is a list: empty, nothing is rendered; filled, one line.
 const maybe = (value) => (value ? [value] : [])
 
-const renderSwitchItem = ({ state, selected, error, errorMessage, required, reverse, divider, maxWidth, label, description, helperText, showIcon }, iconMarkup = inlineIcon(defaultIconPath)) => {
+const renderSwitchItem = ({ state, error, errorMessage, required, reverse, divider, maxWidth, label, description, showIcon }, iconMarkup = inlineIcon(defaultIconPath)) => {
   const safeState = orElse(state, states)
   const shape = shapes[safeState]
-  const selectedKey = selected ? 'True' : 'False'
 
   const itemClasses = [
     'switch-item',
@@ -208,12 +223,11 @@ const renderSwitchItem = ({ state, selected, error, errorMessage, required, reve
   // when the item is invalid — the stylesheet only shows it then.
   const describedBy = [
     description ? 'switchItemDescription' : '',
-    helperText ? 'switchItemHelper' : '',
     error && errorMessage ? 'switchItemErrorText' : ''
   ].filter(Boolean).join(' ')
 
   const attrs = [
-    selectedMap[selectedKey],
+    selectedAttr,
     errorMap[(error ? 'True' : 'False')],
     requiredMap[(required ? 'True' : 'False')],
     describedBy ? ` aria-describedby="${describedBy}"` : '',
@@ -232,26 +246,21 @@ const renderSwitchItem = ({ state, selected, error, errorMessage, required, reve
 
   const item = `  <div class="${itemClasses}">
     <div class="control-item-assets-container">
-      ${indicators[shape]({ attrs, checked: ariaChecked[selectedKey] })}
+      ${indicators[shape]({ attrs, checked: ariaChecked })}
     </div>
     <div class="control-item-text-container">
 ${textLines.map((line) => `      ${line}`).join('\n')}
     </div>${iconContainer.join('')}
   </div>`
 
-  // The documentation writes no helper text for a control item — it only has a
-  // description, inside the text container. `.helper-text` is the design system's
-  // generic class for it (`scss/_forms.scss`), so it is used here as the form
-  // components use it: a sibling of the component, before the error message,
-  // referenced by `aria-describedby`.
-  const helperLine = maybe(helperText).map((text) =>
-    `  <p class="helper-text" id="switchItemHelper">${text}</p>`)
-
-  const errorLine = maybe(errorMessage).map((text) =>
+  // The message is only written when the item is in error. The Controls panel
+  // hides the text control then, and the markup must not keep a paragraph
+  // nothing on screen can reach.
+  const errorLine = maybe(error && errorMessage).map((text) =>
     `  <p class="control-item-error-message" id="switchItemErrorText">${text}</p>`)
 
   return `<div class="switch-item-container">
-${[item, ...helperLine, ...errorLine].join('\n')}
+${[item, ...errorLine].join('\n')}
 </div>`
 }
 
@@ -269,30 +278,27 @@ export default {
   title: 'Playground/Switch item',
   argTypes: {
     label: {
+      name: 'Label',
       control: 'text',
     },
     description: {
+      name: 'Description',
       control: 'text',
       description: 'Rendered as `<p class="control-item-description">` inside the text container, and referenced by `aria-describedby`. Empty: no description.',
     },
-    helperText: {
-      name: 'Helper text',
-      control: 'text',
-      description: 'Rendered as `<p class="helper-text">` after the item, before the error message, and referenced by `aria-describedby`. The documentation has no helper text on a control item; `.helper-text` is the generic class the form components use. Empty: none.',
-    },
-    selected: {
-      control: 'boolean',
-    },
     state: {
+      name: 'State',
       control: 'select',
-      options: states,
+      options: stateOptions,
       description: '`Read only` is another DOM, not an attribute: a `<span role="switch" aria-readonly="true">` in place of the input, and a `<p>` in place of the label.',
     },
     required: {
+      name: 'Required',
       control: 'boolean',
       description: 'Adds `required` on the input and `is-required` on the label, which draws the asterisk.',
     },
     error: {
+      name: 'Error',
       control: 'boolean',
       description: 'Adds `aria-invalid="true"`. The stylesheet shows the error message below only when the container holds an invalid input — so the message can be written first and appear with the state.',
     },
@@ -300,11 +306,14 @@ export default {
       name: 'Error message',
       control: 'text',
       description: 'Rendered as `<p class="control-item-error-message">` inside the `switch-item-container`, after the item, and referenced by `aria-describedby`. Hidden by the stylesheet until `error` is checked. Empty: no message.',
+      if: { arg: 'error', truthy: true },
     },
     reverse: {
+      name: 'Reverse',
       control: 'boolean',
     },
     divider: {
+      name: 'Divider',
       control: 'boolean',
     },
     maxWidth: {
@@ -313,16 +322,14 @@ export default {
       description: 'Adds `component-max-width`, the design system class carrying the list item maximum width token — 480 px, measured. Nothing draws the width of an item on its own: check `divider`, or write a long enough label or description, to see it bite.',
     },
     showIcon: {
+      name: 'Icon',
       control: 'boolean',
     },
     icon: {
+      name: 'Icon content',
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
       if: { arg: 'showIcon', truthy: true },
-    },
-    skeleton: {
-      control: 'boolean',
-      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -334,13 +341,12 @@ export const PlaygroundSwitchItem = {
       source: {
         transform: (_src, context) => {
           const {
-            state, selected, error, errorMessage, required, reverse, divider,
-            maxWidth, label, description, helperText, showIcon, icon, skeleton
+            state, error, errorMessage, required, reverse, divider,
+            maxWidth, label, description, showIcon, icon, skeleton
           } = context.args
 
           return skeletonWrapper(renderSwitchItem({
-            state,
-            selected,
+            state: baseState(state),
             error,
             errorMessage,
             required,
@@ -349,17 +355,15 @@ export const PlaygroundSwitchItem = {
             maxWidth,
             label,
             description,
-            helperText,
             showIcon,
-          }, resolveIcon(icon, spriteIcon)), skeleton)
+          }, resolveIcon(icon, spriteIcon)), isSkeleton(state))
         },
       },
     },
   },
-  render: ({ state, selected, error, errorMessage, required, reverse, divider, maxWidth, label, description, helperText, showIcon, icon, skeleton }) => {
+  render: ({ state, error, errorMessage, required, reverse, divider, maxWidth, label, description, showIcon, icon }) => {
     return skeletonWrapper(renderSwitchItem({
-      state,
-      selected,
+      state: baseState(state),
       error,
       errorMessage,
       required,
@@ -368,15 +372,12 @@ export const PlaygroundSwitchItem = {
       maxWidth,
       label,
       description,
-      helperText,
       showIcon,
-    }, resolveIcon(icon, inlineIcon(defaultIconPath))), skeleton)
+    }, resolveIcon(icon, inlineIcon(defaultIconPath))), isSkeleton(state))
   },
   args: {
     label: 'Label',
     description: 'Description text',
-    helperText: 'Helper text.',
-    selected: false,
     state: 'Enabled',
     required: false,
     error: false,
@@ -386,6 +387,5 @@ export const PlaygroundSwitchItem = {
     maxWidth: false,
     showIcon: false,
     icon: '',
-    skeleton: false
   },
 }

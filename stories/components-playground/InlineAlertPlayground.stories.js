@@ -186,17 +186,21 @@ export default {
   title: 'Playground/Inline alert',
   argTypes: {
     status: {
+      name: 'Status',
       control: 'select',
       options: statuses,
     },
     label: {
+      name: 'Label',
       control: 'text',
     },
     icon: {
+      name: 'Icon content',
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Neutral and Accent only: a functional status carries its own icon, from the CSS. Empty: the design system icon.',
     },
     skeleton: {
+      name: 'Skeleton',
       control: 'boolean',
       description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }

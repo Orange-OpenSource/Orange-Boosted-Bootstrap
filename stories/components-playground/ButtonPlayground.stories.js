@@ -9,6 +9,18 @@ const layouts = ['Text only', 'Text + icon', 'Icon only']
 const sizes = ['Default', 'Small']
 const states = ['Enabled', 'Loading indeterminate', 'Loading determinate', 'Disabled']
 
+// `Skeleton` is one of the states, not a checkbox beside them. It is a wrapper
+// in the markup — `<div aria-busy="true" inert>` around the component rendered
+// in its first state — but in the Controls panel it answers the same question
+// as the others: what does this look like right now. Two controls for one
+// question is what makes a panel read as two components glued together.
+const stateOptions = [...states, 'Skeleton']
+
+const isSkeleton = (state) => state === 'Skeleton'
+
+const baseState = (state) => (isSkeleton(state) ? states[0] : state)
+
+
 // A control left on "Choose option" gives `undefined`. The component must still
 // render, so every select falls back on the first value of its list rather than
 // on an empty output.
@@ -291,34 +303,39 @@ export default {
   title: 'Playground/Button',
   argTypes: {
     label: {
-      name: 'Label (hidden when Icon only)',
+      name: 'Label',
       control: 'text',
       description: 'Visible next to the icon, and carried by the `visually-hidden` span in the `Icon only` layout — where it is all a screen reader announces. Interpolated as is, so HTML goes through: paste `Line 1<br>Line 2`, or a `<strong>`, to see how the button behaves on several lines.',
     },
     variant: {
+      name: 'Variant',
       control: 'select',
       options: buttonVariants,
     },
     coloredBg: {
-      name: 'On colored bg',
+      name: 'On colored background',
       control: 'boolean',
       description: 'Adds `btn-on-colored-bg` and wraps the button in the surface the documentation pairs it with — `bg-surface-brand-primary` carrying `data-bs-theme="light"` on a child, so the background itself does not follow the theme (utilities/background/). OUDS reserves this variant for `Default`, `Strong` and `Minimal`; `Brand` and `Negative` stay reachable, with a warning.',
     },
     layout: {
+      name: 'Layout',
       control: 'select',
       options: layouts,
     },
     size: {
+      name: 'Size',
       control: 'select',
       options: sizes,
       description: '`btn-small` — 40 px high, `label-medium` typography, smaller icon and paddings (`scss/_buttons.scss`). Not in the published 1.4.0 stylesheet yet: switch the CSS source to the repository build to see it.',
     },
     rounded: {
+      name: 'Rounded corners',
       control: 'boolean',
     },
     state: {
+      name: 'State',
       control: 'select',
-      options: states,
+      options: stateOptions,
       description: 'The two loading states are the two documented loaders: `loading-indeterminate` spins without end, `loading-determinate` draws a progress. Both disable the button while it loads.',
     },
     loadingTime: {
@@ -328,13 +345,10 @@ export default {
       if: { arg: 'state', eq: 'Loading determinate' },
     },
     icon: {
+      name: 'Icon content',
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
       if: { arg: 'layout', neq: 'Text only' },
-    },
-    skeleton: {
-      control: 'boolean',
-      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -345,35 +359,35 @@ export const PlaygroundButton = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { label, variant, layout, size, state, icon, rounded, loadingTime, coloredBg, skeleton } = context.args
+          const { label, variant, layout, size, state, icon, rounded, loadingTime, coloredBg } = context.args
 
           return skeletonWrapper(renderButton({
             label,
             variant,
             layout,
             size,
-            state,
+            state: baseState(state),
             icon,
             rounded,
             loadingTime,
             coloredBg,
-          }, icon ? '' : spriteIcon, false), skeleton)
+          }, icon ? '' : spriteIcon, false), isSkeleton(state))
         },
       },
     },
   },
-  render: ({ label, variant, layout, size, state, icon, rounded, loadingTime, coloredBg, skeleton }) => {
+  render: ({ label, variant, layout, size, state, icon, rounded, loadingTime, coloredBg }) => {
     return skeletonWrapper(renderButton({
       label,
       variant,
       layout,
       size,
-      state,
+      state: baseState(state),
       icon,
       rounded,
       loadingTime,
       coloredBg,
-    }), skeleton)
+    }), isSkeleton(state))
   },
   args: {
     label: 'Label',
@@ -385,6 +399,5 @@ export const PlaygroundButton = {
     state: 'Enabled',
     loadingTime: '5s',
     icon: '',
-    skeleton: false
   },
 }

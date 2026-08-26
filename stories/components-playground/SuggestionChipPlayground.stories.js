@@ -4,8 +4,20 @@
 //
 // A suggestion chip is a group component: the documentation never shows one on
 // its own, and a `chips-container` with a single `<li>` is not the DOM anyone
-// writes. The playground therefore renders several, each with its own label and
-// its own disabled state.
+// writes. The playground therefore renders two, each with its own label.
+//
+// THE COUNT IS FROZEN AT TWO, AND `Disabled` IS ONE CONTROL FOR THE GROUP.
+//
+// The count used to be a number from 1 to 3, with the per-chip controls gated
+// on `if: { arg: 'count', gte: N }`. That gate does not work — Storybook's `if`
+// understands `eq`, `neq`, `truthy` and `exists`, and a `gte` falls back
+// silently on a truthiness test, so the controls of chips the group was not
+// rendering stayed on screen looking inert. Two chips already show the
+// container, the gap and the wrapping; a third adds an identical `<li>`.
+//
+// `Disabled` follows the rule the filter chip already applies: it is a group
+// setting. No real page disables one suggestion out of two — the whole set is
+// unavailable or none of it is.
 //
 // Unlike a filter chip, a suggestion chip is always a `<button>`: it triggers an
 // answer, it does not hold a selection. Hence no form control here — and the
@@ -21,38 +33,28 @@ const layouts = ['Text only', 'Text + icon', 'Icon only']
 // on an empty output.
 const orElse = (value, options) => (options.includes(value) ? value : options[0])
 
-// Only a positive integer is allowed for the number of chips.
-const toCount = (value) => {
-  const parsed = Number.parseInt(value, 10)
-
-  return Number.isNaN(parsed) ? 1 : Math.min(Math.max(1, parsed), 8)
-}
-
 // The labels of the documentation example. They are answers, not nouns: a
 // suggestion chip carries a whole sentence, which is exactly what makes the
 // component wrap — and worth seeing.
 const defaultChips = [
-  { label: 'Thanks.', disabled: false },
-  { label: 'Looks good to me.', disabled: false },
-  { label: 'Can we talk about it later ?', disabled: false }
+  { label: 'Thanks.' },
+  { label: 'Looks good to me.' }
 ]
 
-// Three chips, three sets of controls. A single `object` control would have been
+// Two chips, two label controls. A single `object` control would have been
 // shorter to write, but Storybook renders it as a raw JSON editor: nobody wants
 // to type a label into that. Flat controls are what both surfaces can show.
-const CHIPS = [1, 2, 3]
+const CHIPS = [1, 2]
 
-const chipsOf = (args) => CHIPS.slice(0, toCount(args.count)).map((index) => ({
-  label: args[`chip${index}Label`],
-  disabled: args[`chip${index}Disabled`]
+const chipsOf = (args) => CHIPS.map((index) => ({
+  label: args[`chip${index}Label`]
 }))
 
 const chipAt = (chips, index) => {
   const chip = Array.isArray(chips) ? chips[index] : undefined
-  const fallback = defaultChips[index] ?? { label: `Suggestion ${index + 1}`, disabled: false }
-  const pick = (key) => (chip && chip[key] !== undefined ? chip[key] : fallback[key])
+  const fallback = defaultChips[index] ?? { label: `Suggestion ${index + 1}` }
 
-  return { label: pick('label'), disabled: Boolean(pick('disabled')) }
+  return { label: chip && chip.label !== undefined ? chip.label : fallback.label }
 }
 
 // The canvas inlines the icons: they show up without depending on the hosted
@@ -189,16 +191,16 @@ const disabledAttrs = {
   'False': ''
 }
 
-const renderSuggestionChip = ({ count, chips, layout, icon }, icons = inlineIcons) => {
+const renderSuggestionChip = ({ chips, disabled, layout, icon }, icons = inlineIcons) => {
   const safeLayout = orElse(layout, layouts)
   const classes = ['chip-interactive', layoutClasses[safeLayout]].filter(Boolean).join(' ')
 
-  const items = Array.from({ length: toCount(count) }, (_, index) => {
+  const items = CHIPS.map((_, index) => {
     const chip = chipAt(chips, index)
     const lines = layoutLines[safeLayout]({ label: chip.label, icons })
 
     return `  <li class="chip chip-suggestion">
-    <button class="${classes}" type="button"${disabledAttrs[(chip.disabled ? 'True' : 'False')]}>
+    <button class="${classes}" type="button"${disabledAttrs[(disabled ? 'True' : 'False')]}>
 ${lines.map((line) => `      ${line}`).join('\n')}
     </button>
   </li>`
@@ -222,53 +224,35 @@ ${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
 export default {
   title: 'Playground/Suggestion chip',
   argTypes: {
-    count: {
-      name: 'Chips',
-      control: { type: 'number', min: 1, max: 3, step: 1 },
-      description: 'How many chips in the group, from 1 to 3. A suggestion chip is never alone in a real page: the container, the gap and the wrapping only show from two.',
-    },
     chip1Label: {
       name: 'Chip 1 — label',
       control: 'text',
       description: 'Interpolated as is, so HTML goes through — paste a `<br>`, or a long sentence, to see the chip on several lines.',
     },
-    chip1Disabled: {
-      name: 'Chip 1 — disabled',
-      control: 'boolean',
-    },
     chip2Label: {
       name: 'Chip 2 — label',
       control: 'text',
       description: 'Interpolated as is, so HTML goes through — paste a `<br>`, or a long sentence, to see the chip on several lines.',
-      if: { arg: 'count', gte: 2 },
     },
-    chip2Disabled: {
-      name: 'Chip 2 — disabled',
+    disabled: {
+      name: 'Disabled',
       control: 'boolean',
-      if: { arg: 'count', gte: 2 },
-    },
-    chip3Label: {
-      name: 'Chip 3 — label',
-      control: 'text',
-      description: 'Interpolated as is, so HTML goes through — paste a `<br>`, or a long sentence, to see the chip on several lines.',
-      if: { arg: 'count', gte: 3 },
-    },
-    chip3Disabled: {
-      name: 'Chip 3 — disabled',
-      control: 'boolean',
-      if: { arg: 'count', gte: 3 },
+      description: 'One control for the whole group: `disabled` on every `<button>`. A real page does not disable one suggestion out of two — same rule as the filter chip.',
     },
     layout: {
+      name: 'Layout',
       control: 'select',
       options: layouts,
       description: 'Shared by every chip. On a suggestion chip the icon sits before the label; `Icon only` adds `chip-icon` and moves the label into a `visually-hidden` span.',
     },
     icon: {
+      name: 'Icon content',
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
       if: { arg: 'layout', neq: 'Text only' },
     },
     skeleton: {
+      name: 'Skeleton',
       control: 'boolean',
       description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
@@ -281,10 +265,10 @@ export const PlaygroundSuggestionChip = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { count, layout, icon, skeleton } = context.args
+          const { disabled, layout, icon, skeleton } = context.args
 
           return skeletonWrapper(renderSuggestionChip({
-            count,
+            disabled,
             chips: chipsOf(context.args),
             layout,
             icon,
@@ -294,23 +278,19 @@ export const PlaygroundSuggestionChip = {
     },
   },
   render: (args) => {
-    const { count, layout, icon, skeleton } = args
+    const { disabled, layout, icon, skeleton } = args
 
     return skeletonWrapper(renderSuggestionChip({
-      count,
+      disabled,
       chips: chipsOf(args),
       layout,
       icon,
     }, withCustomIcon(inlineIcons, icon)), skeleton)
   },
   args: {
-    count: 3,
     chip1Label: 'Thanks.',
-    chip1Disabled: false,
     chip2Label: 'Looks good to me.',
-    chip2Disabled: false,
-    chip3Label: 'Can we talk about it later ?',
-    chip3Disabled: false,
+    disabled: false,
     layout: 'Text only',
     icon: '',
     skeleton: false

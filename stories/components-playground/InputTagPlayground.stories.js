@@ -4,6 +4,18 @@
 
 const states = ['Enabled', 'Disabled']
 
+// `Skeleton` is one of the states, not a checkbox beside them. It is a wrapper
+// in the markup — `<div aria-busy="true" inert>` around the component rendered
+// in its first state — but in the Controls panel it answers the same question
+// as the others: what does this look like right now. Two controls for one
+// question is what makes a panel read as two components glued together.
+const stateOptions = [...states, 'Skeleton']
+
+const isSkeleton = (state) => state === 'Skeleton'
+
+const baseState = (state) => (isSkeleton(state) ? states[0] : state)
+
+
 const stateMap = {
   'Enabled': '',
   // Hover, Pressed-Touch, Focus and Skeleton are Figma states with no class in
@@ -12,7 +24,13 @@ const stateMap = {
   'Disabled': ' disabled'
 }
 
-const renderInputTag = ({ state, label, hiddenLabel }) => {
+// The `visually-hidden` span is the control's whole accessible name and never
+// varies with anything the panel offers, so it is a constant rather than a
+// control: a text no one ever sees on the canvas is not an axis of the
+// component.
+const hiddenLabel = 'Remove this tag'
+
+const renderInputTag = ({ state, label }) => {
   const disabledAttr = stateMap[state] ?? ''
 
   return `<button type="button" class="tag tag-input"${disabledAttr}>
@@ -35,20 +53,13 @@ export default {
   title: 'Playground/Input tag',
   argTypes: {
     state: {
+      name: 'State',
       control: 'select',
-      options: states,
+      options: stateOptions,
     },
     label: {
+      name: 'Label',
       control: 'text',
-    },
-    hiddenLabel: {
-      name: 'Hidden label (remove button)',
-      control: 'text',
-      description: 'Carried by the `visually-hidden` span: it announces what the button does. The visible text is `label`.',
-    },
-    skeleton: {
-      control: 'boolean',
-      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -59,28 +70,24 @@ export const PlaygroundInputTag = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { state, label, hiddenLabel, skeleton } = context.args
+          const { state, label } = context.args
 
           return skeletonWrapper(renderInputTag({
-            state,
+            state: baseState(state),
             label,
-            hiddenLabel,
-          }), skeleton)
+          }), isSkeleton(state))
         },
       },
     },
   },
-  render: ({ state, label, hiddenLabel, skeleton }) => {
+  render: ({ state, label }) => {
     return skeletonWrapper(renderInputTag({
-      state,
+      state: baseState(state),
       label,
-      hiddenLabel,
-    }), skeleton)
+    }), isSkeleton(state))
   },
   args: {
     state: 'Enabled',
     label: 'Label',
-    hiddenLabel: 'Remove this tag',
-    skeleton: false
   },
 }

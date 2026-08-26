@@ -22,12 +22,25 @@ const sizeClasses = {
   'Large': 'badge-large'
 }
 
+// The hidden text is not a control. The badge has no visible text, so the
+// `visually-hidden` span is its whole accessible name — and what it has to say
+// is what the status means: "colour should not be the only way to convey
+// information". It is therefore derived from the status rather than typed.
+const statusTexts = {
+  'Neutral': 'Notification',
+  'Accent': 'Notification',
+  'Positive': 'Success',
+  'Info': 'Information',
+  'Warning': 'Warning',
+  'Negative': 'Error'
+}
+
 const stateClasses = {
   'Enabled': '',
   'Disabled': 'disabled'
 }
 
-const renderBadge = ({ status, size, state, hiddenLabel }) => {
+const renderBadge = ({ status, size, state }) => {
   const classes = [
     'badge',
     statusClasses[status],
@@ -35,29 +48,27 @@ const renderBadge = ({ status, size, state, hiddenLabel }) => {
     stateClasses[state]
   ].filter(Boolean).join(' ')
 
-  return `<p class="${classes}"><span class="visually-hidden">${hiddenLabel}</span></p>`
+  return `<p class="${classes}"><span class="visually-hidden">${statusTexts[status] ?? statusTexts.Neutral}</span></p>`
 }
 
 export default {
   title: 'Playground/Badge',
   argTypes: {
     status: {
+      name: 'Status',
       control: 'select',
       options: statuses,
     },
     size: {
+      name: 'Size',
       control: 'select',
       options: sizes,
     },
     state: {
+      name: 'State',
       control: 'select',
       options: states,
     },
-    hiddenLabel: {
-      name: 'Hidden label',
-      control: 'text',
-      description: 'Carried by the `visually-hidden` span: the badge has no visible text, this is all a screen reader announces.',
-    }
   }
 }
 
@@ -67,30 +78,27 @@ export const PlaygroundBadge = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { status, size, state, hiddenLabel } = context.args
+          const { status, size, state } = context.args
 
           return renderBadge({
             status,
             size,
             state,
-            hiddenLabel,
           })
         },
       },
     },
   },
-  render: ({ status, size, state, hiddenLabel }) => {
+  render: ({ status, size, state }) => {
     return renderBadge({
       status,
       size,
       state,
-      hiddenLabel,
     })
   },
   args: {
     status: 'Neutral',
     size: 'Xsmall',
-    state: 'Enabled',
-    hiddenLabel: 'Beware'
+    state: 'Enabled'
   },
 }

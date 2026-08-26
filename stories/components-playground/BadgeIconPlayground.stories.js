@@ -14,6 +14,20 @@
 // ignored by the functional statuses, which carry their own status icon.
 
 const statuses = ['Neutral', 'Accent', 'Positive', 'Info', 'Warning', 'Negative']
+
+// The hidden text is not a control. The badge has no visible text, so the
+// `visually-hidden` span is its whole accessible name — and what it has to say
+// is what the status means: "colour should not be the only way to convey
+// information". It is therefore derived from the status rather than typed.
+const statusTexts = {
+  'Neutral': 'Notification',
+  'Accent': 'Notification',
+  'Positive': 'Success',
+  'Info': 'Information',
+  'Warning': 'Warning',
+  'Negative': 'Error'
+}
+
 const sizes = ['Xsmall', 'Small', 'Medium', 'Large']
 const states = ['Enabled', 'Disabled']
 
@@ -166,7 +180,7 @@ const badgeTemplate = ({ classes, markup, label }) => `<p class="${classes}">
   <span class="visually-hidden">${label}</span>
 </p>`
 
-const renderBadgeIcon = ({ status, size, state, label }, iconMarkup = inlineIcon(defaultIconPath)) => {
+const renderBadgeIcon = ({ status, size, state }, iconMarkup = inlineIcon(defaultIconPath)) => {
   const safeStatus = orElse(status, statuses)
   const classes = [
     'badge',
@@ -175,33 +189,32 @@ const renderBadgeIcon = ({ status, size, state, label }, iconMarkup = inlineIcon
     stateClasses[orElse(state, states)]
   ].filter(Boolean).join(' ')
 
-  return badgeTemplate({ classes, markup: statusMarkup[safeStatus] ?? iconMarkup, label })
+  return badgeTemplate({ classes, markup: statusMarkup[safeStatus] ?? iconMarkup, label: statusTexts[safeStatus] ?? statusTexts.Neutral })
 }
 
 export default {
   title: 'Playground/Badge icon',
   argTypes: {
     status: {
+      name: 'Status',
       control: 'select',
       options: statuses,
     },
     size: {
+      name: 'Size',
       control: 'select',
       options: sizes,
     },
     state: {
+      name: 'State',
       control: 'select',
       options: states,
     },
     icon: {
+      name: 'Icon content',
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Neutral and Accent only. Empty: the design system icon.',
     },
-    label: {
-      name: 'Hidden label',
-      control: 'text',
-      description: 'Carried by the `visually-hidden` span: the badge has no visible text, this is all a screen reader announces.',
-    }
   }
 }
 
@@ -211,31 +224,28 @@ export const PlaygroundBadgeIcon = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { status, size, state, label, icon } = context.args
+          const { status, size, state, icon } = context.args
 
           return renderBadgeIcon({
             status,
             size,
             state,
-            label,
           }, resolveIcon(icon, spriteIcon))
         },
       },
     },
   },
-  render: ({ status, size, state, label, icon }) => {
+  render: ({ status, size, state, icon }) => {
     return renderBadgeIcon({
       status,
       size,
       state,
-      label,
     }, resolveIcon(icon, inlineIcon(defaultIconPath)))
   },
   args: {
     status: 'Neutral',
     size: 'Medium',
     state: 'Enabled',
-    icon: '',
-    label: 'Favourite'
+    icon: ''
   },
 }

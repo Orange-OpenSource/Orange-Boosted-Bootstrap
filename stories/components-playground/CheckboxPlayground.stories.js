@@ -47,7 +47,13 @@ const stateMap = {
   'Disabled': ' disabled'
 }
 
-const renderCheckbox = ({ state, selectionStatus, error, hiddenLabel }) => {
+// The `visually-hidden` span is the control's whole accessible name and never
+// varies with anything the panel offers, so it is a constant rather than a
+// control: a text no one ever sees on the canvas is not an axis of the
+// component.
+const hiddenLabel = 'Standalone checkbox'
+
+const renderCheckbox = ({ state, selectionStatus, error }) => {
   const safeStatus = orElse(selectionStatus, selectionStatuses)
   const checkedAttr = selectionStatusMap[safeStatus]
   const invalidAttr = errorMap[(error ? 'True' : 'False')]
@@ -63,21 +69,19 @@ export default {
   title: 'Playground/Checkbox',
   argTypes: {
     state: {
+      name: 'State',
       control: 'select',
       options: states,
     },
     selectionStatus: {
+      name: 'Selection status',
       control: 'select',
       options: selectionStatuses,
     },
     error: {
+      name: 'Error',
       control: 'boolean',
     },
-    hiddenLabel: {
-      name: 'Hidden label',
-      control: 'text',
-      description: 'Carried by the `visually-hidden` span: a standalone checkbox has no visible label, this is all a screen reader announces.',
-    }
   }
 }
 
@@ -87,30 +91,27 @@ export const PlaygroundCheckbox = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { state, selectionStatus, error, hiddenLabel } = context.args
+          const { state, selectionStatus, error } = context.args
 
           return renderCheckbox({
             state,
             selectionStatus,
             error,
-            hiddenLabel,
           })
         },
       },
     },
   },
-  render: ({ state, selectionStatus, error, hiddenLabel }) => {
+  render: ({ state, selectionStatus, error }) => {
     return renderCheckbox({
       state,
       selectionStatus,
       error,
-      hiddenLabel,
     })
   },
   args: {
     state: 'Enabled',
     selectionStatus: 'Unselected',
-    error: false,
-    hiddenLabel: 'Standalone checkbox'
+    error: false
   },
 }

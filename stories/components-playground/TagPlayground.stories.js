@@ -8,6 +8,18 @@ const layouts = ['Text only', 'Text + bullet', 'Text + icon']
 const sizes = ['Default', 'Small']
 const states = ['Enabled', 'Loading', 'Disabled']
 
+// `Skeleton` is one of the states, not a checkbox beside them. It is a wrapper
+// in the markup — `<div aria-busy="true" inert>` around the component rendered
+// in its first state — but in the Controls panel it answers the same question
+// as the others: what does this look like right now. Two controls for one
+// question is what makes a panel read as two components glued together.
+const stateOptions = [...states, 'Skeleton']
+
+const isSkeleton = (state) => state === 'Skeleton'
+
+const baseState = (state) => (isSkeleton(state) ? states[0] : state)
+
+
 // Fix — Text + icon: a functional status (Positive, Info, Warning, Negative)
 // carries its own icon, provided by the CSS through
 // `<span class="tag-status-icon"></span>`; only the two non functional ones
@@ -204,7 +216,7 @@ ${lines.map((line) => `  ${line}`).join('\n')}
 </p>`
 }
 
-const renderTag = ({ appearance, status, layout, size, state, roundedCorner, label }, iconMarkup = inlineIcon(defaultIconPath)) => {
+const renderTag = ({ appearance, status, layout, size, state, rounded, label }, iconMarkup = inlineIcon(defaultIconPath)) => {
   const safeStatus = orElse(status, statuses)
   const safeState = orElse(state, states)
 
@@ -213,7 +225,7 @@ const renderTag = ({ appearance, status, layout, size, state, roundedCorner, lab
     statusClasses[safeStatus],
     appearanceClasses[orElse(appearance, appearances)],
     sizeClasses[orElse(size, sizes)],
-    roundedCornerClasses[(roundedCorner ? 'True' : 'False')],
+    roundedCornerClasses[(rounded ? 'True' : 'False')],
     stateClasses[safeState]
   ].filter(Boolean).join(' ')
 
@@ -237,39 +249,43 @@ export default {
   title: 'Playground/Tag',
   argTypes: {
     appearance: {
+      name: 'Appearance',
       control: 'select',
       options: appearances,
     },
     status: {
+      name: 'Status',
       control: 'select',
       options: statuses,
     },
     layout: {
+      name: 'Layout',
       control: 'select',
       options: layouts,
     },
     size: {
+      name: 'Size',
       control: 'select',
       options: sizes,
     },
     state: {
+      name: 'State',
       control: 'select',
-      options: states,
+      options: stateOptions,
     },
-    roundedCorner: {
+    rounded: {
+      name: 'Rounded corners',
       control: 'boolean',
     },
     label: {
+      name: 'Label',
       control: 'text',
     },
     icon: {
+      name: 'Icon content',
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. `Text + icon` layout, and Neutral or Accent only: a functional status carries its own icon, from the CSS. Empty: the design system icon.',
       if: { arg: 'layout', eq: 'Text + icon' },
-    },
-    skeleton: {
-      control: 'boolean',
-      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -280,31 +296,31 @@ export const PlaygroundTag = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { appearance, status, layout, size, state, roundedCorner, label, icon, skeleton } = context.args
+          const { appearance, status, layout, size, state, rounded, label, icon } = context.args
 
           return skeletonWrapper(renderTag({
             appearance,
             status,
             layout,
             size,
-            state,
-            roundedCorner,
+            state: baseState(state),
+            rounded,
             label,
-          }, resolveIcon(icon, spriteIcon)), skeleton)
+          }, resolveIcon(icon, spriteIcon)), isSkeleton(state))
         },
       },
     },
   },
-  render: ({ appearance, status, layout, size, state, roundedCorner, label, icon, skeleton }) => {
+  render: ({ appearance, status, layout, size, state, rounded, label, icon }) => {
     return skeletonWrapper(renderTag({
       appearance,
       status,
       layout,
       size,
-      state,
-      roundedCorner,
+      state: baseState(state),
+      rounded,
       label,
-    }, resolveIcon(icon, inlineIcon(defaultIconPath))), skeleton)
+    }, resolveIcon(icon, inlineIcon(defaultIconPath))), isSkeleton(state))
   },
   args: {
     appearance: 'Muted',
@@ -312,9 +328,8 @@ export const PlaygroundTag = {
     layout: 'Text only',
     size: 'Default',
     state: 'Enabled',
-    roundedCorner: true,
+    rounded: true,
     label: 'Label',
     icon: '',
-    skeleton: false
   },
 }

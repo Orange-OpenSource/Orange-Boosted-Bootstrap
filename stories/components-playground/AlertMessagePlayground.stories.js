@@ -42,12 +42,25 @@
 // No `Max width` control: the documentation page shows no
 // `.component-max-width` on an alert, and the stylesheet only ever compounds
 // that class with the form components.
+//
+// The bullet list is a count with arrows plus one text field per bullet, and
+// the fields carry `if: { arg: 'bullets', gte: N }`. Storybook's `if` only
+// understands `eq`, `neq`, `truthy` and `exists`: it reads a `gte` as a
+// truthiness test, so it shows the three fields as soon as there is one bullet,
+// while the standalone preview — which honours `gte` — shows exactly the
+// rendered ones. Bullet 1 is gated on `neq: 0` instead, which is exact on both
+// surfaces. An `object` control was tried in between: it hides nothing wrongly,
+// but it turns adding a bullet into typing JSON, and the arrows are the point.
+//
+// No control on the texts the canvas never shows. The hidden text of the icon
+// is what the status *means*, spelled out for a screen reader, so it is
+// derived from the status; the close button's accessible name is always
+// "Close". Both are constants below.
 
 const statuses = ['Negative', 'Positive', 'Info', 'Warning', 'Neutral', 'Accent']
 const labelElements = ['p', 'h2', 'h3', 'h4', 'h5', 'h6']
 const actions = ['None', 'After the text', 'In the action container']
 const actionElements = ['Button', 'Link']
-const liveRegions = ['None', 'Alert', 'Status']
 
 // A control left on "Choose option" gives `undefined`. The component must still
 // render, so every select falls back on the first value of its list rather than
@@ -163,9 +176,21 @@ const spriteIcons = { heartEmpty: '<svg aria-hidden="true"><use xlink:href="/ora
 
 const withCustomIcon = (icons, icon) => (icon ? { heartEmpty: inlineIcon(icon) } : icons)
 
-// The hidden text has two homes, and it is the icon that decides which. With an
-// icon container it is a `<p>` inside it; without one there is nowhere left to
-// put it, so it becomes a prefix of the visible label.
+// The hidden text is not a control: "colour should not be the only way to
+// convey information", so what it announces is the meaning of the status. A
+// non-functional status has no meaning to spell out and carries none.
+const statusTexts = {
+  'Negative': 'Error',
+  'Positive': 'Success',
+  'Info': 'Information',
+  'Warning': 'Warning',
+  'Neutral': '',
+  'Accent': ''
+}
+
+// That text has two homes, and it is the icon that decides which. With an icon
+// container it is a `<p>` inside it; without one there is nowhere left to put
+// it, so it becomes a prefix of the visible label.
 const hiddenTexts = {
   'in-icon': (text) => (text ? `<p class="visually-hidden">${text}</p>` : ''),
   'in-label': (text) => (text ? `<span class="visually-hidden">${text}: </span>` : '')
@@ -218,34 +243,21 @@ const actionTemplates = {
   'Link': (label) => `<a class="link" href="#">${label}</a>`
 }
 
-const closeTemplates = {
-  'True': (label) => `<div class="alert-close-container">
+// The close button's accessible name never varies, so it is a constant rather
+// than a control. It is carried by a `visually-hidden` span, the method the
+// documentation prefers over `aria-label` and `aria-labelledby`.
+const closeLabel = 'Close'
+
+// `.alert-close-container` is not optional here. It sets `container-type: size`
+// around the button, and that container query is what rounds the button's
+// bottom-right corner on a rounded single-line alert — measured `border-radius`
+// `0 12px 12px 0` with it, `0 12px 0 0` without. The documentation's own
+// example always has it, so the playground always writes it.
+const closeMarkup = () => `<div class="alert-close-container">
   <button class="btn-close" data-bs-dismiss="alert">
-    <span class="visually-hidden">${label}</span>
+    <span class="visually-hidden">${closeLabel}</span>
   </button>
-</div>`,
-  'False': (label) => `<button class="btn-close" data-bs-dismiss="alert">
-  <span class="visually-hidden">${label}</span>
-</button>`
-}
-
-// `role="alert"` goes **on** the alert; `Status` wraps it in a
-// `<div role="status">`. A live region has to exist before the content is
-// inserted to be announced, which is why the second one is a container and not
-// an attribute.
-const roleAttrs = {
-  'None': '',
-  'Alert': ' role="alert"',
-  'Status': ''
-}
-
-const roleWrappers = {
-  'None': (markup) => markup,
-  'Alert': (markup) => markup,
-  'Status': (markup) => `<div role="status">
-${indent(markup, '  ')}
 </div>`
-}
 
 const roundedWrappers = {
   'True': (markup) => `<div class="use-rounded-corner-alert">
@@ -266,29 +278,38 @@ ${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
 
 const block = (parts, pad) => parts.filter(Boolean).map((part) => indent(part, pad)).join('\n')
 
-const renderAlertMessage = ({ status, icon, iconContent, hiddenLabel, labelElement, label, description, bullets, bullet1, bullet2, bullet3, action, actionElement, actionLabel, closeButton, closeLabel, closeContainer, liveRegion, rounded }, icons = inlineIcons, preview = true) => {
+const renderAlertMessage = ({ status, icon, iconContent, labelElement, label, description, bullets, bullet1, bullet2, bullet3, action, actionElement, actionLabel, closeButton, rounded }, icons = inlineIcons, preview = true) => {
   const safeStatus = orElse(status, statuses)
   const safeLabelElement = orElse(labelElement, labelElements)
   const safeAction = orElse(action, actions)
   const safeActionElement = orElse(actionElement, actionElements)
-  const safeLiveRegion = orElse(liveRegion, liveRegions)
 
   const classes = ['alert', 'alert-message', statusClasses[safeStatus]].filter(Boolean).join(' ')
   const source = iconSources[safeStatus]
-  const broken = brokenIcon(safeStatus, icon, iconContent)
 
-  const iconBlock = icon
+  // The icon can only be *removed* on a non-functional status. On Negative,
+  // Positive, Info and Warning the stylesheet draws it from `--bs-alert-icon`
+  // and it is the container that carries the status: taking it away would
+  // leave the meaning to the colour alone. The control stays on screen — `if`
+  // has no `oneOf` to hide it with — and its description says so.
+  const iconShown = source === 'stylesheet' ? true : Boolean(icon)
+  const broken = brokenIcon(safeStatus, iconShown, iconContent)
+  const hiddenText = statusTexts[safeStatus]
+
+  const iconBlock = iconShown
     ? iconContainers[iconContent ? 'element' : source]({
-      hidden: hiddenTexts['in-icon'](hiddenLabel),
+      hidden: hiddenTexts['in-icon'](hiddenText),
       icon: icons.heartEmpty
     })
     : ''
 
-  const items = [bullet1, bullet2, bullet3].slice(0, Math.max(0, Math.min(3, Number(bullets) || 0))).filter(Boolean)
+  const items = [bullet1, bullet2, bullet3]
+    .slice(0, Math.max(0, Math.min(3, Number(bullets) || 0)))
+    .filter(Boolean)
 
   const textContainer = `<div class="alert-text-container">
 ${block([
-    labelTemplates[safeLabelElement]({ prefix: icon ? '' : hiddenTexts['in-label'](hiddenLabel), label }),
+    labelTemplates[safeLabelElement]({ prefix: iconShown ? '' : hiddenTexts['in-label'](hiddenText), label }),
     description ? `<p>${description}</p>` : '',
     bulletList(items)
   ], '  ')}
@@ -297,15 +318,15 @@ ${block([
   const actionMarkup = actionTemplates[safeActionElement](actionLabel)
   const inlineAction = safeAction === 'After the text' ? actionMarkup : ''
   const containerAction = safeAction === 'In the action container' ? actionMarkup : ''
-  const closeMarkup = closeButton ? closeTemplates[closeContainer ? 'True' : 'False'](closeLabel) : ''
+  const close = closeButton ? closeMarkup() : ''
 
-  const actionContainer = [containerAction, closeMarkup].filter(Boolean).length
+  const actionContainer = [containerAction, close].filter(Boolean).length
     ? `<div class="alert-action-container">
-${block([containerAction, closeMarkup], '  ')}
+${block([containerAction, close], '  ')}
 </div>`
     : ''
 
-  const alert = `<div class="${classes}"${roleAttrs[safeLiveRegion]}>
+  const alert = `<div class="${classes}">
 ${block([
     iconBlock,
     `<div class="alert-container">
@@ -315,7 +336,7 @@ ${block([textContainer, inlineAction], '  ')}
   ], '  ')}
 </div>`
 
-  const wrapped = roundedWrappers[rounded ? 'True' : 'False'](roleWrappers[safeLiveRegion](alert))
+  const wrapped = roundedWrappers[rounded ? 'True' : 'False'](alert)
 
   return (preview ? brokenIconBanner(broken) : brokenIconComment(broken)) + wrapped
 }
@@ -324,6 +345,7 @@ export default {
   title: 'Playground/Alert message',
   argTypes: {
     status: {
+      name: 'Status',
       control: 'select',
       options: statuses,
       description: 'The first four are functional: the stylesheet draws their icon from `--bs-alert-icon`, and `.alert-icon` must stay empty. `Neutral` and `Accent` declare no such variable — they need an element inside the container, or no container at all.',
@@ -331,18 +353,13 @@ export default {
     icon: {
       name: 'Icon',
       control: 'boolean',
-      description: 'Removes the **whole** `.alert-icon` container, not just its contents. On `Neutral` and `Accent` an empty container gives an invalid `mask-image`, so no mask at all: a solid 20 px square. The documentation calls the result an "iconless alert message".',
+      description: 'Removes the **whole** `.alert-icon` container, not just its contents — and **only on `Neutral` and `Accent`**. A functional status keeps its icon whatever this control says: it is what carries the meaning beside the colour. On the two non-functional statuses an empty container gives an invalid `mask-image`, so no mask at all: a solid 20 px square. The documentation calls the result an "iconless alert message".',
     },
     iconContent: {
       name: 'Icon content',
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon. **Only for `Neutral` and `Accent`** — on a functional status any element inside the container removes the functional icon, which the canvas and the snippet both warn about.',
       if: { arg: 'icon', truthy: true },
-    },
-    hiddenLabel: {
-      name: 'Hidden label',
-      control: 'text',
-      description: 'Moves with the icon: a `<p class="visually-hidden">` inside `.alert-icon` when there is one, a prefix `<span>` of the label when there is not. "Color should not be the only way to convey information." Empty renders nothing.',
     },
     labelElement: {
       name: 'Label element',
@@ -351,34 +368,39 @@ export default {
       description: 'The documentation asks for semantics that match the context: a `<p>` when the label stands alone, a heading when it introduces a description or a list. The class stays `alert-label` either way.',
     },
     label: {
+      name: 'Label',
       control: 'text',
       description: 'Interpolated as is, so HTML goes through.',
     },
     description: {
+      name: 'Description',
       control: 'text',
       description: 'A `<p>` after the label, inside `.alert-text-container`. Empty: no paragraph at all.',
     },
     bullets: {
-      name: 'Bullet list items',
+      name: 'Bullets',
       control: { type: 'number', min: 0, max: 3, step: 1 },
-      description: 'One control rather than a boolean and a count, so the three text fields below are gated by a single rule. `0` renders no `<ul>`. The markers come from `.alert-text-container ul > li::before` — the alert draws its own, level 0 only, and does not use the Bullet list component.',
+      description: 'How many bullets in the list, from the arrows. `0` renders no `<ul>` at all. The markers come from `.alert-text-container ul > li::before`: the alert draws its own, level 0 only, and does not use the Bullet list component.',
     },
     bullet1: {
       name: 'Bullet 1',
       control: 'text',
-      if: { arg: 'bullets', gte: 1 },
+      if: { arg: 'bullets', neq: 0 },
     },
     bullet2: {
       name: 'Bullet 2',
       control: 'text',
+      description: 'Shown from two bullets. Storybook cannot express that — its `if` has no `gte` and falls back on a truthiness test — so it shows this field from the first bullet; the standalone preview hides it until the second.',
       if: { arg: 'bullets', gte: 2 },
     },
     bullet3: {
       name: 'Bullet 3',
       control: 'text',
+      description: 'Shown from three bullets, with the same reservation as `Bullet 2` on the Storybook side.',
       if: { arg: 'bullets', gte: 3 },
     },
     action: {
+      name: 'Action',
       control: 'select',
       options: actions,
       description: 'Both placements are documented and they are **not** interchangeable: only the first raises the minimum height, through `.alert-message:has(.alert-container > .link)`.',
@@ -398,25 +420,7 @@ export default {
     closeButton: {
       name: 'Close button',
       control: 'boolean',
-      description: '`.btn-close` with `data-bs-dismiss="alert"`. Without the alert JS plugin loaded the button shows and dismisses nothing — Storybook loads it, a bare HTML page does not.',
-    },
-    closeLabel: {
-      name: 'Close button label',
-      control: 'text',
-      description: 'Carried by a `visually-hidden` span, the method the documentation prefers over `aria-label` and `aria-labelledby`.',
-      if: { arg: 'closeButton', truthy: true },
-    },
-    closeContainer: {
-      name: 'Close container',
-      control: 'boolean',
-      description: 'Not decoration: `.alert-close-container` sets `container-type: size` around the button, and that container query is what rounds the button’s bottom-right corner on a rounded single-line alert. Measured `border-radius` of the `.btn-close`: `0 12px 12px 0` with the container, `0 12px 0 0` without it, `0` when not rounded. Read it together with `Rounded corners`.',
-      if: { arg: 'closeButton', truthy: true },
-    },
-    liveRegion: {
-      name: 'Live region',
-      control: 'select',
-      options: liveRegions,
-      description: '`Alert` puts `role="alert"` on the alert itself; `Status` wraps it in `<div role="status">`. A live region must exist **before** the content is inserted to be announced, which is why the polite form is a container rather than an attribute.',
+      description: '`.btn-close` with `data-bs-dismiss="alert"`, always inside its `.alert-close-container`. Without the alert JS plugin loaded the button shows and dismisses nothing — Storybook loads it, a bare HTML page does not.',
     },
     rounded: {
       name: 'Rounded corners',
@@ -424,6 +428,7 @@ export default {
       description: '`use-rounded-corner-alert` on an ancestor — normally `<body>`, a product-wide setting rather than a property of the alert. "For standard or business-oriented usage, keep the default square corners."',
     },
     skeleton: {
+      name: 'Skeleton',
       control: 'boolean',
       description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
@@ -436,13 +441,12 @@ export const PlaygroundAlertMessage = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { status, icon, iconContent, hiddenLabel, labelElement, label, description, bullets, bullet1, bullet2, bullet3, action, actionElement, actionLabel, closeButton, closeLabel, closeContainer, liveRegion, rounded, skeleton } = context.args
+          const { status, icon, iconContent, labelElement, label, description, bullets, bullet1, bullet2, bullet3, action, actionElement, actionLabel, closeButton, rounded, skeleton } = context.args
 
           return skeletonWrapper(renderAlertMessage({
             status,
             icon,
             iconContent,
-            hiddenLabel,
             labelElement,
             label,
             description,
@@ -454,21 +458,17 @@ export const PlaygroundAlertMessage = {
             actionElement,
             actionLabel,
             closeButton,
-            closeLabel,
-            closeContainer,
-            liveRegion,
             rounded,
           }, withCustomIcon(spriteIcons, iconContent), false), skeleton)
         },
       },
     },
   },
-  render: ({ status, icon, iconContent, hiddenLabel, labelElement, label, description, bullets, bullet1, bullet2, bullet3, action, actionElement, actionLabel, closeButton, closeLabel, closeContainer, liveRegion, rounded, skeleton }) => {
+  render: ({ status, icon, iconContent, labelElement, label, description, bullets, bullet1, bullet2, bullet3, action, actionElement, actionLabel, closeButton, rounded, skeleton }) => {
     return skeletonWrapper(renderAlertMessage({
       status,
       icon,
       iconContent,
-      hiddenLabel,
       labelElement,
       label,
       description,
@@ -480,9 +480,6 @@ export const PlaygroundAlertMessage = {
       actionElement,
       actionLabel,
       closeButton,
-      closeLabel,
-      closeContainer,
-      liveRegion,
       rounded,
     }, withCustomIcon(inlineIcons, iconContent)), skeleton)
   },
@@ -490,21 +487,17 @@ export const PlaygroundAlertMessage = {
     status: 'Negative',
     icon: true,
     iconContent: '',
-    hiddenLabel: 'Negative alert',
     labelElement: 'p',
     label: 'Alert message',
     description: 'Description of the alert message.',
-    bullets: 0,
-    bullet1: 'Bullet text',
-    bullet2: 'Bullet text',
-    bullet3: 'Bullet text',
+    bullets: 3,
+    bullet1: 'First point',
+    bullet2: 'Second point',
+    bullet3: 'Third point',
     action: 'After the text',
     actionElement: 'Button',
     actionLabel: 'Action',
     closeButton: true,
-    closeLabel: 'Close',
-    closeContainer: true,
-    liveRegion: 'None',
     rounded: false,
     skeleton: false
   },

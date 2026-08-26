@@ -13,12 +13,32 @@
 
 const states = ['Enabled', 'Read only', 'Disabled', 'Loading indeterminate', 'Loading determinate']
 
+// `Skeleton` is one of the states, not a checkbox beside them. It is a wrapper
+// in the markup — `<div aria-busy="true" inert>` around the component rendered
+// in its first state — but in the Controls panel it answers the same question
+// as the others: what does this look like right now. Two controls for one
+// question is what makes a panel read as two components glued together.
+const stateOptions = [...states, 'Skeleton']
+
+const isSkeleton = (state) => state === 'Skeleton'
+
+const baseState = (state) => (isSkeleton(state) ? states[0] : state)
+
+
 // A control left on "Choose option" gives `undefined`. The component must still
 // render, so every select falls back on the first value of its list rather than
 // on an empty output.
 const orElse = (value, options) => (options.includes(value) ? value : options[0])
 
 // An optional part is a list: empty, nothing is rendered; filled, one line.
+// The trailing button's accessible name is not a control: it is a text the
+// canvas never shows, and it says what the button does — which does not change
+// with anything the panel offers. The documentation's own example is a
+// favourite toggle, so that is the name written here. Swap the constant and
+// the icon together if the snippet is going into a page that does something
+// else.
+const actionLabel = 'Add to favorites'
+
 const maybe = (value) => (value ? [value] : [])
 
 // OUDS specificity: an empty placeholder is written `placeholder=" "`, a single
@@ -261,7 +281,7 @@ const retainAttr = (key) => ` oninput="var w; try { w = globalThis.top &amp;&amp
 const renderTextInput = ({
   label, inputText, placeholder, helperText, helperLink, error, errorMessage, required,
   prefix, suffix, outlined, rounded, maxWidth, state, loadingTime, leadingIcon,
-  trailingAction, hiddenLabel
+  trailingAction
 }, icons = inlineIcons, retain = '') => {
   const safeState = orElse(state, states)
 
@@ -295,7 +315,7 @@ const renderTextInput = ({
     ...fieldWrappers[prefix || suffix ? 'affixed' : 'plain']({ field, prefix, suffix }),
     ...maybe(trailingAction).map(() => `<button class="btn btn-minimal btn-icon" type="button"${actionDisabled[safeState]}>
       ${icons.action}
-      <span class="visually-hidden">${hiddenLabel}</span>
+      <span class="visually-hidden">${actionLabel}</span>
     </button>`),
     ...maybe(loadingMessages[safeState]).map(() => loader),
     ...maybe(loadingMessages[safeState]).map((message) =>
@@ -346,9 +366,11 @@ export default {
   title: 'Playground/Text input',
   argTypes: {
     label: {
+      name: 'Label',
       control: 'text',
     },
     placeholder: {
+      name: 'Placeholder',
       control: 'text',
       description: 'OUDS specificity: left empty it is rendered as `placeholder=" "`, a single space. Without it the floating label would sit on top of the value.',
     },
@@ -363,10 +385,12 @@ export default {
       description: 'Rendered as `<a class="link link-small">` below the container. Empty: none.',
     },
     required: {
+      name: 'Required',
       control: 'boolean',
       description: 'Adds `required` on the field and `is-required` on the label, which draws the asterisk.',
     },
     error: {
+      name: 'Error',
       control: 'boolean',
       description: 'Adds `aria-invalid="true"` and shows the error message below.',
     },
@@ -377,17 +401,21 @@ export default {
       if: { arg: 'error', truthy: true },
     },
     prefix: {
+      name: 'Prefix',
       control: 'text',
       description: 'Text before the field. Carried by `data-bs-prefix` on a `.input-container` wrapper, which the stylesheet draws in a `::before`. Empty: no wrapper.',
     },
     suffix: {
+      name: 'Suffix',
       control: 'text',
       description: 'Text after the field, same mechanism through `data-bs-suffix`. Empty: no wrapper.',
     },
     outlined: {
+      name: 'Outlined',
       control: 'boolean',
     },
     rounded: {
+      name: 'Rounded corners',
       control: 'boolean',
       description: 'Product-wide setting: `use-rounded-corner-inputs` on an ancestor, not a class of the component.',
     },
@@ -397,8 +425,9 @@ export default {
       description: 'Adds `component-max-width` on `.text-input`, the design system class carrying the maximum width token.',
     },
     state: {
+      name: 'State',
       control: 'select',
-      options: states,
+      options: stateOptions,
       description: 'The two loading states are the two documented loaders. Every state but `Enabled` disables the action button — leaving it clickable next to a read only or disabled field was a bug.',
     },
     loadingTime: {
@@ -408,43 +437,42 @@ export default {
       if: { arg: 'state', eq: 'Loading determinate' },
     },
     leadingIcon: {
+      name: 'Leading icon',
       control: 'boolean',
     },
     icon: {
+      name: 'Icon content',
       control: 'text',
       description: 'Leading icon: a whole `<svg>…</svg>`, pasted as is, or only its inside, then wrapped in a 24×24 viewBox. Empty: the design system icon.',
       if: { arg: 'leadingIcon', truthy: true },
     },
     trailingAction: {
+      name: 'Trailing action',
       control: 'boolean',
     },
     actionIcon: {
+      name: 'Action icon content',
       control: 'text',
       description: 'Trailing button icon: a whole `<svg>…</svg>`, pasted as is, or only its inside. Empty: the design system icon.',
       if: { arg: 'trailingAction', truthy: true },
     },
-    hiddenLabel: {
-      name: 'Hidden label (action button)',
-      control: 'text',
-      description: 'Carried by the `visually-hidden` span of the trailing button: it announces what the button does.',
-      if: { arg: 'trailingAction', truthy: true },
-    },
-    skeleton: {
-      control: 'boolean',
-      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
-    }
   }
 }
 
 const ARGS = [
   'label', 'placeholder', 'helperText', 'helperLink', 'error', 'errorMessage',
   'required', 'prefix', 'suffix', 'outlined', 'rounded', 'maxWidth', 'state', 'loadingTime',
-  'leadingIcon', 'trailingAction', 'hiddenLabel'
+  'leadingIcon', 'trailingAction'
 ]
 
 // The render arguments, picked from the story args: eighteen controls make a
-// destructuring list longer than the function it feeds.
-const pick = (args) => Object.fromEntries(ARGS.map((name) => [name, args[name]]))
+// destructuring list longer than the function it feeds. `Skeleton` is one of
+// the values of `state`, so it is peeled off here: the wrapper takes it and the
+// component renders in its first state underneath.
+const pick = (args) => ({
+  ...Object.fromEntries(ARGS.map((name) => [name, args[name]])),
+  state: baseState(args.state)
+})
 
 export const PlaygroundTextInput = {
   parameters: {
@@ -462,7 +490,7 @@ export const PlaygroundTextInput = {
       { ...pick(args), inputText: keptValue('textInput') },
       withCustomIcons(inlineIcons, args),
       retainAttr('textInput')
-    ), args.skeleton)
+    ), isSkeleton(args.state))
   },
   args: {
     label: 'Label',
@@ -483,7 +511,5 @@ export const PlaygroundTextInput = {
     icon: '',
     trailingAction: false,
     actionIcon: '',
-    hiddenLabel: 'Add to favorites',
-    skeleton: false
   },
 }

@@ -22,7 +22,13 @@ const stateMap = {
   'Disabled': ' disabled'
 }
 
-const renderSwitch = ({ state, selected, hiddenLabel }) => {
+// The `visually-hidden` span is the control's whole accessible name and never
+// varies with anything the panel offers, so it is a constant rather than a
+// control: a text no one ever sees on the canvas is not an axis of the
+// component.
+const hiddenLabel = 'Standalone switch'
+
+const renderSwitch = ({ state, selected }) => {
   const checkedAttr = selectedMap[(selected ? 'True' : 'False')] ?? ''
   const stateAttr = stateMap[state] ?? ''
 
@@ -36,17 +42,14 @@ export default {
   title: 'Playground/Switch',
   argTypes: {
     state: {
+      name: 'State',
       control: 'select',
       options: states,
     },
     selected: {
+      name: 'Selected',
       control: 'boolean',
     },
-    hiddenLabel: {
-      name: 'Hidden label',
-      control: 'text',
-      description: 'Carried by the `visually-hidden` span: a standalone switch has no visible label, this is all a screen reader announces.',
-    }
   }
 }
 
@@ -56,27 +59,24 @@ export const PlaygroundSwitch = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { state, selected, hiddenLabel } = context.args
+          const { state, selected } = context.args
 
           return renderSwitch({
             state,
             selected,
-            hiddenLabel,
           })
         },
       },
     },
   },
-  render: ({ state, selected, hiddenLabel }) => {
+  render: ({ state, selected }) => {
     return renderSwitch({
       state,
       selected,
-      hiddenLabel,
     })
   },
   args: {
     state: 'Enabled',
-    selected: false,
-    hiddenLabel: 'Standalone switch'
+    selected: false
   },
 }

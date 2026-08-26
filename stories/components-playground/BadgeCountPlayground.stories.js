@@ -20,6 +20,19 @@ const sizeClasses = {
   'Large': 'badge-large'
 }
 
+// The hidden text is not a control. The count is visible; what it counts is
+// not, and the `visually-hidden` span beside it is what says so. What it has to
+// say is what the status means — "colour should not be the only way to convey
+// information" — so it is derived from the status rather than typed.
+const statusTexts = {
+  'Neutral': 'Notification',
+  'Accent': 'Notification',
+  'Positive': 'Success',
+  'Info': 'Information',
+  'Warning': 'Warning',
+  'Negative': 'Error'
+}
+
 const stateClasses = {
   'Enabled': '',
   'Disabled': 'disabled'
@@ -32,7 +45,7 @@ const toCount = (value) => {
   return Number.isNaN(parsed) ? 0 : Math.max(0, parsed)
 }
 
-const renderBadgeCount = ({ status, size, state, number, hiddenLabel }) => {
+const renderBadgeCount = ({ status, size, state, number }) => {
   const count = toCount(number)
   const classes = [
     'badge',
@@ -42,32 +55,31 @@ const renderBadgeCount = ({ status, size, state, number, hiddenLabel }) => {
     stateClasses[state]
   ].filter(Boolean).join(' ')
 
-  return `<p class="${classes}">${count}<span class="visually-hidden">${hiddenLabel}</span></p>`
+  return `<p class="${classes}">${count}<span class="visually-hidden">${statusTexts[status] ?? statusTexts.Neutral}</span></p>`
 }
 
 export default {
   title: 'Playground/Badge count',
   argTypes: {
     status: {
+      name: 'Status',
       control: 'select',
       options: statuses,
     },
     size: {
+      name: 'Size',
       control: 'select',
       options: sizes,
     },
     state: {
+      name: 'State',
       control: 'select',
       options: states,
     },
     number: {
+      name: 'Number',
       control: { type: 'number', min: 0, step: 1 },
     },
-    hiddenLabel: {
-      name: 'Hidden label',
-      control: 'text',
-      description: 'Carried by the `visually-hidden` span, next to the visible count: it says what the number counts.',
-    }
   }
 }
 
@@ -77,33 +89,30 @@ export const PlaygroundBadgeCount = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { status, size, state, number, hiddenLabel } = context.args
+          const { status, size, state, number } = context.args
 
           return renderBadgeCount({
             status,
             size,
             state,
             number,
-            hiddenLabel,
           })
         },
       },
     },
   },
-  render: ({ status, size, state, number, hiddenLabel }) => {
+  render: ({ status, size, state, number }) => {
     return renderBadgeCount({
       status,
       size,
       state,
       number,
-      hiddenLabel,
     })
   },
   args: {
     status: 'Neutral',
     size: 'Medium',
     state: 'Enabled',
-    number: 1,
-    hiddenLabel: 'error'
+    number: 1
   },
 }

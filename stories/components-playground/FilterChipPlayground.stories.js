@@ -6,8 +6,14 @@
 // with a single `<li>`, which is not the DOM anyone writes. The playground
 // therefore renders two — enough to show the container, the gap and a selected
 // chip next to an unselected one, which is all the markup has to teach. Only the
-// label and the selected state are per chip; the form and the disabled state are
-// group settings, so they are one control each.
+// label is per chip; the form and the disabled state are group settings, so they
+// are one control each.
+//
+// There is no `Selected` control. The chips on the canvas are real inputs — a
+// checkbox, a radio sharing one `name`, or a button with `aria-pressed` and the
+// Bootstrap toggle plugin — so selecting one is a click, which is also the only
+// way to see the three forms behave differently. The snippet shows the initial
+// markup: the first chip checked, as the documentation's own example writes it.
 //
 // Three forms, all documented, all real HTML: a checkbox, a radio button, or a
 // button with `aria-pressed`. They are not three components: `.chip-filter`
@@ -21,11 +27,10 @@
 const layouts = ['Text only', 'Text + icon', 'Icon only']
 const controls = ['Checkbox', 'Radio', 'Button']
 
-// Two chips, two labels, two selected states. A single `object` control would
-// have been shorter to write, but Storybook renders it as a raw JSON editor:
-// nobody wants to type a label into that. Flat controls are what both surfaces
-// can show. The count is frozen: a third chip adds no markup the second does not
-// already show.
+// Two chips, two labels. A single `object` control would have been shorter to
+// write, but Storybook renders it as a raw JSON editor: nobody wants to type a
+// label into that. Flat controls are what both surfaces can show. The count is
+// frozen: a third chip adds no markup the second does not already show.
 const CHIPS = [1, 2]
 
 // A control left on "Choose option" gives `undefined`. The component must still
@@ -33,9 +38,9 @@ const CHIPS = [1, 2]
 // on an empty output.
 const orElse = (value, options) => (options.includes(value) ? value : options[0])
 
-// The default group deliberately mixes a selected chip and an unselected one:
-// the selected state is the whole point of a filter, and one chip alone shows
-// neither the gap between chips nor how the group wraps.
+// The group starts with one chip selected and one not: the selected state is the
+// whole point of a filter, and the pair is what shows the difference between the
+// two renderings side by side. This is initial markup, not a control.
 const defaultChips = [
   { label: 'Apple', selected: true },
   { label: 'Samsung', selected: false }
@@ -49,7 +54,7 @@ const chipAt = (chips, index, control, disabled) => {
   return {
     label: pick('label'),
     control: orElse(control, controls),
-    selected: Boolean(pick('selected')),
+    selected: Boolean(defaultChips[index]?.selected),
     disabled: Boolean(disabled)
   }
 }
@@ -238,8 +243,7 @@ const controlKinds = {
 
 // The chips, read from the flat controls: one entry per chip.
 const chipsOf = (args) => CHIPS.map((index) => ({
-  label: args[`chip${index}Label`],
-  selected: args[`chip${index}Selected`]
+  label: args[`chip${index}Label`]
 }))
 
 const renderFilterChip = ({ chips, control, disabled, layout, icon }, icons = inlineIcons) => {
@@ -278,18 +282,10 @@ export default {
       control: 'text',
       description: 'Interpolated as is, so HTML goes through — a `<br>` shows how the chip behaves on several lines.',
     },
-    chip1Selected: {
-      name: 'Chip 1 — selected',
-      control: 'boolean',
-    },
     chip2Label: {
       name: 'Chip 2 — label',
       control: 'text',
       description: 'Interpolated as is, so HTML goes through — a `<br>` shows how the chip behaves on several lines.',
-    },
-    chip2Selected: {
-      name: 'Chip 2 — selected',
-      control: 'boolean',
     },
     control: {
       name: 'Control',
@@ -303,16 +299,19 @@ export default {
       description: 'Shared by every chip: `disabled` on the input or on the button.',
     },
     layout: {
+      name: 'Layout',
       control: 'select',
       options: layouts,
       description: 'Shared by every chip. On a filter chip the icon sits after the label; `Icon only` adds `chip-icon` and moves the label into a `visually-hidden` span.',
     },
     icon: {
+      name: 'Icon content',
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
       if: { arg: 'layout', neq: 'Text only' },
     },
     skeleton: {
+      name: 'Skeleton',
       control: 'boolean',
       description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
@@ -351,9 +350,7 @@ export const PlaygroundFilterChip = {
   },
   args: {
     chip1Label: 'Apple',
-    chip1Selected: true,
     chip2Label: 'Samsung',
-    chip2Selected: false,
     control: 'Checkbox',
     disabled: false,
     layout: 'Text only',

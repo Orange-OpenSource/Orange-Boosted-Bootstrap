@@ -107,7 +107,7 @@ const levelAt = (lists, index) => {
 
 // A custom marker is a CSS mask, not an <svg> in the markup:
 // `--bs-bullet-list-custom-marker` takes a `url()` pointing at an inline SVG.
-// The colour therefore comes from the marker colour classes, never from the
+// The colour therefore comes from the marker color classes, never from the
 // `fill` of the pasted SVG.
 //
 // Same rule as the `icon` controls elsewhere: a whole `<svg>…</svg>` is used as
@@ -217,7 +217,7 @@ export default {
       description: 'Unordered, Ordered or Bare. An `<ol>` inside a `<ul>` reproduces the “Mixed lists” example of the documentation.',
     },
     level1MarkerColor: {
-      name: 'Level 1 — marker colour',
+      name: 'Level 1 — marker color',
       control: 'select',
       options: markerColors,
       description: '`Inherited` poses no class; the documentation sets the colour one nesting level at a time.',
@@ -236,7 +236,7 @@ export default {
       description: 'Unordered, Ordered or Bare. An `<ol>` inside a `<ul>` reproduces the “Mixed lists” example of the documentation.',
     },
     level2MarkerColor: {
-      name: 'Level 2 — marker colour',
+      name: 'Level 2 — marker color',
       control: 'select',
       options: markerColors,
       description: '`Inherited` poses no class; the documentation sets the colour one nesting level at a time.',
@@ -255,7 +255,7 @@ export default {
       description: 'Unordered, Ordered or Bare. An `<ol>` inside a `<ul>` reproduces the “Mixed lists” example of the documentation.',
     },
     level3MarkerColor: {
-      name: 'Level 3 — marker colour',
+      name: 'Level 3 — marker color',
       control: 'select',
       options: markerColors,
       description: '`Inherited` poses no class; the documentation sets the colour one nesting level at a time.',
@@ -268,13 +268,16 @@ export default {
       if: { arg: 'level3Type', neq: 'Bare' },
     },
     textStyle: {
+      name: 'Text style',
       control: 'select',
       options: textStyles,
     },
     bold: {
+      name: 'Bold',
       control: 'boolean',
     },
     skeleton: {
+      name: 'Skeleton',
       control: 'boolean',
       description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }

@@ -7,25 +7,28 @@
 // `.breadcrumb-item a` selector. Link's properties therefore have no counterpart
 // in the breadcrumb markup. GAP TO BE ARBITRATED.
 //
-// `Drilldown` keeps its Figma name, but not its four values: Figma stops at N+4,
-// the markup does not. It is a number, capped at 12 to avoid the runaway.
+// `Drilldown` keeps its Figma name and, now, its Figma ceiling: a number from 1
+// to 4. The markup itself does not stop at four — it used to be capped at 12 —
+// but the stylesheet is built around four plus the current page (it puts levels
+// back one media query at a time and shows all of them from 1320px), and a
+// fifth level adds a fifth identical `<li>`.
 //
-// One control per level rather than a single `object` one: Storybook renders an
-// `object` control as a raw JSON editor, which is not a thing anyone wants to
-// type a label into. Those controls carry `if: { gte }`, so a level only asks
-// for its label once the drilldown reaches it. Storybook understands `eq`,
-// `neq`, `truthy` and `exists`, not `gte` — it therefore shows the four of them
-// at once, while the standalone playground hides those beyond the drilldown.
-//
-// Only the first four levels have controls: beyond, a level takes the label the
-// documentation gives it, then `Level 5`, `Level 6`… — never an empty link.
-const NAMED_LEVELS = [1, 2, 3, 4]
+// One pair of controls per level rather than a single `object` one: Storybook
+// renders an `object` control as a raw JSON editor, which is not a thing anyone
+// wants to type a label into. Each pair carries
+// `if: { arg: 'drilldown', gte: level }`, so a level only asks for its label
+// once the drilldown reaches it — exactly, in the standalone preview, which
+// understands `gte`. Storybook's own `if` grammar has only `eq`, `neq`,
+// `truthy` and `exists`: it reads a `gte` as a truthiness test and therefore
+// shows the four pairs at once. Level 1 is gated on `neq: 0` instead — it is
+// always rendered, and the rule is exact on both surfaces.
+const LEVELS = [1, 2, 3, 4]
 
-// Only a positive integer is allowed for the depth.
+// Only a positive integer is allowed for the depth, and never more than four.
 const toDrilldown = (value) => {
   const parsed = Number.parseInt(value, 10)
 
-  return Number.isNaN(parsed) ? 1 : Math.min(Math.max(1, parsed), 12)
+  return Number.isNaN(parsed) ? 1 : Math.min(Math.max(1, parsed), LEVELS.length)
 }
 
 
@@ -86,9 +89,9 @@ const defaultLabels = ['Home', 'Category 1', 'Sub category B', 'Sub sub category
 // The levels before the current page, then the current page: one list, one
 // shape, no special case at the end. Each level reads its own two controls.
 const itemsOf = (args) => [
-  ...Array.from({ length: toDrilldown(args.drilldown) }, (_, index) => ({
-    label: args[`level${index + 1}Label`] || defaultLabels[index] || `Level ${index + 1}`,
-    truncatable: args[`level${index + 1}Truncatable`] ?? true,
+  ...LEVELS.slice(0, toDrilldown(args.drilldown)).map((level) => ({
+    label: args[`level${level}Label`] || defaultLabels[level - 1],
+    truncatable: args[`level${level}Truncatable`] ?? true,
     kind: 'link'
   })),
   { label: args.pageLabel, truncatable: true, kind: 'current' }
@@ -123,9 +126,15 @@ ${lines.join('\n')}
   return surroundings[preview ? 'preview' : 'code'](markup)
 }
 
+// Level 1 is always rendered, so `neq: 0` says the truth on both surfaces;
+// beyond, only `gte` can express it, and only the standalone preview honours it.
+const levelCondition = (level) => (level === 1
+  ? { arg: 'drilldown', neq: 0 }
+  : { arg: 'drilldown', gte: level })
+
 // One label control and one truncation control per level, built from the same
 // pair so the four levels cannot drift apart.
-const levelArgTypes = Object.fromEntries(NAMED_LEVELS.flatMap((level) => {
+const levelArgTypes = Object.fromEntries(LEVELS.flatMap((level) => {
   const index = level - 1
 
   return [
@@ -133,18 +142,18 @@ const levelArgTypes = Object.fromEntries(NAMED_LEVELS.flatMap((level) => {
       name: `Level ${level} — label`,
       control: 'text',
       description: `Visible text of level ${level}, copied into the \`title\` attribute. Empty: “${defaultLabels[index]}”, the label of the documentation example.`,
-      if: { arg: 'drilldown', gte: level },
+      if: levelCondition(level),
     }],
     [`level${level}Truncatable`, {
       name: `Level ${level} — truncatable`,
       control: 'boolean',
-      description: 'Unchecked adds `flex-shrink-0` on the `<li>`, the only documented way to keep a level out of the automatic truncation.',
-      if: { arg: 'drilldown', gte: level },
+      description: 'Unchecked adds `flex-shrink-0` on the `<li>`, the only documented way to keep a level out of the automatic truncation. It only bites once the levels are competing for the width, which at four levels they do.',
+      if: levelCondition(level),
     }]
   ]
 }))
 
-const levelArgs = Object.fromEntries(NAMED_LEVELS.flatMap((level) => [
+const levelArgs = Object.fromEntries(LEVELS.flatMap((level) => [
   [`level${level}Label`, ''],
   [`level${level}Truncatable`, true]
 ]))
@@ -154,8 +163,8 @@ export default {
   argTypes: {
     drilldown: {
       name: 'Drilldown',
-      control: { type: 'number', min: 1, max: 12, step: 1 },
-      description: 'How many levels before the current page. Figma stops at N+4, the markup does not — hence a number. The stylesheet only shows every level from 1320px, which the canvas works around; see the note at the top of the file.',
+      control: { type: 'number', min: 1, max: 4, step: 1 },
+      description: 'How many levels before the current page, from the arrows — Figma stops at N+4 and so does this control. The `<nav>` is announced as `basic breadcrumb` at one level and `full breadcrumb` beyond, as the documentation names its two examples. The stylesheet only shows every level from 1320px, which the canvas works around; see the note at the top of the file.',
     },
     ...levelArgTypes,
     pageLabel: {
@@ -181,7 +190,7 @@ export const PlaygroundBreadcrumb = {
     return renderBreadcrumb(args)
   },
   args: {
-    drilldown: 1,
+    drilldown: 4,
     ...levelArgs,
     pageLabel: 'Current page'
   },

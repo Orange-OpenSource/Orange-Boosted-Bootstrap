@@ -26,6 +26,18 @@ const densities = ['Default', 'Compact']
 const sizes = ['Default', 'Small']
 const states = ['Enabled', 'Disabled']
 
+// `Skeleton` is one of the states, not a checkbox beside them. It is a wrapper
+// in the markup — `<div aria-busy="true" inert>` around the component rendered
+// in its first state — but in the Controls panel it answers the same question
+// as the others: what does this look like right now. Two controls for one
+// question is what makes a panel read as two components glued together.
+const stateOptions = [...states, 'Skeleton']
+
+const isSkeleton = (state) => state === 'Skeleton'
+
+const baseState = (state) => (isSkeleton(state) ? states[0] : state)
+
+
 // A background utility must always be paired with the colour theme that goes
 // with it, carried by a *child* element so the background itself does not follow
 // the attribute (utilities/background/). The playground offers the pairing the
@@ -322,39 +334,41 @@ export default {
   title: 'Playground/Link',
   argTypes: {
     layout: {
+      name: 'Layout',
       control: 'select',
       options: layouts,
     },
     size: {
+      name: 'Size',
       control: 'select',
       options: sizes,
     },
     density: {
+      name: 'Density',
       control: 'select',
       options: densities,
       description: '`link-compact` lowers the minimum height and the block padding, and has a rule of its own when combined with `Small` (`scss/_links.scss`).',
     },
     state: {
+      name: 'State',
       control: 'select',
-      options: states,
+      options: stateOptions,
     },
     coloredBg: {
-      name: 'On colored bg',
+      name: 'On colored background',
       control: 'boolean',
       description: 'Adds `link-on-colored-bg` and wraps the link in the surface the documentation pairs it with — `bg-surface-brand-primary` carrying `data-bs-theme="light"` on a child, so the background itself does not follow the theme (utilities/background/). `Visited` has no colour of its own there: it falls back to a plain link, and says so.',
     },
     label: {
+      name: 'Label',
       control: 'text',
       description: 'Interpolated as is, so HTML goes through: paste `Ligne 1<br>Ligne 2`, or a `<strong>`, to see how the link behaves on several lines.',
     },
     icon: {
+      name: 'Icon content',
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
       if: { arg: 'layout', eq: 'Text + icon' },
-    },
-    skeleton: {
-      control: 'boolean',
-      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -365,29 +379,29 @@ export const PlaygroundLink = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { layout, size, density, state, label, icon, coloredBg, skeleton } = context.args
+          const { layout, size, density, state, label, icon, coloredBg } = context.args
 
           return skeletonWrapper(renderLink({
             layout,
             size,
             density,
-            state,
+            state: baseState(state),
             label,
             coloredBg,
-          }, withCustomIcon(spriteIcons, icon), false), skeleton)
+          }, withCustomIcon(spriteIcons, icon), false), isSkeleton(state))
         },
       },
     },
   },
-  render: ({ layout, size, density, state, label, icon, coloredBg, skeleton }) => {
+  render: ({ layout, size, density, state, label, icon, coloredBg }) => {
     return skeletonWrapper(renderLink({
       layout,
       size,
       density,
-      state,
+      state: baseState(state),
       label,
       coloredBg,
-    }, withCustomIcon(inlineIcons, icon)), skeleton)
+    }, withCustomIcon(inlineIcons, icon)), isSkeleton(state))
   },
   args: {
     layout: 'Next',
@@ -397,6 +411,5 @@ export const PlaygroundLink = {
     coloredBg: false,
     label: 'Label',
     icon: '',
-    skeleton: false
   },
 }

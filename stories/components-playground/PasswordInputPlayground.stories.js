@@ -302,7 +302,7 @@ const retainAttr = (key) => ` oninput="var w; try { w = globalThis.top &amp;&amp
 
 const renderPasswordInput = ({
   label, inputText, placeholder, helperText, error, errorMessage, required, prefix,
-  outlined, rounded, maxWidth, state, loadingTime, hiddenPassword, leadingIcon, hiddenLabel
+  outlined, rounded, maxWidth, state, loadingTime, hiddenPassword, leadingIcon
 }, icons = inlineIcons, retain = '') => {
   const safeState = orElse(state, states)
   const hiddenKey = hiddenPassword ? 'True' : 'False'
@@ -331,7 +331,7 @@ const renderPasswordInput = ({
     ...fieldWrappers[prefix ? 'affixed' : 'plain']({ field, prefix, suffix: '' }),
     `<button class="btn btn-minimal btn-icon" aria-pressed="${pressedAttrs[hiddenKey]}" type="button"${actionDisabled[safeState]}>
       ${actionIcons[hiddenKey](icons)}
-      <span class="visually-hidden">${hiddenLabel || actionLabels[hiddenKey]}</span>
+      <span class="visually-hidden">${actionLabels[hiddenKey]}</span>
     </button>`,
     ...maybe(loadingMessages[safeState]).map(() => loader),
     ...maybe(loadingMessages[safeState]).map((message) =>
@@ -364,9 +364,11 @@ export default {
   title: 'Playground/Password input',
   argTypes: {
     label: {
+      name: 'Label',
       control: 'text',
     },
     placeholder: {
+      name: 'Placeholder',
       control: 'text',
       description: 'OUDS specificity: left empty it is rendered as `placeholder=" "`, a single space. Without it the floating label would sit on top of the value.',
     },
@@ -381,10 +383,12 @@ export default {
       description: 'Rendered as `<p class="helper-text">` below the container, and referenced by `aria-describedby`. Empty: none.',
     },
     required: {
+      name: 'Required',
       control: 'boolean',
       description: 'Adds `required` on the field and `is-required` on the label, which draws the asterisk.',
     },
     error: {
+      name: 'Error',
       control: 'boolean',
       description: 'Adds `aria-invalid="true"` and shows the error message below.',
     },
@@ -395,13 +399,16 @@ export default {
       if: { arg: 'error', truthy: true },
     },
     prefix: {
+      name: 'Prefix',
       control: 'text',
       description: 'Text before the field, carried by `data-bs-prefix` on a `.input-container` wrapper. The documentation writes `DEV-` and says the prefix is not part of what is typed. Empty: no wrapper.',
     },
     outlined: {
+      name: 'Outlined',
       control: 'boolean',
     },
     rounded: {
+      name: 'Rounded corners',
       control: 'boolean',
       description: 'Product-wide setting: `use-rounded-corner-inputs` on an ancestor, not a class of the component.',
     },
@@ -411,6 +418,7 @@ export default {
       description: 'Adds `component-max-width` on `.text-input`, the design system class carrying the maximum width token.',
     },
     state: {
+      name: 'State',
       control: 'select',
       options: states,
       description: 'Disabled and the two loading states disable the reveal button. Read only leaves it active on purpose: the value cannot be edited, but it can still be read.',
@@ -422,25 +430,22 @@ export default {
       if: { arg: 'state', eq: 'Loading determinate' },
     },
     leadingIcon: {
+      name: 'Leading icon',
       control: 'boolean',
     },
     icon: {
+      name: 'Icon content',
       control: 'text',
       description: 'Leading icon: a whole `<svg>…</svg>`, pasted as is, or only its inside. Empty: the `lock-closed` symbol of the design system.',
       if: { arg: 'leadingIcon', truthy: true },
     },
-    hiddenLabel: {
-      name: 'Hidden label (reveal button)',
-      control: 'text',
-      description: 'Carried by the `visually-hidden` span of the reveal button. Empty: it follows the state, "Show password" or "Hide password".',
-    }
   }
 }
 
 const ARGS = [
   'label', 'placeholder', 'helperText', 'error', 'errorMessage', 'required',
   'prefix', 'outlined', 'rounded', 'maxWidth', 'state', 'loadingTime', 'hiddenPassword',
-  'leadingIcon', 'hiddenLabel'
+  'leadingIcon'
 ]
 
 // The render arguments, picked from the story args: sixteen controls make a
@@ -480,7 +485,6 @@ export const PlaygroundPasswordInput = {
     state: 'Enabled',
     loadingTime: '5s',
     leadingIcon: false,
-    icon: '',
-    hiddenLabel: ''
+    icon: ''
   },
 }

@@ -5,7 +5,7 @@
 // A radio button is a group component by nature: one alone cannot be unselected,
 // and the `name` attribute is what makes the exclusive choice. The playground
 // therefore renders a `<fieldset class="control-items-list">` with several
-// items, each carrying its own label, extra label, description and selection —
+// items, each carrying its own label, extra label and description —
 // same idea as the levels of the Breadcrumb.
 //
 // Fix — Read only: it is not an attribute, it is another DOM. The documentation
@@ -20,63 +20,76 @@
 //
 // The error message lives inside the `fieldset`, after the items, and
 // `_control-item.scss:15` hides it until the fieldset `:has()` an invalid input.
+//
+// THE GROUP IS FROZEN AT TWO OPTIONS, and no option carries a `Selected`
+// control.
+//
+// The count used to be a number from 1 to 8, with each option's controls gated
+// on `if: { arg: 'count', gte: N }`. That gate does not work — Storybook's `if`
+// understands `eq`, `neq`, `truthy` and `exists`, and a `gte` falls back
+// silently on a truthiness test, so the controls of options the group was not
+// rendering stayed on screen looking inert. Two options is also the whole
+// point: an exclusive choice does not exist below two, and a third one adds an
+// identical `<div class="radio-button-item">`.
+//
+// `Selected` is gone for a different reason: the canvas holds two real radio
+// inputs sharing one `name`. Clicking one is the exclusive choice itself, and
+// it is a better demonstration than a checkbox in the panel. The snippet shows
+// the initial markup, which the documentation writes with the first option
+// checked.
 
 const states = ['Enabled', 'Read only', 'Disabled']
+
+// `Skeleton` is one of the states, not a checkbox beside them. It is a wrapper
+// in the markup — `<div aria-busy="true" inert>` around the component rendered
+// in its first state — but in the Controls panel it answers the same question
+// as the others: what does this look like right now. Two controls for one
+// question is what makes a panel read as two components glued together.
+const stateOptions = [...states, 'Skeleton']
+
+const isSkeleton = (state) => state === 'Skeleton'
+
+const baseState = (state) => (isSkeleton(state) ? states[0] : state)
+
 
 // A control left on "Choose option" gives `undefined`. The component must still
 // render, so every select falls back on the first value of its list rather than
 // on an empty output.
 const orElse = (value, options) => (options.includes(value) ? value : options[0])
 
-// Only a positive integer is allowed for the number of items.
-const toCount = (value) => {
-  const parsed = Number.parseInt(value, 10)
+// The two options of the group, and their controls. Flat `option{N}{Property}`
+// args rather than one `object` control: Storybook renders an object as a raw
+// JSON editor, which is not a thing anyone wants to type a label into.
+const OPTIONS = [1, 2]
 
-  return Number.isNaN(parsed) ? 1 : Math.min(Math.max(1, parsed), 8)
-}
+// The documentation's example starts with the first option checked: an
+// exclusive choice that starts empty is a legitimate state, but it hides what
+// the selected indicator looks like. This is initial markup, not a control —
+// the canvas is two real radios and clicking is how you move the selection.
+const selectedIndex = 0
 
-// One selected item by default: an exclusive choice that starts empty is a
-// legitimate state, but it hides what the selected indicator looks like.
 const defaultItems = [
-  { label: 'Option 1', extraLabel: 'Extra label', description: 'Description text', selected: true },
-  { label: 'Option 2', extraLabel: '', description: 'Description text', selected: false },
-  { label: 'Option 3', extraLabel: '', description: '', selected: false }
+  { label: 'Option 1', extraLabel: 'Extra label', description: 'Description text' },
+  { label: 'Option 2', extraLabel: '', description: 'Description text' }
 ]
 
-// Three options, three sets of controls. A single `object` control would have
-// been shorter to write, but Storybook renders it as a raw JSON editor: nobody
-// wants to type a label into that. Flat controls are what both surfaces show.
-const OPTIONS = [1, 2, 3]
-
-const itemsOf = (args) => OPTIONS.slice(0, toCount(args.count)).map((index) => ({
+const itemsOf = (args) => OPTIONS.map((index) => ({
   label: args[`option${index}Label`],
   extraLabel: args[`option${index}ExtraLabel`],
-  description: args[`option${index}Description`],
-  selected: args[`option${index}Selected`]
+  description: args[`option${index}Description`]
 }))
 
 const itemAt = (items, index) => {
   const item = Array.isArray(items) ? items[index] : undefined
-  const fallback = defaultItems[index] ?? { label: `Option ${index + 1}`, extraLabel: '', description: '', selected: false }
+  const fallback = defaultItems[index] ?? { label: `Option ${index + 1}`, extraLabel: '', description: '' }
   const pick = (key) => (item && item[key] !== undefined ? item[key] : fallback[key])
 
   return {
     label: pick('label'),
     extraLabel: pick('extraLabel'),
     description: pick('description'),
-    selected: Boolean(pick('selected'))
+    selected: index === selectedIndex
   }
-}
-
-const selectedMap = {
-  'False': '',
-  'True': ' checked'
-}
-
-// What a read only indicator announces in place of `checked`.
-const ariaChecked = {
-  'False': 'false',
-  'True': 'true'
 }
 
 const errorMap = {
@@ -250,7 +263,7 @@ const renderItem = ({ item, index, shape, state, itemClasses, error, required, e
   ].filter(Boolean).join(' ')
 
   const attrs = [
-    selectedMap[(item.selected ? 'True' : 'False')],
+    item.selected ? ' checked' : '',
     errorMap[(error ? 'True' : 'False')],
     requiredMap[(required ? 'True' : 'False')],
     describedBy ? ` aria-describedby="${describedBy}"` : '',
@@ -270,7 +283,7 @@ const renderItem = ({ item, index, shape, state, itemClasses, error, required, e
 
   return `  <div class="${itemClasses}">
     <div class="control-item-assets-container">
-      ${indicators[shape]({ id, attrs, checked: ariaChecked[(item.selected ? 'True' : 'False')] })}
+      ${indicators[shape]({ id, attrs, checked: String(item.selected) })}
     </div>
     <div class="control-item-text-container">
 ${textLines.map((line) => `      ${line}`).join('\n')}
@@ -278,7 +291,7 @@ ${textLines.map((line) => `      ${line}`).join('\n')}
   </div>`
 }
 
-const renderRadioButtonItem = ({ count, items, legend, state, error, errorMessage, required, reverse, outlined, divider, maxWidth, showIcon }, iconMarkup = inlineIcon(defaultIconPath)) => {
+const renderRadioButtonItem = ({ items, legend, state, error, errorMessage, required, reverse, outlined, divider, maxWidth, showIcon }, iconMarkup = inlineIcon(defaultIconPath)) => {
   const safeState = orElse(state, states)
   const shape = shapes[safeState]
 
@@ -290,7 +303,7 @@ const renderRadioButtonItem = ({ count, items, legend, state, error, errorMessag
     maxWidth ? 'component-max-width' : ''
   ].filter(Boolean).join(' ')
 
-  const rendered = Array.from({ length: toCount(count) }, (_, index) =>
+  const rendered = OPTIONS.map((_, index) =>
     renderItem({
       item: itemAt(items, index),
       index,
@@ -307,7 +320,10 @@ const renderRadioButtonItem = ({ count, items, legend, state, error, errorMessag
   const legendLine = maybe(legend).map((text) =>
     `  <legend${required ? ' class="is-required"' : ''}>${text}</legend>`)
 
-  const errorLine = maybe(errorMessage).map((text) =>
+  // The message is only written when the group is in error. The Controls panel
+  // hides the text control then, and the markup must not keep a paragraph
+  // nothing on screen can reach.
+  const errorLine = maybe(error && errorMessage).map((text) =>
     `  <p class="control-item-error-message" id="radioItemErrorText">${text}</p>`)
 
   return `<fieldset class="control-items-list">
@@ -328,11 +344,6 @@ ${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
 export default {
   title: 'Playground/Radio button item',
   argTypes: {
-    count: {
-      name: 'Items',
-      control: { type: 'number', min: 1, max: 8, step: 1 },
-      description: 'How many radio buttons in the group. One alone cannot be unselected: the exclusive choice only exists from two, and it is the shared `name` that makes it.',
-    },
     option1Label: {
       name: 'Option 1 — label',
       control: 'text',
@@ -347,68 +358,38 @@ export default {
       control: 'text',
       description: 'Rendered as `<p class="control-item-description">`, referenced by `aria-describedby`. Empty: none.',
     },
-    option1Selected: {
-      name: 'Option 1 — selected',
-      control: 'boolean',
-    },
     option2Label: {
       name: 'Option 2 — label',
       control: 'text',
-      if: { arg: 'count', gte: 2 },
     },
     option2ExtraLabel: {
       name: 'Option 2 — extra label',
       control: 'text',
       description: 'Rendered as `<span class="radio-button-extra-label">`, after the label. Empty: none.',
-      if: { arg: 'count', gte: 2 },
     },
     option2Description: {
       name: 'Option 2 — description',
       control: 'text',
       description: 'Rendered as `<p class="control-item-description">`, referenced by `aria-describedby`. Empty: none.',
-      if: { arg: 'count', gte: 2 },
-    },
-    option2Selected: {
-      name: 'Option 2 — selected',
-      control: 'boolean',
-      if: { arg: 'count', gte: 2 },
-    },
-    option3Label: {
-      name: 'Option 3 — label',
-      control: 'text',
-      if: { arg: 'count', gte: 3 },
-    },
-    option3ExtraLabel: {
-      name: 'Option 3 — extra label',
-      control: 'text',
-      description: 'Rendered as `<span class="radio-button-extra-label">`, after the label. Empty: none.',
-      if: { arg: 'count', gte: 3 },
-    },
-    option3Description: {
-      name: 'Option 3 — description',
-      control: 'text',
-      description: 'Rendered as `<p class="control-item-description">`, referenced by `aria-describedby`. Empty: none.',
-      if: { arg: 'count', gte: 3 },
-    },
-    option3Selected: {
-      name: 'Option 3 — selected',
-      control: 'boolean',
-      if: { arg: 'count', gte: 3 },
     },
     legend: {
+      name: 'Legend',
       control: 'text',
       description: 'The `<legend>` of the `fieldset`: what the whole group asks. Carries `is-required` when the choice is mandatory. Empty: no legend.',
     },
     state: {
+      name: 'State',
       control: 'select',
-      options: states,
+      options: stateOptions,
       description: '`Read only` is another DOM, not an attribute: a `<span role="radio" aria-readonly="true">` in place of each input, a `<p>` in place of each label, and the whole group wrapped in `<div role="radiogroup" aria-readonly="true">`.',
     },
     required: {
+      name: 'Required',
       control: 'boolean',
       description: 'Adds `required` on each input and `is-required` on the legend — the choice is mandatory, not one of the options.',
     },
     error: {
+      name: 'Error',
       control: 'boolean',
       description: 'Adds `aria-invalid="true"`. The stylesheet shows the error message below only when the fieldset holds an invalid input.',
     },
@@ -416,14 +397,18 @@ export default {
       name: 'Error message',
       control: 'text',
       description: 'Rendered as `<p class="control-item-error-message">` inside the `fieldset`, after the items. Hidden by the stylesheet until `error` is checked. Empty: no message.',
+      if: { arg: 'error', truthy: true },
     },
     outlined: {
+      name: 'Outlined',
       control: 'boolean',
     },
     reverse: {
+      name: 'Reverse',
       control: 'boolean',
     },
     divider: {
+      name: 'Divider',
       control: 'boolean',
     },
     maxWidth: {
@@ -432,16 +417,14 @@ export default {
       description: 'Adds `component-max-width`, the design system class carrying the list item maximum width token — 480 px, measured. Nothing draws the width of an item on its own: check `divider`, or write a long enough label or description, to see it bite.',
     },
     showIcon: {
+      name: 'Icon',
       control: 'boolean',
     },
     icon: {
+      name: 'Icon content',
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Rendered on every item of the group. Empty: the design system icon.',
       if: { arg: 'showIcon', truthy: true },
-    },
-    skeleton: {
-      control: 'boolean',
-      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
     }
   }
 }
@@ -453,15 +436,14 @@ export const PlaygroundRadioButtonItem = {
       source: {
         transform: (_src, context) => {
           const {
-            count, legend, state, error, errorMessage, required, reverse,
+            legend, state, error, errorMessage, required, reverse,
             outlined, divider, maxWidth, showIcon, icon, skeleton
           } = context.args
 
           return skeletonWrapper(renderRadioButtonItem({
-            count,
             items: itemsOf(context.args),
             legend,
-            state,
+            state: baseState(state),
             error,
             errorMessage,
             required,
@@ -470,18 +452,17 @@ export const PlaygroundRadioButtonItem = {
             divider,
             maxWidth,
             showIcon,
-          }, resolveIcon(icon, spriteIcon)), skeleton)
+          }, resolveIcon(icon, spriteIcon)), isSkeleton(state))
         },
       },
     },
   },
   render: (args) => {
-    const { count, legend, state, error, errorMessage, required, reverse, outlined, divider, maxWidth, showIcon, icon, skeleton } = args
+    const { legend, state, error, errorMessage, required, reverse, outlined, divider, maxWidth, showIcon, icon } = args
     return skeletonWrapper(renderRadioButtonItem({
-      count,
       items: itemsOf(args),
       legend,
-      state,
+      state: baseState(state),
       error,
       errorMessage,
       required,
@@ -490,22 +471,15 @@ export const PlaygroundRadioButtonItem = {
       divider,
       maxWidth,
       showIcon,
-    }, resolveIcon(icon, inlineIcon(defaultIconPath))), skeleton)
+    }, resolveIcon(icon, inlineIcon(defaultIconPath))), isSkeleton(state))
   },
   args: {
-    count: 3,
     option1Label: 'Option 1',
     option1ExtraLabel: 'Extra label',
     option1Description: 'Description text',
-    option1Selected: true,
     option2Label: 'Option 2',
     option2ExtraLabel: '',
     option2Description: 'Description text',
-    option2Selected: false,
-    option3Label: 'Option 3',
-    option3ExtraLabel: '',
-    option3Description: '',
-    option3Selected: false,
     legend: 'Radio buttons group',
     state: 'Enabled',
     required: false,
@@ -517,6 +491,5 @@ export const PlaygroundRadioButtonItem = {
     maxWidth: false,
     showIcon: false,
     icon: '',
-    skeleton: false
   },
 }
