@@ -1375,7 +1375,7 @@ caption {
   /* rtl:remove */
   letter-spacing: var(--bs-font-letter-spacing-heading-small);
   font-weight: 700;
-  color: var(--bs-caption-color, var(--bs-emphasis-color));
+  color: var(--bs-caption-color, var(--bs-color-content-default));
   text-align: left;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -5389,15 +5389,15 @@ dialog,
   --bs-table-bg-type: initial;
   --bs-table-color-state: initial;
   --bs-table-bg-state: initial;
-  --bs-table-color: var(--bs-emphasis-color);
+  --bs-table-color: var(--bs-color-content-default);
   --bs-table-bg: var(--bs-body-bg);
   --bs-table-border-color: var(--bs-color-border-default);
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: var(--bs-emphasis-color);
+  --bs-table-striped-color: var(--bs-color-content-default);
   --bs-table-striped-bg: var(--bs-color-surface-secondary);
   --bs-table-active-color: var(--bs-color-content-default);
   --bs-table-active-bg: var(--bs-color-bg-inverse-low);
-  --bs-table-hover-color: var(--bs-emphasis-color);
+  --bs-table-hover-color: var(--bs-color-content-default);
   --bs-table-hover-bg: rgba(var(--bs-emphasis-color-rgb), var(--bs-table-hover-bg-factor));
   width: 100%;
   margin-bottom: 1rem;
@@ -9393,9 +9393,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-navbar-font-weight: 700;
   --bs-navbar-border-width: var(--bs-border-width);
   --bs-navbar-border-color: var(--bs-color-border-default);
-  --bs-navbar-bg: var(--bs-highlight-color);
-  --bs-navbar-color: var(--bs-emphasis-color);
-  --bs-navbar-hover-color: var(--bs-color-action-selected);
+  --bs-navbar-bg: var(--bs-button-color-content-brand-pressed);
+  --bs-navbar-color: var(--bs-color-content-default);
+  --bs-navbar-hover-color: var(--bs-link-mono-color-content-pressed);
   --bs-navbar-disabled-color: var(--bs-color-content-disabled);
   --bs-navbar-active-color: var(--bs-color-action-selected);
   --bs-navbar-brand-padding-y: 0;
@@ -9404,7 +9404,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-navbar-brand-logo-size: 1.875rem;
   --bs-navbar-brand-font-size: 1.3125rem;
   --bs-navbar-brand-letter-spacing: calc(var(--bs-font-letter-spacing-body-medium) * 5);
-  --bs-navbar-brand-color: var(--bs-emphasis-color);
+  --bs-navbar-brand-color: var(--bs-color-content-default);
   --bs-navbar-brand-hover-color: var(--bs-color-action-selected);
   --bs-navbar-nav-padding-top: 0;
   --bs-navbar-nav-padding-x: 0;
@@ -9421,8 +9421,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-navbar-toggler-padding-x: 15px;
   --bs-navbar-toggler-font-size: 1.04166666rem;
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3e%3cpath d='M2 19h21v-2H2v2Zm0-6h21v-2H2v2Zm0-6h21V5H2v2Z'/%3e%3c/svg%3e");
-  --bs-navbar-toggler-icon-color: var(--bs-emphasis-color);
-  --bs-navbar-toggler-icon-hover-color: var(--bs-color-action-selected);
+  --bs-navbar-toggler-icon-color: var(--bs-color-content-default);
+  --bs-navbar-toggler-icon-hover-color: var(--bs-link-mono-color-content-pressed);
   --bs-navbar-toggler-border-color: ;
   --bs-navbar-toggler-border-radius: 0px;
   --bs-navbar-toggler-focus-width: ;
@@ -9581,13 +9581,16 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .navbar-nav .nav-link:hover {
   z-index: 1;
 }
+.navbar-nav .nav-link:active {
+  color: var(--bs-navbar-active-color);
+}
 @media (max-width: 1023.98px) {
   .navbar-nav .nav-link {
     outline-offset: -3px;
   }
 }
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-  color: var(--bs-navbar-active-color);
+  color: var(--bs-color-content-default);
 }
 .navbar-nav .nav-item {
   border-top: var(--bs-navbar-border-width) solid var(--bs-navbar-border-color);
@@ -9725,7 +9728,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
     left: var(--bs-navbar-nav-link-padding-x);
     height: 4px;
     content: "";
-    background-color: currentcolor;
+    background-color: var(--bs-navbar-active-color);
     transition: bottom 0.2s ease-in-out;
   }
 }
@@ -9828,7 +9831,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
     left: var(--bs-navbar-nav-link-padding-x);
     height: 4px;
     content: "";
-    background-color: currentcolor;
+    background-color: var(--bs-navbar-active-color);
     transition: bottom 0.2s ease-in-out;
   }
 }
@@ -9931,7 +9934,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
     left: var(--bs-navbar-nav-link-padding-x);
     height: 4px;
     content: "";
-    background-color: currentcolor;
+    background-color: var(--bs-navbar-active-color);
     transition: bottom 0.2s ease-in-out;
   }
 }
@@ -10034,7 +10037,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
     left: var(--bs-navbar-nav-link-padding-x);
     height: 4px;
     content: "";
-    background-color: currentcolor;
+    background-color: var(--bs-navbar-active-color);
     transition: bottom 0.2s ease-in-out;
   }
 }
@@ -10137,7 +10140,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
     left: var(--bs-navbar-nav-link-padding-x);
     height: 4px;
     content: "";
-    background-color: currentcolor;
+    background-color: var(--bs-navbar-active-color);
     transition: bottom 0.2s ease-in-out;
   }
 }
@@ -10240,7 +10243,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
     left: var(--bs-navbar-nav-link-padding-x);
     height: 4px;
     content: "";
-    background-color: currentcolor;
+    background-color: var(--bs-navbar-active-color);
     transition: bottom 0.2s ease-in-out;
   }
 }
@@ -10343,7 +10346,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
     left: var(--bs-navbar-nav-link-padding-x);
     height: 4px;
     content: "";
-    background-color: currentcolor;
+    background-color: var(--bs-navbar-active-color);
     transition: bottom 0.2s ease-in-out;
   }
 }
@@ -10446,7 +10449,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
     left: var(--bs-navbar-nav-link-padding-x);
     height: 4px;
     content: "";
-    background-color: currentcolor;
+    background-color: var(--bs-navbar-active-color);
     transition: bottom 0.2s ease-in-out;
   }
 }
@@ -10548,7 +10551,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   left: var(--bs-navbar-nav-link-padding-x);
   height: 4px;
   content: "";
-  background-color: currentcolor;
+  background-color: var(--bs-navbar-active-color);
   transition: bottom 0.2s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -14477,7 +14480,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-footer-gap: 0;
   --bs-footer-padding-top: 0;
   --bs-footer-padding-bottom: 0;
-  --bs-footer-color: var(--bs-body-color);
+  --bs-footer-color: var(--bs-color-content-default);
   --bs-footer-title-margin-bottom: 0;
   --bs-navbar-padding-y: 0;
   --bs-navbar-nav-link-padding-y: 0;
@@ -14542,7 +14545,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-accordion-btn-font-size: var(--bs-font-size-body-small);
   --bs-accordion-btn-line-height: 1.45rem;
   --bs-accordion-btn-letter-spacing: var(--bs-font-letter-spacing-body-medium);
-  --bs-accordion-active-color: var(--bs-primary);
+  --bs-accordion-active-color: var(--bs-color-content-brand-primary);
   --bs-accordion-btn-hover-bg: ;
 }
 .footer .footer-nav .footer-column:first-of-type .accordion-header:first-of-type,
