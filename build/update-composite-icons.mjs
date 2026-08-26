@@ -260,6 +260,24 @@ function buildCommentLine(commentPath, version) {
 
 // --- Main processing per brand ---
 
+/**
+ * Warns when a pending icon comment (`// path v1.0`) is discarded without
+ * ever being consumed by a following variable line. This can happen if the
+ * SCSS formatting drifts from what the parser expects (see PR description
+ * for details on the associated risks).
+ */
+function warnOrphanComment(packageName, pendingComment, reason) {
+  if (!pendingComment) {
+    return
+  }
+
+  console.warn(
+    `[${packageName}] Orphan icon comment ignored (${reason}): ` +
+    `"${pendingComment.commentPath}" v${pendingComment.version} ` +
+    `at block-relative line ${pendingComment.commentLineIndex + 1}`
+  )
+}
+
 async function processBrand({ packageName, sourceName, iconsRoot, version }) {
   const compositePath = getCompositePath(packageName)
   const originalContent = await fs.readFile(compositePath, 'utf8')
@@ -280,6 +298,7 @@ async function processBrand({ packageName, sourceName, iconsRoot, version }) {
   for (const [lineIndex, line] of lines.entries()) {
     const parsedComment = parseCommentPath(line)
     if (parsedComment) {
+      warnOrphanComment(packageName, pendingComment, 'overwritten by next comment')
       pendingComment = { ...parsedComment, commentLineIndex: lineIndex }
       continue
     }
@@ -342,9 +361,12 @@ async function processBrand({ packageName, sourceName, iconsRoot, version }) {
 
     // Reset pending comment on non-matching comment lines
     if (line.trim().startsWith('//')) {
+      warnOrphanComment(packageName, pendingComment, 'followed by unrecognized comment line')
       pendingComment = null
     }
   }
+
+  warnOrphanComment(packageName, pendingComment, 'end of block reached without a following variable line')
 
   // Load updated SVGs in parallel
   const results = await Promise.all(entries.map(async entry => {
