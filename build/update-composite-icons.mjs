@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// update-component-icons.mjs
+// update-composite-icons.mjs
 //
 // Updates the SVG data URIs embedded in the brand _composite.scss files
 // (orange, sosh, orange-compact) from SVG source files in a given icons
