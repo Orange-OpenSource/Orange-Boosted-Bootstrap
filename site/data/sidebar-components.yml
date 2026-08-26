@@ -1,5 +1,5 @@
 - title: Components
-  icon: menu-button-wide-fill
+  icon: component-atom
   icon_color: body-color
   pages:
     - title: Alerts
@@ -30,7 +30,7 @@
     - title: Text input
 
 - title: Coming soon
-  icon: menu-button-wide-fill
+  icon: component-atom
   icon_color: body-color
   pages:
     - title: Accordion

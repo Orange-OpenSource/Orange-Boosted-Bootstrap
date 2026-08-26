@@ -78,13 +78,13 @@ If you need guidance to use Solaris icons, please refer to the paragraph [use So
 Icons are designed within a square layout to preserve consistency. Within this square, there exists a designated safety zone to guarantee that icons can be used in various sizes and contexts while maintaining alignment as intended by the designers. The dimensions of the icons encompass this safety zone, ensuring adaptability and consistency across diverse applications.
 
 <svg width="8em" height="8em" class="bg-opacity-lowest" aria-hidden="true">
-  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}/>
+  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}/>
 </svg>
 <svg width="8em" height="8em" class="bg-opacity-lowest" aria-hidden="true">
   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}/>
 </svg>
 <svg width="8em" height="8em" class="bg-opacity-lowest" aria-hidden="true">
-  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#tick')}/>
+  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}/>
 </svg>
 
 ## Icons color
@@ -120,22 +120,22 @@ Here are [the normal contexts of use of these functional colors](https://unified
       </p>
       <p>
         <svg class="text-status-info decorative-small-icon" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-info')}" />
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-info')}" />
         </svg> Info
       </p>
       <p>
         <svg class="text-status-positive decorative-small-icon" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-success')}" />
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-positive')}" />
         </svg> Success
       </p>
       <p>
         <svg class="decorative-small-icon" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-warning-accessible')}" />
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-warning')}" />
         </svg> Warning
       </p>
       <p>
         <svg class="text-status-negative decorative-small-icon" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-important')}" />
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-negative')}" />
         </svg> Important
       </p>
     </div>
@@ -147,22 +147,22 @@ Here are [the normal contexts of use of these functional colors](https://unified
       </p>
       <p>
         <svg class="decorative-small-icon" style="color: var(--bs-color-content-status-info)" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-info')}" />
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-info')}" />
         </svg> Info
       </p>
       <p>
         <svg class="decorative-small-icon" style="color: var(--bs-color-content-status-positive)" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-success')}" />
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-positive')}" />
         </svg> Success
       </p>
       <p>
         <svg class="decorative-small-icon" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-warning-accessible')}" />
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-warning')}" />
         </svg> Warning
       </p>
       <p>
         <svg class="decorative-small-icon" style="color: var(--bs-color-content-status-negative)" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-important')}" />
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-negative')}" />
         </svg> Important
       </p>
     </div>
@@ -175,13 +175,13 @@ To ensure accessibility through sufficient contrast, OUDS provides a dedicated w
 Here is a SVG symbol to insert into your SVG sprite. It uses the CSS variables `--bs-icon-color-content-status-warning-external-shape` and `--bs-icon-color-content-status-warning-internal-shape` to color the external and internal shapes of the icon respectively, changing according to color mode. See below to know more about [SVG sprites](#svg-sprite).
 
 <BrandSpecific brand={['orange', 'orange-compact']}>
-<Example buttonLabel="accessible warning SVG path" lang="svg" showPreview={false} code={`<symbol viewBox="0 0 24 24" id="alert-warning-accessible">
+<Example buttonLabel="accessible warning SVG path" lang="svg" showPreview={false} code={`<symbol viewBox="0 0 24 24" id="functional-status-warning">
     <path fill="var(--bs-icon-color-content-status-warning-external-shape)" d="M22.452 16.98 14.805 3.063a2.556 2.556 0 0 0-4.411 0L2.77 16.943l-.001.002-.021.036a2.54 2.54 0 0 0-.009 2.552 2.55 2.55 0 0 0 2.215 1.276h15.292a2.548 2.548 0 0 0 2.215-1.276 2.542 2.542 0 0 0-.01-2.553ZM11.4 8.031c0-1.188.4-1.758 1.2-1.758.8 0 1.2.57 1.2 1.758v4.535c0 1.188-.385 1.774-1.2 1.774-.8 0-1.2-.585-1.2-1.774V8.031Zm1.188 10.119a1.394 1.394 0 0 1-1.388-1.407 1.38 1.38 0 0 1 1.388-1.391 1.39 1.39 0 0 1 1.387 1.39c0 .768-.622 1.408-1.387 1.408Z"/>
     <path fill="var(--bs-icon-color-content-status-warning-internal-shape)" d="M12.6 6.273c-.8 0-1.2.57-1.2 1.758v4.535c0 1.188.4 1.774 1.2 1.774.816 0 1.2-.586 1.2-1.774V8.031c0-1.188-.4-1.758-1.2-1.758Zm-1.4 10.47c0 .784.622 1.407 1.388 1.407.765 0 1.387-.64 1.387-1.407a1.39 1.39 0 0 0-1.387-1.391 1.38 1.38 0 0 0-1.388 1.39Z"/>
   </symbol>`} />
 </BrandSpecific>
 <BrandSpecific brand="sosh">
-<Example buttonLabel="accessible warning SVG path" lang="svg" showPreview={false} code={`<symbol viewBox="0 0 24 24" id="alert-warning-accessible">
+<Example buttonLabel="accessible warning SVG path" lang="svg" showPreview={false} code={`<symbol viewBox="0 0 24 24" id="functional-status-warning">
     <path fill="var(--bs-icon-color-content-status-warning-external-shape)" d="M12 3.36c.786 0 1.473.43 1.843 1.072l7.467 12.96c.184.32.29.692.29 1.088 0 1.193-.955 2.16-2.133 2.16H4.533c-1.178 0-2.132-.967-2.133-2.16 0-.396.106-.769.29-1.088l.018-.03.001-.003 7.448-12.927A2.127 2.127 0 0 1 12 3.36Zm0 12.72c-.334 0-.618.12-.85.36-.233.24-.35.52-.35.84 0 .33.117.612.35.847.218.23.528.357.85.353.335 0 .618-.118.85-.353.234-.235.35-.517.35-.847 0-.32-.116-.6-.35-.84a1.142 1.142 0 0 0-.85-.36Zm.001-9.6c-.643 0-1.171.455-1.201 1.025l.24 7.135h1.92l.24-7.135c-.03-.57-.556-1.025-1.199-1.025Z"/>
     <path fill="var(--bs-icon-color-content-status-warning-internal-shape)" d="M10.8 7.505c.03-.57.558-1.025 1.2-1.025.643 0 1.17.455 1.2 1.025l-.24 7.135h-1.92l-.24-7.135Zm2.05 10.622a1.15 1.15 0 0 1-.85.353 1.15 1.15 0 0 1-.85-.353 1.16 1.16 0 0 1-.35-.847c0-.32.116-.6.35-.84.232-.24.516-.36.85-.36.334 0 .618.12.85.36.234.24.35.52.35.84 0 .33-.116.613-.35.847Z"/>
   </symbol>`} />
@@ -190,7 +190,7 @@ Here is a SVG symbol to insert into your SVG sprite. It uses the CSS variables `
 Then, you can use it like this:
 
 <Example buttonLabel="accessible warning icon" class="mt-none" code={`<svg class="decorative-small-icon" aria-hidden="true">
-    <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-warning-accessible')}" />
+    <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-warning')}" />
   </svg>`} />
 
 Please note that this icon cannot be rendered by a Web font, due to its two colors.
@@ -203,9 +203,6 @@ Here are some examples of other [color utilities]([[docsref:utilities/color#colo
     <svg class="decorative-small-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
     </svg>
-    <svg class="decorative-small-icon text-default" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}" />
-    </svg>
     <svg class="decorative-small-icon text-primary" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}" />
     </svg>
@@ -217,9 +214,6 @@ Here are some examples of other [color utilities]([[docsref:utilities/color#colo
   <p class="p-small bg-always-black d-inline-flex align-items-center gap-xsmall" data-bs-theme="dark">
     <svg class="decorative-small-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-    </svg>
-    <svg class="decorative-small-icon" style="color: var(--bs-color-content-default)" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#expurge')}" />
     </svg>
     <svg class="decorative-small-icon" style="color: var(--bs-color-content-brand-primary)" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}" />
