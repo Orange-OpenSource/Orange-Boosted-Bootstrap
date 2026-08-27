@@ -67,6 +67,21 @@ $enable-important-utilities: true;
         @import "../../utilities/api";
       }
       @include expect() {
+        @keyframes rotate-determinate {
+          0% { stroke-dashoffset: 107 #{"/* rtl:ignore */"}; }
+          100% { stroke-dashoffset: 0 #{"/* rtl:ignore */"}; }
+        }
+        @keyframes rotate1-indeterminate {
+          0%,
+          10% { stroke-dashoffset: 192 #{"/* rtl:ignore */"}; }
+          50%,
+          60% { stroke-dashoffset: 96 #{"/* rtl:ignore */"}; }
+          100% { stroke-dashoffset: 0 #{"/* rtl:ignore */"}; }
+        }
+        @keyframes rotate2-indeterminate {
+          0% { transform: rotate(0deg) #{"/* rtl:ignore */"}; }
+          100% { transform: rotate(360deg) #{"/* rtl:ignore */"}; }
+        }
         .opacity-invisible {
           opacity: 0 !important;
         }
@@ -169,6 +184,21 @@ $enable-important-utilities: true;
       }
 
       @include expect() {
+        @keyframes rotate-determinate {
+          0% { stroke-dashoffset: 107 #{"/* rtl:ignore */"}; }
+          100% { stroke-dashoffset: 0 #{"/* rtl:ignore */"}; }
+        }
+        @keyframes rotate1-indeterminate {
+          0%,
+          10% { stroke-dashoffset: 192 #{"/* rtl:ignore */"}; }
+          50%,
+          60% { stroke-dashoffset: 96 #{"/* rtl:ignore */"}; }
+          100% { stroke-dashoffset: 0 #{"/* rtl:ignore */"}; }
+        }
+        @keyframes rotate2-indeterminate {
+          0% { transform: rotate(0deg) #{"/* rtl:ignore */"}; }
+          100% { transform: rotate(360deg) #{"/* rtl:ignore */"}; }
+        }
         .opacity-0 {
           opacity: 0 !important;
         }
