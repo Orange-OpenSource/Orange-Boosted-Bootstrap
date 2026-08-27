@@ -135,6 +135,7 @@ h1 {
 h2 {
   @extend %heading;
   @include get-font-size("heading-large"); // OUDS mod: instead of `font-size: $h2-font-size`
+  position: relative; // OUDS mod: for marker pseudo element
 }
 
 h3 {
