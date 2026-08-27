@@ -82,7 +82,7 @@ Disabled icons using the `<a>` element behave a bit different:
 - Disabled icons using `<a>` must include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies, to make it visually appear disabled and disable all `pointer-events`.
 - Disabled icons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning]([[docsref:/components/links#disabled-link-accessibility-warning]]).
 
-<Example buttonLabel="disabled icon links" code={`<a class="icon icon-interactive" style="width: 32px" aria-disabled="true" tabindex="-1" aria-label="Disabled interactive link icon">
+<Example buttonLabel="disabled icon links" code={`<a href="#" class="icon icon-interactive" style="width: 32px" aria-disabled="true" tabindex="-1" aria-label="Disabled interactive link icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
