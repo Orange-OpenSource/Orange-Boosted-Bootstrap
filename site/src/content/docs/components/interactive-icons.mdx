@@ -6,7 +6,6 @@ aliases:
 toc: true
 types:
   - Interactive icon
-  - Assistant icon
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
@@ -21,7 +20,7 @@ import { getMode, getTokenValue } from '@libs/sass-variables'
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
-          <button class="icon icon-interactive" style="width: 32px">
+          <button class="icon icon-interactive" style="width: 32px" aria-label="Default interactive icon">
             <svg aria-hidden="true">
               <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
             </svg>
@@ -31,27 +30,7 @@ import { getMode, getTokenValue } from '@libs/sass-variables'
       <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#interactive-icon">Interactive icon</a> is a UI element that triggers an action or event.</div>
     </div>
   </li>
-  <li class="col">
-    <div class="card position-relative h-100">
-      <div class="card-top bg-secondary">
-        <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
-          <button class="icon icon-assistant"></button>
-        </div>
-      </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#assistant-button">Assistant icon</a> is a UI element that enables AI related interaction.</div>
-    </div>
-  </li>
 </ul>
-
-For both types of icon, OUDS Web has a common base `.icon` class that sets up default styles such as padding and content alignment. By default, `.icon` controls have no border nor background color, but still defines basic focus and hover styles. The `.icon` class is intended to be used in conjunction with our icon variants, or to serve as a basis for your own custom styles. The most basic icon is the `.icon-interactive` variant.
-
-<Example showToolbar={false} code={`<button class="icon icon-interactive" style="width: 32px">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-  </button>`} />
-
-<Example showToolbar={false} code={`<button class="icon icon-assistant" style="width: 32px"></button>`} />
 
 ## Accessibility (semantics)
 
@@ -63,13 +42,13 @@ Use an `<a>` element only for navigation purpose; it must include an `href` attr
 
 Generally speaking, you should always ask yourself which tag is appropriate for your specific context. The visual rendering will remain the same anyway:
 
-<Example buttonLabel="icons semantics" code={`<button class="icon icon-interactive" style="width: 32px">
+<Example buttonLabel="icons semantics" code={`<button class="icon icon-interactive" style="width: 32px" aria-label="Button icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </button>
 
-  <a class="icon icon-interactive" style="width: 32px" href="#">
+  <a class="icon icon-interactive" style="width: 32px" href="#" aria-label="Link icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -79,7 +58,7 @@ Generally speaking, you should always ask yourself which tag is appropriate for 
 
 Interactive icon is a UI element that triggers an action or event. It comes in various states to convey emphasis.
 
-<Example buttonLabel="interactive icon" class="bd-example" code={`<button class="icon icon-interactive" style="width: 32px">
+<Example buttonLabel="interactive icon" class="bd-example" code={`<button class="icon icon-interactive" style="width: 32px" aria-label="Default interactive icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -91,7 +70,7 @@ Interactive icon is a UI element that triggers an action or event. It comes in v
 
 Make icons inactive by adding the `[disabled]` boolean attribute to any `<button>` element. Disabled icons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
-<Example buttonLabel="disabled interactive icon" class="bd-example" code={`<button class="icon icon-interactive" style="width: 32px" disabled>
+<Example buttonLabel="disabled interactive icon" class="bd-example" code={`<button class="icon icon-interactive" style="width: 32px" disabled aria-label="Disabled interactive button icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -102,7 +81,7 @@ Disabled icons using the `<a>` element behave a bit different:
 - Disabled icons using `<a>` must include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies, to make it visually appear disabled and disable all `pointer-events`.
 - Disabled icons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning]([[docsref:/components/links#disabled-link-accessibility-warning]]).
 
-<Example buttonLabel="disabled icon links" code={`<a class="icon icon-interactive" style="width: 32px" aria-disabled="true">
+<Example buttonLabel="disabled icon links" code={`<a class="icon icon-interactive" style="width: 32px" aria-disabled="true" aria-label="Disabled interactive link icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -118,7 +97,7 @@ To make an animated loading state icon, you will add in your standard icon:
 
 For example, before loading, your icon could be like this:
 
-  <Example buttonLabel="loading interactive icon before loading" class="bd-example" code={`<button class="icon icon-interactive" style="width: 32px">
+  <Example buttonLabel="loading interactive icon before loading" class="bd-example" code={`<button class="icon icon-interactive" style="width: 32px" aria-label="Before loading interactive icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -142,7 +121,7 @@ At the end of the loading, you should:
 - Set a final status message in `<span>`, indicating the loading has ended (so we don’t add again `.d-none` on this status message).
 - Put the focus back on the icon to ensure similar behavior across browsers and not lose the user after changes.
 
-<Example buttonLabel="loading interactive icon currently loading" class="bd-example" code={`<button class="icon icon-interactive loading-indeterminate" style="width: 32px" disabled>
+<Example buttonLabel="loading interactive icon currently loading" class="bd-example" code={`<button class="icon icon-interactive loading-indeterminate" style="width: 32px" disabled aria-label="Indeterminate loading interactive icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -152,7 +131,7 @@ At the end of the loading, you should:
     <span role="status" id="loading-icon-msg-1" class="visually-hidden d-none"></span>
   </button>
 
-  <button class="icon icon-interactive loading-determinate" style="width: 32px; --bs-loading-time: 5s;" disabled>
+  <button class="icon icon-interactive loading-determinate" style="width: 32px; --bs-loading-time: 5s;" disabled aria-label="Determinate loading interactive icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -168,63 +147,9 @@ At the end of the loading, you should:
 <SkeletonRedirect component="interactive icon" />
 
 <Example buttonLabel="skeleton interactive icon" class="bd-example" code={`<div aria-busy="${true}" inert>
-    <button class="icon icon-interactive" style="width: 32px">
+    <button class="icon icon-interactive" style="width: 32px" aria-label="Skeleton interactive icon">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
     </button>
-</div>`} />
-
-## [[comp]] Assistant icon
-
-An assistant icon is a UI element that triggers an action event featuring AI-powered capabilities, such as conversational assistance, content generation, or contextual suggestions.
-
-The assistant icon combines standard icon functions with AI-specific visual features to clearly indicate actions enhanced or powered by artificial intelligence.
-
-You can use `.icon-assistant` class to indicate AI actions in a process or a flow. This class will add a specific icon and border color.
-
-  <Example buttonLabel="assistant icon" class="bd-example" code={`<button class="icon icon-assistant"></button>`} />
-
-<Callout type="warning" title="Transparency and older browsers">
-  An assistant icon does not have a transparent background on older browsers and Firefox because [`background-clip: border-area` is not fully supported](https://caniuse.com/wf-background-clip-border-area).
-
-  It's necessary to set `--bs-icon-bg` to its container background color to be compatible with most browsers. Make sure that the used variable isn't semi-transparent (ie. use background tokens instead of surface tokens).
-</Callout>
-
-If your browser is compatible, the following example will show two transparent assistant buttons on a tertiary background. If not, only one non-transparent and one transparent button.
-
-<Example buttonLabel="assistant button simulated transparent background" class="bd-btn-example" code={`<div class="bg-tertiary">
-
-  <button type="button" class="btn btn-assistant">
-    Assistant
-  </button>
-
-  <button type="button" class="btn btn-assistant" style="--bs-btn-bg: var(--bs-color-bg-tertiary);">
-    Assistant
-  </button>
-
-  </div>`} />
-
-### States
-
-#### Disabled
-
-<Example buttonLabel="disabled assistant icon" class="bd-example" code={`<button class="icon icon-assistant" disabled></button>`} />
-
-#### Loading
-
-<Example buttonLabel="skeleton assistant icon" class="bd-example" code={`
-  <button class="icon icon-assistant loading-indeterminate" disabled>
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-icon-msg-3" class="visually-hidden d-none"></span>
-</button>
-`} />
-
-#### Skeleton
-
-<Example buttonLabel="skeleton assistant icon" class="bd-example" code={`
-<div aria-busy="${true}" inert>
-    <button class="icon icon-assistant"></button>
 </div>`} />
