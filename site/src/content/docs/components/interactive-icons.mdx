@@ -35,6 +35,7 @@ import { getMode, getTokenValue } from '@libs/sass-variables'
 ## Accessibility (semantics)
 
 The `.icon` classes are designed to be used with the `<button>` element, but can be used on `<a>` elements. You should use any semantic element that best fits the context to appropriately convey its purpose to assistive technologies such as screen readers.
+In particular, do not forget to add an `aria-label` since there is no discernible text for screen reader users.
 
 Use a `<button>` element for actions or for an element that triggers an in-page functionality (like collapsing content), as it is the most semantically correct and accessible choice.
 
@@ -81,7 +82,7 @@ Disabled icons using the `<a>` element behave a bit different:
 - Disabled icons using `<a>` must include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies, to make it visually appear disabled and disable all `pointer-events`.
 - Disabled icons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning]([[docsref:/components/links#disabled-link-accessibility-warning]]).
 
-<Example buttonLabel="disabled icon links" code={`<a class="icon icon-interactive" style="width: 32px" aria-disabled="true" aria-label="Disabled interactive link icon">
+<Example buttonLabel="disabled icon links" code={`<a class="icon icon-interactive" style="width: 32px" aria-disabled="true" tabindex="-1" aria-label="Disabled interactive link icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
