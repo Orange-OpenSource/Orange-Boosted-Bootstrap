@@ -98,12 +98,13 @@ Wrap `<input>` in `.input-container` with `data-bs-prefix`:
 
 ## Invalid state
 
-Add `.is-invalid` to the input. Provide `.error-text` linked via `aria-describedby`:
+Add `aria-invalid="true"` to the input. Provide `.error-text` linked via `aria-describedby`:
 
 ```html
 <input
   type="password"
-  class="text-input-field is-invalid"
+  class="text-input-field"
+  aria-invalid="true"
   aria-describedby="errorMsg"
   placeholder=" "
   value="12345"

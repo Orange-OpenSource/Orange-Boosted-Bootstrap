@@ -33,18 +33,18 @@ Key differences from standard Bootstrap:
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>OUDS Web</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/ouds-web/dist/css/ouds-web.min.css"
+      href="https://cdn.jsdelivr.net/npm/@ouds/web-orange/dist/css/ouds-web.min.css"
       rel="stylesheet"
     />
   </head>
   <body>
     <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/ouds-web/dist/js/ouds-web.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ouds/web-common/dist/js/ouds-web.bundle.min.js"></script>
   </body>
 </html>
 ```
 
-Or install via npm: `npm install ouds-web`
+Or install via npm: `npm install @ouds/web-common @ouds/web-orange`
 
 ## Reference documentation
 

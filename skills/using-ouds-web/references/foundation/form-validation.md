@@ -213,6 +213,6 @@ State "**All fields marked with an \* are mandatory.**" at top. Add `.is-require
 ## Accessibility
 
 - Always use `<label>` linked to form elements
-- Specify validation rules via attributes: `required`, `pattern`, `min`, `minLength`
+- Specify validation rules via attributes: `required`, `pattern`, `min`, `minlength`
 - Add `inputmode` and `autocomplete` attributes as needed
 - Associate error messages with `aria-describedby` when fields become invalid

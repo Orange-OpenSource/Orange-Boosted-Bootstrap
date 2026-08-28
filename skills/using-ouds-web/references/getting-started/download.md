@@ -13,9 +13,8 @@ Requires a Sass compiler and Autoprefixer for source files.
 Import in JS:
 
 ```js
-const oudsWeb = require("oudsWeb");
-// or
-import oudsWeb from "oudsWeb";
+import * as oudsWeb from "@ouds/web-common";
+// or: import { Toast, Modal } from "@ouds/web-common";
 ```
 
 ### yarn
@@ -33,8 +32,8 @@ bun add @ouds/web-common @ouds/web-orange
 ### NuGet (.NET)
 
 ```powershell
-Install-Package ouds-web
-Install-Package ouds-web.sass
+Install-Package ouds-web-common ouds-web-orange
+Install-Package ouds-web-common.sass ouds-web-orange.sass
 ```
 
 ## CDN (jsDelivr)

@@ -15,7 +15,7 @@ OUDS Web is based on Bootstrap: a powerful, feature-packed frontend toolkit for 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>OUDS Web demo</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/ouds-web/dist/css/ouds-web.min.css"
+      href="https://cdn.jsdelivr.net/npm/@ouds/web-orange/dist/css/ouds-web.min.css"
       rel="stylesheet"
       crossorigin="anonymous"
     />
@@ -23,7 +23,7 @@ OUDS Web is based on Bootstrap: a powerful, feature-packed frontend toolkit for 
   <body>
     <h1>Hello, world!</h1>
     <script
-      src="https://cdn.jsdelivr.net/npm/ouds-web/dist/js/ouds-web.bundle.min.js"
+      src="https://cdn.jsdelivr.net/npm/@ouds/web-common/dist/js/ouds-web.bundle.min.js"
       crossorigin="anonymous"
     ></script>
   </body>
@@ -38,7 +38,7 @@ Popper is included in the bundle. To include separately (saves bytes if no dropd
   crossorigin="anonymous"
 ></script>
 <script
-  src="https://cdn.jsdelivr.net/npm/ouds-web/dist/js/ouds-web.min.js"
+  src="https://cdn.jsdelivr.net/npm/@ouds/web-common/dist/js/ouds-web.min.js"
   crossorigin="anonymous"
 ></script>
 ```

@@ -38,7 +38,7 @@ For import maps with Popper:
     }
 </script>
 <script type="module">
-    import * as oudsWeb from "dist/js/ouds-web.esm";
+    import * as oudsWeb from "@ouds/web-common";
 
     new oudsWeb.Popover(document.getElementById("popoverButton"));
 </script>

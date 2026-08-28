@@ -8,8 +8,8 @@
 
 | Breakpoint | Class prefix | Min-width        |
 | ---------- | ------------ | ---------------- |
-| 2x-small   | _(none)_     | <320px (default) |
-| X-small    | `xs`         | >=320px          |
+| 2x-small   | _(none)_     | 0 (default)      |
+| X-small    | `xs`         | >=390px          |
 | Small      | `sm`         | >=480px          |
 | Medium     | `md`         | >=736px          |
 | Large      | `lg`         | >=1024px         |
@@ -45,7 +45,7 @@ Customizable via `$grid-breakpoints` Sass map in `_variables.scss`.
 ### Max-width
 
 ```scss
-@include media-breakpoint-down(xs) { ... }  // <320px
+@include media-breakpoint-down(xs) { ... }  // <390px
 @include media-breakpoint-down(sm) { ... }  // <480px
 @include media-breakpoint-down(md) { ... }  // <736px
 // etc.
