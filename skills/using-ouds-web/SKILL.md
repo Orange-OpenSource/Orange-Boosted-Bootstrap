@@ -25,6 +25,30 @@ Key differences from standard Bootstrap:
 
 ## Quick start
 
+OUDS Web ships as two npm packages you always need together: `@ouds/web-common` (shared JS/Sass) and one theme package for the brand's CSS/tokens. Pick **one** theme package depending on the project:
+
+| Brand          | Theme package             |
+| -------------- | -------------------------- |
+| Orange         | `@ouds/web-orange`         |
+| Orange Compact | `@ouds/web-orange-compact` |
+| Sosh           | `@ouds/web-sosh`           |
+
+**Recommended: install via npm** (or yarn/bun):
+
+```sh
+npm install @ouds/web-common @ouds/web-orange
+```
+
+Then import the CSS and JS in your app, e.g.:
+
+```js
+import "@ouds/web-orange/dist/css/ouds-web.min.css";
+import * as oudsWeb from "@ouds/web-common";
+// or: import { Toast, Modal } from "@ouds/web-common";
+```
+
+For quick prototyping without a build step, the CDN can be used instead, replacing `web-orange` with the theme package matching your brand:
+
 ```html
 <!doctype html>
 <html lang="en">
@@ -43,8 +67,6 @@ Key differences from standard Bootstrap:
   </body>
 </html>
 ```
-
-Or install via npm: `npm install @ouds/web-common @ouds/web-orange`
 
 ## Reference documentation
 
@@ -109,7 +131,6 @@ Or install via npm: `npm install @ouds/web-common @ouds/web-orange`
 
 ### Utilities
 
-- [API](references/utilities/api.md) - Utility API for generating classes
 - [Aspect ratio](references/utilities/aspect-ratio.md) - Aspect ratio containers
 - [Background](references/utilities/background.md) - Background utilities
 - [Border](references/utilities/border.md) - Border utilities
