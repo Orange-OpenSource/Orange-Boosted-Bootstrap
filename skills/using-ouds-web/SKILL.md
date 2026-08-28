@@ -24,34 +24,19 @@ Key differences from standard Bootstrap:
 - **Rounded corner buttons**: opt-in via `.use-rounded-corner-buttons` on a parent container
 - **Button variants**: `.btn-default`, `.btn-strong`, `.btn-brand`, `.btn-minimal`, `.btn-negative` (not Bootstrap's `.btn-primary`, `.btn-secondary`, etc.)
 
-## Rule: utilities before custom CSS
+## Layout priority: grid > helpers > custom CSS
 
-**Never write custom CSS, `<style>` blocks, or inline `style="..."` attributes for layout, flexbox, spacing, sizing, alignment, or positioning.** OUDS Web ships utility classes for virtually all of these needs — writing raw CSS for them is almost always wrong and is the most common mistake when using this library.
+**Never write custom CSS, `<style>` blocks, or inline `style="..."` attributes for layout, flexbox, spacing, sizing, alignment, or positioning.** OUDS Web is a Bootstrap fork and ships both a 12-column grid and a full utility layer — writing raw CSS for layout is almost always wrong.
 
-Before writing any custom CSS/Sass rule:
+Pick in this order:
 
-1. Check the [Common layout tasks](#common-layout-tasks--use-this-class) table below.
-2. If not covered, search the relevant file in `references/utilities/` or `references/layout/` (see Quick search).
-3. Only fall back to custom CSS if no utility class exists for the need, and prefer extending via Sass maps/variables (see [Sass](references/getting-started/sass.md)) over hardcoded values.
+1. **Grid first** — `.row`/`.col-*` (see [Grid](references/layout/grid.md)) for the page/section's overall structure: major regions, a repeating set of blocks (e.g. a list of cards), or form fields laid out in columns.
+2. **Helpers second** — `d-flex`, `.vstack`/`.hstack`, `justify-content-*`, `gap-*`, `position-*`, etc. to align/space a handful of elements inside a single component (icon + label, a row of buttons, centering one element).
+3. **Custom CSS last** — only if neither applies; prefer Sass variable/map overrides (see [Sass](references/getting-started/sass.md)) over hardcoded values.
 
-### Common layout tasks → use this class
+Heuristic: structuring the page's major zones or a repeating set of blocks → grid. Aligning a few elements within one component → helpers.
 
-| Need                                          | Use                                                              | Not this                                          |
-| ---------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------- |
-| Flex container (row/column)                    | `.d-flex`, `.flex-column`, `.flex-row`                            | `style="display:flex"` / custom CSS                |
-| Center content (horiz./vert.)                  | `.d-flex .justify-content-center .align-items-center`             | `margin: 0 auto` + custom flex CSS                  |
-| Space items apart / between                    | `.justify-content-between`, `.justify-content-evenly`             | manual `margin-left`/`margin-right`                 |
-| Gap between flex/grid children                 | `.gap-{token}`, `.row-gap-*`, `.column-gap-*`                     | margins on children                                 |
-| Simple vertical/horizontal stack of items       | `.vstack`, `.hstack` (+ `.gap-*`)                                 | custom flex CSS                                     |
-| Multi-column responsive layout                  | `.row` / `.col-*` grid (see [Grid](references/layout/grid.md))    | `display:grid`/`flex` custom CSS + media queries    |
-| Margin/padding of any kind                      | `{m\|p}{side}-{token}` (e.g. `mt-large`, `px-small`)              | pixel values in `style=` or custom CSS               |
-| Width/height (relative, viewport)               | `.w-*`, `.h-*`, `.vw-*`, `.vh-*`, `.mw-*`, `.mh-*`                | `style="width:...; height:..."`                     |
-| Show/hide responsively                          | `.d-none`, `{breakpoint}:d-block` (see [Display](references/utilities/display.md)) | custom media queries                     |
-| Sticky/fixed header or footer                   | `.sticky-top`, `.sticky-bottom`, `.fixed-top`, `.fixed-bottom`     | `position: fixed/sticky` custom CSS                 |
-| Absolute centering / overlay                    | `.position-absolute .top-50 .start-50 .translate-middle`          | manual `transform`/`top`/`left` custom CSS          |
-| Order of flex/grid items                        | `.order-{0-5}`, `.order-first`, `.order-last`                    | custom CSS `order` property                          |
-
-If a required layout truly cannot be achieved with utilities (e.g. a very specific animation or a component-level structural style), custom CSS is acceptable — but double-check the relevant reference doc first and prefer Sass variable/map overrides over hardcoded values.
+Full decision table (need → class → tier) in [Layout utilities](references/layout/utilities.md#layout-decision-table). Nested grids are rare — see the note in [Grid](references/layout/grid.md#nesting).
 
 ## Quick start
 
@@ -275,5 +260,5 @@ OUDS Web form components use `.control-item-*` classes:
 
 ### Reminder
 
-Layout, flexbox, spacing, sizing, and positioning almost always have a matching OUDS Web utility class — see [Rule: utilities before custom CSS](#rule-utilities-before-custom-css). Reach for a utility class before writing a Sass rule, a `<style>` block, or an inline `style="..."` attribute.
+Layout, flexbox, spacing, sizing, and positioning almost always have a matching OUDS Web class. Grid (`.row`/`.col-*`) for page/section structure, then helpers (`d-flex`, `.vstack`/`.hstack`, `gap-*`, etc.) for alignment inside a component — see [Layout priority](#layout-priority-grid--helpers--custom-css). Reach for a class before writing a Sass rule, a `<style>` block, or an inline `style="..."` attribute.
 

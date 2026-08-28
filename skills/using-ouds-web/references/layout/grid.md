@@ -91,6 +91,8 @@ Control number of columns per row:
 
 ## Nesting
 
+Nested grids are **rare** in practice — only nest a `.row` inside a `.col` when that column truly contains its own independent sub-grid of content (e.g. a data table or card layout embedded inside a wider column). Do **not** nest `.row`/`.col-*` just to align or space a small number of elements (icon + label, a pair of buttons, a couple of stats side by side) — use `.hstack`/`.vstack` or `.d-flex` instead (see [Flex](../utilities/flex.md), [Stack](../utilities/stack.md)).
+
 ```html
 <div class="row">
   <div class="sm:col-3">Level 1</div>
@@ -102,6 +104,7 @@ Control number of columns per row:
   </div>
 </div>
 ```
+
 
 ## Sass Mixins
 
