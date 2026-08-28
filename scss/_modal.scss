@@ -1,45 +1,35 @@
-// Dialog modal surface and positioning
-
-$ouds-modal-width-2xs: 360px !default;
-$ouds-modal-width-xs: 390px !default;
-$ouds-modal-width-sm: 480px !default;
-$ouds-modal-width-md: 768px !default;
-$ouds-modal-width-lg: 1024px !default;
-$ouds-modal-width-xl: 1440px !default;
-$ouds-modal-width-2xl: 1680px !default;
-$ouds-modal-width-3xl: 1920px !default;
-
 .modal {
+  --#{$prefix}modal-column-count: 12;
+  --#{$prefix}modal-grid-margin: #{$ouds-space-fixed-medium};
 
+  position: relative;
   flex-direction: column;
-  overscroll-behavior: none;
+  width: calc((100vw - 2 * var(--#{$prefix}modal-grid-margin)) * var(--#{$prefix}modal-column-count) / 12);
+  max-width: unset;
+  margin-inline: $ouds-space-fixed-medium;
+  overscroll-behavior: contain;
   background-color: #{$modal-content-bg};
   @include border-radius(var(--#{$prefix}modal-border-radius));
 
-  // @include media-breakpoint-up(xs) {
-  //   --#{$prefix}modal-width: #{$ouds-modal-width-xs};
-  // }
-  // @include media-breakpoint-up(sm) {
-  //   --#{$prefix}modal-width: #{$ouds-modal-width-sm};
-  // }
-  // @include media-breakpoint-up(md) {
-  //   --#{$prefix}modal-width: #{$ouds-modal-width-md};
-  //   &.modal-dialog {
-  //     --#{$prefix}modal-width: #{$ouds-modal-width-sm};
-  //   }
-  // }
-  // @include media-breakpoint-up(lg) {
-  //   --#{$prefix}modal-width: #{$ouds-modal-width-lg};
-  // }
-  // @include media-breakpoint-up(xl) {
-  //   --#{$prefix}modal-width: #{$ouds-modal-width-xl};
-  // }
-  // @include media-breakpoint-up(2xl) {
-  //   --#{$prefix}modal-width: #{$ouds-modal-width-2xl};
-  // }
-  // @include media-breakpoint-up(3xl) {
-  //   --#{$prefix}modal-width: #{$ouds-modal-width-3xl};
-  // }
+  @include media-breakpoint-up(sm) {
+    --#{$prefix}modal-column-count: 10;
+    --#{$prefix}modal-margin-inline: var(--#{$prefix}grid-margin);
+
+    margin-inline: auto;
+  }
+
+  @include media-breakpoint-up(xl) {
+    --#{$prefix}modal-column-count: 8;
+  }
+}
+
+.modal-body {
+  padding-block: $ouds-space-padding-block-large $ouds-space-padding-block-medium;
+  padding-inline: $ouds-space-padding-inline-2xlarge;
+
+  * {
+    max-width: 100%;
+  }
 }
 
 // .modal.modal-dialog-scrollable {
@@ -48,14 +38,6 @@ $ouds-modal-width-3xl: 1920px !default;
 //   --#{$prefix}modal-scrollable-inner-margin: #{$modal-scrollable-inner-margin}; // OUDS mod
 //   --#{$prefix}modal-footer-margin-top: #{$modal-scrollable-footer-margin-top}; // OUDS mod
 //   // scss-docs-end modal-scrollable-css-vars
-
-//   .modal-body {
-//     padding: var(--#{$prefix}modal-scrollable-inner-padding); // OUDS mod
-//     margin: var(--#{$prefix}modal-scrollable-inner-margin); // OUDS mod
-//     overflow-y: auto;
-//     border: var(--#{$prefix}modal-border-width) solid var(--#{$prefix}modal-border-color); // OUDS mod
-//     border-width: var(--#{$prefix}modal-border-width) 0; // OUDS mod
-//   }
 // }
 
 // Modal background used by JS fallback mode
@@ -86,23 +68,14 @@ $ouds-modal-width-3xl: 1920px !default;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding-inline: var(--#{$prefix}space-scaled-3xlarge) var(--#{$prefix}space-scaled-xsmall);
-  padding-top: var(--#{$prefix}space-scaled-xsmall);
-  border-bottom: if($modal-header-border-color == null, null, var(--#{$prefix}modal-header-border-width) solid var(--#{$prefix}modal-header-border-color)); // OUDS mod
-  @include border-top-radius(var(--#{$prefix}modal-inner-border-radius));
+  padding-inline: $ouds-space-padding-inline-2xlarge;
+  padding-top: $ouds-space-padding-block-xlarge;
+  background-color: var(--#{$prefix}body-bg);
 
   .btn-close {
-    margin-inline-start: auto;
-  }
-}
-
-// Modal body
-// Where all modal content resides (sibling of .modal-header and .modal-footer)
-.modal-body {
-  padding-inline: var(--#{$prefix}space-scaled-3xlarge);
-
-  > * {
-    margin-bottom: var(--#{$prefix}space-scaled-small);
+    position: absolute;
+    top: $ouds-space-inset-medium;
+    right: $ouds-space-inset-medium;
   }
 }
 
@@ -110,12 +83,24 @@ $ouds-modal-width-3xl: 1920px !default;
 .modal-footer {
   display: flex;
   flex-shrink: 0;
+  flex-direction: column; // stack buttons on small screens
   flex-wrap: wrap;
   gap: var(--#{$prefix}space-scaled-small);
   align-items: center; // vertically center
-  justify-content: flex-end; // align action buttons to the end
-  padding-inline: var(--#{$prefix}space-scaled-3xlarge);
-  padding-top: $ouds-space-fixed-small;
-  margin-bottom: var(--#{$prefix}space-scaled-2xlarge);
+  justify-content: flex-start; // align action buttons to the end
+  padding-inline: $ouds-space-padding-inline-2xlarge;
+  padding-top: $ouds-space-padding-block-2xlarge;
+  padding-bottom: calc($ouds-space-padding-block-medium + $ouds-space-padding-block-xlarge);
   background-color: var(--#{$prefix}modal-footer-bg);
+
+  @include media-breakpoint-down(md) {
+    > * {
+      width: 100%; // make buttons full width on small screens
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row-reverse; // reverse order of buttons to have primary on the right
+    justify-content: flex-start; // align action buttons to the end
+  }
 }
