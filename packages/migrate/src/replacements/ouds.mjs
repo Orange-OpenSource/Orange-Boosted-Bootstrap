@@ -15,8 +15,22 @@ export const oudsReplacements = [
   // Clearfix
   ['clearfix', 'd-flow-root'],
 
+  // Interactions
+  ['pe-auto', 'pointer-events-auto'],
+
+  // Shadow
+  ['shadow-default', 'shadow-elevated'],
+
   // Ratio
   [...warnForClass('ratio')],
+
+  // Components
+  // Badge
+  ['badge-disabled', 'disabled'],
+
+  // Link
+  [...warnForClass('back')],
+  ['colored-bg', 'link-on-colored-bg'],
 
   // Form
   [

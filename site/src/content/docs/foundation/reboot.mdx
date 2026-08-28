@@ -124,7 +124,7 @@ Placeholder links—those without an `href`—are targeted with a more specific 
 
 On colored backgrounds, links should have a different style. Visited links don’t have a specific style on colored backgrounds.
 
-<Example buttonLabel="links on colored backgrounds" class="p-none" code={`<div class="colored-bg">
+<Example buttonLabel="links on colored backgrounds" class="p-none" code={`<div class="link-on-colored-bg">
     <div class="bg-surface-brand-primary p-large">
       <div data-bs-theme="${getMode('modes-on-brand-primary')}">
         This is an example of a <a href="#">link on colored background</a> in a paragraph.
@@ -136,9 +136,9 @@ On colored backgrounds, links should have a different style. Visited links don�
       </div>
     </div>
   </div>
-  <div class="bg-surface-brand-primary p-large">
+  <div class="link-on-colored-bg bg-surface-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}">
-      This is an example of a <a href="." class="colored-bg visited-links">link on colored background</a> in a paragraph.
+      This is an example of a <a href="." class="visited-links">link on colored background</a> in a paragraph.
     </div>
   </div>`} />
 
@@ -438,9 +438,5 @@ The default `cursor` on summary is `text`, so we reset that to `pointer` to conv
 HTML5 adds [a new global attribute named `[hidden]`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden), which is styled as `display: none` by default. Borrowing an idea from [PureCSS](https://purecss.io/), we improve upon this default by making `[hidden] { display: none !important; }` to help prevent its `display` from getting accidentally overridden.
 
 <Code lang="html" buttonLabel="hidden attribute" code={`<input type="text" hidden />`} />
-
-<Callout type="info">
-  Since `[hidden]` is not compatible with jQuery’s `$(...).hide()` and `$(...).show()` methods, we don’t specifically endorse `[hidden]` over other techniques for managing the `display` of elements.
-</Callout>
 
 To merely toggle the visibility of an element, meaning its `display` is not modified and the element can still affect the flow of the document, use [the `.invisible` class]([[docsref:/utilities/visibility]]) instead.

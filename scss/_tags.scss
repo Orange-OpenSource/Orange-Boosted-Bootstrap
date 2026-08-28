@@ -10,7 +10,7 @@
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-default};
   --#{$prefix}tag-icon-padding: #{$ouds-tag-space-inset-icon-default};
   --#{$prefix}tag-bullet-padding: #{$ouds-tag-space-inset-bullet-default};
-  --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-loader-default};
+  --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-progress-indicator-default};
   --#{$prefix}tag-font-size-icon: #{$ouds-font-size-label-medium};
   --#{$prefix}tag-color: #{$ouds-color-content-inverse};
   --#{$prefix}tag-border-width: 0px;
@@ -18,11 +18,11 @@
   --#{$prefix}tag-asset-color: currentcolor;
   --#{$prefix}tag-loading-dasharray: 92;
   --#{$prefix}tag-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
-  --#{$prefix}tag-positive-icon: var(--#{$prefix}success-icon);
-  --#{$prefix}tag-info-icon: var(--#{$prefix}info-icon);
-  --#{$prefix}tag-warning-external-icon: var(--#{$prefix}warning-icon);
-  --#{$prefix}tag-warning-internal-icon: var(--#{$prefix}warning-internal-icon);
-  --#{$prefix}tag-negative-icon: var(--#{$prefix}error-icon);
+  --#{$prefix}tag-positive-icon: var(--#{$prefix}alert-success-icon);
+  --#{$prefix}tag-info-icon: var(--#{$prefix}alert-info-icon);
+  --#{$prefix}tag-warning-external-icon: var(--#{$prefix}alert-warning-icon);
+  --#{$prefix}tag-warning-internal-icon: var(--#{$prefix}alert-warning-internal-icon);
+  --#{$prefix}tag-negative-icon: var(--#{$prefix}alert-error-icon);
 
   position: relative;
   display: inline-flex;
@@ -32,7 +32,7 @@
   min-height: var(--#{$prefix}tag-min-height);
   padding: calc(var(--#{$prefix}tag-padding-y) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-end) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-y) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-start) - var(--#{$prefix}tag-border-width));
   margin: 0;
-  font-weight: 700;
+  font-weight: $ouds-font-weight-web-label-strong;
   color: var(--#{$prefix}tag-color);
   white-space: nowrap;
   background-color: var(--#{$prefix}tag-background-color);
@@ -237,9 +237,10 @@
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-small};
   --#{$prefix}tag-icon-padding: #{$ouds-tag-space-inset-icon-small};
   --#{$prefix}tag-bullet-padding: #{$ouds-tag-space-inset-bullet-small};
-  --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-loader-small};
+  --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-progress-indicator-small};
   --#{$prefix}tag-font-size-icon: #{$ouds-font-size-label-small};
   @include get-font-size("label-small");
+  font-weight: $ouds-font-weight-web-label-moderate;
 }
 
 .tag-input {
@@ -250,6 +251,7 @@
   --#{$prefix}tag-padding-end: var(--#{$prefix}tag-padding-asset);
 
   margin: calc(($ouds-tag-size-min-height-interactive-area - var(--#{$prefix}tag-min-height)) / 2) 0;
+  font-weight: $ouds-font-weight-web-label-moderate;
   border: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-border-color);
 
   &::before {

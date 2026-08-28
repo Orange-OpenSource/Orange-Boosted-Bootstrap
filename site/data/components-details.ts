@@ -19,6 +19,13 @@ export const componentsDetails: ComponentCardData[] = [
       </div>`
   },
   {
+    name: 'Assistant button',
+    slug: 'assistant-button',
+    link: 'buttons#assistant-button',
+    category: 'Assistant',
+    snippet: `<button type="button" class="btn btn-assistant">Label</button>`
+  },
+  {
     name: 'Badge',
     link: 'badges#badge',
     category: 'Indicator',
@@ -166,7 +173,8 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <svg class="text-status-accent decorative-small-icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-      </svg>`
+      </svg>`,
+    excludeFromVersioning: true
   },
   {
     name: 'Inline alert',

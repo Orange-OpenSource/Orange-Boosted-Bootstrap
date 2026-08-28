@@ -1,5 +1,5 @@
 - title: Getting started
-  icon: book-half
+  icon: information-manual
   icon_color: body-color
   pages:
     - title: Introduction
@@ -10,7 +10,6 @@
     - title: Browsers & devices
     - title: Accessibility
     - title: Sass
-      coming_soon: true
     - title: JavaScript
     - title: Optimize
       coming_soon: true
