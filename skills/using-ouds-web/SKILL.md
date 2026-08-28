@@ -24,6 +24,35 @@ Key differences from standard Bootstrap:
 - **Rounded corner buttons**: opt-in via `.use-rounded-corner-buttons` on a parent container
 - **Button variants**: `.btn-default`, `.btn-strong`, `.btn-brand`, `.btn-minimal`, `.btn-negative` (not Bootstrap's `.btn-primary`, `.btn-secondary`, etc.)
 
+## Rule: utilities before custom CSS
+
+**Never write custom CSS, `<style>` blocks, or inline `style="..."` attributes for layout, flexbox, spacing, sizing, alignment, or positioning.** OUDS Web ships utility classes for virtually all of these needs — writing raw CSS for them is almost always wrong and is the most common mistake when using this library.
+
+Before writing any custom CSS/Sass rule:
+
+1. Check the [Common layout tasks](#common-layout-tasks--use-this-class) table below.
+2. If not covered, search the relevant file in `references/utilities/` or `references/layout/` (see Quick search).
+3. Only fall back to custom CSS if no utility class exists for the need, and prefer extending via Sass maps/variables (see [Sass](references/getting-started/sass.md)) over hardcoded values.
+
+### Common layout tasks → use this class
+
+| Need                                          | Use                                                              | Not this                                          |
+| ---------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------- |
+| Flex container (row/column)                    | `.d-flex`, `.flex-column`, `.flex-row`                            | `style="display:flex"` / custom CSS                |
+| Center content (horiz./vert.)                  | `.d-flex .justify-content-center .align-items-center`             | `margin: 0 auto` + custom flex CSS                  |
+| Space items apart / between                    | `.justify-content-between`, `.justify-content-evenly`             | manual `margin-left`/`margin-right`                 |
+| Gap between flex/grid children                 | `.gap-{token}`, `.row-gap-*`, `.column-gap-*`                     | margins on children                                 |
+| Simple vertical/horizontal stack of items       | `.vstack`, `.hstack` (+ `.gap-*`)                                 | custom flex CSS                                     |
+| Multi-column responsive layout                  | `.row` / `.col-*` grid (see [Grid](references/layout/grid.md))    | `display:grid`/`flex` custom CSS + media queries    |
+| Margin/padding of any kind                      | `{m\|p}{side}-{token}` (e.g. `mt-large`, `px-small`)              | pixel values in `style=` or custom CSS               |
+| Width/height (relative, viewport)               | `.w-*`, `.h-*`, `.vw-*`, `.vh-*`, `.mw-*`, `.mh-*`                | `style="width:...; height:..."`                     |
+| Show/hide responsively                          | `.d-none`, `{breakpoint}:d-block` (see [Display](references/utilities/display.md)) | custom media queries                     |
+| Sticky/fixed header or footer                   | `.sticky-top`, `.sticky-bottom`, `.fixed-top`, `.fixed-bottom`     | `position: fixed/sticky` custom CSS                 |
+| Absolute centering / overlay                    | `.position-absolute .top-50 .start-50 .translate-middle`          | manual `transform`/`top`/`left` custom CSS          |
+| Order of flex/grid items                        | `.order-{0-5}`, `.order-first`, `.order-last`                    | custom CSS `order` property                          |
+
+If a required layout truly cannot be achieved with utilities (e.g. a very specific animation or a component-level structural style), custom CSS is acceptable — but double-check the relevant reference doc first and prefer Sass variable/map overrides over hardcoded values.
+
 ## Quick start
 
 OUDS Web ships as two npm packages you always need together: `@ouds/web-common` (shared JS/Sass) and one theme package for the brand's CSS/tokens. Pick **one** theme package depending on the project:
@@ -171,6 +200,10 @@ grep -ri "data-bs-theme" references/foundation/color-modes.md
 grep -ri "control-item" references/components/
 grep -ri "\.bg-" references/utilities/background.md
 grep -ri "spacing\|margin\|padding" references/utilities/spacing.md
+grep -ri "d-flex\|justify-content\|align-items\|flex-" references/utilities/flex.md
+grep -ri "vstack\|hstack" references/utilities/stack.md
+grep -ri "\.col-\|row-cols" references/layout/grid.md
+grep -ri "sticky\|fixed-\|translate-middle" references/utilities/position.md
 ```
 
 ## Critical conventions
@@ -239,3 +272,8 @@ OUDS Web form components use `.control-item-*` classes:
   <use xlink:href="path/to/ouds-web-sprite.svg#icon-name"></use>
 </svg>
 ```
+
+### Reminder
+
+Layout, flexbox, spacing, sizing, and positioning almost always have a matching OUDS Web utility class — see [Rule: utilities before custom CSS](#rule-utilities-before-custom-css). Reach for a utility class before writing a Sass rule, a `<style>` block, or an inline `style="..."` attribute.
+

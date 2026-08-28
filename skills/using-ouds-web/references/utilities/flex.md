@@ -76,11 +76,13 @@ Use `.me-auto` or `.ms-auto` on flex items to push siblings:
 Combine with `align-items` and `flex-column` for vertical auto-margin:
 
 ```html
-<div class="d-flex align-items-start flex-column" style="height: 200px">
+<div class="d-flex align-items-start flex-column h-100">
   <div class="mb-auto">Top item</div>
   <div>Bottom item</div>
 </div>
 ```
+
+(Height set via `.h-*`/`.vh-*` utilities — see [Sizing](sizing.md) — not inline `style="height:..."`.)
 
 ## Wrap
 

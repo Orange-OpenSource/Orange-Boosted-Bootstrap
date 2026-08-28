@@ -17,10 +17,12 @@ Format: `{property}{sides}-{size}` (base) or `{breakpoint}:{property}{sides}-{si
 ```html
 <div class="mt-none">No top margin</div>
 <div class="p-large">Large padding all sides</div>
-<div class="mx-auto" style="width: 200px;">Horizontally centered</div>
+<div class="mx-auto w-50">Horizontally centered</div>
 <div class="px-small">Small horizontal padding</div>
 <div class="mb-medium lg:mb-xlarge">Medium bottom margin, xlarge from LG</div>
 ```
+
+(Width set via `.w-*` utility — see [Sizing](sizing.md) — not inline `style="width:..."`.)
 
 ## Scaled spacing
 
