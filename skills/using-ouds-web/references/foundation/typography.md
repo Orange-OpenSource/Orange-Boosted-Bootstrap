@@ -132,6 +132,21 @@ Uses body large text. Wrap with `<blockquote class="blockquote">`.
 </figure>
 ```
 
+## Label utility classes (v1.4.0+)
+
+In addition to heading/body font-size utilities, dedicated **label** font-size classes are available (non-responsive, single value regardless of breakpoint), for UI labels such as form labels, buttons, tags, badges:
+
+| Class      | Level          |
+| ---------- | -------------- |
+| `.fs-lxl`  | Label xlarge   |
+| `.fs-ll`   | Label large    |
+| `.fs-lm`   | Label medium   |
+| `.fs-ls`   | Label small    |
+
+```html
+<span class="fs-lm">Label medium text</span>
+```
+
 ## Sass Mixin: `get-font-size()`
 
 For custom components, use the `get-font-size()` mixin. Label levels: `small`, `medium`, `large`, `xlarge`.

@@ -17,6 +17,7 @@ Key differences from standard Bootstrap:
 - **Semantic color system** with `bg-surface-*`, `text-*`, `border-*` token-based classes
 - **4 color modes**: `light`, `dark`, `root`, `root-inverted` (set via `data-bs-theme`)
 - **Orange-specific components**: header, footer, chips, tags, sticker, stepped-process, title-bar, skeleton, local-navigation, back-to-top, bullet-list, divider, quantity-selector
+- **Assistant button** (`.btn-assistant`, v1.4.0+): AI-powered action button variant, distinct from standard/navigation buttons
 - **Modified form components**: switch, checkbox, radio-button, text-input, text-area, select-input, password-input use `.control-item-*` pattern
 - **CSS variable prefix**: `--bs-`
 - **Container**: use `.container-fluid` (not fixed `.container`)
@@ -32,6 +33,8 @@ OUDS Web ships as two npm packages you always need together: `@ouds/web-common` 
 | Orange         | `@ouds/web-orange`         |
 | Orange Compact | `@ouds/web-orange-compact` |
 | Sosh           | `@ouds/web-sosh`           |
+
+A project must pick **one** theme and never mix several in the same codebase — see [Themes and brands](references/foundation/themes.md).
 
 **Recommended: install via npm** (or yarn/bun):
 
@@ -94,6 +97,7 @@ For quick prototyping without a build step, the CDN can be used instead, replaci
 - [Reboot](references/foundation/reboot.md) - CSS reset and base styles
 - [Form validation](references/foundation/form-validation.md) - Validation styles
 - [Component](references/foundation/component.md) - Base component architecture
+- [Themes and brands](references/foundation/themes.md) - Orange, Orange Compact, Sosh themes
 
 ### Layout
 
@@ -131,6 +135,7 @@ For quick prototyping without a build step, the CDN can be used instead, replaci
 
 ### Utilities
 
+- [Figma tokens mapping](references/utilities/figma-tokens.md) - Mapping Figma design tokens to utility classes/variables
 - [Aspect ratio](references/utilities/aspect-ratio.md) - Aspect ratio containers
 - [Background](references/utilities/background.md) - Background utilities
 - [Border](references/utilities/border.md) - Border utilities
@@ -221,6 +226,8 @@ OUDS Web form components use `.control-item-*` classes:
 <button class="btn btn-negative">Negative</button>
 <!-- Navigation buttons -->
 <a class="btn btn-next btn-default" href="#">Next</a>
+<!-- Assistant button (AI-powered actions, v1.4.0+) -->
+<button class="btn btn-assistant">Assistant</button>
 <!-- On colored backgrounds, add btn-on-colored-bg -->
 <button class="btn btn-default btn-on-colored-bg">On colored bg</button>
 ```

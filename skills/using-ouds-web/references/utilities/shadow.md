@@ -8,12 +8,14 @@ Add or remove box-shadow using semantic elevation classes.
 
 ```html
 <div class="shadow-none">No shadow</div>
-<div class="shadow-default">Default shadow</div>
+<div class="shadow-elevated">Elevated shadow</div>
 <div class="shadow-drag">Drag shadow</div>
 <div class="shadow-emphasized">Emphasized shadow</div>
 <div class="shadow-raised">Raised shadow</div>
 <div class="shadow-sticky">Sticky shadow</div>
 ```
+
+> **Breaking change (v1.4.0+):** `.shadow-default` has been removed in favor of `.shadow-elevated`.
 
 ## Bootstrap compatibility classes
 

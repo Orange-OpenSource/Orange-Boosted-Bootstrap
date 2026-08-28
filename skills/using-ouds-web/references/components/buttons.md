@@ -1,6 +1,6 @@
 # Buttons
 
-Two types: **Button** and **Navigation button**. Both use base class `.btn`.
+Three types: **Button**, **Navigation button**, and **Assistant button**. All use base class `.btn`.
 
 ## Button
 
@@ -75,6 +75,49 @@ For determinate loading, set `--bs-btn-loading-time` CSS variable (e.g. `style="
 
 Wrap in `<div aria-busy="true" inert>`.
 
+## Assistant button
+
+A button that triggers an AI-powered action (conversational assistance, content generation, contextual suggestions). Combines standard button functions with AI-specific visual features (icon + specific border color).
+
+```html
+<a class="btn btn-assistant" href="#">Assistant</a>
+<button type="button" class="btn btn-assistant">Assistant</button>
+```
+
+> **Transparency on older browsers/Firefox:** the assistant button background isn't transparent on browsers that don't support `background-clip: border-area`. Set `--bs-btn-bg` to the container's background color (use a `bg-*` token, not a semi-transparent `surface-*` token) to keep it visually consistent:
+
+```html
+<button
+  type="button"
+  class="btn btn-assistant"
+  style="--bs-btn-bg: var(--bs-color-bg-tertiary);"
+>
+  Assistant
+</button>
+```
+
+### Icon only
+
+Add `.btn-icon`. Icon-only assistant buttons are always fully circular.
+
+```html
+<button type="button" class="btn btn-assistant btn-icon">
+  <span class="visually-hidden">Assistant</span>
+</button>
+```
+
+### Rounded corners (Orange brand)
+
+Same as button — add `.use-rounded-corner-buttons` on a top container.
+
+### Disabled
+
+Add `disabled` attribute (assistant buttons typically use `<button>`).
+
+### Loading
+
+Same mechanism as [button loading state](#loading) — `.loading-indeterminate`/`.loading-determinate`, loader SVG, `disabled` while loading.
+
 ## Navigation button
 
 Directional buttons for forward/backward navigation.
@@ -126,4 +169,4 @@ Use `.d-grid` and `.gap-small` for full-width stacked buttons.
 - Wrap navigation buttons in `<nav>` with `aria-label` when used for page navigation
 - Always provide accessible name for icon-only buttons
 
-> **Not Bootstrap:** Variants are `.btn-default`, `.btn-strong`, `.btn-brand`, `.btn-minimal`, `.btn-negative` (not `.btn-primary`, `.btn-secondary`, etc.). Navigation buttons (`.btn-previous`, `.btn-next`) are OUDS Web-specific. Loading states use `.loading-indeterminate`/`.loading-determinate` with SVG loader. Colored background support via `.btn-on-colored-bg`.
+> **Not Bootstrap:** Variants are `.btn-default`, `.btn-strong`, `.btn-brand`, `.btn-minimal`, `.btn-negative` (not `.btn-primary`, `.btn-secondary`, etc.). Navigation buttons (`.btn-previous`, `.btn-next`) and the Assistant button (`.btn-assistant`, AI-related actions) are OUDS Web-specific. Loading states use `.loading-indeterminate`/`.loading-determinate` with SVG loader. Colored background support via `.btn-on-colored-bg`.

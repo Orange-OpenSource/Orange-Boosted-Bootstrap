@@ -105,4 +105,4 @@ const tooltip = new oudsWeb.Tooltip(el, {
 
 ## jQuery
 
-Not required. If jQuery is detected, components are added to jQuery's plugin system automatically.
+Not supported. jQuery integration was fully removed in v1.4.0 (previously, if jQuery was detected, components were added to jQuery's plugin system automatically). Use the native/ESM API described above instead.
