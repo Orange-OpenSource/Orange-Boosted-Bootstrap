@@ -1,6 +1,6 @@
-# Color Palette
+# Colors
 
-Summary of all existing and useable colors in OUDS Web.
+Summary of all existing and useable colors in OUDS Web. See [Tokens](tokens.md) for how these colors fit into the broader raw/semantic/composite/component token architecture.
 
 ## Palette Variables
 

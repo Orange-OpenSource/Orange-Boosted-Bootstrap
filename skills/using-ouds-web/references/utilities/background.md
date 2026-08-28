@@ -69,3 +69,7 @@ Layer two background colors by nesting two containers:
 ## Other available classes
 
 - `.bg-transparent`
+
+## Not Bootstrap: combined `.text-bg-*` helpers
+
+Bootstrap's combined `.text-bg-*` helpers (`.text-bg-primary`, etc.) are **not** used in OUDS Web. Use color modes (`data-bs-theme`) together with the background utilities above for accessible color/background pairings instead.

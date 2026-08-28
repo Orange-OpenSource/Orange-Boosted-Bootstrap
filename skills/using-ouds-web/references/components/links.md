@@ -1,6 +1,6 @@
 # Links
 
-> **Not Bootstrap:** OUDS Web uses a dedicated `.link` class for standalone links with specific padding, alignment, focus/hover/active styles, and size variants. Bootstrap has no equivalent standalone link component class.
+> **Not Bootstrap:** OUDS Web uses a dedicated `.link` class for standalone links with specific padding, alignment, focus/hover/active styles, and size/density variants. Bootstrap has no equivalent standalone link component class, and the Bootstrap `.link-*` colored link helpers (`.link-primary`, `.link-secondary`, etc.) should **not** be used in OUDS Web — colored links are not part of the design system.
 
 ## Overview
 
@@ -36,11 +36,21 @@ Add `.link-on-colored-bg` along with the appropriate `data-bs-theme` on a parent
 
 ### With chevron
 
-Add `.link-chevron` for a right-side chevron. Add `.back` for a left-side chevron.
+Add `.link-chevron` for a right-side chevron. Add `.link-previous` (combined with `.link-chevron`) for a left-side chevron.
 
 ```html
 <a class="link link-chevron" href="#">Link with chevron</a>
-<a class="link link-chevron back" href="#">Link with back chevron</a>
+<a class="link link-chevron link-previous" href="#">Link with previous chevron</a>
+```
+
+### With external icon
+
+Add `.link-external` for a right-side external-link icon. Add visually hidden text to indicate the link opens an external resource.
+
+```html
+<a class="link link-external" href="#"
+  >Link with external icon<span class="visually-hidden">&nbsp;(external link)</span></a
+>
 ```
 
 ### With icon
@@ -87,9 +97,16 @@ Wrap in `[aria-busy="true"]` with `inert`:
 
 ## Sizes
 
-Add `.link-small` for a smaller size.
+Links are available in two sizes and two densities, combinable:
+
+- `.link-small` — smaller font-size
+- `.link-compact` — smaller padding (denser)
 
 ```html
 <a class="link" href="#">Default link</a>
 <a class="link link-small" href="#">Small link</a>
+<a class="link link-compact" href="#">Compact link</a>
+<a class="link link-compact link-small" href="#">Small compact link</a>
 ```
+
+> **Accessibility:** compact and small sizes are not recommended for accessibility reasons (reduced interactive area). Per WCAG 2.5.5 (target size enhanced), a link plus its surrounding space should total at least `44px x 44px`; space compact links apart accordingly.

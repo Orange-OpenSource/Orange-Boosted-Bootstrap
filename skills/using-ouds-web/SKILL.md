@@ -74,16 +74,18 @@ For quick prototyping without a build step, the CDN can be used instead, replaci
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>OUDS Web</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/@ouds/web-orange/dist/css/ouds-web.min.css"
+      href="https://cdn.jsdelivr.net/npm/@ouds/web-orange@<version>/dist/css/ouds-web.min.css"
       rel="stylesheet"
     />
   </head>
   <body>
     <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/@ouds/web-common/dist/js/ouds-web.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ouds/web-common@<version>/dist/js/ouds-web.bundle.min.js"></script>
   </body>
 </html>
 ```
+
+Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving it floating.
 
 ## Reference documentation
 
@@ -104,8 +106,9 @@ For quick prototyping without a build step, the CDN can be used instead, replaci
 
 - [Approach](references/foundation/approach.md) - Design principles
 - [Typography](references/foundation/typography.md) - Headings, body text, display, font mixins
-- [Color palette](references/foundation/color-palette.md) - Available raw colors
+- [Colors](references/foundation/colors.md) - Available raw colors
 - [Color modes](references/foundation/color-modes.md) - Light/dark/root/root-inverted themes
+- [Tokens](references/foundation/tokens.md) - Raw/semantic/composite/component token architecture
 - [CSS variables](references/foundation/css-variables.md) - Custom properties
 - [Options](references/foundation/options.md) - Sass configuration options
 - [Reboot](references/foundation/reboot.md) - CSS reset and base styles
@@ -144,8 +147,15 @@ For quick prototyping without a build step, the CDN can be used instead, replaci
 - [Skeleton](references/components/skeleton.md) - Loading placeholders
 - [Switch](references/components/switch.md) - Toggle switches
 - [Tags](references/components/tags.md) - Tag elements
+- [Table](references/components/table.md) - Opt-in table styling (draft component)
 - [Text area](references/components/text-area.md) - Multiline inputs
 - [Text input](references/components/text-input.md) - Single-line inputs
+
+### Not yet documented (do not invent markup)
+
+The OUDS Web documentation site has placeholder ("Coming soon") pages for the following components — **no OUDS Web-specific markup, classes, or design guidance exists for them yet**: `accordion`, `back-to-top`, `card`, `carousel`, `close-button`, `collapse`, `dropdown`, `list-group`, `local-navigation`, `modal`, `nav-tab`, `navbar`, `offcanvas`, `pagination`, `popover`, `progress`, `quantity-selector`, `range`, `scrollspy`, `spinner`, `stepped-process`, `sticker`, `title-bar`, `toast`, `tooltip`.
+
+If a task requires one of these, **tell the user it isn't documented in OUDS Web yet** instead of guessing markup or falling back to plain Bootstrap classes (OUDS Web's class names, tokens, and structure regularly diverge from Bootstrap, so a Bootstrap fallback would likely be wrong).
 
 ### Utilities
 
@@ -154,8 +164,6 @@ For quick prototyping without a build step, the CDN can be used instead, replaci
 - [Background](references/utilities/background.md) - Background utilities
 - [Border](references/utilities/border.md) - Border utilities
 - [Color](references/utilities/color.md) - Text color utilities
-- [Color & background](references/utilities/color-background.md) - Combined utilities
-- [Colored link](references/utilities/colored-link.md) - Colored link variants
 - [Display](references/utilities/display.md) - Display property
 - [Flex](references/utilities/flex.md) - Flexbox utilities
 - [Float](references/utilities/float.md) - Float positioning
