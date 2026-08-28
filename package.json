@@ -180,7 +180,7 @@
     "terser": "^5.50.0",
     "unist-util-visit": "^5.0.0",
     "vitest": "^4.1.10",
-    "vnu-jar": "24.10.17",
+    "vnu-jar": "26.8.21",
     "zod": "^4.0.17"
   },
   "files": [
