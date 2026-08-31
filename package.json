@@ -87,7 +87,9 @@
     "watch-js-docs": "nodemon --watch site/src/assets/ --ext js --exec \"npm run js-lint\"",
     "storybook": "npm run storybook-generate && storybook dev -p 6006",
     "storybook-generate": "npm run docs-build && node stories/create-stories-from-doc.js",
-    "storybook-build": "npm run storybook-generate && storybook build -o ./_site/storybook"
+    "storybook-build": "npm run storybook-generate && storybook build -o ./_site/storybook",
+    "update-composite-icons": "node build/update-composite-icons.mjs",
+    "update-sprite-icons": "node build/update-sprite-icons.mjs"
   },
   "peerDependencies": {
     "@popperjs/core": "^2.11.8"
@@ -174,6 +176,7 @@
     "storybook": "^10.5.8",
     "stylelint": "^16.23.1",
     "stylelint-config-twbs-bootstrap": "^16.1.0",
+    "svgo": "^4.0.2",
     "tarteaucitronjs": "^1.34.0",
     "terser": "^5.50.0",
     "unist-util-visit": "^5.0.0",

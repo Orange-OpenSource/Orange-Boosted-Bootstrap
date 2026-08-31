@@ -49,7 +49,7 @@ From now on, OUDS Web won’t embed Bootstrap elements that are not part of Oran
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The focus-visible polyfill has been removed. So you no longer need it on your side, and you should replace all the calls to `:focus[data-focus-visible-added]` by `:focus-visible`.
 
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> jQuery support has been removed from the library.
+- <span class="tag tag-small tag-negative">Breaking</span> jQuery support has been removed from the library.
 
 ## Fonts
 
@@ -200,6 +200,10 @@ You will have to make some extra JavaScript to change the styles and update the 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Use `.link-sm` class to get small standalone link.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.link-on-colored-bg` has been added; it can be used to get variants on colored backgrounds.
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> A `.link` class should be added to existing links with `.link-chevron` class to comply with the OUDS Web documentation and ensure future compatibility.
+
+### Scrollspy
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> While Scrollspy has not been published yet, we have updated its implementation using the one from Bootstrap v6 to improve its behavior. This does not necessitate any action on your part as this is backward compatible and a drop-in replacement. You can find implementation details in [the related pull request](https://github.com/twbs/bootstrap/pull/42557) in Bootstrap repository.
 
 ### Tags
 
