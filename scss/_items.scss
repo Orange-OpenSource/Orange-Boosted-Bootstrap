@@ -267,14 +267,6 @@
   --#{$prefix}list-item-border-color: #{$ouds-color-border-default};
 }
 
-// TODO: remove or uncomment the `.item-no-outline` once the design is decided
-// .item-no-outline use:
-// <div class="item item-navigation item-outlined item-no-outline">
-
-// .item-no-outline { // Needs to be after .item-outlined to override the variable
-//   --#{$prefix}list-item-border-color: initial;
-// }
-
 .item-no-divider { // Needs to be after .item-outlined to override the variable
   --#{$prefix}list-item-border-color: transparent;
 }
