@@ -304,24 +304,24 @@
 }
 
 .item-status-positive {
-  --#{$prefix}list-item-icon: var(--#{$prefix}success-icon);
+  --#{$prefix}list-item-icon: var(--#{$prefix}alert-success-icon);
   --#{$prefix}list-item-icon-color: #{$ouds-color-content-status-positive};
 }
 
 .item-status-info {
-  --#{$prefix}list-item-icon: var(--#{$prefix}info-icon);
+  --#{$prefix}list-item-icon: var(--#{$prefix}alert-info-icon);
   --#{$prefix}list-item-icon-color: #{$ouds-color-content-status-info};
 }
 
 .item-status-warning {
-  --#{$prefix}list-item-icon: var(--#{$prefix}warning-icon);
+  --#{$prefix}list-item-icon: var(--#{$prefix}alert-warning-icon);
   --#{$prefix}list-item-icon-color: var(--#{$prefix}icon-color-content-status-warning-external-shape);
-  --#{$prefix}list-item-icon-internal: var(--#{$prefix}warning-internal-icon);
+  --#{$prefix}list-item-icon-internal: var(--#{$prefix}alert-warning-internal-icon);
   --#{$prefix}list-item-icon-color-internal: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
 }
 
 .item-status-negative {
-  --#{$prefix}list-item-icon: var(--#{$prefix}error-icon);
+  --#{$prefix}list-item-icon: var(--#{$prefix}alert-error-icon);
   --#{$prefix}list-item-icon-color: #{$ouds-color-content-status-negative};
 }
 

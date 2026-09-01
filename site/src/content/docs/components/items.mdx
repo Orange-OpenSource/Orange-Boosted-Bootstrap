@@ -151,7 +151,7 @@ The basic structure includes:
 
 In case of an important navigation of the page, a wrapping `<nav aria-label="">` element can be added around the navigation items.
 
-In case of a complex navigation item, you probably should link all the texts and components together by adding `[aria-describedby]` on the link in order to provide a valid accessible name for the link. The `[aria-describedby]` should point to the ids of the elements that contain the texts describing the link.
+In case of a complex navigation item, you probably should link all the texts and components together by adding `[aria-labelledby]` on the link in order to provide a valid accessible name for the link. The `[aria-labelledby]` should point to the ids of the elements that contain the texts labelling the link.
 
 In case there is no interactive element inside, you may want to [wrap the entire `.item-container` in an `<a>`](#wrapping-link) element.
 
@@ -160,7 +160,7 @@ In case there is no interactive element inside, you may want to [wrap the entire
       <div class="item-content">
         <div class="item-text-container">
           <p class="item-overline" id="accessible-item-overline">Overline</p>
-          <a href="#" class="item-label item-interactive" aria-describedby="accessible-item-overline accessible-item-extra-label accessible-item-description">Label</a>
+          <a href="#" class="item-label item-interactive" id="accessible-item-label" aria-labelledby="accessible-item-overline accessible-item-label accessible-item-extra-label accessible-item-description">Label</a>
           <p class="item-extra-label" id="accessible-item-extra-label">Extra label</p>
           <p class="item-description" id="accessible-item-description">Description</p>
         </div>
@@ -169,8 +169,6 @@ In case there is no interactive element inside, you may want to [wrap the entire
   </div>`} />
 
 Make sure that every text is wrapped inside a semantic element, adapted to its context of use such as `<p>` or `<h*>`.
-
-For every item, the vocalization order of the item should be worked on.
 
 ## Card items
 
@@ -1148,7 +1146,7 @@ Add `.item-external` to the `.item-navigation` to indicate that the item is an e
 Optionally, the `<a>` element can wrap the entire `.item-container` instead of just the label.
 
 <Callout type="info" title="Accessibility">
-  Screen readers will read the entire item as a link. You can use the `.visually-hidden` text to provide additional context if needed. You won't need any `[aria-describedby]` as stated in our [accessibility section](#accessibility).
+  Screen readers will read the entire item as a link. You can use the `.visually-hidden` text to provide additional context if needed. You won't need any `[aria-labelledby]` as stated in our [accessibility section](#accessibility).
 
   Avoid using any interactive elements inside the item when using this variant, as it will create nested interactive elements which is not valid HTML and can cause accessibility issues.
 </Callout>
@@ -1168,7 +1166,7 @@ Optionally, the `<a>` element can wrap the entire `.item-container` instead of j
 `.item-slot-focusable` can be added to the slot or the interactive element to be able to interact with it.
 
 <Callout type="negative">
-  The interactive slot should be avoided inside the navigation item as much as possible.
+  The interactive slot should be avoided inside the navigation item as much as possible. Prefer to have only Navigation item or multiple links inside a static item. So here, just like in the [alignment section](#alignment).
 </Callout>
 
 <Example buttonLabel="navigation card item with focusable slot" class="d-flex flex-column gap-medium" code={`<div class="item item-navigation">
