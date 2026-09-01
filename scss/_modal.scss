@@ -27,17 +27,23 @@
     height: calc(100vh - 2 * var(--#{$prefix}modal-grid-margin));
   }
 
-  &.modal-sticky-actions > .modal-footer {
-    position: sticky;
-    bottom: 0;
+  &.modal-sticky-actions .modal-footer {
     padding-block: $ouds-space-padding-block-xlarge;
     border-top: $ouds-border-width-default solid $ouds-color-border-muted;
   }
 }
 
+.modal-content {
+  display: grid;
+  grid-template-rows: auto 1fr auto; // header, body, footer
+  width: 100%;
+  height: 100%;
+}
+
 .modal-body {
   padding-block: $ouds-space-padding-block-large $ouds-space-padding-block-medium;
   padding-inline: $ouds-space-padding-inline-2xlarge;
+  overflow-y: auto;
 
   * {
     max-width: 100%;
