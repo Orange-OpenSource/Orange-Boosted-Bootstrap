@@ -16,9 +16,9 @@ Use:
 
 ## Minimal example
 
-<Example buttonLabel="dialog modal full" code={`<dialog id="demoModal" class="modal" aria-label="Demo modal">
+<Example buttonLabel="dialog modal full" code={`<dialog id="demoModal" class="modal" aria-label="Demo modal" closedby="any">
     <div class="modal-header">
-      <h3>Modal title</h3>
+      <h3 class="modal-title">Modal title</h3>
       <button type="button" class="btn btn-close" commandfor="demoModal" command="close">
         <span class="visually-hidden">Close</span>
       </button>
@@ -37,10 +37,36 @@ Use:
     <div class="modal-footer">
       <button type="button" class="btn btn-strong" commandfor="demoModal" command="close">Confirm</button>
       <button type="button" class="btn btn-minimal" commandfor="demoModal" command="close">Cancel</button>
+      <button type="button" class="link" commandfor="demoModal" command="close">More</button>
     </div>
   </dialog>
 
   <button type="button" class="btn btn-default" commandfor="demoModal" command="show-modal">
+    Open modal
+  </button>`} />
+
+
+## Sticky actions
+
+<Example buttonLabel="dialog modal sticky actions" code={`<dialog id="demoModalStickyActions" class="modal modal-sticky-actions" aria-label="Demo modal" closedby="any">
+    <div class="modal-header">
+      <h3 class="modal-title">Modal title</h3>
+      <button type="button" class="btn btn-close" commandfor="demoModalStickyActions" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages noe.</p>
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-strong" commandfor="demoModalStickyActions" command="close">Confirm</button>
+      <button type="button" class="btn btn-minimal" commandfor="demoModalStickyActions" command="close">Cancel</button>
+      <button type="button" class="link" commandfor="demoModalStickyActions" command="close">More</button>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="demoModalStickyActions" command="show-modal">
     Open modal
   </button>`} />
 

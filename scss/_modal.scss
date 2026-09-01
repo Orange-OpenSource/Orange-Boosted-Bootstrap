@@ -2,11 +2,10 @@
   --#{$prefix}modal-column-count: 12;
   --#{$prefix}modal-grid-margin: #{$ouds-space-fixed-medium};
 
-  position: relative;
-  flex-direction: column;
   width: calc((100vw - 2 * var(--#{$prefix}modal-grid-margin)) * var(--#{$prefix}modal-column-count) / 12);
   max-width: unset;
-  margin-inline: $ouds-space-fixed-medium;
+  max-height: calc(100vh - 2 * var(--#{$prefix}modal-grid-margin));
+  margin: auto $ouds-space-fixed-medium;
   overscroll-behavior: contain;
   background-color: #{$modal-content-bg};
   @include border-radius(var(--#{$prefix}modal-border-radius));
@@ -15,11 +14,24 @@
     --#{$prefix}modal-column-count: 10;
     --#{$prefix}modal-margin-inline: var(--#{$prefix}grid-margin);
 
-    margin-inline: auto;
+    max-height: 90vh;
+    margin: auto;
   }
 
   @include media-breakpoint-up(xl) {
     --#{$prefix}modal-column-count: 8;
+  }
+
+  &.modal-full-height,
+  &.modal-sticky-actions {
+    height: calc(100vh - 2 * var(--#{$prefix}modal-grid-margin));
+  }
+
+  &.modal-sticky-actions > .modal-footer {
+    position: sticky;
+    bottom: 0;
+    padding-block: $ouds-space-padding-block-xlarge;
+    border-top: $ouds-border-width-default solid $ouds-color-border-muted;
   }
 }
 
@@ -87,20 +99,27 @@
   flex-wrap: wrap;
   gap: var(--#{$prefix}space-scaled-small);
   align-items: center; // vertically center
-  justify-content: flex-start; // align action buttons to the end
   padding-inline: $ouds-space-padding-inline-2xlarge;
   padding-top: $ouds-space-padding-block-2xlarge;
   padding-bottom: calc($ouds-space-padding-block-medium + $ouds-space-padding-block-xlarge);
-  background-color: var(--#{$prefix}modal-footer-bg);
+  background-color: #{$modal-content-bg};
 
   @include media-breakpoint-down(md) {
     > * {
       width: 100%; // make buttons full width on small screens
+    }
+
+    > .link {
+      justify-content: center; // align action buttons to the end
     }
   }
 
   @include media-breakpoint-up(md) {
     flex-direction: row-reverse; // reverse order of buttons to have primary on the right
     justify-content: flex-start; // align action buttons to the end
+
+    > .link {
+      margin-inline-end: auto; // push link to the left of the buttons
+    }
   }
 }
