@@ -25,8 +25,8 @@ Requires a Sass compiler and Autoprefixer for source files.
 Import in JS:
 
 ```js
-import "@ouds/web-orange/dist/css/ouds-web.min.css";
-import * as oudsWeb from "@ouds/web-common";
+import '@ouds/web-orange/dist/css/ouds-web.min.css'
+import * as oudsWeb from '@ouds/web-common'
 // or: import { Toast, Modal } from "@ouds/web-common";
 ```
 

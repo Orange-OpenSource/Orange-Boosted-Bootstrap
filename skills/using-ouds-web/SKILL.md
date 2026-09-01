@@ -59,8 +59,8 @@ npm install @ouds/web-common @ouds/web-orange
 Then import the CSS and JS in your app, e.g.:
 
 ```js
-import "@ouds/web-orange/dist/css/ouds-web.min.css";
-import * as oudsWeb from "@ouds/web-common";
+import '@ouds/web-orange/dist/css/ouds-web.min.css'
+import * as oudsWeb from '@ouds/web-common'
 // or: import { Toast, Modal } from "@ouds/web-common";
 ```
 

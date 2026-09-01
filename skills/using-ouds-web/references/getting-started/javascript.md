@@ -23,10 +23,11 @@ OUDS Web CSS works with any framework.
 
 ```html
 <script type="module">
-  import { Toast } from "ouds-web.esm.min.js";
-  Array.from(document.querySelectorAll(".toast")).forEach(
-    (toastNode) => new Toast(toastNode),
-  );
+  import { Toast } from '@ouds/web-common/dist/js/ouds-web.esm.min.js'
+
+for (const toastNode of Array.from(document.querySelectorAll('.toast'))) {
+  new Toast(toastNode)
+}
 </script>
 ```
 
@@ -43,9 +44,9 @@ For import maps with Popper:
     }
 </script>
 <script type="module">
-    import * as oudsWeb from "@ouds/web-common";
+    import * as oudsWeb from '@ouds/web-common'
 
-    new oudsWeb.Popover(document.getElementById("popoverButton"));
+new oudsWeb.Popover(document.getElementById('popoverButton'))
 </script>
 ```
 
@@ -58,10 +59,10 @@ Enable and configure plugins via HTML data attributes (preferred). Use **one set
 Custom events use infinitive (start: `show`) and past participle (end: `shown`) form:
 
 ```js
-const myModal = document.querySelector("#myModal");
-myModal.addEventListener("show.bs.modal", (event) => {
-  event.preventDefault(); // stops modal from showing
-});
+const myModal = document.querySelector('#myModal')
+myModal.addEventListener('show.bs.modal', event => {
+  event.preventDefault() // stops modal from showing
+})
 ```
 
 ## Programmatic API
@@ -85,7 +86,7 @@ Methods that start transitions return before the transition ends; listen to the 
 ### Change defaults
 
 ```js
-oudsWeb.Modal.Default.keyboard = false;
+oudsWeb.Modal.Default.keyboard = false
 ```
 
 ## Common methods
@@ -103,9 +104,9 @@ Tooltips and Popovers use a built-in sanitizer. Customize allowList or use DOMPu
 ```js
 const tooltip = new oudsWeb.Tooltip(el, {
   sanitizeFn(content) {
-    return DOMPurify.sanitize(content);
-  },
-});
+    return DOMPurify.sanitize(content)
+  }
+})
 ```
 
 ## jQuery

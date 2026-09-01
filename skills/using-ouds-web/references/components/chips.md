@@ -102,8 +102,8 @@ Add `disabled` attribute to the button.
 Toggle via `data-bs-toggle="button"`. Methods: `toggle`, `dispose`, `getInstance`, `getOrCreateInstance`.
 
 ```js
-const chip = oudsWeb.Button.getOrCreateInstance(element);
-chip.toggle();
+const chip = oudsWeb.Button.getOrCreateInstance(element)
+chip.toggle()
 ```
 
 > **Not Bootstrap:** Chips are an OUDS Web-specific component (not present in Bootstrap). Structure uses `.chips-container`, `.chip`, `.chip-filter`/`.chip-suggestion`, `.chip-interactive`. Filter chips support checkbox, radio, and button implementations.
