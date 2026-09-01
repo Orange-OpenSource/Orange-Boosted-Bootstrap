@@ -71,8 +71,8 @@ All variables use `!default`. Override before import:
 @import "../node_modules/@ouds/web-orange/scss/tokens";
 
 // Overrides
-$body-bg: #000;
-$body-color: #111;
+$body-bg: $ouds-color-bg-primary-light !default;
+$body-color: $ouds-color-content-default-light !default;
 
 @import "../node_modules/@ouds/web-common/scss/variables";
 // ... rest of imports
@@ -83,14 +83,14 @@ $body-color: #111;
 ### Modify
 
 ```scss
-$primary: #0074d9;
+$primary: $ouds-color-content-brand-primary-light;
 ```
 
 ### Add to map
 
 ```scss
 $custom-colors: (
-  "custom-color": #900,
+  "custom-color": $ouds-color-action-enabled-light,
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
 ```
