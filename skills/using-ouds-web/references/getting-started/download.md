@@ -71,10 +71,6 @@ Without Popper (if no dropdowns/tooltips needed):
 
 ```html
 <script
-  src="https://cdn.jsdelivr.net/npm/@popperjs/core/dist/umd/popper.min.js"
-  crossorigin="anonymous"
-></script>
-<script
   src="https://cdn.jsdelivr.net/npm/@ouds/web-common/dist/js/ouds-web.min.js"
   crossorigin="anonymous"
 ></script>

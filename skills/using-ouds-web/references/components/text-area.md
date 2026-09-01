@@ -10,7 +10,7 @@ Wrap `<textarea class="text-area-field">` and `<label>` in `.text-area-container
 <div class="text-area">
   <div class="text-area-container">
     <label for="myTextArea">Additional comments</label>
-    <textarea class="text-area-field" id="myTextArea"></textarea>
+    <textarea class="text-area-field" id="myTextArea" placeholder=" "></textarea>
   </div>
 </div>
 ```
@@ -34,7 +34,7 @@ Add `.text-area-container-outlined`:
 ```html
 <div class="text-area-container text-area-container-outlined">
   <label for="ta">Label</label>
-  <textarea class="text-area-field" id="ta"></textarea>
+  <textarea class="text-area-field" id="ta" placeholder=" "></textarea>
 </div>
 ```
 
@@ -79,6 +79,7 @@ Add `aria-invalid="true"` to `.text-area-field`. Add `.error-text` linked via `a
   class="text-area-field"
   aria-invalid="true"
   aria-describedby="feedback"
+  placeholder=" "
 ></textarea>
 ...
 <p class="helper-text">Helper text.</p>
@@ -95,5 +96,5 @@ Add `.is-required` to `<label>` and `required` to `<textarea>`.
 
 ```html
 <label for="ta" class="is-required">Comments</label>
-<textarea class="text-area-field" id="ta" required></textarea>
+<textarea class="text-area-field" id="ta" required placeholder=" "></textarea>
 ```

@@ -34,10 +34,6 @@ Popper is included in the bundle. To include separately (saves bytes if no dropd
 
 ```html
 <script
-  src="https://cdn.jsdelivr.net/npm/@popperjs/core/dist/umd/popper.min.js"
-  crossorigin="anonymous"
-></script>
-<script
   src="https://cdn.jsdelivr.net/npm/@ouds/web-common/dist/js/ouds-web.min.js"
   crossorigin="anonymous"
 ></script>

@@ -22,7 +22,7 @@ All text input features (leading icons, helper text, validation, outlined, prefi
       class="text-input-field"
       placeholder=" "
     />
-    <button class="btn btn-minimal btn-icon">
+    <button class="btn btn-minimal btn-icon" type="button">
       <svg aria-hidden="true">
         <use xlink:href="/path/to/sprite.svg#accessibility-vision" />
       </svg>
