@@ -1,4 +1,4 @@
-# Download
+# Installation
 
 OUDS Web is split into a common package (`@ouds/web-common`) shared by every brand, and one theme package per brand. Always install `@ouds/web-common` together with **exactly one** theme package matching the project's brand:
 
@@ -8,9 +8,11 @@ OUDS Web is split into a common package (`@ouds/web-common`) shared by every bra
 | Orange Compact | `@ouds/web-orange-compact`   | `ouds-web-orange-compact` / `ouds-web-orange-compact.sass`     |
 | Sosh           | `@ouds/web-sosh`             | `ouds-web-sosh` / `ouds-web-sosh.sass`                         |
 
-## Package managers (recommended)
+A project must never mix several themes in the same codebase — see [Themes and brands](../foundation/themes.md).
 
-### npm (recommended)
+## npm/yarn/Bun (recommended)
+
+### npm
 
 ```sh
 npm install @ouds/web-common @ouds/web-orange
@@ -23,6 +25,7 @@ Requires a Sass compiler and Autoprefixer for source files.
 Import in JS:
 
 ```js
+import "@ouds/web-orange/dist/css/ouds-web.min.css";
 import * as oudsWeb from "@ouds/web-common";
 // or: import { Toast, Modal } from "@ouds/web-common";
 ```
@@ -39,7 +42,7 @@ yarn add @ouds/web-common @ouds/web-orange
 bun add @ouds/web-common @ouds/web-orange
 ```
 
-### NuGet (.NET)
+## NuGet (.NET)
 
 ```powershell
 Install-Package ouds-web-common ouds-web-orange
@@ -57,30 +60,30 @@ Prefer the npm installation above for real projects (proper Sass customization, 
   crossorigin="anonymous"
 />
 <link
-  href="https://cdn.jsdelivr.net/npm/@ouds/web-orange/dist/css/ouds-web.min.css"
+  href="https://cdn.jsdelivr.net/npm/@ouds/web-orange@<version>/dist/css/ouds-web.min.css"
   rel="stylesheet"
   crossorigin="anonymous"
 />
 <script
-  src="https://cdn.jsdelivr.net/npm/@ouds/web-common/dist/js/ouds-web.bundle.min.js"
+  src="https://cdn.jsdelivr.net/npm/@ouds/web-common@<version>/dist/js/ouds-web.bundle.min.js"
   crossorigin="anonymous"
 ></script>
 ```
 
-Without Popper (if no dropdowns/tooltips needed):
+Popper is included in the bundle above. Without Popper (if no dropdowns/tooltips needed), use the standalone script instead:
 
 ```html
 <script
-  src="https://cdn.jsdelivr.net/npm/@ouds/web-common/dist/js/ouds-web.min.js"
+  src="https://cdn.jsdelivr.net/npm/@ouds/web-common@<version>/dist/js/ouds-web.min.js"
   crossorigin="anonymous"
 ></script>
 ```
 
-Always use `integrity` and `crossorigin="anonymous"` attributes with CDN links.
+Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving it floating, and use `crossorigin="anonymous"` with CDN links.
 
 ## Compiled download
 
-Includes compiled and minified CSS/JS bundles. No source files or documentation.
+Includes compiled and minified CSS/JS bundles. No source files or documentation. See [Contents](contents.md) for the file structure.
 
 ## Source download
 

@@ -91,10 +91,9 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 
 ### Getting started
 
-- [Introduction](references/getting-started/introduction.md) - Quick start, CDN links, JS components
-- [Download](references/getting-started/download.md) - Installation methods
+- [Installation](references/getting-started/installation.md) - npm/yarn/Bun, NuGet, CDN, compiled/source download
 - [Contents](references/getting-started/contents.md) - Compiled files structure
-- [JavaScript](references/getting-started/javascript.md) - JS plugin usage, data attributes, API
+- [JavaScript](references/getting-started/javascript.md) - Components requiring JS, plugin usage, data attributes, API
 - [Sass](references/getting-started/sass.md) - Sass customization, variables, maps, mixins
 - [Accessibility](references/getting-started/accessibility.md) - Accessibility guidelines
 - [Browsers & devices](references/getting-started/browsers-devices.md) - Supported browsers

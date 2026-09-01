@@ -1,5 +1,10 @@
 # JavaScript
 
+## Components that require JavaScript
+
+- **Alerts**: for dismissing
+- **Chips**: for toggling states
+
 ## Including plugins
 
 Include all at once with `ouds-web.js` or individually from `js/dist/*.js`. For bundlers (Webpack, Parcel, Vite), use UMD files from `/js/dist/*.js`.
