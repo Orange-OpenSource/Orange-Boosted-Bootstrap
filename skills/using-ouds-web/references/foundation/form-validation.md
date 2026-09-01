@@ -14,7 +14,16 @@ Client-side and server-side form validation with custom feedback styles.
 
 ## Client-Side Validation
 
-Use `novalidate` + JavaScript to handle submit and apply `:user-invalid` styles. Store error ID in `data-errormessage` attribute.
+Use `novalidate` + JavaScript to handle submit and apply `:user-invalid` styles.
+
+Each field references its error message via `aria-describedby`. This reference must **not** be static in the HTML — it must be **synchronized dynamically** with the field's actual validity state:
+
+- Listen only to the `input` event on each field and the `submit` event on the form (do **not** listen to `blur`, since error styles rely on `:user-invalid`, which follows the same triggering logic).
+- On each trigger, check the field's validity (`checkValidity()` or the equivalent API of the framework used in the project).
+- If invalid → ensure the error message ID is present in `aria-describedby`, preserving any other IDs already present (e.g. an existing helper text description) — `aria-describedby` can hold multiple space-separated IDs.
+- If valid → remove that ID from `aria-describedby` without touching other IDs; if the resulting list is empty, remove the attribute entirely.
+
+This logic must be implemented by the library consumer, using whatever framework the project relies on (vanilla JS, React, Vue, Angular...). OUDS Web does not ship a ready-to-use script for this.
 
 ```html
 <form class="needs-validation" novalidate>
@@ -28,7 +37,7 @@ Use `novalidate` + JavaScript to handle submit and apply `:user-invalid` styles.
         type="text"
         class="text-input-field"
         id="username"
-        data-errormessage="usernameFeedback"
+        aria-describedby="usernameFeedback"
         autocomplete="username"
         placeholder=" "
         required
@@ -44,7 +53,7 @@ Use `novalidate` + JavaScript to handle submit and apply `:user-invalid` styles.
       <select
         class="select-input-field"
         id="continent"
-        data-errormessage="continentFeedback"
+        aria-describedby="continentFeedback"
         required
       >
         <option value="" disabled selected></option>
@@ -65,7 +74,7 @@ Use `novalidate` + JavaScript to handle submit and apply `:user-invalid` styles.
           value=""
           name="title"
           id="mr"
-          data-errormessage="titleFeedback"
+          aria-describedby="titleFeedback"
           required
         />
       </div>
@@ -87,7 +96,7 @@ Use `novalidate` + JavaScript to handle submit and apply `:user-invalid` styles.
           type="checkbox"
           value=""
           id="agree"
-          data-errormessage="agreeFeedback"
+          aria-describedby="agreeFeedback"
           required
         />
       </div>
@@ -110,7 +119,7 @@ Use `novalidate` + JavaScript to handle submit and apply `:user-invalid` styles.
           role="switch"
           value=""
           id="terms"
-          data-errormessage="termsFeedback"
+          aria-describedby="termsFeedback"
           required
         />
       </div>
@@ -208,11 +217,10 @@ State "**All fields marked with an \* are mandatory.**" at top. Add `.is-require
 | `.helper-text`                | Helper/description text below inputs           |
 | `.is-required`                | Red asterisk on mandatory field labels         |
 | `.component-max-width`        | Constrains component width                     |
-| `data-errormessage`           | Data attribute storing error element ID        |
 
 ## Accessibility
 
 - Always use `<label>` linked to form elements
 - Specify validation rules via attributes: `required`, `pattern`, `min`, `minlength`
 - Add `inputmode` and `autocomplete` attributes as needed
-- Associate error messages with `aria-describedby` when fields become invalid
+- Associate error messages with `aria-describedby`, synchronizing it dynamically as the field's validity state changes (see "Client-Side Validation")
