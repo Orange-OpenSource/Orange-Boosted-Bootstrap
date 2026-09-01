@@ -86,7 +86,7 @@ $color-mode-type: data;
 
 @include color-mode(dark) {
   .element {
-    color: var(--bs-color-content-on-status--info-muted);
+    color: var(--bs-color-content-on-status-info-muted);
     background-color: var(--bs-color-surface-status-info-muted);
   }
 }

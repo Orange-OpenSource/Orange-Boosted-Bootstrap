@@ -44,7 +44,7 @@ CSS variables factorize repeated SVG data URIs to decrease file size:
 
 ```css
 body {
-  font: 1rem/1.5 var(--bs-font-body-family);
+  font: 1rem/1.5 var(--bs-body-font-family);
 }
 a {
   color: var(--bs-color-content-brand-primary);
@@ -53,7 +53,7 @@ a {
 
 ## Focus Visible Variables
 
-Custom `:focus-visible` styles via Sass and CSS variables. Remove with `outline: 0; box-shadow: none;`. Focus styles are removed for form elements.
+Custom `:focus-visible` styles are available through Sass and CSS variables. Preserve an equivalent visible focus indicator when customizing them, and use the `focus-visible()` mixin for custom interactive elements.
 
 ## Grid Breakpoints
 

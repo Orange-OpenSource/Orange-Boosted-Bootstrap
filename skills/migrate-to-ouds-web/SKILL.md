@@ -64,7 +64,7 @@ Example: if the warning mentions `.alert-success`, look up `alerts` in `using-ou
 ## Step 5 — Post-migration checklist
 
 - [ ] Review `git diff` to verify all automated replacements are correct
-- [ ] Update `package.json`: replace `boosted`/`@ob1/web` with `ouds-web` (or `@ouds/web-common` + `@ouds/web-orange`)
+- [ ] Update `package.json`: replace `boosted`/`@ob1/web` with `@ouds/web-common` plus exactly one theme package (for example, `@ouds/web-orange`)
 - [ ] Update Sass/CSS imports (e.g. `@import "boosted"` → `@import "ouds-web"`)
 - [ ] Update CDN links in HTML files (`boosted.min.css` → `ouds-web.min.css`)
 - [ ] Search for leftover `class=" "` artifacts — the tool does **not** remove empty class attributes

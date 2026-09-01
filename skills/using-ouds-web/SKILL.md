@@ -26,7 +26,7 @@ Key differences from standard Bootstrap:
 
 ## Layout priority: grid > helpers > custom CSS
 
-**Never write custom CSS, `<style>` blocks, or inline `style="..."` attributes for layout, flexbox, spacing, sizing, alignment, or positioning.** OUDS Web is a Bootstrap fork and ships both a 12-column grid and a full utility layer — writing raw CSS for layout is almost always wrong.
+**Prefer OUDS Web grid and utilities over custom CSS, `<style>` blocks, or inline styles for layout, flexbox, spacing, sizing, alignment, and positioning whenever an equivalent class exists.** OUDS Web is a Bootstrap fork and ships both a 12-column grid and a full utility layer, so custom CSS should be the fallback described below.
 
 Pick in this order:
 

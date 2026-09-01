@@ -75,7 +75,7 @@ oudsWeb.Popover.getInstance(myPopoverEl);
 oudsWeb.Popover.getOrCreateInstance(myPopoverEl, configObject);
 ```
 
-All methods are **asynchronous** (return before transition ends). Listen to events for completion.
+Methods that start transitions return before the transition ends; listen to the corresponding events for completion. Static instance methods and non-transitioning methods are synchronous.
 
 ### Change defaults
 

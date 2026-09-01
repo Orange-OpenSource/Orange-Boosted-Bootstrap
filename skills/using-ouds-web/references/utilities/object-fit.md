@@ -11,11 +11,11 @@ Control how replaced elements (`<img>`, `<video>`) are resized to fit their cont
 - `.object-fit-none`
 
 ```html
-<img src="..." class="object-fit-contain border" />
-<img src="..." class="object-fit-cover border" />
-<img src="..." class="object-fit-fill border" />
-<img src="..." class="object-fit-scale border" />
-<img src="..." class="object-fit-none border" />
+<img src="..." class="object-fit-contain border" alt="" />
+<img src="..." class="object-fit-cover border" alt="" />
+<img src="..." class="object-fit-fill border" alt="" />
+<img src="..." class="object-fit-scale border" alt="" />
+<img src="..." class="object-fit-none border" alt="" />
 ```
 
 ## Responsive variants
@@ -34,5 +34,5 @@ Control how replaced elements (`<img>`, `<video>`) are resized to fit their cont
 Works on `<video>` elements the same way:
 
 ```html
-<video src="..." class="object-fit-cover" autoplay></video>
+<video src="..." class="object-fit-cover" controls></video>
 ```

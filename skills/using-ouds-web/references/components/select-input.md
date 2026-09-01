@@ -110,9 +110,7 @@ For determinate loading, set `style="--bs-loading-time: 5s;"` on the container.
 <svg viewBox="0 0 40 40" class="loader" aria-hidden="true">
   <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
 </svg>
-<span role="status" id="loadMsg" class="visually-hidden d-none"
-  >Loading...</span
->
+<span role="status" id="loadMsg" class="visually-hidden">Loading...</span>
 ```
 
 Remove loading class, set final status message, and refocus select when done.

@@ -52,7 +52,7 @@ Bootstrap compatibility mode available via `ouds-web-bootstrap.css`.
 ### Buttons
 
 - New variants: `.btn-default`, `.btn-strong`, `.btn-brand`, `.btn-minimal`, `.btn-negative`
-- Navigation buttons: `.btn-next`, `.btn-prev`
+- Navigation buttons: `.btn-next`, `.btn-previous`
 - Colored backgrounds: `.btn-on-colored-bg`
 - Removed: `.btn-primary`, `.btn-secondary`, `.btn-outline-*`, `.btn-lg`, `.btn-sm` (available with Bootstrap compat)
 

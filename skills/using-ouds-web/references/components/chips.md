@@ -35,7 +35,7 @@ Use `<button>` with `data-bs-toggle="button"`. Style applies on `[aria-pressed="
 
 ```html
 <li class="chip chip-filter">
-  <button class="chip-interactive" data-bs-toggle="button">Filter</button>
+  <button class="chip-interactive" data-bs-toggle="button" aria-pressed="false" type="button">Filter</button>
 </li>
 ```
 

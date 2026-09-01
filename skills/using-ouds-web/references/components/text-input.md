@@ -75,7 +75,7 @@ Place a minimal icon button (`.btn .btn-minimal .btn-icon`) after the input insi
 <div class="text-input-container">
   <label for="input">Label</label>
   <input type="text" class="text-input-field" id="input" placeholder=" " />
-  <button class="btn btn-minimal btn-icon">
+  <button type="button" class="btn btn-minimal btn-icon">
     <svg aria-hidden="true">
       <use xlink:href="/path/to/sprite.svg#heart-empty" />
     </svg>
@@ -162,9 +162,7 @@ For determinate: set `style="--bs-loading-time: 5s;"` on the container.
 <svg viewBox="0 0 40 40" class="loader" aria-hidden="true">
   <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
 </svg>
-<span role="status" id="loadMsg" class="visually-hidden d-none"
-  >Loading...</span
->
+<span role="status" id="loadMsg" class="visually-hidden">Loading...</span>
 ```
 
 Remove loading class, set final status, refocus input when done.
