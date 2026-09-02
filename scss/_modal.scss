@@ -2,6 +2,7 @@
   --#{$prefix}modal-column-count: 12;
   --#{$prefix}modal-grid-margin: #{$ouds-space-fixed-medium};
 
+  flex-direction: column; // cannot use grid because of Safari dialog limitations
   width: calc((100vw - 2 * var(--#{$prefix}modal-grid-margin)) * var(--#{$prefix}modal-column-count) / 12);
   max-width: unset;
   max-height: calc(100vh - 2 * var(--#{$prefix}modal-grid-margin));
@@ -22,6 +23,10 @@
     --#{$prefix}modal-column-count: 8;
   }
 
+  &:open {
+    display: flex;
+  }
+
   &.modal-full-height,
   &.modal-sticky-actions {
     height: calc(100vh - 2 * var(--#{$prefix}modal-grid-margin));
@@ -29,18 +34,13 @@
 
   &.modal-sticky-actions .modal-footer {
     padding-block: $ouds-space-padding-block-xlarge;
+    padding-inline: $ouds-space-padding-inline-2xlarge;
     border-top: $ouds-border-width-default solid $ouds-color-border-muted;
   }
 }
 
-.modal-content {
-  display: grid;
-  grid-template-rows: auto 1fr auto; // header, body, footer
-  width: 100%;
-  height: 100%;
-}
-
 .modal-body {
+  flex-grow: 1;
   padding-block: $ouds-space-padding-block-large $ouds-space-padding-block-medium;
   padding-inline: $ouds-space-padding-inline-2xlarge;
   overflow-y: auto;
@@ -48,15 +48,19 @@
   * {
     max-width: 100%;
   }
-}
 
-// .modal.modal-dialog-scrollable {
-//   // scss-docs-start modal-scrollable-css-vars
-//   --#{$prefix}modal-scrollable-inner-padding: #{$modal-scrollable-inner-padding}; // OUDS mod
-//   --#{$prefix}modal-scrollable-inner-margin: #{$modal-scrollable-inner-margin}; // OUDS mod
-//   --#{$prefix}modal-footer-margin-top: #{$modal-scrollable-footer-margin-top}; // OUDS mod
-//   // scss-docs-end modal-scrollable-css-vars
-// }
+  &:not(:has(.modal-footer)) > :last-child {
+    margin-bottom: 0;
+  }
+
+  &:has(.modal-footer) {
+    padding-bottom: 0;
+
+    > :nth-last-child(2) {
+      margin-bottom: $ouds-space-padding-block-medium;
+    }
+  }
+}
 
 // Modal background used by JS fallback mode
 .modal-backdrop {
@@ -80,12 +84,9 @@
 // Modal header
 // Top section of the modal with title and dismiss
 .modal-header {
-  position: sticky;
-  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   padding-inline: $ouds-space-padding-inline-2xlarge;
   padding-top: $ouds-space-padding-block-xlarge;
   background-color: var(--#{$prefix}body-bg);
@@ -105,9 +106,8 @@
   flex-wrap: wrap;
   gap: var(--#{$prefix}space-scaled-small);
   align-items: center; // vertically center
-  padding-inline: $ouds-space-padding-inline-2xlarge;
   padding-top: $ouds-space-padding-block-2xlarge;
-  padding-bottom: calc($ouds-space-padding-block-medium + $ouds-space-padding-block-xlarge);
+  padding-bottom: calc($ouds-space-padding-block-medium + $ouds-space-padding-block-2xlarge);
   background-color: #{$modal-content-bg};
 
   @include media-breakpoint-down(md) {
