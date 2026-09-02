@@ -9,8 +9,6 @@
 }
 
 .dropdown-toggle {
-  --#{$prefix}btn-padding-x: #{$dropdown-padding-x}; // OUDS mod
-
   white-space: nowrap;
   // Generate the caret automatically
   @include caret();
@@ -24,8 +22,6 @@
   // OUDS mod: no --#{$prefix}dropdown-padding-x
   --#{$prefix}dropdown-padding-y: #{$dropdown-padding-y};
   --#{$prefix}dropdown-spacer: #{$dropdown-spacer};
-  --#{$prefix}dropdown-font-size: #{$dropdown-font-size};
-  --#{$prefix}dropdown-line-height: #{$dropdown-line-height}; // OUDS mod
   --#{$prefix}dropdown-color: #{$dropdown-color};
   --#{$prefix}dropdown-bg: #{$dropdown-bg};
   --#{$prefix}dropdown-border-color: #{$dropdown-border-color};
@@ -55,16 +51,15 @@
   min-width: var(--#{$prefix}dropdown-min-width);
   padding: var(--#{$prefix}dropdown-padding-y) var(--#{$prefix}dropdown-padding-y);
   margin: 0; // Override default margin of ul
-  font-size: var(--#{$prefix}dropdown-font-size);
-  line-height: var(--#{$prefix}dropdown-line-height); // OUDS mod
   color: var(--#{$prefix}dropdown-color);
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
   background-color: var(--#{$prefix}dropdown-bg);
   background-clip: padding-box;
   border: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
+  @include get-font-size("label-large", true);
   @include border-radius(var(--#{$prefix}dropdown-border-radius));
-  @include box-shadow(var(--#{$prefix}dropdown-box-shadow));
+  box-shadow: var(--#{$prefix}dropdown-box-shadow);
 
   &[data-bs-popper] {
     top: 100%;
@@ -77,11 +72,11 @@
     > li:first-child .dropdown-item {
       @include border-top-radius(var(--#{$prefix}dropdown-inner-border-radius));
     }
+
     > .dropdown-item:last-child,
     > li:last-child .dropdown-item {
       @include border-bottom-radius(var(--#{$prefix}dropdown-inner-border-radius));
     }
-
   }
 }
 
@@ -233,11 +228,11 @@
 // Dropdown section headers
 .dropdown-header {
   display: block;
-  padding: var(--#{$prefix}dropdown-header-padding-y) var(--#{$prefix}dropdown-header-padding-x);
+  padding: var(--#{$prefix}dropdown-header-padding-y) var(--#{$prefix}dropdown-header-padding-x) calc(var(--#{$prefix}dropdown-header-padding-y) + .125rem); // OUDS mod
   margin-bottom: 0; // for use with heading elements
-  font-size: $font-size-sm;
   color: var(--#{$prefix}dropdown-header-color);
   white-space: nowrap; // as with > li > a
+  @include get-font-size("label-xlarge", true);
 }
 
 // Dropdown text
@@ -246,21 +241,3 @@
   padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x);
   color: var(--#{$prefix}dropdown-link-color);
 }
-
-// OUDS mod: deprecated in OUDS Web, kept for Bootstrap compatibility
-// Dark dropdowns
-.dropdown-menu-dark {
-  --#{$prefix}dropdown-color: #{$dropdown-dark-color};
-  --#{$prefix}dropdown-bg: #{$dropdown-dark-bg};
-  --#{$prefix}dropdown-border-color: #{$dropdown-dark-border-color};
-  --#{$prefix}dropdown-box-shadow: #{$dropdown-dark-box-shadow};
-  --#{$prefix}dropdown-link-color: #{$dropdown-dark-link-color};
-  --#{$prefix}dropdown-link-hover-color: #{$dropdown-dark-link-hover-color};
-  --#{$prefix}dropdown-divider-bg: #{$dropdown-dark-divider-bg};
-  --#{$prefix}dropdown-link-hover-bg: #{$dropdown-dark-link-hover-bg};
-  --#{$prefix}dropdown-link-active-color: #{$dropdown-dark-link-active-color};
-  --#{$prefix}dropdown-link-active-bg: #{$dropdown-dark-link-active-bg};
-  --#{$prefix}dropdown-link-disabled-color: #{$dropdown-dark-link-disabled-color};
-  --#{$prefix}dropdown-header-color: #{$dropdown-dark-header-color};
-}
-// End mod

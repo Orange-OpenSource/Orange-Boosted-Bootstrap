@@ -1379,50 +1379,36 @@ $dropdown-padding-y:                0 !default; // OUDS mod: instead of `.5rem`
 $dropdown-spacer:                   0 !default; // OUDS mod: instead of `.125rem`
 $dropdown-font-size:                $font-size-base !default;
 $dropdown-line-height:              $line-height-base !default; // OUDS mod
-$dropdown-color:                    var(--#{$prefix}body-color) !default;
-$dropdown-bg:                       var(--#{$prefix}body-bg) !default;
+$dropdown-color:                    var(--#{$prefix}color-content-default) !default;
+$dropdown-bg:                       var(--#{$prefix}color-bg-primary) !default;
 $dropdown-border-color:             var(--#{$prefix}color-border-default) !default; // OUDS mod: instead of `var(--#{$prefix}border-color-translucent)`
 $dropdown-border-radius:            var(--#{$prefix}border-radius) !default;
 $dropdown-border-width:             var(--#{$prefix}border-width) !default;
-$dropdown-inner-border-radius:      0 !default; // OUDS mod: instead of `calc(#{$dropdown-border-radius} - #{$dropdown-border-width})`
+$dropdown-inner-border-radius:      calc(#{$dropdown-border-radius} - #{$dropdown-border-width}) !default;
 $dropdown-divider-bg:               $dropdown-border-color !default;
-$dropdown-divider-margin-y:         $spacer * .25 !default; // OUDS mod: instead of `$spacer * .5`
-$dropdown-box-shadow:               var(--#{$prefix}box-shadow) !default;
+$dropdown-divider-margin-y:         $ouds-space-fixed-2xsmall !default; // OUDS mod: instead of `$spacer * .5`
+$dropdown-box-shadow:               $ouds-elevation-elevated !default;
 
 $dropdown-link-color:               null !default; // OUDS mod: instead of `var(--#{$prefix}body-color)`
 $dropdown-link-hover-color:         $dropdown-link-color !default;
-$dropdown-link-hover-bg:            var(--#{$prefix}secondary-bg) !default; // OUDS mod: instead of `var(--#{$prefix}tertiary-bg)`
+$dropdown-link-hover-bg:            var(--#{$prefix}color-action-support-hover) !default; // OUDS mod: instead of `var(--#{$prefix}tertiary-bg)`
 
 $dropdown-link-active-color:        $dropdown-link-color !default; // OUDS mod: instead of `$component-active-color`
 $dropdown-link-active-bg:           var(--#{$prefix}color-action-primary-pressed) !default; // OUDS mod: instead of `$component-active-bg`
 
 $dropdown-link-disabled-color:      var(--#{$prefix}color-content-disabled) !default; // OUDS mod: instead of `var(--#{$prefix}tertiary-color)`
 
-$dropdown-item-padding-y:           $spacer * .5 !default; // OUDS mod: instead of `$spacer * .25`
-$dropdown-item-padding-x:           $spacer * .5 !default; // OUDS mod: instead of `$spacer`
+$dropdown-item-padding-y:           $ouds-space-fixed-xsmall !default; // OUDS mod: instead of `$spacer * .25`
+$dropdown-item-padding-x:           $ouds-space-fixed-small !default; // OUDS mod: instead of `$spacer`
 
 $dropdown-header-color:             null !default; // OUDS mod: instead of `$gray-600`
 $dropdown-header-padding-x:         $dropdown-item-padding-x !default;
-$dropdown-header-padding-y:         $spacer !default; // OUDS mod: instead of `$dropdown-padding-y`
+$dropdown-header-padding-y:         $dropdown-item-padding-y !default; // OUDS mod: instead of `$dropdown-padding-y`
 // fusv-disable
 $dropdown-header-padding:           $dropdown-header-padding-y $dropdown-header-padding-x !default; // Deprecated in Bootstrap v5.2.0
 // fusv-enable
 // scss-docs-end dropdown-variables
 
-// OUDS mod: deprecated all `$dropdown-dark-*` in OUDS Web, kept for Bootstrap compatibility
-$dropdown-dark-color:               $white !default; // OUDS mod
-$dropdown-dark-bg:                  $black !default; // OUDS mod
-$dropdown-dark-border-color:        $gray-700 !default; // OUDS mod
-$dropdown-dark-divider-bg:          $dropdown-dark-border-color !default; // OUDS mod
-$dropdown-dark-box-shadow:          null !default;
-$dropdown-dark-link-color:          $dropdown-dark-color !default;
-$dropdown-dark-link-hover-color:    $white !default;
-$dropdown-dark-link-hover-bg:       $gray-700 !default; // OUDS mod
-$dropdown-dark-link-active-color:   $black !default; // OUDS mod
-$dropdown-dark-link-active-bg:      $white !default; // OUDS mod
-$dropdown-dark-link-disabled-color: $gray-700 !default; // OUDS mod
-$dropdown-dark-header-color:        $white !default; // OUDS mod
-// End mod
 
 // Pagination
 
