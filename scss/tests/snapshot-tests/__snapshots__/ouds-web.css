@@ -10104,24 +10104,24 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .item-status-positive {
-  --bs-list-item-icon: var(--bs-success-icon);
+  --bs-list-item-icon: var(--bs-alert-success-icon);
   --bs-list-item-icon-color: var(--bs-color-content-status-positive);
 }
 
 .item-status-info {
-  --bs-list-item-icon: var(--bs-info-icon);
+  --bs-list-item-icon: var(--bs-alert-info-icon);
   --bs-list-item-icon-color: var(--bs-color-content-status-info);
 }
 
 .item-status-warning {
-  --bs-list-item-icon: var(--bs-warning-icon);
+  --bs-list-item-icon: var(--bs-alert-warning-icon);
   --bs-list-item-icon-color: var(--bs-icon-color-content-status-warning-external-shape);
-  --bs-list-item-icon-internal: var(--bs-warning-internal-icon);
+  --bs-list-item-icon-internal: var(--bs-alert-warning-internal-icon);
   --bs-list-item-icon-color-internal: var(--bs-icon-color-content-status-warning-internal-shape);
 }
 
 .item-status-negative {
-  --bs-list-item-icon: var(--bs-error-icon);
+  --bs-list-item-icon: var(--bs-alert-error-icon);
   --bs-list-item-icon-color: var(--bs-color-content-status-negative);
 }
 
