@@ -9,7 +9,6 @@ types:
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
-import { getMode, getTokenValue } from '@libs/sass-variables'
 
 ## Overview
 
@@ -20,7 +19,7 @@ import { getMode, getTokenValue } from '@libs/sass-variables'
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
-          <button class="icon icon-interactive" style="width: 32px" aria-label="Default interactive icon">
+          <button class="icon-interactive" style="width: 32px" aria-label="Default interactive icon">
             <svg aria-hidden="true">
               <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
             </svg>
@@ -34,7 +33,7 @@ import { getMode, getTokenValue } from '@libs/sass-variables'
 
 ## Accessibility (semantics)
 
-The `.icon` classes are designed to be used with the `<button>` element, but can be used on `<a>` elements. You should use any semantic element that best fits the context to appropriately convey its purpose to assistive technologies such as screen readers.
+The `.icon-interactive` classes are designed to be used with the `<button>` element, but can be used on `<a>` elements. You should use any semantic element that best fits the context to appropriately convey its purpose to assistive technologies such as screen readers.
 In particular, do not forget to add an `aria-label` since there is no discernible text for screen reader users.
 
 Use a `<button>` element for actions or for an element that triggers an in-page functionality (like collapsing content), as it is the most semantically correct and accessible choice.
@@ -43,13 +42,13 @@ Use an `<a>` element only for navigation purpose; it must include an `href` attr
 
 Generally speaking, you should always ask yourself which tag is appropriate for your specific context. The visual rendering will remain the same anyway:
 
-<Example buttonLabel="icons semantics" code={`<button class="icon icon-interactive" style="width: 32px" aria-label="Button icon">
+<Example buttonLabel="icons semantics" code={`<button class="icon-interactive" style="width: 32px" aria-label="Button icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </button>
 
-  <a class="icon icon-interactive" style="width: 32px" href="#" aria-label="Link icon">
+  <a class="icon-interactive" style="width: 32px" href="#" aria-label="Link icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -59,7 +58,7 @@ Generally speaking, you should always ask yourself which tag is appropriate for 
 
 Interactive icon is a UI element that triggers an action or event. It comes in various states to convey emphasis.
 
-<Example buttonLabel="interactive icon" class="bd-example" code={`<button class="icon icon-interactive" style="width: 32px" aria-label="Default interactive icon">
+<Example buttonLabel="interactive icon" class="bd-example" code={`<button class="icon-interactive" style="width: 32px" aria-label="Default interactive icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -71,7 +70,7 @@ Interactive icon is a UI element that triggers an action or event. It comes in v
 
 Make icons inactive by adding the `[disabled]` boolean attribute to any `<button>` element. Disabled icons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
-<Example buttonLabel="disabled interactive icon" class="bd-example" code={`<button class="icon icon-interactive" style="width: 32px" disabled aria-label="Disabled interactive button icon">
+<Example buttonLabel="disabled interactive icon" class="bd-example" code={`<button class="icon-interactive" style="width: 32px" disabled aria-label="Disabled interactive button icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -82,7 +81,7 @@ Disabled icons using the `<a>` element behave a bit different:
 - Disabled icons using `<a>` must include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies, to make it visually appear disabled and disable all `pointer-events`.
 - Disabled icons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning]([[docsref:/components/links#disabled-link-accessibility-warning]]).
 
-<Example buttonLabel="disabled icon links" code={`<a href="#" class="icon icon-interactive" style="width: 32px" aria-disabled="true" tabindex="-1" aria-label="Disabled interactive link icon">
+<Example buttonLabel="disabled icon links" code={`<a href="#" class="icon-interactive" style="width: 32px" aria-disabled="true" tabindex="-1" aria-label="Disabled interactive link icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -98,7 +97,7 @@ To make an animated loading state icon, you will add in your standard icon:
 
 For example, before loading, your icon could be like this:
 
-  <Example buttonLabel="loading interactive icon before loading" class="bd-example" code={`<button class="icon icon-interactive" style="width: 32px" aria-label="Before loading interactive icon">
+  <Example buttonLabel="loading interactive icon before loading" class="bd-example" code={`<button class="icon-interactive" style="width: 32px" aria-label="Before loading interactive icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -122,7 +121,7 @@ At the end of the loading, you should:
 - Set a final status message in `<span>`, indicating the loading has ended (so we don’t add again `.d-none` on this status message).
 - Put the focus back on the icon to ensure similar behavior across browsers and not lose the user after changes.
 
-<Example buttonLabel="loading interactive icon currently loading" class="bd-example" code={`<button class="icon icon-interactive loading-indeterminate" style="width: 32px" disabled aria-label="Indeterminate loading interactive icon">
+<Example buttonLabel="loading interactive icon currently loading" class="bd-example" code={`<button class="icon-interactive loading-indeterminate" style="width: 32px" disabled aria-label="Indeterminate loading interactive icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -132,7 +131,7 @@ At the end of the loading, you should:
     <span role="status" id="loading-icon-msg-1" class="visually-hidden d-none"></span>
   </button>
 
-  <button class="icon icon-interactive loading-determinate" style="width: 32px; --bs-loading-time: 5s;" disabled aria-label="Determinate loading interactive icon">
+  <button class="icon-interactive loading-determinate" style="width: 32px; --bs-loading-time: 5s;" disabled aria-label="Determinate loading interactive icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -148,7 +147,7 @@ At the end of the loading, you should:
 <SkeletonRedirect component="interactive icon" />
 
 <Example buttonLabel="skeleton interactive icon" class="bd-example" code={`<div aria-busy="${true}" inert>
-    <button class="icon icon-interactive" style="width: 32px" aria-label="Skeleton interactive icon">
+    <button class="icon-interactive" style="width: 32px" aria-label="Skeleton interactive icon">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
