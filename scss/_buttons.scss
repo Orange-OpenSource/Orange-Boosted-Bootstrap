@@ -124,7 +124,7 @@
   }
 
   // OUDS mod: loading buttons
-  @include loader($loading-color: var(--#{$prefix}btn-loading-color)) {
+  @include loader($loading-color: var(--#{$prefix}btn-loading-color), $loading-size: var(--#{$prefix}btn-loading-size)) {
     background-color: var(--#{$prefix}btn-loading-bg);
     border-color: var(--#{$prefix}btn-loading-border-color);
   }
