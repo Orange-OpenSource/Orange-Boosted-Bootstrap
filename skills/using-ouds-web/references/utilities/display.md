@@ -9,6 +9,8 @@ Responsive display utility classes to toggle the CSS `display` property.
 
 > **Not Bootstrap:** OUDS Web breakpoints are `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl` (the base `2xs` has no abbreviation). Bootstrap uses `sm`, `md`, `lg`, `xl`, `xxl`.
 
+> **Not Tailwind:** despite the `breakpoint:` prefix looking like Tailwind's variants, the utility is still `d-none`/`d-flex` (Bootstrap-style), not Tailwind's `hidden`/`flex`. See [Breakpoints](../layout/breakpoints.md#not-tailwind).
+
 ## Values
 
 `none`, `inline`, `inline-block`, `block`, `grid`, `inline-grid`, `table`, `table-cell`, `table-row`, `flex`, `inline-flex`

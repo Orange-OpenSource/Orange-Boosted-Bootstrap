@@ -23,6 +23,8 @@
 - **Gutters**: responsive, use `.gx-*`, `.gy-*`, `.g-*` classes with OUDS spacing tokens
 - **Class prefix per breakpoint**: `.col-` (base), `.xs:col-`, `.sm:col-`, `.md:col-`, `.lg:col-`, `.xl:col-`, `.2xl:col-`, `.3xl:col-`
 
+> **Not Tailwind:** the `breakpoint:` prefix resembles Tailwind's variants, but this is still a 12-column `col-*` grid (Bootstrap-style), not Tailwind's `grid-cols-*`/fractional widths (`w-1/2`). See [Breakpoints](breakpoints.md#not-tailwind).
+
 With `$enable-bootstrap-compatibility: true`, `.col-xxl-*` is also available.
 
 ## Auto-Layout Columns

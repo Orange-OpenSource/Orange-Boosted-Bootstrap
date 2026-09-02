@@ -2,6 +2,8 @@
 
 Configure element positioning. Not responsive (except sticky variants).
 
+> The sticky variants below use the `{breakpoint}:` prefix — see [Breakpoints](../layout/breakpoints.md#not-tailwind) for the syntax and a note on why this isn't Tailwind.
+
 ## Position values
 
 ```html

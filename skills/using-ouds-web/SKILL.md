@@ -13,6 +13,12 @@ Key differences from standard Bootstrap:
 
 - **8 breakpoints** instead of 6: `2xs`, `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`
 - **Breakpoint prefix syntax** (v1.3.0+): responsive classes use `{breakpoint}:{utility}-{value}` prefix format, **not** the Bootstrap infix format `{utility}-{breakpoint}-{value}`. Example: `md:d-none`, `lg:col-6`, `sm:flex-row` (not `d-md-none`, `col-lg-6`, `flex-sm-row`)
+  > **This is not Tailwind CSS.** The `breakpoint:` prefix *looks* like Tailwind's responsive variants (`md:flex`, `lg:hidden`), but the resemblance stops at the colon. Utility names, values, and the delivery mechanism are still Bootstrap/OUDS, not Tailwind:
+  > - Utility names are Bootstrap-style, not Tailwind's: `d-flex`/`d-none` (not `flex`/`hidden`), `col-6` (not `grid-cols-6` / `w-1/2`), `float-end` (not `float-right`).
+  > - Values are OUDS **semantic design tokens**, not Tailwind's numeric scale: `p-medium`, `gap-xsmall`, `mb-large` (not `p-4`, `gap-2`, `mb-8`).
+  > - There is **no arbitrary-value bracket syntax** (no `w-[327px]`, `bg-[#fff]`) — only the fixed, pre-defined class set.
+  > - There is **no Tailwind config file, no JIT/on-demand compiler, no `@apply`**: classes are precompiled and shipped in the theme's CSS bundle, exactly like Bootstrap.
+  > - See [Breakpoints](references/layout/breakpoints.md#not-tailwind) for the full comparison.
 - **OUDS design tokens** for spacing, typography, and colors (e.g., `none`, `3xsmall`, `2xsmall`, `xsmall`, `small`, `medium`, `large`, `xlarge`, `2xlarge`, `3xlarge`)
 - **Semantic color system** with `bg-surface-*`, `text-*`, `border-*` token-based classes
 - **4 color modes**: `light`, `dark`, `root`, `root-inverted` (set via `data-bs-theme`)

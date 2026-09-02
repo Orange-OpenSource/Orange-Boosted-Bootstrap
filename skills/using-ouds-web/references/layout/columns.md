@@ -2,6 +2,8 @@
 
 Alignment, ordering, and offsetting via the flexbox grid system.
 
+> Responsive examples below use the `{breakpoint}:` prefix — see [Breakpoints](breakpoints.md#not-tailwind) for the syntax and a note on why this isn't Tailwind.
+
 ## Alignment
 
 ### Vertical Alignment (on row)

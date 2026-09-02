@@ -4,6 +4,8 @@ Responsive margin, padding, and gap utilities.
 
 > **Not Bootstrap:** OUDS Web uses named spacing tokens instead of Bootstrap's numeric `0`-`5` scale. Two systems exist: **fixed** (pixel-based, constant across breakpoints) and **scaled** (responsive, changes per breakpoint).
 
+> **Not Tailwind:** the `{breakpoint}:` prefix looks like Tailwind's variants, but values are semantic tokens (`p-medium`, `gap-small`), not Tailwind's numeric scale (`p-4`, `gap-2`). See [Breakpoints](../layout/breakpoints.md#not-tailwind).
+
 ## Fixed spacing
 
 Format: `{property}{sides}-{size}` (base) or `{breakpoint}:{property}{sides}-{size}` (responsive)

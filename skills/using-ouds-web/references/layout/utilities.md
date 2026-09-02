@@ -2,6 +2,8 @@
 
 Quick reference for layout-related utilities.
 
+> **Not Tailwind:** many of these utilities support a `{breakpoint}:` responsive prefix (e.g. `md:d-block`) that resembles Tailwind's variant syntax, but class names and values remain Bootstrap/OUDS (`d-flex`, `gap-medium`), not Tailwind's (`flex`, `gap-4`). See [Breakpoints](breakpoints.md#not-tailwind).
+
 ## Layout decision table
 
 OUDS Web is a Bootstrap fork: it has both the 12-column grid (`.row`/`.col-*`) and a full layout utility layer (flex, stack, position, display...). Pick the right tool with this priority: **1. Grid, 2. Helpers, 3. Custom CSS.**

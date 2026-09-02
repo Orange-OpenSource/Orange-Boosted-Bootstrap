@@ -23,6 +23,22 @@
 >
 > The base `2xs` breakpoint has no prefix — base classes apply from `2xs` up (e.g. `.d-none`).
 
+<a id="not-tailwind"></a>
+
+> **Not Tailwind:** the `breakpoint:` prefix looks like Tailwind's responsive variants (`md:flex`, `lg:hidden`), but that's where the similarity ends — do not reuse Tailwind class names or conventions.
+>
+> | Need                     | Tailwind (wrong here)      | OUDS Web (correct)         |
+> | ------------------------ | --------------------------- | ---------------------------- |
+> | Hide from `md` up        | `md:hidden`                 | `md:d-none`                  |
+> | Flex container from `lg` | `lg:flex`                   | `lg:d-flex`                  |
+> | Gap                      | `gap-4`                     | `gap-medium`                 |
+> | Padding                  | `p-4`                       | `p-medium`                   |
+> | Column span              | `md:w-1/2` / `grid-cols-2`  | `md:col-6`                   |
+> | Float                    | `float-right`               | `float-end`                  |
+> | Arbitrary value          | `w-[327px]`, `bg-[#fff]`   | *not supported* — use tokens |
+>
+> OUDS Web utility class names come from Bootstrap's utility API and OUDS design tokens, not from Tailwind's scale. There is also no Tailwind-style config file, JIT/on-demand compiler, or `@apply` — classes are precompiled and shipped in the theme's CSS bundle, like the rest of Bootstrap.
+
 With `$enable-bootstrap-compatibility: true`, `xxl` is an alias for `2xl`.
 
 Customizable via `$grid-breakpoints` Sass map in `_variables.scss`.

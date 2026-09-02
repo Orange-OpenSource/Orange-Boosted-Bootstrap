@@ -2,6 +2,8 @@
 
 Experimental opt-in layout system built on CSS Grid (alternative to the flexbox grid).
 
+> Responsive examples below use the `{breakpoint}:` prefix — see [Breakpoints](breakpoints.md#not-tailwind) for the syntax and a note on why this isn't Tailwind (this is not Tailwind's `grid-cols-*` system).
+
 ## Enable
 
 ```scss

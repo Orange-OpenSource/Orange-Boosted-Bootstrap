@@ -6,6 +6,8 @@ Utilities for text alignment, wrapping, weight, size, transform, and decoration.
 
 Responsive classes: `{breakpoint}:text-{start|center|end}`
 
+> **Not Tailwind:** the `breakpoint:` prefix resembles Tailwind's variants, but utility names and font-size tokens are Bootstrap/OUDS-specific (e.g. typography uses semantic size tokens, not Tailwind's `text-lg`/`text-xl` scale). See [Breakpoints](../layout/breakpoints.md#not-tailwind).
+
 ```html
 <p class="text-start">Start aligned text on all viewport sizes.</p>
 <p class="text-center mx-auto">Center aligned text on all viewport sizes.</p>

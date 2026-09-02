@@ -4,6 +4,8 @@ Padding between columns, used to responsively space and align content.
 
 > **Not Bootstrap:** Gutter classes use OUDS spacing token names (`none`, `3xsmall`...`5xlarge`), not Bootstrap's numeric scale (0-5).
 
+> **Not Tailwind:** the `breakpoint:` prefix seen in responsive examples (e.g. `lg:g-medium`) resembles Tailwind's variants, but values remain OUDS semantic tokens, not Tailwind's `gap-4`-style numeric scale. See [Breakpoints](breakpoints.md#not-tailwind).
+
 ## Gutter Scale
 
 Values: `none`, `3xsmall`, `2xsmall`, `xsmall`, `small`, `medium`, `large`, `xlarge`, `2xlarge`, `3xlarge`, `4xlarge`, `5xlarge`.

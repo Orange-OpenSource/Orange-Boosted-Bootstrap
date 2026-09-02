@@ -2,6 +2,8 @@
 
 Control how replaced elements (`<img>`, `<video>`) are resized to fit their container.
 
+> Responsive examples below use the `{breakpoint}:` prefix — see [Breakpoints](../layout/breakpoints.md#not-tailwind) for the syntax and a note on why this isn't Tailwind.
+
 ## Classes
 
 - `.object-fit-contain`

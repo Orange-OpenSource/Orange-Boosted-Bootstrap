@@ -2,6 +2,8 @@
 
 Flexbox shortcut helpers for vertical and horizontal layouts.
 
+> Responsive examples below use the `{breakpoint}:` prefix — see [Breakpoints](../layout/breakpoints.md#not-tailwind) for the syntax and a note on why this isn't Tailwind.
+
 ## Vertical stack
 
 Use `.vstack` for full-width vertical layouts. Combine with `.gap-*` for spacing.
