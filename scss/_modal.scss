@@ -8,7 +8,7 @@
   max-height: calc(100vh - 2 * var(--#{$prefix}modal-grid-margin));
   margin: auto $ouds-space-fixed-medium;
   overscroll-behavior: contain;
-  background-color: #{$modal-content-bg};
+  background-color: $ouds-color-overlay-modal-sheet;
   @include border-radius(var(--#{$prefix}modal-border-radius));
 
   @include media-breakpoint-up(sm) {
@@ -33,8 +33,7 @@
   }
 
   &.modal-sticky-actions .modal-footer {
-    padding-block: $ouds-space-padding-block-xlarge;
-    padding-inline: $ouds-space-padding-inline-2xlarge;
+    padding: $ouds-space-padding-block-xlarge $ouds-space-padding-inline-2xlarge;
     border-top: $ouds-border-width-default solid $ouds-color-border-muted;
   }
 
@@ -45,8 +44,7 @@
 
 .modal-body {
   flex-grow: 1;
-  padding-block: $ouds-space-padding-block-large $ouds-space-padding-block-medium;
-  padding-inline: $ouds-space-padding-inline-2xlarge;
+  padding: $ouds-space-padding-block-large $ouds-space-padding-inline-2xlarge $ouds-space-padding-block-medium;
   overflow-y: auto;
 
   * {
@@ -69,19 +67,15 @@
 .modal::backdrop {
   overflow: hidden;
   overscroll-behavior: contain;
-  background-color: var(--#{$prefix}color-overlay-backdrop);
-  opacity: $modal-backdrop-opacity;
 }
 
-// Modal header
-// Top section of the modal with title and dismiss
 .modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-inline: $ouds-space-padding-inline-2xlarge;
   padding-top: $ouds-space-padding-block-xlarge;
-  background-color: var(--#{$prefix}body-bg);
+  background-color: $ouds-color-overlay-modal-sheet;
 
   .btn-close {
     position: absolute;
@@ -90,7 +84,6 @@
   }
 }
 
-// Footer (for actions)
 .modal-footer {
   display: flex;
   flex-shrink: 0;
@@ -98,9 +91,8 @@
   flex-wrap: wrap;
   gap: var(--#{$prefix}space-scaled-small);
   align-items: center; // vertically center
-  padding-top: $ouds-space-padding-block-2xlarge;
-  padding-bottom: calc($ouds-space-padding-block-medium + $ouds-space-padding-block-2xlarge);
-  background-color: #{$modal-content-bg};
+  padding-block: $ouds-space-padding-block-2xlarge calc($ouds-space-padding-block-medium + $ouds-space-padding-block-2xlarge);
+  background-color: $ouds-color-overlay-modal-sheet;
 
   @include media-breakpoint-down(md) {
     > * {
@@ -108,7 +100,7 @@
     }
 
     > .link {
-      justify-content: center; // align action buttons to the end
+      justify-content: center;
     }
   }
 
