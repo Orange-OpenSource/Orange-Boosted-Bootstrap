@@ -37,6 +37,10 @@
     padding-inline: $ouds-space-padding-inline-2xlarge;
     border-top: $ouds-border-width-default solid $ouds-color-border-muted;
   }
+
+  &:not(:has(.modal-footer)) .modal-body {
+    padding-bottom: calc($ouds-space-padding-block-medium + $ouds-space-padding-block-2xlarge);
+  }
 }
 
 .modal-body {
@@ -62,22 +66,10 @@
   }
 }
 
-// Modal background used by JS fallback mode
-.modal-backdrop {
-  // scss-docs-start modal-backdrop-css-vars
-  --#{$prefix}backdrop-zindex: #{$zindex-modal-backdrop};
-  --#{$prefix}backdrop-bg: #{$modal-backdrop-bg};
-  --#{$prefix}backdrop-opacity: #{$modal-backdrop-opacity};
-  // scss-docs-end modal-backdrop-css-vars
-
-  @include overlay-backdrop(var(--#{$prefix}backdrop-zindex), var(--#{$prefix}backdrop-bg), var(--#{$prefix}backdrop-opacity));
-}
-
-// OUDS mod: native dialog backdrop styling
 .modal::backdrop {
   overflow: hidden;
   overscroll-behavior: contain;
-  background-color: $modal-backdrop-bg;
+  background-color: var(--#{$prefix}color-overlay-backdrop);
   opacity: $modal-backdrop-opacity;
 }
 
