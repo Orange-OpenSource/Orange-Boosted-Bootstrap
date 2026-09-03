@@ -6725,7 +6725,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   text-align: left;
   list-style: none;
   background-color: var(--bs-dropdown-bg);
-  background-clip: padding-box;
   border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
   max-width: var(--bs-font-max-width-label-large);
   font-size: var(--bs-font-size-label-large);

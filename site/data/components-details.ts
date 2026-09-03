@@ -92,6 +92,21 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `<hr class="w-50" />`
   },
   {
+    name: 'Dropdown',
+    slug: 'dropdown',
+    link: 'dropdown',
+    category: 'Actions',
+    snippet: `
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Label
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Label</a></li>
+        </ul>
+      </div>`
+  },
+  {
     name: 'Filter chip',
     slug: 'filter-chip',
     link: 'chips#filter-chip',

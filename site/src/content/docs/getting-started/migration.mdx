@@ -47,6 +47,10 @@ toc: true
 
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Filter chip component has been updated to 1.5.0 with no outward changes. Read more in the [filter chip design changelog](https://r.orange.fr/r/S-ouds-doc-filter-chip_changelog).
 
+#### Dropdown
+
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> OUDS Web now supports a draft dropdown component. It comes from Boosted directly. It is intended as a placeholder for projects that need it urgently but be aware that it will change in the future. Read more in our [dropdown page]([[docsref:/components/dropdown]]).
+
 #### Footer
 
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> The design of the footer component (draft) has been updated to use OUDS Web variables for the background and text colors. Colors have also been updated to match the header colors. It requires no outward changes, but you may need to update your custom styles if you were overriding the footer colors.
@@ -84,6 +88,11 @@ toc: true
 ### Sass mixins
 
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> The `list-unstyled` mixin has been updated to remove the margin bottom.
+
+### Dual mode
+
+1. Update `@ouds/web-common` and `@ouds/web-[theme]` to v1.5.0.
+2. Remove `@import "boosted/scss/dropdown";` from the Boosted custom import stack.
 
 ## v1.4.0 [[version-changelog-link]]
 

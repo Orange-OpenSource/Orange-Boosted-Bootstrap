@@ -55,7 +55,6 @@
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
   background-color: var(--#{$prefix}dropdown-bg);
-  background-clip: padding-box;
   border: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
   @include get-font-size("label-large", true);
   @include border-radius(var(--#{$prefix}dropdown-border-radius));
