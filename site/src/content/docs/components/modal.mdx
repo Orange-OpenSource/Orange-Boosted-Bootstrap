@@ -8,11 +8,25 @@ toc: true
 
 ## Overview
 
-Modal is built on the native `<dialog>` element and opened/closed declaratively with invoker commands.
+<Example buttonLabel="dialog modal full" code={`<dialog id="demoModalDialog" class="modal" aria-label="Demo modal dialog" closedby="any">
+    <div class="modal-header">
+      <h3 class="modal-title">Title</h3>
+      <button type="button" class="btn btn-close" commandfor="demoModalDialog" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
 
-Use:
-- `commandfor="dialog-id" command="show-modal"` to open.
-- `commandfor="dialog-id" command="close"` to close.
+      <div class="modal-footer">
+        <button type="button" class="btn btn-strong" commandfor="demoModalDialog" command="close">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="demoModalDialog" command="show-modal">
+    Open modal dialog
+  </button>`} />
 
 ## Minimal example
 
