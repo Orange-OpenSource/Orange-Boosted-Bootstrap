@@ -18,6 +18,7 @@ interface Props {
   multiTheme?: boolean
   getUsage?: (colorName: string, colorPrefix?: string) => string
   getStyle?: (token: IColorToken, mode: string) => astroHTML.JSX.CSSProperties
+  hasBackdrop?: boolean
 }
 
 const getCustomProp = (colorName: string, colorPrefix: string) =>
@@ -38,7 +39,8 @@ const {
   tokenRegexp,
   multiTheme = true,
   getUsage = getCustomProp,
-  getStyle = getBackground
+  getStyle = getBackground,
+  hasBackdrop
 } = Astro.props
 
 const getLightDarkValuesFor = (colorName: string) => {
@@ -114,11 +116,11 @@ if (basicClasses.length) {
                 data-bs-theme={multiTheme ? 'light' : undefined}
               >
                 <figure
-                  class:list={['w-100 h-100 mb-none d-flex justify-content-center align-items-center', { ['bg-' + token.colorName!]: token.colorName }]}
+                  class:list={['w-100 h-100 mb-none d-flex justify-content-center align-items-center', basicClasses.length > 0 ? { [ getUsage(token.colorName).replace('.', '')]: token.colorName } : {}]}
                   style={getStyle(token, 'light')}
                   title={token.lightValue ?? ''}
                 >
-                  {token.backdropLight && (
+                  {(hasBackdrop || token.backdropLight) && (
                     <svg class="decorative-small-icon" aria-hidden="true" color={token.lightValue}>
                       <use
                         xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}
@@ -135,11 +137,11 @@ if (basicClasses.length) {
               <td>
                 <div class="bg-primary ratio-21x9" data-bs-theme="dark">
                   <figure
-                    class:list={['w-100 h-100 mb-none d-flex justify-content-center align-items-center', { ['bg-' + token.colorName!]: token.colorName }]}
+                    class:list={['w-100 h-100 mb-none d-flex justify-content-center align-items-center', basicClasses.length > 0 ? { [ getUsage(token.colorName).replace('.', '')]: token.colorName } : {}]}
                     style={getStyle(token, 'dark')}
                     title={token.darkValue ?? ''}
                   >
-                    {token.backdropDark && (
+                    {(hasBackdrop || token.backdropDark) && (
                       <svg class="decorative-small-icon" aria-hidden="true" color={token.darkValue}>
                         <use
                           xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}
