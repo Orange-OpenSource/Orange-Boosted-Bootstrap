@@ -7,6 +7,7 @@ toc: true
 types:
   - Button
   - Navigation button
+  - Expand button
   - Assistant button
 ---
 
@@ -24,8 +25,8 @@ import { getMode } from '@libs/sass-variables'
 
 ### Component types
 
-<ul class="list-unstyled row row-cols-1 md:row-cols-3">
-  <li class="col">
+<ul class="list-unstyled grid gap-medium">
+  <li class="g-col-6">
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
@@ -35,7 +36,7 @@ import { getMode } from '@libs/sass-variables'
       <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#button">Button</a> is a UI element that triggers an action or event, used to initiate tasks or confirm an action.</div>
     </div>
   </li>
-  <li class="col">
+  <li class="g-col-6">
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
@@ -45,14 +46,24 @@ import { getMode } from '@libs/sass-variables'
       <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#navigation-button">Navigation button</a> is a UI element that enables movement between different pages within a multi-page interface.</div>
     </div>
   </li>
-  <li class="col">
+  <li class="g-col-6">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
+          <a class="btn btn-expand btn-default" href="#">Expand</a>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#expand-button">Expand button</a> is a UI element that toggles content visibility, allowing users to expand or collapse content sections.</div>
+    </div>
+  </li>
+  <li class="g-col-6">
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
           <button type="button" class="btn btn-assistant">Assistant</button>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#assistant-button">Assistant button</a> is a UI element that triggers an AI-related action or event.</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#assistant-button">Assistant button</a> is a UI element that triggers an action or event featuring AI-powered capabilities, such as conversational assistance, content generation, or contextual suggestions.</div>
     </div>
   </li>
 </ul>
@@ -62,6 +73,15 @@ For the three types of button, OUDS Web has a common base `.btn` class that sets
 <Example showToolbar={false} code={`<button type="button" class="btn btn-default">Default</button>`} />
 
 <Example showToolbar={false} code={`<button type="button" class="btn btn-next btn-default">Next</button>`} />
+
+<Example showToolbar={false} code={`<div class="dropdown">
+    <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>`} />
 
 <Example showToolbar={false} code={`<button type="button" class="btn btn-assistant">Assistant</button>`} />
 
@@ -757,7 +777,7 @@ If you don’t want the button text to wrap, you can add the `.text-nowrap` clas
 
 Navigation button is a UI element that enables movement between different pages within a multi-page interface. Navigation button is typically arranged in a sequence to indicate the user’s current position and provide controls for accessing previous, next, or specific pages.
 
-You can use `.btn-previous` and `.btn-next` classes to indicate backward and forward actions in a process or a flow. These classes will add a directional arrow to the left or right of the button text, respectively. As navigation buttons generaly indicate a navigation purpose, in our examples, we have used `<a>` elements, but this could be adapted to your own context (in that case, don't forget to add an `href` attribute to make the element focusable). The visual rendering will remain the same anyway:
+You can use `.btn-previous` and `.btn-next` classes to indicate backward and forward actions in a process or a flow. These classes will add a directional arrow to the left or right of the button text, respectively. As navigation buttons generally indicate a navigation purpose, in our examples, we have used `<a>` elements, but this could be adapted to your own context (in that case, don't forget to add an `href` attribute to make the element focusable). The visual rendering will remain the same anyway:
 
 <Example buttonLabel="basic navigation buttons" class="bd-btn-example" code={`<a class="btn btn-default btn-previous" href="#">Previous</a>
 
@@ -932,6 +952,167 @@ If you don’t want the button text to wrap, you can add the `.text-nowrap` clas
   <button class="btn btn-default btn-previous" type="button">
     In small contexts the button text wraps automatically to adapt its behavior
   </button>`} />
+
+## [[comp]] Expand button
+
+An expand button is a UI element that toggles content visibility, allowing users to expand or collapse content sections. The expand button minimizes visual clutter by displaying only essential information and allowing access to additional details when necessary.
+
+You can use `.btn-expand` class to indicate a [dropdown menu]([[docsref:/components/dropdown]]) can be expanded. This class will add a directional arrow to the left of the button text. As expand buttons generally indicate a dropdown menu, in our examples, we have used `<button>` elements, but this could be adapted to your own context.
+
+<Callout type="negative" title="Dropdown menu">
+  Be aware that the dropdown menu is not part of the expand button component and is a draft component. Please refer to the [dropdown menu documentation]([[docsref:/components/dropdown]]) for more information.
+</Callout>
+
+<Example buttonLabel="basic expand button" class="bd-btn-example" code={`<div class="dropdown">
+    <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>`} />
+
+### Variants
+
+OUDS Web includes several expand button variants, each serving its own semantic purpose. Please follow the [expand button design specifications](https://r.orange.fr/r/S-ouds-doc-expand-button) to choose the right button variant for the right action.
+
+<Callout type="warning" title="Beware">
+  The button and the expand button have the same variants except for the negative, which does not exist for the expand button.
+</Callout>
+
+<Example buttonLabel="expand buttons variants" class="bd-btn-example" code={`<div class="dropdown">
+    <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+
+    <button type="button" class="btn btn-strong btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+
+    <button type="button" class="btn btn-brand btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+
+    <button type="button" class="btn btn-minimal btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>`} />
+
+#### Icon only
+
+Add the class `.btn-icon` to get a squared button that only contains an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or an `aria-label` attribute.
+
+<Example buttonLabel="icon only expand button" class="bd-btn-example" code={`<div class="dropdown">
+    <button type="button" class="btn btn-default btn-icon btn-expand" data-bs-toggle="dropdown" aria-expanded="false">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <span class="visually-hidden">Expand</span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>`} />
+
+<BrandSpecific brand={['orange', 'orange-compact']}>
+  #### Rounded corners
+
+  Rounded corners expand buttons is a project-wide option therefore all your buttons should either be rounded or not. Add `.use-rounded-corner-buttons` on a top container (for example `<body>`) to use rounded corners.
+
+<Callout type="warning">
+  Rounded corners could be used in more emotional, immersive contexts or those tied to specific visual identities. **For standard or business-oriented usage, keep the default square corners.**
+</Callout>
+
+<Callout type="info">
+  We use a `<div>` as a parent container because we cannot use `<body>` in an example.
+</Callout>
+
+<Example buttonLabel="rounded expand buttons" class="bd-btn-example" code={`<div class="use-rounded-corner-buttons">
+    <div class="dropdown">
+      <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+  </div>`} />
+</BrandSpecific>
+
+### States
+
+#### Disabled
+
+Make expand buttons inactive by adding the `[disabled]` boolean attribute to the `<button>` element. Disabled expand buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
+
+<Example buttonLabel="disabled expand button" class="bd-btn-example" code={`<div class="dropdown">
+    <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false" disabled>Expand</button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>`} />
+
+#### Loading
+
+The loading state of an expand button indicates that an action is currently processing or taking place. This state provides feedback to users, enhancing user experience.
+
+Please refer to the [loading state section of the button component](#loading) for guidelines on how to implement loading states, as well as a JavaScript example and a live demo.
+
+<Example buttonLabel="loading expand buttons" class="bd-btn-example" code={`<div class="dropdown">
+    <button type="button" class="btn btn-default btn-expand loading-indeterminate" data-bs-toggle="dropdown" aria-expanded="false" disabled>
+      Expand
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-nav-btn-msg-1" class="visually-hidden">Loading next page</span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>`} />
+
+#### Skeleton
+
+<SkeletonRedirect component="expand button" />
+
+<Example buttonLabel="expand button skeleton" code={`<div aria-busy="true" inert>
+    <div class="dropdown">
+      <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+  </div>`} />
+
+### Layout
+
+#### Text wrapping
+
+A button's text should not exceed one line, but will automatically wrap if necessary. It also natively supports `<br/>` tags to break the text into multiple lines. Read more about [text wrapping in a button](https://r.orange.fr/r/S-ouds-doc-expand-button/t/2bd515e9b8).
+
+If you don’t want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
+
+<Example buttonLabel="expand buttons with wrapped text" class="bd-btn-example d-flex flex-column align-items-start" code={`<div class="dropdown">
+    <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">
+      The label remains centered in<br/>multiline mode with an icon
+    </button>
+
+    <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">
+      In small contexts the button text wraps automatically to adapt its behavior
+    </button>
+
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>`} />
 
 ## [[comp]] Assistant button
 
