@@ -43,6 +43,9 @@ export const boostedReplacements = [
   ['btn-sm', 'btn-small'],
   [...warnForClass('btn-lg', { link: 'https://web.unified-design-system.orange.com/docs/components/buttons#button' })],
 
+  // List group
+  [...warnForClass('list-group', { link: 'https://web.unified-design-system.orange.com/docs/components/items' })],
+
   // Skeleton
   [...warnForClass('placeholder-(wave|glow)', { link: 'https://web.unified-design-system.orange.com/docs/components/skeleton' })],
   ['placeholder', 'skeleton'],
