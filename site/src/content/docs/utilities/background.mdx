@@ -59,7 +59,7 @@ Following are the equivalent Bootstrap background that you shouldn’t be using.
 
 
 <ColorTable
-  colorPrefix="bootstrap/theme/colors/"
+  colorPrefix="bootstrap/bg/"
   basicClasses={[getData('theme-colors').map((themeColor) => [`${themeColor.name}`, `${themeColor.name}-subtle`]).flat(), 'body-secondary', 'body-tertiary', 'body', 'black', 'white', 'transparent'].flat()}
   getUsage={(colorName) => `.bg-${colorName}`} />
 
@@ -252,7 +252,10 @@ Color and background helpers combine the power of our [`.text-*` utilities]([[do
   There’s currently no support for a CSS-native `color-contrast` function, so we use our own via Sass. This means that customizing our theme colors via CSS variables may cause color contrast issues with these utilities.
 </Callout>
 
-<Example buttonLabel="text and background colors (Bootstrap compatibility)" code={[
-  ...getData('theme-colors').map((themeColor) => `<div class="text-bg-${themeColor.name} p-3">${themeColor.title} with contrasting color</div>`)
-]} />
+<ColorTable
+  colorPrefix="bootstrap/text/bg/"
+  basicClasses={[...getData('theme-colors').map((themeColor) => themeColor.name)]}
+  getUsage={(colorName) => `.text-bg-${colorName}`}
+  hasBackdrop={true} />
+
 </BootstrapCompatibility>
