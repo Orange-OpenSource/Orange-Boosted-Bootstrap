@@ -114,21 +114,20 @@ OUDS Web provides custom events for most plugins' unique actions. Generally, the
 
 All infinitive events provide [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) functionality. This provides the ability to stop the execution of an action before it starts. Returning false from an event handler will also automatically call `preventDefault()`.
 
-<Code buttonLabel="events" lang="js" code={`const myModal = document.querySelector('#myModal')
+<Code buttonLabel="events" lang="js" code={`const myDialog = document.querySelector('#myModal')
 
-  myModal.addEventListener('show.bs.modal', event => {
-    return event.preventDefault() // stops modal from being shown
+  myDialog.addEventListener('cancel', event => {
+    event.preventDefault() // keeps the dialog open
   })`} />
 
 ## Programmatic API
 
 All constructors accept an optional options object or nothing (which initiates a plugin with its default behavior):
 
-<Code buttonLabel="programmatic API" lang="js" code={`const myModalEl = document.querySelector('#myModal')
-  const modal = new oudsWeb.Modal(myModalEl) // initialized with defaults
+<Code buttonLabel="programmatic API" lang="js" code={`const myDialog = document.querySelector('#myModal')
 
-  const configObject = { keyboard: false }
-  const modal1 = new oudsWeb.Modal(myModalEl, configObject) // initialized with no keyboard`} />
+  myDialog.showModal()
+  myDialog.close()`} />
 
 If you'd like to get a particular plugin instance, each plugin exposes a `getInstance` method. For example, to retrieve an instance directly from an element:
 
@@ -146,8 +145,7 @@ In case an instance wasn't initialized, it may accept and use an optional config
 
 In addition to the `getInstance` and `getOrCreateInstance` methods, all plugin constructors can accept a DOM element or a valid [CSS selector](#selectors) as the first argument. Plugin elements are found with the `querySelector` method since our plugins only support a single element.
 
-<Code buttonLabel="constructor, getInstance and getOrCreateInstance" lang="js" code={`const modal = new oudsWeb.Modal('#myModal')
-  const dropdown = new oudsWeb.Dropdown('[data-bs-toggle="dropdown"]')
+<Code buttonLabel="constructor, getInstance and getOrCreateInstance" lang="js" code={`const dropdown = new oudsWeb.Dropdown('[data-bs-toggle="dropdown"]')
   const offcanvas = oudsWeb.Offcanvas.getInstance('#myOffcanvas')
   const alert = oudsWeb.Alert.getOrCreateInstance('#myAlert')`} />
 
@@ -188,8 +186,9 @@ While it may seem correct to use the `dispose` method immediately after `hide()`
 
 You can change the default settings for a plugin by modifying the plugin's `Constructor.Default` object:
 
-<Code buttonLabel="change settings" lang="js" code={`// changes default for the modal plugin's \`keyboard\` option to false
-  oudsWeb.Modal.Default.keyboard = false`} />
+<Code buttonLabel="change settings" lang="js" code={`// Dialog behavior is configured in markup and native dialog APIs
+  const dialog = document.querySelector('#myModal')
+  dialog.setAttribute('data-bs-backdrop-static', '')`} />
 
 ## Methods and properties
 
@@ -198,9 +197,9 @@ Every OUDS Web plugin exposes the following methods and static properties.
 <BsTable class="table">
   | Method | Description |
   | --- | --- |
-  | `dispose` | Destroys an element's modal. (Removes stored data on the DOM element) |
-  | `getInstance` | *Static* method which allows you to get the modal instance associated with a DOM element. |
-  | `getOrCreateInstance` | *Static* method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialized. |
+  | `showModal` | Native dialog API to open a modal dialog. |
+  | `close` | Native dialog API to close a dialog. |
+  | `requestClose` | Native dialog API to request close with cancel support (where available). |
 </BsTable>
 
 <BsTable class="table mt-xlarge">

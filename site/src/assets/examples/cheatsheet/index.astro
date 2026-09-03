@@ -1105,16 +1105,16 @@ export const body_class = 'bg-body-tertiary'
       <div>
         <Example showMarkup={false} code={`
         <div class="d-flex justify-content-between flex-wrap">
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalDefault">
+          <button type="button" class="btn btn-primary" commandfor="exampleModalDefault" command="show-modal">
             Launch demo modal
           </button>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropLive">
+          <button type="button" class="btn btn-primary" commandfor="staticBackdropLive" command="show-modal">
             Launch static backdrop modal
           </button>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
+          <button type="button" class="btn btn-primary" commandfor="exampleModalCenteredScrollable" command="show-modal">
             Vertically centered scrollable modal
           </button>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">
+          <button type="button" class="btn btn-primary" commandfor="exampleModalFullscreen" command="show-modal">
             Full screen
           </button>
         </div>
@@ -1490,46 +1490,43 @@ export const body_class = 'bg-body-tertiary'
   </section>
 </main>
 
-<div class="modal fade" id="exampleModalDefault" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<dialog class="modal fade" data-bs-role="modal" id="exampleModalDefault" aria-label="Default modal dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" commandfor="exampleModalDefault" command="close" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" commandfor="exampleModalDefault" command="close">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
-</div>
-<div class="modal fade" id="staticBackdropLive" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLiveLabel" aria-hidden="true">
+</dialog>
+<dialog class="modal fade" data-bs-role="modal" id="staticBackdropLive" data-bs-backdrop-static aria-label="Static backdrop modal dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLiveLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" commandfor="staticBackdropLive" command="close" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p>I will not close if you click outside me. Don't even try to press escape key.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" commandfor="staticBackdropLive" command="close">Close</button>
         <button type="button" class="btn btn-primary">Understood</button>
       </div>
     </div>
   </div>
-</div>
-<div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+</dialog>
+<dialog class="modal fade" data-bs-role="modal" id="exampleModalCenteredScrollable" aria-label="Centered scrollable modal dialog">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalCenteredScrollableTitle">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" commandfor="exampleModalCenteredScrollable" command="close" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p>This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.</p>
@@ -1537,25 +1534,24 @@ export const body_class = 'bg-body-tertiary'
         <p>This content should appear at the bottom after you scroll.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" commandfor="exampleModalCenteredScrollable" command="close">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
-</div>
-<div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
+</dialog>
+<dialog class="modal fade" data-bs-role="modal" id="exampleModalFullscreen" aria-label="Fullscreen modal dialog">
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-4" id="exampleModalFullscreenLabel">Full screen modal</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" commandfor="exampleModalFullscreen" command="close" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" commandfor="exampleModalFullscreen" command="close">Close</button>
       </div>
     </div>
   </div>
-</div>
+</dialog>
