@@ -8,20 +8,16 @@
   --#{$prefix}icon-active-color: #{$ouds-color-action-pressed};
   --#{$prefix}icon-disabled-color: #{$ouds-color-action-disabled};
   --#{$prefix}icon-focus-color: #{$ouds-color-action-focus};
-  --#{$prefix}icon-focus-border-color: #{$ouds-color-border-focus};
-  --#{$prefix}icon-focus-border-width: #{$ouds-border-width-focus};
-  --#{$prefix}icon-focus-color-border-focus-inset: #{$ouds-color-border-focus-inset};
-  --#{$prefix}icon-focus-border-width-focus-inset: #{$ouds-border-width-focus-inset};
   --#{$prefix}icon-loading-color: #{$ouds-color-action-loading};
   --#{$prefix}icon-loading-size: #{px-to-rem($ouds-button-size-progress-indicator-default)};
 
   display: inline-flex;
-  align-items: center; // OUDS mod
-  justify-content: center; // OUDS mod
-  min-width: var(--#{$prefix}icon-min-width); // OUDS mod
-  max-width: var(--#{$prefix}icon-max-width); // OUDS mod
-  min-height: var(--#{$prefix}icon-min-height); // OUDS mod
-  max-height: var(--#{$prefix}icon-max-height); // OUDS mod
+  align-items: center;
+  justify-content: center;
+  min-width: var(--#{$prefix}icon-min-width);
+  max-width: var(--#{$prefix}icon-max-width);
+  min-height: var(--#{$prefix}icon-min-height);
+  max-height: var(--#{$prefix}icon-max-height);
   aspect-ratio: 1;
   padding: 0;
   color: var(--#{$prefix}icon-color);
@@ -42,11 +38,8 @@
   }
 
   &:focus-visible {
-    //color: var(--#{$prefix}icon-focus-color);
-    //outline: var(--#{$prefix}icon-focus-border-width) solid var(--#{$prefix}icon-focus-border-color);
-    //box-shadow: 0 0 0 calc(var(--#{$prefix}icon-focus-border-width-focus-inset) + $focus-visible-inner-width) var(--#{$prefix}icon-focus-color-border-focus-inset);
     --#{$prefix}icon-color: var(--#{$prefix}icon-focus-color);
-    @include focus-visible($color: var(--#{$prefix}icon-focus-border-color), $width: var(--#{$prefix}icon-focus-border-width), $box-width: calc(var(--#{$prefix}icon-focus-border-width-focus-inset) + $focus-visible-inner-width), $box-color: var(--#{$prefix}icon-focus-color-border-focus-inset));
+    @include focus-visible();
   }
 
   &:active {
@@ -54,11 +47,10 @@
   }
 
   &:disabled,
-  &[aria-disabled="true"] { // OUDS mod: Defensive CSS to force a11y
+  &[aria-disabled="true"] {
     color: var(--#{$prefix}icon-disabled-color);
     pointer-events: none;
   }
 
-  // OUDS mod: loading icons
   @include loader($loading-color: var(--#{$prefix}icon-loading-color), $loading-size: var(--#{$prefix}icon-loading-size));
 }
