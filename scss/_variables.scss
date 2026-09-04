@@ -1744,49 +1744,6 @@ $progress-height-xs:                $spacer * .25 !default;
 // End mod
 // scss-docs-end progress-variables
 
-// List group
-
-// scss-docs-start list-group-variables
-$list-group-font-weight:              $font-weight-bold !default; // OUDS mod
-$list-group-color:                    null !default; // OUDS mod: instead of `var(--#{$prefix}body-color)`
-$list-group-bg:                       transparent !default; // OUDS mod: instead of `var(--#{$prefix}body-bg)`
-$list-group-border-color:             var(--#{$prefix}color-border-default) !default; // OUDS mod: instead of `var(--#{$prefix}border-color)`
-$list-group-border-width:             var(--#{$prefix}border-width) !default;
-$list-group-border-radius:            var(--#{$prefix}border-radius) !default;
-
-$list-group-divider-size:             map-get($border-widths, 1) !default;
-
-$list-group-item-padding-y:           10px !default; // OUDS mod: instead of $spacer * .5
-$list-group-item-padding-x:           13px !default; // OUDS mod: instead of $spacer
-$list-group-item-icon-size:           $spacer * .85 !default; // OUDS mod
-$list-group-item-icon-margin-x:       calc(var(--#{$prefix}list-group-item-padding-x) - 5px) !default; // OUDS mod
-
-$list-group-numbered-item-margin-end: 14px !default; // OUDS mod
-
-$list-group-hover-bg:                 var(--#{$prefix}secondary-bg) !default; // OUDS mod: instead of `var(--#{$prefix}tertiary-bg)`
-$list-group-active-color:             var(--#{$prefix}emphasis-color) !default; // OUDS mod: instead of `$component-active-color`
-$list-group-active-bg:                no-repeat linear-gradient(to right, var(--#{$prefix}primary) 4px, var(--#{$prefix}color-action-primary-pressed) 4px) !default; // OUDS mod: instead of `$component-active-bg`
-$list-group-active-border-color:      $list-group-border-color !default; // OUDS mod: instead of `$list-group-active-bg`
-
-$list-group-disabled-color:           var(--#{$prefix}color-content-disabled) !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
-$list-group-disabled-bg:              $list-group-bg !default;
-
-$list-group-action-color:             var(--#{$prefix}emphasis-color) !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
-$list-group-action-hover-color:       var(--#{$prefix}emphasis-color) !default;
-
-$list-group-action-active-color:      $list-group-active-color !default; // OUDS mod: instead of `var(--#{$prefix}body-color)`
-$list-group-action-active-bg:         $list-group-active-bg !default; // OUDS mod: instead of `var(--#{$prefix}secondary-bg)`
-
-// OUDS mod
-$list-group-icons: (
-  "success": var(--#{$prefix}alert-success-icon),
-  "info":    var(--#{$prefix}alert-info-icon),
-  "warning": var(--#{$prefix}alert-warning-icon),
-  "danger":  var(--#{$prefix}alert-error-icon)
-) !default;
-// End mod
-// scss-docs-end list-group-variables
-
 
 // Image thumbnails
 

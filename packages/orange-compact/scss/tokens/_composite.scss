@@ -137,7 +137,15 @@ $chip-tick-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
 // orange/Component/link/previous v2.2 — same icon as $btn-previous-icon
 $link-previous-icon: var(--#{$prefix}btn-previous-icon) !default;
 // orange/Component/link/external-link v2.2
-$link-external-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M17.3 17a1 1 0 0 1-1 .9H7a1 1 0 0 1-.9-1V7.7a1 1 0 0 1 1-.9h5.7l1.6-1.6h-8q-1.7.2-1.9 2v10.5q.2 1.7 2 1.9H17q1.7-.2 1.9-2V9.7l-1.6 1.6zm2-13.5h-5.2l1.7 1.8-3.5 3.5q-.6.8 0 1.6l1.3 1.3q.8.6 1.6 0l3.6-3.5 1.7 1.7V4.7q0-1.1-1.2-1.2'/></svg>") !default;
+$link-external-icon: var(--#{$prefix}link-external-icon) !default;
+
+// * List item *
+// orange/Component/list-item/external-link v2.2 — same icon as $link-external-icon
+$list-item-external-icon: var(--#{$prefix}link-external-icon) !default;
+// orange/Component/list-item/next v2.2
+$list-item-next-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m10.5 18.1 6.2-6.1-6.2-6.1-1.8 1.7L13 12l-4.4 4.4z'/></svg>") !default;
+// orange/Component/list-item/previous v2.2
+$list-item-previous-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M13.5 5.9 7.3 12l6.2 6.1 1.8-1.7L11 12l4.4-4.4z'/></svg>") !default;
 
 // * Radio button *
 // orange/Component/radio-button/radio-button-selected v2.2
@@ -181,6 +189,7 @@ $svg-as-custom-props: (
   "alert-warning-internal-icon": $alert-icon-warning-internal, // Used by alerts and tags
   "alert-error-icon": $alert-icon-important, // Used by alerts and tags
   "breadcrumb-divider-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m10 19.1 7.3-7.1L10 4.9l-2.1 2 5.2 5.1-5.2 5z'/></svg>"), // Duplicated SVG used by $breadcrumb-divider-icon, $btn-next-icon
-  "btn-previous-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M14 4.9 6.8 12l7.2 7.1 2.1-2-5.2-5.1 5.2-5z'/></svg>") // Duplicated SVG used by $btn-previous-icon, $link-previous-icon
+  "btn-previous-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M14 4.9 6.8 12l7.2 7.1 2.1-2-5.2-5.1 5.2-5z'/></svg>"), // Duplicated SVG used by $btn-previous-icon, $link-previous-icon
+  "link-external-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M17.3 17a1 1 0 0 1-1 .9H7a1 1 0 0 1-.9-1V7.7a1 1 0 0 1 1-.9h5.7l1.6-1.6h-8q-1.7.2-1.9 2v10.5q.2 1.7 2 1.9H17q1.7-.2 1.9-2V9.7l-1.6 1.6zm2-13.5h-5.2l1.7 1.8-3.5 3.5q-.6.8 0 1.6l1.3 1.3q.8.6 1.6 0l3.6-3.5 1.7 1.7V4.7q0-1.1-1.2-1.2'/></svg>") // Duplicated SVG used by $link-external-icon, $list-item-external-icon
 ) !default;
 

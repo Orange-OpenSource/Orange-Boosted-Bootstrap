@@ -18,6 +18,7 @@
       draft: true
     - title: Icon
     - title: Links
+    - title: Items
     - title: Password input
     - title: Radio button
     - title: Select input
@@ -44,8 +45,6 @@
     - title: Close button
       coming_soon: true
     - title: Collapse
-      coming_soon: true
-    - title: List group
       coming_soon: true
     - title: Local navigation
       coming_soon: true
