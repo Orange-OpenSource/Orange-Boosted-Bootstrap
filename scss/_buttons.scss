@@ -205,7 +205,6 @@
     --#{$prefix}btn-padding-start: #{$ouds-button-space-inset-icon-only-default};
     --#{$prefix}btn-padding-end: #{$ouds-button-space-inset-icon-only-default};
     --#{$prefix}btn-padding-y: #{$ouds-button-space-inset-icon-only-default};
-    --#{$prefix}btn-icon-gap: 0;
     --#{$prefix}btn-icon-size: #{px-to-rem($ouds-button-size-icon-only-default)};
 
     max-height: $ouds-button-size-max-size-icon-only-default;
@@ -235,7 +234,6 @@
       --#{$prefix}btn-padding-start: #{$ouds-button-space-inset-icon-only-small};
       --#{$prefix}btn-padding-end: #{$ouds-button-space-inset-icon-only-small};
       --#{$prefix}btn-padding-y: #{$ouds-button-space-inset-icon-only-small};
-      --#{$prefix}btn-icon-gap: 0;
       --#{$prefix}btn-icon-size: #{px-to-rem($ouds-button-size-icon-only-small)};
 
       max-height: $ouds-button-size-max-size-icon-only-small;
@@ -533,7 +531,8 @@
   }
 }
 
-.btn-next {
+.btn-next,
+.btn-expand {
   --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-start-icon-end-default};
   --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-chevron-end-default};
   --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-chevron-default};
@@ -544,8 +543,17 @@
   }
 }
 
+.btn-expand::after {
+  mask-image: $btn-expanded-false-icon;
+}
+
+.btn-expand[aria-expanded="true"]::after {
+  mask-image: $btn-expanded-true-icon;
+}
+
 .btn-previous::before,
-.btn-next::after {
+.btn-next::after,
+.btn-expand::after {
   flex-shrink: 0;
   width: var(--#{$prefix}btn-icon-size);
   height: var(--#{$prefix}btn-icon-size);
