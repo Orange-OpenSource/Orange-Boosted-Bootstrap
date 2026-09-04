@@ -44,6 +44,19 @@ const htmlProps: HTMLAttributes<'html'> = direction === 'rtl' ? { lang: 'ar', di
     <Stylesheet direction={direction} layout="examples" />
     <Favicons />
 
+    <style is:global lang="scss">
+      @import '../../../scss/config';
+      @import '../../../scss/functions';
+      @import '../../../packages/orange/scss/tokens';
+      @import '../../../scss/variables';
+      @import '../../../scss/variables-dark';
+      @import '../../../scss/maps';
+      @import '../../../scss/mixins';
+      @import '../scss/variables';
+      @import '../scss/component-examples';
+      @import '../scss/syntax';
+    </style>
+
     <style is:global>
       .bd-placeholder-img {
         font-size: 1.125rem;
