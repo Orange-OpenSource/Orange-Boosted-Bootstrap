@@ -5810,9 +5810,6 @@ optgroup {
 .link-expand.link-reverse::after {
   order: -1;
 }
-.link-expand:disabled, .link-expand[aria-disabled=true] {
-  pointer-events: none;
-}
 
 .colored-bg.link, .colored-bg.link-chevron,
 .colored-bg.link-external,
@@ -5877,17 +5874,29 @@ optgroup {
 }
 .colored-bg.link[aria-disabled=true], .colored-bg[aria-disabled=true].link-chevron,
 .colored-bg[aria-disabled=true].link-external,
-.colored-bg[aria-disabled=true].link-expand,
+.colored-bg[aria-disabled=true].link-expand, .colored-bg.link:disabled, .colored-bg.link-chevron:disabled,
+.colored-bg.link-external:disabled,
+.colored-bg.link-expand:disabled,
 .colored-bg :is(.link, .link-chevron,
 .link-external,
 .link-expand, a)[aria-disabled=true],
+.colored-bg :is(.link, .link-chevron,
+.link-external,
+.link-expand, a):disabled,
 .link-on-colored-bg.link[aria-disabled=true],
 .link-on-colored-bg[aria-disabled=true].link-chevron,
 .link-on-colored-bg[aria-disabled=true].link-external,
 .link-on-colored-bg[aria-disabled=true].link-expand,
+.link-on-colored-bg.link:disabled,
+.link-on-colored-bg.link-chevron:disabled,
+.link-on-colored-bg.link-external:disabled,
+.link-on-colored-bg.link-expand:disabled,
 .link-on-colored-bg :is(.link, .link-chevron,
 .link-external,
-.link-expand, a)[aria-disabled=true] {
+.link-expand, a)[aria-disabled=true],
+.link-on-colored-bg :is(.link, .link-chevron,
+.link-external,
+.link-expand, a):disabled {
   --bs-link-color: var(--bs-link-mono-color-content-disabled);
 }
 

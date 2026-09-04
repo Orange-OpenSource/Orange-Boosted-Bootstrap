@@ -136,11 +136,6 @@
   &.link-reverse::after {
     order: -1;
   }
-
-  &:disabled,
-  &[aria-disabled="true"] {
-    pointer-events: none;
-  }
 }
 
 .colored-bg, // @deprecated, will be removed in v1.6.0, use "link-on-colored-bg" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
@@ -162,7 +157,8 @@
       --#{$prefix}link-color: #{$ouds-link-mono-color-content-pressed}; // OUDS mod
     }
 
-    &[aria-disabled="true"] {
+    &[aria-disabled="true"],
+    &:disabled {
       --#{$prefix}link-color: #{$ouds-link-mono-color-content-disabled}; // OUDS mod
     }
   }
