@@ -116,7 +116,7 @@ if (basicClasses.length) {
                 data-bs-theme={multiTheme ? 'light' : undefined}
               >
                 <figure
-                  class:list={['w-100 h-100 mb-none d-flex justify-content-center align-items-center', basicClasses.length > 0 ? { [ getUsage(token.colorName).replace('.', '')]: token.colorName } : {}]}
+                  class:list={['w-100 h-100 mb-none d-flex justify-content-center align-items-center', basicClasses.length > 0 ? { [ getUsage(token.colorName, colorPrefix).replace('.', '')]: token.colorName } : {}]}
                   style={getStyle(token, 'light')}
                   title={token.lightValue ?? ''}
                 >
@@ -137,7 +137,7 @@ if (basicClasses.length) {
               <td>
                 <div class="bg-primary ratio-21x9" data-bs-theme="dark">
                   <figure
-                    class:list={['w-100 h-100 mb-none d-flex justify-content-center align-items-center', basicClasses.length > 0 ? { [ getUsage(token.colorName).replace('.', '')]: token.colorName } : {}]}
+                    class:list={['w-100 h-100 mb-none d-flex justify-content-center align-items-center', basicClasses.length > 0 ? { [ getUsage(token.colorName, colorPrefix).replace('.', '')]: token.colorName } : {}]}
                     style={getStyle(token, 'dark')}
                     title={token.darkValue ?? ''}
                   >
