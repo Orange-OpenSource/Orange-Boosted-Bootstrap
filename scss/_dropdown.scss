@@ -39,7 +39,6 @@
   --#{$prefix}dropdown-link-disabled-color: #{$dropdown-link-disabled-color};
   --#{$prefix}dropdown-item-padding-x: #{$dropdown-item-padding-x};
   --#{$prefix}dropdown-item-padding-y: #{$dropdown-item-padding-y};
-  --#{$prefix}dropdown-item-font-weight: #{$font-weight-bold}; // OUDS mod
   --#{$prefix}dropdown-header-color: #{$dropdown-header-color};
   --#{$prefix}dropdown-header-padding-x: #{$dropdown-header-padding-x};
   --#{$prefix}dropdown-header-padding-y: #{$dropdown-header-padding-y};
@@ -49,7 +48,7 @@
   z-index: var(--#{$prefix}dropdown-zindex);
   display: none; // none by default, but block on "open" of the menu
   min-width: var(--#{$prefix}dropdown-min-width);
-  padding: var(--#{$prefix}dropdown-padding-y) var(--#{$prefix}dropdown-padding-y);
+  padding: var(--#{$prefix}dropdown-padding-y) 0;
   margin: 0; // Override default margin of ul
   color: var(--#{$prefix}dropdown-color);
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
@@ -168,7 +167,7 @@
   height: 0;
   margin: var(--#{$prefix}dropdown-divider-margin-y) 0;
   overflow: hidden;
-  border-top: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-divider-bg); // OUDS mod
+  border-top: var(--#{$prefix}border-width) solid var(--#{$prefix}dropdown-divider-bg); // OUDS mod
   opacity: 1; // Revisit in v6 to de-dupe styles that conflict with <hr /> element
 }
 
@@ -178,9 +177,9 @@
 .dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
-  padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x) calc(var(--#{$prefix}dropdown-item-padding-y) + .125rem); // OUDS mod
+  padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x); // OUDS mod
   clear: both;
-  font-weight: var(--#{$prefix}dropdown-item-font-weight); // OUDS mod
+  font-weight: $ouds-font-weight-web-label-default;
   color: var(--#{$prefix}dropdown-link-color);
   text-align: inherit; // For `<button>`s
   text-decoration: if($link-decoration == none, null, none);
@@ -227,11 +226,11 @@
 // Dropdown section headers
 .dropdown-header {
   display: block;
-  padding: var(--#{$prefix}dropdown-header-padding-y) var(--#{$prefix}dropdown-header-padding-x) calc(var(--#{$prefix}dropdown-header-padding-y) + .125rem); // OUDS mod
+  padding: var(--#{$prefix}dropdown-header-padding-y) var(--#{$prefix}dropdown-header-padding-x); // OUDS mod
   margin-bottom: 0; // for use with heading elements
+  font-weight: $ouds-font-weight-web-label-moderate;
   color: var(--#{$prefix}dropdown-header-color);
   white-space: nowrap; // as with > li > a
-  @include get-font-size("label-xlarge", true);
 }
 
 // Dropdown text

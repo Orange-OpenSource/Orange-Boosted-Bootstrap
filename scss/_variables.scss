@@ -1375,18 +1375,18 @@ $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 // scss-docs-start dropdown-variables
 $dropdown-min-width:                10rem !default;
 $dropdown-padding-x:                $spacer * .5 !default; // OUDS mod: instead of `0`
-$dropdown-padding-y:                0 !default; // OUDS mod: instead of `.5rem`
+$dropdown-padding-y:                $ouds-space-fixed-xsmall !default; // OUDS mod: instead of `.5rem`
 $dropdown-spacer:                   0 !default; // OUDS mod: instead of `.125rem`
 $dropdown-font-size:                $font-size-base !default;
 $dropdown-line-height:              $line-height-base !default; // OUDS mod
 $dropdown-color:                    var(--#{$prefix}color-content-default) !default;
-$dropdown-bg:                       var(--#{$prefix}color-bg-primary) !default;
+$dropdown-bg:                       var(--#{$prefix}color-bg-secondary) !default;
 $dropdown-border-color:             var(--#{$prefix}color-border-default) !default; // OUDS mod: instead of `var(--#{$prefix}border-color-translucent)`
 $dropdown-border-radius:            var(--#{$prefix}border-radius) !default;
-$dropdown-border-width:             var(--#{$prefix}border-width) !default;
+$dropdown-border-width:             0px !default;
 $dropdown-inner-border-radius:      calc(#{$dropdown-border-radius} - #{$dropdown-border-width}) !default;
 $dropdown-divider-bg:               $dropdown-border-color !default;
-$dropdown-divider-margin-y:         $ouds-space-fixed-2xsmall !default; // OUDS mod: instead of `$spacer * .5`
+$dropdown-divider-margin-y:         0 !default; // OUDS mod: instead of `$spacer * .5`
 $dropdown-box-shadow:               $ouds-elevation-elevated !default;
 
 $dropdown-link-color:               null !default; // OUDS mod: instead of `var(--#{$prefix}body-color)`
@@ -1394,15 +1394,15 @@ $dropdown-link-hover-color:         $dropdown-link-color !default;
 $dropdown-link-hover-bg:            var(--#{$prefix}color-action-support-hover) !default; // OUDS mod: instead of `var(--#{$prefix}tertiary-bg)`
 
 $dropdown-link-active-color:        $dropdown-link-color !default; // OUDS mod: instead of `$component-active-color`
-$dropdown-link-active-bg:           var(--#{$prefix}color-action-primary-pressed) !default; // OUDS mod: instead of `$component-active-bg`
+$dropdown-link-active-bg:           var(--#{$prefix}color-action-support-pressed) !default; // OUDS mod: instead of `$component-active-bg`
 
 $dropdown-link-disabled-color:      var(--#{$prefix}color-content-disabled) !default; // OUDS mod: instead of `var(--#{$prefix}tertiary-color)`
 
-$dropdown-item-padding-y:           $ouds-space-fixed-xsmall !default; // OUDS mod: instead of `$spacer * .25`
-$dropdown-item-padding-x:           $ouds-space-fixed-small !default; // OUDS mod: instead of `$spacer`
+$dropdown-item-padding-y:           $ouds-space-fixed-small !default; // OUDS mod: instead of `$spacer * .25`
+$dropdown-item-padding-x:           $ouds-space-fixed-medium !default; // OUDS mod: instead of `$spacer`
 
-$dropdown-header-color:             null !default; // OUDS mod: instead of `$gray-600`
-$dropdown-header-padding-x:         $dropdown-item-padding-x !default;
+$dropdown-header-color:             var(--#{$prefix}color-content-muted) !default; // OUDS mod: instead of `$gray-600`
+$dropdown-header-padding-x:         calc(#{$dropdown-item-padding-x} - 4px) !default;
 $dropdown-header-padding-y:         $dropdown-item-padding-y !default; // OUDS mod: instead of `$dropdown-padding-y`
 // fusv-disable
 $dropdown-header-padding:           $dropdown-header-padding-y $dropdown-header-padding-x !default; // Deprecated in Bootstrap v5.2.0

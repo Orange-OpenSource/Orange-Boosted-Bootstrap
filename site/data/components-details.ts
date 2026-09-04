@@ -97,14 +97,10 @@ export const componentsDetails: ComponentCardData[] = [
     link: 'dropdown',
     category: 'Actions',
     snippet: `
-      <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Label
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Label</a></li>
-        </ul>
-      </div>`
+      <ul class="dropdown-menu d-block">
+        <li><a class="dropdown-item" href="#">Label</a></li>
+        <li><a class="dropdown-item" href="#">Label</a></li>
+      </ul>`
   },
   {
     name: 'Filter chip',

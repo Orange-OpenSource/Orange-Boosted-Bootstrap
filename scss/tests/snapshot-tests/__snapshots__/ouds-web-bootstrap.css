@@ -8716,34 +8716,33 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .dropdown-menu {
   --bs-dropdown-zindex: 1000;
   --bs-dropdown-min-width: 10rem;
-  --bs-dropdown-padding-y: 0;
+  --bs-dropdown-padding-y: 8px;
   --bs-dropdown-spacer: 0;
   --bs-dropdown-color: var(--bs-color-content-default);
-  --bs-dropdown-bg: var(--bs-color-bg-primary);
+  --bs-dropdown-bg: var(--bs-color-bg-secondary);
   --bs-dropdown-border-color: var(--bs-color-border-default);
   --bs-dropdown-border-radius: var(--bs-border-radius);
-  --bs-dropdown-border-width: var(--bs-border-width);
-  --bs-dropdown-inner-border-radius: calc(var(--bs-border-radius) - var(--bs-border-width));
+  --bs-dropdown-border-width: 0px;
+  --bs-dropdown-inner-border-radius: calc(var(--bs-border-radius) - 0px);
   --bs-dropdown-divider-bg: var(--bs-color-border-default);
-  --bs-dropdown-divider-margin-y: 4px;
+  --bs-dropdown-divider-margin-y: 0;
   --bs-dropdown-box-shadow: 0 2px 3px 0 var(--bs-elevation-color-elevated);
   --bs-dropdown-link-color: ;
   --bs-dropdown-link-hover-color: ;
   --bs-dropdown-link-hover-bg: var(--bs-color-action-support-hover);
   --bs-dropdown-link-active-color: ;
-  --bs-dropdown-link-active-bg: var(--bs-color-action-primary-pressed);
+  --bs-dropdown-link-active-bg: var(--bs-color-action-support-pressed);
   --bs-dropdown-link-disabled-color: var(--bs-color-content-disabled);
-  --bs-dropdown-item-padding-x: 12px;
-  --bs-dropdown-item-padding-y: 8px;
-  --bs-dropdown-item-font-weight: 700;
-  --bs-dropdown-header-color: ;
-  --bs-dropdown-header-padding-x: 12px;
-  --bs-dropdown-header-padding-y: 8px;
+  --bs-dropdown-item-padding-x: 16px;
+  --bs-dropdown-item-padding-y: 12px;
+  --bs-dropdown-header-color: var(--bs-color-content-muted);
+  --bs-dropdown-header-padding-x: calc(16px - 4px);
+  --bs-dropdown-header-padding-y: 12px;
   position: absolute;
   z-index: var(--bs-dropdown-zindex);
   display: none;
   min-width: var(--bs-dropdown-min-width);
-  padding: var(--bs-dropdown-padding-y) var(--bs-dropdown-padding-y);
+  padding: var(--bs-dropdown-padding-y) 0;
   margin: 0;
   color: var(--bs-dropdown-color);
   text-align: left;
@@ -8762,16 +8761,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   top: 100%;
   left: 0;
   margin-top: var(--bs-dropdown-spacer);
-}
-.dropdown-menu > .dropdown-item:first-child,
-.dropdown-menu > li:first-child .dropdown-item {
-  border-top-left-radius: var(--bs-dropdown-inner-border-radius);
-  border-top-right-radius: var(--bs-dropdown-inner-border-radius);
-}
-.dropdown-menu > .dropdown-item:last-child,
-.dropdown-menu > li:last-child .dropdown-item {
-  border-bottom-right-radius: var(--bs-dropdown-inner-border-radius);
-  border-bottom-left-radius: var(--bs-dropdown-inner-border-radius);
 }
 
 .dropdown-menu-start {
@@ -8994,16 +8983,16 @@ ol.bullet-list > li > ol > li > ol > li::before {
   height: 0;
   margin: var(--bs-dropdown-divider-margin-y) 0;
   overflow: hidden;
-  border-top: var(--bs-dropdown-border-width) solid var(--bs-dropdown-divider-bg);
+  border-top: var(--bs-border-width) solid var(--bs-dropdown-divider-bg);
   opacity: 1;
 }
 
 .dropdown-item {
   display: block;
   width: 100%;
-  padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x) calc(var(--bs-dropdown-item-padding-y) + 0.125rem);
+  padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
   clear: both;
-  font-weight: var(--bs-dropdown-item-font-weight);
+  font-weight: 400;
   color: var(--bs-dropdown-link-color);
   text-align: inherit;
   text-decoration: none;
@@ -9037,15 +9026,11 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .dropdown-header {
   display: block;
-  padding: var(--bs-dropdown-header-padding-y) var(--bs-dropdown-header-padding-x) calc(var(--bs-dropdown-header-padding-y) + 0.125rem);
+  padding: var(--bs-dropdown-header-padding-y) var(--bs-dropdown-header-padding-x);
   margin-bottom: 0;
+  font-weight: 500;
   color: var(--bs-dropdown-header-color);
   white-space: nowrap;
-  max-width: var(--bs-font-max-width-label-xlarge);
-  font-size: var(--bs-font-size-label-xlarge);
-  line-height: var(--bs-font-line-height-label-xlarge);
-  /* rtl:remove */
-  letter-spacing: var(--bs-font-letter-spacing-label-xlarge);
 }
 
 .dropdown-item-text {
@@ -9490,7 +9475,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   .navbar .dropdown .dropdown-menu {
     --bs-dropdown-font-size: var(--bs-font-size-body-small);
     --bs-dropdown-line-height: var(--bs-font-line-height-body-small);
-    --bs-dropdown-item-padding-y: 9px;
+    --bs-dropdown-item-padding-y: 13px;
   }
 }
 
