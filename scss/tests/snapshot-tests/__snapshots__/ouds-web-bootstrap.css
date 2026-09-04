@@ -1114,6 +1114,7 @@ h2, .h2 {
   line-height: var(--bs-font-line-height-heading-large);
   /* rtl:remove */
   letter-spacing: var(--bs-font-letter-spacing-heading-large);
+  position: relative;
 }
 
 h3, .h3 {
@@ -1571,6 +1572,18 @@ dialog,
 :not([popover])::backdrop {
   background-color: #000;
   opacity: 0.5;
+}
+
+.h2.marker::after,
+h2.marker::after {
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 1.875rem;
+  height: 0.375rem;
+  margin-block: 0.375rem;
+  content: "";
+  background: var(--bs-color-content-brand-primary);
 }
 
 .lead {
