@@ -12039,10 +12039,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-icon-active-color: var(--bs-color-action-pressed);
   --bs-icon-disabled-color: var(--bs-color-action-disabled);
   --bs-icon-focus-color: var(--bs-color-action-focus);
-  --bs-icon-focus-border-color: var(--bs-color-border-focus);
-  --bs-icon-focus-border-width: 5px;
-  --bs-icon-focus-color-border-focus-inset: var(--bs-color-border-focus-inset);
-  --bs-icon-focus-border-width-focus-inset: 2px;
   --bs-icon-loading-color: var(--bs-color-action-loading);
   --bs-icon-loading-size: 1.25rem;
   display: inline-flex;
@@ -12072,9 +12068,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .icon-interactive:focus-visible {
   --bs-icon-color: var(--bs-icon-focus-color);
   isolation: isolate;
-  outline: var(--bs-icon-focus-border-width) solid var(--bs-icon-focus-border-color);
+  outline: 3px solid var(--bs-color-border-focus);
   outline-offset: 2px;
-  box-shadow: 0 0 0 calc(var(--bs-icon-focus-border-width-focus-inset) + 2px) var(--bs-icon-focus-color-border-focus-inset);
+  box-shadow: 0 0 0 2px var(--bs-color-border-focus-inset);
 }
 .icon-interactive:active {
   color: var(--bs-icon-active-color);
