@@ -1,0 +1,28 @@
+@mixin assistant-icon {
+  &::before {
+    flex-shrink: 0;
+    width: var(--#{$prefix}assistant-icon-size);
+    height: var(--#{$prefix}assistant-icon-size);
+    content: "";
+    background-color: currentcolor;
+    mask: $icon-assistant-icon center;
+  }
+}
+
+@mixin assistant-border {
+  --#{$prefix}loader-gradient-unit: 82deg;
+
+  // Reduce the noise for people that don't want some
+  @media (prefers-reduced-motion: no-preference) and (prefers-contrast: no-preference) and (forced-colors: none) {
+    background: linear-gradient(var(--#{$prefix}btn-bg, var(--#{$prefix}color-bg-primary))) padding-box, conic-gradient($ouds-color-ai-secondary 0 var(--#{$prefix}loader-gradient-unit), $ouds-color-ai-tertiary var(--#{$prefix}loader-gradient-unit) calc(2 * var(--#{$prefix}loader-gradient-unit)), $ouds-color-ai-quaternary calc(2 * var(--#{$prefix}loader-gradient-unit)) calc(3 * var(--#{$prefix}loader-gradient-unit)), $ouds-color-ai-primary calc(3 * var(--#{$prefix}loader-gradient-unit)) calc(4 * var(--#{$prefix}loader-gradient-unit))) border-box;
+    @supports (background-clip: border-area) {
+      background: conic-gradient($ouds-color-ai-secondary 0 var(--#{$prefix}loader-gradient-unit), $ouds-color-ai-tertiary var(--#{$prefix}loader-gradient-unit) calc(2 * var(--#{$prefix}loader-gradient-unit)), $ouds-color-ai-quaternary calc(2 * var(--#{$prefix}loader-gradient-unit)) calc(3 * var(--#{$prefix}loader-gradient-unit)), $ouds-color-ai-primary calc(3 * var(--#{$prefix}loader-gradient-unit)) calc(4 * var(--#{$prefix}loader-gradient-unit))) border-box border-area;
+    }
+
+    &:is(:disabled, [aria-disabled="true"]):not(.loading-indeterminate, .loading-determinate) {
+      background: initial;
+    }
+
+    @content;
+  }
+}

@@ -1,0 +1,19 @@
+.icon-assistant {
+  --#{$prefix}loader-gradient-unit: 72deg;
+  --#{$prefix}icon-border-width: #{$ouds-button-border-width-ai};
+  --#{$prefix}assistant-icon-size: 1rem;
+
+  align-items: center;
+  justify-content: center;
+  border: var(--#{$prefix}icon-border-width) solid transparent;
+  border-radius: $ouds-border-radius-pill; // stylelint-disable-line property-disallowed-list
+
+  @include assistant-icon();
+
+  @include assistant-border();
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    border-color: currentcolor;
+  }
+}
