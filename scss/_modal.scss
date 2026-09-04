@@ -1,3 +1,12 @@
+// Global config
+#{$ouds-root-selector} {
+  --#{$prefix}modal-border-radius: #{$ouds-alert-border-radius-default};
+}
+
+.use-rounded-corner-modal {
+  --#{$prefix}modal-border-radius: #{$ouds-border-radius-large};
+}
+
 .modal {
   --#{$prefix}modal-column-count: 12;
   --#{$prefix}modal-grid-margin: #{$ouds-space-fixed-medium};
@@ -40,6 +49,38 @@
   &:not(:has(.modal-footer)) .modal-body {
     padding-bottom: calc($ouds-space-padding-block-medium + $ouds-space-padding-block-2xlarge);
   }
+
+  &::backdrop {
+    overflow: hidden;
+    overscroll-behavior: contain;
+    backdrop-filter: blur($core-ouds-elevation-blur-500);
+  }
+
+  &.modal-non-blurred::backdrop {
+    backdrop-filter: none;
+  }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $ouds-space-padding-block-xlarge var(--#{$prefix}space-scaled-3xlarge) 0 $ouds-space-padding-inline-2xlarge;
+  background-color: $ouds-color-overlay-modal-sheet;
+
+  .btn-close {
+    position: absolute;
+    top: $ouds-space-inset-medium;
+    right: $ouds-space-inset-medium;
+  }
+}
+
+.modal-title {
+  margin: 0;
+}
+
+.modal-subtitle {
+  margin: 0;
 }
 
 .modal-body {
@@ -64,30 +105,10 @@
   }
 }
 
-.modal::backdrop {
-  overflow: hidden;
-  overscroll-behavior: contain;
-}
-
-.modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-inline: $ouds-space-padding-inline-2xlarge;
-  padding-top: $ouds-space-padding-block-xlarge;
-  background-color: $ouds-color-overlay-modal-sheet;
-
-  .btn-close {
-    position: absolute;
-    top: $ouds-space-inset-medium;
-    right: $ouds-space-inset-medium;
-  }
-}
-
-.modal-footer {
+.modal .modal-footer {
   display: flex;
   flex-shrink: 0;
-  flex-direction: column; // stack buttons on small screens
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   gap: var(--#{$prefix}space-scaled-small);
   align-items: center; // vertically center
@@ -95,21 +116,17 @@
   background-color: $ouds-color-overlay-modal-sheet;
 
   @include media-breakpoint-down(md) {
-    > * {
-      width: 100%; // make buttons full width on small screens
-    }
+    &:not(.modal-footer-horizontal) {
+      flex-direction: column; // stack buttons on small screens
 
-    > .link {
-      justify-content: center;
+      &:not(.modal-footer-small) > * {
+        width: 100%; // make buttons full width on small screens
+      }
     }
   }
 
-  @include media-breakpoint-up(md) {
-    flex-direction: row-reverse; // reverse order of buttons to have primary on the right
-    justify-content: flex-start; // align action buttons to the end
-
-    > .link {
-      margin-inline-end: auto; // push link to the left of the buttons
-    }
+  > .link {
+    justify-content: center;
+    margin-inline-end: auto; // push link to the left of the buttons
   }
 }
