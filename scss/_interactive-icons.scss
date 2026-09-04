@@ -1,0 +1,56 @@
+.icon-interactive {
+  --#{$prefix}icon-min-width: #{$ouds-size-min-interactive-area-smallest};
+  --#{$prefix}icon-min-height: #{$ouds-size-min-interactive-area-smallest};
+  --#{$prefix}icon-max-width: #{$ouds-size-min-interactive-area-default};
+  --#{$prefix}icon-max-height: #{$ouds-size-min-interactive-area-default};
+  --#{$prefix}icon-color: #{$ouds-color-action-enabled};
+  --#{$prefix}icon-hover-color: #{$ouds-color-action-hover};
+  --#{$prefix}icon-active-color: #{$ouds-color-action-pressed};
+  --#{$prefix}icon-disabled-color: #{$ouds-color-action-disabled};
+  --#{$prefix}icon-focus-color: #{$ouds-color-action-focus};
+  --#{$prefix}icon-loading-color: #{$ouds-color-action-loading};
+  --#{$prefix}icon-loading-size: #{px-to-rem($ouds-button-size-progress-indicator-default)};
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--#{$prefix}icon-min-width);
+  max-width: var(--#{$prefix}icon-max-width);
+  min-height: var(--#{$prefix}icon-min-height);
+  max-height: var(--#{$prefix}icon-max-height);
+  aspect-ratio: 1;
+  padding: 0;
+  color: var(--#{$prefix}icon-color);
+  background: none;
+  border: 0;
+
+  svg {
+    flex-shrink: 1;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    font-size: 1.5rem;
+    line-height: 0;
+  }
+
+  &:hover {
+    color: var(--#{$prefix}icon-hover-color);
+  }
+
+  &:focus-visible {
+    --#{$prefix}icon-color: var(--#{$prefix}icon-focus-color);
+    @include focus-visible();
+  }
+
+  &:active {
+    color: var(--#{$prefix}icon-active-color);
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: var(--#{$prefix}icon-disabled-color);
+    pointer-events: none;
+  }
+
+  @include loader($loading-color: var(--#{$prefix}icon-loading-color), $loading-size: var(--#{$prefix}icon-loading-size));
+}
