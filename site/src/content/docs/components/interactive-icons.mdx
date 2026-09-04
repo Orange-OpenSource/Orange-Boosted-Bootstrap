@@ -34,13 +34,14 @@ import { getVersionedDocsPath } from '@libs/path'
 ## Accessibility (semantics)
 
 The `.icon-interactive` classes are designed to be used with the `<button>` element, but can be used on `<a>` elements. You should use any semantic element that best fits the context to appropriately convey its purpose to assistive technologies such as screen readers.
-In particular, do not forget to add an `aria-label` since there is no discernible text for screen reader users.
 
 Use a `<button>` element for actions or for an element that triggers an in-page functionality (like collapsing content), as it is the most semantically correct and accessible choice.
 
 Use an `<a>` element only for navigation purpose; it must include an `href` attribute to be focusable.
 
-Generally speaking, you should always ask yourself which tag is appropriate for your specific context. The visual rendering will remain the same anyway:
+Generally speaking, you should always ask yourself which tag is appropriate for your specific context. The visual rendering will remain the same anyway.
+
+In any case, do not forget to add an `aria-label` since there is no discernible text for screen reader users.
 
 <Example buttonLabel="icons semantics" code={`<button class="icon-interactive" style="width: 32px" aria-label="Button icon">
     <svg aria-hidden="true">
