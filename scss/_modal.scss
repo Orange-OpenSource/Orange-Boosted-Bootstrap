@@ -61,6 +61,30 @@
   }
 }
 
+.modal-alert-icon {
+  --#{$prefix}modal-icon: var(--#{$prefix}alert-error-icon);
+  --#{$prefix}modal-icon-color: #{$ouds-color-content-status-negative};
+
+  position: relative;
+  width: var(--#{$prefix}icon-small-with-heading-small);
+  height: var(--#{$prefix}icon-small-with-heading-small);
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    display: block;
+    color: var(--#{$prefix}modal-icon-color);
+    content: "";
+    background-color: currentcolor;
+    mask-image: escape-svg(var(--#{$prefix}modal-icon));
+  }
+
+  &.modal-success {
+    --#{$prefix}modal-icon: var(--#{$prefix}alert-success-icon);
+    --#{$prefix}modal-icon-color: #{$ouds-color-content-status-positive};
+  }
+}
+
 .modal-header {
   display: flex;
   align-items: center;

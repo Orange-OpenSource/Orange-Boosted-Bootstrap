@@ -338,6 +338,56 @@ By default the modal backdrop is blurred to visually separate the modal from the
     Open modal without blurred backdrop
   </button>`} />
 
+#### Functional
+
+You can implement function modal dialogs using the functional variants of the icons and buttons.
+
+<Example buttonLabel="dialog modal negative" code={`<dialog id="demoModalNegative" class="modal modal-negative" aria-label="Demo modal dialog" closedby="any">
+    <div class="modal-header">
+      <div class="d-flex align-items-center gap-scaled-small">
+        <div class="modal-alert-icon"><p class="visually-hidden">Alert</p></div>
+        <h3 class="modal-title">Confirm deletion</h3>
+      </div>
+      <button type="button" class="btn btn-close" commandfor="demoModalNegative" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-negative" commandfor="demoModalNegative" command="close">Delete</button>
+        <button type="button" class="btn btn-minimal" commandfor="demoModalNegative" command="close">Cancel</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="demoModalNegative" command="show-modal">
+    Open negative modal
+  </button>`} />
+
+
+<Example buttonLabel="dialog modal success" code={`<dialog id="demoModalSuccess" class="modal" aria-label="Demo modal dialog" closedby="any">
+    <div class="modal-header">
+      <div class="d-flex align-items-center gap-scaled-small">
+        <div class="modal-alert-icon modal-success"><p class="visually-hidden">Alert</p></div>
+        <h3 class="modal-title">Subscription confirmed!</h3>
+      </div>
+      <button type="button" class="btn btn-close" commandfor="demoModalSuccess" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" commandfor="demoModalSuccess" command="close">Ok</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="demoModalSuccess" command="show-modal">
+    Open success modal
+  </button>`} />
+
 ## JS example
 
 <Example buttonLabel="dialog modal full" code={`<dialog id="demoJSModal" class="modal" aria-label="Demo modal">
