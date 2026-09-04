@@ -140,6 +140,10 @@ $chip-tick-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
 // * Link *
 // orange/Component/link/previous v2.2 — same icon as $btn-previous-icon
 $link-previous-icon: var(--#{$prefix}btn-previous-icon) !default;
+// orange/Component/link/expanded-false v2.2 — same icon as $btn-expanded-false-icon
+$link-expanded-false-icon: var(--#{$prefix}btn-expanded-false-icon) !default;
+// orange/Component/link/expanded-true v2.2 — same icon as $btn-expanded-true-icon
+$link-expanded-true-icon: var(--#{$prefix}btn-expanded-true-icon) !default;
 // orange/Component/link/external-link v2.2
 $link-external-icon: var(--#{$prefix}link-external-icon) !default;
 
@@ -194,8 +198,8 @@ $svg-as-custom-props: (
   "alert-error-icon": $alert-icon-important, // Used by alerts and tags
   "breadcrumb-divider-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m10 19.1 7.3-7.1L10 4.9l-2.1 2 5.2 5.1-5.2 5z'/></svg>"), // Duplicated SVG used by $breadcrumb-divider-icon, $btn-next-icon
   "btn-previous-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M14 4.9 6.8 12l7.2 7.1 2.1-2-5.2-5.1 5.2-5z'/></svg>"), // Duplicated SVG used by $btn-previous-icon, $link-previous-icon
-  "btn-expanded-false-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m4.9 10 7.1 7.3 7.1-7.3-2-2.1-5.1 5.2-5-5.2z'/></svg>"), // Duplicated SVG used by $btn-expanded-false-icon, $select-input-chevron
-  "btn-expanded-true-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19.1 14 12 6.8 4.9 14l2 2.1 5.1-5.2 5 5.2z'/></svg>"), // Duplicated SVG used by $btn-expanded-true-icon, $select-input-expanded-chevron
+  "btn-expanded-false-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m4.9 10 7.1 7.3 7.1-7.3-2-2.1-5.1 5.2-5-5.2z'/></svg>"), // Duplicated SVG used by $btn-expanded-false-icon, $link-expanded-false-icon, $select-input-chevron
+  "btn-expanded-true-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19.1 14 12 6.8 4.9 14l2 2.1 5.1-5.2 5 5.2z'/></svg>"), // Duplicated SVG used by $btn-expanded-true-icon, $link-expanded-true-icon, $select-input-expanded-chevron
   "link-external-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M17.3 17a1 1 0 0 1-1 .9H7a1 1 0 0 1-.9-1V7.7a1 1 0 0 1 1-.9h5.7l1.6-1.6h-8q-1.7.2-1.9 2v10.5q.2 1.7 2 1.9H17q1.7-.2 1.9-2V9.7l-1.6 1.6zm2-13.5h-5.2l1.7 1.8-3.5 3.5q-.6.8 0 1.6l1.3 1.3q.8.6 1.6 0l3.6-3.5 1.7 1.7V4.7q0-1.1-1.2-1.2'/></svg>") // Duplicated SVG used by $link-external-icon, $list-item-external-icon
 ) !default;
 

@@ -8,6 +8,7 @@ aliases:
 toc: true
 types:
   - Link
+  - Expand link
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
@@ -18,6 +19,53 @@ import { getMode } from '@libs/sass-variables'
 </Callout>
 
 ## Overview
+
+### Component types
+
+<ul class="list-unstyled grid gap-medium">
+  <li class="g-col-6">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
+          <a class="link link-chevron" href="#">Label</a>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#link">Link</a> is a UI element that allows to navigate from one location to another.</div>
+    </div>
+  </li>
+  <li class="g-col-6">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
+          <div class="dropdown">
+            <button type="button" class="link link-expand" data-bs-toggle="dropdown" aria-expanded="false">Label</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#expand-link">Expand link</a> is a UI element that reveals or hides additional content through a text link.</div>
+    </div>
+  </li>
+</ul>
+
+For the three types of button, OUDS Web has a common base `.link` class that sets up default styles.
+
+<Example showToolbar={false} code={`<a class="link" href="#">Label</a>`} />
+
+<Example showToolbar={false} code={`<div class="dropdown">
+    <button type="button" class="link link-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>`} />
+
+## [[comp]] Link
 
 Link is a UI element that allows to navigate from one location to another, either within the same page or across different pages in the same resource, or to an external resource.
 
@@ -37,9 +85,9 @@ The `.link` classes are designed to be used with the `<a>` element. However, you
 
 <Example buttonLabel="link with a button tag" code={`<button class="link" type="submit">Button link</button>`} />
 
-## Variants
+### Variants
 
-### On colored background
+#### On colored background
 
 OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/utilities/background#colored-background]]). Their accessibility (readability) is ensured by suitable semi-opaque backgrounds.
 
@@ -58,7 +106,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
     </div>
   </div>`} />
 
-### With chevron
+#### With chevron
 
 Add `.link-chevron` to enhance your link with a chevron on the right side. Use the additional `.link-previous` class to display the chevron on the left side.
 
@@ -69,7 +117,7 @@ Add `.link-chevron` to enhance your link with a chevron on the right side. Use t
     <div><a class="link link-chevron link-previous" href="#">This is an example of a link on multiple lines with a previous chevron</a></div>
   </div>`} />
 
-### With external icon
+#### With external icon
 
 Add `.link-external` to enhance your link with an external icon on the right side.
 
@@ -79,7 +127,7 @@ Add `.link-external` to enhance your link with an external icon on the right sid
 
 <Example buttonLabel="links with external icon" class="d-flex flex-column gap-medium" code={`<a class="link link-external" href="#">Link with external icon<span class="visually-hidden">&nbsp;(external link)</span></a>`} />
 
-### With icon
+#### With icon
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
@@ -117,9 +165,9 @@ Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left o
   </a>`} />
 </BootstrapCompatibility>
 
-## States
+### States
 
-### Disabled
+#### Disabled
 
 Make links look inactive by adding the `aria-disabled="true"` attribute to any `<a>` element. Disabled links have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
@@ -136,7 +184,7 @@ Disabled links using `<a>` *should not* include the `href` attribute. In case yo
     </a>
   </div>`} />
 
-#### Disabled link accessibility warning
+##### Disabled link accessibility warning
 
 To cover cases where you have to keep the `href` attribute on a disabled link, the style on `[aria-disabled="true"]` uses `pointer-events: none` to try to disable the link functionality of `<a>`s. Note that this CSS property is not yet standardized for HTML, but all modern browsers support it. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links.
 
@@ -146,7 +194,7 @@ However, if the disabled link conveys useful information for users, it must rema
 <Example buttonLabel="disabled links keeping `href` attribute" code={`<div><a href="#" class="link" tabindex="-1" aria-disabled="true">Disabled link without any useful information</a></div>
   <div><a href="#" class="link" aria-disabled="true">Keyboard focusable disabled link</a></div>`} />
 
-### Skeleton
+#### Skeleton
 
 <SkeletonRedirect component="link" />
 
@@ -154,7 +202,7 @@ However, if the disabled link conveys useful information for users, it must rema
     <a class="link" href="#">Very long link</a>
   </div>`} />
 
-## Sizes
+### Sizes
 
 Links are available in two sizes and two densities. Add `.link-small` for small font-size link. Add `.link-compact` for smaller padding around the link. You can combine both classes to have a small and compact link.
 
@@ -168,3 +216,115 @@ Links are available in two sizes and two densities. Add `.link-small` for small 
   <a class="link link-small" href="#">This is an example of a small link</a>
   <a class="link link-compact" href="#">This is an example of a compact link</a>
   <a class="link link-compact link-small" href="#">This is an example of a small compact link</a>`} />
+
+## [[comp]] Expand link
+
+An expand link is a UI element that reveals or hides additional content through a text link.
+
+The expand link feature is displayed through a dropdown with selectable values. It is ideal for inline contexts where minimal visual weight is needed, maintaining a clean layout while still providing access to additional information.
+
+Use OUDS Web `.link` class to set up styles such as padding and content alignment to display standalone links. By default, `.link` defines focus, hover and active styles similar to the `<a>` tag.
+
+<Callout type="info">
+  The expand link uses a `<button>` element to trigger the dropdown.
+</Callout>
+
+<Example showToolbar={false} code={`<div class="dropdown">
+    <button type="button" class="link link-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>`} />
+
+### Variants
+
+#### On colored background
+
+OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/utilities/background#colored-background]]). Their accessibility (readability) is ensured by suitable semi-opaque backgrounds.
+
+<Callout type="warning" title="Heads up!">
+  Background utilities used to make colored backgrounds, should always be used with the appropriate color theme (see an example below). Please refer to [colored backgrounds documentation]([[docsref:/utilities/background#colored-backgrounds]]).
+</Callout>
+
+<Example buttonLabel="expand link on colored backgrounds" class="p-none bd-first-rounded" code={`<div class="bg-surface-brand-primary p-large">
+    <div data-bs-theme="${getMode('modes-on-brand-primary')}">
+      <div class="dropdown">
+        <button type="button" class="link link-on-colored-bg link-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+        <ul class="dropdown-menu" data-bs-theme="root">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>`} />
+
+#### Reverse
+
+Add the `.link-reverse` class to reverse the chevron position of the expand link.
+
+<Example buttonLabel="expand link with reverse chevron" code={`<div class="dropdown">
+    <button type="button" class="link link-expand link-reverse" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>`} />
+
+### States
+
+#### Disabled
+
+Add the `[disabled]` attribute to the `<button>` element to disable the expand link.
+
+<Example buttonLabel="disabled expand link" code={`<div class="dropdown">
+    <button type="button" class="link link-expand" data-bs-toggle="dropdown" aria-expanded="false" disabled>Expand</button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>`} />
+
+#### Skeleton
+
+<SkeletonRedirect component="expand link" />
+
+<Example buttonLabel="expand link skeleton" code={`<div aria-busy="true" inert>
+    <div class="dropdown">
+      <button type="button" class="link link-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+  </div>`} />
+
+### Sizes
+
+Links are available in two sizes and two densities. Add `.link-small` for small font-size link. Add `.link-compact` for smaller padding around the link. You can combine both classes to have a small and compact link.
+
+<Callout type="warning">
+  Compact and small sizes are not recommended for accessibility reasons because of the interactive area being reduced.
+
+  For the 2.5.5 WCAG criterion on target size enhanced and while using a list of compact links, make sure to space them enough to avoid accidental interactions. If you follow the [2.5.5 WCAG criterion](https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html), the minimum height and width of the link with the spaces around should equal `44px x 44px`.
+</Callout>
+
+<Example buttonLabel="expand links sizes" code={`<div class="dropdown d-flex flex-column align-items-start gap-xsmall">
+    <button type="button" class="link link-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+
+    <button type="button" class="link link-expand link-small" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+
+    <button type="button" class="link link-expand link-compact" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+
+    <button type="button" class="link link-expand link-compact link-small" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>`} />

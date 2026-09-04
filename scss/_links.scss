@@ -39,7 +39,8 @@
 }
 
 .link-chevron,
-.link-external {
+.link-external,
+.link-expand {
   --#{$prefix}link-chevron-gap: #{$ouds-link-space-column-gap-chevron-default};
 
   // Extend for Boosted compatibility in which .link-chevron can be used without .link
@@ -64,7 +65,8 @@
     --#{$prefix}link-chevron-color: #{$ouds-link-color-content-pressed};
   }
 
-  &[aria-disabled="true"] {
+  &[aria-disabled="true"],
+  &:disabled {
     --#{$prefix}link-chevron-color: #{$ouds-color-action-disabled};
   }
 }
@@ -111,6 +113,33 @@
     background-color: var(--#{$prefix}link-chevron-color, $ouds-link-color-chevron-enabled);
     mask: $link-external-icon center no-repeat;
     mask-size: var(--#{$prefix}link-icon-size);
+  }
+}
+
+.link-expand {
+  display: inline-flex;
+  gap: var(--#{$prefix}link-chevron-gap);
+
+  &::after {
+    flex-shrink: 0;
+    width: var(--#{$prefix}link-icon-size);
+    height: var(--#{$prefix}link-icon-size);
+    content: "";
+    background-color: var(--#{$prefix}link-chevron-color, $ouds-link-color-chevron-enabled);
+    mask-image: $link-expanded-false-icon;
+  }
+
+  &[aria-expanded="true"]::after {
+    mask-image: $link-expanded-true-icon;
+  }
+
+  &.link-reverse::after {
+    order: -1;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    pointer-events: none;
   }
 }
 
