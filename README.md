@@ -15,6 +15,7 @@
 ## Table of contents
 
 - [Quick start](#quick-start)
+- [AI agent skills](#ai-agent-skills)
 - [Status](#status)
 - [What’s included](#whats-included)
 - [Bugs and feature requests](#bugs-and-feature-requests)
@@ -45,6 +46,22 @@ Several quick start options are available:
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package ouds-web-common ouds-web-orange` Sass: `Install-Package ouds-web-common.sass ouds-web-orange.sass`
 
 Read the [Getting started page](https://web.unified-design-system.orange.com/docs/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
+
+
+## AI agent skills
+
+This repository ships [Agent Skills](https://www.skills.sh/) in the [`skills/`](skills/) directory, giving AI coding agents (Claude Code, Cursor, GitHub Copilot, and others) procedural knowledge of OUDS Web:
+
+- **`using-ouds-web`** — a comprehensive reference of OUDS Web components, layout, utilities, and design tokens, used when an agent generates OUDS Web markup or code.
+- **`migrate-to-ouds-web`** — a step-by-step workflow to migrate a project from Boosted, OB1, or an older OUDS Web version to the latest OUDS Web.
+
+Install them in your project with the [`skills` CLI](https://www.skills.sh/):
+
+```sh
+npx skills add Orange-OpenSource/Orange-Boosted-Bootstrap
+```
+
+This downloads the skills and configures them for use with your AI agent.
 
 
 ## Status
