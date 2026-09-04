@@ -10,36 +10,22 @@
   --#{$prefix}btn-disabled-color: #{$ouds-button-color-content-ai-disabled};
   --#{$prefix}btn-focus-color: #{$ouds-button-color-content-ai-focus};
   --#{$prefix}btn-loading-color: #{$ouds-button-color-content-ai-loading};
+  --#{$prefix}assistant-icon-size: #{$ouds-size-min-interactive-area-smallest};
 
   border-color: currentcolor;
 
-  &::before {
-    flex-shrink: 0;
-    width: var(--#{$prefix}btn-icon-size);
-    height: var(--#{$prefix}btn-icon-size);
-    content: "";
-    background-color: currentcolor;
-    mask: $btn-assistant-icon center;
-  }
+  @include assistant-icon();
 
-  // Reduce the noise for people that don't want some
-  @media (prefers-reduced-motion: no-preference) and (prefers-contrast: no-preference) and (forced-colors: none) {
-    background: linear-gradient(var(--#{$prefix}btn-bg, var(--#{$prefix}color-bg-primary))) padding-box, conic-gradient($ouds-color-ai-secondary 0deg 82deg, $ouds-color-ai-tertiary 82deg 118deg, $ouds-color-ai-quaternary 118deg 242deg, $ouds-color-ai-primary 242deg 360deg) border-box;
-    @supports (background-clip: border-area) {
-      background: conic-gradient($ouds-color-ai-secondary 0deg 82deg, $ouds-color-ai-tertiary 82deg 118deg, $ouds-color-ai-quaternary 118deg 242deg, $ouds-color-ai-primary 242deg 360deg) border-box border-area;
-    }
+  @include assistant-border() {
     border-color: transparent;
 
     &:is(:hover, :active, :focus-visible) {
       border-color: transparent;
     }
-
-    &:is(:disabled, [aria-disabled="true"]):not(.loading-indeterminate, .loading-determinate) {
-      background: initial;
-    }
   }
 
   &.btn-icon {
+    --#{$prefix}loader-gradient-unit: 72deg;
     --#{$prefix}btn-border-radius: #{$ouds-button-border-radius-ai-icon-only};
   }
 
