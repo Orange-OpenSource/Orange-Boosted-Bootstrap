@@ -40,6 +40,8 @@ Icons are designed within a square layout to preserve consistency. Within this s
   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}/>
 </svg>
 
+You can use the utility classes provided in the [icons sizing utilities]([[docsref:utilities/icons-sizing]]) documentation to adjust the size of your icons according to your needs.
+
 ## Using icons
 
 There are many ways to use <BrandSpecific brand={['orange', 'orange-compact']}>Solaris</BrandSpecific> icons in a web page:
@@ -186,6 +188,8 @@ To color icons, you can:
 - specify a color using CSS variables like `--bs-color-content-brand-primary`, `--bs-color-content-disabled` or `--bs-color-content-status-positive`.
 
 For SVGs (SVG sprites, inline SVGs or CSS mask image SVGs), the `fill="currentColor"` attribute is required on the `<svg>` or `<symbol>` tag, if you want to change the icons color on the fly (for example on hover): it will make the icon inherit color from itself or its parent containers. <BrandSpecific brand={['orange', 'orange-compact']}>It is set on the icons downloaded from Solaris icons finder.</BrandSpecific> For CSS mask image SVGs, the `background-color: currentcolor` CSS property should be set.
+
+Note that you can use the utility classes provided in the [icons sizing utilities]([[docsref:utilities/icons-sizing]]) documentation to adjust the size of your icons.
 
 ### Status colors
 
