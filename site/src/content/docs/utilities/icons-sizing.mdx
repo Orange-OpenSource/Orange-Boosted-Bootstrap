@@ -1,9 +1,8 @@
 ---
-title: Icons
-description: Guidance and suggestions for using icons library with OUDS Web.
+title: Icons sizing
+description: OUDS Web includes some utility classes to change the icons' size.
 aliases:
-  - "/docs/extend/icons/"
-  - "/docs/components/icon/"
+  - "/docs/utilities/icons-sizing/"
 toc: true
 ---
 
@@ -61,178 +60,13 @@ export const screenSize = [
   "desktop"
 ]
 
-<Callout type="info">
-  You can find here the [iconography design guidelines](https://r.orange.fr/r/S-ouds-doc-icon-intro).
-</Callout>
-
-<BrandSpecific brand={['orange', 'orange-compact']}>
-While OUDS Web doesn’t include an icon set by default, Orange does have its own comprehensive icon library called Solaris. While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
-
-[Solaris icons library]([[config:icons]]) is a growing library of icons that are designed by OUDS design team. It features an icon search tool based on categories and keywords, and allows icons to be downloaded in various formats for use in design and development. They are not open-source though and should only be used for Orange projects. Please refer to the [icons license file]([[config:icons_license]]) for legal information.
-
-If you need guidance to use Solaris icons, please refer to the paragraph [use Solaris icons](#use-solaris-icons).
-</BrandSpecific>
-
-## Icons rendering
-
-Icons are designed within a square layout to preserve consistency. Within this square, there exists a designated safety zone to guarantee that icons can be used in various sizes and contexts while maintaining alignment as intended by the designers. The dimensions of the icons encompass this safety zone, ensuring adaptability and consistency across diverse applications.
-
-<svg width="8em" height="8em" class="bg-opacity-lowest" aria-hidden="true">
-  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}/>
-</svg>
-<svg width="8em" height="8em" class="bg-opacity-lowest" aria-hidden="true">
-  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}/>
-</svg>
-<svg width="8em" height="8em" class="bg-opacity-lowest" aria-hidden="true">
-  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}/>
-</svg>
-
-## Icons color
-
-To color icons, you can:
-- use [color utilities classes]([[docsref:utilities/color#colors]]) like `.text-brand-primary`, `.text-disabled` or `.text-status-positive` that change current color value.
-- specify a color using CSS variables like `--bs-color-content-brand-primary`, `--bs-color-content-disabled` or `--bs-color-content-status-positive`.
-
-For SVGs (SVG sprites, inline SVGs or CSS mask image SVGs), the `fill="currentColor"` attribute is required on the `<svg>` or `<symbol>` tag, if you want to change the icons color on the fly: it will make the icon inherit color from itself or its parent containers. <BrandSpecific brand={['orange', 'orange-compact']}>It is set on the icons downloaded from Solaris icons finder.</BrandSpecific> For CSS mask image SVGs, the `background-color: currentColor` CSS property should be set.
-
-### Functional icons
-
-The following color utilities and CSS variables are intended for use only with functional icons. The warning icon is an exception as it has two different colors for its internal and external shapes, to ensure accessibility. For this icon, you can use the dedicated [accessible warning icon](#accessible-warning-icon).
-
-Here are [the normal contexts of use of these functional colors](https://unified-design-system.orange.com/472794e18/p/217ac6-color/t/6d158c2daf).
-
-<BsTable>
-| Color utility | Color CSS variable | Context of use |
-| --- | --- | --- |
-| `.text-status-accent` | `--bs-color-content-status-accent` | Used to highlight or draw attention to a specific element. |
-| `.text-status-info` | `--bs-color-content-status-info` | Use to communicate a feedback. It’s more important than a neutral color. |
-| `.text-status-positive` | `--bs-color-content-status-positive` | Use to communicate a positive action, a confirmation or a positive feedback. |
-| NA | `--bs-icon-color-content-status-warning-external-shape` and `--bs-icon-color-content-status-warning-internal-shape` | Use to display an information that requires more attention, or an action from the user. |
-| `.text-status-negative` | `--bs-color-content-status-negative` | Use to communicate something negative. It can be a destructive action, an error state, or a negative feedback. |
-</BsTable>
-
-<Example buttonLabel="functional icons and colors" code={`<div class="d-flex justify-content-center md:gap-large">
-    <div class="p-medium bg-primary border border-default" data-bs-theme="light">
-      <p>
-        <svg class="text-status-accent decorative-small-icon" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-        </svg> Accent
-      </p>
-      <p>
-        <svg class="text-status-info decorative-small-icon" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-info')}" />
-        </svg> Info
-      </p>
-      <p>
-        <svg class="text-status-positive decorative-small-icon" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-positive')}" />
-        </svg> Success
-      </p>
-      <p>
-        <svg class="decorative-small-icon" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-warning')}" />
-        </svg> Warning
-      </p>
-      <p>
-        <svg class="text-status-negative decorative-small-icon" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-negative')}" />
-        </svg> Important
-      </p>
-    </div>
-    <div class="p-medium bg-always-black border border-default" data-bs-theme="dark">
-      <p>
-        <svg class="text-status-accent decorative-small-icon" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-        </svg> Accent
-      </p>
-      <p>
-        <svg class="decorative-small-icon" style="color: var(--bs-color-content-status-info)" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-info')}" />
-        </svg> Info
-      </p>
-      <p>
-        <svg class="decorative-small-icon" style="color: var(--bs-color-content-status-positive)" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-positive')}" />
-        </svg> Success
-      </p>
-      <p>
-        <svg class="decorative-small-icon" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-warning')}" />
-        </svg> Warning
-      </p>
-      <p>
-        <svg class="decorative-small-icon" style="color: var(--bs-color-content-status-negative)" aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-negative')}" />
-        </svg> Important
-      </p>
-    </div>
-  </div>`} />
-
-#### Accessible warning icon
-
-To ensure accessibility through sufficient contrast, OUDS provides a dedicated warning icon with two distinct colors for its external and internal shapes. This design choice enhances visibility and clarity, making it easier for users to recognize and understand warning messages.
-
-Here is a SVG symbol to insert into your SVG sprite. It uses the CSS variables `--bs-icon-color-content-status-warning-external-shape` and `--bs-icon-color-content-status-warning-internal-shape` to color the external and internal shapes of the icon respectively, changing according to color mode. See below to know more about [SVG sprites](#svg-sprite).
-
-<BrandSpecific brand={['orange', 'orange-compact']}>
-<Example buttonLabel="accessible warning SVG path" lang="svg" showPreview={false} code={`<symbol viewBox="0 0 24 24" id="functional-status-warning">
-    <path fill="var(--bs-icon-color-content-status-warning-external-shape)" d="M22.452 16.98 14.805 3.063a2.556 2.556 0 0 0-4.411 0L2.77 16.943l-.001.002-.021.036a2.54 2.54 0 0 0-.009 2.552 2.55 2.55 0 0 0 2.215 1.276h15.292a2.548 2.548 0 0 0 2.215-1.276 2.542 2.542 0 0 0-.01-2.553ZM11.4 8.031c0-1.188.4-1.758 1.2-1.758.8 0 1.2.57 1.2 1.758v4.535c0 1.188-.385 1.774-1.2 1.774-.8 0-1.2-.585-1.2-1.774V8.031Zm1.188 10.119a1.394 1.394 0 0 1-1.388-1.407 1.38 1.38 0 0 1 1.388-1.391 1.39 1.39 0 0 1 1.387 1.39c0 .768-.622 1.408-1.387 1.408Z"/>
-    <path fill="var(--bs-icon-color-content-status-warning-internal-shape)" d="M12.6 6.273c-.8 0-1.2.57-1.2 1.758v4.535c0 1.188.4 1.774 1.2 1.774.816 0 1.2-.586 1.2-1.774V8.031c0-1.188-.4-1.758-1.2-1.758Zm-1.4 10.47c0 .784.622 1.407 1.388 1.407.765 0 1.387-.64 1.387-1.407a1.39 1.39 0 0 0-1.387-1.391 1.38 1.38 0 0 0-1.388 1.39Z"/>
-  </symbol>`} />
-</BrandSpecific>
-<BrandSpecific brand="sosh">
-<Example buttonLabel="accessible warning SVG path" lang="svg" showPreview={false} code={`<symbol viewBox="0 0 24 24" id="functional-status-warning">
-    <path fill="var(--bs-icon-color-content-status-warning-external-shape)" d="M12 3.36c.786 0 1.473.43 1.843 1.072l7.467 12.96c.184.32.29.692.29 1.088 0 1.193-.955 2.16-2.133 2.16H4.533c-1.178 0-2.132-.967-2.133-2.16 0-.396.106-.769.29-1.088l.018-.03.001-.003 7.448-12.927A2.127 2.127 0 0 1 12 3.36Zm0 12.72c-.334 0-.618.12-.85.36-.233.24-.35.52-.35.84 0 .33.117.612.35.847.218.23.528.357.85.353.335 0 .618-.118.85-.353.234-.235.35-.517.35-.847 0-.32-.116-.6-.35-.84a1.142 1.142 0 0 0-.85-.36Zm.001-9.6c-.643 0-1.171.455-1.201 1.025l.24 7.135h1.92l.24-7.135c-.03-.57-.556-1.025-1.199-1.025Z"/>
-    <path fill="var(--bs-icon-color-content-status-warning-internal-shape)" d="M10.8 7.505c.03-.57.558-1.025 1.2-1.025.643 0 1.17.455 1.2 1.025l-.24 7.135h-1.92l-.24-7.135Zm2.05 10.622a1.15 1.15 0 0 1-.85.353 1.15 1.15 0 0 1-.85-.353 1.16 1.16 0 0 1-.35-.847c0-.32.116-.6.35-.84.232-.24.516-.36.85-.36.334 0 .618.12.85.36.234.24.35.52.35.84 0 .33-.116.613-.35.847Z"/>
-  </symbol>`} />
-</BrandSpecific>
-
-Then, you can use it like this:
-
-<Example buttonLabel="accessible warning icon" class="mt-none" code={`<svg class="decorative-small-icon" aria-hidden="true">
-    <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#functional-status-warning')}" />
-  </svg>`} />
-
-Please note that this icon cannot be rendered by a Web font, due to its two colors.
-
-### Other icons
-
-Here are some examples of other [color utilities]([[docsref:utilities/color#colors]]) and CSS variables used with icons.
-
-<Example buttonLabel="non functional icons and colors" class="d-inline-flex flex-column" code={`<p class="p-small bg-primary d-inline-flex align-items-center gap-xsmall" data-bs-theme="light">
-    <svg class="decorative-small-icon" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-    </svg>
-    <svg class="decorative-small-icon text-primary" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}" />
-    </svg>
-    <svg class="decorative-small-icon text-disabled" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}" />
-    </svg>
-    <span class="icon si si-settings text-muted decorative-small-icon" aria-hidden="true"></span>
-  </p>
-  <p class="p-small bg-always-black d-inline-flex align-items-center gap-xsmall" data-bs-theme="dark">
-    <svg class="decorative-small-icon" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-    </svg>
-    <svg class="decorative-small-icon" style="color: var(--bs-color-content-brand-primary)" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}" />
-    </svg>
-    <svg class="decorative-small-icon" style="color: var(--bs-color-content-disabled)" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}" />
-    </svg>
-    <span class="icon si si-settings decorative-small-icon" style="color: var(--bs-color-content-muted)" aria-hidden="true"></span>
-  </p>`} />
-
-## Icons size
-
 Icons’ size depends on where they are placed in the page content, so please make sure to either use our utilities provided in this page or follow the design. Icons size utility classes are designed to be used upon `<img />`, `<svg>` or even icon font, wherever the icon is.
 
 Every icon size utility class presented in here has the common following code:
 
 <ScssDocs buttonLabel="SCSS to manage icon size" name="ouds-font-icon-common" file="scss/helpers/_icon.scss" />
 
-### Headings
+## Headings
 
 Here are the rules to follow for headings. These icons’ sizes are responsive.
 
@@ -418,11 +252,11 @@ Here are the rules to follow for headings. These icons’ sizes are responsive.
     <h6 class="mb-none">H6 with small icon</h6>
   </div>`} />
 
-### Display headings
+## Display headings
 
 You should not use any icon with our `.display-*` font sizes, because we prefer to keep the place for the text.
 
-### Regular texts
+## Regular texts
 
 Here are the rules to follow for regular texts. These icons’ sizes are responsive.
 
@@ -551,7 +385,7 @@ Here are the rules to follow for regular texts. These icons’ sizes are respons
     </p>
   </div>`} />
 
-### Decorative
+## Decorative
 
 Here are the rules to follow for decorative icons. Be careful using these icons’ sizes because they are not responsive. Check out for [more information about accessibility in our documentation](#icons-accessibility).
 
@@ -688,51 +522,8 @@ Here are the rules to follow for decorative icons. Be careful using these icons�
   <svg class="decorative-3xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
   <svg class="decorative-4xsmall-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>`} />
 
-### Multiple lines
 
-Sometimes you need a different structure to handle larger titles, or paragraphs that wrap over several lines. Here are some examples to handle these use cases. We’ve set arbitrary spacings, but align them with your design.
-
-#### Centered on text block
-
-This is the default behavior of our DOM.
-
-<Example buttonLabel="icon centered on heading block" code={`<div class="d-flex align-items-center">
-    <svg class="hxl-large-icon me-scaled-small text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}" />
-    </svg>
-    <h1 class="mb-none">H1 with large icon and a very long title to see how it behaves while being wrapped</h1>
-  </div>`} />
-
-<Example buttonLabel="icon centered on regular text block" code={`<div class="d-flex align-items-center">
-    <svg class="bm-large-icon me-scaled-small text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}" />
-    </svg>
-    <p class="mb-none">
-      Default long paragraph with large icon. It stands here in order for you to see how the icon should behave when it’s placed next to a long paragraph. Whenever the paragraph stands on multiple lines please prefer using a block element and not an inline element so there will no strange behaviors.
-    </p>
-  </div>`} />
-
-#### Above text block
-
-You can also have the icon above the text block.
-
-<Example buttonLabel="icon above heading block" code={`<div>
-    <svg class="hxl-large-icon mb-scaled-xsmall text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}" />
-    </svg>
-    <h1 class="mb-none">H1 with large icon and a very long title to see how it behaves while being wrapped</h1>
-  </div>`} />
-
-<Example buttonLabel="icon above regular text block" code={`<div>
-    <svg class="bm-large-icon mb-scaled-2xsmall text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}" />
-    </svg>
-    <p class="mb-none">
-      Default long paragraph with large icon. It stands here in order for you to see how the icon should behave when it’s placed next to a long paragraph. Whenever the paragraph stands on multiple lines please prefer using a block element and not an inline element so there will no strange behaviors.
-    </p>
-  </div>`} />
-
-### `<img>` and font icon
+## `<img>` and font icon
 
 SVG Sprite is the preferred choice for flexibility, performance and accessibility, and this is why all our examples use this method but there are other ways to display icons. They should all behave the same thanks to our CSS. If you are experimenting any trouble, feel free to search or fill in a new [Github discussion](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions) or contact [our team]([[docsref:/about/team]]).
 
@@ -745,141 +536,8 @@ SVG Sprite is the preferred choice for flexibility, performance and accessibilit
     <h1 class="mb-none">H1 with large icon</h1>
   </div>`} />
 
-## Icons accessibility
 
-<Callout type="info">
-  For more details, **Orange Accessibility Guidelines** provides [a deep-dive article regarding SVG accessibility](https://a11y-guidelines.orange.com/en/articles/accessible-svg/).
-</Callout>
 
-#### Decorative icons
-Purely **decorative icons** (like repeating information of an adjacent text) must be hidden to assistive technologies:
-- for `<svg>` or `<span>` tags, use the attribute `aria-hidden="true"`
-- for `<img />`, use an empty `alt` attribute
-- CSS background images are intended to be decorative
 
-#### Informative/meaningful icons
 
-If the icon is **meaningful** with no visible adjacent text, e.g. indication in a table or only content of a button, you have to provide an appropriate alternative text with the description of the icon or the description of the action triggered.
 
-The best way to do this is to keep the icon hidden to assistive technologies (see above) and add a visually hidden label which will be perceived by assistive technologies, by using the `.visually-hidden` class. You can also use an `aria-label` on the containing interactive element to provide an accessible name. For external images within the `<img />` tag, you can also fill the `alt` attribute directly.
-
-Remember that you cannot use external images inside interactive elements because the color won’t change with the element’s status (hover, active, focus...), see [SVG external image](#svg-external-image).
-
-{/* todo add tooltip on buttons and explanation when available */}
-<Example buttonLabel="informative icons" class="mt-none bd-btn-example" code={`<button type="button" class="btn btn-icon btn-default">
-    <svg width="1rem" height="1rem" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}" />
-    </svg>
-    <span class="visually-hidden">Delete</span>
-  </button>
-  <button type="button" class="btn btn-icon btn-default" aria-label="Delete">
-    <svg width="1rem" height="1rem" aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}" />
-    </svg>
-  </button>
-  <button type="button" class="btn btn-icon btn-default">
-    <span class="icon si si-settings" aria-hidden="true"></span>
-    <span class="visually-hidden">Open settings</span>
-  </button>
-  <button type="button" class="btn btn-icon btn-default" aria-label="Open settings">
-    <span class="icon si si-settings" aria-hidden="true"></span>
-  </button>
-  <div class="d-inline-block bg-always-white">
-    <img src="${getVersionedDocsPath('/assets/img/heart-empty.svg')}" alt="Favorite" width="32" height="32" />
-  </div>`} />
-
-## Use icons
-
-There are many ways to use <BrandSpecific brand={['orange', 'orange-compact']}>Solaris</BrandSpecific> icons in a web page:
-- Bundled, if you have several icons in your project:
-  - [SVG sprite](#svg-sprite) (preferred choice for flexibility, performance and accessibility)
-  - [Icon font](#icon-font)
-- Individually, if you have only few icons to render:
-  - [Inline SVG](#inline-svg)
-  - [SVG external image](#svg-external-image)
-  - [CSS mask image SVG](#css-mask-image-svg)
-
-<BrandSpecific brand={['orange', 'orange-compact']}>All icons can be retrieved easily in any of these formats in the Solaris icons finder. See Solaris icons library [develop documentation]([[config:icons_develop]]) for complete development guidelines for the different formats, and their pros and cons.</BrandSpecific>
-
-Overview on how to integrate icons in a web page:
-<BsTable class="table">
-| Method | Advantages | Drawbacks | Recommendation |
-| --- | --- | --- | --- |
-| SVG Sprite | <ul><li>Color change via CSS</li><li>Easy addition/removal</li><li>Versioning</li><li>One HTTP request</li><li>Cache</li></ul> | <ul><li>Sprite file can become heavy with many icons (&gt;20)</li></ul> | *Recommended for most use cases* |
-| Icon font | <ul><li>Color change via CSS</li><li>Concise and readable code</li><li>Cache</li></ul> | <ul><li>Heavier than sprite with few icons</li><li>Difficult addition/removal</li><li>No versioning</li><li>Flickering effect on loading</li><li>No multicolor icons</li></ul> | Use only with many icons (&gt;20) |
-| Inline SVG | <ul><li>Color change via CSS</li><li>Loaded with the page</li></ul> | <ul><li>Makes HTML heavier</li><li>No cache</li><li>Not suitable for reuse</li><li>Verbose, hard to read</li></ul> | One-time integration of a single icon |
-| External SVG image | <ul><li>Readable code</li><li>Cache</li></ul> | <ul><li>Impossible to change color</li><li>Loading after HTML</li><li>One HTTP request per image</li></ul> | One-time integration of a single-color icon |
-| CSS background image | <ul><li>Usable with CSS pseudo-elements</li><li>Cache</li></ul> | <ul><li>Makes CSS heavier</li><li>Difficult color change</li></ul> | One-time integration via CSS pseudo-elements |
-</BsTable>
-
-### SVG sprite
-
-This technique is the <strong>preferred choice</strong> for flexibility, performance and accessibility.
-
-<BrandSpecific brand={['orange', 'orange-compact']}>Using the [Solaris icons finder]([[config:icons]]), you can generate an SVG sprite, a single SVG file containing all your icons in `<symbol>` elements, and then insert an icon through a `<use>` element.</BrandSpecific> With SVG sprites, you can benefit of the power of `currentColor` for easy coloring and theming.
-
-Please note that if you experience a problem with a cropped SVG, we recommend using the `.overflow-visible` utility on the SVG to fix its rendering.
-
-  SVG sprite file example:
-
-<Example buttonLabel="SVG sprite file" lang="svg" showPreview={false} showToolbar={false} code={`<svg xmlns="http://www.w3.org/2000/svg">
-    <symbol id="settings" fill="currentColor" viewBox="0 0 1000 1000">
-      <path d="..." fill-rule="evenodd"/>
-    </symbol>
-    <symbol id="trash" fill="currentColor" viewBox="0 0 1000 1000">
-      <path d="..." fill-rule="evenodd"/>
-    </symbol>
-  </svg>`} />
-
-SVG sprite usage:
-
-<Example buttonLabel="SVG sprite file usage" code={`<svg width="3rem" height="3rem" aria-hidden="true">
-    <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#settings')}" />
-  </svg>
-  <svg width="3rem" height="3rem" aria-hidden="true">
-    <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}" />
-  </svg>`} />
-
-To speed up loading, the SVG sprite file can be preloaded in the `<head>` of the page:
-
-<Example buttonLabel="SVG sprite file preloading" lang="svg" showPreview={false} code={`<link rel="preload" href="/path/to/your/sprite.svg" as="image" type="image/svg+xml" />`} />
-
-### Icon font
-
-Icon font is not the preferred solution. However, for websites needing more than 20 icons, you may consider using an icon font instead of an SVG sprite for eco-design reasons.
-
-<BrandSpecific brand={['orange', 'orange-compact']}>Using the [Solaris icons finder]([[config:icons]]),</BrandSpecific> you can generate an icon font containing all your icons and use it like a classic font. Icons can be styled through CSS properties like `font-size` and `color`. Please keep in mind that adding or removing icons from the font afterward can be complicated.
-
-<Example buttonLabel="icon font" code={`<span class="si si-settings" aria-hidden="true" style="font-size: 3rem"></span>`} />
-
-<Callout type="warning">
-  Note that with this technique, you cannot have multicolor icons, so you cannot render the [warning icon](#accessible-warning-icon).
-</Callout>
-
-### Inline SVG
-
-This technique should only be used if you have few icons to render, and if they are used only once in your website.
-
-You can embed your icons directly within the HTML of your page (as opposed to an external image file). This way to use SVGs can benefit of the power of `currentColor` for easy coloring and theming.
-
-<Example buttonLabel="inline SVG icon" class="mt-none" code={`<svg fill="currentColor" class="decorative-small-icon" viewBox="0 0 1000 1000" aria-hidden="true">
-    <path d="M656.7 422.409a229.96 229.96 0 0 1-315.39.008A224.95 224.95 0 0 0 224.064 615H224v210a100 100 0 0 0 100 100h450V620a224.94 224.94 0 0 0-117.3-197.591M679 255A180 180 0 1 1 499 75a180 180 0 0 1 180 180" fill-rule="evenodd"/>
-  </svg>`} />
-
-### SVG external image
-
-You can use SVG through an `<img />` tag when:
-- you only have few icons to render
-- you don’t need to change the icons colors. For that reason, **we do not recommend to use that technique**, so it won’t be documented here.
-
-### CSS mask image SVG
-
-CSS mask image icons should be used when you can’t or don’t want to refer to an external image, or if you want to include the icon in a CSS `::before` or `::after` pseudo-element.
-
-You should use the `mask-image` property instead of `background-image` to benefit from the coloring and theming system, by setting `background-color` property to `currentColor`. You can use the SVG code within your CSS (be sure to escape any characters with [our internal `escape-svg()` function]([[docsref:/getting-started/sass]]#escape-svg)). When no dimensions are specified via `width` and `height` on the `<svg>`, the icon will fill the available space. Mask images can also be styled through CSS properties like `width` or `height`. Note that the `xmlns` attribute is required.
-
-<Example buttonLabel="mask image icon" class="mt-none" code={`<span class="icon-home"></span>`} />
-
-Using:
-
-<ScssDocs buttonLabel="SCSS for mask image icon" name="icon-home" file="site/src/scss/_component-examples.scss" />
