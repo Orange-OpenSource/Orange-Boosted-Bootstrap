@@ -27,16 +27,16 @@ While OUDS Web doesn’t include an icon set by default, Orange does have its ow
 
 Icons are designed within a square layout to preserve consistency. Within this square, there exists a designated safety zone to guarantee that icons can be used in various sizes and contexts while maintaining alignment as intended by the designers. The dimensions of the icons encompass this safety zone, ensuring adaptability and consistency across diverse applications.
 
-<svg width="8em" height="8em" class="bg-opacity-lowest" aria-hidden="true">
+<svg class="bg-opacity-lowest decorative-2xlarge-icon" aria-hidden="true">
   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
 </svg>
-<svg width="8em" height="8em" class="bg-opacity-lowest" aria-hidden="true">
+<svg class="bg-opacity-lowest decorative-2xlarge-icon" aria-hidden="true">
   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}/>
 </svg>
-<svg width="8em" height="8em" class="bg-opacity-lowest" aria-hidden="true">
+<svg class="bg-opacity-lowest decorative-2xlarge-icon" aria-hidden="true">
   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}/>
 </svg>
-<svg width="8em" height="8em" class="bg-opacity-lowest" aria-hidden="true">
+<svg class="bg-opacity-lowest decorative-2xlarge-icon" aria-hidden="true">
   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}/>
 </svg>
 
@@ -87,10 +87,10 @@ Please note that if you experience a problem with a cropped SVG, we recommend us
 
 SVG sprite usage:
 
-<Example buttonLabel="SVG sprite file usage" code={`<svg width="3rem" height="3rem" aria-hidden="true">
+<Example buttonLabel="SVG sprite file usage" code={`<svg class="decorative-large-icon" aria-hidden="true">
     <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#settings')}" />
   </svg>
-  <svg width="3rem" height="3rem" aria-hidden="true">
+  <svg class="decorative-large-icon" aria-hidden="true">
     <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}" />
   </svg>`} />
 
@@ -104,7 +104,7 @@ Icon font is not the preferred solution. However, for websites needing more than
 
 <BrandSpecific brand={['orange', 'orange-compact']}>Using the [Solaris icons finder]([[config:icons]]),</BrandSpecific> you can generate an icon font containing all your icons and use it like a classic font. Icons can be styled through CSS properties like `font-size` and `color`. Please keep in mind that adding or removing icons from the font afterward can be complicated.
 
-<Example buttonLabel="icon font" code={`<span class="si si-settings" aria-hidden="true" style="font-size: 3rem"></span>`} />
+<Example buttonLabel="icon font" code={`<span class="si si-settings decorative-large-icon" aria-hidden="true"></span>`} />
 
 <Callout type="warning">
   Note that with this technique, you cannot have multicolor icons, so you cannot render the [warning icon](#accessible-warning-icon).
@@ -116,7 +116,7 @@ CSS background icons should be used when you can’t or don’t want to refer to
 
 Technically, you should use the `mask-image` property instead of `background-image` to benefit from the coloring and theming system, by setting `background-color` property to `currentcolor`. You can use the SVG code within your CSS (be sure to escape any characters with [our internal `escape-svg()` function]([[docsref:/getting-started/sass]]#escape-svg)). When no dimensions are specified via `width` and `height` on the `<svg>`, the icon will fill the available space. Mask images can also be styled through CSS properties like `width` or `height`. Note that the `xmlns` attribute is required.
 
-<Example buttonLabel="mask image icon" class="mt-none" code={`<span class="icon-home"></span>`} />
+<Example buttonLabel="mask image icon" class="mt-none" code={`<span class="icon-home decorative-large-icon"></span>`} />
 
 Using:
 
@@ -128,8 +128,8 @@ This technique should only be used if you have few icons to render, and if they 
 
 You can embed your icons directly within the HTML of your page (as opposed to an external image file). This way to use SVGs can benefit of the power of `currentColor` for easy coloring and theming.
 
-<Example buttonLabel="inline SVG icon" class="mt-none" code={`<svg fill="currentColor" class="decorative-small-icon" viewBox="0 0 1000 1000" aria-hidden="true">
-    <path d="M656.7 422.409a229.96 229.96 0 0 1-315.39.008A224.95 224.95 0 0 0 224.064 615H224v210a100 100 0 0 0 100 100h450V620a224.94 224.94 0 0 0-117.3-197.591M679 255A180 180 0 1 1 499 75a180 180 0 0 1 180 180" fill-rule="evenodd"/>
+<Example buttonLabel="inline SVG icon" class="mt-none" code={`<svg fill="currentColor" viewBox="0 0 24 24" class="decorative-large-icon" aria-hidden="true">
+    <path fill-rule="evenodd" d="M15.785 10.138a5.52 5.52 0 0 1-7.57 0 5.4 5.4 0 0 0-2.813 4.622H5.4v5.04a2.4 2.4 0 0 0 2.4 2.4h10.8v-7.32a5.4 5.4 0 0 0-2.815-4.742m.535-4.018a4.32 4.32 0 1 1-8.64 0 4.32 4.32 0 0 1 8.64 0" clip-rule="evenodd"/>
   </svg>`} />
 
 ### SVG external image
@@ -160,13 +160,13 @@ Remember that you cannot use external images inside interactive elements because
 
 {/* todo add tooltip on buttons and explanation when available */}
 <Example buttonLabel="informative icons" class="mt-none bd-btn-example" code={`<button type="button" class="btn btn-icon btn-default">
-    <svg width="1rem" height="1rem" aria-hidden="true">
+    <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}" />
     </svg>
     <span class="visually-hidden">Delete</span>
   </button>
   <button type="button" class="btn btn-icon btn-default" aria-label="Delete">
-    <svg width="1rem" height="1rem" aria-hidden="true">
+    <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}" />
     </svg>
   </button>
@@ -308,14 +308,14 @@ Sometimes you need a different structure to handle larger titles, or paragraphs 
 This is the default behavior of our DOM.
 
 <Example buttonLabel="icon centered on heading block" code={`<div class="d-flex align-items-center">
-    <svg class="hxl-large-icon me-scaled-small text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg class="hxl-large-icon me-scaled-small text-status-info" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}" />
     </svg>
     <h1 class="mb-none">H1 with large icon and a very long title to see how it behaves while being wrapped</h1>
   </div>`} />
 
 <Example buttonLabel="icon centered on regular text block" code={`<div class="d-flex align-items-center">
-    <svg class="bm-large-icon me-scaled-small text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg class="bm-large-icon me-scaled-small text-status-info" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}" />
     </svg>
     <p class="mb-none">
@@ -328,14 +328,14 @@ This is the default behavior of our DOM.
 You can also have the icon above the text block.
 
 <Example buttonLabel="icon above heading block" code={`<div>
-    <svg class="hxl-large-icon mb-scaled-xsmall text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg class="hxl-large-icon mb-scaled-xsmall text-status-info" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}" />
     </svg>
     <h1 class="mb-none">H1 with large icon and a very long title to see how it behaves while being wrapped</h1>
   </div>`} />
 
 <Example buttonLabel="icon above regular text block" code={`<div>
-    <svg class="bm-large-icon mb-scaled-2xsmall text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg class="bm-large-icon mb-scaled-2xsmall text-status-info" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#internet')}" />
     </svg>
     <p class="mb-none">
