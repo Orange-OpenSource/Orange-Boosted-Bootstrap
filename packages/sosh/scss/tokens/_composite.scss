@@ -127,6 +127,10 @@ $checkbox-undetermined-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.o
 // * Chip *
 // sosh/Component/chip/tick v2.2
 $chip-tick-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M18 5.6 9.2 15 6 11.6c-.4-.5-1.4-.5-2 .1q-.7 1 .2 2l4.1 4.6q.4.4 1 .5.8-.1.9-.5l9.6-10.7q.9-.8.1-1.9c-.5-.6-1.5-.6-2-.1'/></svg>") !default;
+// sosh/Component/chip/expanded-false v2.2 — same icon as $btn-expanded-false-icon
+$chip-expanded-false-icon: var(--#{$prefix}btn-expanded-false-icon) !default;
+// sosh/Component/chip/expanded-true v2.2 — same icon as $btn-expanded-true-icon
+$chip-expanded-true-icon: var(--#{$prefix}btn-expanded-true-icon) !default;
 
 // * Link *
 // sosh/Component/link/previous v2.2 — same icon as $btn-previous-icon
@@ -177,14 +181,14 @@ $helper-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 // *** Expose SVG used several times as custom props (CSS vars like --bs-success-icon)
 // /!\ convention: the key name must end by "-icon"
 $svg-as-custom-props: (
-  "chevron-icon": $chevron-icon, // For legacy usages only
-  "alert-success-icon": $alert-icon-success, // Used by alerts and tags
-  "alert-info-icon": $alert-icon-info, // Used by alerts and tags
-  "alert-warning-icon": $alert-icon-warning-external, // Used by alerts and tags
-  "alert-warning-internal-icon": $alert-icon-warning-internal, // Used by alerts and tags
-  "alert-error-icon": $alert-icon-important, // Used by alerts and tags
-  "btn-previous-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M15.7 16.8 10 12l5.6-4.8q.8-1 0-2-1-.6-2 .1L6.8 11q-.7.9 0 1.8l6.7 5.9q1.3 1 2 .1 1.1-1.1 0-2'/></svg>"), // Duplicated SVG used by $btn-previous-icon, $link-previous-icon
-  "btn-expanded-false-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M16.8 8.3 12 14 7.1 8.3q-1-.8-2 0-.6 1 .1 2l5.8 6.8q.9.8 1.8 0l5.9-6.7q1-1.2.1-2-1.1-1.2-2 0'/></svg>"), // Duplicated SVG used by $btn-expanded-false-icon, $select-input-chevron
-  "btn-expanded-true-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M7.2 15.7 12 10l4.8 5.6q1 .8 2 0 .6-1-.1-2L13 6.8q-.9-.7-1.8 0l-6 6.7q-.8 1.3 0 2 1 1.1 2 0'/></svg>"), // Duplicated SVG used by $btn-expanded-true-icon, $select-input-expanded-chevron
-  "link-external-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M11 5.6A.7.7 0 0 1 11 7H5.4a.7.7 0 0 0-.8.8v11.6h11.8a1 1 0 0 0 .7-.8v-5.8a.7.7 0 1 1 1.4 0v5.8a2 2 0 0 1-2.1 2.2H4.2a1 1 0 0 1-1-1v-12a2 2 0 0 1 2.2-2.2zm9-2.4h.2l.1.1.2.1v.1l.1.2v.1h.1V4l-.3 5-.2.6-.6.2A1 1 0 0 1 19 9l.1-3-5.8 5.6a1 1 0 0 1-1 0 1 1 0 0 1 0-1L18 4.7 15 5a1 1 0 0 1-.8-.7 1 1 0 0 1 .7-.8z'/></svg>") // Duplicated SVG used by $link-external-icon, $list-item-external-icon
+  "chevron-icon": $chevron-icon, /* For legacy usages only*/
+  "alert-success-icon": $alert-icon-success, /* Used by alerts and tags*/
+  "alert-info-icon": $alert-icon-info, /* Used by alerts and tags*/
+  "alert-warning-icon": $alert-icon-warning-external, /* Used by alerts and tags*/
+  "alert-warning-internal-icon": $alert-icon-warning-internal, /* Used by alerts and tags*/
+  "alert-error-icon": $alert-icon-important, /* Used by alerts and tags*/
+  "btn-previous-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M15.7 16.8 10 12l5.6-4.8q.8-1 0-2-1-.6-2 .1L6.8 11q-.7.9 0 1.8l6.7 5.9q1.3 1 2 .1 1.1-1.1 0-2'/></svg>"), /* Duplicated SVG used by $btn-previous-icon, $link-previous-icon*/
+  "btn-expanded-false-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M16.8 8.3 12 14 7.1 8.3q-1-.8-2 0-.6 1 .1 2l5.8 6.8q.9.8 1.8 0l5.9-6.7q1-1.2.1-2-1.1-1.2-2 0'/></svg>"), /* Duplicated SVG used by $btn-expanded-false-icon, $chip-expanded-false-icon, $select-input-chevron*/
+  "btn-expanded-true-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M7.2 15.7 12 10l4.8 5.6q1 .8 2 0 .6-1-.1-2L13 6.8q-.9-.7-1.8 0l-6 6.7q-.8 1.3 0 2 1 1.1 2 0'/></svg>"), /* Duplicated SVG used by $btn-expanded-true-icon, $chip-expanded-true-icon, $select-input-expanded-chevron*/
+  "link-external-icon": url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M11 5.6A.7.7 0 0 1 11 7H5.4a.7.7 0 0 0-.8.8v11.6h11.8a1 1 0 0 0 .7-.8v-5.8a.7.7 0 1 1 1.4 0v5.8a2 2 0 0 1-2.1 2.2H4.2a1 1 0 0 1-1-1v-12a2 2 0 0 1 2.2-2.2zm9-2.4h.2l.1.1.2.1v.1l.1.2v.1h.1V4l-.3 5-.2.6-.6.2A1 1 0 0 1 19 9l.1-3-5.8 5.6a1 1 0 0 1-1 0 1 1 0 0 1 0-1L18 4.7 15 5a1 1 0 0 1-.8-.7 1 1 0 0 1 .7-.8z'/></svg>") /* Duplicated SVG used by $link-external-icon, $list-item-external-icon*/
 ) !default;

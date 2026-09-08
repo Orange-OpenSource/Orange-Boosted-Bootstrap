@@ -134,7 +134,9 @@
   input:checked ~ .chip-interactive,
   .chip-interactive[aria-pressed="true"],
   .chip-interactive[aria-selected="true"],
-  .chip-interactive:has(input:checked) {
+  .chip-interactive:has(input:checked),
+  .chip-interactive:has(.badge:not(.d-none)),
+  .chip-interactive.active {
     --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-enabled};
     --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-enabled};
     --#{$prefix}chip-border-width: #{px-to-rem($ouds-chip-border-width-selected)};
@@ -172,7 +174,9 @@
   input:checked:focus-visible ~ .chip-interactive,
   .chip-interactive[aria-pressed="true"]:focus-visible,
   .chip-interactive[aria-selected="true"]:focus-visible,
-  .chip-interactive:has(input:checked:focus-visible) {
+  .chip-interactive:has(input:checked:focus-visible),
+  .chip-interactive:has(.badge:not(.d-none)):focus-visible,
+  .chip-interactive.active:focus-visible {
     --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-focus};
     --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-focus};
     --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-focus};
@@ -182,11 +186,36 @@
   input:checked:disabled ~ .chip-interactive,
   .chip-interactive[aria-pressed="true"]:disabled,
   .chip-interactive[aria-selected="true"]:disabled,
-  .chip-interactive:has(input:checked:disabled) {
+  .chip-interactive:has(input:checked:disabled),
+  .chip-interactive:has(.badge:not(.d-none)):disabled,
+  .chip-interactive.active:disabled {
     --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-disabled};
     --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-disabled};
     --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-disabled};
     --#{$prefix}chip-tick-color: currentcolor;
+  }
+
+  &.dropdown {
+    .chip-interactive {
+      --#{$prefix}chip-padding-end: #{$ouds-chip-space-padding-inline-chevron-end};
+    }
+
+    .chip-badge-chevron {
+      display: flex;
+      gap: $ouds-chip-space-column-gap-badge-chevron;
+
+      &::after {
+        width: px-to-rem($ouds-chip-size-icon);
+        height: px-to-rem($ouds-chip-size-icon);
+        content: "";
+        background-color: currentcolor;
+        mask-image: $chip-expanded-false-icon;
+      }
+    }
+
+    .chip-interactive[aria-expanded="true"] .chip-badge-chevron::after {
+      mask-image: $chip-expanded-true-icon;
+    }
   }
 }
 

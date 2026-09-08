@@ -8,6 +8,7 @@ aliases:
 toc: true
 types:
   - Filter chip
+  - Filter chip expand
   - Suggestion chip
 ---
 
@@ -21,7 +22,7 @@ import { getVersionedDocsPath } from '@libs/path'
 
 ### Component types
 
-<ul class="list-unstyled row row-cols-1 sm:row-cols-2">
+<ul class="list-unstyled row row-cols-1 sm:row-cols-3">
   <li class="col">
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary" inert>
@@ -33,6 +34,25 @@ import { getVersionedDocsPath } from '@libs/path'
         </div>
       </div>
       <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#filter-chip">Filter chip</a> is a UI element that enables users to select or deselect options within a series, commonly used to capture filtering decisions.</div>
+    </div>
+  </li>
+  <li class="col">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary" inert>
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
+          <ul class="chips-container overflow-visible">
+            <li class="chip chip-filter dropdown">
+              <button class="chip-interactive" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+                <span>Expand</span>
+                <span class="chip-badge-chevron">
+                  <span class="badge badge-neutral badge-count">1<span class="visually-hidden">filter(s) selected</span></span>
+                </span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#filter-chip-expand">Filter chip expand</a> is a UI element that allows users to control the selection or deselection of a choice from a defined list of options, frequently used to capture filtering decisions.</div>
     </div>
   </li>
   <li class="col">
@@ -79,6 +99,7 @@ Here is a table summarizing the pseudo elements that are used by the different v
 | chip variant    | `.chip-interactive::before` | `.chip-interactive::after` |
 | ---| --- | --- |
 | Filter chip     | Used       | Used      |
+| Filter chip expand | Used       | Used      |
 | Suggestion chip | –          | Used      |
 </BsTable>
 
@@ -304,6 +325,136 @@ For example, to toggle all chips:
     const chip = oudsWeb.Button.getOrCreateInstance(chipElement)
     chip.toggle()
   })`} />
+
+## [[comp]] Filter chip expand
+
+A filter chip expand is a UI element that allows users to control the selection or deselection of a choice from a defined list of options, frequently used to capture filtering decisions.
+
+The filter chip expand feature is displayed through a dropdown with selectable values, making it ideal for filters with multiple or dynamic options while providing clarity and saving space in the interface.
+
+To create a filter chip expand, add `.chip-filter.dropdown` to the `.chip` and `.chip-badge-chevron` inside the `.chip-interactive`.
+
+The selected state of the filter chip expand is triggered by the presence either of a [Badge count]([[docsref:/components/badges#badge-count]]) not being `.d-none`. If needed, it's also possible to trigger it by adding `.active` to the `.chip-interactive`.
+
+`.chip-badge-chevron` class indicates a [dropdown menu]([[docsref:/components/dropdown]]) can be expanded. This class will add a directional arrow to the left of the button text. As filter chip expand generally indicates a dropdown menu, in our examples, we have used `<button>` elements, but this could be adapted to your own context.
+
+<Callout type="warning">
+  If possible, display a semantically informative title to describe the chips' list purpose like in the following example, otherwise an `aria-label` must be added to the `.chips-container` to explain the function of the chips. [Read more about chips accessibility here.](#accessibility)
+</Callout>
+
+<Callout type="negative" title="Dropdown menu">
+  Be aware that the dropdown menu is not part of the expand button component and is a draft component. Please refer to the [dropdown menu documentation]([[docsref:/components/dropdown]]) for more information.
+</Callout>
+
+<Example buttonLabel="basic filter chip expand" code={`
+  <h4 id="filterExpandHeader">Filters</h4>
+  <div role="group" aria-labelledby="filterExpandHeader">
+    <ul class="chips-container overflow-visible">
+      <li class="chip chip-filter dropdown">
+        <button class="chip-interactive" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+          Brands
+          <span class="chip-badge-chevron">
+            <span class="badge badge-neutral badge-count">1<span class="visually-hidden">filter(s) selected</span></span>
+          </span>
+        </button>
+        <div class="dropdown-menu">
+          <button class="dropdown-item" aria-pressed="true" type="button">Apple <svg class="ms-auto" width="16" height="16" aria-hidden="true"><use xlink:href="/orange/docs/1.4/assets/img/ouds-web-sprite.svg#check2"></use></svg></button>
+          <button class="dropdown-item" type="button">Samsung</button>
+        </div>
+      </li>
+      <li class="chip chip-filter dropdown">
+        <button class="chip-interactive" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+          Color
+          <span class="chip-badge-chevron"></span>
+        </button>
+        <div class="dropdown-menu">
+          <button class="dropdown-item" type="button">Red</button>
+          <button class="dropdown-item" type="button">Blue</button>
+        </div>
+      </li>
+    </ul>
+  </div>`} />
+
+### States
+
+#### Disabled
+
+Add `disabled` attribute either on the button element to disable the chip.
+
+The following example shows every possible renderings depending on the filter chip type but it is not recommended to mix different types in a real use case.
+
+<Example buttonLabel="disabled filter chip expand" code={`<ul class="chips-container overflow-visible" aria-label="Filters">
+    <li class="chip chip-filter dropdown">
+      <button class="chip-interactive" disabled data-bs-toggle="dropdown" aria-expanded="false" type="button">
+        Brands
+        <span class="chip-badge-chevron">
+          <span class="badge badge-neutral badge-count">1<span class="visually-hidden">filter(s) selected</span></span>
+        </span>
+      </button>
+      <div class="dropdown-menu">
+        <button class="dropdown-item" aria-pressed="true" type="button">Apple <svg class="ms-auto" width="16" height="16" aria-hidden="true"><use xlink:href="/orange/docs/1.4/assets/img/ouds-web-sprite.svg#check2"></use></svg></button>
+        <button class="dropdown-item" type="button">Samsung</button>
+      </div>
+    </li>
+    <li class="chip chip-filter dropdown">
+      <button class="chip-interactive" disabled data-bs-toggle="dropdown" aria-expanded="false" type="button">
+        Color
+        <span class="chip-badge-chevron"></span>
+      </button>
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Red</button>
+        <button class="dropdown-item" type="button">Blue</button>
+      </div>
+    </li>
+  </ul>`} />
+
+#### Skeleton
+
+<SkeletonRedirect component="filter chip expand" />
+
+<Example buttonLabel="filter chip skeleton" code={`<div aria-busy="true" inert>
+    <ul class="chips-container overflow-visible">
+      <li class="chip chip-filter dropdown">
+        <button class="chip-interactive" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+          Brands
+          <span class="chip-badge-chevron">
+            <span class="badge badge-neutral badge-count">1<span class="visually-hidden">filter(s) selected</span></span>
+          </span>
+        </button>
+        <div class="dropdown-menu">
+          <button class="dropdown-item" aria-pressed="true" type="button">Apple <svg class="ms-auto" width="16" height="16" aria-hidden="true"><use xlink:href="/orange/docs/1.4/assets/img/ouds-web-sprite.svg#check2"></use></svg></button>
+          <button class="dropdown-item" type="button">Samsung</button>
+        </div>
+      </li>
+    </ul>
+  </div>`} />
+
+### Live example
+
+This example shows how to implement a filter chip expand. This is achieved by toggling four elements:
+  - The badge needs to be updated according to the number of selected filters. If no filter is selected, the badge should be hidden using `.d-none`.
+  - The checked state inside each dropdown item should be toggled based on the `aria-pressed` state of the item. (This part might change when the dropdown menu component is finalized.)
+
+<Callout type="negative" title="Dropdown menu">
+  Be aware that the dropdown menu is not part of the filter chip expand component and is a draft component. Please refer to the [dropdown menu documentation]([[docsref:/components/dropdown]]) for more information.
+</Callout>
+
+<Example buttonLabel="filter chip expand live example" code={`<ul class="chips-container overflow-visible" aria-label="Filters">
+    <li class="chip chip-filter dropdown" id="filterChipExpandExample">
+      <button class="chip-interactive" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" type="button">
+        Brands
+        <span class="chip-badge-chevron">
+          <span class="badge badge-neutral badge-count d-none">1 <span class="visually-hidden">filter(s) selected</span></span>
+        </span>
+      </button>
+      <div class="dropdown-menu">
+        <button class="dropdown-item" data-bs-toggle="button" aria-pressed="false" type="button">Apple <svg class="d-none" width="16" height="16" aria-hidden="true"><use xlink:href="/orange/docs/1.4/assets/img/ouds-web-sprite.svg#check2"></use></svg></button>
+        <button class="dropdown-item" data-bs-toggle="button" aria-pressed="false" type="button">Samsung <svg class="d-none" width="16" height="16" aria-hidden="true"><use xlink:href="/orange/docs/1.4/assets/img/ouds-web-sprite.svg#check2"></use></svg></button>
+      </div>
+    </li>
+  </ul>`} />
+
+<JsDocs name="live-filter-chip-expand" file="site/src/assets/partials/snippets.js" />
 
 ## [[comp]] Suggestion chip
 
@@ -650,4 +801,17 @@ A chip's text should not exceed one line. When needed, it also supports `<br/>` 
       Suggestion chip<br/>
       with a very long label
     </button>
+  </div>
+  <div class="chip chip-filter dropdown">
+    <button class="chip-interactive" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+      Filter chip expand<br/>
+      with a very long label
+      <span class="chip-badge-chevron">
+        <span class="badge badge-neutral badge-count">1<span class="visually-hidden">filter(s) selected</span></span>
+      </span>
+    </button>
+    <div class="dropdown-menu">
+      <button class="dropdown-item" aria-pressed="true" type="button">Label <svg class="ms-auto" width="16" height="16" aria-hidden="true"><use xlink:href="/orange/docs/1.4/assets/img/ouds-web-sprite.svg#check2"></use></svg></button>
+      <button class="dropdown-item" type="button">Label</button>
+    </div>
   </div>`} />
