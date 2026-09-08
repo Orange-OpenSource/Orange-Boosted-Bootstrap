@@ -12,7 +12,6 @@ import { rehypeBsTable, rehypeCustomHeaderSlug, rehypeHeaderLinksOrder } from '.
 import { remarkBsComp, remarkBsConfig, remarkBsDocsref, remarkBsVersionLink } from './src/libs/remark'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { isHeading } from './src/libs/utils'
-import rehypeClassNames from "rehype-class-names"
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -51,8 +50,7 @@ export default defineConfig({
           }
         ],
         rehypeHeaderLinksOrder,
-        rehypeBsTable,
-        [rehypeClassNames, {h2: 'marker'}]
+        rehypeBsTable
       ],
       remarkPlugins: [remarkBsConfig, remarkBsDocsref, remarkBsComp, remarkBsVersionLink]
     }),

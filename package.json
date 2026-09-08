@@ -162,7 +162,6 @@
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
     "rehype-autolink-headings": "^7.1.0",
-    "rehype-class-names": "^2.0.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "rollup": "^4.63.1",
