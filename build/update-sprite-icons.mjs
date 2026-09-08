@@ -41,10 +41,10 @@ const BRANDS = [
 // The key is the source brand, and the value is an object mapping icon paths to the attribute that must be kept.
 // For example, if an icon has a "fill-rule" attribute that must not be removed, it is listed here.
 const SVG_WITH_SPECIAL_ATTRIBUTES = {
-  "orange": {
-    "communication/objects/multi-tool-repair.svg": "fill-rule",
-    "communication/security-and-safety/child-protection.svg": "fill-rule",
-    "functional/communications/live-chat.svg": "fill-rule"
+  orange: {
+    'communication/objects/multi-tool-repair.svg': 'fill-rule',
+    'communication/security-and-safety/child-protection.svg': 'fill-rule',
+    'functional/communications/live-chat.svg': 'fill-rule'
   }
 }
 
@@ -204,13 +204,15 @@ function stripAll(string, pattern) {
 }
 
 function extractSvgInnerContent(svgFileContent, attrToKeep = null) {
-  const attrPattern = attrToKeep === "fill-rule" ? 'clip-rule' : attrToKeep === "clip-rule" ? 'fill-rule' : "(fill-rule|clip-rule)"
-  const removeAttrsPlugin = attrPattern ? {
-    name: 'removeAttrs',
-    params: {
-      attrs: `path:${attrPattern}:evenodd`
-    }
-  } : null
+  const attrPattern = attrToKeep === 'fill-rule' ? 'clip-rule' : (attrToKeep === 'clip-rule' ? 'fill-rule' : '(fill-rule|clip-rule)')
+  const removeAttrsPlugin = attrPattern ?
+    {
+      name: 'removeAttrs',
+      params: {
+        attrs: `path:${attrPattern}:evenodd`
+      }
+    } :
+    null
   let result = svgFileContent
   result = stripAll(result, /<\?xml[\s\S]*?\?>/g)
   result = stripAll(result, /<!--[\s\S]*?-->/g)
