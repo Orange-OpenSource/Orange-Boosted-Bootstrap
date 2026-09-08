@@ -14,9 +14,9 @@
 
 .icons-example-swatch-mask::after {
   display: block;
-  content: '';
   width: var(--icons-example-size);
   height: var(--icons-example-size);
+  content: "";
   background-color: currentcolor;
   mask-image: var(--icons-example-icon);
   mask-repeat: no-repeat;
