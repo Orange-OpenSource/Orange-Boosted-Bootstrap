@@ -87,9 +87,8 @@ const spriteIconIds = [...new Set([...spriteContent.matchAll(/<symbol\s+id="([\w
   </p>
 
   <div class="icons-example-size-control py-medium">
-    <label for="icons-example-size-range">
-      Icon size: <output for="icons-example-size-range" id="icons-example-size-output">32px</output>
-    </label>
+    <label for="icons-example-size-range">Icon size: </label>
+    <output for="icons-example-size-range" id="icons-example-size-output">32px</output>
     <input
       type="range"
       class="form-range"
@@ -109,7 +108,7 @@ const spriteIconIds = [...new Set([...spriteContent.matchAll(/<symbol\s+id="([\w
     displayed here in a neutral, single color (<code>currentColor</code>) on a light gray background, independently
     of their real usage context.
   </p>
-  <ul class="icons-example-grid d-grid gap-medium list-unstyled" role="list">
+  <ul class="icons-example-grid d-grid gap-medium list-unstyled">
     {
       compositeIcons.map((icon) => (
         <li class="d-flex flex-column align-items-center gap-xsmall p-small border border-default">
@@ -125,7 +124,7 @@ const spriteIconIds = [...new Set([...spriteContent.matchAll(/<symbol\s+id="([\w
     These icons come from the documentation sample sprite
     <code>{`assets/img/ouds-web-sprite.svg`}</code> and are used with the SVG <code>{'<use>'}</code> element.
   </p>
-  <ul class="icons-example-grid d-grid gap-medium list-unstyled" role="list">
+  <ul class="icons-example-grid d-grid gap-medium list-unstyled">
     {
       spriteIconIds.map((id) => (
         <li class="d-flex flex-column align-items-center gap-xsmall p-small border border-default">
