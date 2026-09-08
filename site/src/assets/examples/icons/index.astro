@@ -78,7 +78,7 @@ const spriteContent = fs.readFileSync(spriteFsPath, 'utf8')
 const spriteIconIds = [...new Set([...spriteContent.matchAll(/<symbol\s+id="([\w-]+)"/g)].map(([, id]) => id))].sort()
 ---
 
-<main class="container-fluid container-max-width">
+<main class="container-fluid container-max-width pb-3xlarge">
   <h1 class="py-medium">Icons</h1>
   <p class="lead">
     This page lists every composite icon (defined in SCSS, used internally by components) and every sprite icon
