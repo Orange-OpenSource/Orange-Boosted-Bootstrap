@@ -189,7 +189,19 @@ function normalizeSvg(svgContent) {
   let result = svgContent
   result = stripAll(result, /<\?xml[\s\S]*?\?>/g)
   result = stripAll(result, /<!--[\s\S]*?-->/g)
-  result = optimize(result, { multipass: true, floatPrecision: 1 }).data
+  result = optimize(result, {
+    multipass: true,
+    floatPrecision: 1,
+    plugins: [
+      'preset-default',
+      {
+        name: 'removeAttrs',
+        params: {
+          attrs: 'path:(fill-rule|clip-rule):evenodd'
+        }
+      }
+    ]
+  }).data
   return result
     .replace(/\s(?:width|height|fill)=("[^"]*"|'[^']*')/g, '')
     .replace(/\r\n|\r|\n/g, ' ')
