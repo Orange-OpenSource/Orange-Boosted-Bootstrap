@@ -201,6 +201,40 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `<a class="link" href="#">Label</a>`
   },
   {
+    name: 'Navigation card item',
+    slug: 'navigation-card-item',
+    link: 'items#navigation-card-item',
+    category: 'Control',
+    snippet: `
+      <div class="item item-navigation w-75">
+        <div class="item-container">
+          <div class="item-content">
+            <div class="item-text-container">
+              <a href="#" class="item-label item-interactive">Label</a>
+            </div>
+          </div>
+        </div>
+      </div>`
+  },
+  {
+    name: 'Navigation list item',
+    slug: 'navigation-list-item',
+    link: 'items#navigation-list-item',
+    category: 'Control',
+    snippet: `
+      <ul class="item-list w-75">
+        <li class="item item-navigation">
+          <div class="item-container">
+            <div class="item-content">
+              <div class="item-text-container">
+                <a href="#" class="item-label item-interactive">Label</a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>`
+  },
+  {
     name: 'Navigation button',
     slug: 'navigation-button',
     link: 'buttons#navigation-button',
@@ -274,6 +308,40 @@ export const componentsDetails: ComponentCardData[] = [
           <button class="chip-interactive">
             Label
           </button>
+        </li>
+      </ul>`
+  },
+  {
+    name: 'Static card item',
+    slug: 'static-card-item',
+    link: 'items#static-card-item',
+    category: 'Control',
+    snippet: `
+      <div class="item w-75">
+        <div class="item-container">
+          <div class="item-content">
+            <div class="item-text-container">
+              <p class="item-label">Label</p>
+            </div>
+          </div>
+        </div>
+      </div>`
+  },
+  {
+    name: 'Static list item',
+    slug: 'static-list-item',
+    link: 'items#static-list-item',
+    category: 'Control',
+    snippet: `
+      <ul class="item-list w-75">
+        <li class="item">
+          <div class="item-container">
+            <div class="item-content">
+              <div class="item-text-container">
+                <p class="item-label">Label</p>
+              </div>
+            </div>
+          </div>
         </li>
       </ul>`
   },
