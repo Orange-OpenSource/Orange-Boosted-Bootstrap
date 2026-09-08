@@ -139,7 +139,7 @@ export const componentsDetails: ComponentCardData[] = [
         <li class="chip chip-filter dropdown">
           <button class="chip-interactive" data-bs-toggle="dropdown" aria-expanded="false" type="button">
             Label
-            <div class="chip-badge-chevron"></div>
+            <span class="chip-badge-chevron"></span>
           </button>
         </li>
       </ul>`
