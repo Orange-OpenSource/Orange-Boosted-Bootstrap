@@ -1,0 +1,30 @@
+/* Icons example page styles */
+
+:root {
+  --icons-example-size: 32px;
+}
+
+.icons-example-size-control {
+  max-width: 24rem;
+}
+
+.icons-example-grid {
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+}
+
+.icons-example-swatch-mask::after {
+  display: block;
+  content: '';
+  width: var(--icons-example-size);
+  height: var(--icons-example-size);
+  background-color: currentcolor;
+  mask-image: var(--icons-example-icon);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.icons-example-svg {
+  width: var(--icons-example-size);
+  height: var(--icons-example-size);
+}
