@@ -12,7 +12,7 @@ import Code from '@components/shortcodes/Code.astro'
     <hr class="xl:d-none border-medium m-none pb-scaled-small" />
     <h2 class="marker mb-scaled-xsmall">Get started any way you&nbsp;want</h2>
     <p class="lead fw-bold bd-text-wrap-balance mb-scaled-xsmall">
-      Jump right into building with OUDS Web—use the CDN, install it via package manager, or download the source code.
+      Jump right into building with OUDS Web—install it via your favorite package manager, or equip your AI coding agent with ready-to-use Skills.
     </p>
     <p class="mb-scaled-large">
       <a href={getVersionedDocsPath('getting-started/download')} class="link link-chevron"> Read installation docs</a>
@@ -38,29 +38,22 @@ import Code from '@components/shortcodes/Code.astro'
       package managers.
     </p>
     <div class="border-top border-thin border-default pt-scaled-small">
-      <h3>Include via CDN</h3>
+      <h3>Use with AI coding agents</h3>
       <p class="mb-scaled-medium">
-        When you only need to include OUDS Web's compiled CSS or JS, you can use <a
-          href="https://www.jsdelivr.com/package/npm/@ouds/web">jsDelivr</a
-        >. See it in action with our simple <a href={getVersionedDocsPath('getting-started/introduction/#quick-start')}
-          >quick start</a
-        >, or <a href={getVersionedDocsPath('examples')}>browse the examples</a> to jumpstart your next project. You can
-        also choose to include Popper and our JS <a
-          href={getVersionedDocsPath('getting-started/introduction/#separate')}>separately</a
-        >.
+        OUDS Web ships Agent Skills that give AI coding agents (Claude Code, Cursor, GitHub Copilot, and others)
+        procedural knowledge of the design system, such as correct component markup, layout and utility classes,
+        design tokens, and migration steps.
       </p>
       <Code
-        code={`<link href="${getConfig().cdn.css}" rel="stylesheet" integrity="${
-          getConfig().cdn.css_hash
-        }" crossorigin="anonymous">`}
-        lang="html" buttonLabel="link to CSS file on JsDelivr"
+        code="npx skills add Orange-OpenSource/Orange-Boosted-Bootstrap/skills"
+        lang="sh" buttonLabel="npx skills add"
       />
-      <Code
-        code={`<script src="${getConfig().cdn.js_bundle}" integrity="${
-          getConfig().cdn.js_bundle_hash
-        }" crossorigin="anonymous"></script>`}
-        lang="html" buttonLabel="link to JavaScript bundle on JsDelivr"
-      />
+      <p class="mb-none">
+        Learn more about <a
+          href={getVersionedDocsPath('getting-started/introduction/#using-ouds-web-with-ai-coding-agents')}
+          >using OUDS Web with AI coding agents</a
+        >.
+      </p>
     </div>
   </div>
 </section>
