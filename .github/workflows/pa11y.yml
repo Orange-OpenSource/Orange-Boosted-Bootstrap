@@ -4,9 +4,9 @@ on:
     branches:
       - main
     paths:
-      - 'js/**'
-      - 'scss/**'
-      - 'site/**'
+      - 'libs/web/js/**'
+      - 'libs/web/scss/**'
+      - 'libs/web/site/**'
   pull_request:
     types: [opened, reopened, synchronize]
   workflow_dispatch:
@@ -63,4 +63,4 @@ jobs:
         if: failure()
         with:
           name: pa11y-ci-results
-          path: .pa11y/
+          path: libs/web/.pa11y/
