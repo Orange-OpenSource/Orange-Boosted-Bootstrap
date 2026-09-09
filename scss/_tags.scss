@@ -219,6 +219,7 @@
   }
 }
 
+[aria-disabled="true"] .tag,
 .disabled .tag,
 .tag.disabled {
   color: #{$ouds-color-content-on-action-disabled} if($enable-important-utilities, !important, null);
