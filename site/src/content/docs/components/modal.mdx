@@ -3,7 +3,7 @@ title: Modal
 description: Use native HTML dialog with invoker commands to display focused modal interactions.
 aliases:
   - "/docs/components/modal/"
-toc: false
+toc: true
 ---
 
 ## Overview
@@ -27,9 +27,30 @@ toc: false
     Open modal dialog
   </button>`} />
 
+### Component types
+
+There are 2 dialog types inside the modal component:
+- [Modal dialog](#modal-dialog) is displayed above the page content and keeps a maximum width based on the viewport grid.
+- [Fullscreen dialog](#fullscreen-dialog) uses the same structure and behavior but takes all the available viewport.
+
+<BsTable>
+  | Dialog type | Viewport behavior | Size variants |
+  | ----------- | ----------------- | ------------- |
+  | [Modal dialog](#modal-dialog) | Uses the modal grid width and max height | Available |
+  | [Fullscreen dialog](#fullscreen-dialog) | Takes all the available viewport | Not available |
+</BsTable>
+
+### Approach
+
+Modal dialog and fullscreen dialog use the same native `<dialog>` element and the same internal structure with `.modal-header`, `.modal-body`, and `.modal-footer`. Add `.fullscreen-dialog` to the `.modal` `<dialog>` when the interaction needs all the available viewport.
+
+The common variants are shared between modal dialog and fullscreen dialog. Full height, rounded corner, blurred backdrop, size, and max-width options are specific to modal dialog.
+
 ## [[comp]] Modal dialog
 
-### Variants
+Modal dialog is used for focused tasks that should stay visually separated from the page without taking the full viewport.
+
+### Modal dialog variants
 
 #### Full height
 
@@ -56,37 +77,10 @@ Add `.modal-full-height` to the `.modal` `<dialog>` to use the max height option
     Open full height modal
   </button>`} />
 
-#### Sticky actions
-
-Add `.modal-sticky-actions` to the `.modal` `<dialog>` to show the actions buttons as fixed on the modal bottom. The content will scroll independently of the action buttons, this ensures that primary actions remain continuously visible and accessible, especially when the modal contains a large amount of content. In this case the [full height variant](#full-height) is automatically applied.
-
-<Example buttonLabel="dialog modal sticky actions" code={`<dialog id="demoModalStickyActions" class="modal modal-sticky-actions" aria-label="Demo modal" closedby="any">
-    <div class="modal-header">
-      <h3 class="modal-title">Modal title</h3>
-      <button type="button" class="btn btn-close" commandfor="demoModalStickyActions" command="close">
-        <span class="visually-hidden">Close</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
-      <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young.</p>
-      <p>On then sake home is am leaf. Of suspicion do departure at extremely he believing. Do know said mind do rent they oh hope of. General enquire picture letters garrets on offices of no on. Say one hearing between excited evening all inhabit thought you. Style begin mr heard by in music tried do. To unreserved projection no introduced invitation.</p>
-      <p>An do on frankness so cordially immediate recommend contained. Imprudence insensible be literature unsatiable do. Of or imprudence solicitude affronting in mr possession. Compass journey he request on suppose limited of or. She margaret law thoughts proposal formerly. Speaking ladyship yet scarcely and mistaken end exertion dwelling. All decisively dispatched instrument particular way one devonshire. Applauded she sportsman explained for out objection.</p>
-      <p>Full he none no side. Uncommonly surrounded considered for him are its. It we is read good soon. My to considered delightful invitation announcing of no decisively boisterous. Did add dashwoods deficient man concluded additions resources. Or landlord packages overcame distance smallest in recurred. Wrong maids or be asked no on enjoy. Household few sometimes out attending described. Lain just fact four of am meet high. </p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-strong" commandfor="demoModalStickyActions" command="close">Confirm</button>
-    </div>
-  </dialog>
-
-  <button type="button" class="btn btn-default" commandfor="demoModalStickyActions" command="show-modal">
-    Open modal with sticky actions
-  </button>`} />
-
 <BrandSpecific brand={['orange', 'orange-compact']}>
 #### Rounded corner
 
-Rounded corner modals is a project-wide option therefore all your modals should either be rounded or not. Add `.use-rounded-corner-modal` on a top container (for example `<body>`) to use rounded corners.
+Rounded corner modals is a project-wide option therefore all your modal dialogs should either be rounded or not. Add `.use-rounded-corner-modal` on a top container (for example `<body>`) to use rounded corners.
 
 <Callout type="warning">
   Rounded corners could be used in more emotional, immersive contexts or those tied to specific visual identities. **For standard or business-oriented usage, keep the default square corners.**
@@ -118,7 +112,116 @@ Rounded corner modals is a project-wide option therefore all your modals should 
   </div>`} />
 </BrandSpecific>
 
-#### Close button
+#### Blurred backdrop
+
+By default the modal dialog backdrop is blurred to visually separate the modal from the underlying content. You can disable this effect by adding the `.modal-non-blurred` class to the modal dialog.
+
+<Example buttonLabel="dialog modal non blurred" code={`<dialog id="demoModalNonBlurred" class="modal modal-non-blurred" aria-label="Demo modal dialog" closedby="any">
+    <div class="modal-header">
+      <h3 class="modal-title">Title</h3>
+      <button type="button" class="btn btn-close" commandfor="demoModalNonBlurred" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-strong" commandfor="demoModalNonBlurred" command="close">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="demoModalNonBlurred" command="show-modal">
+    Open modal without blurred backdrop
+  </button>`} />
+
+### Sizes
+
+Add `.modal-small` to switch to a small modal dialog. Use it when the dialog requires less space and the user can complete the task with minimal information or interaction.
+
+<Example buttonLabel="modal dialog small" code={`<dialog id="demoModalSmall" class="modal modal-negative modal-small" aria-label="Demo modal dialog small" closedby="any">
+    <div class="modal-header">
+      <div class="d-flex align-items-center gap-scaled-small">
+        <div class="modal-alert-icon"><p class="visually-hidden">Alert</p></div>
+        <h3 class="modal-title">Confirm deletion</h3>
+      </div>
+      <button type="button" class="btn btn-close" commandfor="demoModalSmall" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-negative" commandfor="demoModalSmall" command="close">Delete</button>
+        <button type="button" class="btn btn-minimal" commandfor="demoModalSmall" command="close">Cancel</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="demoModalSmall" command="show-modal">
+    Open small modal
+  </button>`} />
+
+## [[comp]] Fullscreen dialog
+
+Fullscreen dialog uses the same native `<dialog>` element and internal structure as modal dialog, but takes all the available viewport. Add `.fullscreen-dialog` to the `.modal` `<dialog>`.
+
+Fullscreen dialog does not use modal dialog size or max-width variants. Use the [common variants](#common-variants) when you need shared dialog options such as sticky actions, a previous link, or functional actions.
+
+<Example buttonLabel="fullscreen dialog" code={`<dialog id="demoFullscreenDialog" class="modal fullscreen-dialog" aria-label="Demo fullscreen dialog" closedby="any">
+    <div class="modal-header">
+      <h3 class="modal-title">Fullscreen dialog title</h3>
+      <button type="button" class="btn btn-close" commandfor="demoFullscreenDialog" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence.</p>
+      <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual.</p>
+      <p>On then sake home is am leaf. Of suspicion do departure at extremely he believing. Do know said mind do rent they oh hope of. General enquire picture letters garrets on offices of no on.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-strong" commandfor="demoFullscreenDialog" command="close">Confirm</button>
+        <button type="button" class="btn btn-minimal" commandfor="demoFullscreenDialog" command="close">Cancel</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="demoFullscreenDialog" command="show-modal">
+    Open fullscreen dialog
+  </button>`} />
+
+## Common variants
+
+The following variants use the same structure and behavior for modal dialog and fullscreen dialog.
+
+### Sticky actions
+
+Add `.modal-sticky-actions` to the `.modal` `<dialog>` to show the actions buttons as fixed on the modal bottom. The content will scroll independently of the action buttons, this ensures that primary actions remain continuously visible and accessible, especially when the modal contains a large amount of content. For modal dialog, the [full height variant](#full-height) is automatically applied.
+
+<Example buttonLabel="dialog modal sticky actions" code={`<dialog id="demoModalStickyActions" class="modal modal-sticky-actions" aria-label="Demo modal" closedby="any">
+    <div class="modal-header">
+      <h3 class="modal-title">Modal title</h3>
+      <button type="button" class="btn btn-close" commandfor="demoModalStickyActions" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
+      <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young.</p>
+      <p>On then sake home is am leaf. Of suspicion do departure at extremely he believing. Do know said mind do rent they oh hope of. General enquire picture letters garrets on offices of no on. Say one hearing between excited evening all inhabit thought you. Style begin mr heard by in music tried do. To unreserved projection no introduced invitation.</p>
+      <p>An do on frankness so cordially immediate recommend contained. Imprudence insensible be literature unsatiable do. Of or imprudence solicitude affronting in mr possession. Compass journey he request on suppose limited of or. She margaret law thoughts proposal formerly. Speaking ladyship yet scarcely and mistaken end exertion dwelling. All decisively dispatched instrument particular way one devonshire. Applauded she sportsman explained for out objection.</p>
+      <p>Full he none no side. Uncommonly surrounded considered for him are its. It we is read good soon. My to considered delightful invitation announcing of no decisively boisterous. Did add dashwoods deficient man concluded additions resources. Or landlord packages overcame distance smallest in recurred. Wrong maids or be asked no on enjoy. Household few sometimes out attending described. Lain just fact four of am meet high. </p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-strong" commandfor="demoModalStickyActions" command="close">Confirm</button>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="demoModalStickyActions" command="show-modal">
+    Open modal with sticky actions
+  </button>`} />
+
+### Close button
 
 The close button may be hidden when the modal has a clear, visible alternative way to dismiss it, such as a single Cancel action or another explicit dismissal control. It may also be omitted when the modal represents a mandatory step in a controlled flow where dismissal is intentionally unavailable.
 
@@ -143,7 +246,7 @@ The close button may be hidden when the modal has a clear, visible alternative w
     Open modal without close button
   </button>`} />
 
-#### Previous link
+### Previous link
 
 You can display a navigation link above the title, aligned to the leading edge of the modal. It is intended for multi-step flows where users can navigate back to a previous step without dismissing the entire modal.
 
@@ -170,7 +273,7 @@ You can display a navigation link above the title, aligned to the leading edge o
     Open modal with previous link
   </button>`} />
 
-#### Subtitle
+### Subtitle
 
 You can display a subtitle above the title, aligned to the leading edge of the modal. Use it to provide additional context or clarify the purpose of the modal when the title alone is not sufficient.
 
@@ -197,7 +300,7 @@ You can display a subtitle above the title, aligned to the leading edge of the m
     Open modal with subtitle
   </button>`} />
 
-#### Title icon
+### Title icon
 
 You can display a subtitle above the title, aligned to the leading edge of the modal. Use it to provide additional context or clarify the purpose of the modal when the title alone is not sufficient.
 
@@ -226,7 +329,7 @@ You can display a subtitle above the title, aligned to the leading edge of the m
     Open modal with title icon
   </button>`} />
 
-#### Description
+### Description
 
 The Description option displays supporting text below the title.It provides additional context, instructions, or information required to understand the purpose or outcome of the modal.The description may be omitted when the title alone provides sufficient context and the message is short and immediately understandable.
 
@@ -248,7 +351,7 @@ The Description option displays supporting text below the title.It provides addi
     Open modal with no description
   </button>`} />
 
-#### Actions
+### Actions
 
 There can be up to three actions buttons on the modal. These buttons typically include a primary action, a secondary action, and an optional tertiary action, allowing users to confirm, cancel, or perform additional tasks related to the modal's content. The buttons will automatically stack vertically on smaller screens but [that can be overridden using `.modal-footer-horizontal`](#horizontal-alignment).
 
@@ -273,7 +376,7 @@ There can be up to three actions buttons on the modal. These buttons typically i
     Open modal with multiple actions
   </button>`} />
 
-##### Horizontal alignment
+#### Horizontal alignment
 
 By default the action buttons will stack vertically on smaller screens and align horizontally on larger screens. You can desactivate the vertical stacking using `.modal-footer-horizontal` on the `.modal-footer` container if needed. This is only advisable for smaller buttons labels.
 
@@ -294,7 +397,7 @@ By default the action buttons will stack vertically on smaller screens and align
     Open modal with alignment
   </button>`} />
 
-##### No full-width buttons
+#### No full-width buttons
 
 By default the action buttons are full-width on smaller screens. You can deactivate the full-width behavior using `.modal-footer-small` on the `.modal-footer` container.
 
@@ -315,30 +418,7 @@ By default the action buttons are full-width on smaller screens. You can deactiv
     Open modal with small buttons
   </button>`} />
 
-#### Blurred backdrop
-
-By default the modal backdrop is blurred to visually separate the modal from the underlying content. You can disable this effect by adding the `.modal-non-blurred` class to the modal.
-
-<Example buttonLabel="dialog modal non blurred" code={`<dialog id="demoModalNonBlurred" class="modal modal-non-blurred" aria-label="Demo modal dialog" closedby="any">
-    <div class="modal-header">
-      <h3 class="modal-title">Title</h3>
-      <button type="button" class="btn btn-close" commandfor="demoModalNonBlurred" command="close">
-        <span class="visually-hidden">Close</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-strong" commandfor="demoModalNonBlurred" command="close">Close</button>
-      </div>
-    </div>
-  </dialog>
-
-  <button type="button" class="btn btn-default" commandfor="demoModalNonBlurred" command="show-modal">
-    Open modal without blurred backdrop
-  </button>`} />
-
-#### Functional
+### Functional
 
 You can implement function modal dialogs using the functional variants of the icons and buttons.
 
@@ -386,33 +466,6 @@ You can implement function modal dialogs using the functional variants of the ic
 
   <button type="button" class="btn btn-default" commandfor="demoModalSuccess" command="show-modal">
     Open success modal
-  </button>`} />
-
-### Sizes
-
-Add `.modal-small` to switch to a small modal dialog. Use it when the dialog requires less space and the user can complete the task with minimal information or interaction.
-
-<Example buttonLabel="modal dialog small" code={`<dialog id="demoModalSmall" class="modal modal-negative modal-small" aria-label="Demo modal dialog small" closedby="any">
-    <div class="modal-header">
-      <div class="d-flex align-items-center gap-scaled-small">
-        <div class="modal-alert-icon"><p class="visually-hidden">Alert</p></div>
-        <h3 class="modal-title">Confirm deletion</h3>
-      </div>
-      <button type="button" class="btn btn-close" commandfor="demoModalSmall" command="close">
-        <span class="visually-hidden">Close</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p>Sportsman do offending supported extremity breakfast by listening.</p>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-negative" commandfor="demoModalSmall" command="close">Delete</button>
-        <button type="button" class="btn btn-minimal" commandfor="demoModalSmall" command="close">Cancel</button>
-      </div>
-    </div>
-  </dialog>
-
-  <button type="button" class="btn btn-default" commandfor="demoModalSmall" command="show-modal">
-    Open small modal
   </button>`} />
 
 ## JS example

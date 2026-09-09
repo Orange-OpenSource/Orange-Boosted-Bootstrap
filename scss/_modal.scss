@@ -42,6 +42,16 @@
     height: calc(100vh - 2 * var(--#{$prefix}modal-grid-margin));
   }
 
+  &.fullscreen-dialog {
+    --#{$prefix}modal-border-radius: #{$ouds-border-radius-none};
+
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    margin: 0;
+  }
+
   &.modal-sticky-actions .modal-footer {
     padding: $ouds-space-padding-block-xlarge $ouds-space-padding-inline-2xlarge;
     border-top: $ouds-border-width-default solid $ouds-color-border-muted;
@@ -57,7 +67,7 @@
     backdrop-filter: blur($core-ouds-elevation-blur-500);
   }
 
-  &.modal-non-blurred::backdrop {
+  &:not(.fullscreen-dialog).modal-non-blurred::backdrop {
     backdrop-filter: none;
   }
 
