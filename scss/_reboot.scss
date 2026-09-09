@@ -760,13 +760,12 @@ progress {
 dialog,
 [popover] {
   padding: 0;
-  overflow: visible;
   background: unset;
   border: 0;
 }
 
 :not([popover])::backdrop {
-  background-color: $modal-backdrop-bg;
-  opacity: $modal-backdrop-opacity;
+  // custom prop fallback to mitigate Safari < 17.4 bug where the actual value is not applied correctly
+  background-color: var(--#{$prefix}color-overlay-backdrop, $ouds-color-overlay-backdrop-light);
 }
 // End mod

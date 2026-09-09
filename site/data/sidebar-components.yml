@@ -17,6 +17,7 @@
     - title: Icon
     - title: Items
     - title: Links
+    - title: Modal
     - title: Password input
     - title: Radio button
     - title: Select input
@@ -47,8 +48,6 @@
     - title: Dropdown
       coming_soon: true
     - title: Local navigation
-      coming_soon: true
-    - title: Modal
       coming_soon: true
     - title: Navbar
       coming_soon: true
