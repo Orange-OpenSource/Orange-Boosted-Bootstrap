@@ -23,12 +23,12 @@
     </contentFiles>
   </metadata>
   <files>
-    <file src="nuget\ouds-web.png" target="" />
+    <file src="libs\web\nuget\ouds-web.png" target="" />
 
-    <file src="dist\js\ouds-web*.js" target="content\Scripts" />
-    <file src="dist\js\ouds-web*.js.map" target="content\Scripts" />
+    <file src="libs\web\dist\js\ouds-web*.js" target="content\Scripts" />
+    <file src="libs\web\dist\js\ouds-web*.js.map" target="content\Scripts" />
 
-    <file src="dist\js\ouds-web*.js" target="contentFiles\any\any\wwwroot\js" />
-    <file src="dist\js\ouds-web*.js.map" target="contentFiles\any\any\wwwroot\js" />
+    <file src="libs\web\dist\js\ouds-web*.js" target="contentFiles\any\any\wwwroot\js" />
+    <file src="libs\web\dist\js\ouds-web*.js.map" target="contentFiles\any\any\wwwroot\js" />
   </files>
 </package>

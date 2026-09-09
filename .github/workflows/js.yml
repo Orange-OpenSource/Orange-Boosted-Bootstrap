@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths:
-      - 'js/**'
+      - 'libs/web/js/**'
   pull_request:
     types: [opened, reopened, synchronize]
   workflow_dispatch:
@@ -48,12 +48,12 @@ jobs:
         run: npm run js-test
 
       - name: Run ouds-migrate tests
-        run: cd packages/migrate && npm run test
+        run: npm run test -w libs/web/packages/migrate
 
       - name: Run Coveralls
         uses: coverallsapp/github-action@8d6379e14d29928660c4ba802d8e85393440b329 # v2.3.8
         if: ${{ !github.event.repository.fork }}
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
-          path-to-lcov: "./js/coverage/lcov.info"
+          path-to-lcov: "./libs/web/js/coverage/lcov.info"
           fail-on-error: false
