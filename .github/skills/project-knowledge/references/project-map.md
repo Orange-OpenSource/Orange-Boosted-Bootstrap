@@ -51,7 +51,7 @@ The root-level `skills/` directory is **not** for contributors to this repo — 
 Distribution mechanism: these skills are **not published as an npm package**. They are installed via the `skills` CLI:
 
 ```sh
-npx skills add Orange-OpenSource/Orange-Boosted-Bootstrap
+npx skills add Orange-OpenSource/Orange-Boosted-Bootstrap/skills
 ```
 
 See README.md ("AI agent skills" section) for the consumer-facing documentation.
