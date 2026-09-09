@@ -3,7 +3,7 @@ baseURL:                          "https://web.unified-design-system.orange.com"
 brand:                            "orange"
 display_brand:                    "Orange"
 
-docsDir:                          "site"
+docsDir:                          "../../apps/site"
 
 subtitle:                         "OUDS Web is a Bootstrap based, Orange branded accessible and ergonomic components library…"
 description:                      "Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins."
