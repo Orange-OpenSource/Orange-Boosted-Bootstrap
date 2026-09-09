@@ -23,9 +23,9 @@
     </contentFiles>
   </metadata>
   <files>
-    <file src="nuget\ouds-web.png" target="" />
+    <file src="libs\web\nuget\ouds-web.png" target="" />
 
-    <file src="packages\orange-compact\dist\css\ouds-web*.*" target="content\Content" />
-    <file src="packages\orange-compact\dist\css\ouds-web*.*" target="contentFiles\any\any\wwwroot\css" />
+    <file src="libs\web\packages\orange-compact\dist\css\ouds-web*.*" target="content\Content" />
+    <file src="libs\web\packages\orange-compact\dist\css\ouds-web*.*" target="contentFiles\any\any\wwwroot\css" />
   </files>
 </package>

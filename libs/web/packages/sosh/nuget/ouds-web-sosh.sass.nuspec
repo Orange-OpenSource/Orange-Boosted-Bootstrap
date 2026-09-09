@@ -23,9 +23,9 @@
     </contentFiles>
   </metadata>
   <files>
-    <file src="nuget\ouds-web.png" target="" />
+    <file src="libs\web\nuget\ouds-web.png" target="" />
 
-    <file src="packages\sosh\scss\**\*.scss" target="content\Content" />
-    <file src="packages\sosh\scss\**\*.scss" target="contentFiles\Content\any\any\wwwroot\scss" />
+    <file src="libs\web\packages\sosh\scss\**\*.scss" target="content\Content" />
+    <file src="libs\web\packages\sosh\scss\**\*.scss" target="contentFiles\Content\any\any\wwwroot\scss" />
   </files>
 </package>
