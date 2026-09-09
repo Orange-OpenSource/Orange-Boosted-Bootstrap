@@ -58,7 +58,7 @@ This repository ships [Agent Skills](https://www.skills.sh/) in the [`skills/`](
 Install them in your project with the [`skills` CLI](https://www.skills.sh/):
 
 ```sh
-npx skills add Orange-OpenSource/Orange-Boosted-Bootstrap
+npx skills add Orange-OpenSource/Orange-Boosted-Bootstrap/skills
 ```
 
 This downloads the skills and configures them for use with your AI agent.
