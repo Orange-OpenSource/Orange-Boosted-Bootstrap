@@ -4,41 +4,58 @@ description: Use native HTML dialog with invoker commands to display focused mod
 aliases:
   - "/docs/components/modal/"
 toc: true
+types:
+  - Modal dialog
+  - Fullscreen dialog
 ---
 
 ## Overview
 
-<Example buttonLabel="dialog modal overview" code={`<dialog id="demoModalDialog" class="modal" aria-label="Demo modal dialog" closedby="any">
-    <div class="modal-header">
-      <h3 class="modal-title">Title</h3>
-      <button type="button" class="btn btn-close" commandfor="demoModalDialog" command="close">
-        <span class="visually-hidden">Close</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-strong" commandfor="demoModalDialog" command="close">Close</button>
-      </div>
-    </div>
-  </dialog>
-
-  <button type="button" class="btn btn-default" commandfor="demoModalDialog" command="show-modal">
-    Open modal dialog
-  </button>`} />
-
 ### Component types
 
-There are 2 dialog types inside the modal component:
-- [Modal dialog](#modal-dialog) is displayed above the page content and keeps a maximum width based on the viewport grid.
-- [Fullscreen dialog](#fullscreen-dialog) uses the same structure and behavior but takes all the available viewport.
 
-<BsTable>
-  | Dialog type | Viewport behavior | Size variants |
-  | ----------- | ----------------- | ------------- |
-  | [Modal dialog](#modal-dialog) | Uses the modal grid width and max height | Available |
-  | [Fullscreen dialog](#fullscreen-dialog) | Takes all the available viewport | Not available |
-</BsTable>
+<ul class="list-unstyled grid gap-medium">
+  <li class="g-col-6">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
+          <div class="modal w-75 h-75 position-relative">
+            <div class="modal-header">
+              <h3 class="modal-title">Title</h3>
+              <button type="button" class="btn btn-close">
+                <span class="visually-hidden">Close</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#modal-dialog">Modal dialog</a> temporary surface that interrupts the current page or task to focus the user's attention</div>
+    </div>
+  </li>
+  <li class="g-col-6">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
+          <div class="modal fullscreen-dialog position-relative h-100">
+            <div class="modal-header">
+              <h3 class="modal-title">Title</h3>
+              <button type="button" class="btn btn-close">
+                <span class="visually-hidden">Close</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#fullscreen-dialog">Fullscreen dialog</a> is a dialog that occupies the entire viewport and does not use a backdrop.</div>
+    </div>
+  </li>
+</ul>
 
 ### Approach
 

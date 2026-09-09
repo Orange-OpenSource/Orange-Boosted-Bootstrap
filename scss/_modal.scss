@@ -48,8 +48,9 @@
     width: 100vw;
     max-width: 100vw;
     height: 100vh;
-    max-height: 100vh;
+    max-height: unset;
     margin: 0;
+    box-shadow: none;
   }
 
   &.modal-sticky-actions .modal-footer {
@@ -67,7 +68,7 @@
     backdrop-filter: blur($core-ouds-elevation-blur-500);
   }
 
-  &:not(.fullscreen-dialog).modal-non-blurred::backdrop {
+  &.modal-non-blurred::backdrop {
     backdrop-filter: none;
   }
 
