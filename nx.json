@@ -1,0 +1,33 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "production": ["default", "!{projectRoot}/**/*.md", "!{projectRoot}/**/tests/**", "!{projectRoot}/dist/**"],
+    "sharedGlobals": []
+  },
+  "targetDefaults": {
+    "css": {
+      "inputs": ["production"],
+      "outputs": ["{projectRoot}/dist/css"],
+      "cache": true
+    },
+    "js": {
+      "inputs": ["production"],
+      "outputs": ["{projectRoot}/dist/js"],
+      "cache": true
+    },
+    "docs-build": {
+      "inputs": ["production"],
+      "outputs": ["{projectRoot}/_site"],
+      "cache": true
+    },
+    "lint": {
+      "inputs": ["default"],
+      "cache": true
+    },
+    "test": {
+      "inputs": ["default"],
+      "cache": true
+    }
+  }
+}
