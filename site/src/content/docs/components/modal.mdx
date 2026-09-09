@@ -388,6 +388,33 @@ You can implement function modal dialogs using the functional variants of the ic
     Open success modal
   </button>`} />
 
+### Sizes
+
+Add `.modal-small` to switch to a small modal dialog. Use it when the dialog requires less space and the user can complete the task with minimal information or interaction.
+
+<Example buttonLabel="modal dialog small" code={`<dialog id="demoModalSmall" class="modal modal-negative modal-small" aria-label="Demo modal dialog small" closedby="any">
+    <div class="modal-header">
+      <div class="d-flex align-items-center gap-scaled-small">
+        <div class="modal-alert-icon"><p class="visually-hidden">Alert</p></div>
+        <h3 class="modal-title">Confirm deletion</h3>
+      </div>
+      <button type="button" class="btn btn-close" commandfor="demoModalSmall" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-negative" commandfor="demoModalSmall" command="close">Delete</button>
+        <button type="button" class="btn btn-minimal" commandfor="demoModalSmall" command="close">Cancel</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="demoModalSmall" command="show-modal">
+    Open small modal
+  </button>`} />
+
 ## JS example
 
 <Example buttonLabel="dialog modal full" code={`<dialog id="demoJSModal" class="modal" aria-label="Demo modal">

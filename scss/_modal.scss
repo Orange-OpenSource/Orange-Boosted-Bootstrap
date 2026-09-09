@@ -18,6 +18,7 @@
   margin: auto $ouds-space-fixed-medium;
   overscroll-behavior: contain;
   background-color: $ouds-color-overlay-modal-sheet;
+  box-shadow: $ouds-elevation-emphasized;
   @include border-radius(var(--#{$prefix}modal-border-radius));
 
   @include media-breakpoint-up(sm) {
@@ -58,6 +59,23 @@
 
   &.modal-non-blurred::backdrop {
     backdrop-filter: none;
+  }
+
+  &.modal-small {
+    @include media-breakpoint-up(md) {
+      --#{$prefix}modal-column-count: 8;
+    }
+    @include media-breakpoint-up(lg) {
+      --#{$prefix}modal-column-count: 6;
+    }
+
+    @include media-breakpoint-up(xl) {
+      --#{$prefix}modal-column-count: 4;
+    }
+
+    .modal-title {
+      @include get-font-size("heading-small");
+    }
   }
 }
 
@@ -101,6 +119,7 @@
 
 .modal-title {
   margin: 0;
+  @include get-font-size("heading-medium");
 }
 
 .modal-subtitle {
@@ -129,7 +148,7 @@
   }
 }
 
-.modal .modal-footer {
+.modal-footer {
   display: flex;
   flex-shrink: 0;
   flex-direction: row-reverse;
