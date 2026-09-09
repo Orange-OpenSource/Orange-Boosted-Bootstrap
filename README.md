@@ -1,232 +1,45 @@
-<h1 align="center">OUDS Web</h1>
+<h1 align="center">OUDS Monorepo</h1>
 
 <p align="center">
-  OUDS Web is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
+  Home of the Orange Unified Design System libraries.
   <br />
   <a href="https://web.unified-design-system.orange.com"><strong>Visit OUDS Web</strong></a>
-  <br />
-  <br />
-  <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
-  ·
-  <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=&labels=feature&template=feature_request.yml">Request feature</a>
 </p>
 
+## Layout
 
-## Table of contents
-
-- [Quick start](#quick-start)
-- [AI agent skills](#ai-agent-skills)
-- [Status](#status)
-- [What’s included](#whats-included)
-- [Bugs and feature requests](#bugs-and-feature-requests)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
-- [Versioning](#versioning)
-- [Creators](#creators)
-- [Thanks](#thanks)
-- [Copyright and license](#copyright-and-license)
-
-
-## Quick start
-
-OUDS Web need at least two different libraries. A common one, containing the common files used to build the different themes, and a theming one to apply some tokens.
-
-The common library have the common Scss files and all the common JavaScript that is included in every library. It also contains the builded JavaScript.
-
-The theming library have the specific Scss files containing all the tokens to apply the theme. It also contains the builded CSS for this specific theme.
-
-Several quick start options are available:
-
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v1.4.0-ouds-web.zip)
-- Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git && git switch main`
-- Install with [npm](https://www.npmjs.com/): `npm install @ouds/web-common@1.4.0 @ouds/web-orange@1.4.0`
-- Install with [yarn](https://yarnpkg.com/): `yarn add @ouds/web-common@1.4.0 @ouds/web-orange@1.4.0`
-- Install with [Bun](https://bun.sh/): `bun add @ouds/web-common@1.4.0 @ouds/web-orange@1.4.0`
-- Install with [Composer](https://getcomposer.org/): `composer require orange-opensource/orange-boosted-bootstrap:dev-main`
-- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package ouds-web-common ouds-web-orange` Sass: `Install-Package ouds-web-common.sass ouds-web-orange.sass`
-
-Read the [Getting started page](https://web.unified-design-system.orange.com/docs/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
-
-
-## AI agent skills
-
-This repository ships [Agent Skills](https://www.skills.sh/) in the [`skills/`](skills/) directory, giving AI coding agents (Claude Code, Cursor, GitHub Copilot, and others) procedural knowledge of OUDS Web:
-
-- **`using-ouds-web`** — a comprehensive reference of OUDS Web components, layout, utilities, and design tokens, used when an agent generates OUDS Web markup or code.
-- **`migrate-to-ouds-web`** — a step-by-step workflow to migrate a project from Boosted, OB1, or an older OUDS Web version to the latest OUDS Web.
-
-Install them in your project with the [`skills` CLI](https://www.skills.sh/):
-
-```sh
-npx skills add Orange-OpenSource/Orange-Boosted-Bootstrap/skills
+```
+libs/
+  web/                OUDS Web — the Bootstrap-based component library (Orange, Sosh, Orange Compact)
+    site/             Astro documentation site (shared by all OUDS Web brands)
+    packages/
+      orange/
+      orange-compact/
+      sosh/
+      migrate/        @ouds/web-migrate CLI
 ```
 
-This downloads the skills and configures them for use with your AI agent.
+More libraries (React, Angular, Vue component libraries) will land under `libs/` over time.
 
+## Getting started
 
-## Status
+Run `npm install` at the repository root — this installs dependencies for every workspace (`libs/web` and `libs/web/packages/*`).
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/Orange-OpenSource/Orange-Boosted-Bootstrap/js.yml?branch=main&label=JS%20Tests&logo=github)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions/workflows/js.yml?query=workflow%3AJS+branch%3Aouds%2Fmain)
-[![npm version](https://img.shields.io/npm/v/@ouds/web-common?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@ouds/web-common)
-[![NuGet](https://img.shields.io/nuget/vpre/ouds-web-common?logo=nuget&logoColor=fff)](https://www.nuget.org/packages/ouds-web-common/absoluteLatest)
-[![Coverage Status](https://img.shields.io/coveralls/github/Orange-OpenSource/Orange-Boosted-Bootstrap/main?logo=coveralls&logoColor=fff)](https://coveralls.io/github/Orange-OpenSource/Orange-Boosted-Bootstrap?branch=main)
-[![CSS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/packages/orange/dist/css/ouds-web.min.css?compression=gzip&label=CSS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/packages/orange/dist/css/ouds-web.min.css)
-[![CSS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/packages/orange/dist/css/ouds-web.min.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/packages/orange/dist/css/ouds-web.min.css)
-[![JS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/js/ouds-web.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/js/ouds-web.min.js)
-[![JS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/js/ouds-web.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/js/ouds-web.min.js)
-[![JSDelivr](https://data.jsdelivr.com/v1/package/npm/@ouds/web-common/badge)](https://www.jsdelivr.com/package/npm/@ouds/web-common)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/badge)](https://scorecard.dev/viewer/?uri=github.com/Orange-OpenSource/Orange-Boosted-Bootstrap)
+All of the familiar npm scripts still work from the repository root; they delegate to the relevant workspace under the hood. For example:
 
-## What’s included
+```bash
+npm run start        # start all three brand doc servers in parallel
+npm run dist          # build CSS + JS for every brand
+npm run test          # run the full test suite
+npm run docs-build    # build the documentation site for every brand
+```
 
-Within the download you’ll find the following directories and files, logically grouping common assets and providing both compiled and minified variations.
+See [`libs/web/README.md`](libs/web/README.md) for the full list of scripts and details on the OUDS Web library itself.
 
-<details>
-  <summary>Download contents</summary>
+## Task orchestration
 
-  ```text
-  @ouds/
-  ├── web-orange/
-  │   └── dist/
-  │       └── css/
-  │           ├── ouds-web-bootstrap.css
-  │           ├── ouds-web-bootstrap.css.map
-  │           ├── ouds-web-bootstrap.min.css
-  │           ├── ouds-web-bootstrap.min.css.map
-  │           ├── ouds-web-bootstrap.rtl.css
-  │           ├── ouds-web-bootstrap.rtl.css.map
-  │           ├── ouds-web-bootstrap.rtl.min.css
-  │           ├── ouds-web-bootstrap.rtl.min.css.map
-  │           ├── ouds-web-grid.css
-  │           ├── ouds-web-grid.css.map
-  │           ├── ouds-web-grid.min.css
-  │           ├── ouds-web-grid.min.css.map
-  │           ├── ouds-web-grid.rtl.css
-  │           ├── ouds-web-grid.rtl.css.map
-  │           ├── ouds-web-grid.rtl.min.css
-  │           ├── ouds-web-grid.rtl.min.css.map
-  │           ├── ouds-web-reboot.css
-  │           ├── ouds-web-reboot.css.map
-  │           ├── ouds-web-reboot.min.css
-  │           ├── ouds-web-reboot.min.css.map
-  │           ├── ouds-web-reboot.rtl.css
-  │           ├── ouds-web-reboot.rtl.css.map
-  │           ├── ouds-web-reboot.rtl.min.css
-  │           ├── ouds-web-reboot.rtl.min.css.map
-  │           ├── ouds-web-utilities.css
-  │           ├── ouds-web-utilities.css.map
-  │           ├── ouds-web-utilities.min.css
-  │           ├── ouds-web-utilities.min.css.map
-  │           ├── ouds-web-utilities.rtl.css
-  │           ├── ouds-web-utilities.rtl.css.map
-  │           ├── ouds-web-utilities.rtl.min.css
-  │           ├── ouds-web-utilities.rtl.min.css.map
-  │           ├── ouds-web.css
-  │           ├── ouds-web.css.map
-  │           ├── ouds-web.min.css
-  │           ├── ouds-web.min.css.map
-  │           ├── ouds-web.rtl.css
-  │           ├── ouds-web.rtl.css.map
-  │           ├── ouds-web.rtl.min.css
-  │           └── ouds-web.rtl.min.css.map
-  └── web-common/
-      └── dist/
-          └── js/
-              ├── ouds-web.bundle.js
-              ├── ouds-web.bundle.js.map
-              ├── ouds-web.bundle.min.js
-              ├── ouds-web.bundle.min.js.map
-              ├── ouds-web.esm.js
-              ├── ouds-web.esm.js.map
-              ├── ouds-web.esm.min.js
-              ├── ouds-web.esm.min.js.map
-              ├── ouds-web.js
-              ├── ouds-web.js.map
-              ├── ouds-web.min.js
-              └── ouds-web.min.js.map
-  ```
-</details>
+This monorepo uses [NX](https://nx.dev) to orchestrate and cache tasks across workspaces. See `nx.json` for target configuration.
 
-We provide compiled CSS and JS (`ouds-web.*`), as well as compiled and minified CSS and JS (`ouds-web.min.*`). [Source maps](https://web.dev/articles/source-maps) (`ouds-web.*.map`) are available for use with certain browsers’ developer tools. Bundled JS files (`ouds-web.bundle.js` and minified `ouds-web.bundle.min.js`) include [Popper](https://popper.js.org/docs/v2/).
+## License
 
-We also provide a compiled and minified CSS (`ouds-web-bootstrap.*` and `ouds-web-bootstrap.min.*`) enforcing Bootstrap compatibility.
-
-## Bugs and feature requests
-
-Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new/choose).
-
-
-## Documentation
-
-OUDS Web’s documentation, included in this repo in the root directory, is built with [Astro](https://astro.build/) and publicly hosted on GitHub Pages at <https://web.unified-design-system.orange.com/>. The docs may also be run locally.
-
-Documentation search is powered by [Algolia’s DocSearch](https://docsearch.algolia.com/).
-
-### Running documentation locally
-
-1. Run `npm install` to install the Node.js dependencies, including Astro (the site builder).
-2. Run `npm run dist` (or a specific npm script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
-3. From the root `/ouds-web` directory, run `npm run start` in the command line.
-4. Open <http://localhost:9001/orange/> or <http://localhost:9002/sosh/> or <http://localhost:9003/orange-compact/> in your browser, and voilà.
-
-Learn more about using Astro by reading its [documentation](https://docs.astro.build/en/getting-started/).
-
-### Documentation for previous releases
-
-You can find all our previous releases docs on <https://web.unified-design-system.orange.com/orange/docs/versions/>.
-
-[Previous releases](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) and their documentation are also available for download.
-
-
-## Contributing
-
-Please read through our [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
-
-Moreover, if your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/main/js/tests). All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
-
-Editor preferences are available in the [editor config](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
-
-
-## Versioning
-
-For transparency into our release cycle and in striving to maintain backward compatibility, OUDS Web is maintained under [the Semantic Versioning guidelines](https://semver.org/). Sometimes we screw up, but we adhere to those rules whenever possible.
-
-See [the Releases section of our GitHub project](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) for changelogs for each release version of OUDS Web.
-
-Our default branch is for development of our OUDS Web release.
-
-
-## Creators
-
-### Bootstrap
-
-**Mark Otto**
-
-- <https://x.com/mdo>
-- <https://github.com/mdo>
-
-**Jacob Thornton**
-
-- <https://x.com/fat>
-- <https://github.com/fat>
-
-## Thanks
-
-<a href="https://www.browserstack.com/">
-  <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack" width="192" height="42" />
-</a>
-
-Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
-
-<a href="https://www.netlify.com/">
-  <img src="https://www.netlify.com/v3/img/components/full-logo-light.svg" alt="Netlify" width="147" height="40" />
-</a>
-
-Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previews!
-
-## Copyright and license
-
-Code and documentation copyright 2011-2026 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors). Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
-
-OUDS Web code and documentation copyright 2015-2026 the [OUDS Web Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA](https://orange.com). Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
-
+See [`LICENSE`](LICENSE).

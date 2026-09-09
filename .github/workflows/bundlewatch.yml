@@ -4,9 +4,9 @@ on:
     branches:
       - main
     paths:
-      - 'js/**'
-      - 'scss/**'
-      - 'packages/**/scss/**'
+      - 'libs/web/js/**'
+      - 'libs/web/scss/**'
+      - 'libs/web/packages/**/scss/**'
   pull_request:
     types: [opened, reopened, synchronize]
   workflow_dispatch:
