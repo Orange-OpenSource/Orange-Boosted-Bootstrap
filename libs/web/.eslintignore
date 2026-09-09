@@ -2,6 +2,9 @@
 **/dist/
 **/vendor/
 /_site/
+/site/public/
 /js/coverage/
+/site/static/sw.js
+/site/layouts/partials/
 /stories/
 /skills/
