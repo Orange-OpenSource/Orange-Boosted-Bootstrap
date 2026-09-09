@@ -187,6 +187,38 @@
     },
     {
       "files": [
+        "site/**"
+      ],
+      "env": {
+        "browser": true,
+        "node": false
+      },
+      "parserOptions": {
+        "sourceType": "script",
+        "ecmaVersion": 2019
+      },
+      "rules": {
+        "no-new": "off",
+        "unicorn/no-array-for-each": "off"
+      }
+    },
+    {
+      "files": [
+        "site/src/assets/application.js",
+        "site/src/assets/color.js",
+        "site/src/assets/partials/*.js",
+        "site/src/assets/search.js",
+        "site/src/assets/snippets.js",
+        "site/src/assets/stackblitz.js",
+        "site/src/plugins/*.js"
+      ],
+      "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2020
+      }
+    },
+    {
+      "files": [
         "**/*.md"
       ],
       "plugins": [
