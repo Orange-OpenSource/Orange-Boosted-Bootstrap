@@ -37,6 +37,17 @@ const BRANDS = [
   { packageName: 'orange-compact', sourceName: 'orange' }
 ]
 
+// List of SVG that require special attributes to be preserved during optimization.
+// The key is the source brand, and the value is an object mapping icon paths to the attribute that must be kept.
+// For example, if an icon has a "fill-rule" attribute that must not be removed, it is listed here.
+const SVG_WITH_SPECIAL_ATTRIBUTES = {
+  orange: {
+    'communication/objects/multi-tool-repair.svg': 'fill-rule',
+    'communication/security-and-safety/child-protection.svg': 'fill-rule',
+    'functional/communications/live-chat.svg': 'fill-rule'
+  }
+}
+
 const EXPECTED_SUBDIRECTORIES = ['orange', 'sosh', 'wireframe']
 const KNOWN_SOURCE_BRANDS = new Set(['orange', 'sosh', 'wireframe'])
 
@@ -192,11 +203,27 @@ function stripAll(string, pattern) {
   return next
 }
 
-function extractSvgInnerContent(svgFileContent) {
+function extractSvgInnerContent(svgFileContent, attrToKeep = null) {
+  const attrPattern = attrToKeep === 'fill-rule' ? 'clip-rule' : (attrToKeep === 'clip-rule' ? 'fill-rule' : '(fill-rule|clip-rule)')
+  const removeAttrsPlugin = attrPattern ?
+    {
+      name: 'removeAttrs',
+      params: {
+        attrs: `path:${attrPattern}:evenodd`
+      }
+    } :
+    null
   let result = svgFileContent
   result = stripAll(result, /<\?xml[\s\S]*?\?>/g)
   result = stripAll(result, /<!--[\s\S]*?-->/g)
-  result = optimize(result, { multipass: true, floatPrecision: 2 }).data
+  result = optimize(result, {
+    multipass: true,
+    floatPrecision: 2,
+    plugins: [
+      'preset-default',
+      removeAttrsPlugin
+    ].filter(Boolean)
+  }).data
   result = result.replace(/^\s*<svg[^>]*>/i, '')
   result = result.replace(/<\/svg>\s*$/i, '')
   return result
@@ -279,7 +306,7 @@ async function loadSourceInnerContent(iconsRoot, sourceBrand, iconPath) {
     )
   }
 
-  return extractSvgInnerContent(raw)
+  return extractSvgInnerContent(raw, SVG_WITH_SPECIAL_ATTRIBUTES[sourceBrand]?.[relativeWithExtension] || null)
 }
 
 // ---------------------------------------------------------------------------
