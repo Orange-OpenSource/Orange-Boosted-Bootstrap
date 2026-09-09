@@ -1,0 +1,2 @@
+[build]
+  publish = "libs/web/_site"

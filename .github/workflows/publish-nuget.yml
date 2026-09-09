@@ -28,14 +28,14 @@ jobs:
         shell: pwsh
         run: |
           $bsversion = $env:GITHUB_REF_NAME.Substring(1)
-          nuget pack "nuget\ouds-web-common.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
-          nuget pack "nuget\ouds-web-common.sass.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
-          nuget pack "packages\orange\nuget\ouds-web-orange.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
-          nuget pack "packages\orange\nuget\ouds-web-orange.sass.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
-          nuget pack "packages\orange-compact\nuget\ouds-web-orange-compact.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
-          nuget pack "packages\orange-compact\nuget\ouds-web-orange-compact.sass.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
-          nuget pack "packages\sosh\nuget\ouds-web-sosh.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
-          nuget pack "packages\sosh\nuget\ouds-web-sosh.sass.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
+          nuget pack "libs\web\nuget\ouds-web-common.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
+          nuget pack "libs\web\nuget\ouds-web-common.sass.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
+          nuget pack "libs\web\packages\orange\nuget\ouds-web-orange.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
+          nuget pack "libs\web\packages\orange\nuget\ouds-web-orange.sass.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
+          nuget pack "libs\web\packages\orange-compact\nuget\ouds-web-orange-compact.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
+          nuget pack "libs\web\packages\orange-compact\nuget\ouds-web-orange-compact.sass.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
+          nuget pack "libs\web\packages\sosh\nuget\ouds-web-sosh.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
+          nuget pack "libs\web\packages\sosh\nuget\ouds-web-sosh.sass.nuspec" -Verbosity detailed -NonInteractive -BasePath . -Version $bsversion
           nuget push "ouds-web-common.$bsversion.nupkg" -Verbosity detailed -NonInteractive -Source "https://api.nuget.org/v3/index.json"
           nuget push "ouds-web-common.sass.$bsversion.nupkg" -Verbosity detailed -NonInteractive -Source "https://api.nuget.org/v3/index.json"
           nuget push "ouds-web-orange.$bsversion.nupkg" -Verbosity detailed -NonInteractive -Source "https://api.nuget.org/v3/index.json"
