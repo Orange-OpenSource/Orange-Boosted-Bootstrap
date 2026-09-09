@@ -32,7 +32,7 @@ Thumbs.db
 *.komodoproject
 
 # Folders to ignore
-/node_modules/
+node_modules/
 /.github/release-drafter.yml
 
 # NX
