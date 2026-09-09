@@ -8,6 +8,14 @@
     "xo/browser",
     "plugin:storybook/recommended"
   ],
+  "env": {
+    "browser": true,
+    "node": false
+  },
+  "parserOptions": {
+    "sourceType": "script",
+    "ecmaVersion": 2019
+  },
   "rules": {
     "arrow-body-style": "off",
     "capitalized-comments": "off",
@@ -69,6 +77,7 @@
     ],
     "no-console": "error",
     "no-negated-condition": "off",
+    "no-new": "off",
     "object-curly-spacing": [
       "error",
       "always"
@@ -88,6 +97,7 @@
     "unicorn/filename-case": "off",
     "unicorn/no-anonymous-default-export": "off",
     "unicorn/no-array-callback-reference": "off",
+    "unicorn/no-array-for-each": "off",
     "unicorn/no-array-method-this-argument": "off",
     "unicorn/no-null": "off",
     "unicorn/no-typeof-undefined": "off",
@@ -108,81 +118,17 @@
   "overrides": [
     {
       "files": [
-        "build/**"
-      ],
-      "env": {
-        "browser": false,
-        "node": true
-      },
-      "parserOptions": {
-        "sourceType": "module"
-      },
-      "rules": {
-        "no-console": "off",
-        "unicorn/prefer-top-level-await": "off"
-      }
-    },
-    {
-      "files": [
-        "js/**"
+        "src/assets/application.js",
+        "src/assets/color.js",
+        "src/assets/partials/*.js",
+        "src/assets/search.js",
+        "src/assets/snippets.js",
+        "src/assets/stackblitz.js",
+        "src/plugins/*.js"
       ],
       "parserOptions": {
-        "sourceType": "module"
-      }
-    },
-    {
-      "files": [
-        "js/tests/*.js",
-        "js/tests/integration/rollup*.js"
-      ],
-      "env": {
-        "node": true
-      },
-      "parserOptions": {
-        "sourceType": "script"
-      }
-    },
-    {
-      "files": [
-        "js/tests/unit/**"
-      ],
-      "env": {
-        "jasmine": true
-      },
-      "rules": {
-        "no-console": "off",
-        "unicorn/consistent-function-scoping": "off",
-        "unicorn/no-useless-undefined": "off",
-        "unicorn/prefer-add-event-listener": "off"
-      }
-    },
-    {
-      "files": [
-        "js/tests/visual/**"
-      ],
-      "plugins": [
-        "html"
-      ],
-      "settings": {
-        "html/html-extensions": [
-          ".html"
-        ]
-      },
-      "rules": {
-        "no-console": "off",
-        "no-new": "off",
-        "unicorn/no-array-for-each": "off"
-      }
-    },
-    {
-      "files": [
-        "scss/tests/**"
-      ],
-      "env": {
-        "node": true
-      },
-      "parserOptions": {
-        "sourceType": "script"
+        "sourceType": "module",
+        "ecmaVersion": 2020
       }
     },
     {
