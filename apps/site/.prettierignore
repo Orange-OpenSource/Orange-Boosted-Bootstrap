@@ -1,0 +1,10 @@
+.astro
+dist
+public
+src/assets
+src/scss
+src/pages/**/*.md
+src/pages/**/*.mdx
+src/content/**/*.mdx
+src/layouts/RedirectLayout.astro
+static

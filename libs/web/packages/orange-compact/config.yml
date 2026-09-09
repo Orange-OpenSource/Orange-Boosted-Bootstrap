@@ -3,7 +3,7 @@ baseURL:                          "https://web.unified-design-system.orange.com"
 brand:                            "orange-compact"
 display_brand:                    "Orange Compact"
 
-docsDir:                          "site"
+docsDir:                          "../../apps/site"
 
 subtitle:                         "OUDS Web Orange Compact is a Bootstrap based, Orange Compact branded accessible and ergonomic components library…"
 description:                      "Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins."
