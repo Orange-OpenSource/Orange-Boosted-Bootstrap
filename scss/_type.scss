@@ -25,17 +25,16 @@
   @extend h6;
 }
 
-// TODO add tokens 2.7 for size, positioning, spacings and color
-.h2.marker::after,
-h2.marker::after { // stylelint-disable-line selector-no-qualifying-type
-  position: absolute;
-  bottom: -12px;
-  left: 0;
-  width: 1.875rem;
-  height: .375rem;
-  margin-block: .375rem;
-  content: "";
-  background: var(--#{$prefix}color-content-brand-primary);
+@if $ouds-heading-large-marker-img {
+  .h2.marker::after,
+  h2.marker::after { // stylelint-disable-line selector-no-qualifying-type
+    display: block;
+    width: $ouds-heading-large-marker-width;
+    height: $ouds-heading-large-marker-height;
+    content: "";
+    background-color: $ouds-typography-color-content-marker;
+    mask-image: #{escape-svg($ouds-heading-large-marker-img)};
+  }
 }
 
 .lead {

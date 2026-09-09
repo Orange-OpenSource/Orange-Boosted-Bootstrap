@@ -1114,7 +1114,6 @@ h2, .h2 {
   line-height: var(--bs-font-line-height-heading-large);
   /* rtl:remove */
   letter-spacing: var(--bs-font-letter-spacing-heading-large);
-  position: relative;
 }
 
 h3, .h3 {
@@ -1576,14 +1575,13 @@ dialog,
 
 .h2.marker::after,
 h2.marker::after {
-  position: absolute;
-  bottom: -12px;
-  left: 0;
-  width: 1.875rem;
-  height: 0.375rem;
-  margin-block: 0.375rem;
+  display: block;
+  width: 30px;
+  height: 12px;
   content: "";
-  background: var(--bs-color-content-brand-primary);
+  background-color: var(--bs-color-content-brand-primary);
+  -webkit-mask-image: url("data:image/svg+xml,%3csvg width='30' height='12' viewBox='0 0 30 12' xmlns='http://www.w3.org/2000/svg'%3e%3crect y='4' width='30' height='6'/%3e%3c/svg%3e");
+  mask-image: url("data:image/svg+xml,%3csvg width='30' height='12' viewBox='0 0 30 12' xmlns='http://www.w3.org/2000/svg'%3e%3crect y='4' width='30' height='6'/%3e%3c/svg%3e");
 }
 
 .lead {
