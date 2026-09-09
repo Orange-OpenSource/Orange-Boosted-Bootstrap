@@ -21,7 +21,7 @@ const FILES = [
   'README.md',
   'js/src/base-component.js',
   'scss/mixins/_banner.scss',
-  '../../apps/site/data/docs-versions.yml'
+  'site/data/docs-versions.yml'
 ]
 
 FILES.push(...BRANDS.filter(name => name !== 'migrate').map(dirname => `packages/${dirname}/config.yml`))

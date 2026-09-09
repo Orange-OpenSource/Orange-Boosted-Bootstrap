@@ -11,11 +11,13 @@
 
 import crypto from 'node:crypto'
 import fs from 'node:fs'
+import { createRequire } from 'node:module'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sh from 'shelljs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const popperMinJsPath = createRequire(import.meta.url).resolve('@popperjs/core/dist/umd/popper.min.js')
 
 sh.config.fatal = true
 
@@ -53,7 +55,7 @@ for (const brand of BRANDS) {
       configPropertyName: 'js_bundle_hash'
     },
     {
-      file: 'node_modules/@popperjs/core/dist/umd/popper.min.js',
+      file: popperMinJsPath,
       configPropertyName: 'popper_hash'
     }
   ]
