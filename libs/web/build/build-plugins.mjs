@@ -47,7 +47,7 @@ const build = async plugin => {
     plugins: [
       babel({
         // Only transpile our source code
-        exclude: 'node_modules/**',
+        exclude: '**/node_modules/**',
         // Include the helpers in each file, at most one copy of each
         babelHelpers: 'bundled'
       })

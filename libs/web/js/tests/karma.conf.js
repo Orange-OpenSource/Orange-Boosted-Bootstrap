@@ -58,7 +58,7 @@ const config = {
     clearContext: false
   },
   files: [
-    'node_modules/hammer-simulator/index.js',
+    require.resolve('hammer-simulator'),
     {
       pattern: 'js/tests/unit/**/*.spec.js',
       watched: !BROWSERSTACK
@@ -75,14 +75,14 @@ const config = {
       }),
       istanbul({
         exclude: [
-          'node_modules/**',
+          '**/node_modules/**',
           'js/tests/unit/**/*.spec.js',
           'js/tests/helpers/**/*.js'
         ]
       }),
       babel({
         // Only transpile our source code
-        exclude: 'node_modules/**',
+        exclude: '**/node_modules/**',
         // Inline the required helpers in each file
         babelHelpers: 'inline'
       }),
