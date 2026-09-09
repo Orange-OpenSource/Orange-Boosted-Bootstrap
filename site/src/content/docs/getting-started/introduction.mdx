@@ -84,6 +84,18 @@ We also include a `crossorigin="anonymous"` attribute to prevent [CORS](https://
 {/* - Need a little more power? Consider building with OUDS Web by [including the source files via package manager]([[docsref:/getting-started/download#package-managers]]). */}
 {/* - Looking to use Boosted as a module with `<script type="module">`? Please refer to our [using Boosted as a module]([[docsref:/getting-started/javascript#using-boosted-as-a-module]]) section. */}
 
+## Using OUDS Web with AI coding agents
+
+OUDS Web ships [Agent Skills](https://www.skills.sh/) in the [`skills/` directory](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/main/skills) of the repository. These give AI coding agents (Claude Code, Cursor, GitHub Copilot, and others) procedural knowledge of OUDS Web, such as correct component markup, layout and utility classes, design tokens, and migration steps from Boosted, OB1, or older OUDS Web versions.
+
+Install them in your project with the [`skills` CLI](https://www.skills.sh/):
+
+```sh
+npx skills add Orange-OpenSource/Orange-Boosted-Bootstrap
+```
+
+This downloads the skills and configures them for use with your AI agent.
+
 ## JS components
 
 Here is a list of components that explicitly require our JavaScript and Popper for interactivity.
