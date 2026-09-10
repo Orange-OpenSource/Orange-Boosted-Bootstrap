@@ -138,7 +138,7 @@ You can use SVG through an `<img />` tag when:
 - you only have few icons to render
 - you don’t need to change the icons colors. For that reason, **we do not recommend to use that technique**, so it won’t be documented here.
 
-## Icons accessibility
+## Icon accessibility
 
 <Callout type="info">
   For more details, **Orange Accessibility Guidelines** provides [a deep-dive article regarding SVG accessibility](https://a11y-guidelines.orange.com/en/articles/accessible-svg/).
@@ -150,7 +150,7 @@ Purely **decorative icons** (like repeating information of an adjacent text) mus
 - for `<img />`, use an empty `alt` attribute
 - CSS background images are intended to be decorative
 
-### Informative/meaningful icons
+### Informative icons
 
 If the icon is **meaningful** with no visible adjacent text, e.g. indication in a table or only content of a button, you have to provide an appropriate alternative text with the description of the icon or the description of the action triggered.
 
@@ -181,7 +181,7 @@ Remember that you cannot use external images inside interactive elements because
     <img src="${getVersionedDocsPath('/assets/img/heart-empty.svg')}" alt="Favorite" class="bl-large-icon" />
   </div>`} />
 
-## Icons colors
+## Icon colors
 
 To color icons, you can:
 - use [color utilities classes]([[docsref:utilities/color#colors]]) like `.text-brand-primary`, `.text-disabled` or `.text-status-positive` that change current color value.
