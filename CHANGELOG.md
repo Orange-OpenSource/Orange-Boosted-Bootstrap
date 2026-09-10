@@ -1,3 +1,40 @@
+# [1.5.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v1.4.0-ouds-web...v1.5.0) (2026-09-09)
+
+
+### Bug Fixes
+
+* **docs:** Add missing aria-pressed="false" type="button" to show password button ([#3773](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/3773)) ([1033a8d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1033a8dc71579a653f6e1b4f6100994752f6dfc4))
+* **docs:** Fix skills installation path ([#3797](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/3797)) ([69baaae](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/69baaae45d86e09e4c4df5d711af589b1c2709ec))
+* **docs:** prevent Scss placeholder to appear as skeleton in Scss code snippets ([#3716](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3716)) ([d7475e5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d7475e5b20426dc9819e5e094d495ad330a32036))
+* **docs:** remove inexistant color utilities ([#3704](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3704)) ([6d76b63](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6d76b63151a568794e1f505795924b32007b8e79))
+* **docs:** Update dual mode page with latest inputs ([#3755](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3755)) ([1b1759d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1b1759da0b74b7289f94754f114febdd74df63a0))
+* **lib:** Fix header, footer and table colors to use OUDS ones ([#3737](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3737)) ([1c78984](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1c78984e8038c83c553de3dc6b480d4e405cfd19))
+* **lib:** invalid control item hover state ([#3606](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3606)) ([ca64578](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ca64578c97f7ada3feb33b8e5a139dcce6abbb75))
+* **lib:** kbd bg color ([#3724](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3724)) ([54344d3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/54344d3d0b47a8e174933da02ff8222a85b4c0f1))
+* **lib:** remove list-unstyled margin bottom ([#3693](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3693)) ([1011508](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1011508039e82fc780762088fabf403b0f63ab6e))
+* **lib:** rename pointer-events utilities ([#3712](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3712)) ([bea04e3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/bea04e3aaee7b6bb6fae8e82373ca6172cace476))
+
+
+### Features
+
+* Add a skill for OUDS web users ([#3595](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3595)) ([25ad265](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/25ad265dde891f4a88194994a91bbfc464aee557))
+* **docs:** added browserslistrc callouts ([#3714](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3714)) ([788b335](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/788b3354ccfdc01fed24583c69c7a045c314107a))
+* **docs:** added draft components to component versioning page ([#3673](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3673)) ([c4a0ecb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c4a0ecb748ec5e291f789db38b585a78311a1277))
+* **docs:** added links to github changelog to migration page ([#3604](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3604)) ([4d8fa36](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4d8fa36fd220dfde3888f4cf8a64803247d1094c))
+* **lib:** Add Assistant Button ([#3529](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3529)) ([6c81458](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6c81458b7a23ccb742fe2416586d9ae1fa7f807a))
+* **lib:** Add Item component (List Item, Card Item) ([#3618](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3618)) ([b530698](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b530698c6a437498778d761a0ffcc72500d0935a))
+* **lib:** added ellipsis to select input ([#3444](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3444)) ([661d081](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/661d081248abc90d08b2af2bd2a25755f9cb57c0))
+* **lib:** Bump button v3.3.0, expand button v3.2.0 and navigation button v3.3.0 ([#3713](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/3713)) ([a8bc0bd](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a8bc0bdfc7acaa396ef09fd1cfdb84095c6d7213))
+* **lib:** Bump filter chip to v1.5.0 and suggestion chip to v1.5.0 ([#3728](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/3728)) ([2f32267](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2f32267c303d3d57b0da875a980e1babe7c916b7))
+* **lib:** Bump link to v2.4.0 and breadcrumb to v1.2.0 ([#3725](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/3725)) ([f9c3382](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f9c33824212dfd9b3740b0412661bcc6f0258939))
+* remove deprecated badge-disabled and shadow-default ([#3735](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3735)) ([8405f07](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8405f0721a4ce79b447976ace891e240bdfecfff))
+* Update icons to v2.2 and add new scripts to manage future updates ([#3729](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3729)) ([cacf845](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cacf845d8691a4f2c4f9673b6c315ea12cecbb90))
+* update Icons to v2.3 ([#3786](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3786)) ([24aa7eb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/24aa7eb6dc263b9353feba1bd6a4707fa63205ba))
+* update scrollspy and fix active links ([#3708](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3708)) ([1293297](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1293297766262b857aa0e394010ac5b915338f69))
+* upgrade storybook theme and load local CSS and JS ([#3764](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3764)) ([5c77ed7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5c77ed72d2f63d3ac014648f77d332c04c19a507))
+
+
+
 # [1.4.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v1.3.0-ouds-web...v1.4.0) (2026-07-07)
 
 

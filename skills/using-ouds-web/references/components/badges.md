@@ -95,4 +95,4 @@ Use utility classes to position badges on buttons:
 - Always add `.visually-hidden` text to describe the badge's meaning
 - Functional badges should not be combined (colorblind users cannot differentiate); prefer badge-icon variant for distinction
 
-> **Not Bootstrap:** Variants are `.badge-neutral`, `.badge-accent`, `.badge-positive`, `.badge-info`, `.badge-warning` (not `.bg-danger`, `.text-bg-*`). Sizes use `.badge-xsmall`/`.badge-small`/`.badge-large` (not `.rounded-pill`). Count badges use `.badge-count`. Icon badges use `.badge-status-icon` or `.badge-icon`. Disabled state uses `.disabled` (not `.badge-disabled`, removed in v1.4.0).
+> **Not Bootstrap:** Variants are `.badge-neutral`, `.badge-accent`, `.badge-positive`, `.badge-info`, `.badge-warning` (not `.bg-danger`, `.text-bg-*`). Sizes use `.badge-xsmall`/`.badge-small`/`.badge-large` (not `.rounded-pill`). Count badges use `.badge-count`. Icon badges use `.badge-status-icon` or `.badge-icon`. Disabled state uses `.disabled` (not `.badge-disabled`, removed (deprecated since v1.4.0)).
