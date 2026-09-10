@@ -50,7 +50,7 @@ cdn:
   js:                             "https://cdn.jsdelivr.net/npm/@ouds/web-common@1.5.0/dist/js/ouds-web.min.js"
   js_hash:                        "sha384-W7aPSNVvcO7DVt/YZ5SYrzkMiig2Mi0hQYrf2HSVwPffFA4jRDQVsf49fId3jXdl"
   js_bundle:                      "https://cdn.jsdelivr.net/npm/@ouds/web-common@1.5.0/dist/js/ouds-web.bundle.min.js"
-  js_bundle_hash:                 "sha384-pASwsNEkGwpJibll6DpHIhi7kAiLDGTLmBJ5GVL1ZZe1iAGMLtrNQwksOznxX+gV"
+  js_bundle_hash:                 "sha384-vxOsFAM8abhNsTIB3U20VNqClqsZLa00eytCnuiPOVWqEs580qc8lVd6wtst2DoS"
   popper:                         "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
   popper_hash:                    "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
   popper_esm:                     "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js"
