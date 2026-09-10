@@ -203,9 +203,9 @@ export const componentsDetails: ComponentCardData[] = [
       </header>`
   },
   {
-    name: 'Interactive icons',
+    name: 'Icons',
     category: 'Actions',
-    link: 'interactive-icons',
+    link: 'icons',
     snippet: `
       <button class="icon-interactive">
         <svg aria-hidden="true">
