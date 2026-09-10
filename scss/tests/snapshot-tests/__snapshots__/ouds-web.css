@@ -1408,6 +1408,17 @@ dialog,
   opacity: 0.5;
 }
 
+.h2.marker::after,
+h2.marker::after {
+  display: block;
+  width: 30px;
+  height: 12px;
+  content: "";
+  background-color: var(--bs-color-content-brand-primary);
+  -webkit-mask-image: url("data:image/svg+xml,%3csvg width='30' height='12' viewBox='0 0 30 12' xmlns='http://www.w3.org/2000/svg'%3e%3crect y='4' width='30' height='6'/%3e%3c/svg%3e");
+  mask-image: url("data:image/svg+xml,%3csvg width='30' height='12' viewBox='0 0 30 12' xmlns='http://www.w3.org/2000/svg'%3e%3crect y='4' width='30' height='6'/%3e%3c/svg%3e");
+}
+
 .lead {
   max-width: var(--bs-font-max-width-body-large);
   font-size: var(--bs-font-size-body-large);

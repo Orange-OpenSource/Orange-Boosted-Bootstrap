@@ -25,6 +25,17 @@
   @extend h6;
 }
 
+@if $ouds-heading-large-marker-img {
+  .h2.marker::after,
+  h2.marker::after { // stylelint-disable-line selector-no-qualifying-type
+    display: block;
+    width: $ouds-heading-large-marker-width;
+    height: $ouds-heading-large-marker-height;
+    content: "";
+    background-color: $ouds-typography-color-content-marker;
+    mask-image: #{escape-svg($ouds-heading-large-marker-img)};
+  }
+}
 
 .lead {
   @include get-font-size("body-large"); // OUDS mod: instead of `font-size: $lead-font-size`
