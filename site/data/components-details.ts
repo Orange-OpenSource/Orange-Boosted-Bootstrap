@@ -177,9 +177,9 @@ export const componentsDetails: ComponentCardData[] = [
     excludeFromVersioning: true
   },
   {
-    name: 'Interactive icons',
+    name: 'Icons',
     category: 'Actions',
-    link: 'interactive-icons',
+    link: 'icons',
     snippet: `
       <button class="icon-interactive">
         <svg aria-hidden="true">
