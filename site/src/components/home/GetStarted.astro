@@ -10,7 +10,7 @@ import Code from '@components/shortcodes/Code.astro'
   </div>
   <div class="xl:col-4 xl:pe-5xlarge">
     <hr class="xl:d-none border-medium m-none pb-scaled-small" />
-    <h2 class="marker mb-scaled-xsmall">Get started any way you&nbsp;want</h2>
+    <h2 class:list={[getConfig().brand === 'sosh' ? 'text-brand-primary' : 'marker', 'mb-scaled-xsmall']}>Get started any way you&nbsp;want</h2>
     <p class="lead fw-bold bd-text-wrap-balance mb-scaled-xsmall">
       Jump right into building with OUDS Web—install it via your favorite package manager, or equip your AI coding agent with ready-to-use Skills.
     </p>
