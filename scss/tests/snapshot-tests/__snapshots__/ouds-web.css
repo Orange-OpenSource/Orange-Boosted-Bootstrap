@@ -12032,18 +12032,12 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-skeleton-height: calc(var(--bs-font-size-heading-medium) * var(--bs-font-line-height-heading-medium));
 }
 
-.icon-interactive {
+.icon {
   --bs-icon-min-width: 24px;
   --bs-icon-min-height: 24px;
   --bs-icon-max-width: 48px;
   --bs-icon-max-height: 48px;
   --bs-icon-color: var(--bs-color-action-enabled);
-  --bs-icon-hover-color: var(--bs-color-action-hover);
-  --bs-icon-active-color: var(--bs-color-action-pressed);
-  --bs-icon-disabled-color: var(--bs-color-action-disabled);
-  --bs-icon-focus-color: var(--bs-color-action-focus);
-  --bs-icon-loading-color: var(--bs-color-action-loading);
-  --bs-icon-loading-size: 1.25rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -12057,7 +12051,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   background: none;
   border: 0;
 }
-.icon-interactive svg {
+.icon svg:not(.loader) {
   flex-shrink: 1;
   width: 1em;
   height: 1em;
@@ -12065,21 +12059,25 @@ ol.bullet-list > li > ol > li > ol > li::before {
   font-size: 1.5rem;
   line-height: 0;
 }
-.icon-interactive:hover {
-  color: var(--bs-icon-hover-color);
+.icon.icon-interactive, .icon.icon-assistant {
+  --bs-icon-hover-color: var(--bs-color-action-hover);
+  --bs-icon-active-color: var(--bs-color-action-pressed);
+  --bs-icon-disabled-color: var(--bs-color-action-disabled);
+  --bs-icon-focus-color: var(--bs-color-action-focus);
+  --bs-icon-loading-color: var(--bs-color-action-loading);
+  --bs-icon-loading-size: 1.25rem;
 }
-.icon-interactive:focus-visible {
+.icon.icon-interactive:hover, .icon.icon-assistant:hover {
+  --bs-icon-color: var(--bs-icon-hover-color);
+}
+.icon.icon-interactive:focus-visible, .icon.icon-assistant:focus-visible {
   --bs-icon-color: var(--bs-icon-focus-color);
-  isolation: isolate;
-  outline: 3px solid var(--bs-color-border-focus);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 2px var(--bs-color-border-focus-inset);
 }
-.icon-interactive:active {
-  color: var(--bs-icon-active-color);
+.icon.icon-interactive:active, .icon.icon-assistant:active {
+  --bs-icon-color: var(--bs-icon-active-color);
 }
-.icon-interactive:disabled, .icon-interactive[aria-disabled=true] {
-  color: var(--bs-icon-disabled-color);
+.icon.icon-interactive:disabled, .icon.icon-interactive[aria-disabled=true], .icon.icon-assistant:disabled, .icon.icon-assistant[aria-disabled=true] {
+  --bs-icon-color: var(--bs-icon-disabled-color);
   pointer-events: none;
 }
 @keyframes rotate-determinate {
@@ -12109,14 +12107,14 @@ ol.bullet-list > li > ol > li > ol > li::before {
     transform: rotate(360deg) /* rtl:ignore */;
   }
 }
-.icon-interactive .loader {
+.icon.icon-interactive .loader, .icon.icon-assistant .loader {
   display: none;
 }
-.icon-interactive.loading-indeterminate, .icon-interactive.loading-determinate {
+.icon.icon-interactive.loading-indeterminate, .icon.icon-interactive.loading-determinate, .icon.icon-assistant.loading-indeterminate, .icon.icon-assistant.loading-determinate {
   position: relative;
   color: transparent;
 }
-.icon-interactive.loading-indeterminate .loader, .icon-interactive.loading-determinate .loader {
+.icon.icon-interactive.loading-indeterminate .loader, .icon.icon-interactive.loading-determinate .loader, .icon.icon-assistant.loading-indeterminate .loader, .icon.icon-assistant.loading-determinate .loader {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -12125,7 +12123,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   font-size: var(--bs-icon-loading-size);
   transform: translate(-50%, -50%) rotate(-90deg);
 }
-.icon-interactive.loading-indeterminate .loader > .loader-inner, .icon-interactive.loading-determinate .loader > .loader-inner {
+.icon.icon-interactive.loading-indeterminate .loader > .loader-inner, .icon.icon-interactive.loading-determinate .loader > .loader-inner, .icon.icon-assistant.loading-indeterminate .loader > .loader-inner, .icon.icon-assistant.loading-determinate .loader > .loader-inner {
   fill: none;
   stroke: var(--bs-icon-loading-color);
   stroke-dasharray: var(--bs-loading-dasharray);
@@ -12133,11 +12131,11 @@ ol.bullet-list > li > ol > li > ol > li::before {
   transform-origin: center;
   animation: var(--bs-loading-animation);
 }
-.icon-interactive.loading-determinate {
+.icon.icon-interactive.loading-determinate, .icon.icon-assistant.loading-determinate {
   --bs-loading-dasharray: 107;
   --bs-loading-animation: var(--bs-loading-time) infinite linear rotate-determinate;
 }
-.icon-interactive.loading-indeterminate {
+.icon.icon-interactive.loading-indeterminate, .icon.icon-assistant.loading-indeterminate {
   --bs-loading-dasharray: 96;
   --bs-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
 }
