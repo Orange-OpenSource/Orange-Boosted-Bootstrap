@@ -50,6 +50,14 @@
       }
     }
   }
+
+  // TODO Hack until we have the expand button
+  button.btn-next::after {
+    mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m3 9.167 9 9.333 9-9.333L18.429 6.5 12 13.167 5.571 6.5 3 9.167Z'/></svg>");
+  }
+  button.btn-next[aria-expanded="true"]::after {
+    transform: scaleY(-1);
+  }
 }
 
 .bd-toc-collapse {
