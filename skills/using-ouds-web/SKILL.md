@@ -23,7 +23,7 @@ Key differences from standard Bootstrap:
 - **Semantic color system** with `bg-surface-*`, `text-*`, `border-*` token-based classes
 - **4 color modes**: `light`, `dark`, `root`, `root-inverted` (set via `data-bs-theme`)
 - **Orange-specific components**: header, footer, chips, tags, sticker, stepped-process, title-bar, skeleton, local-navigation, back-to-top, bullet-list, divider, quantity-selector, items (replaces Bootstrap's `.list-group`)
-- **Assistant button** (`.btn-assistant`, v1.4.0+): AI-powered action button variant, distinct from standard/navigation buttons
+- **Assistant button** (`.btn-assistant`, v1.5.0): AI-powered action button variant, distinct from standard/navigation buttons
 - **Modified form components**: switch, checkbox, radio-button, text-input, text-area, select-input, password-input use `.control-item-*` pattern
 - **CSS variable prefix**: `--bs-`
 - **Container**: use `.container-fluid` (not fixed `.container`)
@@ -258,7 +258,7 @@ OUDS Web form components use `.control-item-*` classes:
 <button class="btn btn-negative">Negative</button>
 <!-- Navigation buttons -->
 <a class="btn btn-next btn-default" href="#">Next</a>
-<!-- Assistant button (AI-powered actions, v1.4.0+) -->
+<!-- Assistant button (AI-powered actions, v1.5.0) -->
 <button class="btn btn-assistant">Assistant</button>
 <!-- On colored backgrounds, add btn-on-colored-bg -->
 <button class="btn btn-default btn-on-colored-bg">On colored bg</button>
