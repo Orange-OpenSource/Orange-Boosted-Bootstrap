@@ -14,7 +14,7 @@ import { getVersionedDocsPath } from '@libs/path'
 </Callout>
 
 You may use two types of icons in your projects, like in this documentation:
-- **Project icons**: As part of an eco-design approach, the icons from the <BrandSpecific brand={['orange', 'orange-compact']}>[Solaris icons library]([[config:icons]])</BrandSpecific><BrandSpecific brand={['sosh']}>Sosh icons library</BrandSpecific> are not included in OUDS Web by default. You must select the icons you need and import them, preferably into an SVG sprite file. See [using icons](#using-icons) section for more technical information about the ways to import icons.
+- **Project icons**: As part of an eco-design approach, the icons from the <BrandSpecific brand={['orange', 'orange-compact']}>[Solaris icons library]([[config:icons]])</BrandSpecific><BrandSpecific brand={['sosh']}>Sosh icons library</BrandSpecific> are not included in OUDS Web by default. You must select the icons you need and import them, preferably into an SVG sprite file. See [using icons](#usage) section for more technical information about the ways to import icons.
 - **Component icons**: Provided directly by OUDS Web, they are part of certain components, such as the breadcrumb separator or the list bullet. These icons are defined directly in our CSS stylesheet and integrated into OUDS Web.
 
 <BrandSpecific brand={['orange', 'orange-compact']}>
@@ -23,7 +23,7 @@ While OUDS Web doesn’t include an icon set by default, Orange does have its ow
 [Solaris icons library]([[config:icons]]) is a growing library of icons that are designed by OUDS design team. It features an icon search tool based on categories and keywords, and allows icons to be downloaded in various formats for use in design and development. They are not open-source though and should only be used for Orange projects. Please refer to the [icons license file]([[config:icons_license]]) for legal information.
 </BrandSpecific>
 
-## Icons rendering
+## Rendering
 
 Icons are designed within a square layout to preserve consistency. Within this square, there exists a designated safety zone to guarantee that icons can be used in various sizes and contexts while maintaining alignment as intended by the designers. The dimensions of the icons encompass this safety zone, ensuring adaptability and consistency across diverse applications.
 
@@ -42,29 +42,21 @@ Icons are designed within a square layout to preserve consistency. Within this s
 
 You can use the utility classes provided in the [icons sizing utilities]([[docsref:utilities/icons-sizing]]) documentation to adjust the size of your icons according to your needs.
 
-## Using icons
+## Usage
 
-There are many ways to use <BrandSpecific brand={['orange', 'orange-compact']}>Solaris</BrandSpecific> icons in a web page:
-- Bundled, if you have several icons in your project:
-  - [SVG sprite](#svg-sprite) (preferred choice for flexibility, performance and accessibility)
-  - [Icon font](#icon-font)
-- Individually, if you have only few icons to render:
-  - [CSS background image](#css-background-image)
-  - [Inline SVG](#inline-svg)
-  - [SVG external image](#svg-external-image)
+There are many ways to integrate <BrandSpecific brand={['orange', 'orange-compact']}>Solaris</BrandSpecific> icons in a web page, here are the most common ones, with their advantages and drawbacks.
 
-<BrandSpecific brand={['orange', 'orange-compact']}>All icons can be retrieved easily in any of these formats in the Solaris icons finder. See Solaris icons library [develop documentation]([[config:icons_develop]]) for complete development guidelines for the different formats, and their pros and cons.</BrandSpecific>
-
-Overview on how to integrate icons in a web page:
 <BsTable class="table">
-| Method | Advantages | Drawbacks | Recommendation |
-| --- | --- | --- | --- |
-| SVG Sprite | <ul><li>Color change via CSS</li><li>Easy addition/removal</li><li>Versioning</li><li>One HTTP request</li><li>Cache</li></ul> | <ul><li>Sprite file can become heavy with many icons (&gt;20)</li></ul> | *Recommended for most use cases* |
-| Icon font | <ul><li>Color change via CSS</li><li>Concise and readable code</li><li>Cache</li></ul> | <ul><li>Heavier than sprite with few icons</li><li>Difficult addition/removal</li><li>No versioning</li><li>Flickering effect on loading</li><li>No multicolor icons</li></ul> | Use only with many icons (&gt;20) |
-| CSS background image | <ul><li>Usable with CSS pseudo-elements</li><li>Cache</li></ul> | <ul><li>Makes CSS heavier</li><li>Difficult color change</li></ul> | One-time integration via CSS pseudo-elements |
-| Inline SVG | <ul><li>Color change via CSS</li><li>Loaded with the page</li></ul> | <ul><li>Makes HTML heavier</li><li>No cache</li><li>Not suitable for reuse</li><li>Verbose, hard to read</li></ul> | One-time integration of a single icon |
-| External SVG image | <ul><li>Readable code</li><li>Cache</li></ul> | <ul><li>Impossible to change color</li><li>Loading after HTML</li><li>One HTTP request per image</li></ul> | One-time integration of a single-color icon |
+| Method | Integration | Advantages | Drawbacks | Recommendation |
+| --- | --- | --- | --- | --- |
+| [SVG sprite](#svg-sprite) | Bundled | <ul><li>Color change via CSS</li><li>Easy addition/removal</li><li>Versioning</li><li>One HTTP request</li><li>Cache</li></ul> | <ul><li>Sprite file can become heavy with many icons (&gt;20)</li></ul> | *Recommended for most use cases, for flexibility, performance and accessibility* |
+| [Icon font](#icon-font) | Bundled | <ul><li>Color change via CSS</li><li>Concise and readable code</li><li>Cache</li></ul> | <ul><li>Heavier than sprite with few icons</li><li>Difficult addition/removal</li><li>No versioning</li><li>Flickering effect on loading</li><li>No multicolor icons</li></ul> | Use only with many icons (&gt;20) |
+| [CSS background image](#css-background-image) | Individual | <ul><li>Usable with CSS pseudo-elements</li><li>Cache</li></ul> | <ul><li>Makes CSS heavier</li><li>Difficult color change</li></ul> | Use via mask image in CSS pseudo-elements, can be related to a component |
+| [Inline SVG](#inline-svg) | Individual | <ul><li>Color change via CSS</li><li>Loaded with the page</li></ul> | <ul><li>Makes HTML heavier</li><li>No cache</li><li>Not suitable for reuse</li><li>Verbose, hard to read</li></ul> | One-time integration of a single icon |
+| [External SVG](#external-svg) | Individual | <ul><li>Readable code</li><li>Cache</li></ul> | <ul><li>Impossible to change color</li><li>Loading after HTML</li><li>One HTTP request per image</li></ul> | One-time integration of a single-color icon |
 </BsTable>
+
+<BrandSpecific brand={['orange', 'orange-compact']}>Note that all icons can be retrieved easily in any of these formats in the Solaris icons finder. See Solaris icons library [develop documentation]([[config:icons_develop]]) for complete development guidelines for the different formats, and their pros and cons.</BrandSpecific>
 
 ### SVG sprite
 
@@ -132,13 +124,13 @@ You can embed your icons directly within the HTML of your page (as opposed to an
     <path fill-rule="evenodd" d="M15.785 10.138a5.52 5.52 0 0 1-7.57 0 5.4 5.4 0 0 0-2.813 4.622H5.4v5.04a2.4 2.4 0 0 0 2.4 2.4h10.8v-7.32a5.4 5.4 0 0 0-2.815-4.742m.535-4.018a4.32 4.32 0 1 1-8.64 0 4.32 4.32 0 0 1 8.64 0" clip-rule="evenodd"/>
   </svg>`} />
 
-### SVG external image
+### External SVG
 
 You can use SVG through an `<img />` tag when:
 - you only have few icons to render
 - you don’t need to change the icons colors. For that reason, **we do not recommend to use that technique**, so it won’t be documented here.
 
-## Icon accessibility
+## Accessibility
 
 <Callout type="info">
   For more details, **Orange Accessibility Guidelines** provides [a deep-dive article regarding SVG accessibility](https://a11y-guidelines.orange.com/en/articles/accessible-svg/).
@@ -150,13 +142,17 @@ Purely **decorative icons** (like repeating information of an adjacent text) mus
 - for `<img />`, use an empty `alt` attribute
 - CSS background images are intended to be decorative
 
+You should set decorative icon sizes in `px` so they do not scale with text zoom, leaving room for surrounding meaningful content.
+
 ### Informative icons
 
 If the icon is **meaningful** with no visible adjacent text, e.g. indication in a table or only content of a button, you have to provide an appropriate alternative text with the description of the icon or the description of the action triggered.
 
 The best way to do this is to keep the icon hidden to assistive technologies (see above) and add a visually hidden label which will be perceived by assistive technologies, by using the `.visually-hidden` class. You can also use an `aria-label` on the containing interactive element to provide an accessible name. For external images within the `<img />` tag, you can also fill the `alt` attribute directly.
 
-Remember that you cannot use external images inside interactive elements because the color won’t change with the element’s status (hover, active, focus...), see [SVG external image](#svg-external-image).
+Remember that you cannot use external images inside interactive elements because the color won’t change with the element’s status (hover, active, focus...), see [External SVG image](#external-svg).
+
+You should set informative icon sizes in `rem` so they scale with text zoom.
 
 {/* todo add tooltip on buttons and explanation when available */}
 <Example buttonLabel="informative icons" class="mt-none bd-btn-example" code={`<button type="button" class="btn btn-icon btn-default">
@@ -181,15 +177,13 @@ Remember that you cannot use external images inside interactive elements because
     <img src="${getVersionedDocsPath('/assets/img/heart-empty.svg')}" alt="Favorite" class="bl-large-icon" />
   </div>`} />
 
-## Icon colors
+## Colors
 
 To color icons, you can:
 - use [color utilities classes]([[docsref:utilities/color#colors]]) like `.text-brand-primary`, `.text-disabled` or `.text-status-positive` that change current color value.
 - specify a color using CSS variables like `--bs-color-content-brand-primary`, `--bs-color-content-disabled` or `--bs-color-content-status-positive`.
 
 For SVGs (SVG sprites, inline SVGs or CSS mask image SVGs), the `fill="currentColor"` attribute is required on the `<svg>` or `<symbol>` tag, if you want to change the icons color on the fly (for example on hover): it will make the icon inherit color from itself or its parent containers. <BrandSpecific brand={['orange', 'orange-compact']}>It is set on the icons downloaded from Solaris icons finder.</BrandSpecific> For CSS mask image SVGs, the `background-color: currentcolor` CSS property should be set.
-
-Note that you can use the utility classes provided in the [icons sizing utilities]([[docsref:utilities/icons-sizing]]) documentation to adjust the size of your icons.
 
 ### Status colors
 
@@ -298,8 +292,11 @@ Here are some examples of other [color utilities]([[docsref:utilities/color#colo
     <span class="icon si si-settings decorative-small-icon" style="color: var(--bs-color-content-muted)" aria-hidden="true"></span>
   </p>`} />
 
+## Sizing
 
-## Multiple lines
+Note that you can use the utility classes provided in the [icons sizing utilities]([[docsref:utilities/icons-sizing]]) documentation to adjust the size of your icons.
+
+## Layout
 
 Sometimes you need a different structure to handle larger titles, or paragraphs that wrap over several lines. Here are some examples to handle these use cases. We’ve set arbitrary spacings, but align them with your design.
 
