@@ -1,11 +1,14 @@
 // Components custom properties applications
-// OUDS Core tokens version 1.10.0
+// OUDS Core tokens version 1.11.0
 // Sosh Core tokens version 1.4.0
-// Sosh System tokens version 2.6.0
+// Sosh System tokens version 2.7.0
 
 // scss-docs-start ouds-all-component-css-color
 // scss-docs-start ouds-component-css-color
 @include color-mode(light, true) {
+  --#{$prefix}visual-assets-icon-color-content-status-warning-external-shape: #{$core-sosh-color-turbo-500};
+  --#{$prefix}visual-assets-icon-color-content-status-warning-internal-shape: #{$core-sosh-color-turbo-750};
+  --#{$prefix}visual-assets-icon-color-content-status-warning-inverse-external-shape: #{$core-sosh-color-turbo-300};
   --#{$prefix}link-mono-color-content-enabled: #{$core-ouds-color-functional-black};
   --#{$prefix}link-mono-color-content-hover: #{$core-ouds-color-functional-black};
   --#{$prefix}link-mono-color-content-pressed: #{$core-sosh-color-opacity-black-520};
@@ -56,9 +59,7 @@
   --#{$prefix}progress-indicator-color-content-track: #{$core-ouds-color-functional-gray-light-400};
   --#{$prefix}progress-indicator-mono-color-content-track: #{$core-ouds-color-functional-gray-light-400};
   --#{$prefix}progress-indicator-mono-color-content-indicator: #{$core-ouds-color-functional-black};
-  --#{$prefix}icon-color-content-status-warning-external-shape: #{$core-sosh-color-turbo-500};
-  --#{$prefix}icon-color-content-status-warning-internal-shape: #{$core-sosh-color-turbo-750};
-  --#{$prefix}icon-color-content-status-warning-inverse-external-shape: #{$core-sosh-color-turbo-300};
+  --#{$prefix}visual-assets-icon-color-content-status-warning-inverse-internal-shape: #{$ouds-color-opacity-transparent-dark};
   --#{$prefix}link-color-chevron-hover: #{$ouds-color-action-hover-light}; // deprecated
   --#{$prefix}link-color-chevron-pressed: #{$ouds-color-action-pressed-light}; // deprecated
   --#{$prefix}link-color-chevron-focus: #{$ouds-color-action-focus-light}; // deprecated
@@ -68,11 +69,13 @@
   --#{$prefix}list-item-color-bg-loading: #{$ouds-color-action-support-loading-light}; // deprecated
   --#{$prefix}list-item-color-bg-focus: #{$ouds-color-action-support-focus-light}; // deprecated
   --#{$prefix}list-item-color-content-loader: #{$ouds-color-content-default-light}; // deprecated
-  --#{$prefix}icon-color-content-status-warning-inverse-internal-shape: #{$ouds-color-opacity-transparent-dark};
 }
 // scss-docs-end ouds-component-css-color
 
 @include color-mode(dark, true) {
+  --#{$prefix}visual-assets-icon-color-content-status-warning-external-shape: #{$core-sosh-color-turbo-300};
+  --#{$prefix}visual-assets-icon-color-content-status-warning-internal-shape: #{$ouds-color-opacity-transparent-dark};
+  --#{$prefix}visual-assets-icon-color-content-status-warning-inverse-external-shape: #{$core-sosh-color-turbo-500};
   --#{$prefix}link-mono-color-content-enabled: #{$core-ouds-color-functional-white};
   --#{$prefix}link-mono-color-content-hover: #{$core-ouds-color-functional-white};
   --#{$prefix}link-mono-color-content-pressed: #{$core-sosh-color-opacity-white-800};
@@ -123,9 +126,7 @@
   --#{$prefix}progress-indicator-color-content-track: #{$core-ouds-color-functional-gray-dark-480};
   --#{$prefix}progress-indicator-mono-color-content-track: #{$core-ouds-color-functional-gray-dark-480};
   --#{$prefix}progress-indicator-mono-color-content-indicator: #{$core-ouds-color-functional-white};
-  --#{$prefix}icon-color-content-status-warning-external-shape: #{$core-sosh-color-turbo-300};
-  --#{$prefix}icon-color-content-status-warning-internal-shape: #{$ouds-color-opacity-transparent-dark};
-  --#{$prefix}icon-color-content-status-warning-inverse-external-shape: #{$core-sosh-color-turbo-500};
+  --#{$prefix}visual-assets-icon-color-content-status-warning-inverse-internal-shape: #{$core-sosh-color-turbo-750};
   --#{$prefix}link-color-chevron-hover: #{$ouds-color-action-hover-dark}; // deprecated
   --#{$prefix}link-color-chevron-pressed: #{$ouds-color-action-pressed-dark}; // deprecated
   --#{$prefix}link-color-chevron-focus: #{$ouds-color-action-focus-dark}; // deprecated
@@ -135,6 +136,5 @@
   --#{$prefix}list-item-color-bg-loading: #{$ouds-color-action-support-loading-dark}; // deprecated
   --#{$prefix}list-item-color-bg-focus: #{$ouds-color-action-support-focus-dark}; // deprecated
   --#{$prefix}list-item-color-content-loader: #{$ouds-color-content-default-dark}; // deprecated
-  --#{$prefix}icon-color-content-status-warning-inverse-internal-shape: #{$core-sosh-color-turbo-750};
 }
 // scss-docs-end ouds-all-component-css-color
