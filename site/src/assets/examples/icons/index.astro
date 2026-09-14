@@ -1,0 +1,141 @@
+---
+import fs from 'node:fs'
+import path from 'node:path'
+import { getConfig } from '@libs/config'
+import { getDocsStaticFsPath, getVersionedDocsPath } from '@libs/path'
+
+export const title = 'Icons'
+export const extra_css = ['icons.css']
+export const extra_js = [{ src: 'icons.js' }]
+export const aliases = ['/examples/icons', '/docs/examples/icons']
+
+const brand = getConfig().brand
+
+// *** Composite icons (SCSS data-URI / CSS custom prop icons used internally by components as mask-image) ***
+// We read the brand's `_composite.scss` file at build time and dynamically extract every icon-related Sass
+// variable, so that this page automatically reflects additions/removals/changes made during an icon pack update,
+// without requiring any manual maintenance of a hardcoded icon list.
+const compositeScssPath = path.join(process.cwd(), `packages/${brand}/scss/tokens/_composite.scss`)
+const compositeScssContent = fs.readFileSync(compositeScssPath, 'utf8')
+
+// Only match top-level variable declarations (ie. lines starting with `$name:`), which excludes the entries of the
+// `$svg-as-custom-props` Sass map (indented `"key": $value,` lines).
+const compositeIconNames = [
+  ...new Set(
+    [...compositeScssContent.matchAll(/^\$([\w-]+):/gm)]
+      .map(([, name]) => name)
+      .filter((name) => /icon|marker|chevron/i.test(name))
+  )
+].sort()
+
+// Extract the raw value of a single top-level `$name: ...;` Sass variable declaration from the given content.
+const getScssVariableValue = (content: string, name: string): string | null => {
+  const match = content.match(new RegExp(`^\\$${name}:\\s*([\\s\\S]+?)\\s*!default;`, 'm'))
+  return match ? match[1] : null
+}
+
+// Extract the `"key": value` pairs of the `$svg-as-custom-props` Sass map, used to resolve `var(--#{$prefix}key)`
+// references found in some composite icon variables.
+const svgAsCustomProps = new Map<string, string>()
+const svgAsCustomPropsMatch = compositeScssContent.match(/\$svg-as-custom-props:\s*\(([\s\S]*?)\)\s*!default;/)
+if (svgAsCustomPropsMatch) {
+  for (const [, key, value] of svgAsCustomPropsMatch[1].matchAll(/"([\w-]+)":\s*(.+?)\s*(?:,? \/\/.*)?$/gm)) {
+    svgAsCustomProps.set(key, value.replace(/,$/, ''))
+  }
+}
+
+// Resolve a raw Sass value into an actual `url("data:image/svg+xml,...")` string, without invoking Sass: values
+// are either a literal `url(...)`, or a `var(--#{$prefix}key)` reference pointing to an entry of the
+// `$svg-as-custom-props` map, itself either a literal `url(...)` or another `$variable` reference.
+const resolveIconValue = (rawValue: string | null): string => {
+  if (!rawValue) return ''
+  if (rawValue.startsWith('url(')) return rawValue
+  const varMatch = rawValue.match(/^var\(--#\{\$prefix\}([\w-]+)\)$/)
+  if (varMatch) {
+    const propValue = svgAsCustomProps.get(varMatch[1])
+    if (propValue?.startsWith('$')) {
+      return resolveIconValue(getScssVariableValue(compositeScssContent, propValue.slice(1)))
+    }
+    return propValue ?? ''
+  }
+  return ''
+}
+
+interface CompositeIcon {
+  name: string
+  value: string
+}
+
+const compositeIcons: CompositeIcon[] = compositeIconNames
+  .map((name) => ({ name, value: resolveIconValue(getScssVariableValue(compositeScssContent, name)) }))
+  .filter((icon) => icon.value)
+
+// *** Sprite icons (documentation sample SVG sprite, used with `<use xlink:href="...svg#id">`) ***
+// We read the brand's sprite file at build time and dynamically extract every `<symbol id="...">`, so that this
+// page automatically reflects additions/removals/changes made to the sprite during an update.
+const spriteFsPath = path.join(getDocsStaticFsPath(), brand, 'docs/[version]/assets/img/ouds-web-sprite.svg')
+const spriteContent = fs.readFileSync(spriteFsPath, 'utf8')
+const spriteIconIds = [...new Set([...spriteContent.matchAll(/<symbol\s+id="([\w-]+)"/g)].map(([, id]) => id))].sort()
+---
+
+<main class="container-fluid container-max-width pb-3xlarge">
+  <h1 class="py-medium">Icons</h1>
+  <p class="lead">
+    This page lists every composite icon (defined in SCSS, used internally by components) and every sprite icon
+    (used in the documentation) for the <strong>{brand}</strong> brand. Use the size slider below to quickly check
+    for rendering issues at different sizes after an icon pack update.
+  </p>
+
+  <div class="icons-example-size-control py-medium">
+    <label for="icons-example-size-range">Icon size: </label>
+    <output for="icons-example-size-range" id="icons-example-size-output">32px</output>
+    <input
+      type="range"
+      class="form-range"
+      id="icons-example-size-range"
+      min="12"
+      max="96"
+      step="1"
+      value="32"
+      aria-describedby="icons-example-size-output"
+    />
+  </div>
+
+  <h2 class="py-medium">Composite icons ({compositeIcons.length})</h2>
+  <p>
+    These icons are defined as Sass variables in <code>packages/{brand}/scss/tokens/_composite.scss</code> and are
+    normally used internally by components as <code>mask-image</code> or <code>background-image</code>. They are
+    displayed here in a neutral, single color (<code>currentColor</code>) on a light gray background, independently
+    of their real usage context.
+  </p>
+  <ul class="icons-example-grid d-grid gap-medium list-unstyled">
+    {
+      compositeIcons.map((icon) => (
+        <li class="d-flex flex-column align-items-center gap-xsmall p-small border border-default">
+          <span class="bg-surface-secondary icons-example-swatch-mask" style={`--icons-example-icon: ${icon.value}`} aria-hidden="true" />
+          <code class="fs-bs">${icon.name}</code>
+        </li>
+      ))
+    }
+  </ul>
+
+  <h2 class="py-medium">Sprite icons ({spriteIconIds.length})</h2>
+  <p>
+    These icons come from the documentation sample sprite
+    <code>{`assets/img/ouds-web-sprite.svg`}</code> and are used with the SVG <code>{'<use>'}</code> element.
+  </p>
+  <ul class="icons-example-grid d-grid gap-medium list-unstyled">
+    {
+      spriteIconIds.map((id) => (
+        <li class="d-flex flex-column align-items-center gap-xsmall p-small border border-default">
+          <span class="bg-surface-secondary" aria-hidden="true">
+            <svg class="icons-example-svg" fill="currentColor" aria-hidden="true">
+              <use xlink:href={getVersionedDocsPath(`/assets/img/ouds-web-sprite.svg#${id}`)} />
+            </svg>
+          </span>
+          <code class="fs-bs">#{id}</code>
+        </li>
+      ))
+    }
+  </ul>
+</main>
