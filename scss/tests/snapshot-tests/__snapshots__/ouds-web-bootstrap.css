@@ -7333,11 +7333,9 @@ optgroup {
   height: var(--bs-text-input-icon-size);
   color: var(--bs-color-content-muted);
 }
-.text-input .text-input-container:has(> svg:not(.loader)) > .text-input-field,
-.text-input .text-input-container:has(> svg:not(.loader)) > .input-container,
-.text-input .text-input-container:has(> svg:not(.loader)) > label, .text-input .text-input-container:has(> img) > .text-input-field,
-.text-input .text-input-container:has(> img) > .input-container,
-.text-input .text-input-container:has(> img) > label {
+.text-input .text-input-container:has(> svg:not(.loader), > img, > .icon) > .text-input-field,
+.text-input .text-input-container:has(> svg:not(.loader), > img, > .icon) > .input-container,
+.text-input .text-input-container:has(> svg:not(.loader), > img, > .icon) > label {
   padding-left: calc(var(--bs-text-input-icon-size) + var(--bs-text-input-column-gap));
 }
 .text-input .text-input-container > button {
