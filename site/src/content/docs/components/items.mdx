@@ -223,9 +223,9 @@ It is surrounded by `.item-list` added to the `<ul>` element.
 
 Some variants shouldn't be applied to this kind of items. Warning will be done about it in:
 - [Outlined](#outlined) variants
-<BrandSpecific brand={['orange', 'orange-compact']}>
+<ThemeSpecific theme={['orange', 'orange-compact']}>
 - [Rounded](#rounded-corners) variant
-</BrandSpecific>
+</ThemeSpecific>
 
 ### [[comp]] Static list item
 
@@ -670,7 +670,7 @@ Here is a small summary of the slots that can be used in an item:
 * [Trailing container](#trailing-container) using `.item-slot`
 * A slot outside of the `.item-content` container, direct child of `.item-container` using `.item-slot`
 
-Optionally, if the item is a navigation item and a slot is mandatory and also interactive, you can add `.item-slot-focusable` to the slot or the interactive element.<BrandSpecific brand={['orange', 'orange-compact']}> Please note that the slot won't be [rounded](#rounded-corners) anymore.</BrandSpecific>
+Optionally, if the item is a navigation item and a slot is mandatory and also interactive, you can add `.item-slot-focusable` to the slot or the interactive element.<ThemeSpecific theme={['orange', 'orange-compact']}> Please note that the slot won't be [rounded](#rounded-corners) anymore.</ThemeSpecific>
 
 <Example buttonLabel="item using a slot outside of the main content of the item" class="d-flex flex-column gap-medium" code={`<div class="item">
     <div class="item-container">
@@ -826,7 +826,7 @@ Static items only have the non-interactive version.
     </div>
   </div>`} />
 
-<BrandSpecific brand={['orange', 'orange-compact']}>
+<ThemeSpecific theme={['orange', 'orange-compact']}>
 ### Rounded corners
 
 Rounded corners items is a project-wide option therefore all your items should either be rounded or not. Add `.use-rounded-corner-items` on a top container (for example `<body>`) to use rounded corners.
@@ -877,7 +877,7 @@ Rounded corners items is a project-wide option therefore all your items should e
       </li>
     </ul>
   </div>`} />
-</BrandSpecific>
+</ThemeSpecific>
 
 ### States
 
