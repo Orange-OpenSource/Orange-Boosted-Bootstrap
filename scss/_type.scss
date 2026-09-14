@@ -25,7 +25,7 @@
   @extend h6;
 }
 
-@if $ouds-heading-large-marker-img {
+@if ($ouds-typography-heading-large-marker and $ouds-heading-large-marker-img) {
   .h2.marker::after,
   h2.marker::after, // stylelint-disable-line selector-no-qualifying-type
   .fs-hl.marker::after {
