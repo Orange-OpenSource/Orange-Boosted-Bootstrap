@@ -289,8 +289,7 @@
       color: $ouds-color-content-muted;
     }
 
-    &:has(> svg:not(.loader)),
-    &:has(> img) {
+    &:has(> svg:not(.loader), > img, > .icon) {
       > .text-input-field,
       > .input-container,
       > label {
