@@ -5191,6 +5191,7 @@ optgroup {
   appearance: none;
   caret-color: var(--bs-text-input-caret-color);
   background-color: transparent;
+  background-clip: content-box;
   border: 0;
   box-shadow: none;
   opacity: 0;
@@ -5451,6 +5452,7 @@ optgroup {
   color: var(--bs-text-input-color);
   caret-color: var(--bs-text-input-caret-color);
   background-color: transparent;
+  background-clip: content-box;
   border: 0;
   font-size: var(--bs-font-size-label-large);
   line-height: var(--bs-font-line-height-label-large);
