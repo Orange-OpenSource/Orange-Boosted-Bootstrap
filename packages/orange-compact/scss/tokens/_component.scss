@@ -36,7 +36,6 @@ $ouds-accordion-space-padding-block-top-expand-container: $ouds-space-padding-bl
 // Alert
 
 // scss-docs-start ouds-component-alert
-$ouds-alert-banner-mode-control-action-on-status-accent: Always in light mode !default;
 $ouds-alert-border-radius-default: $ouds-border-radius-default !default;
 $ouds-alert-border-radius-rounded: $ouds-border-radius-large !default;
 $ouds-alert-message-border-width: $ouds-border-width-none !default;
@@ -451,37 +450,6 @@ $ouds-list-item-space-row-gap: $ouds-space-row-gap-none !default;
 // scss-docs-start ouds-component-modal
 $ouds-modal-dialog-border-radius-default: $ouds-border-radius-default !default;
 $ouds-modal-dialog-border-radius-rounded: $ouds-border-radius-large !default;
-$ouds-modal-dialog-grid-margin-horizontal-default-desktop: 267px !default;
-$ouds-modal-dialog-grid-margin-horizontal-default-large-desktop: 358px !default;
-$ouds-modal-dialog-grid-margin-horizontal-default-tablet: 85px !default;
-$ouds-modal-dialog-grid-margin-horizontal-mobile: 16px !default;
-$ouds-modal-dialog-grid-margin-horizontal-small-desktop: 599px !default;
-$ouds-modal-dialog-grid-margin-horizontal-small-large-desktop: 664px !default;
-$ouds-modal-dialog-grid-margin-horizontal-small-tablet: 147px !default;
-$ouds-modal-dialog-grid-margin-vertical-default-desktop: 41px !default;
-$ouds-modal-dialog-grid-margin-vertical-default-large-desktop: 52px !default;
-$ouds-modal-dialog-grid-margin-vertical-default-tablet: 47px !default;
-$ouds-modal-dialog-grid-margin-vertical-mobile-default: 16px !default;
-$ouds-modal-dialog-grid-margin-vertical-small-desktop: 164px !default;
-$ouds-modal-dialog-grid-margin-vertical-small-large-desktop: 260px !default;
-$ouds-modal-dialog-grid-margin-vertical-small-mobile: 190px !default;
-$ouds-modal-dialog-grid-margin-vertical-small-tablet: 235px !default;
-$ouds-modal-dialog-size-max-height-small-desktop: 492px !default;
-$ouds-modal-dialog-size-max-height-small-large-desktop: 520px !default;
-$ouds-modal-dialog-size-max-height-small-mobile: 380px !default;
-$ouds-modal-dialog-size-max-height-small-tablet: 470px !default;
-$ouds-modal-dialog-size-max-width-default-desktop: 1066px !default;
-$ouds-modal-dialog-size-max-width-default-large-desktop: 1204px !default;
-$ouds-modal-dialog-size-max-width-default-mobile: 448px !default;
-$ouds-modal-dialog-size-max-width-default-tablet: 810px !default;
-$ouds-modal-dialog-size-max-width-small-desktop: 522px !default;
-$ouds-modal-dialog-size-max-width-small-large-desktop: 592px !default;
-$ouds-modal-dialog-size-max-width-small-mobile: 448px !default;
-$ouds-modal-dialog-size-max-width-small-tablet: 480px !default;
-$ouds-modal-dialog-size-min-height-small-desktop: 460px !default;
-$ouds-modal-dialog-size-min-height-small-large-desktop: 500px !default;
-$ouds-modal-dialog-size-min-height-small-mobile: 280px !default;
-$ouds-modal-dialog-size-min-height-small-tablet: 420px !default;
 $ouds-modal-dialog-space-column-gap-previous-title-desktop: $ouds-space-column-gap-2xlarge !default;
 $ouds-modal-dialog-space-column-gap-previous-title-mobile: $ouds-space-column-gap-large !default;
 $ouds-modal-dialog-space-column-gap-previous-title-tablet: $ouds-space-column-gap-xlarge !default;
@@ -501,9 +469,6 @@ $ouds-modal-dialog-space-padding-block-bottom-default-tablet: $ouds-space-paddin
 $ouds-modal-dialog-space-padding-block-bottom-mobile: $ouds-space-padding-block-2xlarge !default;
 $ouds-modal-dialog-space-padding-block-bottom-small-desktop: $ouds-space-padding-block-3xlarge !default;
 $ouds-modal-dialog-space-padding-block-bottom-small-tablet: $ouds-space-padding-block-2xlarge !default;
-$ouds-modal-dialog-space-padding-block-bottom-sticky-footer-safe-area-desktop: 84px !default;
-$ouds-modal-dialog-space-padding-block-bottom-sticky-footer-safe-area-mobile: 62px !default;
-$ouds-modal-dialog-space-padding-block-bottom-sticky-footer-safe-area-tablet: 84px !default;
 $ouds-modal-dialog-space-padding-block-footer-sticky-default-desktop: $ouds-space-padding-block-3xlarge !default;
 $ouds-modal-dialog-space-padding-block-footer-sticky-default-tablet: $ouds-space-padding-block-3xlarge !default;
 $ouds-modal-dialog-space-padding-block-footer-sticky-mobile: $ouds-space-padding-block-xlarge !default;
@@ -586,31 +551,6 @@ $ouds-radio-button-size-min-width: $ouds-size-min-interactive-area-default !defa
 // scss-docs-start ouds-component-select
 $ouds-select-input-size-min-width: $ouds-dimension-8xlarge !default;
 // scss-docs-end ouds-component-select
-
-// Side
-
-// scss-docs-start ouds-component-side
-$ouds-side-sheet-grid-margin-horizontal-default-desktop: 961px !default;
-$ouds-side-sheet-grid-margin-horizontal-default-large-desktop: 1429px !default;
-$ouds-side-sheet-grid-margin-horizontal-default-mobile: 16px !default;
-$ouds-side-sheet-grid-margin-horizontal-default-tablet: 331px !default;
-$ouds-side-sheet-grid-margin-horizontal-small-desktop: 1077px !default;
-$ouds-side-sheet-grid-margin-horizontal-small-large-desktop: 1582px !default;
-$ouds-side-sheet-grid-margin-horizontal-small-mobile: 47px !default;
-$ouds-side-sheet-grid-margin-horizontal-small-tablet: 392px !default;
-$ouds-side-sheet-size-max-width-default-desktop: 520px !default;
-$ouds-side-sheet-size-max-width-default-large-desktop: 600px !default;
-$ouds-side-sheet-size-max-width-default-mobile: 380px !default;
-$ouds-side-sheet-size-max-width-default-tablet: 440px !default;
-$ouds-side-sheet-size-max-width-small-desktop: 480px !default;
-$ouds-side-sheet-size-max-width-small-large-desktop: 520px !default;
-$ouds-side-sheet-size-max-width-small-mobile: 340px !default;
-$ouds-side-sheet-size-max-width-small-tablet: 400px !default;
-$ouds-side-sheet-size-min-width-small-desktop: 420px !default;
-$ouds-side-sheet-size-min-width-small-large-desktop: 440px !default;
-$ouds-side-sheet-size-min-width-small-mobile: 1px !default;
-$ouds-side-sheet-size-min-width-small-tablet: 1px !default;
-// scss-docs-end ouds-component-side
 
 // Skeleton
 
@@ -724,10 +664,6 @@ $ouds-toast-border-radius-media: $ouds-border-radius-default !default;
 $ouds-toast-size-asset-large: $ouds-dimension-3xlarge !default;
 $ouds-toast-size-asset-medium: $ouds-dimension-medium !default;
 $ouds-toast-size-asset-small: $ouds-size-icon-with-label-large-size-medium !default;
-$ouds-toast-size-width-desktop: 442px !default;
-$ouds-toast-size-width-large-desktop: 592px !default;
-$ouds-toast-size-width-mobile: 374px !default;
-$ouds-toast-size-width-tablet: 474px !default;
 // scss-docs-end ouds-component-toast
 
 // Typography
@@ -738,13 +674,3 @@ $ouds-typography-heading-large-marker: true !default;
 $ouds-typography-space-padding-block-bottom-heading-large-marker: $ouds-space-padding-block-4xsmall !default; // deprecated
 $ouds-typography-space-padding-block-top-heading-large-marker: $ouds-space-padding-block-3xsmall !default; // deprecated
 // scss-docs-end ouds-component-typography
-
-// Visual
-
-// scss-docs-start ouds-component-visual
-$ouds-visual-assets-icon-brand: orange !default;
-$ouds-visual-assets-icon-color-content-status-warning-external-shape: var(--#{$prefix}visual-assets-icon-color-content-status-warning-external-shape) !default;
-$ouds-visual-assets-icon-color-content-status-warning-internal-shape: var(--#{$prefix}visual-assets-icon-color-content-status-warning-internal-shape) !default;
-$ouds-visual-assets-icon-color-content-status-warning-inverse-external-shape: var(--#{$prefix}visual-assets-icon-color-content-status-warning-inverse-external-shape) !default;
-$ouds-visual-assets-icon-color-content-status-warning-inverse-internal-shape: var(--#{$prefix}visual-assets-icon-color-content-status-warning-inverse-internal-shape) !default;
-// scss-docs-end ouds-component-visual
