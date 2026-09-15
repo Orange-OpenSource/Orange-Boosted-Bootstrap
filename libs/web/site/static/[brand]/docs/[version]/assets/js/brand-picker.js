@@ -7,15 +7,42 @@
 (() => {
   'use strict'
 
+  const getBrandPath = brand => {
+    switch (brand) {
+      case 'orange': {
+        return 'orange'
+      }
+
+      case 'orange-compact': {
+        return 'orange-compact'
+      }
+
+      case 'sosh': {
+        return 'sosh'
+      }
+
+      default: {
+        return null
+      }
+    }
+  }
+
   window.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-bs-brand-value]')
       .forEach(toggle => {
         toggle.addEventListener('click', e => {
           e.preventDefault()
           const url = new URL(window.location)
-          const brand = `/${toggle.getAttribute('data-bs-brand-value')}/`
-          const brandToChange = `/${url.pathname.split('/')[1]}/`
-          window.location = url.href.replace(brandToChange, brand)
+          const brand = getBrandPath(toggle.getAttribute('data-bs-brand-value'))
+
+          if (brand === null) {
+            return
+          }
+
+          const pathSegments = url.pathname.split('/')
+          pathSegments[1] = brand
+          url.pathname = pathSegments.join('/')
+          window.location.assign(url.href)
         })
       })
   })
