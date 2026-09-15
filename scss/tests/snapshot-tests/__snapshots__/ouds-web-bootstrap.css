@@ -8729,17 +8729,17 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .dropdown-menu {
   --bs-dropdown-zindex: 1000;
   --bs-dropdown-min-width: 10rem;
-  --bs-dropdown-padding-y: 8px;
+  --bs-dropdown-padding-y: 0;
   --bs-dropdown-spacer: 0;
   --bs-dropdown-color: var(--bs-color-content-default);
-  --bs-dropdown-bg: var(--bs-color-bg-secondary);
+  --bs-dropdown-bg: var(--bs-color-overlay-dropdown);
   --bs-dropdown-border-color: var(--bs-color-border-default);
   --bs-dropdown-border-radius: var(--bs-border-radius);
   --bs-dropdown-border-width: 0px;
   --bs-dropdown-inner-border-radius: calc(var(--bs-border-radius) - 0px);
   --bs-dropdown-divider-bg: var(--bs-color-border-default);
   --bs-dropdown-divider-margin-y: 0;
-  --bs-dropdown-box-shadow: 0 4px 4px -1px var(--bs-elevation-color-drag);
+  --bs-dropdown-box-shadow: 0 2px 3px 0 var(--bs-elevation-color-elevated);
   --bs-dropdown-link-color: ;
   --bs-dropdown-link-hover-color: ;
   --bs-dropdown-link-hover-bg: var(--bs-color-action-support-hover);
@@ -8774,6 +8774,16 @@ ol.bullet-list > li > ol > li > ol > li::before {
   top: 100%;
   left: 0;
   margin-top: var(--bs-dropdown-spacer);
+}
+.dropdown-menu > .dropdown-item:first-child,
+.dropdown-menu > li:first-child .dropdown-item {
+  border-top-left-radius: var(--bs-dropdown-inner-border-radius);
+  border-top-right-radius: var(--bs-dropdown-inner-border-radius);
+}
+.dropdown-menu > .dropdown-item:last-child,
+.dropdown-menu > li:last-child .dropdown-item {
+  border-bottom-right-radius: var(--bs-dropdown-inner-border-radius);
+  border-bottom-left-radius: var(--bs-dropdown-inner-border-radius);
 }
 
 .dropdown-menu-start {
