@@ -1,3 +1,2 @@
 [build]
-  command = "npm run netlify"
   publish = "libs/web/_site"
