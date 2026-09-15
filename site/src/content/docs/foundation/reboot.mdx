@@ -102,7 +102,7 @@ Links have a disabled style when using an `aria-disabled="true"` attribute.
 
 Visited links don’t have a specific style by default.
 
-<BrandSpecific brand={['orange', 'orange-compact']}>
+<ThemeSpecific theme={['orange', 'orange-compact']}>
 The `:visited` state can be styled with the additional `.visited-links` utility class that can be applied directly to a link or to a parent element to style all the child links.
 
 <Example buttonLabel="visited link" code={`<div class="visited-links">
@@ -116,7 +116,7 @@ The `:visited` state can be styled with the additional `.visited-links` utility 
   <div>
     <a href="." class="visited-links">This is an example of a visited link</a>
   </div>`} />
-</BrandSpecific>
+</ThemeSpecific>
 
 Placeholder links—those without an `href`—are targeted with a more specific selector and have their `color` and `text-decoration` reset to their default values.
 
