@@ -6709,7 +6709,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-dropdown-inner-border-radius: calc(var(--bs-border-radius) - 0px);
   --bs-dropdown-divider-bg: var(--bs-color-border-default);
   --bs-dropdown-divider-margin-y: 0;
-  --bs-dropdown-box-shadow: 0 2px 3px 0 var(--bs-elevation-color-elevated);
+  --bs-dropdown-box-shadow: 0 4px 4px -1px var(--bs-elevation-color-drag);
   --bs-dropdown-link-color: ;
   --bs-dropdown-link-hover-color: ;
   --bs-dropdown-link-hover-bg: var(--bs-color-action-support-hover);
@@ -6719,7 +6719,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-dropdown-item-padding-x: 16px;
   --bs-dropdown-item-padding-y: 12px;
   --bs-dropdown-header-color: var(--bs-color-content-muted);
-  --bs-dropdown-header-padding-x: calc(16px - 4px);
+  --bs-dropdown-header-padding-x: 12px;
   --bs-dropdown-header-padding-y: 12px;
   position: absolute;
   z-index: var(--bs-dropdown-zindex);
