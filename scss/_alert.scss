@@ -42,6 +42,10 @@
     @include border-top-end-radius(var(--#{$prefix}alert-border-radius));
   }
 
+  .alert-icon {
+    margin-top: $ouds-alert-space-padding-block;
+  }
+
   @supports not (container-type: size) {
     &:not(:has(.alert-text-container p:not(.alert-label), .alert-text-container ul, .alert-container .link)) .btn-close {
       @include border-bottom-end-radius(var(--#{$prefix}alert-border-radius));
@@ -55,7 +59,6 @@
   flex-shrink: 0;
   width: px-to-rem($ouds-alert-size-asset);
   height: px-to-rem($ouds-alert-size-asset);
-  margin-top: $ouds-alert-space-padding-block;
   color: var(--#{$prefix}alert-icon-color);
 
   &:where(:not(:has(svg, img, .icon))) {
