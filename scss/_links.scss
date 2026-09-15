@@ -71,15 +71,13 @@
 
 .link-chevron {
   // Chevron icon
-  &:not(.link-previous),
-  &:not(.back) { // @deprecated, will be removed in v1.6.0, use "link-previous" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
+  &:not(.back, .link-previous) { // @deprecated, will be removed in v1.6.0, use "link-previous" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
     display: inline-block;
   }
 
   &.link-previous::before,
   &.back::before, // @deprecated, will be removed in v1.6.0, use "link-previous" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
-  &:not(.back)::after, // @deprecated, will be removed in v1.6.0, use "link-previous" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
-  &:not(.link-previous)::after {
+  &:not(.back, .link-previous)::after { // @deprecated, will be removed in v1.6.0, use "link-previous" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
     display: inline-block;
     width: var(--#{$prefix}link-icon-size);
     min-width: var(--#{$prefix}link-icon-size);
@@ -88,12 +86,11 @@
     vertical-align: text-bottom;
     content: "";
     background-color: var(--#{$prefix}link-chevron-color, $ouds-link-color-chevron-enabled);
-    mask: var(--#{$prefix}chevron-icon) center no-repeat;
+    mask: $link-previous-icon center no-repeat;
     mask-size: var(--#{$prefix}link-icon-size);
   }
 
-  &:not(.back)::after, // @deprecated, will be removed in v1.6.0, use "link-previous" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
-  &:not(.link-previous)::after {
+  &:not(.back, .link-previous)::after { // @deprecated, will be removed in v1.6.0, use "link-previous" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
     margin-right: 0;
     margin-left: var(--#{$prefix}link-chevron-gap);
     transform: rotate(180deg);
@@ -112,7 +109,7 @@
     vertical-align: text-bottom;
     content: "";
     background-color: var(--#{$prefix}link-chevron-color, $ouds-link-color-chevron-enabled);
-    mask: var(--#{$prefix}external-icon) center no-repeat;
+    mask: $link-external-icon center no-repeat;
     mask-size: var(--#{$prefix}link-icon-size);
   }
 }

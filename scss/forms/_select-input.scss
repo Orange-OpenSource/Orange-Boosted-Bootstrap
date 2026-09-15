@@ -232,7 +232,7 @@
     pointer-events: none;
     content: "";
     background-color: currentcolor;
-    mask: var(--#{$prefix}error-icon) no-repeat 50% / px-to-rem($ouds-button-size-icon-only-default);
+    mask: var(--#{$prefix}alert-error-icon) no-repeat 50% / px-to-rem($ouds-button-size-icon-only-default);
     transform: translate(0, -50%);
   }
 

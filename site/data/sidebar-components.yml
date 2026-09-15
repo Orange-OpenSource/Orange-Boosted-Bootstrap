@@ -1,5 +1,5 @@
 - title: Components
-  icon: menu-button-wide-fill
+  icon: component-atom
   icon_color: body-color
   pages:
     - title: Alerts
@@ -15,6 +15,7 @@
     - title: Header
       draft: true
     - title: Icon
+    - title: Items
     - title: Links
     - title: Password input
     - title: Radio button
@@ -28,7 +29,7 @@
     - title: Text input
 
 - title: Coming soon
-  icon: menu-button-wide-fill
+  icon: component-atom
   icon_color: body-color
   pages:
     - title: Accordion
@@ -44,8 +45,6 @@
     - title: Collapse
       coming_soon: true
     - title: Dropdown
-      coming_soon: true
-    - title: List group
       coming_soon: true
     - title: Local navigation
       coming_soon: true

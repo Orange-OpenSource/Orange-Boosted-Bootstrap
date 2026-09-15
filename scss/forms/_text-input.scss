@@ -109,6 +109,7 @@
       appearance: none;
       caret-color: var(--#{$prefix}text-input-caret-color);
       background-color: transparent;
+      background-clip: content-box; // fixes https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3809
       border: 0;
       box-shadow: none;
       opacity: 0;
@@ -288,8 +289,7 @@
       color: $ouds-color-content-muted;
     }
 
-    &:has(> svg:not(.loader)),
-    &:has(> img) {
+    &:has(> svg:not(.loader), > img, > .icon) {
       > .text-input-field,
       > .input-container,
       > label {
@@ -334,7 +334,7 @@
         color: var(--#{$prefix}text-input-label-color);
         content: "";
         background-color: currentcolor;
-        mask: var(--#{$prefix}error-icon) no-repeat 50% / px-to-rem($ouds-button-size-icon-only-default);
+        mask: var(--#{$prefix}alert-error-icon) no-repeat 50% / px-to-rem($ouds-button-size-icon-only-default);
       }
 
       &:has(> button)::after,
@@ -461,6 +461,7 @@
       color: var(--#{$prefix}text-input-color);
       caret-color: var(--#{$prefix}text-input-caret-color);
       background-color: transparent;
+      background-clip: content-box; // fixes https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3809
       border: 0;
       @include get-font-size("label-large");
 
@@ -639,7 +640,7 @@
         color: var(--#{$prefix}text-input-label-color);
         content: "";
         background-color: currentcolor;
-        mask: escape-svg(var(--#{$prefix}error-icon)) no-repeat 50% / px-to-rem($ouds-button-size-icon-only-default);
+        mask: escape-svg(var(--#{$prefix}alert-error-icon)) no-repeat 50% / px-to-rem($ouds-button-size-icon-only-default);
       }
 
       &:not(.text-area-container-outlined) {

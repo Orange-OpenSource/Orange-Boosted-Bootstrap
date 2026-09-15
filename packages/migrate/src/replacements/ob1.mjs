@@ -121,6 +121,12 @@ export const ob1Replacements = [
     })
   ],
 
+  // List group
+  [...warnForClass('items-list', {
+    message: 'The component using class \'{class}\' in {file} needs small adaptations to use the new component version.',
+    link: 'https://web.unified-design-system.orange.com/docs/components/items'
+  })],
+
   // Skeleton
   [...warnForClass('ob1-skeleton', { link: 'https://web.unified-design-system.orange.com/docs/components/skeleton' })],
   ['ob1-skeleton-[\\w-]+', 'skeleton'],

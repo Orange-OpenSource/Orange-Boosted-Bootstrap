@@ -5,83 +5,79 @@
 :root {
   // All available CSS vars and specific modifications for OUDS Web
   --docsearch-primary-color: var(--bs-color-content-brand-primary);
+  --docsearch-soft-primary-color: var(--bs-color-action-support-hover);
+  --docsearch-subtle-color: var(--bs-color-border-default);
   --docsearch-text-color: var(--bs-color-content-default);
-  // --docsearch-spacing
-  // --docsearch-icon-stroke-width
-  --docsearch-highlight-color: var(--docsearch-primary-color);
+  --docsearch-error-color: var(--bs-color-content-status-negative);
+  --docsearch-success-color: var(--bs-color-surface-status-positive-muted);
+  --docsearch-secondary-text-color: var(--bs-color-content-muted);
+  --docsearch-background-color: var(--bs-color-bg-primary);
+  --docsearch-spacing: 20px;
+  // --docsearch-icon-stroke-width: 1.4;
+  --docsearch-focus-color: var(--bs-color-content-on-action-focus);
+  --docsearch-highlight-color: var(--bs-color-content-on-action-highlighted);
   --docsearch-muted-color: var(--bs-color-content-muted);
-  // TODO: use modal tokens when available here
-  --docsearch-container-background: #{rgba(#000, .5)};
+  --docsearch-muted-color-darker: var(--bs-color-content-muted);
+  --docsearch-icon-color: var(--bs-color-content-default);
+  --docsearch-container-background: #{rgba(#808080, .5)};
   --docsearch-logo-color: var(--bs-color-content-default);
-  // --docsearch-modal-width
-  // --docsearch-modal-height
-  --docsearch-modal-background: var(--bs-body-bg);
+  --docsearch-border-radius: var(--bs-border-radius); // Bootstrap compat
+  --docsearch-search-button-background: transparent;
+  --docsearch-search-button-text-color: var(--bs-color-content-default);
+  // --docsearch-modal-width: 800px;
+  // --docsearch-modal-height: 600px;
+  // --docsearch-modal-variable-height: 60dvh;
+  --docsearch-modal-background: var(--bs-color-bg-primary);
   --docsearch-modal-shadow: none;
-  // --docsearch-searchbox-height;
-  // --docsearch-searchbox-background;
+  // --docsearch-searchbox-height :56px;
+  // --docsearch-searchbox-initial-height: 56px;
+  --docsearch-searchbox-background: var(--bs-color-bg-primary);
   --docsearch-searchbox-focus-background: transparent;
-  --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-text-color);
-  // --docsearch-hit-height;
-  --docsearch-hit-color: var(--bs-color-content-muted);
-  --docsearch-hit-active-color: var(--bs-color-content-on-action-highlighted);
+  // --docsearch-actions-width: 99px;
+  // --docsearch-actions-height: 44px;
+  // --docsearch-hit-height: 56px;
+  // --docsearch-hit-color: var(--bs-color-content-muted);
+  --docsearch-hit-highlight-color: var(--bs-color-action-highlighted);
   --docsearch-hit-background: transparent;
-  // --docsearch-hit-shadow;
-  --docsearch-key-gradient: null;
-  --docsearch-key-shadow: null;
-  // --docsearch-footer-height;
+  // --docsearch-key-background: #f5f5fa;
+  // --docsearch-key-color: #5a5e9a;
+  // --docsearch-key-pressed-shadow: inset 0 2px 4px rgba(120, 122, 165, .25);
+  // --docsearch-footer-height: 52px;
   --docsearch-footer-background: transparent;
   --docsearch-footer-shadow: 0 -1px var(--bs-color-border-emphasized);
+  // --fav-out-dur: 160ms;
+  // --del-dur: 150ms;
+  // --ease-smooth: cubic-bezier(.25, .8, .4, 1);
+  // --ease-fast: cubic-bezier(.45, .15, .6, .9);
+  // --shadow-pop: 0 4px 12px rgba(0, 0, 0, .06);
+  // --shimmer-bg: linear-gradient(90deg, #e0e3e8 0%, var(--docsearch-muted-color) 20%, var(--docsearch-muted-color) 60%, #e0e3e8 95%);
+  // --docsearch-dropdown-menu-background: var(--docsearch-hit-background);
+  // --docsearch-dropdown-menu-item-hover-background: var(--docsearch-modal-background);
 }
 
-.bd-search {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.DocSearch-Container {
-  --docsearch-spacing: 20px;
-  --docsearch-hit-shadow: none;
-  --docsearch-muted-color: var(--docsearch-text-color);
-  --docsearch-hit-color: var(--docsearch-text-color);
-
-  position: fixed;
-  z-index: 2000; // Make sure to be over all components showcased in the documentation
-  cursor: auto; // Needed because of [role="button"] in Algolia search modal. Remove once https://github.com/algolia/docsearch/issues/1370 is tackled.
-}
-
-.DocSearch-Modal {
-  border: var(--bs-border-width) solid var(--bs-color-border-default);
-  @include border-radius(var(--bs-border-radius));
-}
-
+// Navbar button styles
 .DocSearch-Button {
-  --docsearch-searchbox-background: transparent;
-
   height: auto;
   padding: 0;
   margin: 0;
+  color: var(--bs-color-content-default);
   border: 0;
 
   &:hover {
-    outline: unset;
-    box-shadow: unset;
+    color: var(--bs-link-mono-color-content-pressed);
+  }
 
-    .DocSearch-Search-Icon {
-      color: var(--bs-link-active-color);
-    }
+  &:active {
+    color: var(--bs-navbar-active-color);
   }
 
   &:focus-visible {
     @include focus-visible();
     border-radius: 0; // stylelint-disable-line property-disallowed-list
   }
-
-  .DocSearch-Search-Icon {
-    color: var(--bs-color-content-default);
-  }
 }
 
+// Hide default Algolia navbar button
 .DocSearch-Button-Placeholder {
   @include visually-hidden();
 
@@ -90,65 +86,98 @@
   }
 }
 
-.DocSearch-Search-Icon {
-  width: 1.875rem;
-  height: 1.875rem;
-  stroke-width: 2;
-}
-
-.DocSearch-Form {
-  box-shadow: var(--bs-color-border-default) 0 0 0 .125rem inset;
-  @include border-radius(var(--bs-border-radius));
-
-  &:focus-within {
-    box-shadow: var(--bs-color-content-default) 0 0 0 .125rem inset;
-  }
-}
-
-.DocSearch-Input:focus {
-  outline: 0;
-  box-shadow: none;
-}
-
-.DocSearch-Reset {
-  @include border-radius(var(--bs-border-radius));
-
-  &:focus-visible {
-    @include focus-visible();
-  }
-}
-
-.DocSearch-Cancel {
-  color: var(--docsearch-text-color);
-}
-
+// Hide default Algolia keyboard shortcuts
 .DocSearch-Button-Keys {
   @include visually-hidden();
 }
 
-.DocSearch-Commands-Key {
-  width: auto;
-  height: auto;
+// Algolia modal styles
+.DocSearch-Container {
+  position: fixed;
+  z-index: 2000; // Make sure to be over all components showcased in the documentation
+  cursor: auto; // Needed because of [role="button"] in Algolia search modal. Remove once https://github.com/algolia/docsearch/issues/1370 is tackled.
+  backdrop-filter: none;
 }
 
-// more specificity to override OUDS ul default margin
-.DocSearch-Commands.DocSearch-Commands {
-  margin-bottom: 0;
+.DocSearch-Modal {
+  @include border-radius(var(--bs-border-radius)); // Bootstrap compat
 }
 
-.DocSearch-Hits {
-  .DocSearch-Hit-source {
+// Search bar in the modal
+.DocSearch-Form {
+  &:focus-within .DocSearch-MagnifierLabel svg {
     color: var(--docsearch-text-color);
+  }
+
+  &:has(.DocSearch-Input:focus) {
+    border-block-end-color: var(--bs-color-border-emphasized);
+
+    .DocSearch-MagnifierLabel svg {
+      color: var(--bs-color-action-pressed);
+    }
   }
 }
 
 .DocSearch-MagnifierLabel {
+  cursor: text;
+}
+
+// Stretched link in the navbar button and the label in the search bar
+.DocSearch-Button,
+.DocSearch-MagnifierLabel {
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+  }
+}
+
+// Remove weird focus outline on search input, handled via focus-within
+.DocSearch-Input {
+  height: unset;
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+// more specificity to override OUDS ul default margin
+// kbd at the bottom of the modal
+.DocSearch .DocSearch-Commands {
+  margin-bottom: 0;
+}
+
+// Clear and close modal in the search input
+.DocSearch-Actions {
+  position: relative;
+  z-index: 2;
+
+  button:hover {
+    color: var(--bs-color-action-hover);
+    background: var(--bs-color-action-support-hover);
+  }
+}
+
+.DocSearch-Clear {
+  padding-inline: 4px;
   color: var(--docsearch-text-color);
 }
 
-.DocSearch-Hit {
-  padding-top: .625rem;
+.DocSearch-Clear,
+.DocSearch-Close {
+  &:focus-visible {
+    @include focus-visible();
+    border-radius: 0; // stylelint-disable-line property-disallowed-list
+  }
+}
 
+// Hit styles while searching for results
+.DocSearch-Hit {
   a {
     @include border-radius(var(--bs-border-radius));
   }
@@ -158,49 +187,46 @@
     background: var(--bs-color-action-highlighted);
   }
 
-  &[aria-selected="true"] {
-    a {
-      background-color: var(--bs-color-action-highlighted);
-    }
+  .DocSearch-Hit-Tree {
+    opacity: 1;
+  }
 
+  &[aria-selected="true"] {
     mark {
-      --docsearch-hit-active-color: var(--bs-color-action-highlighted);
+      color: var(--bs-color-action-highlighted);
       text-decoration: none;
       background: var(--bs-color-content-on-action-highlighted);
     }
-  }
-}
 
-.DocSearch-Hit-action-button {
-  @include border-radius(var(--bs-border-radius));
+    .DocSearch-Hit-title,
+    .DocSearch-Hit-path {
+      color: var(--bs-color-content-on-action-highlighted);
+    }
 
-  &:hover,
-  &:focus {
-    background: transparent;
-
-    path {
-      fill: var(--bs-color-content-on-action-highlighted);
+    .DocSearch-Hit-Tree {
+      color: var(--bs-color-content-on-action-highlighted);
     }
   }
 }
 
-.DocSearch-Prefill {
-  color: var(--bs-color-content-default);
-  text-decoration: underline;
-  @include border-radius(var(--bs-border-radius));
-
-  &:hover {
-    color: var(--docsearch-highlight-color);
-  }
-
-  &:focus-visible {
-    @include focus-visible();
-  }
+// Command keys in the footer
+.DocSearch-Commands-Key {
+  color: var(--#{$prefix}color-content-inverse);
+  background: var(--#{$prefix}color-surface-inverse-high);
 }
 
-// Fix --docsearch-logo-color that doesn't do anything
+// Algolia logo
 .DocSearch-Logo svg .cls-1,
 .DocSearch-Logo svg .cls-2 {
   fill: var(--docsearch-logo-color);
 }
-// End mod
+
+// No results found
+.DocSearch-NoResults svg {
+  stroke: var(--bs-color-content-status-negative);
+}
+
+// Fix an issue on Firefox / MacOS where a scrollbar appears
+.DocSearch-Hit-content-wrapper {
+  overflow: hidden;
+}

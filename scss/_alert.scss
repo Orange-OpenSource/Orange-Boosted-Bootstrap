@@ -182,7 +182,7 @@
 
 .alert-negative {
   --#{$prefix}alert-text-color: #{$ouds-color-content-status-negative};
-  --#{$prefix}alert-icon: var(--#{$prefix}error-icon);
+  --#{$prefix}alert-icon: var(--#{$prefix}alert-error-icon);
   --#{$prefix}alert-icon-color: #{$ouds-color-content-status-negative};
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-negative-muted};
   --#{$prefix}alert-border-color: #{$ouds-color-border-status-negative};
@@ -194,7 +194,7 @@
 
 .alert-positive {
   --#{$prefix}alert-text-color: #{$ouds-color-content-status-positive};
-  --#{$prefix}alert-icon: var(--#{$prefix}success-icon);
+  --#{$prefix}alert-icon: var(--#{$prefix}alert-success-icon);
   --#{$prefix}alert-icon-color: #{$ouds-color-content-status-positive};
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-positive-muted};
   --#{$prefix}alert-border-color: #{$ouds-color-border-status-positive};
@@ -206,7 +206,7 @@
 
 .alert-info {
   --#{$prefix}alert-text-color: #{$ouds-color-content-status-info};
-  --#{$prefix}alert-icon: var(--#{$prefix}info-icon);
+  --#{$prefix}alert-icon: var(--#{$prefix}alert-info-icon);
   --#{$prefix}alert-icon-color: #{$ouds-color-content-status-info};
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-info-muted};
   --#{$prefix}alert-border-color: #{$ouds-color-border-status-info};
@@ -218,9 +218,9 @@
 
 .alert-warning {
   --#{$prefix}alert-text-color: #{$ouds-color-content-status-warning};
-  --#{$prefix}alert-icon: var(--#{$prefix}warning-icon);
+  --#{$prefix}alert-icon: var(--#{$prefix}alert-warning-icon);
   --#{$prefix}alert-icon-color: var(--#{$prefix}icon-color-content-status-warning-external-shape);
-  --#{$prefix}alert-icon-internal: var(--#{$prefix}warning-internal-icon);
+  --#{$prefix}alert-icon-internal: var(--#{$prefix}alert-warning-internal-icon);
   --#{$prefix}alert-icon-internal-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-warning-muted};
   --#{$prefix}alert-border-color: #{$ouds-color-border-status-warning};
