@@ -54,6 +54,12 @@ $ouds-font-family-monospace-stack:
   Menlo,
   monospace !default;
 // scss-docs-end ouds-composite-font-monospace
+// scss-docs-start ouds-composite-typography
+// NB: SVG should contain paddings and shouldn't have any `fill` attribute
+$ouds-heading-large-marker-img: null !default;
+$ouds-heading-large-marker-width: 0 !default;
+$ouds-heading-large-marker-height: 0 !default;
+// scss-docs-end ouds-composite-typography
 // stylelint-enable value-keyword-case, scss/dollar-variable-colon-space-after
 
 //// ****** ICONS as data URIs ******
