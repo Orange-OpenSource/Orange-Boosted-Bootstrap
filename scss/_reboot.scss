@@ -342,7 +342,7 @@ sup { top: -.5em; }
     text-decoration: $link-hover-decoration;
   }
 
-  &[aria-disabled="true"] {
+  &:where([aria-disabled="true"]) {
     --#{$prefix}link-color: #{$ouds-color-action-disabled}; // OUDS mod
     text-decoration: $link-decoration;
     pointer-events: none;
