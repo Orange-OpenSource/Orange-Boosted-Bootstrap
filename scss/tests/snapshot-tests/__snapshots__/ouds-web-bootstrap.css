@@ -56,7 +56,7 @@
   --bs-color-border-minimal: rgba(0, 0, 0, 0.04);
   --bs-color-border-muted: rgba(0, 0, 0, 0.12);
   --bs-color-border-on-brand-primary: #000;
-  --bs-color-border-status-accent: #ff7900;
+  --bs-color-border-status-accent: #f15e00;
   --bs-color-border-status-info: #0073b2;
   --bs-color-border-status-negative: #db0002;
   --bs-color-border-status-positive: #138126;
@@ -85,7 +85,7 @@
   --bs-color-content-on-status-positive-muted: #000;
   --bs-color-content-on-status-warning-emphasized: #000;
   --bs-color-content-on-status-warning-muted: #000;
-  --bs-color-content-status-accent: #ff7900;
+  --bs-color-content-status-accent: #f15e00;
   --bs-color-content-status-info: #0073b2;
   --bs-color-content-status-inverse-info: #8ad5ff;
   --bs-color-content-status-inverse-negative: #ff8081;
@@ -109,7 +109,7 @@
   --bs-color-surface-inverse-low: #272727;
   --bs-color-surface-primary: #fff;
   --bs-color-surface-secondary: rgba(0, 0, 0, 0.04);
-  --bs-color-surface-status-accent-emphasized: #ff7900;
+  --bs-color-surface-status-accent-emphasized: #f15e00;
   --bs-color-surface-status-accent-muted: rgba(189, 121, 60, 0.08);
   --bs-color-surface-status-info-emphasized: #0073b2;
   --bs-color-surface-status-info-muted: rgba(38, 178, 255, 0.08);
@@ -246,6 +246,9 @@
 [data-bs-theme=light],
 :root[data-bs-theme=light] [data-bs-theme=root],
 :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+  --bs-visual-assets-icon-color-content-status-warning-external-shape: #ffd000;
+  --bs-visual-assets-icon-color-content-status-warning-internal-shape: #856a00;
+  --bs-visual-assets-icon-color-content-status-warning-inverse-external-shape: #ffe270;
   --bs-link-mono-color-content-enabled: #000;
   --bs-link-mono-color-content-hover: #000;
   --bs-link-mono-color-content-pressed: rgba(0, 0, 0, 0.52);
@@ -293,12 +296,14 @@
   --bs-switch-color-track-selected-interaction: #138126;
   --bs-switch-color-track-unselected: rgba(0, 0, 0, 0.44);
   --bs-switch-color-track-unselected-interaction: rgba(0, 0, 0, 0.52);
+  --bs-categorical-tag-color-bg-category-1: #50be87;
+  --bs-categorical-tag-color-bg-category-2: #4ab4e6;
+  --bs-categorical-tag-color-bg-category-3: #ffb400;
+  --bs-categorical-tag-color-bg-category-4: #a885d8;
   --bs-progress-indicator-color-content-track: #ccc;
   --bs-progress-indicator-mono-color-content-track: #ccc;
   --bs-progress-indicator-mono-color-content-indicator: #000;
-  --bs-icon-color-content-status-warning-external-shape: #ffd000;
-  --bs-icon-color-content-status-warning-internal-shape: #856a00;
-  --bs-icon-color-content-status-warning-inverse-external-shape: #ffe270;
+  --bs-visual-assets-icon-color-content-status-warning-inverse-internal-shape: rgba(255, 255, 255, 0);
   --bs-link-color-chevron-hover: #f15e00;
   --bs-link-color-chevron-pressed: #f15e00;
   --bs-link-color-chevron-focus: #f15e00;
@@ -308,13 +313,15 @@
   --bs-list-item-color-bg-loading: rgba(0, 0, 0, 0.12);
   --bs-list-item-color-bg-focus: rgba(0, 0, 0, 0.08);
   --bs-list-item-color-content-loader: #000;
-  --bs-icon-color-content-status-warning-inverse-internal-shape: rgba(255, 255, 255, 0);
 }
 
 [data-bs-theme=dark],
 :root[data-bs-theme=dark],
 :root[data-bs-theme=dark] [data-bs-theme=root],
 :root[data-bs-theme=light] [data-bs-theme=root-inverted] {
+  --bs-visual-assets-icon-color-content-status-warning-external-shape: #ffe270;
+  --bs-visual-assets-icon-color-content-status-warning-internal-shape: rgba(255, 255, 255, 0);
+  --bs-visual-assets-icon-color-content-status-warning-inverse-external-shape: #ffd000;
   --bs-link-mono-color-content-enabled: #fff;
   --bs-link-mono-color-content-hover: #fff;
   --bs-link-mono-color-content-pressed: rgba(255, 255, 255, 0.8);
@@ -362,12 +369,14 @@
   --bs-switch-color-track-selected-interaction: #94f0a4;
   --bs-switch-color-track-unselected: rgba(255, 255, 255, 0.64);
   --bs-switch-color-track-unselected-interaction: rgba(255, 255, 255, 0.8);
+  --bs-categorical-tag-color-bg-category-1: #75cca1;
+  --bs-categorical-tag-color-bg-category-2: #79c7ec;
+  --bs-categorical-tag-color-bg-category-3: #ffd266;
+  --bs-categorical-tag-color-bg-category-4: #c5ade6;
   --bs-progress-indicator-color-content-track: #444;
   --bs-progress-indicator-mono-color-content-track: #444;
   --bs-progress-indicator-mono-color-content-indicator: #fff;
-  --bs-icon-color-content-status-warning-external-shape: #ffe270;
-  --bs-icon-color-content-status-warning-internal-shape: rgba(255, 255, 255, 0);
-  --bs-icon-color-content-status-warning-inverse-external-shape: #ffd000;
+  --bs-visual-assets-icon-color-content-status-warning-inverse-internal-shape: #856a00;
   --bs-link-color-chevron-hover: #ff7900;
   --bs-link-color-chevron-pressed: #ff7900;
   --bs-link-color-chevron-focus: #ff7900;
@@ -377,7 +386,6 @@
   --bs-list-item-color-bg-loading: rgba(255, 255, 255, 0.12);
   --bs-list-item-color-bg-focus: rgba(255, 255, 255, 0.08);
   --bs-list-item-color-content-loader: #eee;
-  --bs-icon-color-content-status-warning-inverse-internal-shape: #856a00;
 }
 
 @font-face {
@@ -775,7 +783,7 @@
     --bs-space-scaled-3xsmall: 4px;
     --bs-space-scaled-2xsmall: 8px;
     --bs-space-scaled-xsmall: 16px;
-    --bs-space-scaled-small: 24px;
+    --bs-space-scaled-small: 20px;
     --bs-space-scaled-medium: 32px;
     --bs-space-scaled-large: 40px;
     --bs-space-scaled-xlarge: 48px;
@@ -11731,7 +11739,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 .alert-message:has(.alert-container > .link, .alert-container > .link-chevron,
 .alert-container > .link-external, .alert-container > .icon-link) {
-  min-height: 100px;
+  min-height: 80px;
 }
 .alert-message .btn-close {
   border-top-right-radius: var(--bs-alert-border-radius);
@@ -11810,7 +11818,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .alert-text-container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
   width: 100%;
 }
 .alert-text-container > * {

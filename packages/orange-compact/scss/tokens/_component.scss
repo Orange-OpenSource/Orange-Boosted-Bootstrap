@@ -1,8 +1,8 @@
 // Component application
 // Depends on semantic applications
-// OUDS Core tokens version 1.10.0
+// OUDS Core tokens version 1.11.0
 // Orange Compact Core tokens version 1.2.0
-// Orange Compact System tokens version 2.6.0
+// Orange Compact System tokens version 2.7.0
 
 // Accordion
 
@@ -22,9 +22,9 @@ $ouds-accordion-faq-space-column-gap-tablet: $ouds-space-column-gap-medium !defa
 $ouds-accordion-faq-space-padding-block-bottom-expand-container-desktop: $ouds-space-padding-block-4xlarge !default;
 $ouds-accordion-faq-space-padding-block-bottom-expand-container-mobile: $ouds-space-padding-block-3xlarge !default;
 $ouds-accordion-faq-space-padding-block-bottom-expand-container-tablet: $ouds-space-padding-block-3xlarge !default;
-$ouds-accordion-faq-space-padding-block-bottom-slot-list-item-container-desktop: $ouds-space-padding-block-xlarge !default;
-$ouds-accordion-faq-space-padding-block-bottom-slot-list-item-container-mobile: $ouds-space-padding-block-large !default;
-$ouds-accordion-faq-space-padding-block-bottom-slot-list-item-container-tablet: $ouds-space-padding-block-large !default;
+$ouds-accordion-faq-space-padding-block-bottom-slot-container-desktop: $ouds-space-padding-block-xlarge !default;
+$ouds-accordion-faq-space-padding-block-bottom-slot-container-mobile: $ouds-space-padding-block-large !default;
+$ouds-accordion-faq-space-padding-block-bottom-slot-container-tablet: $ouds-space-padding-block-large !default;
 $ouds-accordion-faq-space-padding-block-desktop: $ouds-space-padding-block-large !default;
 $ouds-accordion-faq-space-padding-block-mobile: $ouds-space-padding-block-medium !default;
 $ouds-accordion-faq-space-padding-block-tablet: $ouds-space-padding-block-medium !default;
@@ -38,18 +38,20 @@ $ouds-accordion-space-padding-block-top-expand-container: $ouds-space-padding-bl
 // scss-docs-start ouds-component-alert
 $ouds-alert-border-radius-default: $ouds-border-radius-default !default;
 $ouds-alert-border-radius-rounded: $ouds-border-radius-large !default;
-$ouds-alert-border-width: $ouds-border-width-none !default;
-$ouds-alert-size-icon: $ouds-size-icon-with-label-large-size-small !default;
-$ouds-alert-size-min-height-bottom-action-placement: $core-ouds-dimension-1050 !default;
+$ouds-alert-message-border-width: $ouds-border-width-none !default;
+$ouds-alert-message-space-row-gap-bullet: $ouds-space-row-gap-2xsmall !default;
+$ouds-alert-size-asset: $ouds-size-icon-with-label-large-size-small !default;
+$ouds-alert-size-min-height-bottom-action: $core-ouds-dimension-850 !default;
 $ouds-alert-size-min-height: $ouds-size-min-interactive-area-default !default;
 $ouds-alert-size-min-width: $core-ouds-dimension-1800 !default;
 $ouds-alert-space-column-gap-action: $ouds-space-column-gap-small !default;
 $ouds-alert-space-column-gap: $ouds-space-column-gap-medium !default;
+$ouds-alert-space-inset-progress-indicator: $ouds-space-inset-4xsmall !default;
+$ouds-alert-space-padding-block-bottom-content: $ouds-space-padding-block-3xsmall !default;
 $ouds-alert-space-padding-block: $ouds-space-padding-block-medium !default;
 $ouds-alert-space-padding-inline: $ouds-space-padding-inline-large !default;
-$ouds-alert-space-row-gap-action: $ouds-space-row-gap-2xsmall !default;
-$ouds-alert-space-row-gap-bullet: $ouds-space-row-gap-2xsmall !default;
-$ouds-alert-space-row-gap: $ouds-space-row-gap-small !default;
+$ouds-alert-space-row-gap-action: $ouds-space-row-gap-2xsmall !default; // deprecated
+$ouds-alert-space-row-gap: $ouds-space-row-gap-2xsmall !default;
 // scss-docs-end ouds-component-alert
 
 // Badge
@@ -197,6 +199,7 @@ $ouds-button-size-icon-only-small: $ouds-size-icon-with-label-large-size-xsmall 
 $ouds-button-size-icon-small: $ouds-size-icon-with-label-medium-size-small !default;
 $ouds-button-size-max-size-icon-only-default: $ouds-size-min-interactive-area-default !default;
 $ouds-button-size-max-size-icon-only-small: $ouds-size-min-interactive-area-small !default;
+$ouds-button-size-max-width: $core-ouds-dimension-4000 !default;
 $ouds-button-size-min-height-default: $ouds-size-min-interactive-area-default !default;
 $ouds-button-size-min-height-small: $ouds-size-min-interactive-area-small !default;
 $ouds-button-size-min-width-default: $ouds-size-min-interactive-area-default !default;
@@ -228,6 +231,17 @@ $ouds-button-space-padding-inline-icon-start-small: $ouds-space-padding-inline-l
 $ouds-button-space-padding-inline-start-icon-end-default: $ouds-space-padding-inline-3xlarge !default;
 $ouds-button-space-padding-inline-start-icon-end-small: $ouds-space-padding-inline-2xlarge !default;
 // scss-docs-end ouds-component-button
+
+// Categorical
+
+// scss-docs-start ouds-component-categorical
+$ouds-categorical-tag-color-bg-category-1: var(--#{$prefix}categorical-tag-color-bg-category-1) !default;
+$ouds-categorical-tag-color-bg-category-2: var(--#{$prefix}categorical-tag-color-bg-category-2) !default;
+$ouds-categorical-tag-color-bg-category-3: var(--#{$prefix}categorical-tag-color-bg-category-3) !default;
+$ouds-categorical-tag-color-bg-category-4: var(--#{$prefix}categorical-tag-color-bg-category-4) !default;
+$ouds-categorical-tag-color-bg-category-5: $core-orange-color-decorative-shocking-pink-200 !default;
+$ouds-categorical-tag-color-content: $core-ouds-color-functional-black !default;
+// scss-docs-end ouds-component-categorical
 
 // Checkbox
 
@@ -306,6 +320,14 @@ $ouds-chip-space-padding-inline-icon: $ouds-space-padding-inline-small !default;
 // scss-docs-start ouds-component-divider
 $ouds-divider-border-width: $ouds-border-width-thin !default;
 // scss-docs-end ouds-component-divider
+
+// Fullscreen
+
+// scss-docs-start ouds-component-fullscreen
+$ouds-fullscreen-dialog-space-inset-close-button-desktop: $ouds-space-inset-3xlarge !default;
+$ouds-fullscreen-dialog-space-inset-close-button-mobile: $ouds-space-inset-large !default;
+$ouds-fullscreen-dialog-space-inset-close-button-tablet: $ouds-space-inset-2xlarge !default;
+// scss-docs-end ouds-component-fullscreen
 
 // Input
 
@@ -399,7 +421,7 @@ $ouds-list-item-size-asset-xlarge: $ouds-dimension-3xlarge !default;
 $ouds-list-item-size-control-indicator: $ouds-size-icon-with-label-large-size-xsmall !default;
 $ouds-list-item-size-current-indicator-width: $core-ouds-dimension-50 !default;
 $ouds-list-item-size-error-icon: $ouds-size-icon-with-label-large-size-small !default; // deprecated
-$ouds-list-item-size-flag-height: $ouds-size-icon-with-label-large-size-xsmall !default;
+$ouds-list-item-size-flag-height: $ouds-size-icon-with-label-large-size-xsmall !default; // deprecated
 $ouds-list-item-size-icon: $ouds-size-icon-with-label-large-size-medium !default; // deprecated
 $ouds-list-item-size-loader: $ouds-size-icon-with-label-large-size-small !default; // deprecated
 $ouds-list-item-size-max-height-assets-container: $core-ouds-dimension-1000 !default; // deprecated
@@ -422,6 +444,59 @@ $ouds-list-item-space-padding-inline-error-icon: $ouds-space-padding-inline-4xsm
 $ouds-list-item-space-padding-inline: $ouds-space-padding-inline-large !default;
 $ouds-list-item-space-row-gap: $ouds-space-row-gap-none !default;
 // scss-docs-end ouds-component-list
+
+// Modal
+
+// scss-docs-start ouds-component-modal
+$ouds-modal-dialog-border-radius-default: $ouds-border-radius-default !default;
+$ouds-modal-dialog-border-radius-rounded: $ouds-border-radius-large !default;
+$ouds-modal-dialog-space-column-gap-previous-title-desktop: $ouds-space-column-gap-2xlarge !default;
+$ouds-modal-dialog-space-column-gap-previous-title-mobile: $ouds-space-column-gap-large !default;
+$ouds-modal-dialog-space-column-gap-previous-title-tablet: $ouds-space-column-gap-xlarge !default;
+$ouds-modal-dialog-space-inset-close-button-default-desktop: $ouds-space-inset-xlarge !default;
+$ouds-modal-dialog-space-inset-close-button-default-tablet: $ouds-space-inset-large !default;
+$ouds-modal-dialog-space-inset-close-button-mobile: $ouds-space-inset-medium !default;
+$ouds-modal-dialog-space-inset-close-button-small-desktop: $ouds-space-inset-large !default;
+$ouds-modal-dialog-space-inset-close-button-small-tablet: $ouds-space-inset-medium !default;
+$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-desktop: $ouds-space-padding-block-xsmall !default;
+$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-mobile: $ouds-space-padding-block-medium !default;
+$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-tablet: $ouds-space-padding-block-3xsmall !default;
+$ouds-modal-dialog-space-padding-block-bottom-body-footer-small-desktop: $ouds-space-padding-block-3xsmall !default;
+$ouds-modal-dialog-space-padding-block-bottom-body-footer-small-mobile: $ouds-space-padding-block-medium !default;
+$ouds-modal-dialog-space-padding-block-bottom-body-footer-small-tablet: $ouds-space-padding-block-3xsmall !default;
+$ouds-modal-dialog-space-padding-block-bottom-default-desktop: $ouds-space-padding-block-4xlarge !default;
+$ouds-modal-dialog-space-padding-block-bottom-default-tablet: $ouds-space-padding-block-3xlarge !default;
+$ouds-modal-dialog-space-padding-block-bottom-mobile: $ouds-space-padding-block-2xlarge !default;
+$ouds-modal-dialog-space-padding-block-bottom-small-desktop: $ouds-space-padding-block-3xlarge !default;
+$ouds-modal-dialog-space-padding-block-bottom-small-tablet: $ouds-space-padding-block-2xlarge !default;
+$ouds-modal-dialog-space-padding-block-footer-sticky-default-desktop: $ouds-space-padding-block-3xlarge !default;
+$ouds-modal-dialog-space-padding-block-footer-sticky-default-tablet: $ouds-space-padding-block-3xlarge !default;
+$ouds-modal-dialog-space-padding-block-footer-sticky-mobile: $ouds-space-padding-block-xlarge !default;
+$ouds-modal-dialog-space-padding-block-footer-sticky-small-desktop: $ouds-space-padding-block-2xlarge !default;
+$ouds-modal-dialog-space-padding-block-footer-sticky-small-tablet: $ouds-space-padding-block-2xlarge !default;
+$ouds-modal-dialog-space-padding-block-top-body-default-desktop: $ouds-space-padding-block-2xlarge !default;
+$ouds-modal-dialog-space-padding-block-top-body-default-mobile: $ouds-space-padding-block-large !default;
+$ouds-modal-dialog-space-padding-block-top-body-default-tablet: $ouds-space-padding-block-xlarge !default;
+$ouds-modal-dialog-space-padding-block-top-body-small-desktop: $ouds-space-padding-block-xlarge !default;
+$ouds-modal-dialog-space-padding-block-top-body-small-mobile: $ouds-space-padding-block-large !default;
+$ouds-modal-dialog-space-padding-block-top-body-small-tablet: $ouds-space-padding-block-large !default;
+$ouds-modal-dialog-space-padding-block-top-default-desktop: $ouds-space-padding-block-3xlarge !default;
+$ouds-modal-dialog-space-padding-block-top-default-tablet: $ouds-space-padding-block-2xlarge !default;
+$ouds-modal-dialog-space-padding-block-top-footer-default-desktop: $ouds-space-padding-block-4xlarge !default;
+$ouds-modal-dialog-space-padding-block-top-footer-default-mobile: $ouds-space-padding-block-2xlarge !default;
+$ouds-modal-dialog-space-padding-block-top-footer-default-tablet: $ouds-space-padding-block-3xlarge !default;
+$ouds-modal-dialog-space-padding-block-top-footer-small-desktop: $ouds-space-padding-block-3xlarge !default;
+$ouds-modal-dialog-space-padding-block-top-footer-small-mobile: $ouds-space-padding-block-2xlarge !default;
+$ouds-modal-dialog-space-padding-block-top-footer-small-tablet: $ouds-space-padding-block-2xlarge !default;
+$ouds-modal-dialog-space-padding-block-top-mobile: $ouds-space-padding-block-xlarge !default;
+$ouds-modal-dialog-space-padding-block-top-small-desktop: $ouds-space-padding-block-2xlarge !default;
+$ouds-modal-dialog-space-padding-block-top-small-tablet: $ouds-space-padding-block-xlarge !default;
+$ouds-modal-dialog-space-padding-inline-default-desktop: $ouds-space-padding-inline-6xlarge !default;
+$ouds-modal-dialog-space-padding-inline-default-tablet: $ouds-space-padding-inline-4xlarge !default;
+$ouds-modal-dialog-space-padding-inline-mobile: $ouds-space-padding-inline-2xlarge !default;
+$ouds-modal-dialog-space-padding-inline-small-desktop: $ouds-space-padding-inline-4xlarge !default;
+$ouds-modal-dialog-space-padding-inline-small-tablet: $ouds-space-padding-inline-3xlarge !default;
+// scss-docs-end ouds-component-modal
 
 // Pin
 
@@ -581,11 +656,21 @@ $ouds-text-input-space-padding-inline-trailing-action: $ouds-space-padding-inlin
 $ouds-text-input-space-row-gap-label-input: $ouds-space-row-gap-none !default;
 // scss-docs-end ouds-component-text
 
+// Toast
+
+// scss-docs-start ouds-component-toast
+$ouds-toast-border-radius-media-rounded: $ouds-border-radius-small !default;
+$ouds-toast-border-radius-media: $ouds-border-radius-default !default;
+$ouds-toast-size-asset-large: $ouds-dimension-3xlarge !default;
+$ouds-toast-size-asset-medium: $ouds-dimension-medium !default;
+$ouds-toast-size-asset-small: $ouds-size-icon-with-label-large-size-medium !default;
+// scss-docs-end ouds-component-toast
+
 // Typography
 
 // scss-docs-start ouds-component-typography
-$ouds-typography-heading-large-marker: true !default;
-$ouds-typography-space-padding-block-bottom-heading-large-marker: $ouds-space-padding-block-4xsmall !default;
-$ouds-typography-space-padding-block-top-heading-large-marker: $ouds-space-padding-block-3xsmall !default;
 $ouds-typography-color-content-marker: $ouds-color-content-brand-primary !default;
+$ouds-typography-heading-large-marker: true !default;
+$ouds-typography-space-padding-block-bottom-heading-large-marker: $ouds-space-padding-block-4xsmall !default; // deprecated
+$ouds-typography-space-padding-block-top-heading-large-marker: $ouds-space-padding-block-3xsmall !default; // deprecated
 // scss-docs-end ouds-component-typography
