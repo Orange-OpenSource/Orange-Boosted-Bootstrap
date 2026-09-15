@@ -8589,7 +8589,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .chip-filter input:checked ~ .chip-interactive,
 .chip-filter .chip-interactive[aria-pressed=true],
 .chip-filter .chip-interactive[aria-selected=true],
-.chip-filter .chip-interactive:has(input:checked) {
+.chip-filter .chip-interactive:has(input:checked),
+.chip-filter .chip-interactive:has(.badge:not(.d-none)),
+.chip-filter .chip-interactive.active {
   --bs-chip-bg: var(--bs-color-opacity-transparent);
   --bs-chip-border-color: var(--bs-color-action-selected);
   --bs-chip-border-width: 0.125rem;
@@ -8600,7 +8602,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .chip-filter input:checked ~ .chip-interactive:hover,
 .chip-filter .chip-interactive[aria-pressed=true]:hover,
 .chip-filter .chip-interactive[aria-selected=true]:hover,
-.chip-filter .chip-interactive:has(input:checked):hover {
+.chip-filter .chip-interactive:has(input:checked):hover,
+.chip-filter .chip-interactive:has(.badge:not(.d-none)):hover,
+.chip-filter .chip-interactive.active:hover {
   --bs-chip-bg: var(--bs-color-opacity-transparent);
   --bs-chip-border-color: var(--bs-color-action-hover);
   --bs-chip-color: var(--bs-color-action-hover);
@@ -8609,7 +8613,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .chip-filter input:checked ~ .chip-interactive:active,
 .chip-filter .chip-interactive[aria-pressed=true]:active,
 .chip-filter .chip-interactive[aria-selected=true]:active,
-.chip-filter .chip-interactive:has(input:checked):active {
+.chip-filter .chip-interactive:has(input:checked):active,
+.chip-filter .chip-interactive:has(.badge:not(.d-none)):active,
+.chip-filter .chip-interactive.active:active {
   --bs-chip-bg: var(--bs-color-opacity-transparent);
   --bs-chip-border-color: var(--bs-color-action-pressed);
   --bs-chip-color: var(--bs-color-action-pressed);
@@ -8618,7 +8624,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .chip-filter input:checked ~ .chip-interactive::before,
 .chip-filter .chip-interactive[aria-pressed=true]::before,
 .chip-filter .chip-interactive[aria-selected=true]::before,
-.chip-filter .chip-interactive:has(input:checked)::before {
+.chip-filter .chip-interactive:has(input:checked)::before,
+.chip-filter .chip-interactive:has(.badge:not(.d-none))::before,
+.chip-filter .chip-interactive.active::before {
   width: 1em;
   height: 1em;
   overflow: hidden;
@@ -8633,7 +8641,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .chip-filter input:checked:focus-visible ~ .chip-interactive,
 .chip-filter .chip-interactive[aria-pressed=true]:focus-visible,
 .chip-filter .chip-interactive[aria-selected=true]:focus-visible,
-.chip-filter .chip-interactive:has(input:checked:focus-visible) {
+.chip-filter .chip-interactive:has(input:checked:focus-visible),
+.chip-filter .chip-interactive:has(.badge:not(.d-none)):focus-visible,
+.chip-filter .chip-interactive.active:focus-visible {
   --bs-chip-bg: var(--bs-color-opacity-transparent);
   --bs-chip-border-color: var(--bs-color-action-focus);
   --bs-chip-color: var(--bs-color-action-focus);
@@ -8642,11 +8652,32 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .chip-filter input:checked:disabled ~ .chip-interactive,
 .chip-filter .chip-interactive[aria-pressed=true]:disabled,
 .chip-filter .chip-interactive[aria-selected=true]:disabled,
-.chip-filter .chip-interactive:has(input:checked:disabled) {
+.chip-filter .chip-interactive:has(input:checked:disabled),
+.chip-filter .chip-interactive:has(.badge:not(.d-none)):disabled,
+.chip-filter .chip-interactive.active:disabled {
   --bs-chip-bg: var(--bs-color-opacity-transparent);
   --bs-chip-border-color: var(--bs-color-action-disabled);
   --bs-chip-color: var(--bs-color-action-disabled);
   --bs-chip-tick-color: currentcolor;
+}
+.chip-filter.dropdown .chip-interactive {
+  --bs-chip-padding-end: 8px;
+}
+.chip-filter.dropdown .chip-badge-chevron {
+  display: flex;
+  gap: 4px;
+}
+.chip-filter.dropdown .chip-badge-chevron::after {
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  background-color: currentcolor;
+  -webkit-mask-image: var(--bs-btn-expanded-false-icon);
+  mask-image: var(--bs-btn-expanded-false-icon);
+}
+.chip-filter.dropdown .chip-interactive[aria-expanded=true] .chip-badge-chevron::after {
+  -webkit-mask-image: var(--bs-btn-expanded-true-icon);
+  mask-image: var(--bs-btn-expanded-true-icon);
 }
 
 .chip .chip-icon {

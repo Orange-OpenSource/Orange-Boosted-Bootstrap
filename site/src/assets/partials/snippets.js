@@ -289,6 +289,47 @@ export default () => {
   // storybook-end password-input
 
   // -------------------------------
+  // Filter chip expand live example
+  // -------------------------------
+  // Used by 'filter chip expand' live example in docs or StackBlitz
+  // storybook-start filter-chip-expand
+  // js-docs-start live-filter-chip-expand
+  // Toggle filter chip expand
+  const filterChipExpandExample = document.querySelector('#filterChipExpandExample')
+  if (filterChipExpandExample) {
+    filterChipExpandExample.addEventListener('hidden.bs.dropdown', () => {
+      const badgeCount = filterChipExpandExample.querySelector('.chip-badge-chevron .badge-count')
+      const dropdownMenu = filterChipExpandExample.querySelector('.dropdown-menu')
+      const count = dropdownMenu.querySelectorAll('[aria-pressed="true"]').length
+
+      if (count > 0) {
+        badgeCount.classList.remove('d-none')
+        badgeCount.textContent = count
+      } else {
+        badgeCount.classList.add('d-none')
+      }
+    })
+
+    const observer = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'aria-pressed') {
+          mutation.target.querySelector('svg')?.classList.toggle('d-none')
+        }
+      })
+    })
+
+    const dropdownItems = filterChipExpandExample.querySelectorAll('.dropdown-item')
+
+    dropdownItems.forEach(item => {
+      observer.observe(item, {
+        attributes: true
+      })
+    })
+  }
+  // js-docs-end live-filter-chip-expand
+  // storybook-end filter-chip-expand
+
+  // -------------------------------
   // Table
   // -------------------------------
   // Indeterminate checkbox in table example in docs and StackBlitz
