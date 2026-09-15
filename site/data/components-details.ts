@@ -98,7 +98,7 @@ export const componentsDetails: ComponentCardData[] = [
     category: 'Actions',
     snippet: `
       <ul class="dropdown-menu d-block">
-        <li><a class="dropdown-item" href="#">Label</a></li>
+        <li><a class="dropdown-item active" href="#">Label</a></li>
         <li><a class="dropdown-item" href="#">Label</a></li>
       </ul>`
   },
