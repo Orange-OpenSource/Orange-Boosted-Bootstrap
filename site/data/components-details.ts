@@ -103,6 +103,18 @@ export const componentsDetails: ComponentCardData[] = [
       </ul>`
   },
   {
+    name: 'Expand button',
+    slug: 'expand-button',
+    link: 'buttons#expand-button',
+    category: 'Actions',
+    snippet: `
+      <div class="dropdown">
+        <button class="btn btn-default btn-expand" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Label
+        </button>
+      </div>`
+  },
+  {
     name: 'Filter chip',
     slug: 'filter-chip',
     link: 'chips#filter-chip',
