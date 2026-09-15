@@ -436,6 +436,8 @@ If the alert can be removed when its content is acknowledged, add a close button
 
 You can add an action [link]([[docsref:/components/links]]) (`<a>` or `<button` depending on the context of use) either after the `.alert-text-container` or inside the `.alert-action-container`.
 
+ You can use [link's compact density]([[docsref:/components/links#sizes]]) when the action is inside the `.alert-text-container`.
+
 <Callout type="warning">
   Please note that only the basic link should be used.
 </Callout>
@@ -446,7 +448,7 @@ You can add an action [link]([[docsref:/components/links]]) (`<a>` or `<button` 
       <div class="alert-text-container">
         <p class="alert-label">Info alert</p>
       </div>
-      <button class="link">Action</button>
+      <button class="link link-compact">Action</button>
     </div>
     <div class="alert-action-container">
       <button class="btn-close" data-bs-dismiss="alert">

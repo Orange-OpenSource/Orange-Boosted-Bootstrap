@@ -23,7 +23,6 @@
 }
 
 .alert-message {
-  --#{$prefix}alert-icon-margin-block: #{$ouds-alert-space-padding-block}; // Here to avoid an encapsulation
   min-width: $ouds-alert-size-min-width;
   min-height: $ouds-alert-size-min-height;
   padding-inline: $ouds-alert-space-padding-inline;
@@ -56,7 +55,7 @@
   flex-shrink: 0;
   width: px-to-rem($ouds-alert-size-asset);
   height: px-to-rem($ouds-alert-size-asset);
-  margin-top: var(--#{$prefix}alert-icon-margin-block);
+  margin-top: $ouds-alert-space-padding-block;
   color: var(--#{$prefix}alert-icon-color);
 
   &:where(:not(:has(svg, img, .icon))) {
@@ -94,7 +93,6 @@
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  gap: $ouds-alert-space-row-gap-action;
   align-items: flex-start;
   justify-content: center; // To handle weird edge cases in de-zoom one line title alert
   width: 1%; // To avoid edge cases when the content is too long for the alert
@@ -109,9 +107,14 @@
   width: 100%; // To avoid the text-container to be larger than it should be
 
   > * { // To handle any content inside this text-container.
+    max-width: var(--#{$prefix}font-max-width-boxed-text);
     margin-bottom: 0;
-    @include get-font-size("label-medium", true);
     font-weight: $ouds-font-weight-web-label-default;
+    @include get-font-size("label-medium");
+  }
+
+  > :not(.alert-label) {
+    padding-block-end: $ouds-alert-space-padding-block-bottom-content;
   }
 
   ul {
@@ -121,6 +124,11 @@
     > li {
       position: relative;
       padding-left: calc(px-to-rem(20px) + 8px);
+      margin-bottom: $ouds-alert-message-space-row-gap-bullet;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       &::before {
         position: absolute;
@@ -166,6 +174,10 @@
   margin-bottom: 0;
   @include get-font-size("label-large", true);
   font-weight: $ouds-font-weight-web-label-moderate;
+
+  .alert-message & {
+    max-width: var(--#{$prefix}font-max-width-boxed-text);
+  }
 }
 
 // Variants
