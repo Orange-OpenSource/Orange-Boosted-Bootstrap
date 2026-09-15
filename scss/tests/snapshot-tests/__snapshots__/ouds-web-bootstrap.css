@@ -246,9 +246,6 @@
 [data-bs-theme=light],
 :root[data-bs-theme=light] [data-bs-theme=root],
 :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
-  --bs-visual-assets-icon-color-content-status-warning-external-shape: #ffd000;
-  --bs-visual-assets-icon-color-content-status-warning-internal-shape: #856a00;
-  --bs-visual-assets-icon-color-content-status-warning-inverse-external-shape: #ffe270;
   --bs-link-mono-color-content-enabled: #000;
   --bs-link-mono-color-content-hover: #000;
   --bs-link-mono-color-content-pressed: rgba(0, 0, 0, 0.52);
@@ -303,7 +300,9 @@
   --bs-progress-indicator-color-content-track: #ccc;
   --bs-progress-indicator-mono-color-content-track: #ccc;
   --bs-progress-indicator-mono-color-content-indicator: #000;
-  --bs-visual-assets-icon-color-content-status-warning-inverse-internal-shape: rgba(255, 255, 255, 0);
+  --bs-icon-color-content-status-warning-external-shape: #ffd000;
+  --bs-icon-color-content-status-warning-internal-shape: #856a00;
+  --bs-icon-color-content-status-warning-inverse-external-shape: #ffe270;
   --bs-link-color-chevron-hover: #f15e00;
   --bs-link-color-chevron-pressed: #f15e00;
   --bs-link-color-chevron-focus: #f15e00;
@@ -313,15 +312,13 @@
   --bs-list-item-color-bg-loading: rgba(0, 0, 0, 0.12);
   --bs-list-item-color-bg-focus: rgba(0, 0, 0, 0.08);
   --bs-list-item-color-content-loader: #000;
+  --bs-icon-color-content-status-warning-inverse-internal-shape: rgba(255, 255, 255, 0);
 }
 
 [data-bs-theme=dark],
 :root[data-bs-theme=dark],
 :root[data-bs-theme=dark] [data-bs-theme=root],
 :root[data-bs-theme=light] [data-bs-theme=root-inverted] {
-  --bs-visual-assets-icon-color-content-status-warning-external-shape: #ffe270;
-  --bs-visual-assets-icon-color-content-status-warning-internal-shape: rgba(255, 255, 255, 0);
-  --bs-visual-assets-icon-color-content-status-warning-inverse-external-shape: #ffd000;
   --bs-link-mono-color-content-enabled: #fff;
   --bs-link-mono-color-content-hover: #fff;
   --bs-link-mono-color-content-pressed: rgba(255, 255, 255, 0.8);
@@ -376,7 +373,9 @@
   --bs-progress-indicator-color-content-track: #444;
   --bs-progress-indicator-mono-color-content-track: #444;
   --bs-progress-indicator-mono-color-content-indicator: #fff;
-  --bs-visual-assets-icon-color-content-status-warning-inverse-internal-shape: #856a00;
+  --bs-icon-color-content-status-warning-external-shape: #ffe270;
+  --bs-icon-color-content-status-warning-internal-shape: rgba(255, 255, 255, 0);
+  --bs-icon-color-content-status-warning-inverse-external-shape: #ffd000;
   --bs-link-color-chevron-hover: #ff7900;
   --bs-link-color-chevron-pressed: #ff7900;
   --bs-link-color-chevron-focus: #ff7900;
@@ -386,6 +385,7 @@
   --bs-list-item-color-bg-loading: rgba(255, 255, 255, 0.12);
   --bs-list-item-color-bg-focus: rgba(255, 255, 255, 0.08);
   --bs-list-item-color-content-loader: #eee;
+  --bs-icon-color-content-status-warning-inverse-internal-shape: #856a00;
 }
 
 @font-face {
