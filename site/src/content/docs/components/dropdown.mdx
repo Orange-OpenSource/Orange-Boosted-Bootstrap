@@ -15,23 +15,25 @@ toc: true
 </Callout>
 
 <Callout type="info" title="OUDS Web components">
-  The dropdown menu itself is used in several other components. Please refer to these documentations to see how the dropdown menu is used in other components:
+  The dropdown menu itself is used in several other components. Please refer to the following documentation pages to see how the dropdown menu is used in other components:
   - [Expand button]([[docsref:/components/buttons#expand-button]])
   - [Expand link]([[docsref:/components/links#expand-link]])
 </Callout>
 
 ## Dropdown
 
+Be sure to adapt the semantic of the tags you use for the dropdown items. For example, use `<button>` for actions in the page and `<a>` for navigation links.
+
 <Example buttonLabel="dropdown menu" code={`<div class="dropdown mb-medium">
     <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">
       Dropdown button
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><button type="button" class="dropdown-item">Action</button></li>
       <li><hr class="dropdown-divider" /></li>
       <li><h6 class="dropdown-header">Dropdown header</h6></li>
       <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item disabled">A disabled action</a></li>
     </ul>
   </div>
 
