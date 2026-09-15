@@ -4,8 +4,8 @@ on:
     branches:
       - main
     paths:
-      - "scss/**"
-      - "packages/**/scss/**"
+      - "libs/web/scss/**"
+      - "libs/web/packages/**/scss/**"
   pull_request:
     types: [opened, reopened, synchronize]
   workflow_dispatch:
@@ -53,7 +53,7 @@ jobs:
       - name: Check built CSS files
         shell: bash
         run: |
-          if [[ $(find packages/orange/dist/css/ -name "*.css" | xargs grep -F "/* stylelint" | wc -l | bc) -eq 0 ]]; then
+          if [[ $(find libs/web/packages/orange/dist/css/ -name "*.css" | xargs grep -F "/* stylelint" | wc -l | bc) -eq 0 ]]; then
             echo "All good, no stylelint multiline comments found"
             exit 0
           else
