@@ -6,8 +6,11 @@
 // with a single `<li>`, which is not the DOM anyone writes. The playground
 // therefore renders two — enough to show the container, the gap and a selected
 // chip next to an unselected one, which is all the markup has to teach. Only the
-// label is per chip; the form and the disabled state are group settings, so they
-// are one control each.
+// label is per chip; the form and the state are group settings, so they are one
+// control each. `Disabled` and `Skeleton` were two checkboxes answering the same
+// question — what does this group look like right now — so they are the two
+// non-default values of one `State` select, the form the rest of the corpus
+// uses wherever a component has more than one state.
 //
 // There is no `Selected` control. The chips on the canvas are real inputs — a
 // checkbox, a radio sharing one `name`, or a button with `aria-pressed` and the
@@ -26,6 +29,17 @@
 
 const layouts = ['Text only', 'Text + icon', 'Icon only']
 const controls = ['Checkbox', 'Radio', 'Button']
+
+// Only two of these three are markup on the chip: `Disabled` writes the
+// attribute on every input or button, `Skeleton` wraps the group in
+// `<div aria-busy="true" inert>` and renders it enabled underneath.
+const states = ['Enabled', 'Disabled']
+
+const stateOptions = [...states, 'Skeleton']
+
+const isSkeleton = (state) => state === 'Skeleton'
+
+const baseState = (state) => (isSkeleton(state) ? states[0] : state)
 
 // Two chips, two labels. A single `object` control would have been shorter to
 // write, but Storybook renders it as a raw JSON editor: nobody wants to type a
@@ -246,7 +260,9 @@ const chipsOf = (args) => CHIPS.map((index) => ({
   label: args[`chip${index}Label`]
 }))
 
-const renderFilterChip = ({ chips, control, disabled, layout, icon }, icons = inlineIcons) => {
+const renderFilterChip = ({ chips, control, state, layout, icon }, icons = inlineIcons) => {
+  const disabled = orElse(baseState(state), states) === 'Disabled'
+
   const safeLayout = orElse(layout, layouts)
   const classes = ['chip-interactive', layoutClasses[safeLayout]].filter(Boolean).join(' ')
 
@@ -277,6 +293,18 @@ ${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
 export default {
   title: 'Playground/Filter chip',
   argTypes: {
+    layout: {
+      name: 'Layout',
+      control: 'select',
+      options: layouts,
+      description: 'Shared by every chip. On a filter chip the icon sits after the label; `Icon only` adds `chip-icon` and moves the label into a `visually-hidden` span.',
+    },
+    control: {
+      name: 'Control',
+      control: 'select',
+      options: controls,
+      description: 'The form of every chip in the group: a checkbox, a radio button sharing the group `name`, or a button with `aria-pressed`. `.chip-filter` styles the three the same way; they do not behave the same. It is one control for the whole group — mixing forms inside one `chips-container` is not something a real page does.',
+    },
     chip1Label: {
       name: 'Chip 1 — label',
       control: 'text',
@@ -287,33 +315,17 @@ export default {
       control: 'text',
       description: 'Interpolated as is, so HTML goes through — a `<br>` shows how the chip behaves on several lines.',
     },
-    control: {
-      name: 'Control',
-      control: 'select',
-      options: controls,
-      description: 'The form of every chip in the group: a checkbox, a radio button sharing the group `name`, or a button with `aria-pressed`. `.chip-filter` styles the three the same way; they do not behave the same. It is one control for the whole group — mixing forms inside one `chips-container` is not something a real page does.',
-    },
-    disabled: {
-      name: 'Disabled',
-      control: 'boolean',
-      description: 'Shared by every chip: `disabled` on the input or on the button.',
-    },
-    layout: {
-      name: 'Layout',
-      control: 'select',
-      options: layouts,
-      description: 'Shared by every chip. On a filter chip the icon sits after the label; `Icon only` adds `chip-icon` and moves the label into a `visually-hidden` span.',
-    },
     icon: {
       name: 'Icon content',
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
       if: { arg: 'layout', neq: 'Text only' },
     },
-    skeleton: {
-      name: 'Skeleton',
-      control: 'boolean',
-      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
+    state: {
+      name: 'State',
+      control: 'select',
+      options: stateOptions,
+      description: 'Shared by every chip: `Disabled` writes the attribute on each input or button, `Skeleton` wraps the group in `<div aria-busy="true" inert>`. One select rather than two checkboxes — a group is unavailable, loading, or neither.',
     }
   }
 }
@@ -324,37 +336,36 @@ export const PlaygroundFilterChip = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { control, disabled, layout, icon, skeleton } = context.args
+          const { control, state, layout, icon } = context.args
 
           return skeletonWrapper(renderFilterChip({
             chips: chipsOf(context.args),
             control,
-            disabled,
+            state,
             layout,
             icon,
-          }, withCustomIcon(spriteIcons, icon)), skeleton)
+          }, withCustomIcon(spriteIcons, icon)), isSkeleton(state))
         },
       },
     },
   },
   render: (args) => {
-    const { control, disabled, layout, icon, skeleton } = args
+    const { control, state, layout, icon } = args
 
     return skeletonWrapper(renderFilterChip({
       chips: chipsOf(args),
       control,
-      disabled,
+      state,
       layout,
       icon,
-    }, withCustomIcon(inlineIcons, icon)), skeleton)
+    }, withCustomIcon(inlineIcons, icon)), isSkeleton(state))
   },
   args: {
+    layout: 'Text only',
+    control: 'Checkbox',
     chip1Label: 'Apple',
     chip2Label: 'Samsung',
-    control: 'Checkbox',
-    disabled: false,
-    layout: 'Text only',
     icon: '',
-    skeleton: false
+    state: 'Enabled'
   },
 }

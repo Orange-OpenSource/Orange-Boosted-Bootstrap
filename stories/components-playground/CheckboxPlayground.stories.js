@@ -9,6 +9,19 @@
 // here rather than emitted as an attribute that does nothing. The states left
 // are the two that change the markup.
 const states = ['Enabled', 'Disabled']
+
+// `Error` is one of the states too. It is an attribute rather than a wrapper —
+// `aria-invalid="true"` on the field — but it cannot be combined with any of
+// the others: a disabled field is not also invalid, and neither is a skeleton.
+// One select, one question.
+
+const stateOptions = [...states, 'Error']
+
+const isError = (state) => state === 'Error'
+
+// The state the component is actually rendered in: `Error` and `Skeleton` sit
+// in the same select but are not values the markup carries as a state.
+const baseState = (state) => (states.includes(state) ? state : states[0])
 const selectionStatuses = ['Unselected', 'Selected', 'Indeterminate']
 
 const selectionStatusMap = {
@@ -57,7 +70,7 @@ const renderCheckbox = ({ state, selectionStatus, error }) => {
   const safeStatus = orElse(selectionStatus, selectionStatuses)
   const checkedAttr = selectionStatusMap[safeStatus]
   const invalidAttr = errorMap[(error ? 'True' : 'False')]
-  const stateAttr = stateMap[orElse(state, states)]
+  const stateAttr = stateMap[baseState(state)]
 
   return `<label class="checkbox-standalone">
   <input class="control-item-indicator" type="checkbox" value="" id="checkboxStandalone"${checkedAttr}${invalidAttr}${stateAttr} />
@@ -71,17 +84,13 @@ export default {
     state: {
       name: 'State',
       control: 'select',
-      options: states,
+      options: stateOptions,
     },
     selectionStatus: {
       name: 'Selection status',
       control: 'select',
       options: selectionStatuses,
-    },
-    error: {
-      name: 'Error',
-      control: 'boolean',
-    },
+    }
   }
 }
 
@@ -91,22 +100,22 @@ export const PlaygroundCheckbox = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { state, selectionStatus, error } = context.args
+          const { state, selectionStatus } = context.args
 
           return renderCheckbox({
             state,
             selectionStatus,
-            error,
+            error: isError(state),
           })
         },
       },
     },
   },
-  render: ({ state, selectionStatus, error }) => {
+  render: ({ state, selectionStatus }) => {
     return renderCheckbox({
       state,
       selectionStatus,
-      error,
+      error: isError(state),
     })
   },
   args: {

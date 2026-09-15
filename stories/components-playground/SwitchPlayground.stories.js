@@ -49,7 +49,7 @@ export default {
     selected: {
       name: 'Selected',
       control: 'boolean',
-    },
+    }
   }
 }
 

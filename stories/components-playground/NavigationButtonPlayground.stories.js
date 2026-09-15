@@ -184,18 +184,26 @@ ${indent(markup, '    ')}
   'False': (markup) => markup
 }
 
-// The combination stays reachable — one has to be able to see what it does —
-// and the story says why it is wrong twice over: a comment that travels with
-// the copied markup, and a banner in the canvas, deliberately styled outside
-// the design system so it cannot be mistaken for a component.
-const forbiddenComment = (variant, coloredBg) =>
-  (coloredBg && forbiddenOnBackground.includes(variant)
-    ? `<!-- OUDS: a ${variant.toLowerCase()} button should never be used on a colored background. -->\n`
-    : '')
+// OUDS forbids some combinations the markup allows. They stay reachable — one
+// has to be able to see what they do — and the story says why they are wrong
+// twice over: a comment that travels with the copied markup, and a banner in
+// the canvas, which does not, and which is deliberately styled outside the
+// design system so it cannot be mistaken for a component. The two helpers below
+// are identical on every component of the corpus that has such a combination.
+const warningBanner = (warning) =>
+  `<p style="margin:0 0 12px;padding:8px 12px;border-left:3px solid #b8460e;background:#fff6e8;color:#8a5300;font:600 12px/1.45 system-ui,sans-serif">${warning}</p>
+`
 
-const forbiddenBanner = (variant, coloredBg) =>
+const warned = (markup, warning, preview) => (warning
+  ? `${preview ? warningBanner(warning) : ''}<!-- ${warning} -->
+${markup}`
+  : markup)
+
+// Here: a brand navigation button on a colored background. Same sentence as
+// Button's, with this component's noun.
+const warningFor = (variant, coloredBg) =>
   (coloredBg && forbiddenOnBackground.includes(variant)
-    ? `<p style="margin:0 0 8px;padding:8px 12px;border:2px dashed #c00;color:#c00;font:14px/1.4 sans-serif">OUDS forbids a ${variant.toLowerCase()} navigation button on a colored background.</p>\n`
+    ? `OUDS: a ${variant.toLowerCase()} navigation button should never be used on a colored background.`
     : '')
 
 // Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
@@ -236,16 +244,17 @@ const renderNavigationButton = ({ label, direction, variant, element, layout, st
   const wrapped = backgroundWrappers[coloredBg ? 'True' : 'False'](
     roundedWrappers[rounded ? 'True' : 'False'](button))
 
-  return (preview ? forbiddenBanner(safeVariant, coloredBg) : forbiddenComment(safeVariant, coloredBg)) + wrapped
+  return warned(wrapped, warningFor(safeVariant, coloredBg), preview)
 }
 
 export default {
   title: 'Playground/Navigation button',
   argTypes: {
-    label: {
-      name: 'Label',
-      control: 'text',
-      description: 'Interpolated as is, so HTML goes through: paste `Line 1<br/>Line 2` to see the label stay centered beside the chevron. On `Icon only` it becomes the `visually-hidden` text, which is all a screen reader announces.',
+    variant: {
+      name: 'Variant',
+      control: 'select',
+      options: variants,
+      description: 'Four variants, not five: "the button and the navigation button have the same variants except for the negative, which does not exist for the navigation button".',
     },
     direction: {
       name: 'Direction',
@@ -253,11 +262,11 @@ export default {
       options: directions,
       description: '`btn-next` draws the chevron in an `::after`, `btn-previous` in a `::before` (`scss/_buttons.scss`). Neither is markup, which is why there is no icon control on this component.',
     },
-    variant: {
-      name: 'Variant',
+    layout: {
+      name: 'Layout',
       control: 'select',
-      options: variants,
-      description: 'Four variants, not five: "the button and the navigation button have the same variants except for the negative, which does not exist for the navigation button".',
+      options: layouts,
+      description: '`Icon only` adds `btn-icon` and moves the label into a `visually-hidden` span. There is no `Text + icon` layout: the direction is the icon.',
     },
     element: {
       name: 'Element',
@@ -265,21 +274,10 @@ export default {
       options: elements,
       description: '`Link` renders `<a href="#">`, `Button` renders `<button type="button">`. The choice matters most on the inactive states, where the two carry different markup.',
     },
-    layout: {
-      name: 'Layout',
-      control: 'select',
-      options: layouts,
-      description: '`Icon only` adds `btn-icon` and moves the label into a `visually-hidden` span. There is no `Text + icon` layout: the direction is the icon.',
-    },
-    coloredBg: {
-      name: 'On colored background',
-      control: 'boolean',
-      description: 'Adds `btn-on-colored-bg` and wraps the button in the surface the documentation pairs it with — `bg-surface-brand-primary` carrying `data-bs-theme="light"` on a child, so the background itself does not follow the theme (utilities/background/). A brand button is forbidden there, and the story says so rather than hiding the combination.',
-    },
-    rounded: {
-      name: 'Rounded corners',
-      control: 'boolean',
-      description: '`use-rounded-corner-buttons` on an ancestor — normally `<body>`, a product-wide setting rather than a property of the button. The documentation shows it as a wrapper, so the wrapper is what the snippet prints.',
+    label: {
+      name: 'Label',
+      control: 'text',
+      description: 'Interpolated as is, so HTML goes through: paste `Line 1<br/>Line 2` to see the label stay centered beside the chevron. On `Icon only` it becomes the `visually-hidden` text, which is all a screen reader announces.',
     },
     state: {
       name: 'State',
@@ -292,6 +290,16 @@ export default {
       control: 'text',
       description: '`--bs-btn-loading-time` on the button itself, which is where `.btn` reads it — the form components read `--bs-loading-time` on their *container* instead. Only the determinate loader uses it.',
       if: { arg: 'state', eq: 'Loading determinate' },
+    },
+    coloredBg: {
+      name: 'On colored background',
+      control: 'boolean',
+      description: 'Adds `btn-on-colored-bg` and wraps the button in the surface the documentation pairs it with — `bg-surface-brand-primary` carrying `data-bs-theme="light"` on a child, so the background itself does not follow the theme (utilities/background/). A brand button is forbidden there, and the story says so rather than hiding the combination.',
+    },
+    rounded: {
+      name: 'Rounded corners',
+      control: 'boolean',
+      description: '`use-rounded-corner-buttons` on an ancestor — normally `<body>`, a product-wide setting rather than a property of the button. The documentation shows it as a wrapper, so the wrapper is what the snippet prints.',
     }
   }
 }
@@ -333,14 +341,14 @@ export const PlaygroundNavigationButton = {
     }), isSkeleton(state))
   },
   args: {
-    label: 'Next',
-    direction: 'Next',
     variant: 'Default',
-    element: 'Link',
+    direction: 'Next',
     layout: 'Text only',
-    coloredBg: false,
-    rounded: false,
+    element: 'Link',
+    label: 'Next',
     state: 'Enabled',
     loadingTime: '5s',
+    coloredBg: false,
+    rounded: false
   },
 }

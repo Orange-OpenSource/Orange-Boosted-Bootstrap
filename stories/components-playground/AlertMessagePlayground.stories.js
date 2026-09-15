@@ -27,13 +27,31 @@
 //   - Non-functional statuses (Neutral, Accent) declare **no**
 //     `--bs-alert-icon`. An empty `.alert-icon` there gives an invalid
 //     `mask-image`, so no mask at all: a solid 20 px square in `currentcolor`.
-//     That is why the `Icon` control removes the *whole container* and not just
-//     its contents — exactly what the documentation's "iconless alert message"
+//     That is why `Icon` removes the *whole container* and not just its
+//     contents — exactly what the documentation's "iconless alert message"
 //     example does.
 //
-// Storybook's `if` cannot express "status is one of Neutral, Accent" — there is
-// no `oneOf`. So `Icon content` stays visible on all six statuses, and its
-// description carries the rule.
+// THE ICON IS ONE CONTROL WITH THREE VALUES, NOT A CHECKBOX PLUS A FIELD.
+// Both had to disappear on a functional status, and `Icon content` also had to
+// disappear when there is no container to put anything in — two conditions on
+// one control, which `if` cannot carry. So they are merged, the way
+// `conventions.md` §8 says to: the three values are the three shapes the
+// container can take, and `Icon content` then depends on a single one of them.
+//
+//   None                 no `.alert-icon` at all
+//   Design system icon   the container, holding the sprite's own icon
+//   Custom icon          the container, holding what `Icon content` carries
+//
+// `Icon` is gated on `if: { arg: 'status', oneOf: ['Neutral', 'Accent'] }` and
+// `Icon content` on `if: { arg: 'icon', eq: 'Custom icon' }`. `oneOf` is not
+// Storybook's — its `if` knows only `eq`, `neq`, `truthy` and `exists`, and
+// falls back on a truthiness test for anything else — so Storybook shows `Icon`
+// on all six statuses while the standalone preview hides it on the functional
+// four. `Icon content`'s own gate is `eq`, exact on both surfaces.
+//
+// The combination the design system forbids stays reachable: choose
+// `Custom icon` on `Neutral`, then move the status to a functional one. The
+// canvas and the snippet both warn about it.
 //
 // Two other documented ways of putting a non-functional icon are not exposed:
 // `mask-image` on `.alert-icon`, or `--bs-alert-icon` on the `.alert` itself.
@@ -58,6 +76,7 @@
 // "Close". Both are constants below.
 
 const statuses = ['Negative', 'Positive', 'Info', 'Warning', 'Neutral', 'Accent']
+const iconModes = ['Design system icon', 'Custom icon', 'None']
 const labelElements = ['p', 'h2', 'h3', 'h4', 'h5', 'h6']
 const actions = ['None', 'After the text', 'In the action container']
 const actionElements = ['Button', 'Link']
@@ -176,6 +195,11 @@ const spriteIcons = { heartEmpty: '<svg aria-hidden="true"><use xlink:href="/ora
 
 const withCustomIcon = (icons, icon) => (icon ? { heartEmpty: inlineIcon(icon) } : icons)
 
+// What the user pasted, but only in the mode that reads it: `Icon content` keeps
+// its value when the mode moves away from `Custom icon`, and the markup must not
+// keep using it behind a control the panel is no longer showing.
+const customIcon = (icon, iconContent) => (icon === 'Custom icon' ? iconContent : '')
+
 // The hidden text is not a control: "colour should not be the only way to
 // convey information", so what it announces is the meaning of the status. A
 // non-functional status has no meaning to spell out and carries none.
@@ -204,22 +228,28 @@ const iconContainers = {
 </div>`
 }
 
-// An icon inside the container of a functional alert silently removes the
+// OUDS forbids some combinations the markup allows. They stay reachable — one
+// has to be able to see what they do — and the story says why they are wrong
+// twice over: a comment that travels with the copied markup, and a banner in
+// the canvas, which does not, and which is deliberately styled outside the
+// design system so it cannot be mistaken for a component. The two helpers below
+// are identical on every component of the corpus that has such a combination.
+const warningBanner = (warning) =>
+  `<p style="margin:0 0 12px;padding:8px 12px;border-left:3px solid #b8460e;background:#fff6e8;color:#8a5300;font:600 12px/1.45 system-ui,sans-serif">${warning}</p>
+`
+
+const warned = (markup, warning, preview) => (warning
+  ? `${preview ? warningBanner(warning) : ''}<!-- ${warning} -->
+${markup}`
+  : markup)
+
+// Here: an icon inside the container of a functional alert silently removes the
 // functional icon, and the resulting markup is not what the design system
-// documents. The combination stays reachable so it can be seen, and the story
-// says why it is wrong twice over: a comment that travels with the copied
-// markup, and a banner in the canvas, deliberately styled outside the design
-// system so it cannot be mistaken for a component.
-const brokenIcon = (status, icon, iconContent) =>
-  Boolean(icon) && Boolean(iconContent) && iconSources[status] === 'stylesheet'
-
-const brokenIconComment = (broken) => (broken
-  ? '<!-- OUDS: an element inside .alert-icon breaks :not(:has(svg, img, .icon)) and removes the functional icon. Leave the container empty on a functional status. -->\n'
-  : '')
-
-const brokenIconBanner = (broken) => (broken
-  ? '<p style="margin:0 0 8px;padding:8px 12px;border:2px dashed #c00;color:#c00;font:14px/1.4 sans-serif">The functional icon is gone: a functional alert message must keep its .alert-icon empty.</p>\n'
-  : '')
+// documents.
+const warningFor = (status, icon, iconContent) =>
+  (Boolean(icon) && Boolean(iconContent) && iconSources[status] === 'stylesheet'
+    ? 'OUDS: an element inside .alert-icon breaks :not(:has(svg, img, .icon)) and removes the functional icon. Leave the container empty on a functional status.'
+    : '')
 
 const labelTemplates = {
   'p': ({ prefix, label }) => `<p class="alert-label">${prefix}${label}</p>`,
@@ -286,18 +316,20 @@ const renderAlertMessage = ({ status, icon, iconContent, labelElement, label, de
 
   const classes = ['alert', 'alert-message', statusClasses[safeStatus]].filter(Boolean).join(' ')
   const source = iconSources[safeStatus]
+  const safeIcon = orElse(icon, iconModes)
 
   // The icon can only be *removed* on a non-functional status. On Negative,
   // Positive, Info and Warning the stylesheet draws it from `--bs-alert-icon`
   // and it is the container that carries the status: taking it away would
-  // leave the meaning to the colour alone. The control stays on screen — `if`
-  // has no `oneOf` to hide it with — and its description says so.
-  const iconShown = source === 'stylesheet' ? true : Boolean(icon)
-  const broken = brokenIcon(safeStatus, iconShown, iconContent)
+  // leave the meaning to the colour alone, so `None` is ignored there.
+  const removable = { 'stylesheet': false, 'element': true }[source]
+  const iconShown = removable ? safeIcon !== 'None' : true
+  const custom = customIcon(safeIcon, iconContent)
+  const warning = warningFor(safeStatus, iconShown, custom)
   const hiddenText = statusTexts[safeStatus]
 
   const iconBlock = iconShown
-    ? iconContainers[iconContent ? 'element' : source]({
+    ? iconContainers[custom ? 'element' : source]({
       hidden: hiddenTexts['in-icon'](hiddenText),
       icon: icons.heartEmpty
     })
@@ -338,7 +370,7 @@ ${block([textContainer, inlineAction], '  ')}
 
   const wrapped = roundedWrappers[rounded ? 'True' : 'False'](alert)
 
-  return (preview ? brokenIconBanner(broken) : brokenIconComment(broken)) + wrapped
+  return warned(wrapped, warning, preview)
 }
 
 export default {
@@ -350,27 +382,16 @@ export default {
       options: statuses,
       description: 'The first four are functional: the stylesheet draws their icon from `--bs-alert-icon`, and `.alert-icon` must stay empty. `Neutral` and `Accent` declare no such variable — they need an element inside the container, or no container at all.',
     },
-    icon: {
-      name: 'Icon',
-      control: 'boolean',
-      description: 'Removes the **whole** `.alert-icon` container, not just its contents — and **only on `Neutral` and `Accent`**. A functional status keeps its icon whatever this control says: it is what carries the meaning beside the colour. On the two non-functional statuses an empty container gives an invalid `mask-image`, so no mask at all: a solid 20 px square. The documentation calls the result an "iconless alert message".',
-    },
-    iconContent: {
-      name: 'Icon content',
+    label: {
+      name: 'Label',
       control: 'text',
-      description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon. **Only for `Neutral` and `Accent`** — on a functional status any element inside the container removes the functional icon, which the canvas and the snippet both warn about.',
-      if: { arg: 'icon', truthy: true },
+      description: 'Interpolated as is, so HTML goes through.',
     },
     labelElement: {
       name: 'Label element',
       control: 'select',
       options: labelElements,
       description: 'The documentation asks for semantics that match the context: a `<p>` when the label stands alone, a heading when it introduces a description or a list. The class stays `alert-label` either way.',
-    },
-    label: {
-      name: 'Label',
-      control: 'text',
-      description: 'Interpolated as is, so HTML goes through.',
     },
     description: {
       name: 'Description',
@@ -422,6 +443,19 @@ export default {
       control: 'boolean',
       description: '`.btn-close` with `data-bs-dismiss="alert"`, always inside its `.alert-close-container`. Without the alert JS plugin loaded the button shows and dismisses nothing — Storybook loads it, a bare HTML page does not.',
     },
+    icon: {
+      name: 'Icon',
+      control: 'select',
+      options: iconModes,
+      description: 'The three shapes the icon container can take. `None` removes the **whole** `.alert-icon`, not just its contents — an empty container on a non-functional status gives an invalid `mask-image`, so no mask at all: a solid 20 px square, which is why the documentation calls the iconless form an "iconless alert message". `Custom icon` puts what `Icon content` carries inside it. Only `Neutral` and `Accent` reach this control: a functional status draws its icon from `--bs-alert-icon` and keeps the container whatever is chosen here, since the colour would otherwise carry the meaning alone. Gated on the status with `oneOf`, which the standalone preview honours and Storybook ignores.',
+      if: { arg: 'status', oneOf: ['Neutral', 'Accent'] },
+    },
+    iconContent: {
+      name: 'Icon content',
+      control: 'text',
+      description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty falls back on the design system icon. Only on `Custom icon`, and therefore only on `Neutral` and `Accent` — that gate is an `eq`, exact on both surfaces. On a functional status any element inside the container removes the functional icon; the combination stays reachable by choosing `Custom icon` first and then moving the status, and the canvas and the snippet both warn about it.',
+      if: { arg: 'icon', eq: 'Custom icon' },
+    },
     rounded: {
       name: 'Rounded corners',
       control: 'boolean',
@@ -459,7 +493,7 @@ export const PlaygroundAlertMessage = {
             actionLabel,
             closeButton,
             rounded,
-          }, withCustomIcon(spriteIcons, iconContent), false), skeleton)
+          }, withCustomIcon(spriteIcons, customIcon(icon, iconContent)), false), skeleton)
         },
       },
     },
@@ -481,14 +515,12 @@ export const PlaygroundAlertMessage = {
       actionLabel,
       closeButton,
       rounded,
-    }, withCustomIcon(inlineIcons, iconContent)), skeleton)
+    }, withCustomIcon(inlineIcons, customIcon(icon, iconContent))), skeleton)
   },
   args: {
     status: 'Negative',
-    icon: true,
-    iconContent: '',
-    labelElement: 'p',
     label: 'Alert message',
+    labelElement: 'p',
     description: 'Description of the alert message.',
     bullets: 3,
     bullet1: 'First point',
@@ -498,6 +530,8 @@ export const PlaygroundAlertMessage = {
     actionElement: 'Button',
     actionLabel: 'Action',
     closeButton: true,
+    icon: 'Design system icon',
+    iconContent: '',
     rounded: false,
     skeleton: false
   },

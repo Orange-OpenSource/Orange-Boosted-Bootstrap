@@ -136,17 +136,17 @@ export default {
       control: 'select',
       options: orientations,
     },
-    color: {
-      name: 'Color',
-      control: 'select',
-      options: colors,
-      description: 'Border colour utility, carried by the divider itself. `Inherited`: no class, the design system colour. Four values are wrapped in the surface the documentation pairs them with, without which they are invisible.',
-    },
     size: {
       name: 'Size',
       control: 'select',
       options: sizes,
       description: 'Border width utility. `Inherited`: no class, the design system thickness.',
+    },
+    color: {
+      name: 'Color',
+      control: 'select',
+      options: colors,
+      description: 'Border colour utility, carried by the divider itself. `Inherited`: no class, the design system colour. Four values are wrapped in the surface the documentation pairs them with, without which they are invisible.',
     }
   }
 }
@@ -177,7 +177,7 @@ export const PlaygroundDivider = {
   },
   args: {
     orientation: 'Horizontal',
-    color: 'Inherited',
-    size: 'Inherited'
+    size: 'Inherited',
+    color: 'Inherited'
   },
 }

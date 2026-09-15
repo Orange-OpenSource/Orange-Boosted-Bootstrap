@@ -210,6 +210,15 @@ ${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
 export default {
   title: 'Playground/Bullet list',
   argTypes: {
+    textStyle: {
+      name: 'Text style',
+      control: 'select',
+      options: textStyles,
+    },
+    bold: {
+      name: 'Bold',
+      control: 'boolean',
+    },
     level1Type: {
       name: 'Level 1 — type',
       control: 'select',
@@ -267,15 +276,6 @@ export default {
       description: 'A whole `<svg>…</svg>` or only its inside, turned into the `--bs-bullet-list-custom-marker` mask. A custom marker inherits into the levels below; `none` puts the design system marker back on a level.',
       if: { arg: 'level3Type', neq: 'Bare' },
     },
-    textStyle: {
-      name: 'Text style',
-      control: 'select',
-      options: textStyles,
-    },
-    bold: {
-      name: 'Bold',
-      control: 'boolean',
-    },
     skeleton: {
       name: 'Skeleton',
       control: 'boolean',
@@ -313,6 +313,8 @@ export const PlaygroundBulletList = {
     }), skeleton)
   },
   args: {
+    textStyle: 'Body large',
+    bold: true,
     level1Type: 'Unordered',
     level1MarkerColor: 'Default',
     level1Icon: '',
@@ -322,8 +324,6 @@ export const PlaygroundBulletList = {
     level3Type: 'Unordered',
     level3MarkerColor: 'Inherited',
     level3Icon: '',
-    textStyle: 'Body large',
-    bold: true,
     skeleton: false
   },
 }

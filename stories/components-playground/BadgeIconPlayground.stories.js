@@ -10,8 +10,12 @@
 //   Neutral / Accent          → <svg class="badge-icon">…</svg>
 //   Positive/Info/Warning/Neg → <span class="badge-status-icon"></span>
 //
-// The `icon` control is therefore only meaningful for Neutral and Accent; it is
-// ignored by the functional statuses, which carry their own status icon.
+// The `Icon content` control is therefore only meaningful for Neutral and
+// Accent; the functional statuses carry their own status icon and ignore it. It
+// is gated on `if: { arg: 'status', oneOf: ['Neutral', 'Accent'] }` — `oneOf` is
+// not Storybook's grammar (it knows `eq`, `neq`, `truthy`, `exists` and falls
+// back on a truthiness test for the rest), so the standalone preview hides the
+// control on the four functional statuses and Storybook does not.
 
 const statuses = ['Neutral', 'Accent', 'Positive', 'Info', 'Warning', 'Negative']
 
@@ -205,16 +209,17 @@ export default {
       control: 'select',
       options: sizes,
     },
+    icon: {
+      name: 'Icon content',
+      control: 'text',
+      description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon. **`Neutral` and `Accent` only** — a functional status draws its own `<span class="badge-status-icon">` from the stylesheet and ignores anything typed here. Gated on the status with `oneOf`, which the standalone preview honours and Storybook ignores: Storybook will show this control on the functional statuses too.',
+      if: { arg: 'status', oneOf: ['Neutral', 'Accent'] },
+    },
     state: {
       name: 'State',
       control: 'select',
       options: states,
-    },
-    icon: {
-      name: 'Icon content',
-      control: 'text',
-      description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Neutral and Accent only. Empty: the design system icon.',
-    },
+    }
   }
 }
 
@@ -245,7 +250,7 @@ export const PlaygroundBadgeIcon = {
   args: {
     status: 'Neutral',
     size: 'Medium',
-    state: 'Enabled',
-    icon: ''
+    icon: '',
+    state: 'Enabled'
   },
 }

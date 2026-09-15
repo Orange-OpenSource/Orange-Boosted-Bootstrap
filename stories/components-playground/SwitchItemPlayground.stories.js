@@ -27,13 +27,21 @@ const states = ['Enabled', 'Read only', 'Disabled']
 // `Skeleton` is one of the states, not a checkbox beside them. It is a wrapper
 // in the markup — `<div aria-busy="true" inert>` around the component rendered
 // in its first state — but in the Controls panel it answers the same question
-// as the others: what does this look like right now. Two controls for one
-// question is what makes a panel read as two components glued together.
-const stateOptions = [...states, 'Skeleton']
+// as the others: what does this look like right now.
+// `Error` is one of the states too. It is an attribute rather than a wrapper —
+// `aria-invalid="true"` on the field — but it cannot be combined with any of
+// the others: a disabled field is not also invalid, and neither is a skeleton.
+// One select, one question.
+
+const stateOptions = [...states, 'Error', 'Skeleton']
 
 const isSkeleton = (state) => state === 'Skeleton'
 
-const baseState = (state) => (isSkeleton(state) ? states[0] : state)
+const isError = (state) => state === 'Error'
+
+// The state the component is actually rendered in: `Error` and `Skeleton` sit
+// in the same select but are not values the markup carries as a state.
+const baseState = (state) => (states.includes(state) ? state : states[0])
 
 
 
@@ -286,27 +294,32 @@ export default {
       control: 'text',
       description: 'Rendered as `<p class="control-item-description">` inside the text container, and referenced by `aria-describedby`. Empty: no description.',
     },
+    showIcon: {
+      name: 'Icon',
+      control: 'boolean',
+    },
+    icon: {
+      name: 'Icon content',
+      control: 'text',
+      description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
+      if: { arg: 'showIcon', truthy: true },
+    },
     state: {
       name: 'State',
       control: 'select',
       options: stateOptions,
       description: '`Read only` is another DOM, not an attribute: a `<span role="switch" aria-readonly="true">` in place of the input, and a `<p>` in place of the label.',
     },
-    required: {
-      name: 'Required',
-      control: 'boolean',
-      description: 'Adds `required` on the input and `is-required` on the label, which draws the asterisk.',
-    },
-    error: {
-      name: 'Error',
-      control: 'boolean',
-      description: 'Adds `aria-invalid="true"`. The stylesheet shows the error message below only when the container holds an invalid input — so the message can be written first and appear with the state.',
-    },
     errorMessage: {
       name: 'Error message',
       control: 'text',
       description: 'Rendered as `<p class="control-item-error-message">` inside the `switch-item-container`, after the item, and referenced by `aria-describedby`. Hidden by the stylesheet until `error` is checked. Empty: no message.',
-      if: { arg: 'error', truthy: true },
+      if: { arg: 'state', eq: 'Error' },
+    },
+    required: {
+      name: 'Required',
+      control: 'boolean',
+      description: 'Adds `required` on the input and `is-required` on the label, which draws the asterisk.',
     },
     reverse: {
       name: 'Reverse',
@@ -320,16 +333,6 @@ export default {
       name: 'Max width',
       control: 'boolean',
       description: 'Adds `component-max-width`, the design system class carrying the list item maximum width token — 480 px, measured. Nothing draws the width of an item on its own: check `divider`, or write a long enough label or description, to see it bite.',
-    },
-    showIcon: {
-      name: 'Icon',
-      control: 'boolean',
-    },
-    icon: {
-      name: 'Icon content',
-      control: 'text',
-      description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
-      if: { arg: 'showIcon', truthy: true },
     }
   }
 }
@@ -341,13 +344,13 @@ export const PlaygroundSwitchItem = {
       source: {
         transform: (_src, context) => {
           const {
-            state, error, errorMessage, required, reverse, divider,
+            state, errorMessage, required, reverse, divider,
             maxWidth, label, description, showIcon, icon, skeleton
           } = context.args
 
           return skeletonWrapper(renderSwitchItem({
             state: baseState(state),
-            error,
+            error: isError(state),
             errorMessage,
             required,
             reverse,
@@ -361,10 +364,10 @@ export const PlaygroundSwitchItem = {
       },
     },
   },
-  render: ({ state, error, errorMessage, required, reverse, divider, maxWidth, label, description, showIcon, icon }) => {
+  render: ({ state, errorMessage, required, reverse, divider, maxWidth, label, description, showIcon, icon }) => {
     return skeletonWrapper(renderSwitchItem({
       state: baseState(state),
-      error,
+      error: isError(state),
       errorMessage,
       required,
       reverse,
@@ -378,14 +381,13 @@ export const PlaygroundSwitchItem = {
   args: {
     label: 'Label',
     description: 'Description text',
-    state: 'Enabled',
-    required: false,
-    error: false,
-    errorMessage: 'This field can’t be activated.',
-    reverse: false,
-    divider: false,
-    maxWidth: false,
     showIcon: false,
     icon: '',
+    state: 'Enabled',
+    errorMessage: 'This field can’t be activated.',
+    required: false,
+    reverse: false,
+    divider: false,
+    maxWidth: false
   },
 }

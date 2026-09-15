@@ -55,26 +55,29 @@ const onBackground = (markup, coloredBg) => backgroundWrappers[coloredBg ? 'True
 
 const onColoredBgClass = (coloredBg) => (coloredBg ? 'btn-on-colored-bg' : '')
 
-// OUDS: "Negative and brand buttons should never be used on colored background."
-// The combination stays reachable — one has to be able to see what it does — so
-// the playground renders it and says so. The Code panel gets a comment, which is
-// copied along with the markup; the canvas gets a banner, which is not, and
-// which is deliberately styled outside the design system so it cannot be taken
-// for a component.
-const forbiddenOnBackground = ['Brand', 'Negative']
-
-const warningFor = (variant, coloredBg) =>
-  coloredBg && forbiddenOnBackground.includes(variant)
-    ? `OUDS: a ${variant.toLowerCase()} button should never be used on a colored background.`
-    : ''
-
-const previewBanner = (warning) =>
+// OUDS forbids some combinations the markup allows. They stay reachable — one
+// has to be able to see what they do — and the story says why they are wrong
+// twice over: a comment that travels with the copied markup, and a banner in
+// the canvas, which does not, and which is deliberately styled outside the
+// design system so it cannot be mistaken for a component. The two helpers below
+// are identical on every component of the corpus that has such a combination.
+const warningBanner = (warning) =>
   `<p style="margin:0 0 12px;padding:8px 12px;border-left:3px solid #b8460e;background:#fff6e8;color:#8a5300;font:600 12px/1.45 system-ui,sans-serif">${warning}</p>
 `
 
-const warned = (markup, warning, preview) =>
-  warning ? `${preview ? previewBanner(warning) : ''}<!-- ${warning} -->
-${markup}` : markup
+const warned = (markup, warning, preview) => (warning
+  ? `${preview ? warningBanner(warning) : ''}<!-- ${warning} -->
+${markup}`
+  : markup)
+
+// Here: "Negative and brand buttons should never be used on colored
+// background."
+const forbiddenOnBackground = ['Brand', 'Negative']
+
+const warningFor = (variant, coloredBg) =>
+  (coloredBg && forbiddenOnBackground.includes(variant)
+    ? `OUDS: a ${variant.toLowerCase()} button should never be used on a colored background.`
+    : '')
 
 // Left empty, the path below is used: it is the `heart-empty` symbol of the OUDS
 // sprite, drawn in a 24×24 viewBox.
@@ -302,20 +305,10 @@ ${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
 export default {
   title: 'Playground/Button',
   argTypes: {
-    label: {
-      name: 'Label',
-      control: 'text',
-      description: 'Visible next to the icon, and carried by the `visually-hidden` span in the `Icon only` layout — where it is all a screen reader announces. Interpolated as is, so HTML goes through: paste `Line 1<br>Line 2`, or a `<strong>`, to see how the button behaves on several lines.',
-    },
     variant: {
       name: 'Variant',
       control: 'select',
       options: buttonVariants,
-    },
-    coloredBg: {
-      name: 'On colored background',
-      control: 'boolean',
-      description: 'Adds `btn-on-colored-bg` and wraps the button in the surface the documentation pairs it with — `bg-surface-brand-primary` carrying `data-bs-theme="light"` on a child, so the background itself does not follow the theme (utilities/background/). OUDS reserves this variant for `Default`, `Strong` and `Minimal`; `Brand` and `Negative` stay reachable, with a warning.',
     },
     layout: {
       name: 'Layout',
@@ -328,9 +321,16 @@ export default {
       options: sizes,
       description: '`btn-small` — 40 px high, `label-medium` typography, smaller icon and paddings (`scss/_buttons.scss`). Not in the published 1.4.0 stylesheet yet: switch the CSS source to the repository build to see it.',
     },
-    rounded: {
-      name: 'Rounded corners',
-      control: 'boolean',
+    label: {
+      name: 'Label',
+      control: 'text',
+      description: 'Visible next to the icon, and carried by the `visually-hidden` span in the `Icon only` layout — where it is all a screen reader announces. Interpolated as is, so HTML goes through: paste `Line 1<br>Line 2`, or a `<strong>`, to see how the button behaves on several lines.',
+    },
+    icon: {
+      name: 'Icon content',
+      control: 'text',
+      description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
+      if: { arg: 'layout', neq: 'Text only' },
     },
     state: {
       name: 'State',
@@ -344,11 +344,14 @@ export default {
       description: 'Determinate loader only: the `--bs-btn-loading-time` custom property, any CSS duration — `5s`, `800ms`.',
       if: { arg: 'state', eq: 'Loading determinate' },
     },
-    icon: {
-      name: 'Icon content',
-      control: 'text',
-      description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
-      if: { arg: 'layout', neq: 'Text only' },
+    coloredBg: {
+      name: 'On colored background',
+      control: 'boolean',
+      description: 'Adds `btn-on-colored-bg` and wraps the button in the surface the documentation pairs it with — `bg-surface-brand-primary` carrying `data-bs-theme="light"` on a child, so the background itself does not follow the theme (utilities/background/). OUDS reserves this variant for `Default`, `Strong` and `Minimal`; `Brand` and `Negative` stay reachable, with a warning.',
+    },
+    rounded: {
+      name: 'Rounded corners',
+      control: 'boolean',
     }
   }
 }
@@ -390,14 +393,14 @@ export const PlaygroundButton = {
     }), isSkeleton(state))
   },
   args: {
-    label: 'Label',
     variant: 'Default',
-    coloredBg: false,
     layout: 'Text + icon',
     size: 'Default',
-    rounded: false,
+    label: 'Label',
+    icon: '',
     state: 'Enabled',
     loadingTime: '5s',
-    icon: '',
+    coloredBg: false,
+    rounded: false
   },
 }

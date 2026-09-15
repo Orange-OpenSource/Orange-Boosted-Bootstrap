@@ -24,6 +24,35 @@
 
 const states = ['Enabled', 'Read only', 'Disabled', 'Loading indeterminate', 'Loading determinate']
 
+// `Skeleton` is one of the states, not a checkbox beside them. It is a wrapper
+// in the markup — `<div aria-busy="true" inert>` around the component rendered
+// in its first state — but in the Controls panel it answers the same question
+// as the others: what does this look like right now.
+// `Error` is one of the states too. It is an attribute rather than a wrapper —
+// `aria-invalid="true"` on the field — but it cannot be combined with any of
+// the others: a disabled field is not also invalid, and neither is a skeleton.
+// One select, one question.
+
+const stateOptions = [...states, 'Error', 'Skeleton']
+
+const isSkeleton = (state) => state === 'Skeleton'
+
+const isError = (state) => state === 'Error'
+
+// The state the component is actually rendered in: `Error` and `Skeleton` sit
+// in the same select but are not values the markup carries as a state.
+const baseState = (state) => (states.includes(state) ? state : states[0])
+
+// Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
+// the component itself: every child of that container renders as a skeleton,
+// and `inert` takes it out of the tab order and of the accessibility tree.
+// Same markup for every component of the design system.
+const skeletonWrapper = (markup, skeleton) => (skeleton
+  ? `<div aria-busy="true" inert>
+${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
+</div>`
+  : markup)
+
 // A control left on "Choose option" gives `undefined`. The component must still
 // render, so every select falls back on the first value of its list rather than
 // on an empty output.
@@ -372,36 +401,53 @@ export default {
       control: 'text',
       description: 'OUDS specificity: left empty it is rendered as `placeholder=" "`, a single space. Without it the floating label would sit on top of the value.',
     },
-    hiddenPassword: {
-      name: 'Hidden password',
-      control: 'boolean',
-      description: 'The state of the field, and the state of the button with it: `type`, icon, hidden label and `aria-pressed` all follow. The documentation swaps the four in JavaScript on every click.',
-    },
     helperText: {
       name: 'Helper text',
       control: 'text',
       description: 'Rendered as `<p class="helper-text">` below the container, and referenced by `aria-describedby`. Empty: none.',
     },
-    required: {
-      name: 'Required',
-      control: 'boolean',
-      description: 'Adds `required` on the field and `is-required` on the label, which draws the asterisk.',
+    prefix: {
+      name: 'Prefix',
+      control: 'text',
+      description: 'Text before the field, carried by `data-bs-prefix` on a `.input-container` wrapper. The documentation writes `DEV-` and says the prefix is not part of what is typed. Empty: no wrapper.',
     },
-    error: {
-      name: 'Error',
+    leadingIcon: {
+      name: 'Leading icon',
       control: 'boolean',
-      description: 'Adds `aria-invalid="true"` and shows the error message below.',
+    },
+    icon: {
+      name: 'Icon content',
+      control: 'text',
+      description: 'Leading icon: a whole `<svg>…</svg>`, pasted as is, or only its inside. Empty: the `lock-closed` symbol of the design system.',
+      if: { arg: 'leadingIcon', truthy: true },
+    },
+    state: {
+      name: 'State',
+      control: 'select',
+      options: stateOptions,
+      description: 'Disabled and the two loading states disable the reveal button. Read only leaves it active on purpose: the value cannot be edited, but it can still be read. `Skeleton` wraps the component in `<div aria-busy="true" inert>` and renders it enabled underneath — the documentation shows that example on the text input and not here, which looks like a documentation gap rather than a real difference.',
     },
     errorMessage: {
       name: 'Error message',
       control: 'text',
       description: 'Rendered as `<p class="error-text">`, after the helper text. Shown when `error` is checked.',
-      if: { arg: 'error', truthy: true },
+      if: { arg: 'state', eq: 'Error' },
     },
-    prefix: {
-      name: 'Prefix',
+    hiddenPassword: {
+      name: 'Hidden password',
+      control: 'boolean',
+      description: 'The state of the field, and the state of the button with it: `type`, icon, hidden label and `aria-pressed` all follow. The documentation swaps the four in JavaScript on every click.',
+    },
+    loadingTime: {
+      name: 'Loading time',
       control: 'text',
-      description: 'Text before the field, carried by `data-bs-prefix` on a `.input-container` wrapper. The documentation writes `DEV-` and says the prefix is not part of what is typed. Empty: no wrapper.',
+      description: 'Determinate loader only: `--bs-loading-time` on the container, any CSS duration.',
+      if: { arg: 'state', eq: 'Loading determinate' },
+    },
+    required: {
+      name: 'Required',
+      control: 'boolean',
+      description: 'Adds `required` on the field and `is-required` on the label, which draws the asterisk.',
     },
     outlined: {
       name: 'Outlined',
@@ -416,41 +462,23 @@ export default {
       name: 'Max width',
       control: 'boolean',
       description: 'Adds `component-max-width` on `.text-input`, the design system class carrying the maximum width token.',
-    },
-    state: {
-      name: 'State',
-      control: 'select',
-      options: states,
-      description: 'Disabled and the two loading states disable the reveal button. Read only leaves it active on purpose: the value cannot be edited, but it can still be read.',
-    },
-    loadingTime: {
-      name: 'Loading time',
-      control: 'text',
-      description: 'Determinate loader only: `--bs-loading-time` on the container, any CSS duration.',
-      if: { arg: 'state', eq: 'Loading determinate' },
-    },
-    leadingIcon: {
-      name: 'Leading icon',
-      control: 'boolean',
-    },
-    icon: {
-      name: 'Icon content',
-      control: 'text',
-      description: 'Leading icon: a whole `<svg>…</svg>`, pasted as is, or only its inside. Empty: the `lock-closed` symbol of the design system.',
-      if: { arg: 'leadingIcon', truthy: true },
-    },
+    }
   }
 }
 
 const ARGS = [
-  'label', 'placeholder', 'helperText', 'error', 'errorMessage', 'required',
+  'label', 'placeholder', 'helperText', 'errorMessage', 'required',
   'prefix', 'outlined', 'rounded', 'maxWidth', 'state', 'loadingTime', 'hiddenPassword',
   'leadingIcon'
 ]
 
 // The render arguments, picked from the story args: sixteen controls make a
 // destructuring list longer than the function it feeds.
-const pick = (args) => Object.fromEntries(ARGS.map((name) => [name, args[name]]))
+const pick = (args) => ({
+  ...Object.fromEntries(ARGS.map((name) => [name, args[name]])),
+  state: baseState(args.state),
+  error: isError(args.state)
+})
 
 export const PlaygroundPasswordInput = {
   parameters: {
@@ -458,33 +486,32 @@ export const PlaygroundPasswordInput = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          return renderPasswordInput(pick(context.args), withCustomIcons(spriteIcons, context.args))
+          return skeletonWrapper(renderPasswordInput(pick(context.args), withCustomIcons(spriteIcons, context.args)), isSkeleton(context.args.state))
         },
       },
     },
   },
   render: (args) => {
-    return renderPasswordInput(
+    return skeletonWrapper(renderPasswordInput(
       { ...pick(args), inputText: keptValue('passwordInput') },
       withCustomIcons(inlineIcons, args),
       retainAttr('passwordInput')
-    )
+    ), isSkeleton(args.state))
   },
   args: {
     label: 'Password',
     placeholder: 'Minimum 8 characters',
-    hiddenPassword: true,
     helperText: 'Your password must be between 8 and 20 characters long.',
-    required: false,
-    error: false,
-    errorMessage: 'Password must be at least 8 characters.',
     prefix: '',
+    leadingIcon: false,
+    icon: '',
+    state: 'Enabled',
+    errorMessage: 'Password must be at least 8 characters.',
+    hiddenPassword: true,
+    loadingTime: '5s',
+    required: false,
     outlined: false,
     rounded: false,
-    maxWidth: false,
-    state: 'Enabled',
-    loadingTime: '5s',
-    leadingIcon: false,
-    icon: ''
+    maxWidth: false
   },
 }

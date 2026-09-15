@@ -17,7 +17,10 @@
 //
 // `Disabled` follows the rule the filter chip already applies: it is a group
 // setting. No real page disables one suggestion out of two — the whole set is
-// unavailable or none of it is.
+// unavailable or none of it is. It is not a checkbox either: with `Skeleton`
+// beside it, two controls were answering the same question — what does this
+// group look like right now — so both are values of one `State` select, the
+// form the rest of the corpus uses.
 //
 // Unlike a filter chip, a suggestion chip is always a `<button>`: it triggers an
 // answer, it does not hold a selection. Hence no form control here — and the
@@ -27,6 +30,17 @@
 // documentation example does. It is a state of the group, not of a chip.
 
 const layouts = ['Text only', 'Text + icon', 'Icon only']
+
+// Only two of these three are markup on the chip: `Disabled` writes the
+// attribute on every `<button>`, `Skeleton` wraps the group in
+// `<div aria-busy="true" inert>` and renders it enabled underneath.
+const states = ['Enabled', 'Disabled']
+
+const stateOptions = [...states, 'Skeleton']
+
+const isSkeleton = (state) => state === 'Skeleton'
+
+const baseState = (state) => (isSkeleton(state) ? states[0] : state)
 
 // A control left on "Choose option" gives `undefined`. The component must still
 // render, so every select falls back on the first value of its list rather than
@@ -191,7 +205,9 @@ const disabledAttrs = {
   'False': ''
 }
 
-const renderSuggestionChip = ({ chips, disabled, layout, icon }, icons = inlineIcons) => {
+const renderSuggestionChip = ({ chips, state, layout, icon }, icons = inlineIcons) => {
+  const disabled = orElse(baseState(state), states) === 'Disabled'
+
   const safeLayout = orElse(layout, layouts)
   const classes = ['chip-interactive', layoutClasses[safeLayout]].filter(Boolean).join(' ')
 
@@ -224,6 +240,12 @@ ${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
 export default {
   title: 'Playground/Suggestion chip',
   argTypes: {
+    layout: {
+      name: 'Layout',
+      control: 'select',
+      options: layouts,
+      description: 'Shared by every chip. On a suggestion chip the icon sits before the label; `Icon only` adds `chip-icon` and moves the label into a `visually-hidden` span.',
+    },
     chip1Label: {
       name: 'Chip 1 — label',
       control: 'text',
@@ -234,27 +256,17 @@ export default {
       control: 'text',
       description: 'Interpolated as is, so HTML goes through — paste a `<br>`, or a long sentence, to see the chip on several lines.',
     },
-    disabled: {
-      name: 'Disabled',
-      control: 'boolean',
-      description: 'One control for the whole group: `disabled` on every `<button>`. A real page does not disable one suggestion out of two — same rule as the filter chip.',
-    },
-    layout: {
-      name: 'Layout',
-      control: 'select',
-      options: layouts,
-      description: 'Shared by every chip. On a suggestion chip the icon sits before the label; `Icon only` adds `chip-icon` and moves the label into a `visually-hidden` span.',
-    },
     icon: {
       name: 'Icon content',
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
       if: { arg: 'layout', neq: 'Text only' },
     },
-    skeleton: {
-      name: 'Skeleton',
-      control: 'boolean',
-      description: 'Wraps the component in `<div aria-busy="true" inert>`, the way the design system puts a real component in a loading state. Same markup for every component.',
+    state: {
+      name: 'State',
+      control: 'select',
+      options: stateOptions,
+      description: 'One control for the whole group: `Disabled` writes the attribute on every `<button>` — a real page does not disable one suggestion out of two, same rule as the filter chip — and `Skeleton` wraps the group in `<div aria-busy="true" inert>`.',
     }
   }
 }
@@ -265,34 +277,33 @@ export const PlaygroundSuggestionChip = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { disabled, layout, icon, skeleton } = context.args
+          const { state, layout, icon } = context.args
 
           return skeletonWrapper(renderSuggestionChip({
-            disabled,
+            state,
             chips: chipsOf(context.args),
             layout,
             icon,
-          }, withCustomIcon(spriteIcons, icon)), skeleton)
+          }, withCustomIcon(spriteIcons, icon)), isSkeleton(state))
         },
       },
     },
   },
   render: (args) => {
-    const { disabled, layout, icon, skeleton } = args
+    const { state, layout, icon } = args
 
     return skeletonWrapper(renderSuggestionChip({
-      disabled,
+      state,
       chips: chipsOf(args),
       layout,
       icon,
-    }, withCustomIcon(inlineIcons, icon)), skeleton)
+    }, withCustomIcon(inlineIcons, icon)), isSkeleton(state))
   },
   args: {
+    layout: 'Text only',
     chip1Label: 'Thanks.',
     chip2Label: 'Looks good to me.',
-    disabled: false,
-    layout: 'Text only',
     icon: '',
-    skeleton: false
+    state: 'Enabled'
   },
 }

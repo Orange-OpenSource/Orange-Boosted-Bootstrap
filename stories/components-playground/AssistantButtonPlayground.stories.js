@@ -213,10 +213,11 @@ const renderAssistantButton = ({ label, element, layout, size, coloredBg, opaque
 export default {
   title: 'Playground/Assistant button',
   argTypes: {
-    label: {
-      name: 'Label',
-      control: 'text',
-      description: 'Interpolated as is, so HTML goes through: paste `Line 1<br/>Line 2` to see the label stay centered beside the AI icon. On `Icon only` it becomes the `visually-hidden` text.',
+    layout: {
+      name: 'Layout',
+      control: 'select',
+      options: layouts,
+      description: '`btn-icon` keeps only the AI icon and moves the label into a `visually-hidden` span. "Icon-only assistant buttons are always completely circular" — which is why `Rounded corners` does nothing here, see that control.',
     },
     element: {
       name: 'Element',
@@ -224,17 +225,28 @@ export default {
       options: elements,
       description: '`Button` renders `<button type="button">`, which is what every example of the documentation uses; `Link` renders `<a href="#">`. The stylesheet covers both inactive forms, so both are offered.',
     },
-    layout: {
-      name: 'Layout',
-      control: 'select',
-      options: layouts,
-      description: '`btn-icon` keeps only the AI icon and moves the label into a `visually-hidden` span. "Icon-only assistant buttons are always completely circular" — which is why `Rounded corners` does nothing here, see that control.',
-    },
     size: {
       name: 'Size',
       control: 'select',
       options: sizes,
       description: '`btn-small` — 40 px high, smaller icon. Legitimate on this component because `_button-assistant.scss` re-declares its paddings inside `&.btn-small`; the navigation button has no such rule, which is why its size is frozen. Not in the published 1.4.0 stylesheet yet.',
+    },
+    label: {
+      name: 'Label',
+      control: 'text',
+      description: 'Interpolated as is, so HTML goes through: paste `Line 1<br/>Line 2` to see the label stay centered beside the AI icon. On `Icon only` it becomes the `visually-hidden` text.',
+    },
+    state: {
+      name: 'State',
+      control: 'select',
+      options: stateOptions,
+      description: 'Disabled drops the gradient border entirely (`background: initial`); both loading states keep it — the rule excludes `.loading-indeterminate, .loading-determinate`. The documentation only shows the indeterminate loader here and refers to Button for the rest; `loading-determinate` is a `.btn` class and works, so it is kept.',
+    },
+    loadingTime: {
+      name: 'Loading time',
+      control: 'text',
+      description: '`--bs-btn-loading-time` on the button itself, which is where `.btn` reads it. Only the determinate loader uses it.',
+      if: { arg: 'state', eq: 'Loading determinate' },
     },
     coloredBg: {
       name: 'On colored background',
@@ -251,18 +263,6 @@ export default {
       name: 'Rounded corners',
       control: 'boolean',
       description: '`use-rounded-corner-buttons` on an ancestor, a product-wide setting. Measured: 0 px to 8 px on a text button, and **no effect on `Icon only`**, where `.btn-assistant.btn-icon` sets `--bs-btn-border-radius` on the element itself and beats the inherited value. That is by design.',
-    },
-    state: {
-      name: 'State',
-      control: 'select',
-      options: stateOptions,
-      description: 'Disabled drops the gradient border entirely (`background: initial`); both loading states keep it — the rule excludes `.loading-indeterminate, .loading-determinate`. The documentation only shows the indeterminate loader here and refers to Button for the rest; `loading-determinate` is a `.btn` class and works, so it is kept.',
-    },
-    loadingTime: {
-      name: 'Loading time',
-      control: 'text',
-      description: '`--bs-btn-loading-time` on the button itself, which is where `.btn` reads it. Only the determinate loader uses it.',
-      if: { arg: 'state', eq: 'Loading determinate' },
     }
   }
 }
@@ -304,14 +304,14 @@ export const PlaygroundAssistantButton = {
     }), isSkeleton(state))
   },
   args: {
-    label: 'Assistant',
-    element: 'Button',
     layout: 'Text only',
+    element: 'Button',
     size: 'Default',
-    coloredBg: true,
-    opaqueBackground: false,
-    rounded: false,
+    label: 'Assistant',
     state: 'Enabled',
     loadingTime: '5s',
+    coloredBg: true,
+    opaqueBackground: false,
+    rounded: false
   },
 }

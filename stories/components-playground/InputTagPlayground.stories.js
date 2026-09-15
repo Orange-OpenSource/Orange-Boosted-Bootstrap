@@ -52,14 +52,14 @@ ${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
 export default {
   title: 'Playground/Input tag',
   argTypes: {
+    label: {
+      name: 'Label',
+      control: 'text',
+    },
     state: {
       name: 'State',
       control: 'select',
       options: stateOptions,
-    },
-    label: {
-      name: 'Label',
-      control: 'text',
     }
   }
 }
@@ -87,7 +87,7 @@ export const PlaygroundInputTag = {
     }), isSkeleton(state))
   },
   args: {
-    state: 'Enabled',
     label: 'Label',
+    state: 'Enabled'
   },
 }

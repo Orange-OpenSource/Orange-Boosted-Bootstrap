@@ -42,13 +42,21 @@ const states = ['Enabled', 'Disabled']
 // `Skeleton` is one of the states, not a checkbox beside them. It is a wrapper
 // in the markup — `<div aria-busy="true" inert>` around the component rendered
 // in its first state — but in the Controls panel it answers the same question
-// as the others: what does this look like right now. Two controls for one
-// question is what makes a panel read as two components glued together.
-const stateOptions = [...states, 'Skeleton']
+// as the others: what does this look like right now.
+// `Error` is one of the states too. It is an attribute rather than a wrapper —
+// `aria-invalid="true"` on the field — but it cannot be combined with any of
+// the others: a disabled field is not also invalid, and neither is a skeleton.
+// One select, one question.
+
+const stateOptions = [...states, 'Error', 'Skeleton']
 
 const isSkeleton = (state) => state === 'Skeleton'
 
-const baseState = (state) => (isSkeleton(state) ? states[0] : state)
+const isError = (state) => state === 'Error'
+
+// The state the component is actually rendered in: `Error` and `Skeleton` sit
+// in the same select but are not values the markup carries as a state.
+const baseState = (state) => (states.includes(state) ? state : states[0])
 
 const loadings = ['None', 'Indeterminate', 'Determinate']
 
@@ -317,16 +325,26 @@ export default {
       control: 'text',
       description: 'The floating label. It sits inside the field while nothing is selected and floats above it as soon as a real option carries `selected`.',
     },
+    helperText: {
+      name: 'Helper text',
+      control: 'text',
+      description: 'A `<p class="helper-text">` after the container, pointed at by `aria-describedby`. Empty renders no paragraph. Set `Error` and empty `Error message` to see the OUDS gap noted at the top of this file: the helper text vanishes and nothing replaces it.',
+    },
+    helperLink: {
+      name: 'Helper link',
+      control: 'text',
+      description: 'A `.link.link-small` after the messages, labelled by its own id **and** the label’s (`aria-labelledby="<link> <label>"`), with the `visually-hidden` span the documentation asks for. Adding it is what gives the `<label>` an `id`.',
+    },
     selectedOption: {
       name: 'Selected option',
       control: 'select',
       options: selectedOptions,
       description: '`None` leaves `<option value="" disabled selected>` in place and the label inside the field; any other value moves `selected` and makes the label float. This is the axis that shows the floating label.',
     },
-    outlined: {
-      name: 'Outlined',
+    groupOptions: {
+      name: 'Group options',
       control: 'boolean',
-      description: '`select-input-container-outlined` — a transparent field with a full outline, in place of the filled one.',
+      description: 'Wraps the options in two `<optgroup>`. The placeholder stays outside them, since it must remain the first child of the `<select>`.',
     },
     leadingIcon: {
       name: 'Leading icon',
@@ -339,37 +357,17 @@ export default {
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
       if: { arg: 'leadingIcon', truthy: true },
     },
-    groupOptions: {
-      name: 'Group options',
-      control: 'boolean',
-      description: 'Wraps the options in two `<optgroup>`. The placeholder stays outside them, since it must remain the first child of the `<select>`.',
-    },
-    helperText: {
-      name: 'Helper text',
-      control: 'text',
-      description: 'A `<p class="helper-text">` after the container, pointed at by `aria-describedby`. Empty renders no paragraph. Set `Error` and empty `Error message` to see the OUDS gap noted at the top of this file: the helper text vanishes and nothing replaces it.',
-    },
-    helperLink: {
-      name: 'Helper link',
-      control: 'text',
-      description: 'A `.link.link-small` after the messages, labelled by its own id **and** the label’s (`aria-labelledby="<link> <label>"`), with the `visually-hidden` span the documentation asks for. Adding it is what gives the `<label>` an `id`.',
-    },
-    error: {
-      name: 'Error',
-      control: 'boolean',
-      description: 'Sets `aria-invalid="true"` and moves `aria-describedby` to the error message. That is all it does: `.error-text` is hidden by default and the stylesheet reveals it through `.select-input-container:has(…error…) ~ .error-text`.',
-    },
-    errorMessage: {
-      name: 'Error message',
-      control: 'text',
-      description: 'A `<p class="error-text">` after the helper text. Gated on `Error`, so the control is only on screen while the paragraph is: the stylesheet would let a real page write it once and reveal it with the state, but a control typing into something the canvas is not showing looks inert.',
-      if: { arg: 'error', truthy: true },
-    },
     state: {
       name: 'State',
       control: 'select',
       options: stateOptions,
       description: 'Orthogonal to `Loading`, unlike the buttons of this corpus: "the select can be disabled or not during the loading time depending on the context of use". The documentation has a "Disabled loading select" example combining the two.',
+    },
+    errorMessage: {
+      name: 'Error message',
+      control: 'text',
+      description: 'A `<p class="error-text">` after the helper text. Gated on `Error`, so the control is only on screen while the paragraph is: the stylesheet would let a real page write it once and reveal it with the state, but a control typing into something the canvas is not showing looks inert.',
+      if: { arg: 'state', eq: 'Error' },
     },
     loading: {
       name: 'Loading',
@@ -388,15 +386,20 @@ export default {
       control: 'boolean',
       description: 'Two things at once: `is-required` on the label, which draws the asterisk in an `::after`, and the `required` attribute on the `<select>`.',
     },
-    maxWidth: {
-      name: 'Max width',
+    outlined: {
+      name: 'Outlined',
       control: 'boolean',
-      description: 'Here `component-max-width` is a **class on `.select-input`**, not a wrapper: the select input is one of the four components the stylesheet compounds that class with. On a button or a badge the constraint would have to go on an ancestor instead.',
+      description: '`select-input-container-outlined` — a transparent field with a full outline, in place of the filled one.',
     },
     rounded: {
       name: 'Rounded corners',
       control: 'boolean',
       description: '`use-rounded-corner-inputs` on an ancestor — normally `<body>`, a product-wide setting rather than a property of the field.',
+    },
+    maxWidth: {
+      name: 'Max width',
+      control: 'boolean',
+      description: 'Here `component-max-width` is a **class on `.select-input`**, not a wrapper: the select input is one of the four components the stylesheet compounds that class with. On a button or a badge the constraint would have to go on an ancestor instead.',
     }
   }
 }
@@ -407,7 +410,7 @@ export const PlaygroundSelectInput = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { label, selectedOption, outlined, leadingIcon, icon, groupOptions, helperText, helperLink, error, errorMessage, state, loading, loadingTime, required, maxWidth, rounded } = context.args
+          const { label, selectedOption, outlined, leadingIcon, icon, groupOptions, helperText, helperLink, errorMessage, state, loading, loadingTime, required, maxWidth, rounded } = context.args
 
           return skeletonWrapper(renderSelectInput({
             label,
@@ -417,7 +420,7 @@ export const PlaygroundSelectInput = {
             groupOptions,
             helperText,
             helperLink,
-            error,
+            error: isError(state),
             errorMessage,
             state: baseState(state),
             loading,
@@ -430,7 +433,7 @@ export const PlaygroundSelectInput = {
       },
     },
   },
-  render: ({ label, selectedOption, outlined, leadingIcon, icon, groupOptions, helperText, helperLink, error, errorMessage, state, loading, loadingTime, required, maxWidth, rounded }) => {
+  render: ({ label, selectedOption, outlined, leadingIcon, icon, groupOptions, helperText, helperLink, errorMessage, state, loading, loadingTime, required, maxWidth, rounded }) => {
     return skeletonWrapper(renderSelectInput({
       label,
       selectedOption,
@@ -439,7 +442,7 @@ export const PlaygroundSelectInput = {
       groupOptions,
       helperText,
       helperLink,
-      error,
+      error: isError(state),
       errorMessage,
       state: baseState(state),
       loading,
@@ -451,20 +454,19 @@ export const PlaygroundSelectInput = {
   },
   args: {
     label: 'Select a number',
-    selectedOption: 'None',
-    outlined: false,
-    leadingIcon: false,
-    icon: '',
-    groupOptions: false,
     helperText: 'Choose a number.',
     helperLink: 'More information',
-    error: false,
-    errorMessage: 'A number is required.',
+    selectedOption: 'None',
+    groupOptions: false,
+    leadingIcon: false,
+    icon: '',
     state: 'Enabled',
+    errorMessage: 'A number is required.',
     loading: 'None',
     loadingTime: '5s',
     required: false,
-    maxWidth: false,
+    outlined: false,
     rounded: false,
+    maxWidth: false
   },
 }

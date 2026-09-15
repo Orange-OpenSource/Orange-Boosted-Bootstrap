@@ -141,13 +141,13 @@ const levelArgTypes = Object.fromEntries(LEVELS.flatMap((level) => {
     [`level${level}Label`, {
       name: `Level ${level} — label`,
       control: 'text',
-      description: `Visible text of level ${level}, copied into the \`title\` attribute. Empty: “${defaultLabels[index]}”, the label of the documentation example.`,
+      description: `Visible text of level ${level}, copied into the \`title\` attribute. Empty: “${defaultLabels[index]}”, the label of the documentation example.${level === 1 ? '' : ' Shown from a drilldown of ' + level + ': Storybook has no `gte` in its `if` and falls back on a truthiness test, so it shows this field from the first level; the standalone preview hides it until the drilldown reaches it.'}`,
       if: levelCondition(level),
     }],
     [`level${level}Truncatable`, {
       name: `Level ${level} — truncatable`,
       control: 'boolean',
-      description: 'Unchecked adds `flex-shrink-0` on the `<li>`, the only documented way to keep a level out of the automatic truncation. It only bites once the levels are competing for the width, which at four levels they do.',
+      description: `Unchecked adds \`flex-shrink-0\` on the \`<li>\`, the only documented way to keep a level out of the automatic truncation. It only bites once the levels are competing for the width, which at four levels they do.${level === 1 ? '' : ' Gated on the drilldown with a `gte`, which Storybook ignores — same reservation as the label above.'}`,
       if: levelCondition(level),
     }]
   ]

@@ -71,15 +71,15 @@ export default {
       control: 'select',
       options: sizes,
     },
-    state: {
-      name: 'State',
-      control: 'select',
-      options: states,
-    },
     number: {
       name: 'Number',
       control: { type: 'number', min: 0, step: 1 },
     },
+    state: {
+      name: 'State',
+      control: 'select',
+      options: states,
+    }
   }
 }
 
@@ -112,7 +112,7 @@ export const PlaygroundBadgeCount = {
   args: {
     status: 'Neutral',
     size: 'Medium',
-    state: 'Enabled',
-    number: 1
+    number: 1,
+    state: 'Enabled'
   },
 }

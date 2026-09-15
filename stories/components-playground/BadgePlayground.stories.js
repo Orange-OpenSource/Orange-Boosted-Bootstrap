@@ -68,7 +68,7 @@ export default {
       name: 'State',
       control: 'select',
       options: states,
-    },
+    }
   }
 }
 

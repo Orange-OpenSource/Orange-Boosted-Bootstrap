@@ -248,15 +248,15 @@ ${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
 export default {
   title: 'Playground/Tag',
   argTypes: {
-    appearance: {
-      name: 'Appearance',
-      control: 'select',
-      options: appearances,
-    },
     status: {
       name: 'Status',
       control: 'select',
       options: statuses,
+    },
+    appearance: {
+      name: 'Appearance',
+      control: 'select',
+      options: appearances,
     },
     layout: {
       name: 'Layout',
@@ -268,15 +268,6 @@ export default {
       control: 'select',
       options: sizes,
     },
-    state: {
-      name: 'State',
-      control: 'select',
-      options: stateOptions,
-    },
-    rounded: {
-      name: 'Rounded corners',
-      control: 'boolean',
-    },
     label: {
       name: 'Label',
       control: 'text',
@@ -286,6 +277,15 @@ export default {
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. `Text + icon` layout, and Neutral or Accent only: a functional status carries its own icon, from the CSS. Empty: the design system icon.',
       if: { arg: 'layout', eq: 'Text + icon' },
+    },
+    state: {
+      name: 'State',
+      control: 'select',
+      options: stateOptions,
+    },
+    rounded: {
+      name: 'Rounded corners',
+      control: 'boolean',
     }
   }
 }
@@ -323,13 +323,13 @@ export const PlaygroundTag = {
     }, resolveIcon(icon, inlineIcon(defaultIconPath))), isSkeleton(state))
   },
   args: {
-    appearance: 'Muted',
     status: 'Neutral',
+    appearance: 'Muted',
     layout: 'Text only',
     size: 'Default',
-    state: 'Enabled',
-    rounded: true,
     label: 'Label',
     icon: '',
+    state: 'Enabled',
+    rounded: true
   },
 }

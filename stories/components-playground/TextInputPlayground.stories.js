@@ -16,13 +16,21 @@ const states = ['Enabled', 'Read only', 'Disabled', 'Loading indeterminate', 'Lo
 // `Skeleton` is one of the states, not a checkbox beside them. It is a wrapper
 // in the markup — `<div aria-busy="true" inert>` around the component rendered
 // in its first state — but in the Controls panel it answers the same question
-// as the others: what does this look like right now. Two controls for one
-// question is what makes a panel read as two components glued together.
-const stateOptions = [...states, 'Skeleton']
+// as the others: what does this look like right now.
+// `Error` is one of the states too. It is an attribute rather than a wrapper —
+// `aria-invalid="true"` on the field — but it cannot be combined with any of
+// the others: a disabled field is not also invalid, and neither is a skeleton.
+// One select, one question.
+
+const stateOptions = [...states, 'Error', 'Skeleton']
 
 const isSkeleton = (state) => state === 'Skeleton'
 
-const baseState = (state) => (isSkeleton(state) ? states[0] : state)
+const isError = (state) => state === 'Error'
+
+// The state the component is actually rendered in: `Error` and `Skeleton` sit
+// in the same select but are not values the markup carries as a state.
+const baseState = (state) => (states.includes(state) ? state : states[0])
 
 
 // A control left on "Choose option" gives `undefined`. The component must still
@@ -384,22 +392,6 @@ export default {
       control: 'text',
       description: 'Rendered as `<a class="link link-small">` below the container. Empty: none.',
     },
-    required: {
-      name: 'Required',
-      control: 'boolean',
-      description: 'Adds `required` on the field and `is-required` on the label, which draws the asterisk.',
-    },
-    error: {
-      name: 'Error',
-      control: 'boolean',
-      description: 'Adds `aria-invalid="true"` and shows the error message below.',
-    },
-    errorMessage: {
-      name: 'Error message',
-      control: 'text',
-      description: 'Rendered as `<p class="error-text">`, after the helper text. Shown when `error` is checked.',
-      if: { arg: 'error', truthy: true },
-    },
     prefix: {
       name: 'Prefix',
       control: 'text',
@@ -409,32 +401,6 @@ export default {
       name: 'Suffix',
       control: 'text',
       description: 'Text after the field, same mechanism through `data-bs-suffix`. Empty: no wrapper.',
-    },
-    outlined: {
-      name: 'Outlined',
-      control: 'boolean',
-    },
-    rounded: {
-      name: 'Rounded corners',
-      control: 'boolean',
-      description: 'Product-wide setting: `use-rounded-corner-inputs` on an ancestor, not a class of the component.',
-    },
-    maxWidth: {
-      name: 'Max width',
-      control: 'boolean',
-      description: 'Adds `component-max-width` on `.text-input`, the design system class carrying the maximum width token.',
-    },
-    state: {
-      name: 'State',
-      control: 'select',
-      options: stateOptions,
-      description: 'The two loading states are the two documented loaders. Every state but `Enabled` disables the action button — leaving it clickable next to a read only or disabled field was a bug.',
-    },
-    loadingTime: {
-      name: 'Loading time',
-      control: 'text',
-      description: 'Determinate loader only: `--bs-loading-time` on the container, any CSS duration.',
-      if: { arg: 'state', eq: 'Loading determinate' },
     },
     leadingIcon: {
       name: 'Leading icon',
@@ -456,11 +422,48 @@ export default {
       description: 'Trailing button icon: a whole `<svg>…</svg>`, pasted as is, or only its inside. Empty: the design system icon.',
       if: { arg: 'trailingAction', truthy: true },
     },
+    state: {
+      name: 'State',
+      control: 'select',
+      options: stateOptions,
+      description: 'The two loading states are the two documented loaders. Every state but `Enabled` disables the action button — leaving it clickable next to a read only or disabled field was a bug.',
+    },
+    errorMessage: {
+      name: 'Error message',
+      control: 'text',
+      description: 'Rendered as `<p class="error-text">`, after the helper text. Shown when `error` is checked.',
+      if: { arg: 'state', eq: 'Error' },
+    },
+    loadingTime: {
+      name: 'Loading time',
+      control: 'text',
+      description: 'Determinate loader only: `--bs-loading-time` on the container, any CSS duration.',
+      if: { arg: 'state', eq: 'Loading determinate' },
+    },
+    required: {
+      name: 'Required',
+      control: 'boolean',
+      description: 'Adds `required` on the field and `is-required` on the label, which draws the asterisk.',
+    },
+    outlined: {
+      name: 'Outlined',
+      control: 'boolean',
+    },
+    rounded: {
+      name: 'Rounded corners',
+      control: 'boolean',
+      description: 'Product-wide setting: `use-rounded-corner-inputs` on an ancestor, not a class of the component.',
+    },
+    maxWidth: {
+      name: 'Max width',
+      control: 'boolean',
+      description: 'Adds `component-max-width` on `.text-input`, the design system class carrying the maximum width token.',
+    }
   }
 }
 
 const ARGS = [
-  'label', 'placeholder', 'helperText', 'helperLink', 'error', 'errorMessage',
+  'label', 'placeholder', 'helperText', 'helperLink', 'errorMessage',
   'required', 'prefix', 'suffix', 'outlined', 'rounded', 'maxWidth', 'state', 'loadingTime',
   'leadingIcon', 'trailingAction'
 ]
@@ -471,7 +474,8 @@ const ARGS = [
 // component renders in its first state underneath.
 const pick = (args) => ({
   ...Object.fromEntries(ARGS.map((name) => [name, args[name]])),
-  state: baseState(args.state)
+  state: baseState(args.state),
+  error: isError(args.state)
 })
 
 export const PlaygroundTextInput = {
@@ -480,7 +484,7 @@ export const PlaygroundTextInput = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          return skeletonWrapper(renderTextInput(pick(context.args), withCustomIcons(spriteIcons, context.args)), context.args.skeleton)
+          return skeletonWrapper(renderTextInput(pick(context.args), withCustomIcons(spriteIcons, context.args)), isSkeleton(context.args.state))
         },
       },
     },
@@ -497,19 +501,18 @@ export const PlaygroundTextInput = {
     placeholder: 'Placeholder',
     helperText: 'Helper text.',
     helperLink: 'More information',
-    required: false,
-    error: false,
-    errorMessage: 'The format is not valid.',
     prefix: '',
     suffix: '',
-    outlined: false,
-    rounded: false,
-    maxWidth: false,
-    state: 'Enabled',
-    loadingTime: '5s',
     leadingIcon: false,
     icon: '',
     trailingAction: false,
     actionIcon: '',
+    state: 'Enabled',
+    errorMessage: 'The format is not valid.',
+    loadingTime: '5s',
+    required: false,
+    outlined: false,
+    rounded: false,
+    maxWidth: false
   },
 }

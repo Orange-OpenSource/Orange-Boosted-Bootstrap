@@ -1,11 +1,14 @@
 // Playground for Text area
 // Docs: https://web.unified-design-system.orange.com/orange/docs/1.4/components/text-area/
 //
-// No `Hidden label` control. The documentation does document a text area whose
-// label is `visually-hidden`, with the text copied into a `title` on the
-// field — but a control that hides an element and moves a text no one ever
-// sees is not an axis anyone comes here to compare. Same rule as the hidden
-// texts elsewhere in the corpus: the label stays visible.
+// `Hidden label` IS A CONTROL HERE, AND NOWHERE ELSE IN THE CORPUS.
+// The rule that removed every hidden-text control (conventions.md §16) is about
+// *texts* nobody ever sees. This is not that: the label's text stays the same
+// and stays under `Label`, and what the checkbox moves is the **markup** — the
+// `<label>` gains `visually-hidden` and the field gains a `title` carrying the
+// same words, which is exactly what the documentation's own example writes. It
+// is a documented variant of this component and of no other, which is why it
+// survives here and stays removed everywhere else.
 //
 // Completes the form family of the corpus, beside Text input, Password input
 // and Select input. Same container / field / messages shape, same
@@ -49,13 +52,21 @@ const states = ['Enabled', 'Read only', 'Disabled']
 // `Skeleton` is one of the states, not a checkbox beside them. It is a wrapper
 // in the markup — `<div aria-busy="true" inert>` around the component rendered
 // in its first state — but in the Controls panel it answers the same question
-// as the others: what does this look like right now. Two controls for one
-// question is what makes a panel read as two components glued together.
-const stateOptions = [...states, 'Skeleton']
+// as the others: what does this look like right now.
+// `Error` is one of the states too. It is an attribute rather than a wrapper —
+// `aria-invalid="true"` on the field — but it cannot be combined with any of
+// the others: a disabled field is not also invalid, and neither is a skeleton.
+// One select, one question.
+
+const stateOptions = [...states, 'Error', 'Skeleton']
 
 const isSkeleton = (state) => state === 'Skeleton'
 
-const baseState = (state) => (isSkeleton(state) ? states[0] : state)
+const isError = (state) => state === 'Error'
+
+// The state the component is actually rendered in: `Error` and `Skeleton` sit
+// in the same select but are not values the markup carries as a state.
+const baseState = (state) => (states.includes(state) ? state : states[0])
 
 
 // A control left on "Choose option" gives `undefined`. The component must still
@@ -138,6 +149,18 @@ const requiredAttrs = {
   'False': ''
 }
 
+// A hidden label is still a label: it keeps its `for`, and the field gets a
+// `title` carrying the same text, which is what the documentation example does.
+const hiddenLabelClasses = {
+  'True': 'visually-hidden',
+  'False': ''
+}
+
+const titleAttrs = {
+  'True': (label) => ` title="${label}"`,
+  'False': () => ''
+}
+
 const requiredClasses = {
   'True': 'is-required',
   'False': ''
@@ -195,7 +218,7 @@ ${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
 </div>`
   : markup)
 
-const renderTextArea = ({ label, placeholder, outlined, resize, helperText, helperLink, error, errorMessage, state, required, maxWidth, rounded }, side = 'canvas') => {
+const renderTextArea = ({ label, hiddenLabel, placeholder, outlined, resize, helperText, helperLink, error, errorMessage, state, required, maxWidth, rounded }, side = 'canvas') => {
   const safeState = orElse(state, states)
   const kept = retain[side]
 
@@ -206,11 +229,11 @@ const renderTextArea = ({ label, placeholder, outlined, resize, helperText, help
   ].filter(Boolean).join(' ')
 
   const containerClasses = ['text-area-container', outlinedClasses[outlined ? 'True' : 'False']].filter(Boolean).join(' ')
-  const labelClasses = ['', requiredClasses[required ? 'True' : 'False']].filter(Boolean).join(' ')
+  const labelClasses = ['', hiddenLabelClasses[hiddenLabel ? 'True' : 'False'], requiredClasses[required ? 'True' : 'False']].filter(Boolean).join(' ')
   const shownError = error ? errorMessage : ''
   const describedBy = describedTargets[describedKind({ error, errorMessage, helperText })]
 
-  const field = `<textarea class="text-area-field" id="${ids.field}" placeholder="${placeholder || ' '}"${stateAttrs[safeState]}${requiredAttrs[required ? 'True' : 'False']}${invalidAttrs[error ? 'True' : 'False']}${describedBy ? ` aria-describedby="${describedBy}"` : ''}${kept.attr}>${kept.value()}</textarea>`
+  const field = `<textarea class="text-area-field" id="${ids.field}"${titleAttrs[hiddenLabel ? 'True' : 'False'](label)} placeholder="${placeholder || ' '}"${stateAttrs[safeState]}${requiredAttrs[required ? 'True' : 'False']}${invalidAttrs[error ? 'True' : 'False']}${describedBy ? ` aria-describedby="${describedBy}"` : ''}${kept.attr}>${kept.value()}</textarea>`
 
   const container = `<div class="${containerClasses}">
 ${block([
@@ -234,20 +257,15 @@ export default {
       control: 'text',
       description: 'The floating label. It sits inside the field while the placeholder shows and floats above it as soon as something is typed — which is why the `placeholder` attribute below is mandatory.',
     },
+    hiddenLabel: {
+      name: 'Hidden label',
+      control: 'boolean',
+      description: 'Adds `visually-hidden` to the `<label>` and copies its text into a `title` on the field, as the documentation example does. The `<label for>` association stays: the label is hidden, not removed. The only control of its kind in the corpus: a text the canvas never shows is a constant everywhere in this corpus, but what moves here is the markup, and the documentation writes both forms.',
+    },
     placeholder: {
       name: 'Placeholder',
       control: 'text',
       description: '**Mandatory.** "Even if you don\'t need a placeholder, you must always define the placeholder attribute with a single space character" — the CSS-only floating label reads `:placeholder-shown`. Emptying this control prints a single space and a comment saying why, rather than a broken `placeholder=""`.',
-    },
-    outlined: {
-      name: 'Outlined',
-      control: 'boolean',
-      description: '`text-area-container-outlined` — a transparent field with a full outline, in place of the filled one.',
-    },
-    resize: {
-      name: 'Manual resizing',
-      control: 'boolean',
-      description: 'Unchecked adds `text-area-no-resize` **on `.text-area`**, not on the field: the class removes the browser\'s resize handle. Note the inversion — the design system names the class after the thing it takes away.',
     },
     helperText: {
       name: 'Helper text',
@@ -259,37 +277,42 @@ export default {
       control: 'text',
       description: 'A `.link.link-small` after the messages, labelled by its own id **and** the label’s (`aria-labelledby="<link> <label>"`), with the `visually-hidden` span the documentation asks for.',
     },
-    error: {
-      name: 'Error',
-      control: 'boolean',
-      description: 'Sets `aria-invalid="true"` and moves `aria-describedby` to the error message. That is all it does: `.error-text` is hidden by default and the stylesheet reveals it through `.text-area-container:has(…error…) ~ .error-text`.',
-    },
-    errorMessage: {
-      name: 'Error message',
-      control: 'text',
-      description: 'Written once and revealed by the state, so it is **not** gated on `Invalid` — that is how the stylesheet is built, and how a real page writes it. Takes HTML, like the helper text.',
-      if: { arg: 'error', truthy: true },
-    },
     state: {
       name: 'State',
       control: 'select',
       options: stateOptions,
       description: '`Read only` is a real attribute here, honoured by the browser — unlike a checkbox, where it is inert and the documentation swaps the whole DOM. Type into the field first, then switch: what was typed is kept, which is how a read-only field actually arrives on screen.',
     },
+    errorMessage: {
+      name: 'Error message',
+      control: 'text',
+      description: 'Written once and revealed by the state, so it is **not** gated on `Invalid` — that is how the stylesheet is built, and how a real page writes it. Takes HTML, like the helper text.',
+      if: { arg: 'state', eq: 'Error' },
+    },
     required: {
       name: 'Required',
       control: 'boolean',
       description: 'Two things at once: `is-required` on the label, which draws the asterisk in an `::after`, and the `required` attribute on the `<textarea>`.',
     },
-    maxWidth: {
-      name: 'Max width',
+    outlined: {
+      name: 'Outlined',
       control: 'boolean',
-      description: 'Here `component-max-width` is a **class on `.text-area`**, not a wrapper: the text area is one of the four components the stylesheet compounds that class with. On a button or a badge the constraint would have to go on an ancestor instead.',
+      description: '`text-area-container-outlined` — a transparent field with a full outline, in place of the filled one.',
+    },
+    resize: {
+      name: 'Manual resizing',
+      control: 'boolean',
+      description: 'Unchecked adds `text-area-no-resize` **on `.text-area`**, not on the field: the class removes the browser\'s resize handle. Note the inversion — the design system names the class after the thing it takes away.',
     },
     rounded: {
       name: 'Rounded corners',
       control: 'boolean',
       description: '`use-rounded-corner-inputs` on an ancestor — normally `<body>`, a product-wide setting rather than a property of the field.',
+    },
+    maxWidth: {
+      name: 'Max width',
+      control: 'boolean',
+      description: 'Here `component-max-width` is a **class on `.text-area`**, not a wrapper: the text area is one of the four components the stylesheet compounds that class with. On a button or a badge the constraint would have to go on an ancestor instead.',
     }
   }
 }
@@ -300,16 +323,17 @@ export const PlaygroundTextArea = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { label, placeholder, outlined, resize, helperText, helperLink, error, errorMessage, state, required, maxWidth, rounded } = context.args
+          const { label, hiddenLabel, placeholder, outlined, resize, helperText, helperLink, errorMessage, state, required, maxWidth, rounded } = context.args
 
           return skeletonWrapper(renderTextArea({
             label,
+            hiddenLabel,
             placeholder,
             outlined,
             resize,
             helperText,
             helperLink,
-            error,
+            error: isError(state),
             errorMessage,
             state: baseState(state),
             required,
@@ -320,15 +344,16 @@ export const PlaygroundTextArea = {
       },
     },
   },
-  render: ({ label, placeholder, outlined, resize, helperText, helperLink, error, errorMessage, state, required, maxWidth, rounded }) => {
+  render: ({ label, hiddenLabel, placeholder, outlined, resize, helperText, helperLink, errorMessage, state, required, maxWidth, rounded }) => {
     return skeletonWrapper(renderTextArea({
       label,
+      hiddenLabel,
       placeholder,
       outlined,
       resize,
       helperText,
       helperLink,
-      error,
+      error: isError(state),
       errorMessage,
       state: baseState(state),
       required,
@@ -338,16 +363,16 @@ export const PlaygroundTextArea = {
   },
   args: {
     label: 'Additional comments',
+    hiddenLabel: false,
     placeholder: ' ',
-    outlined: false,
-    resize: true,
     helperText: 'Please be concise and limit your comment to <strong>180</strong> characters.',
     helperLink: 'More information',
-    error: false,
-    errorMessage: 'This field can\'t be empty.',
     state: 'Enabled',
+    errorMessage: 'This field can\'t be empty.',
     required: false,
-    maxWidth: false,
+    outlined: false,
+    resize: true,
     rounded: false,
+    maxWidth: false
   },
 }

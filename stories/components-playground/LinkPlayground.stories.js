@@ -230,7 +230,7 @@ const layoutTemplates = {
 
   'Visited': ({ classes, label }) =>
     `<!-- "visited-links" comes from scss/_reboot.scss; href="." points at the current page, which the browser always has in its history -->
-<a class="${classes}" href=".">${label}</a>`,
+<a class="${classes}" href="../../../../../Downloads/components-playground-stories-csf3">${label}</a>`,
 
   'Text + icon': ({ classes, disabledAttr, label, icons }) =>
     `<a class="${classes}"${disabledAttr}>
@@ -294,10 +294,27 @@ const previewExtras = {
 const notOnBackground = (layout, coloredBg) =>
   (coloredBg ? layoutOnBackground[layout] : undefined) ?? layout
 
-const visitedWarning = (layout, coloredBg) =>
-  coloredBg && layout === 'Visited'
-    ? '<!-- OUDS: no visited colour on a colored background — rendered as a plain link. -->\n'
-    : ''
+// OUDS forbids some combinations the markup allows. They stay reachable — one
+// has to be able to see what they do — and the story says why they are wrong
+// twice over: a comment that travels with the copied markup, and a banner in
+// the canvas, which does not, and which is deliberately styled outside the
+// design system so it cannot be mistaken for a component. The two helpers below
+// are identical on every component of the corpus that has such a combination.
+const warningBanner = (warning) =>
+  `<p style="margin:0 0 12px;padding:8px 12px;border-left:3px solid #b8460e;background:#fff6e8;color:#8a5300;font:600 12px/1.45 system-ui,sans-serif">${warning}</p>
+`
+
+const warned = (markup, warning, preview) => (warning
+  ? `${preview ? warningBanner(warning) : ''}<!-- ${warning} -->
+${markup}`
+  : markup)
+
+// Here: a visited link has no visited color on a colored background, so the
+// design system renders it as a plain link.
+const warningFor = (layout, coloredBg) =>
+  (coloredBg && layout === 'Visited'
+    ? 'OUDS: a visited link has no visited color on a colored background — rendered as a plain link.'
+    : '')
 
 const renderLink = ({ layout, size, density, state, label, coloredBg }, icons = inlineIcons, preview = true) => {
   const safeLayout = notOnBackground(orElse(layout, layouts), coloredBg)
@@ -312,12 +329,14 @@ const renderLink = ({ layout, size, density, state, label, coloredBg }, icons = 
 
   const extras = preview ? (previewExtras[safeLayout] ?? '') : ''
 
-  return extras + visitedWarning(orElse(layout, layouts), coloredBg) + onBackground(layoutTemplates[safeLayout]({
+  const markup = onBackground(layoutTemplates[safeLayout]({
     classes,
     disabledAttr: stateMap[orElse(state, states)],
     label,
     icons
   }), coloredBg)
+
+  return extras + warned(markup, warningFor(orElse(layout, layouts), coloredBg), preview)
 }
 
 // Skeleton is carried by an ancestor, `<div aria-busy="true" inert>`, never by
@@ -349,16 +368,6 @@ export default {
       options: densities,
       description: '`link-compact` lowers the minimum height and the block padding, and has a rule of its own when combined with `Small` (`scss/_links.scss`).',
     },
-    state: {
-      name: 'State',
-      control: 'select',
-      options: stateOptions,
-    },
-    coloredBg: {
-      name: 'On colored background',
-      control: 'boolean',
-      description: 'Adds `link-on-colored-bg` and wraps the link in the surface the documentation pairs it with — `bg-surface-brand-primary` carrying `data-bs-theme="light"` on a child, so the background itself does not follow the theme (utilities/background/). `Visited` has no colour of its own there: it falls back to a plain link, and says so.',
-    },
     label: {
       name: 'Label',
       control: 'text',
@@ -369,6 +378,16 @@ export default {
       control: 'text',
       description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Empty: the design system icon.',
       if: { arg: 'layout', eq: 'Text + icon' },
+    },
+    state: {
+      name: 'State',
+      control: 'select',
+      options: stateOptions,
+    },
+    coloredBg: {
+      name: 'On colored background',
+      control: 'boolean',
+      description: 'Adds `link-on-colored-bg` and wraps the link in the surface the documentation pairs it with — `bg-surface-brand-primary` carrying `data-bs-theme="light"` on a child, so the background itself does not follow the theme (utilities/background/). `Visited` has no colour of its own there: it falls back to a plain link, and says so.',
     }
   }
 }
@@ -407,9 +426,9 @@ export const PlaygroundLink = {
     layout: 'Next',
     size: 'Default',
     density: 'Default',
-    state: 'Enabled',
-    coloredBg: false,
     label: 'Label',
     icon: '',
+    state: 'Enabled',
+    coloredBg: false
   },
 }

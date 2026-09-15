@@ -43,13 +43,21 @@ const states = ['Enabled', 'Read only', 'Disabled']
 // `Skeleton` is one of the states, not a checkbox beside them. It is a wrapper
 // in the markup — `<div aria-busy="true" inert>` around the component rendered
 // in its first state — but in the Controls panel it answers the same question
-// as the others: what does this look like right now. Two controls for one
-// question is what makes a panel read as two components glued together.
-const stateOptions = [...states, 'Skeleton']
+// as the others: what does this look like right now.
+// `Error` is one of the states too. It is an attribute rather than a wrapper —
+// `aria-invalid="true"` on the field — but it cannot be combined with any of
+// the others: a disabled field is not also invalid, and neither is a skeleton.
+// One select, one question.
+
+const stateOptions = [...states, 'Error', 'Skeleton']
 
 const isSkeleton = (state) => state === 'Skeleton'
 
-const baseState = (state) => (isSkeleton(state) ? states[0] : state)
+const isError = (state) => state === 'Error'
+
+// The state the component is actually rendered in: `Error` and `Skeleton` sit
+// in the same select but are not values the markup carries as a state.
+const baseState = (state) => (states.includes(state) ? state : states[0])
 
 
 // A control left on "Choose option" gives `undefined`. The component must still
@@ -344,6 +352,11 @@ ${markup.split('\n').map((line) => (line ? `  ${line}` : line)).join('\n')}
 export default {
   title: 'Playground/Radio button item',
   argTypes: {
+    legend: {
+      name: 'Legend',
+      control: 'text',
+      description: 'The `<legend>` of the `fieldset`: what the whole group asks. Carries `is-required` when the choice is mandatory. Empty: no legend.',
+    },
     option1Label: {
       name: 'Option 1 — label',
       control: 'text',
@@ -372,10 +385,15 @@ export default {
       control: 'text',
       description: 'Rendered as `<p class="control-item-description">`, referenced by `aria-describedby`. Empty: none.',
     },
-    legend: {
-      name: 'Legend',
+    showIcon: {
+      name: 'Icon',
+      control: 'boolean',
+    },
+    icon: {
+      name: 'Icon content',
       control: 'text',
-      description: 'The `<legend>` of the `fieldset`: what the whole group asks. Carries `is-required` when the choice is mandatory. Empty: no legend.',
+      description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Rendered on every item of the group. Empty: the design system icon.',
+      if: { arg: 'showIcon', truthy: true },
     },
     state: {
       name: 'State',
@@ -383,21 +401,16 @@ export default {
       options: stateOptions,
       description: '`Read only` is another DOM, not an attribute: a `<span role="radio" aria-readonly="true">` in place of each input, a `<p>` in place of each label, and the whole group wrapped in `<div role="radiogroup" aria-readonly="true">`.',
     },
-    required: {
-      name: 'Required',
-      control: 'boolean',
-      description: 'Adds `required` on each input and `is-required` on the legend — the choice is mandatory, not one of the options.',
-    },
-    error: {
-      name: 'Error',
-      control: 'boolean',
-      description: 'Adds `aria-invalid="true"`. The stylesheet shows the error message below only when the fieldset holds an invalid input.',
-    },
     errorMessage: {
       name: 'Error message',
       control: 'text',
       description: 'Rendered as `<p class="control-item-error-message">` inside the `fieldset`, after the items. Hidden by the stylesheet until `error` is checked. Empty: no message.',
-      if: { arg: 'error', truthy: true },
+      if: { arg: 'state', eq: 'Error' },
+    },
+    required: {
+      name: 'Required',
+      control: 'boolean',
+      description: 'Adds `required` on each input and `is-required` on the legend — the choice is mandatory, not one of the options.',
     },
     outlined: {
       name: 'Outlined',
@@ -415,16 +428,6 @@ export default {
       name: 'Max width',
       control: 'boolean',
       description: 'Adds `component-max-width`, the design system class carrying the list item maximum width token — 480 px, measured. Nothing draws the width of an item on its own: check `divider`, or write a long enough label or description, to see it bite.',
-    },
-    showIcon: {
-      name: 'Icon',
-      control: 'boolean',
-    },
-    icon: {
-      name: 'Icon content',
-      control: 'text',
-      description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Rendered on every item of the group. Empty: the design system icon.',
-      if: { arg: 'showIcon', truthy: true },
     }
   }
 }
@@ -436,7 +439,7 @@ export const PlaygroundRadioButtonItem = {
       source: {
         transform: (_src, context) => {
           const {
-            legend, state, error, errorMessage, required, reverse,
+            legend, state, errorMessage, required, reverse,
             outlined, divider, maxWidth, showIcon, icon, skeleton
           } = context.args
 
@@ -444,7 +447,7 @@ export const PlaygroundRadioButtonItem = {
             items: itemsOf(context.args),
             legend,
             state: baseState(state),
-            error,
+            error: isError(state),
             errorMessage,
             required,
             reverse,
@@ -458,12 +461,12 @@ export const PlaygroundRadioButtonItem = {
     },
   },
   render: (args) => {
-    const { legend, state, error, errorMessage, required, reverse, outlined, divider, maxWidth, showIcon, icon } = args
+    const { legend, state, errorMessage, required, reverse, outlined, divider, maxWidth, showIcon, icon } = args
     return skeletonWrapper(renderRadioButtonItem({
       items: itemsOf(args),
       legend,
       state: baseState(state),
-      error,
+      error: isError(state),
       errorMessage,
       required,
       reverse,
@@ -474,22 +477,21 @@ export const PlaygroundRadioButtonItem = {
     }, resolveIcon(icon, inlineIcon(defaultIconPath))), isSkeleton(state))
   },
   args: {
+    legend: 'Radio buttons group',
     option1Label: 'Option 1',
     option1ExtraLabel: 'Extra label',
     option1Description: 'Description text',
     option2Label: 'Option 2',
     option2ExtraLabel: '',
     option2Description: 'Description text',
-    legend: 'Radio buttons group',
+    showIcon: false,
+    icon: '',
     state: 'Enabled',
-    required: false,
-    error: false,
     errorMessage: 'This field can’t be empty.',
+    required: false,
     outlined: false,
     reverse: false,
     divider: false,
-    maxWidth: false,
-    showIcon: false,
-    icon: '',
+    maxWidth: false
   },
 }

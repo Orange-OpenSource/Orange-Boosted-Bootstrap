@@ -112,16 +112,16 @@ ${bars.join('\n')}
 export default {
   title: 'Playground/Skeleton',
   argTypes: {
-    count: {
-      name: 'Bars',
-      control: { type: 'number', min: 1, max: 8, step: 1 },
-      description: 'How many skeletons in the container. Two or more show the security margins, which sit between the bars.',
-    },
     height: {
       name: 'Height',
       control: 'select',
       options: heights,
       description: 'The three exclusive ways of giving a skeleton its height, in one control. `Title` and `Text` are the documented container **classes** — they set the height of each bar and the margin between them. `1x1` to `21x9` are the aspect **ratio** utilities, carried by each bar, which compute the height from the width. `Free` carries neither, and reads the length below.',
+    },
+    count: {
+      name: 'Bars',
+      control: { type: 'number', min: 1, max: 8, step: 1 },
+      description: 'How many skeletons in the container. Two or more show the security margins, which sit between the bars.',
     },
     securityMargin: {
       name: 'Security margins',
@@ -171,8 +171,8 @@ export const PlaygroundSkeleton = {
     })
   },
   args: {
-    count: 3,
     height: 'Text',
+    count: 3,
     securityMargin: true,
     width: 0,
     heightPx: 0

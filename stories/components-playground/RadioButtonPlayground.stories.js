@@ -10,6 +10,19 @@
 // are the two that change the markup.
 const states = ['Enabled', 'Disabled']
 
+// `Error` is one of the states too. It is an attribute rather than a wrapper —
+// `aria-invalid="true"` on the field — but it cannot be combined with any of
+// the others: a disabled field is not also invalid, and neither is a skeleton.
+// One select, one question.
+
+const stateOptions = [...states, 'Error']
+
+const isError = (state) => state === 'Error'
+
+// The state the component is actually rendered in: `Error` and `Skeleton` sit
+// in the same select but are not values the markup carries as a state.
+const baseState = (state) => (states.includes(state) ? state : states[0])
+
 const selectedMap = {
   'False': '',
   'True': ' checked'
@@ -36,7 +49,7 @@ const hiddenLabel = 'Default standalone radio button'
 const renderRadioButton = ({ state, selected, error }) => {
   const checkedAttr = selectedMap[(selected ? 'True' : 'False')] ?? ''
   const invalidAttr = errorMap[(error ? 'True' : 'False')] ?? ''
-  const stateAttr = stateMap[state] ?? ''
+  const stateAttr = stateMap[baseState(state)]
 
   return `<label class="radio-button-standalone">
   <input class="control-item-indicator" type="radio" value=""${checkedAttr}${invalidAttr}${stateAttr} />
@@ -50,16 +63,12 @@ export default {
     state: {
       name: 'State',
       control: 'select',
-      options: states,
+      options: stateOptions,
     },
     selected: {
       name: 'Selected',
       control: 'boolean',
-    },
-    error: {
-      name: 'Error',
-      control: 'boolean',
-    },
+    }
   }
 }
 
@@ -69,22 +78,22 @@ export const PlaygroundRadioButton = {
       codePanel: true,
       source: {
         transform: (_src, context) => {
-          const { state, selected, error } = context.args
+          const { state, selected } = context.args
 
           return renderRadioButton({
             state,
             selected,
-            error,
+            error: isError(state),
           })
         },
       },
     },
   },
-  render: ({ state, selected, error }) => {
+  render: ({ state, selected }) => {
     return renderRadioButton({
       state,
       selected,
-      error,
+      error: isError(state),
     })
   },
   args: {
