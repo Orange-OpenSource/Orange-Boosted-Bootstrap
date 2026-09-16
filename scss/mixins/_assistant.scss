@@ -5,7 +5,12 @@
     height: var(--#{$prefix}assistant-icon-size);
     content: "";
     background-color: currentcolor;
-    mask: $icon-assistant-icon center;
+    mask:
+      radial-gradient(
+        circle,
+        transparent 0 calc(50% - var(--#{$prefix}icon-assistant-border-ratio)),
+        black calc(50% - var(--#{$prefix}icon-assistant-border-ratio)) 100%
+      ), $icon-assistant-icon center;
   }
 }
 
