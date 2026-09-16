@@ -92,60 +92,32 @@ Interactive Icon is an icon component designed to trigger a user interaction (e.
 
 #### Disabled
 
-Make icons inactive by adding the `[disabled]` boolean attribute to the `<button>` element. Disabled icons have `pointer-events: none` applied to, preventing hover and active states from triggering.
-
-<Example buttonLabel="disabled interactive icon" class="bd-example" code={`<button class="icon icon-interactive bl-large-icon" disabled aria-label="Disabled interactive button icon">
+<DisabledState name="interactive icons">
+  <Example slot="buttonExample" buttonLabel="disabled interactive icon" class="bd-example" code={`<button class="icon icon-interactive bl-large-icon" disabled aria-label="Disabled interactive button icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </button>`} />
-
-Disabled icons using the `<a>` element behave a bit different:
-
-- Disabled icons using `<a>` must include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies, to make it visually appear disabled and disable all `pointer-events`.
-- Disabled icons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning]([[docsref:/components/links#disabled-link-accessibility-warning]]).
-
-<Example buttonLabel="disabled icon links" code={`<a class="icon icon-interactive bl-large-icon" aria-disabled="true" aria-label="Disabled interactive link icon">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-  </a>`} />
+  <Example slot="anchorExample" buttonLabel="disabled icon links" code={`<a class="icon icon-interactive bl-large-icon" aria-disabled="true" aria-label="Disabled interactive link icon">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+    </a>`} />
+</DisabledState>
 
 #### Loading
 
-The loading state of an icon indicates that an action is currently processing or taking place. This state provides feedback to users, enhancing user experience.
-
-To make an animated loading state icon, you will add in your standard icon:
-- An animated `<svg>`: the animation will differ whether the loading time is known or not.
-- A status message `<span>`: the message must be updated regularly in order to be vocalized by screen readers; if the loading time is defined, you should indicate the progression.
-
-For example, before loading, your icon could be like this:
-
-<Example buttonLabel="loading interactive icon before loading" class="bd-example" code={`<button class="icon icon-interactive bl-large-icon" aria-label="Before loading interactive icon">
-  <svg aria-hidden="true">
-    <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-  </svg>
-  <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-    <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-  </svg>
-  <span role="status" id="loading-icon-msg-0" class="visually-hidden d-none"></span>
-</button>`} />
-
-When the loading starts, you will have to:
-- Add the class `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for a known loading time) to the icon to provide the appropriate styles and animation.
-- For a known loading time, provide a CSS variable `--bs-loading-time` to set the loading time. For example, add `style="--bs-loading-time: 5s;"` to the icon, for a 5 seconds loading.
-- Set the disabled state on the `<button>` element to avoid any unwanted interactions.
-- Remove the `.d-none` from the status message `<span>`.
-- Update regularly the status message `<span>` containing the loading message.
-
-At the end of the loading, you should:
-
-- Remove the disabled state on the `<button>` element to restore its interactivity.
-- Remove the class `.loading-indeterminate` or `.loading-determinate` to restore the icon’s look.
-- Set a final status message in `<span>`, indicating the loading has ended (so we don’t add again `.d-none` on this status message).
-- Put the focus back on the icon to ensure similar behavior across browsers and not lose the user after changes.
-
-<Example buttonLabel="loading interactive icon currently loading" class="bd-example" code={`<button class="icon icon-interactive bl-large-icon loading-indeterminate" disabled aria-label="Indeterminate loading interactive icon">
+<LoadingState name="interactive icon" loadingTimeVariable="bs-loading-time">
+  <Example slot="beforeLoading" buttonLabel="loading interactive icon before loading" class="bd-example" code={`<button class="icon icon-interactive bl-large-icon" aria-label="Before loading interactive icon">
+    <svg aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-icon-msg-0" class="visually-hidden d-none"></span>
+  </button>`} />
+  <Example slot="loading" buttonLabel="loading interactive icon currently loading" class="bd-example" code={`<button class="icon icon-interactive bl-large-icon loading-indeterminate" disabled aria-label="Indeterminate loading interactive icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -155,9 +127,9 @@ At the end of the loading, you should:
     <span role="status" id="loading-icon-msg-1" class="visually-hidden d-none"></span>
   </button>
 
-  <button class="icon icon-interactive loading-determinate bl-large-icon" style="--bs-loading-time: 5s;" disabled aria-label="Determinate loading interactive icon">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    <button class="icon icon-interactive loading-determinate bl-large-icon" style="--bs-loading-time: 5s;" disabled aria-label="Determinate loading interactive icon">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
@@ -165,6 +137,7 @@ At the end of the loading, you should:
     <span role="status" id="loading-icon-msg-2" class="visually-hidden d-none"></span>
   </button>
 `} />
+</LoadingState>
 
 #### Skeleton
 
@@ -208,62 +181,30 @@ If your browser is compatible, the following example will show two transparent a
 
 #### Disabled
 
-Make icons inactive by adding the `[disabled]` boolean attribute to any `<button>` element. Disabled icons have `pointer-events: none` applied to, preventing hover and active states from triggering.
+<DisabledState name="assistant icons">
+  <Example slot="buttonExample" buttonLabel="disabled assistant icon" class="bd-example" code={`<button class="icon icon-assistant" disabled aria-label="Disabled assistant icon"></button>`} showToolbar={false} />
 
-<Example buttonLabel="disabled assistant icon" class="bd-example" code={`<button class="icon icon-assistant" disabled aria-label="Disabled assistant icon"></button>`} showToolbar={false} />
-
-Disabled icons using the `<a>` element behave a bit different:
-
-  - Disabled icons using `<a>` must include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies, to make it visually appear disabled and disable all `pointer-events`.
-  - Disabled icons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning]([[docsref:/components/links#disabled-link-accessibility-warning]]).
-
-<Example buttonLabel="disabled icon links" code={`<a href="#" class="icon icon-assistant" aria-disabled="true" tabindex="-1" aria-label="Disabled assistant link icon"></a>`} />
+  <Example slot="anchorExample" buttonLabel="disabled icon links" code={`<a href="#" class="icon icon-assistant" aria-disabled="true" tabindex="-1" aria-label="Disabled assistant link icon"></a>`} />
+</DisabledState>
 
 #### Loading
 
-The loading state of an icon indicates that an action is currently processing or taking place. This state provides feedback to users, enhancing user experience.
-
-To make an animated loading state icon, you will add in your standard icon:
-  - An animated `<svg>`: the animation will differ whether the loading time is known or not.
-  - A status message `<span>`: the message must be updated regularly in order to be vocalized by screen readers; if the loading time is defined, you should indicate the progression.
-
-For example, before loading, your icon could be like this:
-
-  <Example buttonLabel="loading assistant icon before loading" class="bd-example" code={`<button class="icon icon-assistant" aria-label="Before loading assistant icon">
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="assistant-loading-icon-msg-0" class="visually-hidden d-none"></span>
-  </button>`} />
-
-When the loading starts, you will have to:
-  - Add the class `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for a known loading time) to the icon to provide the appropriate styles and animation.
-  - For a known loading time, provide a CSS variable `--bs-loading-time` to set the loading time. For example, add `style="--bs-loading-time: 5s;"` to the icon, for a 5 seconds loading.
-  - Set the disabled state on the `<button>` element to avoid any unwanted interactions.
-  - Remove the `.d-none` from the status message `<span>`.
-  - Update regularly the status message `<span>` containing the loading message.
-
-  At the end of the loading, you should:
-
-  - Remove the disabled state on the `<button>` element to restore its interactivity.
-  - Remove the class `.loading-indeterminate` or `.loading-determinate` to restore the icon’s look.
-  - Set a final status message in `<span>`, indicating the loading has ended (so we don’t add again `.d-none` on this status message).
-- Put the focus back on the icon to ensure similar behavior across browsers and not lose the user after changes.
-
-<Example buttonLabel="loading assistant icon currently loading" class="bd-example" code={`<button class="icon icon-assistant loading-indeterminate" disabled aria-label="Indeterminate loading assistant icon">
+<LoadingState name="assistant icon" referralVersion={true} baseComponentName="icon">
+  <Example slot="loading" buttonLabel="loading assistant icon currently loading" class="bd-example" code={`<button class="icon icon-assistant loading-indeterminate" disabled aria-label="Indeterminate loading assistant icon">
     <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="assistant-loading-icon-msg-1" class="visually-hidden d-none"></span>
   </button>
 
-  <button class="icon icon-assistant loading-determinate" style="--bs-loading-time: 5s;" disabled aria-label="Determinate loading assistant icon">
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="assistant-loading-icon-msg-2" class="visually-hidden d-none"></span>
-  </button>
+    <button class="icon icon-assistant loading-determinate" style="--bs-loading-time: 5s;" disabled aria-label="Determinate loading assistant icon">
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="assistant-loading-icon-msg-2" class="visually-hidden d-none"></span>
+    </button>
 `} />
+</LoadingState>
 
 #### Skeleton
 

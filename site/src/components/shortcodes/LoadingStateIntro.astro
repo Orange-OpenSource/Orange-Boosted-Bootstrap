@@ -1,0 +1,13 @@
+---
+
+interface Props {
+  /**
+   * The name of the component which loading state is being described.
+   */
+  name?: string
+}
+
+const { name } = Astro.props
+---
+
+<p>The loading state of an { name } indicates that an action is currently processing or taking place. This state provides feedback to users, enhancing user experience.</p>
