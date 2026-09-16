@@ -115,6 +115,18 @@ export const componentsDetails: ComponentCardData[] = [
       </div>`
   },
   {
+    name: 'Expand link',
+    slug: 'expand-link',
+    link: 'links#expand-link',
+    category: 'Navigation',
+    snippet: `
+      <div class="dropdown">
+        <button class="link link-expand" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Label
+        </button>
+      </div>`
+  },
+  {
     name: 'Filter chip',
     slug: 'filter-chip',
     link: 'chips#filter-chip',
