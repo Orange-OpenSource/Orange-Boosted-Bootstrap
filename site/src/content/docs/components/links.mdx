@@ -223,7 +223,9 @@ An expand link is a UI element that reveals or hides additional content through 
 
 The expand link feature is displayed through a dropdown with selectable values. It is ideal for inline contexts where minimal visual weight is needed, maintaining a clean layout while still providing access to additional information.
 
-Use OUDS Web `.link` class to set up styles such as padding and content alignment to display standalone links. By default, `.link` defines focus, hover and active styles similar to the `<a>` tag.
+Use OUDS Web `.link` class to set up styles such as padding and content alignment to display standalone links. By default, `.link` defines focus, hover and active styles similar to the `<a>` tag. Add `.link-expand` to indicate an expandable link, which icon changes depending on the `[aria-expanded]` attribute.
+
+We use links as dropdown items, but know that you can use `<button>` elements if the context requires a more semantic approach for actions rather than navigation.
 
 <Callout type="info">
   The expand link uses a `<button>` element to trigger the dropdown.
