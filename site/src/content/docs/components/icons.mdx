@@ -11,6 +11,8 @@ types:
 
 import { getVersionedDocsPath } from '@libs/path'
 
+{/* TODO: update link when the interactive and assistant icons design spec is online https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3820 */}
+
 ## Overview
 
 ### Component types
@@ -37,7 +39,7 @@ import { getVersionedDocsPath } from '@libs/path'
           <button class="icon icon-assistant" aria-label="Default assistant icon"></button>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#assistant-button">Assistant icon</a> is a UI element that enables AI related interaction.</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#assistant-icon">Assistant icon</a> is a UI element that enables AI related interaction.</div>
     </div>
   </li>
 </ul>
@@ -78,7 +80,7 @@ In any case, do not forget to add an `aria-label` since there is no discernible 
 
 ## [[comp]] Interactive icon
 
-Interactive icon is a UI element that triggers an action or event. It comes in various states to convey emphasis.
+Interactive Icon is an icon component designed to trigger a user interaction (e.g., open, close, toggle a state). It includes defined interactive states and can be used independently or within other components such as buttons, inputs, or menus.
 
 <Example buttonLabel="interactive icon" class="bd-example" code={`<button class="icon icon-interactive bl-large-icon" aria-label="Default interactive icon">
     <svg aria-hidden="true">
@@ -90,7 +92,7 @@ Interactive icon is a UI element that triggers an action or event. It comes in v
 
 #### Disabled
 
-Make icons inactive by adding the `[disabled]` boolean attribute to any `<button>` element. Disabled icons have `pointer-events: none` applied to, preventing hover and active states from triggering.
+Make icons inactive by adding the `[disabled]` boolean attribute to the `<button>` element. Disabled icons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
 <Example buttonLabel="disabled interactive icon" class="bd-example" code={`<button class="icon icon-interactive bl-large-icon" disabled aria-label="Disabled interactive button icon">
     <svg aria-hidden="true">
@@ -103,7 +105,7 @@ Disabled icons using the `<a>` element behave a bit different:
 - Disabled icons using `<a>` must include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies, to make it visually appear disabled and disable all `pointer-events`.
 - Disabled icons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning]([[docsref:/components/links#disabled-link-accessibility-warning]]).
 
-<Example buttonLabel="disabled icon links" code={`<a href="#" class="icon icon-interactive bl-large-icon" aria-disabled="true" tabindex="-1" aria-label="Disabled interactive link icon">
+<Example buttonLabel="disabled icon links" code={`<a class="icon icon-interactive bl-large-icon" aria-disabled="true" aria-label="Disabled interactive link icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -178,7 +180,7 @@ At the end of the loading, you should:
 
 ## [[comp]] Assistant icon
 
-An assistant icon is a UI element that triggers an action event featuring AI-powered capabilities, such as conversational assistance, content generation, or contextual suggestions.
+Assistant icon is an icon action component used to trigger an interaction with an AI-powered feature, such as conversational assistance, content generation, or contextual suggestions.
 
 The assistant icon combines standard icon functions with AI-specific visual features to clearly indicate actions enhanced or powered by artificial intelligence.
 
