@@ -181,6 +181,18 @@ for (const file of files) {
       + (undocumented.length ? ` — ${undocumented.length} without a description saying so` : ' — documented'))
   }
 
+  // --- a hardcoded icon is never reachable ---------------------------------
+  /* An inlined `<path d="…">` with no `Icon content` text control locks the
+     glyph forever — the bug the four `Item` playgrounds shipped with
+     (heart-empty, unreachable). `Tag` and `Badge` are legitimate fixed
+     assets: each already has its own playground, so they are not held to
+     this rule. */
+  const hasIconControl = Object.values(meta.argTypes)
+    .some((spec) => spec.name === 'Icon content' && ((spec.control && spec.control.type) || spec.control) === 'text')
+  if (/<path d="/.test(src) && !hasIconControl) {
+    problems.push('a hardcoded <path> icon with no `Icon content` text control — the glyph can never be changed (conventions.md §6)')
+  }
+
   // --- render vs transform -------------------------------------------------
   const base = story.args
   const panel = (a) => story.parameters.docs.source.transform('', { args: a })

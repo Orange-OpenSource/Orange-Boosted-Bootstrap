@@ -17,13 +17,16 @@
 // pair only (artifacts 1–2). Code Connect and the Figma plugin (3–4) are
 // blocked on the kit.
 //
-// LEADING/TRAILING ARE ONE SELECT, NOT AN ASSET-TYPE PLUS A SIZE. Figma-side
-// this is "asset type" crossed with "size", but the stylesheet only ever
-// compounds a handful of pairs (`item-leading-large`, `item-leading-xlarge` +
-// `item-leading-rounded`, never both sizes at once) — so the pairs the docs
-// actually show become the options of a single table, keyed by a
-// self-describing label. Adding a second control for size would let someone
-// reach a combination the design system does not draw.
+// ASSET TYPE, SIZE AND STATUS ARE THREE CONTROLS, NOT ONE CATALOGUE ENTRY PER
+// COMBINATION. `Leading asset`/`Trailing asset` pick the family (`Icon`,
+// `Image`, `Slot`…); `Leading size`/`Trailing size` and `Leading status`/
+// `Trailing status` are gated on it with `if: { oneOf }` / `if: { eq }`
+// (conventions.md §8) so only the combinations the stylesheet actually draws
+// stay reachable — `Icon` has no `XLarge rounded` (falls back to `Large`),
+// a status recolors the icon and always wins over size, and `Image` has no
+// status. A single "Icon large" / "Status icon — Positive" style option
+// folded two independent axes into one string per value, which is exactly the
+// catalogue conventions.md §14 warns against.
 //
 // SMALL ITEM IS A FORBIDDEN-COMBINATION WARNING, NOT A GATE. The docs say a
 // small item must not use a sized asset, a slot, an overline or an extra
@@ -44,14 +47,7 @@
 const assetOptions = [
   'None',
   'Icon',
-  'Icon large',
-  'Status icon — Positive',
-  'Status icon — Warning',
-  'Status icon — Info',
-  'Status icon — Negative',
   'Image',
-  'Image large',
-  'Image xlarge rounded',
   'Slot'
 ]
 
@@ -64,16 +60,14 @@ const trailingAssetOptions = [
   'Badge dot',
   'Tag',
   'Icon',
-  'Icon large',
-  'Status icon — Positive',
-  'Status icon — Warning',
-  'Status icon — Info',
-  'Status icon — Negative',
   'Image',
-  'Image large',
-  'Image xlarge rounded',
   'Slot'
 ]
+
+// `Icon` never draws `XLarge rounded` (falls back to `Large`); `Image` never
+// takes a status. Shared axes, gated per asset (conventions.md §8).
+const sizeOptions = ['Normal', 'Large', 'XLarge rounded']
+const statusOptions = ['None', 'Positive', 'Warning', 'Info', 'Negative']
 
 const states = ['Default', 'Disabled', 'Skeleton']
 const backgrounds = ['Default', 'With background', 'No background']
@@ -92,40 +86,107 @@ const inlineHeartPath = '<path d="M18.4 11.242 12 18.247l-6.4-7.005-.003-.004a3.
 const inlineIcons = { heartEmpty: `<svg class="w-100 h-100" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">${inlineHeartPath}</svg>` }
 const spriteIcons = { heartEmpty: '<svg class="w-100 h-100" aria-hidden="true"><use xlink:href="/orange/docs/1.4/assets/img/ouds-web-sprite.svg#heart-empty"/></svg>' }
 
+// The `icon` control repaints `Icon` leading and trailing assets with any SVG
+// or image, the same paste-in mechanism as the button and control-item
+// playgrounds — `Tag` and the two `Badge` options are left alone, each already
+// has its own dedicated playground (conventions.md §6).
+const iconClass = 'w-100 h-100'
+
+const setAttr = (attrs, name, value) => {
+  const re = new RegExp(`\\s${name}="[^"]*"`, 'i')
+
+  return re.test(attrs) ? attrs.replace(re, ` ${name}="${value}"`) : `${attrs} ${name}="${value}"`
+}
+
+const withIconClass = (attrs) => {
+  const existing = /\sclass="([^"]*)"/i.exec(attrs)
+  const classes = existing ? existing[1].split(/\s+/).filter(Boolean) : []
+  const merged = classes.includes(iconClass) ? classes : [iconClass, ...classes]
+
+  return setAttr(attrs, 'class', merged.join(' '))
+}
+
+const wrapIcon = (icon) => `<svg class="${iconClass}" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">${icon}</svg>`
+
+const sizeOf = (attrs, name) => (new RegExp(`\\s${name}="([\\d.]+)`, 'i').exec(attrs) ?? [])[1]
+
+const withViewBox = (attrs) => {
+  const width = sizeOf(attrs, 'width')
+  const height = sizeOf(attrs, 'height')
+
+  return /\sviewBox="/i.test(attrs) || !width || !height ? attrs : `${attrs} viewBox="0 0 ${width} ${height}"`
+}
+
+const keepIcon = (icon, opening) => {
+  const sized = setAttr(withViewBox(opening[1]).replace(/\s(?:width|height)="[^"]*"/gi, ''), 'aria-hidden', 'true')
+
+  return icon.replace(/^\s*<svg[^>]*>/i, `<svg${withIconClass(sized)}>`).trim()
+}
+
+const keepImage = (icon, opening) => {
+  const sized = setAttr(opening[1].replace(/\s(?:width|height)="[^"]*"/gi, ''), 'aria-hidden', 'true')
+
+  return icon.replace(/^\s*<img[^>]*>/i, `<img${setAttr(withIconClass(sized), 'alt', '')}>`).trim()
+}
+
+const urlImage = (icon) => `<img class="${iconClass}" src="${icon.trim().replace(/"/g, '%22').replace(/\s/g, '%20')}" alt="" aria-hidden="true">`
+
+const pastedKinds = { svg: keepIcon, img: keepImage, url: urlImage, inside: wrapIcon }
+
+const kindOf = (icon) => [
+  { kind: 'svg', when: /^\s*<svg[\s>]/i.test(icon) },
+  { kind: 'img', when: /^\s*<img[\s>]/i.test(icon) },
+  { kind: 'url', when: /^\s*(?:data:|https?:\/\/|\/|\.{1,2}\/)/i.test(String(icon)) }
+].filter((entry) => entry.when).map((entry) => entry.kind)[0] ?? 'inside'
+
+const inlineIcon = (icon) => {
+  const kind = kindOf(icon)
+  const opening = new RegExp(`^\\s*<${kind}([^>]*)>`, 'i').exec(icon)
+
+  return pastedKinds[kind](icon, opening)
+}
+
+// A pasted icon replaces the sprite reference on both sides: the Code panel
+// would otherwise lie about what the canvas renders.
+const resolveIcon = (icon, fallback) => (icon ? inlineIcon(icon) : fallback)
+
+const customIcons = (icon) => ({
+  heartEmpty: resolveIcon(icon, inlineIcons.heartEmpty)
+})
+
+const customSpriteIcons = (icon) => ({
+  heartEmpty: resolveIcon(icon, spriteIcons.heartEmpty)
+})
+
 const statusIconClasses = {
-  'Status icon — Positive': 'item-status-positive',
-  'Status icon — Warning': 'item-status-warning',
-  'Status icon — Info': 'item-status-info',
-  'Status icon — Negative': 'item-status-negative'
+  'Positive': 'item-status-positive',
+  'Warning': 'item-status-warning',
+  'Info': 'item-status-info',
+  'Negative': 'item-status-negative'
+}
+
+const leadingSizeClasses = {
+  'Normal': '',
+  'Large': ' item-leading-large',
+  'XLarge rounded': ' item-leading-xlarge item-leading-rounded ratio-16x9'
+}
+
+const trailingSizeClasses = {
+  'Normal': '',
+  'Large': ' item-trailing-large',
+  'XLarge rounded': ' item-trailing-xlarge ratio-16x9 item-trailing-rounded'
 }
 
 const leadingTemplates = {
   'None': () => '',
-  'Icon': (icons) => `<div class="item-leading-container">
+  'Icon': (icons, size, status) => (status !== 'None'
+    ? `<div class="item-leading-container">
+  <div class="item-icon ${statusIconClasses[status]}"></div>
+</div>`
+    : `<div class="item-leading-container${leadingSizeClasses[size === 'XLarge rounded' ? 'Large' : size]}">
   ${icons.heartEmpty}
-</div>`,
-  'Icon large': (icons) => `<div class="item-leading-container item-leading-large">
-  ${icons.heartEmpty}
-</div>`,
-  'Status icon — Positive': () => `<div class="item-leading-container">
-  <div class="item-icon ${statusIconClasses['Status icon — Positive']}"></div>
-</div>`,
-  'Status icon — Warning': () => `<div class="item-leading-container">
-  <div class="item-icon ${statusIconClasses['Status icon — Warning']}"></div>
-</div>`,
-  'Status icon — Info': () => `<div class="item-leading-container">
-  <div class="item-icon ${statusIconClasses['Status icon — Info']}"></div>
-</div>`,
-  'Status icon — Negative': () => `<div class="item-leading-container">
-  <div class="item-icon ${statusIconClasses['Status icon — Negative']}"></div>
-</div>`,
-  'Image': () => `<div class="item-leading-container">
-  <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover">
-</div>`,
-  'Image large': () => `<div class="item-leading-container item-leading-large">
-  <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover">
-</div>`,
-  'Image xlarge rounded': () => `<div class="item-leading-container item-leading-xlarge item-leading-rounded ratio-16x9">
+</div>`),
+  'Image': (icons, size) => `<div class="item-leading-container${leadingSizeClasses[size]}">
   <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover">
 </div>`,
   'Slot': () => `<div class="item-leading-container item-slot">
@@ -154,31 +215,14 @@ const trailingTemplates = {
   'Tag': () => `<div class="item-trailing-container">
   <p class="tag">Tag</p>
 </div>`,
-  'Icon': (icons) => `<div class="item-trailing-container">
+  'Icon': (icons, size, status) => (status !== 'None'
+    ? `<div class="item-trailing-container">
+  <div class="item-icon ${statusIconClasses[status]}"></div>
+</div>`
+    : `<div class="item-trailing-container${trailingSizeClasses[size === 'XLarge rounded' ? 'Large' : size]}">
   ${icons.heartEmpty}
-</div>`,
-  'Icon large': (icons) => `<div class="item-trailing-container item-trailing-large">
-  ${icons.heartEmpty}
-</div>`,
-  'Status icon — Positive': () => `<div class="item-trailing-container">
-  <div class="item-icon ${statusIconClasses['Status icon — Positive']}"></div>
-</div>`,
-  'Status icon — Warning': () => `<div class="item-trailing-container">
-  <div class="item-icon ${statusIconClasses['Status icon — Warning']}"></div>
-</div>`,
-  'Status icon — Info': () => `<div class="item-trailing-container">
-  <div class="item-icon ${statusIconClasses['Status icon — Info']}"></div>
-</div>`,
-  'Status icon — Negative': () => `<div class="item-trailing-container">
-  <div class="item-icon ${statusIconClasses['Status icon — Negative']}"></div>
-</div>`,
-  'Image': () => `<div class="item-trailing-container">
-  <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover">
-</div>`,
-  'Image large': () => `<div class="item-trailing-container item-trailing-large">
-  <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover">
-</div>`,
-  'Image xlarge rounded': () => `<div class="item-trailing-container item-trailing-xlarge ratio-16x9 item-trailing-rounded">
+</div>`),
+  'Image': (icons, size) => `<div class="item-trailing-container${trailingSizeClasses[size]}">
   <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover">
 </div>`,
   'Slot': () => `<div class="item-trailing-container item-slot">
@@ -187,7 +231,10 @@ const trailingTemplates = {
 }
 
 // A sized asset, or a slot, is what the docs forbid on a small item.
-const restrictedForSmall = (asset) => /large|xlarge/i.test(asset) || asset === 'Slot'
+const restrictedForSmall = (asset, size) => asset === 'Slot' || ((asset === 'Icon' || asset === 'Image') && size !== 'Normal')
+
+// A status icon is always normal size, whatever `Leading size`/`Trailing size` holds.
+const effectiveSize = (asset, size, status) => (asset === 'Icon' && status !== 'None' ? 'Normal' : size)
 
 // OUDS forbids some combinations the markup allows. They stay reachable — one
 // has to be able to see what they do — and the story warns twice over: a
@@ -209,11 +256,11 @@ const warned = (markup, warning, preview) => (warning
 ${markup}`
   : markup)
 
-const smallSizeWarning = (small, leading, trailing, overline, extraLabel) => {
+const smallSizeWarning = (small, leading, leadingSize, trailing, trailingSize, overline, extraLabel) => {
   const problems = small
     ? [
-      restrictedForSmall(leading) ? 'leading asset' : '',
-      restrictedForSmall(trailing) ? 'trailing asset' : '',
+      restrictedForSmall(leading, leadingSize) ? 'leading asset' : '',
+      restrictedForSmall(trailing, trailingSize) ? 'trailing asset' : '',
       overline ? 'overline' : '',
       extraLabel ? 'extra label' : ''
     ].filter(Boolean)
@@ -247,9 +294,13 @@ ${indent(markup, '  ')}
 </div>`
   : markup)
 
-const renderStaticCardItem = ({ overline, label, boldLabel, extraLabel, description, leadingAsset, trailingAsset, helperText, state, background, noDivider, outlined, roundedCorners, topAlignment, smallSize, maxWidth }, icons = inlineIcons, preview = true) => {
+const renderStaticCardItem = ({ overline, label, boldLabel, extraLabel, description, leadingAsset, leadingSize, leadingStatus, trailingAsset, trailingSize, trailingStatus, helperText, state, background, noDivider, outlined, roundedCorners, topAlignment, smallSize, maxWidth, icon }, icons = customIcons(icon), preview = true) => {
   const safeLeading = orElse(leadingAsset, assetOptions)
+  const safeLeadingSize = orElse(leadingSize, sizeOptions)
+  const safeLeadingStatus = orElse(leadingStatus, statusOptions)
   const safeTrailing = orElse(trailingAsset, trailingAssetOptions)
+  const safeTrailingSize = orElse(trailingSize, sizeOptions)
+  const safeTrailingStatus = orElse(trailingStatus, statusOptions)
   const safeState = orElse(state, states)
   const safeBackground = orElse(background, backgrounds)
 
@@ -280,9 +331,9 @@ ${block([
 
   const itemContent = `<div class="item-content">
 ${block([
-    leadingTemplates[safeLeading](icons),
+    leadingTemplates[safeLeading](icons, safeLeadingSize, safeLeadingStatus),
     textContainer,
-    trailingTemplates[safeTrailing](icons)
+    trailingTemplates[safeTrailing](icons, safeTrailingSize, safeTrailingStatus)
   ], '  ')}
 </div>`
 
@@ -296,7 +347,7 @@ ${indent(itemContent, '  ')}
 ${block([itemContainer, helper], '  ')}
 </div>`
 
-  const warning = smallSizeWarning(smallSize, safeLeading, safeTrailing, overline, extraLabel)
+  const warning = smallSizeWarning(smallSize, safeLeading, effectiveSize(safeLeading, safeLeadingSize, safeLeadingStatus), safeTrailing, effectiveSize(safeTrailing, safeTrailingSize, safeTrailingStatus), overline, extraLabel)
   const withState = disabledWrapper(skeletonWrapper(warned(item, warning, preview), safeState === 'Skeleton'), safeState === 'Disabled')
 
   return roundedCornersWrapper(withState, roundedCorners)
@@ -332,13 +383,46 @@ export default {
       name: 'Leading asset',
       control: 'select',
       options: assetOptions,
-      description: 'One control for asset type and size together: the stylesheet only ever compounds the pairs the design system draws (`item-leading-large`, or `item-leading-xlarge` + `item-leading-rounded`), so those pairs are the options rather than two separate controls that could reach an undrawn combination.',
+      description: 'The asset family. `Leading size` and `Leading status` below refine `Icon`/`Image`.',
+    },
+    leadingSize: {
+      name: 'Leading size',
+      control: 'select',
+      options: sizeOptions,
+      if: { arg: 'leadingAsset', oneOf: ['Icon', 'Image'] },
+      description: '`Icon` only draws `Normal`/`Large` — `XLarge rounded` falls back to `Large`. Hidden once `Leading status` recolors the icon, since a status icon is always normal size. Gated on the asset with `oneOf`, which the standalone preview honours and Storybook ignores.',
+    },
+    leadingStatus: {
+      name: 'Leading status',
+      control: 'select',
+      options: statusOptions,
+      if: { arg: 'leadingAsset', eq: 'Icon' },
+      description: 'Recolors the leading icon into a status icon (`.item-status-*`) and overrides `Leading size`.',
     },
     trailingAsset: {
       name: 'Trailing asset',
       control: 'select',
       options: trailingAssetOptions,
       description: 'Text, badge and tag are exempt from the small-item sizing restriction; icon and image are not.',
+    },
+    trailingSize: {
+      name: 'Trailing size',
+      control: 'select',
+      options: sizeOptions,
+      if: { arg: 'trailingAsset', oneOf: ['Icon', 'Image'] },
+      description: '`Icon` only draws `Normal`/`Large` — `XLarge rounded` falls back to `Large`. Hidden once `Trailing status` recolors the icon, since a status icon is always normal size. Gated on the asset with `oneOf`, which the standalone preview honours and Storybook ignores.',
+    },
+    trailingStatus: {
+      name: 'Trailing status',
+      control: 'select',
+      options: statusOptions,
+      if: { arg: 'trailingAsset', eq: 'Icon' },
+      description: 'Recolors the trailing icon into a status icon (`.item-status-*`) and overrides `Trailing size`.',
+    },
+    icon: {
+      name: 'Icon content',
+      control: 'text',
+      description: 'A whole `<svg>…</svg>` or an `<img>`, pasted as is, a bare `data:` URL, or only the inside of an SVG (`<path>`, `<g>`…), then wrapped in a 24×24 viewBox. Applies when a leading/trailing asset is `Icon`. Empty: the heart-empty icon shown in the documentation example.',
     },
     helperText: {
       name: 'Helper text',
@@ -395,7 +479,7 @@ export const PlaygroundStaticCardItem = {
     docs: {
       codePanel: true,
       source: {
-        transform: (_src, context) => renderStaticCardItem(context.args, spriteIcons, false),
+        transform: (_src, context) => renderStaticCardItem(context.args, customSpriteIcons(context.args.icon), false),
       },
     },
   },
@@ -407,7 +491,12 @@ export const PlaygroundStaticCardItem = {
     extraLabel: 'Extra label',
     description: 'Description',
     leadingAsset: 'Icon',
+    leadingSize: 'Normal',
+    leadingStatus: 'None',
     trailingAsset: 'None',
+    trailingSize: 'Normal',
+    trailingStatus: 'None',
+    icon: '',
     helperText: '',
     state: 'Default',
     background: 'Default',

@@ -192,6 +192,21 @@ to the canvas. `check_stories.js` bounds that risk: it compares the two
 normalised outputs and warns when they differ outside `<svg>`, so an unintended
 divergence still surfaces.
 
+**A fixed icon path is a bug, not a placeholder.** The four `Item` playgrounds
+shipped with the docs' `heart-empty` glyph hardcoded — no control could ever
+change it. Any component whose markup draws an icon (not a status dot, not a
+`Tag`/`Badge`, each already has its own playground) needs an `icon` text
+control that repaints it, the pattern Button and the control-item playgrounds
+already use:
+
+```js
+const resolveIcon = (icon, fallback) => (icon ? inlineIcon(icon) : fallback)
+```
+
+`render` resolves against the inline default, `transform` against the sprite
+reference — same split as above. `check_stories.js` fails a file that has a
+hardcoded `<path d="…">` with no matching `icon` control.
+
 ## 7. Wrappers: max-width and skeleton
 
 Two wrappers recur across components, with the same body every time. **Neither
@@ -515,6 +530,27 @@ and which is deliberately styled outside the design system so it cannot be
 mistaken for a component. This turned out to be the most-liked thing in the
 corpus — reuse the pattern wherever the design system forbids a combination the
 markup allows.
+
+**An "asset" select that folds type, size and status into one option string is
+the same anti-pattern.** The four item playgrounds (Static/Navigation card and
+list item) once offered a single `Leading asset` select with options like
+`'Icon'`, `'Icon large'`, `'Status icon — Positive'`, `'Image xlarge rounded'`:
+three independent axes — asset family, size, status — collapsed into one
+catalogue of pre-baked combinations, so `Icon large` could not become a status
+icon and `Icon` could not be resized without hunting for the right compound
+string. Read as "which asset-family-size-status combos exist" — Badge's and
+Chip's own catalogues answer that question worse than a real select per axis
+would. The fix: one select per axis — `Leading asset` (family: `None`, `Icon`,
+`Image`, `Slot`…), `Leading size` and `Leading status` — each gated with `if`
+(§8) so only the combinations the stylesheet draws stay reachable: `Leading
+size` on `if: { arg: 'leadingAsset', oneOf: ['Icon', 'Image'] }`, `Leading
+status` on `if: { arg: 'leadingAsset', eq: 'Icon' }` since `Image` never takes
+a status. A value neither axis's stylesheet draws (`Icon` + `XLarge rounded`)
+is clamped in the render table rather than reachable — the same "every select
+falls back" principle (§5), applied inside a table instead of at the top of
+it. Whenever a value name reads like two or three properties glued with a
+space or an em dash, that is the signal to split it into one control per axis
+before it grows a fourth.
 
 ---
 
