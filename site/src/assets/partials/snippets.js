@@ -157,28 +157,29 @@ export default () => {
   // -------------------------------
   // Modal
   // -------------------------------
-  // Modal 'Varying modal content' example in docs and StackBlitz
-  // storybook-start modal
-  // js-docs-start varying-modal-content
-  if (document.getElementById('exampleModal')) {
-    document.getElementById('exampleModal').addEventListener('show.bs.modal', event => {
-      // Button that triggered the modal
-      const button = event.relatedTarget
-      // Extract info from data-bs-* attributes
-      const recipient = button.getAttribute('data-bs-whatever')
-      // If necessary, you could initiate an Ajax request here
-      // and then do the updating in a callback.
+  // Modal 'JS' example in docs
+  if (document.getElementById('demoJSModal')) {
+    // js-docs-start modal-js
+    const dialog = document.getElementById('demoJSModal')
+    const openingButton = document.querySelector('[data-open-modal="demoJSModal"]')
+    const closeButton = document.querySelector('[data-close-modal="demoJSModal"]')
 
-      // Update the modal's content.
-      const modalTitle = document.getElementById('exampleModal').querySelector('.modal-title')
-      const modalBodyInput = document.getElementById('exampleModal').querySelector('.modal-body input')
-
-      modalTitle.textContent = `New message to ${recipient}`
-      modalBodyInput.value = recipient
+    openingButton.addEventListener('click', () => {
+      dialog.showModal()
     })
+
+    closeButton.addEventListener('click', () => {
+      dialog.close()
+    })
+
+    // this is necessary for "light dismiss" (closing dialog on backdrop click)
+    dialog.addEventListener('click', event => {
+      if (event.target === event.currentTarget) {
+        dialog.close()
+      }
+    })
+    // js-docs-end modal-js
   }
-  // js-docs-end varying-modal-content
-  // storybook-end modal
 
   // -------------------------------
   // Offcanvas
