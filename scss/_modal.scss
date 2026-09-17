@@ -37,7 +37,7 @@
     display: flex;
   }
 
-  &.modal-full-height,
+  &.modal-fixed-height,
   &.modal-sticky-actions {
     height: calc(100vh - 2 * var(--#{$prefix}modal-grid-margin));
   }
@@ -73,15 +73,22 @@
   }
 
   &.modal-small {
+    max-height: 50vh;
+
     @include media-breakpoint-up(md) {
       --#{$prefix}modal-column-count: 8;
     }
     @include media-breakpoint-up(lg) {
       --#{$prefix}modal-column-count: 6;
+      max-height: 60vh;
     }
 
     @include media-breakpoint-up(xl) {
       --#{$prefix}modal-column-count: 4;
+    }
+
+    @include media-breakpoint-up(3xl) {
+      max-height: 50vh;
     }
 
     .modal-title {
@@ -170,17 +177,10 @@
   background-color: $ouds-color-overlay-modal-sheet;
 
   @include media-breakpoint-down(md) {
-    &:not(.modal-footer-horizontal) {
-      flex-direction: column; // stack buttons on small screens
+    flex-direction: column; // stack buttons on small screens
 
-      &:not(.modal-footer-small) > * {
-        width: 100%; // make buttons full width on small screens
-      }
+    > * {
+      width: 100%; // make buttons full width on small screens
     }
-  }
-
-  > .link {
-    justify-content: center;
-    margin-inline-end: auto; // push link to the left of the buttons
   }
 }

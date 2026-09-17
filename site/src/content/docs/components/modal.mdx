@@ -9,10 +9,11 @@ types:
   - Fullscreen dialog
 ---
 
+import { getVersionedDocsPath } from '@libs/path'
+
 ## Overview
 
 ### Component types
-
 
 <ul class="list-unstyled grid gap-medium">
   <li class="g-col-6">
@@ -69,11 +70,11 @@ Modal dialog is used for focused tasks that should stay visually separated from 
 
 ### Modal dialog variants
 
-#### Full height
+#### Fixed height
 
-Add `.modal-full-height` to the `.modal` `<dialog>` to use the max height option. This variant can be used to simulate a modal containing a large amount of content that requires vertical scrolling, or to define a fixed-height modal for multi-step flows or content with a consistent layout.
+Add `.modal-fixed-height` to the `.modal` `<dialog>` to use the max height option. This variant can be used to simulate a modal containing a large amount of content that requires vertical scrolling, or to define a fixed-height modal for multi-step flows or content with a consistent layout.
 
-<Example buttonLabel="dialog modal full height" code={`<dialog id="demoModalFullHeight" class="modal modal-full-height" aria-label="Demo modal" closedby="any">
+<Example buttonLabel="dialog modal fixed height" code={`<dialog id="demoModalFullHeight" class="modal modal-fixed-height" aria-label="Demo modal" closedby="any">
     <div class="modal-header">
       <h3 class="modal-title">Modal title</h3>
       <button type="button" class="btn btn-close" commandfor="demoModalFullHeight" command="close">
@@ -91,7 +92,7 @@ Add `.modal-full-height` to the `.modal` `<dialog>` to use the max height option
   </dialog>
 
   <button type="button" class="btn btn-default" commandfor="demoModalFullHeight" command="show-modal">
-    Open full height modal
+    Open fixed height modal
   </button>`} />
 
 <BrandSpecific brand={['orange', 'orange-compact']}>
@@ -325,7 +326,7 @@ You can display a subtitle above the title, aligned to the leading edge of the m
     <div class="modal-header">
       <div class="d-flex align-items-center gap-scaled-small">
         <svg class="hm-large-icon" aria-hidden="true">
-          <use xlink:href="/orange/docs/1.4/assets/img/ouds-web-sprite.svg#heart-empty" />
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
         <h3 class="modal-title">Modal title</h3>
       </div>
@@ -384,7 +385,7 @@ There can be up to three actions buttons on the modal. These buttons typically i
       <div class="modal-footer">
         <button type="button" class="btn btn-strong" commandfor="demoModalMultipleActions" command="close">Confirm</button>
         <button type="button" class="btn btn-minimal" commandfor="demoModalMultipleActions" command="close">Cancel</button>
-        <a href="#" class="link">More Info</a>
+        <a href="#" class="link justify-content-center">More Info</a>
       </div>
     </div>
   </dialog>
