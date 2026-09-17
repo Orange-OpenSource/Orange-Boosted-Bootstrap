@@ -6,6 +6,7 @@
  * @see site/src/libs/astro.ts
  */
 export declare global {
+  export const AccessibilityTagsNotice: typeof import('@shortcodes/AccessibilityTagsNotice.astro').default
   export const AddedIn: typeof import('@shortcodes/AddedIn.astro').default
   export const AssetsNavTab: typeof import('@shortcodes/AssetsNavTab.astro').default
   export const AssetsTab: typeof import('@shortcodes/AssetsTab.astro').default
