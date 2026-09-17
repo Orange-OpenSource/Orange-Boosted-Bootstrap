@@ -62,14 +62,7 @@ const onColoredBgClass = (coloredBg) => (coloredBg ? 'btn-on-colored-bg' : '')
 // design system so it cannot be mistaken for a component. The two helpers below
 // are identical on every component of the corpus that has such a combination.
 const warningBanner = (warning) =>
-  `<div class="alert alert-message alert-negative mb-medium" role="alert">
-  <div class="alert-icon"><p class="visually-hidden">Warning</p></div>
-  <div class="alert-container">
-    <div class="alert-text-container">
-      <p class="alert-label">${warning}</p>
-    </div>
-  </div>
-</div>
+  `<p style="margin:0 0 12px;padding:8px 12px;border-left:3px solid #b8460e;background:#fff6e8;color:#8a5300;font:600 12px/1.45 system-ui,sans-serif">${warning}</p>
 `
 
 const warned = (markup, warning, preview) => (warning
