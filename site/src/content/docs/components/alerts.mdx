@@ -437,7 +437,8 @@ If the alert can be removed when its content is acknowledged, add a close button
 You can add an action [link]([[docsref:/components/links]]) (`<a>` or `<button` depending on the context of use) either after the `.alert-text-container` or inside the `.alert-action-container`.
 
 <Callout type="warning">
-  Please note that only the basic link should be used.
+  - Please note that only the basic link without icon or chevron should be used.
+  - The [compact version of the link]([[docsref:/components/links#sizes]]) must be used when it is placed inside `.alert-container`.
 </Callout>
 
 <Example buttonLabel="alert message with alternate action" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-info">
@@ -446,7 +447,7 @@ You can add an action [link]([[docsref:/components/links]]) (`<a>` or `<button` 
       <div class="alert-text-container">
         <p class="alert-label">Info alert</p>
       </div>
-      <button class="link">Action</button>
+      <button class="link link-compact">Action</button>
     </div>
     <div class="alert-action-container">
       <button class="btn-close" data-bs-dismiss="alert">
@@ -478,7 +479,7 @@ You can add an action [link]([[docsref:/components/links]]) (`<a>` or `<button` 
       <div class="alert-text-container">
         <p class="alert-label">Info alert</p>
       </div>
-      <a href="#" class="link">Action</a>
+      <a href="#" class="link link-compact">Action</a>
     </div>
     <div class="alert-action-container">
       <button class="btn-close" data-bs-dismiss="alert">
@@ -576,7 +577,7 @@ Here are some examples with everything activated and some long texts to see how 
           <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem. Aenean posuere elementum massa, ac elementum magna auctor quis.</li>
         </ul>
       </div>
-      <a href="#" class="link">Action</a>
+      <a href="#" class="link link-compact">Action</a>
     </div>
     <div class="alert-action-container">
       <button class="btn-close" data-bs-dismiss="alert">
