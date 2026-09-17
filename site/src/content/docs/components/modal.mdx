@@ -74,10 +74,10 @@ Modal dialog is used for focused tasks that should stay visually separated from 
 
 Add `.modal-fixed-height` to the `.modal` `<dialog>` to use the max height option. This variant can be used to simulate a modal containing a large amount of content that requires vertical scrolling, or to define a fixed-height modal for multi-step flows or content with a consistent layout.
 
-<Example buttonLabel="dialog modal fixed height" code={`<dialog id="demoModalFullHeight" class="modal modal-fixed-height" aria-label="Demo modal" closedby="any">
+<Example buttonLabel="dialog modal fixed height" code={`<dialog id="demoModalFixedHeight" class="modal modal-fixed-height" aria-label="Demo modal" closedby="any">
     <div class="modal-header">
       <h3 class="modal-title">Modal title</h3>
-      <button type="button" class="btn btn-close" commandfor="demoModalFullHeight" command="close">
+      <button type="button" class="btn btn-close" commandfor="demoModalFixedHeight" command="close">
         <span class="visually-hidden">Close</span>
       </button>
     </div>
@@ -86,13 +86,33 @@ Add `.modal-fixed-height` to the `.modal` `<dialog>` to use the max height optio
       <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young.</p>
       <p>On then sake home is am leaf. Of suspicion do departure at extremely he believing. Do know said mind do rent they oh hope of. General enquire picture letters garrets on offices of no on. Say one hearing between excited evening all inhabit thought you. Style begin mr heard by in music tried do. To unreserved projection no introduced invitation.</p>
       <div class="modal-footer">
-        <button type="button" class="btn btn-strong" commandfor="demoModalFullHeight" command="close">Confirm</button>
+        <button type="button" class="btn btn-strong" commandfor="demoModalFixedHeight" command="close">Confirm</button>
       </div>
     </div>
   </dialog>
 
-  <button type="button" class="btn btn-default" commandfor="demoModalFullHeight" command="show-modal">
+  <button type="button" class="btn btn-default" commandfor="demoModalFixedHeight" command="show-modal">
     Open fixed height modal
+  </button>
+
+  <dialog id="demoModalSmallFixedHeight" class="modal modal-small modal-fixed-height" aria-label="Demo modal" closedby="any">
+    <div class="modal-header">
+      <h3 class="modal-title">Modal title</h3>
+      <button type="button" class="btn btn-close" commandfor="demoModalSmallFixedHeight" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
+      <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-strong" commandfor="demoModalSmallFixedHeight" command="close">Confirm</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="demoModalSmallFixedHeight" command="show-modal">
+    Open small fixed height modal
   </button>`} />
 
 <BrandSpecific brand={['orange', 'orange-compact']}>
