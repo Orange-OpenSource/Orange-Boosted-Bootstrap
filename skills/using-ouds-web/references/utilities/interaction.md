@@ -24,7 +24,7 @@
 <a href="#" class="pointer-events-auto">Clickable link</a>
 ```
 
-> **Breaking change (v1.4.0+):** these classes were previously named `.pe-none`/`.pe-auto` (renamed to avoid collision with padding utilities).
+> **Breaking change (v1.5.0):** these classes were previously named `.pe-none`/`.pe-auto` (renamed to avoid collision with padding utilities).
 
 `.pointer-events-none` only affects pointer devices (mouse, stylus, touch). To fully disable for keyboard users, also add `tabindex="-1"` and `aria-disabled="true"`.
 
