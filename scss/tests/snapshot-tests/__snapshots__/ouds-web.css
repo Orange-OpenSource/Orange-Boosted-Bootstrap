@@ -9573,6 +9573,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .alert-message .alert-icon {
   margin-top: 12px;
 }
+.alert-message .alert-label {
+  max-width: var(--bs-font-max-width-boxed-text);
+}
 @supports not (container-type: size) {
   .alert-message:not(:has(.alert-text-container p:not(.alert-label), .alert-text-container ul, .alert-container .link)) .btn-close {
     border-bottom-right-radius: var(--bs-alert-border-radius);
@@ -9700,9 +9703,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   /* rtl:remove */
   letter-spacing: var(--bs-font-letter-spacing-label-large);
   font-weight: 500;
-}
-.alert-message .alert-label {
-  max-width: var(--bs-font-max-width-boxed-text);
 }
 
 .alert-accent {

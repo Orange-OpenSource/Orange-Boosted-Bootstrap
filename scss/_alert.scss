@@ -46,6 +46,10 @@
     margin-top: $ouds-alert-space-padding-block;
   }
 
+  .alert-label {
+    max-width: var(--#{$prefix}font-max-width-boxed-text);
+  }
+
   @supports not (container-type: size) {
     &:not(:has(.alert-text-container p:not(.alert-label), .alert-text-container ul, .alert-container .link)) .btn-close {
       @include border-bottom-end-radius(var(--#{$prefix}alert-border-radius));
@@ -177,10 +181,6 @@
   margin-bottom: 0;
   @include get-font-size("label-large", true);
   font-weight: $ouds-font-weight-web-label-moderate;
-
-  .alert-message & {
-    max-width: var(--#{$prefix}font-max-width-boxed-text);
-  }
 }
 
 // Variants
