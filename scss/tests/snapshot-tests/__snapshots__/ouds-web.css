@@ -6412,14 +6412,20 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-btn-disabled-color: var(--bs-color-action-disabled);
   --bs-btn-focus-color: var(--bs-color-action-focus);
   --bs-btn-loading-color: var(--bs-color-action-loading);
-  --bs-assistant-icon-size: 24px;
+  --bs-assistant-gradient-unit: 82deg;
+  --bs-assistant-border-gradient:
+    conic-gradient(
+      var(--bs-color-ai-secondary) 0 var(--bs-assistant-gradient-unit),
+      var(--bs-color-ai-tertiary) var(--bs-assistant-gradient-unit) calc(2 * var(--bs-assistant-gradient-unit)),
+      var(--bs-color-ai-quaternary) calc(2 * var(--bs-assistant-gradient-unit)) calc(3 * var(--bs-assistant-gradient-unit)),
+      var(--bs-color-ai-primary) calc(3 * var(--bs-assistant-gradient-unit)) calc(4 * var(--bs-assistant-gradient-unit))
+    );
   border-color: currentcolor;
-  --bs-loader-gradient-unit: 82deg;
 }
 .btn-assistant::before {
   flex-shrink: 0;
-  width: var(--bs-assistant-icon-size);
-  height: var(--bs-assistant-icon-size);
+  width: var(--bs-btn-icon-size);
+  height: var(--bs-btn-icon-size);
   content: "";
   background-color: currentcolor;
   -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M11.5 4.6c.1-.5.9-.5 1 0l.8 2.3a7 7 0 0 0 4.8 4.5l2.5.7c.5.2.5.8 0 1l-2.5.7a7 7 0 0 0-4.8 4.5l-.8 2.3c-.1.5-.9.5-1 0l-.8-2.3a7 7 0 0 0-4.8-4.5l-2.5-.7a.5.5 0 0 1 0-1l2.5-.7a7 7 0 0 0 4.8-4.5zM5 4.9q.1-.1.2 0l.2.6q.3.9 1.1 1l.6.3q.1.1 0 .2l-.6.2a2 2 0 0 0-1 1.1l-.3.6q-.1.2-.2 0l-.2-.6a2 2 0 0 0-1.1-1L3 7q-.2-.1 0-.2l.6-.2a2 2 0 0 0 1-1.1zM17.9 3h.3l.3.8Q18.9 5 20 5.4l.9.3V6l-.9.3a2 2 0 0 0-1.5 1.5l-.3.8h-.3l-.3-.8A2 2 0 0 0 16 6.3l-.8-.3v-.3l.8-.3A2 2 0 0 0 17.6 4z'/></svg>") center;
@@ -6427,23 +6433,23 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 @media (prefers-reduced-motion: no-preference) and (prefers-contrast: no-preference) and (forced-colors: none) {
   .btn-assistant {
-    background: linear-gradient(var(--bs-btn-bg, var(--bs-color-bg-primary))) padding-box, conic-gradient(var(--bs-color-ai-secondary) 0 var(--bs-loader-gradient-unit), var(--bs-color-ai-tertiary) var(--bs-loader-gradient-unit) calc(2 * var(--bs-loader-gradient-unit)), var(--bs-color-ai-quaternary) calc(2 * var(--bs-loader-gradient-unit)) calc(3 * var(--bs-loader-gradient-unit)), var(--bs-color-ai-primary) calc(3 * var(--bs-loader-gradient-unit)) calc(4 * var(--bs-loader-gradient-unit))) border-box;
+    background: linear-gradient(var(--bs-btn-bg, var(--bs-color-bg-primary))) padding-box, var(--bs-assistant-border-gradient) border-box;
     border-color: transparent;
   }
   @supports (background-clip: border-area) {
     .btn-assistant {
-      background: conic-gradient(var(--bs-color-ai-secondary) 0 var(--bs-loader-gradient-unit), var(--bs-color-ai-tertiary) var(--bs-loader-gradient-unit) calc(2 * var(--bs-loader-gradient-unit)), var(--bs-color-ai-quaternary) calc(2 * var(--bs-loader-gradient-unit)) calc(3 * var(--bs-loader-gradient-unit)), var(--bs-color-ai-primary) calc(3 * var(--bs-loader-gradient-unit)) calc(4 * var(--bs-loader-gradient-unit))) border-box border-area;
+      background: var(--bs-assistant-border-gradient) border-box border-area;
     }
-  }
-  .btn-assistant:is(:disabled, [aria-disabled=true]):not(.loading-indeterminate, .loading-determinate) {
-    background: initial;
   }
   .btn-assistant:is(:hover, :active, :focus-visible) {
     border-color: transparent;
   }
+  .btn-assistant:is(:disabled, [aria-disabled=true]):not(.loading-indeterminate, .loading-determinate) {
+    background: initial;
+  }
 }
 .btn-assistant.btn-icon, .btn-assistant.btn-close {
-  --bs-loader-gradient-unit: 72deg;
+  --bs-assistant-gradient-unit: 72deg;
   --bs-btn-border-radius: 2000px;
 }
 .btn-assistant.btn-small {
@@ -12149,36 +12155,38 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .icon-assistant {
-  --bs-loader-gradient-unit: 72deg;
   --bs-icon-border-width: 1px;
+  --bs-assistant-gradient-unit: 72deg;
   --bs-assistant-icon-size: 1rem;
-  align-items: center;
-  justify-content: center;
-  border: var(--bs-icon-border-width) solid transparent;
+  --bs-assistant-gradient-unit: 82deg;
+  --bs-assistant-border-gradient:
+    conic-gradient(
+      var(--bs-color-ai-secondary) 0 var(--bs-assistant-gradient-unit),
+      var(--bs-color-ai-tertiary) var(--bs-assistant-gradient-unit) calc(2 * var(--bs-assistant-gradient-unit)),
+      var(--bs-color-ai-quaternary) calc(2 * var(--bs-assistant-gradient-unit)) calc(3 * var(--bs-assistant-gradient-unit)),
+      var(--bs-color-ai-primary) calc(3 * var(--bs-assistant-gradient-unit)) calc(4 * var(--bs-assistant-gradient-unit))
+    );
+  position: relative;
   border-radius: 2000px;
-  --bs-loader-gradient-unit: 82deg;
 }
 .icon-assistant::before {
-  flex-shrink: 0;
-  width: var(--bs-assistant-icon-size);
-  height: var(--bs-assistant-icon-size);
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: var(--bs-assistant-border-gradient);
+  border-radius: 2000px;
+  -webkit-mask-image: radial-gradient(circle closest-side, transparent 0% 91.6666%, #000 91.6666% 100%);
+  mask-image: radial-gradient(circle closest-side, transparent 0% 91.6666%, #000 91.6666% 100%);
+}
+.icon-assistant::after {
+  position: absolute;
+  inset: 0;
   content: "";
   background-color: currentcolor;
-  -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M11.5 4.6c.1-.5.9-.5 1 0l.8 2.3a7 7 0 0 0 4.8 4.5l2.5.7c.5.2.5.8 0 1l-2.5.7a7 7 0 0 0-4.8 4.5l-.8 2.3c-.1.5-.9.5-1 0l-.8-2.3a7 7 0 0 0-4.8-4.5l-2.5-.7a.5.5 0 0 1 0-1l2.5-.7a7 7 0 0 0 4.8-4.5zM5 4.9q.1-.1.2 0l.2.6q.3.9 1.1 1l.6.3q.1.1 0 .2l-.6.2a2 2 0 0 0-1 1.1l-.3.6q-.1.2-.2 0l-.2-.6a2 2 0 0 0-1.1-1L3 7q-.2-.1 0-.2l.6-.2a2 2 0 0 0 1-1.1zM17.9 3h.3l.3.8Q18.9 5 20 5.4l.9.3V6l-.9.3a2 2 0 0 0-1.5 1.5l-.3.8h-.3l-.3-.8A2 2 0 0 0 16 6.3l-.8-.3v-.3l.8-.3A2 2 0 0 0 17.6 4z'/></svg>") center;
-  mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M11.5 4.6c.1-.5.9-.5 1 0l.8 2.3a7 7 0 0 0 4.8 4.5l2.5.7c.5.2.5.8 0 1l-2.5.7a7 7 0 0 0-4.8 4.5l-.8 2.3c-.1.5-.9.5-1 0l-.8-2.3a7 7 0 0 0-4.8-4.5l-2.5-.7a.5.5 0 0 1 0-1l2.5-.7a7 7 0 0 0 4.8-4.5zM5 4.9q.1-.1.2 0l.2.6q.3.9 1.1 1l.6.3q.1.1 0 .2l-.6.2a2 2 0 0 0-1 1.1l-.3.6q-.1.2-.2 0l-.2-.6a2 2 0 0 0-1.1-1L3 7q-.2-.1 0-.2l.6-.2a2 2 0 0 0 1-1.1zM17.9 3h.3l.3.8Q18.9 5 20 5.4l.9.3V6l-.9.3a2 2 0 0 0-1.5 1.5l-.3.8h-.3l-.3-.8A2 2 0 0 0 16 6.3l-.8-.3v-.3l.8-.3A2 2 0 0 0 17.6 4z'/></svg>") center;
-}
-@media (prefers-reduced-motion: no-preference) and (prefers-contrast: no-preference) and (forced-colors: none) {
-  .icon-assistant {
-    background: linear-gradient(var(--bs-btn-bg, var(--bs-color-bg-primary))) padding-box, conic-gradient(var(--bs-color-ai-secondary) 0 var(--bs-loader-gradient-unit), var(--bs-color-ai-tertiary) var(--bs-loader-gradient-unit) calc(2 * var(--bs-loader-gradient-unit)), var(--bs-color-ai-quaternary) calc(2 * var(--bs-loader-gradient-unit)) calc(3 * var(--bs-loader-gradient-unit)), var(--bs-color-ai-primary) calc(3 * var(--bs-loader-gradient-unit)) calc(4 * var(--bs-loader-gradient-unit))) border-box;
-  }
-  @supports (background-clip: border-area) {
-    .icon-assistant {
-      background: conic-gradient(var(--bs-color-ai-secondary) 0 var(--bs-loader-gradient-unit), var(--bs-color-ai-tertiary) var(--bs-loader-gradient-unit) calc(2 * var(--bs-loader-gradient-unit)), var(--bs-color-ai-quaternary) calc(2 * var(--bs-loader-gradient-unit)) calc(3 * var(--bs-loader-gradient-unit)), var(--bs-color-ai-primary) calc(3 * var(--bs-loader-gradient-unit)) calc(4 * var(--bs-loader-gradient-unit))) border-box border-area;
-    }
-  }
-  .icon-assistant:is(:disabled, [aria-disabled=true]):not(.loading-indeterminate, .loading-determinate) {
-    background: initial;
-  }
+  -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M11.5 4.6c.1-.5.9-.5 1 0l.8 2.3a7 7 0 0 0 4.8 4.5l2.5.7c.5.2.5.8 0 1l-2.5.7a7 7 0 0 0-4.8 4.5l-.8 2.3c-.1.5-.9.5-1 0l-.8-2.3a7 7 0 0 0-4.8-4.5l-2.5-.7a.5.5 0 0 1 0-1l2.5-.7a7 7 0 0 0 4.8-4.5zM5 4.9q.1-.1.2 0l.2.6q.3.9 1.1 1l.6.3q.1.1 0 .2l-.6.2a2 2 0 0 0-1 1.1l-.3.6q-.1.2-.2 0l-.2-.6a2 2 0 0 0-1.1-1L3 7q-.2-.1 0-.2l.6-.2a2 2 0 0 0 1-1.1zM17.9 3h.3l.3.8Q18.9 5 20 5.4l.9.3V6l-.9.3a2 2 0 0 0-1.5 1.5l-.3.8h-.3l-.3-.8A2 2 0 0 0 16 6.3l-.8-.3v-.3l.8-.3A2 2 0 0 0 17.6 4z'/></svg>") no-repeat center;
+  mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M11.5 4.6c.1-.5.9-.5 1 0l.8 2.3a7 7 0 0 0 4.8 4.5l2.5.7c.5.2.5.8 0 1l-2.5.7a7 7 0 0 0-4.8 4.5l-.8 2.3c-.1.5-.9.5-1 0l-.8-2.3a7 7 0 0 0-4.8-4.5l-2.5-.7a.5.5 0 0 1 0-1l2.5-.7a7 7 0 0 0 4.8-4.5zM5 4.9q.1-.1.2 0l.2.6q.3.9 1.1 1l.6.3q.1.1 0 .2l-.6.2a2 2 0 0 0-1 1.1l-.3.6q-.1.2-.2 0l-.2-.6a2 2 0 0 0-1.1-1L3 7q-.2-.1 0-.2l.6-.2a2 2 0 0 0 1-1.1zM17.9 3h.3l.3.8Q18.9 5 20 5.4l.9.3V6l-.9.3a2 2 0 0 0-1.5 1.5l-.3.8h-.3l-.3-.8A2 2 0 0 0 16 6.3l-.8-.3v-.3l.8-.3A2 2 0 0 0 17.6 4z'/></svg>") no-repeat center;
+  -webkit-mask-size: 75%;
+  mask-size: 75%;
 }
 .icon-assistant:disabled, .icon-assistant[aria-disabled=true] {
   border-color: currentcolor;
