@@ -176,6 +176,10 @@
   padding-block: $ouds-space-padding-block-2xlarge calc($ouds-space-padding-block-medium + $ouds-space-padding-block-2xlarge);
   background-color: $ouds-color-overlay-modal-sheet;
 
+  > *:first-child:last-child {
+    margin-inline: auto;
+  }
+
   @include media-breakpoint-down(md) {
     flex-direction: column; // stack buttons on small screens
 
