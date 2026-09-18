@@ -535,7 +535,7 @@
 .btn-expand {
   --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-start-icon-end-default};
   --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-chevron-end-default};
-  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-chevron-default};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon-chevron-default};
 
   &::after {
     content: "";
@@ -544,6 +544,7 @@
 }
 
 .btn-expand::after {
+  --#{$prefix}btn-icon-size: #{px-to-rem($ouds-button-size-icon-default)};
   mask-image: $btn-expanded-false-icon;
 }
 
