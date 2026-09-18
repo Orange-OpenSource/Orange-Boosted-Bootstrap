@@ -17,6 +17,16 @@ toc: true
   ```
 </Callout>
 
+## v1.6.0 [[version-changelog-link]]
+
+<hr />
+
+### Components
+
+#### Dropdown
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> OUDS Web now supports a draft dropdown menu component. It comes from Boosted directly. It is intended as a placeholder for projects that need it urgently but be aware that it will change in the future. Read more in our [dropdown page]([[docsref:/components/dropdown]]).
+
 ## v1.5.0 [[version-changelog-link]]
 
 <hr />
@@ -32,6 +42,8 @@ toc: true
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Breadcrumb component has been updated to 1.2.0 with no outward changes. Read more in the [breadcrumb design changelog](https://r.orange.fr/r/S-ouds-doc-breadcrumb_changelog).
 
 #### Buttons
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Expand button has been implemented. Read more in our [buttons page]([[docsref:/components/buttons#expand-button]]).
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Assistant button has been implemented. Read more in our [buttons page]([[docsref:/components/buttons#assistant-button]]).
 
@@ -61,6 +73,8 @@ toc: true
 
 #### Links
 
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Expand link has been implemented. Read more in our [links page]([[docsref:/components/links#expand-link]]).
+
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Link component has been updated to 2.4.0. Read more in the [link design changelog](https://r.orange.fr/r/S-ouds-doc-link_changelog).
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.colored-bg` has been deprecated in favor of `.link-on-colored-bg`. It will be removed in v1.6.0. Read more in our [reboot page]([[docsref:/foundation/reboot#links]]).
@@ -88,6 +102,11 @@ toc: true
 ### Sass mixins
 
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> The `list-unstyled` mixin has been updated to remove the margin bottom.
+
+### Dual mode
+
+1. Update `@ouds/web-common` and `@ouds/web-[theme]` to v1.5.0.
+2. Remove `@import "boosted/scss/dropdown";` from the Boosted custom import stack.
 
 ## v1.4.0 [[version-changelog-link]]
 
