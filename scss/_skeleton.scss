@@ -51,7 +51,7 @@
 // Skeleton selectors
 [aria-busy="true"] {
   // List of all the components that don't have security margins
-  :is(.alert, .btn, .checkbox-standalone, .chip-interactive, .link, .radio-button-standalone, .select-input, .switch-standalone > .control-item-indicator, .tag, .text-area, .text-input) {
+  :is(.alert, .btn, .checkbox-standalone, .chip-interactive, .icon-interactive, .link, .radio-button-standalone, .select-input, .switch-standalone > .control-item-indicator, .tag, .text-area, .text-input) {
     --#{$prefix}skeleton-margin-block: 0; // Remove security margins for components
     @extend %skeleton-placeholder;
   }
