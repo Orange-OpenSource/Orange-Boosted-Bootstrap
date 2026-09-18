@@ -28,14 +28,14 @@
   min-height: $ouds-alert-size-min-height;
   padding-inline: $ouds-alert-space-padding-inline;
   background-color: var(--#{$prefix}alert-bg);
-  border: var(--#{$prefix}alert-border-color) solid $ouds-alert-border-width;
+  border: var(--#{$prefix}alert-border-color) solid $ouds-alert-message-border-width;
 
   &:has(.btn-close) {
     padding-right: 0;
   }
 
   &:has(.alert-container > .link) {
-    min-height: $ouds-alert-size-min-height-bottom-action-placement;
+    min-height: $ouds-alert-size-min-height-bottom-action;
   }
 
   // To avoid overflow: hidden that hides the focus
@@ -54,8 +54,8 @@
   position: relative;
   display: block;
   flex-shrink: 0;
-  width: px-to-rem($ouds-alert-size-icon);
-  height: px-to-rem($ouds-alert-size-icon);
+  width: px-to-rem($ouds-alert-size-asset);
+  height: px-to-rem($ouds-alert-size-asset);
   margin-top: var(--#{$prefix}alert-icon-margin-block);
   color: var(--#{$prefix}alert-icon-color);
 
@@ -84,7 +84,7 @@
   .icon {
     width: 100%;
     height: 100%;
-    font-size: $ouds-alert-size-icon;
+    font-size: $ouds-alert-size-asset;
     line-height: 1;
     vertical-align: baseline; // Remove some weird stuff on zoom // TODO: For reboot maybe ?
   }
