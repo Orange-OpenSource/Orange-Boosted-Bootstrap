@@ -7,7 +7,7 @@
   --#{$prefix}modal-border-radius: #{$ouds-modal-dialog-border-radius-rounded};
 }
 
-.fullscreen-dialog,
+.modal-fullscreen-dialog,
 .modal-dialog {
   flex-direction: column; // cannot use grid because of Safari dialog limitations
   overscroll-behavior: contain;
@@ -36,7 +36,7 @@
   }
 }
 
-.fullscreen-dialog {
+.modal-fullscreen-dialog {
   width: 100vw;
   max-width: unset;
   height: 100vh;

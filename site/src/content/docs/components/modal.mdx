@@ -40,7 +40,7 @@ import { getVersionedDocsPath } from '@libs/path'
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
-          <div class="fullscreen-dialog position-relative h-100">
+          <div class="modal-fullscreen-dialog position-relative h-100">
             <div class="modal-header">
               <h3 class="modal-title">Title</h3>
               <button type="button" class="btn btn-close">
@@ -60,7 +60,7 @@ import { getVersionedDocsPath } from '@libs/path'
 
 ### Approach
 
-Modal dialog and fullscreen dialog use the same native `<dialog>` element and the same internal structure with `.modal-header`, `.modal-body`, and `.modal-footer`. Add `.fullscreen-dialog` to the `.modal` `<dialog>` when the interaction needs all the available viewport.
+Modal dialog and fullscreen dialog use the same native `<dialog>` element and the same internal structure with `.modal-header`, `.modal-body`, and `.modal-footer`. Add `.modal-fullscreen-dialog` to the `.modal` `<dialog>` when the interaction needs all the available viewport.
 
 The [common variants](#common-variants) are shared between modal dialog and fullscreen dialog, modal dialog has [specific variants](#variants) and [sizes](#sizes).
 
@@ -221,11 +221,11 @@ Add `.modal-small` to switch to a small modal dialog. Use it when the dialog req
 
 ## [[comp]] Fullscreen dialog
 
-Fullscreen dialog uses the same native `<dialog>` element and internal structure as modal dialog, but takes all the available viewport. Use `.fullscreen-dialog` on `<dialog>` to make it a fullscreen dialog.
+Fullscreen dialog uses the same native `<dialog>` element and internal structure as modal dialog, but takes all the available viewport. Use `.modal-fullscreen-dialog` on `<dialog>` to make it a fullscreen dialog.
 
 Only the [common variants](#common-variants) are available for this kind of dialog.
 
-<Example buttonLabel="fullscreen dialog" code={`<dialog id="demoFullscreenDialog" class="fullscreen-dialog" aria-label="Demo fullscreen dialog" closedby="any">
+<Example buttonLabel="fullscreen dialog" code={`<dialog id="demoFullscreenDialog" class="modal-fullscreen-dialog" aria-label="Demo fullscreen dialog" closedby="any">
     <div class="modal-header">
       <h3 class="modal-title">Fullscreen dialog title</h3>
       <button type="button" class="btn btn-close" commandfor="demoFullscreenDialog" command="close">
@@ -307,7 +307,7 @@ The close button may be hidden when the modal has a clear, visible alternative w
 
 You can display a navigation link above the title, aligned to the leading edge of the modal. It is intended for multi-step flows where users can navigate back to a previous step without dismissing the entire modal.
 
-<Example buttonLabel="dialog modal previous link" code={`<dialog id="modalDialogPreviousLink" class="fullscreen-dialog" aria-label="Demo modal" closedby="any">
+<Example buttonLabel="dialog modal previous link" code={`<dialog id="modalDialogPreviousLink" class="modal-fullscreen-dialog" aria-label="Demo modal" closedby="any">
     <div class="modal-header">
       <div class="d-flex flex-column gap-large">
         <a href="#" class="link link-chevron link-previous">Previous</a>
