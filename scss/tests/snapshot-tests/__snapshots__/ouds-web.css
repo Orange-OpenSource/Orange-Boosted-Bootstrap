@@ -5199,7 +5199,6 @@ optgroup {
   appearance: none;
   caret-color: var(--bs-text-input-caret-color);
   background-color: transparent;
-  background-clip: content-box;
   border: 0;
   box-shadow: none;
   opacity: 0;
@@ -5332,9 +5331,11 @@ optgroup {
   height: var(--bs-text-input-icon-size);
   color: var(--bs-color-content-muted);
 }
-.text-input .text-input-container:has(> svg:not(.loader), > img, > .icon) > .text-input-field,
-.text-input .text-input-container:has(> svg:not(.loader), > img, > .icon) > .input-container,
-.text-input .text-input-container:has(> svg:not(.loader), > img, > .icon) > label {
+.text-input .text-input-container:has(> svg:not(.loader)) > .text-input-field,
+.text-input .text-input-container:has(> svg:not(.loader)) > .input-container,
+.text-input .text-input-container:has(> svg:not(.loader)) > label, .text-input .text-input-container:has(> img) > .text-input-field,
+.text-input .text-input-container:has(> img) > .input-container,
+.text-input .text-input-container:has(> img) > label {
   padding-left: calc(var(--bs-text-input-icon-size) + var(--bs-text-input-column-gap));
 }
 .text-input .text-input-container > button {
@@ -5458,7 +5459,6 @@ optgroup {
   color: var(--bs-text-input-color);
   caret-color: var(--bs-text-input-caret-color);
   background-color: transparent;
-  background-clip: content-box;
   border: 0;
   font-size: var(--bs-font-size-label-large);
   line-height: var(--bs-font-line-height-label-large);
