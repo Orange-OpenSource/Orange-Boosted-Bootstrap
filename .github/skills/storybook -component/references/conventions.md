@@ -540,17 +540,23 @@ catalogue of pre-baked combinations, so `Icon large` could not become a status
 icon and `Icon` could not be resized without hunting for the right compound
 string. Read as "which asset-family-size-status combos exist" — Badge's and
 Chip's own catalogues answer that question worse than a real select per axis
-would. The fix: one select per axis — `Leading asset` (family: `None`, `Icon`,
-`Image`, `Slot`…), `Leading size` and `Leading status` — each gated with `if`
-(§8) so only the combinations the stylesheet draws stay reachable: `Leading
-size` on `if: { arg: 'leadingAsset', oneOf: ['Icon', 'Image'] }`, `Leading
-status` on `if: { arg: 'leadingAsset', eq: 'Icon' }` since `Image` never takes
-a status. A value neither axis's stylesheet draws (`Icon` + `XLarge rounded`)
-is clamped in the render table rather than reachable — the same "every select
-falls back" principle (§5), applied inside a table instead of at the top of
-it. Whenever a value name reads like two or three properties glued with a
-space or an em dash, that is the signal to split it into one control per axis
-before it grows a fourth.
+would.
+
+The fix is not one shared `Leading size` for every family either — `Icon` and
+`Image` do not draw the same sizes (per the 1.5 docs, an icon only ever draws
+`item-leading-large`, never `XLarge rounded`), so a shared control still needs
+a second mechanism (a clamp, or `oneOf`) to keep it exact. Splitting by family
+removes that mechanism entirely: `Leading asset` picks the family (`None`,
+`Icon`, `Image`, `Slot`…), and each family that has its own axes gets its own
+controls — `Leading icon size` (`Normal`/`Large` only), `Leading icon status`,
+`Leading image size` (`Normal`/`Large`/`XLarge rounded`) — every one gated with
+a plain `if: { arg: 'leadingAsset', eq: '…' }` (§8). A single `eq` per control
+is exact on both Storybook and the standalone preview — no `oneOf`, no
+render-table clamp, no divergence to document. Whenever a value name reads like
+two or three properties glued with a space or an em dash, that is the signal to
+split it into one control per axis, and whenever two families would have to
+share a control's option list, that is the signal to split the control by
+family too.
 
 ---
 

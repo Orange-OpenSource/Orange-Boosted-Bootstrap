@@ -1,5 +1,5 @@
 // Playground for Navigation list item
-// Docs: https://web.unified-design-system.orange.com/orange/docs/1.4/components/items/
+// Docs: https://web.unified-design-system.orange.com/orange/docs/1.5/components/items/
 //
 // See StaticListItemPlayground for the shared reasoning on the `<ul>`/`<li>`
 // shape, the frozen single-item list, and why `Outlined` / `Rounded corners`
@@ -28,9 +28,12 @@ const trailingAssetOptions = [
   'Slot'
 ]
 
-// `Icon` never draws `XLarge rounded` (falls back to `Large`); `Image` never
-// takes a status. Shared axes, gated per asset (conventions.md §8).
-const sizeOptions = ['Normal', 'Large', 'XLarge rounded']
+// `Icon` only ever draws `Normal`/`Large` (1.5 docs: "Icons can be sized with
+// `item-leading-large`"); `Image` also draws `XLarge rounded`. Separate option
+// lists per family, so neither control can reach a combination the other
+// family's controls exist for.
+const iconSizeOptions = ['Normal', 'Large']
+const imageSizeOptions = ['Normal', 'Large', 'XLarge rounded']
 const statusOptions = ['None', 'Positive', 'Warning', 'Info', 'Negative']
 
 const states = ['Default', 'Disabled', 'Skeleton']
@@ -45,7 +48,7 @@ const block = (parts, pad) => parts.filter(Boolean).map((part) => indent(part, p
 const inlineHeartPath = '<path d="M18.4 11.242 12 18.247l-6.4-7.005-.003-.004a3.285 3.285 0 0 1 .247-4.678 3.383 3.383 0 0 1 4.625.128l.979.92.552.525.552-.525.98-.92.009-.01a3.352 3.352 0 0 1 2.37-.97c1.852 0 3.354 1.483 3.354 3.313a3.29 3.29 0 0 1-.862 2.217l-.003.004Zm1.463-6.125A5.635 5.635 0 0 0 12 5.08c-2.185-2.118-5.694-2.105-7.863.038a5.475 5.475 0 0 0-.105 7.702L12 21.5l7.968-8.68a5.475 5.475 0 0 0-.105-7.703Z"/>'
 
 const inlineIcons = { heartEmpty: `<svg class="w-100 h-100" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">${inlineHeartPath}</svg>` }
-const spriteIcons = { heartEmpty: '<svg class="w-100 h-100" aria-hidden="true"><use xlink:href="/orange/docs/1.4/assets/img/ouds-web-sprite.svg#heart-empty"/></svg>' }
+const spriteIcons = { heartEmpty: '<svg class="w-100 h-100" aria-hidden="true"><use xlink:href="/orange/docs/1.5/assets/img/ouds-web-sprite.svg#heart-empty"/></svg>' }
 
 // The `icon` control repaints `Icon` leading and trailing assets with any SVG
 // or image, the same paste-in mechanism as the button and control-item
@@ -144,7 +147,7 @@ const leadingTemplates = {
     ? `<div class="item-leading-container">
   <div class="item-icon ${statusIconClasses[status]}"></div>
 </div>`
-    : `<div class="item-leading-container${leadingSizeClasses[size === 'XLarge rounded' ? 'Large' : size]}">
+    : `<div class="item-leading-container${leadingSizeClasses[size]}">
   ${icons.heartEmpty}
 </div>`),
   'Image': (icons, size) => `<div class="item-leading-container${leadingSizeClasses[size]}">
@@ -180,7 +183,7 @@ const trailingTemplates = {
     ? `<div class="item-trailing-container">
   <div class="item-icon ${statusIconClasses[status]}"></div>
 </div>`
-    : `<div class="item-trailing-container${trailingSizeClasses[size === 'XLarge rounded' ? 'Large' : size]}">
+    : `<div class="item-trailing-container${trailingSizeClasses[size]}">
   ${icons.heartEmpty}
 </div>`),
   'Image': (icons, size) => `<div class="item-trailing-container${trailingSizeClasses[size]}">
@@ -193,8 +196,12 @@ const trailingTemplates = {
 
 const restrictedForSmall = (asset, size) => asset === 'Slot' || ((asset === 'Icon' || asset === 'Image') && size !== 'Normal')
 
-// A status icon is always normal size, whatever `Leading size`/`Trailing size` holds.
+// A status icon is always normal size, whatever icon size control holds.
 const effectiveSize = (asset, size, status) => (asset === 'Icon' && status !== 'None' ? 'Normal' : size)
+
+// Picks the size control that applies to the chosen family — `Icon` and
+// `Image` each have their own, never shared (see StaticCardItemPlayground).
+const sizeFor = (asset, iconSize, imageSize) => (asset === 'Icon' ? iconSize : imageSize)
 
 const warningBanner = (warning) => `<div class="alert alert-message alert-negative mb-medium" role="alert">
   <div class="alert-icon"><p class="visually-hidden">Warning</p></div>
@@ -243,13 +250,15 @@ const externalSuffixes = {
   'False': ' (external link)'
 }
 
-const renderNavigationListItem = ({ overline, label, boldLabel, extraLabel, description, leadingAsset, leadingSize, leadingStatus, trailingAsset, trailingSize, trailingStatus, helperText, wrappingLink, backChevron, externalLink, newWindow, state, background, noDivider, topAlignment, smallSize, maxWidth, icon }, icons = customIcons(icon), preview = true) => {
+const renderNavigationListItem = ({ overline, label, boldLabel, extraLabel, description, leadingAsset, leadingIconSize, leadingIconStatus, leadingImageSize, trailingAsset, trailingIconSize, trailingIconStatus, trailingImageSize, helperText, wrappingLink, backChevron, externalLink, newWindow, state, background, noDivider, topAlignment, smallSize, maxWidth, icon }, icons = customIcons(icon), preview = true) => {
   const safeLeading = orElse(leadingAsset, assetOptions)
-  const safeLeadingSize = orElse(leadingSize, sizeOptions)
-  const safeLeadingStatus = orElse(leadingStatus, statusOptions)
+  const safeLeadingIconSize = orElse(leadingIconSize, iconSizeOptions)
+  const safeLeadingIconStatus = orElse(leadingIconStatus, statusOptions)
+  const safeLeadingImageSize = orElse(leadingImageSize, imageSizeOptions)
   const safeTrailing = orElse(trailingAsset, trailingAssetOptions)
-  const safeTrailingSize = orElse(trailingSize, sizeOptions)
-  const safeTrailingStatus = orElse(trailingStatus, statusOptions)
+  const safeTrailingIconSize = orElse(trailingIconSize, iconSizeOptions)
+  const safeTrailingIconStatus = orElse(trailingIconStatus, statusOptions)
+  const safeTrailingImageSize = orElse(trailingImageSize, imageSizeOptions)
   const safeState = orElse(state, states)
   const safeBackground = orElse(background, backgrounds)
 
@@ -292,9 +301,9 @@ ${block([
 
   const itemContent = `<div class="item-content">
 ${block([
-    leadingTemplates[safeLeading](icons, safeLeadingSize, safeLeadingStatus),
+    leadingTemplates[safeLeading](icons, sizeFor(safeLeading, safeLeadingIconSize, safeLeadingImageSize), safeLeadingIconStatus),
     textContainer,
-    trailingTemplates[safeTrailing](icons, safeTrailingSize, safeTrailingStatus)
+    trailingTemplates[safeTrailing](icons, sizeFor(safeTrailing, safeTrailingIconSize, safeTrailingImageSize), safeTrailingIconStatus)
   ], '  ')}
 </div>`
 
@@ -316,7 +325,9 @@ ${block([itemContainer, helper], '  ')}
 ${indent(li, '  ')}
 </ul>`
 
-  const warning = smallSizeWarning(smallSize, safeLeading, effectiveSize(safeLeading, safeLeadingSize, safeLeadingStatus), safeTrailing, effectiveSize(safeTrailing, safeTrailingSize, safeTrailingStatus), overline, extraLabel)
+  const leadingSize = sizeFor(safeLeading, safeLeadingIconSize, safeLeadingImageSize)
+  const trailingSize = sizeFor(safeTrailing, safeTrailingIconSize, safeTrailingImageSize)
+  const warning = smallSizeWarning(smallSize, safeLeading, effectiveSize(safeLeading, leadingSize, safeLeadingIconStatus), safeTrailing, effectiveSize(safeTrailing, trailingSize, safeTrailingIconStatus), overline, extraLabel)
   return disabledWrapper(skeletonWrapper(warned(list, warning, preview), safeState === 'Skeleton'), safeState === 'Disabled')
 }
 
@@ -349,21 +360,21 @@ export default {
       name: 'Leading asset',
       control: 'select',
       options: assetOptions,
-      description: '`Slot` adds `.item-slot-focusable` automatically, since a navigation item needs its slot to stay reachable by keyboard. `Leading size` and `Leading status` below refine `Icon`/`Image`.',
+      description: '`Slot` adds `.item-slot-focusable` automatically, since a navigation item needs its slot to stay reachable by keyboard. `Leading icon size`/`Leading icon status` and `Leading image size` below refine `Icon`/`Image` and only show up for the matching family.',
     },
-    leadingSize: {
-      name: 'Leading size',
+    leadingIconSize: {
+      name: 'Leading icon size',
       control: 'select',
-      options: sizeOptions,
-      if: { arg: 'leadingAsset', oneOf: ['Icon', 'Image'] },
-      description: '`Icon` only draws `Normal`/`Large` — `XLarge rounded` falls back to `Large`. Hidden once `Leading status` recolors the icon, since a status icon is always normal size. Gated on the asset with `oneOf`, which the standalone preview honours and Storybook ignores.',
+      options: iconSizeOptions,
+      if: { arg: 'leadingAsset', eq: 'Icon' },
+      description: '`item-leading-large` — an icon never draws `XLarge rounded`. Hidden once `Leading icon status` recolors it, since a status icon is always normal size.',
     },
-    leadingStatus: {
-      name: 'Leading status',
+    leadingIconStatus: {
+      name: 'Leading icon status',
       control: 'select',
       options: statusOptions,
       if: { arg: 'leadingAsset', eq: 'Icon' },
-      description: 'Recolors the leading icon into a status icon (`.item-status-*`) and overrides `Leading size`.',
+      description: 'Recolors the leading icon into a status icon (`.item-status-*`) and overrides `Leading icon size`.',
     },
     trailingAsset: {
       name: 'Trailing asset',
@@ -371,19 +382,19 @@ export default {
       options: trailingAssetOptions,
       description: '`Slot` adds `.item-slot-focusable` automatically, for the same reason as the leading asset.',
     },
-    trailingSize: {
-      name: 'Trailing size',
+    trailingIconSize: {
+      name: 'Trailing icon size',
       control: 'select',
-      options: sizeOptions,
-      if: { arg: 'trailingAsset', oneOf: ['Icon', 'Image'] },
-      description: '`Icon` only draws `Normal`/`Large` — `XLarge rounded` falls back to `Large`. Hidden once `Trailing status` recolors the icon, since a status icon is always normal size. Gated on the asset with `oneOf`, which the standalone preview honours and Storybook ignores.',
+      options: iconSizeOptions,
+      if: { arg: 'trailingAsset', eq: 'Icon' },
+      description: '`item-trailing-large` — an icon never draws `XLarge rounded`. Hidden once `Trailing icon status` recolors it, since a status icon is always normal size.',
     },
-    trailingStatus: {
-      name: 'Trailing status',
+    trailingIconStatus: {
+      name: 'Trailing icon status',
       control: 'select',
       options: statusOptions,
       if: { arg: 'trailingAsset', eq: 'Icon' },
-      description: 'Recolors the trailing icon into a status icon (`.item-status-*`) and overrides `Trailing size`.',
+      description: 'Recolors the trailing icon into a status icon (`.item-status-*`) and overrides `Trailing icon size`.',
     },
     icon: {
       name: 'Icon content',
@@ -466,11 +477,13 @@ export const PlaygroundNavigationListItem = {
     extraLabel: 'Extra label',
     description: 'Description',
     leadingAsset: 'Icon',
-    leadingSize: 'Normal',
-    leadingStatus: 'None',
+    leadingIconSize: 'Normal',
+    leadingIconStatus: 'None',
+    leadingImageSize: 'Normal',
     trailingAsset: 'None',
-    trailingSize: 'Normal',
-    trailingStatus: 'None',
+    trailingIconSize: 'Normal',
+    trailingIconStatus: 'None',
+    trailingImageSize: 'Normal',
     icon: '',
     helperText: '',
     wrappingLink: false,
