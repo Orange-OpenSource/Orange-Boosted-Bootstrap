@@ -1,23 +1,57 @@
 // Global config
 #{$ouds-root-selector} {
-  --#{$prefix}modal-border-radius: #{$ouds-alert-border-radius-default};
+  --#{$prefix}modal-border-radius: #{$ouds-modal-dialog-border-radius-default};
 }
 
 .use-rounded-corner-modal {
-  --#{$prefix}modal-border-radius: #{$ouds-border-radius-large};
+  --#{$prefix}modal-border-radius: #{$ouds-modal-dialog-border-radius-rounded};
 }
 
-.modal {
+.fullscreen-dialog,
+.modal-dialog {
+  flex-direction: column; // cannot use grid because of Safari dialog limitations
+  overscroll-behavior: contain;
+  background-color: $ouds-color-overlay-modal-sheet;
+
+  &:open {
+    display: flex;
+  }
+
+  &.modal-non-blurred::backdrop {
+    backdrop-filter: none;
+  }
+
+  &::backdrop {
+    overflow: hidden;
+    overscroll-behavior: contain;
+  }
+
+  &.modal-sticky-actions .modal-footer {
+    padding: $ouds-space-padding-block-xlarge $ouds-space-padding-inline-2xlarge;
+    border-top: $ouds-border-width-default solid $ouds-color-border-muted;
+  }
+
+  &:not(:has(.modal-footer)) .modal-body {
+    padding-bottom: calc($ouds-space-padding-block-medium + $ouds-space-padding-block-2xlarge);
+  }
+}
+
+.fullscreen-dialog {
+  width: 100vw;
+  max-width: unset;
+  height: 100vh;
+  max-height: unset;
+  margin: 0;
+}
+
+.modal-dialog {
   --#{$prefix}modal-column-count: 12;
   --#{$prefix}modal-grid-margin: #{$ouds-space-fixed-medium};
 
-  flex-direction: column; // cannot use grid because of Safari dialog limitations
   width: calc((100vw - 2 * var(--#{$prefix}modal-grid-margin)) * var(--#{$prefix}modal-column-count) / 12);
   max-width: unset;
   max-height: calc(100vh - 2 * var(--#{$prefix}modal-grid-margin));
   margin: auto $ouds-space-fixed-medium;
-  overscroll-behavior: contain;
-  background-color: $ouds-color-overlay-modal-sheet;
   box-shadow: $ouds-elevation-emphasized;
   @include border-radius(var(--#{$prefix}modal-border-radius));
 
@@ -33,43 +67,9 @@
     --#{$prefix}modal-column-count: 8;
   }
 
-  &:open {
-    display: flex;
-  }
-
   &.modal-fixed-height,
   &.modal-sticky-actions {
     height: calc(100vh - 2 * var(--#{$prefix}modal-grid-margin));
-  }
-
-  &.fullscreen-dialog {
-    --#{$prefix}modal-border-radius: #{$ouds-border-radius-none};
-
-    width: 100vw;
-    max-width: 100vw;
-    height: 100vh;
-    max-height: unset;
-    margin: 0;
-    box-shadow: none;
-  }
-
-  &.modal-sticky-actions .modal-footer {
-    padding: $ouds-space-padding-block-xlarge $ouds-space-padding-inline-2xlarge;
-    border-top: $ouds-border-width-default solid $ouds-color-border-muted;
-  }
-
-  &:not(:has(.modal-footer)) .modal-body {
-    padding-bottom: calc($ouds-space-padding-block-medium + $ouds-space-padding-block-2xlarge);
-  }
-
-  &::backdrop {
-    overflow: hidden;
-    overscroll-behavior: contain;
-    backdrop-filter: blur($core-ouds-elevation-blur-500);
-  }
-
-  &.modal-non-blurred::backdrop {
-    backdrop-filter: none;
   }
 
   &.modal-small {
