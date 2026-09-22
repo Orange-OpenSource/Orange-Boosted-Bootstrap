@@ -27,9 +27,13 @@
     overscroll-behavior: contain;
   }
 
-  &.modal-sticky-actions .modal-footer {
-    padding: $ouds-space-padding-block-xlarge $ouds-space-padding-inline-2xlarge;
-    border-top: $ouds-border-width-default solid $ouds-color-border-muted;
+  &.modal-sticky-actions {
+    padding-block-end: 0;
+
+    .modal-footer {
+      padding: var(--#{$prefix}modal-dialog-space-padding-block-footer-sticky) var(--#{$prefix}modal-dialog-space-padding-inline);
+      border-top: $ouds-border-width-default solid $ouds-color-border-muted;
+    }
   }
 }
 
@@ -51,7 +55,6 @@
   --#{$prefix}modal-dialog-space-padding-block-top: #{$ouds-modal-dialog-space-padding-block-top-mobile};
   --#{$prefix}modal-dialog-space-padding-block-top-footer: #{$ouds-modal-dialog-space-padding-block-top-footer-default-mobile};
   --#{$prefix}modal-dialog-space-padding-inline: #{$ouds-modal-dialog-space-padding-inline-mobile};
-  --#{$prefix}modal-grid-margin: #{$ouds-space-fixed-medium};
 
   width: calc(100vw - 2 * $ouds-space-fixed-medium);
   max-width: unset;
@@ -91,11 +94,6 @@
     --#{$prefix}modal-dialog-space-padding-block-top-footer: #{$ouds-modal-dialog-space-padding-block-top-footer-default-desktop};
     --#{$prefix}modal-dialog-space-padding-inline: #{$ouds-modal-dialog-space-padding-inline-default-desktop};
     --#{$prefix}modal-column-count: 8;
-  }
-
-  &.modal-fixed-height,
-  &.modal-sticky-actions {
-    height: calc(100vh - 2 * $ouds-space-fixed-medium);
   }
 
   &.modal-small {
@@ -143,6 +141,11 @@
     .modal-title {
       @include get-font-size("heading-small");
     }
+  }
+
+  &.modal-fixed-height,
+  &.modal-sticky-actions {
+    height: calc(100vh - 2 * $ouds-space-fixed-medium);
   }
 }
 

@@ -93,7 +93,7 @@ Modal dialog is used for focused tasks that should stay visually separated from 
 
 Add `.modal-fixed-height` to the `.modal` `<dialog>` to use the fixed height option. This variant can be used to define a fixed-height modal dialog for multi-step flows or content with a consistent layout. The modal dialog will use the maximum height available which depends on [the modal size](#sizes).
 
-<Example buttonLabel="dialog modal fixed height" class="bd-btn-example" code={`<dialog id="modalDialogFixedHeight" class="modal-dialog modal-fixed-height" aria-label="Demo modal" closedby="any">
+<Example buttonLabel="dialog modal fixed height" code={`<dialog id="modalDialogFixedHeight" class="modal-dialog modal-fixed-height" aria-label="Demo modal" closedby="any">
     <div class="modal-header">
       <h3 class="modal-title">Modal title</h3>
       <button type="button" class="btn btn-close" commandfor="modalDialogFixedHeight" command="close">
@@ -110,7 +110,7 @@ Add `.modal-fixed-height` to the `.modal` `<dialog>` to use the fixed height opt
     </div>
   </dialog>
 
-  <button type="button" class="btn btn-default" commandfor="modalDialogFixedHeight" command="show-modal">
+  <button type="button" class="btn btn-default m-xsmall" commandfor="modalDialogFixedHeight" command="show-modal">
     Open fixed height modal
   </button>
 
@@ -309,7 +309,7 @@ You can display a navigation link above the title, aligned to the leading edge o
 
 <Example buttonLabel="dialog modal previous link" code={`<dialog id="modalDialogPreviousLink" class="modal-dialog" aria-label="Demo modal" closedby="any">
     <div class="modal-header">
-      <div class="d-flex flex-column gap-medium">
+      <div class="d-flex flex-column gap-scaled-small">
         <a href="#" class="link link-chevron link-previous">Previous</a>
         <h3 class="modal-title">Modal title</h3>
       </div>
