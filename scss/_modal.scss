@@ -9,6 +9,16 @@
 
 .modal-fullscreen-dialog,
 .modal-dialog {
+  --#{$prefix}modal-dialog-space-column-gap-previous-title: #{$ouds-modal-dialog-space-column-gap-previous-title-mobile};
+  --#{$prefix}modal-dialog-space-inset-close-button: #{$ouds-modal-dialog-space-inset-close-button-mobile};
+  --#{$prefix}modal-dialog-space-padding-block-bottom-body-footer: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-mobile};
+  --#{$prefix}modal-dialog-space-padding-block-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-mobile};
+  --#{$prefix}modal-dialog-space-padding-block-footer-sticky: #{$ouds-modal-dialog-space-padding-block-footer-sticky-mobile};
+  --#{$prefix}modal-dialog-space-padding-block-top-body: #{$ouds-modal-dialog-space-padding-block-top-body-default-mobile};
+  --#{$prefix}modal-dialog-space-padding-block-top: #{$ouds-modal-dialog-space-padding-block-top-mobile};
+  --#{$prefix}modal-dialog-space-padding-block-top-footer: #{$ouds-modal-dialog-space-padding-block-top-footer-default-mobile};
+  --#{$prefix}modal-dialog-space-padding-inline: #{$ouds-modal-dialog-space-padding-inline-mobile};
+
   flex-direction: column; // cannot use grid because of Safari dialog limitations
   padding-block: var(--#{$prefix}modal-dialog-space-padding-block-top) var(--#{$prefix}modal-dialog-space-padding-block-bottom);
   overscroll-behavior: contain;
@@ -35,41 +45,6 @@
       border-top: $ouds-border-width-default solid $ouds-color-border-muted;
     }
   }
-}
-
-.modal-fullscreen-dialog {
-  width: 100vw;
-  max-width: unset;
-  height: 100vh;
-  max-height: unset;
-  margin: 0;
-}
-
-.modal-dialog {
-  --#{$prefix}modal-dialog-space-column-gap-previous-title: #{$ouds-modal-dialog-space-column-gap-previous-title-mobile};
-  --#{$prefix}modal-dialog-space-inset-close-button: #{$ouds-modal-dialog-space-inset-close-button-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-bottom-body-footer: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-footer-sticky: #{$ouds-modal-dialog-space-padding-block-footer-sticky-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-top-body: #{$ouds-modal-dialog-space-padding-block-top-body-default-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-top: #{$ouds-modal-dialog-space-padding-block-top-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-top-footer: #{$ouds-modal-dialog-space-padding-block-top-footer-default-mobile};
-  --#{$prefix}modal-dialog-space-padding-inline: #{$ouds-modal-dialog-space-padding-inline-mobile};
-
-  width: calc(100vw - 2 * $ouds-space-fixed-medium);
-  max-width: unset;
-  max-height: calc(100vh - 2 * $ouds-space-fixed-medium);
-  margin: auto $ouds-space-fixed-medium;
-  box-shadow: $ouds-elevation-emphasized;
-  @include border-radius(var(--#{$prefix}modal-border-radius));
-
-  @include media-breakpoint-up(sm) {
-    --#{$prefix}modal-column-count: 10;
-    width: calc(100vw * var(--#{$prefix}modal-column-count) / 12);
-
-    max-height: 90vh;
-    margin: auto;
-  }
 
   @include media-breakpoint-up(md) {
     --#{$prefix}modal-dialog-space-column-gap-previous-title: #{$ouds-modal-dialog-space-column-gap-previous-title-tablet};
@@ -94,6 +69,35 @@
     --#{$prefix}modal-dialog-space-padding-block-top-footer: #{$ouds-modal-dialog-space-padding-block-top-footer-default-desktop};
     --#{$prefix}modal-dialog-space-padding-inline: #{$ouds-modal-dialog-space-padding-inline-default-desktop};
     --#{$prefix}modal-column-count: 8;
+  }
+}
+
+.modal-fullscreen-dialog {
+  --#{$prefix}modal-dialog-space-padding-block-bottom: var(--#{$prefix}space-scaled-xlarge);
+  --#{$prefix}modal-dialog-space-padding-block-top: var(--#{$prefix}space-scaled-xlarge);
+  --#{$prefix}modal-dialog-space-padding-inline: var(--#{$prefix}grid-margin);
+
+  width: 100vw;
+  max-width: unset;
+  height: 100vh;
+  max-height: unset;
+  margin: 0;
+}
+
+.modal-dialog {
+  width: calc(100vw - 2 * $ouds-space-fixed-medium);
+  max-width: unset;
+  max-height: calc(100vh - 2 * $ouds-space-fixed-medium);
+  margin: auto $ouds-space-fixed-medium;
+  box-shadow: $ouds-elevation-emphasized;
+  @include border-radius(var(--#{$prefix}modal-border-radius));
+
+  @include media-breakpoint-up(sm) {
+    --#{$prefix}modal-column-count: 10;
+    width: calc(100vw * var(--#{$prefix}modal-column-count) / 12);
+
+    max-height: 90vh;
+    margin: auto;
   }
 
   &.modal-small {
@@ -146,6 +150,12 @@
   &.modal-fixed-height,
   &.modal-sticky-actions {
     height: calc(100vh - 2 * $ouds-space-fixed-medium);
+  }
+
+  .modal-body {
+    * {
+      max-width: 100%;
+    }
   }
 }
 
@@ -201,10 +211,6 @@
   padding-inline: var(--#{$prefix}modal-dialog-space-padding-inline);
   margin-block: var(--#{$prefix}modal-dialog-space-padding-block-top-body) var(--#{$prefix}modal-dialog-space-padding-block-bottom-body-footer);
   overflow-y: auto;
-
-  * {
-    max-width: 100%;
-  }
 
   &:not(:has(.modal-footer)) > :last-child {
     margin-bottom: 0;
