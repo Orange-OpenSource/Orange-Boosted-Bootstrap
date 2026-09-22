@@ -11,9 +11,8 @@ types:
 ---
 
 import { getData } from '@libs/data'
-import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
-import { getMode } from '@libs/sass-variables'
+import { getMode, getTokenValue } from '@libs/sass-variables'
 
 {/* TODO: update link when the assistant button design spec is online https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3734 */}
 <Callout type="info">
@@ -956,7 +955,6 @@ Please refer to the [loading state section of the button component](#loading) fo
 
   </div>`} />
 
-
 ### Sizes
 
 Assistant buttons are available in two sizes. Add `.btn-small` to have a smaller button.
@@ -972,42 +970,62 @@ Assistant buttons are available in two sizes. Add `.btn-small` to have a smaller
 ### Text wrapping
 
 {/* TODO: udpate link when the assistant button design spec is online https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3734 */}
-By default, a button's width won't exceed `30rem` and will automatically wrap if necessary.  It also natively supports `<br/>` tags to break the text into multiple lines. Read more about text wrapping in a [button](https://unified-design-system.orange.com/472794e18/p/689c55-button/t/b29aae8b37), [navigation button](https://unified-design-system.orange.com/472794e18/p/1469c4-navigation-button/t/99e6bc9526) and [assistant button](https://unified-design-system.orange.com/472794e18/p/689c55-button/t/b29aae8b37).
+Button's width won't exceed <code>{(getTokenValue('$core-ouds-dimension-4000').slice(0, -2)) / 16}rem</code> and will automatically wrap if necessary. Howerver, buttons natively support `<br/>` tags to break the text into multiple lines when needed. Read more about multiline and responsiveness in a [button](https://unified-design-system.orange.com/472794e18/p/689c55-button/t/b29aae8b37), [navigation button](https://unified-design-system.orange.com/472794e18/p/1469c4-navigation-button/t/99e6bc9526) and [assistant button](https://unified-design-system.orange.com/472794e18/p/689c55-button/t/b29aae8b37).
 
-<Example buttonLabel="buttons with wrapped text" class="bd-btn-example d-flex flex-column align-items-start" code={`<button type="button" class="btn btn-default">
+<Example buttonLabel="buttons with wrapping text" class="bd-btn-example d-flex flex-column align-items-start" code={`<button type="button" class="btn btn-default">
     A button will automatically wrap if the text is longer than the default max width, or if the container is not large enough
   </button>
-  <button type="button" class="btn btn-default">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-    The label remains centered with the icon when it wraps automatically
-  </button>
-  <button type="button" class="btn btn-default btn-assistant">
-    In assistant button too, the text will be automatically centered when the text is very long
-  </button>
-
 
   <button type="button" class="btn btn-default">
-    You can force break line<br/>where you want it
-  </button>
-  <button type="button" class="btn btn-default">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-    When forcing break line, the label<br/>remains centered with the icon
-  </button>
-  <button type="button" class="btn btn-default btn-previous">
-    In navigation<br/>button too
+    A button<br/>will automatically wrap if the text is longer than the default max width, but you can force it where you want
   </button>
 
-
-  <button type="button" class="btn btn-default">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-    When forcing break line, the label remains centered with the icon
+  <button type="button" class="btn btn-assistant">
+    The label remains centered with the icon when it wraps because of the max width
   </button>
-  <button type="button" class="btn btn-default btn-previous">
-    In navigation button too
+
+  <button type="button" class="btn btn-assistant">
+    The label<br/>remains centered with the icon when you force a break line too
   </button>`} />
+
+ ### Block buttons
+
+Create responsive stacks of "block buttons" with a mix of our display and gap utilities. By using utilities, we have great control over spacing, alignment, and responsive behaviors.
+
+<Example buttonLabel="block buttons" class="bd-btn-example" code={`<div class="d-grid gap-small">
+
+    <button class="btn btn-default" type="button">Button</button>
+
+    <button class="btn btn-default" type="button">Button</button>
+
+  </div>`} />
+
+Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where `.md:d-block` replaces the `.d-grid` class, thus nullifying the `gap-small` utility. Resize your browser to see them change.
+
+<Example buttonLabel="block buttons until the md breakpoint" class="bd-btn-example" code={`<div class="d-grid gap-small md:d-block">
+
+    <button class="btn btn-default" type="button">Button</button>
+
+    <button class="btn btn-default" type="button">Button</button>
+
+  </div>`} />
+
+You can adjust the width of your block buttons with grid column width classes like `.col-3`. Center it horizontally with `.mx-auto`, too. Buttons will always be limited by their max-width, so they won't stretch too much on large screens.
+
+<Example buttonLabel="half-width block buttons" class="bd-btn-example" code={`<div class="d-grid gap-small col-3 md:col-8 mx-auto">
+
+    <button class="btn btn-default" type="button">Button</button>
+
+    <button class="btn btn-default" type="button">Button</button>
+
+  </div>`} />
+
+Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we’ve taken our previous responsive example and added some flex utilities and a margin utility on the button to right-align the buttons when they’re no longer stacked.
+
+<Example buttonLabel="right aligned inline buttons" class="bd-btn-example" code={`<div class="d-grid gap-small md:d-flex md:justify-content-end">
+
+    <button class="btn btn-default md:me-xsmall" type="button">Button</button>
+
+    <button class="btn btn-default" type="button">Button</button>
+
+  </div>`} />
