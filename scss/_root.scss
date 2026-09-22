@@ -149,23 +149,6 @@
   --#{$prefix}font-max-width-label-large: #{px-to-rem($ouds-size-max-width-label-large-mobile)};
   --#{$prefix}font-max-width-label-xlarge: #{px-to-rem($ouds-size-max-width-label-xlarge-mobile)};
 
-  --#{$prefix}modal-dialog-space-column-gap-previous-title: #{$ouds-modal-dialog-space-column-gap-previous-title-mobile};
-  --#{$prefix}modal-dialog-space-inset-close-button-default: #{$ouds-modal-dialog-space-inset-close-button-mobile};
-  --#{$prefix}modal-dialog-space-inset-close-button-small: #{$ouds-modal-dialog-space-inset-close-button-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-bottom-body-footer-default: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-bottom-body-footer-small: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-small-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-bottom-default: #{$ouds-modal-dialog-space-padding-block-bottom-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-bottom-small: #{$ouds-modal-dialog-space-padding-block-bottom-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-footer-sticky-default: #{$ouds-modal-dialog-space-padding-block-footer-sticky-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-footer-sticky-small: #{$ouds-modal-dialog-space-padding-block-footer-sticky-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-top-body-default: #{$ouds-modal-dialog-space-padding-block-top-body-default-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-top-body-small: #{$ouds-modal-dialog-space-padding-block-top-body-small-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-top-default: #{$ouds-modal-dialog-space-padding-block-top-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-top-footer-default: #{$ouds-modal-dialog-space-padding-block-top-footer-default-mobile};
-  --#{$prefix}modal-dialog-space-padding-block-top-footer-small: #{$ouds-modal-dialog-space-padding-block-top-footer-small-mobile};
-  --#{$prefix}modal-dialog-space-padding-inline-default: #{$ouds-modal-dialog-space-padding-inline-mobile};
-  --#{$prefix}modal-dialog-space-padding-inline-small: #{$ouds-modal-dialog-space-padding-inline-mobile};
-
   @include media-breakpoint-up(md) {
     --#{$prefix}font-size-display-large: #{px-to-rem($ouds-font-size-display-large-tablet)};
     --#{$prefix}font-size-display-medium: #{px-to-rem($ouds-font-size-display-medium-tablet)};
@@ -211,23 +194,6 @@
     --#{$prefix}font-max-width-label-medium: #{px-to-rem($ouds-size-max-width-label-medium-tablet)};
     --#{$prefix}font-max-width-label-large: #{px-to-rem($ouds-size-max-width-label-large-tablet)};
     --#{$prefix}font-max-width-label-xlarge: #{px-to-rem($ouds-size-max-width-label-xlarge-tablet)};
-
-    --#{$prefix}modal-dialog-space-column-gap-previous-title: #{$ouds-modal-dialog-space-column-gap-previous-title-tablet};
-    --#{$prefix}modal-dialog-space-inset-close-button-default: #{$ouds-modal-dialog-space-inset-close-button-default-tablet};
-    --#{$prefix}modal-dialog-space-inset-close-button-small: #{$ouds-modal-dialog-space-inset-close-button-small-tablet};
-    --#{$prefix}modal-dialog-space-padding-block-bottom-body-footer-default: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-tablet};
-    --#{$prefix}modal-dialog-space-padding-block-bottom-body-footer-small: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-small-tablet};
-    --#{$prefix}modal-dialog-space-padding-block-bottom-default: #{$ouds-modal-dialog-space-padding-block-bottom-default-tablet};
-    --#{$prefix}modal-dialog-space-padding-block-bottom-small: #{$ouds-modal-dialog-space-padding-block-bottom-small-tablet};
-    --#{$prefix}modal-dialog-space-padding-block-footer-sticky-default: #{$ouds-modal-dialog-space-padding-block-footer-sticky-default-tablet};
-    --#{$prefix}modal-dialog-space-padding-block-footer-sticky-small: #{$ouds-modal-dialog-space-padding-block-footer-sticky-small-tablet};
-    --#{$prefix}modal-dialog-space-padding-block-top-body-default: #{$ouds-modal-dialog-space-padding-block-top-body-default-tablet};
-    --#{$prefix}modal-dialog-space-padding-block-top-body-small: #{$ouds-modal-dialog-space-padding-block-top-body-small-tablet};
-    --#{$prefix}modal-dialog-space-padding-block-top-default: #{$ouds-modal-dialog-space-padding-block-top-default-tablet};
-    --#{$prefix}modal-dialog-space-padding-block-top-footer-default: #{$ouds-modal-dialog-space-padding-block-top-footer-default-tablet};
-    --#{$prefix}modal-dialog-space-padding-block-top-footer-small: #{$ouds-modal-dialog-space-padding-block-top-footer-small-tablet};
-    --#{$prefix}modal-dialog-space-padding-inline-default: #{$ouds-modal-dialog-space-padding-inline-default-tablet};
-    --#{$prefix}modal-dialog-space-padding-inline-small: #{$ouds-modal-dialog-space-padding-inline-small-tablet};
   }
 
   @include media-breakpoint-up(xl) {
@@ -275,23 +241,6 @@
     --#{$prefix}font-max-width-label-medium: #{px-to-rem($ouds-size-max-width-label-medium-desktop)};
     --#{$prefix}font-max-width-label-large: #{px-to-rem($ouds-size-max-width-label-large-desktop)};
     --#{$prefix}font-max-width-label-xlarge: #{px-to-rem($ouds-size-max-width-label-xlarge-desktop)};
-
-    --#{$prefix}modal-dialog-space-column-gap-previous-title: #{$ouds-modal-dialog-space-column-gap-previous-title-desktop};
-    --#{$prefix}modal-dialog-space-inset-close-button-default: #{$ouds-modal-dialog-space-inset-close-button-default-desktop};
-    --#{$prefix}modal-dialog-space-inset-close-button-small: #{$ouds-modal-dialog-space-inset-close-button-small-desktop};
-    --#{$prefix}modal-dialog-space-padding-block-bottom-body-footer-default: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-desktop};
-    --#{$prefix}modal-dialog-space-padding-block-bottom-body-footer-small: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-small-desktop};
-    --#{$prefix}modal-dialog-space-padding-block-bottom-default: #{$ouds-modal-dialog-space-padding-block-bottom-default-desktop};
-    --#{$prefix}modal-dialog-space-padding-block-bottom-small: #{$ouds-modal-dialog-space-padding-block-bottom-small-desktop};
-    --#{$prefix}modal-dialog-space-padding-block-footer-sticky-default: #{$ouds-modal-dialog-space-padding-block-footer-sticky-default-desktop};
-    --#{$prefix}modal-dialog-space-padding-block-footer-sticky-small: #{$ouds-modal-dialog-space-padding-block-footer-sticky-small-desktop};
-    --#{$prefix}modal-dialog-space-padding-block-top-body-default: #{$ouds-modal-dialog-space-padding-block-top-body-default-desktop};
-    --#{$prefix}modal-dialog-space-padding-block-top-body-small: #{$ouds-modal-dialog-space-padding-block-top-body-small-desktop};
-    --#{$prefix}modal-dialog-space-padding-block-top-default: #{$ouds-modal-dialog-space-padding-block-top-default-desktop};
-    --#{$prefix}modal-dialog-space-padding-block-top-footer-default: #{$ouds-modal-dialog-space-padding-block-top-footer-default-desktop};
-    --#{$prefix}modal-dialog-space-padding-block-top-footer-small: #{$ouds-modal-dialog-space-padding-block-top-footer-small-desktop};
-    --#{$prefix}modal-dialog-space-padding-inline-default: #{$ouds-modal-dialog-space-padding-inline-default-desktop};
-    --#{$prefix}modal-dialog-space-padding-inline-small: #{$ouds-modal-dialog-space-padding-inline-small-desktop};
   }
   // scss-docs-end root-font-variables-ouds
   // End mod

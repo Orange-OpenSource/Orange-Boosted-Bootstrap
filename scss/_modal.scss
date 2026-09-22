@@ -10,6 +10,7 @@
 .modal-fullscreen-dialog,
 .modal-dialog {
   flex-direction: column; // cannot use grid because of Safari dialog limitations
+  padding-block: var(--#{$prefix}modal-dialog-space-padding-block-top) var(--#{$prefix}modal-dialog-space-padding-block-bottom);
   overscroll-behavior: contain;
   background-color: $ouds-color-overlay-modal-sheet;
 
@@ -30,10 +31,6 @@
     padding: $ouds-space-padding-block-xlarge $ouds-space-padding-inline-2xlarge;
     border-top: $ouds-border-width-default solid $ouds-color-border-muted;
   }
-
-  &:not(:has(.modal-footer)) .modal-body {
-    padding-bottom: calc($ouds-space-padding-block-medium + $ouds-space-padding-block-2xlarge);
-  }
 }
 
 .modal-fullscreen-dialog {
@@ -45,45 +42,97 @@
 }
 
 .modal-dialog {
-  --#{$prefix}modal-column-count: 12;
+  --#{$prefix}modal-dialog-space-column-gap-previous-title: #{$ouds-modal-dialog-space-column-gap-previous-title-mobile};
+  --#{$prefix}modal-dialog-space-inset-close-button: #{$ouds-modal-dialog-space-inset-close-button-mobile};
+  --#{$prefix}modal-dialog-space-padding-block-bottom-body-footer: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-mobile};
+  --#{$prefix}modal-dialog-space-padding-block-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-mobile};
+  --#{$prefix}modal-dialog-space-padding-block-footer-sticky: #{$ouds-modal-dialog-space-padding-block-footer-sticky-mobile};
+  --#{$prefix}modal-dialog-space-padding-block-top-body: #{$ouds-modal-dialog-space-padding-block-top-body-default-mobile};
+  --#{$prefix}modal-dialog-space-padding-block-top: #{$ouds-modal-dialog-space-padding-block-top-mobile};
+  --#{$prefix}modal-dialog-space-padding-block-top-footer: #{$ouds-modal-dialog-space-padding-block-top-footer-default-mobile};
+  --#{$prefix}modal-dialog-space-padding-inline: #{$ouds-modal-dialog-space-padding-inline-mobile};
   --#{$prefix}modal-grid-margin: #{$ouds-space-fixed-medium};
 
-  width: calc((100vw - 2 * var(--#{$prefix}modal-grid-margin)) * var(--#{$prefix}modal-column-count) / 12);
+  width: calc(100vw - 2 * $ouds-space-fixed-medium);
   max-width: unset;
-  max-height: calc(100vh - 2 * var(--#{$prefix}modal-grid-margin));
+  max-height: calc(100vh - 2 * $ouds-space-fixed-medium);
   margin: auto $ouds-space-fixed-medium;
   box-shadow: $ouds-elevation-emphasized;
   @include border-radius(var(--#{$prefix}modal-border-radius));
 
   @include media-breakpoint-up(sm) {
     --#{$prefix}modal-column-count: 10;
-    --#{$prefix}modal-margin-inline: var(--#{$prefix}grid-margin);
+    width: calc(100vw * var(--#{$prefix}modal-column-count) / 12);
 
     max-height: 90vh;
     margin: auto;
   }
 
+  @include media-breakpoint-up(md) {
+    --#{$prefix}modal-dialog-space-column-gap-previous-title: #{$ouds-modal-dialog-space-column-gap-previous-title-tablet};
+    --#{$prefix}modal-dialog-space-inset-close-button: #{$ouds-modal-dialog-space-inset-close-button-default-tablet};
+    --#{$prefix}modal-dialog-space-padding-block-bottom-body-footer: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-tablet};
+    --#{$prefix}modal-dialog-space-padding-block-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-default-tablet};
+    --#{$prefix}modal-dialog-space-padding-block-footer-sticky: #{$ouds-modal-dialog-space-padding-block-footer-sticky-default-tablet};
+    --#{$prefix}modal-dialog-space-padding-block-top-body: #{$ouds-modal-dialog-space-padding-block-top-body-default-tablet};
+    --#{$prefix}modal-dialog-space-padding-block-top: #{$ouds-modal-dialog-space-padding-block-top-default-tablet};
+    --#{$prefix}modal-dialog-space-padding-block-top-footer: #{$ouds-modal-dialog-space-padding-block-top-footer-default-tablet};
+    --#{$prefix}modal-dialog-space-padding-inline: #{$ouds-modal-dialog-space-padding-inline-default-tablet};
+  }
+
   @include media-breakpoint-up(xl) {
+    --#{$prefix}modal-dialog-space-column-gap-previous-title: #{$ouds-modal-dialog-space-column-gap-previous-title-desktop};
+    --#{$prefix}modal-dialog-space-inset-close-button: #{$ouds-modal-dialog-space-inset-close-button-default-desktop};
+    --#{$prefix}modal-dialog-space-padding-block-bottom-body-footer: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-desktop};
+    --#{$prefix}modal-dialog-space-padding-block-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-default-desktop};
+    --#{$prefix}modal-dialog-space-padding-block-footer-sticky: #{$ouds-modal-dialog-space-padding-block-footer-sticky-default-desktop};
+    --#{$prefix}modal-dialog-space-padding-block-top-body: #{$ouds-modal-dialog-space-padding-block-top-body-default-desktop};
+    --#{$prefix}modal-dialog-space-padding-block-top: #{$ouds-modal-dialog-space-padding-block-top-default-desktop};
+    --#{$prefix}modal-dialog-space-padding-block-top-footer: #{$ouds-modal-dialog-space-padding-block-top-footer-default-desktop};
+    --#{$prefix}modal-dialog-space-padding-inline: #{$ouds-modal-dialog-space-padding-inline-default-desktop};
     --#{$prefix}modal-column-count: 8;
   }
 
   &.modal-fixed-height,
   &.modal-sticky-actions {
-    height: calc(100vh - 2 * var(--#{$prefix}modal-grid-margin));
+    height: calc(100vh - 2 * $ouds-space-fixed-medium);
   }
 
   &.modal-small {
+    --#{$prefix}modal-dialog-space-padding-block-bottom-body-footer: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-small-mobile};
+    --#{$prefix}modal-dialog-space-padding-block-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-mobile};
+    --#{$prefix}modal-dialog-space-padding-block-footer-sticky: #{$ouds-modal-dialog-space-padding-block-footer-sticky-mobile};
+    --#{$prefix}modal-dialog-space-padding-block-top-body: #{$ouds-modal-dialog-space-padding-block-top-body-small-mobile};
+    --#{$prefix}modal-dialog-space-padding-block-top-footer: #{$ouds-modal-dialog-space-padding-block-top-footer-small-mobile};
+    --#{$prefix}modal-dialog-space-padding-inline: #{$ouds-modal-dialog-space-padding-inline-mobile};
+
     max-height: 50vh;
 
     @include media-breakpoint-up(md) {
+      --#{$prefix}modal-dialog-space-inset-close-button: #{$ouds-modal-dialog-space-inset-close-button-small-tablet};
+      --#{$prefix}modal-dialog-space-padding-block-bottom-body-footer: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-small-tablet};
+      --#{$prefix}modal-dialog-space-padding-block-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-small-tablet};
+      --#{$prefix}modal-dialog-space-padding-block-footer-sticky: #{$ouds-modal-dialog-space-padding-block-footer-sticky-small-tablet};
+      --#{$prefix}modal-dialog-space-padding-block-top-body: #{$ouds-modal-dialog-space-padding-block-top-body-small-tablet};
+      --#{$prefix}modal-dialog-space-padding-block-top-footer: #{$ouds-modal-dialog-space-padding-block-top-footer-small-tablet};
+      --#{$prefix}modal-dialog-space-padding-inline: #{$ouds-modal-dialog-space-padding-inline-small-tablet};
       --#{$prefix}modal-column-count: 8;
     }
+
     @include media-breakpoint-up(lg) {
       --#{$prefix}modal-column-count: 6;
+
       max-height: 60vh;
     }
 
     @include media-breakpoint-up(xl) {
+      --#{$prefix}modal-dialog-space-inset-close-button: #{$ouds-modal-dialog-space-inset-close-button-small-desktop};
+      --#{$prefix}modal-dialog-space-padding-block-bottom-body-footer: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-small-desktop};
+      --#{$prefix}modal-dialog-space-padding-block-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-small-desktop};
+      --#{$prefix}modal-dialog-space-padding-block-footer-sticky: #{$ouds-modal-dialog-space-padding-block-footer-sticky-small-desktop};
+      --#{$prefix}modal-dialog-space-padding-block-top-body: #{$ouds-modal-dialog-space-padding-block-top-body-small-desktop};
+      --#{$prefix}modal-dialog-space-padding-block-top-footer: #{$ouds-modal-dialog-space-padding-block-top-footer-small-desktop};
+      --#{$prefix}modal-dialog-space-padding-inline: #{$ouds-modal-dialog-space-padding-inline-small-desktop};
       --#{$prefix}modal-column-count: 4;
     }
 
@@ -95,6 +144,29 @@
       @include get-font-size("heading-small");
     }
   }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--#{$prefix}modal-dialog-space-padding-inline) var(--#{$prefix}space-scaled-3xlarge);
+  background-color: $ouds-color-overlay-modal-sheet;
+
+  .btn-close {
+    position: absolute;
+    top: var(--#{$prefix}modal-dialog-space-inset-close-button);
+    right: var(--#{$prefix}modal-dialog-space-inset-close-button);
+  }
+}
+
+.modal-title {
+  margin: 0;
+  @include get-font-size("heading-medium");
+}
+
+.modal-subtitle {
+  margin: 0;
 }
 
 .modal-alert-icon {
@@ -121,32 +193,10 @@
   }
 }
 
-.modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: $ouds-space-padding-block-xlarge var(--#{$prefix}space-scaled-3xlarge) 0 $ouds-space-padding-inline-2xlarge;
-  background-color: $ouds-color-overlay-modal-sheet;
-
-  .btn-close {
-    position: absolute;
-    top: $ouds-space-inset-medium;
-    right: $ouds-space-inset-medium;
-  }
-}
-
-.modal-title {
-  margin: 0;
-  @include get-font-size("heading-medium");
-}
-
-.modal-subtitle {
-  margin: 0;
-}
-
 .modal-body {
   flex-grow: 1;
-  padding: $ouds-space-padding-block-large $ouds-space-padding-inline-2xlarge $ouds-space-padding-block-medium;
+  padding-inline: var(--#{$prefix}modal-dialog-space-padding-inline);
+  margin-block: var(--#{$prefix}modal-dialog-space-padding-block-top-body) var(--#{$prefix}modal-dialog-space-padding-block-bottom-body-footer);
   overflow-y: auto;
 
   * {
@@ -158,10 +208,10 @@
   }
 
   &:has(.modal-footer) {
-    padding-bottom: 0;
+    margin-block-end: 0;
 
     > :nth-last-child(2) {
-      margin-bottom: $ouds-space-padding-block-medium;
+      margin-block-end: var(--#{$prefix}modal-dialog-space-padding-block-bottom-body-footer);
     }
   }
 }
@@ -173,7 +223,7 @@
   flex-wrap: wrap;
   gap: var(--#{$prefix}space-scaled-small);
   align-items: center; // vertically center
-  padding-block: $ouds-space-padding-block-2xlarge calc($ouds-space-padding-block-medium + $ouds-space-padding-block-2xlarge);
+  padding-block: var(--#{$prefix}modal-dialog-space-padding-block-top-footer) var(--#{$prefix}modal-dialog-space-padding-block-bottom-body-footer);
   background-color: $ouds-color-overlay-modal-sheet;
 
   > *:first-child:last-child {
