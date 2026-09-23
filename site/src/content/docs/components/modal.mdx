@@ -483,7 +483,7 @@ By default the action buttons will stack vertically on smaller screens and align
 
 You can implement function modal dialogs using the functional variants of the icons and buttons.
 
-<Example buttonLabel="dialog modal negative" code={`<dialog id="modalDialogNegative" class="modal-dialog modal-negative" aria-label="Demo modal dialog" closedby="any">
+<Example buttonLabel="dialog modal negative" code={`<dialog id="modalDialogNegative" class="modal-dialog modal-small" aria-label="Demo modal dialog negative" closedby="any">
     <div class="modal-header">
       <div class="d-flex align-items-center gap-scaled-small">
         <div class="modal-alert-icon"><p class="visually-hidden">Alert</p></div>
@@ -494,7 +494,7 @@ You can implement function modal dialogs using the functional variants of the ic
       </button>
     </div>
     <div class="modal-body">
-      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
+      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed.</p>
       <div class="modal-footer">
         <button type="button" class="btn btn-negative" commandfor="modalDialogNegative" command="close">Delete</button>
         <button type="button" class="btn btn-minimal" commandfor="modalDialogNegative" command="close">Cancel</button>
@@ -507,7 +507,7 @@ You can implement function modal dialogs using the functional variants of the ic
   </button>`} />
 
 
-<Example buttonLabel="dialog modal success" code={`<dialog id="modalDialogSuccess" class="modal-dialog" aria-label="Demo modal dialog" closedby="any">
+<Example buttonLabel="dialog modal success" code={`<dialog id="modalDialogSuccess" class="modal-dialog modal-small" aria-label="Demo modal dialog success" closedby="any">
     <div class="modal-header">
       <div class="d-flex align-items-center gap-scaled-small">
         <div class="modal-alert-icon modal-success"><p class="visually-hidden">Alert</p></div>
@@ -529,7 +529,21 @@ You can implement function modal dialogs using the functional variants of the ic
     Open success modal
   </button>`} />
 
-## JS example
+## Interactivity
+
+In order to open a dialog, you need to use either invoker commands or JavaScript.
+
+### Invoker commands
+
+The Invoker Commands API provides a way to declaratively assign behaviors to buttons, allowing control of interactive elements when the button is enacted by the user. Please refer to the [MDN article on Invoker Commands](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API) for more information.
+
+We use this method in the examples above to open and close the modal dialogs without writing any JavaScript code.
+
+<Callout type="info">
+  As Invoker Commands are only recently
+</Callout>
+
+### Javascript
 
 <Example buttonLabel="dialog modal full" code={`<dialog id="demoJSModal" class="modal-dialog" aria-label="Demo modal">
     <div class="modal-header">

@@ -147,8 +147,7 @@
     }
   }
 
-  &.modal-fixed-height,
-  &.modal-sticky-actions {
+  &.modal-fixed-height {
     height: calc(100vh - 2 * $ouds-space-fixed-medium);
   }
 

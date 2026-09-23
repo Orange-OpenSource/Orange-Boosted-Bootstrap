@@ -12602,7 +12602,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   /* rtl:remove */
   letter-spacing: var(--bs-font-letter-spacing-heading-small);
 }
-.modal-dialog.modal-fixed-height, .modal-dialog.modal-sticky-actions {
+.modal-dialog.modal-fixed-height {
   height: calc(100vh - 32px);
 }
 .modal-dialog .modal-body * {
