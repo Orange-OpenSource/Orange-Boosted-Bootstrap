@@ -2,10 +2,10 @@ name: Compress Images
 on:
   pull_request:
     paths:
-      - "**.jpg"
-      - "**.jpeg"
-      - "**.png"
-      - "**.webp"
+      - '**.jpg'
+      - '**.jpeg'
+      - '**.png'
+      - '**.webp'
     types: [opened, synchronize]
   workflow_dispatch:
 
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       # allow calibreapp/image-actions to update PRs
-      contents: read
+      contents: write
       pull-requests: write
     steps:
       - name: Clone repository
