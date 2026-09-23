@@ -60,9 +60,25 @@ import { getVersionedDocsPath } from '@libs/path'
 
 ### Approach
 
-Modal dialog and fullscreen dialog use the same native `<dialog>` element and the same internal structure with `.modal-header`, `.modal-body`, and `.modal-footer`. Add `.modal-fullscreen-dialog` to the `.modal` `<dialog>` when the interaction needs all the available viewport.
+Modal dialog and fullscreen dialog use the same native `<dialog>` element and the same internal structure with `.modal-header`, `.modal-body`, and `.modal-footer`. Either use `.modal-dialog` for a standard modal dialog or `.modal-fullscreen-dialog` for a fullscreen modal.
 
 The [common variants](#common-variants) are shared between modal dialog and fullscreen dialog, modal dialog has [specific variants](#variants) and [sizes](#sizes).
+
+As this component relies on the native `<dialog>` element we encourage you to read the [MDN documentation on the `<dialog>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog).
+
+### Accessibility
+
+As we use the native `<dialog>` element, we benefit from built-in accessibility features such as keyboard navigation, focus management, and screen reader support.
+
+Some things to keep in mind while using modals include:
+- Choose the most appropriate initial focus when the dialog opens. By default, focus moves to the first focusable element; use `autofocus` when another element, such as the close button or an input, should receive focus.
+- Always provide an explicit and accessible way to close the dialog, such as a close, cancel, or confirmation button. Modal dialogs should also preserve the default `Escape` key behavior.
+- Open modal dialogs [with `showModal()`](#javascript) or the [`show-modal` invoker command](#invoker-commands) so that the rest of the page is made inert and the dialog is exposed with modal semantics.
+- Do not add `tabindex` to the `<dialog>` element.
+
+<Callout type="info">
+  Read the [MDN accessibility guidance for the `<dialog>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog#accessibility) for more information.
+</Callout>
 
 ## [[comp]] Modal dialog
 
@@ -531,7 +547,7 @@ You can implement function modal dialogs using the functional variants of the ic
 
 ## Interactivity
 
-In order to open a dialog, you need to use either invoker commands or JavaScript.
+In order to open a dialog, you need to use either [invoker commands](#invoker-commands) or [JavaScript](#javascript).
 
 ### Invoker commands
 
@@ -540,10 +556,38 @@ The Invoker Commands API provides a way to declaratively assign behaviors to but
 We use this method in the examples above to open and close the modal dialogs without writing any JavaScript code.
 
 <Callout type="info">
-  As Invoker Commands are only recently
+  As Invoker Commands are only recently widely available in browsers, it is recommended to [integrate this polyfill](https://github.com/keithamus/invokers-polyfill) in your projects or use the [programmatic solution](#javascript).
 </Callout>
 
-### Javascript
+First create a button with the `[commandfor]` attribute pointing to the ID of the modal dialog you want to control. The `[command]` attribute specifies the action to be performed, such as `show-modal` to open the dialog as a modal.
+
+```html
+<button type="button" commandfor="modalDialogInvokerCommand" command="show-modal">
+  Open modal
+</button>
+```
+
+Then create a `<dialog>` element with the corresponding ID that matches the `[commandfor]` attribute of the button.
+
+```html
+<dialog id="modalDialogInvokerCommand" class="modal-dialog" aria-label="Invoker modal dialog">
+  <!-- modal dialog content -->
+</dialog>
+
+```
+Inside the `<dialog>` element, the buttons that should close the modal dialog need to have the `[commandfor]` attribute pointing to the ID of the dialog and the `[command]` attribute set to `close`.
+
+```html
+<button type="button" class="btn btn-close" commandfor="modalDialogInvokerCommand" command="close">
+  <span class="visually-hidden">Close</span>
+</button>
+```
+
+### JavaScript
+
+JavaScript can be used to display and close the `<dialog>` element. You can use the `showModal()` method to display a modal dialog. The dialog can then be closed using the `close()` method.
+
+<JsDocs name="modal-js" file="site/src/assets/partials/snippets.js" />
 
 <Example buttonLabel="dialog modal full" code={`<dialog id="demoJSModal" class="modal-dialog" aria-label="Demo modal">
     <div class="modal-header">
@@ -560,7 +604,5 @@ We use this method in the examples above to open and close the modal dialogs wit
   </dialog>
 
   <button type="button" class="btn btn-default" data-open-modal="demoJSModal">
-    Open modal
+    Open modal with JS
   </button>`} />
-
-<JsDocs name="modal-js" file="site/src/assets/partials/snippets.js" />
