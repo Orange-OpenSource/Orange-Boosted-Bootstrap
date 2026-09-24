@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * OUDS Web  v1.4.0 (https://web.unified-design-system.orange.com/)
+ * OUDS Web  v1.5.0 (https://web.unified-design-system.orange.com/)
  * Copyright 2014-2026 The OUDS Web Authors
  * Copyright 2014-2026 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
@@ -409,7 +409,7 @@
   height: 1px;
   pointer-events: none;
   content: "";
-  background-image: url("https://assets.orange.com/pm_12751_542_542931-ew23c26ecu-ouds-px.png?a=1&b=or&lib=ouds-web&v=1.4.0");
+  background-image: url("https://assets.orange.com/pm_12751_542_542931-ew23c26ecu-ouds-px.png?a=1&b=or&lib=ouds-web&v=1.5.0");
   opacity: 0;
 }
 
@@ -5209,6 +5209,7 @@ optgroup {
   appearance: none;
   caret-color: var(--bs-text-input-caret-color);
   background-color: transparent;
+  background-clip: content-box;
   border: 0;
   box-shadow: none;
   opacity: 0;
@@ -5344,11 +5345,9 @@ optgroup {
   height: var(--bs-text-input-icon-size);
   color: var(--bs-color-content-muted);
 }
-.text-input .text-input-container:has(> svg:not(.loader)) > .text-input-field,
-.text-input .text-input-container:has(> svg:not(.loader)) > .input-container,
-.text-input .text-input-container:has(> svg:not(.loader)) > label, .text-input .text-input-container:has(> img) > .text-input-field,
-.text-input .text-input-container:has(> img) > .input-container,
-.text-input .text-input-container:has(> img) > label {
+.text-input .text-input-container:has(> svg:not(.loader), > img, > .icon) > .text-input-field,
+.text-input .text-input-container:has(> svg:not(.loader), > img, > .icon) > .input-container,
+.text-input .text-input-container:has(> svg:not(.loader), > img, > .icon) > label {
   padding-left: calc(var(--bs-text-input-icon-size) + var(--bs-text-input-column-gap));
 }
 .text-input .text-input-container > button {
@@ -5472,6 +5471,7 @@ optgroup {
   color: var(--bs-text-input-color);
   caret-color: var(--bs-text-input-caret-color);
   background-color: transparent;
+  background-clip: content-box;
   border: 0;
   font-size: var(--bs-font-size-label-large);
   line-height: var(--bs-font-line-height-label-large);
@@ -11219,8 +11219,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
   min-height: inherit;
   content: "";
   background-color: currentcolor;
-  -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M10.2 21H3V3h7.2v18ZM21 21h-7.2V3H21v18Z' fill-rule='evenodd'/></svg>") no-repeat 50%/0.75rem 0.75rem;
-  mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M10.2 21H3V3h7.2v18ZM21 21h-7.2V3H21v18Z' fill-rule='evenodd'/></svg>") no-repeat 50%/0.75rem 0.75rem;
+  -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M10.2 21H3V3h7.2v18ZM21 21h-7.2V3H21v18Z'/></svg>") no-repeat 50%/0.75rem 0.75rem;
+  mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M10.2 21H3V3h7.2v18ZM21 21h-7.2V3H21v18Z'/></svg>") no-repeat 50%/0.75rem 0.75rem;
 }
 
 .carousel-action-bar .carousel-control-play-pause.play {
@@ -11233,8 +11233,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
   min-height: inherit;
   content: "";
   background-color: currentcolor;
-  -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M12.138 16.8 3 21.6V2.4l9.138 4.8L21 12z' fill-rule='evenodd'/></svg>") no-repeat 50%/0.75rem 0.75rem;
-  mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M12.138 16.8 3 21.6V2.4l9.138 4.8L21 12z' fill-rule='evenodd'/></svg>") no-repeat 50%/0.75rem 0.75rem;
+  -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M12.138 16.8 3 21.6V2.4l9.138 4.8L21 12z'/></svg>") no-repeat 50%/0.75rem 0.75rem;
+  mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M12.138 16.8 3 21.6V2.4l9.138 4.8L21 12z'/></svg>") no-repeat 50%/0.75rem 0.75rem;
 }
 
 .carousel-action-bar .carousel-control-play-pause.play::after {
