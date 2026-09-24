@@ -641,6 +641,13 @@ legend {
   }
 }
 
+[aria-disabled="true"],
+:disabled {
+  legend {
+    color: $ouds-color-content-disabled;
+  }
+}
+
 // Fix height of inputs with a type of datetime-local, date, month, week, or time
 // See https://github.com/twbs/bootstrap/issues/18842
 

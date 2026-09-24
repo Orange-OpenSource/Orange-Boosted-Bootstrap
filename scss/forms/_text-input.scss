@@ -249,8 +249,14 @@
 
     // Disabled inputs
     &:has(.text-input-field:disabled) {
-      > label::before {
-        cursor: default;
+      > label {
+        &::before {
+          cursor: default;
+        }
+
+        &::after {
+          color: currentcolor;
+        }
       }
     }
 
@@ -613,8 +619,14 @@
       // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
       opacity: 1;
 
-      > label::before {
-        cursor: default;
+      > label {
+        &::before {
+          cursor: default;
+        }
+
+        &::after {
+          color: currentcolor;
+        }
       }
 
       &:not(.text-area-container-outlined) {
