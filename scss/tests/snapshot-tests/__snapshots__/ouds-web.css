@@ -12055,8 +12055,10 @@ ol.bullet-list > li > ol > li > ol > li::before {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   min-width: var(--bs-icon-min-width);
   max-width: var(--bs-icon-max-width);
+  height: 100%;
   min-height: var(--bs-icon-min-height);
   max-height: var(--bs-icon-max-height);
   aspect-ratio: 1;
