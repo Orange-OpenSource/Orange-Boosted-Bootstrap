@@ -373,7 +373,7 @@ In a form having several fields and where all fields are mandatory, it is suffic
 In a form having several fields and where not all fields are mandatory, you have to display a message "**All fields marked with an <span class="text-status-negative">*</span> are mandatory.**" at the top. Then, you have to explicitly indicate which fields are mandatory to users, by adding the class `.is-required` on the label, which adds a red asterisk at the end of the label. The mandatory nature of the fields will be indicated to assistive technologies by the `required` attribute.
 
 <Callout type="info">
-  To have the asterisk in the right color for disabled fields, you may disable the form with `[disabled]` or `[aria-disabled]` on the form or fieldset, or add `[aria-disabled]` on the label.
+  To have the asterisk in the right color for disabled fields, you may disable a `<fieldset>` with `disabled`, or add `aria-disabled="true"` on the fieldset/container (or on the label).
 </Callout>
 
 <Example buttonLabel="form with some mandatory fields" code={`<form class="needs-validation" novalidate>
