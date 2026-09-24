@@ -1325,6 +1325,11 @@ legend + * {
   clear: left;
 }
 
+[aria-disabled=true] legend,
+:disabled legend {
+  color: var(--bs-color-content-disabled);
+}
+
 ::-webkit-datetime-edit-fields-wrapper,
 ::-webkit-datetime-edit-text,
 ::-webkit-datetime-edit-minute,
@@ -3664,6 +3669,12 @@ dialog,
   content: "*";
 }
 
+[disabled] .is-required::after,
+[aria-disabled].is-required::after,
+[aria-disabled] .is-required::after {
+  color: currentcolor;
+}
+
 .form-helper {
   position: relative;
   display: inline-block;
@@ -3961,6 +3972,10 @@ textarea.form-control-lg {
 .switch-item:has(input:disabled) *,
 .form-switch:has(input:disabled) *, .radio-button-item:has(input:disabled) *, .checkbox-item:has(input:disabled) *, .switch-standalone:has(input:disabled) *, .radio-button-standalone:has(input:disabled) *, .checkbox-standalone:has(input:disabled) * {
   color: var(--bs-color-action-disabled);
+}
+.switch-item:has(input:disabled) *::after,
+.form-switch:has(input:disabled) *::after, .radio-button-item:has(input:disabled) *::after, .checkbox-item:has(input:disabled) *::after, .switch-standalone:has(input:disabled) *::after, .radio-button-standalone:has(input:disabled) *::after, .checkbox-standalone:has(input:disabled) *::after {
+  color: currentcolor;
 }
 .switch-item:has(input:hover),
 .form-switch:has(input:hover), .radio-button-item:has(input:hover), .checkbox-item:has(input:hover), .switch-standalone:has(input:hover), .radio-button-standalone:has(input:hover), .checkbox-standalone:has(input:hover), .switch-item:has(input:focus-visible),
@@ -4998,6 +5013,9 @@ textarea.form-control-lg {
 .select-input-container:has(.select-input-field:disabled) > label {
   pointer-events: none;
 }
+.select-input-container:has(.select-input-field:disabled) > label::after {
+  color: currentcolor;
+}
 .select-input-container:is(:has(:open), :not(:has(:disabled:checked))) > label {
   top: calc(var(--bs-text-input-padding-y) + 0.5 * var(--bs-font-size-label-small) * var(--bs-font-line-height-label-small) + 0.5 * (var(--bs-text-input-min-height) - 2 * var(--bs-text-input-padding-y) - var(--bs-font-size-label-small) * var(--bs-font-line-height-label-small) - var(--bs-font-size-label-large) * var(--bs-font-line-height-label-large)));
   white-space: nowrap;
@@ -5297,6 +5315,9 @@ optgroup {
 .text-input .text-input-container:has(.text-input-field:disabled) > label::before {
   cursor: default;
 }
+.text-input .text-input-container:has(.text-input-field:disabled) > label::after {
+  color: currentcolor;
+}
 .text-input .text-input-container:has(.text-input-field:disabled):not(:has(.loading-indeterminate, .loading-determinate)) {
   --bs-text-input-label-color: var(--bs-color-action-disabled);
   --bs-text-input-color: var(--bs-color-action-disabled);
@@ -5581,6 +5602,9 @@ optgroup {
 }
 .text-area .text-area-container:has(.text-area-field:disabled) > label::before {
   cursor: default;
+}
+.text-area .text-area-container:has(.text-area-field:disabled) > label::after {
+  color: currentcolor;
 }
 .text-area .text-area-container:has(.text-area-field:disabled):not(.text-area-container-outlined) {
   --bs-text-input-background-color: var(--bs-color-action-support-disabled);
