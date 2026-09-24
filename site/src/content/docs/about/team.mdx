@@ -12,11 +12,11 @@ OUDS Web is maintained by the core team and a small group of invaluable core con
 <ul class="item-list component-max-width mb-large">
   {getData('core-team').map((member) => {
     return (
-      <li class="item item-navigation">
+      <li class="item item-navigation mb-none">
         <a class="item-container item-interactive" href={`https://github.com/${member.user}`}>
           <div class="item-content">
             <div class="item-leading-container item-leading-large">
-              <img src={`https://github.com/${member.user}.png`} alt={`@${member.user}`} width="32" height="32" loading="lazy" />
+              <img src={`https://github.com/${member.user}.png`} alt={`@${member.user}`} class="w-100 h-100" loading="lazy" />
             </div>
             <div class="item-text-container">
               <span class="item-label">@{member.user}</span>
