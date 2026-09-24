@@ -4,8 +4,8 @@
 // See StaticListItemPlayground for the shared reasoning on the `<ul>`/`<li>`
 // shape, the frozen single-item list, and why `Outlined` / `Rounded corners`
 // are not offered. See NavigationCardItemPlayground for the shared reasoning
-// on `Wrapping link`, `Back chevron`, `External link` / `New window` and the
-// derived `.item-slot-focusable`. This file combines both without repeating
+// on `Wrapping link`, `Back chevron`, `External link` and the derived
+// `.item-slot-focusable`. This file combines both without repeating
 // either.
 
 const assetOptions = [
@@ -33,12 +33,12 @@ const trailingAssetOptions = [
 // lists per family, so neither control can reach a combination the other
 // family's controls exist for.
 const iconSizeOptions = ['Normal', 'Large']
-const imageSizeOptions = ['Normal', 'Large', 'XLarge rounded']
+const imageSizeOptions = ['Normal', 'Large', 'XLarge']
+const imageRatioOptions = ['1x1', '4x3', '16x9']
+const trailingTextOptions = ['Normal', 'With extra label', 'Bold', 'Muted']
 const statusOptions = ['None', 'Positive', 'Warning', 'Info', 'Negative']
 
 const states = ['Default', 'Disabled', 'Skeleton']
-const backgrounds = ['Default', 'With background', 'No background']
-
 const orElse = (value, options) => (options.includes(value) ? value : options[0])
 
 const indent = (markup, pad) => markup.split('\n').map((line) => (line ? `${pad}${line}` : line)).join('\n')
@@ -132,25 +132,37 @@ const statusIconClasses = {
 const leadingSizeClasses = {
   'Normal': '',
   'Large': ' item-leading-large',
-  'XLarge rounded': ' item-leading-xlarge item-leading-rounded ratio-16x9'
+  'XLarge': ' item-leading-xlarge'
 }
 
 const trailingSizeClasses = {
   'Normal': '',
   'Large': ' item-trailing-large',
-  'XLarge rounded': ' item-trailing-xlarge ratio-16x9 item-trailing-rounded'
+  'XLarge': ' item-trailing-xlarge'
 }
+
+const ratioClasses = {
+  '1x1': ' ratio-1x1',
+  '4x3': ' ratio-4x3',
+  '16x9': ' ratio-16x9'
+}
+
+const imageClasses = (side, size, rounded, ratio) => [
+  side === 'leading' ? leadingSizeClasses[size] : trailingSizeClasses[size],
+  rounded ? ` item-${side}-rounded` : '',
+  ratioClasses[ratio]
+].join('')
 
 const leadingTemplates = {
   'None': () => '',
   'Icon': (icons, size, status) => (status !== 'None'
-    ? `<div class="item-leading-container">
+    ? `<div class="item-leading-container${leadingSizeClasses[size]}">
   <div class="item-icon ${statusIconClasses[status]}"></div>
 </div>`
     : `<div class="item-leading-container${leadingSizeClasses[size]}">
   ${icons.heartEmpty}
 </div>`),
-  'Image': (icons, size) => `<div class="item-leading-container${leadingSizeClasses[size]}">
+  'Image': (icons, size, status, rounded, ratio) => `<div class="item-leading-container${imageClasses('leading', size, rounded, ratio)}">
   <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover">
 </div>`,
   'Slot': () => `<div class="item-leading-container item-slot item-slot-focusable">
@@ -160,16 +172,21 @@ const leadingTemplates = {
 
 const trailingTemplates = {
   'None': () => '',
-  'Text': () => `<div class="item-trailing-container">
+  'Text': (icons, size, status, rounded, ratio, text) => ({
+    'Normal': `<div class="item-trailing-container">
+  <p class="item-label">Label</p>
+</div>`,
+    'With extra label': `<div class="item-trailing-container">
   <p class="item-label">Label</p>
   <p class="item-extra-label">Extra label</p>
 </div>`,
-  'Text bold': () => `<div class="item-trailing-container">
+    'Bold': `<div class="item-trailing-container">
   <p class="item-label fw-bold">Label</p>
 </div>`,
-  'Text muted': () => `<div class="item-trailing-container">
+    'Muted': `<div class="item-trailing-container">
   <p class="item-label text-muted">Label</p>
-</div>`,
+</div>`
+  }[text] || ''),
   'Badge count': () => `<div class="item-trailing-container">
   <p class="badge badge-count">12<span class="visually-hidden">errors</span></p>
 </div>`,
@@ -180,13 +197,13 @@ const trailingTemplates = {
   <p class="tag">Tag</p>
 </div>`,
   'Icon': (icons, size, status) => (status !== 'None'
-    ? `<div class="item-trailing-container">
+    ? `<div class="item-trailing-container${trailingSizeClasses[size]}">
   <div class="item-icon ${statusIconClasses[status]}"></div>
 </div>`
     : `<div class="item-trailing-container${trailingSizeClasses[size]}">
   ${icons.heartEmpty}
 </div>`),
-  'Image': (icons, size) => `<div class="item-trailing-container${trailingSizeClasses[size]}">
+  'Image': (icons, size, status, rounded, ratio) => `<div class="item-trailing-container${imageClasses('trailing', size, rounded, ratio)}">
   <img alt="" src="https://placecats.com/500/500" class="w-100 h-100 object-fit-cover">
 </div>`,
   'Slot': () => `<div class="item-trailing-container item-slot item-slot-focusable">
@@ -245,29 +262,19 @@ ${indent(markup, '  ')}
 </div>`
   : markup)
 
-const externalSuffixes = {
-  'True': '<span class="visually-hidden">&nbsp;(external link, new window)</span>',
-  'False': ' (external link)'
-}
-
-const renderNavigationListItem = ({ overline, label, boldLabel, extraLabel, description, leadingAsset, leadingIconSize, leadingIconStatus, leadingImageSize, trailingAsset, trailingIconSize, trailingIconStatus, trailingImageSize, helperText, wrappingLink, backChevron, externalLink, newWindow, state, background, noDivider, topAlignment, smallSize, maxWidth, icon }, icons = customIcons(icon), preview = true) => {
+const renderNavigationListItem = ({ overline, label, boldLabel, extraLabel, description, leadingAsset, leadingIconSize, leadingIconStatus, leadingImageSize, leadingImageRounded, leadingImageRatio, trailingAsset, trailingIconSize, trailingIconStatus, trailingImageSize, trailingImageRounded, trailingImageRatio, trailingText, helperText, wrappingLink, backChevron, externalLink, state, background, noDivider, topAlignment, smallSize, maxWidth, icon }, icons = customIcons(icon), preview = true) => {
   const safeLeading = orElse(leadingAsset, assetOptions)
   const safeLeadingIconSize = orElse(leadingIconSize, iconSizeOptions)
   const safeLeadingIconStatus = orElse(leadingIconStatus, statusOptions)
   const safeLeadingImageSize = orElse(leadingImageSize, imageSizeOptions)
+  const safeLeadingImageRatio = orElse(leadingImageRatio, imageRatioOptions)
   const safeTrailing = orElse(trailingAsset, trailingAssetOptions)
   const safeTrailingIconSize = orElse(trailingIconSize, iconSizeOptions)
   const safeTrailingIconStatus = orElse(trailingIconStatus, statusOptions)
   const safeTrailingImageSize = orElse(trailingImageSize, imageSizeOptions)
+  const safeTrailingImageRatio = orElse(trailingImageRatio, imageRatioOptions)
+  const safeTrailingText = orElse(trailingText, trailingTextOptions)
   const safeState = orElse(state, states)
-  const safeBackground = orElse(background, backgrounds)
-
-  const backgroundClasses = {
-    'Default': '',
-    'With background': 'item-bg',
-    'No background': 'item-no-bg'
-  }
-
   const listClasses = ['item-list', maxWidth ? 'component-max-width' : ''].filter(Boolean).join(' ')
 
   const liClasses = [
@@ -278,13 +285,13 @@ const renderNavigationListItem = ({ overline, label, boldLabel, extraLabel, desc
     smallSize ? 'item-small' : '',
     topAlignment ? 'item-top' : '',
     noDivider ? 'item-no-divider' : '',
-    backgroundClasses[safeBackground]
+    background ? 'item-bg' : ''
   ].filter(Boolean).join(' ')
 
   const helperId = helperText ? 'item-helper-1' : ''
 
-  const externalAttrs = externalLink && newWindow ? ' target="_blank" rel="noopener"' : ''
-  const externalSuffix = externalLink ? externalSuffixes[newWindow ? 'True' : 'False'] : ''
+  const externalAttrs = externalLink ? ' target="_blank" rel="noopener"' : ''
+  const externalSuffix = externalLink ? '<span class="visually-hidden">&nbsp;(external link, new window)</span>' : ''
 
   const labelMarkup = wrappingLink
     ? `<span class="item-label${boldLabel ? ' fw-bold' : ''}">${label}</span>`
@@ -301,9 +308,9 @@ ${block([
 
   const itemContent = `<div class="item-content">
 ${block([
-    leadingTemplates[safeLeading](icons, sizeFor(safeLeading, safeLeadingIconSize, safeLeadingImageSize), safeLeadingIconStatus),
+    leadingTemplates[safeLeading](icons, sizeFor(safeLeading, safeLeadingIconSize, safeLeadingImageSize), safeLeadingIconStatus, leadingImageRounded, safeLeadingImageRatio),
     textContainer,
-    trailingTemplates[safeTrailing](icons, sizeFor(safeTrailing, safeTrailingIconSize, safeTrailingImageSize), safeTrailingIconStatus)
+    trailingTemplates[safeTrailing](icons, sizeFor(safeTrailing, safeTrailingIconSize, safeTrailingImageSize), safeTrailingIconStatus, trailingImageRounded, safeTrailingImageRatio, safeTrailingText)
   ], '  ')}
 </div>`
 
@@ -376,6 +383,26 @@ export default {
       if: { arg: 'leadingAsset', eq: 'Icon' },
       description: 'Recolors the leading icon into a status icon (`.item-status-*`) and overrides `Leading icon size`.',
     },
+    leadingImageSize: {
+      name: 'Leading image size',
+      control: 'select',
+      options: imageSizeOptions,
+      if: { arg: 'leadingAsset', eq: 'Image' },
+      description: '`item-leading-large`',
+    },
+    leadingImageRounded: {
+      name: 'Leading image rounded',
+      control: 'boolean',
+      if: { arg: 'leadingAsset', eq: 'Image' },
+      description: '`item-leading-rounded`',
+    },
+    leadingImageRatio: {
+      name: 'Leading image ratio',
+      control: 'select',
+      options: imageRatioOptions,
+      if: { arg: 'leadingAsset', eq: 'Image' },
+      description: '`ratio-*x*` — Using the ratios from the utilities',
+    },
     trailingAsset: {
       name: 'Trailing asset',
       control: 'select',
@@ -395,6 +422,33 @@ export default {
       options: statusOptions,
       if: { arg: 'trailingAsset', eq: 'Icon' },
       description: 'Recolors the trailing icon into a status icon (`.item-status-*`) and overrides `Trailing icon size`.',
+    },
+    trailingImageSize: {
+      name: 'Trailing image size',
+      control: 'select',
+      options: imageSizeOptions,
+      if: { arg: 'trailingAsset', eq: 'Image' },
+      description: '`item-trailing-large`',
+    },
+    trailingImageRounded: {
+      name: 'Trailing image rounded',
+      control: 'boolean',
+      if: { arg: 'trailingAsset', eq: 'Image' },
+      description: '`item-trailing-rounded`',
+    },
+    trailingImageRatio: {
+      name: 'Trailing image ratio',
+      control: 'select',
+      options: imageRatioOptions,
+      if: { arg: 'trailingAsset', eq: 'Image' },
+      description: '`ratio-*x*` — Using the ratios from the utilities',
+    },
+    trailingText: {
+      name: 'Trailing text',
+      control: 'select',
+      options: trailingTextOptions,
+      if: { arg: 'trailingAsset', eq: 'Text' },
+      description: 'Options for the trailing text content',
     },
     icon: {
       name: 'Icon content',
@@ -421,12 +475,6 @@ export default {
       control: 'boolean',
       description: '`.item-external` — an external-link icon at the end of the item.',
     },
-    newWindow: {
-      name: 'New window',
-      control: 'boolean',
-      description: 'The two documented forms: `target="_blank" rel="noopener"` with a `visually-hidden` suffix, or neither attribute with a visible suffix.',
-      if: { arg: 'externalLink', truthy: true },
-    },
     state: {
       name: 'State',
       control: 'select',
@@ -434,10 +482,9 @@ export default {
       description: '`Disabled` wraps the `<ul>` in `[aria-disabled="true"]`; `Skeleton` in `aria-busy="true" inert`.',
     },
     background: {
-      name: 'Background',
-      control: 'select',
-      options: backgrounds,
-      description: 'List items paint no background by default, unlike card items; `With background` / `No background` add `.item-bg` / `.item-no-bg`.',
+      name: 'With background',
+      control: 'boolean',
+      description: 'List items have no background by default; turn this on to add `.item-bg`.',
     },
     noDivider: {
       name: 'No divider',
@@ -480,18 +527,22 @@ export const PlaygroundNavigationListItem = {
     leadingIconSize: 'Normal',
     leadingIconStatus: 'None',
     leadingImageSize: 'Normal',
+    leadingImageRounded: false,
+    leadingImageRatio: '1x1',
     trailingAsset: 'None',
     trailingIconSize: 'Normal',
     trailingIconStatus: 'None',
     trailingImageSize: 'Normal',
+    trailingImageRounded: false,
+    trailingImageRatio: '1x1',
+    trailingText: 'Normal',
     icon: '',
     helperText: '',
     wrappingLink: false,
     backChevron: false,
     externalLink: false,
-    newWindow: true,
     state: 'Default',
-    background: 'Default',
+    background: false,
     noDivider: false,
     topAlignment: false,
     smallSize: false,
