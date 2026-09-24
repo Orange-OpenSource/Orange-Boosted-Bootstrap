@@ -8,8 +8,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   min-width: var(--#{$prefix}icon-min-width);
   max-width: var(--#{$prefix}icon-max-width);
+  height: 100%;
   min-height: var(--#{$prefix}icon-min-height);
   max-height: var(--#{$prefix}icon-max-height);
   aspect-ratio: 1;
