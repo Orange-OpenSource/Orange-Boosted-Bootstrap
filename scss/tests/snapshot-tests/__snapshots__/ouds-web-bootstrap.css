@@ -8469,7 +8469,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .btn-expand {
   --bs-btn-padding-start: 28px;
   --bs-btn-padding-end: 16px;
-  --bs-btn-icon-gap: 6px;
+  --bs-btn-icon-gap: 4px;
 }
 .btn-next::after,
 .btn-expand::after {
@@ -8479,6 +8479,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .btn-expand::after {
+  --bs-btn-icon-size: 1.25rem;
   -webkit-mask-image: var(--bs-btn-expanded-false-icon);
   mask-image: var(--bs-btn-expanded-false-icon);
 }
