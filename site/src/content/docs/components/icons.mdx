@@ -23,7 +23,7 @@ import { getVersionedDocsPath } from '@libs/path'
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
           <button class="icon icon-interactive" style="width: 32px" aria-label="Default icon">
-            <svg aria-hidden="true">
+            <svg class="decorative-small-icon" aria-hidden="true">
               <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
             </svg>
           </button>
@@ -46,8 +46,8 @@ import { getVersionedDocsPath } from '@libs/path'
 
 For both types of icon, OUDS Web has a common base `.icon` class that sets up default styles such as padding and content alignment. By default, `.icon` controls have no border nor background color, but still defines basic focus and hover styles. The `.icon` class is intended to be used in conjunction with our icon variants, or to serve as a basis for your own custom styles. The most basic icon is the `.icon` variant.
 
-<Example showToolbar={false} code={`<button class="icon icon-interactive bl-large-icon" aria-label="Default interactive icon">
-    <svg aria-hidden="true">
+<Example showToolbar={false} code={`<button class="icon icon-interactive" aria-label="Default interactive icon">
+    <svg class="decorative-small-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
 </button>`} />
@@ -60,14 +60,14 @@ For both types of icon, OUDS Web has a common base `.icon` class that sets up de
 
 In any case, do not forget to add an `aria-label` since there is no discernible text for screen reader users.
 
-<Example buttonLabel="icons semantics" code={`<button class="icon icon-interactive bl-large-icon" aria-label="Button icon">
-    <svg aria-hidden="true">
+<Example buttonLabel="icons semantics" code={`<button class="icon icon-interactive" aria-label="Button icon">
+    <svg class="decorative-small-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </button>
 
-  <a class="icon icon-interactive bl-large-icon" href="#" aria-label="Link icon">
-    <svg aria-hidden="true">
+  <a class="icon icon-interactive" href="#" aria-label="Link icon">
+    <svg class="decorative-small-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </a>`} />
@@ -76,8 +76,8 @@ In any case, do not forget to add an `aria-label` since there is no discernible 
 
 Interactive Icon is an icon component designed to trigger a user interaction (e.g., open, close, toggle a state). It includes defined interactive states and can be used independently or within other components such as buttons, inputs, or menus.
 
-<Example buttonLabel="interactive icon" class="bd-example" code={`<button class="icon icon-interactive bl-large-icon" aria-label="Default interactive icon">
-    <svg aria-hidden="true">
+<Example buttonLabel="interactive icon" class="bd-example" code={`<button class="icon icon-interactive" aria-label="Default interactive icon">
+    <svg class="decorative-small-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </button>`} />
@@ -87,13 +87,13 @@ Interactive Icon is an icon component designed to trigger a user interaction (e.
 #### Disabled
 
 <DisabledState name="interactive icons">
-  <Example slot="buttonExample" buttonLabel="disabled interactive icon" class="bd-example" code={`<button class="icon icon-interactive bl-large-icon" disabled aria-label="Disabled interactive button icon">
-    <svg aria-hidden="true">
+  <Example slot="buttonExample" buttonLabel="disabled interactive icon" class="bd-example" code={`<button class="icon icon-interactive" disabled aria-label="Disabled interactive button icon">
+    <svg class="decorative-small-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </button>`} />
-  <Example slot="anchorExample" buttonLabel="disabled icon links" code={`<a href="#" tabindex="-1" class="icon icon-interactive bl-large-icon" aria-disabled="true" aria-label="Disabled interactive link icon">
-    <svg aria-hidden="true">
+  <Example slot="anchorExample" buttonLabel="disabled icon links" code={`<a href="#" tabindex="-1" class="icon icon-interactive" aria-disabled="true" aria-label="Disabled interactive link icon">
+    <svg class="decorative-small-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </a>`} />
@@ -102,8 +102,8 @@ Interactive Icon is an icon component designed to trigger a user interaction (e.
 #### Loading
 
 <LoadingState name="interactive icon" loadingTimeVariable="bs-loading-time">
-  <Example slot="beforeLoading" buttonLabel="loading interactive icon before loading" class="bd-example" code={`<button class="icon icon-interactive bl-large-icon" aria-label="Before loading interactive icon">
-    <svg aria-hidden="true">
+  <Example slot="beforeLoading" buttonLabel="loading interactive icon before loading" class="bd-example" code={`<button class="icon icon-interactive" aria-label="Before loading interactive icon">
+    <svg class="decorative-small-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -111,8 +111,8 @@ Interactive Icon is an icon component designed to trigger a user interaction (e.
     </svg>
     <span role="status" id="loading-icon-msg-0" class="visually-hidden d-none"></span>
   </button>`} />
-  <Example slot="loading" buttonLabel="loading interactive icon currently loading" class="bd-example" code={`<button class="icon icon-interactive bl-large-icon loading-indeterminate" disabled aria-label="Indeterminate loading interactive icon">
-    <svg aria-hidden="true">
+  <Example slot="loading" buttonLabel="loading interactive icon currently loading" class="bd-example" code={`<button class="icon icon-interactive loading-indeterminate" disabled aria-label="Indeterminate loading interactive icon">
+    <svg class="decorative-small-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -121,8 +121,8 @@ Interactive Icon is an icon component designed to trigger a user interaction (e.
     <span role="status" id="loading-icon-msg-1" class="visually-hidden d-none"></span>
   </button>
 
-  <button class="icon icon-interactive loading-determinate bl-large-icon" style="--bs-loading-time: 5s;" disabled aria-label="Determinate loading interactive icon">
-    <svg aria-hidden="true">
+  <button class="icon icon-interactive loading-determinate" style="--bs-loading-time: 5s;" disabled aria-label="Determinate loading interactive icon">
+    <svg class="decorative-small-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -138,12 +138,38 @@ Interactive Icon is an icon component designed to trigger a user interaction (e.
 <SkeletonRedirect component="interactive icon" />
 
 <Example buttonLabel="skeleton interactive icon" class="bd-example" code={`<div aria-busy="${true}" inert>
-    <button class="icon icon-interactive bl-large-icon" aria-label="Skeleton interactive icon">
-      <svg aria-hidden="true">
+    <button class="icon icon-interactive" aria-label="Skeleton interactive icon">
+      <svg class="decorative-small-icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
     </button>
 </div>`} />
+
+### Sizes
+
+Interactive icons are meant to adapt to their container. They are not constrained to specific dimensions, and can be used at any size required by layout.
+
+They can also be styled using `.decorative-*-icon` classes.
+
+<Example buttonLabel="multiple sizes icon" class="bd-example" code={`<div style="width: 38px; height: 38px; display: inline-block;">
+    <button class="icon icon-interactive" aria-label="Inline style interactive icon">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+    </button>
+  </div>
+
+  <button class="icon icon-interactive" aria-label="Small interactive icon">
+    <svg class="decorative-small-icon" aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+  </button>
+
+  <button class="icon icon-interactive" aria-label="Large interactive icon">
+    <svg class="decorative-large-icon" aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+  </button>`} />
 
 ## [[comp]] Assistant icon
 
@@ -208,3 +234,14 @@ If your browser is compatible, the following example will show two transparent a
     <button class="icon icon-assistant" aria-label="Skeleton assistant icon"></button>
 </div>`} />
 
+### Sizes
+
+Assistant icons are meant to adapt to their container. They are not constrained to specific dimensions, and can be used at any size required by layout.
+
+<Example buttonLabel="multiple sizes icon" class="bd-example" code={`<div style="width: 32px; height: 32px; display: inline-block;">
+    <button type="button" class="icon icon-assistant" aria-label="First transparent assistant icon"></button>
+  </div>
+
+  <div style="width: 64px; height: 64px; display: inline-block;">
+    <button class="icon icon-assistant" aria-label="Large assistant icon"></button>
+  </div>`} />
