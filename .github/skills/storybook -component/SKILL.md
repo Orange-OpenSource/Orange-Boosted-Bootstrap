@@ -119,12 +119,16 @@ contradict it.
    builds and zips. It stops at the first divergence. Then
    `node scripts/code-connect-file.mjs <kit-path> <component-id> -o code-connect-<component>.md`.
 7. **Write the story** following `references/conventions.md` — read it before
-   writing, it holds the rules that make a story fit the corpus, each with the
-   reason it exists. Its controls mirror the property names and value lists you
-   already read in step 2; its markup mirrors the `example:` blocks you just
-   wrote.
-8. **Check the story**: `node scripts/check_stories.js <file>`. Fix what it
-   reports.
+  writing, it holds the rules that make a story fit the corpus, each with the
+  reason it exists. Its controls mirror the property names and value lists you
+  already read in step 2; its markup mirrors the `example:` blocks you just
+  wrote. Split independent axes into separate controls, use boolean labels
+  that describe the checked state, and keep sibling stories' control meaning
+  aligned.
+8. **Check the story**: `node scripts/check_stories.js <file>`. When updating
+  a shared family, run it on every sibling story as well. Fix dead controls,
+  polarity mismatches, stale table keys and render/transform divergence it
+  reports.
 9. **Preview it**: `python3 scripts/build_preview.py <component>-preview.html <file>`,
    open it, confirm the component renders and every control moves something.
 10. **Cross-check the two chains before delivering.** Same variant, same HTML in
@@ -311,8 +315,8 @@ claiming anything is verified.
   component-file style with a full worked example, resolution, rendering,
   verification, installing and publishing inside the organisation. Before
   touching `src/`.
-- `references/conventions.md` — the 21 playground conventions, each with its
-  reason. Before writing or reviewing a story. §8 and §16 to §21 came out of the
+- `references/conventions.md` — the 22 playground conventions, each with its
+  reason. Before writing or reviewing a story. §8 and §16 to §22 came out of the
   25–28/08/2026 reviews and are the ones a new file most often gets wrong.
 - `references/component-notes.md` — what is already settled per component in the
   current corpus: wrappers, group patterns, readonly DOM, classes that exist

@@ -26,6 +26,7 @@ Contents:
 19. [A state hides the control it governs](#19-a-state-hides-the-control-it-governs)
 20. [One order of controls, in every file](#20-one-order-of-controls-in-every-file)
 21. [One warning, one shape, for every forbidden combination](#21-one-warning-one-shape-for-every-forbidden-combination)
+22. [Control labels describe the checked state](#22-control-labels-describe-the-checked-state)
 
 ---
 
@@ -128,6 +129,14 @@ since those are the mapping's keys, and the conversion happens on read:
 ```js
 outlinedClasses[outlined ? 'True' : 'False']
 ```
+
+The visible control name describes the state represented by `true`, not the
+property's generic category. Use `No background` when checked adds
+`item-no-bg`, and `With background` when checked adds `item-bg`; do not label
+either control simply `Background`. Set the default to `false` when the
+component's documented default is unchanged, and make the renderer use the
+same polarity as the label. A boolean whose checked state means the opposite
+of its name is a copy-paste bug waiting to happen.
 
 ## 5. Every select falls back on its first option
 
@@ -560,6 +569,12 @@ family too.
 
 ---
 
+Whenever a value combines independent axes — for example size, roundedness
+and aspect ratio — expose one control per axis and pass all of them to the
+renderer. Give each family its own option list when the valid values differ.
+A related Figma property does not automatically earn a control: it must change
+the generated markup and be gated on the family or state where it applies.
+
 ## 15. The canvas and the story may run in different windows
 
 Text input and Password input keep what is typed into the canvas across a
@@ -859,4 +874,25 @@ Three fixed points: the sentence starts with `OUDS: `, the **comment goes into
 both surfaces** (it is what survives a copy-paste), and the banner is
 preview-only. The render function ends with
 `return warned(wrapped, warningFor(…), preview)`.
+
+---
+
+## 22. Control labels describe the checked state
+
+Apply this checklist whenever a boolean control is added or renamed:
+
+1. Name it after what `true` does: `No background`, `With background`,
+  `Outlined`, `Reverse`.
+2. Make the default match the documented component default, usually `false`
+  when the base class already supplies the default appearance.
+3. Make the renderer's condition read in the same direction as the label:
+  `noBackground ? 'item-no-bg' : ''`, not an inverted condition hidden
+  behind a generic `background` name.
+4. If the Figma property has the opposite polarity, keep the mapping-key
+  conversion local and give the playground the user-facing polarity.
+
+Before delivering, replay the story with `check_stories.js`. For a shared
+family of stories, replay every sibling story too: the same property can have
+different defaults or class targets on cards, lists, compact variants and
+navigation variants, but the label must retain the same meaning.
 
