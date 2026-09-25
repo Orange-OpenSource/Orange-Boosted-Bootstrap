@@ -1,6 +1,6 @@
 ---
 import { getVersionedDocsPath } from '@libs/path'
-import { getTokenValue, type IDeclaration } from '@libs/sass-variables'
+import { getTokenValue, type IDeclaration, getMode, hasToken } from '@libs/sass-variables'
 import { allTokens } from '@libs/sass-variables'
 
 interface IColorToken {
@@ -19,6 +19,9 @@ interface Props {
   getUsage?: (colorName: string, colorPrefix?: string) => string
   getStyle?: (token: IColorToken, mode: string) => astroHTML.JSX.CSSProperties
   hasBackdrop?: boolean
+  displayRecommendedTheme?: boolean
+  parentTheme?: 'light'|'dark'|'root'|'root-inverted',
+  enableCopyToClipboard?: boolean
 }
 
 const getCustomProp = (colorName: string, colorPrefix: string) =>
@@ -40,7 +43,10 @@ const {
   multiTheme = true,
   getUsage = getCustomProp,
   getStyle = getBackground,
-  hasBackdrop
+  hasBackdrop,
+  displayRecommendedTheme = false,
+  parentTheme,
+  enableCopyToClipboard = false
 } = Astro.props
 
 const getLightDarkValuesFor = (colorName: string) => {
@@ -71,6 +77,45 @@ const matchAndGetValues = (colorToken: IDeclaration): IColorToken => {
   }
 }
 
+const getRecommendedThemeFor = (searchedToken: IColorToken) => {
+    if (searchedToken.colorName === 'black' || searchedToken.colorName === 'white') {
+      return searchedToken.colorName === 'black' ? 'dark' : 'light'
+    }
+
+    const recommendedTheme = allTokens
+      .filter(tokenData => tokenData.name.match(new RegExp(`\ouds-color-(surface|bg)-${searchedToken.colorName}-light`))).map(token => {
+      const themesArray = allTokens.filter(allToken => {
+        return allToken.name.match(`modes-on-((bg|surface)-)?${searchedToken.colorName}-(dark|light)`)
+      }).map(token => token.compiledValue)
+        if (parentTheme === 'root-inverted') {
+          return themesArray[0].includes('dark')
+            ? themesArray[1].includes('light')
+              ? 'root-inverted'
+              : 'dark'
+            : themesArray[1].includes('light')
+              ? 'light'
+              : 'root'
+        }
+
+        if (parentTheme === 'light' || parentTheme === 'dark') {
+          const darkParentTheme = parentTheme === 'dark'
+          return themesArray[darkParentTheme ? 0 : 1].includes(parentTheme)
+            ? parentTheme
+            : darkParentTheme ? 'light' : 'dark'
+        }
+
+      return themesArray[0].includes('dark')
+        ? themesArray[1].includes('light')
+          ? 'root'
+          : 'dark'
+        : themesArray[1].includes('light')
+          ? 'light'
+          : 'root-inverted'
+    })
+
+  return recommendedTheme[0] !== parentTheme ? recommendedTheme[0] : ''
+}
+
 let tokens: IColorToken[] = []
 if (basicClasses.length) {
   tokens = basicClasses.map((className: string) => ({ colorName: className }))
@@ -83,13 +128,14 @@ if (basicClasses.length) {
     }
   ]
 }
+
 ---
 
 <div class="table-responsive mb-small">
   <table class="table">
     <thead>
       <tr>
-        <th class="w-50" scope="col">{colorPrefix}</th>
+        <th class="w-50" scope="col">{displayRecommendedTheme ? 'Usage' : colorPrefix}</th>
         {
           multiTheme ? (
             <>
@@ -97,10 +143,13 @@ if (basicClasses.length) {
               <th scope="col">Dark mode</th>
             </>
           ) : (
-            <th scope="col">All modes</th>
+            <>
+              <th scope="col">All modes</th>
+              { displayRecommendedTheme && (<th scope="col">Recommended theme</th>)}
+            </>
           )
         }
-        <th scope="col">Usage</th>
+        { !displayRecommendedTheme && ( <th scope="col">Usage</th> )}
       </tr>
     </thead>
     <tbody>
@@ -108,7 +157,22 @@ if (basicClasses.length) {
         tokens.map((token: IColorToken) => (
           <tr class="align-middle">
             <th class="w-50" scope="row">
-              <var>{token.colorName}</var>
+              <var>
+                { displayRecommendedTheme ? (
+                  <>
+                    {getUsage(token.colorName, colorPrefix)}
+                    { enableCopyToClipboard &&
+                      <button data-clipboard-text={getUsage(token.colorName, colorPrefix).replaceAll('.', '')} type="button" class="btn btn-minimal btn-icon btn-clipboard m-3xsmall">
+                        <svg aria-hidden="true">
+                          <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use>
+                        </svg>
+                      </button> }
+                  </>
+                  ) : (
+                    <> { token.colorName } </>
+                  )
+                }
+              </var>
             </th>
             <td>
               <div
@@ -117,7 +181,7 @@ if (basicClasses.length) {
               >
                 <figure
                   class:list={['w-100 h-100 mb-none d-flex justify-content-center align-items-center', basicClasses.length > 0 ? { [ getUsage(token.colorName, colorPrefix).replace('.', '')]: token.colorName } : {}]}
-                  style={getStyle(token, 'light')}
+                  style={getStyle(token, multiTheme ? 'light' : 'root')}
                   title={token.lightValue ?? ''}
                 >
                   {(hasBackdrop || token.backdropLight) && (
@@ -133,6 +197,13 @@ if (basicClasses.length) {
                 </figure>
               </div>
             </td>
+            { displayRecommendedTheme && (<td class="w-25"><var>{getRecommendedThemeFor(token) ?? '—'}</var>
+              {enableCopyToClipboard && getRecommendedThemeFor(token) && (<button data-clipboard-text={'data-bs-theme=' + (getRecommendedThemeFor(token) )} data-bs-title="Copy class to clipboard" type="button" class="btn btn-minimal btn-icon btn-clipboard m-3xsmall">
+                <svg aria-hidden="true">
+                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use>
+                </svg>
+              </button>)}
+            </td>)}
             {multiTheme && (
               <td>
                 <div class="bg-primary ratio-21x9" data-bs-theme="dark">
@@ -155,9 +226,13 @@ if (basicClasses.length) {
                 </div>
               </td>
             )}
-            <td class="w-25 user-select-all">
-              <var>{getUsage(token.colorName, colorPrefix)}</var>
-            </td>
+            { !displayRecommendedTheme && (
+              <>
+                <td class="w-25 user-select-all">
+                  <var>{getUsage(token.colorName, colorPrefix)}</var>
+                </td>
+              </>
+            )}
           </tr>
         ))
       }

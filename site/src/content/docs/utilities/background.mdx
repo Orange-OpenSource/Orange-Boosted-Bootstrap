@@ -61,7 +61,8 @@ Following are the equivalent Bootstrap background that you shouldn’t be using.
 <ColorTable
   colorPrefix="bootstrap/bg/"
   basicClasses={[getData('theme-colors').map((themeColor) => [`${themeColor.name}`, `${themeColor.name}-subtle`]).flat(), 'body-secondary', 'body-tertiary', 'body', 'black', 'white', 'transparent'].flat()}
-  getUsage={(colorName) => `.bg-${colorName}`} />
+  getUsage={(colorName) => `.bg-${colorName}`}
+  displayRecommendedTheme={false} />
 
 </BootstrapCompatibility>
 
@@ -76,27 +77,43 @@ Below are all the background utilities along with their recommended `[data-bs-th
 <ColorTable
   colorPrefix="ouds/color/bg/"
   tokenRegexp={/\$ouds-color-(bg-(?<colorName>.*)-light)/}
-  getUsage={(colorName) => `.bg-${colorName}`} />
+  getUsage={(colorName) => `.bg-${colorName}`}
+  multiTheme={false}
+  displayRecommendedTheme={true}
+  parentTheme="root"
+  enableCopyToClipboard={true} />
 <ColorTable
   colorPrefix="ouds/color/surface/"
   tokenRegexp={/\$ouds-color-(surface-(?<colorName>.*)-light)/}
-  getUsage={(colorName) => `.bg-surface-${colorName}`} />
+  getUsage={(colorName) => `.bg-surface-${colorName}`}
+  multiTheme={false}
+  displayRecommendedTheme={true}
+  parentTheme="root"
+  enableCopyToClipboard={true}/>
 <ColorTable
   colorPrefix="ouds/color/always/"
   tokenRegexp={/\$ouds-color-always-(?!on-)(?<colorName>.*)/}
   getUsage={(colorName) => `.bg-always-${colorName}`}
-  multiTheme={false} />
+  multiTheme={false}
+  displayRecommendedTheme={true}
+  parentTheme="root"
+  enableCopyToClipboard={true}/>
 <ColorTable
   colorPrefix="ouds/color/transparent/"
   basicClasses={['transparent']}
-  getUsage={(colorName) => `.bg-${colorName}`} />
+  getUsage={(colorName) => `.bg-${colorName}`}
+  multiTheme={false}
+  displayRecommendedTheme={true}
+  parentTheme="root"
+  enableCopyToClipboard={true}/>
 
 We also provide opacity-based background classes, which should be used only in specific contexts where you need to adjust background opacity to enhance text readability. In most cases, `.bg-secondary` or `.bg-surface-secondary` are the preferred alternatives.
 
 <ColorTable
   colorPrefix="ouds/color/opacity/"
   tokenRegexp={/\$ouds-color-opacity-(?<colorName>(lower|lowest))-light/}
-  getUsage={(colorName) => `.bg-opacity-${colorName}`} />
+  getUsage={(colorName) => `.bg-opacity-${colorName}`}
+  enableCopyToClipboard={true}/>
 
 ## Inside a static color mode
 
@@ -117,27 +134,42 @@ For example in a `light` color mode context, dark backgrounds like `.bg-inverse-
         colorPrefix="ouds/color/bg/"
         tokenRegexp={/\$ouds-color-(bg-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-${colorName}`}
-        multiTheme={false} />
+        multiTheme={false}
+        displayRecommendedTheme={true}
+        parentTheme="light"
+        enableCopyToClipboard={true} />
       <ColorTable
         colorPrefix="ouds/color/surface/"
         tokenRegexp={/\$ouds-color-(surface-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-surface-${colorName}`}
-        multiTheme={false} />
+        multiTheme={false}
+        displayRecommendedTheme={true}
+        parentTheme="light"
+        enableCopyToClipboard={true} />
       <ColorTable
         colorPrefix="ouds/color/always/"
         tokenRegexp={/\$ouds-color-always-(?!on-)(?<colorName>.*)/}
         getUsage={(colorName) => `.bg-always-${colorName}`}
-        multiTheme={false} />
+        multiTheme={false}
+        displayRecommendedTheme={true}
+        parentTheme="light"
+        enableCopyToClipboard={true} />
       <ColorTable
         colorPrefix="ouds/color/transparent/"
         basicClasses={['transparent']}
         getUsage={(colorName) => `.bg-${colorName}`}
-        multiTheme={false} />
+        multiTheme={false}
+        displayRecommendedTheme={true}
+        parentTheme="light"
+        enableCopyToClipboard={true} />
       <ColorTable
         colorPrefix="ouds/color/opacity/"
         tokenRegexp={/\$ouds-color-opacity-(?<colorName>(lower|lowest))-light/}
         getUsage={(colorName) => `.bg-opacity-${colorName}`}
-        multiTheme={false} />
+        multiTheme={false}
+        displayRecommendedTheme={true}
+        parentTheme="light"
+        enableCopyToClipboard={true} />
     </div>
   </div>
 </details>
@@ -153,27 +185,42 @@ With a `dark` color mode context, light backgrounds like `.bg-inverse-high` will
         colorPrefix="ouds/color/bg/"
         tokenRegexp={/\$ouds-color-(bg-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-${colorName}`}
-        multiTheme={false} />
+        multiTheme={false}
+        displayRecommendedTheme={true}
+        parentTheme="dark"
+        enableCopyToClipboard={true} />
       <ColorTable
         colorPrefix="ouds/color/surface/"
         tokenRegexp={/\$ouds-color-(surface-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-surface-${colorName}`}
-        multiTheme={false} />
+        multiTheme={false}
+        displayRecommendedTheme={true}
+        parentTheme="dark"
+        enableCopyToClipboard={true} />
       <ColorTable
         colorPrefix="ouds/color/always/"
         tokenRegexp={/\$ouds-color-always-(?!on-)(?<colorName>.*)/}
         getUsage={(colorName) => `.bg-always-${colorName}`}
-        multiTheme={false} />
+        multiTheme={false}
+        displayRecommendedTheme={true}
+        parentTheme="dark"
+        enableCopyToClipboard={true} />
       <ColorTable
         colorPrefix="ouds/color/transparent/"
         basicClasses={['transparent']}
         getUsage={(colorName) => `.bg-${colorName}`}
-        multiTheme={false} />
+        multiTheme={false}
+        displayRecommendedTheme={true}
+        parentTheme="dark"
+        enableCopyToClipboard={true} />
       <ColorTable
         colorPrefix="ouds/color/opacity/"
         tokenRegexp={/\$ouds-color-opacity-(?<colorName>(lower|lowest))-light/}
         getUsage={(colorName) => `.bg-opacity-${colorName}`}
-        multiTheme={false} />
+        multiTheme={false}
+        displayRecommendedTheme={true}
+        parentTheme="dark"
+        enableCopyToClipboard={true} />
     </div>
   </div>
 </details>
@@ -191,27 +238,42 @@ The following examples demonstrate the proper use of `[data-bs-theme]` in dynami
         colorPrefix="ouds/color/bg/"
         tokenRegexp={/\$ouds-color-(bg-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-${colorName}`}
-        multiTheme={false} />
+        multiTheme={false}
+        displayRecommendedTheme={true}
+        parentTheme="root-inverted"
+        enableCopyToClipboard={true} />
       <ColorTable
         colorPrefix="ouds/color/surface/"
         tokenRegexp={/\$ouds-color-(surface-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-surface-${colorName}`}
-        multiTheme={false} />
+        multiTheme={false}
+        displayRecommendedTheme={true}
+        parentTheme="root-inverted"
+        enableCopyToClipboard={true} />
       <ColorTable
         colorPrefix="ouds/color/always/"
         tokenRegexp={/\$ouds-color-always-(?!on-)(?<colorName>.*)/}
         getUsage={(colorName) => `.bg-always-${colorName}`}
-        multiTheme={false} />
+        multiTheme={false}
+        displayRecommendedTheme={true}
+        parentTheme="root-inverted"
+        enableCopyToClipboard={true} />
       <ColorTable
         colorPrefix="ouds/color/transparent/"
         basicClasses={['transparent']}
         getUsage={(colorName) => `.bg-${colorName}`}
-        multiTheme={false} />
+        multiTheme={false}
+        displayRecommendedTheme={true}
+        parentTheme="root-inverted"
+        enableCopyToClipboard={true} />
       <ColorTable
         colorPrefix="ouds/color/opacity/"
         tokenRegexp={/\$ouds-color-opacity-(?<colorName>(lower|lowest))-light/}
         getUsage={(colorName) => `.bg-opacity-${colorName}`}
-        multiTheme={false} />
+        multiTheme={false}
+        displayRecommendedTheme={true}
+        parentTheme="root-inverted"
+        enableCopyToClipboard={true} />
     </div>
   </div>
 </details>
