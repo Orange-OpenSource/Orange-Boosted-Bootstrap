@@ -33,7 +33,9 @@ export function validateVersionedDocsPaths(distUrl: URL) {
 
   for (const docsPath of generatedVersionedDocsPaths) {
     const sanitizedDocsPath = sanitizeVersionedDocsPathForValidation(docsPath)
-    const absoluteDocsPath = fileURLToPath(new URL(path.join(`./${getConfig().brand}/docs`, docs_version, sanitizedDocsPath), distUrl))
+    const absoluteDocsPath = fileURLToPath(
+      new URL(path.join(`./${getConfig().brand}/docs`, docs_version, sanitizedDocsPath), distUrl)
+    )
 
     const docsPathExists = fs.existsSync(absoluteDocsPath)
 

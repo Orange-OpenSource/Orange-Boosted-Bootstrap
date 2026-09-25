@@ -79,7 +79,7 @@ export function getConfig(): Config {
     return config
   }
 
-  const brand = process.env.BRAND || "orange"
+  const brand = process.env.BRAND || 'orange'
 
   try {
     // Load the config from the `config.yml` file.
