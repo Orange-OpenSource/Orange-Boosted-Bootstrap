@@ -20,7 +20,7 @@ import { getVersionedDocsPath } from '@libs/path'
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
-          <div class="modal-dialog w-75 h-75 position-relative">
+          <div class="modal-dialog w-75 h-75 position-relative" open style="transition: unset">
             <div class="modal-header">
               <h3 class="modal-title">Title</h3>
               <button type="button" class="btn btn-close">
@@ -84,7 +84,7 @@ Some things to keep in mind while using modals include:
 
 Modal dialog is used for focused tasks that should stay visually separated from the page without taking the full viewport.
 
-<Example buttonLabel="basic modal dialog" code={`<dialog id="modalDialog" class="modal-dialog modal-non-blurred" aria-label="Demo modal dialog" closedby="any">
+<Example buttonLabel="basic modal dialog" code={`<dialog id="modalDialog" class="modal-dialog" aria-label="Demo modal dialog" closedby="any">
     <div class="modal-header">
       <h3 class="modal-title">Title</h3>
       <button type="button" class="btn btn-close" commandfor="modalDialog" command="close">

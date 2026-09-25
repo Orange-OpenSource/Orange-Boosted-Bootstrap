@@ -1575,6 +1575,10 @@ dialog,
   border: 0;
 }
 
+body:has(dialog:modal:open) {
+  overflow-y: hidden;
+}
+
 :not([popover])::backdrop {
   background-color: var(--bs-color-overlay-backdrop, rgba(0, 0, 0, 0.68));
 }
@@ -12467,18 +12471,15 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-modal-dialog-space-padding-block-top-footer: 24px;
   --bs-modal-dialog-space-padding-inline: 24px;
   flex-direction: column;
+  max-width: unset;
+  max-height: unset;
   padding-block: var(--bs-modal-dialog-space-padding-block-top) var(--bs-modal-dialog-space-padding-block-bottom);
   overscroll-behavior: contain;
   background-color: var(--bs-color-overlay-modal-sheet);
 }
-.modal-fullscreen-dialog:open,
-.modal-dialog:open {
+.modal-fullscreen-dialog:is(:open, [open]),
+.modal-dialog:is(:open, [open]) {
   display: flex;
-}
-.modal-fullscreen-dialog.modal-non-blurred::backdrop,
-.modal-dialog.modal-non-blurred::backdrop {
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none;
 }
 .modal-fullscreen-dialog::backdrop,
 .modal-dialog::backdrop {
@@ -12529,19 +12530,54 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-modal-dialog-space-padding-block-top: var(--bs-space-scaled-xlarge);
   --bs-modal-dialog-space-padding-inline: var(--bs-grid-margin);
   width: 100vw;
-  max-width: unset;
   height: 100vh;
-  max-height: unset;
   margin: 0;
 }
 
 .modal-dialog {
   width: calc(100vw - 32px);
-  max-width: unset;
   max-height: calc(100vh - 32px);
   margin: auto 16px;
   box-shadow: 0 8px 8px -2px var(--bs-elevation-color-emphasized);
+  opacity: 0;
+  transform: translateY(-3rem);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, display 0.4s allow-discrete, overlay 0.2s allow-discrete;
   border-radius: var(--bs-modal-border-radius);
+}
+@media (prefers-reduced-motion: reduce) {
+  .modal-dialog {
+    transition: none;
+  }
+}
+.modal-dialog:not(.modal-non-blurred)::backdrop {
+  -webkit-backdrop-filter: unset;
+  backdrop-filter: unset;
+  transition: -webkit-backdrop-filter 0.2s ease-in-out;
+  transition: backdrop-filter 0.2s ease-in-out;
+  transition: backdrop-filter 0.2s ease-in-out, -webkit-backdrop-filter 0.2s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .modal-dialog:not(.modal-non-blurred)::backdrop {
+    transition: none;
+  }
+}
+.modal-dialog:is(:open, [open]) {
+  opacity: 1;
+  transform: none;
+}
+.modal-dialog:is(:open, [open]):not(.modal-non-blurred)::backdrop {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+@starting-style {
+  .modal-dialog:is(:open, [open]) {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  .modal-dialog:is(:open, [open]):not(.modal-non-blurred)::backdrop {
+    -webkit-backdrop-filter: unset;
+    backdrop-filter: unset;
+  }
 }
 @media (min-width: 480px) {
   .modal-dialog {
@@ -12659,8 +12695,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .modal-body {
   flex-grow: 1;
+  padding-block-end: var(--bs-modal-dialog-space-padding-block-bottom-body-footer);
   padding-inline: var(--bs-modal-dialog-space-padding-inline);
-  margin-block: var(--bs-modal-dialog-space-padding-block-top-body) var(--bs-modal-dialog-space-padding-block-bottom-body-footer);
+  margin-block-start: var(--bs-modal-dialog-space-padding-block-top-body);
   overflow-y: auto;
 }
 .modal-body:not(:has(.modal-footer)) > :last-child {

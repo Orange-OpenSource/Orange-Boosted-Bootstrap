@@ -20,16 +20,14 @@
   --#{$prefix}modal-dialog-space-padding-inline: #{$ouds-modal-dialog-space-padding-inline-mobile};
 
   flex-direction: column; // cannot use grid because of Safari dialog limitations
+  max-width: unset;
+  max-height: unset;
   padding-block: var(--#{$prefix}modal-dialog-space-padding-block-top) var(--#{$prefix}modal-dialog-space-padding-block-bottom);
   overscroll-behavior: contain;
   background-color: $ouds-color-overlay-modal-sheet;
 
-  &:open {
+  &:is(:open, [open]) {
     display: flex;
-  }
-
-  &.modal-non-blurred::backdrop {
-    backdrop-filter: none;
   }
 
   &::backdrop {
@@ -78,19 +76,42 @@
   --#{$prefix}modal-dialog-space-padding-inline: var(--#{$prefix}grid-margin);
 
   width: 100vw;
-  max-width: unset;
   height: 100vh;
-  max-height: unset;
   margin: 0;
 }
 
 .modal-dialog {
   width: calc(100vw - 2 * $ouds-space-fixed-medium);
-  max-width: unset;
   max-height: calc(100vh - 2 * $ouds-space-fixed-medium);
   margin: auto $ouds-space-fixed-medium;
   box-shadow: $ouds-elevation-emphasized;
+  opacity: 0;
+  transform: translateY(-3rem);
+  @include transition(transform .3s ease-in-out, opacity .3s ease-in-out, display .4s allow-discrete, overlay .2s allow-discrete);
   @include border-radius(var(--#{$prefix}modal-border-radius));
+
+  &:not(.modal-non-blurred)::backdrop {
+    backdrop-filter: unset;
+    @include transition(backdrop-filter .2s ease-in-out);
+  }
+
+  &:is(:open, [open]) {
+    opacity: 1;
+    transform: none;
+
+    &:not(.modal-non-blurred)::backdrop {
+      backdrop-filter: blur(#{$ouds-effect-blur-backdrop});
+    }
+
+    @starting-style {
+      opacity: 0;
+      transform: translateY(-3rem);
+
+      &:not(.modal-non-blurred)::backdrop {
+        backdrop-filter: unset;
+      }
+    }
+  }
 
   @include media-breakpoint-up(sm) {
     --#{$prefix}modal-column-count: 10;
@@ -207,8 +228,9 @@
 
 .modal-body {
   flex-grow: 1;
+  padding-block-end: var(--#{$prefix}modal-dialog-space-padding-block-bottom-body-footer);
   padding-inline: var(--#{$prefix}modal-dialog-space-padding-inline);
-  margin-block: var(--#{$prefix}modal-dialog-space-padding-block-top-body) var(--#{$prefix}modal-dialog-space-padding-block-bottom-body-footer);
+  margin-block-start: var(--#{$prefix}modal-dialog-space-padding-block-top-body);
   overflow-y: auto;
 
   &:not(:has(.modal-footer)) > :last-child {
