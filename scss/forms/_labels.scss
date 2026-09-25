@@ -24,6 +24,14 @@
   content: "*";
 }
 
+[disabled] .is-required,
+[aria-disabled].is-required,
+[aria-disabled] .is-required {
+  &::after {
+    color: currentcolor;
+  }
+}
+
 .form-helper {
   position: relative;
   display: inline-block;
