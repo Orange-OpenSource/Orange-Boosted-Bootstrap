@@ -92,6 +92,41 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `<hr class="w-50" />`
   },
   {
+    name: 'Dropdown',
+    slug: 'dropdown',
+    link: 'dropdown',
+    category: 'Actions',
+    snippet: `
+      <ul class="dropdown-menu d-block">
+        <li><a class="dropdown-item active" href="#">Label</a></li>
+        <li><a class="dropdown-item" href="#">Label</a></li>
+      </ul>`
+  },
+  {
+    name: 'Expand button',
+    slug: 'expand-button',
+    link: 'buttons#expand-button',
+    category: 'Actions',
+    snippet: `
+      <div class="dropdown">
+        <button class="btn btn-default btn-expand" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Label
+        </button>
+      </div>`
+  },
+  {
+    name: 'Expand link',
+    slug: 'expand-link',
+    link: 'links#expand-link',
+    category: 'Navigation',
+    snippet: `
+      <div class="dropdown">
+        <button class="link link-expand" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Label
+        </button>
+      </div>`
+  },
+  {
     name: 'Filter chip',
     slug: 'filter-chip',
     link: 'chips#filter-chip',
@@ -166,15 +201,6 @@ export const componentsDetails: ComponentCardData[] = [
           </div>
         </nav>
       </header>`
-  },
-  {
-    name: 'Icon',
-    category: 'Visual assets',
-    snippet: `
-      <svg class="text-status-accent decorative-small-icon" aria-hidden="true">
-        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-      </svg>`,
-    excludeFromVersioning: true
   },
   {
     name: 'Inline alert',
