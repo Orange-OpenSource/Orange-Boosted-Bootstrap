@@ -177,6 +177,17 @@ export const componentsDetails: ComponentCardData[] = [
     excludeFromVersioning: true
   },
   {
+    name: 'Icons',
+    category: 'Actions',
+    link: 'icons',
+    snippet: `
+      <button class="icon icon-interactive">
+        <svg aria-hidden="true" class="bl-large-icon">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+      </button>`
+  },
+  {
     name: 'Inline alert',
     slug: 'inline-alert',
     link: 'alerts#inline-alert',

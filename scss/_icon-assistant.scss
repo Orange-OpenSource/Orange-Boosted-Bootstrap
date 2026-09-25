@@ -1,0 +1,38 @@
+.icon-assistant {
+  --#{$prefix}icon-border-width: #{$ouds-button-border-width-ai};
+  --#{$prefix}assistant-gradient-unit: 72deg;
+  --#{$prefix}assistant-icon-size: 1rem;
+  @include assistant();
+
+  position: relative;
+  border-radius: $ouds-border-radius-pill; // stylelint-disable-line property-disallowed-list
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: var(--#{$prefix}assistant-border-gradient);
+    border-radius: $ouds-border-radius-pill; // stylelint-disable-line property-disallowed-list
+
+    mask-image:
+      radial-gradient(
+        circle closest-side,
+        transparent 0% 91.6666%,
+        $black 91.6666% 100%
+      );
+  }
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-color: currentcolor;
+    mask: $assistant-icon no-repeat center;
+    mask-size: 75%;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    border-color: currentcolor;
+  }
+}

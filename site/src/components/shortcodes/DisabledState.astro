@@ -1,0 +1,25 @@
+---
+import { getVersionedDocsPath } from '@libs/path.ts'
+
+interface Props {
+  /**
+   * The name of the component which disabled state is being described.
+   */
+  name?: string
+}
+
+const { name } = Astro.props
+---
+
+<p>Make { name } inactive by adding the <code>[disabled]</code> boolean attribute to the <code>&lt;button&gt;</code> element. Disabled { name } have <code>pointer-events: none</code> applied to them, preventing hover and active states from triggering.</p>
+
+<slot name="buttonExample" />
+
+<p>Disabled { name } using the <code>&lt;a&gt;</code> element behave a bit different:</p>
+
+<ul>
+  <li>Disabled { name } using <code>&lt;a&gt;</code> must include the <code>aria-disabled="true"</code> attribute to indicate the state of the element to assistive technologies, to make it visually appear disabled and disable all <code>pointer-events</code>.</li>
+  <li>Disabled { name } using <code>&lt;a&gt;</code> <em>should not</em> include the <code>href</code> attribute. In case you need to keep the <code>href</code>, please refer to <a href={getVersionedDocsPath('/components/links#disabled-link-accessibility-warning')}>disabled link accessibility warning</a>.</li>
+</ul>
+
+<slot name="anchorExample" />
