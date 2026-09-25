@@ -28,10 +28,7 @@ const docsSchema = z.object({
   thumbnail: z.string().optional(),
   title: z.string(),
   toc: z.boolean().optional(),
-  types: z
-    .string()
-    .array()
-    .optional(),
+  types: z.string().array().optional()
 })
 
 const docsCollection = defineCollection({

@@ -54,7 +54,7 @@ export function getComponentSVG(className: string): string {
 }
 
 export function getVersionLink(version: string): string {
-    return `<a class="link link-external float-end" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/${version}-ouds-web" target="_blank" rel="noopener">
+  return `<a class="link link-external float-end" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/${version}-ouds-web" target="_blank" rel="noopener">
       Full changelog
   </a>`
 }
