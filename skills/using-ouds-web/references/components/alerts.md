@@ -60,7 +60,7 @@ Place inside `.alert-action-container`:
 
 Add an action link (`<a>` or `<button>`, depending on the context):
 
-- When the action is placed inside `.alert-container`, after `.alert-text-container`, use `.link link-compact`.
+- When the action is placed inside `.alert-container`, after `.alert-text-container`, use `.link.link-compact`.
 - When the action is placed inside `.alert-action-container`, beside the close button, use the regular `.link`.
 
 ### Description

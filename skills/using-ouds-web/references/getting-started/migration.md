@@ -6,7 +6,7 @@
 
 ### Breaking changes
 
-- **Alerts**: action links placed inside `.alert-container`, after `.alert-text-container`, must use the compact link variant: `.link link-compact`. Action links placed inside `.alert-action-container`, beside the close button, continue to use the regular `.link`.
+- **Alerts**: action links placed inside `.alert-container`, after `.alert-text-container`, must use the compact link variant: `.link.link-compact`. Action links placed inside `.alert-action-container`, beside the close button, continue to use the regular `.link`.
 
 ## v1.5.0
 
