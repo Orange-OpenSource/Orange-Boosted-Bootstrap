@@ -9079,7 +9079,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .btn-assistant.btn-icon,
- .btn-assistant.btn-close {
+.btn-assistant.btn-close {
   --bs-assistant-gradient-unit: 72deg;
   --bs-btn-border-radius: 2000px;
 }
@@ -15702,7 +15702,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   background: var(--bs-assistant-border-gradient);
   border-radius: 2000px;
   mask-image: radial-gradient(circle closest-side, transparent 0% 91.6666%, #000 91.6666% 100%);
-  mask-image: radial-gradient(circle closest-side, transparent 0% 91.6666%, #000 91.6666% 100%);
 }
 .icon-assistant::after {
   position: absolute;
@@ -15710,8 +15709,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   content: "";
   background-color: currentcolor;
   mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M11.5 4.6c.1-.5.9-.5 1 0l.8 2.3a7 7 0 0 0 4.8 4.5l2.5.7c.5.2.5.8 0 1l-2.5.7a7 7 0 0 0-4.8 4.5l-.8 2.3c-.1.5-.9.5-1 0l-.8-2.3a7 7 0 0 0-4.8-4.5l-2.5-.7a.5.5 0 0 1 0-1l2.5-.7a7 7 0 0 0 4.8-4.5zM5 4.9q.1-.1.2 0l.2.6q.3.9 1.1 1l.6.3q.1.1 0 .2l-.6.2a2 2 0 0 0-1 1.1l-.3.6q-.1.2-.2 0l-.2-.6a2 2 0 0 0-1.1-1L3 7q-.2-.1 0-.2l.6-.2a2 2 0 0 0 1-1.1zM17.9 3h.3l.3.8Q18.9 5 20 5.4l.9.3V6l-.9.3a2 2 0 0 0-1.5 1.5l-.3.8h-.3l-.3-.8A2 2 0 0 0 16 6.3l-.8-.3v-.3l.8-.3A2 2 0 0 0 17.6 4z'/></svg>") no-repeat center;
-  mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M11.5 4.6c.1-.5.9-.5 1 0l.8 2.3a7 7 0 0 0 4.8 4.5l2.5.7c.5.2.5.8 0 1l-2.5.7a7 7 0 0 0-4.8 4.5l-.8 2.3c-.1.5-.9.5-1 0l-.8-2.3a7 7 0 0 0-4.8-4.5l-2.5-.7a.5.5 0 0 1 0-1l2.5-.7a7 7 0 0 0 4.8-4.5zM5 4.9q.1-.1.2 0l.2.6q.3.9 1.1 1l.6.3q.1.1 0 .2l-.6.2a2 2 0 0 0-1 1.1l-.3.6q-.1.2-.2 0l-.2-.6a2 2 0 0 0-1.1-1L3 7q-.2-.1 0-.2l.6-.2a2 2 0 0 0 1-1.1zM17.9 3h.3l.3.8Q18.9 5 20 5.4l.9.3V6l-.9.3a2 2 0 0 0-1.5 1.5l-.3.8h-.3l-.3-.8A2 2 0 0 0 16 6.3l-.8-.3v-.3l.8-.3A2 2 0 0 0 17.6 4z'/></svg>") no-repeat center;
-  mask-size: 75%;
   mask-size: 75%;
 }
 .icon-assistant:disabled,
@@ -16463,57 +16460,56 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .decorative-2xlarge-icon,
-.decorative-xlarge-icon,
-.decorative-large-icon,
-.decorative-medium-icon,
-.decorative-small-icon,
-.decorative-xsmall-icon,
-.decorative-2xsmall-icon,
-.decorative-3xsmall-icon,
-.decorative-4xsmall-icon,
-.dl-large-icon,
-.dl-medium-icon,
-.dl-small-icon,
-.dm-large-icon,
-.dm-medium-icon,
-.dm-small-icon,
-.ds-large-icon,
-.ds-medium-icon,
-.ds-small-icon,
-.hxl-large-icon,
-.hxl-medium-icon,
-.hxl-small-icon,
-.hl-large-icon,
-.hl-medium-icon,
-.hl-small-icon,
-.hm-large-icon,
-.hm-medium-icon,
-.hm-small-icon,
-.hs-large-icon,
-.hs-medium-icon,
-.hs-small-icon,
-.bl-large-icon,
-.bl-medium-icon,
-.bl-small-icon,
-.bm-large-icon,
-.bm-medium-icon,
-.bm-small-icon,
-.bs-large-icon,
-.bs-medium-icon,
-.bs-small-icon,
-.ls-large-icon,
-.ls-medium-icon,
-.ls-small-icon,
-.lm-large-icon,
-.lm-medium-icon,
-.lm-small-icon,
-.ll-large-icon,
-.ll-medium-icon,
-.ll-small-icon,
-.lxl-large-icon,
-.lxl-medium-icon,
-.lxl-small-icon {
-  display: inline-block;
+ .decorative-xlarge-icon,
+ .decorative-large-icon,
+ .decorative-medium-icon,
+ .decorative-small-icon,
+ .decorative-xsmall-icon,
+ .decorative-2xsmall-icon,
+ .decorative-3xsmall-icon,
+ .decorative-4xsmall-icon,
+ .dl-large-icon,
+ .dl-medium-icon,
+ .dl-small-icon,
+ .dm-large-icon,
+ .dm-medium-icon,
+ .dm-small-icon,
+ .ds-large-icon,
+ .ds-medium-icon,
+ .ds-small-icon,
+ .hxl-large-icon,
+ .hxl-medium-icon,
+ .hxl-small-icon,
+ .hl-large-icon,
+ .hl-medium-icon,
+ .hl-small-icon,
+ .hm-large-icon,
+ .hm-medium-icon,
+ .hm-small-icon,
+ .hs-large-icon,
+ .hs-medium-icon,
+ .hs-small-icon,
+ .bl-large-icon,
+ .bl-medium-icon,
+ .bl-small-icon,
+ .bm-large-icon,
+ .bm-medium-icon,
+ .bm-small-icon,
+ .bs-large-icon,
+ .bs-medium-icon,
+ .bs-small-icon,
+ .ls-large-icon,
+ .ls-medium-icon,
+ .ls-small-icon,
+ .lm-large-icon,
+ .lm-medium-icon,
+ .lm-small-icon,
+ .ll-large-icon,
+ .ll-medium-icon,
+ .ll-small-icon,
+ .lxl-large-icon,
+ .lxl-medium-icon,
+ .lxl-small-icon {
   flex-shrink: 0;
   width: 1em;
   height: 1em;
