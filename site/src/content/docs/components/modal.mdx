@@ -20,7 +20,7 @@ import { getVersionedDocsPath } from '@libs/path'
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
-          <div class="modal-dialog w-75 h-75 position-relative" open style="transition: unset">
+          <dialog class="modal-dialog w-75 h-75 position-relative" open style="transition: unset">
             <div class="modal-header">
               <h3 class="modal-title">Title</h3>
               <button type="button" class="btn btn-close">
@@ -30,7 +30,7 @@ import { getVersionedDocsPath } from '@libs/path'
             <div class="modal-body">
               <p>Content.</p>
             </div>
-          </div>
+          </dialog>
         </div>
       </div>
       <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#modal-dialog">Modal dialog</a> temporary surface that interrupts the current page or task to focus the user's attention</div>
