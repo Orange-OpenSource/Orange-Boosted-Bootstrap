@@ -149,7 +149,7 @@ Interactive Icon is an icon component designed to trigger a user interaction (e.
 
 Interactive icons are meant to adapt to their container. They are not constrained to specific dimensions, and can be used at any size required by layout.
 
-They can also be styled using `.decorative-*-icon` classes.
+They can also be styled using `.decorative-*-icon` classes on `svg` elements.
 
 <Example buttonLabel="multiple sizes icon" class="bd-example" code={`<div style="width: 38px; height: 38px; display: inline-block;">
     <button class="icon icon-interactive" aria-label="Inline style interactive icon">
@@ -179,8 +179,7 @@ The assistant icon combines standard icon functions with AI-specific visual feat
 
 You can use `.icon-assistant` class to indicate AI actions in a process or a flow. This class will add a specific icon and border color.
 
-<Example buttonLabel="assistant icon" class="bd-example" code={`<button class="icon icon-assistant" aria-label="Default assistant icon"></button>
-<button class="icon icon-assistant" aria-label="Default assistant icon"></button>`} />
+<Example buttonLabel="assistant icon" class="bd-example" code={`<button class="icon icon-assistant" aria-label="Default assistant icon"></button>`} />
 
 <Callout type="warning" title="Transparency and older browsers">
 An assistant icon does not have a transparent background on older browsers and Firefox because [`background-clip: border-area` is not fully supported](https://caniuse.com/wf-background-clip-border-area).
@@ -238,10 +237,10 @@ If your browser is compatible, the following example will show two transparent a
 
 Assistant icons are meant to adapt to their container. They are not constrained to specific dimensions, and can be used at any size required by layout.
 
+They can also be styled using `.decorative-*-icon` classes on `button` elements.
+
 <Example buttonLabel="multiple sizes icon" class="bd-example" code={`<div style="width: 32px; height: 32px; display: inline-block;">
     <button type="button" class="icon icon-assistant" aria-label="First transparent assistant icon"></button>
   </div>
 
-  <div style="width: 64px; height: 64px; display: inline-block;">
-    <button class="icon icon-assistant" aria-label="Large assistant icon"></button>
-  </div>`} />
+  <button class="icon icon-assistant decorative-large-icon" aria-label="Large assistant icon"></button>`} />

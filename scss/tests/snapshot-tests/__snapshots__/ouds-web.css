@@ -12901,7 +12901,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .decorative-2xlarge-icon, .decorative-xlarge-icon, .decorative-large-icon, .decorative-medium-icon, .decorative-small-icon, .decorative-xsmall-icon, .decorative-2xsmall-icon, .decorative-3xsmall-icon, .decorative-4xsmall-icon, .dl-large-icon, .dl-medium-icon, .dl-small-icon, .dm-large-icon, .dm-medium-icon, .dm-small-icon, .ds-large-icon, .ds-medium-icon, .ds-small-icon, .hxl-large-icon, .hxl-medium-icon, .hxl-small-icon, .hl-large-icon, .hl-medium-icon, .hl-small-icon, .hm-large-icon, .hm-medium-icon, .hm-small-icon, .hs-large-icon, .hs-medium-icon, .hs-small-icon, .bl-large-icon, .bl-medium-icon, .bl-small-icon, .bm-large-icon, .bm-medium-icon, .bm-small-icon, .bs-large-icon, .bs-medium-icon, .bs-small-icon, .ls-large-icon, .ls-medium-icon, .ls-small-icon, .lm-large-icon, .lm-medium-icon, .lm-small-icon, .ll-large-icon, .ll-medium-icon, .ll-small-icon, .lxl-large-icon, .lxl-medium-icon, .lxl-small-icon {
-  display: inline-block;
   flex-shrink: 0;
   width: 1em;
   height: 1em;
