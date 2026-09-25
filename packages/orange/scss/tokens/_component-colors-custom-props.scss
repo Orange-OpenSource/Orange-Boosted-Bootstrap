@@ -1,7 +1,7 @@
 // Components custom properties applications
-// OUDS Core tokens version 1.10.0
+// OUDS Core tokens version 1.11.0
 // Orange Core tokens version 1.2.0
-// Orange System tokens version 2.6.0
+// Orange System tokens version 2.7.0
 
 // scss-docs-start ouds-all-component-css-color
 // scss-docs-start ouds-component-css-color
@@ -53,6 +53,10 @@
   --#{$prefix}switch-color-track-selected-interaction: #{$core-ouds-color-functional-malachite-750};
   --#{$prefix}switch-color-track-unselected: #{$core-ouds-color-opacity-black-440};
   --#{$prefix}switch-color-track-unselected-interaction: #{$core-ouds-color-opacity-black-520};
+  --#{$prefix}categorical-tag-color-bg-category-1: #{$core-orange-color-decorative-emerald-500};
+  --#{$prefix}categorical-tag-color-bg-category-2: #{$core-orange-color-decorative-sky-400};
+  --#{$prefix}categorical-tag-color-bg-category-3: #{$core-orange-color-decorative-amber-500};
+  --#{$prefix}categorical-tag-color-bg-category-4: #{$core-orange-color-decorative-amethyst-400};
   --#{$prefix}progress-indicator-color-content-track: #{$core-ouds-color-functional-gray-light-400};
   --#{$prefix}progress-indicator-mono-color-content-track: #{$core-ouds-color-functional-gray-light-400};
   --#{$prefix}progress-indicator-mono-color-content-indicator: #{$core-ouds-color-functional-black};
@@ -120,6 +124,10 @@
   --#{$prefix}switch-color-track-selected-interaction: #{$core-ouds-color-functional-malachite-300};
   --#{$prefix}switch-color-track-unselected: #{$core-ouds-color-opacity-white-640};
   --#{$prefix}switch-color-track-unselected-interaction: #{$core-ouds-color-opacity-white-800};
+  --#{$prefix}categorical-tag-color-bg-category-1: #{$core-orange-color-decorative-emerald-400};
+  --#{$prefix}categorical-tag-color-bg-category-2: #{$core-orange-color-decorative-sky-300};
+  --#{$prefix}categorical-tag-color-bg-category-3: #{$core-orange-color-decorative-amber-300};
+  --#{$prefix}categorical-tag-color-bg-category-4: #{$core-orange-color-decorative-amethyst-300};
   --#{$prefix}progress-indicator-color-content-track: #{$core-ouds-color-functional-gray-dark-480};
   --#{$prefix}progress-indicator-mono-color-content-track: #{$core-ouds-color-functional-gray-dark-480};
   --#{$prefix}progress-indicator-mono-color-content-indicator: #{$core-ouds-color-functional-white};
