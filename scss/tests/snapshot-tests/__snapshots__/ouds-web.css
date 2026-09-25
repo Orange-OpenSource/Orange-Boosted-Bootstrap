@@ -502,6 +502,7 @@
   --bs-font-max-width-label-medium: 40rem;
   --bs-font-max-width-label-large: 40rem;
   --bs-font-max-width-label-xlarge: 40rem;
+  --bs-font-max-width-boxed-text: 45rem;
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: var(--bs-font-size-body-medium);
   --bs-body-font-weight: 400;
@@ -603,6 +604,7 @@
     --bs-font-max-width-label-medium: 40rem;
     --bs-font-max-width-label-large: 40rem;
     --bs-font-max-width-label-xlarge: 40rem;
+    --bs-font-max-width-boxed-text: 50rem;
   }
 }
 @media (min-width: 1320px) {
@@ -654,6 +656,7 @@
     --bs-font-max-width-label-medium: 40rem;
     --bs-font-max-width-label-large: 45rem;
     --bs-font-max-width-label-xlarge: 45rem;
+    --bs-font-max-width-boxed-text: 55rem;
   }
 }
 @media (min-width: 736px) {
@@ -9551,7 +9554,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .alert-message {
-  --bs-alert-icon-margin-block: 12px;
   min-width: 160px;
   min-height: 48px;
   padding-inline: 16px;
@@ -9568,6 +9570,12 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .alert-message .btn-close {
   border-top-right-radius: var(--bs-alert-border-radius);
 }
+.alert-message .alert-icon {
+  margin-top: 12px;
+}
+.alert-message .alert-label {
+  max-width: var(--bs-font-max-width-boxed-text);
+}
 @supports not (container-type: size) {
   .alert-message:not(:has(.alert-text-container p:not(.alert-label), .alert-text-container ul, .alert-container .link)) .btn-close {
     border-bottom-right-radius: var(--bs-alert-border-radius);
@@ -9580,7 +9588,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   flex-shrink: 0;
   width: 1.5rem;
   height: 1.5rem;
-  margin-top: var(--bs-alert-icon-margin-block);
   color: var(--bs-alert-icon-color);
 }
 .alert-icon:where(:not(:has(svg, img, .icon)))::before, .alert-icon:where(:not(:has(svg, img, .icon)))::after {
@@ -9613,7 +9620,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  gap: 4px;
   align-items: flex-start;
   justify-content: center;
   width: 1%;
@@ -9628,13 +9634,16 @@ ol.bullet-list > li > ol > li > ol > li::before {
   width: 100%;
 }
 .alert-text-container > * {
+  max-width: var(--bs-font-max-width-boxed-text);
   margin-bottom: 0;
-  max-width: var(--bs-font-max-width-label-medium);
+  font-weight: 400;
   font-size: var(--bs-font-size-label-medium);
   line-height: var(--bs-font-line-height-label-medium);
   /* rtl:remove */
   letter-spacing: var(--bs-font-letter-spacing-label-medium);
-  font-weight: 400;
+}
+.alert-text-container > :not(.alert-label) {
+  padding-block-end: 4px;
 }
 .alert-text-container ul {
   padding-left: 0;
@@ -9643,6 +9652,10 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .alert-text-container ul > li {
   position: relative;
   padding-left: calc(1.25rem + 8px);
+  margin-bottom: 0px;
+}
+.alert-text-container ul > li:last-child {
+  margin-bottom: 0;
 }
 .alert-text-container ul > li::before {
   position: absolute;

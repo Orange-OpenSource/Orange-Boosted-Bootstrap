@@ -2,6 +2,12 @@
 
 > Tip: the [`@ouds/web-migrate`](https://www.npmjs.com/package/@ouds/web-migrate) CLI can automatically update project files across most breaking changes below. Run `npx @ouds/web-migrate "src/**/*.{css,scss,html}"` and review the diff.
 
+## v1.6.0
+
+### Breaking changes
+
+- **Alerts**: action links placed inside `.alert-container`, after `.alert-text-container`, must use the compact link variant: `.link.link-compact`. Action links placed inside `.alert-action-container`, beside the close button, continue to use the regular `.link`.
+
 ## v1.5.0
 
 ### Breaking changes
