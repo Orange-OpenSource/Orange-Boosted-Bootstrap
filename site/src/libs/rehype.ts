@@ -49,14 +49,14 @@ export const rehypeHeaderLinksOrder: Plugin<[], Root> = function () {
         }
 
         if (Array.isArray(childClass)) {
-          return childClass.some(item => String(item).includes('anchor-link'))
+          return childClass.some((item) => String(item).includes('anchor-link'))
         }
 
         return false
       }
 
       const hasAnchor = hasAnchorClass(node.children[0])
-      const headingIndex = node.children.findIndex(child => child.type === 'text')
+      const headingIndex = node.children.findIndex((child) => child.type === 'text')
       if (!hasAnchor || headingIndex === -1) {
         return
       }
