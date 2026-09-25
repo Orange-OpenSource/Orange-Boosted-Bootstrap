@@ -12140,8 +12140,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .item-overline {
   display: block;
+  max-width: var(--bs-font-max-width-boxed-text);
   margin-bottom: 0;
-  max-width: var(--bs-font-max-width-label-small);
   font-size: var(--bs-font-size-label-small);
   line-height: var(--bs-font-line-height-label-small);
   /* rtl:remove */
@@ -12152,8 +12152,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .item-label {
   display: block;
+  max-width: var(--bs-font-max-width-boxed-text);
   margin-bottom: 0;
-  max-width: var(--bs-font-max-width-label-large);
   font-size: var(--bs-font-size-label-large);
   line-height: var(--bs-font-line-height-label-large);
   /* rtl:remove */
@@ -12164,8 +12164,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .item-extra-label {
   display: block;
+  max-width: var(--bs-font-max-width-boxed-text);
   margin-bottom: 0;
-  max-width: var(--bs-font-max-width-label-medium);
   font-size: var(--bs-font-size-label-medium);
   line-height: var(--bs-font-line-height-label-medium);
   /* rtl:remove */
@@ -12176,8 +12176,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .item-description {
   display: block;
+  max-width: var(--bs-font-max-width-boxed-text);
   margin-bottom: 0;
-  max-width: var(--bs-font-max-width-label-medium);
   font-size: var(--bs-font-size-label-medium);
   line-height: var(--bs-font-line-height-label-medium);
   /* rtl:remove */

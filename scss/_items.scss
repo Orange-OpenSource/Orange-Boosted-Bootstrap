@@ -131,32 +131,36 @@
 
 .item-overline {
   display: block;
+  max-width: var(--#{$prefix}font-max-width-boxed-text);
   margin-bottom: 0;
-  @include get-font-size("label-small", true);
+  @include get-font-size("label-small", false);
   font-weight: $ouds-font-weight-web-label-moderate;
   color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-muted);
 }
 
 .item-label {
   display: block;
+  max-width: var(--#{$prefix}font-max-width-boxed-text);
   margin-bottom: 0;
-  @include get-font-size("label-large", true);
+  @include get-font-size("label-large", false);
   font-weight: $ouds-font-weight-web-label-default;
   color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
 }
 
 .item-extra-label {
   display: block;
+  max-width: var(--#{$prefix}font-max-width-boxed-text);
   margin-bottom: 0;
-  @include get-font-size("label-medium", true);
+  @include get-font-size("label-medium", false);
   font-weight: $ouds-font-weight-web-label-strong;
   color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
 }
 
 .item-description {
   display: block;
+  max-width: var(--#{$prefix}font-max-width-boxed-text);
   margin-bottom: 0;
-  @include get-font-size("label-medium", true);
+  @include get-font-size("label-medium", false);
   font-weight: $ouds-font-weight-web-label-default;
   color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-muted);
 }
