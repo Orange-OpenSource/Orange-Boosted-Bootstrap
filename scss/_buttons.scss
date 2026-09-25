@@ -535,12 +535,16 @@
 .btn-expand {
   --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-start-icon-end-default};
   --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-chevron-end-default};
-  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon-chevron-default};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-chevron-default};
 
   &::after {
     content: "";
     mask-image: $btn-next-icon;
   }
+}
+
+.btn-expand.btn-icon {
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon-chevron-default};
 }
 
 .btn-expand::after {

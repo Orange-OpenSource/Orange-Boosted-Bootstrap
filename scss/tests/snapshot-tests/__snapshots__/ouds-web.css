@@ -6450,13 +6450,17 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .btn-expand {
   --bs-btn-padding-start: 28px;
   --bs-btn-padding-end: 16px;
-  --bs-btn-icon-gap: 4px;
+  --bs-btn-icon-gap: 6px;
 }
 .btn-next::after,
 .btn-expand::after {
   content: "";
   -webkit-mask-image: var(--bs-breadcrumb-divider-icon);
   mask-image: var(--bs-breadcrumb-divider-icon);
+}
+
+.btn-expand.btn-icon, .btn-expand.btn-close {
+  --bs-btn-icon-gap: 4px;
 }
 
 .btn-expand::after {
