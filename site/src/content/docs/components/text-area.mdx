@@ -107,6 +107,8 @@ To display a helper link below text areas, use a standard small link [with `.lin
   Helper link should be explicitly described using the `aria-labelledby` attribute in which you must combine the helper link id and the related text area label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the text area. We also recommend adding a `.visually-hidden` span inside the link to coordinate the link content and the label.
 </Callout>
 
+Since the helper link is the direct next element after the text area, it is not necessary to use the `aria-describedby` attribute on the text area for the helper link.
+
 <Example buttonLabel="text areas with helper link" code={`<div class="text-area mb-medium">
     <div class="text-area-container">
       <label id="labelTextAreaWithHelperTextLink" for="textAreaWithHelperTextLink">Additional comments</label>

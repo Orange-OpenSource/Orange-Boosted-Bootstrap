@@ -184,6 +184,8 @@ To display a helper link below selects, use a standard small link [with `.link` 
   Helper link should be explicitly labelled using the `aria-labelledby` attribute in which you must combine the helper link id and the related select input label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the select input. We also recommend adding a `.visually-hidden` span inside the link to coordinate the link content and the label.
 </Callout>
 
+Since the helper link is the direct next element after the select input, it is not necessary to use the `aria-describedby` attribute on the select input for the helper link.
+
 <Example buttonLabel="select inputs with helper link" code={`<div class="select-input mb-medium">
     <div class="select-input-container">
       <label id="labelSelectWithHelperAndLink" for="exampleSelectWithHelperAndLink">Select example with helper and link texts</label>
