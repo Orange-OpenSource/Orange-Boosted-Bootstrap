@@ -41,7 +41,7 @@ export default defineConfig({
           rehypeAutolinkHeadings,
           {
             behavior: 'prepend',
-            content: [{ type: 'text', value: ' '}],
+            content: [{ type: 'text', value: ' ' }],
             properties: (element: Element) => ({
               class: 'anchor-link',
               ariaLabel: `Link to this section: ${(element.children[0] as Text).value}`
