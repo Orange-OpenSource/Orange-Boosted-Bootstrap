@@ -36,16 +36,13 @@
     </nav>
 
     <div class="container-fluid mt-large">
-      <h1>Modal <small>Bootstrap Visual Test</small></h1>
+      <h1>Modal <small>Native dialog visual test</small></h1>
 
-      <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title h4" id="myModalLabel">Modal title</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button><!--OUDS mod: a11y-->
-            </div>
-            <div class="modal-body">
+      <dialog class="modal fade" data-bs-role="modal" id="myModal" aria-label="Modal dialog">
+        <div class="modal-header">
+          <button type="button" class="btn-close" commandfor="myModal" command="close"><span class="visually-hidden">Close</span></button><!--OUDS mod: a11y-->
+        </div>
+        <div class="modal-body">
               <h4>Text in a modal</h4>
               <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
 
@@ -114,23 +111,18 @@
               <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
               <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
               <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-strong">Save changes</button>
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" commandfor="myModal" command="close">Close</button>
+          <button type="button" class="btn btn-strong">Save changes</button>
+        </div>
+      </dialog>
 
-      <div class="modal fade" id="firefoxModal" tabindex="-1" aria-labelledby="firefoxModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title h4" id="firefoxModalLabel">Firefox Bug Test</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button><!--OUDS mod: a11y-->
-            </div>
-            <div class="modal-body">
+      <dialog class="modal fade" data-bs-role="modal" id="firefoxModal" aria-label="Firefox bug test dialog">
+        <div class="modal-header">
+          <button type="button" class="btn-close" commandfor="firefoxModal" command="close"><span class="visually-hidden">Close</span></button><!--OUDS mod: a11y-->
+        </div>
+        <div class="modal-body">
               <ol>
                 <li>Ensure you're using Firefox.</li>
                 <li>Open a new tab and then switch back to this tab.</li>
@@ -138,34 +130,27 @@
                 <li>Switch to the other tab and then back to this tab.</li>
               </ol>
               <p>Test result: <strong id="ff-bug-test-result"></strong></p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-strong">Save changes</button>
-            </div>
-          </div>
         </div>
-      </div>
-
-      <div class="modal fade" id="slowModal" tabindex="-1" aria-labelledby="slowModalLabel" aria-hidden="true" style="transition-duration: 5s;">
-        <div class="modal-dialog" style="transition-duration: inherit;">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title h4" id="slowModalLabel">Lorem slowly</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button><!--OUDS mod: a11y-->
-            </div>
-            <div class="modal-body">
-              <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-strong">Save changes</button>
-            </div>
-          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" commandfor="firefoxModal" command="close">Close</button>
+          <button type="button" class="btn btn-strong">Save changes</button>
         </div>
-      </div>
+      </dialog>
 
-      <button type="button" class="btn btn-strong" data-bs-toggle="modal" data-bs-target="#myModal">
+      <dialog class="modal fade" data-bs-role="modal" id="slowModal" aria-label="Slow transition dialog" style="transition-duration: 5s;">
+        <div class="modal-header">
+          <button type="button" class="btn-close" commandfor="slowModal" command="close"><span class="visually-hidden">Close</span></button><!--OUDS mod: a11y-->
+        </div>
+        <div class="modal-body">
+          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" commandfor="slowModal" command="close">Close</button>
+          <button type="button" class="btn btn-strong">Save changes</button>
+        </div>
+      </dialog>
+
+      <button type="button" class="btn btn-strong" commandfor="myModal" command="show-modal">
         Launch demo modal
       </button>
 
@@ -175,14 +160,14 @@
 
       <br /><br />
 
-      <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#firefoxModal">
+      <button type="button" class="btn btn-default" commandfor="firefoxModal" command="show-modal">
         Launch Firefox bug test modal
       </button>
       (<a href="https://github.com/twbs/bootstrap/issues/18365">See Issue #18365</a>)
 
       <br /><br />
 
-      <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#slowModal">
+      <button type="button" class="btn btn-default" commandfor="slowModal" command="show-modal">
         Launch modal with slow transition
       </button>
 
@@ -191,11 +176,6 @@
       <div class="bg-always-black p-small" id="tall" style="display: none;" data-bs-theme="dark">
         Tall body content to force the page to have a scrollbar.
       </div>
-
-      <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="&#x3C;div class=&#x22;modal fade the-bad&#x22; tabindex=&#x22;-1&#x22;&#x3E;&#x3C;div class=&#x22;modal-dialog&#x22;&#x3E;&#x3C;div class=&#x22;modal-content&#x22;&#x3E;&#x3C;div class=&#x22;modal-header&#x22;&#x3E;&#x3C;button type=&#x22;button&#x22; class=&#x22;btn-close&#x22; data-bs-dismiss=&#x22;modal&#x22; aria-label=&#x22;Close&#x22;&#x3E;&#x3C;span aria-hidden=&#x22;true&#x22;&#x3E;&#x26;times;&#x3C;/span&#x3E;&#x3C;/button&#x3E;&#x3C;h1 class=&#x22;modal-title h4&#x22;&#x3E;The Bad Modal&#x3C;/h1&#x3E;&#x3C;/div&#x3E;&#x3C;div class=&#x22;modal-body&#x22;&#x3E;This modal&#x27;s HTTML source code is declared inline, inside the data-bs-target attribute of it&#x27;s show-button&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x3C;/div&#x3E;">
-        Modal with an XSS inside the data-bs-target
-      </button>
-
       <br /><br />
 
       <button type="button" class="btn btn-default" id="btnPreventModal">
@@ -236,42 +216,48 @@
 
       ffBugInput.addEventListener('focus', handlerClickFfBugInput)
 
-      const modalFf = new oudsWeb.Modal(firefoxModal)
-
       document.getElementById('btnPreventModal').addEventListener('click', () => {
-        const shownFirefoxModal = () => {
-          modalFf.hide()
-          firefoxModal.removeEventListener('shown.bs.modal', hideFirefoxModal)
+        const onCancel = event => {
+          event.preventDefault()
+          console.log('Test passed: cancel was prevented')
+          firefoxModal.removeEventListener('cancel', onCancel)
+          firefoxModal.close()
         }
 
-        const hideFirefoxModal = event => {
-          event.preventDefault()
-          firefoxModal.removeEventListener('hide.bs.modal', hideFirefoxModal)
+        firefoxModal.addEventListener('cancel', onCancel)
+        firefoxModal.showModal()
 
-          if (modalFf._isTransitioning) {
-            console.error('Modal plugin should not set _isTransitioning when hide event is prevented')
-          } else {
-            console.log('Test passed')
-            modalFf.hide() // work as expected
+        if (typeof firefoxModal.requestClose === 'function') {
+          firefoxModal.requestClose()
+        } else {
+          const syntheticCancel = new Event('cancel', { cancelable: true })
+          const isCancelled = !firefoxModal.dispatchEvent(syntheticCancel)
+
+          if (!isCancelled) {
+            firefoxModal.close()
           }
         }
-
-        firefoxModal.addEventListener('shown.bs.modal', shownFirefoxModal)
-        firefoxModal.addEventListener('hide.bs.modal', hideFirefoxModal)
-        modalFf.show()
       })
 
       // Test transition duration
       let t0
       let t1
+      let waitForTransitionEnd = false
       const slowModal = document.getElementById('slowModal')
+      const slowModalInvoker = document.querySelector('[commandfor="slowModal"][command="show-modal"]')
 
-      slowModal.addEventListener('shown.bs.modal', () => {
+      slowModal.addEventListener('transitionend', () => {
+        if (!waitForTransitionEnd || !slowModal.open) {
+          return
+        }
+
+        waitForTransitionEnd = false
         t1 = performance.now()
         console.log(`transition-duration took ${t1 - t0}ms.`)
       })
 
-      slowModal.addEventListener('show.bs.modal', () => {
+      slowModalInvoker.addEventListener('click', () => {
+        waitForTransitionEnd = true
         t0 = performance.now()
       })
     </script>
