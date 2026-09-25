@@ -496,6 +496,8 @@
   --bs-alert-error-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M12 2.4A9.6 9.6 0 0 0 2.4 12a9.6 9.6 0 0 0 9.6 9.6 9.6 9.6 0 0 0 9.6-9.6A9.6 9.6 0 0 0 12 2.4M10.8 8q0-1.7 1.2-1.7c1.2 0 1.2.5 1.2 1.7v4.6q0 1.8-1.2 1.7-1.2 0-1.2-1.7zM12 18.2a1.4 1.4 0 0 1-1.4-1.5 1.4 1.4 0 0 1 1.4-1.3 1.4 1.4 0 0 1 1.4 1.3q-.1 1.3-1.4 1.4'/%3e%3c/svg%3e");
   --bs-breadcrumb-divider-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='m10 19.1 7.3-7.1L10 4.9l-2.1 2 5.2 5.1-5.2 5z'/%3e%3c/svg%3e");
   --bs-btn-previous-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M14 4.9 6.8 12l7.2 7.1 2.1-2-5.2-5.1 5.2-5z'/%3e%3c/svg%3e");
+  --bs-btn-expanded-false-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='m4.9 10 7.1 7.3 7.1-7.3-2-2.1-5.1 5.2-5-5.2z'/%3e%3c/svg%3e");
+  --bs-btn-expanded-true-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M19.1 14 12 6.8 4.9 14l2 2.1 5.1-5.2 5 5.2z'/%3e%3c/svg%3e");
   --bs-link-external-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M17.3 17a1 1 0 0 1-1 .9H7a1 1 0 0 1-.9-1V7.7a1 1 0 0 1 1-.9h5.7l1.6-1.6h-8q-1.7.2-1.9 2v10.5q.2 1.7 2 1.9H17q1.7-.2 1.9-2V9.7l-1.6 1.6zm2-13.5h-5.2l1.7 1.8-3.5 3.5q-.6.8 0 1.6l1.3 1.3q.8.6 1.6 0l3.6-3.5 1.7 1.7V4.7q0-1.1-1.2-1.2'/%3e%3c/svg%3e");
   --bs-font-sans-serif: "HelvNeueOrange", "Helvetica Neue", Helvetica, "SF Pro", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: Consolas, "SFMono-Regular", "Roboto Mono", "Liberation Mono", Menlo, monospace;
@@ -1268,25 +1270,30 @@ sup {
 }
 
 .breadcrumb .breadcrumb-item a, .link, .icon-link, .link-chevron,
-.link-external, a {
+.link-external,
+.link-expand, a {
   font-weight: 700;
   color: var(--bs-link-color, var(--bs-color-action-enabled));
   text-decoration: underline;
 }
 .breadcrumb .breadcrumb-item a:hover, .link:hover, .icon-link:hover, .link-chevron:hover,
-.link-external:hover, a:hover {
+.link-external:hover,
+.link-expand:hover, a:hover {
   --bs-link-color: var(--bs-color-action-hover);
 }
 .breadcrumb .breadcrumb-item a:focus-visible, .link:focus-visible, .icon-link:focus-visible, .link-chevron:focus-visible,
-.link-external:focus-visible, a:focus-visible {
+.link-external:focus-visible,
+.link-expand:focus-visible, a:focus-visible {
   --bs-link-color: var(--bs-color-action-focus);
 }
 .breadcrumb .breadcrumb-item a:active, .link:active, .icon-link:active, .link-chevron:active,
-.link-external:active, a:active {
+.link-external:active,
+.link-expand:active, a:active {
   --bs-link-color: var(--bs-color-action-pressed);
 }
-.breadcrumb .breadcrumb-item a[aria-disabled=true], [aria-disabled=true].link, [aria-disabled=true].icon-link, [aria-disabled=true].link-chevron,
-[aria-disabled=true].link-external, a[aria-disabled=true] {
+.breadcrumb .breadcrumb-item a:where([aria-disabled=true], :disabled), .link:where([aria-disabled=true], :disabled), .icon-link:where([aria-disabled=true], :disabled), .link-chevron:where([aria-disabled=true], :disabled),
+.link-external:where([aria-disabled=true], :disabled),
+.link-expand:where([aria-disabled=true], :disabled), a:where([aria-disabled=true], :disabled) {
   --bs-link-color: var(--bs-color-action-disabled);
   text-decoration: underline;
   pointer-events: none;
@@ -6946,8 +6953,8 @@ textarea.form-control-lg {
   pointer-events: none;
   content: "";
   background-color: var(--bs-color-content-default);
-  -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m4.9 10 7.1 7.3 7.1-7.3-2-2.1-5.1 5.2-5-5.2z'/></svg>") no-repeat 50%/1.5rem;
-  mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m4.9 10 7.1 7.3 7.1-7.3-2-2.1-5.1 5.2-5-5.2z'/></svg>") no-repeat 50%/1.5rem;
+  -webkit-mask: var(--bs-btn-expanded-false-icon) no-repeat 50%/1.5rem;
+  mask: var(--bs-btn-expanded-false-icon) no-repeat 50%/1.5rem;
   transform: translate(0, -50%);
 }
 .select-input-container > img, .form-select > img,
@@ -6987,8 +6994,8 @@ textarea.form-control-lg {
   padding-left: calc(var(--bs-text-input-icon-size) + var(--bs-text-input-column-gap));
 }
 .select-input-container:has(:open)::after, .form-select:has(:open)::after {
-  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19.1 14 12 6.8 4.9 14l2 2.1 5.1-5.2 5 5.2z'/></svg>");
-  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19.1 14 12 6.8 4.9 14l2 2.1 5.1-5.2 5 5.2z'/></svg>");
+  -webkit-mask-image: var(--bs-btn-expanded-true-icon);
+  mask-image: var(--bs-btn-expanded-true-icon);
 }
 .select-input-container:has(.select-input-field:disabled:where(:not(.loading-indeterminate, .loading-determinate)), .form-select:disabled:where(:not(.loading-indeterminate, .loading-determinate))), .form-select:has(.select-input-field:disabled:where(:not(.loading-indeterminate, .loading-determinate)), .form-select:disabled:where(:not(.loading-indeterminate, .loading-determinate))) {
   color: var(--bs-color-action-disabled);
@@ -7636,10 +7643,14 @@ optgroup {
 }
 
 .error-text, .helper-text, .select-input-container ~ .link, .select-input-container ~ .icon-link, .select-input-container ~ .link-chevron,
-.select-input-container ~ .link-external, .form-select ~ .link, .form-select ~ .icon-link, .form-select ~ .link-chevron,
-.form-select ~ .link-external, .text-input .text-input-container ~ .link, .text-input .text-input-container ~ .icon-link, .text-input .text-input-container ~ .link-chevron,
-.text-input .text-input-container ~ .link-external, .text-area .text-area-container ~ .link, .text-area .text-area-container ~ .icon-link, .text-area .text-area-container ~ .link-chevron,
-.text-area .text-area-container ~ .link-external {
+.select-input-container ~ .link-external,
+.select-input-container ~ .link-expand, .form-select ~ .link, .form-select ~ .icon-link, .form-select ~ .link-chevron,
+.form-select ~ .link-external,
+.form-select ~ .link-expand, .text-input .text-input-container ~ .link, .text-input .text-input-container ~ .icon-link, .text-input .text-input-container ~ .link-chevron,
+.text-input .text-input-container ~ .link-external,
+.text-input .text-input-container ~ .link-expand, .text-area .text-area-container ~ .link, .text-area .text-area-container ~ .icon-link, .text-area .text-area-container ~ .link-chevron,
+.text-area .text-area-container ~ .link-external,
+.text-area .text-area-container ~ .link-expand {
   --bs-text-input-message-margin-top: 8px;
   padding-right: var(--bs-text-input-padding-x);
   padding-left: var(--bs-text-input-padding-x);
@@ -7667,7 +7678,8 @@ optgroup {
 }
 
 .link, .icon-link, .link-chevron,
-.link-external {
+.link-external,
+.link-expand {
   --bs-link-icon-size: 1.25rem;
   --bs-link-icon-gap: 8px;
   font-size: var(--bs-font-size-label-large);
@@ -7686,19 +7698,23 @@ optgroup {
   border: 0;
 }
 .link:has(svg, img, .icon):not(:hover, :active, :focus-visible), .icon-link:has(svg, img, .icon):not(:hover, :active, :focus-visible), .link-chevron:has(svg, img, .icon):not(:hover, :active, :focus-visible),
-.link-external:has(svg, img, .icon):not(:hover, :active, :focus-visible) {
+.link-external:has(svg, img, .icon):not(:hover, :active, :focus-visible),
+.link-expand:has(svg, img, .icon):not(:hover, :active, :focus-visible) {
   text-decoration: none;
 }
 .link svg, .icon-link svg, .link-chevron svg,
 .link-external svg,
+.link-expand svg,
 .link img,
 .icon-link img,
 .link-chevron img,
 .link-external img,
+.link-expand img,
 .link .icon,
 .icon-link .icon,
 .link-chevron .icon,
-.link-external .icon {
+.link-external .icon,
+.link-expand .icon {
   flex-shrink: 0;
   width: 1em;
   height: 1em;
@@ -7709,30 +7725,40 @@ optgroup {
 }
 
 .link-chevron,
-.link-external {
+.link-external,
+.link-expand {
   --bs-link-chevron-gap: 4px;
   text-decoration: none;
 }
 .link-chevron:hover, .link-chevron:active, .link-chevron:focus-visible,
 .link-external:hover,
 .link-external:active,
-.link-external:focus-visible {
+.link-external:focus-visible,
+.link-expand:hover,
+.link-expand:active,
+.link-expand:focus-visible {
   text-decoration: underline;
 }
 .link-chevron:hover,
-.link-external:hover {
+.link-external:hover,
+.link-expand:hover {
   --bs-link-chevron-color: var(--bs-color-action-hover);
 }
 .link-chevron:focus-visible,
-.link-external:focus-visible {
+.link-external:focus-visible,
+.link-expand:focus-visible {
   --bs-link-chevron-color: var(--bs-color-action-focus);
 }
 .link-chevron:active,
-.link-external:active {
+.link-external:active,
+.link-expand:active {
   --bs-link-chevron-color: var(--bs-color-action-pressed);
 }
-.link-chevron[aria-disabled=true],
-.link-external[aria-disabled=true] {
+.link-chevron[aria-disabled=true], .link-chevron:disabled,
+.link-external[aria-disabled=true],
+.link-external:disabled,
+.link-expand[aria-disabled=true],
+.link-expand:disabled {
   --bs-link-chevron-color: var(--bs-color-action-disabled);
 }
 
@@ -7777,65 +7803,119 @@ optgroup {
   mask-size: var(--bs-link-icon-size);
 }
 
+.link-expand {
+  display: inline-flex;
+  gap: var(--bs-link-chevron-gap);
+}
+.link-expand::after {
+  flex-shrink: 0;
+  width: var(--bs-link-icon-size);
+  height: var(--bs-link-icon-size);
+  content: "";
+  background-color: var(--bs-link-chevron-color, var(--bs-color-content-brand-primary));
+  -webkit-mask-image: var(--bs-btn-expanded-false-icon);
+  mask-image: var(--bs-btn-expanded-false-icon);
+}
+.link-expand[aria-expanded=true]::after {
+  -webkit-mask-image: var(--bs-btn-expanded-true-icon);
+  mask-image: var(--bs-btn-expanded-true-icon);
+}
+.link-expand.link-reverse::after {
+  order: -1;
+}
+
 .colored-bg.link, .colored-bg.icon-link, .colored-bg.link-chevron,
 .colored-bg.link-external,
+.colored-bg.link-expand,
 .colored-bg :is(.link, .icon-link, .link-chevron,
-.link-external, a),
+.link-external,
+.link-expand, a),
 .link-on-colored-bg.link,
 .link-on-colored-bg.icon-link,
 .link-on-colored-bg.link-chevron,
 .link-on-colored-bg.link-external,
+.link-on-colored-bg.link-expand,
 .link-on-colored-bg :is(.link, .icon-link, .link-chevron,
-.link-external, a) {
+.link-external,
+.link-expand, a) {
   --bs-link-color: var(--bs-link-mono-color-content-enabled);
   --bs-link-chevron-color: var(--bs-link-color);
 }
 .colored-bg.link:hover, .colored-bg.icon-link:hover, .colored-bg.link-chevron:hover,
 .colored-bg.link-external:hover,
+.colored-bg.link-expand:hover,
 .colored-bg :is(.link, .icon-link, .link-chevron,
-.link-external, a):hover,
+.link-external,
+.link-expand, a):hover,
 .link-on-colored-bg.link:hover,
 .link-on-colored-bg.icon-link:hover,
 .link-on-colored-bg.link-chevron:hover,
 .link-on-colored-bg.link-external:hover,
+.link-on-colored-bg.link-expand:hover,
 .link-on-colored-bg :is(.link, .icon-link, .link-chevron,
-.link-external, a):hover {
+.link-external,
+.link-expand, a):hover {
   --bs-link-color: var(--bs-link-mono-color-content-hover);
 }
 .colored-bg.link:focus-visible, .colored-bg.icon-link:focus-visible, .colored-bg.link-chevron:focus-visible,
 .colored-bg.link-external:focus-visible,
+.colored-bg.link-expand:focus-visible,
 .colored-bg :is(.link, .icon-link, .link-chevron,
-.link-external, a):focus-visible,
+.link-external,
+.link-expand, a):focus-visible,
 .link-on-colored-bg.link:focus-visible,
 .link-on-colored-bg.icon-link:focus-visible,
 .link-on-colored-bg.link-chevron:focus-visible,
 .link-on-colored-bg.link-external:focus-visible,
+.link-on-colored-bg.link-expand:focus-visible,
 .link-on-colored-bg :is(.link, .icon-link, .link-chevron,
-.link-external, a):focus-visible {
+.link-external,
+.link-expand, a):focus-visible {
   --bs-link-color: var(--bs-link-mono-color-content-focus);
 }
 .colored-bg.link:active, .colored-bg.icon-link:active, .colored-bg.link-chevron:active,
 .colored-bg.link-external:active,
+.colored-bg.link-expand:active,
 .colored-bg :is(.link, .icon-link, .link-chevron,
-.link-external, a):active,
+.link-external,
+.link-expand, a):active,
 .link-on-colored-bg.link:active,
 .link-on-colored-bg.icon-link:active,
 .link-on-colored-bg.link-chevron:active,
 .link-on-colored-bg.link-external:active,
+.link-on-colored-bg.link-expand:active,
 .link-on-colored-bg :is(.link, .icon-link, .link-chevron,
-.link-external, a):active {
+.link-external,
+.link-expand, a):active {
   --bs-link-color: var(--bs-link-mono-color-content-pressed);
 }
 .colored-bg.link[aria-disabled=true], .colored-bg[aria-disabled=true].icon-link, .colored-bg[aria-disabled=true].link-chevron,
 .colored-bg[aria-disabled=true].link-external,
+.colored-bg[aria-disabled=true].link-expand, .colored-bg.link:disabled, .colored-bg.icon-link:disabled, .colored-bg.link-chevron:disabled,
+.colored-bg.link-external:disabled,
+.colored-bg.link-expand:disabled,
 .colored-bg :is(.link, .icon-link, .link-chevron,
-.link-external, a)[aria-disabled=true],
+.link-external,
+.link-expand, a)[aria-disabled=true],
+.colored-bg :is(.link, .icon-link, .link-chevron,
+.link-external,
+.link-expand, a):disabled,
 .link-on-colored-bg.link[aria-disabled=true],
 .link-on-colored-bg[aria-disabled=true].icon-link,
 .link-on-colored-bg[aria-disabled=true].link-chevron,
 .link-on-colored-bg[aria-disabled=true].link-external,
+.link-on-colored-bg[aria-disabled=true].link-expand,
+.link-on-colored-bg.link:disabled,
+.link-on-colored-bg.icon-link:disabled,
+.link-on-colored-bg.link-chevron:disabled,
+.link-on-colored-bg.link-external:disabled,
+.link-on-colored-bg.link-expand:disabled,
 .link-on-colored-bg :is(.link, .icon-link, .link-chevron,
-.link-external, a)[aria-disabled=true] {
+.link-external,
+.link-expand, a)[aria-disabled=true],
+.link-on-colored-bg :is(.link, .icon-link, .link-chevron,
+.link-external,
+.link-expand, a):disabled {
   --bs-link-color: var(--bs-link-mono-color-content-disabled);
 }
 
@@ -8148,7 +8228,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-btn-padding-start: 12px;
   --bs-btn-padding-end: 12px;
   --bs-btn-padding-y: 12px;
-  --bs-btn-icon-gap: 0;
   --bs-btn-icon-size: 1.5rem;
   max-height: 48px;
 }
@@ -8174,7 +8253,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-btn-padding-start: 10px;
   --bs-btn-padding-end: 10px;
   --bs-btn-padding-y: 10px;
-  --bs-btn-icon-gap: 0;
   --bs-btn-icon-size: 1.25rem;
   max-height: 40px;
 }
@@ -8387,19 +8465,37 @@ ol.bullet-list > li > ol > li > ol > li::before {
   mask-image: var(--bs-btn-previous-icon);
 }
 
-.btn-next {
+.btn-next,
+.btn-expand {
   --bs-btn-padding-start: 28px;
   --bs-btn-padding-end: 16px;
   --bs-btn-icon-gap: 6px;
 }
-.btn-next::after {
+.btn-next::after,
+.btn-expand::after {
   content: "";
   -webkit-mask-image: var(--bs-breadcrumb-divider-icon);
   mask-image: var(--bs-breadcrumb-divider-icon);
 }
 
+.btn-expand.btn-icon, .btn-expand.btn-close {
+  --bs-btn-icon-gap: 4px;
+}
+
+.btn-expand::after {
+  --bs-btn-icon-size: 1.25rem;
+  -webkit-mask-image: var(--bs-btn-expanded-false-icon);
+  mask-image: var(--bs-btn-expanded-false-icon);
+}
+
+.btn-expand[aria-expanded=true]::after {
+  -webkit-mask-image: var(--bs-btn-expanded-true-icon);
+  mask-image: var(--bs-btn-expanded-true-icon);
+}
+
 .btn-previous::before,
-.btn-next::after {
+.btn-next::after,
+.btn-expand::after {
   flex-shrink: 0;
   width: var(--bs-btn-icon-size);
   height: var(--bs-btn-icon-size);
@@ -8696,7 +8792,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .dropdown-toggle {
-  --bs-btn-padding-x: 0.5rem;
   white-space: nowrap;
 }
 .dropdown-toggle::after {
@@ -8719,44 +8814,44 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-dropdown-min-width: 10rem;
   --bs-dropdown-padding-y: 0;
   --bs-dropdown-spacer: 0;
-  --bs-dropdown-font-size: var(--bs-font-size-body-medium);
-  --bs-dropdown-line-height: var(--bs-font-line-height-body-medium);
-  --bs-dropdown-color: var(--bs-body-color);
-  --bs-dropdown-bg: var(--bs-body-bg);
+  --bs-dropdown-color: var(--bs-color-content-default);
+  --bs-dropdown-bg: var(--bs-color-overlay-dropdown);
   --bs-dropdown-border-color: var(--bs-color-border-default);
   --bs-dropdown-border-radius: var(--bs-border-radius);
-  --bs-dropdown-border-width: var(--bs-border-width);
-  --bs-dropdown-inner-border-radius: 0;
+  --bs-dropdown-border-width: 0px;
+  --bs-dropdown-inner-border-radius: calc(var(--bs-border-radius) - 0px);
   --bs-dropdown-divider-bg: var(--bs-color-border-default);
-  --bs-dropdown-divider-margin-y: 0.25rem;
-  --bs-dropdown-box-shadow: var(--bs-box-shadow);
+  --bs-dropdown-divider-margin-y: 0;
+  --bs-dropdown-box-shadow: 0 2px 3px 0 var(--bs-elevation-color-elevated);
   --bs-dropdown-link-color: ;
   --bs-dropdown-link-hover-color: ;
-  --bs-dropdown-link-hover-bg: var(--bs-secondary-bg);
+  --bs-dropdown-link-hover-bg: var(--bs-color-action-support-hover);
   --bs-dropdown-link-active-color: ;
-  --bs-dropdown-link-active-bg: var(--bs-color-action-primary-pressed);
+  --bs-dropdown-link-active-bg: var(--bs-color-action-support-pressed);
   --bs-dropdown-link-disabled-color: var(--bs-color-content-disabled);
-  --bs-dropdown-item-padding-x: 0.5rem;
-  --bs-dropdown-item-padding-y: 0.5rem;
-  --bs-dropdown-item-font-weight: 700;
-  --bs-dropdown-header-color: ;
-  --bs-dropdown-header-padding-x: 0.5rem;
-  --bs-dropdown-header-padding-y: 1rem;
+  --bs-dropdown-item-padding-x: 16px;
+  --bs-dropdown-item-padding-y: 12px;
+  --bs-dropdown-header-color: var(--bs-color-content-muted);
+  --bs-dropdown-header-padding-x: 12px;
+  --bs-dropdown-header-padding-y: 12px;
   position: absolute;
   z-index: var(--bs-dropdown-zindex);
   display: none;
   min-width: var(--bs-dropdown-min-width);
-  padding: var(--bs-dropdown-padding-y) var(--bs-dropdown-padding-y);
+  padding: var(--bs-dropdown-padding-y) 0;
   margin: 0;
-  font-size: var(--bs-dropdown-font-size);
-  line-height: var(--bs-dropdown-line-height);
   color: var(--bs-dropdown-color);
   text-align: left;
   list-style: none;
   background-color: var(--bs-dropdown-bg);
-  background-clip: padding-box;
   border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
+  max-width: var(--bs-font-max-width-label-large);
+  font-size: var(--bs-font-size-label-large);
+  line-height: var(--bs-font-line-height-label-large);
+  /* rtl:remove */
+  letter-spacing: var(--bs-font-letter-spacing-label-large);
   border-radius: var(--bs-dropdown-border-radius);
+  box-shadow: var(--bs-dropdown-box-shadow);
 }
 .dropdown-menu[data-bs-popper] {
   top: 100%;
@@ -8994,16 +9089,16 @@ ol.bullet-list > li > ol > li > ol > li::before {
   height: 0;
   margin: var(--bs-dropdown-divider-margin-y) 0;
   overflow: hidden;
-  border-top: var(--bs-dropdown-border-width) solid var(--bs-dropdown-divider-bg);
+  border-top: var(--bs-border-width) solid var(--bs-dropdown-divider-bg);
   opacity: 1;
 }
 
 .dropdown-item {
   display: block;
   width: 100%;
-  padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x) calc(var(--bs-dropdown-item-padding-y) + 0.125rem);
+  padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
   clear: both;
-  font-weight: var(--bs-dropdown-item-font-weight);
+  font-weight: 400;
   color: var(--bs-dropdown-link-color);
   text-align: inherit;
   text-decoration: none;
@@ -9039,7 +9134,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   display: block;
   padding: var(--bs-dropdown-header-padding-y) var(--bs-dropdown-header-padding-x);
   margin-bottom: 0;
-  font-size: var(--bs-font-size-body-small);
+  font-weight: 500;
   color: var(--bs-dropdown-header-color);
   white-space: nowrap;
 }
@@ -9048,21 +9143,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   display: block;
   padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
   color: var(--bs-dropdown-link-color);
-}
-
-.dropdown-menu-dark {
-  --bs-dropdown-color: #fff;
-  --bs-dropdown-bg: #000;
-  --bs-dropdown-border-color: #333;
-  --bs-dropdown-box-shadow: ;
-  --bs-dropdown-link-color: #fff;
-  --bs-dropdown-link-hover-color: #fff;
-  --bs-dropdown-divider-bg: #333;
-  --bs-dropdown-link-hover-bg: #333;
-  --bs-dropdown-link-active-color: #000;
-  --bs-dropdown-link-active-bg: #fff;
-  --bs-dropdown-link-disabled-color: #333;
-  --bs-dropdown-header-color: #fff;
 }
 
 .btn-group,
@@ -9501,7 +9581,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   .navbar .dropdown .dropdown-menu {
     --bs-dropdown-font-size: var(--bs-font-size-body-small);
     --bs-dropdown-line-height: var(--bs-font-line-height-body-small);
-    --bs-dropdown-item-padding-y: 0.5625rem;
+    --bs-dropdown-item-padding-y: 12px;
   }
 }
 
@@ -11719,7 +11799,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
   padding-right: 0;
 }
 .alert-message:has(.alert-container > .link, .alert-container > .link-chevron,
-.alert-container > .link-external, .alert-container > .icon-link) {
+.alert-container > .link-external,
+.alert-container > .link-expand, .alert-container > .icon-link) {
   min-height: 100px;
 }
 .alert-message .btn-close {
@@ -14267,7 +14348,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
   }
 }
 .skeleton, .placeholder, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .item), [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .link, .link-chevron,
-.link-external, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input) {
+.link-external,
+.link-expand, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input) {
   position: relative;
   height: var(--bs-skeleton-height);
   overflow: hidden;
@@ -14276,12 +14358,15 @@ ol.bullet-list > li > ol > li > ol > li::before {
   border: 0;
 }
 .skeleton > *, .placeholder > *, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .item) > *, [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .link, .link-chevron,
-.link-external, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input) > * {
+.link-external,
+.link-expand, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input) > * {
   visibility: hidden;
 }
 .skeleton::before, .placeholder::before, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .item)::before, [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .link, .link-chevron,
-.link-external, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input)::before, .skeleton::after, .placeholder::after, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .item)::after, [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .link, .link-chevron,
-.link-external, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input)::after {
+.link-external,
+.link-expand, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input)::before, .skeleton::after, .placeholder::after, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .item)::after, [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .link, .link-chevron,
+.link-external,
+.link-expand, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input)::after {
   all: unset;
   position: absolute;
   inset: var(--bs-skeleton-margin-block, 4px) 0;
@@ -14290,7 +14375,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
   content: "";
 }
 .skeleton::before, .placeholder::before, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .item)::before, [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .link, .link-chevron,
-.link-external, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input)::before {
+.link-external,
+.link-expand, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input)::before {
   width: unset !important;
   height: unset !important;
   background-color: var(--bs-color-opacity-lowest) !important;
@@ -14298,14 +14384,16 @@ ol.bullet-list > li > ol > li > ol > li::before {
   mask: unset !important;
 }
 .skeleton::after, .placeholder::after, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .item)::after, [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .link, .link-chevron,
-.link-external, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input)::after {
+.link-external,
+.link-expand, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input)::after {
   background: linear-gradient(270deg, var(--bs-color-opacity-transparent) 3%, var(--bs-color-opacity-lower) 47%, var(--bs-color-opacity-transparent) 97%);
   transform: translate3d(-100%, 0, 0);
   animation: skeleton-wave 1.25s 2s ease-in-out infinite;
 }
 
 [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .link, .link-chevron,
-.link-external, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input) {
+.link-external,
+.link-expand, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input) {
   --bs-skeleton-margin-block: 0;
 }
 .skeleton-no-margins {
