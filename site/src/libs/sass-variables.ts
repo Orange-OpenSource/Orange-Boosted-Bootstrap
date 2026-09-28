@@ -10,11 +10,14 @@ export interface IDeclaration {
 }
 
 const options = {
-  inputFiles: [`packages/${getConfig().brand}/scss/tokens/_raw.scss`, `packages/${getConfig().brand}/scss/tokens/_semantic.scss`],
+  inputFiles: [
+    `packages/${getConfig().brand}/scss/tokens/_raw.scss`,
+    `packages/${getConfig().brand}/scss/tokens/_semantic.scss`
+  ],
   includePaths: []
 }
 
-export const allTokens:IDeclaration[] = exporter(options).getArray()
+export const allTokens: IDeclaration[] = exporter(options).getArray()
 
 /**
  * This function returns the current theme depending on the parameter passed (light, dark, root, root-inverted). You need to use a name containing 'modes-on' and it should exist in the _semantic.scss file.
@@ -22,7 +25,9 @@ export const allTokens:IDeclaration[] = exporter(options).getArray()
  * @returns the current theme (light, dark, root, root-inverted) for the chosen background
  */
 export const getMode = (regex: string) => {
-  const modes = allTokens.filter((token: IDeclaration) => token.name.match(regex)).map((token: IDeclaration) => token.compiledValue)
+  const modes = allTokens
+    .filter((token: IDeclaration) => token.name.match(regex))
+    .map((token: IDeclaration) => token.compiledValue)
   const theme = modes[0].includes('dark')
     ? modes[1].includes('light')
       ? 'root'
@@ -39,11 +44,11 @@ export const getMode = (regex: string) => {
  * @returns boolean
  */
 export const hasToken = (searchToken: string) => {
-  return allTokens.some((token: IDeclaration) => token.name === searchToken);
+  return allTokens.some((token: IDeclaration) => token.name === searchToken)
 }
 
 export const getTokenValue = (name: string) => {
   const token = allTokens.find((token: IDeclaration) => token.name === name)
-  if(!token) throw new Error(`Token not found: ${name}`)
+  if (!token) throw new Error(`Token not found: ${name}`)
   return token.compiledValue
 }

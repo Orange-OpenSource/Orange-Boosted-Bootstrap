@@ -15,7 +15,7 @@ Add or remove box-shadow using semantic elevation classes.
 <div class="shadow-sticky">Sticky shadow</div>
 ```
 
-> **Breaking change (v1.4.0+):** `.shadow-default` has been removed in favor of `.shadow-elevated`.
+> **Breaking change (v1.4.0+):** `.shadow-default` has been deprecated in favor of `.shadow-elevated`.
 
 ## Bootstrap compatibility classes
 

@@ -85,6 +85,9 @@ export const ob1Replacements = [
     link: 'https://web.unified-design-system.orange.com/docs/components/divider'
   })],
 
+  // Dropdown
+  [...warnForClass('ob1-link-arrow\\s+down', { link: 'https://web.unified-design-system.orange.com/docs/components/dropdown' })],
+
   // Form
   [
     ...warnForClass('ob1-form-group', {

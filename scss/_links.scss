@@ -39,7 +39,8 @@
 }
 
 .link-chevron,
-.link-external {
+.link-external,
+.link-expand {
   --#{$prefix}link-chevron-gap: #{$ouds-link-space-column-gap-chevron-default};
 
   // Extend for Boosted compatibility in which .link-chevron can be used without .link
@@ -64,7 +65,8 @@
     --#{$prefix}link-chevron-color: #{$ouds-link-color-content-pressed};
   }
 
-  &[aria-disabled="true"] {
+  &[aria-disabled="true"],
+  &:disabled {
     --#{$prefix}link-chevron-color: #{$ouds-color-action-disabled};
   }
 }
@@ -114,6 +116,28 @@
   }
 }
 
+.link-expand {
+  display: inline-flex;
+  gap: var(--#{$prefix}link-chevron-gap);
+
+  &::after {
+    flex-shrink: 0;
+    width: var(--#{$prefix}link-icon-size);
+    height: var(--#{$prefix}link-icon-size);
+    content: "";
+    background-color: var(--#{$prefix}link-chevron-color, $ouds-link-color-chevron-enabled);
+    mask-image: $link-expanded-false-icon;
+  }
+
+  &[aria-expanded="true"]::after {
+    mask-image: $link-expanded-true-icon;
+  }
+
+  &.link-reverse::after {
+    order: -1;
+  }
+}
+
 .colored-bg, // @deprecated, will be removed in v1.6.0, use "link-on-colored-bg" instead https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3742
 .link-on-colored-bg {
   &.link,
@@ -133,7 +157,8 @@
       --#{$prefix}link-color: #{$ouds-link-mono-color-content-pressed}; // OUDS mod
     }
 
-    &[aria-disabled="true"] {
+    &[aria-disabled="true"],
+    &:disabled {
       --#{$prefix}link-color: #{$ouds-link-mono-color-content-disabled}; // OUDS mod
     }
   }
