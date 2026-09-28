@@ -144,14 +144,14 @@ export const componentsDetails: ComponentCardData[] = [
     link: 'modals#fullscreen-dialog',
     category: 'Dialog',
     snippet: `
-      <div class="modal-base modal-fullscreen-dialog position-relative h-100 w-100" open style="transition: unset">
+      <dialog class="modal-base modal-fullscreen-dialog position-relative h-100 w-100" open style="transition: unset">
         <div class="modal-header">
           <h3 class="modal-title">Title</h3>
           <button type="button" class="btn btn-close">
             <span class="visually-hidden">Close</span>
           </button>
         </div>
-      </div>`
+      </dialog>`
   },
   {
     name: 'Header',
