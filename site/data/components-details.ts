@@ -139,6 +139,21 @@ export const componentsDetails: ComponentCardData[] = [
       </footer>`
   },
   {
+    name: 'Fullscreen dialog',
+    slug: 'fullscreen-dialog-web',
+    link: 'modals#fullscreen-dialog',
+    category: 'Dialog',
+    snippet: `
+      <div class="modal-base modal-fullscreen-dialog position-relative h-100 w-100" open style="transition: unset">
+        <div class="modal-header">
+          <h3 class="modal-title">Title</h3>
+          <button type="button" class="btn btn-close">
+            <span class="visually-hidden">Close</span>
+          </button>
+        </div>
+      </div>`
+  },
+  {
     name: 'Header',
     category: 'Navigation',
     snippet: `
@@ -199,6 +214,21 @@ export const componentsDetails: ComponentCardData[] = [
     link: 'links',
     category: 'Navigation',
     snippet: `<a class="link" href="#">Label</a>`
+  },
+  {
+    name: 'Modal dialog',
+    slug: 'modal-dialog-web',
+    link: 'modals#modal-dialog',
+    category: 'Dialog',
+    snippet: `
+      <dialog class="modal-base modal-dialog w-75 h-75 position-relative" open style="transition: unset">
+        <div class="modal-header">
+          <h3 class="modal-title">Title</h3>
+          <button type="button" class="btn btn-close">
+            <span class="visually-hidden">Close</span>
+          </button>
+        </div>
+      </dialog>`
   },
   {
     name: 'Navigation card item',

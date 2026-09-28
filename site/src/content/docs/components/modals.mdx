@@ -13,6 +13,10 @@ types:
 
 import { getVersionedDocsPath } from '@libs/path'
 
+<Callout type="info">
+  You can find the OUDS design guidelines here: [modal dialog guidelines](https://r.orange.fr/r/S-ouds-doc-modal-dialog), [fullscreen dialog guidelines](https://r.orange.fr/r/S-ouds-doc-fullscreen-dialog).
+</Callout>
+
 ## Overview
 
 ### Component types
@@ -42,7 +46,7 @@ import { getVersionedDocsPath } from '@libs/path'
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
-          <div class="modal-base modal-fullscreen-dialog position-relative h-100">
+          <dialog class="modal-base modal-fullscreen-dialog position-relative h-100" open style="transition: unset">
             <div class="modal-header">
               <h3 class="modal-title">Title</h3>
               <button type="button" class="btn btn-close">
@@ -52,7 +56,7 @@ import { getVersionedDocsPath } from '@libs/path'
             <div class="modal-body">
               <p>Content.</p>
             </div>
-          </div>
+          </dialog>
         </div>
       </div>
       <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#fullscreen-dialog">Fullscreen dialog</a> is a dialog that occupies the entire viewport and does not use a backdrop.</div>
