@@ -253,7 +253,7 @@
     color: var(--bs-color-content-status-negative);
     content: "";
     background-color: currentcolor;
-    mask: var(--bs-error-icon) no-repeat center;
+    mask: var(--bs-alert-error-icon) no-repeat center;
   }
 }
 
