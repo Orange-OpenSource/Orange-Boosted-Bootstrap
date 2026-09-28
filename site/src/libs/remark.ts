@@ -100,10 +100,13 @@ export const remarkBsComp: Plugin<[], Root> = function () {
       switch (node.type) {
         case 'text': {
           if (node.value.match(compRegExp)) {
-            parent.children = [{
-              type: 'html',
-              value: getComponentSVG('hl-small-icon me-scaled-2xsmall mb-xsmall')
-            }, ...parent.children]
+            parent.children = [
+              {
+                type: 'html',
+                value: getComponentSVG('hl-small-icon me-scaled-2xsmall mb-xsmall')
+              },
+              ...parent.children
+            ]
             node.value = replaceRegexInText(node.value, compRegExp)
           }
           break
@@ -124,10 +127,13 @@ export const remarkBsVersionLink: Plugin<[], Root> = function () {
           const regexMatch = node.value.match(versionLinkRegExp)
           if (regexMatch) {
             const version = node.value.replace(' ' + regexMatch[0], '')
-            parent.children = [...parent.children, {
-              type: 'html',
-              value: getVersionLink(version)
-            }]
+            parent.children = [
+              ...parent.children,
+              {
+                type: 'html',
+                value: getVersionLink(version)
+              }
+            ]
             node.value = replaceRegexInText(node.value, versionLinkRegExp)
           }
           break
