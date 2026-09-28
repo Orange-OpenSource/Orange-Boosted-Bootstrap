@@ -93,6 +93,10 @@
   overflow: hidden;
   color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
   @include border-radius(var(--#{$prefix}list-item-leading-container-border-radius, $ouds-list-item-border-radius-media), var(--#{$prefix}list-item-leading-container-border-radius, $ouds-list-item-border-radius-media));
+
+  &:has(svg, .icon, .item-icon, video) {
+    height: var(--#{$prefix}list-item-leading-container-icon-size, px-to-rem($ouds-size-icon-with-label-large-size-medium));
+  }
 }
 
 .item-text-container {
@@ -117,8 +121,13 @@
   white-space: nowrap;
   @include border-radius(var(--#{$prefix}list-item-trailing-container-border-radius, $ouds-list-item-border-radius-media), var(--#{$prefix}list-item-trailing-container-border-radius, $ouds-list-item-border-radius-media));
 
-  &:has(svg, img, .icon, .item-icon, video) {
+  &:has(img, video) {
     height: var(--#{$prefix}list-item-trailing-container-size, px-to-rem($ouds-list-item-size-asset-medium));
+    aspect-ratio: 1;
+  }
+
+  &:has(svg, .icon, .item-icon, video) {
+    height: var(--#{$prefix}list-item-trailing-container-icon-size, px-to-rem($ouds-size-icon-with-label-large-size-medium));
     aspect-ratio: 1;
   }
 
@@ -285,6 +294,7 @@
 
 .item-leading-large {
   --#{$prefix}list-item-leading-container-size: #{px-to-rem($ouds-list-item-size-asset-large)};
+  --#{$prefix}list-item-leading-container-icon-size: #{px-to-rem($ouds-size-icon-with-label-large-size-xlarge)};
 }
 
 .item-leading-xlarge {
@@ -339,6 +349,9 @@
   --#{$prefix}list-item-container-row-gap: 0;
   --#{$prefix}list-item-text-container-margin-top: #{$ouds-list-item-space-padding-block-top-alignment-top-text-container-small};
   --#{$prefix}list-item-leading-container-size: #{px-to-rem($ouds-list-item-size-asset-small)};
+  --#{$prefix}list-item-trailing-container-size: #{px-to-rem($ouds-list-item-size-asset-small)};
+  --#{$prefix}list-item-leading-container-icon-size: #{px-to-rem($ouds-size-icon-with-label-large-size-small)};
+  --#{$prefix}list-item-leading-container-icon-size: #{px-to-rem($ouds-size-icon-with-label-large-size-small)};
 }
 
 

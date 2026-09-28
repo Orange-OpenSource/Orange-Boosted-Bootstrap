@@ -9903,6 +9903,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
   color: var(--bs-list-item-disabled-color, var(--bs-color-content-default));
   border-radius: var(--bs-list-item-leading-container-border-radius, 0px);
 }
+.item-leading-container:has(svg, .icon, .item-icon, video) {
+  height: var(--bs-list-item-leading-container-icon-size, 1.75rem);
+}
 
 .item-text-container {
   display: flex;
@@ -9926,8 +9929,12 @@ ol.bullet-list > li > ol > li > ol > li::before {
   white-space: nowrap;
   border-radius: var(--bs-list-item-trailing-container-border-radius, 0px);
 }
-.item-trailing-container:has(svg, img, .icon, .item-icon, video) {
+.item-trailing-container:has(img, video) {
   height: var(--bs-list-item-trailing-container-size, 1.75rem);
+  aspect-ratio: 1;
+}
+.item-trailing-container:has(svg, .icon, .item-icon, video) {
+  height: var(--bs-list-item-trailing-container-icon-size, 1.75rem);
   aspect-ratio: 1;
 }
 .item-trailing-container:has(.item-label) {
@@ -10089,6 +10096,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .item-leading-large {
   --bs-list-item-leading-container-size: 2.5rem;
+  --bs-list-item-leading-container-icon-size: 2.25rem;
 }
 
 .item-leading-xlarge {
@@ -10141,6 +10149,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-list-item-container-row-gap: 0;
   --bs-list-item-text-container-margin-top: 0px;
   --bs-list-item-leading-container-size: 1.5rem;
+  --bs-list-item-trailing-container-size: 1.5rem;
+  --bs-list-item-leading-container-icon-size: 1.5rem;
+  --bs-list-item-leading-container-icon-size: 1.5rem;
 }
 
 .item-navigation .item-container {
