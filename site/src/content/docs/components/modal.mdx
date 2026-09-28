@@ -269,9 +269,13 @@ The following variants use the same structure and behavior for modal dialog and 
 
 ### Sticky actions
 
-Add `.modal-sticky-actions` to the `.modal` `<dialog>` to show the actions buttons as fixed on the modal bottom. The content will scroll independently of the action buttons, this ensures that primary actions remain continuously visible and accessible, especially when the modal contains a large amount of content. For modal dialog, the [full height variant](#full-height) is automatically applied.
+Move the `.modal-footer` outside of the `.modal-body` to show the actions buttons as fixed on the modal bottom. The content will scroll independently of the action buttons, this ensures that primary actions remain continuously visible and accessible, especially when the modal contains a large amount of content. For modal dialog, the [full height variant](#full-height) is automatically applied.
 
-<Example buttonLabel="dialog modal sticky actions" code={`<dialog id="modalDialogStickyActions" class="modal-base modal-dialog modal-sticky-actions" aria-label="Demo modal" closedby="any">
+<Callout type="warning">
+  The DOM structure is different from the normal case, please make sure to place the `.modal-footer` outside of the `.modal-body`.
+</Callout>
+
+<Example buttonLabel="dialog modal sticky actions" code={`<dialog id="modalDialogStickyActions" class="modal-base modal-dialog" aria-label="Demo modal" closedby="any">
     <div class="modal-header">
       <h3 class="modal-title">Modal title</h3>
       <button type="button" class="btn btn-close" commandfor="modalDialogStickyActions" command="close">
@@ -422,7 +426,7 @@ The Description option displays supporting text below the title.It provides addi
     Open modal with no description
   </button>`} />
 
-### Actions
+### Actions layout
 
 There can be up to three actions buttons on the modal. These buttons typically include a primary action, a secondary action, and an optional tertiary action, allowing users to confirm, cancel, or perform additional tasks related to the modal's content.
 
@@ -493,6 +497,33 @@ By default the action buttons will stack vertically on smaller screens and align
 
   <button type="button" class="btn btn-default" commandfor="modalDialogAlignment" command="show-modal">
     Open modal with alignment
+  </button>`} />
+
+#### Complex layouts
+
+For more complex uses cases you may need to add containers in the `.modal-footer` to better control the layout and alignment of the action buttons.
+
+<Example buttonLabel="dialog modal complex actions layout" code={`<dialog id="modalDialogComplexActionsLayout" class="modal-base modal-dialog modal-fixed-height" aria-label="Demo modal" closedby="any">
+    <div class="modal-header">
+      <h3 class="modal-title">Modal title</h3>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
+      <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young.</p>
+    </div>
+    <div class="modal-footer">
+      <div class="d-flex flex-column md:flex-row md:flex-row-reverse w-100 gap-scaled-small">
+        <div class="hstack flex-row-reverse gap-scaled-small">
+          <button type="button" class="btn btn-strong flex-fill" commandfor="modalDialogComplexActionsLayout" command="close">Confirm</button>
+          <button type="button" class="btn btn-default flex-fill" commandfor="modalDialogComplexActionsLayout" command="close">Abort</button>
+        </div>
+        <a href="#" class="link justify-content-center mx-auto md:ms-none md:me-auto flex-shrink-0">More Info</a>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="modalDialogComplexActionsLayout" command="show-modal">
+    Open modal with complex actions layout
   </button>`} />
 
 ### Functional

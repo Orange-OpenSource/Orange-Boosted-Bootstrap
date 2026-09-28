@@ -42,7 +42,7 @@
     overscroll-behavior: contain;
   }
 
-  &.modal-sticky-actions {
+  &:has(> .modal-footer) {
     padding-block-end: 0;
 
     .modal-footer {
@@ -256,7 +256,7 @@
     padding-block-end: 0;
 
     .modal-footer {
-      padding-inline: none;
+      padding-inline: 0;
     }
 
     > :nth-last-child(2) {
