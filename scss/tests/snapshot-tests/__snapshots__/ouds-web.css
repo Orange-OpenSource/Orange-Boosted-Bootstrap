@@ -10270,8 +10270,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-modal-border-radius: 12px;
 }
 
-.modal-fullscreen-dialog,
-.modal-dialog {
+.modal-base {
   --bs-modal-dialog-space-column-gap-previous-title: 16px;
   --bs-modal-dialog-space-inset-close-button: 12px;
   --bs-modal-dialog-space-padding-block-bottom-body-footer: 12px;
@@ -10281,34 +10280,36 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-modal-dialog-space-padding-block-top: 20px;
   --bs-modal-dialog-space-padding-block-top-footer: 24px;
   --bs-modal-dialog-space-padding-inline: 24px;
+  --bs-modal-max-height: unset;
+  --bs-modal-width: 100vw;
+  --bs-modal-height: 100vh;
+  --bs-modal-margin: 0;
   flex-direction: column;
+  width: var(--bs-modal-width);
   max-width: unset;
-  max-height: unset;
+  height: var(--bs-modal-height);
+  max-height: var(--bs-modal-max-height);
   padding-block: var(--bs-modal-dialog-space-padding-block-top) var(--bs-modal-dialog-space-padding-block-bottom);
+  margin: var(--bs-modal-margin);
   overscroll-behavior: contain;
   background-color: var(--bs-color-overlay-modal-sheet);
 }
-.modal-fullscreen-dialog:is(:open, [open]),
-.modal-dialog:is(:open, [open]) {
+.modal-base:is(:open, [open]) {
   display: flex;
 }
-.modal-fullscreen-dialog::backdrop,
-.modal-dialog::backdrop {
+.modal-base::backdrop {
   overflow: hidden;
   overscroll-behavior: contain;
 }
-.modal-fullscreen-dialog.modal-sticky-actions,
-.modal-dialog.modal-sticky-actions {
+.modal-base:has(> .modal-footer) {
   padding-block-end: 0;
 }
-.modal-fullscreen-dialog.modal-sticky-actions .modal-footer,
-.modal-dialog.modal-sticky-actions .modal-footer {
-  padding: var(--bs-modal-dialog-space-padding-block-footer-sticky) var(--bs-modal-dialog-space-padding-inline);
+.modal-base:has(> .modal-footer) .modal-footer {
+  padding-block: var(--bs-modal-dialog-space-padding-block-footer-sticky);
   border-top: 1px solid var(--bs-color-border-muted);
 }
 @media (min-width: 736px) {
-  .modal-fullscreen-dialog,
-  .modal-dialog {
+  .modal-base {
     --bs-modal-dialog-space-column-gap-previous-title: 20px;
     --bs-modal-dialog-space-inset-close-button: 16px;
     --bs-modal-dialog-space-padding-block-bottom-body-footer: 4px;
@@ -10321,8 +10322,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   }
 }
 @media (min-width: 1320px) {
-  .modal-fullscreen-dialog,
-  .modal-dialog {
+  .modal-base {
     --bs-modal-dialog-space-column-gap-previous-title: 24px;
     --bs-modal-dialog-space-inset-close-button: 24px;
     --bs-modal-dialog-space-padding-block-bottom-body-footer: 8px;
@@ -10340,15 +10340,16 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-modal-dialog-space-padding-block-bottom: var(--bs-space-scaled-xlarge);
   --bs-modal-dialog-space-padding-block-top: var(--bs-space-scaled-xlarge);
   --bs-modal-dialog-space-padding-inline: var(--bs-grid-margin);
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
+  --bs-modal-width: 100vw;
+  --bs-modal-height: 100vh;
+  --bs-modal-margin: 0;
 }
 
 .modal-dialog {
-  width: calc(100vw - 32px);
-  max-height: calc(100vh - 32px);
-  margin: auto 16px;
+  --bs-modal-max-height: calc(100vh - 2 * 16px);
+  --bs-modal-width: calc(100vw - 2 * 16px);
+  --bs-modal-height: fit-content;
+  --bs-modal-margin: auto 16px;
   box-shadow: 0 8px 8px -2px var(--bs-elevation-color-emphasized);
   opacity: 0;
   transform: translateY(-3rem);
@@ -10393,8 +10394,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
 @media (min-width: 480px) {
   .modal-dialog {
     --bs-modal-column-count: 10;
+    --bs-modal-max-height: 90vh;
     width: calc(100vw * var(--bs-modal-column-count) / 12);
-    max-height: 90vh;
     margin: auto;
   }
 }
@@ -10405,7 +10406,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-modal-dialog-space-padding-block-top-body: 16px;
   --bs-modal-dialog-space-padding-block-top-footer: 24px;
   --bs-modal-dialog-space-padding-inline: 24px;
-  max-height: 50vh;
+  --bs-modal-max-height: 50vh;
 }
 @media (min-width: 736px) {
   .modal-dialog.modal-small {
@@ -10422,7 +10423,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 @media (min-width: 1024px) {
   .modal-dialog.modal-small {
     --bs-modal-column-count: 6;
-    max-height: 60vh;
+    --bs-modal-max-height: 60vh;
   }
 }
 @media (min-width: 1320px) {
@@ -10439,7 +10440,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 @media (min-width: 1880px) {
   .modal-dialog.modal-small {
-    max-height: 50vh;
+    --bs-modal-max-height: 50vh;
   }
 }
 .modal-dialog.modal-small .modal-title {
@@ -10450,7 +10451,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   letter-spacing: var(--bs-font-letter-spacing-heading-small);
 }
 .modal-dialog.modal-fixed-height {
-  height: calc(100vh - 32px);
+  --bs-modal-height: var(--bs-modal-max-height);
 }
 .modal-dialog .modal-body * {
   max-width: 100%;
@@ -10515,7 +10516,10 @@ ol.bullet-list > li > ol > li > ol > li::before {
   margin-block-end: 0;
 }
 .modal-body:has(.modal-footer) {
-  margin-block-end: 0;
+  padding-block-end: 0;
+}
+.modal-body:has(.modal-footer) .modal-footer {
+  padding-inline: 0;
 }
 .modal-body:has(.modal-footer) > :nth-last-child(2) {
   margin-block-end: var(--bs-modal-dialog-space-padding-block-bottom-body-footer);
@@ -10529,6 +10533,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   gap: var(--bs-space-scaled-small);
   align-items: center;
   padding-block: var(--bs-modal-dialog-space-padding-block-top-footer) var(--bs-modal-dialog-space-padding-block-bottom-body-footer);
+  padding-inline: var(--bs-modal-dialog-space-padding-inline);
   background-color: var(--bs-color-overlay-modal-sheet);
 }
 .modal-footer > *:first-child:last-child {
