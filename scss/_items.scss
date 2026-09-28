@@ -307,6 +307,7 @@
 
 .item-trailing-large {
   --#{$prefix}list-item-trailing-container-size: #{px-to-rem($ouds-list-item-size-asset-large)};
+  --#{$prefix}list-item-trailing-container-icon-size: #{px-to-rem($ouds-size-icon-with-label-large-size-xlarge)};
 }
 
 .item-trailing-xlarge {

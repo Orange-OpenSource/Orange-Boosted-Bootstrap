@@ -12313,6 +12313,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .item-trailing-large {
   --bs-list-item-trailing-container-size: 2.5rem;
+  --bs-list-item-trailing-container-icon-size: 2.25rem;
 }
 
 .item-trailing-xlarge {
