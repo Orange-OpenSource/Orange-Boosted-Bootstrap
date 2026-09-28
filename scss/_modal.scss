@@ -7,8 +7,7 @@
   --#{$prefix}modal-border-radius: #{$ouds-modal-dialog-border-radius-rounded};
 }
 
-.modal-fullscreen-dialog,
-.modal-dialog {
+.modal-base {
   --#{$prefix}modal-dialog-space-column-gap-previous-title: #{$ouds-modal-dialog-space-column-gap-previous-title-mobile};
   --#{$prefix}modal-dialog-space-inset-close-button: #{$ouds-modal-dialog-space-inset-close-button-mobile};
   --#{$prefix}modal-dialog-space-padding-block-bottom-body-footer: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-mobile};
@@ -19,10 +18,18 @@
   --#{$prefix}modal-dialog-space-padding-block-top-footer: #{$ouds-modal-dialog-space-padding-block-top-footer-default-mobile};
   --#{$prefix}modal-dialog-space-padding-inline: #{$ouds-modal-dialog-space-padding-inline-mobile};
 
+  --#{$prefix}modal-max-height: unset;
+  --#{$prefix}modal-width: 100vw;
+  --#{$prefix}modal-height: 100vh;
+  --#{$prefix}modal-margin: 0;
+
   flex-direction: column; // cannot use grid because of Safari dialog limitations
+  width: var(--#{$prefix}modal-width);
   max-width: unset;
-  max-height: unset;
+  height: var(--#{$prefix}modal-height);
+  max-height: var(--#{$prefix}modal-max-height);
   padding-block: var(--#{$prefix}modal-dialog-space-padding-block-top) var(--#{$prefix}modal-dialog-space-padding-block-bottom);
+  margin: var(--#{$prefix}modal-margin);
   overscroll-behavior: contain;
   background-color: $ouds-color-overlay-modal-sheet;
 
@@ -39,7 +46,7 @@
     padding-block-end: 0;
 
     .modal-footer {
-      padding: var(--#{$prefix}modal-dialog-space-padding-block-footer-sticky) var(--#{$prefix}modal-dialog-space-padding-inline);
+      padding-block: var(--#{$prefix}modal-dialog-space-padding-block-footer-sticky);
       border-top: $ouds-border-width-default solid $ouds-color-border-muted;
     }
   }
@@ -70,20 +77,26 @@
   }
 }
 
-.modal-fullscreen-dialog {
+@mixin modal-fullscreen-dialog {
   --#{$prefix}modal-dialog-space-padding-block-bottom: var(--#{$prefix}space-scaled-xlarge);
   --#{$prefix}modal-dialog-space-padding-block-top: var(--#{$prefix}space-scaled-xlarge);
   --#{$prefix}modal-dialog-space-padding-inline: var(--#{$prefix}grid-margin);
 
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
+  --#{$prefix}modal-width: 100vw;
+  --#{$prefix}modal-height: 100vh;
+  --#{$prefix}modal-margin: 0;
 }
 
-.modal-dialog {
-  width: calc(100vw - 2 * $ouds-space-fixed-medium);
-  max-height: calc(100vh - 2 * $ouds-space-fixed-medium);
-  margin: auto $ouds-space-fixed-medium;
+.modal-fullscreen-dialog {
+  @include modal-fullscreen-dialog();
+}
+
+@mixin modal-dialog {
+  --#{$prefix}modal-max-height: calc(100vh - 2 * #{$ouds-space-fixed-medium});
+  --#{$prefix}modal-width: calc(100vw - 2 * #{$ouds-space-fixed-medium});
+  --#{$prefix}modal-height: fit-content;
+  --#{$prefix}modal-margin: auto #{$ouds-space-fixed-medium};
+
   box-shadow: $ouds-elevation-emphasized;
   opacity: 0;
   transform: translateY(-3rem);
@@ -115,9 +128,9 @@
 
   @include media-breakpoint-up(sm) {
     --#{$prefix}modal-column-count: 10;
-    width: calc(100vw * var(--#{$prefix}modal-column-count) / 12);
+    --#{$prefix}modal-max-height: 90vh;
 
-    max-height: 90vh;
+    width: calc(100vw * var(--#{$prefix}modal-column-count) / 12);
     margin: auto;
   }
 
@@ -128,8 +141,7 @@
     --#{$prefix}modal-dialog-space-padding-block-top-body: #{$ouds-modal-dialog-space-padding-block-top-body-small-mobile};
     --#{$prefix}modal-dialog-space-padding-block-top-footer: #{$ouds-modal-dialog-space-padding-block-top-footer-small-mobile};
     --#{$prefix}modal-dialog-space-padding-inline: #{$ouds-modal-dialog-space-padding-inline-mobile};
-
-    max-height: 50vh;
+    --#{$prefix}modal-max-height: 50vh;
 
     @include media-breakpoint-up(md) {
       --#{$prefix}modal-dialog-space-inset-close-button: #{$ouds-modal-dialog-space-inset-close-button-small-tablet};
@@ -144,8 +156,7 @@
 
     @include media-breakpoint-up(lg) {
       --#{$prefix}modal-column-count: 6;
-
-      max-height: 60vh;
+      --#{$prefix}modal-max-height: 60vh;
     }
 
     @include media-breakpoint-up(xl) {
@@ -160,7 +171,7 @@
     }
 
     @include media-breakpoint-up(3xl) {
-      max-height: 50vh;
+      --#{$prefix}modal-max-height: 50vh;
     }
 
     .modal-title {
@@ -169,7 +180,7 @@
   }
 
   &.modal-fixed-height {
-    height: calc(100vh - 2 * $ouds-space-fixed-medium);
+    --#{$prefix}modal-height: var(--#{$prefix}modal-max-height);
   }
 
   .modal-body {
@@ -177,6 +188,10 @@
       max-width: 100%;
     }
   }
+}
+
+.modal-dialog {
+  @include modal-dialog();
 }
 
 .modal-header {
@@ -238,7 +253,11 @@
   }
 
   &:has(.modal-footer) {
-    margin-block-end: 0;
+    padding-block-end: 0;
+
+    .modal-footer {
+      padding-inline: none;
+    }
 
     > :nth-last-child(2) {
       margin-block-end: var(--#{$prefix}modal-dialog-space-padding-block-bottom-body-footer);
@@ -254,6 +273,7 @@
   gap: var(--#{$prefix}space-scaled-small);
   align-items: center; // vertically center
   padding-block: var(--#{$prefix}modal-dialog-space-padding-block-top-footer) var(--#{$prefix}modal-dialog-space-padding-block-bottom-body-footer);
+  padding-inline: var(--#{$prefix}modal-dialog-space-padding-inline);
   background-color: $ouds-color-overlay-modal-sheet;
 
   > *:first-child:last-child {
