@@ -92,6 +92,41 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `<hr class="w-50" />`
   },
   {
+    name: 'Dropdown',
+    slug: 'dropdown',
+    link: 'dropdown',
+    category: 'Actions',
+    snippet: `
+      <ul class="dropdown-menu d-block">
+        <li><a class="dropdown-item active" href="#">Label</a></li>
+        <li><a class="dropdown-item" href="#">Label</a></li>
+      </ul>`
+  },
+  {
+    name: 'Expand button',
+    slug: 'expand-button',
+    link: 'buttons#expand-button',
+    category: 'Actions',
+    snippet: `
+      <div class="dropdown">
+        <button class="btn btn-default btn-expand" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Label
+        </button>
+      </div>`
+  },
+  {
+    name: 'Expand link',
+    slug: 'expand-link',
+    link: 'links#expand-link',
+    category: 'Navigation',
+    snippet: `
+      <div class="dropdown">
+        <button class="link link-expand" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Label
+        </button>
+      </div>`
+  },
+  {
     name: 'Filter chip',
     slug: 'filter-chip',
     link: 'chips#filter-chip',
@@ -168,15 +203,6 @@ export const componentsDetails: ComponentCardData[] = [
       </header>`
   },
   {
-    name: 'Icon',
-    category: 'Visual assets',
-    snippet: `
-      <svg class="text-status-accent decorative-small-icon" aria-hidden="true">
-        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-      </svg>`,
-    excludeFromVersioning: true
-  },
-  {
     name: 'Inline alert',
     slug: 'inline-alert',
     link: 'alerts#inline-alert',
@@ -199,6 +225,40 @@ export const componentsDetails: ComponentCardData[] = [
     link: 'links',
     category: 'Navigation',
     snippet: `<a class="link" href="#">Label</a>`
+  },
+  {
+    name: 'Navigation card item',
+    slug: 'navigation-card-item',
+    link: 'items#navigation-card-item',
+    category: 'Control',
+    snippet: `
+      <div class="item item-navigation w-75">
+        <div class="item-container">
+          <div class="item-content">
+            <div class="item-text-container">
+              <a href="#" class="item-label item-interactive">Label</a>
+            </div>
+          </div>
+        </div>
+      </div>`
+  },
+  {
+    name: 'Navigation list item',
+    slug: 'navigation-list-item',
+    link: 'items#navigation-list-item',
+    category: 'Control',
+    snippet: `
+      <ul class="item-list w-75">
+        <li class="item item-navigation">
+          <div class="item-container">
+            <div class="item-content">
+              <div class="item-text-container">
+                <a href="#" class="item-label item-interactive">Label</a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>`
   },
   {
     name: 'Navigation button',
@@ -274,6 +334,40 @@ export const componentsDetails: ComponentCardData[] = [
           <button class="chip-interactive">
             Label
           </button>
+        </li>
+      </ul>`
+  },
+  {
+    name: 'Static card item',
+    slug: 'static-card-item',
+    link: 'items#static-card-item',
+    category: 'Control',
+    snippet: `
+      <div class="item w-75">
+        <div class="item-container">
+          <div class="item-content">
+            <div class="item-text-container">
+              <p class="item-label">Label</p>
+            </div>
+          </div>
+        </div>
+      </div>`
+  },
+  {
+    name: 'Static list item',
+    slug: 'static-list-item',
+    link: 'items#static-list-item',
+    category: 'Control',
+    snippet: `
+      <ul class="item-list w-75">
+        <li class="item">
+          <div class="item-container">
+            <div class="item-content">
+              <div class="item-text-container">
+                <p class="item-label">Label</p>
+              </div>
+            </div>
+          </div>
         </li>
       </ul>`
   },

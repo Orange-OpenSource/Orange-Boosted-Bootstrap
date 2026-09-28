@@ -1,9 +1,9 @@
 ## Release v
 
+- [ ] Before the release, check that the skills are up to date with what is included in the release. [Update the skills if needed](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/wiki/Developer-guide#update-provided-skills).
 - [ ] `npm run release-version $current_version $next_version` to bump version number
   - then, if bumping a minor or major version:
     - [ ] Manually search and replace `$current_version` in all files, meaning changes should happen in:
-      - [ ] The style sheet loaded in `.storybook/preview-head.html`
       - [ ] `docs_version` in `config.yml` and other references to the previous version
       - [ ] Update the pixel tracker URL in all `packages/**/scss/_composite.scss`
       - [ ] `scss/docs.scss`

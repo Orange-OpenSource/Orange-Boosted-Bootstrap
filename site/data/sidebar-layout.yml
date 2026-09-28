@@ -1,5 +1,5 @@
 - title: Layout
-  icon: grid-fill
+  icon: display-grid
   icon_color: body-color
   pages:
     - title: Breakpoints

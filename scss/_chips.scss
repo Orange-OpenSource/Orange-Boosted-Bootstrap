@@ -133,6 +133,7 @@
   // Filter chip specific style for selected state
   input:checked ~ .chip-interactive,
   .chip-interactive[aria-pressed="true"],
+  .chip-interactive[aria-selected="true"],
   .chip-interactive:has(input:checked) {
     --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-enabled};
     --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-enabled};
@@ -170,6 +171,7 @@
 
   input:checked:focus-visible ~ .chip-interactive,
   .chip-interactive[aria-pressed="true"]:focus-visible,
+  .chip-interactive[aria-selected="true"]:focus-visible,
   .chip-interactive:has(input:checked:focus-visible) {
     --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-focus};
     --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-focus};
@@ -179,6 +181,7 @@
 
   input:checked:disabled ~ .chip-interactive,
   .chip-interactive[aria-pressed="true"]:disabled,
+  .chip-interactive[aria-selected="true"]:disabled,
   .chip-interactive:has(input:checked:disabled) {
     --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-disabled};
     --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-disabled};
