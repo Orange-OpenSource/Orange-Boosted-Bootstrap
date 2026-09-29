@@ -43,7 +43,7 @@
   align-items: center;
   width: 100%;
   padding: var(--#{$prefix}accordion-btn-padding-y) var(--#{$prefix}accordion-btn-padding-x);
-  @include font-size(var(--#{$prefix}accordion-btn-font-size)); // OUDS mod
+  font-size: var(--#{$prefix}accordion-btn-font-size); // OUDS mod
   font-weight: var(--#{$prefix}accordion-btn-font-weight); // OUDS mod
   line-height: var(--#{$prefix}accordion-btn-line-height); // OUDS mod
   color: var(--#{$prefix}accordion-btn-color);

@@ -1,0 +1,15 @@
+---
+/*
+ * Outputs a detail element, with the specified summary while keeping the content of the details uninterpreted
+ */
+interface Props {
+  summary: string
+}
+
+const { summary } = Astro.props
+---
+
+<details class="mt-medium mb-2xlarge">
+  <summary>{summary}</summary>
+  <slot />
+</details>

@@ -4,7 +4,7 @@
 
 .form-text {
   margin-top: $form-text-margin-top;
-  @include get-font-size("label-medium"); // OUDS mod: instead of @include font-size($form-text-font-size);
+  @include get-font-size("label-medium"); // OUDS mod: instead of font-size: $form-text-font-size;
   // OUDS mod: no font-style
   // OUDS mod: no font-weight
   color: $form-text-color;

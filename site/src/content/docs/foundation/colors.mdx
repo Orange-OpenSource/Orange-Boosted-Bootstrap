@@ -1,0 +1,237 @@
+---
+title: Colors
+description: OUDS Web’s colors reinforces our brand identity and ensures consistency across all websites.
+aliases:
+  - "/docs/customize/color-palette/"
+  - "/docs/foundation/color-palette/"
+  - "/docs/foundation/colors/"
+toc: true
+---
+
+This page lists all the colors available in OUDS Web and their usage, organized by their category. All colors are displayed in both light and dark modes for reference. However, they should be applied semantically using their respective utility classes or custom properties to ensure dynamic adaptation to the [color mode]([[docsref:/foundation/color-modes]]).
+
+## Background
+
+These colors are used for whole pages and structurally meaningful sections backgrounds.
+
+These colors can be used with [our background utilities]([[docsref:/utilities/background]]).
+
+<Callout type="info" title="Usage reference">
+  Please refer to the [background colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/t/b3d025a22f) for more information on usage.
+</Callout>
+
+<ColorTable
+  colorPrefix="ouds/color/bg/"
+  tokenRegexp={/\$ouds-color-bg-(?<colorName>.*)-light/}
+  getUsage={(colorName) => `.bg-${colorName}`} />
+
+## Surface
+
+These colors should be used as background for elements that are on another background.
+
+These colors can be used with [our background utilities]([[docsref:/utilities/background]]). Some of these surface colors have an opacity value and are designed to come on top of another color, we explain [how to achieve surface color superposition here]([[docsref:/utilities/background#multiple-backgrounds]]).
+
+<Callout type="info" title="Usage reference">
+  Please refer to the [surface colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/t/e89157f0cf) for more information on usage.
+</Callout>
+
+<ColorTable
+  colorPrefix="ouds/color/surface/"
+  tokenRegexp={/\$ouds-color-surface-((?!status|brand))(?<colorName>.*)-light/}
+  getUsage={(colorName) => `.bg-surface-${colorName}`} />
+
+<ColorTable
+  colorPrefix="ouds/color/surface/brand/"
+  tokenRegexp={/\$ouds-color-surface-brand-(?<colorName>.*)-light/}
+  getUsage={(colorName) => `.bg-surface-brand-${colorName}`} />
+
+### Status
+
+These surface colors are used specifically to indicate a status.
+
+Like other surface colors, they can be used with [our background utilities]([[docsref:/utilities/background]]).
+
+{
+  ['positive', 'info', 'warning', 'negative', 'accent'].map((status) => (
+    <ColorTable
+      colorPrefix={`ouds/color/surface/status/${status}/`}
+      tokenRegexp={new RegExp(`\\$ouds-color-surface-status-${status}-\(\?<colorName>\.\*\)-light`)}
+      getUsage={(colorName) => `.bg-surface-status-${status}-${colorName}`} />
+  ))
+}
+
+## Content
+
+These colors are used for informative but non-interactive content such as texts and icons.
+
+These colors can be used with [our text color utilities]([[docsref:/utilities/color]]).
+
+<Callout type="info" title="Usage reference">
+  Please refer to the [content colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/t/6d158c2daf) for more information on usage.
+</Callout>
+
+<ColorTable
+  colorPrefix="ouds/color/content/"
+  tokenRegexp={/\$ouds-color-content((?!-on|-status))-(?<colorName>.*)-light/}
+  getUsage={(colorName) => `.text-${colorName}`} />
+
+<ColorTable
+  colorPrefix="ouds/color/content/status/"
+  tokenRegexp={/\$ouds-color-content-status-(?<colorName>.*)-light/}
+  getUsage={(colorName) => `.text-status-${colorName}`} />
+
+### Content on other colors
+
+These content colors are used to guarantee maximum legibility for contents displayed on a background or surface color.
+
+<Callout type="info">
+  In the following lists we display an icon with the content color on their target background color.
+</Callout>
+
+<ColorTable
+  colorPrefix="ouds/color/content/on/brand/"
+  tokenRegexp={/\$ouds-color-content-on-(?<backdropColorName>brand-(?<colorName>.*))-light/}
+  getUsage={(colorName) => `.text-on-brand-${colorName}`} />
+
+{
+  ['positive', 'info', 'warning', 'negative', 'accent'].map((status) => (
+    <ColorTable
+      colorPrefix={`ouds/color/content/on/status/${status}/`}
+      tokenRegexp={new RegExp(`\\$ouds-color-content-on-\(\?<backdropColorName>status-${status}-\(\?<colorName>\.\*\)\)-light`)}
+      getUsage={(colorName) => `.text-on-status-${status}-${colorName}`} />
+  ))
+}
+
+<Callout type="info">
+  The following content colors are highly specific and should only be used with direction from a designer or within the context of a custom component.
+</Callout>
+
+<ColorTable
+  colorPrefix="ouds/color/content/on/action/"
+  tokenRegexp={/\$ouds-color-content-on-(?<backdropColorName>action-(?<colorName>.*))-light/} />
+
+## Action
+
+These colors are used for interactive elements and actions' states.
+
+<Callout type="info" title="Usage reference">
+  Please refer to the [action colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/t/7f8ec71ae2) for more information on usage.
+</Callout>
+
+<Callout type="warning">
+  These colors should only be used for custom components development, this is why no utilities are provided, please use directly the custom properties in your CSS.
+</Callout>
+
+<ColorTable
+  colorPrefix="ouds/color/action/"
+  tokenRegexp={/\$ouds-color-action((?!-support|-negative))-(?<colorName>.*)-light/} />
+
+<ColorTable
+  colorPrefix="ouds/color/action/support/"
+  tokenRegexp={/\$ouds-color-action-support-(?<colorName>.*)-light/} />
+
+<ColorTable
+  colorPrefix="ouds/color/action/negative/"
+  tokenRegexp={/\$ouds-color-action-negative-(?<colorName>.*)-light/} />
+
+## Border
+
+These colors are used for borders and dividers.
+
+These colors can be used with [our border utilities]([[docsref:/utilities/border#color]]).
+
+<Callout type="info" title="Usage reference">
+  Please refer to the [border colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/t/0e45bd67e9) for more information on usage.
+</Callout>
+
+<ColorTable
+  colorPrefix="ouds/color/border/"
+  tokenRegexp={/\$ouds-color-border((?!-status|-on|-focus))-(?<colorName>.*)-light/}
+  getUsage={(colorName) => `.border-${colorName}`} />
+
+<ColorTable
+  colorPrefix="ouds/color/border/status/"
+  tokenRegexp={/\$ouds-color-border-status-(?<colorName>.*)-light/}
+  getUsage={(colorName) => `.border-status-${colorName}`} />
+
+<Callout type="info">
+  The following border colors do not have utilities because they are used only in a Sass mixin to create focus rings.
+</Callout>
+
+<ColorTable
+  colorPrefix="ouds/color/border/"
+  tokenRegexp={/\$ouds-color-border-(?<colorName>focus.*)-light/} />
+
+### Border on other colors
+
+These border colors will guarantee an acceptable contrast on a specific background or surface color.
+
+<ColorTable
+  colorPrefix="ouds/color/border/on/brand/"
+  tokenRegexp={/\$ouds-color-border-on-brand-(?<colorName>.*)-light/}
+  getUsage={(colorName) => `.border-on-brand-${colorName}`} />
+
+## Overlay
+
+These colors are used for overlay elements like dropdown, modals and tooltips to create depth and emphasis.
+
+<Callout type="info" title="Usage reference">
+  Please refer to the [overlay colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/t/f9abe635d0) for more information on usage.
+</Callout>
+
+<Callout type="warning">
+  These colors should only be used for custom components development, this is why no utilities are provided, please use directly the custom properties in your CSS.
+</Callout>
+
+<ColorTable
+  colorPrefix="ouds/color/overlay/"
+  tokenRegexp={/\$ouds-color-overlay-(?<colorName>.*)-light/} />
+
+## Always
+
+These colors are invariant, they will stay the same on every brand, modes or contexts.
+
+These colors can be used with [our background utilities]([[docsref:/utilities/background]]), [our text utilities]([[docsref:/utilities/color]]) or [our border utilities]([[docsref:/utilities/border]]).
+
+<Callout type="info" title="Usage reference">
+  Please refer to the [always colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/t/25abc650b5) for more information on usage.
+</Callout>
+
+<ColorTable
+  colorPrefix="ouds/color/always/"
+  tokenRegexp={/\$ouds-color-always-(?<colorName>.*)/}
+  multiTheme={false} />
+
+## Opacity
+
+These colors only define opacities levels, they are used to tweak visibility, hierarchy or emphasis of elements.
+
+These colors can be used with [our opacity utilities]([[docsref:/utilities/opacity]]).
+
+<Callout type="info" title="Usage reference">
+  Please refer to the [opacity colors design reference](https://unified-design-system.orange.com/472794e18/p/217ac6-color/t/b4eb059054) for more information on usage.
+</Callout>
+
+export const opacityBackgroundStyle = "repeating-conic-gradient(var(--bs-color-bg-primary) 0% 25%, var(--bs-color-bg-inverse-high) 0% 50%) 0 0/ 20px 20px";
+
+<ColorTable
+  colorPrefix="ouds/opacity/"
+  tokenRegexp={/\$ouds-opacity-(?<colorName>.*)/}
+  getUsage={(colorName) => `.opacity-${colorName}`}
+  multiTheme={false}
+  getStyle={(token, mode) =>
+    mode === 'light'
+      ? {
+          opacity: token.lightValue,
+          background: opacityBackgroundStyle
+        }
+      : {
+          opacity: token.darkValue,
+          background: opacityBackgroundStyle
+        }} />
+
+## Decorative
+
+<Callout type="info" title="For design only">
+  Decorative colors are used for coloring illustrations only and should not be needed in OUDS Web. Please contact us if you need to use them in your project.
+</Callout>

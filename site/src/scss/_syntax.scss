@@ -39,6 +39,19 @@
   user-select: none;
 }
 
+// no skeleton in SCSS snippets (necessary for SCSS placeholder that get a .placeholder class from PrismJS)
+.language-scss {
+  .placeholder {
+    display: inline;
+    color: inherit;
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+}
+
 // Token styles
 .token {
   &.tag {

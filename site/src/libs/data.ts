@@ -1,14 +1,7 @@
 import fs from 'node:fs'
-import yaml from 'js-yaml'
+import * as yaml from 'js-yaml'
 import { z } from 'zod'
-import {
-  zHexColor,
-  zNamedHexColors,
-  zPxSizeOrEmpty,
-  zVersionMajorMinor,
-  zVersionSemver,
-  zSidebar
-} from './validation'
+import { zHexColor, zNamedHexColors, zPxSizeOrEmpty, zVersionMajorMinor, zVersionSemver, zSidebar } from './validation'
 import { capitalizeFirstLetter } from './utils'
 
 // An object containing all the data types and their associated schema. The key should match the name of the data file
@@ -18,8 +11,18 @@ const dataDefinitions = {
     .object({
       name: z.string(),
       value: z.string()
-    }).array(),
+    })
+    .array(),
   breakpoints: z
+    .object({
+      breakpoint: z.string(),
+      abbr: z.string(),
+      name: z.string(),
+      'min-width': zPxSizeOrEmpty,
+      container: zPxSizeOrEmpty
+    })
+    .array(),
+  'bootstrap-breakpoints': z
     .object({
       breakpoint: z.string(),
       abbr: z.string(),
@@ -38,7 +41,7 @@ const dataDefinitions = {
   'docs-versions': z
     .object({
       group: z.string(),
-      baseurl: z.string().url(),
+      baseurl: z.url(),
       description: z.string(),
       versions: z.union([zVersionSemver, zVersionMajorMinor]).array()
     })
@@ -88,7 +91,7 @@ let data = new Map<DataType, z.infer<DataSchema>>()
 export function getData<TType extends DataType>(type: TType): z.infer<(typeof dataDefinitions)[TType]> {
   if (data.has(type)) {
     // Returns the data if it has already been loaded.
-    return data.get(type)
+    return data.get(type) as z.infer<(typeof dataDefinitions)[TType]>
   }
 
   const dataPath = `./site/data/${type}.yml`
@@ -103,7 +106,7 @@ export function getData<TType extends DataType>(type: TType): z.infer<(typeof da
     // Cache the data.
     data.set(type, parsedData)
 
-    return parsedData
+    return parsedData as z.infer<(typeof dataDefinitions)[TType]>
   } catch (error) {
     if (error instanceof z.ZodError) {
       console.error(`The \`${dataPath}\` file content is invalid:`, error.issues)
@@ -113,5 +116,5 @@ export function getData<TType extends DataType>(type: TType): z.infer<(typeof da
   }
 }
 
-type DataType = keyof typeof dataDefinitions
+export type DataType = keyof typeof dataDefinitions
 type DataSchema = z.ZodTypeAny

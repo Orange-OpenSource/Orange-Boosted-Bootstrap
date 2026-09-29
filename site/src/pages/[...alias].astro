@@ -4,7 +4,7 @@ import RedirectLayout from '@layouts/RedirectLayout.astro'
 import { getVersionedDocsPath } from '@libs/path'
 import { trimLeadingAndTrailingSlashes } from '@libs/utils'
 import { replaceConfigInText } from '@libs/remark'
-import { aliasedDocsPages } from '@libs/content'
+import { aliasedDocsPages, getDocsPageSlug } from '@libs/content'
 import { getAliasedExamplesPages, getExampleNameFromPagePath } from '@libs/examples'
 import { getConfig } from '@libs/config'
 
@@ -42,7 +42,7 @@ export async function getStaticPaths() {
     const aliases = normalizeAliases(aliasedDocsPage.data.aliases)
 
     for (const alias of aliases) {
-      staticPaths.push(getAliasStaticPath(alias, aliasedDocsPage.slug))
+      staticPaths.push(getAliasStaticPath(alias, getDocsPageSlug(aliasedDocsPage.id)))
     }
   }
   return staticPaths.flat()

@@ -7,7 +7,7 @@ aliases:
 toc: true
 ---
 
-import { allTokens } from '@libs/sass-variables'
+import { getTokenValue } from '@libs/sass-variables'
 
 export const headingLevel = [
   "heading-xlarge",
@@ -28,6 +28,13 @@ export const textLevel = [
   "body-large",
   "body-medium",
   "body-small"
+]
+
+export const labelLevel = [
+  "label-xlarge",
+  "label-large",
+  "label-medium",
+  "label-small"
 ]
 
 export const screenSize = [
@@ -81,7 +88,7 @@ All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-s
       {
           screenSize.map((size) => (
           <td>
-            <code>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</code> ({allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue})
+            <code>{(getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2)) / 16}rem</code> ({getTokenValue(`$ouds-font-size-${level}-${size}`)})
           </td>
         ))
       }
@@ -122,10 +129,10 @@ All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-s
               screenSize.map((size) => (
                 <td>
                   <ul class="mb-none ps-medium">
-                    <li><code class="text-default">font-size</code>: <b>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</b></li>
-                    <li><code>line-height</code>: {Math.round(((allTokens.find((token) => token.name === `$ouds-font-line-height-${level}-${size}`).compiledValue.slice(0, -2)) / (allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2))) * 10000) / 10000}</li>
-                    <li><code>letter-spacing</code>: {(allTokens.find((token) => token.name === `$ouds-font-letter-spacing-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
-                    <li><code>max-width</code>: {(allTokens.find((token) => token.name === `$ouds-size-max-width-type-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
+                    <li><code class="text-default">font-size</code>: <b>{(getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2)) / 16}rem</b></li>
+                    <li><code>line-height</code>: {Math.round(((getTokenValue( `$ouds-font-line-height-${level}-${size}`).slice(0, -2)) / (getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2))) * 10000) / 10000}</li>
+                    <li><code>letter-spacing</code>: {(getTokenValue(`$ouds-font-letter-spacing-${level}-${size}`).slice(0, -2)) / 16}rem</li>
+                    <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-${level}-${size}`).slice(0, -2)) / 16}rem</li>
                   </ul>
                 </td>
               ))
@@ -154,7 +161,7 @@ All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-s
   <p class="h5">h5. OUDS Web heading</p>
   <p class="h6">h6. OUDS Web heading</p>`} />
 
-You can easily add an icon with your font reference using [our icon size utilities]([[docsref:/components/icon#icons-size]]).
+You can easily add an icon with your font reference using [our icon size utilities]([[docsref:/utilities/icons-sizing]]).
 
 ## Display headings
 
@@ -185,7 +192,7 @@ We provide `.display-*` from `large` through `small`. Each class sets `font-size
         {
           screenSize.map((size) => (
             <td>
-              <code>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</code> ({allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue})
+              <code>{(getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2)) / 16}rem</code> ({getTokenValue(`$ouds-font-size-${level}-${size}`)})
             </td>
             ))
         }
@@ -223,10 +230,10 @@ We provide `.display-*` from `large` through `small`. Each class sets `font-size
               screenSize.map((size) => (
                 <td>
                   <ul class="mb-none ps-medium">
-                    <li><code class="text-default">font-size</code>: <b>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</b></li>
-                    <li><code>line-height</code>: {Math.round(((allTokens.find((token) => token.name === `$ouds-font-line-height-${level}-${size}`).compiledValue.slice(0, -2)) / (allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2))) * 10000) / 10000}</li>
-                    <li><code>letter-spacing</code>: {(allTokens.find((token) => token.name === `$ouds-font-letter-spacing-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
-                    <li><code>max-width</code>: {(allTokens.find((token) => token.name === `$ouds-size-max-width-type-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
+                    <li><code class="text-default">font-size</code>: <b>{(getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2)) / 16}rem</b></li>
+                    <li><code>line-height</code>: {Math.round(((getTokenValue(`$ouds-font-line-height-${level}-${size}`).slice(0, -2)) / (getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2))) * 10000) / 10000}</li>
+                    <li><code>letter-spacing</code>: {(getTokenValue(`$ouds-font-letter-spacing-${level}-${size}`).slice(0, -2)) / 16}rem</li>
+                    <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-${level}-${size}`).slice(0, -2)) / 16}rem</li>
                   </ul>
                 </td>
               ))
@@ -288,17 +295,24 @@ Since only [headings](#headings), [display headings](#display-headings) and `str
     </thead>
     <tbody>
     {
-      textLevel.map((level) => (
+      [ ...textLevel, ...labelLevel].map((level) => (
       <tr>
         <td>
           {level === 'body-large' && (<>Body large (<code>{'.lead'}</code>)</>)}
           {level === 'body-medium' && (<>Body medium (default <code>{'<p>'}</code>)</>)}
           {level === 'body-small' && (<>Body small (<code>{'.small'}</code> or <code>{'<small>'}</code>)</>)}
+          {level === 'label-xlarge' && (<>Label xlarge (<code>{'.fs-lxl'}</code>)</>)}
+          {level === 'label-large' && (<>Label large (<code>{'.fs-ll'}</code>)</>)}
+          {level === 'label-medium' && (<>Label medium (<code>{'.fs-lm'}</code>)</>)}
+          {level === 'label-small' && (<>Label small (<code>{'.fs-ls'}</code>)</>)}
         </td>
         {
           screenSize.map((size) => (
             <td>
-              <code>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</code> ({allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue})
+              {!level.includes('label-')
+                    && (<><code>{(getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2)) / 16}rem</code> ({getTokenValue(`$ouds-font-size-${level}-${size}`)})</>)}
+              {level.includes('label-')
+                && (<><code>{(getTokenValue(`$ouds-font-size-${level}`).slice(0, -2)) / 16}rem</code> ({getTokenValue(`$ouds-font-size-${level}`)})</>)}
             </td>
           ))
         }
@@ -323,21 +337,25 @@ Since only [headings](#headings), [display headings](#display-headings) and `str
       </thead>
       <tbody>
       {
-        textLevel.map((level) => (
+        [ ...textLevel, ...labelLevel].map((level) => (
         <tr>
           <td>
             {level === 'body-large' && (<>Body large (<code>{'.lead'}</code>)</>)}
             {level === 'body-medium' && (<>Body medium (default <code>{'<p>'}</code>)</>)}
             {level === 'body-small' && (<>Body small (<code>{'.small'}</code> or <code>{'<small>'}</code>)</>)}
+            {level === 'label-xlarge' && (<>Label xlarge (<code>{'.fs-lxl'}</code>)</>)}
+            {level === 'label-large' && (<>Label large (<code>{'.fs-ll'}</code>)</>)}
+            {level === 'label-medium' && (<>Label medium (<code>{'.fs-lm'}</code>)</>)}
+            {level === 'label-small' && (<>Label small (<code>{'.fs-ls'}</code>)</>)}
           </td>
           {
             screenSize.map((size) => (
               <td>
                 <ul class="mb-none ps-medium">
-                  <li><code class="text-default">font-size</code>: <b>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</b></li>
-                  <li><code>line-height</code>: {Math.round(((allTokens.find((token) => token.name === `$ouds-font-line-height-${level}-${size}`).compiledValue.slice(0, -2)) / (allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2))) * 10000) / 10000}</li>
-                  <li><code>letter-spacing</code>: {(allTokens.find((token) => token.name === `$ouds-font-letter-spacing-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
-                  <li><code>max-width</code>: {(allTokens.find((token) => token.name === `$ouds-size-max-width-type-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
+                  <li><code class="text-default">font-size</code>: <b>{(getTokenValue(`$ouds-font-size-${level}${!level.includes('label-') ? '-' + size : ''}`).slice(0, -2)) / 16}rem</b></li>
+                  <li><code>line-height</code>: {Math.round(((getTokenValue(`$ouds-font-line-height-${level}${!level.includes('label-') ? '-' + size : ''}`).slice(0, -2)) / (getTokenValue(`$ouds-font-size-${level}${!level.includes('label-') ? '-' + size : ''}`).slice(0, -2))) * 10000) / 10000}</li>
+                  <li><code>letter-spacing</code>: {(getTokenValue(`$ouds-font-letter-spacing-${level}${!level.includes('label-') ? '-' + size : ''}`).slice(0, -2)) / 16}rem</li>
+                  <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-${level}-${size}`).slice(0, -2)) / 16}rem</li>
                 </ul>
               </td>
             ))
@@ -350,7 +368,7 @@ Since only [headings](#headings), [display headings](#display-headings) and `str
   </div>
 </details>
 
-You can easily add an icon with your font reference using [our icon size utilities]([[docsref:/components/icon#icons-size]]).
+You can easily add an icon with your font reference using [our icon size utilities]([[docsref:/utilities/icons-sizing]]).
 
 ### Lead
 
@@ -464,44 +482,26 @@ Use text utilities as needed to change the alignment of your blockquote.
 Align terms and descriptions horizontally by using our grid system’s predefined classes (or semantic mixins). For longer terms, you can optionally add a `.text-truncate` class to truncate the text with an ellipsis.
 
 <Example code={`<dl class="row">
-    <dt class="col-sm-3">Description lists</dt>
-    <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+    <dt class="sm:col-3">Description lists</dt>
+    <dd class="sm:col-9">A description list is perfect for defining terms.</dd>
 
-    <dt class="col-sm-3">Term</dt>
-    <dd class="col-sm-9">
+    <dt class="sm:col-3">Term</dt>
+    <dd class="sm:col-9">
       <p>Definition for the term.</p>
       <p>And some more placeholder definition text.</p>
     </dd>
 
-    <dt class="col-sm-3">Another term</dt>
-    <dd class="col-sm-9">This definition is short, so no extra paragraphs or anything.</dd>
+    <dt class="sm:col-3">Another term</dt>
+    <dd class="sm:col-9">This definition is short, so no extra paragraphs or anything.</dd>
 
-    <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
-    <dd class="col-sm-9">This can be useful when space is tight. Adds an ellipsis at the end.</dd>
+    <dt class="sm:col-3 text-truncate">Truncated term is truncated</dt>
+    <dd class="sm:col-9">This can be useful when space is tight. Adds an ellipsis at the end.</dd>
 
-    <dt class="col-sm-3">Nesting</dt>
-    <dd class="col-sm-9">
+    <dt class="sm:col-3">Nesting</dt>
+    <dd class="sm:col-9">
       <dl class="row">
-        <dt class="col-sm-4">Nested definition list</dt>
-        <dd class="col-sm-8">I heard you like definition lists. Let me put a definition list inside your definition list.</dd>
+        <dt class="sm:col-4">Nested definition list</dt>
+        <dd class="sm:col-8">I heard you like definition lists. Let me put a definition list inside your definition list.</dd>
       </dl>
     </dd>
   </dl>`} />
-
-## Text style for custom components
-
-OUDS Web introduces a specific text style for components named `label` with 4 levels: `small`, `medium`, `large` and `xlarge`, it sets `font-size`, `line-height` and `letter-spacing` css properties. We use this style for many components included in OUDS Web, if you need to develop a custom component for your project you can use this font by calling the Scss mixin `get-font-size()`. Following is a call example for this mixin.
-
-<Example showPreview={false}  lang="scss" code={`.my-custom-component {
-    @include get-font-size("label-medium");
-  }`} />
-
-This will result in the following CSS.
-
-<Example showPreview={false}  lang="css" code={`.my-custom-component {
-    font-size: var(--bs-font-size-label-medium);
-    line-height: var(--bs-font-line-height-label-medium);
-
-    // only for ltr
-    letter-spacing: var(--bs-font-letter-spacing-label-medium);
-  }`} />

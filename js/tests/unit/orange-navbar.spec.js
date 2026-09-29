@@ -1,6 +1,6 @@
 import OrangeNavbar from '../../src/orange-navbar.js'
 import {
-  clearFixture, getFixture, createEvent, jQueryMock
+  clearFixture, getFixture, createEvent
 } from '../helpers/fixture.js'
 
 describe('OrangeNavbar', () => {
@@ -35,49 +35,6 @@ describe('OrangeNavbar', () => {
   describe('DATA_KEY', () => {
     it('should return plugin data key', () => {
       expect(OrangeNavbar.DATA_KEY).toEqual('bs.orangenavbar')
-    })
-  })
-
-  describe('jQueryInterface', () => {
-    it('should create an orange navbar', () => {
-      fixtureEl.innerHTML = '<div></div>'
-
-      const div = fixtureEl.querySelector('div')
-
-      jQueryMock.fn.orangenavbar = OrangeNavbar.jQueryInterface
-      jQueryMock.elements = [div]
-
-      jQueryMock.fn.orangenavbar.call(jQueryMock)
-
-      expect(OrangeNavbar.getInstance(div)).not.toBeNull()
-    })
-
-    it('should not re create an orange navbar', () => {
-      fixtureEl.innerHTML = '<div></div>'
-
-      const div = fixtureEl.querySelector('div')
-      const orangenavbar = new OrangeNavbar(div)
-
-      jQueryMock.fn.orangenavbar = OrangeNavbar.jQueryInterface
-      jQueryMock.elements = [div]
-
-      jQueryMock.fn.orangenavbar.call(jQueryMock)
-
-      expect(OrangeNavbar.getInstance(div)).toEqual(orangenavbar)
-    })
-
-    it('should throw error on undefined method', () => {
-      fixtureEl.innerHTML = '<div></div>'
-
-      const div = fixtureEl.querySelector('div')
-      const action = 'undefinedMethod'
-
-      jQueryMock.fn.orangenavbar = OrangeNavbar.jQueryInterface
-      jQueryMock.elements = [div]
-
-      expect(() => {
-        jQueryMock.fn.orangenavbar.call(jQueryMock, action)
-      }).toThrowError(TypeError, `No method named "${action}"`)
     })
   })
 

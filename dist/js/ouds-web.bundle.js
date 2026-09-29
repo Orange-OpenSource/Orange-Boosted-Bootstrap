@@ -1,10 +1,10 @@
 /*!
-  * OUDS Web v1.1.0 (https://web.unified-design-system.orange.com/)
+  * OUDS Web v1.5.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2015-2026 The OUDS Web Authors
   * Copyright 2015-2026 Orange
-  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
+  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v1.1.0 (https://web.unified-design-system.orange.com/)
+  * Bootstrap v1.5.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2011-2026 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -64,257 +64,10 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap util/index.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  const MAX_UID = 1_000_000;
-  const MILLISECONDS_MULTIPLIER = 1000;
-  const TRANSITION_END = 'transitionend';
-
-  /**
-   * Properly escape IDs selectors to handle weird IDs
-   * @param {string} selector
-   * @returns {string}
-   */
-  const parseSelector = selector => {
-    if (selector && window.CSS && window.CSS.escape) {
-      // document.querySelector needs escaping to handle IDs (html5+) containing for instance /
-      selector = selector.replace(/#([^\s"#']+)/g, (match, id) => `#${CSS.escape(id)}`);
-    }
-    return selector;
-  };
-
-  // Shout-out AngusCroll (https://goo.gl/pxwQGp)
-  const toType = object => {
-    if (object === null || object === undefined) {
-      return `${object}`;
-    }
-    return Object.prototype.toString.call(object).match(/\s([a-z]+)/i)[1].toLowerCase();
-  };
-
-  /**
-   * Public Util API
-   */
-
-  const getUID = prefix => {
-    do {
-      prefix += Math.floor(Math.random() * MAX_UID);
-    } while (document.getElementById(prefix));
-    return prefix;
-  };
-  const getTransitionDurationFromElement = element => {
-    if (!element) {
-      return 0;
-    }
-
-    // Get transition-duration of the element
-    let {
-      transitionDuration,
-      transitionDelay
-    } = window.getComputedStyle(element);
-    const floatTransitionDuration = Number.parseFloat(transitionDuration);
-    const floatTransitionDelay = Number.parseFloat(transitionDelay);
-
-    // Return 0 if element or transition duration is not found
-    if (!floatTransitionDuration && !floatTransitionDelay) {
-      return 0;
-    }
-
-    // If multiple durations are defined, take the first
-    transitionDuration = transitionDuration.split(',')[0];
-    transitionDelay = transitionDelay.split(',')[0];
-    return (Number.parseFloat(transitionDuration) + Number.parseFloat(transitionDelay)) * MILLISECONDS_MULTIPLIER;
-  };
-  const triggerTransitionEnd = element => {
-    element.dispatchEvent(new Event(TRANSITION_END));
-  };
-  const isElement$1 = object => {
-    if (!object || typeof object !== 'object') {
-      return false;
-    }
-    if (typeof object.jquery !== 'undefined') {
-      object = object[0];
-    }
-    return typeof object.nodeType !== 'undefined';
-  };
-  const getElement = object => {
-    // it's a jQuery object or a node element
-    if (isElement$1(object)) {
-      return object.jquery ? object[0] : object;
-    }
-    if (typeof object === 'string' && object.length > 0) {
-      return document.querySelector(parseSelector(object));
-    }
-    return null;
-  };
-  const isVisible = element => {
-    if (!isElement$1(element) || element.getClientRects().length === 0) {
-      return false;
-    }
-    const elementIsVisible = getComputedStyle(element).getPropertyValue('visibility') === 'visible';
-    // Handle `details` element as its content may falsie appear visible when it is closed
-    const closedDetails = element.closest('details:not([open])');
-    if (!closedDetails) {
-      return elementIsVisible;
-    }
-    if (closedDetails !== element) {
-      const summary = element.closest('summary');
-      if (summary && summary.parentNode !== closedDetails) {
-        return false;
-      }
-      if (summary === null) {
-        return false;
-      }
-    }
-    return elementIsVisible;
-  };
-  const isDisabled = element => {
-    if (!element || element.nodeType !== Node.ELEMENT_NODE) {
-      return true;
-    }
-    if (element.classList.contains('disabled')) {
-      return true;
-    }
-    if (typeof element.disabled !== 'undefined') {
-      return element.disabled;
-    }
-    return element.hasAttribute('disabled') && element.getAttribute('disabled') !== 'false';
-  };
-  const findShadowRoot = element => {
-    if (!document.documentElement.attachShadow) {
-      return null;
-    }
-
-    // Can find the shadow root otherwise it'll return the document
-    if (typeof element.getRootNode === 'function') {
-      const root = element.getRootNode();
-      return root instanceof ShadowRoot ? root : null;
-    }
-    if (element instanceof ShadowRoot) {
-      return element;
-    }
-
-    // when we don't find a shadow root
-    if (!element.parentNode) {
-      return null;
-    }
-    return findShadowRoot(element.parentNode);
-  };
-  const noop = () => {};
-
-  /**
-   * Trick to restart an element's animation
-   *
-   * @param {HTMLElement} element
-   * @return void
-   *
-   * @see https://www.harrytheo.com/blog/2021/02/restart-a-css-animation-with-javascript/#restarting-a-css-animation
-   */
-  const reflow = element => {
-    element.offsetHeight; // eslint-disable-line no-unused-expressions
-  };
-  const getjQuery = () => {
-    if (window.jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
-      return window.jQuery;
-    }
-    return null;
-  };
-  const DOMContentLoadedCallbacks = [];
-  const onDOMContentLoaded = callback => {
-    if (document.readyState === 'loading') {
-      // add listener on the first call when the document is in loading state
-      if (!DOMContentLoadedCallbacks.length) {
-        document.addEventListener('DOMContentLoaded', () => {
-          for (const callback of DOMContentLoadedCallbacks) {
-            callback();
-          }
-        });
-      }
-      DOMContentLoadedCallbacks.push(callback);
-    } else {
-      callback();
-    }
-  };
-  const isRTL = () => document.documentElement.dir === 'rtl';
-  const defineJQueryPlugin = plugin => {
-    onDOMContentLoaded(() => {
-      const $ = getjQuery();
-      /* istanbul ignore if */
-      if ($) {
-        const name = plugin.NAME;
-        const JQUERY_NO_CONFLICT = $.fn[name];
-        $.fn[name] = plugin.jQueryInterface;
-        $.fn[name].Constructor = plugin;
-        $.fn[name].noConflict = () => {
-          $.fn[name] = JQUERY_NO_CONFLICT;
-          return plugin.jQueryInterface;
-        };
-      }
-    });
-  };
-  const execute = (possibleCallback, args = [], defaultValue = possibleCallback) => {
-    return typeof possibleCallback === 'function' ? possibleCallback.call(...args) : defaultValue;
-  };
-  const executeAfterTransition = (callback, transitionElement, waitForTransition = true) => {
-    if (!waitForTransition) {
-      execute(callback);
-      return;
-    }
-    const durationPadding = 5;
-    const emulatedDuration = getTransitionDurationFromElement(transitionElement) + durationPadding;
-    let called = false;
-    const handler = ({
-      target
-    }) => {
-      if (target !== transitionElement) {
-        return;
-      }
-      called = true;
-      transitionElement.removeEventListener(TRANSITION_END, handler);
-      execute(callback);
-    };
-    transitionElement.addEventListener(TRANSITION_END, handler);
-    setTimeout(() => {
-      if (!called) {
-        triggerTransitionEnd(transitionElement);
-      }
-    }, emulatedDuration);
-  };
-
-  /**
-   * Return the previous/next element of a list.
-   *
-   * @param {array} list    The list of elements
-   * @param activeElement   The active element
-   * @param shouldGetNext   Choose to get next or previous element
-   * @param isCycleAllowed
-   * @return {Element|elem} The proper element
-   */
-  const getNextActiveElement = (list, activeElement, shouldGetNext, isCycleAllowed) => {
-    const listLength = list.length;
-    let index = list.indexOf(activeElement);
-
-    // if the element does not exist in the list return an element
-    // depending on the direction and if cycle is allowed
-    if (index === -1) {
-      return !shouldGetNext && isCycleAllowed ? list[listLength - 1] : list[0];
-    }
-    index += shouldGetNext ? 1 : -1;
-    if (isCycleAllowed) {
-      index = (index + listLength) % listLength;
-    }
-    return list[Math.max(0, Math.min(index, listLength - 1))];
-  };
-
-  /**
-   * --------------------------------------------------------------------------
    * Bootstrap dom/event-handler.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
-
 
   /**
    * Constants
@@ -329,7 +82,7 @@
     mouseenter: 'mouseover',
     mouseleave: 'mouseout'
   };
-  const nativeEvents = new Set(['click', 'dblclick', 'mouseup', 'mousedown', 'contextmenu', 'mousewheel', 'DOMMouseScroll', 'mouseover', 'mouseout', 'mousemove', 'selectstart', 'selectend', 'keydown', 'keypress', 'keyup', 'orientationchange', 'touchstart', 'touchmove', 'touchend', 'touchcancel', 'pointerdown', 'pointermove', 'pointerup', 'pointerleave', 'pointercancel', 'gesturestart', 'gesturechange', 'gestureend', 'focus', 'blur', 'change', 'reset', 'select', 'submit', 'focusin', 'focusout', 'load', 'unload', 'beforeunload', 'resize', 'move', 'DOMContentLoaded', 'readystatechange', 'error', 'abort', 'scroll']);
+  const nativeEvents = new Set(['click', 'dblclick', 'mouseup', 'mousedown', 'contextmenu', 'mousewheel', 'DOMMouseScroll', 'mouseover', 'mouseout', 'mousemove', 'selectstart', 'selectend', 'keydown', 'keypress', 'keyup', 'orientationchange', 'touchstart', 'touchmove', 'touchend', 'touchcancel', 'pointerdown', 'pointermove', 'pointerup', 'pointerleave', 'pointercancel', 'gesturestart', 'gesturechange', 'gestureend', 'focus', 'blur', 'change', 'reset', 'select', 'submit', 'focusin', 'focusout', 'load', 'unload', 'beforeunload', 'resize', 'move', 'DOMContentLoaded', 'readystatechange', 'error', 'abort', 'scroll', 'scrollend']);
 
   /**
    * Private methods
@@ -484,33 +237,11 @@
       if (typeof event !== 'string' || !element) {
         return null;
       }
-      const $ = getjQuery();
-      const typeEvent = getTypeEvent(event);
-      const inNamespace = event !== typeEvent;
-      let jQueryEvent = null;
-      let bubbles = true;
-      let nativeDispatch = true;
-      let defaultPrevented = false;
-      if (inNamespace && $) {
-        jQueryEvent = $.Event(event, args);
-        $(element).trigger(jQueryEvent);
-        bubbles = !jQueryEvent.isPropagationStopped();
-        nativeDispatch = !jQueryEvent.isImmediatePropagationStopped();
-        defaultPrevented = jQueryEvent.isDefaultPrevented();
-      }
       const evt = hydrateObj(new Event(event, {
-        bubbles,
+        bubbles: true,
         cancelable: true
       }), args);
-      if (defaultPrevented) {
-        evt.preventDefault();
-      }
-      if (nativeDispatch) {
-        element.dispatchEvent(evt);
-      }
-      if (evt.defaultPrevented && jQueryEvent) {
-        jQueryEvent.preventDefault();
-      }
+      element.dispatchEvent(evt);
       return evt;
     }
   };
@@ -589,6 +320,210 @@
 
   /**
    * --------------------------------------------------------------------------
+   * Bootstrap util/index.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+   * --------------------------------------------------------------------------
+   */
+
+  const MAX_UID = 1_000_000;
+  const MILLISECONDS_MULTIPLIER = 1000;
+  const TRANSITION_END = 'transitionend';
+
+  /**
+   * Properly escape IDs selectors to handle weird IDs
+   * @param {string} selector
+   * @returns {string}
+   */
+  const parseSelector = selector => {
+    if (selector && window.CSS && window.CSS.escape) {
+      // document.querySelector needs escaping to handle IDs (html5+) containing for instance /
+      selector = selector.replace(/#([^\s"#']+)/g, (match, id) => `#${CSS.escape(id)}`);
+    }
+    return selector;
+  };
+
+  // Shout-out AngusCroll (https://goo.gl/pxwQGp)
+  const toType = object => {
+    if (object === null || object === undefined) {
+      return `${object}`;
+    }
+    return Object.prototype.toString.call(object).match(/\s([a-z]+)/i)[1].toLowerCase();
+  };
+
+  /**
+   * Public Util API
+   */
+
+  const getUID = prefix => {
+    do {
+      prefix += Math.floor(Math.random() * MAX_UID);
+    } while (document.getElementById(prefix));
+    return prefix;
+  };
+  const getTransitionDurationFromElement = element => {
+    if (!element) {
+      return 0;
+    }
+
+    // Get transition-duration of the element
+    let {
+      transitionDuration,
+      transitionDelay
+    } = window.getComputedStyle(element);
+    const floatTransitionDuration = Number.parseFloat(transitionDuration);
+    const floatTransitionDelay = Number.parseFloat(transitionDelay);
+
+    // Return 0 if element or transition duration is not found
+    if (!floatTransitionDuration && !floatTransitionDelay) {
+      return 0;
+    }
+
+    // If multiple durations are defined, take the first
+    transitionDuration = transitionDuration.split(',')[0];
+    transitionDelay = transitionDelay.split(',')[0];
+    return (Number.parseFloat(transitionDuration) + Number.parseFloat(transitionDelay)) * MILLISECONDS_MULTIPLIER;
+  };
+  const triggerTransitionEnd = element => {
+    element.dispatchEvent(new Event(TRANSITION_END));
+  };
+  const isElement$1 = object => {
+    if (!object || typeof object !== 'object') {
+      return false;
+    }
+    return typeof object.nodeType !== 'undefined';
+  };
+  const getElement = object => {
+    if (isElement$1(object)) {
+      return object;
+    }
+    if (typeof object === 'string' && object.length > 0) {
+      return document.querySelector(parseSelector(object));
+    }
+    return null;
+  };
+  const isVisible = element => {
+    if (!isElement$1(element) || element.getClientRects().length === 0) {
+      return false;
+    }
+    const elementIsVisible = getComputedStyle(element).getPropertyValue('visibility') === 'visible';
+    // Handle `details` element as its content may falsie appear visible when it is closed
+    const closedDetails = element.closest('details:not([open])');
+    if (!closedDetails) {
+      return elementIsVisible;
+    }
+    if (closedDetails !== element) {
+      const summary = element.closest('summary');
+      if (summary && summary.parentNode !== closedDetails) {
+        return false;
+      }
+      if (summary === null) {
+        return false;
+      }
+    }
+    return elementIsVisible;
+  };
+  const isDisabled = element => {
+    if (!element || element.nodeType !== Node.ELEMENT_NODE) {
+      return true;
+    }
+    if (element.classList.contains('disabled')) {
+      return true;
+    }
+    if (typeof element.disabled !== 'undefined') {
+      return element.disabled;
+    }
+    return element.hasAttribute('disabled') && element.getAttribute('disabled') !== 'false';
+  };
+  const findShadowRoot = element => {
+    if (!document.documentElement.attachShadow) {
+      return null;
+    }
+
+    // Can find the shadow root otherwise it'll return the document
+    if (typeof element.getRootNode === 'function') {
+      const root = element.getRootNode();
+      return root instanceof ShadowRoot ? root : null;
+    }
+    if (element instanceof ShadowRoot) {
+      return element;
+    }
+
+    // when we don't find a shadow root
+    if (!element.parentNode) {
+      return null;
+    }
+    return findShadowRoot(element.parentNode);
+  };
+  const noop = () => {};
+
+  /**
+   * Trick to restart an element's animation
+   *
+   * @param {HTMLElement} element
+   * @return void
+   *
+   * @see https://www.harrytheo.com/blog/2021/02/restart-a-css-animation-with-javascript/#restarting-a-css-animation
+   */
+  const reflow = element => {
+    element.offsetHeight; // eslint-disable-line no-unused-expressions
+  };
+  const isRTL = () => document.documentElement.dir === 'rtl';
+  const execute = (possibleCallback, args = [], defaultValue = possibleCallback) => {
+    return typeof possibleCallback === 'function' ? possibleCallback.call(...args) : defaultValue;
+  };
+  const executeAfterTransition = (callback, transitionElement, waitForTransition = true) => {
+    if (!waitForTransition) {
+      execute(callback);
+      return;
+    }
+    const durationPadding = 5;
+    const emulatedDuration = getTransitionDurationFromElement(transitionElement) + durationPadding;
+    let called = false;
+    const handler = ({
+      target
+    }) => {
+      if (target !== transitionElement) {
+        return;
+      }
+      called = true;
+      transitionElement.removeEventListener(TRANSITION_END, handler);
+      execute(callback);
+    };
+    transitionElement.addEventListener(TRANSITION_END, handler);
+    setTimeout(() => {
+      if (!called) {
+        triggerTransitionEnd(transitionElement);
+      }
+    }, emulatedDuration);
+  };
+
+  /**
+   * Return the previous/next element of a list.
+   *
+   * @param {array} list    The list of elements
+   * @param activeElement   The active element
+   * @param shouldGetNext   Choose to get next or previous element
+   * @param isCycleAllowed
+   * @return {Element|elem} The proper element
+   */
+  const getNextActiveElement = (list, activeElement, shouldGetNext, isCycleAllowed) => {
+    const listLength = list.length;
+    let index = list.indexOf(activeElement);
+
+    // if the element does not exist in the list return an element
+    // depending on the direction and if cycle is allowed
+    if (index === -1) {
+      return !shouldGetNext && isCycleAllowed ? list[listLength - 1] : list[0];
+    }
+    index += shouldGetNext ? 1 : -1;
+    if (isCycleAllowed) {
+      index = (index + listLength) % listLength;
+    }
+    return list[Math.max(0, Math.min(index, listLength - 1))];
+  };
+
+  /**
+   * --------------------------------------------------------------------------
    * Bootstrap util/config.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
@@ -652,7 +587,7 @@
    * Constants
    */
 
-  const VERSION = '1.1.0';
+  const VERSION = '1.5.0';
 
   /**
    * Class definition
@@ -872,20 +807,6 @@
       EventHandler.trigger(this._element, EVENT_CLOSED);
       this.dispose();
     }
-
-    // Static
-    static jQueryInterface(config) {
-      return this.each(function () {
-        const data = Alert.getOrCreateInstance(this);
-        if (typeof config !== 'string') {
-          return;
-        }
-        if (data[config] === undefined || config.startsWith('_') || config === 'constructor') {
-          throw new TypeError(`No method named "${config}"`);
-        }
-        data[config](this);
-      });
-    }
   }
 
   /**
@@ -893,12 +814,6 @@
    */
 
   enableDismissTrigger(Alert, 'close');
-
-  /**
-   * jQuery
-   */
-
-  defineJQueryPlugin(Alert);
 
   /**
    * --------------------------------------------------------------------------
@@ -932,18 +847,30 @@
 
     // Public
     toggle() {
-      // Toggle class and sync the `aria-pressed` attribute with the return value of the `.toggle()` method
-      this._element.setAttribute('aria-pressed', this._element.classList.toggle(CLASS_NAME_ACTIVE$3));
-    }
+      // OUDS mod: Determine current pressed state from aria-pressed attribute if present or active class as a fallback
+      const ariaPressed = this._element.getAttribute('aria-pressed');
+      const hasActiveClass = this._element.classList.contains(CLASS_NAME_ACTIVE$3);
 
-    // Static
-    static jQueryInterface(config) {
-      return this.each(function () {
-        const data = Button.getOrCreateInstance(this);
-        if (config === 'toggle') {
-          data[config]();
-        }
-      });
+      // Determine new pressed state
+      let newPressedState;
+      // eslint-disable-next-line unicorn/prefer-ternary
+      if (ariaPressed === 'true' || ariaPressed === 'false') {
+        // Toggle existing aria-pressed value
+        newPressedState = ariaPressed !== 'true';
+      } else {
+        // Convert active class presence to aria-pressed state
+        newPressedState = !hasActiveClass;
+      }
+
+      // Update aria-pressed attribute
+      this._element.setAttribute('aria-pressed', String(newPressedState));
+
+      // Add or remove active class
+      if (newPressedState) {
+        this._element.classList.add(CLASS_NAME_ACTIVE$3);
+      } else {
+        this._element.classList.remove(CLASS_NAME_ACTIVE$3);
+      }
     }
   }
 
@@ -957,12 +884,6 @@
     const data = Button.getOrCreateInstance(button);
     data.toggle();
   });
-
-  /**
-   * jQuery
-   */
-
-  defineJQueryPlugin(Button);
 
   /**
    * --------------------------------------------------------------------------
@@ -1549,22 +1470,6 @@
       }
     }
     // End mod
-
-    static jQueryInterface(config) {
-      return this.each(function () {
-        const data = Carousel.getOrCreateInstance(this, config);
-        if (typeof config === 'number') {
-          data.to(config);
-          return;
-        }
-        if (typeof config === 'string') {
-          if (data[config] === undefined || config.startsWith('_') || config === 'constructor') {
-            throw new TypeError(`No method named "${config}"`);
-          }
-          data[config]();
-        }
-      });
-    }
   }
 
   /**
@@ -1600,12 +1505,6 @@
       Carousel.getOrCreateInstance(carousel);
     }
   });
-
-  /**
-   * jQuery
-   */
-
-  defineJQueryPlugin(Carousel);
 
   /**
    * --------------------------------------------------------------------------
@@ -1804,23 +1703,6 @@
         element.setAttribute('aria-expanded', isOpen);
       }
     }
-
-    // Static
-    static jQueryInterface(config) {
-      const _config = {};
-      if (typeof config === 'string' && /show|hide/.test(config)) {
-        _config.toggle = false;
-      }
-      return this.each(function () {
-        const data = Collapse.getOrCreateInstance(this, _config);
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
-            throw new TypeError(`No method named "${config}"`);
-          }
-          data[config]();
-        }
-      });
-    }
   }
 
   /**
@@ -1838,12 +1720,6 @@
       }).toggle();
     }
   });
-
-  /**
-   * jQuery
-   */
-
-  defineJQueryPlugin(Collapse);
 
   var top = 'top';
   var bottom = 'bottom';
@@ -3628,12 +3504,6 @@
       return instance;
     };
   }
-  var createPopper$2 = /*#__PURE__*/popperGenerator(); // eslint-disable-next-line import/no-unused-modules
-
-  var defaultModifiers$1 = [eventListeners, popperOffsets$1, computeStyles$1, applyStyles$1];
-  var createPopper$1 = /*#__PURE__*/popperGenerator({
-    defaultModifiers: defaultModifiers$1
-  }); // eslint-disable-next-line import/no-unused-modules
 
   var defaultModifiers = [eventListeners, popperOffsets$1, computeStyles$1, applyStyles$1, offset$1, flip$1, preventOverflow$1, arrow$1, hide$1];
   var createPopper = /*#__PURE__*/popperGenerator({
@@ -3656,8 +3526,6 @@
     clippingParents,
     computeStyles: computeStyles$1,
     createPopper,
-    createPopperBase: createPopper$2,
-    createPopperLite: createPopper$1,
     detectOverflow,
     end,
     eventListeners,
@@ -3958,18 +3826,6 @@
     }
 
     // Static
-    static jQueryInterface(config) {
-      return this.each(function () {
-        const data = Dropdown.getOrCreateInstance(this, config);
-        if (typeof config !== 'string') {
-          return;
-        }
-        if (typeof data[config] === 'undefined') {
-          throw new TypeError(`No method named "${config}"`);
-        }
-        data[config]();
-      });
-    }
     static clearMenus(event) {
       if (event.button === RIGHT_MOUSE_BUTTON || event.type === 'keyup' && event.key !== TAB_KEY$1) {
         return;
@@ -4044,12 +3900,6 @@
     event.preventDefault();
     Dropdown.getOrCreateInstance(this).toggle();
   });
-
-  /**
-   * jQuery
-   */
-
-  defineJQueryPlugin(Dropdown);
 
   /**
    * --------------------------------------------------------------------------
@@ -4393,7 +4243,7 @@
   const EVENT_HIDDEN$4 = `hidden${EVENT_KEY$6}`;
   const EVENT_SHOW$4 = `show${EVENT_KEY$6}`;
   const EVENT_SHOWN$4 = `shown${EVENT_KEY$6}`;
-  const EVENT_RESIZE$1 = `resize${EVENT_KEY$6}`;
+  const EVENT_RESIZE$2 = `resize${EVENT_KEY$6}`;
   const EVENT_CLICK_DISMISS = `click.dismiss${EVENT_KEY$6}`;
   const EVENT_MOUSEDOWN_DISMISS = `mousedown.dismiss${EVENT_KEY$6}`;
   const EVENT_KEYDOWN_DISMISS$1 = `keydown.dismiss${EVENT_KEY$6}`;
@@ -4541,7 +4391,7 @@
         }
         this._triggerBackdropTransition();
       });
-      EventHandler.on(window, EVENT_RESIZE$1, () => {
+      EventHandler.on(window, EVENT_RESIZE$2, () => {
         if (this._isShown && !this._isTransitioning) {
           this._adjustDialog();
         }
@@ -4623,20 +4473,6 @@
       this._element.style.paddingLeft = '';
       this._element.style.paddingRight = '';
     }
-
-    // Static
-    static jQueryInterface(config, relatedTarget) {
-      return this.each(function () {
-        const data = Modal.getOrCreateInstance(this, config);
-        if (typeof config !== 'string') {
-          return;
-        }
-        if (typeof data[config] === 'undefined') {
-          throw new TypeError(`No method named "${config}"`);
-        }
-        data[config](relatedTarget);
-      });
-    }
   }
 
   /**
@@ -4671,12 +4507,6 @@
   enableDismissTrigger(Modal);
 
   /**
-   * jQuery
-   */
-
-  defineJQueryPlugin(Modal);
-
-  /**
    * --------------------------------------------------------------------------
    * Bootstrap offcanvas.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -4704,7 +4534,7 @@
   const EVENT_HIDE$3 = `hide${EVENT_KEY$5}`;
   const EVENT_HIDE_PREVENTED = `hidePrevented${EVENT_KEY$5}`;
   const EVENT_HIDDEN$3 = `hidden${EVENT_KEY$5}`;
-  const EVENT_RESIZE = `resize${EVENT_KEY$5}`;
+  const EVENT_RESIZE$1 = `resize${EVENT_KEY$5}`;
   const EVENT_CLICK_DATA_API$2 = `click${EVENT_KEY$5}${DATA_API_KEY$3}`;
   const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY$5}`;
   const SELECTOR_DATA_TOGGLE$1 = '[data-bs-toggle="offcanvas"]';
@@ -4844,20 +4674,6 @@
         EventHandler.trigger(this._element, EVENT_HIDE_PREVENTED);
       });
     }
-
-    // Static
-    static jQueryInterface(config) {
-      return this.each(function () {
-        const data = Offcanvas.getOrCreateInstance(this, config);
-        if (typeof config !== 'string') {
-          return;
-        }
-        if (data[config] === undefined || config.startsWith('_') || config === 'constructor') {
-          throw new TypeError(`No method named "${config}"`);
-        }
-        data[config](this);
-      });
-    }
   }
 
   /**
@@ -4892,8 +4708,8 @@
       Offcanvas.getOrCreateInstance(selector).show();
     }
   });
-  EventHandler.on(window, EVENT_RESIZE, () => {
-    for (const element of SelectorEngine.find('[aria-modal][class*=show][class*=offcanvas-]')) {
+  EventHandler.on(window, EVENT_RESIZE$1, () => {
+    for (const element of SelectorEngine.find('[aria-modal][class*=show][class*=offcanvas]')) {
       if (getComputedStyle(element).position !== 'fixed') {
         Offcanvas.getOrCreateInstance(element).hide();
       }
@@ -4902,15 +4718,9 @@
   enableDismissTrigger(Offcanvas);
 
   /**
-   * jQuery
-   */
-
-  defineJQueryPlugin(Offcanvas);
-
-  /**
    * --------------------------------------------------------------------------
    * OUDS Web orange-navbar.js
-   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
+   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
 
@@ -4946,18 +4756,6 @@
         el.classList.remove('header-minimized');
       }
     }
-    static jQueryInterface(config) {
-      return this.each(function () {
-        const data = OrangeNavbar.getOrCreateInstance(this, config);
-        if (typeof config !== 'string') {
-          return;
-        }
-        if (typeof data[config] === 'undefined') {
-          throw new TypeError(`No method named "${config}"`);
-        }
-        data[config]();
-      });
-    }
   }
 
   /**
@@ -4974,12 +4772,6 @@
       OrangeNavbar.enableMinimizing(el);
     }
   });
-
-  /**
-   * jQuery
-   */
-
-  defineJQueryPlugin(OrangeNavbar);
 
   /**
    * --------------------------------------------------------------------------
@@ -5703,27 +5495,7 @@
         this.tip = null;
       }
     }
-
-    // Static
-    static jQueryInterface(config) {
-      return this.each(function () {
-        const data = Tooltip.getOrCreateInstance(this, config);
-        if (typeof config !== 'string') {
-          return;
-        }
-        if (typeof data[config] === 'undefined') {
-          throw new TypeError(`No method named "${config}"`);
-        }
-        data[config]();
-      });
-    }
   }
-
-  /**
-   * jQuery
-   */
-
-  defineJQueryPlugin(Tooltip);
 
   /**
    * --------------------------------------------------------------------------
@@ -5785,32 +5557,12 @@
     _getContent() {
       return this._resolvePossibleFunction(this._config.content);
     }
-
-    // Static
-    static jQueryInterface(config) {
-      return this.each(function () {
-        const data = Popover.getOrCreateInstance(this, config);
-        if (typeof config !== 'string') {
-          return;
-        }
-        if (typeof data[config] === 'undefined') {
-          throw new TypeError(`No method named "${config}"`);
-        }
-        data[config]();
-      });
-    }
   }
-
-  /**
-   * jQuery
-   */
-
-  defineJQueryPlugin(Popover);
 
   /**
    * --------------------------------------------------------------------------
    * OUDS Web quantity-selector.js
-   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
+   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
 
@@ -5899,18 +5651,6 @@
         btnUp.setAttribute('disabled', '');
       }
     }
-    static jQueryInterface(config) {
-      return this.each(function () {
-        const data = QuantitySelector.getOrCreateInstance(this, config);
-        if (typeof config !== 'string') {
-          return;
-        }
-        if (typeof data[config] === 'undefined') {
-          throw new TypeError(`No method named "${config}"`);
-        }
-        data[config]();
-      });
-    }
   }
 
   /**
@@ -5925,12 +5665,6 @@
       QuantitySelector.getOrCreateInstance(el).ValueOnLoad(el);
     }
   });
-
-  /**
-   * jQuery
-   */
-
-  defineJQueryPlugin(QuantitySelector);
 
   /**
    * --------------------------------------------------------------------------
@@ -5950,33 +5684,48 @@
   const DATA_API_KEY = '.data-api';
   const EVENT_ACTIVATE = `activate${EVENT_KEY$2}`;
   const EVENT_CLICK = `click${EVENT_KEY$2}`;
+  const EVENT_SCROLL = `scroll${EVENT_KEY$2}`;
+  const EVENT_SCROLLEND = `scrollend${EVENT_KEY$2}`;
+  const EVENT_RESIZE = `resize${EVENT_KEY$2}`;
   const EVENT_LOAD_DATA_API$1 = `load${EVENT_KEY$2}${DATA_API_KEY}`;
-  const CLASS_NAME_DROPDOWN_ITEM = 'dropdown-item';
+  const CLASS_NAME_MENU_ITEM = 'menu-item';
   const CLASS_NAME_ACTIVE$1 = 'active';
   const SELECTOR_DATA_SPY = '[data-bs-spy="scroll"]';
   const SELECTOR_TARGET_LINKS = '[href]';
-  const SELECTOR_NAV_LIST_GROUP = '.nav, .list-group';
-  const SELECTOR_NAV_LINKS = '.nav-link';
+  // OUDS mod @todo https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3711
+  // we set these to ul and a to handle our TOC structure but for the final ScrollSpy
+  // we should determine what is the best way to handle this
+  const SELECTOR_NAV_LIST_GROUP = 'ul, .nav, .list-group';
+  const SELECTOR_NAV_LINKS = 'a, .nav-link';
   const SELECTOR_NAV_ITEMS = '.nav-item';
   const SELECTOR_LIST_ITEMS = '.list-group-item';
   const SELECTOR_LINK_ITEMS = `${SELECTOR_NAV_LINKS}, ${SELECTOR_NAV_ITEMS} > ${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ITEMS}`;
-  const SELECTOR_DROPDOWN = '.dropdown';
-  const SELECTOR_DROPDOWN_TOGGLE$1 = '.dropdown-toggle';
+  const SELECTOR_MENU_TOGGLE = '[data-bs-toggle="menu"]';
+
+  // How long (ms) to wait after the last scroll event before settling a pending
+  // smooth-scroll navigation, when the native `scrollend` event is unavailable.
+  const SCROLL_IDLE_TIMEOUT = 100;
+  // Debounce (ms) for rebuilding the observer on resize (px activation lines only).
+  const RESIZE_DEBOUNCE = 100;
   const Default$1 = {
-    offset: null,
-    // TODO: Bootstrap v6 @deprecated, keep it for backwards compatibility reasons
-    rootMargin: '0px 0px -25%',
+    // `rootMargin` is the raw IntersectionObserver root-box override. When set it
+    // takes precedence over `topMargin` and is passed straight to the observer.
+    // Leave it null and use `topMargin` for everyday use.
+    rootMargin: null,
     smoothScroll: false,
     target: null,
-    threshold: [0.1, 0.5, 1]
+    threshold: [0],
+    // Position of the activation line, measured from the top of the scroll root.
+    // The active section is the deepest one whose top has scrolled to/above it.
+    // Accepts a percentage (`12%`) or pixels (`96px`, e.g. below a sticky navbar).
+    topMargin: '12%'
   };
   const DefaultType$1 = {
-    offset: '(number|null)',
-    // TODO Bootstrap v6 @deprecated, keep it for backwards compatibility reasons
-    rootMargin: 'string',
+    rootMargin: '(string|null)',
     smoothScroll: 'boolean',
     target: 'element',
-    threshold: 'array'
+    threshold: 'array',
+    topMargin: 'string'
   };
 
   /**
@@ -5988,15 +5737,23 @@
       super(element, config);
 
       // this._element is the observablesContainer and config.target the menu links wrapper
-      this._targetLinks = new Map();
-      this._observableSections = new Map();
-      this._rootElement = getComputedStyle(this._element).overflowY === 'visible' ? null : this._element;
+      this._sections = []; // observable section elements, in DOM order
+      this._linkBySection = new Map(); // section element -> nav link
+      this._sectionByLink = new Map(); // nav link -> section element (for smooth scroll)
+      this._intersecting = new Set(); // sections currently crossing the activation line
       this._activeTarget = null;
+      this._lastActive = null; // last activated section (keep-last across gaps)
+      this._atBottom = false;
+      this._rootElement = getComputedStyle(this._element).overflowY === 'visible' ? null : this._element;
       this._observer = null;
-      this._previousScrollData = {
-        visibleEntryTop: 0,
-        parentScrollTop: 0
-      };
+      this._sentinel = null;
+      this._sentinelObserver = null;
+      this._pendingNavigation = null;
+      this._settleTimeout = null;
+      this._settleHandler = null;
+      this._scrollIdleHandler = null;
+      this._resizeHandler = null;
+      this._resizeTimeout = null;
       this.refresh(); // initialize
     }
 
@@ -6015,117 +5772,357 @@
     refresh() {
       this._initializeTargetsAndObservables();
       this._maybeEnableSmoothScroll();
-      if (this._observer) {
-        this._observer.disconnect();
-      } else {
-        this._observer = this._getNewObserver();
-      }
-      for (const section of this._observableSections.values()) {
+
+      // (Re)build the activation observer.
+      this._observer?.disconnect();
+      this._intersecting.clear();
+      this._observer = this._getNewObserver();
+      for (const section of this._sections) {
         this._observer.observe(section);
       }
+
+      // Detect the bottom-of-page case (a short last section whose top never
+      // reaches the activation line) natively, via a dedicated sentinel observer.
+      this._setUpSentinel();
+
+      // A px activation line doesn't track viewport height the way `%` does, so
+      // rebuild the observer (debounced) on resize when px units are in play.
+      this._maybeAddResizeListener();
     }
     dispose() {
-      this._observer.disconnect();
+      this._observer?.disconnect();
+      this._teardownSentinel();
+      this._disarmSettle();
+      this._removeResizeListener();
+      EventHandler.off(this._config.target, EVENT_CLICK);
       super.dispose();
     }
 
     // Private
     _configAfterMerge(config) {
-      // TODO: on v6 target should be given explicitly & remove the {target: 'ss-target'} case
-      config.target = getElement(config.target) || document.body;
-
-      // TODO: v6 Only for backwards compatibility reasons. Use rootMargin only
-      config.rootMargin = config.offset ? `${config.offset}px 0px -30%` : config.rootMargin;
+      config.target = getElement(config.target);
+      if (!config.target) {
+        throw new TypeError(`${this.constructor.NAME.toUpperCase()}: Option "target" is required and must be an existing element.`);
+      }
       if (typeof config.threshold === 'string') {
         config.threshold = config.threshold.split(',').map(value => Number.parseFloat(value));
       }
       return config;
     }
+
+    // --- Detection (IntersectionObserver-driven) -----------------------------
+
+    _getNewObserver() {
+      const options = {
+        root: this._rootElement,
+        threshold: this._config.threshold,
+        rootMargin: this._config.rootMargin ?? this._getDerivedRootMargin()
+      };
+      return new IntersectionObserver(entries => this._onIntersect(entries), options);
+    }
+    _onIntersect(entries) {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          this._intersecting.add(entry.target);
+        } else {
+          this._intersecting.delete(entry.target);
+        }
+      }
+      this._computeActive();
+    }
+
+    // Single source of truth for active selection, derived only from IO state —
+    // no per-frame layout reads. The active section is the deepest (DOM-order)
+    // one currently crossing the activation line; in a gap we keep the last one;
+    // above the first section the first stays active; at the very bottom the last
+    // section wins.
+    _computeActive() {
+      // Guard against observer callbacks that outlive a disposed/detached instance.
+      if (!this._element?.isConnected || this._sections.length === 0) {
+        return;
+      }
+      let active = null;
+      if (this._atBottom) {
+        active = this._sections.at(-1);
+      } else {
+        for (const section of this._sections) {
+          if (this._intersecting.has(section)) {
+            active = section;
+          }
+        }
+
+        // No section crosses the line: keep the last active (content gap), or fall
+        // back to the first section at the top of the page.
+        active ||= this._lastActive ?? this._sections.at(0);
+      }
+      if (!active) {
+        return;
+      }
+      this._lastActive = active;
+      const link = this._linkBySection.get(active);
+      if (link) {
+        this._process(link);
+      }
+    }
+
+    // Single source of truth for the `topMargin` option: its numeric value and
+    // whether it's expressed as a percentage of the root height or in pixels.
+    _parseTopMargin() {
+      const value = String(this._config.topMargin);
+      return {
+        value: Number.parseFloat(value) || 0,
+        unit: value.endsWith('%') ? '%' : 'px'
+      };
+    }
+
+    // Collapse the observer root to a strip from the top down to the activation
+    // line, so a section is "intersecting" exactly while it crosses that line.
+    _getDerivedRootMargin() {
+      const {
+        value,
+        unit
+      } = this._parseTopMargin();
+      let percent = value;
+
+      // Express a pixel activation line as a percentage of the root height.
+      if (unit === 'px') {
+        const rootHeight = this._rootElement ? this._rootElement.clientHeight : document.documentElement.clientHeight || window.innerHeight;
+        percent = rootHeight ? value / rootHeight * 100 : 12;
+      }
+
+      // Clamp so the bottom inset stays a valid (non-negative) rootMargin even if
+      // the line sits outside the root box.
+      const bottom = Math.min(Math.max(100 - percent, 0), 100);
+      return `0px 0px -${bottom}% 0px`;
+    }
+
+    // Whether the activation line is derived from a pixel `topMargin` (in which
+    // case it must be recomputed on resize). An explicit `rootMargin` is owned by
+    // the caller, and a `%` topMargin is recomputed by the browser automatically.
+    _usesPixelMargin() {
+      return !this._config.rootMargin && this._parseTopMargin().unit === 'px';
+    }
+
+    // --- Bottom sentinel -----------------------------------------------------
+
+    _setUpSentinel() {
+      this._teardownSentinel();
+      if (this._sections.length === 0) {
+        return;
+      }
+      const sentinel = document.createElement('div');
+      sentinel.setAttribute('aria-hidden', 'true');
+      sentinel.style.cssText = 'position:relative;width:0;height:1px;margin:0;padding:0;border:0;visibility:hidden;';
+      this._element.append(sentinel);
+      this._sentinel = sentinel;
+      this._sentinelObserver = new IntersectionObserver(entries => this._onSentinel(entries), {
+        root: this._rootElement,
+        threshold: [0]
+      });
+      this._sentinelObserver.observe(sentinel);
+    }
+    _onSentinel(entries) {
+      const entry = entries.at(-1);
+      // Only treat the sentinel as "bottom reached" when content actually
+      // overflows; otherwise everything is visible and there's nothing to spy.
+      this._atBottom = Boolean(entry?.isIntersecting) && this._isOverflowing();
+      this._computeActive();
+    }
+    _isOverflowing() {
+      const scroller = this._rootElement || document.scrollingElement || document.documentElement;
+      return scroller.scrollHeight > scroller.clientHeight;
+    }
+    _teardownSentinel() {
+      this._sentinelObserver?.disconnect();
+      this._sentinelObserver = null;
+      this._sentinel?.remove();
+      this._sentinel = null;
+      this._atBottom = false;
+    }
+
+    // --- Resize (px activation lines only) -----------------------------------
+
+    _maybeAddResizeListener() {
+      this._removeResizeListener();
+      if (!this._usesPixelMargin()) {
+        return;
+      }
+      this._resizeHandler = () => {
+        clearTimeout(this._resizeTimeout);
+        this._resizeTimeout = setTimeout(() => this._rebuildObserver(), RESIZE_DEBOUNCE);
+      };
+      EventHandler.on(window, EVENT_RESIZE, this._resizeHandler);
+    }
+    _removeResizeListener() {
+      clearTimeout(this._resizeTimeout);
+      this._resizeTimeout = null;
+      if (this._resizeHandler) {
+        EventHandler.off(window, EVENT_RESIZE, this._resizeHandler);
+        this._resizeHandler = null;
+      }
+    }
+    _rebuildObserver() {
+      if (!this._observer) {
+        return;
+      }
+      this._observer.disconnect();
+      this._intersecting.clear();
+      this._observer = this._getNewObserver();
+      for (const section of this._sections) {
+        this._observer.observe(section);
+      }
+    }
+
+    // --- Smooth-scroll settle (hash + focus) ---------------------------------
+
     _maybeEnableSmoothScroll() {
       if (!this._config.smoothScroll) {
         return;
       }
 
-      // unregister any previous listeners
+      // Unregister any previous listener so refresh() doesn't stack them.
       EventHandler.off(this._config.target, EVENT_CLICK);
       EventHandler.on(this._config.target, EVENT_CLICK, SELECTOR_TARGET_LINKS, event => {
-        const observableSection = this._observableSections.get(event.target.hash);
-        if (observableSection) {
-          event.preventDefault();
-          const root = this._rootElement || window;
-          const height = observableSection.offsetTop - this._element.offsetTop;
+        const link = event.target.closest(SELECTOR_TARGET_LINKS);
+        const section = link && this._sectionByLink.get(link);
+        if (!section || !this._element) {
+          return;
+        }
+        event.preventDefault();
+        const root = this._rootElement || window;
+        const height = section.offsetTop - this._element.offsetTop;
+        const currentTop = this._rootElement ? this._rootElement.scrollTop : window.scrollY ?? window.pageYOffset;
+        const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // If we're already there (or motion is reduced), there will be no scroll
+        // — and thus no `scrollend` — to wait for, so settle immediately. This
+        // avoids a stuck pending navigation that never restores hash/focus.
+        if (reduceMotion || Math.abs(currentTop - height) <= 2) {
           if (root.scrollTo) {
             root.scrollTo({
               top: height,
-              behavior: 'smooth'
+              behavior: 'auto'
             });
-            return;
+          } else {
+            root.scrollTop = height;
           }
+          this._settleNavigation(link.hash, section);
+          return;
+        }
 
-          // Chrome 60 doesn't support `scrollTo`
+        // Defer the URL-hash and focus updates until the scroll settles, so we
+        // don't thrash the address bar mid-animation (and so the native hash
+        // navigation we just prevented is restored once we arrive).
+        this._pendingNavigation = {
+          hash: link.hash,
+          section
+        };
+        this._armSettle();
+        if (root.scrollTo) {
+          root.scrollTo({
+            top: height,
+            behavior: 'smooth'
+          });
+        } else {
           root.scrollTop = height;
         }
       });
     }
-    _getNewObserver() {
-      const options = {
-        root: this._rootElement,
-        threshold: this._config.threshold,
-        rootMargin: this._config.rootMargin
+
+    // Arm a one-shot settle for the in-flight smooth scroll. `scrollend` is the
+    // primary signal; a transient scroll-idle timer covers engines without it.
+    // Both are removed on settle, so a later unrelated scroll can't replay it.
+    _armSettle() {
+      this._disarmSettle();
+      const target = this._getSettleTarget();
+      this._settleHandler = () => this._onSettle();
+      this._scrollIdleHandler = () => {
+        clearTimeout(this._settleTimeout);
+        this._settleTimeout = setTimeout(() => this._onSettle(), SCROLL_IDLE_TIMEOUT);
       };
-      return new IntersectionObserver(entries => this._observerCallback(entries), options);
+      EventHandler.on(target, EVENT_SCROLLEND, this._settleHandler);
+      EventHandler.on(target, EVENT_SCROLL, this._scrollIdleHandler);
     }
-
-    // The logic of selection
-    _observerCallback(entries) {
-      const targetElement = entry => this._targetLinks.get(`#${entry.target.id}`);
-      const activate = entry => {
-        this._previousScrollData.visibleEntryTop = entry.target.offsetTop;
-        this._process(targetElement(entry));
-      };
-      const parentScrollTop = (this._rootElement || document.documentElement).scrollTop;
-      const userScrollsDown = parentScrollTop >= this._previousScrollData.parentScrollTop;
-      this._previousScrollData.parentScrollTop = parentScrollTop;
-      for (const entry of entries) {
-        if (!entry.isIntersecting) {
-          this._activeTarget = null;
-          this._clearActiveClass(targetElement(entry));
-          continue;
-        }
-        const entryIsLowerThanPrevious = entry.target.offsetTop >= this._previousScrollData.visibleEntryTop;
-        // if we are scrolling down, pick the bigger offsetTop
-        if (userScrollsDown && entryIsLowerThanPrevious) {
-          activate(entry);
-          // if parent isn't scrolled, let's keep the first visible item, breaking the iteration
-          if (!parentScrollTop) {
-            return;
-          }
-          continue;
-        }
-
-        // if we are scrolling up, pick the smallest offsetTop
-        if (!userScrollsDown && !entryIsLowerThanPrevious) {
-          activate(entry);
-        }
+    _disarmSettle() {
+      clearTimeout(this._settleTimeout);
+      this._settleTimeout = null;
+      const target = this._getSettleTarget();
+      if (this._settleHandler) {
+        EventHandler.off(target, EVENT_SCROLLEND, this._settleHandler);
+        this._settleHandler = null;
+      }
+      if (this._scrollIdleHandler) {
+        EventHandler.off(target, EVENT_SCROLL, this._scrollIdleHandler);
+        this._scrollIdleHandler = null;
       }
     }
+    _getSettleTarget() {
+      return this._rootElement || document;
+    }
+    _onSettle() {
+      this._disarmSettle();
+      if (!this._pendingNavigation) {
+        return;
+      }
+      const {
+        hash,
+        section
+      } = this._pendingNavigation;
+      this._settleNavigation(hash, section);
+    }
+    _settleNavigation(hash, section) {
+      this._pendingNavigation = null;
+
+      // Restore the URL hash (without adding a history entry) now that we've
+      // arrived, and move focus to the section for keyboard/AT users.
+      if (window.history?.replaceState) {
+        window.history.replaceState(null, '', hash);
+      }
+      if (!section.hasAttribute('tabindex')) {
+        section.setAttribute('tabindex', '-1');
+      }
+      section.focus({
+        preventScroll: true
+      });
+    }
+
+    // --- Targets / observables ----------------------------------------------
+
     _initializeTargetsAndObservables() {
-      this._targetLinks = new Map();
-      this._observableSections = new Map();
+      this._sections = [];
+      this._linkBySection = new Map();
+      this._sectionByLink = new Map();
       const targetLinks = SelectorEngine.find(SELECTOR_TARGET_LINKS, this._config.target);
+      const seen = new Set();
       for (const anchor of targetLinks) {
-        // ensure that the anchor has an id and is not disabled
         if (!anchor.hash || isDisabled(anchor)) {
           continue;
         }
-        const observableSection = SelectorEngine.findOne(decodeURI(anchor.hash), this._element);
 
-        // ensure that the observableSection exists & is visible
-        if (isVisible(observableSection)) {
-          this._targetLinks.set(decodeURI(anchor.hash), anchor);
-          this._observableSections.set(anchor.hash, observableSection);
+        // Resolve by id (decoded) rather than building a CSS selector, so any
+        // literal id works — dots, slashes, colons, and percent-encoded chars —
+        // without escaping.
+        const id = decodeFragment(anchor.hash.slice(1));
+        if (!id) {
+          continue;
+        }
+        const section = document.getElementById(id);
+        // ensure the section exists, is scoped to this element, and is visible
+        if (!section || !this._element.contains(section) || !isVisible(section)) {
+          continue;
+        }
+        this._sectionByLink.set(anchor, section);
+        this._linkBySection.set(section, anchor); // last link wins for a section
+
+        if (!seen.has(section)) {
+          seen.add(section);
+          this._sections.push(section);
         }
       }
+
+      // Keep sections in top-to-bottom order so "deepest" selection is
+      // well-defined. Read once here (refresh/resize), never on the hot path.
+      this._sections.sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top);
     }
     _process(target) {
       if (this._activeTarget === target) {
@@ -6140,9 +6137,12 @@
       });
     }
     _activateParents(target) {
-      // Activate dropdown parents
-      if (target.classList.contains(CLASS_NAME_DROPDOWN_ITEM)) {
-        SelectorEngine.findOne(SELECTOR_DROPDOWN_TOGGLE$1, target.closest(SELECTOR_DROPDOWN)).classList.add(CLASS_NAME_ACTIVE$1);
+      // Activate menu parents
+      if (target.classList.contains(CLASS_NAME_MENU_ITEM)) {
+        const menuToggle = target.closest('.menu')?.previousElementSibling;
+        if (menuToggle?.matches(SELECTOR_MENU_TOGGLE)) {
+          menuToggle.classList.add(CLASS_NAME_ACTIVE$1);
+        }
         return;
       }
       for (const listGroup of SelectorEngine.parents(target, SELECTOR_NAV_LIST_GROUP)) {
@@ -6160,19 +6160,14 @@
         node.classList.remove(CLASS_NAME_ACTIVE$1);
       }
     }
+  }
 
-    // Static
-    static jQueryInterface(config) {
-      return this.each(function () {
-        const data = ScrollSpy.getOrCreateInstance(this, config);
-        if (typeof config !== 'string') {
-          return;
-        }
-        if (data[config] === undefined || config.startsWith('_') || config === 'constructor') {
-          throw new TypeError(`No method named "${config}"`);
-        }
-        data[config]();
-      });
+  // Decode a URL fragment id, tolerating malformed escapes (returns it as-is).
+  function decodeFragment(hash) {
+    try {
+      return decodeURIComponent(hash);
+    } catch {
+      return hash;
     }
   }
 
@@ -6185,12 +6180,6 @@
       ScrollSpy.getOrCreateInstance(spy);
     }
   });
-
-  /**
-   * jQuery
-   */
-
-  defineJQueryPlugin(ScrollSpy);
 
   /**
    * --------------------------------------------------------------------------
@@ -6418,20 +6407,6 @@
     _getOuterElement(elem) {
       return elem.closest(SELECTOR_OUTER) || elem;
     }
-
-    // Static
-    static jQueryInterface(config) {
-      return this.each(function () {
-        const data = Tab.getOrCreateInstance(this);
-        if (typeof config !== 'string') {
-          return;
-        }
-        if (data[config] === undefined || config.startsWith('_') || config === 'constructor') {
-          throw new TypeError(`No method named "${config}"`);
-        }
-        data[config]();
-      });
-    }
   }
 
   /**
@@ -6456,11 +6431,6 @@
       Tab.getOrCreateInstance(element);
     }
   });
-  /**
-   * jQuery
-   */
-
-  defineJQueryPlugin(Tab);
 
   /**
    * --------------------------------------------------------------------------
@@ -6618,19 +6588,6 @@
       clearTimeout(this._timeout);
       this._timeout = null;
     }
-
-    // Static
-    static jQueryInterface(config) {
-      return this.each(function () {
-        const data = Toast.getOrCreateInstance(this, config);
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
-            throw new TypeError(`No method named "${config}"`);
-          }
-          data[config](this);
-        }
-      });
-    }
   }
 
   /**
@@ -6638,12 +6595,6 @@
    */
 
   enableDismissTrigger(Toast);
-
-  /**
-   * jQuery
-   */
-
-  defineJQueryPlugin(Toast);
 
   /**
    * --------------------------------------------------------------------------

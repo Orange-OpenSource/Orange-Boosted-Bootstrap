@@ -50,3 +50,6 @@ Thumbs.db
 /site/node_modules
 /site/.astro
 /site/public
+
+# OUDS migrate
+/packages/migrate/node_modules

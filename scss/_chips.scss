@@ -10,7 +10,7 @@
 
 .chip {
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex-shrink: 0;
   align-items: center;
   min-height: px-to-rem($ouds-chip-size-min-height-interactive-area);
@@ -42,8 +42,9 @@
   min-height: $ouds-chip-size-min-height;
   padding: calc(var(--#{$prefix}chip-padding-block) - var(--#{$prefix}chip-border-width)) calc(var(--#{$prefix}chip-padding-end) - var(--#{$prefix}chip-border-width)) calc(var(--#{$prefix}chip-padding-block) - var(--#{$prefix}chip-border-width)) calc(var(--#{$prefix}chip-padding-start) - var(--#{$prefix}chip-border-width));
   @include get-font-size("label-medium");
-  font-weight: 700;
+  font-weight: $ouds-font-weight-web-label-moderate;
   color: var(--#{$prefix}chip-color);
+  text-align: start;
   background-color: var(--#{$prefix}chip-bg);
   border: var(--#{$prefix}chip-border-width) solid var(--#{$prefix}chip-border-color);
   border-radius: $ouds-chip-border-radius; // stylelint-disable-line property-disallowed-list
@@ -87,8 +88,8 @@
   svg,
   img,
   .icon {
-    width: 1em;
-    height: 1em;
+    width: $ouds-chip-size-icon;
+    height: $ouds-chip-size-icon;
     overflow: hidden;
     font-size: $ouds-chip-size-icon;
     line-height: 1;
@@ -132,6 +133,7 @@
   // Filter chip specific style for selected state
   input:checked ~ .chip-interactive,
   .chip-interactive[aria-pressed="true"],
+  .chip-interactive[aria-selected="true"],
   .chip-interactive:has(input:checked) {
     --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-enabled};
     --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-enabled};
@@ -169,6 +171,7 @@
 
   input:checked:focus-visible ~ .chip-interactive,
   .chip-interactive[aria-pressed="true"]:focus-visible,
+  .chip-interactive[aria-selected="true"]:focus-visible,
   .chip-interactive:has(input:checked:focus-visible) {
     --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-focus};
     --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-focus};
@@ -178,6 +181,7 @@
 
   input:checked:disabled ~ .chip-interactive,
   .chip-interactive[aria-pressed="true"]:disabled,
+  .chip-interactive[aria-selected="true"]:disabled,
   .chip-interactive:has(input:checked:disabled) {
     --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-disabled};
     --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-disabled};
@@ -195,6 +199,8 @@
   svg,
   img,
   .icon {
+    width: px-to-rem($ouds-chip-size-icon);
+    height: px-to-rem($ouds-chip-size-icon);
     font-size: px-to-rem($ouds-chip-size-icon);
   }
 }

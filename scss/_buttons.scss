@@ -31,7 +31,7 @@
   // OUDS mod: no --#{$prefix}btn-padding-x
   --#{$prefix}btn-padding-y: #{$btn-padding-y};
   // OUDS mod: no --#{$prefix}btn-font-family
-  // OUDS mod: no `@include rfs($btn-font-size, --#{$prefix}btn-font-size)`
+  // OUDS mod: no --#{$prefix}btn-font-size
   --#{$prefix}btn-font-weight: #{$btn-font-weight};
   // OUDS mod: no `--#{$prefix}btn-line-height`
   --#{$prefix}btn-color: #{$btn-color};
@@ -46,13 +46,13 @@
   // Additional OUDS variables
   --#{$prefix}btn-padding-start: #{$btn-padding-x};
   --#{$prefix}btn-padding-end: #{$btn-padding-x};
-  --#{$prefix}btn-min-width: #{$ouds-button-size-min-width};
-  --#{$prefix}btn-min-height: #{$ouds-button-size-min-height};
+  --#{$prefix}btn-min-width: #{$ouds-button-size-min-width-default};
+  --#{$prefix}btn-min-height: #{$ouds-button-size-min-height-default};
   --#{$prefix}btn-interaction-border-width: #{$btn-border-width};
-  --#{$prefix}btn-icon-size: #{$ouds-button-size-icon};
-  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon};
+  --#{$prefix}btn-icon-size: #{$ouds-button-size-icon-default};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon-default};
   --#{$prefix}btn-focus-border-color: var(--#{$prefix}btn-hover-border-color);
-  --#{$prefix}btn-loading-size: #{px-to-rem($ouds-button-size-loader)};
+  --#{$prefix}btn-loading-size: #{px-to-rem($ouds-button-size-progress-indicator-default)};
   --#{$prefix}btn-loading-dasharray: 96;
   --#{$prefix}btn-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
   // End mod
@@ -60,6 +60,7 @@
 
   display: inline-flex; // OUDS mod: instead of `inline-block`
   flex-shrink: 0;
+  gap: var(--#{$prefix}btn-icon-gap);
   align-items: center; // OUDS mod
   justify-content: center; // OUDS mod
   min-width: var(--#{$prefix}btn-min-width); // OUDS mod
@@ -87,8 +88,7 @@
   &:focus-visible,
   &.loading-indeterminate,
   &.loading-determinate,
-  &:active,
-  &.active {
+  &:active {
     padding: calc(var(--#{$prefix}btn-padding-y) - var(--#{$prefix}btn-interaction-border-width)) calc(var(--#{$prefix}btn-padding-end) - var(--#{$prefix}btn-interaction-border-width)) calc(var(--#{$prefix}btn-padding-y) - var(--#{$prefix}btn-interaction-border-width)) calc(var(--#{$prefix}btn-padding-start) - var(--#{$prefix}btn-interaction-border-width));
     border-width: var(--#{$prefix}btn-interaction-border-width);
   }
@@ -118,8 +118,7 @@
   // OUDS mod: no .btn-check:checked + &:active,
   // OUDS mod: no .btn-check:checked + &,
   // OUDS mod: no &.show,
-  &:active,
-  &.active {
+  &:active {
     color: var(--#{$prefix}btn-active-color);
     background-color: var(--#{$prefix}btn-active-bg);
     // Remove CSS gradients if they're enabled
@@ -189,7 +188,6 @@
     flex-shrink: 0;
     width: 1em;
     height: 1em;
-    margin-right: var(--#{$prefix}btn-icon-gap);
     overflow: hidden;
     font-size: var(--#{$prefix}btn-icon-size);
     line-height: 1;
@@ -198,19 +196,49 @@
   &:has(svg:not(.loader)),
   &:has(img:not(.loader)),
   &:has(.icon:not(.loader)) {
-    --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start};
-    --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end};
+    --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start-default};
+    --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end-default};
   }
 
   // icon button (icon only, without text)
   &.btn-icon.btn-icon { // Double the class selector to artificially increase the selector's specificity
-    --#{$prefix}btn-padding-start: #{$ouds-button-space-inset-icon-only};
-    --#{$prefix}btn-padding-end: #{$ouds-button-space-inset-icon-only};
-    --#{$prefix}btn-padding-y: #{$ouds-button-space-inset-icon-only};
-    --#{$prefix}btn-icon-gap: 0;
-    --#{$prefix}btn-icon-size: #{px-to-rem($ouds-button-size-icon-only)};
+    --#{$prefix}btn-padding-start: #{$ouds-button-space-inset-icon-only-default};
+    --#{$prefix}btn-padding-end: #{$ouds-button-space-inset-icon-only-default};
+    --#{$prefix}btn-padding-y: #{$ouds-button-space-inset-icon-only-default};
+    --#{$prefix}btn-icon-size: #{px-to-rem($ouds-button-size-icon-only-default)};
+
+    max-height: $ouds-button-size-max-size-icon-only-default;
   }
   // End mod
+
+  &.btn-small {
+    --#{$prefix}btn-min-width: #{$ouds-button-size-min-width-small};
+    --#{$prefix}btn-min-height: #{$ouds-button-size-min-height-small};
+    --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-none-small};
+    --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-icon-none-small};
+    --#{$prefix}btn-padding-y: #{$ouds-button-space-padding-block-small};
+    --#{$prefix}btn-icon-size: #{$ouds-button-size-icon-small};
+    --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon-small};
+    --#{$prefix}btn-loading-size: #{px-to-rem($ouds-button-size-progress-indicator-small)};
+
+    @include get-font-size("label-medium"); // OUDS mod
+
+    &:has(svg:not(.loader)),
+    &:has(img:not(.loader)),
+    &:has(.icon:not(.loader)) {
+      --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start-small};
+      --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end-small};
+    }
+
+    &.btn-icon.btn-icon { // Double the class selector to artificially increase the selector's specificity
+      --#{$prefix}btn-padding-start: #{$ouds-button-space-inset-icon-only-small};
+      --#{$prefix}btn-padding-end: #{$ouds-button-space-inset-icon-only-small};
+      --#{$prefix}btn-padding-y: #{$ouds-button-space-inset-icon-only-small};
+      --#{$prefix}btn-icon-size: #{px-to-rem($ouds-button-size-icon-only-small)};
+
+      max-height: $ouds-button-size-max-size-icon-only-small;
+    }
+  }
 }
 
 .use-rounded-corner-buttons {
@@ -442,13 +470,13 @@
     height: var(--#{$prefix}btn-icon-size);
     content: "";
     background-color: currentcolor;
-    mask-image: var(--#{$prefix}close-icon);
+    mask-image: $btn-expurge-icon;
   }
 }
 
 @if $enable-bootstrap-compatibility {
   .btn-primary {
-    @extend .btn-strong;
+    @extend .btn-brand;
   }
 
   .btn-success {
@@ -487,3 +515,52 @@
 }
 // scss-docs-end btn-variant-loops
 // End mod
+
+//
+// Navigation button styles
+//
+
+.btn-previous {
+  --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-chevron-start-default};
+  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-end-icon-start-default};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-chevron-default};
+
+  &::before {
+    content: "";
+    mask-image: $btn-previous-icon;
+  }
+}
+
+.btn-next,
+.btn-expand {
+  --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-start-icon-end-default};
+  --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-chevron-end-default};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-chevron-default};
+
+  &::after {
+    content: "";
+    mask-image: $btn-next-icon;
+  }
+}
+
+.btn-expand.btn-icon {
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon-chevron-default};
+}
+
+.btn-expand::after {
+  --#{$prefix}btn-icon-size: #{px-to-rem($ouds-button-size-icon-default)};
+  mask-image: $btn-expanded-false-icon;
+}
+
+.btn-expand[aria-expanded="true"]::after {
+  mask-image: $btn-expanded-true-icon;
+}
+
+.btn-previous::before,
+.btn-next::after,
+.btn-expand::after {
+  flex-shrink: 0;
+  width: var(--#{$prefix}btn-icon-size);
+  height: var(--#{$prefix}btn-icon-size);
+  background-color: currentcolor;
+}

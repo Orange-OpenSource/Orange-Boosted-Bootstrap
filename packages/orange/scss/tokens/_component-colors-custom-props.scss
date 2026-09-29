@@ -1,11 +1,16 @@
 // Components custom properties applications
-// OUDS Core tokens version 1.9.0
+// OUDS Core tokens version 1.10.0
 // Orange Core tokens version 1.2.0
-// Orange System tokens version 2.3.0
+// Orange System tokens version 2.6.0
 
 // scss-docs-start ouds-all-component-css-color
 // scss-docs-start ouds-component-css-color
 @include color-mode(light, true) {
+  --#{$prefix}link-mono-color-content-enabled: #{$core-ouds-color-functional-black};
+  --#{$prefix}link-mono-color-content-hover: #{$core-ouds-color-functional-black};
+  --#{$prefix}link-mono-color-content-pressed: #{$core-ouds-color-opacity-black-520};
+  --#{$prefix}link-mono-color-content-disabled: #{$core-ouds-color-opacity-black-280};
+  --#{$prefix}link-mono-color-content-focus: #{$core-ouds-color-functional-black};
   --#{$prefix}button-color-bg-brand-pressed: #{$core-ouds-color-functional-black};
   --#{$prefix}button-color-bg-brand-loading: #{$core-ouds-color-functional-black};
   --#{$prefix}button-color-content-brand-pressed: #{$core-ouds-color-functional-white};
@@ -43,23 +48,36 @@
   --#{$prefix}button-mono-color-content-strong-focus: #{$core-ouds-color-functional-white};
   --#{$prefix}button-mono-color-border-default-enabled: #{$core-ouds-color-functional-black};
   --#{$prefix}button-mono-color-border-default-disabled: #{$core-ouds-color-opacity-black-280};
-  --#{$prefix}link-mono-color-content-enabled: #{$core-ouds-color-functional-black};
-  --#{$prefix}link-mono-color-content-hover: #{$core-ouds-color-functional-black};
-  --#{$prefix}link-mono-color-content-pressed: #{$core-ouds-color-opacity-black-520};
-  --#{$prefix}link-mono-color-content-disabled: #{$core-ouds-color-opacity-black-280};
-  --#{$prefix}link-mono-color-content-focus: #{$core-ouds-color-functional-black};
   --#{$prefix}switch-color-cursor: #{$core-ouds-color-functional-white};
   --#{$prefix}switch-color-track-selected: #{$core-ouds-color-functional-malachite-700};
   --#{$prefix}switch-color-track-selected-interaction: #{$core-ouds-color-functional-malachite-750};
   --#{$prefix}switch-color-track-unselected: #{$core-ouds-color-opacity-black-440};
   --#{$prefix}switch-color-track-unselected-interaction: #{$core-ouds-color-opacity-black-520};
+  --#{$prefix}progress-indicator-color-content-track: #{$core-ouds-color-functional-gray-light-400};
+  --#{$prefix}progress-indicator-mono-color-content-track: #{$core-ouds-color-functional-gray-light-400};
+  --#{$prefix}progress-indicator-mono-color-content-indicator: #{$core-ouds-color-functional-black};
   --#{$prefix}icon-color-content-status-warning-external-shape: #{$core-ouds-color-functional-sun-500};
   --#{$prefix}icon-color-content-status-warning-internal-shape: #{$core-ouds-color-functional-sun-750};
-  --#{$prefix}icon-color-content-default: #{$core-ouds-color-functional-black};
+  --#{$prefix}icon-color-content-status-warning-inverse-external-shape: #{$core-ouds-color-functional-sun-300};
+  --#{$prefix}link-color-chevron-hover: #{$ouds-color-content-brand-primary-light}; // deprecated
+  --#{$prefix}link-color-chevron-pressed: #{$ouds-color-content-brand-primary-light}; // deprecated
+  --#{$prefix}link-color-chevron-focus: #{$ouds-color-content-brand-primary-light}; // deprecated
+  --#{$prefix}list-item-color-bg-current-enabled: #{$ouds-color-action-support-enabled-light};
+  --#{$prefix}list-item-color-bg-hover: #{$ouds-color-action-support-hover-light}; // deprecated
+  --#{$prefix}list-item-color-bg-pressed: #{$ouds-color-action-support-pressed-light}; // deprecated
+  --#{$prefix}list-item-color-bg-loading: #{$ouds-color-action-support-loading-light}; // deprecated
+  --#{$prefix}list-item-color-bg-focus: #{$ouds-color-action-support-focus-light}; // deprecated
+  --#{$prefix}list-item-color-content-loader: #{$ouds-color-content-default-light}; // deprecated
+  --#{$prefix}icon-color-content-status-warning-inverse-internal-shape: #{$ouds-color-opacity-transparent-dark};
 }
 // scss-docs-end ouds-component-css-color
 
 @include color-mode(dark, true) {
+  --#{$prefix}link-mono-color-content-enabled: #{$core-ouds-color-functional-white};
+  --#{$prefix}link-mono-color-content-hover: #{$core-ouds-color-functional-white};
+  --#{$prefix}link-mono-color-content-pressed: #{$core-ouds-color-opacity-white-800};
+  --#{$prefix}link-mono-color-content-disabled: #{$core-ouds-color-opacity-white-440};
+  --#{$prefix}link-mono-color-content-focus: #{$core-ouds-color-functional-white};
   --#{$prefix}button-color-bg-brand-pressed: #{$core-ouds-color-functional-gray-light-160};
   --#{$prefix}button-color-bg-brand-loading: #{$core-ouds-color-functional-gray-light-160};
   --#{$prefix}button-color-content-brand-pressed: #{$core-ouds-color-functional-black};
@@ -97,18 +115,26 @@
   --#{$prefix}button-mono-color-content-strong-focus: #{$core-ouds-color-functional-black};
   --#{$prefix}button-mono-color-border-default-enabled: #{$core-ouds-color-functional-white};
   --#{$prefix}button-mono-color-border-default-disabled: #{$core-ouds-color-opacity-white-440};
-  --#{$prefix}link-mono-color-content-enabled: #{$core-ouds-color-functional-white};
-  --#{$prefix}link-mono-color-content-hover: #{$core-ouds-color-functional-white};
-  --#{$prefix}link-mono-color-content-pressed: #{$core-ouds-color-opacity-white-800};
-  --#{$prefix}link-mono-color-content-disabled: #{$core-ouds-color-opacity-white-440};
-  --#{$prefix}link-mono-color-content-focus: #{$core-ouds-color-functional-white};
   --#{$prefix}switch-color-cursor: #{$core-ouds-color-functional-gray-dark-880};
   --#{$prefix}switch-color-track-selected: #{$core-ouds-color-functional-malachite-600};
   --#{$prefix}switch-color-track-selected-interaction: #{$core-ouds-color-functional-malachite-300};
   --#{$prefix}switch-color-track-unselected: #{$core-ouds-color-opacity-white-640};
   --#{$prefix}switch-color-track-unselected-interaction: #{$core-ouds-color-opacity-white-800};
+  --#{$prefix}progress-indicator-color-content-track: #{$core-ouds-color-functional-gray-dark-480};
+  --#{$prefix}progress-indicator-mono-color-content-track: #{$core-ouds-color-functional-gray-dark-480};
+  --#{$prefix}progress-indicator-mono-color-content-indicator: #{$core-ouds-color-functional-white};
   --#{$prefix}icon-color-content-status-warning-external-shape: #{$core-ouds-color-functional-sun-300};
   --#{$prefix}icon-color-content-status-warning-internal-shape: #{$ouds-color-opacity-transparent-dark};
-  --#{$prefix}icon-color-content-default: #{$core-ouds-color-functional-gray-light-160};
+  --#{$prefix}icon-color-content-status-warning-inverse-external-shape: #{$core-ouds-color-functional-sun-500};
+  --#{$prefix}link-color-chevron-hover: #{$ouds-color-content-brand-primary-dark}; // deprecated
+  --#{$prefix}link-color-chevron-pressed: #{$ouds-color-content-brand-primary-dark}; // deprecated
+  --#{$prefix}link-color-chevron-focus: #{$ouds-color-content-brand-primary-dark}; // deprecated
+  --#{$prefix}list-item-color-bg-current-enabled: #{$ouds-color-action-support-hover-dark};
+  --#{$prefix}list-item-color-bg-hover: #{$ouds-color-action-support-hover-dark}; // deprecated
+  --#{$prefix}list-item-color-bg-pressed: #{$ouds-color-action-support-pressed-dark}; // deprecated
+  --#{$prefix}list-item-color-bg-loading: #{$ouds-color-action-support-loading-dark}; // deprecated
+  --#{$prefix}list-item-color-bg-focus: #{$ouds-color-action-support-focus-dark}; // deprecated
+  --#{$prefix}list-item-color-content-loader: #{$ouds-color-content-default-dark}; // deprecated
+  --#{$prefix}icon-color-content-status-warning-inverse-internal-shape: #{$core-ouds-color-functional-sun-750};
 }
 // scss-docs-end ouds-all-component-css-color

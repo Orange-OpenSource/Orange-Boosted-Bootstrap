@@ -79,15 +79,6 @@
     margin-top: .5rem;
   }
 
-  // List groups
-  > .list-group {
-    max-width: 25rem;
-  }
-
-  > [class*="list-group-horizontal"] {
-    max-width: 100%;
-  }
-
   // Navbars
   .fixed-top,
   .sticky-top {
@@ -135,6 +126,8 @@
 
 .bd-example-row [class^="col"],
 .bd-example-cols [class^="col"] > *,
+.bd-example-row [class*=":col"], // OUDS mod: for responsive row columns
+.bd-example-cols [class*=":col"] > *, // OUDS mod: for responsive row columns
 .bd-example-cssgrid [class*="grid"] > * {
   padding-top: .75rem;
   padding-bottom: .75rem;
@@ -398,7 +391,7 @@
   }
 
   pre code {
-    @include font-size(inherit);
+    font-size: inherit;
     color: var(--#{$prefix}color-content-default); // OUDS mod: instead of `var(--bs-body-color)`
     word-wrap: normal;
   }
@@ -492,8 +485,8 @@
 // scss-docs-start icon-home
 .icon-home::before {
   display: inline-block;
-  width: 3rem;
-  height: 3rem;
+  width: 1em;
+  height: 1em;
   vertical-align: bottom;
   content: "";
   background-color: currentcolor;

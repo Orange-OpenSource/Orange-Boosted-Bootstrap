@@ -1,7 +1,6 @@
 $prefix: bs-;
 $enable-important-utilities: false;
 
-// Important: Do not import rfs to check that the mixin just calls the appropriate functions from it
 // OUDS mod
 @import "../../config";
 @import "../../functions"; // Added because needed by "variables"
@@ -318,57 +317,26 @@ $enable-important-utilities: false;
         }
       }
     }
-
-    @include describe("rfs") {
-      @include it("sets the fluid value when not inside media query") {
-        @include test-generate-utility(
-          (
-            property: padding,
-            values: 1rem,
-            rfs: true
-          )
-        ) {
-          .padding-1rem {
-            padding: rfs-fluid-value(1rem);
-          }
-        }
-      }
-
-      @include it("sets the value when inside the media query") {
-        @include test-generate-utility(
-          (
-            property: padding,
-            values: 1rem,
-            rfs: true
-          ),
-          $is-rfs-media-query: true
-        ) {
-          .padding-1rem {
-            padding: rfs-value(1rem);
-          }
-        }
-      }
-    }
   }
 
-  @include describe("$infix") {
-    @include it("inserts the given infix") {
+  @include describe("$prefix") {
+    @include it("inserts the given prefix") {
       @include test-generate-utility(
         (
           property: "padding",
           values: (null: 1rem, small: .5rem, large: 2rem)
         ),
-        $infix: -sm
+        $bkpt-prefix: sm\:
       ) {
-        .padding-sm {
+        .sm\:padding {
           padding: 1rem;
         }
 
-        .padding-sm-small {
+        .sm\:padding-small {
           padding: .5rem;
         }
 
-        .padding-sm-large {
+        .sm\:padding-large {
           padding: 2rem;
         }
       }
@@ -384,13 +352,13 @@ $enable-important-utilities: false;
             invisible: hidden,
           )
         ),
-        -sm
+        $bkpt-prefix: sm\:
       ) {
-        .sm-visible {
+        .sm\:visible {
           visibility: visible;
         }
 
-        .sm-invisible {
+        .sm\:invisible {
           visibility: hidden;
         }
       }

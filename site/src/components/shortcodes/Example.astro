@@ -95,7 +95,7 @@ const simplifiedMarkup = markup
             (showPreview && showToolbar) ? '' : 'border-top-none']}>
             <small class="font-monospace text-muted text-uppercase my-small">{lang}</small>
             <!-- OUDS mod: buttons are not displayed on small screens -->
-            <div class="d-none d-md-flex ms-auto">
+            <div class="d-none md:d-flex ms-auto">
               <button type="button" class="btn btn-minimal btn-icon btn-edit m-2xsmall me-xsmall"
                 title={stackblitzLabel}
                 data-sb-js-snippet={addStackblitzJs ? true : undefined}>

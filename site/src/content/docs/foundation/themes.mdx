@@ -1,0 +1,63 @@
+---
+title: Themes and brands
+description: Documentation and examples for themes usage guidelines.
+aliases:
+  - "/docs/foundation/themes/"
+  - "/docs/about/brand/"
+toc: true
+---
+
+import { getVersionedDocsPath } from '@libs/path'
+
+OUDS Web offers three distinct themes: Orange, Orange Compact, and Sosh, representing two brands—Orange and Sosh. Each theme is applied consistently across all elements of the design system, featuring its own color scheme, typography, grid, logo, and more. These themes are intended for use in different contexts and for various purposes, and they should not be mixed within the same project. Each project must select one theme and apply it uniformly across all screens.
+
+This page showcases the three OUDS Web themes. Throughout the rest of the documentation, you can switch themes using the menu in the header.
+
+<Callout type="negative" title="Do not use multiple themes in the same project">
+  OUDS Web is designed for use with a single theme per project. This page displays a themes showcase and should not be replicated in actual projects, as it can create confusion and inconsistency in design.
+</Callout>
+
+<ThemeDemoStylesImport />
+
+
+## Orange
+
+The Orange theme represents the default Orange brand for OUDS Web. It is suitable for a wide range of contexts and purposes, featuring Orange’s vibrant color scheme, modern typography, and distinctive logo.
+
+<ThemeDemo theme="orange"/>
+
+### Logo for Orange theme
+
+OUDS Web provides a single SVG file for both master and small Orange logos, since it’s lightweight and easily made responsive. Here is the unminified SVG content:
+
+<img src={getVersionedDocsPath('assets/brand/orange-logo.svg')} class="figure-img img-fluid m-auto mb-medium" width="50" height="50" alt="Orange logos" loading="lazy" />
+
+<SvgDocs theme="orange" buttonLabel="Orange logo" />
+
+## Orange compact
+
+The Orange Compact theme presents the Orange brand in a more condensed format. It is intended for contexts where a significant amount of information needs to be displayed on each screen, such as business tools or operational interfaces. The Orange Compact theme shares the same color scheme, typography, and logo as the Orange theme.
+
+<ThemeDemo theme="orange-compact" />
+
+### Logo for Orange compact theme
+
+OUDS Web provides a single SVG file for both master and small Orange logos, since it’s lightweight and easily made responsive. It is the same logos as the ones used in the Orange theme. Here is the unminified SVG content:
+
+<img src={getVersionedDocsPath('assets/brand/orange-compact-logo.svg')} class="figure-img img-fluid m-auto mb-medium" width="50" height="50" alt="Orange logos" loading="lazy" />
+
+<SvgDocs theme="orange-compact" buttonLabel="Orange logo" />
+
+## Sosh
+
+The Sosh theme represents the default Sosh brand for OUDS Web. It embodies a more playful and youthful spirit, akin to social media or marketing materials. The Sosh brand features a bright color scheme, playful typography, and a distinctive logo.
+
+<ThemeDemo theme="sosh" />
+
+### Logo for Sosh theme
+
+OUDS Web provides an SVG file for the logo. Here is the unminified SVG content:
+
+<img src={getVersionedDocsPath('assets/brand/sosh-logo.svg')} class="figure-img img-fluid m-auto" width="80" height="80" alt="Sosh logo" loading="lazy" />
+
+<SvgDocs theme="sosh" buttonLabel="Sosh logo" />
