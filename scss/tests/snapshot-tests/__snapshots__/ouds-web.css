@@ -12574,7 +12574,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
   background: none;
   border: 0;
 }
-.icon svg:not(.loader) {
+.icon svg:not(.loader),
+.icon .icon {
   flex-shrink: 1;
   width: 1em;
   height: 1em;
