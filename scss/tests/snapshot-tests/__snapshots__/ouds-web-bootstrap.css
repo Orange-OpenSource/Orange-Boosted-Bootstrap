@@ -12655,8 +12655,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 .modal-header .btn-close {
   position: absolute;
+  inset-inline-end: var(--bs-modal-dialog-space-inset-close-button);
   top: var(--bs-modal-dialog-space-inset-close-button);
-  right: var(--bs-modal-dialog-space-inset-close-button);
 }
 
 .modal-title {
@@ -14124,6 +14124,25 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 .offcanvas.showing, .offcanvas.hiding, .offcanvas.show {
   visibility: visible;
+}
+
+.offcanvas-backdrop {
+  --bs-offcanvas-backdrop-bg: var(--bs-color-overlay-backdrop);
+  --bs-offcanvas-backdrop-opacity: 1;
+  --bs-offcanvas-backdrop-zindex: 1040;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--bs-offcanvas-backdrop-zindex);
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bs-offcanvas-backdrop-bg);
+}
+.offcanvas-backdrop.fade {
+  opacity: 0;
+}
+.offcanvas-backdrop.show {
+  opacity: var(--bs-offcanvas-backdrop-opacity);
 }
 
 .offcanvas-header {

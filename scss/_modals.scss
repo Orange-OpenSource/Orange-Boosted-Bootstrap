@@ -203,8 +203,8 @@
 
   .btn-close {
     position: absolute;
+    inset-inline-end: var(--#{$prefix}modal-dialog-space-inset-close-button);
     top: var(--#{$prefix}modal-dialog-space-inset-close-button);
-    right: var(--#{$prefix}modal-dialog-space-inset-close-button);
   }
 }
 
