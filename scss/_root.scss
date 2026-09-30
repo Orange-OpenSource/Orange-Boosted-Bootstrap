@@ -148,6 +148,7 @@
   --#{$prefix}font-max-width-label-medium: #{px-to-rem($ouds-size-max-width-label-medium-mobile)};
   --#{$prefix}font-max-width-label-large: #{px-to-rem($ouds-size-max-width-label-large-mobile)};
   --#{$prefix}font-max-width-label-xlarge: #{px-to-rem($ouds-size-max-width-label-xlarge-mobile)};
+  --#{$prefix}font-max-width-boxed-text: #{px-to-rem($ouds-size-max-width-boxed-text-mobile)};
 
   @include media-breakpoint-up(md) {
     --#{$prefix}font-size-display-large: #{px-to-rem($ouds-font-size-display-large-tablet)};
@@ -194,6 +195,7 @@
     --#{$prefix}font-max-width-label-medium: #{px-to-rem($ouds-size-max-width-label-medium-tablet)};
     --#{$prefix}font-max-width-label-large: #{px-to-rem($ouds-size-max-width-label-large-tablet)};
     --#{$prefix}font-max-width-label-xlarge: #{px-to-rem($ouds-size-max-width-label-xlarge-tablet)};
+    --#{$prefix}font-max-width-boxed-text: #{px-to-rem($ouds-size-max-width-boxed-text-tablet)};
   }
 
   @include media-breakpoint-up(xl) {
@@ -241,6 +243,7 @@
     --#{$prefix}font-max-width-label-medium: #{px-to-rem($ouds-size-max-width-label-medium-desktop)};
     --#{$prefix}font-max-width-label-large: #{px-to-rem($ouds-size-max-width-label-large-desktop)};
     --#{$prefix}font-max-width-label-xlarge: #{px-to-rem($ouds-size-max-width-label-xlarge-desktop)};
+    --#{$prefix}font-max-width-boxed-text: #{px-to-rem($ouds-size-max-width-boxed-text-desktop)};
   }
   // scss-docs-end root-font-variables-ouds
   // End mod
