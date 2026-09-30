@@ -221,6 +221,17 @@
   gap: var(--#{$prefix}modal-title-link-gap);
 }
 
+.modal-title-with-icon {
+  display: flex;
+  gap: var(--#{$prefix}space-scaled-small);
+  align-items: center;
+}
+
+.modal-title-with-subtitle {
+  display: flex;
+  flex-direction: column;
+}
+
 .modal-subtitle {
   margin: 0;
 }

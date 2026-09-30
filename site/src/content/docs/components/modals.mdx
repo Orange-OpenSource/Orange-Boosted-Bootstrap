@@ -363,7 +363,7 @@ You can display a subtitle above the title, aligned to the leading edge of the m
 
 <Example buttonLabel="modal dialog subtitle" code={`<dialog id="modalDialogSubtitle" class="modal-base modal-dialog" aria-labelledby="modalDialogSubtitleTitle" closedby="any">
     <div class="modal-header">
-      <div class="d-flex flex-column gap-none">
+      <div class="modal-title-with-subtitle">
         <p class="modal-subtitle">Subtitle</p>
         <h3 id="modalDialogSubtitleTitle" class="modal-title">Modal title</h3>
       </div>
@@ -386,11 +386,11 @@ You can display a subtitle above the title, aligned to the leading edge of the m
 
 ### Title icon
 
-You can display a subtitle above the title, aligned to the leading edge of the modal. Use it to provide additional context or clarify the purpose of the modal when the title alone is not sufficient.
+You can display an icon to the right of the title. It can be used either as a decorative element or to communicate a functional status, such as success, deletion, error, warning, or information.
 
-<Example buttonLabel="modal dialog subtitle" code={`<dialog id="modalDialogTitleIcon" class="modal-base modal-dialog" aria-labelledby="modalDialogTitleIconTitle" closedby="any">
+<Example buttonLabel="modal dialog title icon" code={`<dialog id="modalDialogTitleIcon" class="modal-base modal-dialog" aria-labelledby="modalDialogTitleIconTitle" closedby="any">
     <div class="modal-header">
-      <div class="d-flex align-items-center gap-scaled-small">
+      <div class="modal-title-with-icon">
         <svg class="hm-large-icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
@@ -415,7 +415,7 @@ You can display a subtitle above the title, aligned to the leading edge of the m
 
 ### Description
 
-The Description option displays supporting text below the title.It provides additional context, instructions, or information required to understand the purpose or outcome of the modal.The description may be omitted when the title alone provides sufficient context and the message is short and immediately understandable.
+The description option displays supporting text below the title.It provides additional context, instructions, or information required to understand the purpose or outcome of the modal. The description may be omitted when the title alone provides sufficient context and the message is short and immediately understandable.
 
 <Example buttonLabel="modal dialog no description" code={`<dialog id="modalDialogNoDescription" class="modal-base modal-dialog" aria-labelledby="modalDialogNoDescriptionTitle" closedby="any">
     <div class="modal-header">

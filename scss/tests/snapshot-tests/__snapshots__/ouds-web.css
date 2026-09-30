@@ -10491,6 +10491,17 @@ ol.bullet-list > li > ol > li > ol > li::before {
   gap: var(--bs-modal-title-link-gap);
 }
 
+.modal-title-with-icon {
+  display: flex;
+  gap: var(--bs-space-scaled-small);
+  align-items: center;
+}
+
+.modal-title-with-subtitle {
+  display: flex;
+  flex-direction: column;
+}
+
 .modal-subtitle {
   margin: 0;
 }
