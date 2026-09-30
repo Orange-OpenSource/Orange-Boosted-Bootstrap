@@ -8,7 +8,7 @@
 }
 
 .modal-base {
-  --#{$prefix}modal-dialog-space-column-gap-previous-title: #{$ouds-modal-dialog-space-column-gap-previous-title-mobile};
+  --#{$prefix}modal-title-link-gap: #{$ouds-modal-dialog-space-column-gap-previous-title-mobile};
   --#{$prefix}modal-close-button-inset: #{$ouds-modal-dialog-space-inset-close-button-mobile};
   --#{$prefix}modal-body-footer-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-mobile};
   --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-mobile};
@@ -44,7 +44,7 @@
   }
 
   @include media-breakpoint-up(md) {
-    --#{$prefix}modal-dialog-space-column-gap-previous-title: #{$ouds-modal-dialog-space-column-gap-previous-title-tablet};
+    --#{$prefix}modal-title-link-gap: #{$ouds-modal-dialog-space-column-gap-previous-title-tablet};
     --#{$prefix}modal-close-button-inset: #{$ouds-modal-dialog-space-inset-close-button-default-tablet};
     --#{$prefix}modal-body-footer-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-tablet};
     --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-default-tablet};
@@ -53,7 +53,7 @@
   }
 
   @include media-breakpoint-up(xl) {
-    --#{$prefix}modal-dialog-space-column-gap-previous-title: #{$ouds-modal-dialog-space-column-gap-previous-title-desktop};
+    --#{$prefix}modal-title-link-gap: #{$ouds-modal-dialog-space-column-gap-previous-title-desktop};
     --#{$prefix}modal-close-button-inset: #{$ouds-modal-dialog-space-inset-close-button-default-desktop};
     --#{$prefix}modal-body-footer-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-desktop};
     --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-default-desktop};
@@ -213,6 +213,12 @@
 .modal-title {
   margin: 0;
   @include get-font-size("heading-medium");
+}
+
+.modal-title-with-link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--#{$prefix}modal-title-link-gap);
 }
 
 .modal-subtitle {
