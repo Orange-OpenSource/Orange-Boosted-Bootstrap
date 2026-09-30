@@ -87,7 +87,7 @@
 
   box-shadow: $ouds-elevation-emphasized;
   opacity: 0;
-  transform: translateY(-3rem);
+  transform: translateY(-8rem);
   @include transition(transform .3s ease-in-out, opacity .3s ease-in-out, display .4s allow-discrete, overlay .2s allow-discrete);
   @include border-radius(var(--#{$prefix}modal-border-radius));
 
@@ -106,7 +106,7 @@
 
     @starting-style {
       opacity: 0;
-      transform: translateY(-3rem);
+      transform: translateY(-8rem);
 
       &:not(.modal-non-blurred)::backdrop {
         backdrop-filter: unset;
