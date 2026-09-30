@@ -19,7 +19,7 @@ interface Props {
 
 const { className, additionalTagsText, componentTypeSpecificsText } = Astro.props
 
-const compatibleTags = `The <code>.${className}</code> classes are designed to be used with the <code>&lt;button&gt;</code> element, but can be used on <code>&lt;a&gt;</code>${additionalTagsText ? ' ' + additionalTagsText : ''} elements. You should use any semantic element that best fits the context to appropriately convey its purpose to assistive technologies such as screen readers.`
+const compatibleTags = `The <code>.${className}</code> class is designed to be used with the <code>&lt;button&gt;</code> element, but can be used on <code>&lt;a&gt;</code>${additionalTagsText ? ' ' + additionalTagsText : ''} elements. You should use any semantic element that best fits the context to appropriately convey its purpose to assistive technologies such as screen readers.`
 ---
 
 <p set:html={compatibleTags} />
@@ -28,4 +28,4 @@ const compatibleTags = `The <code>.${className}</code> classes are designed to b
 <p>Use an <code>&lt;a&gt;</code> element only for navigation purpose; it must include an <code>href</code> attribute to be focusable.</p>
 <p set:html={componentTypeSpecificsText} />
 
-<p>Generally speaking, you should always ask yourself which tag is appropriate for your specific context. The visual rendering will remain the same anyway:</p>
+<p>Generally speaking, you should always ask yourself which tag is appropriate for your specific context. The visual rendering will remain the same anyway.</p>
