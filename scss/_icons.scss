@@ -20,7 +20,8 @@
   background: none;
   border: 0;
 
-  svg:not(.loader) {
+  svg:not(.loader),
+  .icon {
     flex-shrink: 1;
     width: 1em;
     height: 1em;
