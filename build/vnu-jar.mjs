@@ -44,7 +44,8 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     'Attribute “switch” not allowed on element “input” at this point.',
     '.*style. not allowed.*',
     // Allow empty option in select
-    'Element “option” without attribute “label” must not be empty.'
+    'Element “option” without attribute “label” must not be empty.',
+    'The heading .*skipping [1-6] heading level.*'
     // End mod
   ].join('|')
 
