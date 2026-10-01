@@ -94,12 +94,12 @@ Interactive Icon is an icon component designed to trigger a user interaction (e.
 #### Disabled
 
 <DisabledState name="interactive icons">
-  <Example slot="buttonExample" buttonLabel="disabled interactive icon" class="bd-example" code={`<button class="icon icon-interactive" disabled aria-label="Disabled interactive button icon">
+  <Example slot="buttonExample" buttonLabel="disabled interactive icon button" class="bd-example" code={`<button class="icon icon-interactive" disabled aria-label="Disabled interactive button icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </button>`} />
-  <Example slot="anchorExample" buttonLabel="disabled icon links" code={`<a href="#" tabindex="-1" class="icon icon-interactive" aria-disabled="true" aria-label="Disabled interactive link icon">
+  <Example slot="anchorExample" buttonLabel="disabled interactive icon link" code={`<a href="#" tabindex="-1" class="icon icon-interactive" aria-disabled="true" aria-label="Disabled interactive link icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -156,7 +156,7 @@ Interactive Icon is an icon component designed to trigger a user interaction (e.
 
 Interactive icons are meant to adapt to their container. They are not constrained to specific dimensions, and can be used at any size required by layout.
 
-They can also be styled using `.decorative-*-icon` classes on `svg` elements.
+They can also be dimensioned using `.decorative-*-icon` classes on `svg` elements.
 
 <Example buttonLabel="multiple sizes icon" class="bd-example" code={`<div style="width: 2.375rem; height: 2.375rem; display: inline-block;">
     <button class="icon icon-interactive" aria-label="Inline style interactive icon">
@@ -209,7 +209,7 @@ If your browser is compatible, the following example will show two transparent a
 <DisabledState name="assistant icons">
   <Example slot="buttonExample" buttonLabel="disabled assistant icon" class="bd-example" code={`<button class="icon icon-assistant" disabled aria-label="Disabled assistant icon"></button>`} showToolbar={false} />
 
-  <Example slot="anchorExample" buttonLabel="disabled icon links" code={`<a href="#" class="icon icon-assistant" aria-disabled="true" tabindex="-1" aria-label="Disabled assistant link icon"></a>`} />
+  <Example slot="anchorExample" buttonLabel="disabled assistant icon link" code={`<a href="#" class="icon icon-assistant" aria-disabled="true" tabindex="-1" aria-label="Disabled assistant link icon"></a>`} />
 </DisabledState>
 
 #### Loading
