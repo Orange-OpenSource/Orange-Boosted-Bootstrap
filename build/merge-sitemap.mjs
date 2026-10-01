@@ -17,9 +17,7 @@ function main() {
   const [firstFile, secondFile] = process.argv.slice(2)
 
   if (!firstFile || !secondFile) {
-    throw new Error(
-      'Usage: node merge-sitemaps.mjs sitemap1.xml sitemap2.xml'
-    )
+    return
   }
 
   // Read both files before replacing the first one.
