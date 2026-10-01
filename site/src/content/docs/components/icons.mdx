@@ -158,13 +158,11 @@ Interactive icons are designed with maximum and minimum width and height, which 
 
 They can be dimensioned using `.decorative-*-icon` classes on `svg` elements.
 
-<Example buttonLabel="multiple sizes icon" class="bd-example" code={`<div style="width: 2.375rem; height: 2.375rem; display: inline-block;">
-    <button class="icon icon-interactive" aria-label="Inline style interactive icon">
-      <svg aria-hidden="true">
-        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-      </svg>
-    </button>
-  </div>
+<Example buttonLabel="multiple sizes icon" class="bd-example" code={`<button class="icon icon-interactive" aria-label="Inline style interactive icon" style="width: 2.375rem; height: 2.375rem;">
+    <svg aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+  </button>
 
   <button class="icon icon-interactive" aria-label="Small interactive icon">
     <svg class="decorative-small-icon" aria-hidden="true">
@@ -207,7 +205,7 @@ If your browser is compatible, the following example will show two transparent a
 #### Disabled
 
 <DisabledState name="assistant icons">
-  <Example slot="buttonExample" buttonLabel="disabled assistant icon" class="bd-example" code={`<button class="icon icon-assistant" disabled aria-label="Disabled assistant icon"></button>`} showToolbar={false} />
+  <Example slot="buttonExample" buttonLabel="disabled assistant icon button" class="bd-example" code={`<button class="icon icon-assistant" disabled aria-label="Disabled assistant icon"></button>`} showToolbar={false} />
 
   <Example slot="anchorExample" buttonLabel="disabled assistant icon link" code={`<a href="#" class="icon icon-assistant" aria-disabled="true" tabindex="-1" aria-label="Disabled assistant link icon"></a>`} />
 </DisabledState>
