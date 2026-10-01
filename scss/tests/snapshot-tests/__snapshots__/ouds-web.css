@@ -10343,7 +10343,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   box-shadow: 0 8px 8px -2px var(--bs-elevation-color-emphasized);
   opacity: 0;
   transform: translateY(-3rem);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, display 0.3s allow-discrete, overlay 0.3s allow-discrete;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, display 0.2s allow-discrete, overlay 0.2s allow-discrete;
   border-radius: var(--bs-modal-border-radius);
 }
 @media (prefers-reduced-motion: reduce) {

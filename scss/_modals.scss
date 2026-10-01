@@ -88,7 +88,7 @@
   box-shadow: $ouds-elevation-emphasized;
   opacity: 0;
   transform: translateY(-3rem);
-  @include transition(transform .3s ease-in-out, opacity .3s ease-in-out, display .3s allow-discrete, overlay .3s allow-discrete);
+  @include transition(transform .2s ease-in-out, opacity .2s ease-in-out, display .2s allow-discrete, overlay .2s allow-discrete);
   @include border-radius(var(--#{$prefix}modal-border-radius));
 
   &:not(.modal-non-blurred)::backdrop {
