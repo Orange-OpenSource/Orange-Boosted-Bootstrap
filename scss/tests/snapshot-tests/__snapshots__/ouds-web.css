@@ -10342,8 +10342,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-modal-padding-inline: 24px;
   box-shadow: 0 8px 8px -2px var(--bs-elevation-color-emphasized);
   opacity: 0;
-  transform: translateY(-8rem);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, display 0.4s allow-discrete, overlay 0.2s allow-discrete;
+  transform: translateY(-3rem);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, display 0.3s allow-discrete, overlay 0.3s allow-discrete;
   border-radius: var(--bs-modal-border-radius);
 }
 @media (prefers-reduced-motion: reduce) {
@@ -10374,7 +10374,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 @starting-style {
   .modal-dialog:is(:open, [open]) {
     opacity: 0;
-    transform: translateY(-8rem);
+    transform: translateY(-3rem);
   }
   .modal-dialog:is(:open, [open]):not(.modal-non-blurred)::backdrop {
     -webkit-backdrop-filter: unset;
