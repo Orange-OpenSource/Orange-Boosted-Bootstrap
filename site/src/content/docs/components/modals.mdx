@@ -332,11 +332,11 @@ The close button may be hidden when the modal has a clear, visible alternative w
 
 ### Previous link
 
-Add a `.modal-title-with-link` container to display a navigation link above the title, aligned to the leading edge of the modal. It is intended for multi-step flows where users can navigate back to a previous step without dismissing the entire modal.
+Add a container with utility classes to display a navigation link above the title, aligned to the leading edge of the modal. It is intended for multi-step flows where users can navigate back to a previous step without dismissing the entire modal.
 
 <Example buttonLabel="modal dialog previous link" code={`<dialog id="modalDialogPreviousLink" class="modal-base modal-fullscreen-dialog" aria-labelledby="modalDialogPreviousLinkTitle" closedby="any">
     <div class="modal-header">
-      <div class="modal-title-with-link">
+      <div class="d-flex flex-column gap-scaled-medium">
         <a href="#" class="link link-chevron link-previous">Previous</a>
         <h3 id="modalDialogPreviousLinkTitle" class="modal-title">Modal title</h3>
       </div>
@@ -363,8 +363,8 @@ You can display a subtitle above the title, aligned to the leading edge of the m
 
 <Example buttonLabel="modal dialog subtitle" code={`<dialog id="modalDialogSubtitle" class="modal-base modal-dialog" aria-labelledby="modalDialogSubtitleTitle" closedby="any">
     <div class="modal-header">
-      <div class="modal-title-with-subtitle">
-        <p class="modal-subtitle">Subtitle</p>
+      <div class="d-flex flex-column">
+        <p class="m-none">Subtitle</p>
         <h3 id="modalDialogSubtitleTitle" class="modal-title">Modal title</h3>
       </div>
       <button type="button" class="btn btn-close" commandfor="modalDialogSubtitle" command="close">
@@ -390,7 +390,7 @@ You can display an icon to the right of the title. It can be used either as a de
 
 <Example buttonLabel="modal dialog title icon" code={`<dialog id="modalDialogTitleIcon" class="modal-base modal-dialog" aria-labelledby="modalDialogTitleIconTitle" closedby="any">
     <div class="modal-header">
-      <div class="modal-title-with-icon">
+      <div class="d-flex gap-scaled-small align-items-center">
         <svg class="hm-large-icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>

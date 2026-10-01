@@ -7,6 +7,8 @@
   --#{$prefix}modal-border-radius: #{$ouds-modal-dialog-border-radius-rounded};
 }
 
+$modal-transition-duration: .2s !default;
+
 .modal-base {
   --#{$prefix}modal-title-link-gap: #{$ouds-modal-dialog-space-column-gap-previous-title-mobile};
   --#{$prefix}modal-close-button-inset: #{$ouds-modal-dialog-space-inset-close-button-mobile};
@@ -88,12 +90,12 @@
   box-shadow: $ouds-elevation-emphasized;
   opacity: 0;
   transform: translateY(-3rem);
-  @include transition(transform .2s ease-in-out, opacity .2s ease-in-out, display .2s allow-discrete, overlay .2s allow-discrete);
+  @include transition(transform #{$modal-transition-duration} ease-in-out, opacity #{$modal-transition-duration} ease-in-out, display #{$modal-transition-duration} allow-discrete, overlay #{$modal-transition-duration} allow-discrete);
   @include border-radius(var(--#{$prefix}modal-border-radius));
 
   &:not(.modal-non-blurred)::backdrop {
     backdrop-filter: unset;
-    @include transition(backdrop-filter .2s ease-in-out);
+    @include transition(backdrop-filter #{$modal-transition-duration} ease-in-out);
   }
 
   &:is(:open, [open]) {
@@ -213,27 +215,6 @@
 .modal-title {
   margin: 0;
   @include get-font-size("heading-medium");
-}
-
-.modal-title-with-link {
-  display: flex;
-  flex-direction: column;
-  gap: var(--#{$prefix}modal-title-link-gap);
-}
-
-.modal-title-with-icon {
-  display: flex;
-  gap: var(--#{$prefix}space-scaled-small);
-  align-items: center;
-}
-
-.modal-title-with-subtitle {
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-subtitle {
-  margin: 0;
 }
 
 .modal-alert-icon {

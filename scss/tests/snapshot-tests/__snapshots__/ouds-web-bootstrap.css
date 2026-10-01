@@ -12674,27 +12674,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   letter-spacing: var(--bs-font-letter-spacing-heading-medium);
 }
 
-.modal-title-with-link {
-  display: flex;
-  flex-direction: column;
-  gap: var(--bs-modal-title-link-gap);
-}
-
-.modal-title-with-icon {
-  display: flex;
-  gap: var(--bs-space-scaled-small);
-  align-items: center;
-}
-
-.modal-title-with-subtitle {
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-subtitle {
-  margin: 0;
-}
-
 .modal-alert-icon {
   --bs-modal-icon: var(--bs-alert-error-icon);
   --bs-modal-icon-color: var(--bs-color-content-status-negative);
