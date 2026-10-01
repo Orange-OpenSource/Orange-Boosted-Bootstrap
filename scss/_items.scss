@@ -27,7 +27,7 @@
   display: flex;
   column-gap: $ouds-list-item-space-column-gap;
   align-items: var(--#{$prefix}list-item-align-items, center);
-  min-height: calc(var(--#{$prefix}list-item-min-height, $ouds-list-item-size-min-height-default) - 2 * var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default / 2));
+  min-height: calc(var(--#{$prefix}list-item-min-height, $ouds-list-item-size-min-height-default) - 2 * var(--#{$prefix}list-item-border-width, calc($ouds-list-item-border-width-default / 2)));
   padding: calc(var(--#{$prefix}list-item-padding-top, $ouds-list-item-space-padding-block-default) - var(--#{$prefix}list-item-border-width, 0px)) calc($ouds-list-item-space-padding-inline - var(--#{$prefix}list-item-border-width, 0px)) calc(var(--#{$prefix}list-item-padding-bottom, $ouds-list-item-space-padding-block-default) - var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default));
 }
 
