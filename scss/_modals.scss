@@ -8,6 +8,7 @@
 }
 
 $modal-transition-duration: .2s !default;
+$modal-transition-dimension: -3rem !default;
 
 .modal-base {
   --#{$prefix}modal-title-link-gap: #{$ouds-modal-dialog-space-column-gap-previous-title-mobile};
@@ -89,7 +90,7 @@ $modal-transition-duration: .2s !default;
 
   box-shadow: $ouds-elevation-emphasized;
   opacity: 0;
-  transform: translateY(-3rem);
+  transform: translateY(#{$modal-transition-dimension});
   @include transition(transform #{$modal-transition-duration} ease-in-out, opacity #{$modal-transition-duration} ease-in-out, display #{$modal-transition-duration} allow-discrete, overlay #{$modal-transition-duration} allow-discrete);
   @include border-radius(var(--#{$prefix}modal-border-radius));
 
@@ -108,7 +109,7 @@ $modal-transition-duration: .2s !default;
 
     @starting-style {
       opacity: 0;
-      transform: translateY(-3rem);
+      transform: translateY(#{$modal-transition-dimension});
 
       &:not(.modal-non-blurred)::backdrop {
         backdrop-filter: unset;
