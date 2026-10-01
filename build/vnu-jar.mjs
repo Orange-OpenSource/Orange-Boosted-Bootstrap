@@ -44,14 +44,7 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     'Attribute “switch” not allowed on element “input” at this point.',
     '.*style. not allowed.*',
     // Allow empty option in select
-    'Element “option” without attribute “label” must not be empty.',
-    'The heading .*skipping [1-6] heading level.*',
-    'The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.',
-    'The element “a” must not appear as a descendant of an element with the attribute “role=tab”.',
-    'The element “a” with the attribute “href” must not appear as a descendant of an element with the attribute “role=tab”.',
-    'Every active .role=tab. element must have a corresponding .role=tabpanel. element.',
-    '.*Cannot invoke .*because .val. is null.',
-    'This document has heading elements but none of them has a computed heading level of 1.'
+    'Element “option” without attribute “label” must not be empty.'
     // End mod
   ].join('|')
 
