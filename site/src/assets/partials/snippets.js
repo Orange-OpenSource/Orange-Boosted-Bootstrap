@@ -174,6 +174,8 @@ export default () => {
 
     // this is necessary for "light dismiss" (closing dialog on backdrop click)
     dialog.addEventListener('click', event => {
+      // this test will return true when clicking on the dialog padding
+      //  you might want to implement a check based on dialog.getBoundingClientRect
       if (event.target === event.currentTarget) {
         dialog.close()
       }

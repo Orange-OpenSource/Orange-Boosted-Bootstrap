@@ -12,7 +12,6 @@ $modal-transition-duration: .2s !default;
 $modal-transition-dimension: -3rem !default;
 
 .modal-base {
-  --#{$prefix}modal-title-link-gap: #{$ouds-modal-dialog-space-column-gap-previous-title-mobile};
   --#{$prefix}modal-close-button-inset: #{$ouds-modal-dialog-space-inset-close-button-mobile};
   --#{$prefix}modal-body-footer-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-mobile};
   --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-mobile};
@@ -48,7 +47,6 @@ $modal-transition-dimension: -3rem !default;
   }
 
   @include media-breakpoint-up(md) {
-    --#{$prefix}modal-title-link-gap: #{$ouds-modal-dialog-space-column-gap-previous-title-tablet};
     --#{$prefix}modal-close-button-inset: #{$ouds-modal-dialog-space-inset-close-button-default-tablet};
     --#{$prefix}modal-body-footer-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-tablet};
     --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-default-tablet};
@@ -57,7 +55,6 @@ $modal-transition-dimension: -3rem !default;
   }
 
   @include media-breakpoint-up(xl) {
-    --#{$prefix}modal-title-link-gap: #{$ouds-modal-dialog-space-column-gap-previous-title-desktop};
     --#{$prefix}modal-close-button-inset: #{$ouds-modal-dialog-space-inset-close-button-default-desktop};
     --#{$prefix}modal-body-footer-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-desktop};
     --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-default-desktop};

@@ -765,7 +765,7 @@ dialog,
 }
 
 // fix for Safari to prevent page scrolling when a modal dialog is open
-body:has(dialog:modal:open) {
+body:has(dialog:modal) {
   overflow-y: hidden;
 }
 

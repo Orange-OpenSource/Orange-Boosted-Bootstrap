@@ -1578,7 +1578,7 @@ dialog,
   border: 0;
 }
 
-body:has(dialog:modal:open) {
+body:has(dialog:modal) {
   overflow-y: hidden;
 }
 
@@ -12487,7 +12487,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .modal-base {
-  --bs-modal-title-link-gap: 16px;
   --bs-modal-close-button-inset: 12px;
   --bs-modal-body-footer-padding-bottom: 12px;
   --bs-modal-sticky-footer-padding-block: 20px;
@@ -12519,7 +12518,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 @media (min-width: 736px) {
   .modal-base {
-    --bs-modal-title-link-gap: 20px;
     --bs-modal-close-button-inset: 16px;
     --bs-modal-body-footer-padding-bottom: 4px;
     --bs-modal-sticky-footer-padding-block: 28px;
@@ -12529,7 +12527,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 @media (min-width: 1320px) {
   .modal-base {
-    --bs-modal-title-link-gap: 24px;
     --bs-modal-close-button-inset: 24px;
     --bs-modal-body-footer-padding-bottom: 8px;
     --bs-modal-sticky-footer-padding-block: 28px;
