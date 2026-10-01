@@ -74,7 +74,7 @@ In any case, do not forget to add an `aria-label` since there is no discernible 
 
 ## [[comp]] Interactive icon
 
-Interactive Icon is an icon component designed to trigger a user interaction (e.g., open, close, toggle a state). It includes defined interactive states and can be used independently or within other components such as buttons, inputs, or menus.
+Interactive icon is an icon component designed to trigger a user interaction (e.g., open, close, toggle a state). It includes defined interactive states and can be used independently or within other components such as buttons, inputs, or menus.
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
@@ -154,9 +154,9 @@ Interactive Icon is an icon component designed to trigger a user interaction (e.
 
 ### Sizes
 
-Interactive icons are meant to adapt to their container. They are not constrained to specific dimensions, and can be used at any size required by layout.
+Interactive icons are designed with maximum and minimum width and height, which constraints their size. They can however take any size within these boundaries.
 
-They can also be dimensioned using `.decorative-*-icon` classes on `svg` elements.
+They can be dimensioned using `.decorative-*-icon` classes on `svg` elements.
 
 <Example buttonLabel="multiple sizes icon" class="bd-example" code={`<div style="width: 2.375rem; height: 2.375rem; display: inline-block;">
     <button class="icon icon-interactive" aria-label="Inline style interactive icon">
@@ -242,9 +242,9 @@ If your browser is compatible, the following example will show two transparent a
 
 ### Sizes
 
-Assistant icons are meant to adapt to their container. They are not constrained to specific dimensions, and can be used at any size required by layout.
+Assistant icons are designed with maximum and minimum width and height, which constraints their size. They can however take any size within these boundaries.
 
-They can also be styled using `.decorative-*-icon` classes on `button` elements.
+They can be dimensioned using `.decorative-*-icon` classes on `button` elements.
 
 <Example buttonLabel="multiple sizes icon" class="bd-example" code={`<div style="width: 2rem; height: 2rem; display: inline-block;">
     <button type="button" class="icon icon-assistant" aria-label="First transparent assistant icon"></button>
