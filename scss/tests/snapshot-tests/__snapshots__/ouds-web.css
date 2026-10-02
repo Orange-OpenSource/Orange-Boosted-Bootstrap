@@ -12553,12 +12553,16 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-skeleton-height: calc(var(--bs-font-size-heading-medium) * var(--bs-font-line-height-heading-medium));
 }
 
-.icon-interactive {
+.icon-interactive,
+.icon-assistant {
   --bs-icon-min-width: 24px;
   --bs-icon-min-height: 24px;
   --bs-icon-max-width: 48px;
   --bs-icon-max-height: 48px;
   --bs-icon-color: var(--bs-color-action-enabled);
+  --bs-icon-disabled-color: var(--bs-color-action-disabled);
+  --bs-icon-loading-color: var(--bs-color-action-loading);
+  --bs-icon-loading-size: 1.25rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -12574,8 +12578,10 @@ ol.bullet-list > li > ol > li > ol > li::before {
   background: none;
   border: 0;
 }
-.icon svg:not(.loader),
-.icon .icon {
+.icon-interactive svg:not(.loader),
+.icon-interactive .icon,
+.icon-assistant svg:not(.loader),
+.icon-assistant .icon {
   flex-shrink: 1;
   width: 1em;
   height: 1em;
@@ -12583,31 +12589,22 @@ ol.bullet-list > li > ol > li > ol > li::before {
   font-size: 1.5rem;
   line-height: 0;
 }
-.icon.icon-interactive,
-.icon.icon-assistant {
-  --bs-icon-hover-color: var(--bs-color-action-hover);
-  --bs-icon-active-color: var(--bs-color-action-pressed);
-  --bs-icon-disabled-color: var(--bs-color-action-disabled);
-  --bs-icon-focus-color: var(--bs-color-action-focus);
-  --bs-icon-loading-color: var(--bs-color-action-loading);
-  --bs-icon-loading-size: 1.25rem;
-}
-.icon.icon-interactive:hover,
-.icon.icon-assistant:hover {
+.icon-interactive:hover,
+.icon-assistant:hover {
   --bs-icon-color: var(--bs-icon-hover-color);
 }
-.icon.icon-interactive:focus-visible,
-.icon.icon-assistant:focus-visible {
+.icon-interactive:focus-visible,
+.icon-assistant:focus-visible {
   --bs-icon-color: var(--bs-icon-focus-color);
 }
-.icon.icon-interactive:active,
-.icon.icon-assistant:active {
+.icon-interactive:active,
+.icon-assistant:active {
   --bs-icon-color: var(--bs-icon-active-color);
 }
-.icon.icon-interactive:disabled,
-.icon.icon-interactive[aria-disabled="true"],
-.icon.icon-assistant:disabled,
-.icon.icon-assistant[aria-disabled="true"] {
+.icon-interactive:disabled,
+ .icon-interactive[aria-disabled="true"],
+.icon-assistant:disabled,
+.icon-assistant[aria-disabled="true"] {
   --bs-icon-color: var(--bs-icon-disabled-color);
   pointer-events: none;
 }
@@ -12640,21 +12637,21 @@ ol.bullet-list > li > ol > li > ol > li::before {
     transform: rotate(360deg) /* rtl:ignore */;
   }
 }
-.icon.icon-interactive .loader,
-.icon.icon-assistant .loader {
+.icon-interactive .loader,
+.icon-assistant .loader {
   display: none;
 }
-.icon.icon-interactive.loading-indeterminate,
-.icon.icon-interactive.loading-determinate,
-.icon.icon-assistant.loading-indeterminate,
-.icon.icon-assistant.loading-determinate {
+.icon-interactive.loading-indeterminate,
+ .icon-interactive.loading-determinate,
+.icon-assistant.loading-indeterminate,
+.icon-assistant.loading-determinate {
   position: relative;
   color: transparent;
 }
-.icon.icon-interactive.loading-indeterminate .loader,
-.icon.icon-interactive.loading-determinate .loader,
-.icon.icon-assistant.loading-indeterminate .loader,
-.icon.icon-assistant.loading-determinate .loader {
+.icon-interactive.loading-indeterminate .loader,
+ .icon-interactive.loading-determinate .loader,
+.icon-assistant.loading-indeterminate .loader,
+.icon-assistant.loading-determinate .loader {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -12663,10 +12660,10 @@ ol.bullet-list > li > ol > li > ol > li::before {
   font-size: var(--bs-icon-loading-size);
   transform: translate(-50%, -50%) rotate(-90deg);
 }
-.icon.icon-interactive.loading-indeterminate .loader > .loader-inner,
-.icon.icon-interactive.loading-determinate .loader > .loader-inner,
-.icon.icon-assistant.loading-indeterminate .loader > .loader-inner,
-.icon.icon-assistant.loading-determinate .loader > .loader-inner {
+.icon-interactive.loading-indeterminate .loader > .loader-inner,
+ .icon-interactive.loading-determinate .loader > .loader-inner,
+.icon-assistant.loading-indeterminate .loader > .loader-inner,
+.icon-assistant.loading-determinate .loader > .loader-inner {
   fill: none;
   stroke: var(--bs-icon-loading-color);
   stroke-dasharray: var(--bs-loading-dasharray);
@@ -12674,15 +12671,21 @@ ol.bullet-list > li > ol > li > ol > li::before {
   transform-origin: center;
   animation: var(--bs-loading-animation);
 }
-.icon.icon-interactive.loading-determinate,
-.icon.icon-assistant.loading-determinate {
+.icon-interactive.loading-determinate,
+.icon-assistant.loading-determinate {
   --bs-loading-dasharray: 107;
   --bs-loading-animation: var(--bs-loading-time) infinite linear rotate-determinate;
 }
-.icon.icon-interactive.loading-indeterminate,
-.icon.icon-assistant.loading-indeterminate {
+.icon-interactive.loading-indeterminate,
+.icon-assistant.loading-indeterminate {
   --bs-loading-dasharray: 96;
   --bs-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
+}
+
+.icon-interactive {
+  --bs-icon-hover-color: var(--bs-color-action-hover);
+  --bs-icon-active-color: var(--bs-color-action-pressed);
+  --bs-icon-focus-color: var(--bs-color-action-focus);
 }
 
 .icon-assistant {
@@ -13429,56 +13432,56 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .decorative-2xlarge-icon,
- .decorative-xlarge-icon,
- .decorative-large-icon,
- .decorative-medium-icon,
- .decorative-small-icon,
- .decorative-xsmall-icon,
- .decorative-2xsmall-icon,
- .decorative-3xsmall-icon,
- .decorative-4xsmall-icon,
- .dl-large-icon,
- .dl-medium-icon,
- .dl-small-icon,
- .dm-large-icon,
- .dm-medium-icon,
- .dm-small-icon,
- .ds-large-icon,
- .ds-medium-icon,
- .ds-small-icon,
- .hxl-large-icon,
- .hxl-medium-icon,
- .hxl-small-icon,
- .hl-large-icon,
- .hl-medium-icon,
- .hl-small-icon,
- .hm-large-icon,
- .hm-medium-icon,
- .hm-small-icon,
- .hs-large-icon,
- .hs-medium-icon,
- .hs-small-icon,
- .bl-large-icon,
- .bl-medium-icon,
- .bl-small-icon,
- .bm-large-icon,
- .bm-medium-icon,
- .bm-small-icon,
- .bs-large-icon,
- .bs-medium-icon,
- .bs-small-icon,
- .ls-large-icon,
- .ls-medium-icon,
- .ls-small-icon,
- .lm-large-icon,
- .lm-medium-icon,
- .lm-small-icon,
- .ll-large-icon,
- .ll-medium-icon,
- .ll-small-icon,
- .lxl-large-icon,
- .lxl-medium-icon,
- .lxl-small-icon {
+.decorative-xlarge-icon,
+.decorative-large-icon,
+.decorative-medium-icon,
+.decorative-small-icon,
+.decorative-xsmall-icon,
+.decorative-2xsmall-icon,
+.decorative-3xsmall-icon,
+.decorative-4xsmall-icon,
+.dl-large-icon,
+.dl-medium-icon,
+.dl-small-icon,
+.dm-large-icon,
+.dm-medium-icon,
+.dm-small-icon,
+.ds-large-icon,
+.ds-medium-icon,
+.ds-small-icon,
+.hxl-large-icon,
+.hxl-medium-icon,
+.hxl-small-icon,
+.hl-large-icon,
+.hl-medium-icon,
+.hl-small-icon,
+.hm-large-icon,
+.hm-medium-icon,
+.hm-small-icon,
+.hs-large-icon,
+.hs-medium-icon,
+.hs-small-icon,
+.bl-large-icon,
+.bl-medium-icon,
+.bl-small-icon,
+.bm-large-icon,
+.bm-medium-icon,
+.bm-small-icon,
+.bs-large-icon,
+.bs-medium-icon,
+.bs-small-icon,
+.ls-large-icon,
+.ls-medium-icon,
+.ls-small-icon,
+.lm-large-icon,
+.lm-medium-icon,
+.lm-small-icon,
+.ll-large-icon,
+.ll-medium-icon,
+.ll-small-icon,
+.lxl-large-icon,
+.lxl-medium-icon,
+.lxl-small-icon {
   flex-shrink: 0;
   width: 1em;
   height: 1em;

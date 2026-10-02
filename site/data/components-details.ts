@@ -207,7 +207,7 @@ export const componentsDetails: ComponentCardData[] = [
     category: 'Actions',
     link: 'icons',
     snippet: `
-      <button class="icon icon-interactive">
+      <button class="icon-interactive">
         <svg aria-hidden="true" class="decorative-small-icon">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
