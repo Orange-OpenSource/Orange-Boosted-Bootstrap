@@ -1,41 +1,29 @@
 ---
-title: Migrating from Boosted
-description: Track and review changes to the OUDS Web source files, documentation, and components to help you migrate from Boosted to OUDS Web.
+title: Migrating from OB1
+description: Track and review changes to the OUDS Web source files, documentation, and components to help you migrate from OB1 to OUDS Web.
 aliases:
-  - "/migration-from-boosted/"
-  - "/docs/migration-from-boosted/"
-  - "/docs/getting-started/migration-from-boosted/"
+  - "/migration-from-ob1/"
+  - "/docs/migration-from-ob1/"
+  - "/docs/getting-started/migration-from-ob1/"
 toc: true
 ---
 
-This guide provides information on how to migrate from Boosted (latest release) to OUDS Web, with Bootstrap compatibility turned off. [Learn more about Bootstrap compatibility]([[docsref:/foundation/approach#bootstrap-compatibility]]).
+This guide provides information on how to migrate from OB1 (latest release of v2) to OUDS Web, with Bootstrap compatibility turned off. [Learn more about Bootstrap compatibility]([[docsref:/foundation/approach#bootstrap-compatibility]]).
 
-<Callout type="info">
-  The [`@ouds/web-migrate`](https://www.npmjs.com/package/@ouds/web-migrate) CLI can help migrate from Boosted to OUDS Web. Run it against your project files and review the diff afterward:
+Let’s start with the most obvious change you’ll notice: the name. **OB1 is now OUDS Web.**
 
-  ```bash
-  npx @ouds/web-migrate --from=boosted "src/**/*.{css,scss,html}"
-  ```
-</Callout>
-
-Let’s start with the most obvious change you’ll notice: the name. **Boosted is now OUDS Web.**
-
-- The NPM packages are now `@ouds/web-common` and `@ouds/web-orange`.
+- The NPM packages are now `@ouds/web-common` and `@ouds/web-orange` or `@ouds/web-sosh` depending on brand used.
 - The CSS and JS files have been renamed:
-  - `boosted-grid.css` → `ouds-web-grid.css` in `@ouds/web-orange`
-  - `boosted-grid.min.css` → `ouds-web-grid.min.css` in `@ouds/web-orange`
-  - `boosted-reboot.css` → `ouds-web-reboot.css` in `@ouds/web-orange`
-  - `boosted-reboot.min.css` → `ouds-web-reboot.min.css` in `@ouds/web-orange`
-  - `boosted-utilities.css` → `ouds-web-utilities.css` in `@ouds/web-orange`
-  - `boosted-utilities.min.css` → `ouds-web-utilities.min.css` in `@ouds/web-orange`
-  - `boosted.css` → `ouds-web.css` in `@ouds/web-orange`
-  - `boosted.min.css` → `ouds-web.min.css` in `@ouds/web-orange`
-  - `boosted.bundle.js` → `ouds-web.bundle.js` in `@ouds/web-common`
-  - `boosted.bundle.min.js` → `ouds-web.bundle.min.js` in `@ouds/web-common`
-  - `boosted.esm.js` → `ouds-web.esm.js` in `@ouds/web-common`
-  - `boosted.esm.min.js` → `ouds-web.esm.min.js` in `@ouds/web-common`
-  - `boosted.js` → `ouds-web.js` in `@ouds/web-common`
-  - `boosted.min.js` → `ouds-web.min.js` in `@ouds/web-common`
+  - `style.css` → `ouds-web.css` in package related to brand used
+  - `style.min.css` → `ouds-web.min.css` in package related to brand used
+  - `ob1.bundle.js` → `ouds-web.bundle.js` in `@ouds/web-common`
+  - `ob1.bundle.min.js` → `ouds-web.bundle.min.js` in `@ouds/web-common`
+  - `ob1.esm.js` → `ouds-web.esm.js` in `@ouds/web-common`
+  - `ob1.esm.min.js` → `ouds-web.esm.min.js` in `@ouds/web-common`
+  - `ob1.js` → `ouds-web.js` in `@ouds/web-common`
+  - `ob1.min.js` → `ouds-web.min.js` in `@ouds/web-common`
+- The `flags.css` file together with the minified version have been removed, you could directly use the [flag-icons npm package](https://www.npmjs.com/package/flag-icons)
+- All fonts-icons file have been removed, read more about [managing icons](([[docsref:/components/icon]]))
 
 From now on, OUDS Web won’t embed Bootstrap elements that are not part of Orange Unified Design System. However, you can still use our Bootstrap compatibility mode by using `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`.
 
@@ -43,9 +31,9 @@ From now on, OUDS Web won’t embed Bootstrap elements that are not part of Oran
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Orange color has been modified from `#f16e00` to `#f15e00`. It means that under certain circumstances, you might be able to use Orange and light gray items together.
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> We provide two brand new themes that are <code>root</code> and <code>root-inverted</code>. They are complementary to `light` and `dark`. See more on our [color modes page]([[docsref:/foundation/color-modes]])
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> We provide four color mode allowinf you to handle Dark mode in every situation. See more on our [color modes page]([[docsref:/foundation/color-modes]])
 
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> The root selector have been tweaked for more flexibility on JS frameworks. Please don’t hesitate to contact us if you find any issue with it.
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> The root selector have been tweaked and can be customized for more flexibility on JS frameworks. Please don’t hesitate to contact us if you find any issue with it.
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The focus-visible polyfill has been removed. So you no longer need it on your side, and you should replace all the calls to `:focus[data-focus-visible-added]` by `:focus-visible`.
 
@@ -56,9 +44,8 @@ From now on, OUDS Web won’t embed Bootstrap elements that are not part of Oran
 OUDS Web doesn’t provide Helvetica Neue font files. Instead, it loads the font from a CDN in order to share the cached files between every project using OUDS Web.
 
 Technically, it means that you can get rid of the following things:
-- Helvetica Neue woff2 files: `fonts/HelvNeue55_W1G.woff2`, `fonts/HelvNeue75_W1G.woff2`, `fonts/HelveticaNeueW20-55Roman.woff2`, and `fonts/HelveticaNeueW20-75Bold.woff2`.
-- `orange-helvetica.*.css` file (default, RTL, or minified version).
-- If you were customizing your Sass compilation, you can remove the `@import "orange-helvetica";` line from your Sass files if it was there.
+- Helvetica Neue woff2 files: `fonts/HelvNeue55_W1G.woff2` and `fonts/HelvNeue75_W1G.woff2`.
+- If you were customizing your Sass compilation, you can remove the `@import "boosted/orange-helvetica";` line from your Sass files if it was there.
 
 Read more about the [font stack]([[docsref:/foundation/reboot#font-stack]]) for more details.
 
@@ -66,17 +53,17 @@ Read more about the [font stack]([[docsref:/foundation/reboot#font-stack]]) for 
 
 ### Typography
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Body fonts’ sizes are now responsive and can change depending on the screen size. See [Typography]([[docsref:/foundation/typography]]) for more details.
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>Warning</span> Body 1, Body 2 and Caption are now named body large, body medium and body small. See [Typography]([[docsref:/foundation/typography/#regular-texts]]) for more details.
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> A `max-width` has been added on all font references for readability reasons. If you want to get rid of the `max-width`, please use our `.mw-none` width utility.
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Selected text is now styled with a specific text `color` and `background-color`, making it easier to spot and to read.
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Display headings classes `.display-{1|2|3|4|5|6}` have been removed and replaced by `.display-{small|medium|large}`. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Display headings classes `.display-{small|medium|large}` have been added.
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Abbreviation class `.initialism` has been removed.
 
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Default spacing values now use `px`s instead of `em`s for fixed component spacing, to keep as much space as possible for meaningful content on zoom.
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Default spacing values now use `px`s instead of `em`s for fixed component spacing, to keep as much space as possible for meaningful content on zoom. The bottom margin of headings is now set to token `$ouds-space-fixed-medium` (16px on Orange brand)
 
 ## Layout
 
@@ -84,9 +71,9 @@ Read more about the [font stack]([[docsref:/foundation/reboot#font-stack]]) for 
   - `2xs` and `3xl` have been added.
   - `xxl` has been renamed to `2xl`.
   - The breakpoints values have changed. Please refer to the [breakpoints’ documentation]([[docsref:/layout/breakpoints]]).
-  - The default container to use is now `.container-fluid` associated to `.container-max-width` instead of `.container-xxl`. Please refer to the [fluid containers’ documentation]([[docsref:/layout/containers#fluid-containers]]).
-  - Default gutter inside grid has been changed to have a fully responsive behavior. It should be a transparent change for you.
-  - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|3xsmall|2xsmall|xsmall|small|medium|large|xlarge|2xlarge|3xlarge|4xlarge|5xlarge`. Proportional equivalence between `0` → `none`, `1` → `2xsmall`, `2` → `small`, `3` → `large`, `4` → `2xlarge`, `5` → `4xlarge`.
+  - The default container to use is `.container-fluid` associated to `.container-max-width` instead of using `.site-width` as parent. Please refer to the [fluid containers’ documentation]([[docsref:/layout/containers#fluid-containers]]). The security margin value has changed.
+  - Default gutter inside grid has been changed to have a fully responsive behavior. It should be a pretty transparent change for you.
+  - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|3xsmall|2xsmall|xsmall|small|medium|large|xlarge|2xlarge|3xlarge|4xlarge|5xlarge`. Proportional equivalence between `0` → `none`, `1` → `medium`, `2` → `xlarge`, `3` → `3xlarge`, `4` → `5xlarge`, `5` → no equivalence.
 
 All responsive classes, helpers, and utilities have been updated accordingly to match the new breakpoints.
 
@@ -97,50 +84,53 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ## Icons
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> OUDS Web now uses [new functional icons]([[docsref:/foundation/icons#status-colors]]). A new [bicolor accessible warning icon]([[docsref:/foundation/icons#accessible-warning-icon]]) has been introduced.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> OUDS Web now uses [new functional icons]([[docsref:/components/icon#functional-icons]]). A new [bicolor accessible warning icon]([[docsref:/components/icon#accessible-warning-icon]]) has been introduced.
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> OUDS Web doesn't provide any font icon, read more on [icon component]([[docsref:/components/icon]]) to build you own sprite.
 
 ## Components
 
+<Callout type="info">
+  Some OB1 components don't have any equivalent in OUDS Web yet: please check the [components documentation]([[docsref:/components]]) for their current status before migrating them.
+</Callout>
+
 ### Alerts
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.alert-message`, `.alert-label`, `.alert-accent`, `.alert-neutral`, `.use-rounded-corner-alert`, `.alert-container`, `.alert-text-container`, `.alert-action-container`, `.alert-positive`, and `.alert-negative` have been added.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The DOM for alerts has changed a lot so we recommend to read our [new alerts page]([[docsref:/components/alerts]]) first. `.alert-sm`, `.alert-success`, `.alert-danger`, `.alert-dismissible`, `.alert-heading` have been removed.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The DOM for alerts has changed a lot so we recommend to read our [new alerts page]([[docsref:/components/alerts]]) first.
     <details class="mb-medium">
       <summary>See all changing classes</summary>
 
-      - `.alert` → `.alert.alert-message`.
-      - `.alert-sm` → To remove.
+      - `.alert` → `.alert.alert-message` (for the block variant with a container and an optional action) or `.alert` alone (for the inline variant).
+      - `.ob1-alert-title` → `.alert-label`.
+      - `.alert-content` → `.alert-text-container` (block variant).
+      - `.alert-icon` → Stays the same, but must now contain a `<p class="visually-hidden">` (or an equivalent hidden text) describing the alert status instead of relying only on the icon.
+      - `.alert-container` is now mandatory around `.alert-icon` and `.alert-text-container` for the block variant (in OB1, `.alert-container` only wrapped `.alert` and `.alert-content`).
+      - `additional-message` (OB1 neutral variant) → `.alert-message` without a status modifier, or `.alert-neutral` depending on the context.
       - `.alert-success` → `.alert-positive`.
-      - `.alert-info` → Stays the same.
-      - `.alert-warning` → Stays the same.
       - `.alert-danger` → `.alert-negative`.
-      - `.alert-icon` → Stays the same.
-      - `.alert-heading` → `.alert-label`.
-      - `.alert-dismissible` → To remove.
-      - The DOM has been updated to add more containers around in order to ease the future integrations.
+      - `.alert-info` and `.alert-warning` stay the same.
 
     </details>
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `alert-variant()` mixin has been removed as it was deprecated in Boosted v5.3.0.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> OB1's In-page alert (`.feedback`, `.feedback-title`, `.feedback-text`, `.feedback-button`) doesn't have a direct documented equivalent in OUDS Web yet. Please rely on the [alerts documentation]([[docsref:/components/alerts]]) and adapt the block alert variant to your layout in the meantime.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Actions inside an alert (buttons, chevron links, expand links) must now be placed the same way as documented, using the standard [buttons]([[docsref:/components/buttons]])/[links]([[docsref:/components/links]]) classes instead of OB1's `.ob1-link-arrow`.
 
 ### Badges
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Badge has changed a lot in its meaning and usages. It can no longer contain text (use our new [tags]([[docsref:/components/tags]]) for this). It is now either a basic badge (a colored bullet), a badge - count (with a number) or a badge - icon (with an icon).
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> New dedicated classes have been added to handle badges colors, states and sizes.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> New classes have been added to handle badges icons.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> New dedicated classes have been added to handle badges colors, states and sizes. The OUDS equivalent of OB1 badge is the Badge - count component, so you should use the new classes related to this component. Please check the [badges documentation]([[docsref:/components/badges]]) for more details.
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> New classes have been added to handle badges icons.
 
 ### Breadcrumb
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> the last element of a Breadcrumb must now contain a `span` element to handle behavior on smaller viewport.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> the last element of a Breadcrumb must now have the `.active` class and contain a `span` element to handle behavior on smaller viewport.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> the hidding of overflowing element is only based on CSS and not on JS anymore. Check the documentation for more details and tips to handle it.
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Accessibility must be enhanced by using an aria-label on the parent element.
 
 ### Bullet list
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.bullet-list`, `.bullet-list-default-color`, `.bullet-list-tick` and `.bullet-list-bare` classes have been added.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.bullet-list` is mandatory for a full Bullet list component as defined in OUDS.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The class `.list` must be replaced by `.bullet-list`.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The class `.ob1-list-tick` must be handled differently as the tick marker is not available by default. Learn more about it in the [bullet list documentation]([[docsref:/components/bullet-list/#tick-marker]]).
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Native `<ul>`, `<ol>` and `<dl>` now have a `max-width` set to the variable `--bs-font-max-width-body-medium`.
-
-### Close button
-
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.btn-close-white` class has been removed as it was deprecated in Boosted v5.3.3.
 
 ### Buttons
 
@@ -149,155 +139,102 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.btn-assistant` has been added.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.btn-on-colored-bg` has been added; it can be used with `.btn-default`, `.btn-strong` and `.btn-minimal` to get variants on colored backgrounds (neither primary, nor secondary, nor tertiary, nor emphasized backgrounds).
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.use-rounded-corner-buttons` have been added; it can be added on `<body>` to toggle project-wide rounded corners buttons.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.btn-inverse` class has been removed, you must use `data-bs-theme` to handle dark backgrounds instead. Learn more about it in our [color modes documentation]([[docsref:/foundation/color-modes]]).
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.btn-primary`, `.btn-secondary`, `.btn-success`, `.btn-danger`, `.btn-warning`, `.btn-info`, `.btn-light`, `.btn-dark` and `btn-dropdown` have been removed. You can still have them using `$enable-bootstrap-compatibility`. Here is the visual correspondence:
-  - `.btn-primary` will look as `.btn-brand`
-  - `.btn-dark` will look as `.btn-strong`
+  - `.btn-primary` and `.btn-dark` will look as `.btn-strong`
   - `.btn-secondary` and `.btn-success` will look as `.btn-default`
   - `.btn-danger` and `.btn-warning` will look as `.btn-negative`
   - `.btn-info` and `.btn-light` will look as `.btn-minimal`
-  - `.btn-dropdown` could look as any variant of the button. So replace it with `.btn-strong`, `.btn-default`, `.btn-minimal` or `.btn-negative` depending on your context.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.btn-no-outline` has been removed. You can use `.btn-minimal` instead.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.btn-social` and all its variants have been removed.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.btn-outline-*` have been removed. You can still have them using `$enable-bootstrap-compatibility`. They all look like `.btn-default`.
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.btn-lg` has been removed.
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.btn-sm` has been renamed to `.btn-small`.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Loading buttons implementation has changed. You should now use the classes `.loading-indeterminate` and `.loading-determinate` and no more spinner borders.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Loading buttons implementation has changed. You should now use the classes `.loading-indeterminate` and `.loading-determinate` and no more progress bars.
 <div class="ps-xlarge">
-
-For example, if you used to write:
-
-```html
-<button class="btn btn-secondary" type="button" disabled>
-  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-  <span class="visually-hidden" role="status">Loading...</span>
-</button>
-```
-Now you should write:
-
-```html
-<button type="button" class="btn btn-default loading-indeterminate" id="loading-btn-1" disabled>
-  Download file 1
-  <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-    <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-  </svg>
-  <span role="status" id="loading-btn-msg-1" class="visually-hidden">Downloading file 1</span>
-</button>
-```
-
-You will have to make some extra JavaScript to change the styles and update the status message like explained in the documentation. You can find a complete example in our [loading buttons live example]([[docsref:/examples/loading-buttons/]]).
-
+You will have to make some extra Javascript to change the styles and update the status message like explained in the documentation. You can find a complete example in our [loading buttons live example]([[docsref:/examples/loading-buttons/]]).
 </div>
-
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Button plugin (button with a toggle behavior) has been removed.
 
 ### Chips
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Chips components have been implemented. See more in our [Chips page]([[docsref:/components/chips]]).
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Classes should be updated to match new names. See more in our [Chips page]([[docsref:/components/chips]]).
+  - `.ob1-filterchip` should be replaced by `.chip` and `.chip-filter` for filter chip or `.chip-suggestion` for suggestion chip.
+  - `.ob1-choicechip` can be removed.
+  - `.ob1-filterchip-input` can be removed.
+  - `.ob1-filterchip-label` must be replaced by `.chip-interactive`.
+  - `data-ob1-title` attribute can be removed as there is no equivalent in OUDS Web.
+  - `.ob1-filterchip-reverse` can be removed, the dark version must be handled by using `data-bs-theme` attribute on a parent element.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> OB1's color selection chip doesn't have any equivalent in OUDS Web
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> OB1's Input Chip is now called Input Tag and can be found in the [Tags documentation]([[docsref:/components/tags/#input-tag]]).
 
 ### Dropdown
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.dropdown-toggle` has been replaced by:
-  - `.btn-expand` inside `.btn` usage.
-  - `.link-expand` inside `.link` usage.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The dropdown menu container `<div class="dropdown-menu">` must now be a `<ul class="dropdown-menu">` with `<li>` items wrapping each `.dropdown-item`. See our [dropdown documentation]([[docsref:/components/dropdown]]).
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-arrow down` trigger class must be replaced by `.btn-expand` (button trigger) or `.link-expand` (link trigger).
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.ob1-dropdown-small` doesn't have any equivalent in OUDS Web.
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> The dropdown component is currently documented as a draft in OUDS Web, its markup may still evolve.
 
 ### Links
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> New standalone link component has been added. Use `.link` class to get it.
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Use `.link-sm` class to get small standalone link.
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.link-on-colored-bg` has been added; it can be used to get variants on colored backgrounds.
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> A `.link` class should be added to existing links with `.link-chevron` class to comply with the OUDS Web documentation and ensure future compatibility.
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-dark` class for variant on colored backgrounds must be renamed to `.link-on-colored-bg`.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-arrow` class must be replaced by both `.link` and `.link-chevron` classes.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-icon` class must be replaced by both `.link` and `.icon-link` classes.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-small` class must be replaced by `link-small`.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-reverse` class can be removed as it shoud be handled by using a `data-bs-theme` attribute on a parent element.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.no-decoration` class can be removed as there is no equivalent in OUDS Web.
 
-### List group
+### List items
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> List group has changed a lot in its usages. There is still a static example and an interactive variant for navigation. This is not an action button anymore.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> New dedicated classes have been added to handle items colors, appearance, states, sizes, etc... All the previous classes have been removed.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> List item is a new component compared to OB1's List item, the DOM is therefore very different. See our [new Items page]([[docsref:/components/items]]) first.
 <div class="ps-xlarge">
 For example, if you used to write:
 
 ```html
-<a href="#" class="list-group-item list-group-item-action list-group-item-danger">A simple Danger list group item</a>
-
-<!-- or -->
-
-<ul class="list-group">
-  <li class="list-group-item d-flex justify-content-between align-items-start">
-    <div class="me-auto">
-      Subheading
-      <div class="fw-normal mt-1 lh-base">Content for list item</div>
-    </div>
-    <span class="badge text-bg-info rounded-pill">14</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-start">
-    <div class="me-auto">
-      Subheading
-      <div class="fw-normal mt-1 lh-base">Content for list item</div>
-    </div>
-    <span class="badge text-bg-info rounded-pill">14</span>
+<ul class="items-list row">
+  <li class="col-12 col-md-6 col-xl-4">
+    <a href="#" class="items-list-item">
+      <div class="item-container">
+        <div class="item-text">
+          <span>Label</span>
+          <small class="item-desc">Texte secondaire</small>
+        </div>
+      </div>
+    </a>
   </li>
 </ul>
 ```
 Now you should write:
 
 ```html
-<div class="item item-navigation">
-  <a href="#" class="item-container item-interactive">
-    <div class="item-content">
-      <div class="item-text-container">
-        <span class="item-text">A simple Danger list group item</span>
-      </div>
-      <div class="item-trailing-container">
-        <div class="item-icon item-status-negative">
-          <span class="visually-hidden">Danger</span>
-        </div>
-      </div>
-    </div>
-  </a>
-</div>
-
-<!-- or -->
-
 <ul class="item-list">
-  <li class="item">
+  <li class="item item-navigation">
     <div class="item-container">
       <div class="item-content">
         <div class="item-text-container">
-          <p class="item-label">Subheading</p>
-          <p class="item-description">Content for list item</p>
-        </div>
-        <div class="item-trailing-container">
-          <p class="badge badge-count badge-info">14</p>
-        </div>
-      </div>
-    </div>
-  </li>
-  <li class="item">
-    <div class="item-container">
-      <div class="item-content">
-        <div class="item-text-container">
-          <p class="item-label">Subheading</p>
-          <p class="item-description">Content for list item</p>
-        </div>
-        <div class="item-trailing-container">
-          <p class="badge badge-count badge-info">14</p>
+          <a href="#" class="item-label item-interactive">Label</a>
+          <p class="item-description">Texte secondaire</p>
         </div>
       </div>
     </div>
   </li>
 </ul>
 ```
+See [our new Items page]([[docsref:/components/items]]) for more information.
 </div>
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> An item has now much more variants, assets and applications. New dedicated classes have been added to handle this.
 
-### Scrollspy
-
-- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> While Scrollspy has not been published yet, we have updated its implementation using the one from Bootstrap v6 to improve its behavior. This does not necessitate any action on your part as this is backward compatible and a drop-in replacement. You can find implementation details in [the related pull request](https://github.com/twbs/bootstrap/pull/42557) in Bootstrap repository.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.items-list-item`, `.item-container`, `.item-text` and `.item-desc` have been removed and replaced by new dedicated classes (`.item`, `.item-container`, `.item-content`, `.item-text-container`, `.item-label`, `.item-description`, `.item-interactive`, `.item-navigation`).
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.ob1-box-radio` should be replaced by the outlined version of the radio button component.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The network quality indicators (`.ob1-network-quality`, `.ob1-network-good`, etc.) don't have any documented equivalent in OUDS Web yet.
 
 ### Tags
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Tag has changed a lot in its meaning and usages. The Informative tag has changed to be the basic tag, and the input tag markup has been updated. The filter tag has changed to be the [filter chip]([[docsref:/components/chips#filter-chip]]). The navigation tag has been removed. Be careful, either the meaning or the markup changed, or both.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> New dedicated classes have been added to handle tags colors, appearance, states and sizes.
+  - `.ob1-capsule` must be replaced by `.tag`, the positive status (by default in OB1) now needs the `.tag-positive` class.
+  - `.ob1-capsule-negative` must be replaced by `.tag-negative`
+  - `.ob1-capsule-warning` must be replaced by `.tag-warning`
+  - `.ob1-capsule-information` and `.ob1-capsule-reminder` can be removed. [Check tag documentation]([[docsref:/components/tags]]) to find the best status for replacement.
+  - `.ob1-capsule-disabled` must be replaced by `.disabled` on the element or a parent container.
+  - `.ob1-capsule-small` and `.ob1-tag-small` must be replaced by `.tag-small`.
+  - All `.ob1-tag*` classes should be replaced by the new classes. [Check tag documentation]([[docsref:/components/tags]]) to find the best status for replacement.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-tag-inverse` and `.ob1-capsule-inverse` classes can be removed as it shoud be handled by using a `data-bs-theme` attribute on a parent element.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> A tag can now contain a decorative bullet or an icon. New dedicated classes have been added to handle this.
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> A tag can now have squared corners by using `rounded-none` utility.
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> To get squared corners like in OB1's commercial tags, you can use `rounded-none` utility.
 
 ## Forms
 
@@ -306,126 +243,137 @@ Now you should write:
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.control-item-assets-container`, `.control-item-text-container`, `.control-item-label`, `.control-item-indicator`, `.control-item-helper`, `.control-item-divider` and `.control-item-inverse` have been added.
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.form-check`, `.form-check-input`, `.form-check-label`, `.form-check-inline`, `.form-check-reverse` and `.form-switch` have been removed.
-
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-custom-checkbox-inverse` class can be removed as it shoud be handled by using a `data-bs-theme` attribute on a parent element.
 
 #### Checkbox
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.checkbox-item` and `.checkbox-standalone` have been added.
-
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Checkbox is a new component compared to Boosted’s Check, the DOM is therefore very different.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Checkbox is a new component compared to OB1’s Check, the DOM is therefore different.
 <div class="ps-xlarge">
 For example, if you used to write:
 
 ```html
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="checkboxDefault" />
-  <label class="form-check-label" for="checkboxDefault">
-    Default checkbox
-  </label>
-</div>
+<ul class="items-list">
+  <li>
+    <div class="items-list-item">
+      <div class="item-container item-container-sm">
+        <div class="form-check">
+          <input
+            type="checkbox"
+            aria-labelledby="customControlLabelValidation1"
+            class="form-check-input"
+            id="customControlValidation1"
+            checked
+          />
+          <label aria-hidden="true" class="form-check-label" for="customControlValidation1"></label>
+        </div>
+        <label id="customControlLabelValidation1" for="customControlValidation1" class="item-text"> Label </label>
+      </div>
+    </div>
+  </li>
+</ul>
 ```
 Now you should write:
 
 ```html
-<div class="checkbox-item">
-  <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault" />
+<fieldset class="control-items-list">
+  <div class="checkbox-item">
+    <div class="control-item-assets-container">
+      <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault" checked />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="checkboxDefault">Label</label>
+    </div>
   </div>
-  <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxDefault">Default checkbox</label>
-  </div>
-</div>
+</fieldset>
 ```
 See [our new Checkbox page]([[docsref:/components/checkbox]]) for more information.
 </div>
 
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Links in checkboxes’ labels are now forbidden (they won’t be interactive anyway).
-
-#### Placeholders
-
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Placeholder component has been changed a lot, its name has been changed to [Skeleton]([[docsref:/components/skeleton]]). We only support one animation now. Placeholder sizing have been revamped a bit. Placeholders colors shouldn’t be used anymore.
-<div class="ps-xlarge">
-For example, if you used to write:
-
-```html
-<p class="placeholder-wave">
-  <span class="placeholder col-12"></span>
-</p>
-```
-
-Now you should write:
-
-```html
-<span class="skeleton col-12"></span>
-```
-See [our new Skeleton page]([[docsref:/components/skeleton]]) for more information.
-</div>
-
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> You can now set components in skeleton state.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The error management is different from OB1's, it is now based on `:user-invalid` pseudo class or `aria-invalid` attribute. The DOM structure must also be updated for the error message. Read more in the [checkbox documentation]([[docsref:/components/checkbox/#invalid]]) for more details.
 
 #### Radio button
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.radio-button-item`, `.radio-button-standalone`, `.radio-button-additional-label` and `.radio-button-item-outlined` have been added.
-
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Radio button is a new component compared to Boosted’s radio, the DOM is therefore very different.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Radio button is a new component compared to OB1’s radio, the DOM is therefore very different.
 <div class="ps-xlarge">
 For example, if you used to write:
 
 ```html
-<div class="form-check">
-  <input class="form-check-input" type="radio" value="" id="radioDefault" />
-  <label class="form-check-label" for="radioDefault">
-    Default radio
-  </label>
-</div>
+<ul class="items-list">
+  <li>
+    <div class="items-list-item">
+      <div class="item-container item-container-sm">
+        <div class="form-check">
+          <input
+            type="radio"
+            id="customRadio1"
+            aria-labelledby="customRadioLabel1"
+            name="customRadio1"
+            class="form-check-input"
+          />
+          <label aria-hidden="true" class="form-check-label" for="customRadio1"></label>
+        </div>
+        <label id="customRadioLabel1" for="customRadio1" class="item-text">
+          <span>Label</span>
+        </label>
+      </div>
+    </div>
+  </li>
+</ul>
 ```
 Now you should write:
 
 ```html
-<div class="radio-button-item">
-  <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="radio" value="" id="radioButtonDefault" />
+<fieldset class="control-items-list">
+  <div class="radio-button-item">
+    <div class="control-item-assets-container">
+      <input class="control-item-indicator" type="radio" value="" id="radioDefault" name="radioBasic" />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="radioDefault">Label</label>
+    </div>
   </div>
-  <div class="control-item-text-container">
-    <label class="control-item-label" for="radioButtonDefault">Default radio button</label>
-  </div>
-</div>
+</fieldset>
 ```
 See [our new Radio button page]([[docsref:/components/radio-button]]) for more information.
 </div>
 
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Links in radio buttons’ labels are now forbidden (they won’t be interactive anyway).
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The error management is different from OB1's, it is now based on `:user-invalid` pseudo class or `aria-invalid` attribute. The DOM structure must also be updated for the error message. Read more in the [radio button documentation]([[docsref:/components/radio-button/#invalid]]) for more details.
 
 #### Select
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.select-input` has been added.
-
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.use-rounded-corner-inputs` have been added; it can be added on `<body>` to toggle project-wide rounded corners inputs.
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Select Input is a new component compared to Boosted’s Select, the DOM is therefore very different.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Select Input is a new component compared to OB1’s Select, the DOM is therefore very different.
 <div class="ps-xlarge">
 For example, if you used to write:
 
 ```html
-<select class="form-select" aria-label="Default select example">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
+<div class="ob1-form-group">
+  <select
+    class="form-control form-control-empty"
+    data-ob1-component="FormControlEmpty"
+    id="input1"
+    aria-labelledby="label1"
+  >
+    <option class="label-option-hidden" value="" disabled="" selected=""></option>
+    <option value="1">Item 1</option>
+    <option value="2">Item 2</option>
+    <option value="3">Item 3</option>
+  </select>
+  <label id="label1" class="form-control-placeholder" for="input1">Label</label>
+</div>
 ```
 Now you should write:
 
 ```html
 <div class="select-input">
   <div class="select-input-container">
-    <label for="exampleSelect">Default select example</label>
+    <label for="exampleSelect">Label</label>
     <select class="select-input-field" id="exampleSelect">
       <option value="" disabled selected></option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option value="1">Item 1</option>
+      <option value="2">Item 2</option>
+      <option value="3">Item 3</option>
     </select>
   </div>
 </div>
@@ -433,94 +381,126 @@ Now you should write:
 See [our new Select Input page]([[docsref:/components/select-input]]) for more information.
 </div>
 
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The error management is different from OB1's, it is now based on `:user-invalid` pseudo class or `aria-invalid` attribute. The DOM structure must also be updated for the error message. Read more in the [select input documentation]([[docsref:/components/select-input/#invalid]]) for more details.
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-form-group-inverse` class can be removed as it shoud be handled by using a `data-bs-theme` attribute on a parent element.
+
 #### Switch
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.switch-item` and `.switch-standalone` have been added.
-
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Switch is a new component compared to Boosted’s Check, the DOM is therefore very different.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Switch is a new component compared to OB1’s Switch, the DOM is therefore very different.
 <div class="ps-xlarge">
 For example, if you used to write:
 
 ```html
-<div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" value="" id="switchDefault" />
-  <label class="form-check-label" for="switchDefault">
-    Default switch
-  </label>
-</div>
+<ul class="items-list">
+  <li>
+    <div class="items-list-item">
+      <div class="item-container item-container-switch">
+        <label for="checkbox1" class="item-text">
+          <span>Label</span>
+        </label>
+        <div class="ob1-switch">
+          <input class="checkbox visually-hidden" id="checkbox1" type="checkbox" checked />
+          <label for="checkbox1" class="toggle toggle-rounded labels">
+            <span class="on">Yes</span>
+            <span class="off">No</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
 ```
 Now you should write:
 
 ```html
-<div class="switch-item">
-  <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDefault" />
-  </div>
-  <div class="control-item-text-container">
-    <label class="control-item-label" for="switchDefault">Default switch</label>
-  </div>
-</div>
+<ul class="control-items-list">
+  <li class="switch-item">
+    <div class="control-item-assets-container">
+      <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDefault" checked />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="switchDefault">Label</label>
+    </div>
+  </li>
+</ul>
 ```
 See [our new Switch page]([[docsref:/components/switch]]) for more information.
 </div>
 
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Links in switches’ labels are now forbidden (they won’t be interactive anyway).
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The error management is different from OB1's, it is now based on `:user-invalid` pseudo class or `aria-invalid` attribute. The DOM structure must also be updated for the error message. Read more in the [switch documentation]([[docsref:/components/switch/#invalid]]) for more details.
 
 ### Text Input
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.text-input` has been added.
-
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.use-rounded-corner-inputs` have been added; it can be added on `<body>` to toggle project-wide rounded corners inputs.
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Text Input is a new component compared to Boosted’s Input, the DOM is therefore very different.
-<div class="ps-xlarge">
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Text Input is a new component compared to OB1’s Input, the DOM is therefore very different.
+<div class="ps-xl">
 For example, if you used to write:
 
 ```html
-<div class="mb-3">
-  <label for="exampleFormControlInput" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput" placeholder="name@example.com">
+<div class="ob1-form-group">
+  <input
+    type="text"
+    id="input1"
+    data-ob1-component="FormControlEmpty"
+    class="form-control form-control-empty"
+    aria-labelledby="label1"
+  />
+  <label id="label1" class="form-control-placeholder" for="input1">Label</label>
 </div>
 ```
 Now you should write:
 
 ```html
-<div class="text-input mb-medium">
+<div class="text-input">
   <div class="text-input-container">
-    <label for="exampleTextInput">Email address</label>
-    <input type="email" class="text-input-field" id="exampleTextInput" placeholder="name@example.com">
+    <label for="exampleTextInput">Label</label>
+    <input type="text" class="text-input-field" id="exampleTextInput" placeholder=" ">
   </div>
 </div>
 ```
 See [our new Text Input page]([[docsref:/components/text-input]]) for more information.
 </div>
 
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Floating label is now handled with CSS, the `data-ob1-component` attribute is not needed anymore but you must have a placeholder with one space character to make it work.
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The error management is different from OB1's, it is now based on `:user-invalid` pseudo class or `aria-invalid` attribute. The DOM structure must also be updated for the error message. Read more in the [text input documentation]([[docsref:/components/text-input/#invalid]]) for more details.
+
 #### Text Area
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.text-area` has been added.
-
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Text Area is a new component compared to Boosted’s Input, the DOM is therefore very different.
-<div class="ps-xlarge">
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Text Area is a new component compared to OB1’s Input, the DOM is therefore very different.
+<div class="ps-xl">
 For example, if you used to write:
 
 ```html
-<div class="mb-3">
-  <label for="exampleFormControlTextarea" class="form-label">Example textarea</label>
-  <textarea class="form-control" id="exampleFormControlTextarea" rows="3"></textarea>
-</div>
+  <div class="ob1-form-group">
+    <textarea
+      id="input21"
+      data-ob1-component="FormControlEmpty, AutoResizeOnCondition"
+      maxlength="1000"
+      class="form-control form-control-empty"
+      aria-labelledby="label21"
+    ></textarea>
+    <label id="label21" class="form-control-placeholder" for="input21">Label</label>
+  </div>
 ```
 Now you should write:
 
 ```html
-<div class="text-area">
-  <div class="text-area-container">
-    <label for="exampleTextArea">Example textarea</label>
-    <textarea class="text-area-field" id="exampleTextArea" placeholder=" "></textarea>
+  <div class="text-area">
+    <div class="text-area-container">
+      <label for="exampleTextArea">Label</label>
+      <textarea class="text-area-field" id="exampleTextArea"></textarea>
+    </div>
   </div>
-</div>
 ```
 See [our new Text Area page]([[docsref:/components/text-area]]) for more information.
 </div>
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Vertical resizing is now handled with CSS, the `data-ob1-component` attribute is not needed anymore.
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The error management is different from OB1's, it is now based on `:user-invalid` pseudo class or `aria-invalid` attribute. The DOM structure must also be updated for the error message. Read more in the [text area documentation]([[docsref:/components/text-area/#invalid]]) for more details.
 
 ### Validation
 
@@ -559,9 +539,9 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 ### Position
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Responsive sticky helpers `.sticky-xxl-{top|bottom}` have been removed and replaced by their equivalent `.2xl:sticky-{top|bottom}`. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Responsive sticky helpers `.sticky-xxl-{top|bottom}` have been removed and replaced by their equivalent `.sticky-2xl-{top|bottom}`. You can still have them using `$enable-bootstrap-compatibility`.
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Responsive sticky helpers: `.xs:sticky-{top|bottom}`, `.2xl:sticky-{top|bottom}` and `.3xl:sticky-{top|bottom}`.
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Responsive sticky helpers: `.sticky-xs-{top|bottom}`, `.sticky-2xl-{top|bottom}` and `.sticky-3xl-{top|bottom}`.
 
 #### Ratio
 
@@ -587,7 +567,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
     <summary><span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>
 
   <Callout type="info">
-    See more details about [`[data-bs-theme]`]([[docsref:/foundation/color-modes]]).
+  See more details about [`[data-bs-theme]`]([[docsref:/foundation/color-modes]]).
   </Callout>
 
   1. `.bg-transparent` stays the same
@@ -595,7 +575,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
   3. `.bg-black` → `.bg-always-black`
   4. `.bg-primary` → `.bg-surface-brand-primary`
   5. `.bg-primary-subtle` (that shouldn’t have been used) → `.bg-tertiary`
-  6. `.bg-secondary` → `.bg-inverse-high` or in some rare cases `.bg-inverse-low`
+  6. `.bg-secondary` → `.bg-emphasized` or in some rare cases `.bg-status-neutral-emphasized`
   7. `.bg-secondary-subtle` (that shouldn’t have been used) → `.bg-secondary`
   8. `.bg-success` → `.bg-surface-status-positive-emphasized` or in some rare cases `.bg-surface-status-positive-muted`
   9. `.bg-success-subtle` (that shouldn’t have been used) → `.bg-surface-status-positive-muted`
@@ -644,7 +624,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> All border color utilities have been removed or changed.
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Border opacity `--bs-border-opacity` custom property has been removed.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Border opacity utilities have been removed.
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> The new border color utilities are now available. Visit our [border page]([[docsref:/utilities/border#color]]) to see more.
 
@@ -654,12 +634,8 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
   1. `.border-primary` → `.border-brand-primary`
   2. `.border-black` → `.border-always-black` or `.border-always-on-white` or `.border-on-brand-primary`
   3. `.border-white` → `.border-always-white` or `.border-always-on-black`
-  4. `.border-success` and `.border-success-subtle` → `.border-status-positive`
-  5. `.border-info` and `.border-info-subtle` → `.border-status-info`
-  6. `.border-warning` and `.border-warning-subtle` → `.border-status-warning`
-  7. `.border-danger` and `.border-danger-subtle` → `.border-status-negative`
-  8. All the remaining `.border-*-subtle` (that shouldn’t have been used) → `.border-default`
-  9. All the remaining `.border-*` → `.border-emphasized`
+  4. All `.border-*-subtle` (that shouldn’t have been used) → `.border-default`
+  5. All the remaining `.border-*` → `.border-emphasized`
 
   </details>
 
@@ -695,21 +671,18 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 ### Display
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> All Boosted responsive display utilities have been renamed to use the colon prefix: `.d-sm-{value}` → `.sm:d-{value}`, `.d-md-{value}` → `.md:d-{value}`, `.d-lg-{value}` → `.lg:d-{value}`, `.d-xl-{value}` → `.xl:d-{value}`. You can still have them using `$enable-bootstrap-compatibility`.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.d-xxl-{value}` responsive display utility has been replaced by `.2xl:d-{value}` (breakpoint rename and prefix change). Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.xs:d-{value}` and `.3xl:d-{value}` responsive display utilities have been added. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.d-xxl-{value}` responsive display utility has been replaced by `.d-2xl-{value}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.d-xs-{value}` and `.d-3xl-{value}` responsive display utilities have been added. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
 
 ### Flex
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> All Boosted responsive flex utilities have been renamed to use the colon prefix: e.g. `.flex-sm-{row|column}` → `.sm:flex-{row|column}`, `.justify-content-md-{value}` → `.md:justify-content-{value}`, `.order-lg-{number}` → `.lg:order-{number}`, and so on for all `sm`, `md`, `lg`, `xl` breakpoints. You can still have them using `$enable-bootstrap-compatibility`.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `xxl` responsive flex utilities have been replaced by `2xl` utilities: `.d-xxl-flex`, `.d-xxl-inline-flex`, `.flex-xxl-{row|column}`, `.flex-xxl-{row|column}-reverse`, `.justify-content-xxl-{start|end|center|between|around|evenly}`, `.align-items-xxl-{start|end|center|baseline|stretch}`, `.align-self-xxl-{start|end|center|baseline|stretch}`, `.flex-xxl-fill`, `.flex-xxl-{grow|shrink}-{0|1}`, `.flex-xxl-{nowrap|wrap|wrap-reverse}`, `.order-xxl-{number}`, `.order-xxl-{first|last}` and `.align-content-xxl-{start|end|center|between|around|stretch}` utilities have been replaced by `.2xl:d-flex`, `.2xl:d-inline-flex`, `.2xl:flex-{row|column}`, `.2xl:flex-{row|column}-reverse`, `.2xl:justify-content-{start|end|center|between|around|evenly}`, `.2xl:align-items-{start|end|center|baseline|stretch}`, `.2xl:align-self-{start|end|center|baseline|stretch}`, `.2xl:flex-fill`, `.2xl:flex-{grow|shrink}-{0|1}`, `.2xl:flex-{nowrap|wrap|wrap-reverse}`, `.2xl:order-{number}`, `.2xl:order-{first|last}` and `.2xl:align-content-{start|end|center|between|around|stretch}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have them using `$enable-bootstrap-compatibility`.
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `xs` and `3xl` responsive flex utilities have been added: `.xs:d-flex`, `.xs:d-inline-flex`, `.xs:flex-{row|column}`, `.xs:flex-{row|column}-reverse`, `.xs:justify-content-{start|end|center|between|around|evenly}`, `.xs:align-items-{start|end|center|baseline|stretch}`, `.xs:align-self-{start|end|center|baseline|stretch}`, `.xs:flex-fill`, `.xs:flex-{grow|shrink}-{0|1}`, `.xs:flex-{nowrap|wrap|wrap-reverse}`, `.xs:order-{number}`, `.xs:order-{first|last}`, `.xs:align-content-{start|end|center|between|around|stretch}`, `.3xl:d-flex`, `.3xl:d-inline-flex`, `.3xl:flex-{row|column}`, `.3xl:flex-{row|column}-reverse`, `.3xl:justify-content-{start|end|center|between|around|evenly}`, `.3xl:align-items-{start|end|center|baseline|stretch}`, `.3xl:align-self-{start|end|center|baseline|stretch}`, `.3xl:flex-fill`, `.3xl:flex-{grow|shrink}-{0|1}`, `.3xl:flex-{nowrap|wrap|wrap-reverse}`, `.3xl:order-{number}`, `.3xl:order-{first|last}` and `.3xl:align-content-{start|end|center|between|around|stretch}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `xxl` responsive flex utilities have been replaced by `2xl` utilities: `.d-xxl-flex`, `.d-xxl-inline-flex`, `.flex-xxl-{row|column}`, `.flex-xxl-{row|column}-reverse`, `.justify-content-xxl-{start|end|center|between|around|evenly}`, `.align-items-xxl-{start|end|center|baseline|stretch}`, `.align-self-xxl-{start|end|center|baseline|stretch}`, `.flex-xxl-fill`, `.flex-xxl-{grow|shrink}-{0|1}`, `.flex-xxl-{nowrap|wrap|wrap-reverse}`, `.order-xxl-{number}`, `.order-xxl-{first|last}` and `.align-content-xxl-{start|end|center|between|around|stretch}` utilities have been replaced by `.d-2xl-flex`, `.d-2xl-inline-flex`, `.flex-2xl-{row|column}`, `.flex-2xl-{row|column}-reverse`, `.justify-content-2xl-{start|end|center|between|around|evenly}`, `.align-items-2xl-{start|end|center|baseline|stretch}`, `.align-self-2xl-{start|end|center|baseline|stretch}`, `.flex-2xl-fill`, `.flex-2xl-{grow|shrink}-{0|1}`, `.flex-2xl-{nowrap|wrap|wrap-reverse}`, `.order-2xl-{number}`, `.order-2xl-{first|last}` and `.align-content-2xl-{start|end|center|between|around|stretch}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `xs` and `3xl` responsive flex utilities have been added: `.d-xs-flex`, `.d-xs-inline-flex`, `.flex-xs-{row|column}`, `.flex-xs-{row|column}-reverse`, `.justify-content-xs-{start|end|center|between|around|evenly}`, `.align-items-xs-{start|end|center|baseline|stretch}`, `.align-self-xs-{start|end|center|baseline|stretch}`, `.flex-xs-fill`, `.flex-xs-{grow|shrink}-{0|1}`, `.flex-xs-{nowrap|wrap|wrap-reverse}`, `.order-xs-{number}`, `.order-xs-{first|last}`, `.align-content-xs-{start|end|center|between|around|stretch}`, `.d-3xl-flex`, `.d-3xl-inline-flex`, `.flex-3xl-{row|column}`, `.flex-3xl-{row|column}-reverse`, `.justify-content-3xl-{start|end|center|between|around|evenly}`, `.align-items-3xl-{start|end|center|baseline|stretch}`, `.align-self-3xl-{start|end|center|baseline|stretch}`, `.flex-3xl-fill`, `.flex-3xl-{grow|shrink}-{0|1}`, `.flex-3xl-{nowrap|wrap|wrap-reverse}`, `.order-3xl-{number}`, `.order-3xl-{first|last}` and `.align-content-3xl-{start|end|center|between|around|stretch}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
 
 ### Float
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> All Boosted responsive float utilities have been renamed to use the colon prefix: `.float-sm-{start|end|none}` → `.sm:float-{start|end|none}`, `.float-md-{start|end|none}` → `.md:float-{start|end|none}`, `.float-lg-{start|end|none}` → `.lg:float-{start|end|none}`, `.float-xl-{start|end|none}` → `.xl:float-{start|end|none}`. You can still have them using `$enable-bootstrap-compatibility`.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `xxl` responsive float utilities have been replaced by `2xl` utilities: `.float-xxl-{start|end|none}` utilities have been replaced by `.2xl:float-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `xs` and `3xl` responsive float utilities have been added:  `.xs:float-{start|end|none}` and  `.3xl:float-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `xxl` responsive float utilities have been replaced by `2xl` utilities: `.float-xxl-{start|end|none}` utilities have been replaced by `.float-2xl-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `xs` and `3xl` responsive float utilities have been added:  `.float-xs-{start|end|none}` and  `.float-3xl-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
 
 ### Interactions
 
@@ -721,9 +694,8 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 ### Object fit
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> All Boosted responsive object fit utilities have been renamed to use the colon prefix: `.object-fit-sm-{value}` → `.sm:object-fit-{value}`, `.object-fit-md-{value}` → `.md:object-fit-{value}`, `.object-fit-lg-{value}` → `.lg:object-fit-{value}`, `.object-fit-xl-{value}` → `.xl:object-fit-{value}`. You can still have them using `$enable-bootstrap-compatibility`.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `xxl` responsive object fit utilities have been replaced by `2xl` utilities: `.object-fit-xxl-{contain|cover|fill|scale|none}` utilities have been replaced by `.2xl:object-fit-{contain|cover|fill|scale|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have them using `$enable-bootstrap-compatibility`.
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `xs` and `3xl` responsive object fit utilities have been added:  `.xs:object-fit-{contain|cover|fill|scale|none}` and  `.3xl:object-fit-{contain|cover|fill|scale|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `xxl` responsive object fit utilities have been replaced by `2xl` utilities: `.object-fit-xxl-{contain|cover|fill|scale|none}` utilities have been replaced by ``.object-fit-2xl-{contain|cover|fill|scale|none}``. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `xs` and `3xl` responsive object fit utilities have been added:  `.object-fit-xs-{contain|cover|fill|scale|none}` and  `.object-fit-3xl-{contain|cover|fill|scale|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> `xxl` responsive object fit utilities can still be available when <code>$enable-bootstrap-compatibility</code> is on.
 
 ### Opacity
@@ -736,7 +708,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.shadow`, `.shadow-sm` and `.shadow-lg` have been removed from the default build. Please check the new [shadows values]([[docsref:/utilities/shadow]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Shadows utilities:
-`.shadow-none`, `.shadow-raised`, `.shadow-drag`, `.shadow-elevated`, `.shadow-emphasized`, and `.shadow-sticky`.
+`.shadow-none`, `.shadow-raised`, `.shadow-drag`, `.shadow-default`, `.shadow-emphasized`, and `.shadow-sticky`.
 
 ### Sizing
 
@@ -755,7 +727,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
     7. **All numbers**: Search for `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)\d` and you shouldn’t have Bootstrap spacing utilities anymore
     {/* Next technique is almost unusable in practice */}
   - Change all the utilities using more precise utilities
-    1. **Mixing Bootstrap numbers**: Search for `([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?\d`, when you match multiple on one line, consider using one of our [scaled spacing utilities]([[docsref:/utilities/spacing#notation-for-scaled-values]]) (for example, `.mb-1.md:mb-2` → `.mb-scaled-2xsmall`).
+    1. **Mixing Bootstrap numbers**: Search for `([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?\d`, when you match multiple on one line, consider using one of our [scaled spacing utilities]([[docsref:/utilities/spacing#notation-for-scaled-values]]) (for example, `.mb-1.mb-md-2` → `.mb-scaled-2xsmall`).
     2. **Remaining standalone classes**: Follow the previous guide going through all the standalone classes.
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The following margin spacing utilities have been removed from the default build (`.m{position}-{breakpoint}-{negative}{value}`). Please check the new [spacing values]([[docsref:/utilities/spacing]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
@@ -784,19 +756,19 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
   - **5**: `.gap-5`, `.row-gap-5`, `.column-gap-5`, `.gap-sm-5`, etc...
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> fixed margin spacing utilities:
-  - **None**: `.m-none`, `.mx-none`, `.my-none`, `.mt-none`, `.mb-none`, `.ms-none`, `.me-none`, `.xs:m-none`, etc...
-  - **3xsmall**: `.m-3xsmall`, `.mx-3xsmall`, `.my-3xsmall`, `.mt-3xsmall`, `.mb-3xsmall`, `.ms-3xsmall`, `.me-3xsmall`, `.xs:m-3xsmall`, etc...
-  - **2xsmall**: `.m-2xsmall`, `.mx-2xsmall`, `.my-2xsmall`, `.mt-2xsmall`, `.mb-2xsmall`, `.ms-2xsmall`, `.me-2xsmall`, `.xs:m-2xsmall`, etc...
-  - **Xsmall**: `.m-xsmall`, `.mx-xsmall`, `.my-xsmall`, `.mt-xsmall`, `.mb-xsmall`, `.ms-xsmall`, `.me-xsmall`, `.xs:m-xsmall`, etc...
-  - **Small**: `.m-small`, `.mx-small`, `.my-small`, `.mt-small`, `.mb-small`, `.ms-small`, `.me-small`, `.xs:m-small`, etc...
-  - **Medium**: `.m-medium`, `.mx-medium`, `.my-medium`, `.mt-medium`, `.mb-medium`, `.ms-medium`, `.me-medium`, `.xs:m-medium`, etc...
-  - **Large**: `.m-large`, `.mx-large`, `.my-large`, `.mt-large`, `.mb-large`, `.ms-large`, `.me-large`, `.xs:m-large`, etc...
-  - **Xlarge**: `.m-xlarge`, `.mx-xlarge`, `.my-xlarge`, `.mt-xlarge`, `.mb-xlarge`, `.ms-xlarge`, `.me-xlarge`, `.xs:m-xlarge`, etc...
-  - **2xlarge**: `.m-2xlarge`, `.mx-2xlarge`, `.my-2xlarge`, `.mt-2xlarge`, `.mb-2xlarge`, `.ms-2xlarge`, `.me-2xlarge`, `.xs:m-2xlarge`, etc...
-  - **3xlarge**: `.m-3xlarge`, `.mx-3xlarge`, `.my-3xlarge`, `.mt-3xlarge`, `.mb-3xlarge`, `.ms-3xlarge`, `.me-3xlarge`, `.xs:m-3xlarge`, etc...
-  - **4xlarge**: `.m-4xlarge`, `.mx-4xlarge`, `.my-4xlarge`, `.mt-4xlarge`, `.mb-4xlarge`, `.ms-4xlarge`, `.me-4xlarge`, `.xs:m-4xlarge`, etc...
-  - **5xlarge**: `.m-5xlarge`, `.mx-5xlarge`, `.my-5xlarge`, `.mt-5xlarge`, `.mb-5xlarge`, `.ms-5xlarge`, `.me-5xlarge`, `.xs:m-5xlarge`, etc...
-  - **Auto**: `.xs:m-auto`, `.xs:mx-auto`, `.xs:my-auto`, `.xs:mt-auto`, `.xs:mb-auto`, `.xs:ms-auto`, `.xs:me-auto`, `.2xl:m-auto`, etc...
+  - **None**: `.m-none`, `.mx-none`, `.my-none`, `.mt-none`, `.mb-none`, `.ms-none`, `.me-none`, `.m-xs-none`, etc...
+  - **3xsmall**: `.m-3xsmall`, `.mx-3xsmall`, `.my-3xsmall`, `.mt-3xsmall`, `.mb-3xsmall`, `.ms-3xsmall`, `.me-3xsmall`, `.m-xs-3xsmall`, etc...
+  - **2xsmall**: `.m-2xsmall`, `.mx-2xsmall`, `.my-2xsmall`, `.mt-2xsmall`, `.mb-2xsmall`, `.ms-2xsmall`, `.me-2xsmall`, `.m-xs-2xsmall`, etc...
+  - **Xsmall**: `.m-xsmall`, `.mx-xsmall`, `.my-xsmall`, `.mt-xsmall`, `.mb-xsmall`, `.ms-xsmall`, `.me-xsmall`, `.m-xs-xsmall`, etc...
+  - **Small**: `.m-small`, `.mx-small`, `.my-small`, `.mt-small`, `.mb-small`, `.ms-small`, `.me-small`, `.m-xs-small`, etc...
+  - **Medium**: `.m-medium`, `.mx-medium`, `.my-medium`, `.mt-medium`, `.mb-medium`, `.ms-medium`, `.me-medium`, `.m-xs-medium`, etc...
+  - **Large**: `.m-large`, `.mx-large`, `.my-large`, `.mt-large`, `.mb-large`, `.ms-large`, `.me-large`, `.m-xs-large`, etc...
+  - **Xlarge**: `.m-xlarge`, `.mx-xlarge`, `.my-xlarge`, `.mt-xlarge`, `.mb-xlarge`, `.ms-xlarge`, `.me-xlarge`, `.m-xs-xlarge`, etc...
+  - **2xlarge**: `.m-2xlarge`, `.mx-2xlarge`, `.my-2xlarge`, `.mt-2xlarge`, `.mb-2xlarge`, `.ms-2xlarge`, `.me-2xlarge`, `.m-xs-2xlarge`, etc...
+  - **3xlarge**: `.m-3xlarge`, `.mx-3xlarge`, `.my-3xlarge`, `.mt-3xlarge`, `.mb-3xlarge`, `.ms-3xlarge`, `.me-3xlarge`, `.m-xs-3xlarge`, etc...
+  - **4xlarge**: `.m-4xlarge`, `.mx-4xlarge`, `.my-4xlarge`, `.mt-4xlarge`, `.mb-4xlarge`, `.ms-4xlarge`, `.me-4xlarge`, `.m-xs-4xlarge`, etc...
+  - **5xlarge**: `.m-5xlarge`, `.mx-5xlarge`, `.my-5xlarge`, `.mt-5xlarge`, `.mb-5xlarge`, `.ms-5xlarge`, `.me-5xlarge`, `.m-xs-5xlarge`, etc...
+  - **Auto**: `.m-xs-auto`, `.mx-xs-auto`, `.my-xs-auto`, `.mt-xs-auto`, `.mb-xs-auto`, `.ms-xs-auto`, `.me-xs-auto`, `.m-2xl-auto`, etc...
   - **Negative**: `.m-n3xsmall`, `.m-n2xsmall`, `.m-nxsmall`, `.m-nsmall`, `.m-nmedium`, `.m-nlarge`, `.m-nxlarge`, `.m-n2xlarge`, `.m-n3xlarge`, `.m-n4xlarge`, `.m-n5xlarge`, `.mx-n3xsmall`, etc...
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> scaled margin spacing utilities:
@@ -812,18 +784,18 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
   - **3xlarge**: `.m-scaled-3xlarge`, `.mx-scaled-3xlarge`, `.my-scaled-3xlarge`, `.mt-scaled-3xlarge`, `.mb-scaled-3xlarge`, `.ms-scaled-3xlarge`, `.me-scaled-3xlarge`
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> fixed padding spacing utilities:
-  - **None**: `.p-none`, `.px-none`, `.py-none`, `.pt-none`, `.pb-none`, `.ps-none`, `.pe-none`, `.xs:p-none`, etc...
-  - **3xsmall**: `.p-3xsmall`, `.px-3xsmall`, `.py-3xsmall`, `.pt-3xsmall`, `.pb-3xsmall`, `.ps-3xsmall`, `.pe-3xsmall`, `.xs:p-3xsmall`, etc...
-  - **2xsmall**: `.p-2xsmall`, `.px-2xsmall`, `.py-2xsmall`, `.pt-2xsmall`, `.pb-2xsmall`, `.ps-2xsmall`, `.pe-2xsmall`, `.xs:p-2xsmall`, etc...
-  - **Xsmall**: `.p-xsmall`, `.px-xsmall`, `.py-xsmall`, `.pt-xsmall`, `.pb-xsmall`, `.ps-xsmall`, `.pe-xsmall`, `.xs:p-xsmall`, etc...
-  - **Small**: `.p-small`, `.px-small`, `.py-small`, `.pt-small`, `.pb-small`, `.ps-small`, `.pe-small`, `.xs:p-small`, etc...
-  - **Medium**: `.p-medium`, `.px-medium`, `.py-medium`, `.pt-medium`, `.pb-medium`, `.ps-medium`, `.pe-medium`, `.xs:p-medium`, etc...
-  - **Large**: `.p-large`, `.px-large`, `.py-large`, `.pt-large`, `.pb-large`, `.ps-large`, `.pe-large`, `.xs:p-large`, etc...
-  - **Xlarge**: `.p-xlarge`, `.px-xlarge`, `.py-xlarge`, `.pt-xlarge`, `.pb-xlarge`, `.ps-xlarge`, `.pe-xlarge`, `.xs:p-xlarge`, etc...
-  - **2xlarge**: `.p-2xlarge`, `.px-2xlarge`, `.py-2xlarge`, `.pt-2xlarge`, `.pb-2xlarge`, `.ps-2xlarge`, `.pe-2xlarge`, `.xs:p-2xlarge`, etc...
-  - **3xlarge**: `.p-3xlarge`, `.px-3xlarge`, `.py-3xlarge`, `.pt-3xlarge`, `.pb-3xlarge`, `.ps-3xlarge`, `.pe-3xlarge`, `.xs:p-3xlarge`, etc...
-  - **4xlarge**: `.p-4xlarge`, `.px-4xlarge`, `.py-4xlarge`, `.pt-4xlarge`, `.pb-4xlarge`, `.ps-4xlarge`, `.pe-4xlarge`, `.xs:p-4xlarge`, etc...
-  - **5xlarge**: `.p-5xlarge`, `.px-5xlarge`, `.py-5xlarge`, `.pt-5xlarge`, `.pb-5xlarge`, `.ps-5xlarge`, `.pe-5xlarge`, `.xs:p-5xlarge`, etc...
+  - **None**: `.p-none`, `.px-none`, `.py-none`, `.pt-none`, `.pb-none`, `.ps-none`, `.pe-none`, `.p-xs-none`, etc...
+  - **3xsmall**: `.p-3xsmall`, `.px-3xsmall`, `.py-3xsmall`, `.pt-3xsmall`, `.pb-3xsmall`, `.ps-3xsmall`, `.pe-3xsmall`, `.p-xs-3xsmall`, etc...
+  - **2xsmall**: `.p-2xsmall`, `.px-2xsmall`, `.py-2xsmall`, `.pt-2xsmall`, `.pb-2xsmall`, `.ps-2xsmall`, `.pe-2xsmall`, `.p-xs-2xsmall`, etc...
+  - **Xsmall**: `.p-xsmall`, `.px-xsmall`, `.py-xsmall`, `.pt-xsmall`, `.pb-xsmall`, `.ps-xsmall`, `.pe-xsmall`, `.p-xs-xsmall`, etc...
+  - **Small**: `.p-small`, `.px-small`, `.py-small`, `.pt-small`, `.pb-small`, `.ps-small`, `.pe-small`, `.p-xs-small`, etc...
+  - **Medium**: `.p-medium`, `.px-medium`, `.py-medium`, `.pt-medium`, `.pb-medium`, `.ps-medium`, `.pe-medium`, `.p-xs-medium`, etc...
+  - **Large**: `.p-large`, `.px-large`, `.py-large`, `.pt-large`, `.pb-large`, `.ps-large`, `.pe-large`, `.p-xs-large`, etc...
+  - **Xlarge**: `.p-xlarge`, `.px-xlarge`, `.py-xlarge`, `.pt-xlarge`, `.pb-xlarge`, `.ps-xlarge`, `.pe-xlarge`, `.p-xs-xlarge`, etc...
+  - **2xlarge**: `.p-2xlarge`, `.px-2xlarge`, `.py-2xlarge`, `.pt-2xlarge`, `.pb-2xlarge`, `.ps-2xlarge`, `.pe-2xlarge`, `.p-xs-2xlarge`, etc...
+  - **3xlarge**: `.p-3xlarge`, `.px-3xlarge`, `.py-3xlarge`, `.pt-3xlarge`, `.pb-3xlarge`, `.ps-3xlarge`, `.pe-3xlarge`, `.p-xs-3xlarge`, etc...
+  - **4xlarge**: `.p-4xlarge`, `.px-4xlarge`, `.py-4xlarge`, `.pt-4xlarge`, `.pb-4xlarge`, `.ps-4xlarge`, `.pe-4xlarge`, `.p-xs-4xlarge`, etc...
+  - **5xlarge**: `.p-5xlarge`, `.px-5xlarge`, `.py-5xlarge`, `.pt-5xlarge`, `.pb-5xlarge`, `.ps-5xlarge`, `.pe-5xlarge`, `.p-xs-5xlarge`, etc...
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> scaled padding spacing utilities:
   - **None**: `.p-scaled-none`, `.px-scaled-none`, `.py-scaled-none`, `.pt-scaled-none`, `.pb-scaled-none`, `.ps-scaled-none`, `.pe-scaled-none`,
@@ -838,18 +810,18 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
   - **3xl**: `.p-scaled-3xlarge`, `.px-scaled-3xlarge`, `.py-scaled-3xlarge`, `.pt-scaled-3xlarge`, `.pb-scaled-3xlarge`, `.ps-scaled-3xlarge`, `.pe-scaled-3xlarge`
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> fixed gap spacing utilities:
-  - **None**: `.gap-none`, `.row-gap-none`, `.column-gap-none`, `.xs:gap-none`, etc...
-  - **3xsmall**: `.gap-3xsmall`, `.row-gap-3xsmall`, `.column-gap-3xsmall`, `.xs:gap-3xsmall`, etc...
-  - **2xsmall**: `.gap-2xsmall`, `.row-gap-2xsmall`, `.column-gap-2xsmall`, `.xs:gap-2xsmall`, etc...
-  - **xsmall**: `.gap-xsmall`, `.row-gap-xsmall`, `.column-gap-xsmall`, `.xs:gap-xsmall`, etc...
-  - **Small**: `.gap-small`, `.row-gap-small`, `.column-gap-small`, `.xs:gap-small`, etc...
-  - **Medium**: `.gap-medium`, `.row-gap-medium`, `.column-gap-medium`, `.xs:gap-medium`, etc...
-  - **Large**: `.gap-large`, `.row-gap-large`, `.column-gap-large`, `.xs:gap-large`, etc...
-  - **Xl**: `.gap-xlarge`, `.row-gap-xlarge`, `.column-gap-xlarge`, `.xs:gap-xlarge`, etc...
-  - **2xl**: `.gap-2xlarge`, `.row-gap-2xlarge`, `.column-gap-2xlarge`, `.xs:gap-2xlarge`, etc...
-  - **3xl**: `.gap-3xlarge`, `.row-gap-3xlarge`, `.column-gap-3xlarge`, `.xs:gap-3xlarge`, etc...
-  - **4xlarge**: `.gap-4xlarge`, `.row-gap-4xlarge`, `.column-gap-4xlarge`, `.xs:gap-4xlarge`, etc...
-  - **5xlarge**: `.gap-5xlarge`, `.row-gap-5xlarge`, `.column-gap-5xlarge`, `.xs:gap-5xlarge`, etc...
+  - **None**: `.gap-none`, `.row-gap-none`, `.column-gap-none`, `.gap-xs-none`, etc...
+  - **3xsmall**: `.gap-3xsmall`, `.row-gap-3xsmall`, `.column-gap-3xsmall`, `.gap-xs-3xsmall`, etc...
+  - **2xsmall**: `.gap-2xsmall`, `.row-gap-2xsmall`, `.column-gap-2xsmall`, `.gap-xs-2xsmall`, etc...
+  - **xsmall**: `.gap-xsmall`, `.row-gap-xsmall`, `.column-gap-xsmall`, `.gap-xs-xsmall`, etc...
+  - **Small**: `.gap-small`, `.row-gap-small`, `.column-gap-small`, `.gap-xs-small`, etc...
+  - **Medium**: `.gap-medium`, `.row-gap-medium`, `.column-gap-medium`, `.gap-xs-medium`, etc...
+  - **Large**: `.gap-large`, `.row-gap-large`, `.column-gap-large`, `.gap-xs-large`, etc...
+  - **Xl**: `.gap-xlarge`, `.row-gap-xlarge`, `.column-gap-xlarge`, `.gap-xs-xlarge`, etc...
+  - **2xl**: `.gap-2xlarge`, `.row-gap-2xlarge`, `.column-gap-2xlarge`, `.gap-xs-2xlarge`, etc...
+  - **3xl**: `.gap-3xlarge`, `.row-gap-3xlarge`, `.column-gap-3xlarge`, `.gap-xs-3xlarge`, etc...
+  - **4xlarge**: `.gap-4xlarge`, `.row-gap-4xlarge`, `.column-gap-4xlarge`, `.gap-xs-4xlarge`, etc...
+  - **5xlarge**: `.gap-5xlarge`, `.row-gap-5xlarge`, `.column-gap-5xlarge`, `.gap-xs-5xlarge`, etc...
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> scaled gap spacing utilities:
   - **None**: `.gap-scaled-none`, `.row-gap-scaled-none`, `.column-gap-scaled-none`
@@ -865,9 +837,9 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 ### Text
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.text-xxl-{start|end|none}` responsive alignment text utility has been replaced by `.2xl:text-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.text-xxl-{start|end|none}` responsive alignment text utility has been replaced by `.text-2xl-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.xs:text-{start|end|none}` and `.3xl:text-{start|end|none}` responsive alignment text utilities have been added. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.text-xs-{start|end|none}` and `.text-3xl-{start|end|none}` responsive alignment text utilities have been added. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Font size text utilities `.fs-{1|2|3|4|5|6}` have been removed and replaced by new ones. You can still have them using `$enable-bootstrap-compatibility`:
   - **Display headings**: `.fs-dl`, `.fs-dm`, `.fs-ds`
@@ -896,17 +868,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `$enable-rounded` option have been set to `true` by default. This option allows you to set rounded corner on components. Please check that it doesn’t impact your website.
 
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `scss/_close.scss` doesn’t exist anymore. If you were importing it in your project, please make sure to remove it.
-
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `scss/_color-palette.scss` doesn’t exist anymore. If you were importing it in your project, please make sure to remove it.
-
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `scss/mixins/_alert.scss` doesn’t exist anymore. If you were importing it in your project, please make sure to remove it.
-
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `scss/vendor/_rfs.scss` has been removed. It was deprecated and should not have been used.
-
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `font-size()` mixin has been removed. Please refer to `get-font-size()` mixin instead.
-
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `generate-utility()` mixin signature was modified, the `$is-rfs-media-query` parameter was removed. If you were using it, please make sure to update your code. For Bootstrap compatibility mode, we kept the infix breakpoint as the last parameter, so you can still use it for your custom utilities. You can check how we use it in `scss/utilities/_breakpoints.scss` for reference.
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
 
@@ -2510,7 +2472,6 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
     <summary><span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Dropped CSS variables:</summary>
     <ul>
       <li><code>--bs-border-color-subtle</code></li>
-      <li><code>--bs-border-opacity</code></li>
       <li><code>--bs-btn-close-active-border-color</code></li>
       <li><code>--bs-btn-close-active-color</code></li>
       <li><code>--bs-btn-close-bg</code></li>
@@ -2705,14 +2666,10 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Signature of `make-row($gutter, $gutter-sm)` is now `make-row($gutter)`.
 
-## Sass
+## Sass mixins
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]([[docsref:/foundation/typography#sass-mixins]]) for more details.
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `color-mode({mode}, {root}, {inverted-mode})` mixin signature has changed. We now provide an `$inverted-mode` parameter that is set by default to `light` or `dark` depending on the `$mode`. It allows you to precise another mode to be the inverse of a certain mode.
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `button-variant` mixin signature has changed. We now provide extra parameters for focus and loading states colors. We keep it as a warning because we provide default values for these parameters. See more in [our Button documentation]([[docsref:/components/buttons#sass-mixins]]).
-
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `add` and `subtract` functions have been removed use `calc` instead.
-
-- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> The `list-unstyled` mixin has been updated to remove the list margin bottom.
