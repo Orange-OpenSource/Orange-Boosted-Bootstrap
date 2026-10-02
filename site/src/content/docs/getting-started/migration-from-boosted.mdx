@@ -201,6 +201,74 @@ You will have to make some extra JavaScript to change the styles and update the 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.link-on-colored-bg` has been added; it can be used to get variants on colored backgrounds.
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> A `.link` class should be added to existing links with `.link-chevron` class to comply with the OUDS Web documentation and ensure future compatibility.
 
+### Modal
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Modals no longer use Boosted's `.modal` container, nested `.modal-dialog` and `.modal-content` structure, or the `boosted.Modal` JavaScript plugin. OUDS Web uses the native `<dialog>` element with `.modal-base` and either `.modal-dialog` or `.modal-fullscreen-dialog`.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Replace `data-bs-toggle="modal"`, `data-bs-target`, and `data-bs-dismiss="modal"` with Invoker Commands API attributes: `commandfor` and `command`.
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> The Invoker Commands API is not supported in every browser yet. Use the [invokers polyfill](https://github.com/keithamus/invokers-polyfill) or call `showModal()` and `close()` programmatically where needed. Read more in our [modals page interactivity section]([[docsref:/components/modals#interactivity]]).
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Boosted modal options such as `backdrop`, `keyboard`, and `focus` do not map to a `Modal` plugin configuration object. Use native dialog behavior, the `closedby` attribute where supported, and explicit controls for the desired flow.
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Replace `.modal-sm` with `.modal-small`. Replace scrollable modal patterns with `.modal-fixed-height`; for actions that must remain visible while content scrolls, place `.modal-footer` outside `.modal-body`. Use `.modal-fullscreen-dialog` for a fullscreen dialog.
+
+For example, Boosted markup:
+
+```html
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Open modal
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title h5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal">
+          <span class="visually-hidden">Close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+Now use OUDS Web markup:
+
+```html
+<button type="button" class="btn btn-default" commandfor="exampleDialog" command="show-modal">
+  Open modal
+</button>
+
+<dialog id="exampleDialog" class="modal-base modal-dialog" aria-labelledby="exampleDialogTitle" closedby="any">
+  <div class="modal-header">
+    <h3 id="exampleDialogTitle" class="modal-title">Modal title</h3>
+    <button type="button" class="btn btn-close" commandfor="exampleDialog" command="close">
+      <span class="visually-hidden">Close</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Modal body text goes here.</p>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-strong" commandfor="exampleDialog" command="close">
+        Close
+      </button>
+    </div>
+  </div>
+</dialog>
+```
+
+For [programmatic usage]([[docsref:/components/modals#javascript]]), replace the Boosted plugin instance:
+
+```js
+const dialog = document.querySelector('#exampleDialog')
+
+dialog.showModal()
+dialog.close()
+```
+
+See the [OUDS Web modal documentation]([[docsref:/components/modals]]) for the complete structure, variants, and accessibility guidance.
+
 ### List group
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> List group has changed a lot in its usages. There is still a static example and an interactive variant for navigation. This is not an action button anymore.
