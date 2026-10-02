@@ -20,6 +20,7 @@ const BRANDS = (await fs.readdir('packages', { withFileTypes: true })).filter(fi
 const FILES = [
   'README.md',
   'js/src/base-component.js',
+  'scss/_config.scss',
   'scss/mixins/_banner.scss',
   'site/data/docs-versions.yml'
 ]
