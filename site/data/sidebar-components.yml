@@ -10,11 +10,12 @@
     - title: Checkbox
     - title: Chips
     - title: Divider
+    - title: Dropdown
+      draft: true
     - title: Footer
       draft: true
     - title: Header
       draft: true
-    - title: Icon
     - title: Items
     - title: Links
     - title: Password input
@@ -43,8 +44,6 @@
     - title: Close button
       coming_soon: true
     - title: Collapse
-      coming_soon: true
-    - title: Dropdown
       coming_soon: true
     - title: Local navigation
       coming_soon: true
