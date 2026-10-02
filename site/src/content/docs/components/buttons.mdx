@@ -14,9 +14,8 @@ import { getData } from '@libs/data'
 import { getVersionedDocsPath } from '@libs/path'
 import { getMode, getTokenValue } from '@libs/sass-variables'
 
-{/* TODO: update link when the assistant button design spec is online https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3734 */}
 <Callout type="info">
-  You can find the OUDS design guidelines here: [button guidelines](https://r.orange.fr/r/S-ouds-doc-button), [navigation button guidelines](https://r.orange.fr/r/S-ouds-doc-navigation-button).
+  You can find the OUDS design guidelines here: [button guidelines](https://r.orange.fr/r/S-ouds-doc-button), [navigation button guidelines](https://r.orange.fr/r/S-ouds-doc-navigation-button), [assistant button guidelines](https://r.orange.fr/r/S-ouds-doc-assistant-button).
 </Callout>
 
 ## Overview
@@ -969,23 +968,22 @@ Assistant buttons are available in two sizes. Add `.btn-small` to have a smaller
 
 ### Text wrapping
 
-{/* TODO: udpate link when the assistant button design spec is online https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3734 */}
 Button's width won't exceed <code>{(getTokenValue('$core-ouds-dimension-4000').slice(0, -2)) / 16}rem</code> and will automatically wrap if necessary. Howerver, buttons natively support `<br/>` tags to break the text into multiple lines when needed. Read more about multiline and responsiveness in a [button](https://r.orange.fr/r/S-ouds-doc-button), [navigation button](https://r.orange.fr/r/S-ouds-doc-navigation-button) and [assistant button](https://r.orange.fr/r/S-ouds-doc-assistant-button).
 
 <Example buttonLabel="buttons with wrapping text" class="bd-btn-example d-flex flex-column align-items-start" code={`<button type="button" class="btn btn-default">
-    A button will automatically wrap if the text is longer than the default max width, or if the container is not large enough
+    A button will automatically wrap if the text is longer than the default max width
   </button>
 
   <button type="button" class="btn btn-default">
-    A button<br/>will automatically wrap if the text is longer than the default max width, but you can force it where you want
+    You can also force the text to wrap<br/>where you want
   </button>
 
   <button type="button" class="btn btn-assistant">
-    The label remains centered with the icon when it wraps because of the max width
+    The label remains centered with the icon when it wraps
   </button>
 
   <button type="button" class="btn btn-assistant">
-    The label<br/>remains centered with the icon when you force a break line too
+    The label<br/>is centered when you force a break line too
   </button>`} />
 
  ### Block buttons
