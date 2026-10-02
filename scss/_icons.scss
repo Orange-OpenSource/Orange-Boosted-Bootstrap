@@ -94,8 +94,7 @@
     mask-size: 75%;
   }
 
-  &:disabled,
-  &[aria-disabled="true"] {
-    border-color: currentcolor;
+  &:is(:disabled, [aria-disabled="true"]):not(.loading-indeterminate, .loading-determinate) {
+    --bs-assistant-border-gradient: currentcolor;
   }
 }
