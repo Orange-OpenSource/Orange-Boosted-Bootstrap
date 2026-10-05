@@ -21,10 +21,10 @@ To colorize icons, please refer to our [icon color section]([[docsref:/foundatio
 OUDS Web provides many `.text-*` and `.bg-*` utilities, but they should be used with care to meet our design specifications and [WCAG 2.2 accessibility standards for color contrast](https://www.w3.org/TR/WCAG/#distinguishable).
 To ensure compliance with the standard, define `color`, `background-color`, and `font-size` together.
 
-<BrandSpecific brand={['orange', 'orange-compact']}>
+<ThemeSpecific theme={['orange', 'orange-compact']}>
 Thus, the `.text-brand-primary` color on light background (`#f15e00`) should only be used in a font size greater than 24px (using for example `.fs-ds` utility), or 19px bold (using for example `.fs-hm` and `.fw-bold` utilities).
 The `.text-brand-primary` color on dark background (`#ff7900`) can be used in any size.
-</BrandSpecific>
+</ThemeSpecific>
 
 <Callout type="warning">
   Please note that aside from `.text-brand-primary`, `.text-default`, and `.text-muted`, most text-utility classes should be avoided as they are highly contextual. Instead, apply our [color modes]([[docsref:/foundation/color-modes]]) directly—as described in the [background utilities]([[docsref:/utilities/background]])—to get the right text color as well as ensure nested components render in the correct mode.
