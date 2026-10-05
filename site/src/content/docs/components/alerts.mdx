@@ -91,9 +91,9 @@ Alert messages come with additional layout classes such as `.alert-container`, `
 
 `.alert-text-container` is to vertically distribute all the textual content of the alert message.
 
-<BrandSpecific brand={['orange', 'orange-compact']}>
+<ThemeSpecific theme={['orange', 'orange-compact']}>
 `.alert-action-container` is mainly useful when there is an action next to a close button in alert message.
-</BrandSpecific>
+</ThemeSpecific>
 
 `.alert-close-container` is only useful when there are rounded corner alerts, with a title on one line, in order to help to round the `.btn-close` automatically. If present, this element should only wrap the `.btn-close` button.
 
@@ -341,7 +341,7 @@ Optionally, for the [non-functional alert message](#non-functional), you can rem
     </div>
   </div>`} />
 
-<BrandSpecific brand={['orange', 'orange-compact']}>
+<ThemeSpecific theme={['orange', 'orange-compact']}>
 #### Rounded
 
 Rounded corners alerts is a project-wide option therefore all your alerts should either be rounded or not. Add `.use-rounded-corner-alert` on a top container (for example `<body>`) to use rounded corners.
@@ -378,7 +378,7 @@ Rounded corners alerts is a project-wide option therefore all your alerts should
       </div>
     </div>
   </div>`} />
-</BrandSpecific>
+</ThemeSpecific>
 
 #### Close button
 
@@ -617,11 +617,11 @@ Using the alert plugin, it’s possible to dismiss any alert message, here’s h
 
 Click the button below to show an alert (hidden with inline styles to start), then dismiss (and destroy) it with the built-in close button.
 
-<BrandSpecific brand={['orange', 'orange-compact']}>
+<ThemeSpecific theme={['orange', 'orange-compact']}>
   <Callout type="info">
     We use `.use-rounded-corner-alert` here to detect edge cases.
   </Callout>
-</BrandSpecific>
+</ThemeSpecific>
 
 <Example buttonLabel="alert message with live behavior" addStackblitzJs code={`<div id="liveAlertPlaceholder" role="status" class="${getConfig().brand === 'orange' ? 'use-rounded-corner-alert ' : '' }d-flex flex-column gap-medium mb-medium">
     <div class="alert alert-message alert-positive">
