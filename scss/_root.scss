@@ -9,7 +9,7 @@
   }
 }
 
-#{$ouds-root-selector}{
+#{$ouds-root-selector} {
   --#{$prefix}theme-name: #{$theme-name};
   --#{$prefix}theme-version: #{$theme-version};
 
