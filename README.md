@@ -50,18 +50,21 @@ Read the [Getting started page](https://web.unified-design-system.orange.com/doc
 
 ## AI agent skills
 
-This repository ships [Agent Skills](https://www.skills.sh/) in the [`skills/`](skills/) directory, giving AI coding agents (Claude Code, Cursor, GitHub Copilot, and others) procedural knowledge of OUDS Web:
+OUDS Web [Agent Skills](https://www.skills.sh/) are shipped in the [`ouds-web-skills` repository](https://github.com/Orange-OpenSource/ouds-web-skills), giving AI coding agents (Claude Code, Cursor, GitHub Copilot, and others) procedural knowledge of OUDS Web:
 
-- **`using-ouds-web`** — a comprehensive reference of OUDS Web components, layout, utilities, and design tokens, used when an agent generates OUDS Web markup or code.
+- **`using-ouds-web-<version>`** — a comprehensive reference of OUDS Web components, layout, utilities, and design tokens, used when an agent generates OUDS Web markup or code.
 - **`migrate-to-ouds-web`** — a step-by-step workflow to migrate a project from Boosted, OB1, or an older OUDS Web version to the latest OUDS Web.
 
 Install them in your project with the [`skills` CLI](https://www.skills.sh/):
 
 ```sh
-npx skills add Orange-OpenSource/Orange-Boosted-Bootstrap/skills
+npx skills add Orange-OpenSource/ouds-web-skills
 ```
 
-This downloads the skills and configures them for use with your AI agent.
+This downloads the skills and configures them for use with your AI agent. The `using-ouds-web-<version>` skill is tied to a specific version of the OUDS Web library, indicated by the suffix in its name (e.g. 1.5 for OUDS Web 1.5.x).
+
+> [!IMPORTANT]
+> Whenever you update OUDS Web in your project, update the skill too: run `npx skills add Orange-OpenSource/ouds-web-skills` again and use the skill matching your new library version. Remove the previous versioned skill to avoid conflicting guidance.
 
 
 ## Status
