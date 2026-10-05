@@ -401,6 +401,10 @@
   src: url("https://assets.orange.com/pm_12751_490_490077-wejriti88u--HelveticaNeue-Strong.woff2?a=1") format("woff2");
   font-display: swap;
 }
+:root {
+  --bs-theme-name: orange;
+  --bs-theme-version: 1.5.0;
+}
 :root::after {
   position: fixed;
   top: 0;
