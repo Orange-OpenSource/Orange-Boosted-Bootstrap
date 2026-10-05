@@ -9643,14 +9643,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
   padding-right: 0;
 }
 .alert-message:has(.alert-container > .link, .alert-container > .link-chevron,
-<<<<<<< HEAD
-.alert-container > .link-external) {
-  min-height: 80px;
-=======
 .alert-container > .link-external,
 .alert-container > .link-expand) {
-  min-height: 100px;
->>>>>>> main
+  min-height: 80px;
 }
 .alert-message .btn-close {
   border-top-right-radius: var(--bs-alert-border-radius);
