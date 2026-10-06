@@ -6,7 +6,7 @@ Draft component — design not finalized. Based on Boosted Orange Navbar with OU
 
 ```html
 <header>
-  <nav class="navbar navbar-expand-lg" aria-label="Global navigation">
+  <nav class="navbar lg:navbar-expand" aria-label="Global navigation">
     <div class="container-fluid container-max-width">
       <div class="navbar-brand me-auto lg:me-xlarge">
         <a class="stretched-link" href="#">
