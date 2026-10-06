@@ -423,29 +423,6 @@
 :root[data-bs-theme=light] [data-bs-theme=root],
 :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
   color-scheme: light;
-  --bs-blue: #26b2ff;
-  --bs-indigo: #a885d8;
-  --bs-purple: #a885d8;
-  --bs-pink: #ffb4e6;
-  --bs-red: #db0002;
-  --bs-orange: #f15e00;
-  --bs-yellow: #ffd000;
-  --bs-green: #3de35a;
-  --bs-teal: #50be87;
-  --bs-cyan: #4ab4e6;
-  --bs-black: #000;
-  --bs-white: #fff;
-  --bs-gray: #666;
-  --bs-gray-dark: #1f1f1f;
-  --bs-gray-100: #f4f4f4;
-  --bs-gray-200: #eee;
-  --bs-gray-300: #e0e0e0;
-  --bs-gray-400: #ccc;
-  --bs-gray-500: #999;
-  --bs-gray-600: #666;
-  --bs-gray-700: #333;
-  --bs-gray-800: #1f1f1f;
-  --bs-gray-900: #141414;
   --bs-primary: #f15e00;
   --bs-secondary: #000;
   --bs-success: #3de35a;
@@ -9248,10 +9225,10 @@ ol.bullet-list > li > ol > li > ol > li::before {
   background: linear-gradient(transparent 1px, transparent 0.25rem, currentcolor 0.25rem, currentcolor calc(100% - 0.25rem), transparent calc(100% - 0.25rem), transparent calc(100% - 1px));
 }
 .btn:active + .dropdown-toggle-split, .btn-close:active + .dropdown-toggle-split, .btn.active + .dropdown-toggle-split, .active.btn-close + .dropdown-toggle-split, .dropdown-toggle-split:active + * + .btn, .dropdown-toggle-split:active + * + .btn-close, .dropdown-toggle-split.active + * + .btn, .dropdown-toggle-split.active + * + .btn-close {
-  border-color: #ff7900;
+  border-color: var(--bs-color-border-brand-primary);
 }
 .btn-group.show > .dropdown-toggle-split:not(:focus):not(:active)::before {
-  color: #ff7900;
+  color: var(--bs-color-content-brand-primary);
   background-color: currentcolor;
 }
 .dropdown-toggle-split::after, .dropup .dropdown-toggle-split::after, .dropend .dropdown-toggle-split::after {
