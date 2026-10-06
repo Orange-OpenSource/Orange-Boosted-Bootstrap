@@ -99,7 +99,7 @@ Draft component — design not finalized. Based on Boosted Orange Navbar with OU
 Placed before the global header. Uses `.supra` on the `<nav>`:
 
 ```html
-<nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation">
+<nav class="navbar lg:navbar-expand supra" aria-label="Supra navigation">
   <div class="container-fluid container-max-width">
     <ul class="navbar-nav me-auto">
       <li class="nav-item">
