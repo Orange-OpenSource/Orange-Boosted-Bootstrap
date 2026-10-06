@@ -18,7 +18,7 @@ Read the project's `package.json` (`dependencies` and `devDependencies`) and map
 | `@ouds/web-common` | *(omit flag, default)* | Older OUDS Web |
 | None found | Ask the user | Unknown |
 
-If `ouds-web` or `@ouds/web-orange` is already present, the project is either fully migrated or partially migrated — confirm with the user before proceeding. If the user confirms, update the dependencies to the latest OUDS Web version. Detect the installed OUDS Web version from `package-lock.json`, it must be used to reference the right `using-ouds-web-version-<major>-<minor>` skill afterward.
+If `ouds-web` or `@ouds/web-orange` is already present, the project is either fully migrated or partially migrated — confirm with the user before proceeding. If the user confirms, update the dependencies to the latest OUDS Web version. Detect the installed OUDS Web version from the project's lockfile (`package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`, or `bun.lock`/`bun.lockb`) or `package.json`, then use the matching `using-ouds-web-version-<major>-<minor>` skill afterward.
 
 ## Step 2 — Choose file glob
 
@@ -87,5 +87,5 @@ Example: if the warning mentions `.alert-success`, look up `alerts` in `using-ou
 
 - Use the `using-ouds-web-version-<major>-<minor>` skill for target component markup and class lookup during manual warning resolution
 - `packages/migrate/README.md` — full `@ouds/web-migrate` options and examples
-- `skills/using-ouds-web-<version>/references/getting-started/migration-from-boosted.md` — component-by-component Boosted→OUDS Web changes
-- `skills/using-ouds-web/references/getting-started/migration.md` — OUDS Web version-to-version changes
+- `using-ouds-web-version-<major>-<minor>/references/getting-started/migration-from-boosted.md` — component-by-component Boosted→OUDS Web changes
+- `using-ouds-web-version-<major>-<minor>/references/getting-started/migration.md` — OUDS Web version-to-version changes

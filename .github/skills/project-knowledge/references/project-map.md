@@ -60,7 +60,7 @@ Contents:
 
 | Skill | Purpose |
 |---|---|
-| `using-ouds-web/` | Comprehensive reference of OUDS Web components, layout, utilities, and design tokens — used when an agent generates OUDS Web markup or code |
+| `using-ouds-web-version-<major>-<minor>/` | Comprehensive reference of OUDS Web components, layout, utilities, and design tokens — used when an agent generates OUDS Web markup or code |
 | `migrate-to-ouds-web/` | Step-by-step workflow to migrate a project from Boosted, OB1, or an older OUDS Web version to the latest OUDS Web |
 
 **Do not confuse with `.github/skills/`**, which contains skills for agents *contributing to this repository* (SCSS/JS conventions, token system, accessibility, etc.) — the two serve different audiences.
