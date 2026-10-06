@@ -46,12 +46,12 @@ Orange-Boosted-Bootstrap/
 
 ## `skills/` folder (distributed to library consumers)
 
-The root-level `skills/` directory is **not** for contributors to this repo — it ships [Agent Skills](https://www.skills.sh/) to give AI coding agents (Claude Code, Cursor, GitHub Copilot, and others) procedural knowledge of the **OUDS Web library itself**, for use in projects that *consume* OUDS Web.
+The root-level `skills/` directory is **not** for contributors to this repo — it stores [Agent Skills](https://www.skills.sh/) to give AI coding agents (Claude Code, Cursor, GitHub Copilot, and others) procedural knowledge of the **OUDS Web library itself**, for use in projects that *consume* OUDS Web.
 
 Distribution mechanism: these skills are **not published as an npm package**. They are installed via the `skills` CLI:
 
 ```sh
-npx skills add Orange-OpenSource/Orange-Boosted-Bootstrap/skills
+npx skills add Orange-OpenSource/ouds-web-skills
 ```
 
 See README.md ("AI agent skills" section) for the consumer-facing documentation.
