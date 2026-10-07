@@ -37,7 +37,7 @@ $modal-transition-dimension: -3rem !default;
     overscroll-behavior: contain;
   }
 
-  &:has(> .modal-footer) {
+  &:has(> .modal-footer):has(.modal-body) {
     padding-block-end: 0;
 
     .modal-footer {
@@ -71,6 +71,15 @@ $modal-transition-dimension: -3rem !default;
   --#{$prefix}modal-padding-top: var(--#{$prefix}space-scaled-xlarge);
   --#{$prefix}modal-padding-bottom: var(--#{$prefix}space-scaled-xlarge);
   --#{$prefix}modal-padding-inline: var(--#{$prefix}grid-margin);
+  --#{$prefix}modal-close-button-inset: #{$ouds-fullscreen-dialog-space-inset-close-button-mobile};
+
+  @include media-breakpoint-up(md) {
+    --#{$prefix}modal-close-button-inset: #{$ouds-fullscreen-dialog-space-inset-close-button-tablet};
+  }
+
+  @include media-breakpoint-up(xl) {
+    --#{$prefix}modal-close-button-inset: #{$ouds-fullscreen-dialog-space-inset-close-button-desktop};
+  }
 }
 
 .modal-fullscreen-dialog {
@@ -251,12 +260,12 @@ $modal-transition-dimension: -3rem !default;
     margin-block-end: 0;
   }
 
+  .modal-footer {
+    padding-inline: 0;
+  }
+
   &:has(.modal-footer) {
     padding-block-end: 0;
-
-    .modal-footer {
-      padding-inline: 0;
-    }
 
     > :nth-last-child(2) {
       margin-block-end: var(--#{$prefix}modal-body-footer-padding-bottom);

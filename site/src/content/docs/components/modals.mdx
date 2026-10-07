@@ -66,7 +66,10 @@ import { getVersionedDocsPath } from '@libs/path'
 
 ### Approach
 
-Modal dialog and fullscreen dialog use the same native `<dialog>` element with the `.modal-base` class and the same internal structure with `.modal-header`, `.modal-body`, and `.modal-footer`. Either use `.modal-dialog` for a standard modal dialog or `.modal-fullscreen-dialog` for a fullscreen modal.
+Modal dialog and fullscreen dialog use the same native `<dialog>` element with the `.modal-base` class. Either use `.modal-dialog` for a standard modal dialog or `.modal-fullscreen-dialog` for a fullscreen modal. The internal structure uses:
+  - `.modal-header` for the header, it contains a `.modal-title` element for the main title.
+  - `.modal-body` for the main content of the modal, it can contain a `.modal-footer` [or not](#sticky-actions).
+  - `.modal-footer` for the action buttons for the modal.
 
 The [common variants](#common-variants) are shared between modal dialog and fullscreen dialog, modal dialog has [specific variants](#variants) and [sizes](#sizes).
 
@@ -81,6 +84,7 @@ Some things to keep in mind while using modals include:
 - Choose the most appropriate initial focus when the dialog opens. By default, focus moves to the first focusable element; use `[autofocus]` when another element, such as the close button or an input, should receive focus.
 - Always provide an explicit and accessible way to close the dialog, such as a close, cancel, or confirmation button. Modal dialogs should also preserve the default `Escape` key behavior.
 - Open modal dialogs [with `showModal()`](#javascript) or the [`show-modal` invoker command](#invoker-commands) so that the rest of the page is made inert and the dialog is exposed with modal semantics.
+- Adapt the title level to the context of the page, ensuring proper heading hierarchy.
 - Do not add `[tabindex]` to the `<dialog>` element.
 
 <Callout type="info">
@@ -282,6 +286,10 @@ Move the `.modal-footer` outside of the `.modal-body` to show the actions button
   The DOM structure is different from the normal case, please make sure to place the `.modal-footer` outside of the `.modal-body`.
 </Callout>
 
+<Callout type="info">
+  Please note that the sticky behavior is visible when the modal contains a large amount of content or on smaller viewports. You might want to resize your browser window to observe the effect more clearly.
+</Callout>
+
 <Example buttonLabel="modal dialog sticky actions" code={`<dialog id="modalDialogStickyActions" class="modal-base modal-dialog" aria-labelledby="modalDialogStickyActionsTitle" closedby="any">
     <div class="modal-header">
       <h3 id="modalDialogStickyActionsTitle" class="modal-title">Modal title</h3>
@@ -310,7 +318,7 @@ Move the `.modal-footer` outside of the `.modal-body` to show the actions button
 The close button may be hidden when the modal has a clear, visible alternative way to dismiss it, such as a single Cancel action or another explicit dismissal control. It may also be omitted when the modal represents a mandatory step in a controlled flow where dismissal is intentionally unavailable.
 
 <Callout type="warning">
-  The modal must always provide a discoverable and accessible way to close it.
+  The modal must always provide a discoverable and accessible way to close it. See the [interactivity section](#interactivity) for more information.
 </Callout>
 
 <Example buttonLabel="modal dialog no close button" code={`<dialog id="modalDialogNoCloseButton" class="modal-base modal-dialog" aria-labelledby="modalDialogNoCloseButtonTitle" closedby="any">
@@ -386,7 +394,7 @@ You can display a subtitle above the title, aligned to the leading edge of the m
 
 ### Title icon
 
-You can display an icon to the right of the title. It can be used either as a decorative element or to communicate a functional status, such as success, deletion, error, warning, or information.
+You can display an icon to the left of the title. It can be used either as a decorative element or to communicate a functional status, see the [functional modals section](#functional-modals) for more details.
 
 <Example buttonLabel="modal dialog title icon" code={`<dialog id="modalDialogTitleIcon" class="modal-base modal-dialog" aria-labelledby="modalDialogTitleIconTitle" closedby="any">
     <div class="modal-header">
@@ -415,7 +423,7 @@ You can display an icon to the right of the title. It can be used either as a de
 
 ### Description
 
-The description option displays supporting text below the title.It provides additional context, instructions, or information required to understand the purpose or outcome of the modal. The description may be omitted when the title alone provides sufficient context and the message is short and immediately understandable.
+The description option displays supporting text below the title. It provides additional context, instructions, or information required to understand the purpose or outcome of the modal. The description may be omitted when the title alone provides sufficient context and the message is short and immediately understandable.
 
 <Example buttonLabel="modal dialog no description" code={`<dialog id="modalDialogNoDescription" class="modal-base modal-dialog" aria-labelledby="modalDialogNoDescriptionTitle" closedby="any">
     <div class="modal-header">
@@ -533,9 +541,9 @@ For more complex uses cases you may need to add containers in the `.modal-footer
     Open modal with complex actions layout
   </button>`} />
 
-### Functional
+### Functional modals
 
-You can implement function modal dialogs using the functional variants of the icons and buttons.
+You can implement functional modal dialogs using the functional variants of the icons and buttons.
 
 <Example buttonLabel="modal dialog negative" code={`<dialog id="modalDialogNegative" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogNegativeTitle" closedby="any">
     <div class="modal-header">
@@ -583,6 +591,37 @@ You can implement function modal dialogs using the functional variants of the ic
     Open success modal
   </button>`} />
 
+## Switching types on breakpoints
+
+For some use cases, it may be desirable to switch the modal type for example from a fullscreen dialog on smaller viewports to a modal dialog. This is not natively supported by the component, but OUDS Web exposes SCSS mixins that allow you to customize the modal behavior and appearance based on your needs.
+
+The following example demonstrates how to define a `.modal-fluid` class to create a modal that adapts from a fullscreen dialog to a modal dialog based on the viewport size.
+
+<ScssDocs name="modal-fluid" file="site/src/scss/_component-examples.scss" buttonLabel="container max width"/>
+
+You can check the responsive behavior on the following example by resizing your browser window.
+
+<Example buttonLabel="modal fluid" code={`<dialog id="modalDialogFluid" class="modal-base modal-fluid" aria-labelledby="modalDialogFluidTitle" closedby="any">
+    <div class="modal-header">
+      <h3 id="modalDialogFluidTitle" class="modal-title">Modal title</h3>
+      <button type="button" class="btn btn-close" commandfor="modalDialogFluid" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
+      <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young.</p>
+      <p>On then sake home is am leaf. Of suspicion do departure at extremely he believing. Do know said mind do rent they oh hope of. General enquire picture letters garrets on offices of no on. Say one hearing between excited evening all inhabit thought you. Style begin mr heard by in music tried do. To unreserved projection no introduced invitation.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-strong" commandfor="modalDialogFluid" command="close">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default m-xsmall" commandfor="modalDialogFluid" command="show-modal">
+    Open modal fluid
+  </button>`} />
+
 ## Interactivity
 
 In order to open a dialog, you need to use either [invoker commands](#invoker-commands) or [JavaScript](#javascript).
@@ -605,10 +644,10 @@ First create a button with the `[commandfor]` attribute pointing to the ID of th
 </button>
 ```
 
-Then create a `<dialog>` element with the corresponding ID that matches the `[commandfor]` attribute of the button.
+Then create a `<dialog>` element with the corresponding ID that matches the `[commandfor]` attribute of the button. Most of the time you should include the `[closedby=any]` attribute to allow closing the dialog by clicking outside of it (light dismiss).
 
 ```html
-<dialog id="modalDialogInvokerCommand" class="modal-base modal-dialog" aria-labelledby="modalDialogInvokerCommandTitle">
+<dialog id="modalDialogInvokerCommand" class="modal-base modal-dialog" aria-labelledby="modalDialogInvokerCommandTitle" closedby="any">
   <h3 id="modalDialogInvokerCommandTitle" class="modal-title">Invoker modal dialog</h3>
   <!-- modal dialog content -->
 </dialog>
@@ -644,35 +683,4 @@ JavaScript can be used to display and close the `<dialog>` element. You can use 
 
   <button type="button" class="btn btn-default" data-open-modal="demoJSModal">
     Open modal with JS
-  </button>`} />
-
-## Switching types on breakpoints
-
-For some use cases, it may be desirable to switch the modal type for example from a fullscreen dialog on smaller viewports to a modal dialog. This is not natively supported by the component, but OUDS Web exposes SCSS mixins that allow you to customize the modal behavior and appearance based on your needs.
-
-The following example demonstrates how to define a `.modal-fluid` class to create a modal that adapts from a fullscreen dialog to a modal dialog based on the viewport size.
-
-<ScssDocs name="modal-fluid" file="site/src/scss/_component-examples.scss" buttonLabel="container max width"/>
-
-You can check the responsive behavior on the following example by resizing your browser window.
-
-<Example buttonLabel="modal fluid" code={`<dialog id="modalDialogFluid" class="modal-base modal-fluid" aria-labelledby="modalDialogFluidTitle" closedby="any">
-    <div class="modal-header">
-      <h3 id="modalDialogFluidTitle" class="modal-title">Modal title</h3>
-      <button type="button" class="btn btn-close" commandfor="modalDialogFluid" command="close">
-        <span class="visually-hidden">Close</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
-      <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young.</p>
-      <p>On then sake home is am leaf. Of suspicion do departure at extremely he believing. Do know said mind do rent they oh hope of. General enquire picture letters garrets on offices of no on. Say one hearing between excited evening all inhabit thought you. Style begin mr heard by in music tried do. To unreserved projection no introduced invitation.</p>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-strong" commandfor="modalDialogFluid" command="close">Close</button>
-      </div>
-    </div>
-  </dialog>
-
-  <button type="button" class="btn btn-default m-xsmall" commandfor="modalDialogFluid" command="show-modal">
-    Open modal fluid
   </button>`} />

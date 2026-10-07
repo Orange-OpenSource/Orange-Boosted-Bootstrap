@@ -10398,10 +10398,10 @@ ol.bullet-list > li > ol > li > ol > li::before {
   overflow: hidden;
   overscroll-behavior: contain;
 }
-.modal-base:has(> .modal-footer) {
+.modal-base:has(> .modal-footer):has(.modal-body) {
   padding-block-end: 0;
 }
-.modal-base:has(> .modal-footer) .modal-footer {
+.modal-base:has(> .modal-footer):has(.modal-body) .modal-footer {
   padding-block: var(--bs-modal-sticky-footer-padding-block);
   border-top: 1px solid var(--bs-color-border-muted);
 }
@@ -10432,6 +10432,17 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-modal-padding-top: var(--bs-space-scaled-xlarge);
   --bs-modal-padding-bottom: var(--bs-space-scaled-xlarge);
   --bs-modal-padding-inline: var(--bs-grid-margin);
+  --bs-modal-close-button-inset: 16px;
+}
+@media (min-width: 736px) {
+  .modal-fullscreen-dialog {
+    --bs-modal-close-button-inset: 32px;
+  }
+}
+@media (min-width: 1320px) {
+  .modal-fullscreen-dialog {
+    --bs-modal-close-button-inset: 40px;
+  }
 }
 
 .modal-dialog {
@@ -10619,11 +10630,11 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .modal-body:not(:has(.modal-footer)) > :last-child {
   margin-block-end: 0;
 }
+.modal-body .modal-footer {
+  padding-inline: 0;
+}
 .modal-body:has(.modal-footer) {
   padding-block-end: 0;
-}
-.modal-body:has(.modal-footer) .modal-footer {
-  padding-inline: 0;
 }
 .modal-body:has(.modal-footer) > :nth-last-child(2) {
   margin-block-end: var(--bs-modal-body-footer-padding-bottom);
