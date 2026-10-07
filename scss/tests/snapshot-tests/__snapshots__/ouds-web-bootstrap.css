@@ -7762,10 +7762,10 @@ optgroup {
   --bs-link-chevron-color: var(--bs-color-action-disabled);
 }
 
-.link-chevron:not(.back, .link-previous) {
+.link-chevron:not(.link-previous) {
   display: inline-block;
 }
-.link-chevron.link-previous::before, .link-chevron.back::before, .link-chevron:not(.back, .link-previous)::after {
+.link-chevron.link-previous::before, .link-chevron:not(.link-previous)::after {
   display: inline-block;
   width: var(--bs-link-icon-size);
   min-width: var(--bs-link-icon-size);
@@ -7779,7 +7779,7 @@ optgroup {
   -webkit-mask-size: var(--bs-link-icon-size);
   mask-size: var(--bs-link-icon-size);
 }
-.link-chevron:not(.back, .link-previous)::after {
+.link-chevron:not(.link-previous)::after {
   margin-right: 0;
   margin-left: var(--bs-link-chevron-gap);
   transform: rotate(180deg);
@@ -7824,15 +7824,7 @@ optgroup {
   order: -1;
 }
 
-.colored-bg.link, .colored-bg.icon-link, .colored-bg.link-chevron,
-.colored-bg.link-external,
-.colored-bg.link-expand,
-.colored-bg :is(.link, .icon-link, .link-chevron,
-.link-external,
-.link-expand, a),
-.link-on-colored-bg.link,
-.link-on-colored-bg.icon-link,
-.link-on-colored-bg.link-chevron,
+.link-on-colored-bg.link, .link-on-colored-bg.icon-link, .link-on-colored-bg.link-chevron,
 .link-on-colored-bg.link-external,
 .link-on-colored-bg.link-expand,
 .link-on-colored-bg :is(.link, .icon-link, .link-chevron,
@@ -7841,15 +7833,7 @@ optgroup {
   --bs-link-color: var(--bs-link-mono-color-content-enabled);
   --bs-link-chevron-color: var(--bs-link-color);
 }
-.colored-bg.link:hover, .colored-bg.icon-link:hover, .colored-bg.link-chevron:hover,
-.colored-bg.link-external:hover,
-.colored-bg.link-expand:hover,
-.colored-bg :is(.link, .icon-link, .link-chevron,
-.link-external,
-.link-expand, a):hover,
-.link-on-colored-bg.link:hover,
-.link-on-colored-bg.icon-link:hover,
-.link-on-colored-bg.link-chevron:hover,
+.link-on-colored-bg.link:hover, .link-on-colored-bg.icon-link:hover, .link-on-colored-bg.link-chevron:hover,
 .link-on-colored-bg.link-external:hover,
 .link-on-colored-bg.link-expand:hover,
 .link-on-colored-bg :is(.link, .icon-link, .link-chevron,
@@ -7857,15 +7841,7 @@ optgroup {
 .link-expand, a):hover {
   --bs-link-color: var(--bs-link-mono-color-content-hover);
 }
-.colored-bg.link:focus-visible, .colored-bg.icon-link:focus-visible, .colored-bg.link-chevron:focus-visible,
-.colored-bg.link-external:focus-visible,
-.colored-bg.link-expand:focus-visible,
-.colored-bg :is(.link, .icon-link, .link-chevron,
-.link-external,
-.link-expand, a):focus-visible,
-.link-on-colored-bg.link:focus-visible,
-.link-on-colored-bg.icon-link:focus-visible,
-.link-on-colored-bg.link-chevron:focus-visible,
+.link-on-colored-bg.link:focus-visible, .link-on-colored-bg.icon-link:focus-visible, .link-on-colored-bg.link-chevron:focus-visible,
 .link-on-colored-bg.link-external:focus-visible,
 .link-on-colored-bg.link-expand:focus-visible,
 .link-on-colored-bg :is(.link, .icon-link, .link-chevron,
@@ -7873,15 +7849,7 @@ optgroup {
 .link-expand, a):focus-visible {
   --bs-link-color: var(--bs-link-mono-color-content-focus);
 }
-.colored-bg.link:active, .colored-bg.icon-link:active, .colored-bg.link-chevron:active,
-.colored-bg.link-external:active,
-.colored-bg.link-expand:active,
-.colored-bg :is(.link, .icon-link, .link-chevron,
-.link-external,
-.link-expand, a):active,
-.link-on-colored-bg.link:active,
-.link-on-colored-bg.icon-link:active,
-.link-on-colored-bg.link-chevron:active,
+.link-on-colored-bg.link:active, .link-on-colored-bg.icon-link:active, .link-on-colored-bg.link-chevron:active,
 .link-on-colored-bg.link-external:active,
 .link-on-colored-bg.link-expand:active,
 .link-on-colored-bg :is(.link, .icon-link, .link-chevron,
@@ -7889,25 +7857,9 @@ optgroup {
 .link-expand, a):active {
   --bs-link-color: var(--bs-link-mono-color-content-pressed);
 }
-.colored-bg.link[aria-disabled=true], .colored-bg[aria-disabled=true].icon-link, .colored-bg[aria-disabled=true].link-chevron,
-.colored-bg[aria-disabled=true].link-external,
-.colored-bg[aria-disabled=true].link-expand, .colored-bg.link:disabled, .colored-bg.icon-link:disabled, .colored-bg.link-chevron:disabled,
-.colored-bg.link-external:disabled,
-.colored-bg.link-expand:disabled,
-.colored-bg :is(.link, .icon-link, .link-chevron,
-.link-external,
-.link-expand, a)[aria-disabled=true],
-.colored-bg :is(.link, .icon-link, .link-chevron,
-.link-external,
-.link-expand, a):disabled,
-.link-on-colored-bg.link[aria-disabled=true],
-.link-on-colored-bg[aria-disabled=true].icon-link,
-.link-on-colored-bg[aria-disabled=true].link-chevron,
+.link-on-colored-bg.link[aria-disabled=true], .link-on-colored-bg[aria-disabled=true].icon-link, .link-on-colored-bg[aria-disabled=true].link-chevron,
 .link-on-colored-bg[aria-disabled=true].link-external,
-.link-on-colored-bg[aria-disabled=true].link-expand,
-.link-on-colored-bg.link:disabled,
-.link-on-colored-bg.icon-link:disabled,
-.link-on-colored-bg.link-chevron:disabled,
+.link-on-colored-bg[aria-disabled=true].link-expand, .link-on-colored-bg.link:disabled, .link-on-colored-bg.icon-link:disabled, .link-on-colored-bg.link-chevron:disabled,
 .link-on-colored-bg.link-external:disabled,
 .link-on-colored-bg.link-expand:disabled,
 .link-on-colored-bg :is(.link, .icon-link, .link-chevron,
