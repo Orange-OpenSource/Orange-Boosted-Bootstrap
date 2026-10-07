@@ -1420,10 +1420,6 @@ dialog,
   border: 0;
 }
 
-body:has(dialog:modal) {
-  overflow-y: hidden;
-}
-
 :not([popover])::backdrop {
   background-color: var(--bs-color-overlay-backdrop, rgba(0, 0, 0, 0.68));
 }
@@ -10386,7 +10382,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   max-width: unset;
   height: var(--bs-modal-height);
   max-height: var(--bs-modal-max-height);
-  padding-block: var(--bs-modal-padding-top) var(--bs-modal-padding-bottom);
   margin: var(--bs-modal-margin);
   overscroll-behavior: contain;
   background-color: var(--bs-color-overlay-modal-sheet);
@@ -10398,12 +10393,15 @@ ol.bullet-list > li > ol > li > ol > li::before {
   overflow: hidden;
   overscroll-behavior: contain;
 }
-.modal-base:has(> .modal-footer):has(.modal-body) {
-  padding-block-end: 0;
+.modal-base:has(> .modal-footer):has(.modal-body) .modal-body {
+  padding-block-end: var(--bs-modal-body-footer-padding-bottom);
 }
-.modal-base:has(> .modal-footer):has(.modal-body) .modal-footer {
+.modal-base:has(> .modal-footer):has(.modal-body) > .modal-footer {
   padding-block: var(--bs-modal-sticky-footer-padding-block);
   border-top: 1px solid var(--bs-color-border-muted);
+}
+.modal-base:not(:has(.modal-body)) .modal-footer {
+  padding-block-end: calc(var(--bs-modal-body-footer-padding-bottom) + var(--bs-modal-padding-bottom));
 }
 @media (min-width: 736px) {
   .modal-base {
@@ -10580,7 +10578,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: var(--bs-modal-padding-inline) var(--bs-space-scaled-3xlarge);
+  padding: var(--bs-modal-padding-top) var(--bs-space-scaled-3xlarge) 0 var(--bs-modal-padding-inline);
   background-color: var(--bs-color-overlay-modal-sheet);
 }
 .modal-header .btn-close {
@@ -10622,8 +10620,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .modal-body {
   flex-grow: 1;
-  padding-block-end: var(--bs-modal-body-footer-padding-bottom);
-  padding-inline: var(--bs-modal-padding-inline);
+  padding: 0 var(--bs-modal-padding-inline) calc(var(--bs-modal-body-footer-padding-bottom) + var(--bs-modal-padding-bottom));
   margin-block-start: var(--bs-modal-body-padding-top);
   overflow-y: auto;
 }
@@ -10634,7 +10631,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   padding-inline: 0;
 }
 .modal-body:has(.modal-footer) {
-  padding-block-end: 0;
+  padding-block-end: var(--bs-modal-padding-bottom);
 }
 .modal-body:has(.modal-footer) > :nth-last-child(2) {
   margin-block-end: var(--bs-modal-body-footer-padding-bottom);

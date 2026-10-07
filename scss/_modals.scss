@@ -23,7 +23,6 @@ $modal-transition-dimension: -3rem !default;
   max-width: unset;
   height: var(--#{$prefix}modal-height);
   max-height: var(--#{$prefix}modal-max-height);
-  padding-block: var(--#{$prefix}modal-padding-top) var(--#{$prefix}modal-padding-bottom);
   margin: var(--#{$prefix}modal-margin);
   overscroll-behavior: contain;
   background-color: $ouds-color-overlay-modal-sheet;
@@ -38,11 +37,19 @@ $modal-transition-dimension: -3rem !default;
   }
 
   &:has(> .modal-footer):has(.modal-body) {
-    padding-block-end: 0;
+    .modal-body {
+      padding-block-end: var(--#{$prefix}modal-body-footer-padding-bottom);
+    }
 
-    .modal-footer {
+    > .modal-footer {
       padding-block: var(--#{$prefix}modal-sticky-footer-padding-block);
       border-top: $ouds-border-width-default solid $ouds-color-border-muted;
+    }
+  }
+
+  &:not(:has(.modal-body)) {
+    .modal-footer {
+      padding-block-end: calc(var(--#{$prefix}modal-body-footer-padding-bottom) + var(--#{$prefix}modal-padding-bottom));
     }
   }
 
@@ -210,7 +217,7 @@ $modal-transition-dimension: -3rem !default;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: var(--#{$prefix}modal-padding-inline) var(--#{$prefix}space-scaled-3xlarge);
+  padding: var(--#{$prefix}modal-padding-top) var(--#{$prefix}space-scaled-3xlarge) 0 var(--#{$prefix}modal-padding-inline);
   background-color: $ouds-color-overlay-modal-sheet;
 
   .btn-close {
@@ -251,8 +258,7 @@ $modal-transition-dimension: -3rem !default;
 
 .modal-body {
   flex-grow: 1;
-  padding-block-end: var(--#{$prefix}modal-body-footer-padding-bottom);
-  padding-inline: var(--#{$prefix}modal-padding-inline);
+  padding: 0 var(--#{$prefix}modal-padding-inline) calc(var(--#{$prefix}modal-body-footer-padding-bottom) + var(--#{$prefix}modal-padding-bottom));
   margin-block-start: var(--#{$prefix}modal-body-padding-top);
   overflow-y: auto;
 
@@ -265,7 +271,7 @@ $modal-transition-dimension: -3rem !default;
   }
 
   &:has(.modal-footer) {
-    padding-block-end: 0;
+    padding-block-end: var(--#{$prefix}modal-padding-bottom);
 
     > :nth-last-child(2) {
       margin-block-end: var(--#{$prefix}modal-body-footer-padding-bottom);
