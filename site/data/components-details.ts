@@ -438,5 +438,14 @@ export const componentsDetails: ComponentCardData[] = [
           <input type="email" class="text-input-field" id="exampleTextInputWithPlaceholder[[id_prefix]]" placeholder=" ">
         </div>
       </div>`
+  },
+  {
+    name: 'Typography',
+    slug: 'typography',
+    category: 'Content display',
+    snippet: `
+      <h2 class="marker">
+       Heading
+      </h2>`
   }
 ]
