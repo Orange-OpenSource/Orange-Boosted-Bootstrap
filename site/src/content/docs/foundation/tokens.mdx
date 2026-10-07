@@ -56,7 +56,7 @@ We build our Sass variables following the architecture of the design tokens:
   - Ex: `ouds/color/content/on/brand-primary` becomes `$ouds-color-content-on-brand-primary`, `ouds/elevation/blur/emphasized` becomes `$ouds-elevation-blur-emphasized`.
 - [Composite tokens](#composite-tokens): `$ouds-elevation-{token-name}`
   - Ex: `ouds/elevation/**/emphasized` are aggregated via `$ouds-elevation-emphasized`.
-  - Our font tokens are aggregated in a mixin [`get-font-size()`]([[docsref:/foundation/typography/#text-style-for-custom-components]]) that takes the font reference name as a parameter. So `ouds/font/**/body-large` are aggregated via `get-font-size("body-large")`.
+  - Our font tokens are aggregated in a mixin [`get-font-size()`]([[docsref:/foundation/typography/#text-style-for-custom-components]]) that takes the font reference name as a parameter. So `ouds/font/**/body-large` are aggregated via `get-font-size("body-large")`. { /* TODO adapt the text and change the link  */ }
 - [Component tokens](#component-tokens): `$ouds-{component-name}-{token-name}`
   - Ex: `ouds/button/color/bg/minimal/hover` becomes `$ouds-button-color-bg-minimal-hover`.
 
