@@ -1,0 +1,23 @@
+{
+  "name": "@ouds/core",
+  "version": "0.0.1",
+  "description": "Framework-agnostic types and utilities shared by @ouds/react, @ouds/vue, and @ouds/angular.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "devDependencies": {
+    "@ouds/web-orange": "^1.5.0",
+    "@ouds/web-orange-compact": "^1.5.0",
+    "@ouds/web-sosh": "^1.5.0"
+  },
+  "main": "./index.cjs",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "require": "./index.cjs"
+    }
+  }
+}
