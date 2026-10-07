@@ -5576,8 +5576,8 @@ dialog,
 }
 
 [disabled] .is-required::after,
-[aria-disabled].is-required::after,
-[aria-disabled] .is-required::after {
+[aria-disabled=true].is-required::after,
+[aria-disabled=true] .is-required::after {
   color: currentcolor;
 }
 

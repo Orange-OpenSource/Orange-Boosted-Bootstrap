@@ -25,8 +25,8 @@
 }
 
 [disabled] .is-required,
-[aria-disabled].is-required,
-[aria-disabled] .is-required {
+[aria-disabled="true"].is-required,
+[aria-disabled="true"] .is-required {
   &::after {
     color: currentcolor;
   }
