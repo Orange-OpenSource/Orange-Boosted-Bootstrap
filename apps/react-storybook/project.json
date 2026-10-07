@@ -1,0 +1,70 @@
+{
+  "name": "@ouds/react-storybook",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/react-storybook/src",
+  "projectType": "application",
+  "tags": [
+    "app:react"
+  ],
+  "targets": {
+    "serve": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/react-storybook/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "storybook": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/react-storybook/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build": {
+      "executor": "@nx/storybook:build",
+      "outputs": [
+        "{options.outputDir}"
+      ],
+      "options": {
+        "outputDir": "dist/apps/react-storybook",
+        "configDir": "apps/react-storybook/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      },
+      "dependsOn": [
+        {
+          "projects": [
+            "@ouds/react"
+          ],
+          "target": "build"
+        }
+      ]
+    },
+    "static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "react-components:build-storybook",
+        "staticFilePath": "dist/storybook/react-components"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "react-components:build-storybook:ci"
+        }
+      }
+    }
+  }
+}
