@@ -1,4 +1,4 @@
-# Modal
+# Modals
 
 OUDS Web modals use the native HTML `<dialog>` element. They provide two dialog types:
 

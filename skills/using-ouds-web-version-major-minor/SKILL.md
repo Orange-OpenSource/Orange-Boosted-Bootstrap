@@ -148,7 +148,7 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 - [Icon](references/components/icon.md) - SVG icon system
 - [Items](references/components/items.md) - Static/navigation card and list items (replaces Bootstrap's list-group)
 - [Links](references/components/links.md) - Link styles
-- [Modal](references/components/modal.md) - Native dialog modal and fullscreen dialog
+- [Modals](references/components/modals.md) - Native dialog modal and fullscreen dialog
 - [Password input](references/components/password-input.md) - Password field with toggle
 - [Radio button](references/components/radio-button.md) - Radio controls
 - [Select input](references/components/select-input.md) - Select inputs
