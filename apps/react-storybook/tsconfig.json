@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "rootDir": "../..",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "types": ["vite/client", "vitest"]
+  },
+  "files": ["*/**/*.d.ts"],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./tsconfig.storybook.json"
+    }
+  ],
+  "extends": "../../tsconfig.base.json"
+}

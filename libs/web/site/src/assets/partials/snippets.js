@@ -202,7 +202,6 @@ export default () => {
     const skeletonToReplace = document.querySelector('.bd-skeleton-replace')
     const originalContent = skeletonToReplace.innerHTML
 
-    // eslint-disable-next-line no-inner-declarations
     function replaceSkeleton() {
       setTimeout(() => {
         skeletonToReplace.innerHTML = `<div class="d-flex gap-medium mb-medium">
@@ -231,7 +230,6 @@ export default () => {
     // js-docs-start skeleton-second-example
     const skeletonToReplace2 = document.querySelector('.bd-skeleton-replace2')
 
-    // eslint-disable-next-line no-inner-declarations
     function removeSkeletons() {
       setTimeout(() => {
         skeletonToReplace2.firstElementChild.removeAttribute('inert')

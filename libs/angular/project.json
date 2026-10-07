@@ -1,0 +1,54 @@
+{
+  "name": "@ouds/angular",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/angular/src",
+  "projectType": "library",
+  "tags": ["lib:angular"],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/angular/ng-package.json",
+        "tsConfig": "libs/angular/tsconfig.lib.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/angular/tsconfig.lib.json"
+        },
+        "development": {
+          "tsConfig": "libs/angular/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "inputs": ["default", "!{projectRoot}/.eslintcache", "{workspaceRoot}/eslint.config.mjs"],
+      "outputs": ["{options.cwd}/.eslintcache"],
+      "options": {
+        "command": "eslint . --cache",
+        "cwd": "libs/angular"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/angular/jest.config.ts"
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  },
+  "release": {
+    "version": {
+      "manifestRootsToUpdate": ["dist/{projectRoot}"],
+      "currentVersionResolver": "git-tag",
+      "fallbackCurrentVersionResolver": "disk"
+    }
+  }
+}

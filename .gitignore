@@ -14,6 +14,7 @@
 # OS or Editor folders
 ._*
 .cache
+.eslintcache
 .DS_Store
 .idea
 .project
@@ -38,3 +39,6 @@ node_modules/
 # NX
 /.nx/cache/
 /.nx/workspace-data/
+/dist/
+/coverage/
+.angular/
