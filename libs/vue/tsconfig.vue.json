@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "verbatimModuleSyntax": false
+  }
+}

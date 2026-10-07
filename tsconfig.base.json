@@ -1,0 +1,28 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM"],
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true,
+    "importHelpers": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@ouds/angular": ["./libs/angular/src/index.ts"],
+      "@ouds/core": ["./libs/core/src/index.ts"],
+      "@ouds/react": ["./libs/react/src/index.ts"],
+      "@ouds/vue": ["./libs/vue/src/index.ts"]
+    }
+  }
+}
