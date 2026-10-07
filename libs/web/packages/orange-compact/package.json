@@ -1,5 +1,11 @@
 {
   "name": "@ouds/web-orange-compact",
+  "nx": {
+    "projectType": "library",
+    "tags": [
+      "lib:web-orange-compact"
+    ]
+  },
   "description": "OUDS Web Orange Compact is a Bootstrap based, Orange Compact branded accessible and ergonomic components library.",
   "version": "1.5.0",
   "version_short": "1.5",
