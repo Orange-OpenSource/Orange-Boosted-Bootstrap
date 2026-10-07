@@ -318,6 +318,10 @@ You can navigate through the different assets using the tabs below.
 
     For status icons, add `.item-icon` with one of these classes: `.item-status-positive`, `.item-status-warning`, `.item-status-info`, or `.item-status-negative`.
 
+    <Callout type="info">
+  Please note that even if it's not recommended, we can have an image which is an icon, but it requires `.icon` class on it to behave correctly.
+    </Callout>
+
     <Example buttonLabel="items with leading icon" class="d-flex flex-column gap-medium" code={`<div class="item">
     <div class="item-container">
       <div class="item-content">
@@ -338,6 +342,19 @@ You can navigate through the different assets using the tabs below.
       <div class="item-content">
         <div class="item-leading-container">
           <div class="item-icon item-status-positive"></div>
+        </div>
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item item-small">
+    <div class="item-container">
+      <div class="item-content">
+        <div class="item-leading-container">
+          <img alt="" src="${getVersionedDocsPath('/assets/img/parcel.png')}" class="w-100 icon" />
         </div>
         <div class="item-text-container">
           <p class="item-label">Label</p>
@@ -582,6 +599,10 @@ You can navigate through the different assets using the tabs below.
 
     For status icons, add `.item-icon` with one of these classes: `.item-status-positive`, `.item-status-warning`, `.item-status-info`, or `.item-status-negative`.
 
+    <Callout type="info">
+  Please note that even if it's not recommended, we can have an image which is an icon, but it requires `.icon` class on it to behave correctly.
+    </Callout>
+
     <Example buttonLabel="items with trailing icon" class="d-flex flex-column gap-medium" code={`<div class="item">
     <div class="item-container">
       <div class="item-content">
@@ -605,6 +626,19 @@ You can navigate through the different assets using the tabs below.
         </div>
         <div class="item-trailing-container">
           <div class="item-icon item-status-warning"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item item-small">
+    <div class="item-container">
+      <div class="item-content">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+        <div class="item-trailing-container">
+          <img alt="" src="${getVersionedDocsPath('/assets/img/parcel.png')}" class="w-100 icon" />
         </div>
       </div>
     </div>
