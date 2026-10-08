@@ -79,9 +79,18 @@ $modal-transition-dimension: -3rem !default;
   --#{$prefix}modal-padding-bottom: var(--#{$prefix}space-scaled-xlarge);
   --#{$prefix}modal-padding-inline: var(--#{$prefix}grid-margin);
   --#{$prefix}modal-close-button-inset: #{$ouds-fullscreen-dialog-space-inset-close-button-mobile};
+  --#{$prefix}modal-border-radius: 0;
+  // the following reset will override any values from @mixin modal-dialog if applied on other breakpoints
+  --#{$prefix}modal-content-max-width: unset;
+
+  transition: none; // stylelint-disable-line property-disallowed-list
 
   @include media-breakpoint-up(md) {
     --#{$prefix}modal-close-button-inset: #{$ouds-fullscreen-dialog-space-inset-close-button-tablet};
+
+    &:where(:not(:has(> .modal-footer))) {
+      --#{$prefix}modal-footer-width: fit-content;
+    }
   }
 
   @include media-breakpoint-up(xl) {
@@ -101,6 +110,10 @@ $modal-transition-dimension: -3rem !default;
   --#{$prefix}modal-padding-top: #{$ouds-modal-dialog-space-padding-block-top-mobile};
   --#{$prefix}modal-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-mobile};
   --#{$prefix}modal-padding-inline: #{$ouds-modal-dialog-space-padding-inline-mobile};
+  // the following resets will override any values from @mixin fullscreen-dialog if applied on other breakpoints
+  --#{$prefix}modal-footer-width: auto;
+  --#{$prefix}modal-border-radius: inherit;
+  --#{$prefix}modal-content-max-width: 100%;
 
   box-shadow: $ouds-elevation-emphasized;
   opacity: 0;
@@ -134,9 +147,8 @@ $modal-transition-dimension: -3rem !default;
   @include media-breakpoint-up(sm) {
     --#{$prefix}modal-column-count: 10;
     --#{$prefix}modal-max-height: 90vh;
-
-    width: calc(100vw * var(--#{$prefix}modal-column-count) / 12);
-    margin: auto;
+    --#{$prefix}modal-margin: auto;
+    --#{$prefix}modal-width: calc(100vw * var(--#{$prefix}modal-column-count) / 12);
   }
 
   @include media-breakpoint-up(md) {
@@ -200,12 +212,6 @@ $modal-transition-dimension: -3rem !default;
 
   &.modal-fixed-height {
     --#{$prefix}modal-height: var(--#{$prefix}modal-max-height);
-  }
-
-  .modal-body {
-    * {
-      max-width: 100%;
-    }
   }
 }
 
@@ -277,6 +283,10 @@ $modal-transition-dimension: -3rem !default;
       margin-block-end: var(--#{$prefix}modal-body-footer-padding-bottom);
     }
   }
+
+  * {
+    max-width: var(--#{$prefix}modal-content-max-width, revert-rule);
+  }
 }
 
 .modal-footer {
@@ -286,6 +296,7 @@ $modal-transition-dimension: -3rem !default;
   flex-wrap: wrap;
   gap: var(--#{$prefix}space-scaled-small);
   align-items: center; // vertically center
+  width: var(--#{$prefix}modal-footer-width, auto);
   padding-block: var(--#{$prefix}modal-footer-padding-top) var(--#{$prefix}modal-body-footer-padding-bottom);
   padding-inline: var(--#{$prefix}modal-padding-inline);
   background-color: $ouds-color-overlay-modal-sheet;
@@ -294,7 +305,7 @@ $modal-transition-dimension: -3rem !default;
     margin-inline: auto;
   }
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     flex-direction: column; // stack buttons on small screens
 
     > * {

@@ -12624,10 +12624,16 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-modal-padding-bottom: var(--bs-space-scaled-xlarge);
   --bs-modal-padding-inline: var(--bs-grid-margin);
   --bs-modal-close-button-inset: 16px;
+  --bs-modal-border-radius: 0;
+  --bs-modal-content-max-width: unset;
+  transition: none;
 }
 @media (min-width: 736px) {
   .modal-fullscreen-dialog {
     --bs-modal-close-button-inset: 32px;
+  }
+  .modal-fullscreen-dialog:where(:not(:has(> .modal-footer))) {
+    --bs-modal-footer-width: fit-content;
   }
 }
 @media (min-width: 1320px) {
@@ -12644,6 +12650,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-modal-padding-top: 20px;
   --bs-modal-padding-bottom: 24px;
   --bs-modal-padding-inline: 24px;
+  --bs-modal-footer-width: auto;
+  --bs-modal-border-radius: inherit;
+  --bs-modal-content-max-width: 100%;
   box-shadow: 0 8px 8px -2px var(--bs-elevation-color-emphasized);
   opacity: 0;
   transform: translateY(-3rem);
@@ -12689,8 +12698,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
   .modal-dialog {
     --bs-modal-column-count: 10;
     --bs-modal-max-height: 90vh;
-    width: calc(100vw * var(--bs-modal-column-count) / 12);
-    margin: auto;
+    --bs-modal-margin: auto;
+    --bs-modal-width: calc(100vw * var(--bs-modal-column-count) / 12);
   }
 }
 @media (min-width: 736px) {
@@ -12763,9 +12772,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .modal-dialog.modal-fixed-height {
   --bs-modal-height: var(--bs-modal-max-height);
 }
-.modal-dialog .modal-body * {
-  max-width: 100%;
-}
 
 .modal-header {
   display: flex;
@@ -12829,6 +12835,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .modal-body:has(.modal-footer) > :nth-last-child(2) {
   margin-block-end: var(--bs-modal-body-footer-padding-bottom);
 }
+.modal-body * {
+  max-width: var(--bs-modal-content-max-width, revert-rule);
+}
 
 .modal-footer {
   display: flex;
@@ -12837,6 +12846,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   flex-wrap: wrap;
   gap: var(--bs-space-scaled-small);
   align-items: center;
+  width: var(--bs-modal-footer-width, auto);
   padding-block: var(--bs-modal-footer-padding-top) var(--bs-modal-body-footer-padding-bottom);
   padding-inline: var(--bs-modal-padding-inline);
   background-color: var(--bs-color-overlay-modal-sheet);
@@ -12844,7 +12854,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .modal-footer > *:first-child:last-child {
   margin-inline: auto;
 }
-@media (max-width: 735.98px) {
+@media (max-width: 479.98px) {
   .modal-footer {
     flex-direction: column;
   }

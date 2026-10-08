@@ -75,6 +75,10 @@ The [common variants](#common-variants) are shared between modal dialog and full
 
 As this component relies on the native `<dialog>` element we encourage you to read the [MDN documentation on the `<dialog>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog).
 
+<Callout type="info" title="Interactivity">
+  In this documentation we rely on [invoker commands](#invoker-commands) to trigger the opening and closing of modals but you can also use [JavaScript](#javascript).
+</Callout>
+
 ### Accessibility
 
 As we use the native `<dialog>` element, we benefit from built-in accessibility features such as keyboard navigation, focus management, and screen reader support.
@@ -265,7 +269,7 @@ Only the [common variants](#common-variants) are available for this kind of dial
       <p>On then sake home is am leaf. Of suspicion do departure at extremely he believing. Do know said mind do rent they oh hope of. General enquire picture letters garrets on offices of no on.</p>
       <div class="modal-footer">
         <button type="button" class="btn btn-strong" commandfor="demoFullscreenDialog" command="close">Confirm</button>
-        <button type="button" class="btn btn-minimal" commandfor="demoFullscreenDialog" command="close">Cancel</button>
+        <button type="button" class="btn btn-default" commandfor="demoFullscreenDialog" command="close">Cancel</button>
       </div>
     </div>
   </dialog>
@@ -277,93 +281,6 @@ Only the [common variants](#common-variants) are available for this kind of dial
 ## Common variants
 
 The following variants use the same structure and behavior for modal dialog and fullscreen dialog.
-
-### Sticky actions
-
-Move the `.modal-footer` outside of the `.modal-body` to show the actions buttons as fixed on the modal bottom. The content will scroll independently of the action buttons, this ensures that primary actions remain continuously visible and accessible, especially when the modal contains a large amount of content.
-
-<Callout type="warning">
-  The DOM structure is different from the normal case, please make sure to place the `.modal-footer` outside of the `.modal-body`.
-</Callout>
-
-<Callout type="info">
-  Please note that the sticky behavior is visible when the modal contains a large amount of content or on smaller viewports. You might want to resize your browser window to observe the effect more clearly.
-</Callout>
-
-<Example buttonLabel="modal dialog sticky actions" code={`<dialog id="modalDialogStickyActions" class="modal-base modal-dialog" aria-labelledby="modalDialogStickyActionsTitle" closedby="any">
-    <div class="modal-header">
-      <h3 id="modalDialogStickyActionsTitle" class="modal-title">Modal title</h3>
-      <button type="button" class="btn btn-close" commandfor="modalDialogStickyActions" command="close">
-        <span class="visually-hidden">Close</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
-      <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young.</p>
-      <p>On then sake home is am leaf. Of suspicion do departure at extremely he believing. Do know said mind do rent they oh hope of. General enquire picture letters garrets on offices of no on. Say one hearing between excited evening all inhabit thought you. Style begin mr heard by in music tried do. To unreserved projection no introduced invitation.</p>
-      <p>An do on frankness so cordially immediate recommend contained. Imprudence insensible be literature unsatiable do. Of or imprudence solicitude affronting in mr possession. Compass journey he request on suppose limited of or. She margaret law thoughts proposal formerly. Speaking ladyship yet scarcely and mistaken end exertion dwelling. All decisively dispatched instrument particular way one devonshire. Applauded she sportsman explained for out objection.</p>
-      <p>Full he none no side. Uncommonly surrounded considered for him are its. It we is read good soon. My to considered delightful invitation announcing of no decisively boisterous. Did add dashwoods deficient man concluded additions resources. Or landlord packages overcame distance smallest in recurred. Wrong maids or be asked no on enjoy. Household few sometimes out attending described. Lain just fact four of am meet high. </p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-strong" commandfor="modalDialogStickyActions" command="close">Close</button>
-    </div>
-  </dialog>
-
-  <button type="button" class="btn btn-default" commandfor="modalDialogStickyActions" command="show-modal">
-    Open modal with sticky actions
-  </button>`} />
-
-### Close button
-
-The close button may be hidden when the modal has a clear, visible alternative way to dismiss it, such as a single Cancel action or another explicit dismissal control. It may also be omitted when the modal represents a mandatory step in a controlled flow where dismissal is intentionally unavailable.
-
-<Callout type="warning">
-  The modal must always provide a discoverable and accessible way to close it. See the [interactivity section](#interactivity) for more information.
-</Callout>
-
-<Example buttonLabel="modal dialog no close button" code={`<dialog id="modalDialogNoCloseButton" class="modal-base modal-dialog" aria-labelledby="modalDialogNoCloseButtonTitle" closedby="any">
-    <div class="modal-header">
-      <h3 id="modalDialogNoCloseButtonTitle" class="modal-title">Modal title</h3>
-    </div>
-    <div class="modal-body">
-      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
-      <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young.</p>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-strong" commandfor="modalDialogNoCloseButton" command="close">I accept</button>
-      </div>
-    </div>
-  </dialog>
-
-  <button type="button" class="btn btn-default" commandfor="modalDialogNoCloseButton" command="show-modal">
-    Open modal without close button
-  </button>`} />
-
-### Previous link
-
-Add a container with utility classes to display a navigation link above the title, aligned to the leading edge of the modal. It is intended for multi-step flows where users can navigate back to a previous step without dismissing the entire modal.
-
-<Example buttonLabel="modal dialog previous link" code={`<dialog id="modalDialogPreviousLink" class="modal-base modal-fullscreen-dialog" aria-labelledby="modalDialogPreviousLinkTitle" closedby="any">
-    <div class="modal-header">
-      <div class="d-flex flex-column gap-scaled-medium">
-        <a href="#" class="link link-chevron link-previous">Previous</a>
-        <h3 id="modalDialogPreviousLinkTitle" class="modal-title">Modal title</h3>
-      </div>
-      <button type="button" class="btn btn-close" commandfor="modalDialogPreviousLink" command="close">
-        <span class="visually-hidden">Close</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
-      <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young.</p>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-strong" commandfor="modalDialogPreviousLink" command="close">Next step</button>
-      </div>
-    </div>
-  </dialog>
-
-  <button type="button" class="btn btn-default" commandfor="modalDialogPreviousLink" command="show-modal">
-    Open modal with previous link
-  </button>`} />
 
 ### Subtitle
 
@@ -421,6 +338,108 @@ You can display an icon to the left of the title. It can be used either as a dec
     Open modal with title icon
   </button>`} />
 
+### Functional modals
+
+You can implement functional modal dialogs using the functional variants of the icons and buttons.
+
+<Example buttonLabel="modal dialog negative" code={`<dialog id="modalDialogNegative" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogNegativeTitle" closedby="any">
+    <div class="modal-header">
+      <div class="d-flex align-items-center gap-scaled-small">
+        <div class="modal-alert-icon"><p class="visually-hidden">Alert</p></div>
+        <h3 id="modalDialogNegativeTitle" class="modal-title">Confirm deletion</h3>
+      </div>
+      <button type="button" class="btn btn-close" commandfor="modalDialogNegative" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-negative" commandfor="modalDialogNegative" command="close">Delete</button>
+        <button type="button" class="btn btn-minimal" commandfor="modalDialogNegative" command="close">Cancel</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="modalDialogNegative" command="show-modal">
+    Open negative modal
+  </button>`} />
+
+
+<Example buttonLabel="modal dialog success" code={`<dialog id="modalDialogSuccess" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogSuccessTitle" closedby="any">
+    <div class="modal-header">
+      <div class="d-flex align-items-center gap-scaled-small">
+        <div class="modal-alert-icon modal-success"><p class="visually-hidden">Alert</p></div>
+        <h3 id="modalDialogSuccessTitle" class="modal-title">Subscription confirmed!</h3>
+      </div>
+      <button type="button" class="btn btn-close" commandfor="modalDialogSuccess" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" commandfor="modalDialogSuccess" command="close">Ok</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="modalDialogSuccess" command="show-modal">
+    Open success modal
+  </button>`} />
+
+### Close button
+
+The close button may be hidden when the modal has a clear, visible alternative way to dismiss it, such as a single Cancel action or another explicit dismissal control. It may also be omitted when the modal represents a mandatory step in a controlled flow where dismissal is intentionally unavailable.
+
+<Callout type="warning">
+  The modal must always provide a discoverable and accessible way to close it. See the [interactivity section](#interactivity) for more information.
+</Callout>
+
+<Example buttonLabel="modal dialog no close button" code={`<dialog id="modalDialogNoCloseButton" class="modal-base modal-dialog" aria-labelledby="modalDialogNoCloseButtonTitle" closedby="any">
+    <div class="modal-header">
+      <h3 id="modalDialogNoCloseButtonTitle" class="modal-title">Modal title</h3>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
+      <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-strong" commandfor="modalDialogNoCloseButton" command="close">I accept</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="modalDialogNoCloseButton" command="show-modal">
+    Open modal without close button
+  </button>`} />
+
+### Previous link
+
+Add a container with utility classes to display a navigation link above the title, aligned to the leading edge of the modal. It is intended for multi-step flows where users can navigate back to a previous step without dismissing the entire modal.
+
+<Example buttonLabel="modal dialog previous link" code={`<dialog id="modalDialogPreviousLink" class="modal-base modal-fullscreen-dialog" aria-labelledby="modalDialogPreviousLinkTitle" closedby="any">
+    <div class="modal-header">
+      <div class="d-flex flex-column gap-scaled-medium">
+        <a href="#" class="link link-chevron link-previous">Previous</a>
+        <h3 id="modalDialogPreviousLinkTitle" class="modal-title">Modal title</h3>
+      </div>
+      <button type="button" class="btn btn-close" commandfor="modalDialogPreviousLink" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
+      <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-strong" commandfor="modalDialogPreviousLink" command="close">Next step</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="modalDialogPreviousLink" command="show-modal">
+    Open modal with previous link
+  </button>`} />
+
 ### Description
 
 The description option displays supporting text below the title. It provides additional context, instructions, or information required to understand the purpose or outcome of the modal. The description may be omitted when the title alone provides sufficient context and the message is short and immediately understandable.
@@ -439,6 +458,83 @@ The description option displays supporting text below the title. It provides add
 
   <button type="button" class="btn btn-default" commandfor="modalDialogNoDescription" command="show-modal">
     Open modal with no description
+  </button>`} />
+
+### Slot - rich content
+
+Modals are not limited to texts, they can contain diverse content such as forms, navigation lists, or interactive elements, providing a flexible space for user interactions.
+
+<Example buttonLabel="modal dialog slot" code={`<dialog id="modalDialogSlot" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogSlotTitle" closedby="any">
+    <div class="modal-header">
+      <h3 id="modalDialogSlotTitle" class="modal-title">Account settings</h3>
+      <button type="button" class="btn btn-close" commandfor="modalDialogSlot" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Manage your account details and security preferences.</p>
+      <nav aria-label="Account settings">
+        <ul class="item-list">
+          <li class="item item-navigation">
+            <div class="item-container">
+              <div class="item-content">
+                <div class="item-text-container">
+                  <a href="#" class="item-label item-interactive" aria-current="page">Personal details</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="item item-navigation">
+            <div class="item-container">
+              <div class="item-content">
+                <div class="item-text-container">
+                  <a href="#" class="item-label item-interactive">Security</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="modalDialogSlot" command="show-modal">
+    Open modal with navigation
+  </button>`} />
+
+### Sticky actions
+
+Move the `.modal-footer` outside of the `.modal-body` to show the actions buttons as fixed on the modal bottom. The content will scroll independently of the action buttons, this ensures that primary actions remain continuously visible and accessible, especially when the modal contains a large amount of content.
+
+<Callout type="warning">
+  The DOM structure is different from the normal case, please make sure to place the `.modal-footer` outside of the `.modal-body`.
+</Callout>
+
+<Callout type="info">
+  Please note that the sticky behavior is visible when the modal contains a large amount of content on smaller viewports. It's also more visible when the modal has a [fixed height](#fixed-height). You might want to resize your browser window to observe the effect more clearly.
+</Callout>
+
+<Example buttonLabel="modal dialog sticky actions" code={`<dialog id="modalDialogStickyActions" class="modal-base modal-dialog" aria-labelledby="modalDialogStickyActionsTitle" closedby="any">
+    <div class="modal-header">
+      <h3 id="modalDialogStickyActionsTitle" class="modal-title">Modal title</h3>
+      <button type="button" class="btn btn-close" commandfor="modalDialogStickyActions" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
+      <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young.</p>
+      <p>On then sake home is am leaf. Of suspicion do departure at extremely he believing. Do know said mind do rent they oh hope of. General enquire picture letters garrets on offices of no on. Say one hearing between excited evening all inhabit thought you. Style begin mr heard by in music tried do. To unreserved projection no introduced invitation.</p>
+      <p>An do on frankness so cordially immediate recommend contained. Imprudence insensible be literature unsatiable do. Of or imprudence solicitude affronting in mr possession. Compass journey he request on suppose limited of or. She margaret law thoughts proposal formerly. Speaking ladyship yet scarcely and mistaken end exertion dwelling. All decisively dispatched instrument particular way one devonshire. Applauded she sportsman explained for out objection.</p>
+      <p>Full he none no side. Uncommonly surrounded considered for him are its. It we is read good soon. My to considered delightful invitation announcing of no decisively boisterous. Did add dashwoods deficient man concluded additions resources. Or landlord packages overcame distance smallest in recurred. Wrong maids or be asked no on enjoy. Household few sometimes out attending described. Lain just fact four of am meet high. </p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-strong" commandfor="modalDialogStickyActions" command="close">Close</button>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="modalDialogStickyActions" command="show-modal">
+    Open modal with sticky actions
   </button>`} />
 
 ### Actions layout
@@ -541,56 +637,6 @@ For more complex uses cases you may need to add containers in the `.modal-footer
     Open modal with complex actions layout
   </button>`} />
 
-### Functional modals
-
-You can implement functional modal dialogs using the functional variants of the icons and buttons.
-
-<Example buttonLabel="modal dialog negative" code={`<dialog id="modalDialogNegative" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogNegativeTitle" closedby="any">
-    <div class="modal-header">
-      <div class="d-flex align-items-center gap-scaled-small">
-        <div class="modal-alert-icon"><p class="visually-hidden">Alert</p></div>
-        <h3 id="modalDialogNegativeTitle" class="modal-title">Confirm deletion</h3>
-      </div>
-      <button type="button" class="btn btn-close" commandfor="modalDialogNegative" command="close">
-        <span class="visually-hidden">Close</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed.</p>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-negative" commandfor="modalDialogNegative" command="close">Delete</button>
-        <button type="button" class="btn btn-minimal" commandfor="modalDialogNegative" command="close">Cancel</button>
-      </div>
-    </div>
-  </dialog>
-
-  <button type="button" class="btn btn-default" commandfor="modalDialogNegative" command="show-modal">
-    Open negative modal
-  </button>`} />
-
-
-<Example buttonLabel="modal dialog success" code={`<dialog id="modalDialogSuccess" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogSuccessTitle" closedby="any">
-    <div class="modal-header">
-      <div class="d-flex align-items-center gap-scaled-small">
-        <div class="modal-alert-icon modal-success"><p class="visually-hidden">Alert</p></div>
-        <h3 id="modalDialogSuccessTitle" class="modal-title">Subscription confirmed!</h3>
-      </div>
-      <button type="button" class="btn btn-close" commandfor="modalDialogSuccess" command="close">
-        <span class="visually-hidden">Close</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p>Sportsman do offending supported extremity breakfast by listening.</p>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" commandfor="modalDialogSuccess" command="close">Ok</button>
-      </div>
-    </div>
-  </dialog>
-
-  <button type="button" class="btn btn-default" commandfor="modalDialogSuccess" command="show-modal">
-    Open success modal
-  </button>`} />
-
 ## Switching types on breakpoints
 
 For some use cases, it may be desirable to switch the modal type for example from a fullscreen dialog on smaller viewports to a modal dialog. This is not natively supported by the component, but OUDS Web exposes SCSS mixins that allow you to customize the modal behavior and appearance based on your needs.
@@ -601,7 +647,7 @@ The following example demonstrates how to define a `.modal-fluid` class to creat
 
 You can check the responsive behavior on the following example by resizing your browser window.
 
-<Example buttonLabel="modal fluid" code={`<dialog id="modalDialogFluid" class="modal-base modal-fluid" aria-labelledby="modalDialogFluidTitle" closedby="any">
+<Example buttonLabel="modal fluid" code={`<div class="use-rounded-corner-modal"><dialog id="modalDialogFluid" class="modal-base modal-fluid modal-fixed-height" aria-labelledby="modalDialogFluidTitle" closedby="any">
     <div class="modal-header">
       <h3 id="modalDialogFluidTitle" class="modal-title">Modal title</h3>
       <button type="button" class="btn btn-close" commandfor="modalDialogFluid" command="close">
@@ -616,7 +662,7 @@ You can check the responsive behavior on the following example by resizing your 
         <button type="button" class="btn btn-strong" commandfor="modalDialogFluid" command="close">Close</button>
       </div>
     </div>
-  </dialog>
+  </dialog></div>
 
   <button type="button" class="btn btn-default m-xsmall" commandfor="modalDialogFluid" command="show-modal">
     Open modal fluid
@@ -644,7 +690,7 @@ First create a button with the `[commandfor]` attribute pointing to the ID of th
 </button>
 ```
 
-Then create a `<dialog>` element with the corresponding ID that matches the `[commandfor]` attribute of the button. Most of the time you should include the `[closedby=any]` attribute to allow closing the dialog by clicking outside of it (light dismiss).
+Then create a `<dialog>` element with the corresponding ID that matches the `[commandfor]` attribute of the button. Most of the time you should include the `[closedby=any]` attribute to allow closing the dialog by clicking outside of it (see [light dismiss](#light-dismiss)).
 
 ```html
 <dialog id="modalDialogInvokerCommand" class="modal-base modal-dialog" aria-labelledby="modalDialogInvokerCommandTitle" closedby="any">
@@ -663,7 +709,7 @@ Inside the `<dialog>` element, the buttons that should close the modal dialog ne
 
 ### JavaScript
 
-JavaScript can be used to display and close the `<dialog>` element. You can use the `showModal()` method to display a modal dialog. The dialog can then be closed using the `close()` method.
+JavaScript can be used to display and close the `<dialog>` element. You can use the `showModal()` method to display a modal dialog. The dialog can then be closed using the `close()` method. As demonstrated in the example below, you can also implement [light dismiss](#light-dismiss) functionality using JavaScript.
 
 <JsDocs name="modal-js" file="site/src/assets/partials/snippets.js" />
 
@@ -684,3 +730,30 @@ JavaScript can be used to display and close the `<dialog>` element. You can use 
   <button type="button" class="btn btn-default" data-open-modal="demoJSModal">
     Open modal with JS
   </button>`} />
+
+### Light dismiss
+
+Allow users to dismiss a modal by clicking outside when doing so will not discard their work or interrupt a required task. This behavior is known as "light dismiss" and can be enabled with invoker commands or implemented in JavaScript depending on which [interactivity](#interactivity) model you are using.
+
+<Callout type="info">
+  Avoid light dismiss for dialogs with unsaved changes or required steps, and always provide a clear, accessible way to close the dialog.
+</Callout>
+
+Use the `[closedby=any]` attribute on the `<dialog>` element to enable light dismiss when you use invoker commands.
+
+```html
+<dialog id="lightDismissModal" class="modal-base modal-dialog" aria-labelledby="lightDismissModalTitle" closedby="any">
+  <!-- modal dialog content -->
+</dialog>
+```
+
+For JavaScript we can implement light dismiss by listening for clicks outside the modal dialog and calling the `close()` method on the `<dialog>` element like this:
+
+```javascript
+dialog.addEventListener('click', event => {
+  if (event.target === event.currentTarget) {
+    dialog.close()
+  }
+})
+```
+
