@@ -1929,8 +1929,6 @@ $kbd-font-size:                     $code-font-size !default;
 $kbd-color:                         var(--#{$prefix}color-content-inverse) !default; // OUDS mod: instead of `var(--#{$prefix}body-bg)`
 $kbd-bg:                            var(--#{$prefix}color-surface-inverse-high) !default; // OUDS mod: instead of `var(--#{$prefix}body-color)`
 $nested-kbd-font-weight:            null !default; // Deprecated in Bootstrap v5.2.0, removing in v6
-
-$pre-color:                         var(--#{$prefix}color-content-muted) !default; // instead of `null`
 // End mod
 
 //

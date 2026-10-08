@@ -416,7 +416,6 @@ pre {
   margin-bottom: $ouds-space-fixed-medium; // 2 // OUDS mod: instead of `1rem`
   overflow: auto; // 3
   @include get-font-size("code-medium"); // OUDS mod: instead of `font-size: $code-font-size`
-  color: $pre-color;
 
   // Account for some code outputs that place code tags in pre tags
   code {
@@ -430,7 +429,6 @@ var, // OUDS mod
 code {
   font-size: $code-font-size;
   font-style: normal; // OUDS mod: <var> is italic in all browsers
-  color: var(--#{$prefix}color-content-muted);
   word-wrap: break-word;
 }
 
