@@ -1,1 +1,1 @@
-declare module 'ods-storybook-theme/OrangeTheme.js';
+declare module '@ouds/storybook-theme/OrangeTheme.js';

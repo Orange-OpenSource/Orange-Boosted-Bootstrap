@@ -1,6 +1,6 @@
 {
   "name": "@ouds/react",
-  "version": "2.3.5",
+  "version": "0.0.1",
   "dependencies": {
     "@ouds/core": "^0.0.1"
   },
