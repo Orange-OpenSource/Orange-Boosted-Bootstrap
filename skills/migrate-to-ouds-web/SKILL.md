@@ -18,7 +18,7 @@ Read the project's `package.json` (`dependencies` and `devDependencies`) and map
 | `@ouds/web-common` | *(omit flag, default)* | Older OUDS Web |
 | None found | Ask the user | Unknown |
 
-If `ouds-web` or `@ouds/web-orange` is already present, the project is either fully migrated or partially migrated — confirm with the user before proceeding.
+If `ouds-web` or `@ouds/web-orange` is already present, the project is either fully migrated or partially migrated — confirm with the user before proceeding. If the user confirms, update the dependencies to the latest OUDS Web version. Detect the installed OUDS Web version from the project's lockfile (`package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`, or `bun.lock`/`bun.lockb`) or `package.json`, then use the matching `using-ouds-web-version-<major>-<minor>` skill afterward.
 
 ## Step 2 — Choose file glob
 
@@ -56,10 +56,10 @@ The tool:
 For each warning line in the output:
 
 1. Identify the component or class name mentioned in the warning
-2. Invoke the `using-ouds-web` skill to find the correct OUDS Web HTML structure for that component
+2. Invoke the `using-ouds-web-version-<major>-<minor>` skill to find the correct OUDS Web HTML structure for that component
 3. Apply the replacement manually in the affected files
 
-Example: if the warning mentions `.alert-success`, look up `alerts` in `using-ouds-web` references to find the correct `.alert-positive` / `.alert-neutral` structure.
+Example: if the warning mentions `.alert-success`, look up `alerts` in `using-ouds-web-version-<major>-<minor>` references to find the correct `.alert-positive` / `.alert-neutral` structure.
 
 ## Step 5 — Post-migration checklist
 
@@ -85,7 +85,7 @@ Example: if the warning mentions `.alert-success`, look up `alerts` in `using-ou
 
 ## References
 
-- Use the `using-ouds-web` skill for target component markup and class lookup during manual warning resolution
+- Use the `using-ouds-web-version-<major>-<minor>` skill for target component markup and class lookup during manual warning resolution
 - `packages/migrate/README.md` — full `@ouds/web-migrate` options and examples
-- `skills/using-ouds-web/references/getting-started/migration-from-boosted.md` — component-by-component Boosted→OUDS Web changes
-- `skills/using-ouds-web/references/getting-started/migration.md` — OUDS Web version-to-version changes
+- `using-ouds-web-version-<major>-<minor>/references/getting-started/migration-from-boosted.md` — component-by-component Boosted→OUDS Web changes
+- `using-ouds-web-version-<major>-<minor>/references/getting-started/migration.md` — OUDS Web version-to-version changes

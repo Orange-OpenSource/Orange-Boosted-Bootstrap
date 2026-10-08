@@ -46,12 +46,12 @@ Orange-Boosted-Bootstrap/
 
 ## `skills/` folder (distributed to library consumers)
 
-The root-level `skills/` directory is **not** for contributors to this repo — it ships [Agent Skills](https://www.skills.sh/) to give AI coding agents (Claude Code, Cursor, GitHub Copilot, and others) procedural knowledge of the **OUDS Web library itself**, for use in projects that *consume* OUDS Web.
+The root-level `skills/` directory is **not** for contributors to this repo — it stores [Agent Skills](https://www.skills.sh/) to give AI coding agents (Claude Code, Cursor, GitHub Copilot, and others) procedural knowledge of the **OUDS Web library itself**, for use in projects that *consume* OUDS Web.
 
 Distribution mechanism: these skills are **not published as an npm package**. They are installed via the `skills` CLI:
 
 ```sh
-npx skills add Orange-OpenSource/Orange-Boosted-Bootstrap/skills
+npx skills add Orange-OpenSource/ouds-web-skills
 ```
 
 See README.md ("AI agent skills" section) for the consumer-facing documentation.
@@ -60,7 +60,7 @@ Contents:
 
 | Skill | Purpose |
 |---|---|
-| `using-ouds-web/` | Comprehensive reference of OUDS Web components, layout, utilities, and design tokens — used when an agent generates OUDS Web markup or code |
+| `using-ouds-web-version-<major>-<minor>/` | Comprehensive reference of OUDS Web components, layout, utilities, and design tokens — used when an agent generates OUDS Web markup or code |
 | `migrate-to-ouds-web/` | Step-by-step workflow to migrate a project from Boosted, OB1, or an older OUDS Web version to the latest OUDS Web |
 
 **Do not confuse with `.github/skills/`**, which contains skills for agents *contributing to this repository* (SCSS/JS conventions, token system, accessibility, etc.) — the two serve different audiences.
