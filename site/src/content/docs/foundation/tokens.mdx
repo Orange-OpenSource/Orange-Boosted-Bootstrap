@@ -56,7 +56,7 @@ We build our Sass variables following the architecture of the design tokens:
   - Ex: `ouds/color/content/on/brand-primary` becomes `$ouds-color-content-on-brand-primary`, `ouds/elevation/blur/emphasized` becomes `$ouds-elevation-blur-emphasized`.
 - [Composite tokens](#composite-tokens): `$ouds-elevation-{token-name}`
   - Ex: `ouds/elevation/**/emphasized` are aggregated via `$ouds-elevation-emphasized`.
-  - Our font tokens are aggregated in a mixin [`get-font-size()`]([[docsref:/utilities/text]]) { /* TODO adapt the texts and change the link  */ } that takes the font reference name as a parameter. So `ouds/font/**/body-large` are aggregated via `get-font-size("body-large")`.
+  - Our font tokens are aggregated in a mixin `get-font-size()` that takes the font reference name as a parameter. So `ouds/font/**/body-large` are aggregated via `get-font-size("body-large")`.
 - [Component tokens](#component-tokens): `$ouds-{component-name}-{token-name}`
   - Ex: `ouds/button/color/bg/minimal/hover` becomes `$ouds-button-color-bg-minimal-hover`.
 
@@ -70,6 +70,6 @@ We build our CSS variables following the architecture of the design tokens:
   - Our scaled spacing are only declared as CSS variables `--bs-space-scaled-{size}`. It’s equivalent to `ouds/space/scaled/{size}` in Figma. Prefer using our [utilities]([[docsref:/utilities#using-our-utilities]]) when possible.
   - Our colors and elevation colors are declared as CSS variables `--bs-color-{token-name}`. It’s equivalent to `ouds/color/{token-name}` in Figma. Prefer using our [utilities]([[docsref:/utilities#using-our-utilities]]) when possible.
   - Our icon sizes are declared as CSS variables `--bs-icon-{size}`. It’s equivalent to `ouds/size/icon/{size}` in Figma. Prefer using our [utilities]([[docsref:/utilities#using-our-utilities]]) when possible.
-  - Our font tokens are aggregated in a mixin [`get-font-size()`]([[docsref:/utilities/text]]). { /* TODO adapt the texts and change the link  */ } that takes the font reference name as a parameter. So `ouds/font/**/body-large` are aggregated via `get-font-size("body-large")`. Don’t use our CSS variables for font alone.
+  - Our font tokens are aggregated in a mixin `get-font-size()` that takes the font reference name as a parameter. So `ouds/font/**/body-large` are aggregated via `get-font-size("body-large")`. Don’t use our CSS variables for font alone.
 - [Composite tokens](#composite-tokens): We don’t have any composite token transformed into a CSS variable, but they are available as [Sass variables](#sass-variables).
 - [Component tokens](#component-tokens): We don’t have any component token transformed into a CSS variable. The only CSS variables that we have for components are the ones that we need to build the component internally.
