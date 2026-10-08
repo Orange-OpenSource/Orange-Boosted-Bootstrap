@@ -96,9 +96,9 @@
   width: 100%;
   height: 100%;
   margin: 0 !important; // stylelint-disable-line declaration-no-important
-  background: $modal-backdrop-bg;
+  background: var(--#{$prefix}color-overlay-backdrop);
   border: 0;
-  opacity: $modal-backdrop-opacity;
+  opacity: 1;
 }
 
 @include tac("H1", true) {

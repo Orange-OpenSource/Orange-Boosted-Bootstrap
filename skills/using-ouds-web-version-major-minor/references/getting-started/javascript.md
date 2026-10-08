@@ -59,9 +59,9 @@ Enable and configure plugins via HTML data attributes (preferred). Use **one set
 Custom events use infinitive (start: `show`) and past participle (end: `shown`) form:
 
 ```js
-const myModal = document.querySelector('#myModal')
-myModal.addEventListener('show.bs.modal', event => {
-  event.preventDefault() // stops modal from showing
+const myToastEl = document.querySelector('#myToast')
+myToastEl.addEventListener('show.bs.toast', event => {
+  event.preventDefault() // stops toast from showing
 })
 ```
 
@@ -69,10 +69,14 @@ myModal.addEventListener('show.bs.modal', event => {
 
 ```js
 // Initialize with defaults
-const modal = new oudsWeb.Modal("#myModal");
+const toast = new oudsWeb.Toast('#myToast')
 
 // With options
-const modal = new oudsWeb.Modal("#myModal", { keyboard: false });
+const toastWithOptions = new oudsWeb.Toast('#myToast', {
+  animation: true,
+  autohide: false,
+  delay: 10000
+})
 
 // Get existing instance
 oudsWeb.Popover.getInstance(myPopoverEl);
@@ -86,7 +90,7 @@ Methods that start transitions return before the transition ends; listen to the 
 ### Change defaults
 
 ```js
-oudsWeb.Modal.Default.keyboard = false
+oudsWeb.Toast.Default.autohide = false
 ```
 
 ## Common methods
