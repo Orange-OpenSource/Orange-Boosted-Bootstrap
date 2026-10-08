@@ -100,7 +100,7 @@ Our dropdowns, popovers, and tooltips also depend on [Popper](https://popper.js.
 
 ## Data attributes
 
-Nearly all OUDS Web plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to **only use one set of data attributes on a single element** (e.g., you cannot trigger a tooltip and modal from the same button.)
+Nearly all OUDS Web plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to **only use one set of data attributes on a single element** (e.g., you cannot trigger a tooltip and dropdown from the same button.)
 
 <JsDataAttributes />
 
@@ -114,21 +114,21 @@ OUDS Web provides custom events for most plugins' unique actions. Generally, the
 
 All infinitive events provide [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) functionality. This provides the ability to stop the execution of an action before it starts. Returning false from an event handler will also automatically call `preventDefault()`.
 
-<Code buttonLabel="events" lang="js" code={`const myModal = document.querySelector('#myModal')
+<Code buttonLabel="events" lang="js" code={`const myToastEl = document.querySelector('#myToast')
 
-  myModal.addEventListener('show.bs.modal', event => {
-    return event.preventDefault() // stops modal from being shown
+  myToastEl.addEventListener('show.bs.toast', event => {
+    return event.preventDefault() // stops toast from being shown
   })`} />
 
 ## Programmatic API
 
 All constructors accept an optional options object or nothing (which initiates a plugin with its default behavior):
 
-<Code buttonLabel="programmatic API" lang="js" code={`const myModalEl = document.querySelector('#myModal')
-  const modal = new oudsWeb.Modal(myModalEl) // initialized with defaults
+<Code buttonLabel="programmatic API" lang="js" code={`const myToastEl = document.querySelector('#myToast')
+  const toast = new oudsWeb.Toast(myToastEl) // initialized with defaults
 
-  const configObject = { keyboard: false }
-  const modal1 = new oudsWeb.Modal(myModalEl, configObject) // initialized with no keyboard`} />
+  const configObject = { autohide: false, delay: 10000 }
+  const toast1 = new oudsWeb.Toast(myToastEl, configObject) // initialized with custom options`} />
 
 If you'd like to get a particular plugin instance, each plugin exposes a `getInstance` method. For example, to retrieve an instance directly from an element:
 
@@ -146,7 +146,7 @@ In case an instance wasn't initialized, it may accept and use an optional config
 
 In addition to the `getInstance` and `getOrCreateInstance` methods, all plugin constructors can accept a DOM element or a valid [CSS selector](#selectors) as the first argument. Plugin elements are found with the `querySelector` method since our plugins only support a single element.
 
-<Code buttonLabel="constructor, getInstance and getOrCreateInstance" lang="js" code={`const modal = new oudsWeb.Modal('#myModal')
+<Code buttonLabel="constructor, getInstance and getOrCreateInstance" lang="js" code={`const toast = new oudsWeb.Toast('#myToast')
   const dropdown = new oudsWeb.Dropdown('[data-bs-toggle="dropdown"]')
   const offcanvas = oudsWeb.Offcanvas.getInstance('#myOffcanvas')
   const alert = oudsWeb.Alert.getOrCreateInstance('#myAlert')`} />
@@ -177,19 +177,20 @@ In addition, a method call on a **transitioning component will be ignored**.
 
 While it may seem correct to use the `dispose` method immediately after `hide()`, it will lead to incorrect results. Here's an example of the problem use:
 
-<Code buttonLabel="`dispose` method" lang="js" code={`const myModal = document.querySelector('#myModal')
-  myModal.hide() // it is asynchronous
+<Code buttonLabel="`dispose` method" lang="js" code={`const myToastEl = document.querySelector('#myToast')
+  const myToast = oudsWeb.Toast.getOrCreateInstance(myToastEl)
+  myToast.hide() // it is asynchronous
 
-  myModal.addEventListener('shown.bs.hidden', event => {
-    myModal.dispose()
+  myToastEl.addEventListener('hidden.bs.toast', () => {
+    myToast.dispose()
   })`} />
 
 ### Default settings
 
 You can change the default settings for a plugin by modifying the plugin's `Constructor.Default` object:
 
-<Code buttonLabel="change settings" lang="js" code={`// changes default for the modal plugin's \`keyboard\` option to false
-  oudsWeb.Modal.Default.keyboard = false`} />
+<Code buttonLabel="change settings" lang="js" code={`// changes default for the toast plugin's \`autohide\` option to false
+  oudsWeb.Toast.Default.autohide = false`} />
 
 ## Methods and properties
 
@@ -198,9 +199,9 @@ Every OUDS Web plugin exposes the following methods and static properties.
 <BsTable class="table">
   | Method | Description |
   | --- | --- |
-  | `dispose` | Destroys an element's modal. (Removes stored data on the DOM element) |
-  | `getInstance` | *Static* method which allows you to get the modal instance associated with a DOM element. |
-  | `getOrCreateInstance` | *Static* method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialized. |
+  | `dispose` | Destroys the component instance and removes its stored data from the DOM element. |
+  | `getInstance` | *Static* method which allows you to get the component instance associated with a DOM element. |
+  | `getOrCreateInstance` | *Static* method which allows you to get the component instance associated with a DOM element, or create one if it was not initialized. |
 </BsTable>
 
 <BsTable class="table mt-xlarge">

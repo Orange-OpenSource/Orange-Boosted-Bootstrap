@@ -23,9 +23,50 @@ toc: true
 
 ### Components
 
+#### Alerts
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Alert message action links must now use [their compact version]([[docsref:/components/links#sizes]]) when they are included at the bottom of the alert message. Read more in our [alerts page]([[docsref:/components/alerts#with-action]]).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Alert message component has been updated to 1.2.0. Read more in the [alert message design changelog](https://r.orange.fr/r/S-ouds-doc-alert-message_changelog).
+
+#### Buttons
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Assistant button component has been updated to 1.1.0 with no changes to the HTML. Read more in our [button design changelog](https://r.orange.fr/r/S-ouds-doc-button_changelog).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Button component has been updated to 3.4.0 with no changes to the HTML. Read more in the [button design changelog](https://r.orange.fr/r/S-ouds-doc-button_changelog).
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Expand button has been implemented. Read more in our [buttons page]([[docsref:/components/buttons#expand-button]]).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Navigation button component has been updated to 3.4.0 with no changes to the HTML. Read more in the [navigation button design changelog](https://r.orange.fr/r/S-ouds-doc-navigation-button_changelog).
+
 #### Dropdown
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> OUDS Web now supports a draft dropdown menu component. It comes from Boosted directly. It is intended as a placeholder for projects that need it urgently but be aware that it will change in the future. Read more in our [dropdown page]([[docsref:/components/dropdown]]).
+
+#### Items
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Items components have been updated to 1.2.0. Please check that your icons and images in the leading/trailing containers keep behaving as normal. Read more in the [list item design changelog](https://r.orange.fr/r/S-ouds-doc-list-item_changelog).
+
+#### Links
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Expand link has been implemented. Read more in our [links page]([[docsref:/components/links#expand-link]]).
+
+#### Modals
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Modal dialog component has been implemented. Read more in our [modals page]([[docsref:/components/modals#modal-dialog]]).
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Fullscreen dialog component has been implemented. Read more in our [modals page]([[docsref:/components/modals#fullscreen-dialog]]).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> The modals components have a different structure and behavior compared to Boosted modals. Read more in our [migration from Boosted guide]([[docsref:/getting-started/migration-from-boosted#modal]]).
+
+### Tools
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> OUDS Web's AI agent skills now have a [dedicated repository](https://github.com/Orange-OpenSource/ouds-web-skills). To install or update them, run `npx skills add Orange-OpenSource/ouds-web-skills`.
+
+### Dual mode
+
+1. Update `@ouds/web-common` and `@ouds/web-[theme]` to v1.5.0.
+2. Remove `@import "boosted/scss/dropdown";` from the Boosted custom import stack.
 
 ## v1.5.0 [[version-changelog-link]]
 
@@ -43,15 +84,13 @@ toc: true
 
 #### Buttons
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Expand button has been implemented. Read more in our [buttons page]([[docsref:/components/buttons#expand-button]]).
-
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Assistant button has been implemented. Read more in our [buttons page]([[docsref:/components/buttons#assistant-button]]).
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.btn-small` has been added. Read more in our [buttons page]([[docsref:/components/buttons#sizes]]).
 
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Button component has been updated to 3.3.0 with no outward changes. Read more in the [button design changelog](https://r.orange.fr/r/S-ouds-doc-button_changelog).
 
-- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Navigation button component has been updated to 3.3.0 with no outward changes. Read more in the [button design changelog](https://r.orange.fr/r/S-ouds-doc-button_changelog).
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Navigation button component has been updated to 3.3.0 with no outward changes. Read more in the [navigation button design changelog](https://r.orange.fr/r/S-ouds-doc-navigation-button_changelog).
 
 #### Chips
 
@@ -72,8 +111,6 @@ toc: true
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Items ([Static card item]([[docsref:/components/items#static-card-item]]), [static list item]([[docsref:/components/items#static-list-item]]), [navigation card item]([[docsref:/components/items#navigation-card-item]]) and [navigation list item]([[docsref:/components/items#navigation-list-item]])) have been implemented. Read more in our [items page]([[docsref:/components/items]]).
 
 #### Links
-
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Expand link has been implemented. Read more in our [links page]([[docsref:/components/links#expand-link]]).
 
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Link component has been updated to 2.4.0. Read more in the [link design changelog](https://r.orange.fr/r/S-ouds-doc-link_changelog).
 
@@ -102,11 +139,6 @@ toc: true
 ### Sass mixins
 
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> The `list-unstyled` mixin has been updated to remove the margin bottom.
-
-### Dual mode
-
-1. Update `@ouds/web-common` and `@ouds/web-[theme]` to v1.5.0.
-2. Remove `@import "boosted/scss/dropdown";` from the Boosted custom import stack.
 
 ## v1.4.0 [[version-changelog-link]]
 

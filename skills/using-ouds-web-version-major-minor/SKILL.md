@@ -1,5 +1,5 @@
 ---
-name: 'using-ouds-web'
+name: 'using-ouds-web-version-major-minor'
 description: 'Provides comprehensive knowledge of the OUDS Web library (Orange Unified Design System for Web), a Bootstrap-based CSS/JS framework for building Orange-branded web interfaces. This skill should be used when generating HTML markup, CSS classes, or JavaScript code that uses OUDS Web components, utilities, layout system, or design tokens. Also use during migrations from Boosted, OB1, or older OUDS Web versions to look up correct OUDS Web component structure as replacement markup. It covers components (buttons, alerts, chips, forms, navigation), layout (grid, breakpoints, containers), utilities (spacing, colors, display, flex), and foundation (typography, color modes, CSS variables, Sass customization).'
 ---
 
@@ -142,11 +142,13 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 - [Checkbox](references/components/checkbox.md) - Checkbox controls
 - [Chips](references/components/chips.md) - Filter and suggestion chips
 - [Divider](references/components/divider.md) - Content dividers
+- [Dropdown](references/components/dropdown.md) - Toggleable menus and overlays (draft component)
 - [Footer](references/components/footer.md) - Page footer
 - [Header](references/components/header.md) - Responsive page header
 - [Icon](references/components/icon.md) - SVG icon system
 - [Items](references/components/items.md) - Static/navigation card and list items (replaces Bootstrap's list-group)
 - [Links](references/components/links.md) - Link styles
+- [Modals](references/components/modals.md) - Native dialog modal and fullscreen dialog
 - [Password input](references/components/password-input.md) - Password field with toggle
 - [Radio button](references/components/radio-button.md) - Radio controls
 - [Select input](references/components/select-input.md) - Select inputs
@@ -159,7 +161,7 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 
 ### Not yet documented (do not invent markup)
 
-The OUDS Web documentation site has placeholder ("Coming soon") pages for the following components — **no OUDS Web-specific markup, classes, or design guidance exists for them yet**: `accordion`, `back-to-top`, `card`, `carousel`, `close-button`, `collapse`, `dropdown`, `local-navigation`, `modal`, `nav-tab`, `navbar`, `offcanvas`, `pagination`, `popover`, `progress`, `quantity-selector`, `range`, `scrollspy`, `spinner`, `stepped-process`, `sticker`, `title-bar`, `toast`, `tooltip`.
+The OUDS Web documentation site has placeholder ("Coming soon") pages for the following components — **no OUDS Web-specific markup, classes, or design guidance exists for them yet**: `accordion`, `back-to-top`, `card`, `carousel`, `close-button`, `collapse`, `local-navigation`, `nav-tab`, `navbar`, `offcanvas`, `pagination`, `popover`, `progress`, `quantity-selector`, `range`, `scrollspy`, `spinner`, `stepped-process`, `sticker`, `title-bar`, `toast`, `tooltip`.
 
 If a task requires one of these, **tell the user it isn't documented in OUDS Web yet** instead of guessing markup or falling back to plain Bootstrap classes (OUDS Web's class names, tokens, and structure regularly diverge from Bootstrap, so a Bootstrap fallback would likely be wrong).
 
