@@ -1,7 +1,7 @@
 <h1 align="center">OUDS Web</h1>
 
 <p align="center">
-  OUDS Web is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
+  OUDS Web Boosted is a fork of Bootstrap to integrate the Orange Unified Design System components, modules and guidelines to easily create Websites with the Orange Brands through dedicated Themes and Modes (Light or Dark). Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
   <br />
   <a href="https://web.unified-design-system.orange.com"><strong>Visit OUDS Web</strong></a>
   <br />
