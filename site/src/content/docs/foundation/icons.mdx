@@ -8,6 +8,7 @@ toc: true
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
+import { getConfig } from '@libs/config'
 
 <Callout type="info">
   You can find here the [iconography design guidelines](https://r.orange.fr/r/S-ouds-doc-icon-intro).
@@ -108,11 +109,11 @@ CSS background icons should be used when you can’t or don’t want to refer to
 
 Technically, you should use the `mask-image` property instead of `background-image` to benefit from the coloring and theming system, by setting `background-color` property to `currentcolor`. You can use the SVG code within your CSS (be sure to escape any characters with [our internal `escape-svg()` function]([[docsref:/getting-started/sass]]#escape-svg)). When no dimensions are specified via `width` and `height` on the `<svg>`, the icon will fill the available space. Mask images can also be styled through CSS properties like `width` or `height`. Note that the `xmlns` attribute is required.
 
-<Example buttonLabel="mask image icon" class="mt-none" code={`<span class="icon-home decorative-large-icon"></span>`} />
+<Example buttonLabel="mask image icon" class="mt-none" code={`<span class="icon-home decorative-large-icon"><span class="visually-hidden">Home</span></span>`} />
 
 Using:
 
-<ScssDocs buttonLabel="SCSS for mask image icon" name="icon-home" file="site/src/scss/_component-examples.scss" />
+<ScssDocs buttonLabel="SCSS for mask image icon" name={`icon-home-${getConfig().brand === 'orange-compact' ? 'orange' : getConfig().brand}`} file="site/src/scss/_component-examples.scss" />
 
 ### Inline SVG
 
@@ -120,9 +121,17 @@ This technique should only be used if you have few icons to render, and if they 
 
 You can embed your icons directly within the HTML of your page (as opposed to an external image file). This way to use SVGs can benefit of the power of `currentColor` for easy coloring and theming.
 
-<Example buttonLabel="inline SVG icon" class="mt-none" code={`<svg fill="currentColor" viewBox="0 0 24 24" class="decorative-large-icon" aria-hidden="true">
-    <path fill-rule="evenodd" d="M15.785 10.138a5.52 5.52 0 0 1-7.57 0 5.4 5.4 0 0 0-2.813 4.622H5.4v5.04a2.4 2.4 0 0 0 2.4 2.4h10.8v-7.32a5.4 5.4 0 0 0-2.815-4.742m.535-4.018a4.32 4.32 0 1 1-8.64 0 4.32 4.32 0 0 1 8.64 0" clip-rule="evenodd"/>
+<ThemeSpecific theme={['orange', 'orange-compact']}>
+  <Example buttonLabel="inline SVG icon" class="mt-none" code={`<svg fill="currentColor" viewBox="0 0 24 24" class="decorative-large-icon" aria-hidden="true">
+    <path fill-rule="evenodd" d="M17.4 9.6h-.6V9c0-2.64-2.16-4.8-4.8-4.8S7.2 6.36 7.2 9v.6H4.8v10.8a1.8 1.8 0 0 0 1.8 1.8h12.6V11.4a1.8 1.8 0 0 0-1.8-1.8M9 9a3 3 0 1 1 6 0v.6H9zm4.57 6.28a2 2 0 0 1-.7.7l.33 3.22h-2.4l.32-3.23a1.8 1.8 0 1 1 2.45-.7" clip-rule="evenodd"/>
   </svg>`} />
+</ThemeSpecific>
+
+<ThemeSpecific theme="sosh">
+  <Example buttonLabel="inline SVG icon" class="mt-none" code={`<svg fill="currentColor" viewBox="0 0 24 24" class="decorative-large-icon" aria-hidden="true">
+    <path fill-rule="evenodd" d="M13.48 13.88c.39 0 .7.32.7.7v3.52a.7.7 0 0 1-.7.7H9.96a.7.7 0 0 1-.7-.7v-3.52c0-.38.31-.7.7-.7zm-2.81 3.51h2.1v-2.1h-2.1zm5.92 6.11H6.88A2.9 2.9 0 0 1 4 20.63v-3.47a.7.7 0 0 1 1.4 0v3.47c0 .8.67 1.46 1.48 1.46h9.71a1.47 1.47 0 0 0 1.47-1.46v-8.45a1.36 1.36 0 0 0-1.36-1.36H6.77a1.36 1.36 0 0 0-1.36 1.36v1.47a.7.7 0 0 1-1.41 0v-1.47a2.77 2.77 0 0 1 2.74-2.76V5.98A5 5 0 0 1 11.72 1a5 5 0 0 1 4.98 4.98v3.44a2.77 2.77 0 0 1 2.77 2.76v8.45a2.9 2.9 0 0 1-2.88 2.87M15.3 5.98a3.6 3.6 0 0 0-3.57-3.57 3.6 3.6 0 0 0-3.57 3.57V9.4h7.14z" clip-rule="evenodd"/>
+  </svg>`} />
+</ThemeSpecific>
 
 ### External SVG
 
