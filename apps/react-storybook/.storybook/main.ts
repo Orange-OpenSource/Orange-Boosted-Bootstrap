@@ -17,9 +17,18 @@ const config: StorybookConfig = {
         defaultName: 'Documentation',
     },
     viteFinal: async (config: any) =>
-        mergeConfig(config, {
-            plugins: [nxViteTsPaths()],
-        }),
+        mergeConfig(
+            {
+                ...config,
+                // libs/react/vite.config.ts copies *.md into its outDir for the npm package.
+                // Under Storybook (absolute outDir outside the app root) the plugin writes to
+                // apps/react-storybook/<absolute path>/…, so drop it for Storybook builds.
+                plugins: (config.plugins ?? [])
+                    .flat()
+                    .filter((plugin: any) => plugin?.name !== 'nx-copy-assets-plugin'),
+            },
+            { plugins: [nxViteTsPaths()] },
+        ),
 };
 
 export default config;

@@ -28,6 +28,7 @@ Root scripts delegate to Nx (`npx nx run @ouds/web-common:<script>`); you can al
 - `npm run lint` — `js-lint` (ESLint) + `css-lint` (Stylelint, unused Sass variables) + `lockfile-lint`.
 - `npm run js-test` — Karma (Chrome, Chromium, or Firefox) + integration bundles. Coverage thresholds: 90% statements/functions/lines, 89% branches.
 - `npm run css-test` — Sass True tests; `npm run css-snapshot-test -- --run` — Vitest snapshots (`css-snapshot-refresh` updates them).
+  `css-snapshot-test` compares the *built* `packages/orange/dist/css/*.css` with the snapshots, so run `npm run css-dev-orange` first (CI runs `npm run css` before the tests), then `git restore packages/orange/dist` unless you intend to commit new CSS.
 - `npm test -w @ouds/web-migrate -- --run` — migration CLI tests.
 - `npm run docs-build` — `dist` + SRI + Astro build for every brand into `_site/`; `npm run docs-lint` — Prettier check + vnu.
 - `npm test` — the full pipeline (lint, dist, js-test, docs-build, docs-lint). Slow; prefer the targeted commands while iterating.
@@ -66,6 +67,7 @@ Root scripts delegate to Nx (`npx nx run @ouds/web-common:<script>`); you can al
 - `lockfile-lint` in `libs/web/package.json` points at `libs/web/package-lock.json`, which no longer exists since the move to the monorepo; lockfile-lint exits 0 on a missing file, so this check is a no-op. The root `npm run lockfile-lint` checks the real lockfile.
 - **Hoisting-sensitive dependencies.** Several packages only work because a specific version sits where Node looks first, so don't remove these `devDependencies` of `libs/web` (or the root pins) without running `npm run docs-build`:
   - `cookie@^2` — Astro 7's generated prerender bundle (`site/dist/.prerender/`) does a bare `import { parseCookie } from 'cookie'` that resolves from `libs/web/` upward. Without the pin it picks the root `cookie@0.7.x` (CommonJS, pulled in by Karma/Storybook) and the docs build fails with `Named export 'parseCookie' not found`.
+  - `sass@1.78.0` (exact) — the compiler that builds the brand CSS. The root also holds a newer Sass/`sass-embedded` (1.104.x, from the Angular toolchain) that serializes colors differently (`#679cec` vs `rgb(40.39%, …)`). `scss/tests/sass-true/runner.js` therefore passes `require('sass')` to `sass-true`, which otherwise prefers the hoisted `sass-embedded`. Keep that option, or `npm run css-test` fails.
   - `vitest@^4` — nested here while the framework libraries use Vitest 5 at the root.
   - root `@babel/plugin-transform-runtime@^7` — keeps Babel 8 from being hoisted over the Babel 7 toolchain.
 - ESLint formatting rules (`indent`, `semi`, `comma-dangle`, …) and `eslint-plugin-markdown` are deprecated; moving to ESLint 10 will require `@stylistic` and `@eslint/markdown`.

@@ -14,7 +14,13 @@ export default defineConfig({
     dts({
       entryRoot: 'src',
       tsconfigPath: resolve(__dirname, 'tsconfig.lib.json'),
-      strictOutput: false
+      strictOutput: false,
+      // Type-check against the built @ouds/core declarations (not its sources) and keep
+      // `@ouds/core` as a bare import in the emitted .d.ts files.
+      compilerOptions: {
+        paths: { '@ouds/core': [resolve(__dirname, '../../dist/libs/core/index.d.ts')] }
+      },
+      aliasesExclude: [/^@ouds\/core/]
     })
   ],
   build: {
@@ -26,10 +32,11 @@ export default defineConfig({
       formats: ['es', 'cjs', 'umd']
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', /^@ouds\/core/],
       output: {
         globals: {
-          vue: 'Vue'
+          vue: 'Vue',
+          '@ouds/core': 'OudsCore'
         }
       }
     }
@@ -42,8 +49,9 @@ export default defineConfig({
       provider: 'v8',
       reportsDirectory: '../../coverage/libs/vue',
       include: ['src/**/*.{ts,vue}'],
-      exclude: ['src/**/*.{test,spec}.ts'],
-      reporter: ['text', 'html', 'lcov']
+      exclude: ['src/**/*.{test,spec}.ts', 'src/**/*.stories.ts'],
+      reporter: ['text', 'html', 'lcov'],
+      thresholds: { statements: 100, branches: 100, functions: 100, lines: 100 }
     }
   }
 })
