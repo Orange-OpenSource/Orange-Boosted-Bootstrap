@@ -6,8 +6,9 @@ Scope: everything under `apps/react-storybook/`. The root [`AGENTS.md`](../../AG
 
 - `.storybook/main.ts` — Storybook 10 config (`@storybook/react-vite`). It loads stories from `libs/react/**/*.stories.@(js|jsx|ts|tsx|mdx)`, reuses `libs/react/vite.config.ts` as the Vite config, and adds `nxViteTsPaths()`.
 - `.storybook/preview.tsx` — global decorators (`OudsProvider`), toolbar `globalTypes` (theme, brand, rounded corners, version badges), `parameters`, and `tags: ['autodocs']`.
-- `.storybook/manager.ts` — manager UI theme (`ods-storybook-theme/OrangeTheme.js` through `addons` from `storybook/manager-api`).
+- `.storybook/manager.ts` — manager UI theme (`@ouds/storybook-theme/OrangeTheme.js` through `addons` from `storybook/manager-api`, same theme as `libs/web`; supports Storybook 9 and 10).
 - `.storybook/storybook.css` — Storybook-only styles.
+- `.storybook/toolbar-addon.ts` — toolbar addon registered from `manager.ts` (identical in the three apps). Global types with `versionLabel` (versions of the library, `@ouds/web-orange`, and the framework) render as grey read-only labels; global types with a `toolbar` (theme, brand, rounded corners) stay dropdowns, styled black on orange. To add a version label, give the global type a `versionLabel` and **no** `toolbar` key.
 - `.oxlintrc.json` — extends the root `oxlint.base.json` and adds `react`, `jsx-a11y`, and `import`.
 - `project.json` — `serve`/`storybook` (`@nx/storybook:storybook`, port 4400), `build` (`@nx/storybook:build` into `dist/apps/react-storybook`, depends on `@ouds/react:build`), and `static`. `lint` is inferred by `@nx/oxlint` and is not declared.
 

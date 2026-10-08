@@ -123,8 +123,8 @@ export const decorators: Decorator[] = [
         const rounded = context.globals['roundedCorners'] === 'on';
         const theme = (context.globals['theme'] as 'light' | 'dark') ?? 'dark';
         const brand =
-            (context.globals['brand'] as 'orange' | 'orange-compact' | 'sosh') ??
-            'orange';
+            (context.globals['brand'] as
+                'orange' | 'orange-compact' | 'sosh') ?? 'orange';
         const storyTitle: string = context.title ?? '';
         const isOuds = storyTitle.startsWith('Components/');
 

@@ -1,0 +1,58 @@
+{
+  "name": "@ouds/vue-storybook",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/vue-storybook/src",
+  "projectType": "application",
+  "tags": ["app:vue"],
+  "targets": {
+    "storybook": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/vue-storybook/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/vue-storybook/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build": {
+      "executor": "@nx/storybook:build",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/apps/vue-storybook",
+        "configDir": "apps/vue-storybook/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "vue-storybook:build",
+        "staticFilePath": "dist/apps/vue-storybook"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "vue-storybook:build:ci"
+        }
+      }
+    }
+  }
+}
