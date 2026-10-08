@@ -99,7 +99,7 @@ Interactive icon is an icon component designed to trigger a user interaction (e.
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </button>`} />
-  <Example slot="anchorExample" buttonLabel="disabled interactive icon link" code={`<a href="#" tabindex="-1" class="icon-interactive" aria-disabled="true" aria-label="Disabled interactive link icon">
+  <Example slot="anchorExample" buttonLabel="disabled interactive icon link" code={`<a class="icon-interactive" aria-disabled="true">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -207,7 +207,7 @@ If your browser is compatible, the following example will show two transparent a
 <DisabledState name="assistant icons">
   <Example slot="buttonExample" buttonLabel="disabled assistant icon button" class="bd-example" code={`<button class="icon-assistant" disabled aria-label="Disabled assistant icon"></button>`} showToolbar={false} />
 
-  <Example slot="anchorExample" buttonLabel="disabled assistant icon link" code={`<a href="#" class="icon-assistant" aria-disabled="true" tabindex="-1" aria-label="Disabled assistant link icon"></a>`} />
+  <Example slot="anchorExample" buttonLabel="disabled assistant icon link" code={`<a class="icon-assistant" aria-disabled="true"></a>`} />
 </DisabledState>
 
 #### Loading
