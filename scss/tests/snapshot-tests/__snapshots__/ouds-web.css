@@ -409,6 +409,10 @@
   src: url("https://assets.orange.com/pm_12751_490_490077-wejriti88u--HelveticaNeue-Strong.woff2?a=1") format("woff2");
   font-display: swap;
 }
+:root {
+  --bs-theme-name: orange;
+  --bs-theme-version: 1.5.0;
+}
 :root::after {
   position: fixed;
   top: 0;
@@ -1365,6 +1369,11 @@ legend {
 }
 legend + * {
   clear: left;
+}
+
+[aria-disabled=true] legend,
+:disabled legend {
+  color: var(--bs-color-content-disabled);
 }
 
 ::-webkit-datetime-edit-fields-wrapper,
@@ -3690,6 +3699,12 @@ h2.marker::after,
   content: "*";
 }
 
+[disabled] .is-required::after,
+[aria-disabled=true].is-required::after,
+[aria-disabled=true] .is-required::after {
+  color: currentcolor;
+}
+
 .form-helper {
   position: relative;
   display: inline-block;
@@ -3987,6 +4002,10 @@ textarea.form-control-lg {
 .switch-item:has(input:disabled) *,
 .form-switch:has(input:disabled) *, .radio-button-item:has(input:disabled) *, .checkbox-item:has(input:disabled) *, .switch-standalone:has(input:disabled) *, .radio-button-standalone:has(input:disabled) *, .checkbox-standalone:has(input:disabled) * {
   color: var(--bs-color-action-disabled);
+}
+.switch-item:has(input:disabled) *::after,
+.form-switch:has(input:disabled) *::after, .radio-button-item:has(input:disabled) *::after, .checkbox-item:has(input:disabled) *::after, .switch-standalone:has(input:disabled) *::after, .radio-button-standalone:has(input:disabled) *::after, .checkbox-standalone:has(input:disabled) *::after {
+  color: currentcolor;
 }
 .switch-item:has(input:hover),
 .form-switch:has(input:hover), .radio-button-item:has(input:hover), .checkbox-item:has(input:hover), .switch-standalone:has(input:hover), .radio-button-standalone:has(input:hover), .checkbox-standalone:has(input:hover), .switch-item:has(input:focus-visible),
@@ -5024,6 +5043,9 @@ textarea.form-control-lg {
 .select-input-container:has(.select-input-field:disabled) > label {
   pointer-events: none;
 }
+.select-input-container:has(.select-input-field:disabled) > label::after {
+  color: currentcolor;
+}
 .select-input-container:is(:has(:open), :not(:has(:disabled:checked))) > label {
   top: calc(var(--bs-text-input-padding-y) + 0.5 * var(--bs-font-size-label-small) * var(--bs-font-line-height-label-small) + 0.5 * (var(--bs-text-input-min-height) - 2 * var(--bs-text-input-padding-y) - var(--bs-font-size-label-small) * var(--bs-font-line-height-label-small) - var(--bs-font-size-label-large) * var(--bs-font-line-height-label-large)));
   white-space: nowrap;
@@ -5324,6 +5346,9 @@ optgroup {
 .text-input .text-input-container:has(.text-input-field:disabled) > label::before {
   cursor: default;
 }
+.text-input .text-input-container:has(.text-input-field:disabled) > label::after {
+  color: currentcolor;
+}
 .text-input .text-input-container:has(.text-input-field:disabled):not(:has(.loading-indeterminate, .loading-determinate)) {
   --bs-text-input-label-color: var(--bs-color-action-disabled);
   --bs-text-input-color: var(--bs-color-action-disabled);
@@ -5608,6 +5633,9 @@ optgroup {
 .text-area .text-area-container:has(.text-area-field:disabled) > label::before {
   cursor: default;
 }
+.text-area .text-area-container:has(.text-area-field:disabled) > label::after {
+  color: currentcolor;
+}
 .text-area .text-area-container:has(.text-area-field:disabled):not(.text-area-container-outlined) {
   --bs-text-input-background-color: var(--bs-color-action-support-disabled);
 }
@@ -5768,10 +5796,10 @@ optgroup {
   --bs-link-chevron-color: var(--bs-color-action-disabled);
 }
 
-.link-chevron:not(.back, .link-previous) {
+.link-chevron:not(.link-previous) {
   display: inline-block;
 }
-.link-chevron.link-previous::before, .link-chevron.back::before, .link-chevron:not(.back, .link-previous)::after {
+.link-chevron.link-previous::before, .link-chevron:not(.link-previous)::after {
   display: inline-block;
   width: var(--bs-link-icon-size);
   min-width: var(--bs-link-icon-size);
@@ -5785,7 +5813,7 @@ optgroup {
   -webkit-mask-size: var(--bs-link-icon-size);
   mask-size: var(--bs-link-icon-size);
 }
-.link-chevron:not(.back, .link-previous)::after {
+.link-chevron:not(.link-previous)::after {
   margin-right: 0;
   margin-left: var(--bs-link-chevron-gap);
   transform: rotate(180deg);
@@ -5830,14 +5858,7 @@ optgroup {
   order: -1;
 }
 
-.colored-bg.link, .colored-bg.link-chevron,
-.colored-bg.link-external,
-.colored-bg.link-expand,
-.colored-bg :is(.link, .link-chevron,
-.link-external,
-.link-expand, a),
-.link-on-colored-bg.link,
-.link-on-colored-bg.link-chevron,
+.link-on-colored-bg.link, .link-on-colored-bg.link-chevron,
 .link-on-colored-bg.link-external,
 .link-on-colored-bg.link-expand,
 .link-on-colored-bg :is(.link, .link-chevron,
@@ -5846,14 +5867,7 @@ optgroup {
   --bs-link-color: var(--bs-link-mono-color-content-enabled);
   --bs-link-chevron-color: var(--bs-link-color);
 }
-.colored-bg.link:hover, .colored-bg.link-chevron:hover,
-.colored-bg.link-external:hover,
-.colored-bg.link-expand:hover,
-.colored-bg :is(.link, .link-chevron,
-.link-external,
-.link-expand, a):hover,
-.link-on-colored-bg.link:hover,
-.link-on-colored-bg.link-chevron:hover,
+.link-on-colored-bg.link:hover, .link-on-colored-bg.link-chevron:hover,
 .link-on-colored-bg.link-external:hover,
 .link-on-colored-bg.link-expand:hover,
 .link-on-colored-bg :is(.link, .link-chevron,
@@ -5861,14 +5875,7 @@ optgroup {
 .link-expand, a):hover {
   --bs-link-color: var(--bs-link-mono-color-content-hover);
 }
-.colored-bg.link:focus-visible, .colored-bg.link-chevron:focus-visible,
-.colored-bg.link-external:focus-visible,
-.colored-bg.link-expand:focus-visible,
-.colored-bg :is(.link, .link-chevron,
-.link-external,
-.link-expand, a):focus-visible,
-.link-on-colored-bg.link:focus-visible,
-.link-on-colored-bg.link-chevron:focus-visible,
+.link-on-colored-bg.link:focus-visible, .link-on-colored-bg.link-chevron:focus-visible,
 .link-on-colored-bg.link-external:focus-visible,
 .link-on-colored-bg.link-expand:focus-visible,
 .link-on-colored-bg :is(.link, .link-chevron,
@@ -5876,14 +5883,7 @@ optgroup {
 .link-expand, a):focus-visible {
   --bs-link-color: var(--bs-link-mono-color-content-focus);
 }
-.colored-bg.link:active, .colored-bg.link-chevron:active,
-.colored-bg.link-external:active,
-.colored-bg.link-expand:active,
-.colored-bg :is(.link, .link-chevron,
-.link-external,
-.link-expand, a):active,
-.link-on-colored-bg.link:active,
-.link-on-colored-bg.link-chevron:active,
+.link-on-colored-bg.link:active, .link-on-colored-bg.link-chevron:active,
 .link-on-colored-bg.link-external:active,
 .link-on-colored-bg.link-expand:active,
 .link-on-colored-bg :is(.link, .link-chevron,
@@ -5891,23 +5891,9 @@ optgroup {
 .link-expand, a):active {
   --bs-link-color: var(--bs-link-mono-color-content-pressed);
 }
-.colored-bg.link[aria-disabled=true], .colored-bg[aria-disabled=true].link-chevron,
-.colored-bg[aria-disabled=true].link-external,
-.colored-bg[aria-disabled=true].link-expand, .colored-bg.link:disabled, .colored-bg.link-chevron:disabled,
-.colored-bg.link-external:disabled,
-.colored-bg.link-expand:disabled,
-.colored-bg :is(.link, .link-chevron,
-.link-external,
-.link-expand, a)[aria-disabled=true],
-.colored-bg :is(.link, .link-chevron,
-.link-external,
-.link-expand, a):disabled,
-.link-on-colored-bg.link[aria-disabled=true],
-.link-on-colored-bg[aria-disabled=true].link-chevron,
+.link-on-colored-bg.link[aria-disabled=true], .link-on-colored-bg[aria-disabled=true].link-chevron,
 .link-on-colored-bg[aria-disabled=true].link-external,
-.link-on-colored-bg[aria-disabled=true].link-expand,
-.link-on-colored-bg.link:disabled,
-.link-on-colored-bg.link-chevron:disabled,
+.link-on-colored-bg[aria-disabled=true].link-expand, .link-on-colored-bg.link:disabled, .link-on-colored-bg.link-chevron:disabled,
 .link-on-colored-bg.link-external:disabled,
 .link-on-colored-bg.link-expand:disabled,
 .link-on-colored-bg :is(.link, .link-chevron,

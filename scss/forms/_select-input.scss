@@ -160,6 +160,10 @@
   &:has(.select-input-field:disabled) {
     > label {
       pointer-events: none;
+
+      &::after {
+        color: currentcolor;
+      }
     }
   }
 
