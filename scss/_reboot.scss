@@ -272,7 +272,7 @@ blockquote {
   }
 }
 
-.blockquote-footer {
+blockquote + .blockquote-footer {
   margin-top: -$ouds-space-fixed-medium;
   margin-bottom: $ouds-space-fixed-medium;
   @include get-font-size("body-small"); // OUDS mod: instead of `font-size: $blockquote-footer-font-size`
