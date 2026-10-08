@@ -1,6 +1,10 @@
 # Typography
 
-Global typography settings, headings, body text, display headings, and text utilities.
+Typography is a set of UI elements that structure and style text content: headings, display text, body text,
+labels, and code. Five types: **Heading**, **Display**, **Body**, **Label**, **Code**.
+
+Use the HTML tag matching the **semantic meaning** of the content (heading, paragraph, code snippet, etc.) —
+never pick a tag just because of how it looks on screen; appearance is handled by the class/token, not the tag.
 
 ## Global Settings
 
@@ -9,9 +13,9 @@ Global typography settings, headings, body text, display headings, and text util
 - `max-width` applied on all font references for readability — remove with `.mw-none` utility
 - `--bs-color-bg-primary` sets `background-color` on `:root` children
 - Sass variables: `$font-family-base`, `$font-size-base`, `$line-height-base`
-- Styles in `_reboot.scss`, variables in `_variables.scss`
+- Styles in `_reboot.scss` and `_typography.scss`, variables in `_variables.scss`
 
-## Headings
+## Heading
 
 HTML `<h1>` through `<h6>` — each sets `font-size`, `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. Responsive across 3 ranges.
 
@@ -39,7 +43,21 @@ Classes `.h1` through `.h6` available for matching heading styling without the H
 <p class="h1">h1. OUDS Web heading</p>
 ```
 
-## Display Headings
+### Heading with marker
+
+A brand-colored marker can be displayed below a heading large (`<h2>` or `.h2`) to reinforce visual emphasis
+and information hierarchy. Add the `.marker` class:
+
+```html
+<h2 class="marker">h2. OUDS Web heading with marker</h2>
+<p class="h2 marker">h2. OUDS Web heading with marker</p>
+```
+
+> **Brand-dependent:** the marker only renders if the active theme defines the
+> `$ouds-typography-heading-large-marker` flag and a `$ouds-heading-large-marker-img` asset. It is available on
+> Orange and Orange Compact; Sosh does not define a marker image, so `.marker` has no visible effect there.
+
+## Display
 
 Larger, more opinionated heading styles. **OUDS Web uses named sizes, not numbers.**
 
@@ -61,9 +79,11 @@ With `$enable-bootstrap-compatibility: true`, `.display-1` through `.display-6` 
 
 Sass: `$display-font-sizes`, `$display-font-weight`, `$display-font-family`, `$display-font-style`, `$display-line-height`.
 
-## Regular Texts
+## Body
 
-Only headings, display headings, and `<strong>` text use **bold**. Other content uses `normal` font-weight.
+Regular body text, used for paragraphs, descriptions, and informational messages. Only headings, display
+headings, and `<strong>` text use **bold** by default; body text uses `normal` font-weight (overridable via
+[font weight utilities](../utilities/text.md)).
 
 | Reference   | Class/Element         |
 | ----------- | --------------------- |
@@ -85,6 +105,9 @@ Only headings, display headings, and `<strong>` text use **bold**. Other content
 <p><small>This is a small paragraph.</small></p>
 <p class="small">This is a small paragraph.</p>
 ```
+
+`.lead`, default `<p>`, and `.small`/`<small>` are equivalent to the font-size text utilities `.fs-bl`, `.fs-bm`,
+`.fs-bs` — all of them also set `line-height`, `letter-spacing`, and `max-width`.
 
 ## Inline Text Elements
 
@@ -109,32 +132,12 @@ Only headings, display headings, and `<strong>` text use **bold**. Other content
 
 Equivalent classes: `.mark`, `.small`, `.text-decoration-underline`, `.text-decoration-line-through`.
 
-## Blockquotes
+> For blockquotes, see [Reboot](../foundation/reboot.md#blockquotes).
 
-Uses body large text. Wrap with `<blockquote class="blockquote">`.
+## Label
 
-```html
-<blockquote class="blockquote">
-  <p>A well-known quote, contained in a blockquote element.</p>
-</blockquote>
-```
-
-### With Attribution
-
-```html
-<figure>
-  <blockquote class="blockquote">
-    <p>A well-known quote, contained in a blockquote element.</p>
-  </blockquote>
-  <figcaption class="blockquote-footer">
-    Someone famous in <cite title="Source Title">Source Title</cite>
-  </figcaption>
-</figure>
-```
-
-## Label utility classes (v1.4.0+)
-
-In addition to heading/body font-size utilities, dedicated **label** font-size classes are available (non-responsive, single value regardless of breakpoint), for UI labels such as form labels, buttons, tags, badges:
+Label is non-responsive text for compact UI components such as buttons, form fields, badges, and tags — single
+value regardless of breakpoint (non-responsive), unlike Heading/Display/Body (responsive). Four size levels:
 
 | Class      | Level          |
 | ---------- | -------------- |
@@ -147,22 +150,38 @@ In addition to heading/body font-size utilities, dedicated **label** font-size c
 <span class="fs-lm">Label medium text</span>
 ```
 
-## Sass Mixin: `get-font-size()`
+Label texts use `normal` font-weight by default too.
 
-For custom components, use the `get-font-size()` mixin. Label levels: `small`, `medium`, `large`, `xlarge`.
+## Code
 
-```scss
-.my-custom-component {
-  @include get-font-size("label-medium");
-}
+Styles technical content like code snippets, commands, system values, and identifiers, using a monospace
+typeface. Single size — reserve it for content that genuinely needs a code-like representation.
+
+> **Color:** `<code>` and `<pre>` no longer force a muted text color by default (the library leaves `color` to
+> inherit the surrounding text color). If a muted appearance is desired, apply it explicitly, e.g.
+> `color: var(--bs-color-content-muted)`.
+
+### Inline code
+
+```html
+For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 ```
 
-Outputs:
+### Code blocks
 
-```css
-.my-custom-component {
-  font-size: var(--bs-font-size-label-medium);
-  line-height: var(--bs-font-line-height-label-medium);
-  letter-spacing: var(--bs-font-letter-spacing-label-medium); /* ltr only */
+Use `<pre><code>` for multiple lines; `<pre>` preserves whitespace/indentation, `<code>` marks the content as code.
+
+```html
+<pre><code>
+if (document.getElementById('myId')) {
+  document.getElementById('myId').addEventListener('click', () => {
+    ...
+  })
 }
+</code></pre>
 ```
+
+## Sizing text in custom components
+
+To size text in a custom component, use the `get-font-size()` composite-token mixin — see
+[Tokens](../foundation/tokens.md#composite-tokens).

@@ -28,6 +28,28 @@ OUDS Web design tokens (from Figma) are structured in a **three-tier architectur
 - Aggregations of several semantic tokens (or brand-specific icons), e.g. shadow/elevation tokens and typographic definitions
 - Already exposed via utilities/components — **usable directly**
 
+### Font tokens: `get-font-size()` mixin
+
+Font tokens can't be used as plain Sass/CSS variables — they're aggregated into the `get-font-size()` mixin,
+which takes the font reference name as a parameter. Use it to size text in custom components. Levels: heading
+(`heading-xlarge/large/medium/small`), body (`body-large/medium/small`), label (`label-xlarge/large/medium/small`).
+
+```scss
+.my-custom-component {
+  @include get-font-size("label-medium");
+}
+```
+
+Outputs:
+
+```css
+.my-custom-component {
+  font-size: var(--bs-font-size-label-medium);
+  line-height: var(--bs-font-line-height-label-medium);
+  letter-spacing: var(--bs-font-letter-spacing-label-medium); /* ltr only */
+}
+```
+
 ## Component tokens
 
 - File: `@ouds/web-{brand}/scss/tokens/_component.scss`

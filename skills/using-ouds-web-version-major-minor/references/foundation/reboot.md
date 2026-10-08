@@ -64,6 +64,40 @@ Use appropriate `data-bs-theme` and `.bg-surface-*` classes:
 
 Styled via `border-top`, inherits `border-color` via `color`. Customize with border utilities. See Divider component.
 
+## Blockquotes
+
+Style applies directly to the bare `<blockquote>` element — **there is no `.blockquote` class** (removed; do not
+add it). Uses [body large text](../components/typography.md#body).
+
+```html
+<blockquote>
+  <p>A well-known quote, contained in a blockquote element.</p>
+</blockquote>
+```
+
+### Naming a source
+
+The HTML spec requires attribution to be placed outside the `<blockquote>`. Wrap the `<blockquote>` in a
+`<figure>` and add a `<figcaption>` (or a block-level element like `<p>`) with the `.blockquote-footer` class
+**immediately after** the `<blockquote>` — it only renders its styling (dash prefix, body small text) when it is
+the adjacent sibling of a `<blockquote>` (CSS selector `blockquote + .blockquote-footer`). Wrap the source name in
+`<cite>`.
+
+```html
+<figure>
+  <blockquote>
+    <p>A well-known quote, contained in a blockquote element.</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Someone famous in <cite title="Source Title">Source Title</cite>
+  </figcaption>
+</figure>
+```
+
+> **Breaking change (v1.6.0):** previously `.blockquote` and `.blockquote-footer` worked as standalone classes.
+> Now the plain `<blockquote>` element carries the style, and `.blockquote-footer` requires the adjacent-sibling
+> structure above to be styled.
+
 ## Lists
 
 Refer to Bullet list component for `<ul>`/`<ol>` styling, `.list-unstyled`, `.list-inline`.
