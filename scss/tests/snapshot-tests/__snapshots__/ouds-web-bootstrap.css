@@ -1248,7 +1248,7 @@ blockquote > :last-child {
   margin-bottom: 0;
 }
 
-.blockquote-footer {
+blockquote + .blockquote-footer {
   margin-top: -16px;
   margin-bottom: 16px;
   max-width: var(--bs-font-max-width-body-small);
@@ -1258,7 +1258,7 @@ blockquote > :last-child {
   letter-spacing: var(--bs-font-letter-spacing-body-small);
   color: var(--bs-color-content-muted);
 }
-.blockquote-footer::before {
+blockquote + .blockquote-footer::before {
   content: "— ";
 }
 
