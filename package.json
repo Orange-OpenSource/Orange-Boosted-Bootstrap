@@ -128,28 +128,33 @@
     "@nx/storybook": "^23.2.1",
     "@nx/vite": "^23.2.1",
     "@nx/vue": "^23.2.1",
-    "@storybook/addon-docs": "10.6.1",
-    "@storybook/angular": "10.6.1",
-    "@storybook/react-vite": "10.6.1",
-    "@storybook/vue3": "10.6.1",
-    "@storybook/vue3-vite": "10.6.1",
+    "@ouds/storybook-theme": "1.0.0",
+    "@storybook/addon-docs": "10.6.7",
+    "@storybook/angular": "10.6.7",
+    "@storybook/react-vite": "10.6.7",
+    "@storybook/vue3": "10.6.7",
+    "@storybook/vue3-vite": "10.6.7",
     "@typescript-eslint/eslint-plugin": "^8.70.1",
     "@typescript-eslint/parser": "^8.70.1",
     "@vitejs/plugin-react": "^6.1.1",
     "@vitejs/plugin-vue": "^6.0.9",
-    "@vitest/coverage-v8": "5.0.3",
+    "@vitest/coverage-v8": "^5.0.3",
     "eslint": "^9.39.5",
     "eslint-config-prettier": "^10.1.8",
     "jsdom": "^30.1.1",
     "lockfile-lint": "^5.0.1",
     "npm-run-all2": "^9.0.3",
     "nx": "^23.2.0",
-    "ods-storybook-theme": "2.0.0",
     "oxlint": "^1.75.0",
     "prettier": "3.9.9",
-    "storybook": "10.6.1",
+    "storybook": "10.6.7",
     "typescript-eslint": "^8.70.1",
     "vite-plugin-dts": "^5.1.1",
     "vitest": "^5.0.3"
+  },
+  "overrides": {
+    "vite-plus": {
+      "@vitest/browser-playwright": "^5.0.3"
+    }
   }
 }

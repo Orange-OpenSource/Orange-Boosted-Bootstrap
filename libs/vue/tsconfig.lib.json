@@ -1,7 +1,6 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "",
     "types": ["vite/client"],
     "lib": ["ES2016", "DOM", "DOM.Iterable"]
   },
