@@ -1237,6 +1237,30 @@ dd {
 blockquote {
   margin: 0 0 16px;
 }
+blockquote > p {
+  max-width: var(--bs-font-max-width-body-large);
+  font-size: var(--bs-font-size-body-large);
+  line-height: var(--bs-font-line-height-body-large);
+  /* rtl:remove */
+  letter-spacing: var(--bs-font-letter-spacing-body-large);
+}
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.blockquote-footer {
+  margin-top: -16px;
+  margin-bottom: 16px;
+  max-width: var(--bs-font-max-width-body-small);
+  font-size: var(--bs-font-size-body-small);
+  line-height: var(--bs-font-line-height-body-small);
+  /* rtl:remove */
+  letter-spacing: var(--bs-font-letter-spacing-body-small);
+  color: var(--bs-color-content-muted);
+}
+.blockquote-footer::before {
+  content: "— ";
+}
 
 i,
 em,
@@ -1592,7 +1616,8 @@ dialog,
 }
 
 .h2.marker::after,
-h2.marker::after {
+h2.marker::after,
+.fs-hl.marker::after {
   display: block;
   width: 30px;
   height: 12px;
@@ -1711,34 +1736,6 @@ h2.marker::after {
 }
 .list-inline-item:not(:last-child) {
   margin-right: 0.25rem;
-}
-
-.blockquote {
-  margin-bottom: 16px;
-}
-.blockquote > p {
-  max-width: var(--bs-font-max-width-body-large);
-  font-size: var(--bs-font-size-body-large);
-  line-height: var(--bs-font-line-height-body-large);
-  /* rtl:remove */
-  letter-spacing: var(--bs-font-letter-spacing-body-large);
-}
-.blockquote > :last-child {
-  margin-bottom: 0;
-}
-
-.blockquote-footer {
-  margin-top: -16px;
-  margin-bottom: 16px;
-  max-width: var(--bs-font-max-width-body-small);
-  font-size: var(--bs-font-size-body-small);
-  line-height: var(--bs-font-line-height-body-small);
-  /* rtl:remove */
-  letter-spacing: var(--bs-font-letter-spacing-body-small);
-  color: var(--bs-color-content-muted);
-}
-.blockquote-footer::before {
-  content: "— ";
 }
 
 .img-fluid {
