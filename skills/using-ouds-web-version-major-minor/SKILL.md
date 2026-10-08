@@ -142,6 +142,7 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 - [Checkbox](references/components/checkbox.md) - Checkbox controls
 - [Chips](references/components/chips.md) - Filter and suggestion chips
 - [Divider](references/components/divider.md) - Content dividers
+- [Dropdown](references/components/dropdown.md) - Toggleable menus and overlays (draft component)
 - [Footer](references/components/footer.md) - Page footer
 - [Header](references/components/header.md) - Responsive page header
 - [Icon](references/components/icon.md) - SVG icon system
@@ -159,7 +160,7 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 
 ### Not yet documented (do not invent markup)
 
-The OUDS Web documentation site has placeholder ("Coming soon") pages for the following components — **no OUDS Web-specific markup, classes, or design guidance exists for them yet**: `accordion`, `back-to-top`, `card`, `carousel`, `close-button`, `collapse`, `dropdown`, `local-navigation`, `modal`, `nav-tab`, `navbar`, `offcanvas`, `pagination`, `popover`, `progress`, `quantity-selector`, `range`, `scrollspy`, `spinner`, `stepped-process`, `sticker`, `title-bar`, `toast`, `tooltip`.
+The OUDS Web documentation site has placeholder ("Coming soon") pages for the following components — **no OUDS Web-specific markup, classes, or design guidance exists for them yet**: `accordion`, `back-to-top`, `card`, `carousel`, `close-button`, `collapse`, `local-navigation`, `modal`, `nav-tab`, `navbar`, `offcanvas`, `pagination`, `popover`, `progress`, `quantity-selector`, `range`, `scrollspy`, `spinner`, `stepped-process`, `sticker`, `title-bar`, `toast`, `tooltip`.
 
 If a task requires one of these, **tell the user it isn't documented in OUDS Web yet** instead of guessing markup or falling back to plain Bootstrap classes (OUDS Web's class names, tokens, and structure regularly diverge from Bootstrap, so a Bootstrap fallback would likely be wrong).
 
