@@ -2,6 +2,7 @@
 title: Typography
 description: Typography is a set of UI elements that structure and style text content, including headings, display text, body text, labels, and code, used to establish visual hierarchy and ensure consistent, accessible reading across OUDS Web.
 aliases:
+  - "/docs/components/typography/"
   - "/docs/foundation/typography/"
   - "/docs/content/typography/"
 toc: true
@@ -219,17 +220,17 @@ All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-s
 
 `.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
 
-<Example buttonLabel="heading styles through classes" code={`<p class="h1">h1. OUDS Web heading</p>
+<Example buttonLabel="heading styles through classes" code={`<h2 class="h1">h2. OUDS Web heading looking like h1</h2>
 
-  <p class="h2">h2. OUDS Web heading</p>
+  <h3 class="h2">h3. OUDS Web heading looking like h2</h3>
 
-  <p class="h3">h3. OUDS Web heading</p>
+  <h2 class="h3">h2. OUDS Web heading looking like h3</h2>
 
-  <p class="h4">h4. OUDS Web heading</p>
+  <h2 class="h4">h2. OUDS Web heading looking like h4</h2>
 
-  <p class="h5">h5. OUDS Web heading</p>
+  <h2 class="h5">h2. OUDS Web heading looking like h5</h2>
 
-  <p class="h6">h6. OUDS Web heading</p>`} />
+  <h2 class="h6">h2. OUDS Web heading looking like h6</h2>`} />
 
 Please note that:
 - The `.h1` to `.h6` classes are equivalent to the [font size text utilities]([[docsref:/utilities/text#font-size]]) `.fs-hxl`, `.fs-hl`, `.fs-hm`, `.fs-hs`, `.fs-bl`, and `.fs-bm`, except for the `font-weight`. Like heading tags and classes, they set the `font-size`, but also the `line-height`, the `letter-spacing` and the `max-width`.
@@ -243,7 +244,7 @@ A brand-colored marker can be displayed below the heading large (`<h2>` or `.h2`
 
 <Example buttonLabel="headings with marker"  code={`<h2 class="marker">h2. OUDS Web heading with marker</h2>
 
-  <p class="h2 marker">h2. OUDS Web heading with marker</p>`} />
+  <h3 class="h2 marker">h3. OUDS Web heading looking like h2 with marker</h3>`} />
 </ThemeSpecific>
 
 ## [[comp]] Display
