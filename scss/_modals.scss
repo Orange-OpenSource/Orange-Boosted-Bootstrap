@@ -238,7 +238,9 @@ $modal-transition-dimension: -3rem !default;
   @include get-font-size("heading-medium");
 }
 
-.modal-alert-icon {
+.modal-icon-positive,
+.modal-icon-negative,
+.modal-icon-info {
   --#{$prefix}modal-icon: var(--#{$prefix}alert-error-icon);
   --#{$prefix}modal-icon-color: #{$ouds-color-content-status-negative};
 
@@ -255,11 +257,16 @@ $modal-transition-dimension: -3rem !default;
     background-color: currentcolor;
     mask-image: escape-svg(var(--#{$prefix}modal-icon));
   }
+}
 
-  &.modal-success {
-    --#{$prefix}modal-icon: var(--#{$prefix}alert-success-icon);
-    --#{$prefix}modal-icon-color: #{$ouds-color-content-status-positive};
-  }
+.modal-icon-positive {
+  --#{$prefix}modal-icon: var(--#{$prefix}alert-success-icon);
+  --#{$prefix}modal-icon-color: #{$ouds-color-content-status-positive};
+}
+
+.modal-icon-info {
+  --#{$prefix}modal-icon: var(--#{$prefix}alert-info-icon);
+  --#{$prefix}modal-icon-color: #{$ouds-color-content-status-info};
 }
 
 .modal-body {

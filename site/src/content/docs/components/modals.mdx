@@ -68,7 +68,7 @@ import { getVersionedDocsPath } from '@libs/path'
 
 Modal dialog and fullscreen dialog use the same native `<dialog>` element with the `.modal-base` class. Either use `.modal-dialog` for a standard modal dialog or `.modal-fullscreen-dialog` for a fullscreen modal. The internal structure uses:
   - `.modal-header` for the header, it contains a `.modal-title` element for the main title.
-  - `.modal-body` for the main content of the modal, it can contain a `.modal-footer` [or not](#sticky-actions).
+  - `.modal-body` for the main content of the modal, it can contain a `.modal-footer` [or not if using sticky actions](#sticky-actions).
   - `.modal-footer` for the action buttons for the modal.
 
 The [common variants](#common-variants) are shared between modal dialog and fullscreen dialog, modal dialog has [specific variants](#variants) and [sizes](#sizes).
@@ -122,7 +122,7 @@ Modal dialog is used for focused tasks that should stay visually separated from 
 
 #### Fixed height
 
-Add `.modal-fixed-height` to the `.modal-dialog` `<dialog>` to use the fixed height option. This variant can be used to define a fixed-height modal dialog for multi-step flows or content with a consistent layout. The modal dialog will use the maximum height available which depends on [the modal size](#sizes).
+Add `.modal-fixed-height` to the `<dialog class="modal-dialog">` to use the fixed height option. This variant can be used to define a fixed-height modal dialog for multi-step flows or content with a consistent layout. The modal dialog will use the maximum height available which depends on [the modal size](#sizes).
 
 <Example buttonLabel="modal dialog fixed height" code={`<dialog id="modalDialogFixedHeight" class="modal-base modal-dialog modal-fixed-height" aria-labelledby="modalDialogFixedHeightTitle" closedby="any">
     <div class="modal-header">
@@ -178,7 +178,7 @@ Rounded corner modals is a project-wide option therefore all your modal dialogs 
   We use a `<div>` as a parent container because we cannot use `<body>` in an example.
 </Callout>
 
-<Example buttonLabel="modal dialog full" code={`<div class="use-rounded-corner-modal">
+<Example buttonLabel="rounded modal dialog" code={`<div class="use-rounded-corner-modal">
     <dialog id="modalDialogDialogRounded" class="modal-base modal-dialog" aria-labelledby="modalDialogDialogRoundedTitle" closedby="any">
       <div class="modal-header">
         <h3 id="modalDialogDialogRoundedTitle" class="modal-title">Title</h3>
@@ -200,7 +200,7 @@ Rounded corner modals is a project-wide option therefore all your modal dialogs 
   </div>`} />
 </ThemeSpecific>
 
-#### Blurred backdrop
+#### Non-blurred backdrop
 
 By default the modal dialog backdrop is blurred to visually separate the modal from the underlying content. You can disable this effect by adding the `.modal-non-blurred` class to the modal dialog.
 
@@ -230,7 +230,7 @@ Add `.modal-small` to switch to a small modal dialog. Use it when the dialog req
 <Example buttonLabel="modal-dialog dialog small" code={`<dialog id="modalDialogSmall" class="modal-base modal-dialog modal-negative modal-small" aria-labelledby="modalDialogSmallTitle" closedby="any">
     <div class="modal-header">
       <div class="d-flex align-items-center gap-scaled-small">
-        <div class="modal-alert-icon"><p class="visually-hidden">Alert</p></div>
+        <div class="modal-icon-negative"><p class="visually-hidden">Alert</p></div>
         <h3 id="modalDialogSmallTitle" class="modal-title">Confirm deletion</h3>
       </div>
       <button type="button" class="btn btn-close" commandfor="modalDialogSmall" command="close">
@@ -286,7 +286,7 @@ The following variants use the same structure and behavior for modal dialog and 
 
 You can display a subtitle above the title, aligned to the leading edge of the modal. Use it to provide additional context or clarify the purpose of the modal when the title alone is not sufficient.
 
-<Example buttonLabel="modal dialog subtitle" code={`<dialog id="modalDialogSubtitle" class="modal-base modal-dialog" aria-labelledby="modalDialogSubtitleTitle" closedby="any">
+<Example buttonLabel="modal dialog with subtitle" code={`<dialog id="modalDialogSubtitle" class="modal-base modal-dialog" aria-labelledby="modalDialogSubtitleTitle" closedby="any">
     <div class="modal-header">
       <div class="d-flex flex-column">
         <p class="m-none">Subtitle</p>
@@ -340,12 +340,12 @@ You can display an icon to the left of the title. It can be used either as a dec
 
 ### Functional modals
 
-You can implement functional modal dialogs using the functional variants of the icons and buttons.
+You can implement functional modal dialogs using the functional variants of the icons and buttons. Use `.modal-icon-negative`, `.modal-icon-positive`, or `.modal-icon-info` for the icon container.
 
 <Example buttonLabel="modal dialog negative" code={`<dialog id="modalDialogNegative" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogNegativeTitle" closedby="any">
     <div class="modal-header">
       <div class="d-flex align-items-center gap-scaled-small">
-        <div class="modal-alert-icon"><p class="visually-hidden">Alert</p></div>
+        <div class="modal-icon-negative"><p class="visually-hidden">Alert</p></div>
         <h3 id="modalDialogNegativeTitle" class="modal-title">Confirm deletion</h3>
       </div>
       <button type="button" class="btn btn-close" commandfor="modalDialogNegative" command="close">
@@ -365,11 +365,10 @@ You can implement functional modal dialogs using the functional variants of the 
     Open negative modal
   </button>`} />
 
-
 <Example buttonLabel="modal dialog success" code={`<dialog id="modalDialogSuccess" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogSuccessTitle" closedby="any">
     <div class="modal-header">
       <div class="d-flex align-items-center gap-scaled-small">
-        <div class="modal-alert-icon modal-success"><p class="visually-hidden">Alert</p></div>
+        <div class="modal-icon-positive"><p class="visually-hidden">Alert</p></div>
         <h3 id="modalDialogSuccessTitle" class="modal-title">Subscription confirmed!</h3>
       </div>
       <button type="button" class="btn btn-close" commandfor="modalDialogSuccess" command="close">
@@ -388,6 +387,28 @@ You can implement functional modal dialogs using the functional variants of the 
     Open success modal
   </button>`} />
 
+<Example buttonLabel="modal dialog info" code={`<dialog id="modalDialogInfo" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogInfoTitle" closedby="any">
+    <div class="modal-header">
+      <div class="d-flex align-items-center gap-scaled-small">
+        <div class="modal-icon-info"><p class="visually-hidden">Alert</p></div>
+        <h3 id="modalDialogInfoTitle" class="modal-title">Your cart is empty</h3>
+      </div>
+      <button type="button" class="btn btn-close" commandfor="modalDialogInfo" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" commandfor="modalDialogInfo" command="close">Ok</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="modalDialogInfo" command="show-modal">
+    Open info modal
+  </button>`} />
+
 ### Close button
 
 The close button may be hidden when the modal has a clear, visible alternative way to dismiss it, such as a single Cancel action or another explicit dismissal control. It may also be omitted when the modal represents a mandatory step in a controlled flow where dismissal is intentionally unavailable.
@@ -404,7 +425,7 @@ The close button may be hidden when the modal has a clear, visible alternative w
       <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
       <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young.</p>
       <div class="modal-footer">
-        <button type="button" class="btn btn-strong" commandfor="modalDialogNoCloseButton" command="close">I accept</button>
+        <button type="button" class="btn btn-strong" commandfor="modalDialogNoCloseButton" command="close">Acknowledge</button>
       </div>
     </div>
   </dialog>
@@ -443,6 +464,10 @@ Add a container with utility classes to display a navigation link above the titl
 ### Description
 
 The description option displays supporting text below the title. It provides additional context, instructions, or information required to understand the purpose or outcome of the modal. The description may be omitted when the title alone provides sufficient context and the message is short and immediately understandable.
+
+<Callout type="info">
+  The [sticky actions](#sticky-actions) variant is not compatible with modals that do not include a description or [rich content](#slot---rich-content).
+</Callout>
 
 <Example buttonLabel="modal dialog no description" code={`<dialog id="modalDialogNoDescription" class="modal-base modal-dialog" aria-labelledby="modalDialogNoDescriptionTitle" closedby="any">
     <div class="modal-header">
@@ -504,7 +529,7 @@ Modals are not limited to texts, they can contain diverse content such as forms,
 
 ### Sticky actions
 
-Move the `.modal-footer` outside of the `.modal-body` to show the actions buttons as fixed on the modal bottom. The content will scroll independently of the action buttons, this ensures that primary actions remain continuously visible and accessible, especially when the modal contains a large amount of content.
+Move the `.modal-footer` outside of the `.modal-body` to show the actions buttons as fixed on the modal bottom. The content will scroll independently of the action buttons, this ensures that primary actions remain continuously visible, especially when the modal contains a large amount of content.
 
 <Callout type="warning">
   The DOM structure is different from the normal case, please make sure to place the `.modal-footer` outside of the `.modal-body`.
@@ -541,10 +566,16 @@ Move the `.modal-footer` outside of the `.modal-body` to show the actions button
 
 There can be up to three actions buttons on the modal. These buttons typically include a primary action, a secondary action, and an optional tertiary action, allowing users to confirm, cancel, or perform additional tasks related to the modal's content.
 
-By default, the buttons will automatically stack vertically and grow to fill the available width on smaller screens.
+By default, the buttons will automatically stack vertically and grow to fill the available width on smaller screens. On larger screens, they will typically be displayed horizontally and aligned to the right with the tertiary action aligned left.
+
+The actions focus order should follow a logical sequence, by default it follows the DOM order: first the primary action, followed by the secondary action, and finally the tertiary action if present. If you want more control on this, you can make the displayed order different from the DOM by using [our order utility classes]([[docsref:utilities/flex#order]]).
 
 <Callout type="info">
   As actions can be displayed in various ways depending on your needs, we rely on utility classes to achieve other layouts, such as [horizontal alignment](#horizontal-alignment) or [buttons that are not full-width on smaller screens](#no-full-width-buttons).
+</Callout>
+
+<Callout type="warning" title="Accessibility">
+  Here we use two `<button>s` and an `<a>` link for the tertiary action. Remember that buttons should be used for actions and links for navigation. Please refer to the [buttons accessibility guidelines]([[docsref:components/buttons#accessibility-semantics]]) for more information.
 </Callout>
 
 <Example buttonLabel="modal dialog multiple actions" code={`<dialog id="modalDialogMultipleActions" class="modal-base modal-dialog" aria-labelledby="modalDialogMultipleActionsTitle" closedby="any">
@@ -558,8 +589,8 @@ By default, the buttons will automatically stack vertically and grow to fill the
       <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
       <div class="modal-footer">
         <button type="button" class="btn btn-strong" commandfor="modalDialogMultipleActions" command="close">Confirm</button>
-        <button type="button" class="btn btn-minimal" commandfor="modalDialogMultipleActions" command="close">Cancel</button>
-        <a href="#" class="link justify-content-center md:me-auto">More Info</a>
+        <button type="button" class="btn btn-default" commandfor="modalDialogMultipleActions" command="close">Cancel</button>
+        <a href="#" class="link justify-content-center sm:me-auto">More Info</a>
       </div>
     </div>
   </dialog>
@@ -570,7 +601,7 @@ By default, the buttons will automatically stack vertically and grow to fill the
 
 #### No full-width buttons
 
-By default the action buttons are full-width on smaller screens. You can deactivate the full-width behavior using utility classes on the action buttons.
+By default the action buttons are full-width on smaller screens. You can deactivate the full-width behavior using `.w-auto` on the action buttons.
 
 <Example buttonLabel="modal dialog full-width buttons" code={`<dialog id="modalDialogFullWidthButtons" class="modal-base modal-dialog" aria-labelledby="modalDialogFullWidthButtonsTitle" closedby="any">
     <div class="modal-header">
