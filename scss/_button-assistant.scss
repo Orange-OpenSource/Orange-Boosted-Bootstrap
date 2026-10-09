@@ -20,7 +20,7 @@
     height: var(--#{$prefix}btn-icon-size);
     content: "";
     background-color: currentcolor;
-    mask: $icon-assistant-icon center;
+    mask: $assistant-icon center;
   }
 
   // Reduce the noise for people that don't want some

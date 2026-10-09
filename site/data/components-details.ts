@@ -26,6 +26,13 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `<button type="button" class="btn btn-assistant">Label</button>`
   },
   {
+    name: 'Assistant icon',
+    category: 'Assistant',
+    slug: 'assistant-icon',
+    link: 'icons#assistant-icon',
+    snippet: `<button type="button" class="icon-assistant"><span class="visually-hidden">Assistant icon</span></button>`
+  },
+  {
     name: 'Badge',
     link: 'badges#badge',
     category: 'Indicator',
@@ -203,17 +210,6 @@ export const componentsDetails: ComponentCardData[] = [
       </header>`
   },
   {
-    name: 'Icons',
-    category: 'Actions',
-    link: 'icons',
-    snippet: `
-      <button class="icon-interactive">
-        <svg aria-hidden="true" class="decorative-small-icon">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-        </svg>
-      </button>`
-  },
-  {
     name: 'Inline alert',
     slug: 'inline-alert',
     link: 'alerts#inline-alert',
@@ -230,6 +226,19 @@ export const componentsDetails: ComponentCardData[] = [
     link: 'tags#input-tag',
     category: 'Indicator',
     snippet: `<button type="button" class="tag tag-input">Label</button>`
+  },
+  {
+    name: 'Interactive icon',
+    slug: 'interactive-icon',
+    category: 'Actions',
+    link: 'icons',
+    snippet: `
+      <button type="button" class="icon-interactive">
+        <span class="visually-hidden">Interactive icon</span>
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+      </button>`
   },
   {
     name: 'Link',
