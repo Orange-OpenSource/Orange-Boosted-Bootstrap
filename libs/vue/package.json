@@ -1,0 +1,27 @@
+{
+  "name": "@ouds/vue",
+  "version": "0.0.1",
+  "dependencies": {
+    "@ouds/core": "^0.0.1"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "vue": "^3.5.0",
+    "@vue/test-utils": "^2.5.1",
+    "@vue/language-core": "^3.3.11"
+  },
+  "repository": {
+    "url": "https://gitlab.tech.orange/frontend-hub/ouds-rav/tree/main/libs/vue"
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  }
+}

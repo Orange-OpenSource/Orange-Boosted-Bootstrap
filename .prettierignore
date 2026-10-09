@@ -1,12 +1,5 @@
-# Prettier is only used for the website
-
-site/.astro
-site/dist
-site/public
-site/src/assets
-site/src/scss
-site/src/pages/**/*.md
-site/src/pages/**/*.mdx
-site/src/content/**/*.mdx
-site/src/layouts/RedirectLayout.astro
-site/static
+# Add files here to ignore them from prettier formatting
+/dist
+/coverage
+/.nx/cache
+/.nx/workspace-data

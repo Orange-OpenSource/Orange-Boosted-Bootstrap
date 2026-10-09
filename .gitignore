@@ -1,6 +1,3 @@
-# Ignore docs files
-/_site/
-
 # Numerous always-ignore extensions
 *.diff
 *.err
@@ -17,6 +14,7 @@
 # OS or Editor folders
 ._*
 .cache
+.eslintcache
 .DS_Store
 .idea
 .project
@@ -35,21 +33,12 @@ Thumbs.db
 *.komodoproject
 
 # Folders to ignore
-/dist-sass/
-/js/coverage/
-/node_modules/
-/.pa11y/
+node_modules/
 /.github/release-drafter.yml
 
-# Storybook
-/stories/auto
-*storybook.log
-
-# Site
-/site/dist
-/site/node_modules
-/site/.astro
-/site/public
-
-# OUDS migrate
-/packages/migrate/node_modules
+# NX
+/.nx/cache/
+/.nx/workspace-data/
+/dist/
+/coverage/
+.angular/
