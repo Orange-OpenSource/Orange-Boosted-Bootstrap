@@ -148,7 +148,9 @@ describe('Button', () => {
     });
 
     it('should announce an empty status when loading without any label', () => {
-        render(<Button isLoading icon={<svg aria-hidden='true' />} isIconOnly />);
+        render(
+            <Button isLoading icon={<svg aria-hidden='true' />} isIconOnly />,
+        );
         expect(screen.getByRole('status').textContent).toBe('');
     });
 });

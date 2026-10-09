@@ -3,9 +3,7 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/react-storybook/src",
   "projectType": "application",
-  "tags": [
-    "app:react"
-  ],
+  "tags": ["app:react"],
   "targets": {
     "serve": {
       "executor": "@nx/storybook:storybook",
@@ -33,9 +31,7 @@
     },
     "build": {
       "executor": "@nx/storybook:build",
-      "outputs": [
-        "{options.outputDir}"
-      ],
+      "outputs": ["{options.outputDir}"],
       "options": {
         "outputDir": "dist/apps/react-storybook",
         "configDir": "apps/react-storybook/.storybook"
@@ -47,9 +43,7 @@
       },
       "dependsOn": [
         {
-          "projects": [
-            "@ouds/react"
-          ],
+          "projects": ["@ouds/react"],
           "target": "build"
         }
       ]

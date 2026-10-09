@@ -24,7 +24,11 @@
     },
     "lint": {
       "executor": "nx:run-commands",
-      "inputs": ["default", "!{projectRoot}/.eslintcache", "{workspaceRoot}/eslint.config.mjs"],
+      "inputs": [
+        "default",
+        "!{projectRoot}/.eslintcache",
+        "{workspaceRoot}/eslint.config.mjs"
+      ],
       "outputs": ["{options.cwd}/.eslintcache"],
       "options": {
         "command": "eslint . --cache",

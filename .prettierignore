@@ -1,5 +1,12 @@
 # Add files here to ignore them from prettier formatting
 /dist
+/dist-saas
 /coverage
+/tmp
 /.nx/cache
 /.nx/workspace-data
+package-lock.json
+
+# OUDS Web keeps its Bootstrap/XO code style (enforced by ESLint) and formats its
+# docs site with its own config (npm run docs-prettier-format).
+/libs/web

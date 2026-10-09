@@ -1,0 +1,93 @@
+{
+  "name": "@ouds/angular-storybook",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/angular-storybook",
+  "projectType": "application",
+  "tags": ["app:angular"],
+  "targets": {
+    "build-angular": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/apps/angular-storybook-angular",
+        "index": "",
+        "main": "",
+        "tsConfig": "apps/angular-storybook/tsconfig.storybook.json",
+        "styles": [
+          "node_modules/@ouds/web-orange/dist/css/ouds-web.min.css",
+          "apps/angular-storybook/.storybook/storybook.css"
+        ],
+        "scripts": []
+      }
+    },
+    "serve": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/angular-storybook/.storybook",
+        "browserTarget": "@ouds/angular-storybook:build-angular",
+        "tsConfig": "apps/angular-storybook/tsconfig.storybook.json",
+        "compodoc": false,
+        "styles": [
+          "node_modules/@ouds/web-orange/dist/css/ouds-web.min.css",
+          "apps/angular-storybook/.storybook/storybook.css"
+        ]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/angular-storybook/.storybook",
+        "browserTarget": "@ouds/angular-storybook:build-angular",
+        "tsConfig": "apps/angular-storybook/tsconfig.storybook.json",
+        "compodoc": false,
+        "styles": [
+          "node_modules/@ouds/web-orange/dist/css/ouds-web.min.css",
+          "apps/angular-storybook/.storybook/storybook.css"
+        ]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/apps/angular-storybook",
+        "configDir": "apps/angular-storybook/.storybook",
+        "browserTarget": "@ouds/angular-storybook:build-angular",
+        "tsConfig": "apps/angular-storybook/tsconfig.storybook.json",
+        "compodoc": false,
+        "styles": [
+          "node_modules/@ouds/web-orange/dist/css/ouds-web.min.css",
+          "apps/angular-storybook/.storybook/storybook.css"
+        ]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "@ouds/angular-storybook:build",
+        "staticFilePath": "dist/apps/angular-storybook"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "@ouds/angular-storybook:build:ci"
+        }
+      }
+    }
+  }
+}

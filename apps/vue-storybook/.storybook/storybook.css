@@ -1,12 +1,12 @@
 .token.tag {
-  display: initial;
-  padding: initial;
-  font-weight: initial;
-  line-height: initial;
-  background-color: initial;
-  border: initial;
+    display: initial;
+    padding: initial;
+    font-weight: initial;
+    line-height: initial;
+    background-color: initial;
+    border: initial;
 }
 
 [data-bs-theme='dark'] body .docs-story {
-  background-color: #000;
+    background-color: #000;
 }

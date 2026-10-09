@@ -25,7 +25,10 @@ const config: StorybookConfig = {
                 // apps/react-storybook/<absolute path>/…, so drop it for Storybook builds.
                 plugins: (config.plugins ?? [])
                     .flat()
-                    .filter((plugin: any) => plugin?.name !== 'nx-copy-assets-plugin'),
+                    .filter(
+                        (plugin: any) =>
+                            plugin?.name !== 'nx-copy-assets-plugin',
+                    ),
             },
             { plugins: [nxViteTsPaths()] },
         ),

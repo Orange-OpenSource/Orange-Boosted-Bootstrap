@@ -8,9 +8,7 @@
     "jsxImportSource": "vue",
     "resolveJsonModule": true,
     "verbatimModuleSyntax": false,
-    "types": [
-      "vite/client"
-    ]
+    "types": ["vite/client"]
   },
   "files": [],
   "include": [],
