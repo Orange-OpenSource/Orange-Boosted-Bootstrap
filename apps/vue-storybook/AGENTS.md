@@ -5,10 +5,10 @@ Scope: everything under `apps/vue-storybook/`. The root [`AGENTS.md`](../../AGEN
 ## Layout
 
 - `.storybook/main.ts` — Storybook 10 config (`@storybook/vue3-vite`, `docgen: 'vue-component-meta'`). It loads stories from `libs/vue/**/*.stories.@(js|jsx|ts|tsx|mdx)` and adds `nxViteTsPaths()` and `@vitejs/plugin-vue` via `viteFinal`.
-- `.storybook/preview.ts` — loads the OUDS Web Orange CSS, registers `OudsProvider` globally via `setup()`, defines global decorators (`OudsProvider`), toolbar `globalTypes` (theme, brand, rounded corners, version badges), `parameters`, `tags: ['autodocs']`, and exports the `InProgressTemplate` helper.
+- `.storybook/preview.ts` — loads the OUDS Web Orange CSS, registers `OudsProvider` globally via `setup()`, defines global decorators (`OudsProvider`), toolbar `globalTypes` (theme, brand, rounded corners), `parameters`, `tags: ['autodocs']`, and exports the `InProgressTemplate` helper.
 - `.storybook/manager.ts` — manager UI theme (`@ouds/storybook-theme/OrangeTheme.js` through `addons` from `storybook/manager-api`, same theme as `libs/web`; supports Storybook 9 and 10).
 - `.storybook/storybook.css` — Storybook-only styles.
-- `.storybook/toolbar-addon.ts` — toolbar addon registered from `manager.ts` (identical in the three apps). Global types with `versionLabel` (versions of the library, `@ouds/web-orange`, and the framework) render as grey read-only labels; global types with a `toolbar` (theme, brand, rounded corners) stay dropdowns, styled black on orange. To add a version label, give the global type a `versionLabel` and **no** `toolbar` key.
+- `.storybook/toolbar-addon.ts` — manager addon registered from `manager.ts` (same structure in the three apps). It adds a read-only toolbar label with the versions of the library, `@ouds/web-orange`, and Vue, read from their `package.json` files. It is not a global type; to change the label, edit the `labels` array.
 - `.oxlintrc.json` — extends the root `oxlint.base.json` and adds `vue` and `import`.
 - `project.json` — `serve`/`storybook` (`@nx/storybook:storybook`, port 4400), `build` (`@nx/storybook:build` into `dist/apps/vue-storybook`), and `static`. `lint` is inferred by `@nx/oxlint` and is not declared.
 

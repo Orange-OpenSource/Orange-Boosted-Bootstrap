@@ -33,6 +33,8 @@ This library stays on ESLint on purpose: Oxlint has no parser for Angular templa
 ## Testing
 
 - Every component gets a co-located `*.component.spec.ts` using `TestBed` with the standalone component in `imports` (see `hello-world.component.spec.ts`).
+- Coverage is collected on every run and held at a 100% global threshold (statements, branches, functions, lines) for `src/**/*.ts`; stories, barrel `index.ts` files, specs, and `src/test-setup.ts` are excluded. `@ouds/core` is mapped to its sources in `jest.config.ts`, so tests don't need a prior `core:build`.
+- Angular 22 components default to `OnPush`: in test host components, drive bindings with signals (or `fixture.componentRef.setInput`), not by mutating plain properties.
 - Jest is used instead of Vitest because Angular's Vitest runner needs an application `buildTarget`, which this ng-packagr library doesn't have (details in `ARCHITECTURE.md`).
 
 ## Boundaries
