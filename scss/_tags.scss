@@ -100,6 +100,24 @@
     }
   }
 
+  // scss-docs-start tag-categorical
+  $tag-categorical-colors: (
+    1: $ouds-categorical-tag-color-bg-category-1,
+    2: $ouds-categorical-tag-color-bg-category-2,
+    3: $ouds-categorical-tag-color-bg-category-3,
+    4: $ouds-categorical-tag-color-bg-category-4,
+    5: $ouds-categorical-tag-color-bg-category-5
+  );
+
+  @each $category, $background in $tag-categorical-colors {
+    &.tag-categorical-#{$category} {
+      --#{$prefix}tag-color: #{$ouds-categorical-tag-color-content};
+      --#{$prefix}tag-background-color: #{$background};
+      --#{$prefix}tag-asset-color: #{$ouds-categorical-tag-color-content};
+    }
+  }
+  // scss-docs-end tag-categorical
+
   &:has(.tag-icon),
   &:has(.tag-status-icon),
   &:has(.tag-bullet),
