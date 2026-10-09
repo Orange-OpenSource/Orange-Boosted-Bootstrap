@@ -15,7 +15,7 @@ Element-specific CSS changes providing a consistent baseline. Builds on Normaliz
 - `box-sizing: border-box` globally on all elements (including `::before`/`::after`)
 - No base `font-size` on `<html>` (browser default 16px assumed); `font-size: 1rem` on `:root` children
 - `:root` children set `font-family`, `font-weight`, `line-height`, `color`
-- `background-color` on `:root` children defaults to `#fff`
+- `background-color` on `:root` children set via `--bs-color-bg-primary`
 
 ## Font Stack
 
@@ -31,6 +31,21 @@ Custom fonts loaded from CDN with native font stack as fallback. Font faces gene
 ## Paragraphs
 
 `<p>`: `margin-top` removed, `margin-bottom` set to `$ouds-space-fixed-medium`. Remove with `.mb-none`.
+
+## Inline Text Elements
+
+```html
+<p>You can use the mark tag to <mark>highlight</mark> text.</p>
+<p><del>This line of text is meant to be treated as deleted text.</del></p>
+<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+<p><u>This line of text will render as underlined.</u></p>
+<p><small>This line of text is meant to be treated as fine print.</small></p>
+<p><strong>This line rendered as bold text.</strong></p>
+<p><em>This line rendered as bold text too,</em> but would natively be italicized.</p>
+```
+
+Use these tags for semantic purpose: `<mark>` (marked/highlighted for reference), `<small>` (side-comments, legal text — uses [body small](../components/typography.md#body)), `<s>` (no longer relevant/accurate), `<u>` (non-textual annotation). To style text without the semantic meaning, use the equivalent classes instead: `.mark`, `.small`, `.text-decoration-underline` (like `<u>`), `.text-decoration-line-through` (like `<s>`). `<b>` and `<i>` remain available for highlighting without added importance / voice & technical terms.
 
 ## Links
 
