@@ -8,6 +8,7 @@ aliases:
 toc: true
 types:
   - Tag
+  - Categorical tag
   - Input tag
 ---
 
@@ -31,6 +32,18 @@ import { getVersionedDocsPath } from '@libs/path'
       </div>
       <div class="card-body border-default border-thin border-top">
         <a class="stretched-link" href="#tag">Tag</a> is a UI element that shows brief information, such as a label, keyword, or category.
+      </div>
+    </div>
+  </li>
+  <li class="col">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
+          <p class="tag tag-categorical-1">Categorical tag</p>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top">
+        <a class="stretched-link" href="#categorical-tag">Categorical tag</a> is a non-interactive UI element that uses a categorical color to distinguish non-functional categories.
       </div>
     </div>
   </li>
@@ -423,6 +436,102 @@ Tags can be added side by side. They require horizontal and vertical spacing bet
     <li class="tag">Label 6</li>
   </ul>`} />
 
+## [[comp]] Categorical tag
+
+Categorical tag is a non-interactive UI element that applies an approved category-to-color mapping, defined by the product or the local market, to visually distinguish non-functional categories such as promotions, events, benefits or locally defined content types.
+
+Add one of the `.tag-categorical-1` to `.tag-categorical-5` classes to the `.tag`. A categorical tag has only an emphasized appearance: `.tag-muted` does not apply.
+
+<Callout type="warning">
+  Categorical colors do not represent success, warning, error, information, priority or severity. Use a standard [tag](#tag) for functional statuses or system feedback. A categorical tag and a standard tag can be used together when they communicate clearly different types of information.
+</Callout>
+
+<Callout type="warning" name="warning-tag-lists-accessibility" />
+
+### Variants
+
+#### Category
+
+The category defines the categorical color used by the tag. Categories are identified by numbers 1 to 5 because the actual color may vary depending on the active theme, product or local market guidelines. The number identifies a reusable color slot: it does not represent priority, hierarchy, severity or functional status.
+
+In some local guidelines, a green categorical color may be reserved for environmental information such as Eco-friendly or Refurbished. When colors are assigned to categories, keep the same association within the same context to support recognition.
+
+<Callout type="warning">
+  Color should not be the only way to convey information: the tag label must be self-explanatory, otherwise add additional text with the class `.visually-hidden`. [Read more about tags accessibility here](#accessibility).
+</Callout>
+
+<Example buttonLabel="categorical tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Categories">
+    <li class="tag tag-categorical-1">Category 1</li>
+    <li class="tag tag-categorical-2">Category 2</li>
+    <li class="tag tag-categorical-3">Category 3</li>
+    <li class="tag tag-categorical-4">Category 4</li>
+    <li class="tag tag-categorical-5">Category 5</li>
+  </ul>`} />
+
+#### Layout
+
+A categorical tag can contain text only, text with a bullet (`.tag-bullet`) or text with an icon (`.tag-icon`). The functional status icon (`.tag-status-icon`) must not be used.
+
+<Example buttonLabel="categorical tags with bullet and icon" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Categories">
+    <li class="tag tag-categorical-1">Text only</li>
+    <li class="tag tag-categorical-2">
+      <span class="tag-bullet"></span>
+      Text + Bullet
+    </li>
+    <li class="tag tag-categorical-3">
+      <svg aria-hidden="true" class="tag-icon">
+        <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
+      </svg>
+      Text + Icon
+    </li>
+  </ul>`} />
+
+#### Rounded corner
+
+By default, categorical tags have rounded corners. To display squared corners, add the `.rounded-none` utility class.
+
+<Example buttonLabel="squared categorical tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Categories">
+    <li class="tag tag-categorical-1 rounded-none">Squared</li>
+    <li class="tag tag-categorical-4 rounded-none">Squared</li>
+  </ul>`} />
+
+### States
+
+#### Disabled
+
+Like a standard tag, add the `.disabled` class to the tag, or place it inside an element with a `.disabled` class.
+
+<Example buttonLabel="disabled categorical tag" code={`<p><span class="tag tag-categorical-1 disabled">Disabled</span> Some text</p>`} />
+
+#### Loading
+
+The loading state works as for a standard [tag](#loading), with the `.tag-loader` SVG and the `.loading` class.
+
+<Example buttonLabel="loading categorical tag" code={`<p class="tag tag-categorical-2 loading">
+    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="tag-loader" aria-hidden="true">
+      <circle class="tag-loader-inner" cx="20" cy="20" r="15"></circle>
+    </svg>
+    <span role="status" class="visually-hidden">Loading</span>
+    Label
+  </p>`} />
+
+#### Skeleton
+
+<SkeletonRedirect component="categorical tag" />
+
+<Example buttonLabel="categorical tag skeleton" code={`<div aria-busy="true" inert>
+    <p class="tag tag-categorical-1">Categorical tag</p>
+  </div>`} />
+
+### Sizes
+
+To display a small categorical tag, add the class `.tag-small`.
+
+<Example buttonLabel="small categorical tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Categories">
+    <li class="tag tag-small tag-categorical-1">Small</li>
+    <li class="tag tag-small tag-categorical-5">Small</li>
+  </ul>`} />
+
 ## [[comp]] Input tag
 
 Input tag is a UI element that renders an entered value as a tag, allowing it to display brief information like a label, keyword, or category.
@@ -432,7 +541,7 @@ Input tag allows users to type and submit values (typically by pressing enter, c
 They are often used for adding labels, categories, or participants. They typically support removing individual tags.
 
 <Callout type="warning">
-  Please note that all the variants of tag above *must not* be applied on input tag.
+  Please note that all the variants of tag above *must not* be applied on input tag, including the categorical ones.
 </Callout>
 
 The input tags are implemented as `<button>` elements, and can take all the usual states: enabled, hover, pressed, disabled or focused. It can be removed on click, but you have to implement this behavior by yourself, with some JavaScript specific to your project.
