@@ -15,7 +15,7 @@
       }
     },
     {
-      "files": "*.{ts,tsx,js,jsx}",
+      "files": "*.{ts,tsx,js,jsx,vue}",
       "options": {
         "tabWidth": 4
       }
