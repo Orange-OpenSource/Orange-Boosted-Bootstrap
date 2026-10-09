@@ -1365,7 +1365,6 @@ pre {
   line-height: var(--bs-font-line-height-code-medium);
   /* rtl:remove */
   letter-spacing: var(--bs-font-letter-spacing-code-medium);
-  color: var(--bs-color-content-muted);
 }
 pre code {
   font-size: inherit;
@@ -1377,7 +1376,6 @@ var,
 code {
   font-size: 0.875em;
   font-style: normal;
-  color: var(--bs-color-content-muted);
   word-wrap: break-word;
 }
 
