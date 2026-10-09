@@ -30,9 +30,7 @@ OUDS Web design tokens (from Figma) are structured in a **three-tier architectur
 
 ### Font tokens: `get-font-size()` mixin
 
-Font tokens can't be used as plain Sass/CSS variables — they're aggregated into the `get-font-size()` mixin,
-which takes the font reference name as a parameter. Use it to size text in custom components. Levels: heading
-(`heading-xlarge/large/medium/small`), body (`body-large/medium/small`), label (`label-xlarge/large/medium/small`).
+Font tokens can't be used as plain Sass/CSS variables — they're aggregated into the `get-font-size()` mixin, which takes the font reference name as a parameter. Use it to size text in custom components. Levels: heading (`heading-xlarge/large/medium/small`), body (`body-large/medium/small`), label (`label-xlarge/large/medium/small`).
 
 ```scss
 .my-custom-component {

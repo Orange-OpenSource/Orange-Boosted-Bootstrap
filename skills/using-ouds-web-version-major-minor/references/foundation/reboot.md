@@ -66,8 +66,7 @@ Styled via `border-top`, inherits `border-color` via `color`. Customize with bor
 
 ## Blockquotes
 
-Style applies directly to the bare `<blockquote>` element — **there is no `.blockquote` class** (removed; do not
-add it). Uses [body large text](../components/typography.md#body).
+Style applies directly to the bare `<blockquote>` element — **there is no `.blockquote` class** (removed; do not add it). Uses [body large text](../components/typography.md#body).
 
 ```html
 <blockquote>
@@ -77,11 +76,7 @@ add it). Uses [body large text](../components/typography.md#body).
 
 ### Naming a source
 
-The HTML spec requires attribution to be placed outside the `<blockquote>`. Wrap the `<blockquote>` in a
-`<figure>` and add a `<figcaption>` (or a block-level element like `<p>`) with the `.blockquote-footer` class
-**immediately after** the `<blockquote>` — it only renders its styling (dash prefix, body small text) when it is
-the adjacent sibling of a `<blockquote>` (CSS selector `blockquote + .blockquote-footer`). Wrap the source name in
-`<cite>`.
+The HTML spec requires attribution to be placed outside the `<blockquote>`. Wrap the `<blockquote>` in a `<figure>` and add a `<figcaption>` (or a block-level element like `<p>`) with the `.blockquote-footer` class **immediately after** the `<blockquote>` — it only renders its styling (dash prefix, body small text) when it is the adjacent sibling of a `<blockquote>` (CSS selector `blockquote + .blockquote-footer`). Wrap the source name in `<cite>`.
 
 ```html
 <figure>
@@ -94,9 +89,7 @@ the adjacent sibling of a `<blockquote>` (CSS selector `blockquote + .blockquote
 </figure>
 ```
 
-> **Breaking change (v1.6.0):** previously `.blockquote` and `.blockquote-footer` worked as standalone classes.
-> Now the plain `<blockquote>` element carries the style, and `.blockquote-footer` requires the adjacent-sibling
-> structure above to be styled.
+> **Breaking change (v1.6.0):** previously `.blockquote` and `.blockquote-footer` worked as standalone classes. Now the plain `<blockquote>` element carries the style, and `.blockquote-footer` requires the adjacent-sibling structure above to be styled.
 
 ## Lists
 

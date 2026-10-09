@@ -1,10 +1,8 @@
 # Typography
 
-Typography is a set of UI elements that structure and style text content: headings, display text, body text,
-labels, and code. Five types: **Heading**, **Display**, **Body**, **Label**, **Code**.
+Typography is a set of UI elements that structure and style text content: headings, display text, body text, labels, and code. Five types: **Heading**, **Display**, **Body**, **Label**, **Code**.
 
-Use the HTML tag matching the **semantic meaning** of the content (heading, paragraph, code snippet, etc.) —
-never pick a tag just because of how it looks on screen; appearance is handled by the class/token, not the tag.
+Use the HTML tag matching the **semantic meaning** of the content (heading, paragraph, code snippet, etc.) — never pick a tag just because of how it looks on screen; appearance is handled by the class/token, not the tag.
 
 ## Global Settings
 
@@ -43,19 +41,24 @@ Classes `.h1` through `.h6` available for matching heading styling without the H
 <p class="h1">h1. OUDS Web heading</p>
 ```
 
+```html
+<!-- Good: <h2> for document structure, styled like an h1 -->
+<h2 class="h1">Section title styled larger</h2>
+
+<!-- Avoid: not a real heading, invisible to heading-based screen reader navigation -->
+<p class="h1">Section title styled larger</p>
+```
+
 ### Heading with marker
 
-A brand-colored marker can be displayed below a heading large (`<h2>` or `.h2`) to reinforce visual emphasis
-and information hierarchy. Add the `.marker` class:
+A brand-colored marker can be displayed below a heading large (`<h2>` or `.h2`) to reinforce visual emphasis and information hierarchy. Add the `.marker` class:
 
 ```html
 <h2 class="marker">h2. OUDS Web heading with marker</h2>
 <p class="h2 marker">h2. OUDS Web heading with marker</p>
 ```
 
-> **Brand-dependent:** the marker only renders if the active theme defines the
-> `$ouds-typography-heading-large-marker` flag and a `$ouds-heading-large-marker-img` asset. It is available on
-> Orange and Orange Compact; Sosh does not define a marker image, so `.marker` has no visible effect there.
+> **Brand-dependent:** the marker only renders if the active theme defines the `$ouds-typography-heading-large-marker` flag and a `$ouds-heading-large-marker-img` asset. It is available on Orange and Orange Compact; Sosh does not define a marker image, so `.marker` has no visible effect there.
 
 ## Display
 
@@ -81,9 +84,7 @@ Sass: `$display-font-sizes`, `$display-font-weight`, `$display-font-family`, `$d
 
 ## Body
 
-Regular body text, used for paragraphs, descriptions, and informational messages. Only headings, display
-headings, and `<strong>` text use **bold** by default; body text uses `normal` font-weight (overridable via
-[font weight utilities](../utilities/text.md)).
+Regular body text, used for paragraphs, descriptions, and informational messages. Only headings, display headings, and `<strong>` text use **bold** by default; body text uses `normal` font-weight (overridable via [font weight utilities](../utilities/text.md)).
 
 | Reference   | Class/Element         |
 | ----------- | --------------------- |
@@ -106,8 +107,7 @@ headings, and `<strong>` text use **bold** by default; body text uses `normal` f
 <p class="small">This is a small paragraph.</p>
 ```
 
-`.lead`, default `<p>`, and `.small`/`<small>` are equivalent to the font-size text utilities `.fs-bl`, `.fs-bm`,
-`.fs-bs` — all of them also set `line-height`, `letter-spacing`, and `max-width`.
+`.lead`, default `<p>`, and `.small`/`<small>` are equivalent to the font-size text utilities `.fs-bl`, `.fs-bm`, `.fs-bs` — all of them also set `line-height`, `letter-spacing`, and `max-width`.
 
 ## Inline Text Elements
 
@@ -136,8 +136,7 @@ Equivalent classes: `.mark`, `.small`, `.text-decoration-underline`, `.text-deco
 
 ## Label
 
-Label is non-responsive text for compact UI components such as buttons, form fields, badges, and tags — single
-value regardless of breakpoint (non-responsive), unlike Heading/Display/Body (responsive). Four size levels:
+Label is non-responsive text for compact UI components such as buttons, form fields, badges, and tags — single value regardless of breakpoint (non-responsive), unlike Heading/Display/Body (responsive). Four size levels:
 
 | Class      | Level          |
 | ---------- | -------------- |
@@ -154,12 +153,9 @@ Label texts use `normal` font-weight by default too.
 
 ## Code
 
-Styles technical content like code snippets, commands, system values, and identifiers, using a monospace
-typeface. Single size — reserve it for content that genuinely needs a code-like representation.
+Styles technical content like code snippets, commands, system values, and identifiers, using a monospace typeface. Single size — reserve it for content that genuinely needs a code-like representation.
 
-> **Color:** `<code>` and `<pre>` no longer force a muted text color by default (the library leaves `color` to
-> inherit the surrounding text color). If a muted appearance is desired, apply it explicitly, e.g.
-> `color: var(--bs-color-content-muted)`.
+> **Color:** `<code>` and `<pre>` no longer force a muted text color by default (the library leaves `color` to inherit the surrounding text color). If a muted appearance is desired, apply it explicitly, e.g. `color: var(--bs-color-content-muted)`.
 
 ### Inline code
 
@@ -183,5 +179,4 @@ if (document.getElementById('myId')) {
 
 ## Sizing text in custom components
 
-To size text in a custom component, use the `get-font-size()` composite-token mixin — see
-[Tokens](../foundation/tokens.md#composite-tokens).
+To size text in a custom component, use the `get-font-size()` composite-token mixin — see [Tokens](../foundation/tokens.md#composite-tokens).
