@@ -12,6 +12,10 @@ export default {
             },
         ],
     },
+    // Resolve @ouds/core from its sources so tests don't depend on a prior build.
+    moduleNameMapper: {
+        '^@ouds/core$': '<rootDir>/../core/src/index.ts',
+    },
     transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$)'],
     snapshotSerializers: [
         'jest-preset-angular/build/serializers/no-ng-attributes',
@@ -19,4 +23,20 @@ export default {
         'jest-preset-angular/build/serializers/html-comment',
     ],
     coverageDirectory: '../../coverage/libs/angular',
-}
+    collectCoverage: true,
+    collectCoverageFrom: [
+        'src/**/*.ts',
+        '!src/**/*.spec.ts',
+        '!src/**/*.stories.ts',
+        '!src/**/index.ts',
+        '!src/test-setup.ts',
+    ],
+    coverageThreshold: {
+        global: {
+            statements: 100,
+            branches: 100,
+            functions: 100,
+            lines: 100,
+        },
+    },
+};

@@ -1,4 +1,4 @@
-import nx from '@nx/eslint-plugin'
+import nx from '@nx/eslint-plugin';
 
 export default [
   ...nx.configs['flat/base'],
@@ -56,7 +56,11 @@ export default [
             },
             {
               sourceTag: 'lib:core',
-              onlyDependOnLibsWithTags: ['lib:web-orange', 'lib:web-orange-compact', 'lib:web-sosh'],
+              onlyDependOnLibsWithTags: [
+                'lib:web-orange',
+                'lib:web-orange-compact',
+                'lib:web-sosh',
+              ],
             },
             {
               sourceTag: 'app:react',
@@ -75,4 +79,4 @@ export default [
       ],
     },
   },
-]
+];

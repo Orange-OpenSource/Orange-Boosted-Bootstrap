@@ -1,0 +1,10 @@
+{
+  "$schema": "../../node_modules/oxlint/configuration_schema.json",
+  // Storybook config only (no Angular templates), so Oxlint is sufficient here.
+  // The @ouds/angular library itself stays on ESLint for angular-eslint template rules.
+  "extends": ["../../oxlint.base.json"],
+  "plugins": ["import"],
+  "env": {
+    "browser": true
+  }
+}
