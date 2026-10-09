@@ -83,9 +83,9 @@ const getRecommendedThemeFor = (searchedToken: IColorToken) => {
     }
 
     const recommendedTheme = allTokens
-      .filter(tokenData => tokenData.name.match(new RegExp(`\ouds-color-(surface|bg)-${searchedToken.colorName}-light`))).map(token => {
-      const themesArray = allTokens.filter(allToken => {
-        return allToken.name.match(`modes-on-((bg|surface)-)?${searchedToken.colorName}-(dark|light)`)
+      .filter(tokenData => tokenData.name.match(new RegExp(`\ouds-color-((surface|bg)-${searchedToken.colorName}|surface-status-${searchedToken.colorName}-emphasized)-light`))).map(token => {
+        const themesArray = allTokens.filter(allToken => {
+          return allToken.name.match(`modes-on-(((bg|surface)-)?${searchedToken.colorName}|status-${searchedToken.colorName}-emphasized)-(dark|light)`)
       }).map(token => token.compiledValue)
         if (parentTheme === 'root-inverted') {
           return themesArray[0].includes('dark')
@@ -176,11 +176,10 @@ if (basicClasses.length) {
             </th>
             <td>
               <div
-                class:list={['ratio-21x9', { 'bg-primary': multiTheme }]}
-                data-bs-theme={multiTheme ? 'light' : undefined}
+                class:list={['ratio-21x9', { 'bg-primary': multiTheme, [getUsage(token.colorName, colorPrefix).replace('.', '')]: !multiTheme }]}
               >
                 <figure
-                  class:list={['w-100 h-100 mb-none d-flex justify-content-center align-items-center', basicClasses.length > 0 ? { [ getUsage(token.colorName, colorPrefix).replace('.', '')]: token.colorName } : {}]}
+                  class:list={['w-100 h-100 mb-none d-flex justify-content-center align-items-center']}
                   style={getStyle(token, multiTheme ? 'light' : 'root')}
                   title={token.lightValue ?? ''}
                 >

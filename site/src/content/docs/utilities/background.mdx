@@ -78,6 +78,7 @@ Below are all the background utilities along with their recommended `[data-bs-th
   colorPrefix="ouds/color/bg/"
   tokenRegexp={/\$ouds-color-(bg-(?<colorName>.*)-light)/}
   getUsage={(colorName) => `.bg-${colorName}`}
+  getStyle={() => {}}
   multiTheme={false}
   displayRecommendedTheme={true}
   parentTheme="root"
@@ -86,6 +87,7 @@ Below are all the background utilities along with their recommended `[data-bs-th
   colorPrefix="ouds/color/surface/"
   tokenRegexp={/\$ouds-color-(surface-(?<colorName>.*)-light)/}
   getUsage={(colorName) => `.bg-surface-${colorName}`}
+  getStyle={() => {}}
   multiTheme={false}
   displayRecommendedTheme={true}
   parentTheme="root"
@@ -94,6 +96,7 @@ Below are all the background utilities along with their recommended `[data-bs-th
   colorPrefix="ouds/color/always/"
   tokenRegexp={/\$ouds-color-always-(?!on-)(?<colorName>.*)/}
   getUsage={(colorName) => `.bg-always-${colorName}`}
+  getStyle={() => {}}
   multiTheme={false}
   displayRecommendedTheme={true}
   parentTheme="root"
@@ -102,6 +105,7 @@ Below are all the background utilities along with their recommended `[data-bs-th
   colorPrefix="ouds/color/transparent/"
   basicClasses={['transparent']}
   getUsage={(colorName) => `.bg-${colorName}`}
+  getStyle={() => {}}
   multiTheme={false}
   displayRecommendedTheme={true}
   parentTheme="root"
@@ -113,6 +117,10 @@ We also provide opacity-based background classes, which should be used only in s
   colorPrefix="ouds/color/opacity/"
   tokenRegexp={/\$ouds-color-opacity-(?<colorName>(lower|lowest))-light/}
   getUsage={(colorName) => `.bg-opacity-${colorName}`}
+  getStyle={() => {}}
+  multiTheme={false}
+  displayRecommendedTheme={true}
+  parentTheme="root"
   enableCopyToClipboard={true}/>
 
 ## Inside a static color mode
@@ -134,6 +142,7 @@ For example in a `light` color mode context, dark backgrounds like `.bg-inverse-
         colorPrefix="ouds/color/bg/"
         tokenRegexp={/\$ouds-color-(bg-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-${colorName}`}
+        getStyle={() => {}}
         multiTheme={false}
         displayRecommendedTheme={true}
         parentTheme="light"
@@ -142,6 +151,7 @@ For example in a `light` color mode context, dark backgrounds like `.bg-inverse-
         colorPrefix="ouds/color/surface/"
         tokenRegexp={/\$ouds-color-(surface-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-surface-${colorName}`}
+        getStyle={() => {}}
         multiTheme={false}
         displayRecommendedTheme={true}
         parentTheme="light"
@@ -150,6 +160,7 @@ For example in a `light` color mode context, dark backgrounds like `.bg-inverse-
         colorPrefix="ouds/color/always/"
         tokenRegexp={/\$ouds-color-always-(?!on-)(?<colorName>.*)/}
         getUsage={(colorName) => `.bg-always-${colorName}`}
+        getStyle={() => {}}
         multiTheme={false}
         displayRecommendedTheme={true}
         parentTheme="light"
@@ -158,6 +169,7 @@ For example in a `light` color mode context, dark backgrounds like `.bg-inverse-
         colorPrefix="ouds/color/transparent/"
         basicClasses={['transparent']}
         getUsage={(colorName) => `.bg-${colorName}`}
+        getStyle={() => {}}
         multiTheme={false}
         displayRecommendedTheme={true}
         parentTheme="light"
@@ -166,6 +178,7 @@ For example in a `light` color mode context, dark backgrounds like `.bg-inverse-
         colorPrefix="ouds/color/opacity/"
         tokenRegexp={/\$ouds-color-opacity-(?<colorName>(lower|lowest))-light/}
         getUsage={(colorName) => `.bg-opacity-${colorName}`}
+        getStyle={() => {}}
         multiTheme={false}
         displayRecommendedTheme={true}
         parentTheme="light"
@@ -185,6 +198,7 @@ With a `dark` color mode context, light backgrounds like `.bg-inverse-high` will
         colorPrefix="ouds/color/bg/"
         tokenRegexp={/\$ouds-color-(bg-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-${colorName}`}
+        getStyle={() => {}}
         multiTheme={false}
         displayRecommendedTheme={true}
         parentTheme="dark"
@@ -193,6 +207,7 @@ With a `dark` color mode context, light backgrounds like `.bg-inverse-high` will
         colorPrefix="ouds/color/surface/"
         tokenRegexp={/\$ouds-color-(surface-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-surface-${colorName}`}
+        getStyle={() => {}}
         multiTheme={false}
         displayRecommendedTheme={true}
         parentTheme="dark"
@@ -201,6 +216,7 @@ With a `dark` color mode context, light backgrounds like `.bg-inverse-high` will
         colorPrefix="ouds/color/always/"
         tokenRegexp={/\$ouds-color-always-(?!on-)(?<colorName>.*)/}
         getUsage={(colorName) => `.bg-always-${colorName}`}
+        getStyle={() => {}}
         multiTheme={false}
         displayRecommendedTheme={true}
         parentTheme="dark"
@@ -209,6 +225,7 @@ With a `dark` color mode context, light backgrounds like `.bg-inverse-high` will
         colorPrefix="ouds/color/transparent/"
         basicClasses={['transparent']}
         getUsage={(colorName) => `.bg-${colorName}`}
+        getStyle={() => {}}
         multiTheme={false}
         displayRecommendedTheme={true}
         parentTheme="dark"
@@ -217,6 +234,7 @@ With a `dark` color mode context, light backgrounds like `.bg-inverse-high` will
         colorPrefix="ouds/color/opacity/"
         tokenRegexp={/\$ouds-color-opacity-(?<colorName>(lower|lowest))-light/}
         getUsage={(colorName) => `.bg-opacity-${colorName}`}
+        getStyle={() => {}}
         multiTheme={false}
         displayRecommendedTheme={true}
         parentTheme="dark"
@@ -238,6 +256,7 @@ The following examples demonstrate the proper use of `[data-bs-theme]` in dynami
         colorPrefix="ouds/color/bg/"
         tokenRegexp={/\$ouds-color-(bg-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-${colorName}`}
+        getStyle={() => {}}
         multiTheme={false}
         displayRecommendedTheme={true}
         parentTheme="root-inverted"
@@ -246,6 +265,7 @@ The following examples demonstrate the proper use of `[data-bs-theme]` in dynami
         colorPrefix="ouds/color/surface/"
         tokenRegexp={/\$ouds-color-(surface-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-surface-${colorName}`}
+        getStyle={() => {}}
         multiTheme={false}
         displayRecommendedTheme={true}
         parentTheme="root-inverted"
@@ -254,6 +274,7 @@ The following examples demonstrate the proper use of `[data-bs-theme]` in dynami
         colorPrefix="ouds/color/always/"
         tokenRegexp={/\$ouds-color-always-(?!on-)(?<colorName>.*)/}
         getUsage={(colorName) => `.bg-always-${colorName}`}
+        getStyle={() => {}}
         multiTheme={false}
         displayRecommendedTheme={true}
         parentTheme="root-inverted"
@@ -262,6 +283,7 @@ The following examples demonstrate the proper use of `[data-bs-theme]` in dynami
         colorPrefix="ouds/color/transparent/"
         basicClasses={['transparent']}
         getUsage={(colorName) => `.bg-${colorName}`}
+        getStyle={() => {}}
         multiTheme={false}
         displayRecommendedTheme={true}
         parentTheme="root-inverted"
@@ -270,6 +292,7 @@ The following examples demonstrate the proper use of `[data-bs-theme]` in dynami
         colorPrefix="ouds/color/opacity/"
         tokenRegexp={/\$ouds-color-opacity-(?<colorName>(lower|lowest))-light/}
         getUsage={(colorName) => `.bg-opacity-${colorName}`}
+        getStyle={() => {}}
         multiTheme={false}
         displayRecommendedTheme={true}
         parentTheme="root-inverted"
@@ -282,15 +305,22 @@ The following examples demonstrate the proper use of `[data-bs-theme]` in dynami
 
 The following colored backgrounds are designed for specific use cases and can only accommodate a limited set of components, such as buttons, links, and text elements. For accessibility reasons, we need to remove the color of these components this is achieved by the colored variants of [buttons]([[docsref:/components/buttons#colored-background]]) and [links]([[docsref:/components/links#on-colored-background]]).
 
-
-  <ColorTable
-    colorPrefix="ouds/color/surface/brand/"
-    tokenRegexp={/\$ouds-color-(surface-brand-(?<colorName>.*)-light)/}
-    getUsage={(colorName) => `.bg-surface-brand-${colorName}`} />
-  <ColorTable
-    colorPrefix="ouds/color/surface/status/"
-    tokenRegexp={/\$ouds-color-(surface-status-(?<colorName>.*)-emphasized-light)/}
-    getUsage={(colorName) => `.bg-surface-status-${colorName}-emphasized`} />
+<ColorTable
+  tokenRegexp={/\$ouds-color-(surface-(?<colorName>brand-.*)-light)/}
+  getUsage={(colorName) => `.bg-surface-${colorName}`}
+  getStyle={() => {}}
+  multiTheme={false}
+  parentTheme="root"
+  displayRecommendedTheme={true}
+  enableCopyToClipboard={true} />
+<ColorTable
+  tokenRegexp={/\$ouds-color-(surface-status-(?<colorName>.*)-emphasized-light)/}
+  getUsage={(colorName) => `.bg-surface-status-${colorName}-emphasized`}
+  getStyle={() => {}}
+  multiTheme={false}
+  parentTheme="root"
+  displayRecommendedTheme={true}
+  enableCopyToClipboard={true} />
 
 ## Multiple backgrounds
 

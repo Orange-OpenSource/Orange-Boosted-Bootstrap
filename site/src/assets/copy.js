@@ -75,7 +75,6 @@ function _onSuccess(event) {
 }
 
 function _onError(event) {
-  console.log(event)
   const modifierKey = /mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
   const fallbackMsg = `Press ${modifierKey}C to copy`
   const tooltipBtn = oudsWeb.Tooltip.getInstance(event.trigger)
