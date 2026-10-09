@@ -9,6 +9,7 @@ toc: true
 types:
   - Tag
   - Input tag
+  - Categorical tag
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
@@ -21,7 +22,7 @@ import { getVersionedDocsPath } from '@libs/path'
 
 ### Component types
 
-<ul class="list-unstyled row row-cols-1 sm:row-cols-2">
+<ul class="list-unstyled row row-cols-1 sm:row-cols-3">
   <li class="col">
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
@@ -31,6 +32,18 @@ import { getVersionedDocsPath } from '@libs/path'
       </div>
       <div class="card-body border-default border-thin border-top">
         <a class="stretched-link" href="#tag">Tag</a> is a UI element that shows brief information, such as a label, keyword, or category.
+      </div>
+    </div>
+  </li>
+  <li class="col">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
+          <p class="tag tag-categorical-1">Categorical tag</p>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top">
+        <a class="stretched-link" href="#categorical-tag">Categorical tag</a> is a UI element that visually differentiates non-functional categories using distinct categorical colors.
       </div>
     </div>
   </li>
@@ -49,11 +62,9 @@ import { getVersionedDocsPath } from '@libs/path'
   </li>
 </ul>
 
+### Approach
+
 For both types of tag, OUDS Web has a common basic `.tag` class that sets up default styles.
-
-<Example showToolbar={false} code={`<p class="tag">Tag</p>`} />
-
-<Example showToolbar={false} code={`<button type="button" class="tag tag-input">Input tag<span class="visually-hidden">Remove this tag</span></button>`} />
 
 ### Accessibility
 
@@ -421,6 +432,182 @@ Tags can be added side by side. They require horizontal and vertical spacing bet
     <li class="tag">Label 4</li>
     <li class="tag">Label 5</li>
     <li class="tag">Label 6</li>
+  </ul>`} />
+
+## [[comp]] Categorical tag
+
+A categorical tag is a UI element that visually differentiates non-functional categories using distinct categorical colors.
+
+A categorical tag does not support any interaction. It can represent information such as promotions, events, benefits, or other locally defined categories.
+
+### Variants
+
+The Category property defines the categorical color used by the component.
+Categories are identified by numbers 1 to 5 because the actual color may vary depending on the active theme, product or local market guidelines. The number identifies a reusable color slot. It does not represent priority, hierarchy, severity or functional status.
+
+<Callout name="warning-color-assistive-technologies" />
+
+<Example buttonLabel="categorical tag variants" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Categories">
+
+    <li class="tag tag-categorical-1">Category 1</li>
+
+    <li class="tag tag-categorical-2">Category 2</li>
+
+    <li class="tag tag-categorical-3">Category 3</li>
+
+    <li class="tag tag-categorical-4">Category 4</li>
+
+    <li class="tag tag-categorical-5">Category 5</li>
+
+  </ul>`} />
+
+#### Icon
+
+To display an icon in categorical tags, add the icon inside the categorical tag, with a `.tag-icon` class.
+
+<Callout type="info" name="info-icons-svg-sprite" />
+
+<Callout type="warning">
+  Since icons in tags are always next to some text, they are purely decorative and should be hidden from assistive technologies using `aria-hidden="true"`, as demonstrated in our examples. [Read more about tags accessibility here](#accessibility).
+</Callout>
+
+<Example buttonLabel="categorical tags with icons" code={`<ul class="list-unstyled d-flex column-gap-xsmall" aria-label="Categorical tags with icons">
+
+    <li class="tag tag-categorical-1">
+      <svg aria-hidden="true" class="tag-icon">
+        <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
+      </svg>
+      Label
+    </li>
+
+    <li class="tag tag-categorical-1">
+      <span class="si-settings tag-icon" aria-hidden="true"></span>
+      Settings
+    </li>
+
+  </ul>`} />
+
+#### Bullet
+
+To add a bullet in the tag, add a `<span>` with a class `.tag-bullet` inside the tag.
+
+<Example buttonLabel="categorical tag with bullet" code={`<p class="tag tag-categorical-1">
+    <span class="tag-bullet"></span>
+    Label
+  </p>`} />
+
+#### Rounded corner
+
+By default, categorical tags have rounded corners. To display categorical tags with squared corners, add the `.rounded-none` utility class to the tag.
+
+<Example buttonLabel="categorical tag with rounded corner" code={`<p class="tag tag-categorical-1 rounded-none">
+    Label
+  </p>`} />
+
+### States
+
+#### Disabled
+
+The disabled categorical tag should only be used in a disabled context, inside an interactive element that has been disabled, such as a clickable card. If the categorical tag has been added a `.disabled` class, or is inside an element with a `.disabled` class it will look dimmed, whatever its status or appearance.
+
+<Example buttonLabel="disabled categorical tag" code={`<div class="disabled mb-medium">
+    <p><span class="tag tag-categorical-1">Disabled</span> Some text</p>
+  </div>
+
+  <p class="disabled"><span class="tag tag-categorical-1">Disabled</span> Some text</p>
+
+  <p><span class="tag tag-categorical-1 disabled">Disabled</span> Some text</p>`} />
+
+#### Loading
+
+The loading state of a categorical tag indicates that an action is currently processing or taking place. This state provides feedback to users, enhancing user experience.
+
+To make an animated loading state categorical tag, you will add in your standard categorical tag:
+- An animated `<svg>`, with the class `.tag-loader`.
+- A status message `<span>`: the message must be updated regularly in order to be vocalized by screen readers.
+
+For example, before loading, your tag could be like this:
+
+  <Example buttonLabel="loading categorical tag" code={`<p class="tag tag-categorical-1">
+    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="tag-loader" aria-hidden="true">
+      <circle class="tag-loader-inner" cx="20" cy="20" r="15"></circle>
+    </svg>
+    <span role="status" class="visually-hidden d-none">Loading</span>
+    Label
+  </p>`} />
+
+When the loading starts, you will have to:
+  - Add the class `.loading` to the tag to provide the appropriate styles and animation.
+  - Remove the `.d-none` from the status message `<span>`.
+  - Update regularly the status message `<span>` containing the loading message.
+
+At the end of the loading, you should:
+  - Remove the class `.loading` to restore the categorical tag’s look.
+  - Set a final status message in `<span>`, indicating the loading has ended (so we don’t add again `.d-none` on this status message).
+
+You can see a similar live example with buttons with the full JavaScript code on our [loading buttons live example]([[docsref:/examples/loading-buttons/]]).
+
+<Example buttonLabel="currently loading categorical tag" code={`<p class="tag tag-categorical-1 loading">
+    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="tag-loader" aria-hidden="true">
+      <circle class="tag-loader-inner" cx="20" cy="20" r="15"></circle>
+    </svg>
+    <span role="status" class="visually-hidden">Loading</span>
+    Label
+  </p>`} />
+
+#### Skeleton
+
+<SkeletonRedirect component="categorical tag" />
+
+<Example buttonLabel="categorical tag skeleton" code={`<div aria-busy="true" inert>
+    <p class="tag tag-categorical-1">Categorical tag</p>
+  </div>`} />
+
+### Sizes
+
+To display a small categorical tag, add the class `.tag-small` to the tag.
+
+<Example buttonLabel="small categorical tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Mobile coverage">
+    <li class="tag tag-categorical-1 tag-small">Communication</li>
+    <li class="tag tag-categorical-2 tag-small">
+      <span class="tag-bullet"></span>
+      Finance
+    </li>
+    <li class="tag tag-categorical-3 tag-small">
+      <svg aria-hidden="true" class="tag-icon">
+        <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
+      </svg>
+      Promotion
+    </li>
+    <li class="tag tag-categorical-4 tag-small">
+        <span class="si-settings tag-icon" aria-hidden="true"></span>
+        Work
+    </li>
+    <li class="tag tag-categorical-5 tag-small loading">
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="tag-loader" aria-hidden="true">
+        <circle class="tag-loader-inner" cx="20" cy="20" r="15"></circle>
+      </svg>
+      <span role="status" class="visually-hidden">Loading</span>
+      ...
+    </li>
+  </ul>`} />
+
+### Layout
+
+Categorical tags can be placed in a semantic list. Use flexbox with horizontal and vertical gaps to space tags and let them wrap when needed.
+
+<Example buttonLabel="categorical tag layout" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Categories">
+
+    <li class="tag tag-categorical-1">Category 1</li>
+
+    <li class="tag tag-categorical-2">Category 2</li>
+
+    <li class="tag tag-categorical-3">Category 3</li>
+
+    <li class="tag tag-categorical-4">Category 4</li>
+
+    <li class="tag tag-categorical-5">Category 5</li>
+
   </ul>`} />
 
 ## [[comp]] Input tag
