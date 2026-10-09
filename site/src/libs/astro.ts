@@ -38,7 +38,7 @@ const sitemapExcludes = [
   `/${getConfig().brand}/docs/${getConfig().docs_version}/components/chip`,
   `/${getConfig().brand}/docs/${getConfig().docs_version}/forms`,
   `/${getConfig().brand}/docs/${getConfig().docs_version}/helpers/screen-readers`,
-  `/${getConfig().brand}/docs/${getConfig().docs_version}/migration`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/update-guide`,
   `/${getConfig().brand}/docs/${getConfig().docs_version}/utilities`,
   `/${getConfig().brand}/docs/${getConfig().docs_version}/about`
 ]
