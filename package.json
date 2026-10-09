@@ -100,7 +100,7 @@
     "@astrojs/mdx": "^7.0.3",
     "@astrojs/prism": "^4.0.2",
     "@astrojs/sitemap": "^3.7.4",
-    "@babel/cli": "^7.29.7",
+    "@babel/cli": "^8.0.6",
     "@babel/core": "^7.29.7",
     "@babel/preset-env": "^7.29.7",
     "@docsearch/js": "^4.7.0",
