@@ -238,25 +238,34 @@ $modal-transition-dimension: -3rem !default;
   @include get-font-size("heading-medium");
 }
 
-.modal-icon-positive,
-.modal-icon-negative,
-.modal-icon-info {
-  --#{$prefix}modal-icon: var(--#{$prefix}alert-error-icon);
-  --#{$prefix}modal-icon-color: #{$ouds-color-content-status-negative};
-
+:is(.modal-icon-positive, .modal-icon-negative, .modal-icon-info, .modal-icon-warning) {
   position: relative;
   width: var(--#{$prefix}icon-small-with-heading-small);
   height: var(--#{$prefix}icon-small-with-heading-small);
+  color: var(--#{$prefix}modal-icon-color);
 
-  &::before {
+  &::before,
+  &::after {
     position: absolute;
     inset: 0;
     display: block;
-    color: var(--#{$prefix}modal-icon-color);
     content: "";
+  }
+
+  &::before {
     background-color: currentcolor;
     mask-image: escape-svg(var(--#{$prefix}modal-icon));
   }
+
+  &::after {
+    background-color: var(--#{$prefix}modal-icon-internal-color);
+    mask-image: escape-svg(var(--#{$prefix}modal-icon-internal));
+  }
+}
+
+.modal-icon-negative {
+  --#{$prefix}modal-icon: var(--#{$prefix}alert-error-icon);
+  --#{$prefix}modal-icon-color: #{$ouds-color-content-status-negative};
 }
 
 .modal-icon-positive {
@@ -269,10 +278,16 @@ $modal-transition-dimension: -3rem !default;
   --#{$prefix}modal-icon-color: #{$ouds-color-content-status-info};
 }
 
+.modal-icon-warning {
+  --#{$prefix}modal-icon: var(--#{$prefix}alert-warning-icon);
+  --#{$prefix}modal-icon-color: var(--#{$prefix}icon-color-content-status-warning-external-shape);
+  --#{$prefix}modal-icon-internal: var(--#{$prefix}alert-warning-internal-icon);
+  --#{$prefix}modal-icon-internal-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
+}
+
 .modal-body {
   flex-grow: 1;
-  padding: 0 var(--#{$prefix}modal-padding-inline) calc(var(--#{$prefix}modal-body-footer-padding-bottom) + var(--#{$prefix}modal-padding-bottom));
-  margin-block-start: var(--#{$prefix}modal-body-padding-top);
+  padding: var(--#{$prefix}modal-body-padding-top) var(--#{$prefix}modal-padding-inline) calc(var(--#{$prefix}modal-body-footer-padding-bottom) + var(--#{$prefix}modal-padding-bottom));
   overflow-y: auto;
 
   &:not(:has(.modal-footer)) > :last-child {

@@ -340,7 +340,7 @@ You can display an icon to the left of the title. It can be used either as a dec
 
 ### Functional modals
 
-You can implement functional modal dialogs using the functional variants of the icons and buttons. Use `.modal-icon-negative`, `.modal-icon-positive`, or `.modal-icon-info` for the icon container.
+You can implement functional modal dialogs using the functional variants `.modal-icon-negative`, `.modal-icon-positive`, `.modal-icon-info`, or `.modal-icon-warning` for the icon container.
 
 <Example buttonLabel="modal dialog negative" code={`<dialog id="modalDialogNegative" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogNegativeTitle" closedby="any">
     <div class="modal-header">
@@ -361,11 +361,11 @@ You can implement functional modal dialogs using the functional variants of the 
     </div>
   </dialog>
 
-  <button type="button" class="btn btn-default" commandfor="modalDialogNegative" command="show-modal">
+  <button type="button" class="btn btn-default m-small" commandfor="modalDialogNegative" command="show-modal">
     Open negative modal
-  </button>`} />
+  </button>
 
-<Example buttonLabel="modal dialog success" code={`<dialog id="modalDialogSuccess" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogSuccessTitle" closedby="any">
+  <dialog id="modalDialogSuccess" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogSuccessTitle" closedby="any">
     <div class="modal-header">
       <div class="d-flex align-items-center gap-scaled-small">
         <div class="modal-icon-positive"><p class="visually-hidden">Alert</p></div>
@@ -383,11 +383,11 @@ You can implement functional modal dialogs using the functional variants of the 
     </div>
   </dialog>
 
-  <button type="button" class="btn btn-default" commandfor="modalDialogSuccess" command="show-modal">
+  <button type="button" class="btn btn-default m-small" commandfor="modalDialogSuccess" command="show-modal">
     Open success modal
-  </button>`} />
+  </button>
 
-<Example buttonLabel="modal dialog info" code={`<dialog id="modalDialogInfo" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogInfoTitle" closedby="any">
+  <dialog id="modalDialogInfo" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogInfoTitle" closedby="any">
     <div class="modal-header">
       <div class="d-flex align-items-center gap-scaled-small">
         <div class="modal-icon-info"><p class="visually-hidden">Alert</p></div>
@@ -405,8 +405,30 @@ You can implement functional modal dialogs using the functional variants of the 
     </div>
   </dialog>
 
-  <button type="button" class="btn btn-default" commandfor="modalDialogInfo" command="show-modal">
+  <button type="button" class="btn btn-default m-small" commandfor="modalDialogInfo" command="show-modal">
     Open info modal
+  </button>
+
+  <dialog id="modalDialogWarning" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogWarningTitle" closedby="any">
+    <div class="modal-header">
+      <div class="d-flex align-items-center gap-scaled-small">
+        <div class="modal-icon-warning"><p class="visually-hidden">Warning</p></div>
+        <h3 id="modalDialogWarningTitle" class="modal-title">No item selected</h3>
+      </div>
+      <button type="button" class="btn btn-close" commandfor="modalDialogWarning" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" commandfor="modalDialogWarning" command="close">Ok</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default m-small" commandfor="modalDialogWarning" command="show-modal">
+    Open warning modal
   </button>`} />
 
 ### Close button
@@ -603,20 +625,20 @@ The actions focus order should follow a logical sequence, by default it follows 
 
 By default the action buttons are full-width on smaller screens. You can deactivate the full-width behavior using `.w-auto` on the action buttons.
 
-<Example buttonLabel="modal dialog full-width buttons" code={`<dialog id="modalDialogFullWidthButtons" class="modal-base modal-dialog" aria-labelledby="modalDialogFullWidthButtonsTitle" closedby="any">
+<Example buttonLabel="modal dialog without full-width buttons" code={`<dialog id="modalDialogNoFullWidthButtons" class="modal-base modal-dialog" aria-labelledby="modalDialogNoFullWidthButtonsTitle" closedby="any">
     <div class="modal-header">
-      <h3 id="modalDialogFullWidthButtonsTitle" class="modal-title">Modal title</h3>
+      <h3 id="modalDialogNoFullWidthButtonsTitle" class="modal-title">Modal title</h3>
     </div>
     <div class="modal-body">
       <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met.</p>
       <div class="modal-footer">
-        <button type="button" class="btn btn-strong w-auto" commandfor="modalDialogFullWidthButtons" command="close">Confirm</button>
-        <button type="button" class="btn btn-minimal w-auto" commandfor="modalDialogFullWidthButtons" command="close">Abort</button>
+        <button type="button" class="btn btn-strong w-auto" commandfor="modalDialogNoFullWidthButtons" command="close">Confirm</button>
+        <button type="button" class="btn btn-minimal w-auto" commandfor="modalDialogNoFullWidthButtons" command="close">Abort</button>
       </div>
     </div>
   </dialog>
 
-  <button type="button" class="btn btn-default" commandfor="modalDialogFullWidthButtons" command="show-modal">
+  <button type="button" class="btn btn-default" commandfor="modalDialogNoFullWidthButtons" command="show-modal">
     Open modal without full-width buttons
   </button>`} />
 
@@ -702,6 +724,12 @@ You can check the responsive behavior on the following example by resizing your 
 ## Interactivity
 
 In order to open a dialog, you need to use either [invoker commands](#invoker-commands) or [JavaScript](#javascript).
+
+When using `showModal()` or invoker commands on a `<dialog>` element, we benefit from built-in accessibility features such as keyboard navigation, focus management, and screen reader support, close on <kbd>Esc</kbd> key press. We do not need to implement these features manually.
+
+<Callout type="warning">
+  Remember to always provide an explicit and accessible way to close the dialog, such as a close, cancel, or confirmation button.
+</Callout>
 
 ### Invoker commands
 

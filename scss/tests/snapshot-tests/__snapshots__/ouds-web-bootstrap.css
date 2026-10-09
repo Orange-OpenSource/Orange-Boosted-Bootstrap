@@ -12795,32 +12795,54 @@ ol.bullet-list > li > ol > li > ol > li::before {
   letter-spacing: var(--bs-font-letter-spacing-heading-medium);
 }
 
-.modal-alert-icon {
-  --bs-modal-icon: var(--bs-alert-error-icon);
-  --bs-modal-icon-color: var(--bs-color-content-status-negative);
+:is(.modal-icon-positive, .modal-icon-negative, .modal-icon-info, .modal-icon-warning) {
   position: relative;
   width: var(--bs-icon-small-with-heading-small);
   height: var(--bs-icon-small-with-heading-small);
+  color: var(--bs-modal-icon-color);
 }
-.modal-alert-icon::before {
+:is(.modal-icon-positive, .modal-icon-negative, .modal-icon-info, .modal-icon-warning)::before, :is(.modal-icon-positive, .modal-icon-negative, .modal-icon-info, .modal-icon-warning)::after {
   position: absolute;
   inset: 0;
   display: block;
-  color: var(--bs-modal-icon-color);
   content: "";
+}
+:is(.modal-icon-positive, .modal-icon-negative, .modal-icon-info, .modal-icon-warning)::before {
   background-color: currentcolor;
   -webkit-mask-image: var(--bs-modal-icon);
   mask-image: var(--bs-modal-icon);
 }
-.modal-alert-icon.modal-success {
+:is(.modal-icon-positive, .modal-icon-negative, .modal-icon-info, .modal-icon-warning)::after {
+  background-color: var(--bs-modal-icon-internal-color);
+  -webkit-mask-image: var(--bs-modal-icon-internal);
+  mask-image: var(--bs-modal-icon-internal);
+}
+
+.modal-icon-negative {
+  --bs-modal-icon: var(--bs-alert-error-icon);
+  --bs-modal-icon-color: var(--bs-color-content-status-negative);
+}
+
+.modal-icon-positive {
   --bs-modal-icon: var(--bs-alert-success-icon);
   --bs-modal-icon-color: var(--bs-color-content-status-positive);
 }
 
+.modal-icon-info {
+  --bs-modal-icon: var(--bs-alert-info-icon);
+  --bs-modal-icon-color: var(--bs-color-content-status-info);
+}
+
+.modal-icon-warning {
+  --bs-modal-icon: var(--bs-alert-warning-icon);
+  --bs-modal-icon-color: var(--bs-icon-color-content-status-warning-external-shape);
+  --bs-modal-icon-internal: var(--bs-alert-warning-internal-icon);
+  --bs-modal-icon-internal-color: var(--bs-icon-color-content-status-warning-internal-shape);
+}
+
 .modal-body {
   flex-grow: 1;
-  padding: 0 var(--bs-modal-padding-inline) calc(var(--bs-modal-body-footer-padding-bottom) + var(--bs-modal-padding-bottom));
-  margin-block-start: var(--bs-modal-body-padding-top);
+  padding: var(--bs-modal-body-padding-top) var(--bs-modal-padding-inline) calc(var(--bs-modal-body-footer-padding-bottom) + var(--bs-modal-padding-bottom));
   overflow-y: auto;
 }
 .modal-body:not(:has(.modal-footer)) > :last-child {
