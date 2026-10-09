@@ -1,22 +1,26 @@
 {
-  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "rootDir": "../..",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "jsx": "preserve",
     "jsxImportSource": "vue",
     "resolveJsonModule": true,
-    "verbatimModuleSyntax": false
+    "verbatimModuleSyntax": false,
+    "types": [
+      "vite/client"
+    ]
   },
   "files": [],
   "include": [],
   "references": [
     {
-      "path": "./tsconfig.lib.json"
+      "path": "./tsconfig.spec.json"
     },
     {
-      "path": "./tsconfig.spec.json"
+      "path": "./tsconfig.storybook.json"
     }
-  ]
+  ],
+  "extends": "../../tsconfig.base.json"
 }

@@ -4,7 +4,7 @@ Vue 3 component library for OUDS Web (Orange Unified Design System), part of the
 
 ## Status
 
-🚧 Early stage — this library currently ships a single `HelloWorld` component as a working scaffold (Nx-managed lint/test/build pipeline). See [ARCHITECTURE.md](./ARCHITECTURE.md) for conventions and the planned styling approach.
+🚧 Early stage — this library currently ships a `Button` component and an `OudsProvider` (theme, brand, and rounded-corner settings, exposed to descendants through `useOuds()`). See [ARCHITECTURE.md](./ARCHITECTURE.md) for conventions and the planned styling approach.
 
 ## Installation
 
@@ -16,11 +16,13 @@ npm install @ouds/vue
 
 ```vue
 <script setup lang="ts">
-import { HelloWorld } from '@ouds/vue'
+import { Button, OudsProvider } from '@ouds/vue'
 </script>
 
 <template>
-  <HelloWorld name="Orange" />
+  <OudsProvider brand="orange" theme="light">
+    <Button label="Save" variant="strong" @click="save" />
+  </OudsProvider>
 </template>
 ```
 
