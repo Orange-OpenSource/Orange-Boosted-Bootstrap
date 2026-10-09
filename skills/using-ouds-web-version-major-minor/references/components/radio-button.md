@@ -98,6 +98,10 @@ Use flex utilities on a container inside the fieldset. Limit to 3 items with sho
 
 Add `.component-max-width` to `.radio-button-item`.
 
+## Accessibility
+
+Keep radio buttons and meaningful icons physically adjacent to their descriptive labels to maintain a clear visual hierarchy and help Assistive Technology users understand their relationship without navigating large areas of whitespace. Use `.component-max-width` when needed to control the component width.
+
 ## States
 
 ### Disabled

@@ -69,6 +69,12 @@ They are implemented using `.checkbox-item` and `.control-item-*` classes, [see 
 
 As checkboxes are almost always grouped in a list, they should be enclosed in a `<fieldset> ` element with a `.control-items-list` class, this will handle automatic error text display when one of the control items input is invalid; you can add a `<legend>` element as a title for the list [read more](#fieldset-legend). It is also possible to use a `<ul>` list in place of the `<fieldset>` (and `<li>`s for the items) but the error text display will be up to you [see an example](#with-ul). If the checkbox is not part of a group and you need the automatic error text display, you can enclose it inside a `.checkbox-item-container` [read more](#unique).
 
+### Accessibility
+
+<Callout type="info">
+  To maintain a clear visual hierarchy and ensure Assistive Technology users do not have to scroll back and forth across large areas of whitespace to understand what an action does, keep actions and meaningful icons physically adjacent to their descriptive labels. Make use of our [component `max-width`](#max-width) utility to control the width of your components if needed.
+</Callout>
+
 ## Variants
 
 ### Divider

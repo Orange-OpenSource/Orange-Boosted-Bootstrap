@@ -86,6 +86,10 @@ Add `.control-item-reverse` to `.switch-item`.
 
 Add `.component-max-width` to `.switch-item`.
 
+## Accessibility
+
+Keep switches and meaningful icons physically adjacent to their descriptive labels to maintain a clear visual hierarchy and help Assistive Technology users understand their relationship without navigating large areas of whitespace. Use `.component-max-width` when needed to control the component width.
+
 ## States
 
 ### Disabled

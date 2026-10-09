@@ -202,6 +202,7 @@ Optional text below `.item-container`, using `.item-helper`. If the item is a na
 
 ## Accessibility
 
+- Keep actions and meaningful icons physically adjacent to their descriptive labels to maintain a clear visual hierarchy and help Assistive Technology users understand their relationship without navigating large areas of whitespace. Use `.component-max-width` when needed to control the component width.
 - For an important page navigation, wrap the navigation items in `<nav aria-label="...">`.
 - For a complex navigation item (multiple text elements), link them together with `[aria-labelledby]` on the interactive element, pointing to the ids of every text element that labels the link.
 - If there is no interactive element inside, consider [wrapping the entire `.item-container` in an `<a>`](#wrapping-link) instead of adding `.item-interactive` on a sub-element.
