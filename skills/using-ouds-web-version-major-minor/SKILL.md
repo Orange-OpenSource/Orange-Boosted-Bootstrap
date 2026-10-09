@@ -110,7 +110,6 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 ### Foundation
 
 - [Approach](references/foundation/approach.md) - Design principles
-- [Typography](references/foundation/typography.md) - Headings, body text, display, font mixins
 - [Colors](references/foundation/colors.md) - Available raw colors
 - [Color modes](references/foundation/color-modes.md) - Light/dark/root/root-inverted themes
 - [Tokens](references/foundation/tokens.md) - Raw/semantic/composite/component token architecture
@@ -157,6 +156,7 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 - [Table](references/components/table.md) - Opt-in table styling (draft component)
 - [Text area](references/components/text-area.md) - Multiline inputs
 - [Text input](references/components/text-input.md) - Single-line inputs
+- [Typography](references/components/typography.md) - Headings (+ heading marker), display, body, label, code
 
 ### Not yet documented (do not invent markup)
 

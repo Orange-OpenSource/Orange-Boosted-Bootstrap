@@ -55,14 +55,35 @@ toc: true
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.back` has been removed in favor of `.link-previous` after being deprecated in v1.5.0. Read more in our [links page]([[docsref:/components/links#with-chevron]]).
 
+#### Typography
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Heading has been implemented, and `.marker` class has been added for 'orange' and 'orange-compact' themes. Read more in our [typography/heading paragraph]([[docsref:/components/typography#heading]]).
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Display has been implemented. Read more in our [typography/display paragraph]([[docsref:/components/typography#display]]).
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Body has been implemented. Read more in our [typography/body paragraph]([[docsref:/components/typography#body]]).
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Label has been implemented. Read more in our [typography/label paragraph]([[docsref:/components/typography#label]]).
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Code has been implemented. Read more in our [typography/code paragraph]([[docsref:/components/typography#code]]).
+
 ### Tools
 
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> OUDS Web's AI agent skills now have a [dedicated repository](https://github.com/Orange-OpenSource/ouds-web-skills). To install or update them, run `npx skills add Orange-OpenSource/ouds-web-skills`.
 
+### Sass
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `_type.scss` has been renamed to `_typography.scss` for more consistency. You will need to change this name if you create your own custom import.
+
+### Reboot
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.blockquote` class has been removed, you can still use `<blockquote>` instead. Read more in our [reboot page]([[docsref:/foundation/reboot]]).
+
 ### Dual mode
 
-1. Update `@ouds/web-common` and `@ouds/web-[theme]` to v1.5.0.
+1. Update `@ouds/web-common` and `@ouds/web-[theme]` to v1.6.0.
 2. Remove `@import "boosted/scss/dropdown";` from the Boosted custom import stack.
+3. Change `@import "@ouds/web-common/scss/type";` to `@import "@ouds/web-common/scss/typography";` in the OUDS Web custom import stack.
 
 ## v1.5.0 [[version-changelog-link]]
 
@@ -191,7 +212,7 @@ toc: true
 
 #### Text
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Labels have been added to font size text utilities : `.fs-lxl`, `.fs-ll`, `.fs-lm`, `.fs-ls` are now available. Read more in our [typography page]([[docsref:foundation/typography#regular-texts]]).
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Labels have been added to font size text utilities : `.fs-lxl`, `.fs-ll`, `.fs-lm`, `.fs-ls` are now available. Read more in our [typography page]([[docsref:utilities/text#font-size]]).
 
 ### CSS and Sass variables
 
@@ -2552,7 +2573,7 @@ toc: true
 
 ### Sass mixins
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]([[docsref:/foundation/typography#sass-mixins]]) for more details.
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]([[docsref:/utilities/text]]) for more details. {/* TODO text to adapt and link to change */ }
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `color-mode({mode}, {root}, {inverted-mode})` mixin.
 
