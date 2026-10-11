@@ -1,0 +1,22 @@
+{
+  "name": "OUDS Code",
+  "id": "ouds-code-web",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html",
+  "editorType": [
+    "figma",
+    "dev"
+  ],
+  "capabilities": [
+    "codegen"
+  ],
+  "documentAccess": "dynamic-page",
+  "codegenLanguages": [
+    {
+      "label": "OUDS Web",
+      "value": "html"
+    }
+  ],
+  "permissions": []
+}
