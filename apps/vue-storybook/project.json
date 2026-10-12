@@ -40,7 +40,13 @@
         "ci": {
           "quiet": true
         }
-      }
+      },
+      "dependsOn": [
+        {
+          "projects": ["@ouds/vue"],
+          "target": "build"
+        }
+      ]
     },
     "static": {
       "executor": "@nx/web:file-server",
