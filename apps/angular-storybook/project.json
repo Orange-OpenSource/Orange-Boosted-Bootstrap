@@ -75,7 +75,13 @@
         "ci": {
           "quiet": true
         }
-      }
+      },
+      "dependsOn": [
+        {
+          "projects": ["@ouds/core", "@ouds/angular"],
+          "target": "build"
+        }
+      ]
     },
     "static": {
       "executor": "@nx/web:file-server",
