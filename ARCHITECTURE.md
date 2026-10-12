@@ -7,7 +7,7 @@ This document is the big picture of the repository: what the Nx projects are, ho
 The repository hosts the Orange Unified Design System (OUDS) implementations for the web, in two families that share a repository but not a release cycle:
 
 - **OUDS Web** (`libs/web`): a fork of Bootstrap that ships CSS and JavaScript, one theme package per brand (Orange, Orange Compact, Sosh).
-- **The RAV libraries** (`libs/react`, `libs/vue`, `libs/angular`): React, Vue 3, and Angular component libraries, with a shared framework-agnostic package (`libs/core`). They are versioned and published independently of OUDS Web. They are currently minimal scaffolds that validate the build, lint, and test pipelines.
+- **The RAV libraries** (`libs/react`, `libs/vue`, `libs/angular`): React, Vue 3, and Angular component libraries, with a shared framework-agnostic package (`libs/core`). They are versioned and published independently of OUDS Web. They are at an early stage: each ships a `Button` and an `OudsProvider` (theme, brand, and rounded-corner settings) on top of `@ouds/core`, with build, lint, and test pipelines at a 100% coverage threshold.
 
 An npm-workspace monorepo hosts them, and [Nx](https://nx.dev) orchestrates tasks, caching, and import boundaries. Root `npm run` scripts delegate to `npx nx run <project>:<target>`.
 
@@ -41,7 +41,7 @@ An npm-workspace monorepo hosts them, and [Nx](https://nx.dev) orchestrates task
 @ouds/angular ──▶ @ouds/core        @ouds/angular-storybook ──▶ @ouds/angular + @ouds/web-orange
 ```
 
-Package-level dependencies and Nx-level imports are not the same thing. The framework libraries depend on `@ouds/core` at runtime. `@ouds/core` reads the brand `package.json` files only to inline version numbers at build time. The framework libraries do not yet depend on OUDS Web's CSS; when they start to, they will use a published npm dependency, not the monorepo sources (see [`libs/react/ARCHITECTURE.md`](libs/react/ARCHITECTURE.md) for the reasoning).
+Package-level dependencies and Nx-level imports are not the same thing. The framework libraries depend on `@ouds/core` at runtime. `@ouds/core` reads the brand `package.json` files only to inline version numbers at build time. The framework libraries have no package dependency on OUDS Web's CSS: `OudsProvider` calls `@ouds/core`'s `loadBrandCSS`, which injects a `<link>` to the brand stylesheet on the jsDelivr CDN at runtime. If they start to depend on OUDS Web directly, they will use a published npm dependency, not the monorepo sources (see [`libs/react/ARCHITECTURE.md`](libs/react/ARCHITECTURE.md) for the reasoning). The Storybook apps read the `@ouds/web-orange` version for their toolbar label, and the Angular one also injects its built CSS as a global style.
 
 ## Dependency rules
 
@@ -93,13 +93,14 @@ Nx task defaults are in `nx.json` (`lint` and `test` are cached; `css`, `js`, an
 
 - `@ouds/core`, `@ouds/react`, and `@ouds/vue` build with Vite library mode (`@nx/vite:build`) into `dist/libs/<lib>`, producing ESM, CJS, and type declarations.
 - `@ouds/angular` builds with ng-packagr (`@nx/angular:package`).
-- `@ouds/react` and `@ouds/vue` declare `build` with `dependsOn: ["^build"]`, because their type declarations resolve against the built `@ouds/core` output rather than its sources. `@ouds/angular` has no such dependency declared today.
+- `@ouds/react`, `@ouds/vue`, and `@ouds/angular` declare `build` with `dependsOn: ["^build"]`, so `@ouds/core` is built first. React and Vue need it because their type declarations resolve against the built `@ouds/core` output rather than its sources. `@ouds/angular-storybook` additionally lists `@ouds/core` and `@ouds/angular` in its own `dependsOn`, because webpack resolves `@ouds/angular` from `node_modules`, whose `exports` point at build output.
 
 **Storybook apps** (one `AGENTS.md` per app)
 
-- Storybook 10, one app per framework, rendering the stories that live next to each component in `libs/<framework>/`. Only `@ouds/react-storybook` declares `build` as depending on its library's `build`; for Vue and Angular, build the library first (`npm run vue:build` / `npm run angular:build`).
+- Storybook 10, one app per framework, rendering the stories that live next to each component in `libs/<framework>/`. Each app's `build` target depends on its library's `build` (Angular also on `@ouds/core`), so a clean checkout builds in one command.
 - Each app's `.storybook/manager.ts` sets the shared OUDS theme (`@ouds/storybook-theme`) and imports `.storybook/toolbar-addon.ts`, a manager addon that adds a read-only toolbar label with the library, `@ouds/web-orange`, and framework versions. The versions are read from `package.json` files in the manager bundle; they do not come from the preview's `globalTypes`.
 - The preview (`.storybook/preview.*`) holds the decorators and the theme, brand, and rounded-corners toolbar selectors.
+- **Deployment:** the docs site and the Storybooks are one Netlify site. `npm run netlify` builds the docs and the OUDS Web Storybook into `libs/web/_site` (`/storybook`), then `storybook:rav:build` builds the three RAV Storybooks and `storybook:rav:copy` copies them into `libs/web/_site/<app-name>` (`react-storybook`, `vue-storybook`, `angular-storybook`). The copy must run last, because `docs-build` starts with `rm -rf _site`. The root `netlify.toml` publishes `libs/web/_site`.
 - `libs/web` has its own Storybook (`@storybook/html-vite`) generated from the built docs; it is separate from these apps.
 
 ## Testing
@@ -113,10 +114,14 @@ Nx task defaults are in `nx.json` (`lint` and `test` are cached; `css`, `js`, an
 | `@ouds/angular`                          | Jest through `jest-preset-angular` (Angular's Vitest runner needs an application `buildTarget`, which doesn't fit an ng-packagr library) |
 | Storybook apps                           | No tests                                                                                                                                 |
 
+## Continuous integration
+
+`.github/workflows/` runs the repository-wide checks as `lint.yml` (`npm run lint:all`), `test.yml` (`npm run test:all`), and `build.yml` (`npm run build:all`), all through Nx with its cache. The OUDS Web suites run in their own workflows: `js.yml` (JS build, Karma, and the migration CLI tests), `css.yml` (Sass tests and CSS snapshots), `docs.yml` (docs build, vnu, Prettier), `pa11y.yml`, `bundlewatch.yml`, and `browserstack.yml`.
+
 ## Versioning and releases
 
 - **OUDS Web**: all five `@ouds/web-*` packages share one version, bumped together by `npm run release-version`.
-- **RAV libraries and `@ouds/core`**: each is versioned independently with Nx release (`git-tag` version resolver, `disk` fallback for `@ouds/core`) and published through its `nx-release-publish` target from `dist/libs/<lib>`. `@ouds/react`, `@ouds/vue`, and `@ouds/angular` record changes in their own `CHANGELOG.md`; `@ouds/core` has none yet.
+- **RAV libraries and `@ouds/core`**: each is versioned independently. `@ouds/core`, `@ouds/react`, and `@ouds/angular` configure Nx release in `project.json` (`git-tag` version resolver, `disk` fallback) and publish through `nx-release-publish` from `dist/libs/<lib>`. `@ouds/vue` does not have that configuration yet (no `release` block or `packageRoot` override in its `project.json`); add it before the first release. `@ouds/react`, `@ouds/vue`, and `@ouds/angular` record changes in their own `CHANGELOG.md`; `@ouds/core` has none yet.
 - The Storybook apps are not published.
 
 ## Where to look next
@@ -128,3 +133,4 @@ Nx task defaults are in `nx.json` (`lint` and `test` are cached; `css`, `js`, an
 | Shared types and utilities                | [`libs/core/AGENTS.md`](libs/core/AGENTS.md)                                                       |
 | A framework library                       | `libs/<react\|vue\|angular>/ARCHITECTURE.md` and `AGENTS.md`                                       |
 | A Storybook app                           | `apps/<react\|vue\|angular>-storybook/AGENTS.md`                                                   |
+| Agent workflow skills                     | `.github/skills/` (OUDS Web only), listed in [`AGENTS.md`](AGENTS.md#agent-assets)                 |
