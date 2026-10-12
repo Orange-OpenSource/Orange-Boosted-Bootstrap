@@ -4,7 +4,7 @@ Scope: everything under `libs/vue/`. The root [`AGENTS.md`](../../AGENTS.md) sti
 
 ## Layout
 
-- `src/components/<name>/` — one kebab-case folder per component: `<name>.component.vue`, `<name>.model.ts` (props/emits types, extending the `Core<Name>Props` from `@ouds/core`), `<name>.spec.ts`, and `<name>.stories.ts` (e.g. `src/components/button/`).
+- `src/components/<name>/` — one kebab-case folder per component: `<name>.component.vue`, `<name>.model.ts` (props/emits types, extending the `Core<Name>Props` from `@ouds/core`), `<name>.spec.ts`, and `<name>.stories.ts` (e.g. `src/components/button/`). `ouds-provider/` also holds `use-ouds.ts` (the `useOuds()` composable) next to its model, which defines the injection key and defaults.
 - `src/index.ts` — barrel file and the package's only public API. Re-export every new component here as a named export (`export { default as Button } from './components/button/button.component.vue'`), plus its types (`export type { ButtonProps }`).
 - `vite.config.ts` — Vite library build (ES + CJS + UMD, `.d.ts` via `vite-plugin-dts`) and the Vitest `test` block, including coverage.
 - `.oxlintrc.json` — Oxlint config for this lib; extends the root `oxlint.base.json`.
@@ -35,11 +35,15 @@ Scope: everything under `libs/vue/`. The root [`AGENTS.md`](../../AGENTS.md) sti
 ## Boundaries
 
 - Tag `lib:vue`. `@nx/enforce-module-boundaries` (via `@nx/oxlint/boundaries-plugin`) forbids imports from `@ouds/web-*`, `@ouds/react`, and `@ouds/angular`.
-- Styling will come from a **published** OUDS Web package, not from `libs/web` sources (see `ARCHITECTURE.md`).
+- The brand CSS is loaded at runtime from the CDN through `@ouds/core`'s `loadBrandCSS` (called by `OudsProvider`). Any future build-time dependency on OUDS Web must be a **published** package, not `libs/web` sources (see `ARCHITECTURE.md`).
 - If you change `depConstraints` in `oxlint.base.json`, mirror the change in the root `eslint.config.mjs` and `libs/web/eslint.config.mjs`.
 
 ## Related
 
-- Workflow skill: [`vue-component-patterns`](../../.github/skills/vue-component-patterns/SKILL.md)
-- Shared RAV conventions: [`rav-conventions`](../../.github/skills/rav-conventions/SKILL.md)
+- Stories live next to the components and render in [`apps/vue-storybook`](../../apps/vue-storybook/AGENTS.md) (`npm run storybook:vue:serve`).
+- There are no RAV-specific agent skills; the skills in `.github/skills/` cover OUDS Web only.
 - Record notable changes in [`CHANGELOG.md`](./CHANGELOG.md) (Keep a Changelog).
+
+## Known issues
+
+- `project.json` has no `nx-release-publish` `packageRoot` override and no `release` block (unlike `@ouds/core`, `@ouds/react`, and `@ouds/angular`), so Nx release would publish from `libs/vue` instead of `dist/libs/vue` and has no `git-tag` version resolver configured. Add both before the first release.
