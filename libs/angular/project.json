@@ -20,7 +20,8 @@
           "tsConfig": "libs/angular/tsconfig.lib.json"
         }
       },
-      "defaultConfiguration": "production"
+      "defaultConfiguration": "production",
+      "dependsOn": ["^build"]
     },
     "lint": {
       "executor": "nx:run-commands",
