@@ -42,3 +42,6 @@ node_modules/
 /dist/
 /coverage/
 .angular/
+
+# Netlify Storybook deploy output (apps/*-storybook/netlify.toml)
+/public/
