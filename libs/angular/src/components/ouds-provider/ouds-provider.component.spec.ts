@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import type { Brand, Theme } from '@ouds/core';
 
 import { OudsProviderComponent } from './ouds-provider.component';
 import { OudsService } from './ouds.service';
@@ -21,8 +22,8 @@ import { OudsService } from './ouds.service';
     `,
 })
 class TestHostComponent {
-    readonly theme = signal<'light' | 'dark'>('light');
-    readonly brand = signal<'orange' | 'orange-compact' | 'sosh'>('orange');
+    readonly theme = signal<Theme>('light');
+    readonly brand = signal<Brand>('orange');
     readonly roundedButtons = signal(false);
     readonly roundedAlerts = signal(false);
     readonly roundedInputs = signal(false);
@@ -82,15 +83,15 @@ describe('OudsProviderComponent', () => {
         expect(component.wrapperClass).toBe(
             'use-rounded-corner-buttons use-rounded-corner-inputs',
         );
-        expect(getWrapper().classList.contains('use-rounded-corner-buttons')).toBe(
-            true,
-        );
-        expect(getWrapper().classList.contains('use-rounded-corner-alert')).toBe(
-            false,
-        );
-        expect(getWrapper().classList.contains('use-rounded-corner-inputs')).toBe(
-            true,
-        );
+        expect(
+            getWrapper().classList.contains('use-rounded-corner-buttons'),
+        ).toBe(true);
+        expect(
+            getWrapper().classList.contains('use-rounded-corner-alert'),
+        ).toBe(false);
+        expect(
+            getWrapper().classList.contains('use-rounded-corner-inputs'),
+        ).toBe(true);
     });
 
     it('should apply the alert rounded corner class', () => {
