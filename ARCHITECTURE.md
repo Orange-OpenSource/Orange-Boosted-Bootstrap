@@ -116,7 +116,7 @@ Nx task defaults are in `nx.json` (`lint` and `test` are cached; `css`, `js`, an
 
 ## Continuous integration
 
-`.github/workflows/` runs the repository-wide checks as `lint.yml` (`npm run lint:all`), `test.yml` (`npm run test:all`), and `build.yml` (`npm run build:all`), all through Nx with its cache. The OUDS Web suites run in their own workflows: `js.yml` (JS build, Karma, and the migration CLI tests), `css.yml` (Sass tests and CSS snapshots), `docs.yml` (docs build, vnu, Prettier), `pa11y.yml`, `bundlewatch.yml`, and `browserstack.yml`.
+`.github/workflows/` runs the repository-wide checks as `lint.yml` (`npm run lint:all`), `test.yml` (`npm run test:all`), and `build.yml` (`npm run build:all`), all through Nx. Each push trigger on `main` also covers the RAV libraries, the Storybook apps, and the root tooling files. The OUDS Web suites run in their own workflows: `js.yml` (JS build, Karma, and the migration CLI tests), `css.yml` (Sass tests and CSS snapshots), `docs.yml` (docs build, vnu, Prettier), `pa11y.yml`, `bundlewatch.yml`, and `browserstack.yml`.
 
 ## Versioning and releases
 

@@ -57,6 +57,27 @@ Run additional suites separately: `npm run css-test` for Sass True/Jasmine `*.te
 
 `libs/core`, `libs/react`, and `libs/vue` use Vitest 5 (`npm run core:test` / `react:test` / `vue:test`, a `vitest run --coverage` command target; V8 coverage reports land in `coverage/libs/<lib>`); the framework libraries enforce a 100% coverage threshold (statements, branches, functions, lines). `libs/angular` uses Jest via `jest-preset-angular` (`npm run angular:test`, same 100% threshold) because Angular's official Vitest runner currently requires an application `buildTarget`, incompatible with this `ng-packagr`-based library.
 
+## Adding a component to the RAV libraries
+
+Use `Button` as the reference implementation in each library. Components follow OUDS Web markup and class names (`btn`, `btn-<variant>`, …); check the matching OUDS Web component under `libs/web/` first. Work in this order, and keep the three frameworks' public props and behavior aligned:
+
+1. **Shared types in `@ouds/core`.** Add `libs/core/src/types/components/<name>/<name>.ts` with a `Core<Name>Props` type (framework-agnostic props only: no `children`, `onClick`, JSX, or Vue/Angular types), and export it from `libs/core/src/types/components/index.ts`. Reuse `Brand`, `Theme`, `SizeProp`, and `Variant` from `types/theming/theming.ts` instead of repeating their unions. `@ouds/core` must not import React, Vue, or Angular.
+2. **React** (`libs/react/src/components/<name>/`): `<name>.component.tsx` (a named `React.FC<<Name>Props>`), `<name>.model.ts` (`<Name>Props = Core<Name>Props & { … }`), `<name>.spec.tsx`, `<name>.stories.tsx`. Re-export the component and its model from `src/components/index.ts`.
+3. **Vue** (`libs/vue/src/components/<name>/`): `<name>.component.vue` (`<script setup lang="ts">`), `<name>.model.ts` (props extend `Core<Name>Props`, plus the emits interface), `<name>.spec.ts`, `<name>.stories.ts`. Export the component and its types from `libs/vue/src/index.ts`.
+4. **Angular** (`libs/angular/src/components/<name>/`): standalone `OnPush` `<name>.component.ts` with its `.html`/`.scss`, `<name>.component.spec.ts`, `<name>.stories.ts`, and an `index.ts` barrel. Add the folder to `src/components/index.ts`. Selectors are prefixed (`orange-<name>`).
+5. **Tests and stories.** Each library enforces 100% coverage (statements, branches, functions, lines), so write the specs together with the component. Stories use the title `Components/<Name>` and live next to the component; the Storybook apps pick them up automatically.
+6. **Run the checks** from the repository root before opening a PR:
+   - `npm run rav:lint && npm run rav:test && npm run rav:build`, plus `npm run core:test` if you touched `@ouds/core`.
+   - `npm run storybook:<react|vue|angular>:build` for each framework you changed.
+
+Rules for component code:
+
+- Never touch `window` or `document` when a module is loaded or while rendering. Only do it in effects, lifecycle hooks, or event handlers, and guard with `typeof document === 'undefined'` where a function can run on the server (see `loadBrandCSS`). This keeps the libraries usable with server-side rendering.
+- Don't add module-level side effects (registering global state, injecting styles on import). The libraries are meant to be tree-shakable.
+- A runtime dependency that stays external in the bundle (like `classnames` in `@ouds/react`) must be declared in that library's `package.json` `dependencies`, or `peerDependencies` when consumers must share a single copy (`react`, `vue`, `@angular/*`). Consumers get a "Cannot find module" error otherwise.
+- Don't import another framework library or OUDS Web sources; the lint boundary rules reject it.
+- Documentation: update the library's `README.md` and `CHANGELOG.md` when a component's public API changes.
+
 ## Commit & Pull Request Guidelines
 
 History commonly uses `feat(scope):`, `fix(scope):`, `chore(scope):`, and `doc:` prefixes. Keep commits focused. Follow `.github/CONTRIBUTING.md` and the relevant PR template: explain motivation and behavior, link issues with `Closes #123`, record validation, update documentation, and provide direct preview links. Target `main` and identify breaking changes.
