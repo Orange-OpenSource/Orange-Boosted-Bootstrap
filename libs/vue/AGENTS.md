@@ -6,7 +6,7 @@ Scope: everything under `libs/vue/`. The root [`AGENTS.md`](../../AGENTS.md) sti
 
 - `src/components/<name>/` — one kebab-case folder per component: `<name>.component.vue`, `<name>.model.ts` (props/emits types, extending the `Core<Name>Props` from `@ouds/core`), `<name>.spec.ts`, and `<name>.stories.ts` (e.g. `src/components/button/`). `ouds-provider/` also holds `use-ouds.ts` (the `useOuds()` composable) next to its model, which defines the injection key and defaults.
 - `src/index.ts` — barrel file and the package's only public API. Re-export every new component here as a named export (`export { default as Button } from './components/button/button.component.vue'`), plus its types (`export type { ButtonProps }`).
-- `vite.config.ts` — Vite library build (ES + CJS + UMD, `.d.ts` via `vite-plugin-dts`) and the Vitest `test` block, including coverage.
+- `vite.config.ts` — Vite library build (ES + CJS, `.d.ts` via `vite-plugin-dts`) and the Vitest `test` block, including coverage.
 - `.oxlintrc.json` — Oxlint config for this lib; extends the root `oxlint.base.json`.
 - `project.json` — Nx targets `build` and `test`; `lint` is inferred by `@nx/oxlint` and intentionally not declared.
 - `tsconfig.json` (shared Vue compiler options; solution file that only references the other two), `tsconfig.lib.json` (library sources, used by `vite-plugin-dts`), `tsconfig.spec.json` (specs and stories, adds Vitest types) — the same layout as `@ouds/react` and `@ouds/core`.
@@ -15,7 +15,7 @@ Scope: everything under `libs/vue/`. The root [`AGENTS.md`](../../AGENTS.md) sti
 
 - `npm run vue:lint` — Oxlint (inferred `lint` target). It also lints the `<script>` blocks inside `.vue` files.
 - `npm run vue:test` — `vitest run --coverage` (Vitest 5, jsdom, `@vue/test-utils`). Reports go to `coverage/libs/vue`. Pass extra flags after `--`, e.g. `npx nx run @ouds/vue:test -- --reporter=verbose`.
-- `npm run vue:build` — Vite library build into `dist/libs/vue`. Type checking is skipped in this target (`skipTypeCheck: true`).
+- `npm run vue:build` — Vite library build into `dist/libs/vue`. The target type-checks with `vue-tsc` (a root devDependency, pinned; an `overrides` entry in the root `package.json` lets it satisfy `@nx/vue`'s `^2` peer range).
 
 ## Code conventions
 

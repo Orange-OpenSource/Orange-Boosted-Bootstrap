@@ -9,8 +9,7 @@
       "executor": "@nx/vite:build",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "outputPath": "dist/libs/vue",
-        "skipTypeCheck": true
+        "outputPath": "dist/libs/vue"
       },
       "dependsOn": ["^build"]
     },
