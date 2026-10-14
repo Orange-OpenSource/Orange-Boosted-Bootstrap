@@ -5,8 +5,8 @@ Scope: everything under `libs/react/`. The root [`AGENTS.md`](../../AGENTS.md) s
 ## Layout
 
 - `src/components/<name>/` — one kebab-case folder per component, holding `<name>.component.tsx`, `<name>.model.ts` (props type, extending the `Core<Name>Props` from `@ouds/core`), a co-located `<name>.spec.tsx`, and `<name>.stories.tsx` (e.g. `src/components/button/`). Today: `button/` and `ouds-provider/` (which also exports the `useOuds` hook and its props/context types; no separate model file).
-- `src/components/index.ts` → `src/index.ts` — barrel files and the package's only public API. Re-export every new component through them.
-- `vite.config.ts` — Vite library build (ESM + CJS + `.d.ts` via `vite-plugin-dts`) and the Vitest `test` block, including coverage.
+- `src/components/index.ts` → `src/index.ts` — barrel files and the package's only public API. Re-export every new component and its model (`export * from './<name>/<name>.component'` and `'./<name>/<name>.model'`) through them. `src/index.ts` also re-exports the `Brand` and `Theme` types from `@ouds/core`, which the Storybook preview uses.
+- `vite.config.ts` — Vite library build (ESM + CJS + `.d.ts` via `vite-plugin-dts`), `resolve.tsconfigPaths: true` (resolves the `@ouds/*` paths of `tsconfig.base.json`, so tests and the Storybook app read `@ouds/core` from its sources), and the Vitest `test` block, including coverage.
 - `.oxlintrc.json` — Oxlint config for this lib; extends the root `oxlint.base.json`.
 - `project.json` — Nx targets `build` and `test`; `lint` is inferred by `@nx/oxlint` and intentionally not declared.
 
@@ -42,3 +42,8 @@ Scope: everything under `libs/react/`. The root [`AGENTS.md`](../../AGENTS.md) s
 - Stories live next to the components and render in [`apps/react-storybook`](../../apps/react-storybook/AGENTS.md) (`npm run storybook:react:serve`).
 - There are no RAV-specific agent skills; the skills in `.github/skills/` cover OUDS Web only.
 - Record notable changes in [`CHANGELOG.md`](./CHANGELOG.md) (Keep a Changelog). Releases go through Nx release (`nx-release-publish`, git-tag versioning).
+
+## Known issues
+
+- The build no longer copies `README.md`, `CHANGELOG.md` and the other Markdown files into `dist/libs/react` (the `nxCopyAssetsPlugin` was removed from `vite.config.ts`), so the published package would have no README until that is added back or handled by the release step.
+- `src/components/button/button.module.scss` is a comment-only placeholder that no component imports. The build extracts no CSS and the package exports no `./style.css` (see `ARCHITECTURE.md`).

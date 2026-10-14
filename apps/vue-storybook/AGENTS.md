@@ -4,7 +4,7 @@ Scope: everything under `apps/vue-storybook/`. The root [`AGENTS.md`](../../AGEN
 
 ## Layout
 
-- `.storybook/main.ts` — Storybook 10 config (`@storybook/vue3-vite`, `docgen: 'vue-component-meta'`). It loads stories from `libs/vue/**/*.stories.@(js|jsx|ts|tsx|mdx)` and adds `nxViteTsPaths()` and `@vitejs/plugin-vue` via `viteFinal`.
+- `.storybook/main.ts` — Storybook 10 config (`@storybook/vue3-vite`, `docgen: 'vue-component-meta'`). It loads stories from `libs/vue/**/*.stories.@(js|jsx|ts|tsx|mdx)` and adds `@vitejs/plugin-vue` and `resolve.tsconfigPaths: true` (Vite's built-in support for the `@ouds/*` paths of `tsconfig.base.json`) via `viteFinal`.
 - `.storybook/preview.ts` — registers `OudsProvider` globally via `setup()`, defines a global decorator that wraps each story in `OudsProvider` (and sets `data-bs-theme`/`data-bs-brand` on `<html>`), toolbar `globalTypes` (theme, brand, rounded corners), `parameters`, and `tags: ['autodocs']`. The brand CSS is loaded by `OudsProvider` from the jsDelivr CDN (the `@ouds/web-orange` stylesheet import in this file is commented out), so stories need network access to look right.
 - `.storybook/manager.ts` — manager UI theme (`@ouds/storybook-theme/OrangeTheme.js` through `addons` from `storybook/manager-api`, same theme as `libs/web`; supports Storybook 9 and 10).
 - `.storybook/storybook.css` — Storybook-only styles.
