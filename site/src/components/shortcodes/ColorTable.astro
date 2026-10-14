@@ -197,7 +197,7 @@ if (basicClasses.length) {
               </div>
             </td>
             { displayRecommendedTheme && (<td class="w-25"><var>{getRecommendedThemeFor(token) ?? '—'}</var>
-              {enableCopyToClipboard && getRecommendedThemeFor(token) && (<button data-clipboard-text={'data-bs-theme=' + (getRecommendedThemeFor(token) )} data-bs-title="Copy class to clipboard" type="button" class="btn btn-minimal btn-icon btn-clipboard m-3xsmall">
+              {enableCopyToClipboard && getRecommendedThemeFor(token) && (<button data-clipboard-text={`data-bs-theme="${getRecommendedThemeFor(token)}"`} data-bs-title="Copy class to clipboard" type="button" class="btn btn-minimal btn-icon btn-clipboard m-3xsmall">
                 <svg aria-hidden="true">
                   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use>
                 </svg>
