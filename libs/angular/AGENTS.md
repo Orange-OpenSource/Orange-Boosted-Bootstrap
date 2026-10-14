@@ -7,7 +7,8 @@ Scope: everything under `libs/angular/`. The root [`AGENTS.md`](../../AGENTS.md)
 - `src/components/<name>/` — one kebab-case folder per component or feature, holding `<name>.component.ts`, its template and styles (`<name>.component.html`, `<name>.component.scss`), a co-located `<name>.component.spec.ts`, `<name>.stories.ts`, and an `index.ts` barrel (e.g. `src/components/button/`). `src/components/ouds-provider/` holds `OudsProviderComponent` and `OudsService` (with `OUDS_CONFIG` and `provideOuds()`), each with its spec.
 - `src/index.ts` — barrel file and the package's only public API (ng-packagr `entryFile`). It re-exports `src/components/index.ts`; add each new component folder's `index.ts` to that barrel.
 - `src/test-setup.ts` — Jest zone environment (`setupZoneTestEnv`).
-- `ng-package.json` — ng-packagr config; output goes to `dist/libs/angular` in Angular Package Format.
+- `ng-package.json` — ng-packagr config; output goes to `dist/libs/angular` in Angular Package Format. `allowedNonPeerDependencies` lists `@ouds/core`, the only runtime dependency besides `tslib`.
+- `package.json` — declares `@ouds/core` in `dependencies` and the Angular packages as `peerDependencies`. It has no hand-written `exports` or `types`: ng-packagr generates them (`module`, `typings`, `exports`) in `dist/libs/angular/package.json`, so don't add them by hand.
 - `jest.config.ts` — Jest via `jest-preset-angular`.
 - `eslint.config.mjs` — ESLint 9 flat config; extends the root `eslint.config.mjs` and adds `angular-eslint`.
 - `project.json` — explicit `build` (`@nx/angular:package`, `dependsOn: ["^build"]` so `@ouds/core` is built first), `lint` (`eslint . --cache`), `test` (`@nx/jest:jest`), and `nx-release-publish` targets, plus the Nx release settings.
@@ -28,7 +29,8 @@ This library stays on ESLint on purpose: Oxlint has no parser for Angular templa
 - Class names are PascalCase with a `Component` suffix (`ButtonComponent`); files are kebab-case (`button.component.ts`).
 - Selectors use the `orange` prefix, which ESLint enforces: kebab-case for elements (`orange-button`, `orange-ouds-provider`), camelCase for attribute directives (`orangeTooltip`).
 - Inputs mirror the shared `Core<Name>Props` from `@ouds/core` (e.g. `variant`, `isDisabled`, `isLoading`); the click output is named `clicked` so it doesn't shadow the native `click` event. Components use `ChangeDetectionStrategy.OnPush`.
-- `@ouds/core` is imported from the sources (`loadBrandCSS`, `Variant`, …); keep it in sync with the `dependencies` declared in `package.json` (see Known issues).
+- Shared types and helpers come from `@ouds/core` (`loadBrandCSS`, `Variant`, `Brand`, `Theme`, …). Use `Brand` and `Theme` instead of repeating their unions. Any new `@ouds/*` import must also be declared in `dependencies` and `allowedNonPeerDependencies`.
+- `src/index.ts` also re-exports the `Brand` and `Theme` types, which the Storybook preview uses.
 - `@angular/core` and `@angular/common` are `peerDependencies` — never bundle them.
 - No code formatter is configured for this library. Existing sources use 4-space indentation and trailing commas, which conflicts with `.editorconfig` (2 spaces). Match the file you are editing, and don't reformat unrelated code.
 
@@ -50,7 +52,3 @@ This library stays on ESLint on purpose: Oxlint has no parser for Angular templa
 - Stories live next to the components and render in [`apps/angular-storybook`](../../apps/angular-storybook/AGENTS.md) (`npm run storybook:angular:serve`; run `npm run angular:build` first).
 - There are no RAV-specific agent skills; the skills in `.github/skills/` cover OUDS Web only.
 - Record notable changes in [`CHANGELOG.md`](./CHANGELOG.md) (Keep a Changelog). Releases go through Nx release (`nx-release-publish`, git-tag versioning).
-
-## Known issues
-
-- `package.json` declares no `dependencies`, although `ButtonComponent` and `OudsProviderComponent` import `@ouds/core` (`@ouds/react` and `@ouds/vue` declare it as a dependency). Nx still sees the import, so `build` runs after `@ouds/core:build`, but the manifest ng-packagr writes to `dist/libs/angular/package.json` lists only `tslib` as a dependency, so consumers would not get `@ouds/core` installed until it is added to `dependencies`.

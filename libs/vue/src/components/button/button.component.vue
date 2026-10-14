@@ -51,14 +51,16 @@ const handleClick = () => {
             label
         }}</span>
         <slot />
-        <svg
-            viewBox="0 0 40 40"
-            xmlns="http://www.w3.org/2000/svg"
-            class="loader"
-            aria-hidden="true"
-        >
-            <circle class="loader-inner" cx="20" cy="20" r="17" />
-        </svg>
+        <template v-if="isLoading">
+            <svg
+                viewBox="0 0 40 40"
+                xmlns="http://www.w3.org/2000/svg"
+                class="loader"
+                aria-hidden="true"
+            >
+                <circle class="loader-inner" cx="20" cy="20" r="17" />
+            </svg>
+        </template>
         <span
             role="status"
             :id="statusId"

@@ -1,4 +1,3 @@
-import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import type { StorybookConfig } from '@storybook/react-vite';
 import { mergeConfig } from 'vite';
 
@@ -30,7 +29,11 @@ const config: StorybookConfig = {
                             plugin?.name !== 'nx-copy-assets-plugin',
                     ),
             },
-            { plugins: [nxViteTsPaths()] },
+            {
+                resolve: {
+                    tsconfigPaths: true,
+                },
+            },
         ),
 };
 

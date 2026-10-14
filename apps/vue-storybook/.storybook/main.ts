@@ -1,4 +1,3 @@
-import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import type { StorybookConfig } from '@storybook/vue3-vite';
 import vue from '@vitejs/plugin-vue';
 import { mergeConfig } from 'vite';
@@ -18,7 +17,10 @@ const config: StorybookConfig = {
 
     viteFinal: async (config) =>
         mergeConfig(config, {
-            plugins: [nxViteTsPaths(), vue()],
+            plugins: [vue()],
+            resolve: {
+                tsconfigPaths: true,
+            },
         }),
 };
 
