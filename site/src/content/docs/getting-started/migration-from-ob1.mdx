@@ -16,6 +16,8 @@ This guide provides information on how to migrate from OB1 (latest release of v2
   ```bash
   npx @ouds/web-migrate --from=ob1 "src/**/*.{css,scss,html,vue}"
   ```
+
+  The CLI automatically replaces some classes and only emits a warning for others. Warnings point to components or classes that require a manual migration: please review them carefully.
 </Callout>
 
 Let’s start with the most obvious change you’ll notice: the name. **OB1 is now OUDS Web.**
@@ -81,7 +83,7 @@ Read more about the [font stack]([[docsref:/foundation/reboot#font-stack]]) for 
   - The breakpoints values have changed. Please refer to the [breakpoints’ documentation]([[docsref:/layout/breakpoints]]).
   - The default container to use is `.container-fluid` associated to `.container-max-width` instead of using `.site-width` as parent. Please refer to the [fluid containers’ documentation]([[docsref:/layout/containers#fluid-containers]]). The security margin value has changed.
   - Default gutter inside grid has been changed to have a fully responsive behavior. It should be a pretty transparent change for you.
-  - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|3xsmall|2xsmall|xsmall|small|medium|large|xlarge|2xlarge|3xlarge|4xlarge|5xlarge`. Proportional equivalence between `0` → `none`, `1` → `medium`, `2` → `xlarge`, `3` → `3xlarge`, `4` → `5xlarge`, `5` → no equivalence.
+  - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|3xsmall|2xsmall|xsmall|small|medium|large|xlarge|2xlarge|3xlarge|4xlarge|5xlarge`. Proportional equivalence between `0` → `none`, `1` → `medium`, `2` → `xlarge`, `3` → `3xlarge`, `4` → `4xlarge`, `5` → `5xlarge`.
 
 All responsive classes, helpers, and utilities have been updated accordingly to match the new breakpoints.
 
@@ -117,6 +119,10 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       - `.alert-success` → `.alert-positive`.
       - `.alert-danger` → `.alert-negative`.
       - `.alert-info` and `.alert-warning` stay the same.
+      - `.alert-heading` → `.alert-label`.
+      - `.alert-sm` and `.alert-dismissible` must be removed.
+
+      The CLI only replaces `.alert` (→ `.alert.alert-message`), `.alert-danger`, `.alert-success` and `.alert-heading`. All the other changes, including `.ob1-alert-title`, `.alert-content` and `.alert-icon`, and the OB1 in-line suggestion (`.ob1-inline-suggestion`), must be done manually.
 
     </details>
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> OB1's In-page alert (`.feedback`, `.feedback-title`, `.feedback-text`, `.feedback-button`) doesn't have a direct documented equivalent in OUDS Web yet. Please rely on the [alerts documentation]([[docsref:/components/alerts]]) and adapt the block alert variant to your layout in the meantime.
@@ -125,6 +131,8 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 ### Badges
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> New dedicated classes have been added to handle badges colors, states and sizes. The OUDS equivalent of OB1 badge is the Badge - count component, so you should use the new classes related to this component. Please check the [badges documentation]([[docsref:/components/badges]]) for more details.
+  - `.ob1-badge` → `.badge.badge-count.badge-positive`, `.ob1-badge-negative` → `.badge-negative`, `.ob1-badge-warning` → `.badge-warning`, `.ob1-badge-info` → `.badge-info`, `.ob1-badge-disabled` → `.badge-disabled`, `.ob1-badge-large` → `.badge-large`.
+  - `.ob1-badge-small` and `.ob1-badge-inverse` must be removed.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> New classes have been added to handle badges icons.
 
 ### Breadcrumb
@@ -137,7 +145,8 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.bullet-list`, `.bullet-list-default-color`, `.bullet-list-tick` and `.bullet-list-bare` classes have been added.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The class `.list` must be replaced by `.bullet-list`.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The class `.ob1-list-tick` must be handled differently as the tick marker is not available by default. Learn more about it in the [bullet list documentation]([[docsref:/components/bullet-list/#tick-marker]]).
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The class `.ob1-list-inverse` must be removed, it should be handled by using a `data-bs-theme` attribute on a parent element.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The class `.ob1-list-tick` is replaced by `.bullet-list-tick`, but the tick marker is not available by default and must be handled differently. Learn more about it in the [bullet list documentation]([[docsref:/components/bullet-list/#tick-marker]]).
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Native `<ul>`, `<ol>` and `<dl>` now have a `max-width` set to the variable `--bs-font-max-width-body-medium`.
 
 ### Buttons
@@ -182,6 +191,7 @@ You will have to make some extra Javascript to change the styles and update the 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> New standalone link component has been added. Use `.link` class to get it.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-dark` class for variant on colored backgrounds must be renamed to `.link-on-colored-bg`.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-arrow` class must be replaced by both `.link` and `.link-chevron` classes.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link` class must be replaced by `.link`.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-icon` class must be replaced by both `.link` and `.icon-link` classes.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-small` class must be replaced by `link-small`.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-reverse` class can be removed as it shoud be handled by using a `data-bs-theme` attribute on a parent element.
@@ -236,10 +246,13 @@ See [our new Items page]([[docsref:/components/items]]) for more information.
   - `.ob1-capsule` must be replaced by `.tag`, the positive status (by default in OB1) now needs the `.tag-positive` class.
   - `.ob1-capsule-negative` must be replaced by `.tag-negative`
   - `.ob1-capsule-warning` must be replaced by `.tag-warning`
-  - `.ob1-capsule-information` and `.ob1-capsule-reminder` can be removed. [Check tag documentation]([[docsref:/components/tags]]) to find the best status for replacement.
-  - `.ob1-capsule-disabled` must be replaced by `.disabled` on the element or a parent container.
+  - `.ob1-capsule-information` → `.tag-info`.
+  - `.ob1-capsule-reminder` → `.tag-muted`.
+  - `.ob1-capsule-disabled` → `.tag-disabled`.
   - `.ob1-capsule-small` and `.ob1-tag-small` must be replaced by `.tag-small`.
-  - All `.ob1-tag*` classes should be replaced by the new classes. [Check tag documentation]([[docsref:/components/tags]]) to find the best status for replacement.
+  - `.ob1-capsule-inverse` must be removed.
+  - `.ob1-tag` → `.tag.rounded-none`, `.ob1-tag-primary` → `.tag-warning`, `.ob1-tag-unavailable` → `.tag-muted`.
+  - `.ob1-tag-information` must be removed. `.ob1-tag-subscribed` must be migrated manually (the CLI only emits a warning). [Check tag documentation]([[docsref:/components/tags]]) to find the best status for replacement.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-tag-inverse` and `.ob1-capsule-inverse` classes can be removed as it shoud be handled by using a `data-bs-theme` attribute on a parent element.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> A tag can now contain a decorative bullet or an icon. New dedicated classes have been added to handle this.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> To get squared corners like in OB1's commercial tags, you can use `rounded-none` utility.
@@ -511,7 +524,15 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 ### Validation
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.was-validated` and `.is-invalid` have been removed, form validation is now based on `:user-invalid` for browser validation and `aria-invalid=true` for manual validation. See [form validation]([[docsref:/foundation/form-validation]]).
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.was-validated` and `.is-invalid` have been removed, form validation is now based on `:user-invalid` for browser validation and `aria-invalid=true` for manual validation. See [form validation]([[docsref:/foundation/form-validation]]). The CLI only emits a warning for `.was-validated`: `.is-invalid` is not detected and must be removed manually.
+
+### Other form components
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> The CLI emits a warning for the remaining OB1 form classes (`.ob1-form-group`, `.ob1-switch`, `.form-control`, `.form-select`, `.input-group`, `.btn-check`, `.form-floating`, `.form-text`, `.col-form-label`). These components have evolved a lot, please refer to their documentation to migrate them manually.
+
+### Other components
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> The CLI also emits a warning for OB1 Footer (`.footer-social`, `.footer-title-content`, `.footer-nav`), Skeleton (`.ob1-skeleton`) and Divider (`.separator`) classes. These components have evolved a lot, please refer to their [documentation]([[docsref:/components]]) to migrate them manually.
 
 ## Helpers
 
@@ -581,25 +602,30 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
   2. `.bg-white` → `.bg-always-white`
   3. `.bg-black` → `.bg-always-black`
   4. `.bg-primary` → `.bg-surface-brand-primary`
-  5. `.bg-primary-subtle` (that shouldn’t have been used) → `.bg-tertiary`
+  5. `.bg-primary-subtle` (that shouldn’t have been used) → `.bg-surface-brand-primary`
   6. `.bg-secondary` → `.bg-inverse-high` or in some rare cases `.bg-inverse-low`
-  7. `.bg-secondary-subtle` (that shouldn’t have been used) → `.bg-secondary`
+  7. `.bg-secondary-subtle` (that shouldn’t have been used) → `.bg-surface-inverse-high`
   8. `.bg-success` → `.bg-surface-status-positive-emphasized` or in some rare cases `.bg-surface-status-positive-muted`
   9. `.bg-success-subtle` (that shouldn’t have been used) → `.bg-surface-status-positive-muted`
   10. `.bg-danger` → `.bg-surface-status-negative-emphasized` or in some rare cases `.bg-surface-status-negative-muted`
   11. `.bg-danger-subtle` (that shouldn’t have been used) → `.bg-surface-status-negative-muted`
   12. `.bg-info` → `.bg-surface-status-info-emphasized` or in some rare cases `.bg-surface-status-info-muted`
-  13. `.bg-info-subtle` (that shouldn’t have been used) → `.bg-surface-status-positive-muted`
+  13. `.bg-info-subtle` (that shouldn’t have been used) → `.bg-surface-status-info-muted`
   14. `.bg-warning` → `.bg-surface-status-warning-emphasized`, `.bg-surface-status-accent-emphasized` or in some rare cases `.bg-surface-status-warning-muted`, `.bg-surface-status-accent-muted`
   15. `.bg-warning-subtle` (that shouldn’t have been used) → `.bg-surface-status-warning-muted` or `.bg-surface-status-accent-muted` depending on your context
   16. `.bg-body` → `.bg-primary`
   17. `.bg-body-secondary` → `.bg-secondary` or in some rare cases `.bg-opacity-lower` or `.bg-opacity-lowest`
-  18. `.bg-body-tertiary` (that shouldn’t have been used) → `.bg-secondary`
+  18. `.bg-body-tertiary` (that shouldn’t have been used) → `.bg-tertiary`
   19. `.bg-light` → `.bg-secondary` or in some rare cases `.bg-opacity-lower` or `.bg-opacity-lowest`
-  20. `.bg-light-subtle` (that shouldn’t have been used) → `.bg-secondary`
-  21. `.bg-dark` → `.bg-inverse-high` or `.bg-always-black` depending on your context
-  22. `.bg-dark-subtle` (that shouldn’t have been used) → `.bg-secondary`
-  23. `.bg-supporting-*` → To remove or replace with the appropriate background
+  20. `.bg-light-subtle` (that shouldn’t have been used) → `.bg-surface-secondary`
+  21. `.bg-dark` → `.bg-inverse-low` (or `.bg-inverse-high` / `.bg-always-black` depending on your context)
+  22. `.bg-dark-subtle` (that shouldn’t have been used) → `.bg-surface-inverse-low`
+  23. `.bg-supporting-*` → To remove or replace with the appropriate background (the CLI only emits a warning)
+  24. `.bg-primary2` → `.bg-surface-brand-tertiary`, `.bg-primary3` → `.bg-surface-brand-secondary`, `.bg-greige` → `.bg-tertiary`
+  25. `.bg-gray1` and `.bg-gray3` → `.bg-inverse-low`, `.bg-gray2` and `.bg-gray4` → `.bg-secondary`
+  26. `.bg-opacity-*` and `.bg-gradient` must be removed
+
+  The CLI emits a warning on every remaining `.bg-*` class: make sure the right `data-bs-theme` is attached.
 
   </details>
 
@@ -609,7 +635,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Border operative utilities: `.border-none`, `.border-top-none`, `.border-bottom-none`, `.border-start-none`, and `.border-end-none`.
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Border width utilities have been removed: `.border-0`, `.border-1`, `.border-2`, `.border-3`, `.border-4` and `.border-5`. Please check the new [border values]([[docsref:/utilities/border#width]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Border width utilities have been removed: `.border-0`, `.border-1`, `.border-2`, `.border-3`, `.border-4` and `.border-5`. The CLI replaces them with `.border-none` (0), `.border-thin` (1), `.border-medium` (2) , `.border-thick` (3) and `.border-thicker` (4 to 5). Please check the new [border values]([[docsref:/utilities/border#width]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Border width utilities: `.border-none`, `.border-thin`, `.border-medium`, `.border-thick`, and `.border-thicker`.
 
@@ -638,11 +664,14 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 - <details>
     <summary><span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Here are the modifications to apply in your websites:</summary>
 
-  1. `.border-primary` → `.border-brand-primary`
-  2. `.border-black` → `.border-always-black` or `.border-always-on-white` or `.border-on-brand-primary`
-  3. `.border-white` → `.border-always-white` or `.border-always-on-black`
-  4. All `.border-*-subtle` (that shouldn’t have been used) → `.border-default`
-  5. All the remaining `.border-*` → `.border-emphasized`
+  1. `.border-primary` → `.border-brand-primary`, `.border-primary2` → `.border-brand-secondary`
+  2. `.border-black` → `.border-always-black` (or `.border-always-on-white` / `.border-on-brand-primary` depending on your context)
+  3. `.border-white` → `.border-always-white` (or `.border-always-on-black` depending on your context)
+  4. All `.border-*-subtle` (that shouldn’t have been used) and `.border-light` → `.border-default`
+  5. `.border-success` → `.border-status-positive`, `.border-danger` → `.border-status-negative`, `.border-info` → `.border-status-info`, `.border-warning` → `.border-status-warning`
+  6. `.border-secondary` and `.border-dark` → `.border-emphasized`
+  7. `.border-gray1` and `.border-gray3` → `.border-emphasized`, `.border-gray2` and `.border-gray4` → `.border-default`
+  8. `.border-opacity-*` must be removed
 
   </details>
 
@@ -674,6 +703,9 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
   15. `.text-black-50` → `.text-muted`
   16. `.text-white-50` → `.text-muted`
   17. `.text-reset` stays the same
+  18. `.text-primary2` → `.text-brand-tertiary`
+  19. `.text-primary3` → `.text-brand-secondary`
+  20. `.text-opacity-*` must be removed, `.text-bg-*` should not have been used and must be migrated with corresponding background and text utilities.
 
   </details>
 
@@ -729,13 +761,13 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 ### Spacings
 
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> You might be able to transfer your spacing utilities following one of the two proposed methods (while keeping almost the rendering and at least the same proportion between spacings):
-  - Keep the previous behavior and getting one utility for another.
+  - Replace the Bootstrap numbers by their OUDS Web equivalent (this is what the CLI does automatically). The proportion between spacings is not strictly preserved, so check the rendering afterward.
     1. **0**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)0` → `$1none`
-    2. **1**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)1` → `$12xsmall`
-    3. **2**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)2` → `$1small`
-    4. **3**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)3` → `$1large`
-    5. **4**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)4` → `$12xlarge`
-    6. **5**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)5` → `$14xlarge`
+    2. **1**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)1` → `$1medium`
+    3. **2**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)2` → `$1xlarge`
+    4. **3**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)3` → `$13xlarge`
+    5. **4**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)4` → `$14xlarge`
+    6. **5**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)5` → `$15xlarge`
     7. **All numbers**: Search for `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)\d` and you shouldn’t have Bootstrap spacing utilities anymore
     {/* Next technique is almost unusable in practice */}
   - Change all the utilities using more precise utilities
@@ -859,11 +891,11 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
   - **Body**: `.fs-bl`, `.fs-bm`, `.fs-bs`
   - **Code**: `.fs-cm`
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Font weight text utilities `.fw-semibold` and `.fw-medium` have been removed.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Font weight text utility `.fw-semibold` has been removed and is replaced by `.fw-medium`.
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Line height text utilities `.lh-1`, `.lh-sm`, `.lh-base`, and `.lh-lg` have been removed, since our font references already have defined `line-height`s. You can still have them using `$enable-bootstrap-compatibility`.
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Line length text utilities `.ll-sm` and `.ll-md` have been removed, since there is already a default `max-width`.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Line length text utilities `.ll-sm` and `.ll-md` have been removed, since there is already a default `max-width`. The CLI only emits a warning: they must be removed manually. The same applies to `.update-font-size` (warning) and `.text-mw` (to remove).
 
 ## Examples
 
