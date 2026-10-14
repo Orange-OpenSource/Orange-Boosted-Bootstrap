@@ -1,4 +1,5 @@
 import { OudsProviderComponent, provideOuds } from '@ouds/angular';
+import type { Brand, Theme } from '@ouds/angular';
 import type { Preview } from '@storybook/angular';
 import { applicationConfig, moduleMetadata } from '@storybook/angular';
 
@@ -20,9 +21,8 @@ const preview: Preview = {
         (storyFn, context): any => {
             const rounded = context.globals['roundedCorners'] === 'on';
             const brand =
-                (context.globals['brand'] as
-                    'orange' | 'orange-compact' | 'sosh') ?? 'orange';
-            const theme = context.globals['theme'] ?? 'dark';
+                (context.globals['brand'] as Brand) ?? 'orange';
+            const theme = (context.globals['theme'] as Theme) ?? 'dark';
             const story = storyFn();
 
             document.documentElement.setAttribute('data-bs-theme', theme);

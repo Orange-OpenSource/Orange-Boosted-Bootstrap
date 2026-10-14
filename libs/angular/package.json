@@ -1,6 +1,9 @@
 {
   "name": "@ouds/angular",
   "version": "0.0.1",
+  "dependencies": {
+    "@ouds/core": "^0.0.1"
+  },
   "peerDependencies": {
     "@angular/common": "^22.0.0",
     "@angular/core": "^22.0.0"
@@ -25,17 +28,5 @@
     "rxjs": "^7.8.1",
     "zone.js": "~0.16.0"
   },
-  "sideEffects": false,
-  "types": "./index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.mjs",
-      "require": "./index.js"
-    },
-    "./style.css": {
-      "import": "./style.css",
-      "require": "./style.css"
-    }
-  }
+  "sideEffects": false
 }

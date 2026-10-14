@@ -12,15 +12,6 @@
         "project": "libs/angular/ng-package.json",
         "tsConfig": "libs/angular/tsconfig.lib.json"
       },
-      "configurations": {
-        "production": {
-          "tsConfig": "libs/angular/tsconfig.lib.json"
-        },
-        "development": {
-          "tsConfig": "libs/angular/tsconfig.lib.json"
-        }
-      },
-      "defaultConfiguration": "production",
       "dependsOn": ["^build"]
     },
     "lint": {

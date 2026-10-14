@@ -7,6 +7,7 @@ import {
     OnInit,
 } from '@angular/core';
 import { loadBrandCSS } from '@ouds/core';
+import type { Theme, Brand } from '@ouds/core';
 
 import { OudsService } from './ouds.service';
 
@@ -25,8 +26,8 @@ import { OudsService } from './ouds.service';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OudsProviderComponent implements OnChanges, OnInit {
-    @Input() theme: 'light' | 'dark' = 'light';
-    @Input() brand: 'orange' | 'orange-compact' | 'sosh' = 'orange';
+    @Input() theme: Theme = 'light';
+    @Input() brand: Brand = 'orange';
     @Input() roundedButtons = false;
     @Input() roundedAlerts = false;
     @Input() roundedInputs = false;

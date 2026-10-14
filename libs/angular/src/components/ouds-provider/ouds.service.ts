@@ -5,10 +5,11 @@ import {
     inject,
     Provider,
 } from '@angular/core';
+import type { Theme, Brand } from '@ouds/core';
 
 export interface OudsConfig {
-    theme?: 'light' | 'dark';
-    brand?: 'orange' | 'orange-compact' | 'sosh';
+    theme?: Theme;
+    brand?: Brand;
     roundedButtons?: boolean;
     roundedAlerts?: boolean;
     roundedInputs?: boolean;
@@ -18,8 +19,8 @@ export const OUDS_CONFIG = new InjectionToken<OudsConfig>('OudsConfig');
 
 @Injectable({ providedIn: 'root' })
 export class OudsService {
-    theme: 'light' | 'dark' = 'light';
-    brand: 'orange' | 'orange-compact' | 'sosh' = 'orange';
+    theme: Theme = 'light';
+    brand: Brand = 'orange';
     roundedButtons = false;
     roundedAlerts = false;
     roundedInputs = false;
