@@ -1,20 +1,16 @@
-import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
-export default defineConfig({
+export default defineConfig(() => ({
     root: __dirname,
     cacheDir: '../../node_modules/.vite/libs/vue',
-
     plugins: [
         vue(),
-        nxViteTsPaths(),
         dts({
             entryRoot: 'src',
             tsconfigPath: resolve(__dirname, 'tsconfig.lib.json'),
-            strictOutput: false,
             // Type-check against the built @ouds/core declarations (not its sources) and keep
             // `@ouds/core` as a bare import in the emitted .d.ts files.
             compilerOptions: {
@@ -27,6 +23,9 @@ export default defineConfig({
             aliasesExclude: [/^@ouds\/core/],
         }),
     ],
+    resolve: {
+        tsconfigPaths: true,
+    },
     build: {
         emptyOutDir: true,
         outDir: '../../dist/libs/vue',
@@ -34,7 +33,7 @@ export default defineConfig({
             entry: resolve(__dirname, 'src/index.ts'),
             name: '@ouds/vue',
             fileName: 'index',
-            formats: ['es', 'cjs'],
+            formats: ['es' as const, 'cjs' as const],
         },
         rollupOptions: {
             external: ['vue', /^@ouds\/core/],
@@ -64,4 +63,4 @@ export default defineConfig({
             },
         },
     },
-});
+}));

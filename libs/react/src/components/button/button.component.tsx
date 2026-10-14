@@ -42,14 +42,16 @@ export const Button: React.FC<ButtonProps> = ({
                 <span className='visually-hidden'>{label}</span>
             ) : null}
             {children}
-            <svg
-                viewBox='0 0 40 40'
-                xmlns='http://www.w3.org/2000/svg'
-                className='loader'
-                aria-hidden='true'
-            >
-                <circle className='loader-inner' cx='20' cy='20' r='17' />
-            </svg>
+            {isLoading ? (
+                <svg
+                    viewBox='0 0 40 40'
+                    xmlns='http://www.w3.org/2000/svg'
+                    className='loader'
+                    aria-hidden='true'
+                >
+                    <circle className='loader-inner' cx='20' cy='20' r='17' />
+                </svg>
+            ) : null}
             {/* Same markup as the OUDS Web loading button; a span live region is used on purpose. */}
             <span
                 // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role

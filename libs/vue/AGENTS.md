@@ -5,8 +5,8 @@ Scope: everything under `libs/vue/`. The root [`AGENTS.md`](../../AGENTS.md) sti
 ## Layout
 
 - `src/components/<name>/` — one kebab-case folder per component: `<name>.component.vue`, `<name>.model.ts` (props/emits types, extending the `Core<Name>Props` from `@ouds/core`), `<name>.spec.ts`, and `<name>.stories.ts` (e.g. `src/components/button/`). `ouds-provider/` also holds `use-ouds.ts` (the `useOuds()` composable) next to its model, which defines the injection key and defaults.
-- `src/index.ts` — barrel file and the package's only public API. Re-export every new component here as a named export (`export { default as Button } from './components/button/button.component.vue'`), plus its types (`export type { ButtonProps }`).
-- `vite.config.ts` — Vite library build (ES + CJS, `.d.ts` via `vite-plugin-dts`) and the Vitest `test` block, including coverage.
+- `src/index.ts` — barrel file and the package's only public API. Re-export every new component here as a named export (`export { default as Button } from './components/button/button.component.vue'`), plus its types (`export type { ButtonProps }`). It also re-exports the `Brand` and `Theme` types from `@ouds/core`, which the Storybook preview uses.
+- `vite.config.ts` — Vite library build (ES + CJS, `.d.ts` via `vite-plugin-dts`, `emptyOutDir`), `resolve.tsconfigPaths: true` (resolves the `@ouds/*` paths of `tsconfig.base.json`, so tests and the Storybook app read `@ouds/core` from its sources), and the Vitest `test` block, including coverage.
 - `.oxlintrc.json` — Oxlint config for this lib; extends the root `oxlint.base.json`.
 - `project.json` — Nx targets `build` and `test`; `lint` is inferred by `@nx/oxlint` and intentionally not declared.
 - `tsconfig.json` (shared Vue compiler options; solution file that only references the other two), `tsconfig.lib.json` (library sources, used by `vite-plugin-dts`), `tsconfig.spec.json` (specs and stories, adds Vitest types) — the same layout as `@ouds/react` and `@ouds/core`.
