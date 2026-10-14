@@ -7,6 +7,18 @@ on:
       - 'libs/web/js/**'
       - 'libs/web/scss/**'
       - 'libs/web/packages/**/scss/**'
+      - 'libs/core/**'
+      - 'libs/angular/**'
+      - 'libs/react/**'
+      - 'libs/vue/**'
+      - 'apps/**'
+      - 'tools/**'
+      - 'nx.json'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig.base.json'
+      - 'oxlint.base.json'
+      - 'eslint.config.mjs'
   pull_request:
     types: [opened, reopened, synchronize]
   workflow_dispatch:
