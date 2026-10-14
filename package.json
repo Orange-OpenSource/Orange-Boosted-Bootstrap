@@ -97,20 +97,22 @@
     "rav:test": "npx nx run-many -t test -p @ouds/angular,@ouds/react,@ouds/vue",
     "rav:lint": "npx nx run-many -t lint -p @ouds/angular,@ouds/react,@ouds/vue",
     "storybook:react:serve": "npx nx run @ouds/react-storybook:serve",
-    "storybook:react:build:dev": "npx nx run @ouds/react-storybook:build:development",
     "storybook:react:build": "npx nx run @ouds/react-storybook:build",
     "storybook:react:lint": "npx nx run @ouds/react-storybook:lint",
     "storybook:vue:serve": "npx nx run @ouds/vue-storybook:serve",
-    "storybook:vue:build:dev": "npx nx run @ouds/vue-storybook:build:development",
     "storybook:vue:build": "npx nx run @ouds/vue-storybook:build",
     "storybook:vue:lint": "npx nx run @ouds/vue-storybook:lint",
     "storybook:angular:serve": "npx nx run @ouds/angular-storybook:serve",
-    "storybook:angular:build:dev": "npx nx run @ouds/angular-storybook:build:development",
     "storybook:angular:build": "npx nx run @ouds/angular-storybook:build",
     "storybook:angular:lint": "npx nx run @ouds/angular-storybook:lint"
   },
   "dependencies": {
     "classnames": "2.5.1"
+  },
+  "overrides": {
+    "@nx/vue": {
+      "vue-tsc": "$vue-tsc"
+    }
   },
   "devDependencies": {
     "@angular-devkit/architect": ">=0.2200.0 <0.2300.0",
@@ -141,6 +143,7 @@
     "@storybook/react-vite": "10.6.1",
     "@storybook/vue3": "10.6.1",
     "@storybook/vue3-vite": "10.6.1",
+    "@types/jest": "^30.0.0",
     "@typescript-eslint/eslint-plugin": "^8.70.1",
     "@typescript-eslint/parser": "^8.70.1",
     "@vitejs/plugin-react": "^6.1.1",
@@ -157,6 +160,7 @@
     "storybook": "10.6.1",
     "typescript-eslint": "^8.70.1",
     "vite-plugin-dts": "^5.1.1",
-    "vitest": "^5.0.3"
+    "vitest": "^5.0.3",
+    "vue-tsc": "3.3.13"
   }
 }
