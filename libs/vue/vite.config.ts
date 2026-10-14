@@ -28,12 +28,13 @@ export default defineConfig({
         }),
     ],
     build: {
+        emptyOutDir: true,
         outDir: '../../dist/libs/vue',
         lib: {
             entry: resolve(__dirname, 'src/index.ts'),
             name: '@ouds/vue',
             fileName: 'index',
-            formats: ['es', 'cjs', 'umd'],
+            formats: ['es', 'cjs'],
         },
         rollupOptions: {
             external: ['vue', /^@ouds\/core/],
