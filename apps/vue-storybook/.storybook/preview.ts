@@ -2,6 +2,7 @@
 import './storybook.css';
 
 import { OudsProvider } from '@ouds/vue';
+import type { Brand, Theme } from '@ouds/vue';
 import type { Decorator, Preview } from '@storybook/vue3';
 import { setup } from '@storybook/vue3';
 
@@ -63,10 +64,9 @@ export const globalTypes: Preview['globalTypes'] = {
 export const decorators: Decorator[] = [
     (story, context): any => {
         const rounded = context.globals['roundedCorners'] === 'on';
-        const theme = (context.globals['theme'] as 'light' | 'dark') ?? 'light';
+        const theme = (context.globals['theme'] as Theme) ?? 'light';
         const brand =
-            (context.globals['brand'] as
-                'orange' | 'orange-compact' | 'sosh') ?? 'orange';
+            (context.globals['brand'] as Brand) ?? 'orange';
 
         document.documentElement.setAttribute('data-bs-theme', theme);
         document.documentElement.setAttribute('data-bs-brand', brand);

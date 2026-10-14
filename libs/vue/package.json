@@ -12,9 +12,6 @@
     "@vue/test-utils": "^2.5.1",
     "@vue/language-core": "^3.3.11"
   },
-  "repository": {
-    "url": "https://gitlab.tech.orange/frontend-hub/ouds-rav/tree/main/libs/vue"
-  },
   "main": "./index.js",
   "types": "./index.d.ts",
   "exports": {
