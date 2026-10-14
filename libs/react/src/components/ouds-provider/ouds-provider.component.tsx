@@ -1,9 +1,10 @@
 import { loadBrandCSS } from '@ouds/core';
+import type { Theme, Brand } from '@ouds/core';
 import React, { createContext, useContext, useEffect } from 'react';
 
 export type OudsProviderProps = {
-    theme?: 'light' | 'dark';
-    brand?: 'orange' | 'orange-compact' | 'sosh';
+    theme?: Theme;
+    brand?: Brand;
     roundedButtons?: boolean;
     roundedAlerts?: boolean;
     roundedInputs?: boolean;
@@ -11,8 +12,8 @@ export type OudsProviderProps = {
 };
 
 type OudsContextValue = {
-    theme: 'light' | 'dark';
-    brand: 'orange' | 'orange-compact' | 'sosh';
+    theme: Theme;
+    brand: Brand;
     roundedButtons: boolean;
     roundedAlerts: boolean;
     roundedInputs: boolean;
