@@ -4,8 +4,8 @@ Scope: everything under `libs/angular/`. The root [`AGENTS.md`](../../AGENTS.md)
 
 ## Layout
 
-- `src/<name>/` — one kebab-case folder per component or feature, holding `<name>.component.ts`, its template and styles (`<name>.component.html`, `<name>.component.scss`), a co-located `<name>.component.spec.ts`, `<name>.stories.ts`, and an `index.ts` barrel (e.g. `src/button/`). `src/ouds-provider/` holds `OudsProviderComponent` and `OudsService` (with `OUDS_CONFIG` and `provideOuds()`), each with its spec.
-- `src/index.ts` — barrel file and the package's only public API (ng-packagr `entryFile`). Re-export every new folder's `index.ts` here.
+- `src/components/<name>/` — one kebab-case folder per component or feature, holding `<name>.component.ts`, its template and styles (`<name>.component.html`, `<name>.component.scss`), a co-located `<name>.component.spec.ts`, `<name>.stories.ts`, and an `index.ts` barrel (e.g. `src/components/button/`). `src/components/ouds-provider/` holds `OudsProviderComponent` and `OudsService` (with `OUDS_CONFIG` and `provideOuds()`), each with its spec.
+- `src/index.ts` — barrel file and the package's only public API (ng-packagr `entryFile`). It re-exports `src/components/index.ts`; add each new component folder's `index.ts` to that barrel.
 - `src/test-setup.ts` — Jest zone environment (`setupZoneTestEnv`).
 - `ng-package.json` — ng-packagr config; output goes to `dist/libs/angular` in Angular Package Format.
 - `jest.config.ts` — Jest via `jest-preset-angular`.

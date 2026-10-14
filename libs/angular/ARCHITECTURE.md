@@ -27,10 +27,10 @@ No OUDS Web package is a dependency of this library yet. Add one as a `peerDepen
 
 ## Conventions
 
-- **Folder structure**: one folder per component or feature under `src/`, kebab-case (e.g. `src/button/`), containing the component, its template and styles, the co-located spec, the story, and an `index.ts` barrel.
+- **Folder structure**: one folder per component or feature under `src/components/`, kebab-case (e.g. `src/components/button/`), containing the component, its template and styles, the co-located spec, the story, and an `index.ts` barrel.
 - **Naming**: PascalCase + `Component` suffix for the class (`ButtonComponent`), kebab-case for the folder and file name (`button.component.ts`); selectors are prefixed (`orange-button`).
 - **Component style**: standalone components (`standalone: true`), no `NgModule` wrapping, `OnPush` change detection.
-- **Exports**: each folder's `index.ts` is re-exported from `src/index.ts` (barrel file); this is the package's public API surface.
+- **Exports**: each folder's `index.ts` is re-exported from `src/components/index.ts`, which `src/index.ts` re-exports (barrel files); this is the package's public API surface.
 - **Shared types**: props shared with the other frameworks live in `@ouds/core`. `ButtonComponent` types its `variant` input with `Variant` from `@ouds/core`.
 - **Testing**: [Jest](https://jestjs.io/) via `@nx/jest` + `jest-preset-angular` (not Vitest — see note below); spec files are co-located as `<name>.component.spec.ts`.
 - **Linting**: ESLint 9 flat config (`eslint.config.mjs`) extending the root `eslint.config.mjs` (Nx base/TypeScript/JavaScript configs + module boundaries) and adding `angular-eslint` (selector prefix rules, template parser). The `lint` target is declared explicitly in `project.json`. Its cache inputs include the root `eslint.config.mjs` and exclude the git-ignored `.eslintcache`. No formatter is configured for this library.
