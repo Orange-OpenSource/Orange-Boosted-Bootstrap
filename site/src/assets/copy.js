@@ -13,7 +13,7 @@
 /* global oudsWeb: false */
 
 import ClipboardJS from 'clipboard'
-import { snippetButtonTooltip } from '@assets/snippetButtonTooltip'
+import { snippetButtonTooltip } from './snippetButtonTooltip.js'
 
 const clipboardTooltip = 'Copy to clipboard'
 snippetButtonTooltip('.btn-clipboard', clipboardTooltip)
