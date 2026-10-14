@@ -511,6 +511,10 @@ The description option displays supporting text below the title. It provides add
 
 Modals are not limited to texts, they can contain diverse content such as forms, navigation lists, or interactive elements, providing a flexible space for user interactions.
 
+<Callout type="info">
+  When there is no description text, the rich content slot spacings can be adjusted using our [spacing utility classes]([[docsref:utilities/spacing]]). For example you can add `.pt-large` on `.modal-body` to increase the top padding.
+</Callout>
+
 <Example buttonLabel="modal dialog slot" code={`<dialog id="modalDialogSlot" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogSlotTitle" closedby="any">
     <div class="modal-header">
       <h3 id="modalDialogSlotTitle" class="modal-title">Account settings</h3>
