@@ -1,2 +1,3 @@
 export * from './button/button.component';
+export * from './button/button.model';
 export * from './ouds-provider/ouds-provider.component';
