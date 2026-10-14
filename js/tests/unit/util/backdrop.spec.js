@@ -1,3 +1,4 @@
+import { vi } from 'vitest'
 import Backdrop from '../../../src/util/backdrop.js'
 import { getTransitionDurationFromElement } from '../../../src/util/index.js'
 import { clearFixture, getFixture } from '../../helpers/fixture.js'
@@ -127,15 +128,15 @@ describe('Backdrop', () => {
           isAnimated: true
         })
         const getElements = () => document.querySelectorAll(CLASS_BACKDROP)
-        const spy = spyOn(instance, 'dispose').and.callThrough()
+        const spy = vi.spyOn(instance, 'dispose')
 
         expect(getElements()).toHaveSize(0)
-        expect(instance._isAppended).toBeFalse()
+        expect(instance._isAppended).toBe(false)
         instance.show(() => {
           instance.hide(() => {
             expect(getElements()).toHaveSize(0)
             expect(spy).not.toHaveBeenCalled()
-            expect(instance._isAppended).toBeFalse()
+            expect(instance._isAppended).toBe(false)
             resolve()
           })
         })
@@ -169,7 +170,7 @@ describe('Backdrop', () => {
   describe('click callback', () => {
     it('should execute callback on click', () => {
       return new Promise(resolve => {
-        const spy = jasmine.createSpy('spy')
+        const spy = vi.fn().mockName('spy')
 
         const instance = new Backdrop({
           isVisible: true,
@@ -198,7 +199,7 @@ describe('Backdrop', () => {
             isVisible: true,
             isAnimated: true
           })
-          const spy2 = jasmine.createSpy('spy2')
+          const spy2 = vi.fn().mockName('spy2')
 
           const execDone = () => {
             setTimeout(() => {
@@ -218,12 +219,12 @@ describe('Backdrop', () => {
 
       it('should show and hide backdrop without a delay if it is not animated', () => {
         return new Promise(resolve => {
-          const spy = jasmine.createSpy('spy', getTransitionDurationFromElement)
+          const spy = vi.fn(getTransitionDurationFromElement).mockName('spy')
           const instance = new Backdrop({
             isVisible: true,
             isAnimated: false
           })
-          const spy2 = jasmine.createSpy('spy2')
+          const spy2 = vi.fn().mockName('spy2')
 
           instance.show(spy2)
           instance.hide(spy2)
@@ -242,7 +243,7 @@ describe('Backdrop', () => {
             isVisible: false,
             isAnimated: true
           })
-          const spy = jasmine.createSpy('spy', getTransitionDurationFromElement)
+          const spy = vi.fn(getTransitionDurationFromElement).mockName('spy')
 
           instance.show()
           instance.hide(() => {

@@ -1,3 +1,4 @@
+import { vi } from 'vitest'
 import EventHandler from '../../../src/dom/event-handler.js'
 import SelectorEngine from '../../../src/dom/selector-engine.js'
 import FocusTrap from '../../../src/util/focustrap.js'
@@ -20,7 +21,7 @@ describe('FocusTrap', () => {
 
       const trapElement = fixtureEl.querySelector('div')
 
-      const spy = spyOn(trapElement, 'focus')
+      const spy = vi.spyOn(trapElement, 'focus').mockImplementation(() => {})
 
       const focustrap = new FocusTrap({ trapElement })
       focustrap.activate()
@@ -33,7 +34,7 @@ describe('FocusTrap', () => {
 
       const trapElement = fixtureEl.querySelector('div')
 
-      const spy = spyOn(trapElement, 'focus')
+      const spy = vi.spyOn(trapElement, 'focus').mockImplementation(() => {})
 
       const focustrap = new FocusTrap({ trapElement, autofocus: false })
       focustrap.activate()
@@ -62,8 +63,8 @@ describe('FocusTrap', () => {
           resolve()
         }
 
-        const spy = spyOn(inside, 'focus')
-        spyOn(SelectorEngine, 'focusableChildren').and.callFake(() => [inside])
+        const spy = vi.spyOn(inside, 'focus').mockImplementation(() => {})
+        vi.spyOn(SelectorEngine, 'focusableChildren').mockImplementation(() => [inside])
 
         document.addEventListener('focusin', focusInListener)
 
@@ -96,8 +97,8 @@ describe('FocusTrap', () => {
         const last = document.getElementById('last')
         const outside = document.getElementById('outside')
 
-        spyOn(SelectorEngine, 'focusableChildren').and.callFake(() => [first, inside, last])
-        const spy = spyOn(first, 'focus').and.callThrough()
+        vi.spyOn(SelectorEngine, 'focusableChildren').mockImplementation(() => [first, inside, last])
+        const spy = vi.spyOn(first, 'focus')
 
         const focusInListener = () => {
           expect(spy).toHaveBeenCalled()
@@ -135,8 +136,8 @@ describe('FocusTrap', () => {
         const last = document.getElementById('last')
         const outside = document.getElementById('outside')
 
-        spyOn(SelectorEngine, 'focusableChildren').and.callFake(() => [first, inside, last])
-        const spy = spyOn(last, 'focus').and.callThrough()
+        vi.spyOn(SelectorEngine, 'focusableChildren').mockImplementation(() => [first, inside, last])
+        const spy = vi.spyOn(last, 'focus')
 
         const focusInListener = () => {
           expect(spy).toHaveBeenCalled()
@@ -172,7 +173,7 @@ describe('FocusTrap', () => {
           resolve()
         }
 
-        const spy = spyOn(focustrap._config.trapElement, 'focus')
+        const spy = vi.spyOn(focustrap._config.trapElement, 'focus').mockImplementation(() => {})
 
         document.addEventListener('focusin', focusInListener)
 
@@ -190,17 +191,17 @@ describe('FocusTrap', () => {
     it('should flag itself as no longer active', () => {
       const focustrap = new FocusTrap({ trapElement: fixtureEl })
       focustrap.activate()
-      expect(focustrap._isActive).toBeTrue()
+      expect(focustrap._isActive).toBe(true)
 
       focustrap.deactivate()
-      expect(focustrap._isActive).toBeFalse()
+      expect(focustrap._isActive).toBe(false)
     })
 
     it('should remove all event listeners', () => {
       const focustrap = new FocusTrap({ trapElement: fixtureEl })
       focustrap.activate()
 
-      const spy = spyOn(EventHandler, 'off')
+      const spy = vi.spyOn(EventHandler, 'off').mockImplementation(() => {})
       focustrap.deactivate()
 
       expect(spy).toHaveBeenCalled()
@@ -209,7 +210,7 @@ describe('FocusTrap', () => {
     it('doesn\'t try removing event listeners unless it needs to (in case it hasn\'t been activated)', () => {
       const focustrap = new FocusTrap({ trapElement: fixtureEl })
 
-      const spy = spyOn(EventHandler, 'off')
+      const spy = vi.spyOn(EventHandler, 'off').mockImplementation(() => {})
       focustrap.deactivate()
 
       expect(spy).not.toHaveBeenCalled()

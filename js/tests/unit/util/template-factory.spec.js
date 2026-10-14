@@ -1,3 +1,4 @@
+import { vi } from 'vitest'
 import TemplateFactory from '../../../src/util/template-factory.js'
 import { clearFixture, getFixture } from '../../helpers/fixture.js'
 
@@ -20,7 +21,7 @@ describe('TemplateFactory', () => {
 
   describe('Default', () => {
     it('should return plugin default config', () => {
-      expect(TemplateFactory.Default).toEqual(jasmine.any(Object))
+      expect(TemplateFactory.Default).toEqual(expect.any(Object))
     })
   })
 
@@ -31,7 +32,7 @@ describe('TemplateFactory', () => {
           sanitize: true,
           template: '<div><a href="javascript:alert(7)">Click me</a></div>'
         })
-        const spy = spyOn(factory, '_maybeSanitize').and.callThrough()
+        const spy = vi.spyOn(factory, '_maybeSanitize')
 
         expect(factory.toHtml().innerHTML).not.toContain('href="javascript:alert(7)')
         expect(spy).toHaveBeenCalled()
@@ -42,7 +43,7 @@ describe('TemplateFactory', () => {
           sanitize: false,
           template: '<div><a href="javascript:alert(7)">Click me</a></div>'
         })
-        const spy = spyOn(factory, '_maybeSanitize').and.callThrough()
+        const spy = vi.spyOn(factory, '_maybeSanitize')
 
         expect(factory.toHtml().innerHTML).toContain('href="javascript:alert(7)')
         expect(spy).toHaveBeenCalled()
@@ -75,7 +76,7 @@ describe('TemplateFactory', () => {
           template: '<div id="foo"></div>',
           content: { '#foo': '<a href="javascript:alert(7)">Click me</a>' }
         })
-        const spy = spyOn(factory, '_maybeSanitize').and.callThrough()
+        const spy = vi.spyOn(factory, '_maybeSanitize')
 
         expect(spy).not.toHaveBeenCalled()
       })
@@ -231,7 +232,7 @@ describe('TemplateFactory', () => {
           '.foo3': ''
         }
       })
-      expect(factory.hasContent()).toBeTrue()
+      expect(factory.hasContent()).toBe(true)
     })
 
     it('should return false, if filtered content is empty', () => {
@@ -242,7 +243,7 @@ describe('TemplateFactory', () => {
           '.foo4': () => null
         }
       })
-      expect(factory.hasContent()).toBeFalse()
+      expect(factory.hasContent()).toBe(false)
     })
   })
 

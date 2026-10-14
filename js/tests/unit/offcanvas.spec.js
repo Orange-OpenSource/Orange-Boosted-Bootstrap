@@ -1,3 +1,4 @@
+import { vi } from 'vitest'
 import EventHandler from '../../src/dom/event-handler.js'
 import Offcanvas from '../../src/offcanvas.js'
 import { isVisible } from '../../src/util/index.js'
@@ -25,13 +26,13 @@ describe('Offcanvas', () => {
 
   describe('VERSION', () => {
     it('should return plugin version', () => {
-      expect(Offcanvas.VERSION).toEqual(jasmine.any(String))
+      expect(Offcanvas.VERSION).toEqual(expect.any(String))
     })
   })
 
   describe('Default', () => {
     it('should return plugin default config', () => {
-      expect(Offcanvas.Default).toEqual(jasmine.any(Object))
+      expect(Offcanvas.Default).toEqual(expect.any(Object))
     })
   })
 
@@ -53,11 +54,11 @@ describe('Offcanvas', () => {
       const closeEl = fixtureEl.querySelector('a')
       const offCanvas = new Offcanvas(offCanvasEl)
 
-      const spy = spyOn(offCanvas, 'hide')
+      const spy = vi.spyOn(offCanvas, 'hide').mockImplementation(() => {})
 
       closeEl.click()
 
-      expect(offCanvas._config.keyboard).toBeTrue()
+      expect(offCanvas._config.keyboard).toBe(true)
       expect(spy).toHaveBeenCalled()
     })
 
@@ -69,7 +70,7 @@ describe('Offcanvas', () => {
       const keyDownEsc = createEvent('keydown')
       keyDownEsc.key = 'Escape'
 
-      const spy = spyOn(offCanvas, 'hide')
+      const spy = vi.spyOn(offCanvas, 'hide').mockImplementation(() => {})
 
       offCanvasEl.dispatchEvent(keyDownEsc)
 
@@ -84,7 +85,7 @@ describe('Offcanvas', () => {
       const keyDownEsc = createEvent('keydown')
       keyDownEsc.key = 'Escape'
 
-      const spy = spyOn(offCanvas, 'hide')
+      const spy = vi.spyOn(offCanvas, 'hide').mockImplementation(() => {})
 
       offCanvasEl.dispatchEvent(keyDownEsc)
 
@@ -99,7 +100,7 @@ describe('Offcanvas', () => {
       const keydownTab = createEvent('keydown')
       keydownTab.key = 'Tab'
 
-      const spy = spyOn(offCanvas, 'hide')
+      const spy = vi.spyOn(offCanvas, 'hide').mockImplementation(() => {})
 
       offCanvasEl.dispatchEvent(keydownTab)
 
@@ -115,12 +116,12 @@ describe('Offcanvas', () => {
         const keyDownEsc = createEvent('keydown')
         keyDownEsc.key = 'Escape'
 
-        const spy = spyOn(offCanvas, 'hide')
-        const hidePreventedSpy = jasmine.createSpy('hidePrevented')
+        const spy = vi.spyOn(offCanvas, 'hide').mockImplementation(() => {})
+        const hidePreventedSpy = vi.fn().mockName('hidePrevented')
         offCanvasEl.addEventListener('hidePrevented.bs.offcanvas', hidePreventedSpy)
 
         offCanvasEl.addEventListener('shown.bs.offcanvas', () => {
-          expect(offCanvas._config.keyboard).toBeFalse()
+          expect(offCanvas._config.keyboard).toBe(false)
           offCanvasEl.dispatchEvent(keyDownEsc)
 
           expect(hidePreventedSpy).toHaveBeenCalled()
@@ -140,13 +141,13 @@ describe('Offcanvas', () => {
         const offCanvas = new Offcanvas(offCanvasEl, { backdrop: 'static' })
 
         const clickEvent = new Event('mousedown', { bubbles: true, cancelable: true })
-        const spyClick = spyOn(offCanvas._backdrop._config, 'clickCallback').and.callThrough()
-        const spyHide = spyOn(offCanvas._backdrop, 'hide').and.callThrough()
-        const hidePreventedSpy = jasmine.createSpy('hidePrevented')
+        const spyClick = vi.spyOn(offCanvas._backdrop._config, 'clickCallback')
+        const spyHide = vi.spyOn(offCanvas._backdrop, 'hide')
+        const hidePreventedSpy = vi.fn().mockName('hidePrevented')
         offCanvasEl.addEventListener('hidePrevented.bs.offcanvas', hidePreventedSpy)
 
         offCanvasEl.addEventListener('shown.bs.offcanvas', () => {
-          expect(spyClick).toEqual(jasmine.any(Function))
+          expect(spyClick).toEqual(expect.any(Function))
 
           offCanvas._backdrop._getElement().dispatchEvent(clickEvent)
           expect(hidePreventedSpy).toHaveBeenCalled()
@@ -165,7 +166,8 @@ describe('Offcanvas', () => {
         const offCanvasEl = fixtureEl.querySelector('div')
         const offCanvas = new Offcanvas(offCanvasEl)
 
-        const spy = spyOn(offCanvas, 'hide').and.callThrough()
+        const spy = vi.spyOn(offCanvas, 'hide')
+        offCanvasEl.addEventListener('hidden.bs.offcanvas', resolve, { once: true })
 
         offCanvasEl.addEventListener('shown.bs.offcanvas', () => {
           const resizeEvent = createEvent('resize')
@@ -173,7 +175,6 @@ describe('Offcanvas', () => {
 
           window.dispatchEvent(resizeEvent)
           expect(spy).toHaveBeenCalled()
-          resolve()
         })
 
         offCanvas.show()
@@ -188,10 +189,10 @@ describe('Offcanvas', () => {
       const offCanvasEl = fixtureEl.querySelector('.offcanvas')
       const offCanvas = new Offcanvas(offCanvasEl)
 
-      expect(offCanvas._config.backdrop).toBeTrue()
-      expect(offCanvas._backdrop._config.isVisible).toBeTrue()
-      expect(offCanvas._config.keyboard).toBeTrue()
-      expect(offCanvas._config.scroll).toBeFalse()
+      expect(offCanvas._config.backdrop).toBe(true)
+      expect(offCanvas._backdrop._config.isVisible).toBe(true)
+      expect(offCanvas._config.keyboard).toBe(true)
+      expect(offCanvas._config.scroll).toBe(false)
     })
 
     it('should read data attributes and override default config', () => {
@@ -200,10 +201,10 @@ describe('Offcanvas', () => {
       const offCanvasEl = fixtureEl.querySelector('.offcanvas')
       const offCanvas = new Offcanvas(offCanvasEl)
 
-      expect(offCanvas._config.backdrop).toBeFalse()
-      expect(offCanvas._backdrop._config.isVisible).toBeFalse()
-      expect(offCanvas._config.keyboard).toBeFalse()
-      expect(offCanvas._config.scroll).toBeTrue()
+      expect(offCanvas._config.backdrop).toBe(false)
+      expect(offCanvas._backdrop._config.isVisible).toBe(false)
+      expect(offCanvas._config.keyboard).toBe(false)
+      expect(offCanvas._config.scroll).toBe(true)
     })
 
     it('given a config object must override data attributes', () => {
@@ -215,9 +216,9 @@ describe('Offcanvas', () => {
         keyboard: true,
         scroll: false
       })
-      expect(offCanvas._config.backdrop).toBeTrue()
-      expect(offCanvas._config.keyboard).toBeTrue()
-      expect(offCanvas._config.scroll).toBeFalse()
+      expect(offCanvas._config.backdrop).toBe(true)
+      expect(offCanvas._config.keyboard).toBe(true)
+      expect(offCanvas._config.scroll).toBe(false)
     })
   })
 
@@ -226,8 +227,8 @@ describe('Offcanvas', () => {
       return new Promise(resolve => {
         fixtureEl.innerHTML = '<div class="offcanvas"></div>'
 
-        const spyHide = spyOn(ScrollBarHelper.prototype, 'hide').and.callThrough()
-        const spyReset = spyOn(ScrollBarHelper.prototype, 'reset').and.callThrough()
+        const spyHide = vi.spyOn(ScrollBarHelper.prototype, 'hide')
+        const spyReset = vi.spyOn(ScrollBarHelper.prototype, 'reset')
         const offCanvasEl = fixtureEl.querySelector('.offcanvas')
         const offCanvas = new Offcanvas(offCanvasEl, { scroll: true })
 
@@ -247,8 +248,8 @@ describe('Offcanvas', () => {
       return new Promise(resolve => {
         fixtureEl.innerHTML = '<div class="offcanvas"></div>'
 
-        const spyHide = spyOn(ScrollBarHelper.prototype, 'hide').and.callThrough()
-        const spyReset = spyOn(ScrollBarHelper.prototype, 'reset').and.callThrough()
+        const spyHide = vi.spyOn(ScrollBarHelper.prototype, 'hide')
+        const spyReset = vi.spyOn(ScrollBarHelper.prototype, 'reset')
         const offCanvasEl = fixtureEl.querySelector('.offcanvas')
         const offCanvas = new Offcanvas(offCanvasEl, { scroll: false })
 
@@ -272,10 +273,10 @@ describe('Offcanvas', () => {
         const offCanvas = new Offcanvas(offCanvasEl, { backdrop: true })
 
         const clickEvent = new Event('mousedown', { bubbles: true, cancelable: true })
-        const spy = spyOn(offCanvas._backdrop._config, 'clickCallback').and.callThrough()
+        const spy = vi.spyOn(offCanvas._backdrop._config, 'clickCallback')
 
         offCanvasEl.addEventListener('shown.bs.offcanvas', () => {
-          expect(offCanvas._backdrop._config.clickCallback).toEqual(jasmine.any(Function))
+          expect(offCanvas._backdrop._config.clickCallback).toEqual(expect.any(Function))
 
           offCanvas._backdrop._getElement().dispatchEvent(clickEvent)
         })
@@ -299,7 +300,7 @@ describe('Offcanvas', () => {
           backdrop: false
         })
 
-        const spy = spyOn(offCanvas._focustrap, 'activate').and.callThrough()
+        const spy = vi.spyOn(offCanvas._focustrap, 'activate')
 
         offCanvasEl.addEventListener('shown.bs.offcanvas', () => {
           expect(spy).not.toHaveBeenCalled()
@@ -320,7 +321,7 @@ describe('Offcanvas', () => {
           backdrop: true
         })
 
-        const spy = spyOn(offCanvas._focustrap, 'activate').and.callThrough()
+        const spy = vi.spyOn(offCanvas._focustrap, 'activate')
 
         offCanvasEl.addEventListener('shown.bs.offcanvas', () => {
           expect(spy).toHaveBeenCalled()
@@ -339,7 +340,7 @@ describe('Offcanvas', () => {
       const offCanvasEl = fixtureEl.querySelector('.offcanvas')
       const offCanvas = new Offcanvas(offCanvasEl)
 
-      const spy = spyOn(offCanvas, 'show')
+      const spy = vi.spyOn(offCanvas, 'show').mockImplementation(() => {})
 
       offCanvas.toggle()
 
@@ -355,7 +356,7 @@ describe('Offcanvas', () => {
 
         offCanvasEl.addEventListener('shown.bs.offcanvas', () => {
           expect(offCanvasEl).toHaveClass('show')
-          const spy = spyOn(offCanvas, 'hide')
+          const spy = vi.spyOn(offCanvas, 'hide').mockImplementation(() => {})
 
           offCanvas.toggle()
 
@@ -399,8 +400,8 @@ describe('Offcanvas', () => {
 
       expect(offCanvasEl).toHaveClass('show')
 
-      const spyShow = spyOn(offCanvas._backdrop, 'show').and.callThrough()
-      const spyTrigger = spyOn(EventHandler, 'trigger').and.callThrough()
+      const spyShow = vi.spyOn(offCanvas._backdrop, 'show')
+      const spyTrigger = vi.spyOn(EventHandler, 'trigger')
       offCanvas.show()
 
       expect(spyTrigger).not.toHaveBeenCalled()
@@ -413,7 +414,7 @@ describe('Offcanvas', () => {
 
         const offCanvasEl = fixtureEl.querySelector('div')
         const offCanvas = new Offcanvas(offCanvasEl)
-        const spy = spyOn(offCanvas._backdrop, 'show').and.callThrough()
+        const spy = vi.spyOn(offCanvas._backdrop, 'show')
 
         offCanvasEl.addEventListener('shown.bs.offcanvas', () => {
           expect(offCanvasEl).toHaveClass('show')
@@ -431,7 +432,7 @@ describe('Offcanvas', () => {
 
         const offCanvasEl = fixtureEl.querySelector('div')
         const offCanvas = new Offcanvas(offCanvasEl)
-        const spy = spyOn(offCanvas._backdrop, 'show').and.callThrough()
+        const spy = vi.spyOn(offCanvas._backdrop, 'show')
 
         const expectEnd = () => {
           setTimeout(() => {
@@ -458,7 +459,7 @@ describe('Offcanvas', () => {
         fixtureEl.innerHTML = '<div class="offcanvas show"></div>'
 
         const offCanvasEl = fixtureEl.querySelector('div')
-        const spy = spyOn(Offcanvas.prototype, 'show').and.callThrough()
+        const spy = vi.spyOn(Offcanvas.prototype, 'show')
 
         offCanvasEl.addEventListener('shown.bs.offcanvas', () => {
           resolve()
@@ -479,7 +480,7 @@ describe('Offcanvas', () => {
         const offCanvasEl = fixtureEl.querySelector('.offcanvas')
         const offCanvas = new Offcanvas(offCanvasEl)
 
-        const spy = spyOn(offCanvas._focustrap, 'activate').and.callThrough()
+        const spy = vi.spyOn(offCanvas._focustrap, 'activate')
 
         offCanvasEl.addEventListener('shown.bs.offcanvas', () => {
           expect(spy).toHaveBeenCalled()
@@ -521,11 +522,11 @@ describe('Offcanvas', () => {
     it('should do nothing if already shown', () => {
       fixtureEl.innerHTML = '<div class="offcanvas"></div>'
 
-      const spyTrigger = spyOn(EventHandler, 'trigger').and.callThrough()
+      const spyTrigger = vi.spyOn(EventHandler, 'trigger')
 
       const offCanvasEl = fixtureEl.querySelector('div')
       const offCanvas = new Offcanvas(offCanvasEl)
-      const spyHide = spyOn(offCanvas._backdrop, 'hide').and.callThrough()
+      const spyHide = vi.spyOn(offCanvas._backdrop, 'hide')
 
       offCanvas.hide()
       expect(spyHide).not.toHaveBeenCalled()
@@ -538,7 +539,7 @@ describe('Offcanvas', () => {
 
         const offCanvasEl = fixtureEl.querySelector('div')
         const offCanvas = new Offcanvas(offCanvasEl)
-        const spy = spyOn(offCanvas._backdrop, 'hide').and.callThrough()
+        const spy = vi.spyOn(offCanvas._backdrop, 'hide')
         offCanvas.show()
 
         offCanvasEl.addEventListener('hidden.bs.offcanvas', () => {
@@ -557,7 +558,7 @@ describe('Offcanvas', () => {
 
         const offCanvasEl = fixtureEl.querySelector('div')
         const offCanvas = new Offcanvas(offCanvasEl)
-        const spy = spyOn(offCanvas._backdrop, 'hide').and.callThrough()
+        const spy = vi.spyOn(offCanvas._backdrop, 'hide')
 
         offCanvas.show()
 
@@ -587,7 +588,7 @@ describe('Offcanvas', () => {
 
         const offCanvasEl = fixtureEl.querySelector('div')
         const offCanvas = new Offcanvas(offCanvasEl)
-        const spy = spyOn(offCanvas._focustrap, 'deactivate').and.callThrough()
+        const spy = vi.spyOn(offCanvas._focustrap, 'deactivate')
         offCanvas.show()
 
         offCanvasEl.addEventListener('hidden.bs.offcanvas', () => {
@@ -607,9 +608,9 @@ describe('Offcanvas', () => {
       const offCanvasEl = fixtureEl.querySelector('div')
       const offCanvas = new Offcanvas(offCanvasEl)
       const backdrop = offCanvas._backdrop
-      const spyDispose = spyOn(backdrop, 'dispose').and.callThrough()
+      const spyDispose = vi.spyOn(backdrop, 'dispose')
       const focustrap = offCanvas._focustrap
-      const spyDeactivate = spyOn(focustrap, 'deactivate').and.callThrough()
+      const spyDeactivate = vi.spyOn(focustrap, 'deactivate')
 
       expect(Offcanvas.getInstance(offCanvasEl)).toEqual(offCanvas)
 
@@ -636,7 +637,7 @@ describe('Offcanvas', () => {
 
         offCanvasEl.addEventListener('shown.bs.offcanvas', () => {
           expect(offCanvasEl).toHaveClass('show')
-          expect(target.checked).toBeTrue()
+          expect(target.checked).toBe(true)
           resolve()
         })
 
@@ -652,7 +653,7 @@ describe('Offcanvas', () => {
 
       const target = fixtureEl.querySelector('a')
 
-      const spy = spyOn(Offcanvas.prototype, 'toggle')
+      const spy = vi.spyOn(Offcanvas.prototype, 'toggle').mockImplementation(() => {})
 
       target.click()
 
@@ -693,7 +694,7 @@ describe('Offcanvas', () => {
         const trigger = fixtureEl.querySelector('#btn')
         const offcanvasEl = fixtureEl.querySelector('#offcanvas')
         const offcanvas = new Offcanvas(offcanvasEl)
-        const spy = spyOn(trigger, 'focus')
+        const spy = vi.spyOn(trigger, 'focus').mockImplementation(() => {})
 
         offcanvasEl.addEventListener('shown.bs.offcanvas', () => {
           offcanvas.hide()
@@ -719,7 +720,7 @@ describe('Offcanvas', () => {
         const trigger = fixtureEl.querySelector('#btn')
         const offcanvasEl = fixtureEl.querySelector('#offcanvas')
         const offcanvas = new Offcanvas(offcanvasEl)
-        const spy = spyOn(trigger, 'focus')
+        const spy = vi.spyOn(trigger, 'focus').mockImplementation(() => {})
 
         offcanvasEl.addEventListener('shown.bs.offcanvas', () => {
           trigger.style.display = 'none'
@@ -727,7 +728,7 @@ describe('Offcanvas', () => {
         })
         offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
           setTimeout(() => {
-            expect(isVisible(trigger)).toBeFalse()
+            expect(isVisible(trigger)).toBe(false)
             expect(spy).not.toHaveBeenCalled()
             resolve()
           }, 5)
@@ -790,7 +791,7 @@ describe('Offcanvas', () => {
       })
       expect(offcanvas).toBeInstanceOf(Offcanvas)
 
-      expect(offcanvas._config.scroll).toBeTrue()
+      expect(offcanvas._config.scroll).toBe(true)
     })
 
     it('should return the instance when exists without given configuration', () => {
@@ -808,7 +809,7 @@ describe('Offcanvas', () => {
       expect(offcanvas).toBeInstanceOf(Offcanvas)
       expect(offcanvas2).toEqual(offcanvas)
 
-      expect(offcanvas2._config.scroll).toBeTrue()
+      expect(offcanvas2._config.scroll).toBe(true)
     })
   })
 })

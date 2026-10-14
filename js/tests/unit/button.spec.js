@@ -24,7 +24,7 @@ describe('Button', () => {
 
   describe('VERSION', () => {
     it('should return plugin version', () => {
-      expect(Button.VERSION).toEqual(jasmine.any(String))
+      expect(Button.VERSION).toEqual(expect.any(String))
     })
   })
 

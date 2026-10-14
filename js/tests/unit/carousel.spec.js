@@ -1,3 +1,4 @@
+import { vi } from 'vitest'
 import Carousel from '../../src/carousel.js'
 import EventHandler from '../../src/dom/event-handler.js'
 import { isRTL, noop } from '../../src/util/index.js'
@@ -37,13 +38,13 @@ describe('Carousel', () => {
 
   describe('VERSION', () => {
     it('should return plugin version', () => {
-      expect(Carousel.VERSION).toEqual(jasmine.any(String))
+      expect(Carousel.VERSION).toEqual(expect.any(String))
     })
   })
 
   describe('Default', () => {
     it('should return plugin default config', () => {
-      expect(Carousel.Default).toEqual(jasmine.any(Object))
+      expect(Carousel.Default).toEqual(expect.any(Object))
     })
   })
 
@@ -105,7 +106,7 @@ describe('Carousel', () => {
           keyboard: true
         })
 
-        const spy = spyOn(carousel, '_keydown').and.callThrough()
+        const spy = vi.spyOn(carousel, '_keydown')
 
         carouselEl.addEventListener('slid.bs.carousel', () => {
           expect(fixtureEl.querySelector('.active')).toEqual(fixtureEl.querySelector('#item2'))
@@ -130,11 +131,11 @@ describe('Carousel', () => {
         '</div>'
       ].join('')
 
-      const spy = spyOn(EventHandler, 'trigger').and.callThrough()
+      const spy = vi.spyOn(EventHandler, 'trigger')
       const carouselEl = fixtureEl.querySelector('#myCarousel')
       // eslint-disable-next-line no-new
       new Carousel('#myCarousel')
-      expect(spy).not.toHaveBeenCalledWith(carouselEl, 'keydown.bs.carousel', jasmine.any(Function))
+      expect(spy).not.toHaveBeenCalledWith(carouselEl, 'keydown.bs.carousel', expect.any(Function))
     })
 
     it('should ignore mouse events if data-bs-pause=false', () => {
@@ -147,11 +148,11 @@ describe('Carousel', () => {
         '</div>'
       ].join('')
 
-      const spy = spyOn(EventHandler, 'trigger').and.callThrough()
+      const spy = vi.spyOn(EventHandler, 'trigger')
       const carouselEl = fixtureEl.querySelector('#myCarousel')
       // eslint-disable-next-line no-new
       new Carousel('#myCarousel')
-      expect(spy).not.toHaveBeenCalledWith(carouselEl, 'hover.bs.carousel', jasmine.any(Function))
+      expect(spy).not.toHaveBeenCalledWith(carouselEl, 'hover.bs.carousel', expect.any(Function))
     })
 
     it('should go to previous item if left arrow key is pressed', () => {
@@ -171,7 +172,7 @@ describe('Carousel', () => {
           keyboard: true
         })
 
-        const spy = spyOn(carousel, '_keydown').and.callThrough()
+        const spy = vi.spyOn(carousel, '_keydown')
 
         carouselEl.addEventListener('slid.bs.carousel', () => {
           expect(fixtureEl.querySelector('.active')).toEqual(fixtureEl.querySelector('#item1'))
@@ -203,11 +204,11 @@ describe('Carousel', () => {
           keyboard: true
         })
 
-        const spy = spyOn(carousel, '_keydown').and.callThrough()
+        const spy = vi.spyOn(carousel, '_keydown')
 
         carouselEl.addEventListener('keydown', event => {
           expect(spy).toHaveBeenCalled()
-          expect(event.defaultPrevented).toBeFalse()
+          expect(event.defaultPrevented).toBe(false)
           resolve()
         })
 
@@ -239,8 +240,8 @@ describe('Carousel', () => {
         keyboard: true
       })
 
-      const spyKeydown = spyOn(carousel, '_keydown').and.callThrough()
-      const spySlide = spyOn(carousel, '_slide')
+      const spyKeydown = vi.spyOn(carousel, '_keydown')
+      const spySlide = vi.spyOn(carousel, '_slide').mockImplementation(() => {})
 
       const keydown = createEvent('keydown', { bubbles: true, cancelable: true })
       keydown.key = 'ArrowRight'
@@ -255,8 +256,8 @@ describe('Carousel', () => {
       expect(spyKeydown).toHaveBeenCalled()
       expect(spySlide).not.toHaveBeenCalled()
 
-      spyKeydown.calls.reset()
-      spySlide.calls.reset()
+      spyKeydown.mockClear()
+      spySlide.mockClear()
 
       Object.defineProperty(keydown, 'target', {
         value: textarea
@@ -273,7 +274,7 @@ describe('Carousel', () => {
       const carouselEl = fixtureEl.querySelector('div')
       const carousel = new Carousel(carouselEl, {})
 
-      const spy = spyOn(EventHandler, 'trigger')
+      const spy = vi.spyOn(EventHandler, 'trigger').mockImplementation(() => {})
 
       carousel._isSliding = true
 
@@ -409,8 +410,8 @@ describe('Carousel', () => {
         carousel.next()
 
         setTimeout(() => {
-          expect(nextControl.disabled).toBeTrue()
-          expect(prevControl.disabled).toBeFalse()
+          expect(nextControl.disabled).toBe(true)
+          expect(prevControl.disabled).toBe(false)
           resolve()
         }, 10)
       })
@@ -438,8 +439,8 @@ describe('Carousel', () => {
         carousel.prev()
 
         setTimeout(() => {
-          expect(prevControl.disabled).toBeTrue()
-          expect(nextControl.disabled).toBeFalse()
+          expect(prevControl.disabled).toBe(true)
+          expect(nextControl.disabled).toBe(false)
           resolve()
         }, 10)
       })
@@ -561,7 +562,7 @@ describe('Carousel', () => {
 
       const carouselEl = fixtureEl.querySelector('div')
 
-      const spy = spyOn(Carousel.prototype, '_addTouchEventListeners')
+      const spy = vi.spyOn(Carousel.prototype, '_addTouchEventListeners').mockImplementation(() => {})
 
       const carousel = new Carousel(carouselEl, {
         touch: false
@@ -575,13 +576,13 @@ describe('Carousel', () => {
       fixtureEl.innerHTML = '<div></div>'
 
       const carouselEl = fixtureEl.querySelector('div')
-      spyOn(Swipe, 'isSupported').and.returnValue(false)
+      vi.spyOn(Swipe, 'isSupported').mockReturnValue(false)
 
       const carousel = new Carousel(carouselEl)
 
       EventHandler.off(carouselEl, Carousel.EVENT_KEY)
 
-      const spy = spyOn(carousel, '_addTouchEventListeners')
+      const spy = vi.spyOn(carousel, '_addTouchEventListeners').mockImplementation(() => {})
 
       carousel._addEventListeners()
 
@@ -594,7 +595,7 @@ describe('Carousel', () => {
 
       const carouselEl = fixtureEl.querySelector('div')
 
-      spyOn(Carousel.prototype, '_addTouchEventListeners')
+      vi.spyOn(Carousel.prototype, '_addTouchEventListeners').mockImplementation(() => {})
 
       // Headless browser does not support touch events, so need to fake it
       // to test that touch events are add properly.
@@ -607,7 +608,6 @@ describe('Carousel', () => {
     it('should allow swiperight and call _slide (prev) with pointer events', () => {
       return new Promise(resolve => {
         if (!supportPointerEvent) {
-          expect().nothing()
           resolve()
           return
         }
@@ -633,7 +633,7 @@ describe('Carousel', () => {
         const item = fixtureEl.querySelector('#item')
         const carousel = new Carousel(carouselEl)
 
-        const spy = spyOn(carousel, '_slide').and.callThrough()
+        const spy = vi.spyOn(carousel, '_slide')
 
         carouselEl.addEventListener('slid.bs.carousel', event => {
           expect(item).toHaveClass('active')
@@ -654,7 +654,6 @@ describe('Carousel', () => {
     it('should allow swipeleft and call next with pointer events', () => {
       return new Promise(resolve => {
         if (!supportPointerEvent) {
-          expect().nothing()
           resolve()
           return
         }
@@ -680,7 +679,7 @@ describe('Carousel', () => {
         const item = fixtureEl.querySelector('#item')
         const carousel = new Carousel(carouselEl)
 
-        const spy = spyOn(carousel, '_slide').and.callThrough()
+        const spy = vi.spyOn(carousel, '_slide')
 
         carouselEl.addEventListener('slid.bs.carousel', event => {
           expect(item).not.toHaveClass('active')
@@ -722,7 +721,7 @@ describe('Carousel', () => {
         const item = fixtureEl.querySelector('#item')
         const carousel = new Carousel(carouselEl)
 
-        const spy = spyOn(carousel, '_slide').and.callThrough()
+        const spy = vi.spyOn(carousel, '_slide')
 
         carouselEl.addEventListener('slid.bs.carousel', event => {
           expect(item).toHaveClass('active')
@@ -763,7 +762,7 @@ describe('Carousel', () => {
         const item = fixtureEl.querySelector('#item')
         const carousel = new Carousel(carouselEl)
 
-        const spy = spyOn(carousel, '_slide').and.callThrough()
+        const spy = vi.spyOn(carousel, '_slide')
 
         carouselEl.addEventListener('slid.bs.carousel', event => {
           expect(item).not.toHaveClass('active')
@@ -805,7 +804,7 @@ describe('Carousel', () => {
         const carousel = new Carousel(carouselEl)
         carousel._isSliding = true
 
-        const spy = spyOn(EventHandler, 'trigger')
+        const spy = vi.spyOn(EventHandler, 'trigger').mockImplementation(() => {})
 
         Simulator.gestures.swipe(carouselEl, {
           deltaX: 300,
@@ -859,7 +858,7 @@ describe('Carousel', () => {
         const carouselEl = fixtureEl.querySelector('.carousel')
         const carousel = new Carousel(carouselEl)
 
-        const spy = spyOn(carousel, 'pause')
+        const spy = vi.spyOn(carousel, 'pause').mockImplementation(() => {})
 
         const mouseOverEvent = createEvent('mouseover')
         carouselEl.dispatchEvent(mouseOverEvent)
@@ -878,8 +877,8 @@ describe('Carousel', () => {
         const carouselEl = fixtureEl.querySelector('.carousel')
         const carousel = new Carousel(carouselEl)
 
-        const spyEnable = spyOn(carousel, '_maybeEnableCycle').and.callThrough()
-        const spyCycle = spyOn(carousel, 'cycle')
+        const spyEnable = vi.spyOn(carousel, '_maybeEnableCycle')
+        const spyCycle = vi.spyOn(carousel, 'cycle').mockImplementation(() => {})
 
         const mouseOutEvent = createEvent('mouseout')
         carouselEl.dispatchEvent(mouseOutEvent)
@@ -900,7 +899,7 @@ describe('Carousel', () => {
       const carouselEl = fixtureEl.querySelector('div')
       const carousel = new Carousel(carouselEl, {})
 
-      const spy = spyOn(EventHandler, 'trigger')
+      const spy = vi.spyOn(EventHandler, 'trigger').mockImplementation(() => {})
 
       carousel._isSliding = true
       carousel.next()
@@ -918,7 +917,7 @@ describe('Carousel', () => {
 
         const doneTest = () => {
           setTimeout(() => {
-            expect(slidEvent).toBeFalse()
+            expect(slidEvent).toBe(false)
             resolve()
           }, 20)
         }
@@ -1042,7 +1041,7 @@ describe('Carousel', () => {
 
       const carouselEl = fixtureEl.querySelector('#myCarousel')
       const carousel = new Carousel(carouselEl)
-      const spy = spyOn(carousel, 'cycle')
+      const spy = vi.spyOn(carousel, 'cycle').mockImplementation(() => {})
 
       carousel.next()
       expect(spy).not.toHaveBeenCalled()
@@ -1076,7 +1075,7 @@ describe('Carousel', () => {
 
         carouselEl.addEventListener('slid.bs.carousel', () => {
           expect(firstIndicator).not.toHaveClass('active')
-          expect(firstIndicator.hasAttribute('aria-current')).toBeFalse()
+          expect(firstIndicator.hasAttribute('aria-current')).toBe(false)
           expect(secondIndicator).toHaveClass('active')
           expect(secondIndicator.getAttribute('aria-current')).toEqual('true')
           resolve()
@@ -1104,9 +1103,9 @@ describe('Carousel', () => {
       const nextBtnEl = fixtureEl.querySelector('.carousel-control-next')
 
       const carousel = new Carousel(carouselEl)
-      const nextSpy = spyOn(carousel, 'next')
-      const prevSpy = spyOn(carousel, 'prev')
-      const spyEnable = spyOn(carousel, '_maybeEnableCycle')
+      const nextSpy = vi.spyOn(carousel, 'next').mockImplementation(() => {})
+      const prevSpy = vi.spyOn(carousel, 'prev').mockImplementation(() => {})
+      const spyEnable = vi.spyOn(carousel, '_maybeEnableCycle').mockImplementation(() => {})
 
       nextBtnEl.click()
       prevBtnEl.click()
@@ -1128,7 +1127,7 @@ describe('Carousel', () => {
       const carouselEl = fixtureEl.querySelector('.carousel')
       const carousel = new Carousel(carouselEl)
 
-      const spy = spyOn(carousel, 'next')
+      const spy = vi.spyOn(carousel, 'next').mockImplementation(() => {})
 
       carousel.nextWhenVisible()
 
@@ -1143,7 +1142,7 @@ describe('Carousel', () => {
       const carouselEl = fixtureEl.querySelector('div')
       const carousel = new Carousel(carouselEl, {})
 
-      const spy = spyOn(EventHandler, 'trigger')
+      const spy = vi.spyOn(EventHandler, 'trigger').mockImplementation(() => {})
 
       carousel._isSliding = true
       carousel.prev()
@@ -1235,7 +1234,7 @@ describe('Carousel', () => {
 
       buttonPlayPauselEl.click()
 
-      expect(carousel._stayPaused).toBeFalse()
+      expect(carousel._stayPaused).toBe(false)
       expect(carousel._element).not.toHaveClass('is-paused')
     })
 
@@ -1264,7 +1263,7 @@ describe('Carousel', () => {
 
       buttonPlayPauselEl.click()
 
-      expect(carousel._stayPaused).toBeTrue()
+      expect(carousel._stayPaused).toBe(true)
       expect(carousel._element).toHaveClass('is-paused')
     })
 
@@ -1291,7 +1290,7 @@ describe('Carousel', () => {
         const carouselEl = fixtureEl.querySelector('#myCarousel')
         const carousel = new Carousel(carouselEl)
 
-        const spy = spyOn(carousel, 'pause')
+        const spy = vi.spyOn(carousel, 'pause').mockImplementation(() => {})
 
         const mouseOverEvent = createEvent('mouseover')
         carouselEl.dispatchEvent(mouseOverEvent)
@@ -1355,7 +1354,7 @@ describe('Carousel', () => {
         const carouselEl = fixtureEl.querySelector('#myCarousel')
         const carousel = new Carousel('#myCarousel')
 
-        const spy = spyOn(carousel, '_maybeEnableCycle').and.callThrough()
+        const spy = vi.spyOn(carousel, '_maybeEnableCycle')
 
         const mouseOutEvent = createEvent('mouseout')
         carouselEl.dispatchEvent(mouseOutEvent)
@@ -1392,7 +1391,7 @@ describe('Carousel', () => {
 
       carousel.cycle()
 
-      expect(carousel._stayPaused).toBeFalse()
+      expect(carousel._stayPaused).toBe(false)
       expect(carousel._element).not.toHaveClass('is-paused')
       expect(buttonPlayPauselEl).toHaveClass('pause')
     })
@@ -1513,7 +1512,7 @@ describe('Carousel', () => {
 
         const carouselEl = fixtureEl.querySelector('#myCarousel')
         const carousel = new Carousel(carouselEl)
-        const spy = spyOn(carousel, '_clearInterval')
+        const spy = vi.spyOn(carousel, '_clearInterval').mockImplementation(() => {})
 
         carouselEl.addEventListener('transitionend', () => {
           expect(spy).toHaveBeenCalled()
@@ -1566,7 +1565,7 @@ describe('Carousel', () => {
       const carouselEl = fixtureEl.querySelector('#myCarousel')
       const carousel = new Carousel(carouselEl)
 
-      const spy = spyOn(window, 'setInterval').and.callThrough()
+      const spy = vi.spyOn(window, 'setInterval')
 
       carousel.cycle()
 
@@ -1591,8 +1590,8 @@ describe('Carousel', () => {
 
       carousel._interval = setInterval(noop, 10)
 
-      const spySet = spyOn(window, 'setInterval').and.callThrough()
-      const spyClear = spyOn(window, 'clearInterval').and.callThrough()
+      const spySet = vi.spyOn(window, 'setInterval')
+      const spyClear = vi.spyOn(window, 'clearInterval')
 
       carousel.cycle()
 
@@ -1730,13 +1729,13 @@ describe('Carousel', () => {
       const carouselEl = fixtureEl.querySelector('#myCarousel')
       const carousel = new Carousel(carouselEl, {})
 
-      const spy = spyOn(carousel, '_slide')
+      const spy = vi.spyOn(carousel, '_slide').mockImplementation(() => {})
 
       carousel.to(25)
 
       expect(spy).not.toHaveBeenCalled()
 
-      spy.calls.reset()
+      spy.mockClear()
 
       carousel.to(-5)
 
@@ -1757,7 +1756,7 @@ describe('Carousel', () => {
       const carouselEl = fixtureEl.querySelector('#myCarousel')
       const carousel = new Carousel(carouselEl, {})
 
-      const spy = spyOn(carousel, '_slide')
+      const spy = vi.spyOn(carousel, '_slide').mockImplementation(() => {})
 
       carousel.to(0)
 
@@ -1779,8 +1778,8 @@ describe('Carousel', () => {
         const carouselEl = fixtureEl.querySelector('#myCarousel')
         const carousel = new Carousel(carouselEl, {})
 
-        const spyOne = spyOn(EventHandler, 'one').and.callThrough()
-        const spySlide = spyOn(carousel, '_slide')
+        const spyOne = vi.spyOn(EventHandler, 'one')
+        const spySlide = vi.spyOn(carousel, '_slide').mockImplementation(() => {})
 
         carousel._isSliding = true
         carousel.to(1)
@@ -1788,7 +1787,7 @@ describe('Carousel', () => {
         expect(spySlide).not.toHaveBeenCalled()
         expect(spyOne).toHaveBeenCalled()
 
-        const spyTo = spyOn(carousel, 'to')
+        const spyTo = vi.spyOn(carousel, 'to').mockImplementation(() => {})
 
         EventHandler.trigger(carouselEl, 'slid.bs.carousel')
 
@@ -1820,7 +1819,7 @@ describe('Carousel', () => {
 
       const carouselEl = fixtureEl.querySelector('div')
       const carousel = new Carousel(carouselEl, {})
-      expect(isRTL()).toBeTrue()
+      expect(isRTL()).toBe(true)
 
       expect(carousel._directionToOrder('left')).toEqual('prev')
       expect(carousel._directionToOrder('right')).toEqual('next')
@@ -1836,7 +1835,7 @@ describe('Carousel', () => {
       const carouselEl = fixtureEl.querySelector('div')
       const carousel = new Carousel(carouselEl, {})
 
-      const spy = spyOn(carousel, '_orderToDirection').and.callThrough()
+      const spy = vi.spyOn(carousel, '_orderToDirection')
 
       carousel._slide(carousel._directionToOrder('left'))
       expect(spy).toHaveBeenCalledWith('next')
@@ -1851,7 +1850,7 @@ describe('Carousel', () => {
 
       const carouselEl = fixtureEl.querySelector('div')
       const carousel = new Carousel(carouselEl, {})
-      const spy = spyOn(carousel, '_orderToDirection').and.callThrough()
+      const spy = vi.spyOn(carousel, '_orderToDirection')
 
       carousel._slide(carousel._directionToOrder('left'))
       expect(spy).toHaveBeenCalledWith('prev')
@@ -1876,33 +1875,33 @@ describe('Carousel', () => {
       ].join('')
 
       const carouselEl = fixtureEl.querySelector('#myCarousel')
-      const addEventSpy = spyOn(carouselEl, 'addEventListener').and.callThrough()
-      const removeEventSpy = spyOn(EventHandler, 'off').and.callThrough()
+      const addEventSpy = vi.spyOn(carouselEl, 'addEventListener')
+      const removeEventSpy = vi.spyOn(EventHandler, 'off')
 
       // Headless browser does not support touch events, so need to fake it
       // to test that touch events are add/removed properly.
       document.documentElement.ontouchstart = noop
 
       const carousel = new Carousel(carouselEl)
-      const swipeHelperSpy = spyOn(carousel._swipeHelper, 'dispose').and.callThrough()
+      const swipeHelperSpy = vi.spyOn(carousel._swipeHelper, 'dispose')
 
       const expectedArgs = [
-        ['keydown', jasmine.any(Function), jasmine.any(Boolean)],
-        ['mouseover', jasmine.any(Function), jasmine.any(Boolean)],
-        ['mouseout', jasmine.any(Function), jasmine.any(Boolean)],
+        ['keydown', expect.any(Function), expect.any(Boolean)],
+        ['mouseover', expect.any(Function), expect.any(Boolean)],
+        ['mouseout', expect.any(Function), expect.any(Boolean)],
         ...(carousel._swipeHelper._supportPointerEvents ?
           [
-            ['pointerdown', jasmine.any(Function), jasmine.any(Boolean)],
-            ['pointerup', jasmine.any(Function), jasmine.any(Boolean)]
+            ['pointerdown', expect.any(Function), expect.any(Boolean)],
+            ['pointerup', expect.any(Function), expect.any(Boolean)]
           ] :
           [
-            ['touchstart', jasmine.any(Function), jasmine.any(Boolean)],
-            ['touchmove', jasmine.any(Function), jasmine.any(Boolean)],
-            ['touchend', jasmine.any(Function), jasmine.any(Boolean)]
+            ['touchstart', expect.any(Function), expect.any(Boolean)],
+            ['touchmove', expect.any(Function), expect.any(Boolean)],
+            ['touchend', expect.any(Function), expect.any(Boolean)]
           ])
       ]
 
-      expect(addEventSpy.calls.allArgs()).toEqual(expectedArgs)
+      expect(addEventSpy.mock.calls).toEqual(expectedArgs)
 
       carousel.dispose()
 
@@ -2095,8 +2094,6 @@ describe('Carousel', () => {
       const next = fixtureEl.querySelector('#next')
 
       next.click()
-
-      expect().nothing()
     })
 
     it('should do nothing if no carousel class on click on arrows', () => {
@@ -2115,8 +2112,6 @@ describe('Carousel', () => {
       const next = fixtureEl.querySelector('#next')
 
       next.click()
-
-      expect().nothing()
     })
   })
 })

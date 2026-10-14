@@ -1,3 +1,4 @@
+import { vi } from 'vitest'
 import OrangeNavbar from '../../src/orange-navbar.js'
 import {
   clearFixture, getFixture, createEvent
@@ -16,19 +17,19 @@ describe('OrangeNavbar', () => {
 
   describe('VERSION', () => {
     it('should return plugin version', () => {
-      expect(OrangeNavbar.VERSION).toEqual(jasmine.any(String))
+      expect(OrangeNavbar.VERSION).toEqual(expect.any(String))
     })
   })
 
   describe('Default', () => {
     it('should return plugin default config', () => {
-      expect(OrangeNavbar.Default).toEqual(jasmine.any(Object))
+      expect(OrangeNavbar.Default).toEqual(expect.any(Object))
     })
   })
 
   describe('DefaultType', () => {
     it('should return plugin default type config', () => {
-      expect(OrangeNavbar.DefaultType).toEqual(jasmine.any(Object))
+      expect(OrangeNavbar.DefaultType).toEqual(expect.any(Object))
     })
   })
 
@@ -44,7 +45,7 @@ describe('OrangeNavbar', () => {
     ].join('')
 
     const loadEvent = createEvent('load')
-    const spy = spyOn(OrangeNavbar, 'enableMinimizing')
+    const spy = vi.spyOn(OrangeNavbar, 'enableMinimizing').mockImplementation(() => {})
 
     window.dispatchEvent(loadEvent)
 
@@ -57,7 +58,7 @@ describe('OrangeNavbar', () => {
     ].join('')
 
     const scrollEvent = createEvent('scroll')
-    const spy = spyOn(OrangeNavbar, 'enableMinimizing')
+    const spy = vi.spyOn(OrangeNavbar, 'enableMinimizing').mockImplementation(() => {})
     window.scrollY = 1
 
     window.dispatchEvent(scrollEvent)
@@ -71,7 +72,7 @@ describe('OrangeNavbar', () => {
     ].join('')
 
     const scrollEvent = createEvent('scroll')
-    const spy = spyOn(OrangeNavbar, 'enableMinimizing')
+    const spy = vi.spyOn(OrangeNavbar, 'enableMinimizing').mockImplementation(() => {})
     window.scrollY = 1
 
     window.dispatchEvent(scrollEvent)

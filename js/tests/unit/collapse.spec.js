@@ -1,3 +1,4 @@
+import { vi } from 'vitest'
 import Collapse from '../../src/collapse.js'
 import EventHandler from '../../src/dom/event-handler.js'
 import { clearFixture, getFixture } from '../helpers/fixture.js'
@@ -15,13 +16,13 @@ describe('Collapse', () => {
 
   describe('VERSION', () => {
     it('should return plugin version', () => {
-      expect(Collapse.VERSION).toEqual(jasmine.any(String))
+      expect(Collapse.VERSION).toEqual(expect.any(String))
     })
   })
 
   describe('Default', () => {
     it('should return plugin default config', () => {
-      expect(Collapse.Default).toEqual(jasmine.any(Object))
+      expect(Collapse.Default).toEqual(expect.any(Object))
     })
   })
 
@@ -89,7 +90,7 @@ describe('Collapse', () => {
       const collapseEl = fixtureEl.querySelector('div')
       const collapse = new Collapse(collapseEl)
 
-      const spy = spyOn(collapse, 'show')
+      const spy = vi.spyOn(collapse, 'show').mockImplementation(() => {})
 
       collapse.toggle()
 
@@ -104,7 +105,7 @@ describe('Collapse', () => {
         toggle: false
       })
 
-      const spy = spyOn(collapse, 'hide')
+      const spy = vi.spyOn(collapse, 'hide').mockImplementation(() => {})
 
       collapse.toggle()
 
@@ -151,7 +152,7 @@ describe('Collapse', () => {
     it('should do nothing if is transitioning', () => {
       fixtureEl.innerHTML = '<div></div>'
 
-      const spy = spyOn(EventHandler, 'trigger')
+      const spy = vi.spyOn(EventHandler, 'trigger').mockImplementation(() => {})
 
       const collapseEl = fixtureEl.querySelector('div')
       const collapse = new Collapse(collapseEl, {
@@ -167,7 +168,7 @@ describe('Collapse', () => {
     it('should do nothing if already shown', () => {
       fixtureEl.innerHTML = '<div class="show"></div>'
 
-      const spy = spyOn(EventHandler, 'trigger')
+      const spy = vi.spyOn(EventHandler, 'trigger').mockImplementation(() => {})
 
       const collapseEl = fixtureEl.querySelector('div')
       const collapse = new Collapse(collapseEl, {
@@ -372,7 +373,6 @@ describe('Collapse', () => {
 
         const expectEnd = () => {
           setTimeout(() => {
-            expect().nothing()
             resolve()
           }, 10)
         }
@@ -395,7 +395,7 @@ describe('Collapse', () => {
     it('should do nothing if is transitioning', () => {
       fixtureEl.innerHTML = '<div></div>'
 
-      const spy = spyOn(EventHandler, 'trigger')
+      const spy = vi.spyOn(EventHandler, 'trigger').mockImplementation(() => {})
 
       const collapseEl = fixtureEl.querySelector('div')
       const collapse = new Collapse(collapseEl, {
@@ -411,7 +411,7 @@ describe('Collapse', () => {
     it('should do nothing if already shown', () => {
       fixtureEl.innerHTML = '<div></div>'
 
-      const spy = spyOn(EventHandler, 'trigger')
+      const spy = vi.spyOn(EventHandler, 'trigger').mockImplementation(() => {})
 
       const collapseEl = fixtureEl.querySelector('div')
       const collapse = new Collapse(collapseEl, {
@@ -453,7 +453,6 @@ describe('Collapse', () => {
 
         const expectEnd = () => {
           setTimeout(() => {
-            expect().nothing()
             resolve()
           }, 10)
         }
@@ -502,11 +501,11 @@ describe('Collapse', () => {
         const triggerEl = fixtureEl.querySelector('a')
         const nestedTriggerEl = fixtureEl.querySelector('#nested')
 
-        const spy = spyOn(Event.prototype, 'preventDefault').and.callThrough()
+        const spy = vi.spyOn(Event.prototype, 'preventDefault')
 
         triggerEl.addEventListener('click', event => {
-          expect(event.target.isEqualNode(nestedTriggerEl)).toBeTrue()
-          expect(event.delegateTarget.isEqualNode(triggerEl)).toBeTrue()
+          expect(event.target.isEqualNode(nestedTriggerEl)).toBe(true)
+          expect(event.delegateTarget.isEqualNode(triggerEl)).toBe(true)
           expect(spy).toHaveBeenCalled()
           resolve()
         })
@@ -660,7 +659,7 @@ describe('Collapse', () => {
 
         collapseEl.addEventListener('shown.bs.collapse', () => {
           expect(collapseEl).toHaveClass('show')
-          expect(target.checked).toBeTrue()
+          expect(target.checked).toBe(true)
           resolve()
         })
 
@@ -972,7 +971,7 @@ describe('Collapse', () => {
       })
       expect(collapse).toBeInstanceOf(Collapse)
 
-      expect(collapse._config.toggle).toBeFalse()
+      expect(collapse._config.toggle).toBe(false)
     })
 
     it('should return the instance when exists without given configuration', () => {
@@ -990,7 +989,7 @@ describe('Collapse', () => {
       expect(collapse).toBeInstanceOf(Collapse)
       expect(collapse2).toEqual(collapse)
 
-      expect(collapse2._config.toggle).toBeFalse()
+      expect(collapse2._config.toggle).toBe(false)
     })
   })
 })

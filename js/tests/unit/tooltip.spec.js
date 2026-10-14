@@ -1,3 +1,4 @@
+import { vi } from 'vitest'
 import EventHandler from '../../src/dom/event-handler.js'
 import Tooltip from '../../src/tooltip.js'
 import { noop } from '../../src/util/index.js'
@@ -22,19 +23,19 @@ describe('Tooltip', () => {
 
   describe('VERSION', () => {
     it('should return plugin version', () => {
-      expect(Tooltip.VERSION).toEqual(jasmine.any(String))
+      expect(Tooltip.VERSION).toEqual(expect.any(String))
     })
   })
 
   describe('Default', () => {
     it('should return plugin default config', () => {
-      expect(Tooltip.Default).toEqual(jasmine.any(Object))
+      expect(Tooltip.Default).toEqual(expect.any(Object))
     })
   })
 
   describe('NAME', () => {
     it('should return plugin name', () => {
-      expect(Tooltip.NAME).toEqual(jasmine.any(String))
+      expect(Tooltip.NAME).toEqual(expect.any(String))
     })
   })
 
@@ -52,7 +53,7 @@ describe('Tooltip', () => {
 
   describe('DefaultType', () => {
     it('should return plugin default type', () => {
-      expect(Tooltip.DefaultType).toEqual(jasmine.any(Object))
+      expect(Tooltip.DefaultType).toEqual(expect.any(Object))
     })
   })
 
@@ -74,7 +75,7 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      expect(tooltip._config.sanitize).toBeTrue()
+      expect(tooltip._config.sanitize).toBe(true)
     })
 
     it('should convert title and content to string if numbers', () => {
@@ -118,7 +119,7 @@ describe('Tooltip', () => {
       return new Promise(resolve => {
         fixtureEl.innerHTML = '<a href="#" rel="tooltip" title="Offset from function"></a>'
 
-        const getOffset = jasmine.createSpy('getOffset').and.returnValue([10, 20])
+        const getOffset = vi.fn().mockName('getOffset').mockReturnValue([10, 20])
         const tooltipEl = fixtureEl.querySelector('a')
         const tooltip = new Tooltip(tooltipEl, {
           offset: getOffset,
@@ -136,7 +137,7 @@ describe('Tooltip', () => {
 
         const offset = tooltip._getOffset()
 
-        expect(offset).toEqual(jasmine.any(Function))
+        expect(offset).toEqual(expect.any(Function))
 
         tooltip.show()
       })
@@ -170,7 +171,7 @@ describe('Tooltip', () => {
       fixtureEl.innerHTML = '<a href="#" rel="tooltip"></a>'
 
       const tooltipEl = fixtureEl.querySelector('a')
-      const getPopperConfig = jasmine.createSpy('getPopperConfig').and.returnValue({ placement: 'left' })
+      const getPopperConfig = vi.fn().mockName('getPopperConfig').mockReturnValue({ placement: 'left' })
       const tooltip = new Tooltip(tooltipEl, {
         popperConfig: getPopperConfig
       })
@@ -178,8 +179,8 @@ describe('Tooltip', () => {
       const popperConfig = tooltip._getPopperConfig('top')
 
       // Ensure that the function was called with the default config.
-      expect(getPopperConfig).toHaveBeenCalledWith(jasmine.objectContaining({
-        placement: jasmine.any(String)
+      expect(getPopperConfig).toHaveBeenCalledWith(expect.objectContaining({
+        placement: expect.any(String)
       }))
       expect(popperConfig.placement).toEqual('left')
     })
@@ -231,7 +232,6 @@ describe('Tooltip', () => {
         tooltip.show()
 
         setTimeout(() => {
-          expect().nothing()
           resolve()
         }, 10)
       })
@@ -245,11 +245,11 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      expect(tooltip._isEnabled).toBeTrue()
+      expect(tooltip._isEnabled).toBe(true)
 
       tooltip.toggleEnabled()
 
-      expect(tooltip._isEnabled).toBeFalse()
+      expect(tooltip._isEnabled).toBe(false)
     })
   })
 
@@ -270,7 +270,6 @@ describe('Tooltip', () => {
         tooltip.toggle()
 
         setTimeout(() => {
-          expect().nothing()
           resolve()
         }, 10)
       })
@@ -301,7 +300,7 @@ describe('Tooltip', () => {
           trigger: 'click'
         })
 
-        const spy = spyOn(tooltip, 'toggle').and.callThrough()
+        const spy = vi.spyOn(tooltip, 'toggle')
 
         tooltipEl.addEventListener('shown.bs.tooltip', () => {
           expect(spy).toHaveBeenCalled()
@@ -341,7 +340,7 @@ describe('Tooltip', () => {
           trigger: 'click'
         })
 
-        const spy = spyOn(tooltip, 'toggle').and.callThrough()
+        const spy = vi.spyOn(tooltip, 'toggle')
 
         tooltipEl.addEventListener('shown.bs.tooltip', () => {
           tooltipEl.click()
@@ -362,26 +361,26 @@ describe('Tooltip', () => {
       fixtureEl.innerHTML = '<a href="#" rel="tooltip" title="Another tooltip"></a>'
 
       const tooltipEl = fixtureEl.querySelector('a')
-      const addEventSpy = spyOn(tooltipEl, 'addEventListener').and.callThrough()
-      const removeEventSpy = spyOn(tooltipEl, 'removeEventListener').and.callThrough()
+      const addEventSpy = vi.spyOn(tooltipEl, 'addEventListener')
+      const removeEventSpy = vi.spyOn(tooltipEl, 'removeEventListener')
 
       const tooltip = new Tooltip(tooltipEl)
 
       expect(Tooltip.getInstance(tooltipEl)).toEqual(tooltip)
 
       const expectedArgs = [
-        ['mouseover', jasmine.any(Function), jasmine.any(Boolean)],
-        ['mouseout', jasmine.any(Function), jasmine.any(Boolean)],
-        ['focusin', jasmine.any(Function), jasmine.any(Boolean)],
-        ['focusout', jasmine.any(Function), jasmine.any(Boolean)]
+        ['mouseover', expect.any(Function), expect.any(Boolean)],
+        ['mouseout', expect.any(Function), expect.any(Boolean)],
+        ['focusin', expect.any(Function), expect.any(Boolean)],
+        ['focusout', expect.any(Function), expect.any(Boolean)]
       ]
 
-      expect(addEventSpy.calls.allArgs()).toEqual(expectedArgs)
+      expect(addEventSpy.mock.calls).toEqual(expectedArgs)
 
       tooltip.dispose()
 
       expect(Tooltip.getInstance(tooltipEl)).toBeNull()
-      expect(removeEventSpy.calls.allArgs()).toEqual(expectedArgs)
+      expect(removeEventSpy.mock.calls).toEqual(expectedArgs)
     })
 
     it('should destroy a tooltip after it is shown and hidden', () => {
@@ -480,7 +479,7 @@ describe('Tooltip', () => {
         const tooltipEl = fixtureEl.querySelector('a')
         const tooltip = new Tooltip(tooltipEl)
 
-        const spy = spyOn(tooltip, 'show')
+        const spy = vi.spyOn(tooltip, 'show').mockImplementation(() => {})
 
         tooltipEl.querySelector('rect').dispatchEvent(createEvent('mouseover', { bubbles: true }))
 
@@ -499,11 +498,11 @@ describe('Tooltip', () => {
         const tooltip = new Tooltip(tooltipEl)
         document.documentElement.ontouchstart = noop
 
-        const spy = spyOn(EventHandler, 'on').and.callThrough()
+        const spy = vi.spyOn(EventHandler, 'on')
 
         tooltipEl.addEventListener('shown.bs.tooltip', () => {
           expect(document.querySelector('.tooltip')).not.toBeNull()
-          expect(spy).toHaveBeenCalledWith(jasmine.any(Object), 'mouseover', noop)
+          expect(spy).toHaveBeenCalledWith(expect.any(Object), 'mouseover', noop)
           document.documentElement.ontouchstart = undefined
           resolve()
         })
@@ -604,7 +603,7 @@ describe('Tooltip', () => {
       return new Promise(resolve => {
         fixtureEl.innerHTML = '<a href="#" rel="tooltip" title="Another tooltip"></a>'
 
-        const spy = jasmine.createSpy('placement').and.returnValue('top')
+        const spy = vi.fn().mockName('placement').mockReturnValue('top')
         const tooltipEl = fixtureEl.querySelector('a')
         const tooltip = new Tooltip(tooltipEl, {
           placement: spy
@@ -690,7 +689,7 @@ describe('Tooltip', () => {
           delay: 150
         })
 
-        const spy = spyOn(tooltip, 'show')
+        const spy = vi.spyOn(tooltip, 'show').mockImplementation(() => {})
 
         setTimeout(() => {
           expect(spy).not.toHaveBeenCalled()
@@ -714,7 +713,7 @@ describe('Tooltip', () => {
           delay: 150
         })
 
-        const spy = spyOn(tooltip, 'show')
+        const spy = vi.spyOn(tooltip, 'show').mockImplementation(() => {})
 
         setTimeout(() => {
           expect(spy).not.toHaveBeenCalled()
@@ -773,7 +772,7 @@ describe('Tooltip', () => {
         const tooltip = new Tooltip(tooltipEl)
         const triggerChild = tooltipEl.querySelector('b')
 
-        const spy = spyOn(tooltip, 'hide').and.callThrough()
+        const spy = vi.spyOn(tooltip, 'hide')
 
         tooltipEl.addEventListener('mouseover', () => {
           const moveMouseToChildEvent = createEvent('mouseout')
@@ -801,7 +800,7 @@ describe('Tooltip', () => {
         const tooltipEl = fixtureEl.querySelector('a')
         const tooltip = new Tooltip(tooltipEl)
 
-        spyOn(window, 'getComputedStyle').and.returnValue({
+        vi.spyOn(window, 'getComputedStyle').mockReturnValue({
           transitionDuration: '0.15s',
           transitionDelay: '0s'
         })
@@ -834,12 +833,12 @@ describe('Tooltip', () => {
         const tooltipEl = fixtureEl.querySelector('a')
         const tooltip = new Tooltip(tooltipEl)
 
-        spyOn(window, 'getComputedStyle').and.returnValue({
+        vi.spyOn(window, 'getComputedStyle').mockReturnValue({
           transitionDuration: '0.15s',
           transitionDelay: '0s'
         })
 
-        const insertedFunc = jasmine.createSpy()
+        const insertedFunc = vi.fn()
         tooltipEl.addEventListener('inserted.bs.tooltip', insertedFunc)
 
         setTimeout(() => {
@@ -904,7 +903,7 @@ describe('Tooltip', () => {
         fixtureEl.innerHTML = '<a href="#" rel="tooltip" title="Another tooltip" data-class-a="custom-class-a" data-class-b="custom-class-b"></a>'
 
         const tooltipEl = fixtureEl.querySelector('a')
-        const spy = jasmine.createSpy('customClass').and.callFake(function (el) {
+        const spy = vi.fn().mockName('customClass').mockImplementation(function (el) {
           return `${el.dataset.classA} ${this.dataset.classB}`
         })
         const tooltip = new Tooltip(tooltipEl, {
@@ -965,7 +964,7 @@ describe('Tooltip', () => {
 
         const tooltipEl = fixtureEl.querySelector('a')
         const tooltip = new Tooltip(tooltipEl)
-        const spy = spyOn(EventHandler, 'off')
+        const spy = vi.spyOn(EventHandler, 'off').mockImplementation(() => {})
 
         tooltipEl.addEventListener('shown.bs.tooltip', () => {
           document.documentElement.ontouchstart = noop
@@ -974,7 +973,7 @@ describe('Tooltip', () => {
 
         tooltipEl.addEventListener('hidden.bs.tooltip', () => {
           expect(document.querySelector('.tooltip')).toBeNull()
-          expect(spy).toHaveBeenCalledWith(jasmine.any(Object), 'mouseover', noop)
+          expect(spy).toHaveBeenCalledWith(expect.any(Object), 'mouseover', noop)
           document.documentElement.ontouchstart = undefined
           resolve()
         })
@@ -1040,7 +1039,6 @@ describe('Tooltip', () => {
 
       try {
         tooltip.hide()
-        expect().nothing()
       } catch {
         throw new Error('should not throw error')
       }
@@ -1056,7 +1054,7 @@ describe('Tooltip', () => {
         const tooltip = new Tooltip(tooltipEl)
 
         tooltipEl.addEventListener('shown.bs.tooltip', () => {
-          const spy = spyOn(tooltip._popper, 'update')
+          const spy = vi.spyOn(tooltip._popper, 'update').mockImplementation(() => {})
 
           tooltip.update()
 
@@ -1075,7 +1073,6 @@ describe('Tooltip', () => {
       const tooltip = new Tooltip(tooltipEl)
 
       tooltip.update()
-      expect().nothing()
     })
   })
 
@@ -1086,7 +1083,7 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      expect(tooltip._isWithContent()).toBeTrue()
+      expect(tooltip._isWithContent()).toBe(true)
     })
 
     it('should return false if there is no content', () => {
@@ -1095,7 +1092,7 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      expect(tooltip._isWithContent()).toBeFalse()
+      expect(tooltip._isWithContent()).toBe(false)
     })
   })
 
@@ -1106,7 +1103,7 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      const spy = spyOn(document, 'createElement').and.callThrough()
+      const spy = vi.spyOn(document, 'createElement')
 
       expect(tooltip._getTipElement()).toBeDefined()
       expect(spy).toHaveBeenCalled()
@@ -1118,12 +1115,12 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      const spy = spyOn(document, 'createElement').and.callThrough()
+      const spy = vi.spyOn(document, 'createElement')
 
       expect(tooltip._getTipElement()).toBeDefined()
       expect(spy).toHaveBeenCalled()
 
-      spy.calls.reset()
+      spy.mockClear()
 
       expect(tooltip._getTipElement()).toBeDefined()
       expect(spy).not.toHaveBeenCalled()
@@ -1200,7 +1197,6 @@ describe('Tooltip', () => {
       const tooltip = new Tooltip(tooltipEl)
 
       tooltip.setContent({ '.tooltip': null })
-      expect().nothing()
     })
 
     it('should do nothing if the content is a child of the element', () => {
@@ -1218,8 +1214,6 @@ describe('Tooltip', () => {
 
       tooltip._getTipElement().append(childContent)
       tooltip.setContent({ '.tooltip': childContent })
-
-      expect().nothing()
     })
 
     it('should add the child text content in the element', () => {

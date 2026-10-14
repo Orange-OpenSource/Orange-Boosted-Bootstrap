@@ -1,3 +1,4 @@
+import { vi } from 'vitest'
 import BaseComponent from '../../../src/base-component.js'
 import { enableDismissTrigger } from '../../../src/util/component-functions.js'
 import { clearFixture, createEvent, getFixture } from '../../helpers/fixture.js'
@@ -35,8 +36,8 @@ describe('Plugin functions', () => {
         '</div>'
       ].join('')
 
-      const spyGet = spyOn(DummyClass2, 'getOrCreateInstance').and.callThrough()
-      const spyTest = spyOn(DummyClass2.prototype, 'testMethod')
+      const spyGet = vi.spyOn(DummyClass2, 'getOrCreateInstance')
+      const spyTest = vi.spyOn(DummyClass2.prototype, 'testMethod').mockImplementation(() => {})
       const componentWrapper = fixtureEl.querySelector('#foo')
       const btnClose = fixtureEl.querySelector('[data-bs-dismiss="test"]')
       const event = createEvent('click')
@@ -55,8 +56,8 @@ describe('Plugin functions', () => {
         '</div>'
       ].join('')
 
-      const spyGet = spyOn(DummyClass2, 'getOrCreateInstance').and.callThrough()
-      const spyHide = spyOn(DummyClass2.prototype, 'hide')
+      const spyGet = vi.spyOn(DummyClass2, 'getOrCreateInstance')
+      const spyHide = vi.spyOn(DummyClass2.prototype, 'hide').mockImplementation(() => {})
       const componentWrapper = fixtureEl.querySelector('#foo')
       const btnClose = fixtureEl.querySelector('[data-bs-dismiss="test"]')
       const event = createEvent('click')
@@ -75,7 +76,7 @@ describe('Plugin functions', () => {
         '</div>'
       ].join('')
 
-      const spy = spyOn(DummyClass2, 'getOrCreateInstance').and.callThrough()
+      const spy = vi.spyOn(DummyClass2, 'getOrCreateInstance')
       const btnClose = fixtureEl.querySelector('[data-bs-dismiss="test"]')
       const event = createEvent('click')
 
@@ -96,7 +97,7 @@ describe('Plugin functions', () => {
       const event = createEvent('click')
 
       enableDismissTrigger(DummyClass2)
-      const spy = spyOn(Event.prototype, 'preventDefault').and.callThrough()
+      const spy = vi.spyOn(Event.prototype, 'preventDefault')
 
       btnClose.dispatchEvent(event)
 

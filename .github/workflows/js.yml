@@ -5,6 +5,10 @@ on:
       - main
     paths:
       - 'js/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'vitest.config.mjs'
+      - '.github/workflows/js.yml'
   pull_request:
     types: [opened, reopened, synchronize]
   workflow_dispatch:
@@ -40,6 +44,9 @@ jobs:
 
       - name: Install npm dependencies
         run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
 
       - name: Run dist
         run: npm run js

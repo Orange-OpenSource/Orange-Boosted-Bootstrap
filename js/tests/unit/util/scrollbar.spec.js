@@ -58,9 +58,9 @@ describe('ScrollBar', () => {
       const result = new ScrollBarHelper().isOverflowing()
 
       if (isScrollBarHidden()) {
-        expect(result).toBeFalse()
+        expect(result).toBe(false)
       } else {
-        expect(result).toBeTrue()
+        expect(result).toBe(true)
       }
     })
 
@@ -71,7 +71,7 @@ describe('ScrollBar', () => {
       const scrollBar = new ScrollBarHelper()
       const result = scrollBar.isOverflowing()
 
-      expect(result).toBeFalse()
+      expect(result).toBe(false)
     })
   })
 
@@ -152,8 +152,8 @@ describe('ScrollBar', () => {
       scrollBar.hide()
       scrollBar.reset()
 
-      expect(fixedEl.getAttribute('style').includes('padding-right')).toBeFalse()
-      expect(stickyEl.getAttribute('style').includes('margin-right')).toBeFalse()
+      expect(fixedEl.getAttribute('style').includes('padding-right')).toBe(false)
+      expect(stickyEl.getAttribute('style').includes('margin-right')).toBe(false)
     })
 
     it('should adjust the inline margin and padding of sticky elements', () => {
@@ -225,8 +225,8 @@ describe('ScrollBar', () => {
       expect(getPaddingX(stickyEl)).toEqual(scrollBarWidth + originalPadding)
       const expectedMargin = scrollBarWidth + originalMargin
       expect(getMarginX(stickyEl)).toEqual(expectedMargin === 0 ? expectedMargin : -expectedMargin)
-      expect(hasMarginAttr(stickyEl)).toBeFalse() // We do not have to keep css margin
-      expect(hasPaddingAttr(stickyEl)).toBeFalse() // We do not have to keep css padding
+      expect(hasMarginAttr(stickyEl)).toBe(false) // We do not have to keep css margin
+      expect(hasPaddingAttr(stickyEl)).toBe(false) // We do not have to keep css padding
 
       scrollBar.reset()
 

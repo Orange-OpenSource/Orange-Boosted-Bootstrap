@@ -1,3 +1,4 @@
+import { vi } from 'vitest'
 import EventHandler from '../../../src/dom/event-handler.js'
 import { noop } from '../../../src/util/index.js'
 import { clearFixture, getFixture } from '../../helpers/fixture.js'
@@ -21,8 +22,6 @@ describe('EventHandler', () => {
 
       EventHandler.on(div, null, noop)
       EventHandler.on(null, 'click', noop)
-
-      expect().nothing()
     })
 
     it('should add event listener', () => {
@@ -32,7 +31,6 @@ describe('EventHandler', () => {
         const div = fixtureEl.querySelector('div')
 
         EventHandler.on(div, 'click', () => {
-          expect().nothing()
           resolve()
         })
 
@@ -47,7 +45,6 @@ describe('EventHandler', () => {
         const div = fixtureEl.querySelector('div')
 
         EventHandler.on(div, 'bs.namespace', () => {
-          expect().nothing()
           resolve()
         })
 
@@ -62,7 +59,6 @@ describe('EventHandler', () => {
         const div = fixtureEl.querySelector('div')
 
         EventHandler.on(div, 'click.namespace', () => {
-          expect().nothing()
           resolve()
         })
 
@@ -73,7 +69,6 @@ describe('EventHandler', () => {
     it('should handle event delegation', () => {
       return new Promise(resolve => {
         EventHandler.on(document, 'click', '.test', () => {
-          expect().nothing()
           resolve()
         })
 
@@ -104,10 +99,10 @@ describe('EventHandler', () => {
         const deep = fixtureEl.querySelector('.deep')
         const sibling = fixtureEl.querySelector('.sibling')
 
-        const enterSpy = jasmine.createSpy('mouseenter')
-        const leaveSpy = jasmine.createSpy('mouseleave')
-        const delegateEnterSpy = jasmine.createSpy('mouseenter')
-        const delegateLeaveSpy = jasmine.createSpy('mouseleave')
+        const enterSpy = vi.fn().mockName('mouseenter')
+        const leaveSpy = vi.fn().mockName('mouseleave')
+        const delegateEnterSpy = vi.fn().mockName('mouseenter')
+        const delegateLeaveSpy = vi.fn().mockName('mouseleave')
 
         EventHandler.on(inner, 'mouseenter', enterSpy)
         EventHandler.on(inner, 'mouseleave', leaveSpy)
@@ -115,10 +110,10 @@ describe('EventHandler', () => {
         EventHandler.on(outer, 'mouseleave', '.inner', delegateLeaveSpy)
 
         EventHandler.on(sibling, 'mouseenter', () => {
-          expect(enterSpy.calls.count()).toEqual(2)
-          expect(leaveSpy.calls.count()).toEqual(2)
-          expect(delegateEnterSpy.calls.count()).toEqual(2)
-          expect(delegateLeaveSpy.calls.count()).toEqual(2)
+          expect(enterSpy.mock.calls.length).toEqual(2)
+          expect(leaveSpy.mock.calls.length).toEqual(2)
+          expect(delegateEnterSpy.mock.calls.length).toEqual(2)
+          expect(delegateLeaveSpy.mock.calls.length).toEqual(2)
           resolve()
         })
 
@@ -143,10 +138,10 @@ describe('EventHandler', () => {
         moveMouse(inner, outer)
 
         setTimeout(() => {
-          expect(enterSpy.calls.count()).toEqual(1)
-          expect(leaveSpy.calls.count()).toEqual(1)
-          expect(delegateEnterSpy.calls.count()).toEqual(1)
-          expect(delegateLeaveSpy.calls.count()).toEqual(1)
+          expect(enterSpy.mock.calls.length).toEqual(1)
+          expect(leaveSpy.mock.calls.length).toEqual(1)
+          expect(delegateEnterSpy.mock.calls.length).toEqual(1)
+          expect(delegateLeaveSpy.mock.calls.length).toEqual(1)
 
           // from outer to inner to sibling (adjacent)
           moveMouse(outer, inner)
@@ -213,7 +208,6 @@ describe('EventHandler', () => {
 
       EventHandler.off(div, null, noop)
       EventHandler.off(null, 'click', noop)
-      expect().nothing()
     })
 
     it('should remove a listener', () => {
@@ -386,7 +380,6 @@ describe('EventHandler', () => {
 
         EventHandler.trigger(div, 'foobar')
         setTimeout(() => {
-          expect().nothing()
           resolve()
         }, 20)
       })

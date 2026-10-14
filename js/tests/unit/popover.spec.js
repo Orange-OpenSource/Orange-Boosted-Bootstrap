@@ -1,3 +1,4 @@
+import { vi } from 'vitest'
 import EventHandler from '../../src/dom/event-handler.js'
 import Popover from '../../src/popover.js'
 import {
@@ -23,19 +24,19 @@ describe('Popover', () => {
 
   describe('VERSION', () => {
     it('should return plugin version', () => {
-      expect(Popover.VERSION).toEqual(jasmine.any(String))
+      expect(Popover.VERSION).toEqual(expect.any(String))
     })
   })
 
   describe('Default', () => {
     it('should return plugin default config', () => {
-      expect(Popover.Default).toEqual(jasmine.any(Object))
+      expect(Popover.Default).toEqual(expect.any(Object))
     })
   })
 
   describe('NAME', () => {
     it('should return plugin name', () => {
-      expect(Popover.NAME).toEqual(jasmine.any(String))
+      expect(Popover.NAME).toEqual(expect.any(String))
     })
   })
 
@@ -53,7 +54,7 @@ describe('Popover', () => {
 
   describe('DefaultType', () => {
     it('should return plugin default type', () => {
-      expect(Popover.DefaultType).toEqual(jasmine.any(Object))
+      expect(Popover.DefaultType).toEqual(expect.any(Object))
     })
   })
 
@@ -240,7 +241,7 @@ describe('Popover', () => {
 
       const popoverEl = fixtureEl.querySelector('a')
       const popover = new Popover(popoverEl, { animation: false })
-      const spy = spyOn(EventHandler, 'trigger').and.callThrough()
+      const spy = vi.spyOn(EventHandler, 'trigger')
 
       popover.show()
 
@@ -281,7 +282,7 @@ describe('Popover', () => {
         })
 
         popoverEl.addEventListener('shown.bs.popover', () => {
-          spy = spy || spyOn(popover._templateFactory, 'constructor').and.callThrough()
+          spy = spy || vi.spyOn(popover._templateFactory, 'constructor')
           const popoverDisplayed = document.querySelector('.popover')
 
           expect(popoverDisplayed).not.toBeNull()

@@ -1,3 +1,4 @@
+import { vi } from 'vitest'
 import { DefaultAllowlist, sanitizeHtml } from '../../../src/util/sanitizer.js'
 
 describe('Sanitizer', () => {
@@ -142,7 +143,7 @@ describe('Sanitizer', () => {
         return htmlUnsafe
       }
 
-      const spy = spyOn(DOMParser.prototype, 'parseFromString')
+      const spy = vi.spyOn(DOMParser.prototype, 'parseFromString').mockImplementation(() => {})
 
       const result = sanitizeHtml(template, DefaultAllowlist, mySanitize)
 

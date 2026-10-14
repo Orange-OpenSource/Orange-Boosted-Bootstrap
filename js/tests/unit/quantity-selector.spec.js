@@ -16,19 +16,19 @@ describe('QuantitySelector', () => {
 
   describe('VERSION', () => {
     it('should return plugin version', () => {
-      expect(QuantitySelector.VERSION).toEqual(jasmine.any(String))
+      expect(QuantitySelector.VERSION).toEqual(expect.any(String))
     })
   })
 
   describe('Default', () => {
     it('should return plugin default config', () => {
-      expect(QuantitySelector.Default).toEqual(jasmine.any(Object))
+      expect(QuantitySelector.Default).toEqual(expect.any(Object))
     })
   })
 
   describe('DefaultType', () => {
     it('should return plugin default type config', () => {
-      expect(QuantitySelector.DefaultType).toEqual(jasmine.any(Object))
+      expect(QuantitySelector.DefaultType).toEqual(expect.any(Object))
     })
   })
 
@@ -207,7 +207,7 @@ describe('QuantitySelector', () => {
     expect(buttonStepUpEl.disabled).toBeTruthy()
   })
 
-  it('should disable click on Step Down button on load to prevent a value out of range', done => {
+  it('should disable click on Step Down button on load to prevent a value out of range', async () => {
     fixtureEl.innerHTML = [
       '<div class="quantity-selector">',
       '  <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0.5" min="0" max="10" step="1" data-bs-round="1" aria-label="Quantity selector" />',
@@ -228,14 +228,14 @@ describe('QuantitySelector', () => {
 
     expect(inputEl.value).toBe('0.5')
 
-    setTimeout(() => {
-      expect(buttonStepDownEl.disabled).toBeTruthy()
-      expect(inputEl.value).toBe('0.5')
-      done()
-    }, 10)
+    await new Promise(resolve => {
+      setTimeout(resolve, 10)
+    })
+    expect(buttonStepDownEl.disabled).toBeTruthy()
+    expect(inputEl.value).toBe('0.5')
   })
 
-  it('should disable click on Step Up button on load to prevent a value out of range', done => {
+  it('should disable click on Step Up button on load to prevent a value out of range', async () => {
     fixtureEl.innerHTML = [
       '<div class="quantity-selector">',
       '  <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="9.5" min="0" max="10" step="1" data-bs-round="1" aria-label="Quantity selector" />',
@@ -256,10 +256,10 @@ describe('QuantitySelector', () => {
     const loadEvent = createEvent('load')
     window.dispatchEvent(loadEvent)
 
-    setTimeout(() => {
-      expect(buttonStepUpEl.disabled).toBeTruthy()
-      expect(inputEl.value).toBe('9.5')
-      done()
-    }, 10)
+    await new Promise(resolve => {
+      setTimeout(resolve, 10)
+    })
+    expect(buttonStepUpEl.disabled).toBeTruthy()
+    expect(inputEl.value).toBe('9.5')
   })
 })
