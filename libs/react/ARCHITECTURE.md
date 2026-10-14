@@ -12,7 +12,7 @@ This project carries the Nx tag `lib:react`. The `@nx/enforce-module-boundaries`
 
 ## Styling approach
 
-Today the components only emit OUDS Web class names; the visual design comes from the brand stylesheet that `OudsProvider` injects at runtime from the jsDelivr CDN (`@ouds/core` pins the version of the brand package it was built with). `src/components/button/button.module.scss` is a CSS module with a single rule that no component imports yet, and although `package.json` lists `./style.css` in `exports`, the build currently emits no such file.
+Today the components only emit OUDS Web class names; the visual design comes from the brand stylesheet that `OudsProvider` injects at runtime from the jsDelivr CDN (`@ouds/core` pins the version of the brand package it was built with). `src/components/button/button.module.scss` is a CSS module with a single rule that no component imports yet. The package does not export a stylesheet; add a `./style.css` export together with the build step that emits it.
 
 If the library later needs OUDS Web tokens/CSS at build time, it will consume them **via a published npm dependency** on the relevant brand package (or `@ouds/web-common`), not by importing `libs/web`'s internal Sass/token sources directly. This was a deliberate choice (see the option analysis below) over consuming the monorepo source directly:
 

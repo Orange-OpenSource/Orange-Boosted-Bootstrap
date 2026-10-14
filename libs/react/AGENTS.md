@@ -19,7 +19,7 @@ Scope: everything under `libs/react/`. The root [`AGENTS.md`](../../AGENTS.md) s
 ## Code conventions
 
 - Function components with hooks, written in TypeScript (`.tsx`). Export a named component (PascalCase) typed with `React.FC<<Name>Props>`; folders and files are kebab-case, with a `.component.tsx` suffix for components. Component classes follow OUDS Web markup (`btn`, `btn-<variant>`, …) and use `classnames`.
-- `@ouds/core` is a `dependency` (kept external in the bundle). Prop types shared across frameworks belong in `@ouds/core`.
+- `@ouds/core` and `classnames` are `dependencies` (kept external in the bundle, so they must stay declared in `libs/react/package.json`). Prop types shared across frameworks belong in `@ouds/core`.
 - `react`, `react-dom`, and `react/jsx-runtime` are externals and `peerDependencies` — never bundle them, and add any new runtime dependency as a peer when consumers must share it.
 - No code formatter is configured for this library. Follow `.editorconfig` and the existing style: single quotes, no semicolons, no trailing commas, 2-space indent.
 - Lint plugins: `react` (including `rules-of-hooks` and `exhaustive-deps`), `jsx-a11y`, and `import`, on top of the base `typescript`/`unicorn`/`oxc` rules. Accessibility errors are real errors — fix them rather than disabling the rule.

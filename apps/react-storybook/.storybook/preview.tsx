@@ -1,6 +1,7 @@
 import './storybook.css';
 
 import { OudsProvider } from '@ouds/react';
+import type { Brand, Theme } from '@ouds/react';
 import type { Decorator, Preview } from '@storybook/react';
 import { JSX } from 'react';
 
@@ -58,10 +59,9 @@ export const globalTypes: Preview['globalTypes'] = {
 export const decorators: Decorator[] = [
     (Story, context): JSX.Element => {
         const rounded = context.globals['roundedCorners'] === 'on';
-        const theme = (context.globals['theme'] as 'light' | 'dark') ?? 'dark';
+        const theme = (context.globals['theme'] as Theme) ?? 'dark';
         const brand =
-            (context.globals['brand'] as
-                'orange' | 'orange-compact' | 'sosh') ?? 'orange';
+            (context.globals['brand'] as Brand) ?? 'orange';
 
         document.documentElement.setAttribute('data-bs-theme', theme);
         document.documentElement.setAttribute('data-bs-brand', brand);
