@@ -16,12 +16,12 @@ Today the components only emit OUDS Web class names; the visual design comes fro
 
 If the library later needs OUDS Web tokens/CSS at build time, it will consume them **via a published npm dependency** on the relevant brand package (or `@ouds/web-common`), not by importing `libs/web`'s internal Sass/token sources directly. This was a deliberate choice over consuming the monorepo source directly:
 
-| | Published npm dependency (chosen) | Direct source consumption |
-|---|---|---|
-| Release coupling | Decoupled — `@ouds/angular` adopts a new `libs/web` token release on its own schedule | Coupled — a token bump in `libs/web` can force a coordinated `@ouds/angular` release |
-| Boundary rule | No change needed — stays isolated | Requires relaxing `enforce-module-boundaries` |
-| Portability | `@ouds/angular` stays extractable/publishable independent of this monorepo's layout | Ties `@ouds/angular` to the monorepo's internal file structure |
-| Dev feedback loop | Slower — needs a published (or prerelease/tarball) version to pick up unreleased token changes | Instant — token changes are visible without a publish step |
+|                   | Published npm dependency (chosen)                                                              | Direct source consumption                                                            |
+| ----------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Release coupling  | Decoupled — `@ouds/angular` adopts a new `libs/web` token release on its own schedule          | Coupled — a token bump in `libs/web` can force a coordinated `@ouds/angular` release |
+| Boundary rule     | No change needed — stays isolated                                                              | Requires relaxing `enforce-module-boundaries`                                        |
+| Portability       | `@ouds/angular` stays extractable/publishable independent of this monorepo's layout            | Ties `@ouds/angular` to the monorepo's internal file structure                       |
+| Dev feedback loop | Slower — needs a published (or prerelease/tarball) version to pick up unreleased token changes | Instant — token changes are visible without a publish step                           |
 
 No OUDS Web package is a dependency of this library yet. Add one as a `peerDependency`/`dependency` when a component needs build-time access to tokens or Sass.
 
@@ -31,10 +31,10 @@ No OUDS Web package is a dependency of this library yet. Add one as a `peerDepen
 - **Naming**: PascalCase + `Component` suffix for the class (`ButtonComponent`), kebab-case for the folder and file name (`button.component.ts`); selectors are prefixed (`orange-button`).
 - **Component style**: standalone components (`standalone: true`), no `NgModule` wrapping, `OnPush` change detection.
 - **Exports**: each folder's `index.ts` is re-exported from `src/components/index.ts`, which `src/index.ts` re-exports (barrel files); this is the package's public API surface.
-- **Shared types**: props shared with the other frameworks live in `@ouds/core`. `ButtonComponent` types its `variant` input with `Variant` from `@ouds/core`.
+- **Shared types**: props shared with the other frameworks live in `@ouds/core`. `ButtonComponent` types its `variant` input with `Variant`, and `OudsProviderComponent`, `OudsService` and `OudsConfig` use `Brand` and `Theme`, all from `@ouds/core`; `src/index.ts` re-exports `Brand` and `Theme`.
 - **Testing**: [Jest](https://jestjs.io/) via `@nx/jest` + `jest-preset-angular` (not Vitest — see note below); spec files are co-located as `<name>.component.spec.ts`.
 - **Linting**: ESLint 9 flat config (`eslint.config.mjs`) extending the root `eslint.config.mjs` (Nx base/TypeScript/JavaScript configs + module boundaries) and adding `angular-eslint` (selector prefix rules, template parser). The `lint` target is declared explicitly in `project.json`. Its cache inputs include the root `eslint.config.mjs` and exclude the git-ignored `.eslintcache`. No formatter is configured for this library.
-- **Build**: [ng-packagr](https://github.com/ng-packagr/ng-packagr) via `@nx/angular:package`, producing an Angular Package Format (APF) distributable. `build` depends on `@ouds/core:build`. `@ouds/core` is imported by the sources but not yet declared in this library's `package.json`; see the known issue in [AGENTS.md](./AGENTS.md).
+- **Build**: [ng-packagr](https://github.com/ng-packagr/ng-packagr) via `@nx/angular:package`, producing an Angular Package Format (APF) distributable. `build` depends on `@ouds/core:build`. `@ouds/core` is a `dependency` in `package.json` and is listed in `allowedNonPeerDependencies` in `ng-package.json`, so the generated `dist/libs/angular/package.json` declares it (with `tslib`). The source `package.json` has no hand-written `exports` or `types`; ng-packagr generates them for the APF output.
 
 ### Why ESLint instead of Oxlint
 

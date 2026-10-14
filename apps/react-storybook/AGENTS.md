@@ -4,7 +4,7 @@ Scope: everything under `apps/react-storybook/`. The root [`AGENTS.md`](../../AG
 
 ## Layout
 
-- `.storybook/main.ts` — Storybook 10 config (`@storybook/react-vite`). It loads stories from `libs/react/**/*.stories.@(js|jsx|ts|tsx|mdx)`, reuses `libs/react/vite.config.ts` as the Vite config, and adds `nxViteTsPaths()`.
+- `.storybook/main.ts` — Storybook 10 config (`@storybook/react-vite`). It loads stories from `libs/react/**/*.stories.@(js|jsx|ts|tsx|mdx)`, reuses `libs/react/vite.config.ts` as the Vite config, and adds `resolve.tsconfigPaths: true` (Vite's built-in support for the `@ouds/*` paths of `tsconfig.base.json`) via `viteFinal`.
 - `.storybook/preview.tsx` — a global decorator that wraps each story in `OudsProvider` (and sets `data-bs-theme`/`data-bs-brand` on `<html>`), toolbar `globalTypes` (theme, brand, rounded corners), `parameters`, and `tags: ['autodocs']`. The brand CSS is loaded by `OudsProvider` from the jsDelivr CDN, so stories need network access to look right.
 - `.storybook/manager.ts` — manager UI theme (`@ouds/storybook-theme/OrangeTheme.js` through `addons` from `storybook/manager-api`, same theme as `libs/web`; supports Storybook 9 and 10).
 - `.storybook/storybook.css` — Storybook-only styles.
