@@ -75,7 +75,6 @@ Below are all the background utilities along with their recommended `[data-bs-th
 </Callout>
 
 <ColorTable
-  colorPrefix="ouds/color/bg/"
   tokenRegexp={/\$ouds-color-(bg-(?<colorName>.*)-light)/}
   getUsage={(colorName) => `.bg-${colorName}`}
   getStyle={() => {}}
@@ -84,7 +83,6 @@ Below are all the background utilities along with their recommended `[data-bs-th
   parentTheme="root"
   enableCopyToClipboard={true} />
 <ColorTable
-  colorPrefix="ouds/color/surface/"
   tokenRegexp={/\$ouds-color-(surface-(?<colorName>.*)-light)/}
   getUsage={(colorName) => `.bg-surface-${colorName}`}
   getStyle={() => {}}
@@ -93,7 +91,6 @@ Below are all the background utilities along with their recommended `[data-bs-th
   parentTheme="root"
   enableCopyToClipboard={true}/>
 <ColorTable
-  colorPrefix="ouds/color/always/"
   tokenRegexp={/\$ouds-color-always-(?!on-)(?<colorName>.*)/}
   getUsage={(colorName) => `.bg-always-${colorName}`}
   getStyle={() => {}}
@@ -102,7 +99,6 @@ Below are all the background utilities along with their recommended `[data-bs-th
   parentTheme="root"
   enableCopyToClipboard={true}/>
 <ColorTable
-  colorPrefix="ouds/color/transparent/"
   basicClasses={['transparent']}
   getUsage={(colorName) => `.bg-${colorName}`}
   getStyle={() => {}}
@@ -114,7 +110,6 @@ Below are all the background utilities along with their recommended `[data-bs-th
 We also provide opacity-based background classes, which should be used only in specific contexts where you need to adjust background opacity to enhance text readability. In most cases, `.bg-secondary` or `.bg-surface-secondary` are the preferred alternatives.
 
 <ColorTable
-  colorPrefix="ouds/color/opacity/"
   tokenRegexp={/\$ouds-color-opacity-(?<colorName>(lower|lowest))-light/}
   getUsage={(colorName) => `.bg-opacity-${colorName}`}
   getStyle={() => {}}
@@ -139,7 +134,6 @@ For example in a `light` color mode context, dark backgrounds like `.bg-inverse-
   <div class="bg-always-white">
     <div data-bs-theme="light">
       <ColorTable
-        colorPrefix="ouds/color/bg/"
         tokenRegexp={/\$ouds-color-(bg-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-${colorName}`}
         getStyle={() => {}}
@@ -148,7 +142,6 @@ For example in a `light` color mode context, dark backgrounds like `.bg-inverse-
         parentTheme="light"
         enableCopyToClipboard={true} />
       <ColorTable
-        colorPrefix="ouds/color/surface/"
         tokenRegexp={/\$ouds-color-(surface-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-surface-${colorName}`}
         getStyle={() => {}}
@@ -157,7 +150,6 @@ For example in a `light` color mode context, dark backgrounds like `.bg-inverse-
         parentTheme="light"
         enableCopyToClipboard={true} />
       <ColorTable
-        colorPrefix="ouds/color/always/"
         tokenRegexp={/\$ouds-color-always-(?!on-)(?<colorName>.*)/}
         getUsage={(colorName) => `.bg-always-${colorName}`}
         getStyle={() => {}}
@@ -166,7 +158,6 @@ For example in a `light` color mode context, dark backgrounds like `.bg-inverse-
         parentTheme="light"
         enableCopyToClipboard={true} />
       <ColorTable
-        colorPrefix="ouds/color/transparent/"
         basicClasses={['transparent']}
         getUsage={(colorName) => `.bg-${colorName}`}
         getStyle={() => {}}
@@ -175,7 +166,6 @@ For example in a `light` color mode context, dark backgrounds like `.bg-inverse-
         parentTheme="light"
         enableCopyToClipboard={true} />
       <ColorTable
-        colorPrefix="ouds/color/opacity/"
         tokenRegexp={/\$ouds-color-opacity-(?<colorName>(lower|lowest))-light/}
         getUsage={(colorName) => `.bg-opacity-${colorName}`}
         getStyle={() => {}}
@@ -195,7 +185,6 @@ With a `dark` color mode context, light backgrounds like `.bg-inverse-high` will
   <div class="bg-always-black">
     <div data-bs-theme="dark">
       <ColorTable
-        colorPrefix="ouds/color/bg/"
         tokenRegexp={/\$ouds-color-(bg-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-${colorName}`}
         getStyle={() => {}}
@@ -204,7 +193,6 @@ With a `dark` color mode context, light backgrounds like `.bg-inverse-high` will
         parentTheme="dark"
         enableCopyToClipboard={true} />
       <ColorTable
-        colorPrefix="ouds/color/surface/"
         tokenRegexp={/\$ouds-color-(surface-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-surface-${colorName}`}
         getStyle={() => {}}
@@ -213,7 +201,6 @@ With a `dark` color mode context, light backgrounds like `.bg-inverse-high` will
         parentTheme="dark"
         enableCopyToClipboard={true} />
       <ColorTable
-        colorPrefix="ouds/color/always/"
         tokenRegexp={/\$ouds-color-always-(?!on-)(?<colorName>.*)/}
         getUsage={(colorName) => `.bg-always-${colorName}`}
         getStyle={() => {}}
@@ -222,7 +209,6 @@ With a `dark` color mode context, light backgrounds like `.bg-inverse-high` will
         parentTheme="dark"
         enableCopyToClipboard={true} />
       <ColorTable
-        colorPrefix="ouds/color/transparent/"
         basicClasses={['transparent']}
         getUsage={(colorName) => `.bg-${colorName}`}
         getStyle={() => {}}
@@ -231,7 +217,6 @@ With a `dark` color mode context, light backgrounds like `.bg-inverse-high` will
         parentTheme="dark"
         enableCopyToClipboard={true} />
       <ColorTable
-        colorPrefix="ouds/color/opacity/"
         tokenRegexp={/\$ouds-color-opacity-(?<colorName>(lower|lowest))-light/}
         getUsage={(colorName) => `.bg-opacity-${colorName}`}
         getStyle={() => {}}
@@ -253,7 +238,6 @@ The following examples demonstrate the proper use of `[data-bs-theme]` in dynami
   <div class="bg-inverse-high">
     <div data-bs-theme="root-inverted">
       <ColorTable
-        colorPrefix="ouds/color/bg/"
         tokenRegexp={/\$ouds-color-(bg-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-${colorName}`}
         getStyle={() => {}}
@@ -262,7 +246,6 @@ The following examples demonstrate the proper use of `[data-bs-theme]` in dynami
         parentTheme="root-inverted"
         enableCopyToClipboard={true} />
       <ColorTable
-        colorPrefix="ouds/color/surface/"
         tokenRegexp={/\$ouds-color-(surface-(?<colorName>.*)-light)/}
         getUsage={(colorName) => `.bg-surface-${colorName}`}
         getStyle={() => {}}
@@ -271,7 +254,6 @@ The following examples demonstrate the proper use of `[data-bs-theme]` in dynami
         parentTheme="root-inverted"
         enableCopyToClipboard={true} />
       <ColorTable
-        colorPrefix="ouds/color/always/"
         tokenRegexp={/\$ouds-color-always-(?!on-)(?<colorName>.*)/}
         getUsage={(colorName) => `.bg-always-${colorName}`}
         getStyle={() => {}}
@@ -280,7 +262,6 @@ The following examples demonstrate the proper use of `[data-bs-theme]` in dynami
         parentTheme="root-inverted"
         enableCopyToClipboard={true} />
       <ColorTable
-        colorPrefix="ouds/color/transparent/"
         basicClasses={['transparent']}
         getUsage={(colorName) => `.bg-${colorName}`}
         getStyle={() => {}}
@@ -289,7 +270,6 @@ The following examples demonstrate the proper use of `[data-bs-theme]` in dynami
         parentTheme="root-inverted"
         enableCopyToClipboard={true} />
       <ColorTable
-        colorPrefix="ouds/color/opacity/"
         tokenRegexp={/\$ouds-color-opacity-(?<colorName>(lower|lowest))-light/}
         getUsage={(colorName) => `.bg-opacity-${colorName}`}
         getStyle={() => {}}
