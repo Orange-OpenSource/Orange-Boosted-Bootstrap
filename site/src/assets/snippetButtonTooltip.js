@@ -9,8 +9,10 @@
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
+/* global oudsWeb: false */
+
 export function snippetButtonTooltip(selector, tooltipLabel) {
-  document.querySelectorAll(selector).forEach((btn) => {
+  document.querySelectorAll(selector).forEach(btn => {
     oudsWeb.Tooltip.getOrCreateInstance(btn, { title: tooltipLabel })
   })
 }

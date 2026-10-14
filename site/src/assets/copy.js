@@ -24,8 +24,8 @@ const clipboard = new ClipboardJS('.btn-clipboard', {
 })
 
 const codeClipboard = new ClipboardJS('.btn-code-clipboard', {
-  target: (trigger) => trigger.closest('.bd-code-snippet')?.querySelector('.highlight'),
-  text: (trigger) => {
+  target: trigger => trigger.closest('.bd-code-snippet')?.querySelector('.highlight'),
+  text(trigger) {
     // Trim text to workaround a Firefox issue where the structure of the DOM (uncontrolled) is relevant for the
     // copied text.
     // https://github.com/zenorocha/clipboard.js/issues/439#issuecomment-312344621
@@ -33,11 +33,11 @@ const codeClipboard = new ClipboardJS('.btn-code-clipboard', {
   }
 })
 
-clipboard.on('success', (event) => _onSuccess(event))
-codeClipboard.on('success', (event) => _onSuccess(event))
+clipboard.on('success', event => _onSuccess(event))
+codeClipboard.on('success', event => _onSuccess(event))
 
-clipboard.on('error', (event) => _onError(event))
-codeClipboard.on('error', (event) => _onError(event))
+clipboard.on('error', event => _onError(event))
+codeClipboard.on('error', event => _onError(event))
 
 function _onSuccess(event) {
   const iconFirstChild = event.trigger.querySelector('svg')?.firstElementChild
@@ -70,6 +70,7 @@ function _onSuccess(event) {
     if (originalXhref) {
       iconFirstChild?.setAttributeNS(namespace, 'href', originalXhref)
     }
+
     tooltipBtn?.hide()
   }, 2000)
 }
