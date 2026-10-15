@@ -148,6 +148,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
       <!-- BEWARE: \`.btn-negative\` and \`.btn-brand\` should never be used on colored backgrounds! -->
     </div>
   </div>
+
   <div class="bg-surface-status-negative-emphasized p-large">
     <div data-bs-theme="${getMode('modes-on-status-negative-emphasized')}" class="d-flex gap-xsmall flex-wrap">
 
@@ -766,24 +767,38 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 
 <Example buttonLabel="navigation buttons on colored backgrounds" class="p-none bd-btn-example bd-first-rounded" code={`<div class="bg-surface-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
+
       <a class="btn btn-next btn-default btn-on-colored-bg" href="#">Default</a>
+
       <a class="btn btn-next btn-icon btn-default btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
+
       <a class="btn btn-next btn-strong btn-on-colored-bg" href="#">Strong</a>
+
       <a class="btn btn-next btn-icon btn-strong btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
+
       <a class="btn btn-next btn-minimal btn-on-colored-bg" href="#">Minimal</a>
+
       <a class="btn btn-next btn-icon btn-minimal btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
+
       <!-- BEWARE: \`.btn-brand\` should never be used on colored backgrounds! -->
     </div>
   </div>
 
   <div class="bg-surface-status-negative-emphasized p-large">
     <div data-bs-theme="${getMode('modes-on-status-negative-emphasized')}" class="d-flex gap-xsmall flex-wrap">
+
       <a class="btn btn-next btn-default btn-on-colored-bg" href="#">Default</a>
+
       <a class="btn btn-next btn-icon btn-default btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
+
       <a class="btn btn-next btn-strong btn-on-colored-bg" href="#">Strong</a>
+
       <a class="btn btn-next btn-icon btn-strong btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
+
       <a class="btn btn-next btn-minimal btn-on-colored-bg" href="#">Minimal</a>
+
       <a class="btn btn-next btn-icon btn-minimal btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
+
       <!-- BEWARE: \`.btn-brand\` should never be used on colored backgrounds! -->
     </div>
   </div>`} />
@@ -944,6 +959,7 @@ Add the class `.btn-icon` to get a squared button that only contains an icon. Ma
 </Callout>
 
 <Example buttonLabel="rounded expand buttons" class="bd-btn-example" code={`<div class="use-rounded-corner-buttons">
+
     <div class="dropdown">
       <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
       <ul class="dropdown-menu">
@@ -952,6 +968,7 @@ Add the class `.btn-icon` to get a squared button that only contains an icon. Ma
         <li><button type="button" class="dropdown-item">Something else here</button></li>
       </ul>
     </div>
+
   </div>`} />
 </ThemeSpecific>
 
@@ -1106,9 +1123,7 @@ Please refer to the [loading state section of the button component](#loading) fo
 <SkeletonRedirect component="assistant button" />
 
 <Example buttonLabel="assistant button skeleton" code={`<div aria-busy="true" inert>
-
     <button type="button" class="btn btn-assistant">Assistant</button>
-
   </div>`} />
 
 ### Sizes
