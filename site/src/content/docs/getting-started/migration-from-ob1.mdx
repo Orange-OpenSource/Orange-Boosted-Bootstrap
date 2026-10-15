@@ -22,7 +22,7 @@ This guide provides information on how to migrate from OB1 (latest release of v2
 
 Let’s start with the most obvious change you’ll notice: the name. **OB1 is now OUDS Web.**
 
-- The NPM packages are now `@ouds/web-common` and `@ouds/web-orange` or `@ouds/web-sosh` depending on brand used.
+- The NPM packages are now `@ouds/web-common` and `@ouds/web-orange` or `@ouds/web-sosh` or `@ouds/web-orange-compact` depending on brand used.
 - The CSS and JS files have been renamed:
   - `style.css` → `ouds-web.css` in package related to brand used
   - `style.min.css` → `ouds-web.min.css` in package related to brand used
@@ -94,7 +94,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ## Icons
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> OUDS Web now uses [new functional icons]([[docsref:/foundation/icons#functional-icons]]). A new [bicolor accessible warning icon]([[docsref:/foundation/icons#accessible-warning-icon]]) has been introduced.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> OUDS Web now uses [new functional icons]([[docsref:/foundation/icons#status-colors]]). A new [bicolor accessible warning icon]([[docsref:/foundation/icons#accessible-warning-icon]]) has been introduced.
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> OUDS Web doesn't provide any font icon, read more on [icon component]([[docsref:/foundation/icons]]) to build you own sprite.
 
@@ -531,7 +531,7 @@ Now you should write:
   <div class="text-area">
     <div class="text-area-container">
       <label for="exampleTextArea">Label</label>
-      <textarea class="text-area-field" id="exampleTextArea"></textarea>
+      <textarea class="text-area-field" id="exampleTextArea" placeholder=" "></textarea>
     </div>
   </div>
 ```
