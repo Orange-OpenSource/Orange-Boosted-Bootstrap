@@ -22,6 +22,27 @@ describe('Button', () => {
         expect(status.text()).toBe('');
     });
 
+    it('always renders the loader and a hidden status, like OUDS Web', () => {
+        const wrapper = mount(Button, { props: { label: 'Save' } });
+        const loader = wrapper.get('svg.loader');
+
+        expect(loader.attributes('aria-hidden')).toBe('true');
+        expect(loader.find('circle.loader-inner').exists()).toBe(true);
+        expect(wrapper.get('[role="status"]').classes()).toContain('d-none');
+    });
+
+    it('keeps the label and the loader while loading', () => {
+        const wrapper = mount(Button, {
+            props: { label: 'Send', isLoading: true },
+        });
+
+        expect(wrapper.get('button').text()).toContain('Send');
+        expect(wrapper.find('svg.loader').exists()).toBe(true);
+        expect(wrapper.get('[role="status"]').classes()).toEqual([
+            'visually-hidden',
+        ]);
+    });
+
     it.each(['strong', 'brand', 'minimal', 'negative'] as const)(
         'applies the %s variant class',
         (variant) => {

@@ -10,7 +10,7 @@ Scope: everything under `libs/angular/`. The root [`AGENTS.md`](../../AGENTS.md)
 - `ng-package.json` — ng-packagr config; output goes to `dist/libs/angular` in Angular Package Format. `allowedNonPeerDependencies` lists `@ouds/core`, the only runtime dependency besides `tslib`.
 - `package.json` — declares `@ouds/core` in `dependencies` and the Angular packages as `peerDependencies`. It has no hand-written `exports` or `types`: ng-packagr generates them (`module`, `typings`, `exports`) in `dist/libs/angular/package.json`, so don't add them by hand.
 - `jest.config.ts` — Jest via `jest-preset-angular`.
-- `eslint.config.mjs` — ESLint 9 flat config; extends the root `eslint.config.mjs` and adds `angular-eslint`.
+- `eslint.config.mjs` — ESLint 9 flat config; extends the root `eslint.config.mjs` and adds `angular-eslint`, including the template accessibility rules (alt text, labels, valid ARIA, keyboard events), which also apply to inline templates.
 - `project.json` — explicit `build` (`@nx/angular:package`, `dependsOn: ["^build"]` so `@ouds/core` is built first), `lint` (`eslint . --cache`), `test` (`@nx/jest:jest`), and `nx-release-publish` targets, plus the Nx release settings.
 
 ## Commands (run from the repository root)

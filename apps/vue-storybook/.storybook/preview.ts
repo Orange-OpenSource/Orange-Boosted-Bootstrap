@@ -65,8 +65,7 @@ export const decorators: Decorator[] = [
     (story, context): any => {
         const rounded = context.globals['roundedCorners'] === 'on';
         const theme = (context.globals['theme'] as Theme) ?? 'light';
-        const brand =
-            (context.globals['brand'] as Brand) ?? 'orange';
+        const brand = (context.globals['brand'] as Brand) ?? 'orange';
 
         document.documentElement.setAttribute('data-bs-theme', theme);
         document.documentElement.setAttribute('data-bs-brand', brand);

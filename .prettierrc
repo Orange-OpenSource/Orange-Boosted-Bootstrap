@@ -9,13 +9,7 @@
   "jsxSingleQuote": true,
   "overrides": [
     {
-      "files": ["*.json", "*.md"],
-      "options": {
-        "tabWidth": 2
-      }
-    },
-    {
-      "files": "*.{ts,tsx,js,jsx,vue,html,css,scss,less}",
+      "files": "*.{ts,tsx,mts,cts,js,mjs,cjs,jsx,vue,html,css,scss,less}",
       "options": {
         "tabWidth": 4
       }

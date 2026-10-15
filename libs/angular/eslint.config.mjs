@@ -1,46 +1,42 @@
 import nx from '@nx/eslint-plugin';
 import baseConfig from '../../eslint.config.mjs';
 import importPlugin from 'eslint-plugin-import';
-import templateParser from '@angular-eslint/template-parser';
-import angularTemplatePlugin from '@angular-eslint/eslint-plugin-template';
+import angular from 'angular-eslint';
 
 export default [
-  ...baseConfig,
-  ...nx.configs['flat/angular'],
-  {
-    plugins: {
-      import: importPlugin,
-    },
-  },
-  {
-    files: ['**/*.ts'],
-    rules: {
-      '@angular-eslint/directive-selector': [
-        'error',
-        {
-          type: 'attribute',
-          prefix: 'orange',
-          style: 'camelCase',
+    ...baseConfig,
+    ...nx.configs['flat/angular'],
+    {
+        plugins: {
+            import: importPlugin,
         },
-      ],
-      '@angular-eslint/component-selector': [
-        'error',
-        {
-          type: 'element',
-          prefix: 'orange',
-          style: 'kebab-case',
+    },
+    {
+        files: ['**/*.ts'],
+        rules: {
+            '@angular-eslint/directive-selector': [
+                'error',
+                {
+                    type: 'attribute',
+                    prefix: 'orange',
+                    style: 'camelCase',
+                },
+            ],
+            '@angular-eslint/component-selector': [
+                'error',
+                {
+                    type: 'element',
+                    prefix: 'orange',
+                    style: 'kebab-case',
+                },
+            ],
         },
-      ],
     },
-  },
-  {
-    files: ['**/*.html'],
-    languageOptions: {
-      parser: templateParser,
-    },
-    plugins: {
-      '@angular-eslint/template': angularTemplatePlugin,
-    },
-    rules: {},
-  },
+    // Template rules for external `.html` templates: the recommended set plus the accessibility
+    // set (alt text, labels, valid ARIA, keyboard events, ...). angular-eslint's configs have no
+    // `files`, so scope them to templates here or the template parser would run on every file.
+    ...[
+        ...angular.configs.templateRecommended,
+        ...angular.configs.templateAccessibility,
+    ].map((config) => ({ ...config, files: ['**/*.html'] })),
 ];

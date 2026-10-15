@@ -72,7 +72,7 @@ The `depConstraints` are duplicated in three configs because three linters run i
 
 | Area                                                               | Linter                                                        | Why                                                                                                                  |
 | ------------------------------------------------------------------ | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `@ouds/core`, `@ouds/react`, `@ouds/vue`, the three Storybook apps | Oxlint through `@nx/oxlint`                                   | Fast; the `lint` target is inferred. Each project's `.oxlintrc.json` extends `oxlint.base.json` and adds its plugins |
+| `@ouds/core`, `@ouds/react`, `@ouds/vue`, the three Storybook apps | Oxlint through `@nx/oxlint`                                   | Fast; the `lint` target is inferred. Each project's `.oxlintrc.json` extends `oxlint.base.json` and adds its plugins. `@ouds/vue` adds a `lint-templates` target (ESLint + `eslint-plugin-vuejs-accessibility`) because Oxlint cannot read `<template>` |
 | `@ouds/angular`                                                    | ESLint 9 (flat config extending the root one)                 | Oxlint cannot parse Angular templates, HTML, or JSON rules                                                           |
 | `@ouds/web-*`                                                      | ESLint 9 (standalone `libs/web/eslint.config.mjs`), Stylelint | Keeps Bootstrap's XO/unicorn/import rule set and lints `<script>` blocks in HTML and JS blocks in Markdown           |
 

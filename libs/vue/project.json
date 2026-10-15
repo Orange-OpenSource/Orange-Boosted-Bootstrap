@@ -13,6 +13,18 @@
       },
       "dependsOn": ["^build"]
     },
+    "lint-templates": {
+      "executor": "nx:run-commands",
+      "cache": true,
+      "inputs": ["default"],
+      "options": {
+        "command": "eslint --max-warnings=0 \"src/**/*.vue\"",
+        "cwd": "libs/vue"
+      }
+    },
+    "lint": {
+      "dependsOn": ["lint-templates"]
+    },
     "test": {
       "executor": "nx:run-commands",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
