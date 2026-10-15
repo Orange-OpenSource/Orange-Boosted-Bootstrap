@@ -1,4 +1,3 @@
-import { vi } from 'vitest'
 import Config from '../../../src/util/config.js'
 import { clearFixture, getFixture } from '../../helpers/fixture.js'
 
@@ -28,13 +27,13 @@ describe('Config', () => {
 
   describe('DefaultType', () => {
     it('should return plugin default type', () => {
-      expect(DummyConfigClass.DefaultType).toEqual(expect.any(Object))
+      expect(DummyConfigClass.DefaultType).toEqual(jasmine.any(Object))
     })
   })
 
   describe('Default', () => {
     it('should return plugin defaults', () => {
-      expect(DummyConfigClass.Default).toEqual(expect.any(Object))
+      expect(DummyConfigClass.Default).toEqual(jasmine.any(Object))
     })
   })
 
@@ -42,7 +41,7 @@ describe('Config', () => {
     it('should parse element\'s data attributes and merge it with default config. Element\'s data attributes must excel Defaults', () => {
       fixtureEl.innerHTML = '<div id="test" data-bs-test-bool="false" data-bs-test-int="8" data-bs-test-string1="bar"></div>'
 
-      vi.spyOn(DummyConfigClass, 'Default', 'get').mockReturnValue({
+      spyOnProperty(DummyConfigClass, 'Default', 'get').and.returnValue({
         testBool: true,
         testString: 'foo',
         testString1: 'foo',
@@ -60,7 +59,7 @@ describe('Config', () => {
     it('should parse element\'s data attributes and merge it with default config, plug these given during method call. The programmatically given should excel all', () => {
       fixtureEl.innerHTML = '<div id="test" data-bs-test-bool="false" data-bs-test-int="8" data-bs-test-string-1="bar"></div>'
 
-      vi.spyOn(DummyConfigClass, 'Default', 'get').mockReturnValue({
+      spyOnProperty(DummyConfigClass, 'Default', 'get').and.returnValue({
         testBool: true,
         testString: 'foo',
         testString1: 'foo',
@@ -81,7 +80,7 @@ describe('Config', () => {
     it('should parse element\'s data attribute `config` and any rest attributes. The programmatically given should excel all. Data attribute `config` should excel only Defaults', () => {
       fixtureEl.innerHTML = '<div id="test" data-bs-config=\'{"testBool":false,"testInt":50,"testInt2":100}\' data-bs-test-int="8" data-bs-test-string-1="bar"></div>'
 
-      vi.spyOn(DummyConfigClass, 'Default', 'get').mockReturnValue({
+      spyOnProperty(DummyConfigClass, 'Default', 'get').and.returnValue({
         testBool: true,
         testString: 'foo',
         testString1: 'foo',
@@ -103,7 +102,7 @@ describe('Config', () => {
     it('should omit element\'s data attribute `config` if is not an object', () => {
       fixtureEl.innerHTML = '<div id="test" data-bs-config="foo" data-bs-test-int="8"></div>'
 
-      vi.spyOn(DummyConfigClass, 'Default', 'get').mockReturnValue({
+      spyOnProperty(DummyConfigClass, 'Default', 'get').and.returnValue({
         testInt: 7,
         testInt2: 79
       })
@@ -117,7 +116,7 @@ describe('Config', () => {
 
   describe('typeCheckConfig', () => {
     it('should check type of the config object', () => {
-      vi.spyOn(DummyConfigClass, 'DefaultType', 'get').mockReturnValue({
+      spyOnProperty(DummyConfigClass, 'DefaultType', 'get').and.returnValue({
         toggle: 'boolean',
         parent: '(string|element)'
       })
@@ -129,11 +128,11 @@ describe('Config', () => {
       const obj = new DummyConfigClass()
       expect(() => {
         obj._typeCheckConfig(config)
-      }).toThrowError(expect.objectContaining({ name: 'TypeError', message: `${obj.constructor.NAME.toUpperCase()}: Option "parent" provided type "number" but expected type "(string|element)".` }))
+      }).toThrowError(TypeError, `${obj.constructor.NAME.toUpperCase()}: Option "parent" provided type "number" but expected type "(string|element)".`)
     })
 
     it('should return null stringified when null is passed', () => {
-      vi.spyOn(DummyConfigClass, 'DefaultType', 'get').mockReturnValue({
+      spyOnProperty(DummyConfigClass, 'DefaultType', 'get').and.returnValue({
         toggle: 'boolean',
         parent: '(null|element)'
       })
@@ -145,10 +144,11 @@ describe('Config', () => {
       }
 
       obj._typeCheckConfig(config)
+      expect().nothing()
     })
 
     it('should return undefined stringified when undefined is passed', () => {
-      vi.spyOn(DummyConfigClass, 'DefaultType', 'get').mockReturnValue({
+      spyOnProperty(DummyConfigClass, 'DefaultType', 'get').and.returnValue({
         toggle: 'boolean',
         parent: '(undefined|element)'
       })
@@ -160,6 +160,7 @@ describe('Config', () => {
       }
 
       obj._typeCheckConfig(config)
+      expect().nothing()
     })
   })
 })

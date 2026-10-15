@@ -16,19 +16,19 @@ describe('QuantitySelector', () => {
 
   describe('VERSION', () => {
     it('should return plugin version', () => {
-      expect(QuantitySelector.VERSION).toEqual(expect.any(String))
+      expect(QuantitySelector.VERSION).toEqual(jasmine.any(String))
     })
   })
 
   describe('Default', () => {
     it('should return plugin default config', () => {
-      expect(QuantitySelector.Default).toEqual(expect.any(Object))
+      expect(QuantitySelector.Default).toEqual(jasmine.any(Object))
     })
   })
 
   describe('DefaultType', () => {
     it('should return plugin default type config', () => {
-      expect(QuantitySelector.DefaultType).toEqual(expect.any(Object))
+      expect(QuantitySelector.DefaultType).toEqual(jasmine.any(Object))
     })
   })
 

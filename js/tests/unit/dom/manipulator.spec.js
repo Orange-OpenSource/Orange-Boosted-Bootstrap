@@ -57,6 +57,7 @@ describe('Manipulator', () => {
   describe('getDataAttributes', () => {
     it('should return an empty object for null', () => {
       expect(Manipulator.getDataAttributes(null)).toEqual({})
+      expect().nothing()
     })
 
     it('should get only bs-prefixed data attributes without bs namespace', () => {
@@ -106,10 +107,10 @@ describe('Manipulator', () => {
 
       const div = fixtureEl.querySelector('div')
 
-      expect(Manipulator.getDataAttribute(div, 'test')).toBe(false)
+      expect(Manipulator.getDataAttribute(div, 'test')).toBeFalse()
 
       div.setAttribute('data-bs-test', 'true')
-      expect(Manipulator.getDataAttribute(div, 'test')).toBe(true)
+      expect(Manipulator.getDataAttribute(div, 'test')).toBeTrue()
 
       div.setAttribute('data-bs-test', '1')
       expect(Manipulator.getDataAttribute(div, 'test')).toEqual(1)

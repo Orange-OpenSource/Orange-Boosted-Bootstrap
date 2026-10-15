@@ -1,4 +1,3 @@
-import { vi } from 'vitest'
 import EventHandler from '../../src/dom/event-handler.js'
 import Dropdown from '../../src/dropdown.js'
 import { noop } from '../../src/util/index.js'
@@ -19,19 +18,19 @@ describe('Dropdown', () => {
 
   describe('VERSION', () => {
     it('should return plugin version', () => {
-      expect(Dropdown.VERSION).toEqual(expect.any(String))
+      expect(Dropdown.VERSION).toEqual(jasmine.any(String))
     })
   })
 
   describe('Default', () => {
     it('should return plugin default config', () => {
-      expect(Dropdown.Default).toEqual(expect.any(Object))
+      expect(Dropdown.Default).toEqual(jasmine.any(Object))
     })
   })
 
   describe('DefaultType', () => {
     it('should return plugin default type config', () => {
-      expect(Dropdown.DefaultType).toEqual(expect.any(Object))
+      expect(Dropdown.DefaultType).toEqual(jasmine.any(Object))
     })
   })
 
@@ -77,6 +76,8 @@ describe('Dropdown', () => {
         dropdownElem.addEventListener('shown.bs.dropdown', () => {
           resolve()
         })
+
+        expect().nothing()
         dropdown.show()
       })
     })
@@ -92,7 +93,7 @@ describe('Dropdown', () => {
           '</div>'
         ].join('')
 
-        const getOffset = vi.fn().mockName('getOffset').mockReturnValue([10, 20])
+        const getOffset = jasmine.createSpy('getOffset').and.returnValue([10, 20])
         const btnDropdown = fixtureEl.querySelector('[data-bs-toggle="dropdown"]')
         const dropdown = new Dropdown(btnDropdown, {
           offset: getOffset,
@@ -164,7 +165,7 @@ describe('Dropdown', () => {
       ].join('')
 
       const btnDropdown = fixtureEl.querySelector('[data-bs-toggle="dropdown"]')
-      const getPopperConfig = vi.fn().mockName('getPopperConfig').mockReturnValue({ placement: 'left' })
+      const getPopperConfig = jasmine.createSpy('getPopperConfig').and.returnValue({ placement: 'left' })
       const dropdown = new Dropdown(btnDropdown, {
         popperConfig: getPopperConfig
       })
@@ -172,8 +173,8 @@ describe('Dropdown', () => {
       const popperConfig = dropdown._getPopperConfig()
 
       // Ensure that the function was called with the default config.
-      expect(getPopperConfig).toHaveBeenCalledWith(expect.objectContaining({
-        placement: expect.any(String)
+      expect(getPopperConfig).toHaveBeenCalledWith(jasmine.objectContaining({
+        placement: jasmine.any(String)
       }))
       expect(popperConfig.placement).toEqual('left')
     })
@@ -229,7 +230,7 @@ describe('Dropdown', () => {
 
         firstDropdownEl.addEventListener('shown.bs.dropdown', () => {
           expect(btnDropdown1).toHaveClass('show')
-          vi.spyOn(dropdown1._popper, 'destroy').mockImplementation(() => {})
+          spyOn(dropdown1._popper, 'destroy')
           btnDropdown2.click()
         })
 
@@ -258,13 +259,13 @@ describe('Dropdown', () => {
         const dropdown = new Dropdown(btnDropdown)
 
         document.documentElement.ontouchstart = noop
-        const spy = vi.spyOn(EventHandler, 'on').mockImplementation(() => {})
-        const spyOff = vi.spyOn(EventHandler, 'off').mockImplementation(() => {})
+        const spy = spyOn(EventHandler, 'on')
+        const spyOff = spyOn(EventHandler, 'off')
 
         btnDropdown.addEventListener('shown.bs.dropdown', () => {
           expect(btnDropdown).toHaveClass('show')
           expect(btnDropdown.getAttribute('aria-expanded')).toEqual('true')
-          expect(spy).toHaveBeenCalledWith(expect.any(Object), 'mouseover', noop)
+          expect(spy).toHaveBeenCalledWith(jasmine.any(Object), 'mouseover', noop)
 
           dropdown.toggle()
         })
@@ -272,7 +273,7 @@ describe('Dropdown', () => {
         btnDropdown.addEventListener('hidden.bs.dropdown', () => {
           expect(btnDropdown).not.toHaveClass('show')
           expect(btnDropdown.getAttribute('aria-expanded')).toEqual('false')
-          expect(spyOff).toHaveBeenCalledWith(expect.any(Object), 'mouseover', noop)
+          expect(spyOff).toHaveBeenCalledWith(jasmine.any(Object), 'mouseover', noop)
 
           document.documentElement.ontouchstart = defaultValueOnTouchStart
           resolve()
@@ -535,13 +536,13 @@ describe('Dropdown', () => {
 
         expect(() => new Dropdown(btnDropdown, {
           reference: {}
-        })).toThrowError(expect.objectContaining({ name: 'TypeError', message: 'DROPDOWN: Option "reference" provided type "object" without a required "getBoundingClientRect" method.' }))
+        })).toThrowError(TypeError, 'DROPDOWN: Option "reference" provided type "object" without a required "getBoundingClientRect" method.')
 
         expect(() => new Dropdown(btnDropdown, {
           reference: {
             getBoundingClientRect: 'not-a-function'
           }
-        })).toThrowError(expect.objectContaining({ name: 'TypeError', message: 'DROPDOWN: Option "reference" provided type "object" without a required "getBoundingClientRect" method.' }))
+        })).toThrowError(TypeError, 'DROPDOWN: Option "reference" provided type "object" without a required "getBoundingClientRect" method.')
 
         // use onFirstUpdate as Poppers internal update is executed async
         const dropdown = new Dropdown(btnDropdown, {
@@ -556,7 +557,7 @@ describe('Dropdown', () => {
           }
         })
 
-        const spy = vi.spyOn(virtualElement, 'getBoundingClientRect')
+        const spy = spyOn(virtualElement, 'getBoundingClientRect').and.callThrough()
 
         dropdown.toggle()
       })
@@ -583,6 +584,7 @@ describe('Dropdown', () => {
         dropdown.toggle()
 
         setTimeout(() => {
+          expect().nothing()
           resolve()
         })
       })
@@ -609,6 +611,7 @@ describe('Dropdown', () => {
         dropdown.toggle()
 
         setTimeout(() => {
+          expect().nothing()
           resolve()
         })
       })
@@ -635,6 +638,7 @@ describe('Dropdown', () => {
         dropdown.toggle()
 
         setTimeout(() => {
+          expect().nothing()
           resolve()
         })
       })
@@ -665,6 +669,7 @@ describe('Dropdown', () => {
         dropdown.toggle()
 
         setTimeout(() => {
+          expect().nothing()
           resolve()
         })
       })
@@ -716,6 +721,7 @@ describe('Dropdown', () => {
         dropdown.show()
 
         setTimeout(() => {
+          expect().nothing()
           resolve()
         }, 10)
       })
@@ -742,6 +748,7 @@ describe('Dropdown', () => {
         dropdown.show()
 
         setTimeout(() => {
+          expect().nothing()
           resolve()
         }, 10)
       })
@@ -768,6 +775,7 @@ describe('Dropdown', () => {
         dropdown.show()
 
         setTimeout(() => {
+          expect().nothing()
           resolve()
         }, 10)
       })
@@ -798,6 +806,7 @@ describe('Dropdown', () => {
         dropdown.show()
 
         setTimeout(() => {
+          expect().nothing()
           resolve()
         }, 10)
       })
@@ -845,7 +854,7 @@ describe('Dropdown', () => {
         const dropdown = new Dropdown(btnDropdown)
 
         btnDropdown.addEventListener('shown.bs.dropdown', () => {
-          vi.spyOn(dropdown._popper, 'destroy').mockImplementation(() => {})
+          spyOn(dropdown._popper, 'destroy')
           dropdown.hide()
         })
 
@@ -935,6 +944,7 @@ describe('Dropdown', () => {
         dropdown.hide()
 
         setTimeout(() => {
+          expect().nothing()
           resolve()
         }, 10)
       })
@@ -988,7 +998,7 @@ describe('Dropdown', () => {
         const dropdown = new Dropdown(btnDropdown)
 
         document.documentElement.ontouchstart = noop
-        const spy = vi.spyOn(EventHandler, 'off').mockImplementation(() => {})
+        const spy = spyOn(EventHandler, 'off')
 
         btnDropdown.addEventListener('shown.bs.dropdown', () => {
           dropdown.hide()
@@ -1026,7 +1036,7 @@ describe('Dropdown', () => {
       expect(dropdown._popper).toBeNull()
       expect(dropdown._menu).not.toBeNull()
       expect(dropdown._element).not.toBeNull()
-      const spy = vi.spyOn(EventHandler, 'off').mockImplementation(() => {})
+      const spy = spyOn(EventHandler, 'off')
 
       dropdown.dispose()
 
@@ -1080,8 +1090,8 @@ describe('Dropdown', () => {
 
       expect(dropdown._popper).not.toBeNull()
 
-      const spyUpdate = vi.spyOn(dropdown._popper, 'update').mockImplementation(() => {})
-      const spyDetect = vi.spyOn(dropdown, '_detectNavbar').mockImplementation(() => {})
+      const spyUpdate = spyOn(dropdown._popper, 'update')
+      const spyDetect = spyOn(dropdown, '_detectNavbar')
 
       dropdown.update()
 
@@ -1102,7 +1112,7 @@ describe('Dropdown', () => {
       const btnDropdown = fixtureEl.querySelector('[data-bs-toggle="dropdown"]')
       const dropdown = new Dropdown(btnDropdown)
 
-      const spy = vi.spyOn(dropdown, '_detectNavbar').mockImplementation(() => {})
+      const spy = spyOn(dropdown, '_detectNavbar')
 
       dropdown.update()
 
@@ -1134,7 +1144,7 @@ describe('Dropdown', () => {
         btnDropdown.addEventListener('shown.bs.dropdown', event => setTimeout(() => {
           expect(btnDropdown).toHaveClass('show')
           expect(btnDropdown.getAttribute('aria-expanded')).toEqual('true')
-          expect(showEventTriggered).toBe(true)
+          expect(showEventTriggered).toBeTrue()
           expect(event.relatedTarget).toEqual(btnDropdown)
           document.body.click()
         }))
@@ -1146,7 +1156,7 @@ describe('Dropdown', () => {
         btnDropdown.addEventListener('hidden.bs.dropdown', event => {
           expect(btnDropdown).not.toHaveClass('show')
           expect(btnDropdown.getAttribute('aria-expanded')).toEqual('false')
-          expect(hideEventTriggered).toBe(true)
+          expect(hideEventTriggered).toBeTrue()
           expect(event.relatedTarget).toEqual(btnDropdown)
           resolve()
         })
@@ -1200,7 +1210,7 @@ describe('Dropdown', () => {
         const dropdownMenu = fixtureEl.querySelector('.dropdown-menu')
         const dropdown = new Dropdown(btnDropdown)
 
-        const hideSpy = vi.spyOn(dropdown, '_completeHide').mockImplementation(() => {})
+        const hideSpy = spyOn(dropdown, '_completeHide')
 
         btnDropdown.addEventListener('shown.bs.dropdown', () => {
           const clickEvent = new MouseEvent('click', {
@@ -1468,7 +1478,7 @@ describe('Dropdown', () => {
       const dropdownToggle2 = fixtureEl.querySelector('#dropdown2')
       const dropdownMenu1 = fixtureEl.querySelector('#menu1')
       const dropdownMenu2 = fixtureEl.querySelector('#menu2')
-      const spy = vi.spyOn(Dropdown, 'getOrCreateInstance')
+      const spy = spyOn(Dropdown, 'getOrCreateInstance').and.callThrough()
 
       dropdownToggle1.click()
       expect(spy).toHaveBeenCalledWith(dropdownToggle1)
@@ -1559,16 +1569,16 @@ describe('Dropdown', () => {
         const dropdownParent = fixtureEl.querySelector('.dropdown')
         const dropdown = new Dropdown(triggerDropdown)
 
-        const showFunction = vi.fn().mockName('showFunction')
+        const showFunction = jasmine.createSpy('showFunction')
         dropdownParent.addEventListener('show.bs.dropdown', showFunction)
 
-        const shownFunction = vi.fn().mockName('shownFunction')
+        const shownFunction = jasmine.createSpy('shownFunction')
         dropdownParent.addEventListener('shown.bs.dropdown', () => {
           shownFunction()
           dropdown.hide()
         })
 
-        const hideFunction = vi.fn().mockName('hideFunction')
+        const hideFunction = jasmine.createSpy('hideFunction')
         dropdownParent.addEventListener('hide.bs.dropdown', hideFunction)
 
         dropdownParent.addEventListener('hidden.bs.dropdown', () => {
@@ -1642,7 +1652,7 @@ describe('Dropdown', () => {
           triggerDropdown.dispatchEvent(keydown)
 
           expect(document.activeElement).not.toHaveClass('disabled')
-          expect(document.activeElement.hasAttribute('disabled')).toBe(false)
+          expect(document.activeElement.hasAttribute('disabled')).toBeFalse()
           resolve()
         })
 
@@ -1854,6 +1864,7 @@ describe('Dropdown', () => {
         const input = fixtureEl.querySelector('input')
 
         triggerDropdown.addEventListener('hidden.bs.dropdown', () => {
+          expect().nothing()
           resolve()
         })
 
@@ -1943,7 +1954,7 @@ describe('Dropdown', () => {
         const dropdown = new Dropdown(triggerDropdown)
         const button = fixtureEl.querySelector('button[data-bs-toggle="dropdown"]')
 
-        const spy = vi.spyOn(dropdown, 'toggle').mockImplementation(() => {})
+        const spy = spyOn(dropdown, 'toggle')
 
         // Key escape
         button.focus()
@@ -1976,7 +1987,7 @@ describe('Dropdown', () => {
         const parent = fixtureEl.querySelector('.parent')
         const toggle = fixtureEl.querySelector('[data-bs-toggle="dropdown"]')
 
-        const parentKeyHandler = vi.fn().mockName('parentKeyHandler')
+        const parentKeyHandler = jasmine.createSpy('parentKeyHandler')
 
         parent.addEventListener('keydown', parentKeyHandler)
         parent.addEventListener('keyup', () => {
@@ -2011,7 +2022,7 @@ describe('Dropdown', () => {
         const parent = fixtureEl.querySelector('.parent')
         const toggle = fixtureEl.querySelector('[data-bs-toggle="dropdown"]')
 
-        const parentKeyHandler = vi.fn().mockName('parentKeyHandler')
+        const parentKeyHandler = jasmine.createSpy('parentKeyHandler')
 
         parent.addEventListener('keydown', parentKeyHandler)
         parent.addEventListener('keyup', () => {
@@ -2172,7 +2183,7 @@ describe('Dropdown', () => {
 
       const dropdownToggle = fixtureEl.querySelector('[data-bs-toggle="dropdown"]')
       const dropdownMenu = fixtureEl.querySelector('.dropdown-menu')
-      const spy = vi.spyOn(Dropdown, 'getOrCreateInstance')
+      const spy = spyOn(Dropdown, 'getOrCreateInstance').and.callThrough()
 
       dropdownToggle.click()
       expect(spy).toHaveBeenCalledWith(dropdownToggle)
@@ -2316,8 +2327,8 @@ describe('Dropdown', () => {
     ].join('')
 
     const btnDropdown = fixtureEl.querySelector('[data-bs-toggle="dropdown"]')
-    const clickListener = vi.fn().mockName('clickListener')
-    const delegatedClickListener = vi.fn().mockName('delegatedClickListener')
+    const clickListener = jasmine.createSpy('clickListener')
+    const delegatedClickListener = jasmine.createSpy('delegatedClickListener')
 
     btnDropdown.addEventListener('click', clickListener)
     document.addEventListener('click', delegatedClickListener)

@@ -1,4 +1,3 @@
-import { vi } from 'vitest'
 import EventHandler from '../../src/dom/event-handler.js'
 import Modal from '../../src/modal.js'
 import ScrollBarHelper from '../../src/util/scrollbar.js'
@@ -29,13 +28,13 @@ describe('Modal', () => {
 
   describe('VERSION', () => {
     it('should return plugin version', () => {
-      expect(Modal.VERSION).toEqual(expect.any(String))
+      expect(Modal.VERSION).toEqual(jasmine.any(String))
     })
   })
 
   describe('Default', () => {
     it('should return plugin default config', () => {
-      expect(Modal.Default).toEqual(expect.any(Object))
+      expect(Modal.Default).toEqual(jasmine.any(Object))
     })
   })
 
@@ -63,8 +62,8 @@ describe('Modal', () => {
       return new Promise(resolve => {
         fixtureEl.innerHTML = '<div class="modal"><div class="modal-dialog"></div></div>'
 
-        const spyHide = vi.spyOn(ScrollBarHelper.prototype, 'hide')
-        const spyReset = vi.spyOn(ScrollBarHelper.prototype, 'reset')
+        const spyHide = spyOn(ScrollBarHelper.prototype, 'hide').and.callThrough()
+        const spyReset = spyOn(ScrollBarHelper.prototype, 'reset').and.callThrough()
         const modalEl = fixtureEl.querySelector('.modal')
         const modal = new Modal(modalEl)
 
@@ -162,7 +161,7 @@ describe('Modal', () => {
       const modalEl = fixtureEl.querySelector('.modal')
       const modal = new Modal(modalEl)
 
-      const spy = vi.spyOn(EventHandler, 'trigger').mockImplementation(() => {})
+      const spy = spyOn(EventHandler, 'trigger')
       modal._isShown = true
 
       modal.show()
@@ -176,7 +175,7 @@ describe('Modal', () => {
       const modalEl = fixtureEl.querySelector('.modal')
       const modal = new Modal(modalEl)
 
-      const spy = vi.spyOn(EventHandler, 'trigger').mockImplementation(() => {})
+      const spy = spyOn(EventHandler, 'trigger')
       modal._isTransitioning = true
 
       modal.show()
@@ -195,6 +194,7 @@ describe('Modal', () => {
           event.preventDefault()
 
           const expectedDone = () => {
+            expect().nothing()
             resolve()
           }
 
@@ -229,8 +229,8 @@ describe('Modal', () => {
         })
 
         modalEl.addEventListener('shown.bs.modal', () => {
-          expect(prevented).toBe(true)
-          expect(modal._isAnimated()).toBe(true)
+          expect(prevented).toBeTrue()
+          expect(modal._isAnimated()).toBeTrue()
           resolve()
         })
 
@@ -246,12 +246,12 @@ describe('Modal', () => {
 
         modalEl.addEventListener('show.bs.modal', () => {
           setTimeout(() => {
-            expect(modal._isTransitioning).toBe(true)
+            expect(modal._isTransitioning).toBeTrue()
           })
         })
 
         modalEl.addEventListener('shown.bs.modal', () => {
-          expect(modal._isTransitioning).toBe(false)
+          expect(modal._isTransitioning).toBeFalse()
           resolve()
         })
 
@@ -275,7 +275,7 @@ describe('Modal', () => {
         const btnClose = fixtureEl.querySelector('[data-bs-dismiss="modal"]')
         const modal = new Modal(modalEl)
 
-        const spy = vi.spyOn(modal, 'hide')
+        const spy = spyOn(modal, 'hide').and.callThrough()
 
         modalEl.addEventListener('shown.bs.modal', () => {
           btnClose.click()
@@ -303,7 +303,7 @@ describe('Modal', () => {
         const btnClose = fixtureEl.querySelector('[data-bs-dismiss="modal"]')
         const modal = new Modal(modalEl)
 
-        const spy = vi.spyOn(modal, 'hide')
+        const spy = spyOn(modal, 'hide').and.callThrough()
 
         modalEl.addEventListener('shown.bs.modal', () => {
           btnClose.click()
@@ -370,7 +370,7 @@ describe('Modal', () => {
           focus: false
         })
 
-        const spy = vi.spyOn(modal._focustrap, 'activate')
+        const spy = spyOn(modal._focustrap, 'activate').and.callThrough()
 
         modalEl.addEventListener('shown.bs.modal', () => {
           expect(spy).not.toHaveBeenCalled()
@@ -388,7 +388,7 @@ describe('Modal', () => {
         const modalEl = fixtureEl.querySelector('.modal')
         const modal = new Modal(modalEl)
 
-        const spy = vi.spyOn(modal, 'hide')
+        const spy = spyOn(modal, 'hide').and.callThrough()
 
         modalEl.addEventListener('shown.bs.modal', () => {
           const keydownEscape = createEvent('keydown')
@@ -413,7 +413,7 @@ describe('Modal', () => {
         const modalEl = fixtureEl.querySelector('.modal')
         const modal = new Modal(modalEl)
 
-        const spy = vi.spyOn(modal, 'hide').mockImplementation(() => {})
+        const spy = spyOn(modal, 'hide')
 
         const expectDone = () => {
           expect(spy).not.toHaveBeenCalled()
@@ -440,7 +440,7 @@ describe('Modal', () => {
         const modalEl = fixtureEl.querySelector('.modal')
         const modal = new Modal(modalEl)
 
-        const spy = vi.spyOn(modal, '_adjustDialog')
+        const spy = spyOn(modal, '_adjustDialog').and.callThrough()
 
         const expectDone = () => {
           expect(spy).toHaveBeenCalled()
@@ -504,7 +504,7 @@ describe('Modal', () => {
 
         const shownCallback = () => {
           setTimeout(() => {
-            expect(modal._isShown).toBe(true)
+            expect(modal._isShown).toBeTrue()
             resolve()
           }, 10)
         }
@@ -533,7 +533,7 @@ describe('Modal', () => {
 
         const shownCallback = () => {
           setTimeout(() => {
-            expect(modal._isShown).toBe(true)
+            expect(modal._isShown).toBeTrue()
             resolve()
           }, 10)
         }
@@ -562,7 +562,7 @@ describe('Modal', () => {
 
         const shownCallback = () => {
           setTimeout(() => {
-            expect(modal._isShown).toBe(false)
+            expect(modal._isShown).toBeFalse()
             resolve()
           }, 10)
         }
@@ -590,7 +590,7 @@ describe('Modal', () => {
 
         const shownCallback = () => {
           setTimeout(() => {
-            expect(modal._isShown).toBe(true)
+            expect(modal._isShown).toBeTrue()
             resolve()
           }, 10)
         }
@@ -642,7 +642,7 @@ describe('Modal', () => {
         })
 
         modalEl.addEventListener('shown.bs.modal', () => {
-          const spy = vi.spyOn(modal, '_queueCallback')
+          const spy = spyOn(modal, '_queueCallback').and.callThrough()
           const mouseDown = createEvent('mousedown')
 
           modalEl.dispatchEvent(mouseDown)
@@ -667,7 +667,7 @@ describe('Modal', () => {
         const modalEl = fixtureEl.querySelector('.modal')
         const modal = new Modal(modalEl)
 
-        const spy = vi.spyOn(modal._focustrap, 'activate')
+        const spy = spyOn(modal._focustrap, 'activate').and.callThrough()
 
         modalEl.addEventListener('shown.bs.modal', () => {
           expect(spy).toHaveBeenCalled()
@@ -686,7 +686,7 @@ describe('Modal', () => {
 
         const modalEl = fixtureEl.querySelector('.modal')
         const modal = new Modal(modalEl)
-        const backdropSpy = vi.spyOn(modal._backdrop, 'hide')
+        const backdropSpy = spyOn(modal._backdrop, 'hide').and.callThrough()
 
         modalEl.addEventListener('shown.bs.modal', () => {
           modal.hide()
@@ -717,7 +717,7 @@ describe('Modal', () => {
         const dialogEl = modalEl.querySelector('.modal-dialog')
         const modal = new Modal(modalEl)
 
-        const spy = vi.spyOn(modal, 'hide').mockImplementation(() => {})
+        const spy = spyOn(modal, 'hide')
 
         modalEl.addEventListener('shown.bs.modal', () => {
           const mouseDown = createEvent('mousedown')
@@ -750,7 +750,7 @@ describe('Modal', () => {
         const buttonEl = modalEl.querySelector('.btn')
         const modal = new Modal(modalEl)
 
-        const spy = vi.spyOn(modal, 'hide').mockImplementation(() => {})
+        const spy = spyOn(modal, 'hide')
         buttonEl.addEventListener('click', () => {
           buttonEl.remove()
         })
@@ -773,6 +773,8 @@ describe('Modal', () => {
       const modal = new Modal(modalEl)
 
       modal.hide()
+
+      expect().nothing()
     })
 
     it('should do nothing is the modal is transitioning', () => {
@@ -783,6 +785,8 @@ describe('Modal', () => {
 
       modal._isTransitioning = true
       modal.hide()
+
+      expect().nothing()
     })
 
     it('should not hide a modal if hide is prevented', () => {
@@ -798,7 +802,7 @@ describe('Modal', () => {
 
         const hideCallback = () => {
           setTimeout(() => {
-            expect(modal._isShown).toBe(true)
+            expect(modal._isShown).toBeTrue()
             resolve()
           }, 10)
         }
@@ -822,7 +826,7 @@ describe('Modal', () => {
 
         const modalEl = fixtureEl.querySelector('.modal')
         const modal = new Modal(modalEl)
-        const spy = vi.spyOn(modal._focustrap, 'deactivate')
+        const spy = spyOn(modal._focustrap, 'deactivate').and.callThrough()
 
         modalEl.addEventListener('shown.bs.modal', () => {
           modal.hide()
@@ -845,11 +849,11 @@ describe('Modal', () => {
       const modalEl = fixtureEl.querySelector('.modal')
       const modal = new Modal(modalEl)
       const focustrap = modal._focustrap
-      const spyDeactivate = vi.spyOn(focustrap, 'deactivate')
+      const spyDeactivate = spyOn(focustrap, 'deactivate').and.callThrough()
 
       expect(Modal.getInstance(modalEl)).toEqual(modal)
 
-      const spyOff = vi.spyOn(EventHandler, 'off').mockImplementation(() => {})
+      const spyOff = spyOn(EventHandler, 'off')
 
       modal.dispose()
 
@@ -866,7 +870,7 @@ describe('Modal', () => {
       const modalEl = fixtureEl.querySelector('.modal')
       const modal = new Modal(modalEl)
 
-      const spy = vi.spyOn(modal, '_adjustDialog').mockImplementation(() => {})
+      const spy = spyOn(modal, '_adjustDialog')
 
       modal.handleUpdate()
 
@@ -918,7 +922,7 @@ describe('Modal', () => {
         const modal = new Modal(modalEl)
         const trigger = fixtureEl.querySelector('[data-bs-toggle="modal"]')
 
-        const spy = vi.spyOn(modal, 'show')
+        const spy = spyOn(modal, 'show').and.callThrough()
 
         modalEl.addEventListener('shown.bs.modal', () => {
           expect(spy).toHaveBeenCalled()
@@ -939,7 +943,7 @@ describe('Modal', () => {
         const modalEl = fixtureEl.querySelector('.modal')
         const trigger = fixtureEl.querySelector('[data-bs-toggle="modal"]')
 
-        const spy = vi.spyOn(Event.prototype, 'preventDefault')
+        const spy = spyOn(Event.prototype, 'preventDefault').and.callThrough()
 
         modalEl.addEventListener('shown.bs.modal', () => {
           expect(modalEl.getAttribute('aria-modal')).toEqual('true')
@@ -965,7 +969,7 @@ describe('Modal', () => {
         const modalEl = fixtureEl.querySelector('.modal')
         const trigger = fixtureEl.querySelector('[data-bs-toggle="modal"]')
 
-        const spy = vi.spyOn(trigger, 'focus').mockImplementation(() => {})
+        const spy = spyOn(trigger, 'focus')
 
         modalEl.addEventListener('shown.bs.modal', () => {
           const modal = Modal.getInstance(modalEl)
@@ -1030,7 +1034,7 @@ describe('Modal', () => {
         const btnClose = fixtureEl.querySelector('button[data-bs-dismiss="modal"]')
         const modal = new Modal(modalEl)
 
-        const spy = vi.spyOn(Event.prototype, 'preventDefault')
+        const spy = spyOn(Event.prototype, 'preventDefault').and.callThrough()
 
         modalEl.addEventListener('shown.bs.modal', () => {
           btnClose.click()
@@ -1059,7 +1063,7 @@ describe('Modal', () => {
         const btnClose = fixtureEl.querySelector('a[data-bs-dismiss="modal"]')
         const modal = new Modal(modalEl)
 
-        const spy = vi.spyOn(Event.prototype, 'preventDefault')
+        const spy = spyOn(Event.prototype, 'preventDefault').and.callThrough()
 
         modalEl.addEventListener('shown.bs.modal', () => {
           btnClose.click()
@@ -1083,7 +1087,7 @@ describe('Modal', () => {
         const modalEl = fixtureEl.querySelector('.modal')
         const trigger = fixtureEl.querySelector('[data-bs-toggle="modal"]')
 
-        const spy = vi.spyOn(trigger, 'focus').mockImplementation(() => {})
+        const spy = spyOn(trigger, 'focus')
 
         modalEl.addEventListener('shown.bs.modal', () => {
           const modal = Modal.getInstance(modalEl)
@@ -1115,7 +1119,7 @@ describe('Modal', () => {
         const modalEl = fixtureEl.querySelector('.modal')
         const trigger = fixtureEl.querySelector('[data-bs-toggle="modal"]')
 
-        const spy = vi.spyOn(trigger, 'focus').mockImplementation(() => {})
+        const spy = spyOn(trigger, 'focus')
 
         const showListener = () => {
           setTimeout(() => {
@@ -1211,7 +1215,7 @@ describe('Modal', () => {
       })
       expect(modal).toBeInstanceOf(Modal)
 
-      expect(modal._config.backdrop).toBe(true)
+      expect(modal._config.backdrop).toBeTrue()
     })
 
     it('should return the instance when exists without given configuration', () => {
@@ -1229,7 +1233,7 @@ describe('Modal', () => {
       expect(modal).toBeInstanceOf(Modal)
       expect(modal2).toEqual(modal)
 
-      expect(modal2._config.backdrop).toBe(true)
+      expect(modal2._config.backdrop).toBeTrue()
     })
   })
 })

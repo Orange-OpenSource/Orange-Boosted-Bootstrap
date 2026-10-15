@@ -1,4 +1,3 @@
-import { vi } from 'vitest'
 import Alert from '../../src/alert.js'
 import { getTransitionDurationFromElement } from '../../src/util/index.js'
 import { clearFixture, getFixture } from '../helpers/fixture.js'
@@ -26,7 +25,7 @@ describe('Alert', () => {
   })
 
   it('should return version', () => {
-    expect(Alert.VERSION).toEqual(expect.any(String))
+    expect(Alert.VERSION).toEqual(jasmine.any(String))
   })
 
   describe('DATA_KEY', () => {
@@ -66,7 +65,7 @@ describe('Alert', () => {
   describe('close', () => {
     it('should close an alert', () => {
       return new Promise(resolve => {
-        const spy = vi.fn(getTransitionDurationFromElement).mockName('spy')
+        const spy = jasmine.createSpy('spy', getTransitionDurationFromElement)
         fixtureEl.innerHTML = '<div class="alert"></div>'
 
         const alertEl = document.querySelector('.alert')
@@ -88,6 +87,10 @@ describe('Alert', () => {
 
         const alertEl = document.querySelector('.alert')
         const alert = new Alert(alertEl)
+
+        alertEl.addEventListener('transitionend', () => {
+          expect().nothing()
+        })
 
         alertEl.addEventListener('closed.bs.alert', () => {
           expect(document.querySelectorAll('.alert')).toHaveSize(0)

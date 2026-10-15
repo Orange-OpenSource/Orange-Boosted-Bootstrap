@@ -1,4 +1,3 @@
-import { vi } from 'vitest'
 import EventHandler from '../../src/dom/event-handler.js'
 import ScrollSpy from '../../src/scrollspy.js'
 import {
@@ -9,8 +8,8 @@ describe('ScrollSpy', () => {
   let fixtureEl
 
   const getElementScrollSpy = element => element.scrollTo ?
-    vi.spyOn(element, 'scrollTo') :
-    vi.spyOn(element, 'scrollTop', 'set')
+    spyOn(element, 'scrollTo').and.callThrough() :
+    spyOnProperty(element, 'scrollTop', 'set').and.callThrough()
 
   const scrollTo = (el, height) => {
     el.scrollTop = height
@@ -79,13 +78,13 @@ describe('ScrollSpy', () => {
 
   describe('VERSION', () => {
     it('should return plugin version', () => {
-      expect(ScrollSpy.VERSION).toEqual(expect.any(String))
+      expect(ScrollSpy.VERSION).toEqual(jasmine.any(String))
     })
   })
 
   describe('Default', () => {
     it('should return plugin default config', () => {
-      expect(ScrollSpy.Default).toEqual(expect.any(Object))
+      expect(ScrollSpy.Default).toEqual(jasmine.any(Object))
     })
   })
 
@@ -164,7 +163,7 @@ describe('ScrollSpy', () => {
         expect(actual.length).toBe(expected.length)
         for (const x of actual) {
           const i = actual.indexOf(x)
-          expect(x, `[${i}]`).toBeCloseTo(expected[i])
+          expect(x).withContext(`[${i}]`).toBeCloseTo(expected[i])
         }
       }
 
@@ -244,7 +243,7 @@ describe('ScrollSpy', () => {
           target: '#ss-target'
         })
 
-        const spy = vi.spyOn(scrollSpy, '_process')
+        const spy = spyOn(scrollSpy, '_process').and.callThrough()
 
         onScrollStop(() => {
           expect(rootEl).toHaveClass('active')
@@ -277,7 +276,7 @@ describe('ScrollSpy', () => {
           target: '.navbar'
         })
 
-        const triggerSpy = vi.spyOn(EventHandler, 'trigger')
+        const triggerSpy = spyOn(EventHandler, 'trigger').and.callThrough()
 
         scrollSpy._activeTarget = fixtureEl.querySelector('#a-1')
         testElementIsActiveAfterScroll({
@@ -322,7 +321,7 @@ describe('ScrollSpy', () => {
           target: fixtureEl.querySelector('#ss-target')
         })
 
-        const spy = vi.spyOn(scrollSpy, '_process')
+        const spy = spyOn(scrollSpy, '_process').and.callThrough()
 
         onScrollStop(() => {
           expect(rootEl).toHaveClass('active')
@@ -477,7 +476,7 @@ describe('ScrollSpy', () => {
           target: '#navigation',
           offset: contentEl.offsetTop
         })
-        const spy = vi.spyOn(scrollSpy, '_process')
+        const spy = spyOn(scrollSpy, '_process').and.callThrough()
 
         onScrollStop(() => {
           const active = () => fixtureEl.querySelector('.active')
@@ -726,8 +725,8 @@ describe('ScrollSpy', () => {
         const section2 = fixtureEl.querySelector('#div-2')
         const scrollSpy = new ScrollSpy(contentEl, { target: '.navbar', smoothScroll: true })
 
-        const replaceSpy = vi.spyOn(window.history, 'replaceState').mockImplementation(() => {})
-        const focusSpy = vi.spyOn(section2, 'focus')
+        const replaceSpy = spyOn(window.history, 'replaceState')
+        const focusSpy = spyOn(section2, 'focus').and.callThrough()
 
         // A smooth-scroll click records the pending navigation; the settle
         // (scrollend) then restores the hash and moves focus.
@@ -812,7 +811,7 @@ describe('ScrollSpy', () => {
       const scrollSpy = new ScrollSpy(contentEl, { target: '#navBar', topMargin: '96px' })
 
       expect(scrollSpy._parseTopMargin()).toEqual({ value: 96, unit: 'px' })
-      expect(scrollSpy._usesPixelMargin()).toBe(true)
+      expect(scrollSpy._usesPixelMargin()).toBeTrue()
     })
 
     it('passes a custom rootMargin straight to the observer (taking precedence over topMargin)', () => {
@@ -826,7 +825,7 @@ describe('ScrollSpy', () => {
       })
 
       expect(scrollSpy._observer.rootMargin).toBe('0px 0px -40% 0px')
-      expect(scrollSpy._usesPixelMargin()).toBe(false)
+      expect(scrollSpy._usesPixelMargin()).toBeFalse()
     })
 
     it('resolves section ids via getElementById, tolerating encoded and malformed fragments', () => {
@@ -861,7 +860,7 @@ describe('ScrollSpy', () => {
       percentSpy.dispose()
 
       const pixelSpy = new ScrollSpy(contentEl, { target: '#navBar', topMargin: '96px' })
-      expect(pixelSpy._resizeHandler).toEqual(expect.any(Function))
+      expect(pixelSpy._resizeHandler).toEqual(jasmine.any(Function))
 
       const firstObserver = pixelSpy._observer
       pixelSpy._rebuildObserver()
@@ -876,7 +875,7 @@ describe('ScrollSpy', () => {
       const el = fixtureEl.querySelector('.content')
       const scrollSpy = new ScrollSpy(el)
 
-      const spy = vi.spyOn(scrollSpy._observer, 'disconnect').mockImplementation(() => {})
+      const spy = spyOn(scrollSpy._observer, 'disconnect')
 
       scrollSpy.refresh()
 
@@ -918,7 +917,7 @@ describe('ScrollSpy', () => {
       const scrollSpy = new ScrollSpy(getContainerFixture(), { topMargin: '10%' })
 
       expect(scrollSpy._parseTopMargin()).toEqual({ value: 10, unit: '%' })
-      expect(scrollSpy._usesPixelMargin()).toBe(false)
+      expect(scrollSpy._usesPixelMargin()).toBeFalse()
     })
 
     it('should parse a pixel topMargin and derive a rootMargin from an explicit scroll root', () => {
@@ -926,7 +925,7 @@ describe('ScrollSpy', () => {
 
       expect(scrollSpy._rootElement).not.toBeNull()
       expect(scrollSpy._parseTopMargin()).toEqual({ value: 50, unit: 'px' })
-      expect(scrollSpy._usesPixelMargin()).toBe(true)
+      expect(scrollSpy._usesPixelMargin()).toBeTrue()
       expect(scrollSpy._getDerivedRootMargin()).toMatch(/^0px 0px -\d/)
     })
 
@@ -947,7 +946,7 @@ describe('ScrollSpy', () => {
     it('should not derive a pixel margin when an explicit rootMargin is set', () => {
       const scrollSpy = new ScrollSpy(getContainerFixture(), { rootMargin: '0px 0px -50% 0px', topMargin: '50px' })
 
-      expect(scrollSpy._usesPixelMargin()).toBe(false)
+      expect(scrollSpy._usesPixelMargin()).toBeFalse()
     })
 
     it('should report a boolean overflow state from the scroll root', () => {
@@ -966,7 +965,7 @@ describe('ScrollSpy', () => {
     })
 
     it('should add a resize listener for pixel margins and remove it on dispose', () => {
-      const spy = vi.spyOn(EventHandler, 'off')
+      const spy = spyOn(EventHandler, 'off').and.callThrough()
       const scrollSpy = new ScrollSpy(getContainerFixture(), { topMargin: '50px' })
 
       expect(scrollSpy._resizeHandler).not.toBeNull()
@@ -1068,8 +1067,8 @@ describe('ScrollSpy', () => {
   describe('SmoothScroll', () => {
     it('should not enable smoothScroll', () => {
       fixtureEl.innerHTML = getDummyFixture()
-      const offSpy = vi.spyOn(EventHandler, 'off')
-      const onSpy = vi.spyOn(EventHandler, 'on')
+      const offSpy = spyOn(EventHandler, 'off').and.callThrough()
+      const onSpy = spyOn(EventHandler, 'on').and.callThrough()
 
       const div = fixtureEl.querySelector('.content')
       const target = fixtureEl.querySelector('#navBar')
@@ -1084,8 +1083,8 @@ describe('ScrollSpy', () => {
 
     it('should enable smoothScroll', () => {
       fixtureEl.innerHTML = getDummyFixture()
-      const offSpy = vi.spyOn(EventHandler, 'off')
-      const onSpy = vi.spyOn(EventHandler, 'on')
+      const offSpy = spyOn(EventHandler, 'off').and.callThrough()
+      const onSpy = spyOn(EventHandler, 'on').and.callThrough()
 
       const div = fixtureEl.querySelector('.content')
       const target = fixtureEl.querySelector('#navBar')
@@ -1096,7 +1095,7 @@ describe('ScrollSpy', () => {
       })
 
       expect(offSpy).toHaveBeenCalledWith(target, 'click.bs.scrollspy')
-      expect(onSpy).toHaveBeenCalledWith(target, 'click.bs.scrollspy', '[href]', expect.any(Function))
+      expect(onSpy).toHaveBeenCalledWith(target, 'click.bs.scrollspy', '[href]', jasmine.any(Function))
     })
 
     it('should not smoothScroll to element if it not handles a scrollspy section', () => {
@@ -1224,8 +1223,8 @@ describe('ScrollSpy', () => {
         smoothScroll: true
       })
 
-      vi.spyOn(window.history, 'replaceState').mockImplementation(() => {})
-      const settleSpy = vi.spyOn(scrollSpy, '_settleNavigation')
+      spyOn(window.history, 'replaceState')
+      const settleSpy = spyOn(scrollSpy, '_settleNavigation').and.callThrough()
 
       link.click()
       await new Promise(resolve => {

@@ -1,4 +1,3 @@
-import { vi } from 'vitest'
 import Tab from '../../src/tab.js'
 import {
   clearFixture, createEvent, getFixture
@@ -17,7 +16,7 @@ describe('Tab', () => {
 
   describe('VERSION', () => {
     it('should return plugin version', () => {
-      expect(Tab.VERSION).toEqual(expect.any(String))
+      expect(Tab.VERSION).toEqual(jasmine.any(String))
     })
   })
 
@@ -209,12 +208,11 @@ describe('Tab', () => {
       const profileTriggerEl = fixtureEl.querySelector('#trigger2')
       const tab = new Tab(profileTriggerEl)
 
-      const shown = new Promise(resolve => {
-        profileTriggerEl.addEventListener('shown.bs.tab', resolve, { once: true })
+      profileTriggerEl.addEventListener('shown.bs.tab', () => {
+        expect(fixtureEl.querySelector(`#${CSS.escape('2')}`)).toHaveClass('active')
       })
+
       tab.show()
-      await shown
-      expect(fixtureEl.querySelector(`#${CSS.escape('2')}`)).toHaveClass('active')
     })
 
     it('should not fire shown when show is prevented', () => {
@@ -225,6 +223,7 @@ describe('Tab', () => {
         const tab = new Tab(navEl)
         const expectDone = () => {
           setTimeout(() => {
+            expect().nothing()
             resolve()
           }, 30)
         }
@@ -264,6 +263,7 @@ describe('Tab', () => {
 
         tab.show()
         setTimeout(() => {
+          expect().nothing()
           resolve()
         }, 30)
       })
@@ -324,7 +324,7 @@ describe('Tab', () => {
         })
 
         triggerList[0].addEventListener('hidden.bs.tab', ev => {
-          expect(hideCalled).toBe(true)
+          expect(hideCalled).toBeTrue()
           expect(ev.relatedTarget.getAttribute('data-bs-target')).toEqual('#profile')
           resolve()
         })
@@ -347,6 +347,7 @@ describe('Tab', () => {
         const secondTab = new Tab(triggerList[1])
         const expectDone = () => {
           setTimeout(() => {
+            expect().nothing()
             resolve()
           }, 30)
         }
@@ -474,9 +475,9 @@ describe('Tab', () => {
 
       const tabEl = fixtureEl.querySelector('.nav-link')
       const tab = new Tab(tabEl)
-      const spy = vi.fn().mockName('spy')
+      const spy = jasmine.createSpy('spy')
 
-      const spyQueue = vi.spyOn(tab, '_queueCallback').mockImplementation(() => {})
+      const spyQueue = spyOn(tab, '_queueCallback')
       tab._activate(null, spy)
       expect(spyQueue).not.toHaveBeenCalled()
       expect(spy).not.toHaveBeenCalled()
@@ -511,11 +512,11 @@ describe('Tab', () => {
 
       expect(tabPanel.getAttribute('role')).toEqual('tabpanel')
       expect(tabPanel2.getAttribute('role')).toEqual('tabpanel')
-      expect(tabPanel.hasAttribute('tabindex')).toBe(false)
-      expect(tabPanel.hasAttribute('tabindex2')).toBe(false)
+      expect(tabPanel.hasAttribute('tabindex')).toBeFalse()
+      expect(tabPanel.hasAttribute('tabindex2')).toBeFalse()
 
       expect(tabPanel.getAttribute('aria-labelledby')).toEqual('foo')
-      expect(tabPanel2.hasAttribute('aria-labelledby')).toBe(false)
+      expect(tabPanel2.hasAttribute('aria-labelledby')).toBeFalse()
     })
   })
 
@@ -532,10 +533,10 @@ describe('Tab', () => {
 
       const keydown = createEvent('keydown')
       keydown.key = 'Enter'
-      const spyStop = vi.spyOn(Event.prototype, 'stopPropagation')
-      const spyPrevent = vi.spyOn(Event.prototype, 'preventDefault')
-      const spyKeydown = vi.spyOn(tab, '_keydown').mockImplementation(() => {})
-      const spyGet = vi.spyOn(tab, '_getChildren').mockImplementation(() => {})
+      const spyStop = spyOn(Event.prototype, 'stopPropagation').and.callThrough()
+      const spyPrevent = spyOn(Event.prototype, 'preventDefault').and.callThrough()
+      const spyKeydown = spyOn(tab, '_keydown')
+      const spyGet = spyOn(tab, '_getChildren')
 
       tabEl.dispatchEvent(keydown)
       expect(spyKeydown).toHaveBeenCalled()
@@ -560,15 +561,15 @@ describe('Tab', () => {
       const tab1 = new Tab(tabEl1)
       const tab2 = new Tab(tabEl2)
       const tab3 = new Tab(tabEl3)
-      const spyShow1 = vi.spyOn(tab1, 'show')
-      const spyShow2 = vi.spyOn(tab2, 'show')
-      const spyShow3 = vi.spyOn(tab3, 'show')
-      const spyFocus1 = vi.spyOn(tabEl1, 'focus')
-      const spyFocus2 = vi.spyOn(tabEl2, 'focus')
-      const spyFocus3 = vi.spyOn(tabEl3, 'focus')
+      const spyShow1 = spyOn(tab1, 'show').and.callThrough()
+      const spyShow2 = spyOn(tab2, 'show').and.callThrough()
+      const spyShow3 = spyOn(tab3, 'show').and.callThrough()
+      const spyFocus1 = spyOn(tabEl1, 'focus').and.callThrough()
+      const spyFocus2 = spyOn(tabEl2, 'focus').and.callThrough()
+      const spyFocus3 = spyOn(tabEl3, 'focus').and.callThrough()
 
-      const spyStop = vi.spyOn(Event.prototype, 'stopPropagation')
-      const spyPrevent = vi.spyOn(Event.prototype, 'preventDefault')
+      const spyStop = spyOn(Event.prototype, 'stopPropagation').and.callThrough()
+      const spyPrevent = spyOn(Event.prototype, 'preventDefault').and.callThrough()
 
       let keydown = createEvent('keydown')
       keydown.key = 'ArrowRight'
@@ -604,13 +605,13 @@ describe('Tab', () => {
       const tabEl2 = fixtureEl.querySelector('#tab2')
       const tab1 = new Tab(tabEl1)
       const tab2 = new Tab(tabEl2)
-      const spyShow1 = vi.spyOn(tab1, 'show')
-      const spyShow2 = vi.spyOn(tab2, 'show')
-      const spyFocus1 = vi.spyOn(tabEl1, 'focus')
-      const spyFocus2 = vi.spyOn(tabEl2, 'focus')
+      const spyShow1 = spyOn(tab1, 'show').and.callThrough()
+      const spyShow2 = spyOn(tab2, 'show').and.callThrough()
+      const spyFocus1 = spyOn(tabEl1, 'focus').and.callThrough()
+      const spyFocus2 = spyOn(tabEl2, 'focus').and.callThrough()
 
-      const spyStop = vi.spyOn(Event.prototype, 'stopPropagation')
-      const spyPrevent = vi.spyOn(Event.prototype, 'preventDefault')
+      const spyStop = spyOn(Event.prototype, 'stopPropagation').and.callThrough()
+      const spyPrevent = spyOn(Event.prototype, 'preventDefault').and.callThrough()
 
       let keydown = createEvent('keydown')
       keydown.key = 'ArrowLeft'
@@ -645,7 +646,7 @@ describe('Tab', () => {
       const tab3 = new Tab(tabEl3)
       tab3.show()
 
-      const spyShown = vi.fn()
+      const spyShown = jasmine.createSpy()
       tabEl1.addEventListener('shown.bs.tab', spyShown)
 
       const keydown = createEvent('keydown')
@@ -671,7 +672,7 @@ describe('Tab', () => {
       const tab1 = new Tab(tabEl1)
       tab1.show()
 
-      const spyShown = vi.fn()
+      const spyShown = jasmine.createSpy()
       tabEl3.addEventListener('shown.bs.tab', spyShown)
 
       const keydown = createEvent('keydown')
@@ -700,14 +701,14 @@ describe('Tab', () => {
       const tab2 = new Tab(tabEl2)
       const tab3 = new Tab(tabEl3)
       const tab4 = new Tab(tabEl4)
-      const spy1 = vi.spyOn(tab1, 'show')
-      const spy2 = vi.spyOn(tab2, 'show')
-      const spy3 = vi.spyOn(tab3, 'show')
-      const spy4 = vi.spyOn(tab4, 'show')
-      const spyFocus1 = vi.spyOn(tabEl1, 'focus')
-      const spyFocus2 = vi.spyOn(tabEl2, 'focus')
-      const spyFocus3 = vi.spyOn(tabEl3, 'focus')
-      const spyFocus4 = vi.spyOn(tabEl4, 'focus')
+      const spy1 = spyOn(tab1, 'show').and.callThrough()
+      const spy2 = spyOn(tab2, 'show').and.callThrough()
+      const spy3 = spyOn(tab3, 'show').and.callThrough()
+      const spy4 = spyOn(tab4, 'show').and.callThrough()
+      const spyFocus1 = spyOn(tabEl1, 'focus').and.callThrough()
+      const spyFocus2 = spyOn(tabEl2, 'focus').and.callThrough()
+      const spyFocus3 = spyOn(tabEl3, 'focus').and.callThrough()
+      const spyFocus4 = spyOn(tabEl4, 'focus').and.callThrough()
 
       const keydown = createEvent('keydown')
       keydown.key = 'ArrowRight'
@@ -741,14 +742,14 @@ describe('Tab', () => {
       const tab2 = new Tab(tabEl2)
       const tab3 = new Tab(tabEl3)
       const tab4 = new Tab(tabEl4)
-      const spy1 = vi.spyOn(tab1, 'show')
-      const spy2 = vi.spyOn(tab2, 'show')
-      const spy3 = vi.spyOn(tab3, 'show')
-      const spy4 = vi.spyOn(tab4, 'show')
-      const spyFocus1 = vi.spyOn(tabEl1, 'focus')
-      const spyFocus2 = vi.spyOn(tabEl2, 'focus')
-      const spyFocus3 = vi.spyOn(tabEl3, 'focus')
-      const spyFocus4 = vi.spyOn(tabEl4, 'focus')
+      const spy1 = spyOn(tab1, 'show').and.callThrough()
+      const spy2 = spyOn(tab2, 'show').and.callThrough()
+      const spy3 = spyOn(tab3, 'show').and.callThrough()
+      const spy4 = spyOn(tab4, 'show').and.callThrough()
+      const spyFocus1 = spyOn(tabEl1, 'focus').and.callThrough()
+      const spyFocus2 = spyOn(tabEl2, 'focus').and.callThrough()
+      const spyFocus3 = spyOn(tabEl3, 'focus').and.callThrough()
+      const spyFocus4 = spyOn(tabEl4, 'focus').and.callThrough()
 
       const keydown = createEvent('keydown')
       keydown.key = 'ArrowLeft'
@@ -780,8 +781,8 @@ describe('Tab', () => {
 
       tab3.show()
 
-      const spyShown1 = vi.fn()
-      const spyShown2 = vi.fn()
+      const spyShown1 = jasmine.createSpy()
+      const spyShown2 = jasmine.createSpy()
       tabEl1.addEventListener('shown.bs.tab', spyShown1)
       tabEl2.addEventListener('shown.bs.tab', spyShown2)
 
@@ -810,8 +811,8 @@ describe('Tab', () => {
 
       tab1.show()
 
-      const spyShown2 = vi.fn()
-      const spyShown3 = vi.fn()
+      const spyShown2 = jasmine.createSpy()
+      const spyShown3 = jasmine.createSpy()
       tabEl2.addEventListener('shown.bs.tab', spyShown2)
       tabEl3.addEventListener('shown.bs.tab', spyShown3)
 
@@ -1122,7 +1123,7 @@ describe('Tab', () => {
         ].join('')
 
         const tabEl = fixtureEl.querySelector('[href="#test2"]')
-        const spy = vi.spyOn(Event.prototype, 'preventDefault')
+        const spy = spyOn(Event.prototype, 'preventDefault').and.callThrough()
 
         tabEl.addEventListener('shown.bs.tab', () => {
           expect(tabEl).toHaveClass('active')
@@ -1154,6 +1155,7 @@ describe('Tab', () => {
 
         triggerDisabled.click()
         setTimeout(() => {
+          expect().nothing()
           resolve()
         }, 30)
       })
@@ -1180,6 +1182,7 @@ describe('Tab', () => {
 
         triggerDisabled.click()
         setTimeout(() => {
+          expect().nothing()
           resolve()
         }, 30)
       })

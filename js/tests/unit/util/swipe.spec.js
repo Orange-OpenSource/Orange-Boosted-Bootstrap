@@ -1,4 +1,3 @@
-import { vi } from 'vitest'
 import EventHandler from '../../../src/dom/event-handler.js'
 import { noop } from '../../../src/util/index.js'
 import Swipe from '../../../src/util/swipe.js'
@@ -63,15 +62,15 @@ describe('Swipe', () => {
     it('should add touch event listeners by default', () => {
       defineDocumentElementOntouchstart()
 
-      vi.spyOn(Swipe.prototype, '_initEvents')
+      spyOn(Swipe.prototype, '_initEvents').and.callThrough()
       const swipe = new Swipe(swipeEl)
       expect(swipe._initEvents).toHaveBeenCalled()
     })
 
     it('should not add touch event listeners if touch is not supported', () => {
-      vi.spyOn(Swipe, 'isSupported').mockReturnValue(false)
+      spyOn(Swipe, 'isSupported').and.returnValue(false)
 
-      vi.spyOn(Swipe.prototype, '_initEvents')
+      spyOn(Swipe.prototype, '_initEvents').and.callThrough()
       const swipe = new Swipe(swipeEl)
 
       expect(swipe._initEvents).not.toHaveBeenCalled()
@@ -81,7 +80,7 @@ describe('Swipe', () => {
   describe('Config', () => {
     it('Test leftCallback', () => {
       return new Promise(resolve => {
-        const spyRight = vi.fn().mockName('spy')
+        const spyRight = jasmine.createSpy('spy')
         clearPointerEvents()
         defineDocumentElementOntouchstart()
         // eslint-disable-next-line no-new
@@ -103,7 +102,7 @@ describe('Swipe', () => {
 
     it('Test rightCallback', () => {
       return new Promise(resolve => {
-        const spyLeft = vi.fn().mockName('spy')
+        const spyLeft = jasmine.createSpy('spy')
         clearPointerEvents()
         defineDocumentElementOntouchstart()
         // eslint-disable-next-line no-new
@@ -135,6 +134,7 @@ describe('Swipe', () => {
             return
           }
 
+          expect().nothing()
           restorePointerEvents()
           resolve()
         }
@@ -163,7 +163,7 @@ describe('Swipe', () => {
       deleteDocumentElementOntouchstart()
 
       const swipe = new Swipe(swipeEl)
-      const spy = vi.spyOn(swipe, '_handleSwipe').mockImplementation(() => {})
+      const spy = spyOn(swipe, '_handleSwipe')
 
       mockSwipeGesture(swipeEl, {
         pos: [300, 10],
@@ -179,6 +179,7 @@ describe('Swipe', () => {
     it('should allow swipeRight and call "rightCallback" with pointer events', () => {
       return new Promise(resolve => {
         if (!supportPointerEvent) {
+          expect().nothing()
           resolve()
           return
         }
@@ -191,6 +192,7 @@ describe('Swipe', () => {
         new Swipe(swipeEl, {
           rightCallback() {
             deleteDocumentElementOntouchstart()
+            expect().nothing()
             resolve()
           }
         })
@@ -202,6 +204,7 @@ describe('Swipe', () => {
     it('should allow swipeLeft and call "leftCallback" with pointer events', () => {
       return new Promise(resolve => {
         if (!supportPointerEvent) {
+          expect().nothing()
           resolve()
           return
         }
@@ -213,6 +216,7 @@ describe('Swipe', () => {
         // eslint-disable-next-line no-new
         new Swipe(swipeEl, {
           leftCallback() {
+            expect().nothing()
             deleteDocumentElementOntouchstart()
             resolve()
           }
@@ -229,7 +233,7 @@ describe('Swipe', () => {
   describe('Dispose', () => {
     it('should call EventHandler.off', () => {
       defineDocumentElementOntouchstart()
-      vi.spyOn(EventHandler, 'off')
+      spyOn(EventHandler, 'off').and.callThrough()
       const swipe = new Swipe(swipeEl)
 
       swipe.dispose()
@@ -237,8 +241,8 @@ describe('Swipe', () => {
     })
 
     it('should destroy', () => {
-      const addEventSpy = vi.spyOn(fixtureEl, 'addEventListener')
-      const removeEventSpy = vi.spyOn(EventHandler, 'off')
+      const addEventSpy = spyOn(fixtureEl, 'addEventListener').and.callThrough()
+      const removeEventSpy = spyOn(EventHandler, 'off').and.callThrough()
       defineDocumentElementOntouchstart()
 
       const swipe = new Swipe(fixtureEl)
@@ -246,16 +250,16 @@ describe('Swipe', () => {
       const expectedArgs =
         swipe._supportPointerEvents ?
           [
-            ['pointerdown', expect.any(Function), expect.any(Boolean)],
-            ['pointerup', expect.any(Function), expect.any(Boolean)]
+            ['pointerdown', jasmine.any(Function), jasmine.any(Boolean)],
+            ['pointerup', jasmine.any(Function), jasmine.any(Boolean)]
           ] :
           [
-            ['touchstart', expect.any(Function), expect.any(Boolean)],
-            ['touchmove', expect.any(Function), expect.any(Boolean)],
-            ['touchend', expect.any(Function), expect.any(Boolean)]
+            ['touchstart', jasmine.any(Function), jasmine.any(Boolean)],
+            ['touchmove', jasmine.any(Function), jasmine.any(Boolean)],
+            ['touchend', jasmine.any(Function), jasmine.any(Boolean)]
           ]
 
-      expect(addEventSpy.mock.calls).toEqual(expectedArgs)
+      expect(addEventSpy.calls.allArgs()).toEqual(expectedArgs)
 
       swipe.dispose()
 
@@ -269,7 +273,7 @@ describe('Swipe', () => {
       Object.defineProperty(window.navigator, 'maxTouchPoints', () => 0)
       defineDocumentElementOntouchstart()
 
-      expect(Swipe.isSupported()).toBe(true)
+      expect(Swipe.isSupported()).toBeTrue()
     })
 
     it('should return "false" if "touchstart" not exists in document element and "navigator.maxTouchPoints" are zero (0)', () => {
@@ -277,10 +281,11 @@ describe('Swipe', () => {
       deleteDocumentElementOntouchstart()
 
       if ('ontouchstart' in document.documentElement) {
+        expect().nothing()
         return
       }
 
-      expect(Swipe.isSupported()).toBe(false)
+      expect(Swipe.isSupported()).toBeFalse()
     })
   })
 })

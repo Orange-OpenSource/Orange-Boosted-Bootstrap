@@ -1,4 +1,3 @@
-import { vi } from 'vitest'
 import Toast from '../../src/toast.js'
 import {
   clearFixture, createEvent, getFixture
@@ -17,7 +16,7 @@ describe('Toast', () => {
 
   describe('VERSION', () => {
     it('should return plugin version', () => {
-      expect(Toast.VERSION).toEqual(expect.any(String))
+      expect(Toast.VERSION).toEqual(jasmine.any(String))
     })
   })
 
@@ -113,7 +112,7 @@ describe('Toast', () => {
 
   describe('DefaultType', () => {
     it('should expose default setting types for read', () => {
-      expect(Toast.DefaultType).toEqual(expect.any(Object))
+      expect(Toast.DefaultType).toEqual(jasmine.any(Object))
     })
   })
 
@@ -218,7 +217,7 @@ describe('Toast', () => {
           toast.show()
         }, toast._config.delay / 2)
 
-        const spy = vi.spyOn(toast, '_clearTimeout')
+        const spy = spyOn(toast, '_clearTimeout').and.callThrough()
 
         toast.show()
       })
@@ -236,10 +235,10 @@ describe('Toast', () => {
 
         const toastEl = fixtureEl.querySelector('.toast')
         const toast = new Toast(toastEl)
-        const spy = vi.spyOn(toast, '_clearTimeout')
+        const spy = spyOn(toast, '_clearTimeout').and.callThrough()
 
         setTimeout(() => {
-          spy.mockClear()
+          spy.calls.reset()
 
           toastEl.addEventListener('mouseover', () => {
             expect(toast._clearTimeout).toHaveBeenCalledTimes(1)
@@ -269,10 +268,10 @@ describe('Toast', () => {
 
         const toastEl = fixtureEl.querySelector('.toast')
         const toast = new Toast(toastEl)
-        const spy = vi.spyOn(toast, '_clearTimeout')
+        const spy = spyOn(toast, '_clearTimeout').and.callThrough()
 
         setTimeout(() => {
-          spy.mockClear()
+          spy.calls.reset()
 
           toastEl.addEventListener('focusin', () => {
             expect(toast._clearTimeout).toHaveBeenCalledTimes(1)
@@ -444,7 +443,7 @@ describe('Toast', () => {
       const toastEl = fixtureEl.querySelector('div')
       const toast = new Toast(toastEl)
 
-      const spy = vi.spyOn(toastEl.classList, 'contains').mockImplementation(() => {})
+      const spy = spyOn(toastEl.classList, 'contains')
 
       toast.hide()
 

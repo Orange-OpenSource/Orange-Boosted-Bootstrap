@@ -1,4 +1,3 @@
-import { vi } from 'vitest'
 import BaseComponent from '../../src/base-component.js'
 import EventHandler from '../../src/dom/event-handler.js'
 import { noop } from '../../src/util/index.js'
@@ -38,7 +37,7 @@ describe('Base Component', () => {
   describe('Static Methods', () => {
     describe('VERSION', () => {
       it('should return version', () => {
-        expect(DummyClass.VERSION).toEqual(expect.any(String))
+        expect(DummyClass.VERSION).toEqual(jasmine.any(String))
       })
     })
 
@@ -109,7 +108,7 @@ describe('Base Component', () => {
 
       it('should de-register element event listeners', () => {
         createInstance()
-        const spy = vi.spyOn(EventHandler, 'off').mockImplementation(() => {})
+        const spy = spyOn(EventHandler, 'off')
 
         instance.dispose()
 

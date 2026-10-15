@@ -1,4 +1,3 @@
-import { vi } from 'vitest'
 import Data from '../../../src/dom/data.js'
 import { clearFixture, getFixture } from '../../helpers/fixture.js'
 
@@ -68,6 +67,8 @@ describe('Data', () => {
 
   it('should do nothing when an element has nothing stored', () => {
     Data.remove(div, TEST_KEY)
+
+    expect().nothing()
   })
 
   it('should remove nothing for an unknown key', () => {
@@ -89,7 +90,7 @@ describe('Data', () => {
   })
 
   it('should console.error a message if called with multiple keys', () => {
-    console.error = vi.fn().mockName('console.error')
+    console.error = jasmine.createSpy('console.error')
 
     const data = { ...TEST_DATA }
     const copy = { ...data }
