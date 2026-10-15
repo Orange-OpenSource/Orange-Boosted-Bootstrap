@@ -8,7 +8,8 @@ Scope: everything under `libs/vue/`. The root [`AGENTS.md`](../../AGENTS.md) sti
 - `src/index.ts` — barrel file and the package's only public API. Re-export every new component here as a named export (`export { default as Button } from './components/button/button.component.vue'`), plus its types (`export type { ButtonProps }`). It also re-exports the `Brand` and `Theme` types from `@ouds/core`, which the Storybook preview uses.
 - `vite.config.ts` — Vite library build (ES + CJS, `.d.ts` via `vite-plugin-dts`, `emptyOutDir`), `resolve.tsconfigPaths: true` (resolves the `@ouds/*` paths of `tsconfig.base.json`, so tests and the Storybook app read `@ouds/core` from its sources), and the Vitest `test` block, including coverage.
 - `.oxlintrc.json` — Oxlint config for this lib; extends the root `oxlint.base.json`.
-- `project.json` — Nx targets `build` and `test`; `lint` is inferred by `@nx/oxlint` and intentionally not declared.
+- `eslint.config.mjs` — ESLint 9 flat config with only `eslint-plugin-vuejs-accessibility`, for `.vue` templates (see Code conventions).
+- `project.json` — Nx targets `build`, `test`, and `lint-templates`; `lint` is inferred by `@nx/oxlint` and only extended here with `dependsOn: ["lint-templates"]`.
 - `tsconfig.json` (shared Vue compiler options; solution file that only references the other two), `tsconfig.lib.json` (library sources, used by `vite-plugin-dts`), `tsconfig.spec.json` (specs and stories, adds Vitest types) — the same layout as `@ouds/react` and `@ouds/core`.
 
 ## Commands (run from the repository root)
@@ -23,7 +24,7 @@ Scope: everything under `libs/vue/`. The root [`AGENTS.md`](../../AGENTS.md) sti
 - Component files are kebab-case with a `.component.vue` suffix (`button.component.vue`), like `@ouds/react`; the exported name is PascalCase (`Button`).
 - `vue` is an external and a `peerDependency` — never bundle it.
 - No code formatter is configured for this library. Follow `.editorconfig` and the existing style: single quotes, no semicolons, no trailing commas, 2-space indent.
-- Lint plugins: `vue` and `import`, on top of the base `typescript`/`unicorn`/`oxc` rules. Oxlint does not lint `<template>` markup, so check template accessibility (labels, roles, keyboard focus) manually.
+- Lint plugins: `vue` and `import`, on top of the base `typescript`/`unicorn`/`oxc` rules. Oxlint does not lint `<template>` markup, so a second target, `lint-templates`, runs ESLint with `eslint-plugin-vuejs-accessibility` (`flat/recommended`) on `src/**/*.vue` using `libs/vue/eslint.config.mjs`; `lint` depends on it, so `npm run vue:lint` runs both. That ESLint config only holds the accessibility rules; everything else stays in Oxlint.
 
 ## Testing
 

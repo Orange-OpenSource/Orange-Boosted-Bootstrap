@@ -20,8 +20,7 @@ const preview: Preview = {
         }),
         (storyFn, context): any => {
             const rounded = context.globals['roundedCorners'] === 'on';
-            const brand =
-                (context.globals['brand'] as Brand) ?? 'orange';
+            const brand = (context.globals['brand'] as Brand) ?? 'orange';
             const theme = (context.globals['theme'] as Theme) ?? 'dark';
             const story = storyFn();
 

@@ -60,8 +60,7 @@ export const decorators: Decorator[] = [
     (Story, context): JSX.Element => {
         const rounded = context.globals['roundedCorners'] === 'on';
         const theme = (context.globals['theme'] as Theme) ?? 'dark';
-        const brand =
-            (context.globals['brand'] as Brand) ?? 'orange';
+        const brand = (context.globals['brand'] as Brand) ?? 'orange';
 
         document.documentElement.setAttribute('data-bs-theme', theme);
         document.documentElement.setAttribute('data-bs-brand', brand);
