@@ -9,7 +9,11 @@ simulatorScript.remove()
 
 expect.extend({
   toHaveClass(received, className) {
-    const pass = received?.classList?.contains(className) ?? false
+    if (typeof received?.classList?.contains !== 'function') {
+      throw new TypeError('expected a DOM element with classList')
+    }
+
+    const pass = received.classList.contains(className)
 
     return {
       pass,
