@@ -23,6 +23,8 @@ export default {
         'jest-preset-angular/build/serializers/html-comment',
     ],
     coverageDirectory: '../../coverage/libs/angular',
+    // Same reporters as the Vitest libraries: an `index.html` report at the root of the folder.
+    coverageReporters: ['text', 'html', 'lcov'],
     collectCoverage: true,
     collectCoverageFrom: [
         'src/**/*.ts',
