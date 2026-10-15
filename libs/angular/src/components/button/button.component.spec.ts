@@ -92,7 +92,46 @@ describe('ButtonComponent', () => {
         fixture.detectChanges();
 
         expect(component.loadingStatusText).toBe('');
-        expect(fixture.nativeElement.querySelector('[role="status"]')).toBeNull();
+    });
+
+    it('should always render the loader and a hidden status, like OUDS Web', () => {
+        const loader = fixture.nativeElement.querySelector('svg.loader');
+        const status: HTMLElement =
+            fixture.nativeElement.querySelector('[role="status"]');
+
+        expect(loader.getAttribute('aria-hidden')).toBe('true');
+        expect(status.id).toBe(component.statusId);
+        expect(status.classList).toContain('visually-hidden');
+        expect(status.classList).toContain('d-none');
+        expect(status.textContent?.trim()).toBe('');
+    });
+
+    it('should reveal the status and keep the label and the loader while loading', () => {
+        fixture.componentRef.setInput('label', 'Send');
+        fixture.componentRef.setInput('loadingLabel', 'Sending…');
+        fixture.componentRef.setInput('isLoading', true);
+        fixture.detectChanges();
+        const button: HTMLButtonElement =
+            fixture.nativeElement.querySelector('button');
+        const status: HTMLElement =
+            fixture.nativeElement.querySelector('[role="status"]');
+
+        expect(button.classList).toContain('loading-indeterminate');
+        expect(button.textContent).toContain('Send');
+        expect(button.querySelector('svg.loader')).not.toBeNull();
+        expect(status.classList).not.toContain('d-none');
+        expect(status.textContent?.trim()).toBe('Sending…');
+    });
+
+    it('should add the className input to the button classes', () => {
+        fixture.componentRef.setInput('className', 'my-button extra');
+        fixture.detectChanges();
+        const button: HTMLButtonElement =
+            fixture.nativeElement.querySelector('button');
+
+        expect(button.classList).toContain('my-button');
+        expect(button.classList).toContain('extra');
+        expect(button.classList).toContain('btn');
     });
 
     it('should compute the button classes from its inputs', () => {
@@ -133,7 +172,9 @@ describe('ButtonComponent', () => {
             fixture.nativeElement.querySelector('button');
 
         expect(button.textContent).toContain('Save');
-        expect(button.querySelector('.visually-hidden')).toBeNull();
+        expect(
+            button.querySelector('.visually-hidden:not([role="status"])'),
+        ).toBeNull();
     });
 
     it('should render the label visually hidden for an icon-only button', () => {
@@ -157,7 +198,7 @@ describe('ButtonComponent', () => {
         expect(button.type).toBe('submit');
         expect(button.getAttribute('aria-label')).toBe('Send form');
         expect(button.getAttribute('form')).toBe('my-form');
-        expect(button.getAttribute('aria-describedby')).toBe(component.statusId);
+        expect(button.hasAttribute('aria-describedby')).toBe(false);
     });
 
     it('should give each instance a unique status id', () => {

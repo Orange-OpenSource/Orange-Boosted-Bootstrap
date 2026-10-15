@@ -51,16 +51,16 @@ const handleClick = () => {
             label
         }}</span>
         <slot />
-        <template v-if="isLoading">
-            <svg
-                viewBox="0 0 40 40"
-                xmlns="http://www.w3.org/2000/svg"
-                class="loader"
-                aria-hidden="true"
-            >
-                <circle class="loader-inner" cx="20" cy="20" r="17" />
-            </svg>
-        </template>
+        <!-- Same markup as the OUDS Web loading button: the loader is always in the DOM and hidden by CSS until loading. -->
+        <svg
+            viewBox="0 0 40 40"
+            xmlns="http://www.w3.org/2000/svg"
+            class="loader"
+            aria-hidden="true"
+        >
+            <circle class="loader-inner" cx="20" cy="20" r="17" />
+        </svg>
+        <!-- The status live region is always in the DOM (`d-none` until loading) so screen readers announce its text change. -->
         <span
             role="status"
             :id="statusId"
