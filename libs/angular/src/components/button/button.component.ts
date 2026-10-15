@@ -42,6 +42,8 @@ export class ButtonComponent {
             [`btn-${this.variant}`]: !!this.variant,
             'loading-indeterminate': this.isLoading,
             'btn-on-colored-bg': this.isOnColoredBg,
+            // Extra classes from the `className` input (`ngClass` splits on spaces).
+            ...(this.className ? { [this.className]: true } : {}),
         };
     }
 

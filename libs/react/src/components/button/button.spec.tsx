@@ -45,6 +45,25 @@ describe('Button', () => {
         expect(baseElement.querySelector('.visually-hidden')).toBeTruthy();
     });
 
+    it('should always render the loader and a hidden status, like OUDS Web', () => {
+        const { baseElement } = render(<Button label='Save' />);
+        const loader = baseElement.querySelector('svg.loader');
+
+        expect(loader?.getAttribute('aria-hidden')).toBe('true');
+        expect(loader?.querySelector('circle.loader-inner')).not.toBeNull();
+        expect(screen.getByRole('status').className).toBe(
+            'visually-hidden d-none',
+        );
+    });
+
+    it('should keep the label and the loader while loading', () => {
+        const { baseElement } = render(<Button label='Send' isLoading />);
+
+        expect(screen.getByRole('button').textContent).toContain('Send');
+        expect(baseElement.querySelector('svg.loader')).not.toBeNull();
+        expect(screen.getByRole('status').className).toBe('visually-hidden');
+    });
+
     it('should render loading state', () => {
         const { baseElement } = render(<Button label='Loading' isLoading />);
         expect(
