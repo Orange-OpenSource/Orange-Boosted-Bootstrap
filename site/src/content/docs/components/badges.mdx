@@ -94,6 +94,7 @@ Badge is displayed as a coloured shape, without an icon, text, or number; its se
 </Callout>
 
 <Example buttonLabel="badges accessible usage" code={`<p class="badge"><span class="visually-hidden">Beware</span></p>
+
   <p class="d-flex align-items-center">Beware<span class="badge ms-2xsmall"></span></p>`} />
 
 ### Variants
@@ -105,6 +106,7 @@ Badge is displayed as a coloured shape, without an icon, text, or number; its se
 Non-functional badges are used to display neutral or accent information without carrying a specific functional meaning (unlike functional badges, see below).
 
 <Example buttonLabel="non-functional badges" class="d-flex gap-large" code={`<p class="badge badge-neutral"><span class="visually-hidden">To be noted</span></p>
+
   <p class="badge badge-accent"><span class="visually-hidden">Important</span></p>`} />
 
 ##### Functional
@@ -116,28 +118,39 @@ Functional badges carry a clear meaning related to the status of an object or sy
 </Callout>
 
 <Example buttonLabel="functional badges" class="d-flex gap-large" code={`<p class="badge badge-positive"><span class="visually-hidden">Success</span></p>
+
   <p class="badge badge-info"><span class="visually-hidden">Info</span></p>
+
   <p class="badge badge-warning"><span class="visually-hidden">Warning</span></p>
+
   <p class="badge"><span class="visually-hidden">Beware</span></p>`} />
 
 Here is a valid example of use of functional badges:
 
 <Example buttonLabel="functional badges usage" class="d-flex gap-large" code={`<div class="d-flex align-items-center">
+
     <p class="position-relative mb-none">
       Activities<span class="badge badge-info badge-small ms-2xsmall"></span><span class="visually-hidden">New!</span>
     </p>
+
     <div class="vr"></div>
+
     <p class="position-relative mb-none">
       Channels
     </p>
+
     <div class="vr"></div>
+
     <p class="position-relative mb-none">
       Conversations<span class="badge badge-info badge-small ms-2xsmall"></span><span class="visually-hidden">New!</span>
     </p>
+
     <div class="vr"></div>
+
     <p class="position-relative mb-none">
       Emails<span class="badge badge-info badge-small ms-2xsmall"></span><span class="visually-hidden">New!</span>
     </p>
+
   </div>`} />
 
 ### States
@@ -147,10 +160,15 @@ Here is a valid example of use of functional badges:
 The disabled state of a badge appears visually muted to signal that it is not currently active or relevant. To make a disabled badge, simply add the `.disabled` class. Depending on the use case, the `.visually-hidden` text may be unnecessary or require adaptation.
 
 <Example buttonLabel="disabled badges" class="d-flex gap-large" code={`<p class="badge badge-neutral disabled"></p>
+
   <p class="badge badge-accent disabled"></p>
+
   <p class="badge badge-positive disabled"></p>
+
   <p class="badge badge-info disabled"></p>
+
   <p class="badge badge-warning disabled"></p>
+
   <p class="badge disabled"></p>`} />
 
 If the badge is in a disabled context (for example, inside a disabled button), the badge will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, the `[aria-disabled="true"]` attribute, or the `.disabled` class.
@@ -170,8 +188,11 @@ Badges are available in four sizes. Default size is medium.
 
 <Example buttonLabel="badges sizes" class="d-flex align-items-center gap-large" code={`
   <p class="badge badge-xsmall"><span class="visually-hidden">Very small badge</span></p>
+
   <p class="badge badge-small"><span class="visually-hidden">Small badge</span></p>
+
   <p class="badge"><span class="visually-hidden">Medium badge (default)</span></p>
+
   <p class="badge badge-large"><span class="visually-hidden">Large badge</span></p>`} />
 
 ## [[comp]] Badge - Count
@@ -185,6 +206,7 @@ Badge - count is displayed as a coloured shape that shows numerical values, and 
 </Callout>
 
 <Example buttonLabel="badges count" class="d-flex gap-large" code={`<p class="badge badge-count">1<span class="visually-hidden">error</span></p>
+
   <p class="position-relative pt-3xsmall">
     Error<span class="position-absolute top-0 start-100 translate-middle badge badge-count">1</span>
   </p>`} />
@@ -200,10 +222,15 @@ Badges - count can be used with non-functional or functional colors.
 </Callout>
 
 <Example buttonLabel="status badges count" class="d-flex gap-large" code={`<p class="badge badge-neutral badge-count">0<span class="visually-hidden">notification</span></p>
+
   <p class="badge badge-accent badge-count">1<span class="visually-hidden">notification</span></p>
+
   <p class="badge badge-positive badge-count">2<span class="visually-hidden">confirmations</span></p>
+
   <p class="badge badge-info badge-count">10<span class="visually-hidden">new emails</span></p>
+
   <p class="badge badge-warning badge-count">+99<span class="visually-hidden">alerts</span></p>
+
   <p class="badge badge-count">250<span class="visually-hidden">errors</span></p>`} />
 
 ### States
@@ -212,11 +239,16 @@ Badges - count can be used with non-functional or functional colors.
 
 The disabled state of a badge - count appears visually muted to signal that it is not currently active or relevant. To make a disabled badge - count, simply add the `.disabled` class. Depending on the use case, the `.visually-hidden` text may require adaptation.
 
-<Example buttonLabel="disabled badges count" class="d-flex gap-large" code={`<p class="badge badge-neutral badge-count disabled">0<span class="visually-hidden">notification</span></p>
+<Example  buttonLabel="disabled badges count" class="d-flex gap-large" code={`<p class="badge badge-neutral badge-count disabled">0<span class="visually-hidden">notification</span></p>
+
   <p class="badge badge-accent badge-count disabled">1<span class="visually-hidden">notification</span></p>
+
   <p class="badge badge-positive badge-count disabled">2<span class="visually-hidden">confirmations</span></p>
+
   <p class="badge badge-info badge-count disabled">10<span class="visually-hidden">new emails</span></p>
+
   <p class="badge badge-warning badge-count disabled">+99<span class="visually-hidden">alerts</span></p>
+
   <p class="badge badge-count disabled">250<span class="visually-hidden">errors</span></p>`} />
 
 If the badge is in a disabled context (for example, inside a disabled button), the badge will automatically take the disabled state without needing to add the `.disabled` class. This works if the ancestor element has the `[disabled]` attribute, the `[aria-disabled="true"]` attribute, or the `.disabled` class.
@@ -235,6 +267,7 @@ If the badge is in a disabled context (for example, inside a disabled button), t
 Badges - count are available in two sizes. Add `.badge-large` to have a larger badge. Default size is medium.
 
 <Example buttonLabel="badges count sizes" class="d-flex align-items-center gap-large" code={`<p class="badge badge-count">12<span class="visually-hidden">errors</span></p>
+
   <p class="badge badge-count badge-large">12<span class="visually-hidden">errors</span></p>`} />
 
 ## [[comp]] Badge - Icon
@@ -253,12 +286,14 @@ Badge - icon is presented as a coloured shape that displays an icon, and its sel
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Beware</span>
   </p>
+
   <p class="badge badge-neutral">
     <svg class="badge-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <span class="visually-hidden">Favourite</span>
   </p>
+
   <p class="badge badge-neutral">
     <span class="badge-icon si-settings" aria-hidden="true"></span>
     <span class="visually-hidden">Parameters</span>
@@ -278,16 +313,19 @@ Non-functional badges - icon are used to display neutral or accent information w
     </svg>
     <span class="visually-hidden">Favourite</span>
   </p>
+
   <p class="badge badge-accent">
     <svg class="badge-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <span class="visually-hidden">Favourite</span>
   </p>
+
   <p class="badge badge-neutral">
     <span class="badge-icon si-settings" aria-hidden="true"></span>
     <span class="visually-hidden">Parameters</span>
   </p>
+
   <p class="badge badge-accent">
     <span class="badge-icon si-settings" aria-hidden="true"></span>
     <span class="visually-hidden">Parameters</span>
@@ -305,14 +343,17 @@ Functional badges - icon carry a clear meaning related to the status of an objec
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Success</span>
   </p>
+
   <p class="badge badge-info">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Info</span>
   </p>
+
   <p class="badge badge-warning">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Warning</span>
   </p>
+
   <p class="badge">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Beware</span>
@@ -328,24 +369,29 @@ The disabled state of a badge - icon appears visually muted to signal that it is
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Error</span>
   </p>
+
   <p class="badge badge-positive disabled">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Success</span>
   </p>
+
   <p class="badge badge-info disabled">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Info</span>
   </p>
+
   <p class="badge badge-warning disabled">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Warning</span>
   </p>
+
   <p class="badge badge-neutral disabled">
     <svg class="badge-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
   </p>
+
   <p class="badge badge-neutral disabled">
     <span class="badge-icon si-settings" aria-hidden="true"></span>
     <span class="visually-hidden">Parameters</span>
@@ -371,70 +417,85 @@ Badges - icon are available in four sizes. Add `.badge-xsmall`, `.badge-small`, 
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Error</span>
   </p>
+
   <p class="badge badge-small">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Error</span>
   </p>
+
   <p class="badge">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Error</span>
   </p>
+
   <p class="badge badge-large">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Error</span>
   </p>
+
   <p class="badge badge-xsmall badge-warning">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Warning</span>
   </p>
+
   <p class="badge badge-small badge-warning">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Warning</span>
   </p>
+
   <p class="badge badge-warning">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Warning</span>
   </p>
+
   <p class="badge badge-large badge-warning">
     <span class="badge-status-icon"></span>
     <span class="visually-hidden">Warning</span>
   </p>
+
   <p class="badge badge-neutral badge-xsmall">
     <svg class="badge-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
   </p>
+
   <p class="badge badge-neutral badge-small">
     <svg class="badge-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
   </p>
+
   <p class="badge badge-neutral">
     <svg class="badge-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
   </p>
+
   <p class="badge badge-neutral badge-large">
     <svg class="badge-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
   </p>
+
   <p class="badge badge-neutral badge-xsmall">
     <span class="badge-icon si-settings" aria-hidden="true"></span>
     <span class="visually-hidden">Parameters</span>
   </p>
+
   <p class="badge badge-neutral badge-small">
     <span class="badge-icon si-settings" aria-hidden="true"></span>
     <span class="visually-hidden">Parameters</span>
   </p>
+
   <p class="badge badge-neutral">
     <span class="badge-icon si-settings" aria-hidden="true"></span>
     <span class="visually-hidden">Parameters</span>
   </p>
+
   <p class="badge badge-neutral badge-large">
     <span class="badge-icon si-settings" aria-hidden="true"></span>
     <span class="visually-hidden">Parameters</span>

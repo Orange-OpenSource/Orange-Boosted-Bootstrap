@@ -91,18 +91,21 @@ Rounded corners inputs is a project-wide option therefore all your inputs should
 </Callout>
 
 <Example buttonLabel="rounded text inputs" code={`<div class="use-rounded-corner-inputs">
+
     <div class="text-input mb-medium">
       <div class="text-input-container">
         <label for="exampleTextInputRounded">Firstname</label>
         <input type="text" class="text-input-field" id="exampleTextInputRounded" placeholder=" ">
       </div>
     </div>
+
     <div class="text-input">
       <div class="text-input-container text-input-container-outlined">
         <label for="exampleTextInputRoundedAlt">Firstname</label>
         <input type="text" class="text-input-field" id="exampleTextInputRoundedAlt" placeholder=" ">
       </div>
     </div>
+
   </div>`} />
 </ThemeSpecific>
 
@@ -121,6 +124,7 @@ Add an icon to help indicate the purpose of the input by placing an `<svg>` or `
       <input type="email" class="text-input-field" id="exampleTextInputEmptyWithIcon" placeholder=" ">
     </div>
   </div>
+
   <div class="text-input mb-medium">
     <div class="text-input-container">
       <svg aria-hidden="true">
@@ -130,6 +134,7 @@ Add an icon to help indicate the purpose of the input by placing an `<svg>` or `
       <input type="email" class="text-input-field" id="exampleTextInputPlaceholderWithIcon" placeholder="placeholder">
     </div>
   </div>
+
   <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
       <svg aria-hidden="true">
@@ -139,6 +144,7 @@ Add an icon to help indicate the purpose of the input by placing an `<svg>` or `
       <input type="email" class="text-input-field" id="exampleTextInputAltEmptyWithIcon" placeholder=" ">
     </div>
   </div>
+
   <div class="text-input">
     <div class="text-input-container text-input-container-outlined">
       <svg aria-hidden="true">
@@ -165,6 +171,7 @@ Trailing actions can be added to the right side of the input field by placing a 
       </button>
     </div>
   </div>
+
   <div class="text-input">
     <div class="text-input-container text-input-container-outlined">
       <label for="exampleTextInputEmptyWithActionOutlined">Label</label>
@@ -251,6 +258,7 @@ Since the helper link is the direct next element after the text input, it is not
       More information <span class="visually-hidden">on</span>
     </a>
   </div>
+
   <div class="text-input">
     <div class="text-input-container">
       <label id="labelTextWithHelperLink" for="inputTextWithHelperLink">Send your feedback</label>
@@ -280,6 +288,7 @@ A textual prefix or suffix can be added to an input by wrapping the `<input>` in
       Please fill in the complete URL without the protocol (e.g. www.example.com).
     </p>
   </div>
+
   <div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="inputTextWithSuffix">Email</label>
@@ -291,6 +300,7 @@ A textual prefix or suffix can be added to an input by wrapping the `<input>` in
       Enter your email address without the domain name (e.g. only your username before the @).
     </p>
   </div>
+
   <div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="inputTextWithPrefixSuffix">Price</label>
@@ -302,6 +312,7 @@ A textual prefix or suffix can be added to an input by wrapping the `<input>` in
       Enter your price in Pounds (£) without decimals.
     </p>
   </div>
+
   <div class="text-input">
     <div class="text-input-container">
      <svg aria-hidden="true">
@@ -341,6 +352,7 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
       <input type="text" class="text-input-field" id="exampleTextInputDisabledEmpty" placeholder=" " disabled>
     </div>
   </div>
+
   <div class="text-input mb-medium">
     <div class="text-input-container">
       <svg aria-hidden="true">
@@ -350,18 +362,21 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
       <input type="text" class="text-input-field" id="exampleTextInputDisabled" placeholder=" " value="Doe" disabled>
     </div>
   </div>
+
   <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
       <label for="exampleTextInputOutlinedDisabledEmpty">Firstname</label>
       <input type="text" class="text-input-field" id="exampleTextInputOutlinedDisabledEmpty" placeholder=" " disabled>
     </div>
   </div>
+
   <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
       <label for="exampleTextInputOutlinedDisabled">Lastname</label>
       <input type="text" class="text-input-field" id="exampleTextInputOutlinedDisabled" placeholder=" " value="Doe" disabled>
     </div>
   </div>
+
   <div class="text-input">
     <div class="text-input-container">
       <label for="exampleTextInputEmptyWithActionDisabled">Label</label>
@@ -379,7 +394,8 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
   Add the `disabled` boolean attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.
 
   <Example buttonLabel="Bootstrap compatibility: disabled text inputs" code={`<input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
-  <input class="form-control" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled readonly>`} />
+
+<input class="form-control" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled readonly>`} />
 </BootstrapCompatibility>
 
 ### Read only
@@ -396,24 +412,28 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
       <input type="text" class="text-input-field" id="exampleTextInputReadonlyEmpty" placeholder=" " readonly>
     </div>
   </div>
+
   <div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="exampleTextInputReadonly">Lastname</label>
       <input type="text" class="text-input-field" id="exampleTextInputReadonly" placeholder=" " value="Doe" readonly>
     </div>
   </div>
+
   <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
       <label for="exampleTextInputOutlinedReadonlyEmpty">Firstname</label>
       <input type="text" class="text-input-field" id="exampleTextInputOutlinedReadonlyEmpty" placeholder=" " readonly>
     </div>
   </div>
+
   <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
       <label for="exampleTextInputOutlinedReadonly">Lastname</label>
       <input type="text" class="text-input-field" id="exampleTextInputOutlinedReadonly" placeholder=" " value="Doe" readonly>
     </div>
   </div>
+
   <div class="text-input">
     <div class="text-input-container">
       <label for="exampleTextInputEmptyWithActionReadonly">Label</label>
@@ -457,6 +477,7 @@ To manually mark an input as invalid, add `aria-invalid="true"` to a `.text-inpu
       Username is required.
     </p>
   </div>
+
   <div class="text-input mb-medium">
     <div class="text-input-container">
       <label id="labelTextInputInvalid" for="exampleTextInputInvalid">Email</label>
@@ -472,6 +493,7 @@ To manually mark an input as invalid, add `aria-invalid="true"` to a `.text-inpu
       Email is invalid.
     </p>
   </div>
+
   <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
       <svg aria-hidden="true">
@@ -484,6 +506,7 @@ To manually mark an input as invalid, add `aria-invalid="true"` to a `.text-inpu
       Address is required.
     </p>
   </div>
+
   <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
       <label id="labelTextInputOutlinedInvalid" for="exampleTextInputOutlinedInvalid">City</label>
@@ -493,6 +516,7 @@ To manually mark an input as invalid, add `aria-invalid="true"` to a `.text-inpu
         City is invalid.
     </p>
   </div>
+
   <div class="text-input mb-medium">
     <div class="text-input-container">
       <svg aria-hidden="true">
@@ -507,6 +531,7 @@ To manually mark an input as invalid, add `aria-invalid="true"` to a `.text-inpu
       Price is not valid.
     </p>
   </div>
+
   <div class="text-input">
     <div class="text-input-container">
       <svg aria-hidden="true">
@@ -574,6 +599,7 @@ In case of an invalid input, you may remove the invalid state before the loading
       <span role="status" id="loading-msg-0" class="visually-hidden d-none">Loading message</span>
     </div>
   </div>
+
   <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
       <svg aria-hidden="true">
@@ -593,6 +619,7 @@ In case of an invalid input, you may remove the invalid state before the loading
       <span role="status" id="loading-msg-1" class="visually-hidden d-none">Loading message</span>
     </div>
   </div>
+
   <div class="text-input mb-medium">
     <div class="text-input-container" style="--bs-loading-time: 5s;">
       <svg aria-hidden="true">
@@ -612,6 +639,7 @@ In case of an invalid input, you may remove the invalid state before the loading
       <span role="status" id="loading-msg-2" class="visually-hidden d-none">Loading message</span>
     </div>
   </div>
+
   <div class="text-input">
     <div class="text-input-container">
       <svg aria-hidden="true">
@@ -699,6 +727,7 @@ By default, text inputs will span the whole width of their parent container, to 
       <input type="email" autocomplete="email" class="text-input-field" id="exampleTextInputWithMaxWidth" placeholder=" ">
     </div>
   </div>
+
   <div class="text-input component-max-width mb-medium">
     <div class="text-input-container">
       <label for="exampleTextInputWithMaxWidthSuffix">Price</label>
