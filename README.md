@@ -48,13 +48,13 @@ For the RAV libraries:
 
 ```bash
 npm run react:lint              # also core:*, angular:* and vue:* — lint / test / build one library
-npm run rav:test                # rav:lint / rav:test / rav:build — run across angular, react and vue
+npm run rav:test                # rav:lint / rav:test run across core, angular, react and vue; rav:build across angular, react and vue
 npm run lint:all                # lint:all / build:all — core, angular, react, vue, web-common and the Storybook apps
 npm run test:all                # core, angular, react and vue
 npm run storybook:react:serve   # also storybook:vue:* and storybook:angular:* — serve (port 4400) / build / lint
 ```
 
-CI runs `lint:all`, `test:all`, and `build:all`; the OUDS Web suites run in their own workflows. `npm run netlify` builds the deployed site: the OUDS Web docs and Storybook, plus the three RAV Storybooks.
+CI runs `lint:all`, `test:all`, and `build:all`; the OUDS Web suites run in their own workflows. `npm run netlify` builds the deployed site: the OUDS Web docs and Storybook, plus the three RAV Storybooks and the test coverage reports of core, angular, react and vue (`/coverage/<library>/`).
 
 ## Tooling
 
