@@ -34,10 +34,10 @@
   // scss-docs-end pagination-css-vars
 
   display: flex;
+  @include list-unstyled();
   flex-wrap: if($pagination-margin-start == (-$pagination-border-width), null, wrap); // OUDS mod
   margin: var(--#{$prefix}pagination-margin-y) 0; // OUDS mod
   background-color: transparent; // OUDS mod
-  @include list-unstyled();
 }
 
 .page-link {

@@ -29,7 +29,7 @@ export function getStaticPaths() {
           <div class="md:col-6 lg:col-4 xl:col mb-2xlarge">
             <h2>{docsVersion.group}</h2>
             <p>{docsVersion.description}</p>
-            <div class="list-group">
+            <ul class="item-list component-max-width">
               {docsVersion.versions
                 .slice()
                 .sort((a, b) => b.localeCompare(a))
@@ -37,19 +37,21 @@ export function getStaticPaths() {
                   const isCurrentVersion = version === getConfig().docs_version
 
                   return (
-                    <a
-                      class:list={[
-                        'list-group-item list-group-item-action py-small',
-                        isCurrentVersion && 'd-flex justify-content-between align-items-center'
-                      ]}
-                      href={`${docsVersion.baseurl.replaceAll('[brand]', getConfig().brand)}/${version}/`}
-                    >
-                      {version}
-                      {isCurrentVersion && <span class="tag tag-accent">Latest</span>}
-                    </a>
+                    <li class="item item-navigation">
+                      <a class="item-container item-interactive" href={`${docsVersion.baseurl.replaceAll('[brand]', getConfig().brand)}/${version}/`}>
+                        <div class="item-content">
+                          <div class="item-text-container">
+                            <span class="item-label">{version}</span>
+                          </div>
+                          {isCurrentVersion && <div class="item-trailing-container">
+                            <span class="tag tag-accent">Latest</span>
+                          </div>}
+                        </div>
+                      </a>
+                    </li>
                   )
                 })}
-            </div>
+            </ul>
           </div>
         )
       })

@@ -1,5 +1,6 @@
 import type { MarkdownHeading } from 'astro'
 import { getConfig } from './config'
+import { getHeadingSlug } from '@libs/utils.ts'
 
 // Generate a tree like structure from a list of headings.
 export function generateToc(allHeadings: MarkdownHeading[], types?: string[]) {
@@ -11,12 +12,16 @@ export function generateToc(allHeadings: MarkdownHeading[], types?: string[]) {
   const toc: TocEntry[] = []
 
   for (const heading of headings) {
+    heading.text = heading.text.replace(' Full changelog', '')
+
+    heading.slug = getHeadingSlug(heading.slug)
+
     if (toc.length === 0) {
       toc.push({ ...heading, children: [] })
       continue
     }
 
-    if (hasComponentTypes && heading.depth === 2 && types?.includes(heading.text)) {
+    if (hasComponentTypes && types?.includes(heading.text)) {
       heading.text = `[[comp]] ${heading.text}`
     }
 

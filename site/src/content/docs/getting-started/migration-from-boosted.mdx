@@ -49,7 +49,7 @@ From now on, OUDS Web won’t embed Bootstrap elements that are not part of Oran
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The focus-visible polyfill has been removed. So you no longer need it on your side, and you should replace all the calls to `:focus[data-focus-visible-added]` by `:focus-visible`.
 
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> jQuery support has been removed from the library.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> jQuery support has been removed from the library.
 
 ## Fonts
 
@@ -97,7 +97,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ## Icons
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> OUDS Web now uses [new functional icons]([[docsref:/components/icon#functional-icons]]). A new [bicolor accessible warning icon]([[docsref:/components/icon#accessible-warning-icon]]) has been introduced.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> OUDS Web now uses [new functional icons]([[docsref:/foundation/icons#status-colors]]). A new [bicolor accessible warning icon]([[docsref:/foundation/icons#accessible-warning-icon]]) has been introduced.
 
 ## Components
 
@@ -146,6 +146,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.btn-default`, `.btn-strong`, `.btn-brand`, `.btn-minimal`, and `.btn-negative` have been added.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.btn-previous` and  `.btn-next` have been added.
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.btn-assistant` has been added.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.btn-on-colored-bg` has been added; it can be used with `.btn-default`, `.btn-strong` and `.btn-minimal` to get variants on colored backgrounds (neither primary, nor secondary, nor tertiary, nor emphasized backgrounds).
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.use-rounded-corner-buttons` have been added; it can be added on `<body>` to toggle project-wide rounded corners buttons.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.btn-primary`, `.btn-secondary`, `.btn-success`, `.btn-danger`, `.btn-warning`, `.btn-info`, `.btn-light`, `.btn-dark` and `btn-dropdown` have been removed. You can still have them using `$enable-bootstrap-compatibility`. Here is the visual correspondence:
@@ -158,7 +159,8 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.btn-no-outline` has been removed. You can use `.btn-minimal` instead.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.btn-social` and all its variants have been removed.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.btn-outline-*` have been removed. You can still have them using `$enable-bootstrap-compatibility`. They all look like `.btn-default`.
-- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.btn-sm` and `.btn-lg` have been removed.
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.btn-lg` has been removed.
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.btn-sm` has been renamed to `.btn-small`.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Loading buttons implementation has changed. You should now use the classes `.loading-indeterminate` and `.loading-determinate` and no more spinner borders.
 <div class="ps-xlarge">
 
@@ -192,12 +194,103 @@ You will have to make some extra JavaScript to change the styles and update the 
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Chips components have been implemented. See more in our [Chips page]([[docsref:/components/chips]]).
 
+### Dropdown
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.dropdown-toggle` has been replaced by:
+  - `.btn-expand` inside `.btn` usage.
+  - `.link-expand` inside `.link` usage.
+
 ### Links
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> New standalone link component has been added. Use `.link` class to get it.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Use `.link-sm` class to get small standalone link.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.link-on-colored-bg` has been added; it can be used to get variants on colored backgrounds.
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> A `.link` class should be added to existing links with `.link-chevron` class to comply with the OUDS Web documentation and ensure future compatibility.
+
+### List group
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> List group has changed a lot in its usages. There is still a static example and an interactive variant for navigation. This is not an action button anymore.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> New dedicated classes have been added to handle items colors, appearance, states, sizes, etc... All the previous classes have been removed.
+<div class="ps-xlarge">
+For example, if you used to write:
+
+```html
+<a href="#" class="list-group-item list-group-item-action list-group-item-danger">A simple Danger list group item</a>
+
+<!-- or -->
+
+<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="me-auto">
+      Subheading
+      <div class="fw-normal mt-1 lh-base">Content for list item</div>
+    </div>
+    <span class="badge text-bg-info rounded-pill">14</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="me-auto">
+      Subheading
+      <div class="fw-normal mt-1 lh-base">Content for list item</div>
+    </div>
+    <span class="badge text-bg-info rounded-pill">14</span>
+  </li>
+</ul>
+```
+Now you should write:
+
+```html
+<div class="item item-navigation">
+  <a href="#" class="item-container item-interactive">
+    <div class="item-content">
+      <div class="item-text-container">
+        <span class="item-text">A simple Danger list group item</span>
+      </div>
+      <div class="item-trailing-container">
+        <div class="item-icon item-status-negative">
+          <span class="visually-hidden">Danger</span>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<!-- or -->
+
+<ul class="item-list">
+  <li class="item">
+    <div class="item-container">
+      <div class="item-content">
+        <div class="item-text-container">
+          <p class="item-label">Subheading</p>
+          <p class="item-description">Content for list item</p>
+        </div>
+        <div class="item-trailing-container">
+          <p class="badge badge-count badge-info">14</p>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="item">
+    <div class="item-container">
+      <div class="item-content">
+        <div class="item-text-container">
+          <p class="item-label">Subheading</p>
+          <p class="item-description">Content for list item</p>
+        </div>
+        <div class="item-trailing-container">
+          <p class="badge badge-count badge-info">14</p>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+```
+</div>
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> An item has now much more variants, assets and applications. New dedicated classes have been added to handle this.
+
+### Scrollspy
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> While Scrollspy has not been published yet, we have updated its implementation using the one from Bootstrap v6 to improve its behavior. This does not necessitate any action on your part as this is backward compatible and a drop-in replacement. You can find implementation details in [the related pull request](https://github.com/twbs/bootstrap/pull/42557) in Bootstrap repository.
 
 ### Tags
 
@@ -617,6 +710,10 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> All Boosted responsive float utilities have been renamed to use the colon prefix: `.float-sm-{start|end|none}` → `.sm:float-{start|end|none}`, `.float-md-{start|end|none}` → `.md:float-{start|end|none}`, `.float-lg-{start|end|none}` → `.lg:float-{start|end|none}`, `.float-xl-{start|end|none}` → `.xl:float-{start|end|none}`. You can still have them using `$enable-bootstrap-compatibility`.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `xxl` responsive float utilities have been replaced by `2xl` utilities: `.float-xxl-{start|end|none}` utilities have been replaced by `.2xl:float-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `xs` and `3xl` responsive float utilities have been added:  `.xs:float-{start|end|none}` and  `.3xl:float-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
+
+### Interactions
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.pe-none` and `.pe-auto` classes have been replaced by `.pointer-events-none` and `.pointer-events-auto` to avoid collision with padding utilities. Read more in our [interactions page]([[docsref:/utilities/interaction#pointer-events]]).
 
 ### Link
 
@@ -2617,3 +2714,5 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `button-variant` mixin signature has changed. We now provide extra parameters for focus and loading states colors. We keep it as a warning because we provide default values for these parameters. See more in [our Button documentation]([[docsref:/components/buttons#sass-mixins]]).
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `add` and `subtract` functions have been removed use `calc` instead.
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> The `list-unstyled` mixin has been updated to remove the list margin bottom.

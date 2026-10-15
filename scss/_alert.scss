@@ -23,24 +23,31 @@
 }
 
 .alert-message {
-  --#{$prefix}alert-icon-margin-block: #{$ouds-alert-space-padding-block}; // Here to avoid an encapsulation
   min-width: $ouds-alert-size-min-width;
   min-height: $ouds-alert-size-min-height;
   padding-inline: $ouds-alert-space-padding-inline;
   background-color: var(--#{$prefix}alert-bg);
-  border: var(--#{$prefix}alert-border-color) solid $ouds-alert-border-width;
+  border: var(--#{$prefix}alert-border-color) solid $ouds-alert-message-border-width;
 
   &:has(.btn-close) {
     padding-right: 0;
   }
 
   &:has(.alert-container > .link) {
-    min-height: $ouds-alert-size-min-height-bottom-action-placement;
+    min-height: $ouds-alert-size-min-height-bottom-action;
   }
 
   // To avoid overflow: hidden that hides the focus
   .btn-close {
     @include border-top-end-radius(var(--#{$prefix}alert-border-radius));
+  }
+
+  .alert-icon {
+    margin-top: $ouds-alert-space-padding-block;
+  }
+
+  .alert-label {
+    max-width: var(--#{$prefix}font-max-width-boxed-text);
   }
 
   @supports not (container-type: size) {
@@ -54,9 +61,8 @@
   position: relative;
   display: block;
   flex-shrink: 0;
-  width: px-to-rem($ouds-alert-size-icon);
-  height: px-to-rem($ouds-alert-size-icon);
-  margin-top: var(--#{$prefix}alert-icon-margin-block);
+  width: px-to-rem($ouds-alert-size-asset);
+  height: px-to-rem($ouds-alert-size-asset);
   color: var(--#{$prefix}alert-icon-color);
 
   &:where(:not(:has(svg, img, .icon))) {
@@ -84,7 +90,7 @@
   .icon {
     width: 100%;
     height: 100%;
-    font-size: $ouds-alert-size-icon;
+    font-size: $ouds-alert-size-asset;
     line-height: 1;
     vertical-align: baseline; // Remove some weird stuff on zoom // TODO: For reboot maybe ?
   }
@@ -94,9 +100,9 @@
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  gap: $ouds-alert-space-row-gap-action;
   align-items: flex-start;
   justify-content: center; // To handle weird edge cases in de-zoom one line title alert
+  width: 1%; // To avoid edge cases when the content is too long for the alert
   min-height: $ouds-alert-size-min-height; // To handle weird edge cases in de-zoom one line title alert
   padding-block: $ouds-alert-space-padding-block;
 }
@@ -105,11 +111,17 @@
   display: flex;
   flex-direction: column;
   gap: $ouds-alert-space-row-gap;
+  width: 100%; // To avoid the text-container to be larger than it should be
 
   > * { // To handle any content inside this text-container.
+    max-width: var(--#{$prefix}font-max-width-boxed-text);
     margin-bottom: 0;
-    @include get-font-size("label-medium", true);
     font-weight: $ouds-font-weight-web-label-default;
+    @include get-font-size("label-medium");
+  }
+
+  > :not(.alert-label) {
+    padding-block-end: $ouds-alert-space-padding-block-bottom-content;
   }
 
   ul {
@@ -119,6 +131,11 @@
     > li {
       position: relative;
       padding-left: calc(px-to-rem(20px) + 8px);
+      margin-bottom: $ouds-alert-message-space-row-gap-bullet;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       &::before {
         position: absolute;
@@ -148,8 +165,8 @@
 
 .alert-close-container {
   align-self: stretch; // To have the alert-close-container height defined on the alert-message height
-  width: calc(2 * $ouds-button-space-inset-icon-only + px-to-rem($ouds-button-size-icon-only));
-  min-width: $ouds-button-size-min-width; // To handle some zoom '-' issues
+  width: calc(2 * $ouds-button-space-inset-icon-only-default + px-to-rem($ouds-button-size-icon-only-default));
+  min-width: $ouds-button-size-min-width-default; // To handle some zoom '-' issues
   container-type: size;
 
   // Complete the border-radius of the button
@@ -180,7 +197,7 @@
 
 .alert-negative {
   --#{$prefix}alert-text-color: #{$ouds-color-content-status-negative};
-  --#{$prefix}alert-icon: var(--#{$prefix}error-icon);
+  --#{$prefix}alert-icon: var(--#{$prefix}alert-error-icon);
   --#{$prefix}alert-icon-color: #{$ouds-color-content-status-negative};
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-negative-muted};
   --#{$prefix}alert-border-color: #{$ouds-color-border-status-negative};
@@ -192,7 +209,7 @@
 
 .alert-positive {
   --#{$prefix}alert-text-color: #{$ouds-color-content-status-positive};
-  --#{$prefix}alert-icon: var(--#{$prefix}success-icon);
+  --#{$prefix}alert-icon: var(--#{$prefix}alert-success-icon);
   --#{$prefix}alert-icon-color: #{$ouds-color-content-status-positive};
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-positive-muted};
   --#{$prefix}alert-border-color: #{$ouds-color-border-status-positive};
@@ -204,7 +221,7 @@
 
 .alert-info {
   --#{$prefix}alert-text-color: #{$ouds-color-content-status-info};
-  --#{$prefix}alert-icon: var(--#{$prefix}info-icon);
+  --#{$prefix}alert-icon: var(--#{$prefix}alert-info-icon);
   --#{$prefix}alert-icon-color: #{$ouds-color-content-status-info};
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-info-muted};
   --#{$prefix}alert-border-color: #{$ouds-color-border-status-info};
@@ -216,9 +233,9 @@
 
 .alert-warning {
   --#{$prefix}alert-text-color: #{$ouds-color-content-status-warning};
-  --#{$prefix}alert-icon: var(--#{$prefix}warning-icon);
+  --#{$prefix}alert-icon: var(--#{$prefix}alert-warning-icon);
   --#{$prefix}alert-icon-color: var(--#{$prefix}icon-color-content-status-warning-external-shape);
-  --#{$prefix}alert-icon-internal: var(--#{$prefix}warning-internal-icon);
+  --#{$prefix}alert-icon-internal: var(--#{$prefix}alert-warning-internal-icon);
   --#{$prefix}alert-icon-internal-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-warning-muted};
   --#{$prefix}alert-border-color: #{$ouds-color-border-status-warning};

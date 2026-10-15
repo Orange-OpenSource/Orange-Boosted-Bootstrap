@@ -31,8 +31,12 @@ BRANDS.map(async brand => {
   const cssFiles = [
     'ouds-web.min.css',
     'ouds-web.min.css.map',
+    'ouds-web-bootstrap.min.css',
+    'ouds-web-bootstrap.min.css.map',
     'ouds-web.rtl.min.css',
-    'ouds-web.rtl.min.css.map'
+    'ouds-web.rtl.min.css.map',
+    'ouds-web-bootstrap.rtl.min.css',
+    'ouds-web-bootstrap.rtl.min.css.map'
   ]
   const jsFiles = [
     'ouds-web.bundle.min.js',
@@ -59,29 +63,32 @@ BRANDS.map(async brand => {
 
   sh.mkdir('-p', [
     distFolder,
-    `${distFolder}/assets/brand/`,
-    `${distFolder}/assets/dist/css/`,
-    `${distFolder}/assets/dist/js/`,
-    `${distFolder}/assets/js/`
+    `${distFolder}/${brand}/docs/${versionShort}/assets/brand/`,
+    `${distFolder}/${brand}/docs/${versionShort}/dist/css/`,
+    `${distFolder}/${brand}/docs/${versionShort}/dist/js/`,
+    `${distFolder}/${brand}/docs/${versionShort}/assets/js/`,
+    `${distFolder}/${brand}/docs/${versionShort}/assets/img/`
   ])
 
   sh.cp('-Rf', `${docsDir}/examples/*`, distFolder)
 
   for (const file of cssFiles) {
-    sh.cp('-f', `${docsDir}/dist/css/${file}`, `${distFolder}/assets/dist/css/`)
+    sh.cp('-f', `${docsDir}/dist/css/${file}`, `${distFolder}/${brand}/docs/${versionShort}/dist/css/`)
   }
 
   for (const file of jsFiles) {
-    sh.cp('-f', `${docsDir}/dist/js/${file}`, `${distFolder}/assets/dist/js/`)
+    sh.cp('-f', `${docsDir}/dist/js/${file}`, `${distFolder}/${brand}/docs/${versionShort}/dist/js/`)
   }
 
   for (const file of imgFiles) {
-    sh.cp('-f', `${docsDir}/assets/brand/${file}`, `${distFolder}/assets/brand/`)
+    sh.cp('-f', `${docsDir}/assets/brand/${file}`, `${distFolder}/${brand}/docs/${versionShort}/assets/brand/`)
   }
 
   for (const file of staticJsFiles) {
-    sh.cp('-f', `${docsDir}/assets/js/${file}`, `${distFolder}/assets/js/`)
+    sh.cp('-f', `${docsDir}/assets/js/${file}`, `${distFolder}/${brand}/docs/${versionShort}/assets/js/`)
   }
+
+  sh.cp('-fr', `${docsDir}/assets/img/`, `${distFolder}/${brand}/docs/${versionShort}/assets/`)
 
   sh.rm(`${distFolder}/index.html`)
 
@@ -91,11 +98,11 @@ BRANDS.map(async brand => {
   const formatPromises = htmlFiles.map(async file => {
     const fileContents = sh.cat(file)
       .toString()
-      .replace(new RegExp(`"/docs/${versionShort}/`, 'g'), '"../')
-      .replace(/"..\/dist\//g, '"../assets/dist/')
-      .replace(/(<link href="\.\.\/[^"]*"[^>]*) integrity="[^"]*"/g, '$1')
-      .replace(/<link[^>]*href="\.\.\/assets\/img\/favicons\/[^"]*"[^>]*>/g, '')
-      .replace(/(<script src="\.\.\/[^"]*"[^>]*) integrity="[^"]*"/g, '$1')
+      .replaceAll(new RegExp(`"/docs/${versionShort}/`, 'g'), '"../')
+      .replaceAll(/"..\/dist\//g, `"../${brand}/docs/${versionShort}/assets/dist/`)
+      .replaceAll(/(<link\s*href="\.?\.?\/[^"]*"[^>]*) integrity="[^"]*"/g, '$1')
+      .replaceAll(/<link[^>]*href="\.\.\/assets\/img\/favicons\/[^"]*"[^>]*>/g, '')
+      .replaceAll(/(<script src="\.?\.?\/[^"]*"[^>]*) integrity="[^"]*"/g, '$1')
 
     let formattedHTML
     try {

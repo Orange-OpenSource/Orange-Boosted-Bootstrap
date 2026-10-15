@@ -18,7 +18,6 @@
 
     ul {
       @include list-unstyled(); // OUDS mod
-      margin-bottom: 0;
 
       ul {
         padding-left: 1rem;

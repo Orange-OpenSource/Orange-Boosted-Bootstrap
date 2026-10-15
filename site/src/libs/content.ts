@@ -10,3 +10,7 @@ export const aliasedDocsPages = await getCollection('docs', ({ data }) => {
 export function getCalloutByName(name: string) {
   return getEntry('callouts', name)
 }
+
+export function getDocsPageSlug(id: string) {
+  return id.replace(/\.(md|mdx)$/, '')
+}

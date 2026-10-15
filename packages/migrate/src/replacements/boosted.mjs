@@ -40,8 +40,14 @@ export const boostedReplacements = [
   [...warnForClass('btn-social', { link: 'https://web.unified-design-system.orange.com/docs/components/buttons#button' })],
   [...warnForClass('btn-toggle', { link: 'https://web.unified-design-system.orange.com/docs/components/buttons#button' })],
   ['btn-outline-[a-z]+', 'btn-default'],
-  [...warnForClass('btn-sm', { link: 'https://web.unified-design-system.orange.com/docs/components/buttons#button' })],
+  ['btn-sm', 'btn-small'],
   [...warnForClass('btn-lg', { link: 'https://web.unified-design-system.orange.com/docs/components/buttons#button' })],
+
+  // Dropdown
+  [...warnForClass('dropdown-toggle', { link: 'https://web.unified-design-system.orange.com/docs/components/dropdown' })],
+
+  // List group
+  [...warnForClass('list-group', { link: 'https://web.unified-design-system.orange.com/docs/components/items' })],
 
   // Skeleton
   [...warnForClass('placeholder-(wave|glow)', { link: 'https://web.unified-design-system.orange.com/docs/components/skeleton' })],

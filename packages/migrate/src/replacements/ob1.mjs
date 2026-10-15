@@ -85,6 +85,9 @@ export const ob1Replacements = [
     link: 'https://web.unified-design-system.orange.com/docs/components/divider'
   })],
 
+  // Dropdown
+  [...warnForClass('ob1-link-arrow\\s+down', { link: 'https://web.unified-design-system.orange.com/docs/components/dropdown' })],
+
   // Form
   [
     ...warnForClass('ob1-form-group', {
@@ -120,6 +123,12 @@ export const ob1Replacements = [
       link: 'https://web.unified-design-system.orange.com/docs/components/links#with-icon'
     })
   ],
+
+  // List group
+  [...warnForClass('items-list', {
+    message: 'The component using class \'{class}\' in {file} needs small adaptations to use the new component version.',
+    link: 'https://web.unified-design-system.orange.com/docs/components/items'
+  })],
 
   // Skeleton
   [...warnForClass('ob1-skeleton', { link: 'https://web.unified-design-system.orange.com/docs/components/skeleton' })],

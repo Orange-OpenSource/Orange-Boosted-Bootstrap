@@ -627,3 +627,27 @@ This layout combines wrapping and vertical scrolling, please note that a `style=
       </button>
     </li>
   </ul>`} />
+
+### Text wrapping
+
+A chip's text should not exceed one line. When needed, it also supports `<br/>` tags to break the text into multiple lines. Read more about [text wrapping in a filter chip](https://r.orange.fr/r/S-ouds-doc-filter-chip/t/75dd4ff373).
+
+<Example buttonLabel="multiline filter chip" class="d-flex flex-wrap gap-medium" code={`<div class="chip chip-filter">
+    <input type="checkbox" id="wrappingChip" checked />
+    <label class="chip-interactive" for="wrappingChip">
+      Filter chip<br/>
+      with a very long label
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+      </svg>
+    </label>
+  </div>
+  <div class="chip chip-suggestion">
+    <button class="chip-interactive" type="button">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+      </svg>
+      Suggestion chip<br/>
+      with a very long label
+    </button>
+  </div>`} />

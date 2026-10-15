@@ -1,7 +1,7 @@
 <h1 align="center">OUDS Web</h1>
 
 <p align="center">
-  OUDS Web is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
+  OUDS Web is a fork of Bootstrap to integrate the Orange Unified Design System components, modules and guidelines to easily create Websites with the Orange Brands through dedicated Themes and Modes (Light or Dark). Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
   <br />
   <a href="https://web.unified-design-system.orange.com"><strong>Visit OUDS Web</strong></a>
   <br />
@@ -15,6 +15,7 @@
 ## Table of contents
 
 - [Quick start](#quick-start)
+- [AI agent skills](#ai-agent-skills)
 - [Status](#status)
 - [What’s included](#whats-included)
 - [Bugs and feature requests](#bugs-and-feature-requests)
@@ -36,15 +37,34 @@ The theming library have the specific Scss files containing all the tokens to ap
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v1.4.0-ouds-web.zip)
+- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v1.5.0-ouds-web.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git && git switch main`
-- Install with [npm](https://www.npmjs.com/): `npm install @ouds/web-common@1.4.0 @ouds/web-orange@1.4.0`
-- Install with [yarn](https://yarnpkg.com/): `yarn add @ouds/web-common@1.4.0 @ouds/web-orange@1.4.0`
-- Install with [Bun](https://bun.sh/): `bun add @ouds/web-common@1.4.0 @ouds/web-orange@1.4.0`
+- Install with [npm](https://www.npmjs.com/): `npm install @ouds/web-common@1.5.0 @ouds/web-orange@1.5.0`
+- Install with [yarn](https://yarnpkg.com/): `yarn add @ouds/web-common@1.5.0 @ouds/web-orange@1.5.0`
+- Install with [Bun](https://bun.sh/): `bun add @ouds/web-common@1.5.0 @ouds/web-orange@1.5.0`
 - Install with [Composer](https://getcomposer.org/): `composer require orange-opensource/orange-boosted-bootstrap:dev-main`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package ouds-web-common ouds-web-orange` Sass: `Install-Package ouds-web-common.sass ouds-web-orange.sass`
 
 Read the [Getting started page](https://web.unified-design-system.orange.com/docs/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
+
+
+## AI agent skills
+
+OUDS Web [Agent Skills](https://www.skills.sh/) are shipped in the [`ouds-web-skills` repository](https://github.com/Orange-OpenSource/ouds-web-skills), giving AI coding agents (Claude Code, Cursor, GitHub Copilot, and others) procedural knowledge of OUDS Web:
+
+- **`using-ouds-web-<version>`** — a comprehensive reference of OUDS Web components, layout, utilities, and design tokens, used when an agent generates OUDS Web markup or code.
+- **`migrate-to-ouds-web`** — a step-by-step workflow to migrate a project from Boosted, OB1, or an older OUDS Web version to the latest OUDS Web.
+
+Install them in your project with the [`skills` CLI](https://www.skills.sh/):
+
+```sh
+npx skills add Orange-OpenSource/ouds-web-skills
+```
+
+This downloads the skills and configures them for use with your AI agent. The `using-ouds-web-<version>` skill is tied to a specific version of the OUDS Web library, indicated by the suffix in its name (e.g. 1.5 for OUDS Web 1.5.x).
+
+> [!IMPORTANT]
+> Whenever you update OUDS Web in your project, update the skill too: run `npx skills add Orange-OpenSource/ouds-web-skills` again and use the skill matching your new library version. Remove the previous versioned skill to avoid conflicting guidance.
 
 
 ## Status

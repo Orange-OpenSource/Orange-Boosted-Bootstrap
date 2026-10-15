@@ -1,5 +1,5 @@
 - title: Utilities
-  icon: braces-asterisk
+  icon: multi-tool-repair
   icon_color: body-color
   pages:
     - title: API
@@ -10,6 +10,7 @@
     - title: Display
     - title: Flex
     - title: Float
+    - title: Icons sizing
     - title: Interaction
     - title: Object fit
     - title: Opacity

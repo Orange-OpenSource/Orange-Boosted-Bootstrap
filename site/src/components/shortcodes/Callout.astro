@@ -1,6 +1,7 @@
 ---
 import { getCalloutByName } from '@libs/content'
 import type { MarkdownInstance } from 'astro'
+import { render } from 'astro:content'
 
 interface Props {
   /**
@@ -72,7 +73,7 @@ if (name) {
     throw new Error(`Could not find callout with name '${name}'.`)
   }
 
-  const namedCallout = await callout.render()
+  const namedCallout = await render(callout)
   if (namedCallout.remarkPluginFrontmatter && namedCallout.remarkPluginFrontmatter.title) {
     titleToDisplay = namedCallout.remarkPluginFrontmatter.title
   }

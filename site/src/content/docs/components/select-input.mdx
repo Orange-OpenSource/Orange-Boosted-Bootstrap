@@ -24,6 +24,8 @@ Use a `.select-input` wrapper to create a select form field with OUDS styles, th
 
 An empty placeholder `<option>` with an empty value is required on each `<select>` as our CSS-only floating label implementation relies on it to detect when the select is empty. This one should be disabled so users won't be able to select it.
 
+<Callout type="info" name="info-floating-label-browserslist" action="Please refer to the Browsers documentation for more details." actionHref={getVersionedDocsPath('/getting-started/browsers-devices')} />
+
 <Example buttonLabel="default select" code={`<div class="select-input">
     <div class="select-input-container">
       <label for="exampleSelect">Default select example</label>
@@ -79,7 +81,7 @@ Add `.select-input-container-outlined` for a minimalist input with a transparent
     </div>
   </div>`} />
 
-<BrandSpecific brand={['orange', 'orange-compact']}>
+<ThemeSpecific theme={['orange', 'orange-compact']}>
 ### Rounded
 
 Rounded corners inputs is a project-wide option therefore all your inputs should either be rounded or not. Add `.use-rounded-corner-inputs` on a top container (for example `<body>`) to use rounded corners.
@@ -112,7 +114,7 @@ Rounded corners inputs is a project-wide option therefore all your inputs should
       </div>
     </div>
   </div>`} />
-</BrandSpecific>
+</ThemeSpecific>
 
 ### Leading icon
 
@@ -181,6 +183,8 @@ To display a helper link below selects, use a standard small link [with `.link` 
 <Callout type="warning">
   Helper link should be explicitly labelled using the `aria-labelledby` attribute in which you must combine the helper link id and the related select input label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the select input. We also recommend adding a `.visually-hidden` span inside the link to coordinate the link content and the label.
 </Callout>
+
+Since the helper link is the direct next element after the select input, it is not necessary to use the `aria-describedby` attribute on the select input for the helper link.
 
 <Example buttonLabel="select inputs with helper link" code={`<div class="select-input mb-medium">
     <div class="select-input-container">
@@ -384,7 +388,7 @@ At the end of the loading, you should:
 - Set a final status message in `<span>`, indicating the loading has ended.
 - Put the focus back on the select to ensure similar behavior across browsers and not lose the user after changes.
 
-<Callout type="info" title="Execption">
+<Callout type="info" title="Exception">
   The select can be disabled or not during the loading time depending on the context of use.
 </Callout>
 

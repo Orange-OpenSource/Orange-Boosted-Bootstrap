@@ -102,7 +102,7 @@ Links have a disabled style when using an `aria-disabled="true"` attribute.
 
 Visited links don’t have a specific style by default.
 
-<BrandSpecific brand={['orange', 'orange-compact']}>
+<ThemeSpecific theme={['orange', 'orange-compact']}>
 The `:visited` state can be styled with the additional `.visited-links` utility class that can be applied directly to a link or to a parent element to style all the child links.
 
 <Example buttonLabel="visited link" code={`<div class="visited-links">
@@ -116,7 +116,7 @@ The `:visited` state can be styled with the additional `.visited-links` utility 
   <div>
     <a href="." class="visited-links">This is an example of a visited link</a>
   </div>`} />
-</BrandSpecific>
+</ThemeSpecific>
 
 Placeholder links—those without an `href`—are targeted with a more specific selector and have their `color` and `text-decoration` reset to their default values.
 
@@ -124,7 +124,7 @@ Placeholder links—those without an `href`—are targeted with a more specific 
 
 On colored backgrounds, links should have a different style. Visited links don’t have a specific style on colored backgrounds.
 
-<Example buttonLabel="links on colored backgrounds" class="p-none" code={`<div class="colored-bg">
+<Example buttonLabel="links on colored backgrounds" class="p-none" code={`<div class="link-on-colored-bg">
     <div class="bg-surface-brand-primary p-large">
       <div data-bs-theme="${getMode('modes-on-brand-primary')}">
         This is an example of a <a href="#">link on colored background</a> in a paragraph.
@@ -136,9 +136,9 @@ On colored backgrounds, links should have a different style. Visited links don�
       </div>
     </div>
   </div>
-  <div class="bg-surface-brand-primary p-large">
+  <div class="link-on-colored-bg bg-surface-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}">
-      This is an example of a <a href="." class="colored-bg visited-links">link on colored background</a> in a paragraph.
+      This is an example of a <a href="." class="visited-links">link on colored background</a> in a paragraph.
     </div>
   </div>`} />
 

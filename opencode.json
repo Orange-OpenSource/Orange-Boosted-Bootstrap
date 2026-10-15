@@ -1,0 +1,10 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    ".github/copilot-instructions.md",
+    ".github/instructions/*.instructions.md"
+  ],
+  "skills": {
+    "paths": [".github/skills"]
+  }
+}
