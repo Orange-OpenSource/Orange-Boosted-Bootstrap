@@ -1,6 +1,9 @@
 ## Release v
 
 - [ ] Before the release, check that the skills are up to date with what is included in the release. [Update the skills if needed](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/wiki/Developer-guide#update-provided-skills).
+- [ ] Copy `skills/using-ouds-web-version-major-minor` in [the ouds-web-skills repository](https://github.com/Orange-OpenSource/ouds-web-skills)
+  - [ ] change `<major>` and `<minor>` to the relevant values in the folder name.
+  - [ ] change `<major>` and `<minor>` to the relevant values in the copied `SKILL.md` frontmatter `name` field.
 - [ ] `npm run release-version $current_version $next_version` to bump version number
   - then, if bumping a minor or major version:
     - [ ] Manually search and replace `$current_version` in all files, meaning changes should happen in:

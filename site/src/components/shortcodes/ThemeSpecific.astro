@@ -1,0 +1,22 @@
+---
+import { getConfig } from '@libs/config';
+/*
+ * Renders its slot only for the configured theme(s).
+ */
+interface Props {
+  /**
+   * The theme(s) that should display the following part.
+   */
+  theme?: string | string[]
+}
+
+const { theme = 'orange' } = Astro.props
+
+const themeToDisplay: string[] = typeof theme === 'string' ? [theme] : theme
+---
+
+{themeToDisplay.map((theme) => {
+  if (theme === getConfig().brand) {
+    return <slot />
+  }
+})}
