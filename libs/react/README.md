@@ -50,7 +50,7 @@ This package lives in the [Orange-Boosted-Bootstrap](../../) Nx monorepo. From t
 - `npm run react:test` — run unit/component tests via [Vitest](https://vitest.dev/) 5 with V8 coverage (reports in `coverage/libs/react`)
 - `npm run react:build` — build the package via Vite
 - `npm run storybook:react:serve` — browse the stories in [`apps/react-storybook`](../../apps/react-storybook/AGENTS.md) (port 4400)
-- `npm run rav:lint` / `rav:test` / `rav:build` — run the same target across `@ouds/angular`, `@ouds/react`, and `@ouds/vue`; `lint:all` / `test:all` / `build:all` cover more projects (see the root [README](../../README.md))
+- `npm run rav:lint` / `rav:test` — run the target across `@ouds/core`, `@ouds/angular`, `@ouds/react`, and `@ouds/vue`; `rav:build` — across `@ouds/angular`, `@ouds/react`, and `@ouds/vue`; `lint:all` / `test:all` / `build:all` cover more projects (see the root [README](../../README.md))
 
 See [ARCHITECTURE.md](./ARCHITECTURE.md) for component, testing, and export conventions, [AGENTS.md](./AGENTS.md) for coding-agent guidelines, and [CHANGELOG.md](./CHANGELOG.md) for release history.
 
