@@ -40,8 +40,8 @@ Use Node.js 24.15.0 (`.nvmrc`) or a compatible newer version. Run commands from 
 - `npm run docs-build`: build documentation for every brand.
 - `npm run lint`: check JavaScript, styles, and the root lockfile.
 - `npm test`: run the main lint, build, JavaScript, and documentation checks.
-- `npm run angular:lint` / `angular:test` / `angular:build` (and the `react:*`, `vue:*`, and `core:*` equivalents): lint, test, or build a single library via Nx. `npm run rav:lint` / `rav:test` / `rav:build` run the same target across the three framework libraries (`@ouds/angular`, `@ouds/react`, `@ouds/vue`).
-- `npm run storybook:<react|vue|angular>:serve` (dev server, port 4400), `:build`, `:lint`: the Storybook apps. `npm run storybook:rav:build` builds the three and `storybook:rav:copy` copies them into `libs/web/_site/`; `npm run netlify` runs the whole deploy build (see [`ARCHITECTURE.md`](ARCHITECTURE.md)). The `storybook:<framework>:build:dev` scripts currently fail because the apps define no `development` configuration.
+- `npm run angular:lint` / `angular:test` / `angular:build` (and the `react:*`, `vue:*`, and `core:*` equivalents): lint, test, or build a single library via Nx. `npm run rav:lint` and `rav:test` run the target across `@ouds/core` and the three framework libraries (`@ouds/angular`, `@ouds/react`, `@ouds/vue`); `rav:build` runs it across the three framework libraries (`@ouds/core` is built first as a dependency).
+- `npm run storybook:<react|vue|angular>:serve` (dev server, port 4400), `:build`, `:lint`: the Storybook apps. `npm run storybook:rav:build` builds the three and `storybook:rav:copy` copies them into `libs/web/_site/`; `npm run rav:test` runs the tests of `@ouds/core` and the framework libraries (writing the coverage reports to `coverage/libs/<lib>`) and `rav:test:copy` copies their HTML reports into `libs/web/_site/coverage/<angular|core|react|vue>/`. `npm run netlify` runs the whole deploy build (see [`ARCHITECTURE.md`](ARCHITECTURE.md)).
 - `npm run lint:all` / `test:all` / `build:all`: run the same target across the projects listed in the root `package.json` scripts (`lint:all` and `build:all` include `@ouds/core`, the framework libraries, `@ouds/web-common`, and the Storybook apps; `test:all` covers `@ouds/core` and the framework libraries) at once (`nx run-many`), reusing Nx's local cache. CI runs exactly these three (`.github/workflows/lint.yml`, `test.yml`, `build.yml`); the OUDS Web suites (`js-test`, `css-test`, `docs-build`, …) run in their own workflows.
 - `npx nx run-many -t lint,test,build --all`: run every target across all 12 Nx projects; `npx nx show project <name> --json` inspects a project's inferred targets and tags.
 
@@ -67,7 +67,7 @@ Use `Button` as the reference implementation in each library. Components follow 
 4. **Angular** (`libs/angular/src/components/<name>/`): standalone `OnPush` `<name>.component.ts` with its `.html`/`.scss`, `<name>.component.spec.ts`, `<name>.stories.ts`, and an `index.ts` barrel. Add the folder to `src/components/index.ts`. Selectors are prefixed (`orange-<name>`).
 5. **Tests and stories.** Each library enforces 100% coverage (statements, branches, functions, lines), so write the specs together with the component. Stories use the title `Components/<Name>` and live next to the component; the Storybook apps pick them up automatically.
 6. **Run the checks** from the repository root before opening a PR:
-   - `npm run rav:lint && npm run rav:test && npm run rav:build`, plus `npm run core:test` if you touched `@ouds/core`.
+   - `npm run rav:lint && npm run rav:test && npm run rav:build` (`rav:lint` and `rav:test` include `@ouds/core`).
    - `npm run storybook:<react|vue|angular>:build` for each framework you changed.
 
 Rules for component code:
