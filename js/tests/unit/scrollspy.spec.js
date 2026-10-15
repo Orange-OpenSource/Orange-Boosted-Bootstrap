@@ -164,7 +164,7 @@ describe('ScrollSpy', () => {
         expect(actual.length).toBe(expected.length)
         for (const x of actual) {
           const i = actual.indexOf(x)
-          expect(x).withContext(`[${i}]`).toBeCloseTo(expected[i])
+          expect(x, `[${i}]`).toBeCloseTo(expected[i])
         }
       }
 
