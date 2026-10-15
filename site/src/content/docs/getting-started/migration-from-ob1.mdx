@@ -33,7 +33,7 @@ Let’s start with the most obvious change you’ll notice: the name. **OB1 is n
   - `ob1.js` → `ouds-web.js` in `@ouds/web-common`
   - `ob1.min.js` → `ouds-web.min.js` in `@ouds/web-common`
 - The `flags.css` file together with the minified version have been removed, you could directly use the [flag-icons npm package](https://www.npmjs.com/package/flag-icons)
-- All fonts-icons file have been removed, read more about [managing icons](([[docsref:/foundation/icons]]))
+- All fonts-icons file have been removed, read more about [managing icons]([[docsref:/foundation/icons]])
 
 From now on, OUDS Web won’t embed Bootstrap elements that are not part of Orange Unified Design System. However, you can still use our Bootstrap compatibility mode by using `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`.
 
@@ -41,7 +41,7 @@ From now on, OUDS Web won’t embed Bootstrap elements that are not part of Oran
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Orange color has been modified from `#f16e00` to `#f15e00`. It means that under certain circumstances, you might be able to use Orange and light gray items together.
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> We provide four color mode allowinf you to handle Dark mode in every situation. See more on our [color modes page]([[docsref:/foundation/color-modes]])
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> We provide four color modes allowing you to handle Dark mode in every situation. See more on our [color modes page]([[docsref:/foundation/color-modes]])
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> The root selector have been tweaked and can be customized for more flexibility on JS frameworks. Please don’t hesitate to contact us if you find any issue with it.
 
@@ -138,7 +138,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 ### Breadcrumb
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> the last element of a Breadcrumb must now have the `.active` class and contain a `span` element to handle behavior on smaller viewport.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> the hidding of overflowing element is only based on CSS and not on JS anymore. Check the documentation for more details and tips to handle it.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> the hiding of overflowing element is only based on CSS and not on JS anymore. Check the documentation for more details and tips to handle it.
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Accessibility must be enhanced by using an aria-label on the parent element.
 
 ### Bullet list
@@ -193,8 +193,8 @@ You will have to make some extra Javascript to change the styles and update the 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-arrow` class must be replaced by both `.link` and `.link-chevron` classes.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link` class must be replaced by `.link`.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-icon` class must be replaced by both `.link` and `.icon-link` classes.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-small` class must be replaced by `link-small`.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-reverse` class can be removed as it shoud be handled by using a `data-bs-theme` attribute on a parent element.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-small` class must be replaced by `.link-small`.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-link-reverse` class can be removed as it should be handled by using a `data-bs-theme` attribute on a parent element.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.no-decoration` class can be removed as there is no equivalent in OUDS Web.
 
 ### List items
@@ -240,6 +240,26 @@ See [our new Items page]([[docsref:/components/items]]) for more information.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.ob1-box-radio` should be replaced by the outlined version of the radio button component.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The network quality indicators (`.ob1-network-quality`, `.ob1-network-good`, etc.) don't have any documented equivalent in OUDS Web yet.
 
+### Skeleton
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.ob1-skeleton` and its variants (like `.ob1-skeleton-white`) must be replaced by `.skeleton`. The CLI automatically replaces the `.ob1-skeleton-*` variants, but only emits a warning for `.ob1-skeleton`, which must be migrated manually.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> There are no color variants anymore, the skeleton color is handled by using a `data-bs-theme` attribute on a parent element.
+<div class="ps-xlarge">
+For example, if you used to write:
+
+```html
+<div class="ob1-skeleton-white ms-1" style="width: 250px; height: 100px"></div>
+```
+Now you should write:
+
+```html
+<div class="skeleton ms-medium" style="width: 250px; height: 100px" inert></div>
+```
+See [our new Skeleton page]([[docsref:/components/skeleton]]) for more information.
+</div>
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Skeletons must be hidden from assistive technologies (using `inert` or `aria-hidden`). Use `aria-busy="true"` on a parent container while loading, and update it to `aria-busy="false"` once the content is loaded and the skeleton removed.
+
 ### Tags
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> New dedicated classes have been added to handle tags colors, appearance, states and sizes.
@@ -253,7 +273,7 @@ See [our new Items page]([[docsref:/components/items]]) for more information.
   - `.ob1-capsule-inverse` must be removed.
   - `.ob1-tag` → `.tag.rounded-none`, `.ob1-tag-primary` → `.tag-warning`, `.ob1-tag-unavailable` → `.tag-muted`.
   - `.ob1-tag-information` must be removed. `.ob1-tag-subscribed` must be migrated manually (the CLI only emits a warning). [Check tag documentation]([[docsref:/components/tags]]) to find the best status for replacement.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-tag-inverse` and `.ob1-capsule-inverse` classes can be removed as it shoud be handled by using a `data-bs-theme` attribute on a parent element.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-tag-inverse` and `.ob1-capsule-inverse` classes can be removed as it should be handled by using a `data-bs-theme` attribute on a parent element.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> A tag can now contain a decorative bullet or an icon. New dedicated classes have been added to handle this.
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> To get squared corners like in OB1's commercial tags, you can use `rounded-none` utility.
 
@@ -263,7 +283,7 @@ See [our new Items page]([[docsref:/components/items]]) for more information.
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.control-item-assets-container`, `.control-item-text-container`, `.control-item-label`, `.control-item-indicator`, `.control-item-helper`, `.control-item-divider` and `.control-item-inverse` have been added.
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.form-check`, `.form-check-input`, `.form-check-label`, `.form-check-inline`, `.form-check-reverse` and `.form-switch` have been removed.
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-custom-checkbox-inverse` class can be removed as it shoud be handled by using a `data-bs-theme` attribute on a parent element.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-custom-checkbox-inverse` class can be removed as it should be handled by using a `data-bs-theme` attribute on a parent element.
 
 #### Checkbox
 
@@ -403,7 +423,7 @@ See [our new Select Input page]([[docsref:/components/select-input]]) for more i
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The error management is different from OB1's, it is now based on `:user-invalid` pseudo class or `aria-invalid` attribute. The DOM structure must also be updated for the error message. Read more in the [select input documentation]([[docsref:/components/select-input/#invalid]]) for more details.
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-form-group-inverse` class can be removed as it shoud be handled by using a `data-bs-theme` attribute on a parent element.
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> The `.ob1-form-group-inverse` class can be removed as it should be handled by using a `data-bs-theme` attribute on a parent element.
 
 #### Switch
 
@@ -532,7 +552,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 ### Other components
 
-- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> The CLI also emits a warning for OB1 Footer (`.footer-social`, `.footer-title-content`, `.footer-nav`), Skeleton (`.ob1-skeleton`) and Divider (`.separator`) classes. These components have evolved a lot, please refer to their [documentation]([[docsref:/components]]) to migrate them manually.
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> The CLI also emits a warning for OB1 Footer (`.footer-social`, `.footer-title-content`, `.footer-nav`) and Divider (`.separator`) classes. These components have evolved a lot, please refer to their [documentation]([[docsref:/components]]) to migrate them manually.
 
 ## Helpers
 
