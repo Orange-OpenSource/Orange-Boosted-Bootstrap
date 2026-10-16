@@ -8,8 +8,8 @@ Framework-agnostic code shared by `@ouds/react`, `@ouds/vue`, and `@ouds/angular
 
 ## Layout
 
-- `src/types/` — shared types: `theming/theming.ts` (`Brand`, `Theme`, `SizeProp`, `Variant`) and `components/<component>/<component>.ts` (`CoreButtonProps`). Component prop types are named `Core<Name>Props` and extended by each framework library.
-- `src/utils/<area>/<area>.util.ts` + co-located `<area>.util.spec.ts` — utilities (today only `brand/brand.util.ts`, which exports `loadBrandCSS`).
+- `src/types/` — shared types: `theming/theming.ts` (`Brand`, `Theme`, `SizeProp`, `Variant`) and `components/<component>/<component>.ts` (`CoreButtonProps`, and `icon/icon.ts` with `OudsIcon`, `IconPath`, `IconSize`, `CoreIconProps`). Component prop types are named `Core<Name>Props` and extended by each framework library.
+- `src/utils/<area>/<area>.util.ts` + co-located `<area>.util.spec.ts` — utilities (today `brand/brand.util.ts`, which exports `loadBrandCSS`, and `icon/icon.util.ts`, which exports `getIconPaths` and `getIconSizeClass`).
 - `src/index.ts` → `src/types/index.ts`, `src/utils/index.ts` — barrel files and the only public API. Re-export every new type or utility through them.
 - `vite.config.ts` — Vite library build (ESM + CJS, `.d.ts` via `vite-plugin-dts`) and the Vitest `test` block, including V8 coverage (reports only; unlike the framework libraries, no threshold is enforced).
 - `.oxlintrc.json` — Oxlint config; extends the root `oxlint.base.json` and adds `import`.

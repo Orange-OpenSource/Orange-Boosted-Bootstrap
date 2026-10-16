@@ -44,18 +44,31 @@ export default [
                         },
                         {
                             sourceTag: 'lib:react',
-                            onlyDependOnLibsWithTags: ['lib:react', 'lib:core'],
+                            onlyDependOnLibsWithTags: [
+                                'lib:react',
+                                'lib:core',
+                                'lib:icons',
+                            ],
                         },
                         {
                             sourceTag: 'lib:vue',
-                            onlyDependOnLibsWithTags: ['lib:vue', 'lib:core'],
+                            onlyDependOnLibsWithTags: [
+                                'lib:vue',
+                                'lib:core',
+                                'lib:icons',
+                            ],
                         },
                         {
                             sourceTag: 'lib:angular',
                             onlyDependOnLibsWithTags: [
                                 'lib:angular',
                                 'lib:core',
+                                'lib:icons',
                             ],
+                        },
+                        {
+                            sourceTag: 'lib:icons',
+                            onlyDependOnLibsWithTags: ['lib:icons', 'lib:core'],
                         },
                         {
                             sourceTag: 'lib:core',

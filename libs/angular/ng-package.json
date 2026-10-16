@@ -4,5 +4,5 @@
   "lib": {
     "entryFile": "src/index.ts"
   },
-  "allowedNonPeerDependencies": ["@ouds/core"]
+  "allowedNonPeerDependencies": ["@ouds/core", "@ouds/icons"]
 }
