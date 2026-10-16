@@ -1,0 +1,67 @@
+---
+import LoadingStateIntro from '@shortcodes/LoadingStateIntro.astro'
+import { getVersionedDocsPath } from '@libs/path.ts'
+
+interface Props {
+  /**
+   * The name of the component which loading state is being described.
+   */
+  name: string
+
+  /**
+   * The name of the component to which it should refer.
+   */
+  baseComponentName?: string
+
+  /**
+   * Should the loading state description refer to the component loading state section
+   */
+  referralVersion?: boolean
+
+  /**
+   * The name of the CSS variable allowing to display a determinate loading state.
+   */
+  loadingTimeVariable?: string
+}
+
+const { name, loadingTimeVariable, referralVersion, baseComponentName } = Astro.props
+---
+
+<LoadingStateIntro name={name}></LoadingStateIntro>
+
+{ referralVersion ? (
+    <p>Please refer to the <a href="#loading">loading state section of the { baseComponentName } component</a> for guidelines on how to implement loading states, as well as a JavaScript example and a live demo.</p>
+    <slot name="loading" />
+  ) : (
+    <p>To make an animated loading state { name }, you will add in your standard { name }:</p>
+    <ul>
+      <li>An animated <code>&lt;svg&gt;</code>: the animation will differ whether the loading time is known or not.</li>
+      <li>A status message <code>&lt;span&gt;</code>: the message must be updated regularly in order to be vocalized by screen readers; if the loading time is defined, you should indicate the progression.</li>
+    </ul>
+
+    <p>For example, before loading, your { name } could be like this:</p>
+
+    <slot name="beforeLoading" />
+
+    <p>When the loading starts, you will have to:</p>
+    <ul>
+      <li>Add the class <code>.loading-indeterminate</code> (for an unknown loading time) or <code>.loading-determinate</code> (for a known loading time) to the { name } to provide the appropriate styles and animation.</li>
+      <li>For a known loading time, provide a CSS variable <code>{ loadingTimeVariable }</code> to set the loading time. For example, add <code>style="--{ loadingTimeVariable }: 5s;"</code> to the { name }, for a 5 seconds loading.</li>
+      <li>Set the disabled state on the <code>&lt;button&gt;</code> element to avoid any unwanted interactions.</li>
+      <li>Remove the <code>.d-none</code> from the status message <code>&lt;span&gt;</code>.</li>
+      <li>Update regularly the status message <code>&lt;span&gt;</code> containing the loading message.</li>
+    </ul>
+
+    <p>At the end of the loading, you should:</p>
+    <ul>
+      <li>Remove the disabled state on the <code>&lt;button&gt;</code> element to restore its interactivity.</li>
+      <li>Remove the class <code>.loading-indeterminate</code> or <code>.loading-determinate</code> to restore the { name }’s look.</li>
+      <li>Set a final status message in <code>&lt;span&gt;</code>, indicating the loading has ended (so we don’t add again <code>.d-none</code> on this status message).</li>
+      <li>Put the focus back on the { name } to ensure similar behavior across browsers and not lose the user after changes.</li>
+    </ul>
+
+    <slot name="loading" />
+
+    <p>You can see it live and find a JavaScript example on our <a href={getVersionedDocsPath("/examples/loading-buttons/")}>loading buttons live example</a>.</p>
+  )
+}
