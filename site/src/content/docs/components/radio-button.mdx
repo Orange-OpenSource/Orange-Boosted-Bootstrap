@@ -24,6 +24,7 @@ Unlike the [radio button](#standalone), the radio button item accommodates a bro
 They are implemented using `.radio-button-item` and `.control-item-*` classes, [see below](#control-item). Browser default radio buttons are replaced with the help of the selector `.control-item-indicator[type="radio"]`.
 
 <Example buttonLabel="basic radio buttons" code={`<fieldset class="control-items-list">
+
     <div class="radio-button-item">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" value="" id="radioDefault" name="radioBasic" />
@@ -32,6 +33,7 @@ They are implemented using `.radio-button-item` and `.control-item-*` classes, [
         <label class="control-item-label" for="radioDefault">Default radio button</label>
       </div>
     </div>
+
     <div class="radio-button-item">
       <div class="control-item-assets-container">
         <input checked class="control-item-indicator" type="radio" value="" id="radioDefault2" name="radioBasic" />
@@ -40,6 +42,7 @@ They are implemented using `.radio-button-item` and `.control-item-*` classes, [
         <label class="control-item-label" for="radioDefault2">Checked radio button</label>
       </div>
     </div>
+
   </fieldset>`} />
 
 <BootstrapCompatibility>
@@ -49,6 +52,7 @@ They are implemented using `.radio-button-item` and `.control-item-*` classes, [
       Default radio button (Bootstrap compatible)
     </label>
   </div>
+
   <div class="form-check">
     <input checked class="form-check-input" type="radio" value="" id="checkChecked" name="radioBasicBs" />
     <label class="form-check-label" for="checkChecked">
@@ -74,6 +78,7 @@ As radio buttons are almost always grouped in a list, they should be enclosed in
 To display a divider, add `.control-item-divider` to a `.radio-button-item`.
 
 <Example buttonLabel="radio buttons with divider" code={`<fieldset class="control-items-list">
+
     <div class="radio-button-item control-item-divider">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" value="" id="radioDivider" name="radioDivider" />
@@ -82,6 +87,7 @@ To display a divider, add `.control-item-divider` to a `.radio-button-item`.
         <label class="control-item-label" for="radioDivider">Default radio button with divider</label>
       </div>
     </div>
+
     <div class="radio-button-item control-item-divider">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" value="" id="radioDivider2" name="radioDivider" checked />
@@ -90,6 +96,7 @@ To display a divider, add `.control-item-divider` to a `.radio-button-item`.
         <label class="control-item-label" for="radioDivider2">Checked radio button with divider</label>
       </div>
     </div>
+
   </fieldset>`} />
 
 ### Icon
@@ -99,6 +106,7 @@ To display a divider, add `.control-item-divider` to a `.radio-button-item`.
 To display an icon, add `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside, as a child of a `.radio-button-item`.
 
 <Example buttonLabel="radio buttons with icon" code={`<fieldset class="control-items-list">
+
     <div class="radio-button-item">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" value="" id="radioWithSVG" name="radioIcon" />
@@ -112,6 +120,7 @@ To display an icon, add `.control-item-assets-container` with an icon (SVG or fo
         </svg>
       </div>
     </div>
+
     <div class="radio-button-item">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" value="" id="radioWithIconFont" name="radioIcon" checked />
@@ -123,6 +132,7 @@ To display an icon, add `.control-item-assets-container` with an icon (SVG or fo
         <span class="icon si si-settings" aria-hidden="true"></span>
       </div>
     </div>
+
   </fieldset>`} />
 
 ### Extra label
@@ -130,6 +140,7 @@ To display an icon, add `.control-item-assets-container` with an icon (SVG or fo
 To add critical information to some of the options, add a `.radio-button-extra-label` as a sibling of a `.control-item-label`. Make sure the extra label is accessible by adding an `aria-describedby` attribute to the input.
 
 <Example buttonLabel="radio buttons with extra label" code={`<fieldset class="control-items-list">
+
     <div class="radio-button-item">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" value="" id="radioWithExtraLabelItem" aria-describedby="radioExtraLabel" name="radioExtraLabel" />
@@ -139,6 +150,7 @@ To add critical information to some of the options, add a `.radio-button-extra-l
         <p class="radio-button-extra-label" id="radioExtraLabel">Extra label</p>
       </div>
     </div>
+
     <div class="radio-button-item">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" value="" id="radioWithExtraLabelItem2" aria-describedby="radioExtraLabel2" name="radioExtraLabel" checked />
@@ -148,6 +160,7 @@ To add critical information to some of the options, add a `.radio-button-extra-l
         <p class="radio-button-extra-label" id="radioExtraLabel2">Extra label</p>
       </div>
     </div>
+
   </fieldset>`} />
 
 ### Description text
@@ -157,6 +170,7 @@ To display a description text, add a `.control-item-description` as a sibling of
 Extra label and description text can be combined, but the extra label must come first (visually and in the `aria-describedby` attribute).
 
 <Example buttonLabel="radio buttons with description text" code={`<fieldset class="control-items-list">
+
     <div class="radio-button-item">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" value="" id="radioWithDescription" aria-describedby="radioDescription" name="radioTextDescription" />
@@ -166,6 +180,7 @@ Extra label and description text can be combined, but the extra label must come 
         <p class="control-item-description" id="radioDescription">Description text</p>
       </div>
     </div>
+
     <div class="radio-button-item">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" value="" id="radioWithDescription2" aria-describedby="radioDescriptionExtraLabel radioDescription2" name="radioTextDescription" checked />
@@ -176,6 +191,7 @@ Extra label and description text can be combined, but the extra label must come 
         <p class="control-item-description" id="radioDescription2">Description text</p>
       </div>
     </div>
+
   </fieldset>`} />
 
 ### Outlined
@@ -183,6 +199,7 @@ Extra label and description text can be combined, but the extra label must come 
 To display outlined radio buttons, add `.radio-button-item-outlined` to a `.radio-button-item`. If there is an outlined radio button item in a group, all its siblings should also be outlined.
 
 <Example buttonLabel="outlined radio buttons" code={`<fieldset class="control-items-list">
+
     <div class="radio-button-item radio-button-item-outlined">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" value="" id="radioOutlined1" name="radioOutlined" />
@@ -191,6 +208,7 @@ To display outlined radio buttons, add `.radio-button-item-outlined` to a `.radi
         <label class="control-item-label" for="radioOutlined1">Default outlined radio button</label>
       </div>
     </div>
+
     <div class="radio-button-item radio-button-item-outlined">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" value="" id="radioOutlined2" name="radioOutlined" checked />
@@ -199,6 +217,7 @@ To display outlined radio buttons, add `.radio-button-item-outlined` to a `.radi
         <label class="control-item-label" for="radioOutlined2">Checked outlined radio button</label>
       </div>
     </div>
+
   </fieldset>`} />
 
 ## States
@@ -218,6 +237,7 @@ Add the `disabled` attribute to the input, then the radio button and the associa
         <p class="control-item-description" id="radioDisabledDescription">Description text</p>
       </div>
     </div>
+
     <div class="radio-button-item">
       <div class="control-item-assets-container">
         <input disabled class="control-item-indicator" type="radio" value="" id="radioCheckedDisabled" name="radioDisabled" checked />
@@ -226,6 +246,7 @@ Add the `disabled` attribute to the input, then the radio button and the associa
         <label class="control-item-label" for="radioCheckedDisabled">Checked disabled radio button</label>
       </div>
     </div>
+
   </fieldset>`} />
 
 <BootstrapCompatibility>
@@ -235,6 +256,7 @@ Add the `disabled` attribute to the input, then the radio button and the associa
       Default disabled radio button
     </label>
   </div>
+
   <div class="form-check">
     <input disabled class="form-check-input" type="radio" value="" id="checkCheckedDisabled" name="radioDisabledBs" checked />
     <label class="form-check-label" for="checkCheckedDisabled">
@@ -249,6 +271,7 @@ To create a read only radio button, the input should be replaced by a `span` ele
 
 <Example buttonLabel="readonly radio buttons" code={`<fieldset class="control-items-list">
     <div role="radiogroup" aria-readonly="true">
+
       <div class="radio-button-item">
         <div class="control-item-assets-container">
           <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="radioReadonlyLabel" aria-describedby="radioReadonlyExtraLabel radioReadonlyDescription"></span>
@@ -259,6 +282,7 @@ To create a read only radio button, the input should be replaced by a `span` ele
           <p class="control-item-description" id="radioReadonlyDescription">Description text</p>
         </div>
       </div>
+
       <div class="radio-button-item">
         <div class="control-item-assets-container">
           <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="radioReadonlyCheckedLabel"></span>
@@ -267,6 +291,7 @@ To create a read only radio button, the input should be replaced by a `span` ele
           <p class="control-item-label" id="radioReadonlyCheckedLabel">Checked readonly radio button</p>
         </div>
       </div>
+
     </div>
   </fieldset>`} />
 
@@ -279,6 +304,7 @@ To create a read only radio button, the input should be replaced by a `span` ele
 To manually mark a radio button as invalid, add the `aria-invalid="true"` attribute to a `.control-item-indicator`. An error icon will be automatically shown, if there is a decorative icon specified it will be hidden.
 
 <Example buttonLabel="invalid radio buttons" code={`<fieldset class="control-items-list">
+
     <div class="radio-button-item control-item-divider">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="radioInvalid" id="radioInvalid" aria-describedby="radioInvalidExtraLabel radioInvalidDescription radioInvalidErrorText" />
@@ -289,6 +315,7 @@ To manually mark a radio button as invalid, add the `aria-invalid="true"` attrib
         <p class="control-item-description" id="radioInvalidDescription">Description text</p>
       </div>
     </div>
+
     <div class="radio-button-item control-item-divider">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="radioInvalid" id="radioInvalid2" aria-describedby="radioInvalid2Description radioInvalidErrorText" checked />
@@ -298,7 +325,9 @@ To manually mark a radio button as invalid, add the `aria-invalid="true"` attrib
         <p class="control-item-description" id="radioInvalid2Description">Description text</p>
       </div>
     </div>
+
     <p class="control-item-error-message" id="radioInvalidErrorText">There is an error.</p>
+
   </fieldset>`} />
 
 <BootstrapCompatibility>
@@ -318,6 +347,7 @@ To display an invalid radio button, add `.is-invalid` to a `.form-check-input`.
 This also works for outlined variant of the component.
 
 <Example buttonLabel="outlined invalid radio buttons" code={`<fieldset class="control-items-list">
+
     <div class="radio-button-item radio-button-item-outlined">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="outlinedInvalid" id="outlinedInvalid1" aria-describedby="radioLayoutOutlinedInvalidErrorText" />
@@ -326,6 +356,7 @@ This also works for outlined variant of the component.
         <label class="control-item-label" for="outlinedInvalid1">Default invalid outlined radio button</label>
       </div>
     </div>
+
     <div class="radio-button-item radio-button-item-outlined">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" aria-invalid="true" type="radio" value="" name="outlinedInvalid" id="outlinedInvalid2" checked aria-describedby="radioLayoutOutlinedInvalidErrorText" />
@@ -334,7 +365,9 @@ This also works for outlined variant of the component.
         <label class="control-item-label" for="outlinedInvalid2">Checked invalid outlined radio button</label>
       </div>
     </div>
+
     <p class="control-item-error-message" id="radioLayoutOutlinedInvalidErrorText">Forbidden choice.</p>
+
   </fieldset>`} />
 
 #### Horizontal
@@ -343,6 +376,7 @@ If the [layout is horizontal](#horizontal-1), the `<fieldset>` must enclose the 
 
 <Example buttonLabel="invalid radio buttons in an horizontal layout" code={`<fieldset class="control-items-list">
     <div class="d-flex flex-row gap-small w-50">
+
       <div class="radio-button-item flex-fill">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" aria-invalid="true" type="radio" value="" id="radioLayoutRowInvalid1" name="radioLayoutRowInvalid" aria-describedby="radioLayoutRowInvalidErrorText" />
@@ -351,6 +385,7 @@ If the [layout is horizontal](#horizontal-1), the `<fieldset>` must enclose the 
           <label class="control-item-label" for="radioLayoutRowInvalid1">Option 1</label>
         </div>
       </div>
+
       <div class="radio-button-item flex-fill">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" aria-invalid="true" type="radio" value="" id="radioLayoutRowInvalid2" name="radioLayoutRowInvalid" aria-describedby="radioLayoutRowInvalidErrorText" />
@@ -359,8 +394,11 @@ If the [layout is horizontal](#horizontal-1), the `<fieldset>` must enclose the 
           <label class="control-item-label" for="radioLayoutRowInvalid2">Option 2</label>
         </div>
       </div>
+
     </div>
+
     <p class="control-item-error-message" id="radioLayoutRowInvalidErrorText">Please make a choice.</p>
+
   </fieldset>`} />
 
 ### Skeleton
@@ -369,6 +407,7 @@ If the [layout is horizontal](#horizontal-1), the `<fieldset>` must enclose the 
 
 <Example buttonLabel="radio button item skeleton" code={`<div aria-busy="true" inert>
     <fieldset class="control-items-list">
+
       <div class="radio-button-item">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" type="radio" value="" id="radioSkeleton" name="radioSkeleton" />
@@ -377,6 +416,7 @@ If the [layout is horizontal](#horizontal-1), the `<fieldset>` must enclose the 
           <label class="control-item-label" for="radioSkeleton">Default radio button</label>
         </div>
       </div>
+
       <div class="radio-button-item">
         <div class="control-item-assets-container">
           <input checked class="control-item-indicator" type="radio" value="" id="radioSkeleton2" name="radioSkeleton" />
@@ -385,6 +425,7 @@ If the [layout is horizontal](#horizontal-1), the `<fieldset>` must enclose the 
           <label class="control-item-label" for="radioSkeleton2">Checked radio button</label>
         </div>
       </div>
+
     </fieldset>
   </div>`} />
 
@@ -397,6 +438,7 @@ It's recommended to keep radio button label to no more than three words. When sp
 <Example buttonLabel="radio buttons with long texts" code={`<div class="row">
     <div class="col-8 md:col-6 xl:col-5">
       <fieldset class="control-items-list">
+
         <div class="radio-button-item control-item-divider">
           <div class="control-item-assets-container">
             <input class="control-item-indicator" type="radio" value="" id="radioLayout1" name="radioLayout" aria-describedby="radioLayout1ExtraLabel radioLayout1Description" />
@@ -412,6 +454,7 @@ It's recommended to keep radio button label to no more than three words. When sp
             </svg>
           </div>
         </div>
+
         <div class="radio-button-item control-item-divider">
           <div class="control-item-assets-container">
             <input class="control-item-indicator" type="radio" value="" id="radioLayout2" name="radioLayout"  aria-describedby="radioLayout2ExtraLabel radioLayout2Description" checked />
@@ -427,6 +470,7 @@ It's recommended to keep radio button label to no more than three words. When sp
             </svg>
           </div>
         </div>
+
       </fieldset>
     </div>
   </div>`} />
@@ -438,6 +482,7 @@ To reverse the component, simply add `.control-item-reverse` to a `.radio-button
 <Example buttonLabel="reversed radio buttons" code={`<div class="row">
     <div class="col-8 md:col-6 xl:col-5">
       <fieldset class="control-items-list">
+
         <div class="radio-button-item control-item-divider control-item-reverse">
           <div class="control-item-assets-container">
             <input class="control-item-indicator" type="radio" value="" id="radioLayoutRev1" name="radioLayoutRev" aria-describedby="radioLayoutRev1ExtraLabel radioLayoutRev1Description" />
@@ -453,6 +498,7 @@ To reverse the component, simply add `.control-item-reverse` to a `.radio-button
             </svg>
           </div>
         </div>
+
         <div class="radio-button-item control-item-divider control-item-reverse">
           <div class="control-item-assets-container">
             <input class="control-item-indicator" type="radio" value="" id="radioLayoutRev2" name="radioLayoutRev"  aria-describedby="radioLayoutRev2ExtraLabel radioLayoutRev2Description" checked />
@@ -468,6 +514,7 @@ To reverse the component, simply add `.control-item-reverse` to a `.radio-button
             </svg>
           </div>
         </div>
+
       </fieldset>
     </div>
   </div>`} />
@@ -482,6 +529,7 @@ Put your radio buttons on the opposite side with the `.form-check-reverse` modif
       Default reverse radio button (Bootstrap compatible)
     </label>
   </div>
+
   <div class="form-check form-check-reverse">
     <input class="form-check-input" type="radio" value="" id="reverseCheck2" name="radioReverseBs" checked />
     <label class="form-check-label" for="reverseCheck2">
@@ -496,6 +544,7 @@ You can align horizontally up to three radio buttons if their labels are short, 
 
 <Example buttonLabel="horizontal radio buttons" code={`<fieldset class="control-items-list">
     <div class="d-flex flex-row gap-small w-50">
+
       <div class="radio-button-item flex-fill">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" type="radio" value="" id="radioLayoutRow1" name="radioLayoutRow" />
@@ -504,6 +553,7 @@ You can align horizontally up to three radio buttons if their labels are short, 
           <label class="control-item-label" for="radioLayoutRow1">Option 1</label>
         </div>
       </div>
+
       <div class="radio-button-item flex-fill">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" type="radio" value="" id="radioLayoutRow2" name="radioLayoutRow" checked />
@@ -512,6 +562,7 @@ You can align horizontally up to three radio buttons if their labels are short, 
           <label class="control-item-label" for="radioLayoutRow2">Option 2</label>
         </div>
       </div>
+
     </div>
   </fieldset>`} />
 
@@ -520,6 +571,7 @@ You can align horizontally up to three radio buttons if their labels are short, 
 By default, radio buttons will span the whole width of their parent container, to limit the width of the radio button on wider parent container, add a `.component-max-width` to the `.radio-button-item` container. More information on radio button sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-radio-button-responsiveness).
 
 <Example buttonLabel="radio buttons max width" code={`<fieldset class="control-items-list">
+
     <div class="radio-button-item component-max-width">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" aria-describedby="radioMWDescription" id="radioWithMaxWidth" value="" name="radioMaxWidth" />
@@ -529,6 +581,7 @@ By default, radio buttons will span the whole width of their parent container, t
         <p class="control-item-description" id="radioMWDescription">Description text</p>
       </div>
     </div>
+
     <div class="radio-button-item component-max-width">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" aria-describedby="radioWithMaxWidth2Description" id="radioWithMaxWidth2" value="" name="radioMaxWidth" checked />
@@ -538,6 +591,7 @@ By default, radio buttons will span the whole width of their parent container, t
         <p class="control-item-description" id="radioWithMaxWidth2Description">Description text</p>
       </div>
     </div>
+
   </fieldset>`} />
 
 ## Fieldset `<legend>`
@@ -547,6 +601,7 @@ For accessibility reasons, it is required to provide understandable radio button
 <Example buttonLabel="radio buttons grouped with fieldset" code={`<div class="row">
     <fieldset class="md:col-6">
       <legend>Radio buttons group example</legend>
+
       <div class="radio-button-item control-item-divider">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" type="radio" value="" id="radioGroup1" name="radioGroup" aria-describedby="radioGroup1ExtraLabel radioGroup1Description" />
@@ -562,6 +617,7 @@ For accessibility reasons, it is required to provide understandable radio button
           </svg>
         </div>
       </div>
+
       <div class="radio-button-item control-item-divider">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" type="radio" value="" id="radioGroup2" name="radioGroup"  aria-describedby="radioGroup2ExtraLabel radioGroup2Description" checked />
@@ -577,6 +633,7 @@ For accessibility reasons, it is required to provide understandable radio button
           </svg>
         </div>
       </div>
+
     </fieldset>
   </div>`} />
 
@@ -611,6 +668,7 @@ For the standalone radio button, we provide a completely different architecture 
 <MandatoryFieldIndication componentName="radio button" />
 
 <Example buttonLabel="mandatory radio buttons indication" code={`<div class="radio-button-item-container">
+
     <div class="radio-button-item">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" value="" id="radioUniqueMandatory" name="mandatoryRadio" required />
@@ -620,9 +678,12 @@ For the standalone radio button, we provide a completely different architecture 
       </div>
     </div>
   </div>
+
   <hr class="my-xlarge">
+
   <fieldset class="control-items-list">
     <legend class="is-required">Mandatory radio buttons</legend>
+
     <div class="radio-button-item">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" value="" id="mandatoryRadio1" name="mandatoryRadios" required />
@@ -631,6 +692,7 @@ For the standalone radio button, we provide a completely different architecture 
         <label class="control-item-label" for="mandatoryRadio1">Default radio button</label>
       </div>
     </div>
+
     <div class="radio-button-item">
       <div class="control-item-assets-container">
         <input checked class="control-item-indicator" type="radio" value="" id="mandatoryRadio2" name="mandatoryRadios" required />
@@ -639,4 +701,5 @@ For the standalone radio button, we provide a completely different architecture 
         <label class="control-item-label" for="mandatoryRadio2">Checked radio button</label>
       </div>
     </div>
+
   </fieldset>`} />
