@@ -17,6 +17,9 @@ $modal-transition-dimension: -3rem !default;
   --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-mobile};
   --#{$prefix}modal-body-padding-top: #{$ouds-modal-dialog-space-padding-block-top-body-default-mobile};
   --#{$prefix}modal-footer-padding-top: #{$ouds-modal-dialog-space-padding-block-top-footer-default-mobile};
+  --#{$prefix}modal-header-gap: var(--#{$prefix}space-scaled-medium);
+  --#{$prefix}modal-title-gap: var(--#{$prefix}space-scaled-small);
+  --#{$prefix}modal-icon-size: var(--#{$prefix}icon-large-with-heading-medium);
 
   flex-direction: column; // cannot use grid because of Safari dialog limitations
   width: var(--#{$prefix}modal-width);
@@ -80,6 +83,7 @@ $modal-transition-dimension: -3rem !default;
   --#{$prefix}modal-padding-inline: var(--#{$prefix}grid-margin);
   --#{$prefix}modal-close-button-inset: #{$ouds-fullscreen-dialog-space-inset-close-button-mobile};
   --#{$prefix}modal-border-radius: 0;
+  --#{$prefix}modal-header-gap: var(--#{$prefix}space-scaled-large);
   // the following reset will override any values from @mixin modal-dialog if applied on other breakpoints
   --#{$prefix}modal-content-max-width: unset;
 
@@ -170,6 +174,8 @@ $modal-transition-dimension: -3rem !default;
     --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-mobile};
     --#{$prefix}modal-body-padding-top: #{$ouds-modal-dialog-space-padding-block-top-body-small-mobile};
     --#{$prefix}modal-footer-padding-top: #{$ouds-modal-dialog-space-padding-block-top-footer-small-mobile};
+    --#{$prefix}modal-title-gap: var(--#{$prefix}space-scaled-xsmall);
+    --#{$prefix}modal-icon-size: var(--#{$prefix}icon-small-with-heading-small);
     --#{$prefix}modal-max-height: 50vh;
 
     @include media-breakpoint-up(md) {
@@ -222,8 +228,7 @@ $modal-transition-dimension: -3rem !default;
 .modal-header {
   display: flex;
   flex-shrink: 0;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   padding: var(--#{$prefix}modal-padding-top) calc(var(--#{$prefix}space-scaled-3xlarge) + var(--#{$prefix}modal-padding-inline)) var(--#{$prefix}modal-body-padding-top) var(--#{$prefix}modal-padding-inline);
   background-color: $ouds-color-overlay-modal-sheet;
 
@@ -232,11 +237,27 @@ $modal-transition-dimension: -3rem !default;
     inset-inline-end: var(--#{$prefix}modal-close-button-inset);
     top: var(--#{$prefix}modal-close-button-inset);
   }
+
+  .link-previous {
+    margin-bottom: var(--#{$prefix}modal-header-gap);
+  }
 }
 
 .modal-title {
+  display: flex;
+  gap: var(--#{$prefix}modal-title-gap);
+  align-items: center;
   margin: 0;
   @include get-font-size("heading-medium");
+}
+
+.modal-subtitle {
+  margin-block-end: 0;
+}
+
+.modal-icon {
+  width: var(--#{$prefix}modal-icon-size);
+  height: var(--#{$prefix}modal-icon-size);
 }
 
 .modal-icon-positive,
@@ -244,8 +265,6 @@ $modal-transition-dimension: -3rem !default;
 .modal-icon-info,
 .modal-icon-warning {
   position: relative;
-  width: var(--#{$prefix}icon-small-with-heading-small);
-  height: var(--#{$prefix}icon-small-with-heading-small);
   color: var(--#{$prefix}modal-icon-color);
 
   &::before,

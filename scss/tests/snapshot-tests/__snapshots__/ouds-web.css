@@ -10363,6 +10363,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-modal-sticky-footer-padding-block: 20px;
   --bs-modal-body-padding-top: 16px;
   --bs-modal-footer-padding-top: 24px;
+  --bs-modal-header-gap: var(--bs-space-scaled-medium);
+  --bs-modal-title-gap: var(--bs-space-scaled-small);
+  --bs-modal-icon-size: var(--bs-icon-large-with-heading-medium);
   flex-direction: column;
   width: var(--bs-modal-width);
   max-width: unset;
@@ -10418,6 +10421,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-modal-padding-inline: var(--bs-grid-margin);
   --bs-modal-close-button-inset: 16px;
   --bs-modal-border-radius: 0;
+  --bs-modal-header-gap: var(--bs-space-scaled-large);
   --bs-modal-content-max-width: unset;
   transition: none;
 }
@@ -10516,6 +10520,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-modal-sticky-footer-padding-block: 20px;
   --bs-modal-body-padding-top: 16px;
   --bs-modal-footer-padding-top: 24px;
+  --bs-modal-title-gap: var(--bs-space-scaled-xsmall);
+  --bs-modal-icon-size: var(--bs-icon-small-with-heading-small);
   --bs-modal-max-height: 50vh;
 }
 @media (min-width: 736px) {
@@ -10569,9 +10575,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .modal-header {
   display: flex;
   flex-shrink: 0;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--bs-modal-padding-top) var(--bs-space-scaled-3xlarge) 0 var(--bs-modal-padding-inline);
+  flex-direction: column;
+  padding: var(--bs-modal-padding-top) calc(var(--bs-space-scaled-3xlarge) + var(--bs-modal-padding-inline)) var(--bs-modal-body-padding-top) var(--bs-modal-padding-inline);
   background-color: var(--bs-color-overlay-modal-sheet);
 }
 .modal-header .btn-close {
@@ -10579,8 +10584,14 @@ ol.bullet-list > li > ol > li > ol > li::before {
   inset-inline-end: var(--bs-modal-close-button-inset);
   top: var(--bs-modal-close-button-inset);
 }
+.modal-header .link-previous {
+  margin-bottom: var(--bs-modal-header-gap);
+}
 
 .modal-title {
+  display: flex;
+  gap: var(--bs-modal-title-gap);
+  align-items: center;
   margin: 0;
   max-width: var(--bs-font-max-width-heading-medium);
   font-size: var(--bs-font-size-heading-medium);
@@ -10589,13 +10600,20 @@ ol.bullet-list > li > ol > li > ol > li::before {
   letter-spacing: var(--bs-font-letter-spacing-heading-medium);
 }
 
+.modal-subtitle {
+  margin-block-end: 0;
+}
+
+.modal-icon {
+  width: var(--bs-modal-icon-size);
+  height: var(--bs-modal-icon-size);
+}
+
 .modal-icon-positive,
 .modal-icon-negative,
 .modal-icon-info,
 .modal-icon-warning {
   position: relative;
-  width: var(--bs-icon-small-with-heading-small);
-  height: var(--bs-icon-small-with-heading-small);
   color: var(--bs-modal-icon-color);
 }
 .modal-icon-positive::before, .modal-icon-positive::after,
@@ -10651,7 +10669,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .modal-body {
   flex-grow: 1;
-  padding: var(--bs-modal-body-padding-top) var(--bs-modal-padding-inline) calc(var(--bs-modal-body-footer-padding-bottom) + var(--bs-modal-padding-bottom));
+  padding: 0 var(--bs-modal-padding-inline) calc(var(--bs-modal-body-footer-padding-bottom) + var(--bs-modal-padding-bottom));
   overflow-y: auto;
 }
 .modal-body > :last-child {

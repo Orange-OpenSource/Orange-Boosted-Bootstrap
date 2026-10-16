@@ -311,14 +311,12 @@ The following variants use the same structure and behavior for modal dialog and 
 
 ### Subtitle
 
-You can display a subtitle above the title, aligned to the leading edge of the modal. Use it to provide additional context or clarify the purpose of the modal when the title alone is not sufficient.
+Add a `<p class="modal-subtitle">` element above the title to display a subtitle aligned to the leading edge of the modal. Use it to provide additional context or clarify the purpose of the modal when the title alone is not sufficient.
 
 <Example buttonLabel="modal dialog with subtitle" code={`<dialog id="modalDialogSubtitle" class="modal-base modal-dialog" aria-labelledby="modalDialogSubtitleTitle" closedby="any">
     <div class="modal-header">
-      <div class="d-flex flex-column">
-        <p class="m-none">Subtitle</p>
-        <h3 id="modalDialogSubtitleTitle" class="modal-title">Modal title</h3>
-      </div>
+      <p class="modal-subtitle">Subtitle</p>
+      <h3 id="modalDialogSubtitleTitle" class="modal-title">Modal title</h3>
       <button type="button" class="btn btn-close" commandfor="modalDialogSubtitle" command="close">
         <span class="visually-hidden">Close</span>
       </button>
@@ -338,16 +336,16 @@ You can display a subtitle above the title, aligned to the leading edge of the m
 
 ### Title icon
 
-You can display an icon to the left of the title. It can be used either as a decorative element or to communicate a functional status, see the [functional modals section](#functional-modals) for more details.
+Add an icon element with the `.modal-icon` class inside the `.modal-title` to display an icon next to the title. It can be used either as a decorative element or to communicate a functional status, see the [functional modals section](#functional-modals) for more details.
 
 <Example buttonLabel="modal dialog title icon" code={`<dialog id="modalDialogTitleIcon" class="modal-base modal-dialog" aria-labelledby="modalDialogTitleIconTitle" closedby="any">
     <div class="modal-header">
-      <div class="d-flex gap-scaled-small align-items-center">
-        <svg class="hm-large-icon" aria-hidden="true">
+      <h3 id="modalDialogTitleIconTitle" class="modal-title">
+        <svg class="modal-icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
-        <h3 id="modalDialogTitleIconTitle" class="modal-title">Modal title</h3>
-      </div>
+        Modal title
+      </h3>
       <button type="button" class="btn btn-close" commandfor="modalDialogTitleIcon" command="close">
         <span class="visually-hidden">Close</span>
       </button>
@@ -367,14 +365,14 @@ You can display an icon to the left of the title. It can be used either as a dec
 
 ### Functional modals
 
-You can implement functional modal dialogs using the functional variants `.modal-icon-negative`, `.modal-icon-positive`, `.modal-icon-info`, or `.modal-icon-warning` for the icon container.
+You can implement functional modal dialogs using the functional variants `.modal-icon-negative`, `.modal-icon-positive`, `.modal-icon-info`, or `.modal-icon-warning` on the `.modal-icon` element. Do not forget to include a visually hidden label inside the icon for accessibility.
 
 <Example buttonLabel="modal dialog negative" code={`<dialog id="modalDialogNegative" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogNegativeTitle" closedby="any">
     <div class="modal-header">
-      <div class="d-flex align-items-center gap-scaled-small">
-        <div class="modal-icon-negative"><p class="visually-hidden">Alert</p></div>
-        <h3 id="modalDialogNegativeTitle" class="modal-title">Confirm deletion</h3>
-      </div>
+        <h3 id="modalDialogNegativeTitle" class="modal-title">
+          <span class="modal-icon modal-icon-negative"><span class="visually-hidden">Warning</span></span>
+          Confirm deletion
+        </h3>
       <button type="button" class="btn btn-close" commandfor="modalDialogNegative" command="close">
         <span class="visually-hidden">Close</span>
       </button>
@@ -394,10 +392,10 @@ You can implement functional modal dialogs using the functional variants `.modal
 
   <dialog id="modalDialogSuccess" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogSuccessTitle" closedby="any">
     <div class="modal-header">
-      <div class="d-flex align-items-center gap-scaled-small">
-        <div class="modal-icon-positive"><p class="visually-hidden">Alert</p></div>
-        <h3 id="modalDialogSuccessTitle" class="modal-title">Subscription confirmed!</h3>
-      </div>
+      <h3 id="modalDialogSuccessTitle" class="modal-title">
+        <span class="modal-icon modal-icon-positive"><p class="visually-hidden">Success</p></span>
+        Subscription confirmed!
+      </h3>
       <button type="button" class="btn btn-close" commandfor="modalDialogSuccess" command="close">
         <span class="visually-hidden">Close</span>
       </button>
@@ -416,10 +414,10 @@ You can implement functional modal dialogs using the functional variants `.modal
 
   <dialog id="modalDialogInfo" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogInfoTitle" closedby="any">
     <div class="modal-header">
-      <div class="d-flex align-items-center gap-scaled-small">
-        <div class="modal-icon-info"><p class="visually-hidden">Alert</p></div>
-        <h3 id="modalDialogInfoTitle" class="modal-title">Your cart is empty</h3>
-      </div>
+      <h3 id="modalDialogInfoTitle" class="modal-title">
+        <span class="modal-icon modal-icon-info"><p class="visually-hidden">Notice</p></span>
+        Your cart is empty
+      </h3>
       <button type="button" class="btn btn-close" commandfor="modalDialogInfo" command="close">
         <span class="visually-hidden">Close</span>
       </button>
@@ -438,10 +436,10 @@ You can implement functional modal dialogs using the functional variants `.modal
 
   <dialog id="modalDialogWarning" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogWarningTitle" closedby="any">
     <div class="modal-header">
-      <div class="d-flex align-items-center gap-scaled-small">
-        <div class="modal-icon-warning"><p class="visually-hidden">Warning</p></div>
-        <h3 id="modalDialogWarningTitle" class="modal-title">No item selected</h3>
-      </div>
+      <h3 id="modalDialogWarningTitle" class="modal-title">
+        <span class="modal-icon modal-icon-warning"><p class="visually-hidden">Warning</p></span>
+        No item selected
+      </h3>
       <button type="button" class="btn btn-close" commandfor="modalDialogWarning" command="close">
         <span class="visually-hidden">Close</span>
       </button>
@@ -485,14 +483,12 @@ The close button may be hidden when the modal has a clear, visible alternative w
 
 ### Previous link
 
-Add a container with utility classes to display a navigation link above the title, aligned to the leading edge of the modal. It is intended for multi-step flows where users can navigate back to a previous step without dismissing the entire modal.
+Add a `.link-previous` anchor before the modal title to display a navigation link above it, aligned to the leading edge of the modal. It is intended for multi-step flows where users can navigate back to a previous step without dismissing the entire modal.
 
 <Example buttonLabel="modal dialog previous link" code={`<dialog id="modalDialogPreviousLink" class="modal-base modal-fullscreen-dialog" aria-labelledby="modalDialogPreviousLinkTitle" closedby="any">
     <div class="modal-header">
-      <div class="d-flex flex-column gap-scaled-medium">
-        <a href="#" class="link link-chevron link-previous">Previous</a>
-        <h3 id="modalDialogPreviousLinkTitle" class="modal-title">Modal title</h3>
-      </div>
+      <a href="#" class="link link-chevron link-previous">Previous</a>
+      <h3 id="modalDialogPreviousLinkTitle" class="modal-title">Modal title</h3>
       <button type="button" class="btn btn-close" commandfor="modalDialogPreviousLink" command="close">
         <span class="visually-hidden">Close</span>
       </button>
