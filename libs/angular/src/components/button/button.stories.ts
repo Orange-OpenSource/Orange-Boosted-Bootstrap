@@ -1,8 +1,10 @@
 import { fn } from 'storybook/test';
 import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
 
+import { IconComponent } from '../icon/icon.component';
 import { ButtonComponent } from './button.component';
 import { Variant } from '@ouds/core';
+import { functionalStatusWarning } from '@ouds/icons';
 
 type StoryArgs = {
     variant?: Variant;
@@ -22,7 +24,7 @@ const meta: Meta<ButtonComponent> = {
     component: ButtonComponent,
     decorators: [
         moduleMetadata({
-            imports: [ButtonComponent],
+            imports: [ButtonComponent, IconComponent],
         }),
     ],
     argTypes: {
@@ -137,11 +139,13 @@ export const Negative: Story = {
 export const WithIcon: Story = {
     args: {
         ...args,
+        label: 'Button with icon',
         isIconOnly: false,
     },
     render: (storyArgs) => ({
         props: {
             ...storyArgs,
+            warningIcon: functionalStatusWarning,
             onClicked: fn(),
         },
         template: `<orange-button
@@ -154,7 +158,7 @@ export const WithIcon: Story = {
             [isIconOnly]="isIconOnly"
             (clicked)="onClicked()"
         >
-            <span icon>⭐</span>
+            <span icon><orange-icon [icon]="warningIcon"></orange-icon></span>
         </orange-button>`,
     }),
 };
@@ -162,11 +166,14 @@ export const WithIcon: Story = {
 export const IconOnly: Story = {
     args: {
         ...args,
+        // The label is kept for assistive technologies (visually hidden).
+        label: 'Warning',
         isIconOnly: true,
     },
     render: (storyArgs) => ({
         props: {
             ...storyArgs,
+            warningIcon: functionalStatusWarning,
             onClicked: fn(),
         },
         template: `<orange-button
@@ -179,7 +186,7 @@ export const IconOnly: Story = {
             [isIconOnly]="isIconOnly"
             (clicked)="onClicked()"
         >
-            <span icon>⭐</span>
+            <span icon><orange-icon [icon]="warningIcon"></orange-icon></span>
         </orange-button>`,
     }),
 };

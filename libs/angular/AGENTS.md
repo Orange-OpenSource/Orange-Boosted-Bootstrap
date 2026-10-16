@@ -4,7 +4,7 @@ Scope: everything under `libs/angular/`. The root [`AGENTS.md`](../../AGENTS.md)
 
 ## Layout
 
-- `src/components/<name>/` — one kebab-case folder per component or feature, holding `<name>.component.ts`, its template and styles (`<name>.component.html`, `<name>.component.scss`), a co-located `<name>.component.spec.ts`, `<name>.stories.ts`, and an `index.ts` barrel (e.g. `src/components/button/`). `src/components/ouds-provider/` holds `OudsProviderComponent` and `OudsService` (with `OUDS_CONFIG` and `provideOuds()`), each with its spec.
+- `src/components/<name>/` — one kebab-case folder per component or feature, holding `<name>.component.ts`, its template and styles (`<name>.component.html`, `<name>.component.scss`), a co-located `<name>.component.spec.ts`, `<name>.stories.ts`, and an `index.ts` barrel (e.g. `src/components/button/`). `src/components/icon/` holds `IconComponent` (`orange-icon`, renders the data of `@ouds/icons`; its spec and story import `@ouds/icons`, mapped to its sources in `jest.config.ts`; it is in `dependencies` and in `allowedNonPeerDependencies` of `ng-package.json` so it is installed with the library, but the library source never imports it). `src/components/ouds-provider/` holds `OudsProviderComponent` and `OudsService` (with `OUDS_CONFIG` and `provideOuds()`), each with its spec.
 - `src/index.ts` — barrel file and the package's only public API (ng-packagr `entryFile`). It re-exports `src/components/index.ts`; add each new component folder's `index.ts` to that barrel.
 - `src/test-setup.ts` — Jest zone environment (`setupZoneTestEnv`).
 - `ng-package.json` — ng-packagr config; output goes to `dist/libs/angular` in Angular Package Format. `allowedNonPeerDependencies` lists `@ouds/core`, the only runtime dependency besides `tslib`.
@@ -52,3 +52,7 @@ This library stays on ESLint on purpose: Oxlint has no parser for Angular templa
 - Stories live next to the components and render in [`apps/angular-storybook`](../../apps/angular-storybook/AGENTS.md) (`npm run storybook:angular:serve`; run `npm run angular:build` first).
 - There are no RAV-specific agent skills; the skills in `.github/skills/` cover OUDS Web only.
 - Record notable changes in [`CHANGELOG.md`](./CHANGELOG.md) (Keep a Changelog). Releases go through Nx release (`nx-release-publish`, git-tag versioning).
+
+## Known issues
+
+- `IconComponent` is `OnPush` and reads the brand from `OudsService`, whose fields are plain properties set by `OudsProviderComponent` when its inputs change. An icon that already rendered does not redraw when only the provider's `brand` changes later; recreate the icon, or convert `OudsService` to signals, which would fix this.

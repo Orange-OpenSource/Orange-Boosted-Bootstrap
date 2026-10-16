@@ -7,8 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.1] - Nx monorepo integration
+### Added
 
-### Changed
-
-- Reset to a minimal standalone `HelloWorldComponent` while integrating this library into the Orange-Boosted-Bootstrap Nx monorepo (working `lint`/`test`/`build` pipeline via ESLint, Jest, and ng-packagr). Prior implementation history predates this changelog and was maintained in a separate repository.
+- `orange-icon` (`IconComponent`): renders an icon from `@ouds/icons` as an inline `<svg>` with the OUDS Web icon markup (size classes, `aria-hidden`, optional visually hidden `label`), using the brand of `OudsService`.

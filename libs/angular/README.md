@@ -4,12 +4,12 @@ Angular component library for OUDS Web (Orange Unified Design System), part of t
 
 ## Status
 
-🚧 Early stage — this library currently ships a standalone `ButtonComponent` (`orange-button`) and an `OudsProviderComponent` (`orange-ouds-provider`: theme, brand, and rounded-corner settings, also available through `OudsService` and `provideOuds()`). See [ARCHITECTURE.md](./ARCHITECTURE.md) for conventions and the styling approach.
+🚧 Early stage — this library currently ships a standalone `ButtonComponent` (`orange-button`), an `IconComponent` (`orange-icon`), and an `OudsProviderComponent` (`orange-ouds-provider`: theme, brand, and rounded-corner settings, also available through `OudsService` and `provideOuds()`). See [ARCHITECTURE.md](./ARCHITECTURE.md) for conventions and the styling approach.
 
 ## Requirements
 
 - `@angular/core` and `@angular/common` `^22.0.0` (peer dependencies).
-- `@ouds/core` (and `tslib`) are regular dependencies and are installed with the package.
+- `@ouds/core`, `@ouds/icons` (and `tslib`) are regular dependencies and are installed with the package.
 
 ## Installation
 
@@ -39,11 +39,23 @@ export class MyComponent {
 
 ## API
 
-Exports: `ButtonComponent`, `OudsProviderComponent`, `OudsService`, `provideOuds()`, the `OUDS_CONFIG` token, and the types `OudsConfig`, `Brand`, and `Theme`. All components are standalone and use `OnPush` change detection.
+Exports: `ButtonComponent`, `IconComponent`, `OudsProviderComponent`, `OudsService`, `provideOuds()`, the `OUDS_CONFIG` token, and the types `OudsConfig`, `Brand`, and `Theme`. All components are standalone and use `OnPush` change detection.
 
 - **`orange-ouds-provider`** — inputs `theme` (`'light' | 'dark'`, default `'light'`), `brand` (`'orange' | 'orange-compact' | 'sosh'`, default `'orange'`), `roundedButtons`, `roundedAlerts`, `roundedInputs` (all default `false`). It wraps its content in a `div` with `data-bs-theme`, `data-bs-brand`, and the `use-rounded-corner-*` classes, and loads the brand stylesheet.
 - **`provideOuds(config)`** — registers an `OudsConfig` (same settings) for `OudsService` and, at application start, adds the `use-rounded-corner-*` classes to `document.body`.
 - **`orange-button`** — inputs `label`, `variant` (`'default' | 'strong' | 'brand' | 'minimal' | 'negative'`), `type`, `isDisabled`, `isIconOnly`, `isLoading`, `loadingLabel`, `isOnColoredBg`, `defaultAriaLabel`, `formId`, and `className`; the `clicked` output; and content projection (an `[icon]` slot and a default slot). While `isLoading` is set the button is disabled (no `clicked` is emitted) and a loader and a status message are rendered.
+
+- **`orange-icon`** — inputs `icon` (icon data from [`@ouds/icons`](../icons/README.md)), `size` (an OUDS Web icon size such as `'bm-medium'` or `'decorative-large'`; without it the size comes from the surrounding CSS), `label`, and `className`. It renders the inline `<svg>` of the OUDS Web icons (`fill="currentColor"`, `aria-hidden="true"`), so it is decorative by default; `label` adds a `visually-hidden` text next to it for a meaningful icon. The drawing follows the brand of the `OudsService` (set by `orange-ouds-provider` or `provideOuds()`). Because the component is `OnPush`, a brand change of the provider after the icon rendered is not picked up.
+
+```ts
+import { IconComponent } from '@ouds/angular';
+import { functionalStatusWarning } from '@ouds/icons';
+
+// in a standalone component: imports: [IconComponent], warning = functionalStatusWarning
+// template: <orange-icon [icon]="warning" size="bm-medium" label="Warning" />
+```
+
+`@ouds/icons` is installed with the library; import only the icons you use, so the others stay out of your bundle. With pnpm (strict mode) or Yarn PnP, also add `@ouds/icons` to your own `package.json`, because your application imports it directly.
 
 ## Styling
 

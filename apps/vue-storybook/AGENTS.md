@@ -23,6 +23,7 @@ Scope: everything under `apps/vue-storybook/`. The root [`AGENTS.md`](../../AGEN
 
 - Write stories next to the component in `libs/vue/src/components/<component>/<component>.stories.ts`, not in this app.
 - Storybook 10 bundles the essentials (controls, actions, viewport, interactions) into `storybook` itself. Don't add `@storybook/addon-essentials`, `@storybook/addon-interactions`, or `@storybook/addons` (7.x/8.x packages that break `npm install`). Import manager APIs from `storybook/manager-api`.
+- The global decorator reads the toolbar values through `reactive(context.globals)` inside `computed` values. Storybook's Vue renderer creates the decorated story once and afterwards only mutates the reactive globals, so values read once in `setup()` would keep the first brand, theme, and rounded-corner setting.
 - Autodocs is enabled through `tags: ['autodocs']` in `preview.ts`; Storybook 10 no longer supports `docs.autodocs` in `main.ts`.
 - Keep every `storybook`/`@storybook/*` package on the same exact version (currently `10.6.1`) in the root `package.json`.
 - Existing files use 4-space indentation and semicolons, unlike the libraries. Match the file you are editing.

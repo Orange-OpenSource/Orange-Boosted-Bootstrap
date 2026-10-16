@@ -5,6 +5,7 @@ import { OudsProvider } from '@ouds/vue';
 import type { Brand, Theme } from '@ouds/vue';
 import type { Decorator, Preview } from '@storybook/vue3';
 import { setup } from '@storybook/vue3';
+import { computed, reactive, watchEffect } from 'vue';
 
 setup((app) => {
     app.component('OudsProvider', OudsProvider);
@@ -62,21 +63,37 @@ export const globalTypes: Preview['globalTypes'] = {
 };
 
 export const decorators: Decorator[] = [
-    (story, context): any => {
-        const rounded = context.globals['roundedCorners'] === 'on';
-        const theme = (context.globals['theme'] as Theme) ?? 'light';
-        const brand = (context.globals['brand'] as Brand) ?? 'orange';
+    (story, context): any => ({
+        components: { story, OudsProvider },
+        setup() {
+            // Storybook's Vue renderer creates this component once and only updates the (reactive)
+            // globals afterwards, so the toolbar values must be read through `reactive(globals)`
+            // inside computed values; reading them once here would freeze the first brand and theme.
+            const globals = reactive(context.globals);
+            const rounded = computed(() => globals['roundedCorners'] === 'on');
+            const theme = computed(
+                () => (globals['theme'] as Theme) ?? 'light',
+            );
+            const brand = computed(
+                () => (globals['brand'] as Brand) ?? 'orange',
+            );
 
-        document.documentElement.setAttribute('data-bs-theme', theme);
-        document.documentElement.setAttribute('data-bs-brand', brand);
-        document.body.style.backgroundColor = theme === 'dark' ? '#000' : '';
+            watchEffect(() => {
+                document.documentElement.setAttribute(
+                    'data-bs-theme',
+                    theme.value,
+                );
+                document.documentElement.setAttribute(
+                    'data-bs-brand',
+                    brand.value,
+                );
+                document.body.style.backgroundColor =
+                    theme.value === 'dark' ? '#000' : '';
+            });
 
-        return {
-            components: { story, OudsProvider },
-            setup() {
-                return { rounded, theme, brand };
-            },
-            template: `
+            return { rounded, theme, brand };
+        },
+        template: `
         <OudsProvider
           :theme="theme"
           :roundedButtons="rounded"
@@ -87,8 +104,7 @@ export const decorators: Decorator[] = [
           <story />
         </OudsProvider>
       `,
-        };
-    },
+    }),
 ];
 
 export const parameters: Preview['parameters'] = {

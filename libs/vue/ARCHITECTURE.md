@@ -4,7 +4,7 @@
 
 `@ouds/vue` is one of the three "RAV" (React / Angular / Vue) framework libraries in this monorepo, alongside [`@ouds/react`](../react/ARCHITECTURE.md) and [`@ouds/angular`](../angular/ARCHITECTURE.md). It originated in a separate project (`ouds-rav`) and was integrated into this monorepo's Nx workspace with its own independent versioning, separate from `libs/web`'s own version (`@ouds/web-common`, currently `1.5.0`).
 
-The library is currently at an early, deliberately minimal stage: it ships a `Button` and an `OudsProvider` (which loads the brand CSS through `@ouds/core`'s `loadBrandCSS` and provides the theme/brand settings with `provide`/`inject`). More OUDS components will follow; see [CHANGELOG.md](./CHANGELOG.md) for the history.
+The library is currently at an early, deliberately minimal stage: it ships a `Button`, an `Icon` (props extend `CoreIconProps`; it renders the inline `<svg>` of an `@ouds/icons` icon with the OUDS Web icon markup), and an `OudsProvider` (which loads the brand CSS through `@ouds/core`'s `loadBrandCSS` and provides the theme/brand settings with `provide`/`inject`). More OUDS components will follow; see [CHANGELOG.md](./CHANGELOG.md) for the history.
 
 ## Isolation from `libs/web`
 
