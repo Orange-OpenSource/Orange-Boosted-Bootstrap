@@ -97,6 +97,7 @@
   height: 100%;
   margin: 0 !important; // stylelint-disable-line declaration-no-important
   background: var(--#{$prefix}color-overlay-backdrop);
+  backdrop-filter: blur(8px);
   border: 0;
   opacity: 1;
 }

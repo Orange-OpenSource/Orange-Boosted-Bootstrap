@@ -96,7 +96,8 @@
   position: fixed;
   z-index: 2000; // Make sure to be over all components showcased in the documentation
   cursor: auto; // Needed because of [role="button"] in Algolia search modal. Remove once https://github.com/algolia/docsearch/issues/1370 is tackled.
-  backdrop-filter: none;
+  background-color: var(--#{$prefix}color-overlay-backdrop);
+  backdrop-filter: blur(8px);
 }
 
 .DocSearch-Modal {

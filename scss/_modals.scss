@@ -221,6 +221,7 @@ $modal-transition-dimension: -3rem !default;
 
 .modal-header {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
   padding: var(--#{$prefix}modal-padding-top) var(--#{$prefix}space-scaled-3xlarge) 0 var(--#{$prefix}modal-padding-inline);
@@ -238,7 +239,10 @@ $modal-transition-dimension: -3rem !default;
   @include get-font-size("heading-medium");
 }
 
-:is(.modal-icon-positive, .modal-icon-negative, .modal-icon-info, .modal-icon-warning) {
+.modal-icon-positive,
+.modal-icon-negative,
+.modal-icon-info,
+.modal-icon-warning {
   position: relative;
   width: var(--#{$prefix}icon-small-with-heading-small);
   height: var(--#{$prefix}icon-small-with-heading-small);
@@ -290,7 +294,7 @@ $modal-transition-dimension: -3rem !default;
   padding: var(--#{$prefix}modal-body-padding-top) var(--#{$prefix}modal-padding-inline) calc(var(--#{$prefix}modal-body-footer-padding-bottom) + var(--#{$prefix}modal-padding-bottom));
   overflow-y: auto;
 
-  &:not(:has(.modal-footer)) > :last-child {
+  > :last-child {
     margin-block-end: 0;
   }
 
@@ -323,7 +327,7 @@ $modal-transition-dimension: -3rem !default;
   padding-inline: var(--#{$prefix}modal-padding-inline);
   background-color: $ouds-color-overlay-modal-sheet;
 
-  > *:first-child:last-child {
+  > :only-child {
     margin-inline: auto;
   }
 
