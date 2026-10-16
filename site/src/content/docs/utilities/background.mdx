@@ -62,6 +62,7 @@ Following are the equivalent Bootstrap background that you shouldn’t be using.
   colorPrefix="bootstrap/bg/"
   basicClasses={[getData('theme-colors').map((themeColor) => [`${themeColor.name}`, `${themeColor.name}-subtle`]).flat(), 'body-secondary', 'body-tertiary', 'body', 'black', 'white', 'transparent'].flat()}
   getUsage={(colorName) => `.bg-${colorName}`}
+  multiTheme={false}
   displayRecommendedTheme={false} />
 
 </BootstrapCompatibility>
