@@ -4,7 +4,7 @@ Scope: everything under `libs/vue/`. The root [`AGENTS.md`](../../AGENTS.md) sti
 
 ## Layout
 
-- `src/components/<name>/` — one kebab-case folder per component: `<name>.component.vue`, `<name>.model.ts` (props/emits types, extending the `Core<Name>Props` from `@ouds/core`), `<name>.spec.ts`, and `<name>.stories.ts` (e.g. `src/components/button/`). `ouds-provider/` also holds `use-ouds.ts` (the `useOuds()` composable) next to its model, which defines the injection key and defaults.
+- `src/components/<name>/` — one kebab-case folder per component: `<name>.component.vue`, `<name>.model.ts` (props/emits types, extending the `Core<Name>Props` from `@ouds/core`), `<name>.spec.ts`, and `<name>.stories.ts` (e.g. `src/components/button/`). `icon/` renders the data of `@ouds/icons` (its specs and stories import `@ouds/icons`, which is in `dependencies` so it is installed with the library, but the library source never imports it). `ouds-provider/` also holds `use-ouds.ts` (the `useOuds()` composable) next to its model, which defines the injection key and defaults.
 - `src/index.ts` — barrel file and the package's only public API. Re-export every new component here as a named export (`export { default as Button } from './components/button/button.component.vue'`), plus its types (`export type { ButtonProps }`). It also re-exports the `Brand` and `Theme` types from `@ouds/core`, which the Storybook preview uses.
 - `vite.config.ts` — Vite library build (ES + CJS, `.d.ts` via `vite-plugin-dts`, `emptyOutDir`), `resolve.tsconfigPaths: true` (resolves the `@ouds/*` paths of `tsconfig.base.json`, so tests and the Storybook app read `@ouds/core` from its sources), and the Vitest `test` block, including coverage.
 - `.oxlintrc.json` — Oxlint config for this lib; extends the root `oxlint.base.json`.
@@ -30,7 +30,7 @@ Scope: everything under `libs/vue/`. The root [`AGENTS.md`](../../AGENTS.md) sti
 
 - Every component gets a co-located `*.spec.ts` file using `mount` from `@vue/test-utils` (see `button.spec.ts`). Mock `@ouds/core` with `vi.mock` when a component calls into it (see `ouds-provider.spec.ts`).
 - Coverage uses the V8 provider and is limited to `src/**/*.{ts,vue}`, excluding specs and `*.stories.ts`. A **100% threshold** (statements, branches, functions, lines) is enforced in `vite.config.ts`.
-- Stories use args only (no custom `render`/template) and `fn()` from `storybook/test` for emits: `onClick: fn()` logs the `click` emit in the Actions panel. Don't import `@storybook/addon-actions`; it doesn't exist in Storybook 10.
+- Stories use args only (no custom `render`/template), except one that combines two components (such as `Icon` inside `Button`), which uses a `render` function with `h()` so no template has to be compiled, and `fn()` from `storybook/test` for emits: `onClick: fn()` logs the `click` emit in the Actions panel. Don't import `@storybook/addon-actions`; it doesn't exist in Storybook 10.
 - Do not switch the `test` target back to `@nx/vitest:test`: `@nx/vitest@23.2.1` only supports Vitest 3–4.
 
 ## Boundaries

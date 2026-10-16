@@ -1,0 +1,19 @@
+<svg
+    [attr.class]="svgClass"
+    width="1rem"
+    height="1rem"
+    [attr.viewBox]="icon.viewBox"
+    fill="currentColor"
+    aria-hidden="true"
+>
+    @for (path of paths; track $index) {
+        <path
+            [attr.d]="path.d"
+            [attr.fill]="path.fill"
+            [attr.fill-rule]="path.fillRule"
+        />
+    }
+</svg>
+@if (label) {
+    <span class="visually-hidden">{{ label }}</span>
+}

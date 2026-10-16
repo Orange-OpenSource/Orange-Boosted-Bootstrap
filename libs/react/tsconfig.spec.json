@@ -20,6 +20,8 @@
     "src/**/*.spec.js",
     "src/**/*.test.jsx",
     "src/**/*.spec.jsx",
+    "src/**/*.stories.ts",
+    "src/**/*.stories.tsx",
     "src/**/*.d.ts"
   ]
 }

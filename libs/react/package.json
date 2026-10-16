@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "@ouds/core": "^0.0.1",
+    "@ouds/icons": "^0.0.1",
     "classnames": "2.5.1"
   },
   "peerDependencies": {

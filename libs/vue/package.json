@@ -2,7 +2,8 @@
   "name": "@ouds/vue",
   "version": "0.0.1",
   "dependencies": {
-    "@ouds/core": "^0.0.1"
+    "@ouds/core": "^0.0.1",
+    "@ouds/icons": "^0.0.1"
   },
   "peerDependencies": {
     "vue": "^3.5.0"

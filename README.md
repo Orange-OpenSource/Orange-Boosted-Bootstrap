@@ -18,20 +18,21 @@ libs/
       sosh/
       migrate/        @ouds/web-migrate CLI
   core/               @ouds/core — framework-agnostic types and utilities shared by angular/react/vue
-  angular/            @ouds/angular — Angular component library (Button, OudsProvider)
-  react/              @ouds/react — React component library (Button, OudsProvider)
-  vue/                @ouds/vue — Vue 3 component library (Button, OudsProvider)
+  icons/              @ouds/icons — icon data (one export per icon, drawings per brand), generated from the OUDS Web sprites
+  angular/            @ouds/angular — Angular component library (Button, Icon, OudsProvider)
+  react/              @ouds/react — React component library (Button, Icon, OudsProvider)
+  vue/                @ouds/vue — Vue 3 component library (Button, Icon, OudsProvider)
 apps/
   react-storybook/    Storybook for @ouds/react
   vue-storybook/      Storybook for @ouds/vue
   angular-storybook/  Storybook for @ouds/angular
 ```
 
-The React, Angular, and Vue ("RAV") libraries are versioned and published independently of OUDS Web. They are at an early stage: each ships a `Button` and an `OudsProvider` (theme, brand, and rounded-corner settings). See each library's `README.md`, `ARCHITECTURE.md`, and `AGENTS.md`, and the repository-level [`ARCHITECTURE.md`](ARCHITECTURE.md) for the project graph, dependency rules, build pipeline, and release model.
+The React, Angular, and Vue ("RAV") libraries are versioned and published independently of OUDS Web. They are at an early stage: each ships a `Button`, an `Icon`, and an `OudsProvider` (theme, brand, and rounded-corner settings). See each library's `README.md`, `ARCHITECTURE.md`, and `AGENTS.md`, and the repository-level [`ARCHITECTURE.md`](ARCHITECTURE.md) for the project graph, dependency rules, build pipeline, and release model.
 
 ## Getting started
 
-Use Node.js 24.15.0 or newer (see `.nvmrc`). Run `npm install` at the repository root — this installs dependencies for every workspace (`libs/web`, `libs/web/packages/*`, `libs/core`, `libs/angular`, `libs/react`, `libs/vue`).
+Use Node.js 24.15.0 or newer (see `.nvmrc`). Run `npm install` at the repository root — this installs dependencies for every workspace (`libs/web`, `libs/web/packages/*`, `libs/core`, `libs/icons`, `libs/angular`, `libs/react`, `libs/vue`).
 
 All of the familiar npm scripts still work from the repository root; they delegate to the relevant workspace under the hood. For example:
 
@@ -62,14 +63,14 @@ CI runs `lint:all`, `test:all`, and `build:all`; the OUDS Web suites run in thei
 | --------------------------- | ----------------------------------------------- | --------------------------------------- | ----------------------- |
 | `libs/web` (`@ouds/web-*`)  | ESLint 9 (`libs/web/eslint.config.mjs`), Stylelint | Prettier (docs site)                    | Karma/Jasmine, Vitest 4 |
 | `libs/angular`              | ESLint 9 (extends root `eslint.config.mjs`)     | —                                       | Jest (100% coverage)    |
-| `libs/core`, `libs/react`, `libs/vue` | Oxlint via `@nx/oxlint` (extends `oxlint.base.json`) | —                                  | Vitest 5 + V8 coverage (100% threshold for react and vue) |
+| `libs/core`, `libs/icons`, `libs/react`, `libs/vue` | Oxlint via `@nx/oxlint` (extends `oxlint.base.json`) | —                                  | Vitest 5 + V8 coverage (100% threshold for react and vue) |
 | `apps/*-storybook`          | Oxlint via `@nx/oxlint` (extends `oxlint.base.json`) | —                                  | —                       |
 
 `libs/angular` stays on ESLint because Oxlint has no parser for Angular templates, HTML, or JSON rules; `apps/angular-storybook` holds no templates, so it uses Oxlint. Module-boundary `depConstraints` are duplicated in `oxlint.base.json`, `eslint.config.mjs`, and `libs/web/eslint.config.mjs`; keep them in sync.
 
 ## Task orchestration
 
-This monorepo uses [NX](https://nx.dev) to orchestrate and cache tasks across workspaces. See `nx.json` for target configuration; the `@nx/oxlint` plugin infers the `lint` target for `@ouds/core`, `@ouds/react`, `@ouds/vue`, and the three Storybook apps. `npx nx show projects` lists the 12 Nx projects.
+This monorepo uses [NX](https://nx.dev) to orchestrate and cache tasks across workspaces. See `nx.json` for target configuration; the `@nx/oxlint` plugin infers the `lint` target for `@ouds/core`, `@ouds/react`, `@ouds/vue`, and the three Storybook apps. `npx nx show projects` lists the 13 Nx projects.
 
 ## License
 
