@@ -1,0 +1,37 @@
+{
+  "name": "@ouds/vue",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/vue/src",
+  "projectType": "library",
+  "tags": ["lib:vue"],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "outputPath": "dist/libs/vue"
+      },
+      "dependsOn": ["^build"]
+    },
+    "lint-templates": {
+      "executor": "nx:run-commands",
+      "cache": true,
+      "inputs": ["default"],
+      "options": {
+        "command": "eslint --max-warnings=0 \"src/**/*.vue\"",
+        "cwd": "libs/vue"
+      }
+    },
+    "lint": {
+      "dependsOn": ["lint-templates"]
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "command": "vitest run --coverage",
+        "cwd": "libs/vue"
+      }
+    }
+  }
+}

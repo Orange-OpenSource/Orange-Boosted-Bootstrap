@@ -1,0 +1,5 @@
+{
+  "sprite": "../web/site/static/{brand}/docs/[version]/assets/img/ouds-web-sprite.svg",
+  "brands": ["orange", "orange-compact", "sosh"],
+  "icons": ["functional-status-warning"]
+}
