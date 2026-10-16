@@ -224,7 +224,7 @@ $modal-transition-dimension: -3rem !default;
   flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
-  padding: var(--#{$prefix}modal-padding-top) var(--#{$prefix}space-scaled-3xlarge) 0 var(--#{$prefix}modal-padding-inline);
+  padding: var(--#{$prefix}modal-padding-top) calc(var(--#{$prefix}space-scaled-3xlarge) + var(--#{$prefix}modal-padding-inline)) var(--#{$prefix}modal-body-padding-top) var(--#{$prefix}modal-padding-inline);
   background-color: $ouds-color-overlay-modal-sheet;
 
   .btn-close {
@@ -291,7 +291,7 @@ $modal-transition-dimension: -3rem !default;
 
 .modal-body {
   flex-grow: 1;
-  padding: var(--#{$prefix}modal-body-padding-top) var(--#{$prefix}modal-padding-inline) calc(var(--#{$prefix}modal-body-footer-padding-bottom) + var(--#{$prefix}modal-padding-bottom));
+  padding: 0 var(--#{$prefix}modal-padding-inline) calc(var(--#{$prefix}modal-body-footer-padding-bottom) + var(--#{$prefix}modal-padding-bottom));
   overflow-y: auto;
 
   > :last-child {
