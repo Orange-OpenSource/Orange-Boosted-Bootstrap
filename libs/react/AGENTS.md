@@ -4,9 +4,10 @@ Scope: everything under `libs/react/`. The root [`AGENTS.md`](../../AGENTS.md) s
 
 ## Layout
 
-- `src/components/<name>/` — one kebab-case folder per component, holding `<name>.component.tsx`, `<name>.model.ts` (props type, extending the `Core<Name>Props` from `@ouds/core`), a co-located `<name>.spec.tsx`, and `<name>.stories.tsx` (e.g. `src/components/button/`). Today: `button/` and `ouds-provider/` (which also exports the `useOuds` hook and its props/context types; no separate model file).
+- `src/components/<name>/` — one kebab-case folder per component, holding `<name>.component.tsx`, `<name>.model.ts` (props type, extending the `Core<Name>Props` from `@ouds/core`), a co-located `<name>.spec.tsx`, and `<name>.stories.tsx` (e.g. `src/components/button/`). Today: `button/`, `icon/` (renders the data of `@ouds/icons`; its specs and stories import `@ouds/icons`, which is in `dependencies` so it is installed with the library, but the library source never imports it), and `ouds-provider/` (which also exports the `useOuds` hook and its props/context types; no separate model file).
 - `src/components/index.ts` → `src/index.ts` — barrel files and the package's only public API. Re-export every new component and its model (`export * from './<name>/<name>.component'` and `'./<name>/<name>.model'`) through them. `src/index.ts` also re-exports the `Brand` and `Theme` types from `@ouds/core`, which the Storybook preview uses.
 - `vite.config.ts` — Vite library build (ESM + CJS + `.d.ts` via `vite-plugin-dts`), `resolve.tsconfigPaths: true` (resolves the `@ouds/*` paths of `tsconfig.base.json`, so tests and the Storybook app read `@ouds/core` from its sources), and the Vitest `test` block, including coverage.
+- `tsconfig.lib.json` excludes the stories, so `tsconfig.spec.json` includes `*.stories.ts(x)` as well: Vite's `resolve.tsconfigPaths` only applies the `@ouds/*` paths to files covered by a tsconfig, and a story that imports `@ouds/icons` would not build in Storybook otherwise.
 - `.oxlintrc.json` — Oxlint config for this lib; extends the root `oxlint.base.json`.
 - `project.json` — Nx targets `build` and `test`; `lint` is inferred by `@nx/oxlint` and intentionally not declared.
 

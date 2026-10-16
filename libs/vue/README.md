@@ -4,12 +4,12 @@ Vue 3 component library for OUDS Web (Orange Unified Design System), part of the
 
 ## Status
 
-🚧 Early stage — this library currently ships a `Button` component and an `OudsProvider` (theme, brand, and rounded-corner settings, exposed to descendants through `useOuds()`). See [ARCHITECTURE.md](./ARCHITECTURE.md) for conventions and the styling approach.
+🚧 Early stage — this library currently ships a `Button` component, an `Icon` component, and an `OudsProvider` (theme, brand, and rounded-corner settings, exposed to descendants through `useOuds()`). See [ARCHITECTURE.md](./ARCHITECTURE.md) for conventions and the styling approach.
 
 ## Requirements
 
 - `vue` `^3.5.0` (peer dependency).
-- `@ouds/core` is a regular dependency and is installed with the package.
+- `@ouds/core` and `@ouds/icons` are regular dependencies and are installed with the package.
 
 ## Installation
 
@@ -33,10 +33,25 @@ import { Button, OudsProvider } from '@ouds/vue';
 
 ## API
 
-Exports: `Button`, `OudsProvider`, the `useOuds()` composable, and the types `ButtonProps`, `ButtonEmits`, `OudsProviderProps`, `OudsContext`, `Brand`, and `Theme`.
+Exports: `Button`, `Icon`, `OudsProvider`, the `useOuds()` composable, and the types `ButtonProps`, `ButtonEmits`, `IconProps`, `OudsProviderProps`, `OudsContext`, `Brand`, and `Theme`.
 
 - **`OudsProvider`** — props `theme` (`'light' | 'dark'`, default `'light'`), `brand` (`'orange' | 'orange-compact' | 'sosh'`, default `'orange'`), `roundedButtons`, `roundedAlerts`, `roundedInputs` (all default `false`), and a default slot. It wraps the slot in a `div` with `data-bs-theme`, `data-bs-brand`, and the `use-rounded-corner-*` classes, and loads the brand stylesheet. `useOuds()` returns the settings of the closest provider (or the defaults).
 - **`Button`** — props `label`, `variant` (`'default' | 'strong' | 'brand' | 'minimal' | 'negative'`), `type`, `isDisabled`, `isIconOnly`, `isLoading`, `loadingLabel`, `isOnColoredBg`, `defaultAriaLabel`, `formId`, and `class`; the `click` event; and the `icon` and default slots. While `isLoading` is set the button is disabled (no `click` is emitted) and a loader and a status message are rendered.
+
+- **`Icon`** — props `icon` (icon data from [`@ouds/icons`](../icons/README.md)), `size` (an OUDS Web icon size such as `'bm-medium'` or `'decorative-large'`; without it the size comes from the surrounding CSS), `label`, and `class`. It renders the inline `<svg>` of the OUDS Web icons (`fill="currentColor"`, `aria-hidden="true"`), so it is decorative by default; `label` adds a `visually-hidden` text next to it for a meaningful icon. The drawing follows the brand of the closest `OudsProvider` (Orange when there is none).
+
+```vue
+<script setup lang="ts">
+import { Icon } from '@ouds/vue';
+import { functionalStatusWarning } from '@ouds/icons';
+</script>
+
+<template>
+  <Icon :icon="functionalStatusWarning" size="bm-medium" label="Warning" />
+</template>
+```
+
+`@ouds/icons` is installed with the library; import only the icons you use, so the others stay out of your bundle. With pnpm (strict mode) or Yarn PnP, also add `@ouds/icons` to your own `package.json`, because your application imports it directly.
 
 ## Styling
 

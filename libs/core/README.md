@@ -6,8 +6,9 @@ Framework-agnostic types and utilities for OUDS (Orange Unified Design System), 
 
 🚧 Early stage. Current public API:
 
-- **Types**: `Brand`, `Theme`, `SizeProp`, `Variant`, `CoreButtonProps`.
+- **Types**: `Brand`, `Theme`, `SizeProp`, `Variant`, `CoreButtonProps`, and for icons `OudsIcon`, `IconPath`, `IconSize`, `CoreIconProps`.
 - **Utilities**: `loadBrandCSS(brand)` — injects (or swaps) a single `<link id="ouds-brand-css">` pointing at the OUDS Web brand stylesheet on jsDelivr. The brand versions are inlined at build time from `@ouds/web-orange`, `@ouds/web-orange-compact`, and `@ouds/web-sosh`. It does nothing when `document` is unavailable (SSR).
+- **Icon helpers**: `getIconPaths(icon, brand)` returns the paths of an icon for a brand (Orange Compact falls back to Orange, and any brand falls back to another one when an icon has no drawing for it), and `getIconSizeClass(size)` returns the OUDS Web class of an icon size (`bm-medium` becomes `bm-medium-icon`). The icon data itself lives in [`@ouds/icons`](../icons/README.md).
 
 ## Installation
 

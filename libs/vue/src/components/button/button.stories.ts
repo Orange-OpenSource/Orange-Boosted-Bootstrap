@@ -1,6 +1,9 @@
+import { functionalStatusWarning } from '@ouds/icons';
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { fn } from 'storybook/test';
+import { h } from 'vue';
 
+import Icon from '../icon/icon.component.vue';
 import Button from './button.component.vue';
 
 const meta: Meta<typeof Button> = {
@@ -89,6 +92,33 @@ export const Minimal: Story = {
 
 export const Negative: Story = {
     args: { ...args, variant: 'negative', label: 'Negative Button' },
+};
+
+// The next two stories pass an `Icon` to the `icon` slot, so they use a render function (with `h`,
+// no template to compile) instead of args only.
+export const WithIcon: Story = {
+    args: { ...args, label: 'Button with icon' },
+    render: (args) => ({
+        setup: () => () =>
+            h(
+                Button,
+                { ...args },
+                { icon: () => h(Icon, { icon: functionalStatusWarning }) },
+            ),
+    }),
+};
+
+export const IconOnly: Story = {
+    // The label is kept for assistive technologies (visually hidden).
+    args: { ...args, label: 'Warning', isIconOnly: true },
+    render: (args) => ({
+        setup: () => () =>
+            h(
+                Button,
+                { ...args },
+                { icon: () => h(Icon, { icon: functionalStatusWarning }) },
+            ),
+    }),
 };
 
 export const Loading: Story = {

@@ -21,6 +21,7 @@
     "paths": {
       "@ouds/angular": ["./libs/angular/src/index.ts"],
       "@ouds/core": ["./libs/core/src/index.ts"],
+      "@ouds/icons": ["./libs/icons/src/index.ts"],
       "@ouds/react": ["./libs/react/src/index.ts"],
       "@ouds/vue": ["./libs/vue/src/index.ts"]
     }

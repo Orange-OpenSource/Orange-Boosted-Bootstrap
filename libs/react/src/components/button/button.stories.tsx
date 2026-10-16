@@ -1,7 +1,9 @@
+import { functionalStatusWarning } from '@ouds/icons';
 import { Meta } from '@storybook/react';
 import { JSX } from 'react';
 import { fn } from 'storybook/test';
 
+import { Icon } from '../icon/icon.component';
 import { ButtonProps } from './button.model';
 import { Button } from './button.component';
 
@@ -98,6 +100,30 @@ export const Minimal = {
 
 export const Negative = {
     args: { ...args, variant: 'negative' as const, label: 'Negative Button' },
+    render: function Render(args: ButtonProps): JSX.Element {
+        return <Button {...args} />;
+    },
+};
+
+export const WithIcon = {
+    args: {
+        ...args,
+        label: 'Button with icon',
+        icon: <Icon icon={functionalStatusWarning} />,
+    },
+    render: function Render(args: ButtonProps): JSX.Element {
+        return <Button {...args} />;
+    },
+};
+
+export const IconOnly = {
+    args: {
+        ...args,
+        // The label is kept for assistive technologies (visually hidden).
+        label: 'Warning',
+        isIconOnly: true,
+        icon: <Icon icon={functionalStatusWarning} />,
+    },
     render: function Render(args: ButtonProps): JSX.Element {
         return <Button {...args} />;
     },
