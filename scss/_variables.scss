@@ -19,14 +19,53 @@ $gray-900: $core-ouds-color-functional-gray-dark-880 !default; // OUDS mod: inst
 $black:    $core-ouds-color-functional-black !default; // OUDS mod: instead of `#000`
 // scss-docs-end gray-color-variables
 
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900,
+) !default;
+// scss-docs-end gray-colors-map
+// fusv-enable
+
 // scss-docs-start color-variables
 $blue:    $core-ouds-color-functional-dodger-blue-500 !default; // OUDS mod: instead of `#0d6efd`
 $indigo:  $core-ouds-color-functional-dodger-blue-500 !default; // OUDS mod: instead of `#6610f2`
 $purple:  $core-ouds-color-functional-amethyst-400 !default; // OUDS mod: instead of `#6f42c1`
+$pink:    $core-ouds-color-functional-amethyst-400 !default; // OUDS mod: instead of `#d63384`
 $red:     $core-ouds-color-functional-scarlet-600 !default; // OUDS mod: instead of `#dc3545`
+$orange:  $core-ouds-color-functional-sun-500 !default; // OUDS mod: instead of `#fd7e14`
 $yellow:  $core-ouds-color-functional-sun-500 !default; // OUDS mod: instead of `#ffc107`
 $green:   $core-ouds-color-functional-malachite-500 !default; // OUDS mod: instead of `#198754`
+$teal:    $core-ouds-color-functional-malachite-500 !default; // OUDS mod: instead of `#20c997`
+$cyan:    $core-ouds-color-functional-dodger-blue-500 !default; // OUDS mod: instead of `#0dcaf0`
 // scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "black":      $black,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+) !default;
+// scss-docs-end colors-map
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.2 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG/#contrast-minimum

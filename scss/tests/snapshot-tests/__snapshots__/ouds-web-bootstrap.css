@@ -423,6 +423,29 @@
 :root[data-bs-theme=light] [data-bs-theme=root],
 :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
   color-scheme: light;
+  --bs-blue: #26b2ff;
+  --bs-indigo: #26b2ff;
+  --bs-purple: #a885d8;
+  --bs-pink: #a885d8;
+  --bs-red: #db0002;
+  --bs-orange: #ffd000;
+  --bs-yellow: #ffd000;
+  --bs-green: #3de35a;
+  --bs-teal: #3de35a;
+  --bs-cyan: #26b2ff;
+  --bs-black: #000;
+  --bs-white: #fff;
+  --bs-gray: #666;
+  --bs-gray-dark: #1f1f1f;
+  --bs-gray-100: #f4f4f4;
+  --bs-gray-200: #eee;
+  --bs-gray-300: #e0e0e0;
+  --bs-gray-400: #ccc;
+  --bs-gray-500: #999;
+  --bs-gray-600: #666;
+  --bs-gray-700: #333;
+  --bs-gray-800: #1f1f1f;
+  --bs-gray-900: #141414;
   --bs-primary: #f15e00;
   --bs-secondary: #000;
   --bs-success: #3de35a;
