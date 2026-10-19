@@ -12600,8 +12600,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .modal-fullscreen-dialog {
   --bs-modal-max-height: unset;
-  --bs-modal-width: 100vw;
-  --bs-modal-height: 100vh;
+  --bs-modal-width: 100dvw;
+  --bs-modal-height: 100dvh;
   --bs-modal-margin: 0;
   --bs-modal-padding-top: var(--bs-space-scaled-xlarge);
   --bs-modal-padding-bottom: var(--bs-space-scaled-xlarge);
@@ -12627,8 +12627,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .modal-dialog {
-  --bs-modal-max-height: calc(100vh - 2 * 16px);
-  --bs-modal-width: calc(100vw - 2 * 16px);
+  --bs-modal-max-height: calc(100dvh - 2 * 16px);
+  --bs-modal-width: calc(min(100dvw, 1920px) - 2 * 16px);
   --bs-modal-height: fit-content;
   --bs-modal-margin: auto 16px;
   --bs-modal-padding-top: 20px;
@@ -12681,9 +12681,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
 @media (min-width: 480px) {
   .modal-dialog {
     --bs-modal-column-count: 10;
-    --bs-modal-max-height: 90vh;
+    --bs-modal-max-height: 90dvh;
     --bs-modal-margin: auto;
-    --bs-modal-width: calc(100vw * var(--bs-modal-column-count) / 12);
+    --bs-modal-width: calc(min(100dvw, 1920px) * var(--bs-modal-column-count) / 12);
   }
 }
 @media (min-width: 736px) {
@@ -12709,7 +12709,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-modal-footer-padding-top: 24px;
   --bs-modal-title-gap: var(--bs-space-scaled-xsmall);
   --bs-modal-icon-size: var(--bs-icon-small-with-heading-small);
-  --bs-modal-max-height: 50vh;
+  --bs-modal-max-height: 50dvh;
 }
 @media (min-width: 736px) {
   .modal-dialog.modal-small {
@@ -12727,7 +12727,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 @media (min-width: 1024px) {
   .modal-dialog.modal-small {
     --bs-modal-column-count: 6;
-    --bs-modal-max-height: 60vh;
+    --bs-modal-max-height: 60dvh;
   }
 }
 @media (min-width: 1320px) {
@@ -12745,7 +12745,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 @media (min-width: 1880px) {
   .modal-dialog.modal-small {
-    --bs-modal-max-height: 50vh;
+    --bs-modal-max-height: 50dvh;
   }
 }
 .modal-dialog.modal-small .modal-title {

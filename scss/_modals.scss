@@ -75,8 +75,8 @@ $modal-transition-dimension: -3rem !default;
 
 @mixin modal-fullscreen-dialog {
   --#{$prefix}modal-max-height: unset;
-  --#{$prefix}modal-width: 100vw;
-  --#{$prefix}modal-height: 100vh;
+  --#{$prefix}modal-width: 100dvw;
+  --#{$prefix}modal-height: 100dvh;
   --#{$prefix}modal-margin: 0;
   --#{$prefix}modal-padding-top: var(--#{$prefix}space-scaled-xlarge);
   --#{$prefix}modal-padding-bottom: var(--#{$prefix}space-scaled-xlarge);
@@ -107,8 +107,8 @@ $modal-transition-dimension: -3rem !default;
 }
 
 @mixin modal-dialog {
-  --#{$prefix}modal-max-height: calc(100vh - 2 * #{$ouds-space-fixed-medium});
-  --#{$prefix}modal-width: calc(100vw - 2 * #{$ouds-space-fixed-medium});
+  --#{$prefix}modal-max-height: calc(100dvh - 2 * #{$ouds-space-fixed-medium});
+  --#{$prefix}modal-width: calc(min(100dvw, #{$ouds-grid-3xl-max-width}) - 2 * #{$ouds-space-fixed-medium});
   --#{$prefix}modal-height: fit-content;
   --#{$prefix}modal-margin: auto #{$ouds-space-fixed-medium};
   --#{$prefix}modal-padding-top: #{$ouds-modal-dialog-space-padding-block-top-mobile};
@@ -150,9 +150,9 @@ $modal-transition-dimension: -3rem !default;
 
   @include media-breakpoint-up(sm) {
     --#{$prefix}modal-column-count: 10;
-    --#{$prefix}modal-max-height: 90vh;
+    --#{$prefix}modal-max-height: 90dvh;
     --#{$prefix}modal-margin: auto;
-    --#{$prefix}modal-width: calc(100vw * var(--#{$prefix}modal-column-count) / 12);
+    --#{$prefix}modal-width: calc(min(100dvw, #{$ouds-grid-3xl-max-width}) * var(--#{$prefix}modal-column-count) / 12);
   }
 
   @include media-breakpoint-up(md) {
@@ -176,7 +176,7 @@ $modal-transition-dimension: -3rem !default;
     --#{$prefix}modal-footer-padding-top: #{$ouds-modal-dialog-space-padding-block-top-footer-small-mobile};
     --#{$prefix}modal-title-gap: var(--#{$prefix}space-scaled-xsmall);
     --#{$prefix}modal-icon-size: var(--#{$prefix}icon-small-with-heading-small);
-    --#{$prefix}modal-max-height: 50vh;
+    --#{$prefix}modal-max-height: 50dvh;
 
     @include media-breakpoint-up(md) {
       --#{$prefix}modal-padding-top: #{$ouds-modal-dialog-space-padding-block-top-small-tablet};
@@ -192,7 +192,7 @@ $modal-transition-dimension: -3rem !default;
 
     @include media-breakpoint-up(lg) {
       --#{$prefix}modal-column-count: 6;
-      --#{$prefix}modal-max-height: 60vh;
+      --#{$prefix}modal-max-height: 60dvh;
     }
 
     @include media-breakpoint-up(xl) {
@@ -208,7 +208,7 @@ $modal-transition-dimension: -3rem !default;
     }
 
     @include media-breakpoint-up(3xl) {
-      --#{$prefix}modal-max-height: 50vh;
+      --#{$prefix}modal-max-height: 50dvh;
     }
 
     .modal-title {

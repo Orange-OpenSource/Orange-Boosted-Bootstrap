@@ -99,7 +99,8 @@
   background: var(--#{$prefix}color-overlay-backdrop);
   backdrop-filter: blur(8px);
   border: 0;
-  opacity: 1;
+  // Avoid tarteaucitron to define opacity on the element
+  opacity: 1 !important; // stylelint-disable-line declaration-no-important
 }
 
 @include tac("H1", true) {
