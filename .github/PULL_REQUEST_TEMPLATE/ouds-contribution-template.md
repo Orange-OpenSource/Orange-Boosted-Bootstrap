@@ -34,7 +34,7 @@ Closes #
 
 ### Checklist (for Core Team only)
 
-- [ ] The changes need to be in the migration guide
+- [ ] The changes need to be in the update guide
 - [ ] The changes are well displayed in [Storybook](https://deploy-preview-{your_pr_number}--boosted.netlify.app/storybook) (be careful if example order has changed for DSM)
 - [ ] The changes are compatible with RTL
 - [ ] Manually test browser compatibility with BrowserStack (Chrome 120, Firefox 121, Edge 120, Safari 15.6, iOS Safari, Chrome & Firefox on Android)
