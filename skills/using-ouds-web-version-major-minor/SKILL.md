@@ -104,7 +104,7 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 - [Accessibility](references/getting-started/accessibility.md) - Accessibility guidelines
 - [Browsers & devices](references/getting-started/browsers-devices.md) - Supported browsers
 - [Component versioning](references/getting-started/component-versioning.md) - Version tracking
-- [Migration](references/getting-started/migration.md) - Migration from previous versions
+- [Update guide](references/getting-started/update-guide.md) - Update from previous versions
 - [Migration from Boosted](references/getting-started/migration-from-boosted.md) - Boosted to OUDS Web
 
 ### Foundation
