@@ -39,7 +39,7 @@
 - name: 'circular-progress-indicator'
   value: '1.2.0'
 - name: 'code'
-  value: '1.0 .0'
+  value: '1.0.0'
 - name: 'display'
   value: '1.0.0'
 - name: 'divider'
