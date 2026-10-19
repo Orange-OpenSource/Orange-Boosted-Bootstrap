@@ -10,7 +10,6 @@ export declare global {
   export const AssetsNavTab: typeof import('@shortcodes/AssetsNavTab.astro').default
   export const AssetsTab: typeof import('@shortcodes/AssetsTab.astro').default
   export const BootstrapCompatibility: typeof import('@shortcodes/BootstrapCompatibility.astro').default
-  export const BrandSpecific: typeof import('@shortcodes/BrandSpecific.astro').default
   export const BsTable: typeof import('@shortcodes/BsTable.astro').default
   export const Callout: typeof import('@shortcodes/Callout.astro').default
   export const CalloutSoon: typeof import('@shortcodes/CalloutSoon.astro').default
@@ -31,4 +30,5 @@ export declare global {
   export const Table: typeof import('@shortcodes/Table.astro').default
   export const ThemeDemo: typeof import('@shortcodes/ThemeDemo.astro').default
   export const ThemeDemoStylesImport: typeof import('@shortcodes/ThemeDemoStylesImport.astro').default
+  export const ThemeSpecific: typeof import('@shortcodes/ThemeSpecific.astro').default
 }
