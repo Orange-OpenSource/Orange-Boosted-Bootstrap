@@ -793,6 +793,13 @@ This could be as simple as adding the following script tag in your HTML:
 <script src="https://cdn.jsdelivr.net/npm/dialog-closedby-polyfill"></script>
 ```
 
+As explained in both polyfills readme files, if you are using npm, you can install the polyfills via npm and import them in your JavaScript files instead of including the script tags in your HTML.
+
+```javascript
+import 'invokers-polyfill'
+import 'dialog-closedby-polyfill'
+```
+
 ### JavaScript
 
 JavaScript can be used to display and close the `<dialog>` element. You can use the `showModal()` method to display a modal dialog. The dialog can then be closed using the `close()` method. As demonstrated in the example below, you can also implement [light dismiss](#light-dismiss) functionality using JavaScript.
