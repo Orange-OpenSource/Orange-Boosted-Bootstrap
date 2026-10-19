@@ -7,12 +7,13 @@
 ### Breaking changes
 
 - **Alerts**: action links placed inside `.alert-container`, after `.alert-text-container`, must use the compact link variant: `.link.link-compact`. Action links placed inside `.alert-action-container`, beside the close button, continue to use the regular `.link`.
-- **Blockquotes**: `.blockquote` class removed — style now applies directly to the bare `<blockquote>` element. `.blockquote-footer` only renders its styling when it is the adjacent sibling of a `<blockquote>` (`blockquote + .blockquote-footer`), so keep the `<figure>` wrapper with `<figcaption class="blockquote-footer">` immediately after the `<blockquote>`.
+- **Blockquotes**: `.blockquote` class deprecated — directly use the `<blockquote>` element. `.blockquote-footer` only renders its styling when it is the adjacent sibling of a `<blockquote>` (`blockquote + .blockquote-footer`), so keep the `<figure>` wrapper with `<figcaption class="blockquote-footer">` immediately after the `<blockquote>`.
 
 ### New
 
 - **Buttons**: Expand button implemented
 - **Links**: Expand link implemented
+- **Tags**: Categorical tag implemented
 - **Typography**: optional heading marker — add `.marker` to a heading large (`<h2>`/`.h2`) to display a brand-colored marker below it (Orange, Orange Compact; no visible effect on Sosh).
 
 ### Components

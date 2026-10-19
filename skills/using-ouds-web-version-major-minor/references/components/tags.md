@@ -1,15 +1,16 @@
 # Tags
 
-> **Not Bootstrap:** Tags are an OUDS Web-specific component (`.tag`) with no Bootstrap equivalent. They provide status variants, icons, bullets, loading state, and input tags.
+> **Not Bootstrap:** Tags are an OUDS Web-specific component (`.tag`) with no Bootstrap equivalent. They provide status variants, categorical tags, icons, bullets, loading state, and input tags.
 
 ## Overview
 
-Two types: **Tag** (display-only) and **Input tag** (removable, interactive).
+Three types: **Tag** (display-only with status variants), **Categorical tag** (display-only category color), and **Input tag** (removable, interactive).
 
 Base class: `.tag`
 
 ```html
 <p class="tag">Tag</p>
+<p class="tag tag-categorical-1">Category</p>
 <button type="button" class="tag tag-input">
   Input tag<span class="visually-hidden">Remove this tag</span>
 </button>
@@ -119,6 +120,19 @@ Use flexbox with `.column-gap-xsmall` and `.row-gap-medium` for spacing between 
 ```
 
 Use `.align-middle` when placing tags next to text: `<h2>Title <span class="tag align-middle">New</span></h2>`
+
+## Categorical Tag
+
+Non-interactive tag for non-functional categories (promotions, events, benefits...). Add `.tag-categorical-1` to `.tag-categorical-5` to the `.tag` (no unnumbered class). Numbers are colour slots whose actual colour depends on theme, product or market: they never mean success, warning, error, priority or severity (use a standard functional tag for that). Keep the same colour/category association within a context. Emphasized only (no `.tag-muted`).
+
+Bullet (`.tag-bullet`), icon (`.tag-icon`), `.tag-small`, `.rounded-none`, `.loading`, `.disabled` and skeleton work like on a standard tag. Do not use `.tag-status-icon`.
+
+```html
+<li class="tag tag-categorical-1">
+  <span class="tag-bullet"></span>
+  Eco-friendly
+</li>
+```
 
 ## Input Tag
 

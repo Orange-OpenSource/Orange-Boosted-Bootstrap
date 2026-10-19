@@ -9531,6 +9531,34 @@ ol.bullet-list > li > ol > li > ol > li::before {
   background-color: var(--bs-color-action-disabled) !important;
 }
 
+.tag-categorical-1,
+.tag-categorical-2,
+.tag-categorical-3,
+.tag-categorical-4,
+.tag-categorical-5 {
+  --bs-tag-color: #000;
+}
+
+.tag-categorical-1 {
+  --bs-tag-background-color: var(--bs-categorical-tag-color-bg-category-1);
+}
+
+.tag-categorical-2 {
+  --bs-tag-background-color: var(--bs-categorical-tag-color-bg-category-2);
+}
+
+.tag-categorical-3 {
+  --bs-tag-background-color: var(--bs-categorical-tag-color-bg-category-3);
+}
+
+.tag-categorical-4 {
+  --bs-tag-background-color: var(--bs-categorical-tag-color-bg-category-4);
+}
+
+.tag-categorical-5 {
+  --bs-tag-background-color: #ffb4e6;
+}
+
 .tag-small {
   --bs-tag-min-width: 24px;
   --bs-tag-min-height: 24px;
