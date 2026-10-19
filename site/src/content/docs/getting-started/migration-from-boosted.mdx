@@ -36,7 +36,6 @@ Let’s start with the most obvious change you’ll notice: the name. **Boosted 
   - `boosted.esm.min.js` → `ouds-web.esm.min.js`
   - `boosted.js` → `ouds-web.js`
   - `boosted.min.js` → `ouds-web.min.js`
-- The SCSS file `_type.scss` has been renamed to `_typography.scss` for more consistency.
 
 From now on, OUDS Web won’t embed Bootstrap elements that are not part of Orange Unified Design System. However, you can still use our Bootstrap compatibility mode by using `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`.
 
@@ -77,7 +76,7 @@ Read more about the [font stack]([[docsref:/foundation/reboot#font-stack]]) for 
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Abbreviation class `.initialism` has been removed.
 
-- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.blockquote` class has been removed, you can still use `<blockquote>` instead. Read more in our [reboot page]([[docsref:/foundation/reboot]]).
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.blockquote` class has been deprecated, you can use `<blockquote>` instead. Read more in our [reboot page]([[docsref:/foundation/reboot]]).
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Default spacing values now use `px`s instead of `em`s for fixed component spacing, to keep as much space as possible for meaningful content on zoom.
 
@@ -904,6 +903,8 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `scss/_color-palette.scss` doesn’t exist anymore. If you were importing it in your project, please make sure to remove it.
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `scss/mixins/_alert.scss` doesn’t exist anymore. If you were importing it in your project, please make sure to remove it.
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `scss/_type.scss` has been renamed to `scss/_typography.scss`. If you were importing it in your project, please make sure to update it accordingly.
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `scss/vendor/_rfs.scss` has been removed. It was deprecated and should not have been used.
 

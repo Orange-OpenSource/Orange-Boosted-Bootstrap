@@ -275,7 +275,7 @@ blockquote {
 blockquote + .blockquote-footer {
   margin-top: -$ouds-space-fixed-medium;
   margin-bottom: $ouds-space-fixed-medium;
-  @include get-font-size("body-small"); // OUDS mod: instead of `font-size: $blockquote-footer-font-size`
+  @include get-font-size("body-small");
   color: $blockquote-footer-color;
 
   &::before {

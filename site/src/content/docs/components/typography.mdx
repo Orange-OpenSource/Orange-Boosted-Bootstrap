@@ -63,20 +63,20 @@ export const screenSize = [
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
-          <h2 class="marker">Heading</h2>
+          <p class="display-large">Display</p>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#heading">Heading</a>  is a UI element that styles typography to structure content and define the hierarchy of information within an interface.</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#display">Display</a> is a UI element that styles typography for impactful content like landing pages, marketing campaigns, and key messages.</div>
     </div>
   </li>
   <li class="g-col-6">
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
-          <p class="display-large">Display</p>
+          <h2 class="marker">Heading</h2>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#display">Display</a> is a UI element that styles typography for impactful content like landing pages, marketing campaigns, and key messages.</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#heading">Heading</a> is a UI element that styles typography to structure content and define the hierarchy of information within an interface.</div>
     </div>
   </li>
   <li class="g-col-6">
@@ -103,7 +103,7 @@ export const screenSize = [
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
-          <code>document.getElementById('HelloWorld')</code>
+          <code>Code</code>
         </div>
       </div>
       <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#code">Code</a> is a UI element that styles typography for technical content like code snippets, commands, system values, and identifiers.</div>
@@ -111,141 +111,13 @@ export const screenSize = [
   </li>
 </ul>
 
+### Approach
+
+Typography elements are provided as components that include the `font-family`, `font-size`, `line-height`, `letter-spacing`, `max-width`, and for some of them, `font-weight`. However, certain elements can be modified using our utilities. Take a look at our [font weight utilities]([[docsref:/utilities/text#font-weight]]), [icon sizing utilities]([[docsref:/utilities/icons-sizing]]), [color utilities]([[docsref:/utilities/color]]), and the `.mw-none` class in [width utilities]([[docsref:/utilities/sizing]]).
+
 ### Accessibility
 
-
 To ensure accessibility, make sure you choose the HTML tags you use, based on their **semantic meaning**; whether it is a heading, plain text, or a snippet of code, you should not use the same tag, regardless of how it appears on screen. Each tag conveys its own semantic meaning, which is communicated to screen readers.
-
-## [[comp]] Heading
-
-Heading is a UI element that styles typography to structure content and define the hierarchy of information within an interface.
-
-The heading features multiple sizes options, to help users quickly understand the organization of a page or section. Variants automatically adjust across breakpoints to ensure optimal readability on all devices. Heading serve as the primary entry point for visual navigation.
-
-All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-size`, and also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. If you want to get rid of the `max-width`, use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]). Here are the associated `font-size`s depending on the breakpoints.
-
-<div class="table-responsive">
-  <table class="table">
-    <thead>
-    <tr>
-      <th>Heading reference</th>
-      <th>Font size from `2xs` to `sm`</th>
-      <th>Font size from `md` to `lg`</th>
-      <th>Font size for `xl` and upper</th>
-    </tr>
-    </thead>
-    <tbody>
-    {
-      headingLevel.map((level) => (
-        <tr>
-          <td>
-            {level === 'heading-xlarge' && (<>Heading xlarge (<code>{'<h1>'}</code> or <code>.h1</code>)</>)}
-            {level === 'heading-large' && (<>Heading large (<code>{'<h2>'}</code> or <code>.h2</code>)</>)}
-            {level === 'heading-medium' && (<>Heading medium (<code>{'<h3>'}</code> or <code>.h3</code>)</>)}
-            {level === 'heading-small' && (<>Heading small (<code>{'<h4>'}</code> or <code>.h4</code>)</>)}
-            {level === 'body-large' && (<>Body large (<code>{'<h5>'}</code> or <code>.h5</code>)</>)}
-            {level === 'body-medium' && (<>Body medium (<code>{'<h6>'}</code> or <code>.h6</code>)</>)}
-          </td>
-          {
-            screenSize.map((size) => (
-              <td>
-                <code>{(getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2)) / 16}rem</code> ({getTokenValue(`$ouds-font-size-${level}-${size}`)})
-              </td>
-            ))
-          }
-        </tr>
-      ))
-    }
-    </tbody>
-  </table>
-</div>
-
-
-<details class="mb-medium">
-  <summary>See more details about the heading classes</summary>
-
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-      <tr>
-        <th>Heading reference</th>
-        <th>Font size from `2xs` to `sm`</th>
-        <th>Font size from `md` to `lg`</th>
-        <th>Font size for `xl` and upper</th>
-      </tr>
-      </thead>
-      <tbody>
-      {
-        headingLevel.map((level) => (
-          <tr>
-            <td>
-              {level === 'heading-xlarge' && (<>Heading xlarge (<code>{'<h1>'}</code> or <code>.h1</code>)</>)}
-              {level === 'heading-large' && (<>Heading large (<code>{'<h2>'}</code> or <code>.h2</code>)</>)}
-              {level === 'heading-medium' && (<>Heading medium (<code>{'<h3>'}</code> or <code>.h3</code>)</>)}
-              {level === 'heading-small' && (<>Heading small (<code>{'<h4>'}</code> or <code>.h4</code>)</>)}
-              {level === 'body-large' && (<>Body large (<code>{'<h5>'}</code> or <code>.h5</code>)</>)}
-              {level === 'body-medium' && (<>Body medium (<code>{'<h6>'}</code> or <code>.h6</code>)</>)}
-            </td>
-            {
-              screenSize.map((size) => (
-                <td>
-                  <ul class="mb-none ps-medium">
-                    <li><code class="text-default">font-size</code>: <b>{(getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2)) / 16}rem</b></li>
-                    <li><code>line-height</code>: {Math.round(((getTokenValue( `$ouds-font-line-height-${level}-${size}`).slice(0, -2)) / (getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2))) * 10000) / 10000}</li>
-                    <li><code>letter-spacing</code>: {(getTokenValue(`$ouds-font-letter-spacing-${level}-${size}`).slice(0, -2)) / 16}rem</li>
-                    <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-${level}-${size}`).slice(0, -2)) / 16}rem</li>
-                  </ul>
-                </td>
-              ))
-            }
-          </tr>
-        ))
-      }
-      </tbody>
-    </table>
-  </div>
-</details>
-
-<Example buttonLabel="heading styles on tags" code={`<h1>h1. OUDS Web heading</h1>
-
-  <h2>h2. OUDS Web heading</h2>
-
-  <h3>h3. OUDS Web heading</h3>
-
-  <h4>h4. OUDS Web heading</h4>
-
-  <h5>h5. OUDS Web heading</h5>
-
-  <h6>h6. OUDS Web heading</h6>`} />
-
-`.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
-
-<Example buttonLabel="heading styles through classes" code={`<h2 class="h1">h2. OUDS Web heading looking like h1</h2>
-
-  <h3 class="h2">h3. OUDS Web heading looking like h2</h3>
-
-  <h2 class="h3">h2. OUDS Web heading looking like h3</h2>
-
-  <h2 class="h4">h2. OUDS Web heading looking like h4</h2>
-
-  <h2 class="h5">h2. OUDS Web heading looking like h5</h2>
-
-  <h2 class="h6">h2. OUDS Web heading looking like h6</h2>`} />
-
-Please note that:
-- The `.h1` to `.h6` classes are equivalent to the [font size text utilities]([[docsref:/utilities/text#font-size]]) `.fs-hxl`, `.fs-hl`, `.fs-hm`, `.fs-hs`, `.fs-bl`, and `.fs-bm`, except for the `font-weight`. Like heading tags and classes, they set the `font-size`, but also the `line-height`, the `letter-spacing` and the `max-width`.
-- You have to use the appropriate HTML tag to convey the right semantic meaning. A heading tag meaning is not reflected by the corresponding class on a `<p>` tag.
-- You can easily add an icon with your headings using our [heading icon size utilities]([[docsref:/utilities/icons-sizing#headings]]).
-
-<ThemeSpecific theme={['orange', 'orange-compact']}>
-### Heading with marker
-
-A brand-colored marker can be displayed below the heading large (`<h2>` or `.h2`), to enhance its visual emphasis and reinforce information hierarchy, by adding the `.marker class`.
-
-<Example buttonLabel="headings with marker"  code={`<h2 class="marker">h2. OUDS Web heading with marker</h2>
-
-  <h3 class="h2 marker">h3. OUDS Web heading looking like h2 with marker</h3>`} />
-</ThemeSpecific>
 
 ## [[comp]] Display
 
@@ -253,7 +125,15 @@ Display is a UI element that styles typography for impactful content like landin
 
 The display features large type sizes that capture attention and create strong visual emphasis. Variants automatically adjust across breakpoints to maintain a consistent visual hierarchy on all screen sizes. Use it sparingly to preserve its impact and effectiveness.
 
-We provide `.display-*` from `large` through `small`. Each class sets `font-size`, and also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]). Here are the associated `font-size`s depending on the breakpoints.
+Display has three size levels: large, medium, and small. Each one sets `font-size`, and also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`.
+
+Please note that:
+- You have to use the appropriate HTML tag to convey the right semantic meaning.
+- The `.display-*` classes are equivalent to the [font size text utilities]([[docsref:/utilities/text#font-size]]) `.fs-dl`, `.fs-dm`, and `.fs-ds`, except for the `font-weight`.
+- If you want to get rid of the `max-width`, please use to use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]).
+- You should not use any icon with our `.display-*` font sizes, because we prefer to keep the place for the text.
+
+Here are the associated `font-size`s depending on the breakpoints:
 
 <div class="table-responsive">
   <table class="table">
@@ -336,10 +216,136 @@ We provide `.display-*` from `large` through `small`. Each class sets `font-size
 
   <h1 class="display-small">Display small</h1>`} />
 
+## [[comp]] Heading
+
+Heading is a UI element that styles typography to structure content and define the hierarchy of information within an interface.
+
+The heading features multiple sizes options, to help users quickly understand the organization of a page or section. Variants automatically adjust across breakpoints to ensure optimal readability on all devices. Heading serve as the primary entry point for visual navigation.
+
+All HTML headings, `<h1>` through `<h6>`, are available. Each one sets `font-size`, and also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. `.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
+
 Please note that:
-- The `.display-large` to `.display-small` classes are equivalent to the [font size text utilities]([[docsref:/utilities/text#font-size]]) `.fs-dl`, `.fs-dm`, and `.fs-ds`, except for the `font-weight`. Like display classes, they set not only the `font-size`, but also the `line-height`, the `letter-spacing`, and the `max-width`.
-- You have to use the appropriate HTML tag to convey the right semantic meaning.
-- You should not use any icon with our `.display-*` font sizes, because we prefer to keep the place for the text.
+- You have to use the appropriate HTML tag to convey the right semantic meaning. A heading tag meaning is not reflected by the corresponding class on a `<p>` tag.
+- The heading tags and classes are equivalent to the [font size text utilities]([[docsref:/utilities/text#font-size]]) `.fs-hxl`, `.fs-hl`, `.fs-hm`, `.fs-hs`, `.fs-bl`, and `.fs-bm`, except for the `font-weight`.
+- If you want to get rid of the `max-width`, please use to use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]).
+- You can easily add an icon with your headings using our [heading icon size utilities]([[docsref:/utilities/icons-sizing#heading]]).
+
+Here are the associated `font-size`s depending on the breakpoints:
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Heading reference</th>
+      <th>Font size from `2xs` to `sm`</th>
+      <th>Font size from `md` to `lg`</th>
+      <th>Font size for `xl` and upper</th>
+    </tr>
+    </thead>
+    <tbody>
+    {
+      headingLevel.map((level) => (
+        <tr>
+          <td>
+            {level === 'heading-xlarge' && (<>Heading xlarge (<code>{'<h1>'}</code> or <code>.h1</code>)</>)}
+            {level === 'heading-large' && (<>Heading large (<code>{'<h2>'}</code> or <code>.h2</code>)</>)}
+            {level === 'heading-medium' && (<>Heading medium (<code>{'<h3>'}</code> or <code>.h3</code>)</>)}
+            {level === 'heading-small' && (<>Heading small (<code>{'<h4>'}</code> or <code>.h4</code>)</>)}
+            {level === 'body-large' && (<>Body large (<code>{'<h5>'}</code> or <code>.h5</code>)</>)}
+            {level === 'body-medium' && (<>Body medium (<code>{'<h6>'}</code> or <code>.h6</code>)</>)}
+          </td>
+          {
+            screenSize.map((size) => (
+              <td>
+                <code>{(getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2)) / 16}rem</code> ({getTokenValue(`$ouds-font-size-${level}-${size}`)})
+              </td>
+            ))
+          }
+        </tr>
+      ))
+    }
+    </tbody>
+  </table>
+</div>
+
+<details class="mb-medium">
+  <summary>See more details about the heading classes</summary>
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Heading reference</th>
+        <th>Font size from `2xs` to `sm`</th>
+        <th>Font size from `md` to `lg`</th>
+        <th>Font size for `xl` and upper</th>
+      </tr>
+      </thead>
+      <tbody>
+      {
+        headingLevel.map((level) => (
+          <tr>
+            <td>
+              {level === 'heading-xlarge' && (<>Heading xlarge (<code>{'<h1>'}</code> or <code>.h1</code>)</>)}
+              {level === 'heading-large' && (<>Heading large (<code>{'<h2>'}</code> or <code>.h2</code>)</>)}
+              {level === 'heading-medium' && (<>Heading medium (<code>{'<h3>'}</code> or <code>.h3</code>)</>)}
+              {level === 'heading-small' && (<>Heading small (<code>{'<h4>'}</code> or <code>.h4</code>)</>)}
+              {level === 'body-large' && (<>Body large (<code>{'<h5>'}</code> or <code>.h5</code>)</>)}
+              {level === 'body-medium' && (<>Body medium (<code>{'<h6>'}</code> or <code>.h6</code>)</>)}
+            </td>
+            {
+              screenSize.map((size) => (
+                <td>
+                  <ul class="mb-none ps-medium">
+                    <li><code class="text-default">font-size</code>: <b>{(getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2)) / 16}rem</b></li>
+                    <li><code>line-height</code>: {Math.round(((getTokenValue( `$ouds-font-line-height-${level}-${size}`).slice(0, -2)) / (getTokenValue(`$ouds-font-size-${level}-${size}`).slice(0, -2))) * 10000) / 10000}</li>
+                    <li><code>letter-spacing</code>: {(getTokenValue(`$ouds-font-letter-spacing-${level}-${size}`).slice(0, -2)) / 16}rem</li>
+                    <li><code>max-width</code>: {(getTokenValue(`$ouds-size-max-width-${level}-${size}`).slice(0, -2)) / 16}rem</li>
+                  </ul>
+                </td>
+              ))
+            }
+          </tr>
+        ))
+      }
+      </tbody>
+    </table>
+  </div>
+</details>
+
+<Example buttonLabel="heading styles on tags" code={`<h1>h1. OUDS Web heading</h1>
+
+  <h2>h2. OUDS Web heading</h2>
+
+  <h3>h3. OUDS Web heading</h3>
+
+  <h4>h4. OUDS Web heading</h4>
+
+  <h5>h5. OUDS Web heading</h5>
+
+  <h6>h6. OUDS Web heading</h6>`} />
+
+<Example buttonLabel="heading styles through classes" code={`<h2 class="h1">h2. OUDS Web heading looking like h1</h2>
+
+  <h3 class="h2">h3. OUDS Web heading looking like h2</h3>
+
+  <h2 class="h3">h2. OUDS Web heading looking like h3</h2>
+
+  <h2 class="h4">h2. OUDS Web heading looking like h4</h2>
+
+  <h2 class="h5">h2. OUDS Web heading looking like h5</h2>
+
+  <h2 class="h6">h2. OUDS Web heading looking like h6</h2>`} />
+
+<ThemeSpecific theme={['orange', 'orange-compact']}>
+### Heading with marker
+
+A brand-colored marker can be displayed below the heading large (`<h2>` or `.h2`), to enhance its visual emphasis and reinforce information hierarchy, by adding the `.marker` class.
+
+<Example buttonLabel="headings with marker"  code={`<h2 class="marker">h2. OUDS Web heading with marker</h2>
+
+  <h3 class="h2 marker">h3. OUDS Web heading looking like h2 with marker</h3>`} />
+</ThemeSpecific>
 
 ## [[comp]] Body
 
@@ -347,11 +353,20 @@ Body is a UI element that styles typography for common text content like paragra
 
 The body features multiple size options, to allow content importance to be expressed while maintaining consistency. Variants automatically adjust across breakpoints to ensure optimal readability on all devices. Body prioritize readability and provide a comfortable reading experience.
 
-Regular body text forms the core of your content. Body text has three size levels: large (for emphasis), medium (default), and small (for supporting information). Each class sets `font-size`, `line-height`, `letter-spacing`, and `max-width`. To remove the `max-width`, use the `.mw-none` [width utility]([[docsref:/utilities/sizing]]). Body texts use `font-weight: normal` by default, but can use other font weights as needed through our [font weight utilities]([[docsref:/utilities/text#font-weight]]).
+Body text has three size levels: large (for emphasis), medium (default), and small (for supporting information). Each one sets `font-size`, `line-height`, `letter-spacing`, and `max-width`. Body texts use `font-weight: normal` by default
+
+Please note that:
+- You have to use the appropriate HTML tag to convey the right semantic meaning, generally a `<p>`.
+- The `.lead`, `<p>` and `.small` or `<small>` texts are equivalent to the [font size text utilities]([[docsref:/utilities/text#font-size]]) `.fs-bl`, `.fs-bm`,  and `.fs-bs`.
+- You can use other font weights as needed through our [font weight utilities]([[docsref:/utilities/text#font-weight]]).
+- If you want to get rid of the `max-width`, please use to use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]).
+- You can easily add an icon with your body texts using our [body text icon size utilities]([[docsref:/utilities/icons-sizing#body]]).
 
 <Callout type="info">
   By default, body medium is set on the `:root` element, and the `max-width` property is applied to `<p>` elements.
 </Callout>
+
+Here are the associated `font-size`s depending on the breakpoints:
 
 <div class="table-responsive">
   <table class="table">
@@ -368,9 +383,9 @@ Regular body text forms the core of your content. Body text has three size level
       textLevel.map((level) => (
       <tr>
         <td>
-          {level === 'body-large' && (<>Body large (<code>{'.lead'}</code>)</>)}
-          {level === 'body-medium' && (<>Body medium (default <code>{'<p>'}</code>)</>)}
-          {level === 'body-small' && (<>Body small (<code>{'.small'}</code> or <code>{'<small>'}</code>)</>)}
+          {level === 'body-large' && (<>Body large (<code>{'.lead'}</code> or <code>.fs-bl</code>)</>)}
+          {level === 'body-medium' && (<>Body medium (default <code>{'<p>'}</code> or <code>.fs-bm</code>)</>)}
+          {level === 'body-small' && (<>Body small (<code>{'.small'}</code>, <code>{'<small>'}</code> or <code>.fs-bs</code>)</>)}
         </td>
         {
           screenSize.map((size) => (
@@ -403,9 +418,9 @@ Regular body text forms the core of your content. Body text has three size level
         textLevel.map((level) => (
         <tr>
           <td>
-            {level === 'body-large' && (<>Body large (<code>{'.lead'}</code>)</>)}
-            {level === 'body-medium' && (<>Body medium (default <code>{'<p>'}</code>)</>)}
-            {level === 'body-small' && (<>Body small (<code>{'.small'}</code> or <code>{'<small>'}</code>)</>)}
+            {level === 'body-large' && (<>Body large (<code>{'.lead'}</code> or <code>.fs-bl</code>)</>)}
+            {level === 'body-medium' && (<>Body medium (default <code>{'<p>'}</code> or <code>.fs-bm</code>)</>)}
+            {level === 'body-small' && (<>Body small (<code>{'.small'}</code> or <code>{'<small>'}</code> or <code>.fs-bs</code>)</>)}
           </td>
           {
             screenSize.map((size) => (
@@ -428,19 +443,18 @@ Regular body text forms the core of your content. Body text has three size level
 </details>
 
 <Example buttonLabel="body texts" code={`<p class="lead">
-    This is a lead paragraph. It stands out from regular paragraphs.
+    This is a body large paragraph. It stands out from regular paragraphs.
   </p>
 
-  <p>This is a regular body paragraph.</p>
+  <p class="fs-bl">
+    This is another body large paragraph.
+  </p>
 
-  <p class="small">This is a small paragraph.</p>
+  <p>This is a regular body medium paragraph.</p>
 
-  <p><small>This is another small paragraph.</small></p>`} />
+  <p class="small">This is a body small paragraph.</p>
 
-Please note that:
-- The `.lead`, `<p>` and `.small` or `<small>` texts are equivalent to the [font size text utilities]([[docsref:/utilities/text#font-size]]) `.fs-bl`, `.fs-bm`,  and `.fs-bs`. Like body texts, they set the `font-size`, but also the `line-height`, the `letter-spacing` and the `max-width`.
-- You have to use the appropriate HTML tag to convey the right semantic meaning, generally a `<p>`.
-- You can easily add an icon with your body texts using our [body text icon size utilities]([[docsref:/utilities/icons-sizing#body-texts]]).
+  <p><small>This is another body small paragraph.</small></p>`} />
 
 ## [[comp]] Label
 
@@ -448,7 +462,14 @@ Label is a UI element that styles typography for compact interface components su
 
 The label is non-responsive and maintains a fixed size across all breakpoints. This ensures visual consistency and predictable behavior within space-constrained UI elements. Labels are preferred when content is displayed within small components.
 
-Labels have four size levels: xlarge, large, medium, and small. Each class sets `font-size`, `line-height`, `letter-spacing`, and `max-width`. To remove the `max-width`, use the `.mw-none` [width utility]([[docsref:/utilities/sizing]]). Label texts use `font-weight: normal` by default, but can use other font weights as needed through our [font weight utilities]([[docsref:/utilities/text#font-weight]]).
+Labels have four size levels: xlarge, large, medium, and small. Each one sets `font-size`, `line-height`, `letter-spacing`, and `max-width`.
+
+Please note that:
+- You have to use the appropriate HTML tag to convey the right semantic meaning, generally a `<p>`.
+- You can use other font weights as needed through our [font weight utilities]([[docsref:/utilities/text#font-weight]]).
+- If you want to get rid of the `max-width`, please use to use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]).
+
+Here are the associated `font-size`s:
 
 <div class="table-responsive">
   <table class="table">
@@ -530,29 +551,16 @@ Labels have four size levels: xlarge, large, medium, and small. Each class sets 
 
   <p class="fs-ls">Label small text</p>`} />
 
-Please note that you have to use the appropriate HTML tag to convey the right semantic meaning.
-
 ## [[comp]] Code
 
 Code element is a UI element that styles typography for technical content like code snippets, commands, system values, and identifiers.
 
 The code employs a monospace typeface to maintain character alignment and enhance the readability of structured content. Offered in one size, it ensures a uniform presentation of technical information across the product. Its application should be restricted to content that necessitates a precise code-like representation.
 
-### Inline code
 
 Use the `<code>` element to mark short code snippets within text. The `<code>` element uses the monospace code font stack and is styled to stand out from surrounding text.
 
 <Example buttonLabel="inline code" code={`For example, <code>&lt;section&gt;</code> should be wrapped as inline.`} />
 
-### Code blocks
 
-Use `<pre><code>` for displaying multiple lines of code. The `<pre>` element preserves whitespace and formatting, particularly indentation, while the `<code>` element marks the content as code.
-
-<Example buttonLabel="multiline code" code={`<pre><code>
-  if (document.getElementById('myId')) {
-    document.getElementById('myId').addEventListener('click', () => {
-      ...
-    })
-  }
-</code></pre>`} />
 

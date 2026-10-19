@@ -101,7 +101,7 @@ export const componentsDetails: ComponentCardData[] = [
     category: 'Content display',
     snippet: `
       <code>
-        Hello World!
+        Code
       </code>`
   },
   {

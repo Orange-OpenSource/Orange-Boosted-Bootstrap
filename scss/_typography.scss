@@ -85,3 +85,21 @@
     margin-right: $list-inline-padding;
   }
 }
+
+//
+// Misc
+//
+
+// Blockquotes
+// deprecated in OUDS Web v1.6
+.blockquote {
+  margin-bottom: $blockquote-margin-y;
+
+  > p {
+    @include get-font-size("body-large");
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}

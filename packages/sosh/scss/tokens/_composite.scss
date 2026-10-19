@@ -55,7 +55,7 @@ $ouds-font-family-monospace-stack:
   monospace !default;
 // scss-docs-end ouds-composite-font-monospace
 // scss-docs-start ouds-composite-typography
-// NB: SVG should contain paddings and shouldn't have any `fill` attribute
+// NB: Set here the marker SVG exported from Figma, including paddings, with no `fill` attributes. Set it to null if there is not marker available for this theme.
 $ouds-heading-large-marker-img: null !default;
 $ouds-heading-large-marker-width: 0 !default;
 $ouds-heading-large-marker-height: 0 !default;
