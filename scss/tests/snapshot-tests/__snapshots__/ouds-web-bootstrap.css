@@ -14475,6 +14475,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-icon-max-width: 48px;
   --bs-icon-max-height: 48px;
   --bs-icon-color: var(--bs-color-action-enabled);
+  --bs-icon-hover-color: var(--bs-color-action-hover);
+  --bs-icon-active-color: var(--bs-color-action-pressed);
+  --bs-icon-focus-color: var(--bs-color-action-focus);
   --bs-icon-disabled-color: var(--bs-color-action-disabled);
   --bs-icon-loading-color: var(--bs-color-action-loading);
   --bs-icon-loading-size: 1.25rem;
@@ -14589,12 +14592,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .icon-assistant.loading-indeterminate {
   --bs-loading-dasharray: 96;
   --bs-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
-}
-
-.icon-interactive {
-  --bs-icon-hover-color: var(--bs-color-action-hover);
-  --bs-icon-active-color: var(--bs-color-action-pressed);
-  --bs-icon-focus-color: var(--bs-color-action-focus);
 }
 
 .icon-assistant {

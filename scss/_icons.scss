@@ -5,6 +5,9 @@
   --#{$prefix}icon-max-width: #{$ouds-size-min-interactive-area-default};
   --#{$prefix}icon-max-height: #{$ouds-size-min-interactive-area-default};
   --#{$prefix}icon-color: #{$ouds-color-action-enabled};
+  --#{$prefix}icon-hover-color: #{$ouds-color-action-hover};
+  --#{$prefix}icon-active-color: #{$ouds-color-action-pressed};
+  --#{$prefix}icon-focus-color: #{$ouds-color-action-focus};
   --#{$prefix}icon-disabled-color: #{$ouds-color-action-disabled};
   --#{$prefix}icon-loading-color: #{$ouds-color-action-loading};
   --#{$prefix}icon-loading-size: #{px-to-rem($ouds-button-size-progress-indicator-default)};
@@ -53,12 +56,6 @@
   }
 
   @include loader($loading-color: var(--#{$prefix}icon-loading-color), $loading-size: var(--#{$prefix}icon-loading-size));
-}
-
-.icon-interactive {
-  --#{$prefix}icon-hover-color: #{$ouds-color-action-hover};
-  --#{$prefix}icon-active-color: #{$ouds-color-action-pressed};
-  --#{$prefix}icon-focus-color: #{$ouds-color-action-focus};
 }
 
 .icon-assistant {
