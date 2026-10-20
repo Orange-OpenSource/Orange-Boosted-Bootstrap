@@ -14,8 +14,6 @@
 /* global oudsWeb: false */
 
 export default () => {
-  // OUDS mod: Try not using `const` at the first layer in this file, otherwise Storybook will fail to render some examples.
-
   // storybook-start overview
   // --------
   // Tooltips
@@ -158,11 +156,11 @@ export default () => {
   // Modal
   // -------------------------------
   // Modal 'JS' example in docs
-  if (document.getElementById('demoJSModal')) {
+  if (document.getElementById('modalDialogJs')) {
     // js-docs-start modal-js
-    const dialog = document.getElementById('demoJSModal')
-    const openingButton = document.querySelector('[data-open-modal="demoJSModal"]')
-    const closeButton = document.querySelector('[data-close-modal="demoJSModal"]')
+    const dialog = document.getElementById('modalDialogJs')
+    const openingButton = document.querySelector('[data-open-modal="modalDialogJs"]')
+    const closeButton = document.querySelector('[data-close-modal="modalDialogJs"]')
 
     openingButton.addEventListener('click', () => {
       dialog.showModal()
@@ -174,8 +172,6 @@ export default () => {
 
     // this is necessary for "light dismiss" (closing dialog on backdrop click)
     dialog.addEventListener('click', event => {
-      // this test will return true when clicking on the dialog padding
-      //  you might want to implement a check based on dialog.getBoundingClientRect
       if (event.target === event.currentTarget) {
         dialog.close()
       }

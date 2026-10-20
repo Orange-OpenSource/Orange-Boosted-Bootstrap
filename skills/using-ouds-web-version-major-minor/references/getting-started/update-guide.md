@@ -13,6 +13,7 @@
 - **Buttons**: Expand button implemented
 - **Links**: Expand link implemented
 - **Modals**: Modal dialog and Fullscreen dialog implemented
+- **Tags**: Categorical tag implemented
 
 ## v1.5.0
 

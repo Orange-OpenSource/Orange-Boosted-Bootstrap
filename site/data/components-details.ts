@@ -74,6 +74,13 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `<button type="button" class="btn btn-default">Label</button>`
   },
   {
+    name: 'Categorical tag',
+    slug: 'categorical-tag',
+    link: 'tags#categorical-tag',
+    category: 'Indicator',
+    snippet: `<p class="tag tag-categorical-1">Label</p>`
+  },
+  {
     name: 'Checkbox',
     category: 'Control',
     snippet: `
@@ -180,7 +187,7 @@ export const componentsDetails: ComponentCardData[] = [
     category: 'Dialog',
     snippet: `
       <dialog class="modal-base modal-fullscreen-dialog position-relative h-100 w-100" open style="transition: unset">
-        <div class="modal-header">
+        <div class="modal-header 2xl:ps-xlarge">
           <h3 class="modal-title">Title</h3>
           <button type="button" class="btn btn-close">
             <span class="visually-hidden">Close</span>
@@ -248,7 +255,7 @@ export const componentsDetails: ComponentCardData[] = [
     category: 'Dialog',
     snippet: `
       <dialog class="modal-base modal-dialog w-75 h-75 position-relative" open style="transition: unset">
-        <div class="modal-header">
+        <div class="modal-header 2xl:ps-large">
           <h3 class="modal-title">Title</h3>
           <button type="button" class="btn btn-close">
             <span class="visually-hidden">Close</span>

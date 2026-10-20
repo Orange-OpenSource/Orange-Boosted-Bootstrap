@@ -17,6 +17,9 @@ $modal-transition-dimension: -3rem !default;
   --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-mobile};
   --#{$prefix}modal-body-padding-top: #{$ouds-modal-dialog-space-padding-block-top-body-default-mobile};
   --#{$prefix}modal-footer-padding-top: #{$ouds-modal-dialog-space-padding-block-top-footer-default-mobile};
+  --#{$prefix}modal-header-gap: var(--#{$prefix}space-scaled-medium);
+  --#{$prefix}modal-title-gap: var(--#{$prefix}space-scaled-small);
+  --#{$prefix}modal-icon-size: var(--#{$prefix}icon-large-with-heading-medium);
 
   flex-direction: column; // cannot use grid because of Safari dialog limitations
   width: var(--#{$prefix}modal-width);
@@ -72,16 +75,26 @@ $modal-transition-dimension: -3rem !default;
 
 @mixin modal-fullscreen-dialog {
   --#{$prefix}modal-max-height: unset;
-  --#{$prefix}modal-width: 100vw;
-  --#{$prefix}modal-height: 100vh;
+  --#{$prefix}modal-width: 100dvw;
+  --#{$prefix}modal-height: 100dvh;
   --#{$prefix}modal-margin: 0;
   --#{$prefix}modal-padding-top: var(--#{$prefix}space-scaled-xlarge);
   --#{$prefix}modal-padding-bottom: var(--#{$prefix}space-scaled-xlarge);
   --#{$prefix}modal-padding-inline: var(--#{$prefix}grid-margin);
   --#{$prefix}modal-close-button-inset: #{$ouds-fullscreen-dialog-space-inset-close-button-mobile};
+  --#{$prefix}modal-border-radius: 0;
+  --#{$prefix}modal-header-gap: var(--#{$prefix}space-scaled-large);
+  // the following reset will override any values from @mixin modal-dialog if applied on other breakpoints
+  --#{$prefix}modal-content-max-width: unset;
+
+  transition: none; // stylelint-disable-line property-disallowed-list
 
   @include media-breakpoint-up(md) {
     --#{$prefix}modal-close-button-inset: #{$ouds-fullscreen-dialog-space-inset-close-button-tablet};
+
+    &:where(:not(:has(> .modal-footer))) {
+      --#{$prefix}modal-footer-width: fit-content;
+    }
   }
 
   @include media-breakpoint-up(xl) {
@@ -94,13 +107,17 @@ $modal-transition-dimension: -3rem !default;
 }
 
 @mixin modal-dialog {
-  --#{$prefix}modal-max-height: calc(100vh - 2 * #{$ouds-space-fixed-medium});
-  --#{$prefix}modal-width: calc(100vw - 2 * #{$ouds-space-fixed-medium});
+  --#{$prefix}modal-max-height: calc(100dvh - 2 * #{$ouds-space-fixed-medium});
+  --#{$prefix}modal-width: calc(min(100dvw, #{$ouds-grid-3xl-max-width}) - 2 * #{$ouds-space-fixed-medium});
   --#{$prefix}modal-height: fit-content;
   --#{$prefix}modal-margin: auto #{$ouds-space-fixed-medium};
   --#{$prefix}modal-padding-top: #{$ouds-modal-dialog-space-padding-block-top-mobile};
   --#{$prefix}modal-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-mobile};
   --#{$prefix}modal-padding-inline: #{$ouds-modal-dialog-space-padding-inline-mobile};
+  // the following resets will override any values from @mixin fullscreen-dialog if applied on other breakpoints
+  --#{$prefix}modal-footer-width: auto;
+  --#{$prefix}modal-border-radius: inherit;
+  --#{$prefix}modal-content-max-width: 100%;
 
   box-shadow: $ouds-elevation-emphasized;
   opacity: 0;
@@ -133,10 +150,9 @@ $modal-transition-dimension: -3rem !default;
 
   @include media-breakpoint-up(sm) {
     --#{$prefix}modal-column-count: 10;
-    --#{$prefix}modal-max-height: 90vh;
-
-    width: calc(100vw * var(--#{$prefix}modal-column-count) / 12);
-    margin: auto;
+    --#{$prefix}modal-max-height: 90dvh;
+    --#{$prefix}modal-margin: auto;
+    --#{$prefix}modal-width: calc(min(100dvw, #{$ouds-grid-3xl-max-width}) * var(--#{$prefix}modal-column-count) / 12);
   }
 
   @include media-breakpoint-up(md) {
@@ -158,7 +174,9 @@ $modal-transition-dimension: -3rem !default;
     --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-mobile};
     --#{$prefix}modal-body-padding-top: #{$ouds-modal-dialog-space-padding-block-top-body-small-mobile};
     --#{$prefix}modal-footer-padding-top: #{$ouds-modal-dialog-space-padding-block-top-footer-small-mobile};
-    --#{$prefix}modal-max-height: 50vh;
+    --#{$prefix}modal-title-gap: var(--#{$prefix}space-scaled-xsmall);
+    --#{$prefix}modal-icon-size: var(--#{$prefix}icon-small-with-heading-small);
+    --#{$prefix}modal-max-height: 50dvh;
 
     @include media-breakpoint-up(md) {
       --#{$prefix}modal-padding-top: #{$ouds-modal-dialog-space-padding-block-top-small-tablet};
@@ -174,7 +192,7 @@ $modal-transition-dimension: -3rem !default;
 
     @include media-breakpoint-up(lg) {
       --#{$prefix}modal-column-count: 6;
-      --#{$prefix}modal-max-height: 60vh;
+      --#{$prefix}modal-max-height: 60dvh;
     }
 
     @include media-breakpoint-up(xl) {
@@ -190,7 +208,7 @@ $modal-transition-dimension: -3rem !default;
     }
 
     @include media-breakpoint-up(3xl) {
-      --#{$prefix}modal-max-height: 50vh;
+      --#{$prefix}modal-max-height: 50dvh;
     }
 
     .modal-title {
@@ -201,12 +219,6 @@ $modal-transition-dimension: -3rem !default;
   &.modal-fixed-height {
     --#{$prefix}modal-height: var(--#{$prefix}modal-max-height);
   }
-
-  .modal-body {
-    * {
-      max-width: 100%;
-    }
-  }
 }
 
 .modal-dialog {
@@ -215,9 +227,9 @@ $modal-transition-dimension: -3rem !default;
 
 .modal-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--#{$prefix}modal-padding-top) var(--#{$prefix}space-scaled-3xlarge) 0 var(--#{$prefix}modal-padding-inline);
+  flex-shrink: 0;
+  flex-direction: column;
+  padding: var(--#{$prefix}modal-padding-top) calc(var(--#{$prefix}space-scaled-3xlarge) + var(--#{$prefix}modal-padding-inline)) var(--#{$prefix}modal-body-padding-top) var(--#{$prefix}modal-padding-inline);
   background-color: $ouds-color-overlay-modal-sheet;
 
   .btn-close {
@@ -225,44 +237,83 @@ $modal-transition-dimension: -3rem !default;
     inset-inline-end: var(--#{$prefix}modal-close-button-inset);
     top: var(--#{$prefix}modal-close-button-inset);
   }
+
+  .link-previous {
+    margin-bottom: var(--#{$prefix}modal-header-gap);
+  }
 }
 
 .modal-title {
+  display: flex;
+  gap: var(--#{$prefix}modal-title-gap);
+  align-items: center;
   margin: 0;
   @include get-font-size("heading-medium");
 }
 
-.modal-alert-icon {
-  --#{$prefix}modal-icon: var(--#{$prefix}alert-error-icon);
-  --#{$prefix}modal-icon-color: #{$ouds-color-content-status-negative};
+.modal-subtitle {
+  margin-block-end: 0;
+}
 
+.modal-icon {
+  width: var(--#{$prefix}modal-icon-size);
+  height: var(--#{$prefix}modal-icon-size);
+}
+
+.modal-icon-positive,
+.modal-icon-negative,
+.modal-icon-info,
+.modal-icon-warning {
   position: relative;
-  width: var(--#{$prefix}icon-small-with-heading-small);
-  height: var(--#{$prefix}icon-small-with-heading-small);
+  color: var(--#{$prefix}modal-icon-color);
 
-  &::before {
+  &::before,
+  &::after {
     position: absolute;
     inset: 0;
     display: block;
-    color: var(--#{$prefix}modal-icon-color);
     content: "";
+  }
+
+  &::before {
     background-color: currentcolor;
     mask-image: escape-svg(var(--#{$prefix}modal-icon));
   }
 
-  &.modal-success {
-    --#{$prefix}modal-icon: var(--#{$prefix}alert-success-icon);
-    --#{$prefix}modal-icon-color: #{$ouds-color-content-status-positive};
+  &::after {
+    background-color: var(--#{$prefix}modal-icon-internal-color);
+    mask-image: escape-svg(var(--#{$prefix}modal-icon-internal));
   }
+}
+
+.modal-icon-negative {
+  --#{$prefix}modal-icon: var(--#{$prefix}alert-error-icon);
+  --#{$prefix}modal-icon-color: #{$ouds-color-content-status-negative};
+}
+
+.modal-icon-positive {
+  --#{$prefix}modal-icon: var(--#{$prefix}alert-success-icon);
+  --#{$prefix}modal-icon-color: #{$ouds-color-content-status-positive};
+}
+
+.modal-icon-info {
+  --#{$prefix}modal-icon: var(--#{$prefix}alert-info-icon);
+  --#{$prefix}modal-icon-color: #{$ouds-color-content-status-info};
+}
+
+.modal-icon-warning {
+  --#{$prefix}modal-icon: var(--#{$prefix}alert-warning-icon);
+  --#{$prefix}modal-icon-color: var(--#{$prefix}icon-color-content-status-warning-external-shape);
+  --#{$prefix}modal-icon-internal: var(--#{$prefix}alert-warning-internal-icon);
+  --#{$prefix}modal-icon-internal-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
 }
 
 .modal-body {
   flex-grow: 1;
   padding: 0 var(--#{$prefix}modal-padding-inline) calc(var(--#{$prefix}modal-body-footer-padding-bottom) + var(--#{$prefix}modal-padding-bottom));
-  margin-block-start: var(--#{$prefix}modal-body-padding-top);
   overflow-y: auto;
 
-  &:not(:has(.modal-footer)) > :last-child {
+  > :last-child {
     margin-block-end: 0;
   }
 
@@ -277,6 +328,10 @@ $modal-transition-dimension: -3rem !default;
       margin-block-end: var(--#{$prefix}modal-body-footer-padding-bottom);
     }
   }
+
+  * {
+    max-width: var(--#{$prefix}modal-content-max-width, revert-rule);
+  }
 }
 
 .modal-footer {
@@ -286,15 +341,16 @@ $modal-transition-dimension: -3rem !default;
   flex-wrap: wrap;
   gap: var(--#{$prefix}space-scaled-small);
   align-items: center; // vertically center
+  width: var(--#{$prefix}modal-footer-width, auto);
   padding-block: var(--#{$prefix}modal-footer-padding-top) var(--#{$prefix}modal-body-footer-padding-bottom);
   padding-inline: var(--#{$prefix}modal-padding-inline);
   background-color: $ouds-color-overlay-modal-sheet;
 
-  > *:first-child:last-child {
+  > :only-child {
     margin-inline: auto;
   }
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     flex-direction: column; // stack buttons on small screens
 
     > * {
