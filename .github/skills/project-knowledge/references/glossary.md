@@ -57,8 +57,9 @@ Reference glossary of project-specific terms. Consult when encountering unfamili
 |---|---|
 | **ESLint** | JavaScript linter (extends `xo`, `unicorn` plugins) |
 | **Stylelint** | SCSS/CSS linter (extends `stylelint-config-twbs-bootstrap`) |
-| **Karma** | JavaScript test runner in real browsers |
-| **Jasmine** | JavaScript testing framework (`describe`, `it`, `expect`) |
+| **Jasmine** | Test framework used by CSS tests; JavaScript unit tests use Vitest |
+| **Vitest** | JavaScript test runner used with Playwright in Chromium |
+| **Playwright** | Browser automation provider used by Vitest |
 | **Pa11y-CI** | Accessibility testing tool with axe-core |
 | **VNU** | Nu Html Checker — HTML5 markup validation |
 | **axe-core** | Accessibility rules engine used by Pa11y-CI and Storybook |
@@ -100,7 +101,7 @@ Reference glossary of project-specific terms. Consult when encountering unfamili
 | **Mixin** | Reusable SCSS code block; invoked with `@include` |
 | **Function** | SCSS function returning a value |
 | **Helper** | Utility class (`.visually-hidden`, `.clearfix`, etc.) |
-| **`.spec.js`** | Unit test file (Jasmine) |
+| **`.spec.js`** | JavaScript unit test file (Vitest) |
 | **`.stories.js`** | Storybook story file |
 | **`.mdx`** | Markdown + JSX — documentation format |
 
