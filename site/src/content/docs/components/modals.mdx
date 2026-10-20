@@ -756,9 +756,7 @@ First create a button with the `[commandfor]` attribute pointing to the ID of th
 
 Then create a `<dialog>` element with the corresponding ID that matches the `[commandfor]` attribute of the button. Most of the time you should include the `[closedby=any]` attribute to allow closing the dialog by clicking outside of it (see [light dismiss](#light-dismiss)).
 
-<Callout type="warning">
-  `[closedby]` attribute may not be supported in some older browsers. See [the polyfills section](#polyfills) for more information on how to mitigate this issue.
-</Callout>
+<Callout type="warning" name="closedby-not-supported" />
 
 ```html
 <dialog id="modalDialogInvokerCommand" class="modal-base modal-dialog" aria-labelledby="modalDialogInvokerCommandTitle" closedby="any">
@@ -832,17 +830,19 @@ Allow users to dismiss a modal by clicking outside when doing so will not discar
   [Avoid light dismiss](#no-light-dismiss) for dialogs with unsaved changes or required steps, and always provide a clear, accessible way to close the dialog.
 </Callout>
 
+#### Using invoker commands
+
 Use the `[closedby=any]` attribute on the `<dialog>` element to enable light dismiss when you use invoker commands.
 
-<Callout type="warning">
-  `[closedby]` attribute may not be supported in some older browsers. See [the polyfills section](#polyfills) for more information on how to mitigate this issue.
-</Callout>
+<Callout type="warning" name="closedby-not-supported" />
 
 ```html
 <dialog id="lightDismissModal" closedby="any" class="modal-base modal-dialog" aria-labelledby="lightDismissModalTitle">
   <!-- modal dialog content -->
 </dialog>
 ```
+
+#### Using JavaScript
 
 For JavaScript we can implement light dismiss by listening for clicks outside the modal dialog and calling the `close()` method on the `<dialog>` element like this:
 
@@ -856,9 +856,13 @@ dialog.addEventListener('click', event => {
 
 #### No light dismiss
 
-Following is an example without light dismiss with invoker commands, this will also prevent closing when the user presses the <kbd>Esc</kbd> key.
+Following is an example without light dismiss using invoker commands, `[closedby="closerequest"]` ensures that the dialog can only be closed programmatically or via the device closing request (on desktop this means pressing the <kbd>Esc</kbd> key).
 
-<Example buttonLabel="modal dialog without light dismiss" code={`<dialog id="modalDialogNoLightDismiss" class="modal-base modal-dialog" aria-labelledby="modalDialogNoLightDismissTitle" closedby="none">
+<Callout type="warning" name="closedby-not-supported" />
+
+If you are using JavaScript to control your modals just don't implement [the click outside listener](#using-javascript).
+
+<Example buttonLabel="modal dialog without light dismiss" code={`<dialog id="modalDialogNoLightDismiss" class="modal-base modal-dialog" aria-labelledby="modalDialogNoLightDismissTitle" closedby="closerequest">
     <div class="modal-header">
       <h3 id="modalDialogNoLightDismissTitle" class="modal-title">Title</h3>
       <button type="button" class="btn btn-close" commandfor="modalDialogNoLightDismiss" command="close">
@@ -876,11 +880,3 @@ Following is an example without light dismiss with invoker commands, this will a
   <button type="button" class="btn btn-default" commandfor="modalDialogNoLightDismiss" command="show-modal">
     Open modal dialog
   </button>`} />
-
-If you are using JavaScript to control your modals and want to prevent closing by pressing the <kbd>Esc</kbd> key, you can listen for the `cancel` event on the `<dialog>` element and call `event.preventDefault()` like this:
-
-```javascript
-dialog.addEventListener('cancel', event => {
-  event.preventDefault()
-})
-```
