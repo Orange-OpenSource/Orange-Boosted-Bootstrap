@@ -29,6 +29,7 @@
   "module": "dist/js/ouds-web.esm.js",
   "scripts": {
     "start": "npm-run-all --parallel dev-*",
+    "build-orange": "npm run astro-build -w packages/orange",
     "dev-orange": "npm run astro-dev -w packages/orange",
     "dev-orange-compact": "npm run astro-dev -w packages/orange-compact",
     "dev-sosh": "npm run astro-dev -w packages/sosh",
