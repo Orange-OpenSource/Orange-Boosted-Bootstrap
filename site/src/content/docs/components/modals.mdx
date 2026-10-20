@@ -76,7 +76,7 @@ The [common variants](#common-variants) are shared between modal dialog and full
 As this component relies on the native `<dialog>` element we encourage you to read the [MDN documentation on the `<dialog>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog).
 
 <Callout type="warning" title="Interactivity">
-  In this documentation we rely on [invoker commands](#invoker-commands) to trigger the opening and closing of modals but you can also use [JavaScript](#javascript). Note that some browsers [require a polyfill](#polyfills) for full invoker commands compatibility
+  In this documentation we rely on [invoker commands](#invoker-commands) to trigger the opening, closing and [light-dismissing](#light-dismiss) of modals but you can also use [JavaScript](#javascript). Note that some browsers [require a polyfill](#polyfills) for full invoker commands compatibility.
 </Callout>
 
 ### Accessibility
@@ -806,10 +806,10 @@ JavaScript can be used to display and close the `<dialog>` element. You can use 
 
 <JsDocs name="modal-js" file="site/src/assets/partials/snippets.js" />
 
-<Example buttonLabel="modal dialog full" code={`<dialog id="demoJSModal" class="modal-base modal-dialog" aria-labelledby="demoJSModalTitle">
+<Example buttonLabel="modal dialog full" code={`<dialog id="modalDialogJs" class="modal-base modal-dialog" aria-labelledby="demoJSModalTitle">
     <div class="modal-header">
       <h3 id="demoJSModalTitle" class="modal-title">Modal title</h3>
-      <button type="button" class="btn btn-close" data-close-modal="demoJSModal">
+      <button type="button" class="btn btn-close" data-close-modal="modalDialogJs">
         <span class="visually-hidden">Close</span>
       </button>
     </div>
@@ -820,7 +820,7 @@ JavaScript can be used to display and close the `<dialog>` element. You can use 
     </div>
   </dialog>
 
-  <button type="button" class="btn btn-default" data-open-modal="demoJSModal">
+  <button type="button" class="btn btn-default" data-open-modal="modalDialogJs">
     Open modal with JS
   </button>`} />
 
@@ -829,7 +829,7 @@ JavaScript can be used to display and close the `<dialog>` element. You can use 
 Allow users to dismiss a modal by clicking outside when doing so will not discard their work or interrupt a required task. This behavior is known as "light dismiss" and can be enabled with invoker commands or implemented in JavaScript depending on which [interactivity](#interactivity) model you are using.
 
 <Callout type="info">
-  Avoid light dismiss for dialogs with unsaved changes or required steps, and always provide a clear, accessible way to close the dialog.
+  [Avoid light dismiss](#no-light-dismiss) for dialogs with unsaved changes or required steps, and always provide a clear, accessible way to close the dialog.
 </Callout>
 
 Use the `[closedby=any]` attribute on the `<dialog>` element to enable light dismiss when you use invoker commands.
@@ -854,3 +854,33 @@ dialog.addEventListener('click', event => {
 })
 ```
 
+#### No light dismiss
+
+Following is an example without light dismiss with invoker commands, this will also prevent closing when the user presses the <kbd>Esc</kbd> key.
+
+<Example buttonLabel="modal dialog without light dismiss" code={`<dialog id="modalDialogNoLightDismiss" class="modal-base modal-dialog" aria-labelledby="modalDialogNoLightDismissTitle" closedby="none">
+    <div class="modal-header">
+      <h3 id="modalDialogNoLightDismissTitle" class="modal-title">Title</h3>
+      <button type="button" class="btn btn-close" commandfor="modalDialogNoLightDismiss" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-strong" commandfor="modalDialogNoLightDismiss" command="close" autofocus>Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="modalDialogNoLightDismiss" command="show-modal">
+    Open modal dialog
+  </button>`} />
+
+If you are using JavaScript to control your modals and want to prevent closing by pressing the <kbd>Esc</kbd> key, you can listen for the `cancel` event on the `<dialog>` element and call `event.preventDefault()` like this:
+
+```javascript
+dialog.addEventListener('cancel', event => {
+  event.preventDefault()
+})
+```

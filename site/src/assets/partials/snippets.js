@@ -156,11 +156,11 @@ export default () => {
   // Modal
   // -------------------------------
   // Modal 'JS' example in docs
-  if (document.getElementById('demoJSModal')) {
+  if (document.getElementById('modalDialogJs')) {
     // js-docs-start modal-js
-    const dialog = document.getElementById('demoJSModal')
-    const openingButton = document.querySelector('[data-open-modal="demoJSModal"]')
-    const closeButton = document.querySelector('[data-close-modal="demoJSModal"]')
+    const dialog = document.getElementById('modalDialogJs')
+    const openingButton = document.querySelector('[data-open-modal="modalDialogJs"]')
+    const closeButton = document.querySelector('[data-close-modal="modalDialogJs"]')
 
     openingButton.addEventListener('click', () => {
       dialog.showModal()
