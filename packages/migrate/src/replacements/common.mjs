@@ -62,9 +62,10 @@ export const commonReplacements = [
 
   // Border
   ['border(-(?:top|bottom|start|end))?-0', 'border$1-none'],
-  ['border(-(?:top|bottom|start|end))?-1', 'border$1-small'],
+  ['border(-(?:top|bottom|start|end))?-1', 'border$1-thin'],
   ['border(-(?:top|bottom|start|end))?-2', 'border$1-medium'],
-  ['border(-(?:top|bottom|start|end))?-[3-5]', 'border$1-large'],
+  ['border(-(?:top|bottom|start|end))?-3', 'border$1-thick'],
+  ['border(-(?:top|bottom|start|end))?-[4-5]', 'border$1-thicker'],
   ['border-[a-z]+-subtle', 'border-default'],
   ['border-primary', 'border-brand-primary'],
   ['border-white', 'border-always-white'],
