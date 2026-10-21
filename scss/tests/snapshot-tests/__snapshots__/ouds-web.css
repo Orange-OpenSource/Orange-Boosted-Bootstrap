@@ -10739,6 +10739,15 @@ ol.bullet-list > li > ol > li > ol > li::before {
     width: 100%;
   }
 }
+@media (max-width: 479.98px) {
+  .modal-footer.modal-footer-horizontal {
+    flex-direction: row-reverse;
+  }
+  .modal-footer.modal-footer-horizontal > * {
+    flex-grow: 1;
+    width: 25%;
+  }
+}
 
 .tooltip {
   --bs-tooltip-zindex: 1080;

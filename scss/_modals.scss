@@ -357,4 +357,15 @@ $modal-transition-dimension: -3rem !default;
       width: 100%; // make buttons full width on small screens
     }
   }
+
+  &.modal-footer-horizontal {
+    @include media-breakpoint-down(sm) {
+      flex-direction: row-reverse; // force horizontal alignment
+
+      > * {
+        flex-grow: 1; // allow buttons to grow and fill available space
+        width: 25%; // reset width for horizontal layout
+      }
+    }
+  }
 }
