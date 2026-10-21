@@ -93,7 +93,7 @@
 // Blockquotes
 // deprecated in OUDS Web v1.6
 .blockquote {
-  margin-bottom: $blockquote-margin-y;
+  margin-bottom: $ouds-space-fixed-medium;
 
   > p {
     @include get-font-size("body-large");

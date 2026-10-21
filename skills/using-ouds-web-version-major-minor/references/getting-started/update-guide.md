@@ -7,7 +7,7 @@
 ### Breaking changes
 
 - **Alerts**: action links placed inside `.alert-container`, after `.alert-text-container`, must use the compact link variant: `.link.link-compact`. Action links placed inside `.alert-action-container`, beside the close button, continue to use the regular `.link`.
-- **Blockquotes**: `.blockquote` class deprecated — directly use the `<blockquote>` element. `.blockquote-footer` only renders its styling when it is the adjacent sibling of a `<blockquote>` (`blockquote + .blockquote-footer`), so keep the `<figure>` wrapper with `<figcaption class="blockquote-footer">` immediately after the `<blockquote>`.
+- **Blockquotes**: `.blockquote` and `.blockquote-footer` classes deprecated (still working) - use the `<blockquote>` element directly, followed by a plain `<figcaption>` immediately after it (`blockquote + figcaption`), inside a `<figure>`.
 
 ### New
 

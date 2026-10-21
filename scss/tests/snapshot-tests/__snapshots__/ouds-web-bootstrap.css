@@ -1252,7 +1252,8 @@ blockquote > :last-child {
   margin-bottom: 0;
 }
 
-blockquote + .blockquote-footer {
+.blockquote-footer,
+blockquote + figcaption {
   margin-top: -16px;
   margin-bottom: 16px;
   max-width: var(--bs-font-max-width-body-small);
@@ -1262,7 +1263,8 @@ blockquote + .blockquote-footer {
   letter-spacing: var(--bs-font-letter-spacing-body-small);
   color: var(--bs-color-content-muted);
 }
-blockquote + .blockquote-footer::before {
+.blockquote-footer::before,
+blockquote + figcaption::before {
   content: "— ";
 }
 
