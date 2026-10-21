@@ -53,7 +53,7 @@ jobs:
         run: npm run release-sri
 
       - name: Test docs
-        run: npm run docs-build
+        run: rm -rf _site && npm run dist && npm run release-sri && npm run astro-build -w packages/orange
 
       - name: Run accessibility tests
         run: npm run docs-accessibility

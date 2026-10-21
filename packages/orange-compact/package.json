@@ -51,7 +51,7 @@
     "css-prefix": "npm-run-all --aggregate-output --parallel css-prefix-*",
     "css-prefix-main": "postcss --config ../../build/postcss.config.mjs --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
     "astro-dev": "cross-env BRAND=orange-compact astro dev --root ../../site --port 9003",
-    "astro-build": "cross-env BRAND=orange-compact astro build --root ../../site && cd ../../site/dist && cp -r . ../../_site",
+    "astro-build": "cross-env BRAND=orange-compact astro build --root ../../site && cd ../../site/dist && node ../../build/merge-sitemap.mjs ./sitemap-0.xml ../../_site/sitemap-0.xml && cp -r . ../../_site",
     "astro-preview": "cross-env BRAND=orange-compact astro preview --root ../../site --port 9003",
     "release-zip": "cd ../.. && cross-env-shell \"rm -rf /ouds-web-orange-compact-$npm_package_version-dist ouds-web-orange-compact-$npm_package_version-dist.zip && cp -r dist/ ouds-web-orange-compact-$npm_package_version-dist && cp -r packages/orange-compact/dist/ ouds-web-orange-compact-$npm_package_version-dist/ && zip -qr9 ouds-web-orange-compact-$npm_package_version-dist.zip ouds-web-orange-compact-$npm_package_version-dist && rm -rf ouds-web-orange-compact-$npm_package_version-dist\""
   },
