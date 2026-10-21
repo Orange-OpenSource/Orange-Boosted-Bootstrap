@@ -674,7 +674,7 @@ By default the action buttons are full-width on smaller screens. You can deactiv
 
 #### Horizontal alignment
 
-By default the action buttons will stack vertically on smaller screens and align horizontally on larger screens. You can deactivate the vertical stacking by using [non full-width buttons](#no-full-width-buttons) and applying the appropriate flex utility classes to the buttons to obtain the horizontal alignment. This is only advisable for smaller buttons labels.
+By default the action buttons will stack vertically on smaller screens and align horizontally on larger screens. You can deactivate the vertical stacking by using [non full-width buttons](#no-full-width-buttons) and applying the appropriate flex utility classes to the `.modal-footer` and buttons to obtain the horizontal alignment. This is only advisable for smaller buttons labels.
 
 <Example buttonLabel="modal dialog alignment" code={`<dialog id="modalDialogAlignment" class="modal-base modal-dialog" aria-labelledby="modalDialogAlignmentTitle" closedby="any">
     <div class="modal-header">
@@ -685,9 +685,9 @@ By default the action buttons will stack vertically on smaller screens and align
     </div>
     <div class="modal-body">
       <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met.</p>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-strong w-auto flex-grow-1 md:flex-grow-0" commandfor="modalDialogAlignment" command="close">Ok</button>
-        <button type="button" class="btn btn-minimal w-auto flex-grow-1 md:flex-grow-0" commandfor="modalDialogAlignment" command="close">Abort</button>
+      <div class="modal-footer flex-row-reverse">
+        <button type="button" class="btn btn-strong w-auto flex-grow-1 sm:flex-grow-0" commandfor="modalDialogAlignment" command="close">Ok</button>
+        <button type="button" class="btn btn-minimal w-auto flex-grow-1 sm:flex-grow-0" commandfor="modalDialogAlignment" command="close">Abort</button>
       </div>
     </div>
   </dialog>
