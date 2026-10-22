@@ -90,16 +90,3 @@
 // Misc
 //
 
-// Blockquotes
-// deprecated in OUDS Web v1.6
-.blockquote {
-  margin-bottom: $ouds-space-fixed-medium;
-
-  > p {
-    @include get-font-size("body-large");
-  }
-
-  > :last-child {
-    margin-bottom: 0;
-  }
-}
