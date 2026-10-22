@@ -12711,7 +12711,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
     --bs-modal-column-count: 10;
     --bs-modal-max-height: 90dvh;
     --bs-modal-margin: auto;
-    --bs-modal-width: calc((min(100dvw, 1920px) - 2 * var(--bs-grid-margin)) * var(--bs-modal-column-count) / 12);
+    --bs-modal-width: calc((min(100dvw, 1680px) - 2 * var(--bs-grid-margin) - (11 * var(--bs-grid-gap))) * var(--bs-modal-column-count) / 12 + (var(--bs-grid-gap) * (var(--bs-modal-column-count) - 1)));
   }
 }
 @media (min-width: 736px) {

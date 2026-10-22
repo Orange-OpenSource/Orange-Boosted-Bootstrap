@@ -152,7 +152,7 @@ $modal-transition-dimension: -3rem !default;
     --#{$prefix}modal-column-count: 10;
     --#{$prefix}modal-max-height: 90dvh;
     --#{$prefix}modal-margin: auto;
-    --#{$prefix}modal-width: calc((min(100dvw, #{$ouds-grid-3xl-max-width}) - 2 * var(--#{$prefix}grid-margin)) * var(--#{$prefix}modal-column-count) / 12);
+    --#{$prefix}modal-width: calc((min(100dvw, #{$ouds-grid-2xl-max-width-alt}) - 2 * var(--#{$prefix}grid-margin) - (11 * var(--#{$prefix}grid-gap))) * var(--#{$prefix}modal-column-count) / 12 + (var(--#{$prefix}grid-gap) * (var(--#{$prefix}modal-column-count) - 1)));
   }
 
   @include media-breakpoint-up(md) {
