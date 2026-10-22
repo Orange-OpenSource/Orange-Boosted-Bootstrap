@@ -77,11 +77,13 @@ Tag and input tag lists must be wrapped in a semantic container (usually a `<ul>
 <Example buttonLabel="tags list with a displayed title" code={`<div class="d-inline-flex align-items-center">
     <h4 id="tagsTitle" class="h6 me-small">Mobile coverage: </h4>
     <div role="group" aria-labelledby="tagsTitle">
+
       <ul class="list-unstyled d-flex column-gap-xsmall">
         <li class="tag">Roaming</li>
         <li class="tag">5G Ready</li>
         <li class="tag">4G</li>
       </ul>
+
     </div>
   </div>
 `} />
@@ -120,6 +122,7 @@ Non-functional tags are used to display categories, default status, or to draw a
     <li class="tag">Neutral emphasized (default)</li>
     <li class="tag tag-accent">Accent emphasized</li>
   </ul>
+
   <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Non-functional muted tags">
     <li class="tag tag-muted">Neutral muted</li>
     <li class="tag tag-accent tag-muted">Accent muted</li>
@@ -139,6 +142,7 @@ Functional tags communicate specific statuses or system feedback (e.g., success,
     <li class="tag tag-warning">Warning emphasized</li>
     <li class="tag tag-negative">Negative emphasized</li>
   </ul>
+
   <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Functional muted tags">
     <li class="tag tag-positive tag-muted">Positive muted</li>
     <li class="tag tag-info tag-muted">Info muted</li>
@@ -172,6 +176,7 @@ To display a colored icon in non-functional tags, add the icon inside the tag, w
       Accent emphasized
     </li>
   </ul>
+
   <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium mb-medium" aria-label="Non-functional muted icons">
     <li class="tag tag-muted">
       <svg aria-hidden="true" class="tag-icon">
@@ -186,6 +191,7 @@ To display a colored icon in non-functional tags, add the icon inside the tag, w
       Accent muted
     </li>
   </ul>
+
   <p class="tag">
     <span class="si-settings tag-icon" aria-hidden="true"></span>
     Settings
@@ -217,6 +223,7 @@ As functional tags communicate specific statuses, each status must always be pai
       Error
     </li>
   </ul>
+
   <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Functional muted icons">
     <li class="tag tag-positive tag-muted">
       <span class="tag-status-icon"></span>
@@ -328,7 +335,9 @@ The disabled tag should only be used in a disabled context, inside an interactiv
 <Example buttonLabel="disabled tags" showMarkup={true} code={`<div class="disabled mb-medium">
     <p><span class="tag tag-accent">Disabled</span> Some text</p>
   </div>
+
   <p class="disabled"><span class="tag tag-accent">Disabled</span> Some text</p>
+
   <p><span class="tag tag-accent disabled">Disabled</span> Some text</p>`} />
 
 #### Loading
@@ -414,13 +423,18 @@ A tag can be used near some text or some title (to show status or key details), 
     <li class="tag">5G Ready</li>
     <li class="tag">4G</li>
   </ul>
+
   <ul class="list-unstyled d-flex gap-xsmall mb-medium" aria-label="Mobile coverage">
     <li class="tag tag-small">Roaming</li>
     <li class="tag tag-small">5G Ready</li>
   </ul>
+
   <h2>Title <span class="tag align-middle">Coming soon</span></h2>
+
   <h2>Title <span class="tag tag-small align-middle">Coming soon</span></h2>
+
   <p><span class="tag">New</span> Some text</p>
+
   <p><span class="tag tag-small">New</span> Some text</p>`} />
 
 Tags can be added side by side. They require horizontal and vertical spacing between each other. You can use [flexbox utilities]([[docsref:/utilities/spacing#gap]]) to manage the horizontal space (default value is obtained thanks to `.column-gap-xsmall`) and the vertical space (default value is obtained thanks to `.row-gap-medium`).
