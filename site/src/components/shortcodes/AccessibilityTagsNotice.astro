@@ -4,7 +4,7 @@ interface Props {
   /**
    * The name of the component being described.
    */
-  className?: string
+  className?: string | string[]
 
   /**
    * Other tags that may be used with the component while still being accessible
@@ -19,7 +19,8 @@ interface Props {
 
 const { className, additionalTagsText, componentTypeSpecificsText } = Astro.props
 
-const compatibleTags = `The <code>.${className}</code> class is designed to be used with the <code>&lt;button&gt;</code> element, but can be used on <code>&lt;a&gt;</code>${additionalTagsText ? ' ' + additionalTagsText : ''} elements. You should use any semantic element that best fits the context to appropriately convey its purpose to assistive technologies such as screen readers.`
+const formattedClasses = Array.isArray(className) ? className.map(c => `<code>.${c}</code>`).join(', ') : `<code>.${className}</code>`
+const compatibleTags = `The ${formattedClasses} ${Array.isArray(className) ? ' classes are' : ' class is'} designed to be used with the <code>&lt;button&gt;</code> element, but can be used on <code>&lt;a&gt;</code>${additionalTagsText ? ' ' + additionalTagsText : ''} elements. You should use any semantic element that best fits the context to appropriately convey its purpose to assistive technologies such as screen readers.`
 ---
 
 <p set:html={compatibleTags} />

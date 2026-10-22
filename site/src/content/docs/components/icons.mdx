@@ -48,7 +48,7 @@ import { getVersionedDocsPath } from '@libs/path'
 
 ### Accessibility (semantics)
 
-<AccessibilityTagsNotice className="icon" />
+<AccessibilityTagsNotice className={["icon-interactive", "icon-assistant"]} />
 
 In any case, do not forget to add an `aria-label` or a `<span class="visually-hidden">` since there is no discernible text for screen reader users.
 
@@ -67,9 +67,9 @@ In any case, do not forget to add an `aria-label` or a `<span class="visually-hi
 
 ## [[comp]] Interactive icon
 
-An interactive icon is a UI element that triggers a user interaction, such as opening, closing, or toggling a state.
+An interactive icon is a UI element that triggers user interactions, such as opening a tooltip or dropdown, and includes defined interactive states.
 
-The interactive icon features defined states and can be used alone or within other components like static card or list items, or menus.
+The interactive icon can be used alone or within other components. It works well in dense layouts with multiple elements.
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
