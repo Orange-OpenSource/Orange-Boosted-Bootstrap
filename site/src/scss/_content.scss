@@ -143,20 +143,20 @@
   --bs-body-color-rgb: #{to-rgb($black)};
   --bs-body-bg: var(--bs-color-surface-status-info-emphasized);
   --bs-body-bg-rgb: #{to-rgb($blue)};
-  --bs-tertiary-bg: #{$blue-600};
+  --bs-tertiary-bg: #{$core-ouds-color-functional-dodger-blue-600};
 
   .dropdown-menu {
-    --bs-dropdown-bg: #{mix($blue-500, $blue-600)};
-    --bs-dropdown-link-active-bg: #{$blue-700};
-    --bs-dropdown-link-hover-bg: #{$blue-600};
+    --bs-dropdown-bg: #{mix($core-ouds-color-functional-dodger-blue-500, $core-ouds-color-functional-dodger-blue-600)};
+    --bs-dropdown-link-active-bg: #{$core-ouds-color-functional-dodger-blue-700};
+    --bs-dropdown-link-hover-bg: #{$core-ouds-color-functional-dodger-blue-600};
   }
 
   .btn-dropdown {
-    --bs-btn-bg: #{mix($gray-600, $blue-400, 50%)};
+    --bs-btn-bg: #{mix($gray-600, $core-ouds-color-functional-dodger-blue-400, 50%)};
     --bs-btn-border-color: #{rgba($white, .25)};
-    --bs-btn-hover-bg: #{darken(mix($gray-600, $blue-400, 50%), 5%)};
+    --bs-btn-hover-bg: #{darken(mix($gray-600, $core-ouds-color-functional-dodger-blue-400, 50%), 5%)};
     --bs-btn-hover-border-color: #{rgba($white, .25)};
-    --bs-btn-active-bg: #{darken(mix($gray-600, $blue-400, 50%), 10%)};
+    --bs-btn-active-bg: #{darken(mix($gray-600, $core-ouds-color-functional-dodger-blue-400, 50%), 10%)};
     --bs-btn-active-border-color: #{rgba($white, .5)};
     --bs-btn-focus-border-color: #{rgba($white, .5)};
     --bs-btn-focus-box-shadow: #{$ouds-elevation-elevated};
