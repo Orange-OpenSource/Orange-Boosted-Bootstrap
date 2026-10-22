@@ -1238,9 +1238,11 @@ dd {
   margin-left: 0;
 }
 
+.blockquote,
 blockquote {
   margin: 0 0 16px;
 }
+.blockquote > p,
 blockquote > p {
   max-width: var(--bs-font-max-width-body-large);
   font-size: var(--bs-font-size-body-large);
@@ -1248,6 +1250,7 @@ blockquote > p {
   /* rtl:remove */
   letter-spacing: var(--bs-font-letter-spacing-body-large);
 }
+.blockquote > :last-child,
 blockquote > :last-child {
   margin-bottom: 0;
 }
@@ -1745,20 +1748,6 @@ h2.marker::after,
 }
 .list-inline-item:not(:last-child) {
   margin-right: 0.25rem;
-}
-
-.blockquote {
-  margin-bottom: 16px;
-}
-.blockquote > p {
-  max-width: var(--bs-font-max-width-body-large);
-  font-size: var(--bs-font-size-body-large);
-  line-height: var(--bs-font-line-height-body-large);
-  /* rtl:remove */
-  letter-spacing: var(--bs-font-letter-spacing-body-large);
-}
-.blockquote > :last-child {
-  margin-bottom: 0;
 }
 
 .img-fluid {
