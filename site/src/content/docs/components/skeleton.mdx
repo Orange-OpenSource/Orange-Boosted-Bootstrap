@@ -72,8 +72,11 @@ Use `.skeleton-title` to render a skeleton with a height corresponding to a medi
   The size of `.placeholder`s are based on the typographic style of the parent element. Customize them with sizing modifiers: `.placeholder-lg`, `.placeholder-sm`, or `.placeholder-xs`.
 
   <Example buttonLabel="Bootstrap compatibility: skeletons with title height" code={`<span class="placeholder col-12 placeholder-lg"></span>
+
   <span class="placeholder col-12"></span>
+
   <span class="placeholder col-12 placeholder-sm"></span>
+
   <span class="placeholder col-12 placeholder-xs"></span>`} />
 </BootstrapCompatibility>
 
@@ -86,11 +89,14 @@ Use `.skeleton-text` to render a skeleton with a height corresponding to a mediu
 </Callout>
 
 <Example buttonLabel="skeletons with paragraph height" code={`<div class="skeleton skeleton-text" inert></div>
+
   <div class="skeleton skeleton-text w-75" inert></div>
 
   <div class="skeleton-text" inert>
     <div class="skeleton"></div>
+
     <div class="skeleton"></div>
+
     <div class="skeleton col-9"></div>
   </div>`} />
 
@@ -106,7 +112,9 @@ You can have the same without the default security margins using `.skeleton-no-m
 
 <Example buttonLabel="skeletons without margins" code={`<div class="skeleton-no-margins skeleton-text" inert>
     <div class="skeleton mb-2xsmall"></div>
+
     <div class="skeleton mb-2xsmall"></div>
+
     <div class="skeleton w-50"></div>
   </div>`} />
 
@@ -115,6 +123,7 @@ You can have the same without the default security margins using `.skeleton-no-m
 To set components in skeleton state, you can wrap any of them in an `[aria-busy="true"]` container, and add the `inert` attribute to it. This will set all the children components in skeleton state, disable them and prevent any interaction.
 
 <Example buttonLabel="all components in skeleton state" code={`<div aria-busy="true" inert>
+    <!-- Alert -->
     <div class="alert alert-message alert-negative mb-medium">
       <div class="alert-icon"></div>
       <div class="alert-container">
@@ -124,13 +133,16 @@ To set components in skeleton state, you can wrap any of them in an `[aria-busy=
       </div>
     </div>
 
+    <!-- Bullet list -->
     <ul class="bullet-list mb-medium">
       <li>Label</li>
       <li>Label</li>
     </ul>
 
+    <!-- Button -->
     <button class="btn btn-default mb-medium">Label</button>
 
+    <!-- Checkbox -->
     <div class="checkbox-item mb-medium">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault" checked />
@@ -140,11 +152,13 @@ To set components in skeleton state, you can wrap any of them in an `[aria-busy=
       </div>
     </div>
 
+    <!-- Standalone checkbox -->
     <label class="checkbox-standalone mb-medium">
       <input class="control-item-indicator" type="checkbox" value="" />
       <span class="visually-hidden">Standalone checkbox</span>
     </label>
 
+    <!-- Filter chip -->
     <ul class="chips-container mb-medium">
       <li class="chip chip-filter">
         <input type="checkbox" id="filterCheck" checked />
@@ -154,17 +168,22 @@ To set components in skeleton state, you can wrap any of them in an `[aria-busy=
       </li>
     </ul>
 
+    <!-- Inline alert -->
     <div class="alert alert-info mb-medium">
       <div class="alert-icon"></div>
       <p class="alert-label">Label</p>
     </div>
 
+    <!-- Input tag -->
     <button type="button" class="tag tag-input mb-medium">Input tag</button>
 
+    <!-- Divider -->
     <br/>
 
+    <!-- Link -->
     <a class="link mb-medium" href="#">Link</a>
 
+    <!-- List items -->
     <ul class="item-list mb-medium">
       <li class="item">
         <div class="item-container">
@@ -186,6 +205,7 @@ To set components in skeleton state, you can wrap any of them in an `[aria-busy=
       </li>
     </ul>
 
+    <!-- Text input with icon -->
     <div class="text-input mb-medium">
       <div class="text-input-container text-input-container-outlined">
         <svg aria-hidden="true">
@@ -204,6 +224,7 @@ To set components in skeleton state, you can wrap any of them in an `[aria-busy=
       </div>
     </div>
 
+    <!-- Radio button -->
     <div class="radio-button-item mb-medium">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="radio" value="" id="radioDefault" name="radioBasic" checked />
@@ -213,11 +234,13 @@ To set components in skeleton state, you can wrap any of them in an `[aria-busy=
       </div>
     </div>
 
+    <!-- Standalone radio button -->
     <label class="radio-button-standalone mb-medium">
       <input class="control-item-indicator" type="radio" value="" />
       <span class="visually-hidden">Default standalone radio button</span>
     </label>
 
+    <!-- Select input -->
     <div class="select-input mb-medium">
       <div class="select-input-container select-input-container-outlined">
         <label for="exampleSelect">Select</label>
@@ -230,6 +253,7 @@ To set components in skeleton state, you can wrap any of them in an `[aria-busy=
       </div>
     </div>
 
+    <!-- Suggestion chip -->
     <ul class="chips-container mb-medium">
       <li class="chip chip-suggestion">
         <button class="chip-interactive">
@@ -238,6 +262,7 @@ To set components in skeleton state, you can wrap any of them in an `[aria-busy=
       </li>
     </ul>
 
+    <!-- Switch item -->
     <div class="switch-item mb-medium">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchWithSVG" checked />
@@ -247,17 +272,23 @@ To set components in skeleton state, you can wrap any of them in an `[aria-busy=
       </div>
     </div>
 
+    <!-- Standalone switch -->
     <label class="switch-standalone mb-medium">
       <input class="control-item-indicator" type="checkbox" role="switch" value="" />
       <span class="visually-hidden">Standalone switch</span>
     </label>
 
-    <br/>
+    <br>
 
+    <!-- Tag -->
     <p class="tag mb-medium">Tag</p>
 
-    <p class="tag tag-categorical-1">Categorical tag</p>
+    <br>
 
+    <!-- Categorical tag -->
+    <p class="tag tag-categorical-1 mb-medium">Categorical tag</p>
+
+    <!-- Text area -->
     <div class="text-area mb-medium">
       <div class="text-area-container text-area-container-outlined">
         <label for="exampleTextArea">Label</label>
@@ -265,6 +296,7 @@ To set components in skeleton state, you can wrap any of them in an `[aria-busy=
       </div>
     </div>
 
+    <!-- Text input -->
     <div class="text-input mb-medium">
       <div class="text-input-container text-input-container-outlined">
         <label for="exampleTextInputWithPlaceholder">Label</label>
@@ -280,7 +312,9 @@ Here are two live examples of skeletons. The first one is a skeleton that is com
 <Example buttonLabel="live example of skeletons being replaced" code={`<div class="bd-skeleton-replace">
     <div aria-busy="true" inert>
       <div class="d-flex gap-medium mb-medium">
+
         <div class="skeleton w-50 ratio-1x1"></div>
+
         <div class="flex-grow-1 d-flex flex-column skeleton-text">
           <div class="skeleton skeleton-title mb-small"></div>
           <div class="skeleton"></div>
@@ -288,7 +322,9 @@ Here are two live examples of skeletons. The first one is a skeleton that is com
           <div class="skeleton"></div>
           <div class="skeleton w-75"></div>
         </div>
+
       </div>
+
       <button class="btn btn-default">Relaunch animation</button>
     </div>
     <p class="visually-hidden" role="alert">Loading content ...</p>
@@ -303,12 +339,14 @@ The second example is a skeleton for a form where elements are already set but w
 <Example buttonLabel="live example of skeletons over components" code={`<div class="bd-skeleton-replace2">
     <div aria-busy="true" inert>
       <form class="d-flex flex-column gap-medium mb-medium" novalidate>
+
         <div class="text-input">
           <div class="text-input-container">
             <label for="exampleTextInputWithPlaceholder2">Email address</label>
             <input type="email" class="text-input-field" id="exampleTextInputWithPlaceholder2" placeholder="name@example.com">
           </div>
         </div>
+
         <div class="select-input">
           <div class="select-input-container">
             <label for="exampleSelect2">Default select example</label>
@@ -320,6 +358,7 @@ The second example is a skeleton for a form where elements are already set but w
             </select>
           </div>
         </div>
+
         <div class="checkbox-item">
           <div class="control-item-assets-container">
             <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault2" />
@@ -328,7 +367,9 @@ The second example is a skeleton for a form where elements are already set but w
             <label class="control-item-label" for="checkboxDefault2">Default checkbox</label>
           </div>
         </div>
+
       </form>
+
       <button class="btn btn-default" onclick="window.relaunchAnim2()">Relaunch animation</button>
     </div>
     <p class="visually-hidden" role="status">Loading form ...</p>
