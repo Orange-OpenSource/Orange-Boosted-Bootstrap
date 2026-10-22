@@ -87,9 +87,7 @@ if(slug && sidebars.includes(slug as typeof sidebars[number])) {
                         >
                           {page.title}
                           {page.draft && (
-                            <svg width="1rem" height="1rem" aria-hidden="true">
-                              <use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#traffic-cone')} />
-                            </svg>
+                            <span class="tag tag-warning tag-muted tag-small">draft</span>
                           )}
                         </a>
                       </li>
