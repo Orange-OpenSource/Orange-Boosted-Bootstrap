@@ -88,4 +88,4 @@ Example: if the warning mentions `.alert-success`, look up `alerts` in `using-ou
 - Use the `using-ouds-web-version-<major>-<minor>` skill for target component markup and class lookup during manual warning resolution
 - `packages/migrate/README.md` — full `@ouds/web-migrate` options and examples
 - `using-ouds-web-version-<major>-<minor>/references/getting-started/migration-from-boosted.md` — component-by-component Boosted→OUDS Web changes
-- `using-ouds-web-version-<major>-<minor>/references/getting-started/migration.md` — OUDS Web version-to-version changes
+- `using-ouds-web-version-<major>-<minor>/references/getting-started/update-guide.md` — OUDS Web version-to-version changes
