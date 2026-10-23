@@ -76,7 +76,7 @@ if(slug && sidebars.includes(slug as typeof sidebars[number])) {
                           href={url}
                           class:list={[
                             'bd-links-link',
-                            'd-inline-flex',
+                            'd-flex',
                             'column-gap-2xsmall',
                             'align-items-center',
                             { active },
@@ -87,7 +87,7 @@ if(slug && sidebars.includes(slug as typeof sidebars[number])) {
                         >
                           {page.title}
                           {page.draft && (
-                            <span class="tag tag-warning tag-muted tag-small">draft</span>
+                            <span class="tag tag-negative tag-muted tag-small ms-auto">draft</span>
                           )}
                         </a>
                       </li>
