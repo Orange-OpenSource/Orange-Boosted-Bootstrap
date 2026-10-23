@@ -37,5 +37,10 @@ export const oudsReplacements = [
     ...warnForClass('was-validated', {
       message: 'The form using class \'{class}\' in {file} needs to be updated to use the new form validation style.'
     })
-  ]
+  ],
+
+  // Modals
+  [...warnForClass('modal', {
+    message: 'The modal in {file} needs to be updated to use the new modal dialog or fullscreen dialog component.'
+  })]
 ]
