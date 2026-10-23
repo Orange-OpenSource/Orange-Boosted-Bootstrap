@@ -423,6 +423,11 @@
 
 // OUDS mod: no .bd-content .bd-code-snippet
 
+// For code elements outside of code snippets, use muted color by default
+code {
+  color: var(--#{$prefix}color-content-muted);
+}
+
 // OUDS mod
 // scss-docs-start sticker-fs-4xlarge
 .sticker-fs-4xlarge {

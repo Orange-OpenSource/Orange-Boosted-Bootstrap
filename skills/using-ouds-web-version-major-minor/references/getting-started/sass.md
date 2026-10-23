@@ -49,7 +49,7 @@ your-project/
 // 7. Optional partials
 @import "../node_modules/@ouds/web-common/scss/utilities";
 @import "../node_modules/@ouds/web-common/scss/reboot";
-@import "../node_modules/@ouds/web-common/scss/type";
+@import "../node_modules/@ouds/web-common/scss/typography";
 @import "../node_modules/@ouds/web-common/scss/images";
 @import "../node_modules/@ouds/web-common/scss/containers";
 @import "../node_modules/@ouds/web-common/scss/grid";
