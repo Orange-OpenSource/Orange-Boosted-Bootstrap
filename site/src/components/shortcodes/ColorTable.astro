@@ -5,7 +5,7 @@ import { allTokens } from '@libs/sass-variables'
 
 interface IColorToken {
   colorName: string
-  lightValue?: string
+  lightValue: string
   darkValue?: string
   backdropLight?: string
   backdropDark?: string
@@ -107,11 +107,12 @@ if (basicClasses.length) {
             </th>
             <td>
               <div
-                class:list={['ratio-21x9', { 'bg-primary': multiTheme, [getUsage(token.colorName, colorPrefix).replace('.', '')]: !multiTheme }]}
+                class:list={['ratio-21x9', { 'bg-primary': multiTheme, [getUsage(token.colorName, colorPrefix).replace('.', '')]: basicClasses.length > 0}]}
+                data-bs-theme={multiTheme ? 'light' : undefined}
               >
                 <figure
                   class:list={['w-100 h-100 mb-none d-flex justify-content-center align-items-center']}
-                  style={getStyle(token, multiTheme ? 'light' : 'root')}
+                  style={getStyle(token,  'light')}
                   title={token.lightValue ?? ''}
                 >
                   {(hasBackdrop || token.backdropLight) && (
