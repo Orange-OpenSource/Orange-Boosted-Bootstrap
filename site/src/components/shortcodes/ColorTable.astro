@@ -55,7 +55,7 @@ const getLightDarkValuesFor = (colorName: string) => {
 }
 
 const matchAndGetValues = (colorToken: IDeclaration): IColorToken => {
-  const { colorName, backdropColorName } = colorToken.name.match(tokenRegexp!)?.groups as {
+  const { colorName, backdropColorName } = colorToken.name.match(tokenRegexp)?.groups as {
     colorName: string
     backdropColorName?: string
   }
@@ -74,14 +74,8 @@ const matchAndGetValues = (colorToken: IDeclaration): IColorToken => {
 let tokens: IColorToken[] = []
 if (basicClasses.length) {
   tokens = basicClasses.map((className: string) => ({ colorName: className }))
-} else if (tokenRegexp) {
-  tokens = allTokens.filter((token) => tokenRegexp.test(token.name)).map(matchAndGetValues)
 } else {
-  tokens = [
-    {
-      colorName: colorPrefix ? colorPrefix.replace(/^.*\//, '') : 'custom'
-    }
-  ]
+  tokens = allTokens.filter((token) => tokenRegexp.test(token.name)).map(matchAndGetValues)
 }
 
 ---
@@ -98,9 +92,7 @@ if (basicClasses.length) {
               <th scope="col">Dark mode</th>
             </>
           ) : (
-            <>
-              <th scope="col">Preview</th>
-            </>
+            <><th scope="col">Preview</th></>
           )
         }
         <th scope="col">Usage</th>
