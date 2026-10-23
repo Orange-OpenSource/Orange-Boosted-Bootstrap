@@ -1,0 +1,39 @@
+<button
+    [ngClass]="buttonClasses"
+    [type]="type"
+    [attr.aria-label]="defaultAriaLabel"
+    [disabled]="buttonDisabled"
+    [attr.form]="formId"
+    (click)="onClick()"
+>
+    <ng-content select="[icon]"></ng-content>
+
+    @if (label && !isIconOnly) {
+        {{ label }}
+    }
+    @if (isIconOnly && label) {
+        <span class="visually-hidden">{{ label }}</span>
+    }
+
+    <ng-content></ng-content>
+
+    <!-- Same markup as the OUDS Web loading button: the loader is always in the DOM and hidden by CSS until loading. -->
+    <svg
+        viewBox="0 0 40 40"
+        xmlns="http://www.w3.org/2000/svg"
+        class="loader"
+        aria-hidden="true"
+    >
+        <circle class="loader-inner" cx="20" cy="20" r="17" />
+    </svg>
+
+    <!-- The status live region is always in the DOM (`d-none` until loading) so screen readers announce its text change. -->
+    <span
+        [id]="statusId"
+        role="status"
+        class="visually-hidden"
+        [class.d-none]="!isLoading"
+    >
+        {{ loadingStatusText }}
+    </span>
+</button>

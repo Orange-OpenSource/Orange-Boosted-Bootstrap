@@ -1,0 +1,21 @@
+{
+  "name": "@ouds/icons",
+  "version": "0.0.1",
+  "description": "OUDS icons as typed data (one named export per icon, with the drawing of each brand), for @ouds/react, @ouds/vue, and @ouds/angular.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "dependencies": {
+    "@ouds/core": "^0.0.1"
+  },
+  "main": "./index.cjs",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "require": "./index.cjs"
+    }
+  }
+}
