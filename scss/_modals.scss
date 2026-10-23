@@ -1,0 +1,371 @@
+// Global config
+#{$ouds-root-selector} {
+  --#{$prefix}modal-border-radius: #{$ouds-modal-dialog-border-radius-default};
+}
+
+.use-rounded-corner-modal {
+  --#{$prefix}modal-border-radius: #{$ouds-modal-dialog-border-radius-rounded};
+}
+
+// transition settings are not tokenized yet see #3851
+$modal-transition-duration: .2s !default;
+$modal-transition-dimension: -3rem !default;
+
+.modal-base {
+  --#{$prefix}modal-close-button-inset: #{$ouds-modal-dialog-space-inset-close-button-mobile};
+  --#{$prefix}modal-body-footer-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-mobile};
+  --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-mobile};
+  --#{$prefix}modal-body-padding-top: #{$ouds-modal-dialog-space-padding-block-top-body-default-mobile};
+  --#{$prefix}modal-footer-padding-top: #{$ouds-modal-dialog-space-padding-block-top-footer-default-mobile};
+  --#{$prefix}modal-header-gap: var(--#{$prefix}space-scaled-medium);
+  --#{$prefix}modal-title-gap: var(--#{$prefix}space-scaled-small);
+  --#{$prefix}modal-icon-size: var(--#{$prefix}icon-large-with-heading-medium);
+
+  flex-direction: column; // cannot use grid because of Safari dialog limitations
+  width: var(--#{$prefix}modal-width);
+  max-width: unset;
+  height: var(--#{$prefix}modal-height);
+  max-height: var(--#{$prefix}modal-max-height);
+  margin: var(--#{$prefix}modal-margin);
+  overscroll-behavior: contain;
+  background-color: $ouds-color-overlay-modal-sheet;
+
+  &:is(:open, [open]) {
+    display: flex;
+  }
+
+  &::backdrop {
+    overflow: hidden;
+    overscroll-behavior: contain;
+  }
+
+  &:has(> .modal-footer):has(.modal-body) {
+    .modal-body {
+      padding-block-end: var(--#{$prefix}modal-body-footer-padding-bottom);
+    }
+
+    > .modal-footer {
+      padding-block: var(--#{$prefix}modal-sticky-footer-padding-block);
+      border-top: $ouds-border-width-default solid $ouds-color-border-muted;
+    }
+  }
+
+  &:not(:has(.modal-body)) {
+    .modal-footer {
+      padding-block-end: calc(var(--#{$prefix}modal-body-footer-padding-bottom) + var(--#{$prefix}modal-padding-bottom));
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    --#{$prefix}modal-close-button-inset: #{$ouds-modal-dialog-space-inset-close-button-default-tablet};
+    --#{$prefix}modal-body-footer-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-tablet};
+    --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-default-tablet};
+    --#{$prefix}modal-body-padding-top: #{$ouds-modal-dialog-space-padding-block-top-body-default-tablet};
+    --#{$prefix}modal-footer-padding-top: #{$ouds-modal-dialog-space-padding-block-top-footer-default-tablet};
+  }
+
+  @include media-breakpoint-up(xl) {
+    --#{$prefix}modal-close-button-inset: #{$ouds-modal-dialog-space-inset-close-button-default-desktop};
+    --#{$prefix}modal-body-footer-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-default-desktop};
+    --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-default-desktop};
+    --#{$prefix}modal-body-padding-top: #{$ouds-modal-dialog-space-padding-block-top-body-default-desktop};
+    --#{$prefix}modal-footer-padding-top: #{$ouds-modal-dialog-space-padding-block-top-footer-default-desktop};
+  }
+}
+
+@mixin modal-fullscreen-dialog {
+  --#{$prefix}modal-max-height: unset;
+  --#{$prefix}modal-width: 100dvw;
+  --#{$prefix}modal-height: 100dvh;
+  --#{$prefix}modal-margin: 0;
+  --#{$prefix}modal-padding-top: var(--#{$prefix}space-scaled-xlarge);
+  --#{$prefix}modal-padding-bottom: var(--#{$prefix}space-scaled-xlarge);
+  --#{$prefix}modal-padding-inline: var(--#{$prefix}grid-margin);
+  --#{$prefix}modal-close-button-inset: #{$ouds-fullscreen-dialog-space-inset-close-button-mobile};
+  --#{$prefix}modal-border-radius: 0;
+  --#{$prefix}modal-header-gap: var(--#{$prefix}space-scaled-large);
+  // the following reset will override any values from @mixin modal-dialog if applied on other breakpoints
+  --#{$prefix}modal-content-max-width: unset;
+
+  transition: none; // stylelint-disable-line property-disallowed-list
+
+  @include media-breakpoint-up(md) {
+    --#{$prefix}modal-close-button-inset: #{$ouds-fullscreen-dialog-space-inset-close-button-tablet};
+
+    &:where(:not(:has(> .modal-footer))) {
+      --#{$prefix}modal-footer-width: fit-content;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    --#{$prefix}modal-close-button-inset: #{$ouds-fullscreen-dialog-space-inset-close-button-desktop};
+  }
+}
+
+.modal-fullscreen-dialog {
+  @include modal-fullscreen-dialog();
+}
+
+@mixin modal-dialog {
+  --#{$prefix}modal-max-height: calc(100dvh - 2 * #{$ouds-space-fixed-medium});
+  --#{$prefix}modal-width: calc(min(100dvw, #{$ouds-grid-3xl-max-width}) - 2 * #{$ouds-space-fixed-medium});
+  --#{$prefix}modal-height: fit-content;
+  --#{$prefix}modal-margin: auto #{$ouds-space-fixed-medium};
+  --#{$prefix}modal-padding-top: #{$ouds-modal-dialog-space-padding-block-top-mobile};
+  --#{$prefix}modal-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-mobile};
+  --#{$prefix}modal-padding-inline: #{$ouds-modal-dialog-space-padding-inline-mobile};
+  // the following resets will override any values from @mixin fullscreen-dialog if applied on other breakpoints
+  --#{$prefix}modal-footer-width: auto;
+  --#{$prefix}modal-border-radius: inherit;
+  --#{$prefix}modal-content-max-width: 100%;
+
+  box-shadow: $ouds-elevation-emphasized;
+  opacity: 0;
+  transform: translateY(#{$modal-transition-dimension});
+  @include transition(transform #{$modal-transition-duration} ease-in-out, opacity #{$modal-transition-duration} ease-in-out, display #{$modal-transition-duration} allow-discrete, overlay #{$modal-transition-duration} allow-discrete);
+  @include border-radius(var(--#{$prefix}modal-border-radius));
+
+  &:not(.modal-non-blurred)::backdrop {
+    backdrop-filter: unset;
+    @include transition(backdrop-filter #{$modal-transition-duration} ease-in-out);
+  }
+
+  &:is(:open, [open]) {
+    opacity: 1;
+    transform: none;
+
+    &:not(.modal-non-blurred)::backdrop {
+      backdrop-filter: blur(#{$ouds-effect-blur-backdrop});
+    }
+
+    @starting-style {
+      opacity: 0;
+      transform: translateY(#{$modal-transition-dimension});
+
+      &:not(.modal-non-blurred)::backdrop {
+        backdrop-filter: unset;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    --#{$prefix}modal-column-count: 10;
+    --#{$prefix}modal-max-height: 90dvh;
+    --#{$prefix}modal-margin: auto;
+    --#{$prefix}modal-width: calc((min(100dvw, #{$ouds-grid-2xl-max-width-alt}) - 2 * var(--#{$prefix}grid-margin) - (11 * var(--#{$prefix}grid-gap))) * var(--#{$prefix}modal-column-count) / 12 + (var(--#{$prefix}grid-gap) * (var(--#{$prefix}modal-column-count) - 1)));
+  }
+
+  @include media-breakpoint-up(md) {
+    --#{$prefix}modal-padding-top: #{$ouds-modal-dialog-space-padding-block-top-default-tablet};
+    --#{$prefix}modal-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-default-tablet};
+    --#{$prefix}modal-padding-inline: #{$ouds-modal-dialog-space-padding-inline-default-tablet};
+  }
+
+  @include media-breakpoint-up(xl) {
+    --#{$prefix}modal-padding-top: #{$ouds-modal-dialog-space-padding-block-top-default-desktop};
+    --#{$prefix}modal-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-default-desktop};
+    --#{$prefix}modal-padding-inline: #{$ouds-modal-dialog-space-padding-inline-default-desktop};
+    --#{$prefix}modal-column-count: 8;
+  }
+
+  &.modal-small {
+    --#{$prefix}modal-body-footer-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-small-mobile};
+    --#{$prefix}modal-dialog-space-padding-block-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-mobile};
+    --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-mobile};
+    --#{$prefix}modal-body-padding-top: #{$ouds-modal-dialog-space-padding-block-top-body-small-mobile};
+    --#{$prefix}modal-footer-padding-top: #{$ouds-modal-dialog-space-padding-block-top-footer-small-mobile};
+    --#{$prefix}modal-title-gap: var(--#{$prefix}space-scaled-xsmall);
+    --#{$prefix}modal-icon-size: var(--#{$prefix}icon-small-with-heading-small);
+    --#{$prefix}modal-max-height: 50dvh;
+
+    @include media-breakpoint-up(md) {
+      --#{$prefix}modal-padding-top: #{$ouds-modal-dialog-space-padding-block-top-small-tablet};
+      --#{$prefix}modal-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-small-tablet};
+      --#{$prefix}modal-padding-inline: #{$ouds-modal-dialog-space-padding-inline-small-tablet};
+      --#{$prefix}modal-column-count: 8;
+      --#{$prefix}modal-close-button-inset: #{$ouds-modal-dialog-space-inset-close-button-small-tablet};
+      --#{$prefix}modal-body-footer-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-small-tablet};
+      --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-small-tablet};
+      --#{$prefix}modal-body-padding-top: #{$ouds-modal-dialog-space-padding-block-top-body-small-tablet};
+      --#{$prefix}modal-footer-padding-top: #{$ouds-modal-dialog-space-padding-block-top-footer-small-tablet};
+    }
+
+    @include media-breakpoint-up(lg) {
+      --#{$prefix}modal-column-count: 6;
+      --#{$prefix}modal-max-height: 60dvh;
+    }
+
+    @include media-breakpoint-up(xl) {
+      --#{$prefix}modal-padding-top: #{$ouds-modal-dialog-space-padding-block-top-small-desktop};
+      --#{$prefix}modal-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-small-desktop};
+      --#{$prefix}modal-padding-inline: #{$ouds-modal-dialog-space-padding-inline-small-desktop};
+      --#{$prefix}modal-column-count: 4;
+      --#{$prefix}modal-close-button-inset: #{$ouds-modal-dialog-space-inset-close-button-small-desktop};
+      --#{$prefix}modal-body-footer-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-small-desktop};
+      --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-small-desktop};
+      --#{$prefix}modal-body-padding-top: #{$ouds-modal-dialog-space-padding-block-top-body-small-desktop};
+      --#{$prefix}modal-footer-padding-top: #{$ouds-modal-dialog-space-padding-block-top-footer-small-desktop};
+    }
+
+    @include media-breakpoint-up(3xl) {
+      --#{$prefix}modal-max-height: 50dvh;
+    }
+
+    .modal-title {
+      @include get-font-size("heading-small");
+    }
+  }
+
+  &.modal-fixed-height {
+    --#{$prefix}modal-height: var(--#{$prefix}modal-max-height);
+  }
+}
+
+.modal-dialog {
+  @include modal-dialog();
+}
+
+.modal-header {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  padding: var(--#{$prefix}modal-padding-top) calc(var(--#{$prefix}space-scaled-3xlarge) + var(--#{$prefix}modal-padding-inline)) var(--#{$prefix}modal-body-padding-top) var(--#{$prefix}modal-padding-inline);
+  background-color: $ouds-color-overlay-modal-sheet;
+
+  .btn-close {
+    position: absolute;
+    inset-inline-end: var(--#{$prefix}modal-close-button-inset);
+    top: var(--#{$prefix}modal-close-button-inset);
+  }
+
+  .link-previous {
+    margin-bottom: var(--#{$prefix}modal-header-gap);
+  }
+}
+
+.modal-title {
+  display: flex;
+  gap: var(--#{$prefix}modal-title-gap);
+  align-items: center;
+  margin: 0;
+  @include get-font-size("heading-medium");
+}
+
+.modal-subtitle {
+  margin-block-end: 0;
+}
+
+.modal-icon {
+  width: var(--#{$prefix}modal-icon-size);
+  height: var(--#{$prefix}modal-icon-size);
+}
+
+.modal-icon-positive,
+.modal-icon-negative,
+.modal-icon-info,
+.modal-icon-warning {
+  position: relative;
+  color: var(--#{$prefix}modal-icon-color);
+
+  &::before,
+  &::after {
+    position: absolute;
+    inset: 0;
+    display: block;
+    content: "";
+  }
+
+  &::before {
+    background-color: currentcolor;
+    mask-image: escape-svg(var(--#{$prefix}modal-icon));
+  }
+
+  &::after {
+    background-color: var(--#{$prefix}modal-icon-internal-color);
+    mask-image: escape-svg(var(--#{$prefix}modal-icon-internal));
+  }
+}
+
+.modal-icon-negative {
+  --#{$prefix}modal-icon: var(--#{$prefix}alert-error-icon);
+  --#{$prefix}modal-icon-color: #{$ouds-color-content-status-negative};
+}
+
+.modal-icon-positive {
+  --#{$prefix}modal-icon: var(--#{$prefix}alert-success-icon);
+  --#{$prefix}modal-icon-color: #{$ouds-color-content-status-positive};
+}
+
+.modal-icon-info {
+  --#{$prefix}modal-icon: var(--#{$prefix}alert-info-icon);
+  --#{$prefix}modal-icon-color: #{$ouds-color-content-status-info};
+}
+
+.modal-icon-warning {
+  --#{$prefix}modal-icon: var(--#{$prefix}alert-warning-icon);
+  --#{$prefix}modal-icon-color: var(--#{$prefix}icon-color-content-status-warning-external-shape);
+  --#{$prefix}modal-icon-internal: var(--#{$prefix}alert-warning-internal-icon);
+  --#{$prefix}modal-icon-internal-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
+}
+
+.modal-body {
+  flex-grow: 1;
+  padding: 0 var(--#{$prefix}modal-padding-inline) calc(var(--#{$prefix}modal-body-footer-padding-bottom) + var(--#{$prefix}modal-padding-bottom));
+  overflow-y: auto;
+
+  > :last-child {
+    margin-block-end: 0;
+  }
+
+  .modal-footer {
+    padding-inline: 0;
+  }
+
+  &:has(.modal-footer) {
+    padding-block-end: var(--#{$prefix}modal-padding-bottom);
+
+    > :nth-last-child(2) {
+      margin-block-end: var(--#{$prefix}modal-body-footer-padding-bottom);
+    }
+  }
+
+  * {
+    max-width: var(--#{$prefix}modal-content-max-width, revert-rule);
+  }
+}
+
+.modal-footer {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: var(--#{$prefix}space-scaled-small);
+  align-items: center; // vertically center
+  width: var(--#{$prefix}modal-footer-width, auto);
+  padding-block: var(--#{$prefix}modal-footer-padding-top) var(--#{$prefix}modal-body-footer-padding-bottom);
+  padding-inline: var(--#{$prefix}modal-padding-inline);
+  background-color: $ouds-color-overlay-modal-sheet;
+
+  > :only-child {
+    margin-inline: auto;
+  }
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column; // stack buttons on small screens
+
+    > * {
+      width: 100%; // make buttons full width on small screens
+    }
+  }
+
+  &.modal-footer-horizontal {
+    @include media-breakpoint-down(sm) {
+      flex-direction: row-reverse; // force horizontal alignment
+
+      > * {
+        flex-grow: 1; // allow buttons to grow and fill available space
+        width: 25%; // reset width for horizontal layout
+      }
+    }
+  }
+}

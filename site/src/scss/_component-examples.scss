@@ -511,4 +511,14 @@
   }
   // scss-docs-end icon-home-sosh
 }
+
+// scss-docs-start modal-fluid
+.modal-fluid {
+  @include modal-fullscreen-dialog();
+
+  @include media-breakpoint-up(md) {
+    @include modal-dialog();
+  }
+}
+// scss-docs-end modal-fluid
 // End mod

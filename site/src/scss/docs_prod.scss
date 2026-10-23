@@ -44,6 +44,7 @@ $enable-bootstrap-compatibility: true;
   @import "../../../scss/bullet-list";
 }
 
+
 // Load docs components
 @import "variables";
 @import "navbar";
@@ -55,6 +56,7 @@ $enable-bootstrap-compatibility: true;
 @import "layout";
 @import "toc";
 @import "footer";
+@import "../../../scss/modals"; // need this to have access to modal mixins in the next file
 @import "component-examples";
 // OUDS mod: no import "callouts";
 @import "colors";
