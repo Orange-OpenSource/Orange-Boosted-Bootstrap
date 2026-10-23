@@ -252,8 +252,8 @@ Here are the associated `font-size`s depending on the breakpoints:
             {level === 'heading-large' && (<>Heading large (<code>{'<h2>'}</code> or <code>.h2</code>)</>)}
             {level === 'heading-medium' && (<>Heading medium (<code>{'<h3>'}</code> or <code>.h3</code>)</>)}
             {level === 'heading-small' && (<>Heading small (<code>{'<h4>'}</code> or <code>.h4</code>)</>)}
-            {level === 'body-large' && (<>Body large (<code>{'<h5>'}</code> or <code>.h5</code>)</>)}
-            {level === 'body-medium' && (<>Body medium (<code>{'<h6>'}</code> or <code>.h6</code>)</>)}
+            {level === 'body-large' && (<>Heading 5 (<code>{'<h5>'}</code> or <code>.h5</code>)</>)}
+            {level === 'body-medium' && (<>Heading 6 (<code>{'<h6>'}</code> or <code>.h6</code>)</>)}
           </td>
           {
             screenSize.map((size) => (
@@ -291,8 +291,8 @@ Here are the associated `font-size`s depending on the breakpoints:
               {level === 'heading-large' && (<>Heading large (<code>{'<h2>'}</code> or <code>.h2</code>)</>)}
               {level === 'heading-medium' && (<>Heading medium (<code>{'<h3>'}</code> or <code>.h3</code>)</>)}
               {level === 'heading-small' && (<>Heading small (<code>{'<h4>'}</code> or <code>.h4</code>)</>)}
-              {level === 'body-large' && (<>Body large (<code>{'<h5>'}</code> or <code>.h5</code>)</>)}
-              {level === 'body-medium' && (<>Body medium (<code>{'<h6>'}</code> or <code>.h6</code>)</>)}
+              {level === 'body-large' && (<>Heading 5 (<code>{'<h5>'}</code> or <code>.h5</code>)</>)}
+              {level === 'body-medium' && (<>Heading 6 (<code>{'<h6>'}</code> or <code>.h6</code>)</>)}
             </td>
             {
               screenSize.map((size) => (
@@ -313,6 +313,10 @@ Here are the associated `font-size`s depending on the breakpoints:
     </table>
   </div>
 </details>
+
+<Callout type="info">
+  Heading 5 and heading 6 references do not exist in the brand guidelines; they are included here for consistency and continuity of HTML pages.
+</Callout>
 
 <Example buttonLabel="heading styles on tags" code={`<h1>h1. OUDS Web heading</h1>
 
