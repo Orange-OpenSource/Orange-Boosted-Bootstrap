@@ -1,6 +1,6 @@
 ---
 import { getVersionedDocsPath } from '@libs/path'
-import { getTokenValue, type IDeclaration } from '@libs/sass-variables'
+import { getTokenValue, type IDeclaration, getMode, hasToken } from '@libs/sass-variables'
 import { allTokens } from '@libs/sass-variables'
 
 interface IColorToken {
@@ -12,11 +12,13 @@ interface IColorToken {
 }
 
 interface Props {
+  basicClasses?: string[]
   tokenRegexp: RegExp
   colorPrefix: string
   multiTheme?: boolean
   getUsage?: (colorName: string, colorPrefix?: string) => string
   getStyle?: (token: IColorToken, mode: string) => astroHTML.JSX.CSSProperties
+  hasBackdrop?: boolean
 }
 
 const getCustomProp = (colorName: string, colorPrefix: string) =>
@@ -31,7 +33,15 @@ const getBackground = (token: IColorToken, mode: string): astroHTML.JSX.CSSPrope
         backgroundColor: token.backdropDark ? token.backdropDark : token.darkValue
       }
 
-const { colorPrefix, tokenRegexp, multiTheme = true, getUsage = getCustomProp, getStyle = getBackground } = Astro.props
+const {
+  colorPrefix,
+  basicClasses = [],
+  tokenRegexp,
+  multiTheme = true,
+  getUsage = getCustomProp,
+  getStyle = getBackground,
+  hasBackdrop
+} = Astro.props
 
 const getLightDarkValuesFor = (colorName: string) => {
   let token = `$ouds-color-${colorName}`
@@ -60,6 +70,14 @@ const matchAndGetValues = (colorToken: IDeclaration): IColorToken => {
     ...(backdropColorName ? getLightDarkValuesFor(backdropColorName) : {})
   }
 }
+
+let tokens: IColorToken[] = []
+if (basicClasses.length) {
+  tokens = basicClasses.map((className: string) => ({ colorName: className }))
+} else {
+  tokens = allTokens.filter((token) => tokenRegexp.test(token.name)).map(matchAndGetValues)
+}
+
 ---
 
 <div class="table-responsive mb-small">
@@ -74,7 +92,7 @@ const matchAndGetValues = (colorToken: IDeclaration): IColorToken => {
               <th scope="col">Dark mode</th>
             </>
           ) : (
-            <th scope="col">All modes</th>
+            <th scope="col">Preview</th>
           )
         }
         <th scope="col">Usage</th>
@@ -82,64 +100,61 @@ const matchAndGetValues = (colorToken: IDeclaration): IColorToken => {
     </thead>
     <tbody>
       {
-        allTokens
-          .filter((token) => tokenRegexp.test(token.name))
-          .map(matchAndGetValues)
-          .map((token: IColorToken) => (
-            <tr class="align-middle">
-              <th class="w-50" scope="row">
-                <var>{token.colorName}</var>
-              </th>
-              <td>
-                <div
-                  class:list={['ratio-21x9', { 'bg-primary': multiTheme }]}
-                  data-bs-theme={multiTheme ? 'light' : undefined}
+        tokens.map((token: IColorToken) => (
+          <tr class="align-middle">
+            <th class="w-50" scope="row">
+              <var>{ token.colorName } </var>
+            </th>
+            <td>
+              <div
+                class:list={['ratio-21x9', { 'bg-primary': multiTheme, [getUsage(token.colorName, colorPrefix).replace('.', '')]: basicClasses.length > 0}]}
+                data-bs-theme={multiTheme ? 'light' : undefined}
+              >
+                <figure
+                  class:list={['w-100 h-100 mb-none d-flex justify-content-center align-items-center']}
+                  style={getStyle(token,  'light')}
+                  title={token.lightValue ?? ''}
                 >
+                  {(hasBackdrop || token.backdropLight) && (
+                    <svg class="decorative-small-icon" aria-hidden="true" color={token.lightValue}>
+                      <use
+                        xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}
+                      />
+                    </svg>
+                  )}
+                  <figcaption class="visually-hidden">
+                    <var>{token.lightValue}</var>
+                  </figcaption>
+                </figure>
+              </div>
+            </td>
+            {multiTheme && (
+              <td>
+                <div class="bg-primary ratio-21x9" data-bs-theme="dark">
                   <figure
-                    class="w-100 h-100 mb-none d-flex justify-content-center align-items-center"
-                    style={getStyle(token, 'light')}
-                    title={token.lightValue}
+                    class:list={['w-100 h-100 mb-none d-flex justify-content-center align-items-center', basicClasses.length > 0 ? { [ getUsage(token.colorName, colorPrefix).replace('.', '')]: token.colorName } : {}]}
+                    style={getStyle(token, 'dark')}
+                    title={token.darkValue ?? ''}
                   >
-                    {token.backdropLight && (
-                      <svg class="decorative-small-icon" aria-hidden="true" color={token.lightValue}>
+                    {(hasBackdrop || token.backdropDark) && (
+                      <svg class="decorative-small-icon" aria-hidden="true" color={token.darkValue}>
                         <use
                           xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}
                         />
                       </svg>
                     )}
                     <figcaption class="visually-hidden">
-                      <var>{token.lightValue}</var>
+                      <var>{token.darkValue}</var>
                     </figcaption>
                   </figure>
                 </div>
               </td>
-              {multiTheme && (
-                <td>
-                  <div class="bg-primary ratio-21x9" data-bs-theme="dark">
-                    <figure
-                      class="w-100 h-100 mb-none d-flex justify-content-center align-items-center"
-                      style={getStyle(token, 'dark')}
-                      title={token.darkValue}
-                    >
-                      {token.backdropDark && (
-                        <svg class="decorative-small-icon" aria-hidden="true" color={token.darkValue}>
-                          <use
-                            xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}
-                          />
-                        </svg>
-                      )}
-                      <figcaption class="visually-hidden">
-                        <var>{token.darkValue}</var>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </td>
-              )}
-              <td class="w-25 user-select-all">
-                <var>{getUsage(token.colorName, colorPrefix)}</var>
-              </td>
-            </tr>
-          ))
+            )}
+            <td class="w-25 user-select-all">
+              <var>{getUsage(token.colorName, colorPrefix)}</var>
+            </td>
+          </tr>
+        ))
       }
     </tbody>
   </table>

@@ -1,0 +1,184 @@
+---
+import { getVersionedDocsPath } from '@libs/path'
+import { getTokenValue, type IDeclaration, getMode, hasToken } from '@libs/sass-variables'
+import { allTokens } from '@libs/sass-variables'
+
+interface IColorToken {
+  colorName: string
+  lightValue?: string
+  darkValue?: string
+  backdropLight?: string
+  backdropDark?: string
+}
+
+interface Props {
+  basicClasses?: string[]
+  tokenRegexp?: RegExp
+  colorPrefix: string
+  getUsage?: (colorName: string, colorPrefix?: string) => string
+  parentTheme?: 'light'|'dark'|'root'|'root-inverted'
+}
+
+const getCustomProp = (colorName: string, colorPrefix: string) =>
+  `var(--bs${colorPrefix.replace('ouds', '').replaceAll('/', '-')}${colorName})`
+
+const getBackground = (token: IColorToken, mode: string): astroHTML.JSX.CSSProperties =>
+  mode === 'light'
+    ? {
+      backgroundColor: token.backdropLight ? token.backdropLight : token.lightValue
+    }
+    : {
+      backgroundColor: token.backdropDark ? token.backdropDark : token.darkValue
+    }
+
+const {
+  colorPrefix,
+  basicClasses = [],
+  tokenRegexp,
+  getUsage = getCustomProp,
+  parentTheme
+} = Astro.props
+
+const getLightDarkValuesFor = (colorName: string) => {
+  let token = `$ouds-color-${colorName}`
+  if (colorName.includes('status') || colorName.includes('brand')) {
+    token = `$ouds-color-surface-${colorName}`
+  }
+  return {
+    backdropLight: getTokenValue(`${token}-light`),
+    backdropDark: getTokenValue(`${token}-dark`)
+  }
+}
+
+const matchAndGetValues = (colorToken: IDeclaration): IColorToken => {
+  const { colorName, backdropColorName } = colorToken.name.match(tokenRegexp!)?.groups as {
+    colorName: string
+    backdropColorName?: string
+  }
+
+  return {
+    lightValue: colorToken.compiledValue,
+    darkValue: colorToken.name.endsWith('-light')
+      ? getTokenValue(colorToken.name.replace(/-light$/, '-dark'))
+      : undefined,
+    colorName,
+    // add both dark and light colors of backdrop (this is for `content-on` tokens)
+    ...(backdropColorName ? getLightDarkValuesFor(backdropColorName) : {})
+  }
+}
+
+const getRecommendedThemeFor = (searchedToken: IColorToken) => {
+  if (searchedToken.colorName === 'black' || searchedToken.colorName === 'white') {
+    return searchedToken.colorName === 'black' ? 'dark' : 'light'
+  }
+
+  const recommendedTheme = allTokens
+    .filter(tokenData => tokenData.name.match(new RegExp(`\ouds-color-((surface|bg)-${searchedToken.colorName}|surface-status-${searchedToken.colorName}-emphasized)-light`))).map(token => {
+      const themesArray = allTokens.filter(allToken => {
+        return allToken.name.match(`modes-on-(((bg|surface)-)?${searchedToken.colorName}|status-${searchedToken.colorName}-emphasized)-(dark|light)`)
+      }).map(token => token.compiledValue)
+      if (parentTheme === 'root-inverted') {
+        return themesArray[0].includes('dark')
+          ? themesArray[1].includes('light')
+            ? 'root-inverted'
+            : 'dark'
+          : themesArray[1].includes('light')
+            ? 'light'
+            : 'root'
+      }
+
+      if (parentTheme === 'light' || parentTheme === 'dark') {
+        const darkParentTheme = parentTheme === 'dark'
+        return themesArray[darkParentTheme ? 0 : 1].includes(parentTheme)
+          ? parentTheme
+          : darkParentTheme ? 'light' : 'dark'
+      }
+
+      return themesArray[0].includes('dark')
+        ? themesArray[1].includes('light')
+          ? 'root'
+          : 'dark'
+        : themesArray[1].includes('light')
+          ? 'light'
+          : 'root-inverted'
+    })
+
+  return recommendedTheme[0] !== parentTheme ? recommendedTheme[0] : ''
+}
+
+let tokens: IColorToken[] = []
+if (basicClasses.length) {
+  tokens = basicClasses.map((className: string) => ({ colorName: className }))
+} else if (tokenRegexp) {
+  tokens = allTokens.filter((token) => tokenRegexp.test(token.name)).map(matchAndGetValues)
+} else {
+  tokens = [
+    {
+      colorName: colorPrefix ? colorPrefix.replace(/^.*\//, '') : 'custom'
+    }
+  ]
+}
+
+---
+
+<div class="table-responsive mb-small">
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="w-50" scope="col">Usage</th>
+      <>
+        <th scope="col">Preview</th>
+        <th scope="col">Recommended theme<br>(if any)</th>
+      </>
+    </tr>
+    </thead>
+    <tbody>
+    {
+      tokens.map((token: IColorToken) => (
+        <tr class="align-middle">
+          <th class="w-50" scope="row">
+            <div class="d-flex align-items-center justify-content-between">
+              <var>{ getUsage(token.colorName, colorPrefix) }</var>
+              <button data-clipboard-text={getUsage(token.colorName, colorPrefix).replaceAll('.', '')} type="button" class="btn btn-minimal btn-icon btn-clipboard m-3xsmall">
+                <svg aria-hidden="true">
+                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use>
+                </svg>
+              </button>
+            </div>
+          </th>
+          <td>
+            <div
+              class:list={['ratio-21x9', getUsage(token.colorName, colorPrefix).replace('.', '')]}
+            >
+              <figure
+                class:list={['w-100 h-100 mb-none d-flex justify-content-center align-items-center']}
+                title={token.lightValue ?? ''}
+                data-bs-theme={getRecommendedThemeFor(token)}
+              >
+                <svg class="decorative-small-icon" aria-hidden="true">
+                  <use
+                    xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}
+                  />
+                </svg>
+                <figcaption class="visually-hidden">
+                  <var>{token.lightValue}</var>
+                </figcaption>
+              </figure>
+            </div>
+          </td>
+          <td class="w-25">
+            <div class="d-flex align-items-center justify-content-between">
+              <var>{getRecommendedThemeFor(token) ?? '—'}</var>
+              { getRecommendedThemeFor(token) && (<button data-clipboard-text={`data-bs-theme="${getRecommendedThemeFor(token)}"`} data-bs-title="Copy class to clipboard" type="button" class="btn btn-minimal btn-icon btn-clipboard m-3xsmall">
+                <svg aria-hidden="true">
+                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use>
+                </svg>
+              </button>)}
+            </div>
+          </td>
+        </tr>
+      ))
+    }
+    </tbody>
+  </table>
+</div>
