@@ -119,8 +119,7 @@
     "@types/js-yaml": "^4.0.9",
     "@types/mime": "^4.0.0",
     "@types/prismjs": "^1.26.5",
-    "@vitest/browser-playwright": "^5.0.0",
-    "@vitest/coverage-v8": "^5.0.0",
+    "@vitest/browser-playwright": "5.0.4",
     "astro": "^7.3.3",
     "astro-auto-import": "^0.6.0",
     "autoprefixer": "^10.6.1",
@@ -172,7 +171,7 @@
     "tarteaucitronjs": "^1.34.0",
     "terser": "^5.51.2",
     "unist-util-visit": "^5.0.0",
-    "vitest": "^5.0.0",
+    "vitest": "^5.0.4",
     "vnu-jar": "24.10.17",
     "zod": "^4.6.5"
   },
