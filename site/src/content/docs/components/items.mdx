@@ -16,6 +16,10 @@ types:
 import { getVersionedDocsPath } from '@libs/path'
 import { getTokenValue } from '@libs/sass-variables'
 
+<Callout type="info" title="Design guidelines">
+  For usage guidance, please refer to the [static card item guidelines](https://r.orange.fr/r/S-ouds-doc-static-card-item), the [static list item guidelines](https://r.orange.fr/r/S-ouds-doc-static-list-item), the [navigation card item guidelines](https://r.orange.fr/r/S-ouds-doc-navigation-card-item), and the [navigation list item guidelines](https://r.orange.fr/r/S-ouds-doc-navigation-list-item).
+</Callout>
+
 ## Overview
 
 Our items are the equivalent of design `List item`
@@ -176,7 +180,7 @@ Card item is a UI element that displays a unit of information either in an inter
 
 ### [[comp]] Static card item
 
-Static card item is a UI element that displays a unit of information in a non-interactive, self-contained card, that does not navigate, trigger actions or have interactive states.
+Static card item is a UI element that displays a unit of information in a non-interactive, self-contained card, that does not navigate, trigger actions or have interactive states.
 
 The static card item may be displayed independently or within a card-based layout. It can include supporting text, leading or trailing content, and status information.
 
@@ -184,8 +188,7 @@ When additional navigation is required, consider using a [navigation card item](
 
 All the available variants can be found in the [common variants section](#common-variants).
 
-<Example buttonLabel="standard static card item display" class="d-flex flex-column gap-medium" code={`
-  <div class="item">
+<Example buttonLabel="standard static card item display" class="d-flex flex-column gap-medium" code={`<div class="item">
     <div class="item-container">
       <div class="item-content">
         <div class="item-text-container">
@@ -236,6 +239,7 @@ The static list item allows quick scanning and comparison of related items. It c
 All the available variants can be found in the [common variants section](#common-variants).
 
 <Example buttonLabel="standard static list item display" class="d-flex flex-column gap-medium" code={`<ul class="item-list">
+
     <li class="item">
       <div class="item-container">
         <div class="item-content">
@@ -245,6 +249,7 @@ All the available variants can be found in the [common variants section](#common
         </div>
       </div>
     </li>
+
     <li class="item">
       <div class="item-container">
         <div class="item-content">
@@ -254,6 +259,7 @@ All the available variants can be found in the [common variants section](#common
         </div>
       </div>
     </li>
+
   </ul>`} />
 
 ### [[comp]] Navigation list item
@@ -267,6 +273,7 @@ Add an `.item-navigation` on the `.item` level and an `.item-interactive` at the
 Available variants can be found in the [common variants section](#common-variants) and [navigation items variants section](#navigation-items-variants).
 
 <Example buttonLabel="standard navigation list item display" class="d-flex flex-column gap-medium" code={`<ul class="item-list">
+
     <li class="item item-navigation">
       <div class="item-container">
         <div class="item-content">
@@ -276,6 +283,7 @@ Available variants can be found in the [common variants section](#common-variant
         </div>
       </div>
     </li>
+
     <li class="item item-navigation">
       <div class="item-container">
         <div class="item-content">
@@ -285,6 +293,7 @@ Available variants can be found in the [common variants section](#common-variant
         </div>
       </div>
     </li>
+
   </ul>`} />
 
 ## Common variants
@@ -773,6 +782,7 @@ By default, [card items](#card-items) have a background-color, while [list items
 
   <!-- List -->
   <ul class="item-list item-bg">
+
     <li class="item">
       <div class="item-container">
         <div class="item-content">
@@ -782,6 +792,7 @@ By default, [card items](#card-items) have a background-color, while [list items
         </div>
       </div>
     </li>
+
     <li class="item item-navigation">
       <div class="item-container">
         <div class="item-content">
@@ -791,6 +802,7 @@ By default, [card items](#card-items) have a background-color, while [list items
         </div>
       </div>
     </li>
+
   </ul>`} />
 
 ### Divider
@@ -810,6 +822,7 @@ You can remove the divider by using `.item-no-divider` on the `.item` or `.item-
 
   <!-- List -->
   <ul class="item-list item-no-divider">
+
     <li class="item">
       <div class="item-container">
         <div class="item-content">
@@ -819,6 +832,7 @@ You can remove the divider by using `.item-no-divider` on the `.item` or `.item-
         </div>
       </div>
     </li>
+
     <li class="item item-navigation">
       <div class="item-container">
         <div class="item-content">
@@ -828,6 +842,7 @@ You can remove the divider by using `.item-no-divider` on the `.item` or `.item-
         </div>
       </div>
     </li>
+
   </ul>`} />
 
 ### Outlined
@@ -878,6 +893,7 @@ Rounded corners items is a project-wide option therefore all your items should e
 </Callout>
 
 <Example buttonLabel="rounded items" class="bd-btn-example" code={`<div class="use-rounded-corner-items">
+
     <!-- Card -->
     <div class="item mb-medium">
       <div class="item-container">
@@ -891,6 +907,7 @@ Rounded corners items is a project-wide option therefore all your items should e
 
     <!-- List -->
     <ul class="item-list">
+
       <li class="item">
         <div class="item-container">
           <div class="item-content">
@@ -900,6 +917,7 @@ Rounded corners items is a project-wide option therefore all your items should e
           </div>
         </div>
       </li>
+
       <li class="item">
         <div class="item-container">
           <div class="item-content">
@@ -909,7 +927,9 @@ Rounded corners items is a project-wide option therefore all your items should e
           </div>
         </div>
       </li>
+
     </ul>
+
   </div>`} />
 </ThemeSpecific>
 
@@ -1001,6 +1021,7 @@ By default every item comes with a default size. The size can be adapted using `
 
   <!-- List -->
   <ul class="item-list item-small">
+
     <li class="item">
       <div class="item-container">
         <div class="item-content">
@@ -1010,6 +1031,7 @@ By default every item comes with a default size. The size can be adapted using `
         </div>
       </div>
     </li>
+
     <li class="item">
       <div class="item-container">
         <div class="item-content">
@@ -1019,6 +1041,7 @@ By default every item comes with a default size. The size can be adapted using `
         </div>
       </div>
     </li>
+
   </ul>`} />
 
 ### Layout
@@ -1109,6 +1132,7 @@ By default, items will span the whole width of their parent container, to limit 
 
   <!-- List -->
   <ul class="item-list component-max-width">
+
     <li class="item">
       <div class="item-container">
         <div class="item-content">
@@ -1118,6 +1142,7 @@ By default, items will span the whole width of their parent container, to limit 
         </div>
       </div>
     </li>
+
     <li class="item">
       <div class="item-container">
         <div class="item-content">
@@ -1127,6 +1152,7 @@ By default, items will span the whole width of their parent container, to limit 
         </div>
       </div>
     </li>
+
   </ul>`} />
 
 ## Navigation items variants

@@ -12,10 +12,10 @@
       - [ ] `scss/docs.scss`
       - [ ] Several markdown files and markdown extended files
       - [ ] Add docs version to `site/data/docs-versions.yml`
-      - [ ] Check that the changes in the migration guide only apply to the latest version
+      - [ ] Check that the changes in the update guide only apply to the latest version
       - [ ] (Major version) Manually update the version in `nuget/ouds-web.nuspec` and `nuget/ouds-web.sass.nuspec`
     - [ ] Update the home news for the next release
-  - check wrong matches in `CHANGELOG.md`, and maybe `site/content/docs/<version>/migration.md`
+  - check wrong matches in `CHANGELOG.md`, and maybe `site/content/docs/<version>/update-guide.md`
   - :warning: check the `package-lock.json` and `package.json` content, only "@ouds/web" should have its version changed!
 - [ ] if the year changed recently, happy new year :tada: but please change © year in `.scss` main files (reboot, grid, utilities, and main file) as well as in `NOTICE.txt`.
 - [ ] `npm run release` to compile dist, build Storybook, update SRI hashes in doc, and package the release

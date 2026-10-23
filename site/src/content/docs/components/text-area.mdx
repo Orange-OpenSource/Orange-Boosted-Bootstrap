@@ -9,8 +9,8 @@ toc: true
 
 import { getVersionedDocsPath } from '@libs/path'
 
-<Callout type="info">
-  You can find here the OUDS [text area design guidelines](https://r.orange.fr/r/S-ouds-doc-text-area).
+<Callout type="info" title="Design guidelines">
+  For usage guidance, please refer to the [text area design guidelines](https://r.orange.fr/r/S-ouds-doc-text-area).
 </Callout>
 
 ## Overview
@@ -35,6 +35,7 @@ A `placeholder` attribute is required on each `<textarea>` as our CSS-only float
       <textarea class="text-area-field" id="exampleTextArea" placeholder=" "></textarea>
     </div>
   </div>
+
   <div class="text-area">
     <div class="text-area-container">
       <label for="exampleTextAreaPlaceholder">Additional comments</label>
@@ -65,18 +66,21 @@ Rounded corners inputs is a project-wide option therefore all your inputs should
 </Callout>
 
 <Example buttonLabel="rounded text areas" code={`<div class="use-rounded-corner-inputs">
+
     <div class="text-area mb-medium">
       <div class="text-area-container">
         <label for="exampleTextAreaRounded">Additional comments</label>
         <textarea class="text-area-field" id="exampleTextAreaRounded" placeholder=" "></textarea>
       </div>
     </div>
+
     <div class="text-area">
       <div class="text-area-container text-area-container-outlined">
         <label for="exampleTextAreaRoundedAlt">Additional comments</label>
         <textarea class="text-area-field" id="exampleTextAreaRoundedAlt" placeholder=" "></textarea>
       </div>
     </div>
+
   </div>`} />
 </ThemeSpecific>
 
@@ -121,6 +125,7 @@ Since the helper link is the direct next element after the text area, it is not 
       More information <span class="visually-hidden">on</span>
     </a>
   </div>
+
   <div class="text-area">
     <div class="text-area-container mt-large">
       <label id="labelTextAreaHelperLink" for="textAreaHelperLink">Additional comments</label>
@@ -179,6 +184,7 @@ Add the `disabled` boolean attribute on a text area to give it a grayed out appe
       <textarea disabled class="text-area-field" id="exampleTextAreaDisabled" placeholder=" ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
   </div>
+
   <div class="text-area">
     <div class="text-area-container text-area-container-outlined">
       <label for="exampleTextAreaOutlinedDisabled">Additional comments</label>
@@ -196,6 +202,7 @@ Add the `readonly` boolean attribute on a text area to prevent modification of t
       <textarea readonly class="text-area-field" id="exampleTextAreaReadonly" placeholder=" ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
   </div>
+
   <div class="text-area">
     <div class="text-area-container text-area-container-outlined">
       <label for="exampleTextAreaOutlinedReadonly">Additional comments</label>
@@ -227,6 +234,7 @@ To manually mark a  text area as invalid, add `aria-invalid="true"` to a `.text-
       This field can’t be empty.
     </p>
   </div>
+
   <div class="text-area">
     <div class="text-area-container text-area-container-outlined">
       <label id="labelTextAreaOutlinedInvalid" for="exampleTextAreaOutlinedInvalid">Additional comments</label>

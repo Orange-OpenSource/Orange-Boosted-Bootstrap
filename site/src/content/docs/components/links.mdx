@@ -14,8 +14,8 @@ types:
 import { getVersionedDocsPath } from '@libs/path'
 import { getMode } from '@libs/sass-variables'
 
-<Callout type="info">
-  You can find here the OUDS [link design guidelines](https://r.orange.fr/r/S-ouds-doc-link).
+<Callout type="info" title="Design guidelines">
+  For usage guidance, please refer to the [link design guidelines](https://r.orange.fr/r/S-ouds-doc-link) and the [expand link design guidelines](https://r.orange.fr/r/S-ouds-doc-expand-link)
 </Callout>
 
 ## Overview
@@ -97,12 +97,17 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 
 <Example buttonLabel="links on colored backgrounds" class="p-none bd-first-rounded" code={`<div class="bg-surface-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}">
+
       <a class="link link-on-colored-bg" href="#">This is an example of link</a>
+
     </div>
   </div>
+
   <div class="bg-surface-status-negative-emphasized p-large">
     <div data-bs-theme="${getMode('modes-on-status-negative-emphasized')}">
+
       <a class="link link-on-colored-bg" href="#">This is an example of link</a>
+
     </div>
   </div>`} />
 
@@ -111,9 +116,12 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 Add `.link-chevron` to enhance your link with a chevron on the right side. Use the additional `.link-previous` class to display the chevron on the left side.
 
 <Example buttonLabel="links with chevron" code={`<div><a class="link link-chevron" href="#">Link with chevron</a></div>
+
   <div><a class="link link-chevron link-previous" href="#">Link with a previous chevron</a></div>
+
   <div style="width:20rem;">
     <div><a class="link link-chevron" href="#">This is an example of a link on multiple lines with chevron</a></div>
+
     <div><a class="link link-chevron link-previous" href="#">This is an example of a link on multiple lines with a previous chevron</a></div>
   </div>`} />
 
@@ -149,6 +157,7 @@ Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left o
       This is an example of a link with an SVG icon
     </a>
   </div>
+
   <div>
     <a class="link icon-link" href="#">
       <span class="icon si si-settings" aria-hidden="true"></span>
@@ -174,7 +183,9 @@ Make links look inactive by adding the `aria-disabled="true"` attribute to any `
 Disabled links using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning](#disabled-link-accessibility-warning).
 
 <Example buttonLabel="disabled links" code={`<div><a class="link" aria-disabled="true">This is an example of a disabled link</a></div>
+
   <div><a class="link link-chevron" aria-disabled="true">This is an example of a disabled link with chevron</a></div>
+
   <div>
     <a class="link icon-link" aria-disabled="true">
       <svg aria-hidden="true">
@@ -192,6 +203,7 @@ If the disabled link does not convey any useful information, you can include a `
 However, if the disabled link conveys useful information for users, it must remain focusable and you should not add the `tabindex="-1"` attribute to keep it accessible to keyboard navigation.
 
 <Example buttonLabel="disabled links keeping `href` attribute" code={`<div><a href="#" class="link" tabindex="-1" aria-disabled="true">Disabled link without any useful information</a></div>
+
   <div><a href="#" class="link" aria-disabled="true">Keyboard focusable disabled link</a></div>`} />
 
 #### Skeleton
@@ -213,8 +225,11 @@ Links are available in two sizes and two densities. Add `.link-small` for small 
 </Callout>
 
 <Example buttonLabel="links sizes" class="d-flex flex-column align-items-start gap-xsmall" code={`<a class="link" href="#">This is an example of a link</a>
+
   <a class="link link-small" href="#">This is an example of a small link</a>
+
   <a class="link link-compact" href="#">This is an example of a compact link</a>
+
   <a class="link link-compact link-small" href="#">This is an example of a small compact link</a>`} />
 
 ## [[comp]] Expand link
@@ -256,6 +271,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 
 <Example buttonLabel="expand link on colored backgrounds" class="p-none bd-first-rounded" code={`<div class="bg-surface-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}">
+
       <div class="dropdown">
         <button type="button" class="link link-on-colored-bg link-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
         <ul class="dropdown-menu" data-bs-theme="root">
@@ -264,6 +280,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
           <li><a class="dropdown-item" href="#">Something else here</a></li>
         </ul>
       </div>
+
     </div>
   </div>`} />
 
@@ -321,6 +338,7 @@ Links are available in two sizes and two densities. Add `.link-small` for small 
 </Callout>
 
 <Example buttonLabel="expand links sizes" code={`<div class="dropdown d-flex flex-column align-items-start gap-xsmall">
+
     <button type="button" class="link link-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
 
     <button type="button" class="link link-expand link-small" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
@@ -333,4 +351,5 @@ Links are available in two sizes and two densities. Add `.link-small` for small 
       <li><a class="dropdown-item" href="#">Another action</a></li>
       <li><a class="dropdown-item" href="#">Something else here</a></li>
     </ul>
+
   </div>`} />

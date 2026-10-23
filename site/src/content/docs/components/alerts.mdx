@@ -15,8 +15,8 @@ added:
 import { getVersionedDocsPath } from '@libs/path'
 import { getConfig } from '@libs/config'
 
-<Callout type="info">
-  You can find the OUDS design guidelines here: [alert message guidelines](https://r.orange.fr/r/S-ouds-doc-alert-message), [inline alert guidelines](https://r.orange.fr/r/S-ouds-doc-inline-alert).
+<Callout type="info" title="Design guidelines">
+  For usage guidance, please refer to the [alert message guidelines](https://r.orange.fr/r/S-ouds-doc-alert-message) and the [inline alert guidelines](https://r.orange.fr/r/S-ouds-doc-inline-alert).
 </Callout>
 
 ## Overview
@@ -207,12 +207,14 @@ The variants `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-war
       An example success alert with an icon
     </div>
   </div>
+
   <div class="alert alert-warning d-flex align-items-center" role="alert">
     <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
     <div>
       An example warning alert with an icon
     </div>
   </div>
+
   <div class="alert alert-danger d-flex align-items-center" role="alert">
     <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
     <div>
@@ -355,6 +357,7 @@ Rounded corners alerts is a project-wide option therefore all your alerts should
 </Callout>
 
 <Example buttonLabel="rounded alert message" code={`<div class="use-rounded-corner-alert">
+
     <div class="alert alert-message mb-medium">
       <div class="alert-icon">
         <svg aria-hidden="true">
@@ -377,6 +380,7 @@ Rounded corners alerts is a project-wide option therefore all your alerts should
         </div>
       </div>
     </div>
+
   </div>`} />
 </ThemeSpecific>
 
@@ -625,6 +629,7 @@ Click the button below to show an alert (hidden with inline styles to start), th
 </ThemeSpecific>
 
 <Example buttonLabel="alert message with live behavior" addStackblitzJs code={`<div id="liveAlertPlaceholder" role="status" class="${getConfig().brand === 'orange' ? 'use-rounded-corner-alert ' : '' }d-flex flex-column gap-medium mb-medium">
+
     <div class="alert alert-message alert-positive">
       <div class="alert-icon"></div>
       <div class="alert-container">
@@ -640,7 +645,9 @@ Click the button below to show an alert (hidden with inline styles to start), th
         </div>
       </div>
     </div>
+
   </div>
+
   <button type="button" class="btn btn-brand" id="liveAlertBtn">Add live alert <span class="visually-hidden">just before this button</span></button>`} />
 
 We use the following JavaScript to trigger our live alert demo:

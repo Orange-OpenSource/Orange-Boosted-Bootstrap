@@ -74,6 +74,13 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `<button type="button" class="btn btn-default">Label</button>`
   },
   {
+    name: 'Categorical tag',
+    slug: 'categorical-tag',
+    link: 'tags#categorical-tag',
+    category: 'Indicator',
+    snippet: `<p class="tag tag-categorical-1">Label</p>`
+  },
+  {
     name: 'Checkbox',
     category: 'Control',
     snippet: `

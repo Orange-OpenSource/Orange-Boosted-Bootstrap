@@ -9,7 +9,7 @@ module.exports = {
   // Make Jasmine look for `.test.scss` files
   spec_files: ['**/*.{test,spec}.scss'],
   // Compile them into JS scripts running `sass-true`
-  requires: [path.join(__dirname, 'sass-true/register')],
+  requires: [path.join(__dirname, 'sass-true/register.js')],
   // Ensure we use `require` so that the require.extensions works
   // as `import` completely bypasses it
   jsLoader: 'require'

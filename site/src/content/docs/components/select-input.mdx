@@ -10,8 +10,8 @@ toc: true
 
 import { getVersionedDocsPath } from '@libs/path'
 
-<Callout type="info">
-  You can find here the OUDS [select input design guidelines](https://r.orange.fr/r/S-ouds-doc-select-input).
+<Callout type="info" title="Design guidelines">
+  For usage guidance, please refer to the [select input design guidelines](https://r.orange.fr/r/S-ouds-doc-select-input).
 </Callout>
 
 ## Overview
@@ -91,6 +91,7 @@ Rounded corners inputs is a project-wide option therefore all your inputs should
 </Callout>
 
 <Example buttonLabel="rounded select inputs" code={`<div class="use-rounded-corner-inputs">
+
     <div class="select-input mb-medium">
       <div class="select-input-container">
         <label for="exampleRoundedSelect">Rounded select example</label>
@@ -102,6 +103,7 @@ Rounded corners inputs is a project-wide option therefore all your inputs should
         </select>
       </div>
     </div>
+
     <div class="select-input">
       <div class="select-input-container select-input-container-outlined">
         <label for="exampleRoundedOutlinedSelect">Rounded outlined select example</label>
@@ -113,6 +115,7 @@ Rounded corners inputs is a project-wide option therefore all your inputs should
         </select>
       </div>
     </div>
+
   </div>`} />
 </ThemeSpecific>
 
@@ -137,6 +140,7 @@ Add an icon to help indicate the purpose of the input by placing an `<svg>` or `
       </select>
     </div>
   </div>
+
   <div class="select-input">
     <div class="select-input-container select-input-container-outlined">
       <svg aria-hidden="true">
@@ -203,6 +207,7 @@ Since the helper link is the direct next element after the select input, it is n
       More information <span class="visually-hidden">about the</span>
     </a>
   </div>
+
   <div class="select-input">
     <div class="select-input-container">
       <label id="labelSelectWithLink" for="exampleSelectWithLink">Select example with link text</label>
@@ -237,6 +242,7 @@ Add the `disabled` boolean attribute on a select to give it a grayed out appeara
       </select>
     </div>
   </div>
+
   <div class="select-input">
     <div class="select-input-container select-input-container-outlined">
       <label for="exampleOutlinedDisabledSelect">Disabled outlined select example</label>
@@ -310,6 +316,7 @@ To manually mark a select as invalid, add `aria-invalid="true"` to a `.select-in
       More information <span class="visually-hidden">about the</span>
     </a>
   </div>
+
   <div class="was-validated">
     <div class="select-input mb-medium">
       <div class="select-input-container">
@@ -332,6 +339,7 @@ To manually mark a select as invalid, add `aria-invalid="true"` to a `.select-in
       </a>
     </div>
   </div>
+
   <div class="select-input mb-medium">
     <div class="select-input-container select-input-container-outlined">
       <label id="labelErrorSelect2" for="exampleErrorSelect2">Outlined select example with error</label>
@@ -349,6 +357,7 @@ To manually mark a select as invalid, add `aria-invalid="true"` to a `.select-in
       A number is required.
     </p>
   </div>
+
   <div class="select-input mb-medium">
     <div class="select-input-container">
       <svg aria-hidden="true">
@@ -414,6 +423,7 @@ In case of an invalid select, you may remove the invalid state before the loadin
       <span role="status" id="loading-msg-0" class="visually-hidden d-none">Loading message</span>
     </div>
   </div>
+
   <div class="select-input mb-medium">
     <div class="select-input-container" style="--bs-loading-time: 5s;">
       <label for="exampleLoadingSelect">Determinate loading select example</label>
@@ -429,6 +439,7 @@ In case of an invalid select, you may remove the invalid state before the loadin
       <span role="status" id="loading-msg-1" class="visually-hidden d-none">Loading message</span>
     </div>
   </div>
+
   <div class="select-input">
     <div class="select-input-container">
       <svg aria-hidden="true">
@@ -509,18 +520,18 @@ The `size` attribute is supported:
 By default, select inputs will span the whole width of their parent container, to limit the width of the select input on wider parent container, add a `.component-max-width` to the `.select-input` container.
 
 <Example buttonLabel="select inputs max width" code={`<div class="select-input component-max-width">
-  <div class="select-input-container">
-    <label for="exampleSelectMaxWidth">Select example max width</label>
-    <select class="select-input-field" id="exampleSelectMaxWidth" aria-describedby="selectMaxWidthHelper">
-      <option value="" disabled selected></option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-    </select>
-  </div>
-  <p id="selectMaxWidthHelper" class="helper-text">
-    Helper text.
-  </p>
+    <div class="select-input-container">
+      <label for="exampleSelectMaxWidth">Select example max width</label>
+      <select class="select-input-field" id="exampleSelectMaxWidth" aria-describedby="selectMaxWidthHelper">
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <p id="selectMaxWidthHelper" class="helper-text">
+      Helper text.
+    </p>
 </div>`} />
 
 ## Optgroup
