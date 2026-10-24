@@ -76,7 +76,7 @@ if(slug && sidebars.includes(slug as typeof sidebars[number])) {
                           href={url}
                           class:list={[
                             'bd-links-link',
-                            'd-inline-flex',
+                            'd-flex',
                             'column-gap-2xsmall',
                             'align-items-center',
                             { active },
@@ -87,9 +87,7 @@ if(slug && sidebars.includes(slug as typeof sidebars[number])) {
                         >
                           {page.title}
                           {page.draft && (
-                            <svg width="1rem" height="1rem" aria-hidden="true">
-                              <use xlink:href={getVersionedDocsPath('assets/img/ouds-web-sprite.svg#traffic-cone')} />
-                            </svg>
+                            <span class="tag tag-negative tag-muted tag-small ms-auto">draft</span>
                           )}
                         </a>
                       </li>
