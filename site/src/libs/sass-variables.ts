@@ -30,7 +30,7 @@ export const getMode = (regex: string) => {
     .map((token: IDeclaration) => token.compiledValue)
   const theme = modes[0].includes('dark')
     ? modes[1].includes('light')
-      ? 'root'
+      ? '-'
       : 'dark'
     : modes[1].includes('dark')
       ? 'root-inverted'
