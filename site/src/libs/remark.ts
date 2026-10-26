@@ -5,6 +5,9 @@ import { visit } from 'unist-util-visit'
 import { getConfig } from './config'
 import { getVersionedDocsPath } from './path'
 import { getComponentSVG, getVersionLink } from './utils'
+import { fromMarkdown } from 'mdast-util-from-markdown'
+import { mdxFromMarkdown } from 'mdast-util-mdx'
+import { mdxjs } from 'micromark-extension-mdxjs'
 
 // [[config:foo]]
 // [[config:foo.bar]]
@@ -136,6 +139,30 @@ export const remarkBsVersionLink: Plugin<[], Root> = function () {
             ]
             node.value = replaceRegexInText(node.value, versionLinkRegExp)
           }
+          break
+        }
+      }
+    })
+  }
+}
+
+
+export const remarkTest: Plugin<[], Root> = function () {
+  return function remarkTestPlugin(ast) {
+    // https://github.com/syntax-tree/mdast#nodes
+    // https://github.com/syntax-tree/mdast-util-mdx-jsx#nodes
+    visit(ast, ['code'], (node, index, parent) => {
+      switch (node.type) {
+        case 'code': {
+          console.log(node, parent)
+          const replacement = fromMarkdown(`<Code  />`, {
+            extensions: [mdxjs()],
+            mdastExtensions: [mdxFromMarkdown()]
+          }).children[0]
+          replacement.position = node.position
+
+          parent.children[parent.children.indexOf(node)] = replacement
+          console.log(replacement)
           break
         }
       }
