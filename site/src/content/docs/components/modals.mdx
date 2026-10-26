@@ -86,7 +86,7 @@ As we use the native `<dialog>` element, we benefit from built-in accessibility 
 Some things to keep in mind while using modals include:
 - Ensure that the dialog has a meaningful and descriptive title, use the `[aria-labelledby]` attribute to reference the title element.
 - Choose the most appropriate initial focus when the dialog opens. By default, focus moves to the first focusable element; use `[autofocus]` when another element, such as the close button or an input, should receive focus.
-- Always provide an explicit and accessible way to close the dialog, such as a close, cancel, or confirmation button. Modal dialogs should also preserve the default `Escape` key behavior.
+- Always provide an explicit and accessible way to close the dialog, such as a close, cancel, or confirmation button. Modal dialogs should also preserve the default <kbd>Esc</kbd> key behavior.
 - Open modal dialogs [with `showModal()`](#javascript) or the [`show-modal` invoker command](#invoker-commands) so that the rest of the page is made inert and the dialog is exposed with modal semantics.
 - Adapt the title level to the context of the page, ensuring proper heading hierarchy.
 - Do not add `[tabindex]` to the `<dialog>` element.
@@ -272,6 +272,58 @@ Only the [common variants](#common-variants) are available for this kind of dial
 
   <button type="button" class="btn btn-default" commandfor="demoFullscreenDialog" command="show-modal">
     Open fullscreen dialog
+  </button>`} />
+
+### Using the grid
+
+Use the OUDS Web grid system within a modal by adding `.container-fluid` and `.container-max-width` on `.modal-header`, `.modal-body`, and, if using [sticky actions](#sticky-actions), `.modal-footer`. Then, use the normal grid system classes as you would anywhere else.
+
+<Callout type="info">
+  In this example the `.col-*` classes are highlighted with a background color, as a result their padding is visible and it seems the alignment is off. In reality their content are properly aligned within the grid system.
+</Callout>
+
+<Example class="bd-example-row" buttonLabel="fullscreen dialog using grid" code={`<dialog id="demoFullscreenDialogGrid" class="modal-base modal-fullscreen-dialog" aria-labelledby="demoFullscreenDialogGridTitle" closedby="any">
+    <div class="modal-header container-fluid container-max-width">
+      <h3 id="demoFullscreenDialogGridTitle" class="modal-title">Fullscreen dialog title</h3>
+      <button type="button" class="btn btn-close" commandfor="demoFullscreenDialogGrid" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body container-fluid container-max-width">
+      <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 ms-auto">.col-md-3 .ms-auto</div>
+        <div class="col-md-2 ms-auto">.col-md-2 .ms-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 ms-auto">.col-md-6 .ms-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-9">
+          Level 1: .col-sm-9
+          <div class="row">
+            <div class="col-8 col-sm-6">
+              Level 2: .col-8 .col-sm-6
+            </div>
+            <div class="col-4 col-sm-6">
+              Level 2: .col-4 .col-sm-6
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-strong" commandfor="demoFullscreenDialogGrid" command="close">Confirm</button>
+        <button type="button" class="btn btn-default" commandfor="demoFullscreenDialogGrid" command="close">Cancel</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="demoFullscreenDialogGrid" command="show-modal">
+    Open fullscreen dialog using grid
   </button>`} />
 
 ## Switching types on breakpoints
