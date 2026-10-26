@@ -22,15 +22,6 @@ interface Props {
 const getCustomProp = (colorName: string, colorPrefix: string) =>
   `var(--bs${colorPrefix.replace('ouds', '').replaceAll('/', '-')}${colorName})`
 
-const getBackground = (token: IColorToken, mode: string): astroHTML.JSX.CSSProperties =>
-  mode === 'light'
-    ? {
-      backgroundColor: token.backdropLight ? token.backdropLight : token.lightValue
-    }
-    : {
-      backgroundColor: token.backdropDark ? token.backdropDark : token.darkValue
-    }
-
 const {
   colorPrefix,
   basicClasses = [],
@@ -137,14 +128,12 @@ if (basicClasses.length) {
       tokens.map((token: IColorToken) => (
         <tr class="align-middle">
           <th class="w-50" scope="row">
-            <div class="d-flex align-items-center justify-content-between">
-              <var>{ getUsage(token.colorName, colorPrefix) }</var>
-              <button data-clipboard-text={getUsage(token.colorName, colorPrefix).replaceAll('.', '')} type="button" class="btn btn-minimal btn-icon btn-clipboard m-3xsmall">
-                <svg aria-hidden="true">
-                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use>
-                </svg>
-              </button>
-            </div>
+            <var>{ getUsage(token.colorName, colorPrefix) }</var>
+            <button data-clipboard-text={getUsage(token.colorName, colorPrefix).replaceAll('.', '')} type="button" class="btn btn-minimal btn-icon btn-clipboard m-3xsmall">
+              <svg aria-hidden="true">
+                <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use>
+              </svg>
+            </button>
           </th>
           <td>
             <div
@@ -167,14 +156,12 @@ if (basicClasses.length) {
             </div>
           </td>
           <td class="w-25">
-            <div class="d-flex align-items-center justify-content-between">
-              <var>{getRecommendedThemeFor(token) ?? '—'}</var>
-              { getRecommendedThemeFor(token) && (<button data-clipboard-text={`data-bs-theme="${getRecommendedThemeFor(token)}"`} data-bs-title="Copy class to clipboard" type="button" class="btn btn-minimal btn-icon btn-clipboard m-3xsmall">
-                <svg aria-hidden="true">
-                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use>
-                </svg>
-              </button>)}
-            </div>
+            <var>{getRecommendedThemeFor(token) ?? '—'}</var>
+            { getRecommendedThemeFor(token) && (<button data-clipboard-text={`data-bs-theme="${getRecommendedThemeFor(token)}"`} data-bs-title="Copy class to clipboard" type="button" class="btn btn-minimal btn-icon btn-clipboard m-3xsmall">
+              <svg aria-hidden="true">
+                <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use>
+              </svg>
+            </button>)}
           </td>
         </tr>
       ))
