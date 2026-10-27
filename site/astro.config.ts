@@ -9,7 +9,7 @@ import { stackblitzPlugin } from './src/plugins/stackblitz-plugin'
 import type { Element, Text } from 'hast'
 import { rehypeHeadingIds, unified } from '@astrojs/markdown-remark'
 import { rehypeBsTable, rehypeCustomHeaderSlug, rehypeHeaderLinksOrder } from './src/libs/rehype'
-import { remarkBsComp, remarkBsConfig, remarkBsDocsref, remarkBsVersionLink, remarkTest } from './src/libs/remark'
+import { remarkBsComp, remarkBsConfig, remarkBsDocsref, remarkBsVersionLink, remarkCodeBlockToExample } from './src/libs/remark'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { isHeading } from './src/libs/utils'
 
@@ -52,7 +52,7 @@ export default defineConfig({
         rehypeHeaderLinksOrder,
         rehypeBsTable
       ],
-      remarkPlugins: [remarkBsConfig, remarkBsDocsref, remarkBsComp, remarkBsVersionLink, remarkTest]
+      remarkPlugins: [remarkBsConfig, remarkBsDocsref, remarkBsComp, remarkBsVersionLink, remarkCodeBlockToExample]
     }),
     syntaxHighlight: 'prism'
   },

@@ -146,15 +146,16 @@ export const remarkBsVersionLink: Plugin<[], Root> = function () {
   }
 }
 
-
-export const remarkTest: Plugin<[], Root> = function () {
-  return function remarkTestPlugin(ast) {
+// A remark plugin to transform code blocks into Example components.
+export const remarkCodeBlockToExample: Plugin<[], Root> = function () {
+  return (ast) => {
     // https://github.com/syntax-tree/mdast#nodes
     // https://github.com/syntax-tree/mdast-util-mdx-jsx#nodes
     visit(ast, ['code'], (node, index, parent) => {
       switch (node.type) {
         case 'code': {
-          const escapedValue = node.value.replaceAll('\n', '\n '); // preserve indentation when passing in JSX attribute
+          // preserve indentation when passing in JSX attribute, escape backticks for safe usage
+          const escapedValue = node.value.replaceAll('\n', '\n ').replaceAll('`', '\\`'); // preserve indentation when passing in JSX attribute
           const replacement = fromMarkdown(`<Example ${node.meta} code={\`${escapedValue}\`} lang="${node.lang}" />`, {
             extensions: [mdxjs()],
             mdastExtensions: [mdxFromMarkdown()]

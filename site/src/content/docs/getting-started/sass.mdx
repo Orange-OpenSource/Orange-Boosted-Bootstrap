@@ -17,7 +17,7 @@ Utilize our source Sass files to take advantage of variables, maps, mixins, and 
 
 Whenever possible, avoid modifying OUDS Web’s core files. For Sass, that means creating your own stylesheet that imports OUDS Web so you can modify and extend it. Assuming you’re using a package manager like npm, you’ll have a file structure that looks like this:
 
-```text
+```text markupOnly={true} buttonLabel="file structure"
 your-project/
 ├── scss/
 │   └── custom.scss
@@ -33,7 +33,7 @@ your-project/
 
 If you’ve downloaded our source files and aren’t using a package manager, you’ll want to manually create something similar to that structure, keeping OUDS Web’s source files separate from your own.
 
-```text
+```text markupOnly={true} buttonLabel="project file structure"
 your-project/
 ├── scss/
 │   └── custom.scss
@@ -50,7 +50,7 @@ your-project/
 
 In your `custom.scss`, you’ll import OUDS Web’s source Sass files. You have two options: include all of OUDS Web, or pick the parts you need. We encourage the latter, though be aware there are some requirements and dependencies across our components. You also will need to include some JavaScript for our plugins.
 
-```scss
+```scss markupOnly={true} buttonLabel="custom.scss - include all"
 // Custom.scss
 // Option A: Include all of OUDS Web
 
@@ -61,7 +61,7 @@ In your `custom.scss`, you’ll import OUDS Web’s source Sass files. You have 
 // Then add additional custom code here
 ```
 
-```scss
+```scss markupOnly={true} buttonLabel="custom.scss - include parts"
 // Custom.scss
 // Option B: Include parts of OUDS Web
 
@@ -109,7 +109,7 @@ In order to use your custom Sass code as CSS in the browser, you need a Sass com
 
 We like to use the CLI to compile our Sass, but you can use whichever method you prefer. From the command line, run the following:
 
-```shell
+```shell markupOnly={true} buttonLabel="install and compile Sass"
 # Install Sass globally
 npm install -g sass
 
@@ -127,7 +127,7 @@ Learn more about your options at [sass-lang.com/install](https://sass-lang.com/i
 
 Once your CSS is compiled, you can include it in your HTML files. Inside your `index.html` you’ll want to include your compiled CSS file. Be sure to update the path to your compiled CSS file if you’ve changed it.
 
-```html
+```html markupOnly={true} buttonLabel="html with compiled CSS included"
 <!doctype html>
 <html lang="en">
   <head>
@@ -152,7 +152,7 @@ Variable overrides must come after our functions are imported, but before the re
 
 Here’s an example that changes the `background-color` and `color` for the `<body>` when importing and compiling OUDS Web via npm:
 
-```scss
+```scss markupOnly={true} buttonLabel="custom.scss with variable overrides"
 // Required
 @import "../node_modules/@ouds/web-common/scss/config";
 @import "../node_modules/@ouds/web-common/scss/functions";
@@ -189,14 +189,14 @@ Some of our Sass maps are merged into empty ones by default. This is done to all
 
 All variables in the `$theme-colors` map are defined as standalone variables. To modify an existing color in our `$theme-colors` map, add the following to your custom Sass file:
 
-```scss
+```scss markupOnly={true} buttonLabel="modify theme colors"
 $primary: #0074d9;
 $danger: #ff4136;
 ```
 
 Later on, these variables are set in OUDS Web’s `$theme-colors` map:
 
-```scss
+```scss markupOnly={true} buttonLabel="theme colors map"
 $theme-colors: (
   "primary": $primary,
   "danger": $danger
@@ -207,7 +207,7 @@ $theme-colors: (
 
 Add new colors to `$theme-colors`, or any other map, by creating a new Sass map with your custom values and merging it with the original map. In this case, we’ll create a new `$custom-colors` map and merge it with `$theme-colors`.
 
-```scss
+```scss markupOnly={true} buttonLabel="add to theme colors map"
 // Create your own map
 $custom-colors: (
   "custom-color": #900
@@ -221,7 +221,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 To remove colors from `$theme-colors`, or any other map, use `map-remove`. Be aware you must insert `$theme-colors` between our requirements just after its definition in `variables` and before its usage in `maps`:
 
-```scss
+```scss markupOnly={true} buttonLabel="remove from theme colors map"
 // Required
 @import "../node_modules/@ouds/web-common/scss/config";
 @import "../node_modules/@ouds/web-common/scss/functions";
@@ -251,7 +251,7 @@ $theme-colors: map-remove($theme-colors, "info", "light", "dark");
 
 Next to the Sass maps we have, theme colors can also be used as standalone variables, like `$primary`.
 
-```scss
+```scss markupOnly={true} buttonLabel="custom css class with color variables"
 .custom-element {
   color: $gray-100;
   background-color: $dark;
@@ -266,7 +266,7 @@ You can lighten or darken colors with OUDS Web’s `tint-color()` and `shade-col
 
 In practice, you’d call the function and pass in the color and weight parameters.
 
-```scss
+```scss markupOnly={true} buttonLabel="color functions examples"
 .custom-element {
   color: tint-color($primary, 10%);
 }
@@ -289,7 +289,7 @@ To help with this, we included the `color-contrast` function in OUDS Web. It use
 
 For example, to generate color swatches from our `$theme-colors` and `$theme-colors-dark` maps:
 
-```scss
+```scss markupOnly={true} buttonLabel="color contrast example"
 @each $color, $value in $theme-colors {
   .swatch-#{$color} {
     color: color-contrast($value);
@@ -309,7 +309,7 @@ For example, to generate color swatches from our `$theme-colors` and `$theme-col
 
 It can also be used for one-off contrast needs:
 
-```scss
+```scss markupOnly={true} buttonLabel="one-off contrast example"
 .custom-element {
   color: color-contrast(#000); // returns `color: #fff`
 }
@@ -317,7 +317,7 @@ It can also be used for one-off contrast needs:
 
 You can also specify a base color with our color map functions:
 
-```scss
+```scss markupOnly={true} buttonLabel="color contrast with base color"
 .custom-element {
   color: color-contrast($dark); // returns `color: #fff`
 }
@@ -337,7 +337,7 @@ A shorthand mixin for the `prefers-color-scheme` media query is available with s
 
 <ScssDocs name="mixin-color-scheme" file="scss/mixins/_color-scheme.scss" />
 
-```scss
+```scss markupOnly={true} buttonLabel="color scheme example"
 .custom-element {
   @include color-scheme(light) {
     // Insert light mode styles here
