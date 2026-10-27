@@ -1,4 +1,4 @@
-import type { Root } from 'mdast'
+import type { Root, RootContent } from 'mdast'
 import type { MdxJsxAttribute, MdxJsxExpressionAttribute } from 'mdast-util-mdx-jsx'
 import type { Plugin } from 'unified'
 import { visit } from 'unist-util-visit'
@@ -154,15 +154,16 @@ export const remarkTest: Plugin<[], Root> = function () {
     visit(ast, ['code'], (node, index, parent) => {
       switch (node.type) {
         case 'code': {
-          console.log(node, parent)
-          const replacement = fromMarkdown(`<Code  />`, {
+          const escapedValue = node.value.replaceAll('\n', '\n '); // preserve indentation when passing in JSX attribute
+          const replacement = fromMarkdown(`<Example ${node.meta} code={\`${escapedValue}\`} lang="${node.lang}" />`, {
             extensions: [mdxjs()],
             mdastExtensions: [mdxFromMarkdown()]
           }).children[0]
           replacement.position = node.position
 
-          parent.children[parent.children.indexOf(node)] = replacement
-          console.log(replacement)
+          if(parent) {
+            parent.children[(parent.children as RootContent[]).indexOf(node)] = replacement
+          }
           break
         }
       }

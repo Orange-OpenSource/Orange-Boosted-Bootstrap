@@ -46,7 +46,6 @@ interface Props {
 }
 
 const { class: className, code, containerClass, fileMatch, filePath, lang, nestedInExample = false, buttonLabel } = Astro.props
-console.log(Astro.props)
 
 const clipboardLabel = buttonLabel ? `Copy ${buttonLabel} code to clipboard` : filePath ?
   `Copy ${filePath} code to clipboard` : 'Copy code to clipboard'
