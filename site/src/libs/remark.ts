@@ -154,8 +154,8 @@ export const remarkCodeBlockToExample: Plugin<[], Root> = function () {
     visit(ast, ['code'], (node, index, parent) => {
       switch (node.type) {
         case 'code': {
-          // preserve indentation when passing in JSX attribute, escape backticks for safe usage
-          const escapedValue = node.value.replaceAll('\n', '\n ').replaceAll('`', '\\`'); // preserve indentation when passing in JSX attribute
+          // preserve indentation when passing in JSX attribute
+          const escapedValue = node.value.replaceAll('\n', '\n ') // preserve indentation when passing in JSX attribute
           const replacement = fromMarkdown(`<Example ${node.meta} code={\`${escapedValue}\`} lang="${node.lang}" />`, {
             extensions: [mdxjs()],
             mdastExtensions: [mdxFromMarkdown()]
