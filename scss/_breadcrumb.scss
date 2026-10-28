@@ -1,10 +1,8 @@
 .breadcrumb {
   // scss-docs-start breadcrumb-css-vars
   // OUDS mod: no breadcrumb-color, breadcrumb-padding-x, breadcrumb-padding-y, breadcrumb-margin-bottom, breadcrumb-font-size, breadcrumb-font-weight, breadcrumb-bg, breadcrumb-border-radius, breadcrumb-divider-color, breadcrumb-item-padding-x, breadcrumb-item-active-color
-  --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-divider-color};
 
   // Additional OUDS variables
-  --#{$prefix}breadcrumb-divider: #{escape-svg($breadcrumb-divider-icon) "/* rtl:"escape-svg($breadcrumb-divider-flipped) "*/"};
   --#{$prefix}breadcrumb-item-gap: #{$ouds-breadcrumb-space-column-gap-links};
   // End mod
   // scss-docs-end breadcrumb-css-vars
@@ -27,10 +25,10 @@
       width: $ouds-breadcrumb-size-icon;
       height: $ouds-breadcrumb-size-icon;
       margin-left: var(--#{$prefix}breadcrumb-item-gap);
-      color: var(--#{$prefix}breadcrumb-divider-color);
+      color: $breadcrumb-divider-color;
       content: "";
       background-color: currentcolor;
-      mask-image: var(--#{$prefix}breadcrumb-divider);
+      mask-image: #{escape-svg($breadcrumb-divider-icon) "/* rtl:"escape-svg($breadcrumb-divider-flipped) "*/"};
 
       /* rtl:raw:
     transform: scaleX(-1);

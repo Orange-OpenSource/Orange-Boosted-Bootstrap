@@ -5409,7 +5409,7 @@ dialog,
 }
 .table-active[data-bs-theme=dark], .table tbody tr:has(.control-item-indicator[type=checkbox]:not([role=switch]):checked, [type=checkbox].form-check-input:not([role=switch]):checked, .control-item-indicator[type=radio]:checked, [type=radio].form-check-input:checked) {
   --bs-table-color-state: var(--bs-color-content-default);
-  --bs-table-bg-state: var(--bs-table-active-bg);
+  --bs-table-bg-state: var(--bs-color-bg-inverse-low);
 }
 
 .table {
@@ -5417,16 +5417,10 @@ dialog,
   --bs-table-bg-type: initial;
   --bs-table-color-state: initial;
   --bs-table-bg-state: initial;
-  --bs-table-color: var(--bs-color-content-default);
   --bs-table-bg: var(--bs-body-bg);
   --bs-table-border-color: var(--bs-color-border-default);
-  --bs-table-accent-bg: transparent;
   --bs-table-striped-color: var(--bs-color-content-default);
   --bs-table-striped-bg: var(--bs-color-surface-secondary);
-  --bs-table-active-color: var(--bs-color-content-default);
-  --bs-table-active-bg: var(--bs-color-bg-inverse-low);
-  --bs-table-hover-color: var(--bs-color-content-default);
-  --bs-table-hover-bg: rgba(var(--bs-emphasis-color-rgb), var(--bs-table-hover-bg-factor));
   width: 100%;
   margin-bottom: 1rem;
   vertical-align: top;
@@ -5441,9 +5435,9 @@ dialog,
 .table > :not(caption) > * > * {
   padding: 16px 16px 17px;
   line-height: 1.25;
-  color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-table-color)));
+  color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-color-content-default)));
   background-color: var(--bs-table-bg);
-  box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
+  box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, transparent));
 }
 .table > thead > tr {
   border-bottom-width: calc(1px * 2);
@@ -5500,8 +5494,8 @@ dialog,
 }
 
 .table-hover > tbody > tr:hover > * {
-  --bs-table-color-state: var(--bs-table-hover-color);
-  --bs-table-bg-state: var(--bs-table-hover-bg);
+  --bs-table-color-state: var(--bs-color-content-default);
+  --bs-table-bg-state: rgba(var(--bs-emphasis-color-rgb), var(--bs-table-hover-bg-factor));
 }
 
 .table-info {
@@ -8102,7 +8096,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .btn, .btn-close {
   --bs-btn-padding-y: 12px;
-  --bs-btn-font-weight: 700;
   --bs-btn-color: var(--bs-color-action-enabled);
   --bs-btn-bg: transparent;
   --bs-btn-border-width: 1px;
@@ -8128,7 +8121,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   max-width: 30rem;
   min-height: var(--bs-btn-min-height);
   padding: calc(var(--bs-btn-padding-y) - var(--bs-btn-border-width)) calc(var(--bs-btn-padding-end) - var(--bs-btn-border-width)) calc(var(--bs-btn-padding-y) - var(--bs-btn-border-width)) calc(var(--bs-btn-padding-start) - var(--bs-btn-border-width));
-  font-weight: var(--bs-btn-font-weight);
+  font-weight: 700;
   color: var(--bs-btn-color);
   text-align: center;
   text-decoration: none;
@@ -8802,48 +8795,29 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .dropdown-menu {
-  --bs-dropdown-zindex: 1000;
-  --bs-dropdown-min-width: 10rem;
-  --bs-dropdown-padding-y: 0;
   --bs-dropdown-spacer: 0;
-  --bs-dropdown-color: var(--bs-color-content-default);
-  --bs-dropdown-bg: var(--bs-color-overlay-dropdown);
-  --bs-dropdown-border-color: var(--bs-color-border-default);
-  --bs-dropdown-border-radius: var(--bs-border-radius);
-  --bs-dropdown-border-width: 0px;
   --bs-dropdown-inner-border-radius: calc(var(--bs-border-radius) - 0px);
-  --bs-dropdown-divider-bg: var(--bs-color-border-default);
-  --bs-dropdown-divider-margin-y: 0;
-  --bs-dropdown-box-shadow: 0 2px 3px 0 var(--bs-elevation-color-elevated);
   --bs-dropdown-link-color: ;
-  --bs-dropdown-link-hover-color: ;
-  --bs-dropdown-link-hover-bg: var(--bs-color-action-support-hover);
-  --bs-dropdown-link-active-color: ;
-  --bs-dropdown-link-active-bg: var(--bs-color-action-support-pressed);
-  --bs-dropdown-link-disabled-color: var(--bs-color-content-disabled);
   --bs-dropdown-item-padding-x: 16px;
   --bs-dropdown-item-padding-y: 12px;
-  --bs-dropdown-header-color: var(--bs-color-content-muted);
-  --bs-dropdown-header-padding-x: 12px;
-  --bs-dropdown-header-padding-y: 12px;
   position: absolute;
-  z-index: var(--bs-dropdown-zindex);
+  z-index: 1000;
   display: none;
-  min-width: var(--bs-dropdown-min-width);
-  padding: var(--bs-dropdown-padding-y) 0;
+  min-width: 10rem;
+  padding: 0 0;
   margin: 0;
-  color: var(--bs-dropdown-color);
+  color: var(--bs-color-content-default);
   text-align: left;
   list-style: none;
-  background-color: var(--bs-dropdown-bg);
-  border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
+  background-color: var(--bs-color-overlay-dropdown);
+  border: 0px solid var(--bs-color-border-default);
   max-width: var(--bs-font-max-width-label-large);
   font-size: var(--bs-font-size-label-large);
   line-height: var(--bs-font-line-height-label-large);
   /* rtl:remove */
   letter-spacing: var(--bs-font-letter-spacing-label-large);
-  border-radius: var(--bs-dropdown-border-radius);
-  box-shadow: var(--bs-dropdown-box-shadow);
+  border-radius: var(--bs-border-radius);
+  box-shadow: 0 2px 3px 0 var(--bs-elevation-color-elevated);
 }
 .dropdown-menu[data-bs-popper] {
   top: 100%;
@@ -9079,9 +9053,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .dropdown-divider {
   height: 0;
-  margin: var(--bs-dropdown-divider-margin-y) 0;
+  margin: 0 0;
   overflow: hidden;
-  border-top: var(--bs-border-width) solid var(--bs-dropdown-divider-bg);
+  border-top: var(--bs-border-width) solid var(--bs-color-border-default);
   opacity: 1;
 }
 
@@ -9100,16 +9074,14 @@ ol.bullet-list > li > ol > li > ol > li::before {
   border-radius: var(--bs-dropdown-item-border-radius, 0);
 }
 .dropdown-item:hover {
-  color: var(--bs-dropdown-link-hover-color);
-  background-color: var(--bs-dropdown-link-hover-bg);
+  background-color: var(--bs-color-action-support-hover);
 }
 .dropdown-item.active, .dropdown-item:active {
-  color: var(--bs-dropdown-link-active-color);
   text-decoration: none;
-  background-color: var(--bs-dropdown-link-active-bg);
+  background-color: var(--bs-color-action-support-pressed);
 }
 .dropdown-item.disabled, .dropdown-item:disabled {
-  color: var(--bs-dropdown-link-disabled-color);
+  color: var(--bs-color-content-disabled);
   pointer-events: none;
   background-color: transparent;
 }
@@ -9124,10 +9096,10 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .dropdown-header {
   display: block;
-  padding: var(--bs-dropdown-header-padding-y) var(--bs-dropdown-header-padding-x);
+  padding: 12px 12px;
   margin-bottom: 0;
   font-weight: 500;
-  color: var(--bs-dropdown-header-color);
+  color: var(--bs-color-content-muted);
   white-space: nowrap;
 }
 
@@ -11077,8 +11049,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .breadcrumb {
-  --bs-breadcrumb-divider-color: var(--bs-color-content-default);
-  --bs-breadcrumb-divider: var(--bs-breadcrumb-divider-icon) /* rtl: var(--bs-breadcrumb-divider-icon) */;
   --bs-breadcrumb-item-gap: 4px;
   max-width: initial;
   padding-left: 0;
@@ -11103,11 +11073,11 @@ ol.bullet-list > li > ol > li > ol > li::before {
   width: 16px;
   height: 16px;
   margin-left: var(--bs-breadcrumb-item-gap);
-  color: var(--bs-breadcrumb-divider-color);
+  color: var(--bs-color-content-default);
   content: "";
   background-color: currentcolor;
-  -webkit-mask-image: var(--bs-breadcrumb-divider);
-  mask-image: var(--bs-breadcrumb-divider);
+  -webkit-mask-image: var(--bs-breadcrumb-divider-icon) /* rtl: var(--bs-breadcrumb-divider-icon) */;
+  mask-image: var(--bs-breadcrumb-divider-icon) /* rtl: var(--bs-breadcrumb-divider-icon) */;
   /* rtl:raw:
   transform: scaleX(-1);
   */
@@ -11500,13 +11470,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-tag-border-width: 0px;
   --bs-tag-background-color: var(--bs-color-surface-inverse-high);
   --bs-tag-asset-color: currentcolor;
-  --bs-tag-loading-dasharray: 92;
-  --bs-tag-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
-  --bs-tag-positive-icon: var(--bs-alert-success-icon);
-  --bs-tag-info-icon: var(--bs-alert-info-icon);
   --bs-tag-warning-external-icon: var(--bs-alert-warning-icon);
-  --bs-tag-warning-internal-icon: var(--bs-alert-warning-internal-icon);
-  --bs-tag-negative-icon: var(--bs-alert-error-icon);
   position: relative;
   display: inline-flex;
   gap: var(--bs-tag-asset-gap);
@@ -11613,12 +11577,12 @@ ol.bullet-list > li > ol > li > ol > li::before {
   border-radius: 2000px;
 }
 .tag.tag-positive .tag-status-icon {
-  -webkit-mask-image: var(--bs-tag-positive-icon);
-  mask-image: var(--bs-tag-positive-icon);
+  -webkit-mask-image: var(--bs-alert-success-icon);
+  mask-image: var(--bs-alert-success-icon);
 }
 .tag.tag-info .tag-status-icon {
-  -webkit-mask-image: var(--bs-tag-info-icon);
-  mask-image: var(--bs-tag-info-icon);
+  -webkit-mask-image: var(--bs-alert-info-icon);
+  mask-image: var(--bs-alert-info-icon);
 }
 .tag.tag-warning:not(.tag-muted) .tag-status-icon {
   -webkit-mask-image: var(--bs-tag-warning-external-icon);
@@ -11646,12 +11610,12 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 .tag.tag-warning.tag-muted .tag-status-icon::after {
   background-color: var(--bs-icon-color-content-status-warning-internal-shape);
-  -webkit-mask-image: var(--bs-tag-warning-internal-icon);
-  mask-image: var(--bs-tag-warning-internal-icon);
+  -webkit-mask-image: var(--bs-alert-warning-internal-icon);
+  mask-image: var(--bs-alert-warning-internal-icon);
 }
 .tag.tag-negative .tag-status-icon {
-  -webkit-mask-image: var(--bs-tag-negative-icon);
-  mask-image: var(--bs-tag-negative-icon);
+  -webkit-mask-image: var(--bs-alert-error-icon);
+  mask-image: var(--bs-alert-error-icon);
 }
 .tag:not(.loading) .tag-loader {
   display: none;
@@ -11673,10 +11637,10 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .tag .tag-loader > .tag-loader-inner {
   fill: none;
   stroke: var(--bs-tag-asset-color);
-  stroke-dasharray: var(--bs-tag-loading-dasharray);
+  stroke-dasharray: 92;
   stroke-width: 8;
   transform-origin: center;
-  animation: var(--bs-tag-loading-animation);
+  animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
 }
 
 [aria-disabled=true] .tag,
@@ -11869,9 +11833,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .alert-icon:where(:not(:has(svg, img, .icon)))::after, .alert > svg:where(:not(:has(svg, img, .icon)))::after,
 .alert > img:where(:not(:has(svg, img, .icon)))::after,
 .alert > .icon:where(:not(:has(svg, img, .icon)))::after {
-  background-color: var(--bs-alert-icon-internal-color);
-  -webkit-mask-image: var(--bs-alert-icon-internal);
-  mask-image: var(--bs-alert-icon-internal);
+  background-color: var(--bs-icon-color-content-status-warning-internal-shape);
+  -webkit-mask-image: var(--bs-alert-warning-internal-icon);
+  mask-image: var(--bs-alert-warning-internal-icon);
 }
 .alert-icon svg, .alert > svg svg,
 .alert > img svg,
@@ -12027,8 +11991,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-alert-text-color: var(--bs-color-content-status-warning);
   --bs-alert-icon: var(--bs-alert-warning-icon);
   --bs-alert-icon-color: var(--bs-icon-color-content-status-warning-external-shape);
-  --bs-alert-icon-internal: var(--bs-alert-warning-internal-icon);
-  --bs-alert-icon-internal-color: var(--bs-icon-color-content-status-warning-internal-shape);
   --bs-alert-bg: var(--bs-color-surface-status-warning-muted);
   --bs-alert-border-color: var(--bs-color-border-status-warning);
 }
@@ -14533,7 +14495,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-footer-gap: 0;
   --bs-footer-padding-top: 0;
   --bs-footer-padding-bottom: 0;
-  --bs-footer-color: var(--bs-color-content-default);
   --bs-footer-title-margin-bottom: 0;
   --bs-navbar-padding-y: 0;
   --bs-navbar-nav-link-padding-y: 0;
@@ -14542,7 +14503,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-navbar-nav-line-height: var(--bs-font-line-height-body-small);
   --bs-navbar-nav-letter-spacing: var(--bs-font-letter-spacing-body-medium);
   display: block;
-  color: var(--bs-footer-color);
+  color: var(--bs-color-content-default);
   box-shadow: none;
 }
 .footer > [class*=container] {
@@ -14591,7 +14552,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .footer .footer-nav {
   --bs-footer-gap: 1.7rem;
   --bs-navbar-nav-padding-top: 0.85rem;
-  --bs-navbar-nav-padding-x: 0;
   --bs-navbar-nav-padding-bottom: 1.3rem;
 }
 .footer .footer-nav .accordion {

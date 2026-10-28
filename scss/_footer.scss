@@ -3,7 +3,6 @@
   --#{$prefix}footer-gap: 0;
   --#{$prefix}footer-padding-top: 0;
   --#{$prefix}footer-padding-bottom: 0;
-  --#{$prefix}footer-color: #{$footer-color};
   --#{$prefix}footer-title-margin-bottom: 0;
   // scss-docs-end footer-css-vars
   --#{$prefix}navbar-padding-y: 0;
@@ -14,7 +13,7 @@
   --#{$prefix}navbar-nav-letter-spacing: #{$footer-letter-spacing};
 
   display: block;
-  color: var(--#{$prefix}footer-color);
+  color: $footer-color;
   box-shadow: none;
 
   > [class*="container"] {
@@ -75,7 +74,6 @@
     --#{$prefix}footer-gap: #{$footer-gap-xl};
     // scss-docs-end footer-nav-css-vars
     --#{$prefix}navbar-nav-padding-top: #{$footer-nav-list-padding-top};
-    --#{$prefix}navbar-nav-padding-x: 0;
     --#{$prefix}navbar-nav-padding-bottom: #{$footer-nav-list-padding-bottom};
 
     .accordion {
