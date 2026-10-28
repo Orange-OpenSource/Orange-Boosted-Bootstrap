@@ -255,7 +255,7 @@ There are also responsive `.order-first` and `.order-last` classes that change t
 
 If you need more `.order-*` classes, you can add new ones by modifying our `$utilities` Sass map. [Read our Sass maps and loops docs]([[docsref:/getting-started/sass#maps-and-loops]]) or [our Modify utilities docs]([[docsref:/utilities/api#modify-utilities]]) for details.
 
-```scss
+```scss markupOnly={true}
 $utilities: map-merge(
   $utilities,
   (
@@ -265,8 +265,8 @@ $utilities: map-merge(
         values: map-merge(
           map-get(map-get($utilities, "order"), "values"),
           (
-            6: 6, // Add a new `.{breakpoint}:order-6` utility
-            last: 7 // Change the `.{breakpoint}:order-last` utility to use the next number
+            6: 6, // Add a new ´.{breakpoint}:order-6´ utility
+            last: 7 // Change the ´.{breakpoint}:order-last´ utility to use the next number
           )
         ),
       ),
