@@ -9,6 +9,7 @@
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
+// eslint-disable-next-line import/no-unresolved
 import docsearch from '@docsearch/js/docsearch'
 
 (() => {
