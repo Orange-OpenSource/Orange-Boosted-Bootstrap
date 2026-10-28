@@ -6,6 +6,7 @@
  * @see site/src/libs/astro.ts
  */
 export declare global {
+  export const AccessibilityTagsNotice: typeof import('@shortcodes/AccessibilityTagsNotice.astro').default
   export const AddedIn: typeof import('@shortcodes/AddedIn.astro').default
   export const AssetsNavTab: typeof import('@shortcodes/AssetsNavTab.astro').default
   export const AssetsTab: typeof import('@shortcodes/AssetsTab.astro').default
@@ -19,10 +20,13 @@ export declare global {
   export const ComponentCard: typeof import('@shortcodes/ComponentCard.astro').default
   export const DeprecatedIn: typeof import('@shortcodes/DeprecatedIn.astro').default
   export const Details: typeof import('@shortcodes/Details.astro').default
+  export const DisabledState: typeof import('@shortcodes/DisabledState.astro').default
   export const EnableBtnCloseTooltip: typeof import('@shortcodes/EnableBtnCloseTooltip.astro').default
   export const Example: typeof import('@shortcodes/Example.astro').default
   export const JsDismiss: typeof import('@shortcodes/JsDismiss.astro').default
   export const JsDocs: typeof import('@shortcodes/JsDocs.astro').default
+  export const LoadingState: typeof import('@shortcodes/LoadingState.astro').default
+  export const LoadingStateIntro: typeof import('@shortcodes/LoadingStateIntro.astro').default
   export const MandatoryFieldIndication: typeof import('@shortcodes/MandatoryFieldIndication.astro').default
   export const Placeholder: typeof import('@shortcodes/Placeholder.astro').default
   export const ScssDocs: typeof import('@shortcodes/ScssDocs.astro').default

@@ -1,0 +1,85 @@
+.icon-interactive,
+.icon-assistant {
+  --#{$prefix}icon-color: #{$ouds-color-action-enabled};
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: #{$ouds-size-min-interactive-area-smallest};
+  max-width: #{$ouds-size-min-interactive-area-default};
+  height: 100%;
+  min-height: #{$ouds-size-min-interactive-area-smallest};
+  max-height: #{$ouds-size-min-interactive-area-default};
+  aspect-ratio: 1;
+  padding: 0;
+  color: var(--#{$prefix}icon-color);
+  background: none;
+  border: 0;
+
+  svg:not(.loader),
+  .icon {
+    flex-shrink: 1;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    font-size: 1.5rem;
+    line-height: 0;
+  }
+
+  &:hover {
+    --#{$prefix}icon-color: #{$ouds-color-action-hover};
+  }
+
+  &:focus-visible {
+    --#{$prefix}icon-color: #{$ouds-color-action-focus};
+  }
+
+  &:active {
+    --#{$prefix}icon-color: #{$ouds-color-action-pressed};
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    --#{$prefix}icon-color: #{$ouds-color-action-disabled};
+    pointer-events: none;
+  }
+
+  @include loader($loading-color: $ouds-color-action-loading, $loading-size: px-to-rem($ouds-button-size-progress-indicator-default));
+}
+
+.icon-assistant {
+  @include assistant();
+  --#{$prefix}assistant-gradient-unit: 72deg;
+
+  position: relative;
+  border-radius: $ouds-border-radius-pill; // stylelint-disable-line property-disallowed-list
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: var(--#{$prefix}assistant-border-gradient);
+    border-radius: $ouds-border-radius-pill; // stylelint-disable-line property-disallowed-list
+
+    mask-image:
+      radial-gradient(
+        circle closest-side,
+        transparent calc(91.6666% - .5px),
+        $black calc(91.6666% + .5px)
+      );
+  }
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-color: currentcolor;
+    mask: $assistant-icon no-repeat center;
+    mask-size: 56.25%;
+  }
+
+  &:is(:disabled, [aria-disabled="true"]):not(.loading-indeterminate, .loading-determinate) {
+    --bs-assistant-border-gradient: currentcolor;
+  }
+}
