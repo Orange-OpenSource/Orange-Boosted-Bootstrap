@@ -9,7 +9,8 @@
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
-import docsearch from '@docsearch/js'
+// eslint-disable-next-line import/no-unresolved
+import docsearch from '@docsearch/js/docsearch'
 
 (() => {
   // These values will be replaced by Astro's Vite plugin
@@ -29,12 +30,16 @@ import docsearch from '@docsearch/js'
 
   docsearch({
     apiKey: CONFIG.apiKey,
-    indexName: CONFIG.indexName,
     appId: CONFIG.appId,
     container: searchElement,
-    searchParameters: {
-      facetFilters: [`version:${siteDocsVersion}`]
-    },
+    indices: [
+      {
+        name: CONFIG.indexName,
+        searchParameters: {
+          facetFilters: [`version:${siteDocsVersion}`]
+        }
+      }
+    ],
     transformItems(items) {
       return items.map(item => {
         const liveUrl = 'https://web.unified-design-system.orange.com/'
