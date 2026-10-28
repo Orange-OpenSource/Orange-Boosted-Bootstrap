@@ -39,6 +39,7 @@
   // --docsearch-hit-color: var(--bs-color-content-muted);
   --docsearch-hit-highlight-color: var(--bs-color-action-highlighted);
   --docsearch-hit-background: transparent;
+  --docsearch-hit-focus-background: var(--bs-color-action-highlighted);
   // --docsearch-key-background: #f5f5fa;
   // --docsearch-key-color: #5a5e9a;
   // --docsearch-key-pressed-shadow: inset 0 2px 4px rgba(120, 122, 165, .25);
@@ -214,7 +215,9 @@
     }
 
     .DocSearch-Hit-title,
-    .DocSearch-Hit-path {
+    .DocSearch-Hit-path,
+    .DocSearch-Hit-action,
+    .DocSearch-Hit-icon {
       color: var(--bs-color-content-on-action-highlighted);
     }
 
