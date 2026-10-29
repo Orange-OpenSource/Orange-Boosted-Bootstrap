@@ -60,7 +60,7 @@
   .container-max-width {
     @include media-breakpoint-up(get-breakpoint-from-width()) {
       --#{$prefix}container-margin-x: #{map-get($container-fluid-margin, get-breakpoint-from-width())};
-      max-width: $ouds-grid-2xl-max-width-alt;
+      max-width: max(px-to-rem($ouds-grid-2xl-max-width-alt), $ouds-grid-2xl-max-width-alt); // make sure the max-width does not shrink if the font size is reduced
 
       .row {
         --#{$prefix}gutter-x: #{map-get($grid-gutter-widths, get-breakpoint-from-width())};
@@ -68,5 +68,18 @@
     }
   }
   // scss-docs-end containers-max
+
+  // scss-docs-start containers-max-alt
+  .container-max-width-alt {
+    @include media-breakpoint-up(get-breakpoint-from-width($ouds-grid-3xl-max-width)) {
+      --#{$prefix}container-margin-x: #{map-get($container-fluid-margin, get-breakpoint-from-width($ouds-grid-3xl-max-width))};
+      max-width: max(px-to-rem($ouds-grid-3xl-max-width), $ouds-grid-3xl-max-width); // make sure the max-width does not shrink if the font size is reduced
+
+      .row {
+        --#{$prefix}gutter-x: #{map-get($grid-gutter-widths, get-breakpoint-from-width($ouds-grid-3xl-max-width))};
+      }
+    }
+  }
+  // scss-docs-end containers-max-alt
   // End mod
 }

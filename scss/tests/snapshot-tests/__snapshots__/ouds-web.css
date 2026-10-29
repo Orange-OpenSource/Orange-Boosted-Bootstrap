@@ -1559,11 +1559,19 @@ dialog,
 @media (min-width: 1640px) {
   .container-max-width {
     --bs-container-margin-x: 80px;
-    max-width: 1680px;
+    max-width: max(105rem, 1680px);
   }
   .container-max-width .row {
     --bs-gutter-x: 32px;
   }
+}
+
+.container-max-width-alt {
+  --bs-container-margin-x: 112px;
+  max-width: max(120rem, 1920px);
+}
+.container-max-width-alt .row {
+  --bs-gutter-x: 40px;
 }
 
 :root {
