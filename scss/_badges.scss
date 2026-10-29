@@ -166,6 +166,7 @@
   --#{$prefix}badge-padding-y-medium-large: 0;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 
   &.badge-large {
     --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-large)};
