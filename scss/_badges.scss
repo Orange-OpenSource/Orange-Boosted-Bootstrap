@@ -164,6 +164,8 @@
 .badge-count {
   --#{$prefix}badge-padding-x-medium-large: #{$ouds-badge-space-padding-inline-medium};
   --#{$prefix}badge-padding-y-medium-large: 0;
+  display: inline-flex;
+  align-items: center;
 
   &.badge-large {
     --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-large)};

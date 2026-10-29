@@ -11476,6 +11476,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .badge-count {
   --bs-badge-padding-x-medium-large: 4px;
   --bs-badge-padding-y-medium-large: 0;
+  display: inline-flex;
+  align-items: center;
 }
 .badge-count.badge-large {
   --bs-badge-size: 1.25rem;
