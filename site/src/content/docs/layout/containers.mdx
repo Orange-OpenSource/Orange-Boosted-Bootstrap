@@ -107,12 +107,16 @@ It is defined as follows:
 
 <ScssDocs name="containers-max-default" file="scss/_containers.scss" buttonLabel="container max width"/>
 
+### Alternative max width
+
 If you need even more space, consider using the `.container-max-width-alt` class instead. After breakpoint `3xl`, this class:
 - limits the container width to {getTokenValue('$ouds-grid-3xl-max-width')} (including margins),
 - limits container margin to {getTokenValue('$ouds-grid-3xl-margin')} each side,
 - limits gutters width to {getTokenValue('$ouds-grid-3xl-column-gap')}.
 
 <ScssDocs name="containers-max-alt" file="scss/_containers.scss" buttonLabel="container max width"/>
+
+### Comparison of fluid and max-width containers
 
 Comparison between `.container-fluid` with `.container-max-width` or `.container-max-width-alt` and `.container-fluid` alone can be seen in the following table:
 
