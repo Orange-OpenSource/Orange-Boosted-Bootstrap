@@ -20,22 +20,22 @@ This guide provides information on how to migrate from Boosted (latest release) 
 
 Let’s start with the most obvious change you’ll notice: the name. **Boosted is now OUDS Web.**
 
-- The NPM package is now `@ouds/web`.
+- The NPM packages are now `@ouds/web-common` and `@ouds/web-orange` or `@ouds/web-orange-compact` for more compact interfaces.
 - The CSS and JS files have been renamed:
-  - `boosted-grid.css` → `ouds-web-grid.css`
-  - `boosted-grid.min.css` → `ouds-web-grid.min.css`
-  - `boosted-reboot.css` → `ouds-web-reboot.css`
-  - `boosted-reboot.min.css` → `ouds-web-reboot.min.css`
-  - `boosted-utilities.css` → `ouds-web-utilities.css`
-  - `boosted-utilities.min.css` → `ouds-web-utilities.min.css`
-  - `boosted.css` → `ouds-web.css`
-  - `boosted.min.css` → `ouds-web.min.css`
-  - `boosted.bundle.js` → `ouds-web.bundle.js`
-  - `boosted.bundle.min.js` → `ouds-web.bundle.min.js`
-  - `boosted.esm.js` → `ouds-web.esm.js`
-  - `boosted.esm.min.js` → `ouds-web.esm.min.js`
-  - `boosted.js` → `ouds-web.js`
-  - `boosted.min.js` → `ouds-web.min.js`
+  - `boosted-grid.css` → `ouds-web-grid.css` in `@ouds/web-orange`
+  - `boosted-grid.min.css` → `ouds-web-grid.min.css` in `@ouds/web-orange`
+  - `boosted-reboot.css` → `ouds-web-reboot.css` in `@ouds/web-orange`
+  - `boosted-reboot.min.css` → `ouds-web-reboot.min.css` in `@ouds/web-orange`
+  - `boosted-utilities.css` → `ouds-web-utilities.css` in `@ouds/web-orange`
+  - `boosted-utilities.min.css` → `ouds-web-utilities.min.css` in `@ouds/web-orange`
+  - `boosted.css` → `ouds-web.css` in `@ouds/web-orange`
+  - `boosted.min.css` → `ouds-web.min.css` in `@ouds/web-orange`
+  - `boosted.bundle.js` → `ouds-web.bundle.js` in `@ouds/web-common`
+  - `boosted.bundle.min.js` → `ouds-web.bundle.min.js` in `@ouds/web-common`
+  - `boosted.esm.js` → `ouds-web.esm.js` in `@ouds/web-common`
+  - `boosted.esm.min.js` → `ouds-web.esm.min.js` in `@ouds/web-common`
+  - `boosted.js` → `ouds-web.js` in `@ouds/web-common`
+  - `boosted.min.js` → `ouds-web.min.js` in `@ouds/web-common`
 
 From now on, OUDS Web won’t embed Bootstrap elements that are not part of Orange Unified Design System. However, you can still use our Bootstrap compatibility mode by using `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`.
 
