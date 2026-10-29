@@ -22,7 +22,7 @@ import { getVersionedDocsPath } from '@libs/path'
 
 ### Component types
 
-<ul class="list-unstyled row row-cols-1 sm:row-cols-3">
+<ul class="list-unstyled row row-cols-1 sm:row-cols-3 mb-medium">
   <li class="col">
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
@@ -75,7 +75,7 @@ For accessibility reasons, any informative element, must either be a semantic el
 Tag and input tag lists must be wrapped in a semantic container (usually a `<ul>` or `<ol>`). *If possible, display a text that semantically describes the purpose of the tags*, otherwise add an `aria-label` to the container that explains the tags' function.
 
 <Example buttonLabel="tags list with a displayed title" code={`<div class="d-inline-flex align-items-center">
-    <h4 id="tagsTitle" class="h6 me-small">Mobile coverage: </h4>
+    <h4 id="tagsTitle" class="h6 mb-none me-small">Mobile coverage: </h4>
     <div role="group" aria-labelledby="tagsTitle">
 
       <ul class="list-unstyled d-flex column-gap-xsmall">
@@ -118,7 +118,7 @@ Tags hold status depending on the context of the information they represent. Eac
 
 Non-functional tags are used to display categories, default status, or to draw attention without carrying a specific functional meaning (unlike functional tags, see below).
 
-<Example buttonLabel="non-functional tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Non-functional emphasized tags (default)">
+<Example buttonLabel="non-functional tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium mb-medium" aria-label="Non-functional emphasized tags (default)">
     <li class="tag">Neutral emphasized (default)</li>
     <li class="tag tag-accent">Accent emphasized</li>
   </ul>
@@ -136,7 +136,7 @@ Functional tags communicate specific statuses or system feedback (e.g., success,
   Keep in mind that color should not be the only way to convey information. If the color has a strong meaning, reflect it in the tag's text and if necessary add additional text with the class `.visually-hidden`. [Read more about tags accessibility here](#accessibility).
 </Callout>
 
-<Example buttonLabel="functional tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Functional emphasized tags (default)">
+<Example buttonLabel="functional tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium mb-medium" aria-label="Functional emphasized tags (default)">
     <li class="tag tag-positive">Positive emphasized</li>
     <li class="tag tag-info">Info emphasized</li>
     <li class="tag tag-warning">Warning emphasized</li>
@@ -162,7 +162,7 @@ To display a colored icon in non-functional tags, add the icon inside the tag, w
   Since icons in tags are always next to some text, they are purely decorative and should be hidden from assistive technologies using `aria-hidden="true"`, as demonstrated in our examples. [Read more about tags accessibility here](#accessibility).
 </Callout>
 
-<Example buttonLabel="non-functional icon tags" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Non-functional emphasized icons">
+<Example buttonLabel="non-functional icon tags" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium mb-medium" aria-label="Non-functional emphasized icons">
     <li class="tag">
       <svg aria-hidden="true" class="tag-icon">
         <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
@@ -177,7 +177,7 @@ To display a colored icon in non-functional tags, add the icon inside the tag, w
     </li>
   </ul>
 
-  <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Non-functional muted icons">
+  <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium mb-medium" aria-label="Non-functional muted icons">
     <li class="tag tag-muted">
       <svg aria-hidden="true" class="tag-icon">
         <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
@@ -205,7 +205,7 @@ As functional tags communicate specific statuses, each status must always be pai
   If the functional meaning of the text is not sufficiently clear, add an additional text with the `.visually-hidden` class to ensure accessibility for all users. [Read more about tags accessibility here](#accessibility).
 </Callout>
 
-<Example buttonLabel="functional status tags" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Functional emphasized icons">
+<Example buttonLabel="functional status tags" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium mb-medium" aria-label="Functional emphasized icons">
     <li class="tag tag-positive">
       <span class="tag-status-icon"></span>
       Activated
@@ -251,7 +251,7 @@ As functional tags communicate specific statuses, each status must always be pai
 
 To add a colored bullet in the tag, add a `<span>` with a class `.tag-bullet` inside the tag.
 
-<Example showMarkup={false} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Emphasized bullet tag examples">
+<Example showMarkup={false} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium mb-medium" aria-label="Emphasized bullet tag examples">
     <li class="tag">
       <span class="tag-bullet"></span>
       Neutral
