@@ -504,7 +504,7 @@
       top: 0;
       left: 0;
       z-index: 2;
-      max-width: 100%;
+      width: 100%;
       padding-top: calc($ouds-text-area-space-padding-block-top-empty - var(--#{$prefix}text-input-border-width-top));
       padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right));
       padding-left: calc($ouds-text-input-space-padding-inline-default - var(--#{$prefix}text-input-border-width-left));
@@ -544,6 +544,8 @@
       &:not(:has(label.visually-hidden)) {
 
         > label {
+          width: unset;
+          max-width: 100%;
           padding-top: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-top));
           white-space: nowrap;
           @include get-font-size("label-small");
