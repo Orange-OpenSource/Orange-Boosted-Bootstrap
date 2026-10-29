@@ -1,6 +1,6 @@
 ---
 title: Modals
-description: Use native HTML dialog with invoker commands to display focused modal interactions.
+description: Modals are UI elements that interrupt the current page or task to focus the user's attention on a specific action, decision, or piece of information.
 aliases:
   - "/docs/components/modal/"
   - "/docs/components/modals/"
@@ -39,7 +39,7 @@ import { getVersionedDocsPath } from '@libs/path'
           </dialog>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#modal-dialog">Modal dialog</a> temporary surface that interrupts the current page or task to focus the user's attention</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#modal-dialog">Modal dialog</a> is a temporary, surface-like UI element that interrupts the current page or task to focus the user's attention on a specific action, decision, or piece of information.</div>
     </div>
   </li>
   <li class="g-col-12 sm:g-col-6">
@@ -59,7 +59,7 @@ import { getVersionedDocsPath } from '@libs/path'
           </dialog>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#fullscreen-dialog">Fullscreen dialog</a> is a dialog that occupies the entire viewport and does not use a backdrop.</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#fullscreen-dialog">Fullscreen dialog</a> is a UI element that covers the entire viewport, interrupting the current page or task to focus the user's attention on a specific action, decision, or piece of information.</div>
     </div>
   </li>
 </ul>
@@ -97,7 +97,11 @@ Some things to keep in mind while using modals include:
 
 ## [[comp]] Modal dialog
 
-Modal dialog is used for focused tasks that should stay visually separated from the page without taking the full viewport.
+A modal dialog is a temporary, surface-like UI element that interrupts the current page or task to focus the user's attention on a specific action, decision, or piece of information.
+
+The modal dialog appears over a backdrop that visually separates it from the underlying content and blocks interaction with that content.
+
+See the [approach](#approach) section to get an overview of the modal dialog structure and classes.
 
 <Example buttonLabel="basic modal dialog" code={`<dialog id="modalDialog" class="modal-base modal-dialog" aria-labelledby="modalDialogTitle" closedby="any">
     <div class="modal-header">
@@ -248,9 +252,13 @@ Add `.modal-small` to switch to a small modal dialog. Use it when the dialog req
 
 ## [[comp]] Fullscreen dialog
 
-Fullscreen dialog uses the same native `<dialog>` element and internal structure as modal dialog, but takes all the available viewport. Use `.modal-fullscreen-dialog` on `<dialog>` to make it a fullscreen dialog.
+A fullscreen dialog is a UI element that covers the entire viewport, interrupting the current page or task to focus the user's attention on a specific action, decision, or piece of information.
 
-Only the [common variants](#common-variants) are available for this kind of dialog.
+The fullscreen dialog layout mirrors the structure and behavior of a standard page and lacks a backdrop, making it ideal for complex tasks or content needing more space and interaction.
+
+Fullscreen dialog uses the same native `<dialog>` element and internal structure as modal dialog, use `.modal-fullscreen-dialog` on `<dialog>` to make it a fullscreen dialog. See the [approach](#approach) section to get an overview of the fullscreen dialog structure and classes.
+
+Only the [common variants](#common-variants) are available for this kind of modal.
 
 <Example buttonLabel="fullscreen dialog" code={`<dialog id="demoFullscreenDialog" class="modal-base modal-fullscreen-dialog" aria-labelledby="demoFullscreenDialogTitle" closedby="any">
     <div class="modal-header">
