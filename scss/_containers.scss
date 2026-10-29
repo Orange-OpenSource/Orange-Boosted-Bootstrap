@@ -56,7 +56,7 @@
   }
 
   // OUDS mod
-  // scss-docs-start containers-max
+  // scss-docs-start containers-max-default
   .container-max-width {
     @include media-breakpoint-up(get-breakpoint-from-width()) {
       --#{$prefix}container-margin-x: #{map-get($container-fluid-margin, get-breakpoint-from-width())};
@@ -67,7 +67,7 @@
       }
     }
   }
-  // scss-docs-end containers-max
+  // scss-docs-end containers-max-default
 
   // scss-docs-start containers-max-alt
   .container-max-width-alt {
