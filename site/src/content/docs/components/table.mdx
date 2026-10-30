@@ -370,9 +370,9 @@ Use `.{xs|sm|md|lg|xl|2xl|3xl}:table-responsive` as needed to create responsive 
 
 ### With checkboxes
 
-For the row selection purpose with checkboxes, you should use [standalone checkboxes]([[docsref:/components/checkbox#standalone]]) with `.visually-hidden` labels describing their use.
+For the row selection purpose with checkboxes, you should use [standalone checkboxes]([[docsref:/components/checkboxes#standalone]]) with `.visually-hidden` labels describing their use.
 
-The first cell of the header should contain a checkbox to select or deselect all rows. When some rows - but not all - are selected, the header checkbox should be in an [indeterminate state]([[docsref:/components/checkbox#indeterminate]]).
+The first cell of the header should contain a checkbox to select or deselect all rows. When some rows - but not all - are selected, the header checkbox should be in an [indeterminate state]([[docsref:/components/checkboxes#indeterminate]]).
 
 To visually indicate a row is selected, you'll need to apply a `data-bs-theme="dark"` attribute on the `<tr>` element (some additional styles will be applied too). This can be done by JavaScript, see the example below. If you want to manually apply the same styles to rows or even cells, you can use the class `.table-active` with `data-bs-theme="dark"` on `<tr>` or `<td>` elements.
 
