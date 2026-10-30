@@ -1,8 +1,12 @@
-# Switch
+# Switches
 
 > **Not Bootstrap:** OUDS Web uses `.switch-item` with `.control-item-*` classes and `role="switch"` instead of Bootstrap's `.form-check.form-switch`. Bootstrap compatibility classes still work.
 
 ## Overview
+
+Switches have two component types: [Switch item](#switch-item) and [Switch (standalone)](#switch-standalone).
+
+## Switch item
 
 Use `.switch-item` with `.control-item-indicator[type="checkbox"][role="switch"]`. Group in `<ul class="control-items-list">` or `<fieldset class="control-items-list">`.
 
@@ -40,13 +44,13 @@ Use `.switch-item` with `.control-item-indicator[type="checkbox"][role="switch"]
 </ul>
 ```
 
-## Variants
+### Variants
 
-### Divider
+#### Divider
 
 Add `.control-item-divider` to `.switch-item`.
 
-### Icon
+#### Icon
 
 Add a `.control-item-assets-container` with icon as the **last child** of `.switch-item` (CSS reverses flow).
 
@@ -72,31 +76,31 @@ Add a `.control-item-assets-container` with icon as the **last child** of `.swit
 </li>
 ```
 
-### Description text
+#### Description text
 
 Add `.control-item-description` inside `.control-item-text-container`. Link via `aria-describedby`.
 
-## Layout
+### Layout
 
-### Reverse
+#### Reverse
 
 Add `.control-item-reverse` to `.switch-item`.
 
-### Max width
+#### Max width
 
 Add `.component-max-width` to `.switch-item`.
 
-## States
+### States
 
-### Disabled
+#### Disabled
 
 Add `disabled` to the input.
 
-### Read only
+#### Read only
 
 Replace `<input>` with `<span class="control-item-indicator" role="switch" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="...">`.
 
-### Invalid
+#### Invalid
 
 Add `aria-invalid="true"` to `.control-item-indicator`.
 
@@ -126,15 +130,19 @@ Add `aria-invalid="true"` to `.control-item-indicator`.
 
 **Group error:** Use `<fieldset class="control-items-list">` — error text auto-displays if any indicator is invalid.
 
-### Skeleton
+#### Skeleton
 
 Wrap in `[aria-busy="true"]` with `inert`.
 
-## Fieldset legend
+### Fieldset legend
 
 Add `<legend>` as first child of `<fieldset>` for screen reader context.
 
-## Standalone
+### Mandatory field
+
+Add `.is-required` to `<label>` (single) or `<legend>` (group), and `required` to inputs.
+
+## Switch (standalone)
 
 ```html
 <label class="switch-standalone">
@@ -148,7 +156,7 @@ Add `<legend>` as first child of `<fieldset>` for screen reader context.
 </label>
 ```
 
-## Native switch haptics
+## Native switches
 
 Add `switch` attribute to input for native iOS haptic feedback (Safari 17.4+). No visual changes.
 
@@ -161,7 +169,3 @@ Add `switch` attribute to input for native iOS haptic feedback (Safari 17.4+). N
   switch
 />
 ```
-
-## Mandatory field
-
-Add `.is-required` to `<label>` (single) or `<legend>` (group), and `required` to inputs.

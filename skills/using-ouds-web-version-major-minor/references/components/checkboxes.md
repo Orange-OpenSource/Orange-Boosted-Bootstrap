@@ -1,4 +1,10 @@
-# Checkbox
+# Checkboxes
+
+## Overview
+
+Checkboxes have two component types: [Checkbox item](#checkbox-item) and [Checkbox (standalone)](#checkbox-standalone).
+
+## Checkbox item
 
 Uses `.checkbox-item` and `.control-item-*` classes. Replaces browser default with `.control-item-indicator[type="checkbox"]`.
 
@@ -26,13 +32,13 @@ Uses `.checkbox-item` and `.control-item-*` classes. Replaces browser default wi
 - `.control-item-text-container` — wraps label and description
 - `.control-item-label` — the label text
 
-## Variants
+### Variants
 
-### Divider
+#### Divider
 
 Add `.control-item-divider` to `.checkbox-item`.
 
-### Icon
+#### Icon
 
 Add a second `.control-item-assets-container` with an SVG or font-icon:
 
@@ -50,7 +56,7 @@ Add a second `.control-item-assets-container` with an SVG or font-icon:
 </div>
 ```
 
-### Description text
+#### Description text
 
 Add `.control-item-description` as sibling of `.control-item-label`. Link with `aria-describedby`.
 
@@ -61,13 +67,13 @@ Add `.control-item-description` as sibling of `.control-item-label`. Link with `
 </div>
 ```
 
-## Layout
+### Layout
 
-### Reverse
+#### Reverse
 
 Add `.control-item-reverse` to `.checkbox-item`.
 
-### Horizontal
+#### Horizontal
 
 Use flex utilities on a wrapper inside `.control-items-list`:
 
@@ -78,25 +84,25 @@ Use flex utilities on a wrapper inside `.control-items-list`:
 </div>
 ```
 
-### Max width
+#### Max width
 
 Add `.component-max-width` to `.checkbox-item`.
 
-## Indeterminate
+### Indeterminate
 
 Set via JavaScript only: `checkbox.indeterminate = true`. Styled via `:indeterminate` pseudo class.
 
-## States
+### States
 
-### Disabled
+#### Disabled
 
 Add `disabled` attribute to the input.
 
-### Read only
+#### Read only
 
 Replace `<input>` with `<span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="...">`.
 
-### Invalid
+#### Invalid
 
 Add `aria-invalid="true"` to the input. Error icon shown automatically (decorative icon hidden). Add error message:
 
@@ -106,15 +112,19 @@ Add `aria-invalid="true"` to the input. Error icon shown automatically (decorati
 
 Place error message as last child of `.control-items-list` (fieldset) or after `</ul>`.
 
-### Unique checkbox with validation
+#### Unique checkbox with validation
 
 Wrap in `.checkbox-item-container` instead of `<fieldset>` for auto error display.
 
-## Fieldset legend
+### Fieldset legend
 
 Add `<legend>` as first child of `<fieldset class="control-items-list">`.
 
-## Standalone checkbox
+### Mandatory field
+
+Add `.is-required` to `.control-item-label` (single) or `<legend>` (group). Add `required` to the input.
+
+## Checkbox (standalone)
 
 Simplified structure without the item layout:
 
@@ -124,9 +134,5 @@ Simplified structure without the item layout:
   <span class="visually-hidden">Standalone checkbox</span>
 </label>
 ```
-
-## Mandatory field
-
-Add `.is-required` to `.control-item-label` (single) or `<legend>` (group). Add `required` to the input.
 
 > **Not Bootstrap:** Uses `.checkbox-item`, `.control-item-*` classes (not `.form-check`/`.form-check-input`/`.form-check-label`). Grouping uses `<fieldset class="control-items-list">`. Reverse uses `.control-item-reverse` (not `.form-check-reverse`). Invalid uses `aria-invalid="true"` (not `.is-invalid`). Read-only state uses `<span>` with ARIA attributes.

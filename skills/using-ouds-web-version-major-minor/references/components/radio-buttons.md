@@ -1,8 +1,12 @@
-# Radio Button
+# Radio buttons
 
 > **Not Bootstrap:** OUDS Web replaces Bootstrap's `.form-check` / `.form-check-input` with a control-item architecture: `.radio-button-item`, `.control-item-indicator`, `.control-item-label`, etc. Bootstrap compatibility classes still work but lack OUDS features.
 
 ## Overview
+
+Radio buttons have two component types: [Radio button item](#radio-button-item) and [Radio button (standalone)](#radio-button-standalone).
+
+## Radio button item
 
 Use `.radio-button-item` with `.control-item-*` classes. Browser default radios are replaced via `.control-item-indicator[type="radio"]`. Group radios in `<fieldset class="control-items-list">`.
 
@@ -40,13 +44,13 @@ Use `.radio-button-item` with `.control-item-*` classes. Browser default radios 
 </fieldset>
 ```
 
-## Variants
+### Variants
 
-### Divider
+#### Divider
 
 Add `.control-item-divider` to `.radio-button-item`.
 
-### Icon
+#### Icon
 
 Add a second `.control-item-assets-container` with an icon as a child of `.radio-button-item` (after the text container):
 
@@ -58,7 +62,7 @@ Add a second `.control-item-assets-container` with an icon as a child of `.radio
 </div>
 ```
 
-### Extra label
+#### Extra label
 
 Add `.radio-button-extra-label` inside `.control-item-text-container`. Link via `aria-describedby`.
 
@@ -69,21 +73,21 @@ Add `.radio-button-extra-label` inside `.control-item-text-container`. Link via 
 </div>
 ```
 
-### Description text
+#### Description text
 
 Add `.control-item-description` inside `.control-item-text-container`. Link via `aria-describedby`. Can combine with extra label (extra label first).
 
-### Outlined
+#### Outlined
 
 Add `.radio-button-item-outlined` to `.radio-button-item`. All siblings should also be outlined.
 
-## Layout
+### Layout
 
-### Reverse
+#### Reverse
 
 Add `.control-item-reverse` to `.radio-button-item`.
 
-### Horizontal
+#### Horizontal
 
 Use flex utilities on a container inside the fieldset. Limit to 3 items with short labels.
 
@@ -94,21 +98,21 @@ Use flex utilities on a container inside the fieldset. Limit to 3 items with sho
 </div>
 ```
 
-### Max width
+#### Max width
 
 Add `.component-max-width` to `.radio-button-item`.
 
-## States
+### States
 
-### Disabled
+#### Disabled
 
 Add `disabled` attribute to the input.
 
-### Read only
+#### Read only
 
 Replace `<input>` with `<span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="...">`. Wrap group in `<div role="radiogroup" aria-readonly="true">`.
 
-### Invalid
+#### Invalid
 
 Add `aria-invalid="true"` to `.control-item-indicator`. Add `.control-item-error-message` inside the fieldset. Link error text via `aria-describedby`.
 
@@ -116,15 +120,19 @@ Add `aria-invalid="true"` to `.control-item-indicator`. Add `.control-item-error
 <p class="control-item-error-message" id="errorText">There is an error.</p>
 ```
 
-### Skeleton
+#### Skeleton
 
 Wrap in `[aria-busy="true"]` with `inert`.
 
-## Fieldset legend
+### Fieldset legend
 
 Add `<legend>` as the first child of `<fieldset>` for screen reader context.
 
-## Standalone
+### Mandatory field
+
+Add `.is-required` to `<label>` (single radio) or `<legend>` (group), and `required` to inputs.
+
+## Radio button (standalone)
 
 For integration inside other components, use `.radio-button-standalone`:
 
@@ -134,7 +142,3 @@ For integration inside other components, use `.radio-button-standalone`:
   <span class="visually-hidden">Label</span>
 </label>
 ```
-
-## Mandatory field
-
-Add `.is-required` to `<label>` (single radio) or `<legend>` (group), and `required` to inputs.
