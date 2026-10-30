@@ -1,6 +1,6 @@
 ---
-name: 'using-ouds-web-version-major-minor'
-description: 'Provides comprehensive knowledge of the OUDS Web library (Orange Unified Design System for Web), a Bootstrap-based CSS/JS framework for building Orange-branded web interfaces. This skill should be used when generating HTML markup, CSS classes, or JavaScript code that uses OUDS Web components, utilities, layout system, or design tokens. Also use during migrations from Boosted, OB1, or older OUDS Web versions to look up correct OUDS Web component structure as replacement markup. It covers components (buttons, alerts, chips, forms, navigation), layout (grid, breakpoints, containers), utilities (spacing, colors, display, flex), and foundation (typography, color modes, CSS variables, Sass customization).'
+name: "using-ouds-web-version-major-minor"
+description: "Provides comprehensive knowledge of the OUDS Web library (Orange Unified Design System for Web), a Bootstrap-based CSS/JS framework for building Orange-branded web interfaces. This skill should be used when generating HTML markup, CSS classes, or JavaScript code that uses OUDS Web components, utilities, layout system, or design tokens. Also use during migrations from Boosted, OB1, or older OUDS Web versions to look up correct OUDS Web component structure as replacement markup. It covers components (buttons, alerts, chips, forms, navigation), layout (grid, breakpoints, containers), utilities (spacing, colors, display, flex), and foundation (typography, color modes, CSS variables, Sass customization)."
 ---
 
 # OUDS Web Library Reference
@@ -13,7 +13,8 @@ Key differences from standard Bootstrap:
 
 - **8 breakpoints** instead of 6: `2xs`, `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`
 - **Breakpoint prefix syntax** (v1.3.0+): responsive classes use `{breakpoint}:{utility}-{value}` prefix format, **not** the Bootstrap infix format `{utility}-{breakpoint}-{value}`. Example: `md:d-none`, `lg:col-6`, `sm:flex-row` (not `d-md-none`, `col-lg-6`, `flex-sm-row`)
-  > **This is not Tailwind CSS.** The `breakpoint:` prefix *looks* like Tailwind's responsive variants (`md:flex`, `lg:hidden`), but the resemblance stops at the colon. Utility names, values, and the delivery mechanism are still Bootstrap/OUDS, not Tailwind:
+  > **This is not Tailwind CSS.** The `breakpoint:` prefix _looks_ like Tailwind's responsive variants (`md:flex`, `lg:hidden`), but the resemblance stops at the colon. Utility names, values, and the delivery mechanism are still Bootstrap/OUDS, not Tailwind:
+  >
   > - Utility names are Bootstrap-style, not Tailwind's: `d-flex`/`d-none` (not `flex`/`hidden`), `col-6` (not `grid-cols-6` / `w-1/2`), `float-end` (not `float-right`).
   > - Values are OUDS **semantic design tokens**, not Tailwind's numeric scale: `p-medium`, `gap-xsmall`, `mb-large` (not `p-4`, `gap-2`, `mb-8`).
   > - There is **no arbitrary-value bracket syntax** (no `w-[327px]`, `bg-[#fff]`) — only the fixed, pre-defined class set.
@@ -24,7 +25,7 @@ Key differences from standard Bootstrap:
 - **4 color modes**: `light`, `dark`, `root`, `root-inverted` (set via `data-bs-theme`)
 - **Orange-specific components**: header, footer, chips, tags, sticker, stepped-process, title-bar, skeleton, local-navigation, back-to-top, bullet-list, divider, quantity-selector, items (replaces Bootstrap's `.list-group`)
 - **Assistant button** (`.btn-assistant`, v1.5.0): AI-powered action button variant, distinct from standard/navigation buttons
-- **Modified form components**: switch, checkbox, radio-button, text-input, text-area, select-input, password-input use `.control-item-*` pattern
+- **Modified form components**: switches, checkboxes, radio buttons, text-input, text-area, select-input, password-input use `.control-item-*` pattern
 - **CSS variable prefix**: `--bs-`
 - **Container**: use `.container-fluid` (not fixed `.container`)
 - **Rounded corner buttons**: opt-in via `.use-rounded-corner-buttons` on a parent container
@@ -48,7 +49,7 @@ Full decision table (need → class → tier) in [Layout utilities](references/l
 
 OUDS Web ships as two npm packages you always need together: `@ouds/web-common` (shared JS/Sass) and one theme package for the brand's CSS/tokens. Pick **one** theme package depending on the project:
 
-| Brand          | Theme package             |
+| Brand          | Theme package              |
 | -------------- | -------------------------- |
 | Orange         | `@ouds/web-orange`         |
 | Orange Compact | `@ouds/web-orange-compact` |
@@ -65,8 +66,8 @@ npm install @ouds/web-common @ouds/web-orange
 Then import the CSS and JS in your app, e.g.:
 
 ```js
-import '@ouds/web-orange/dist/css/ouds-web.min.css'
-import * as oudsWeb from '@ouds/web-common'
+import "@ouds/web-orange/dist/css/ouds-web.min.css";
+import * as oudsWeb from "@ouds/web-common";
 // or: import { Toast, Modal } from "@ouds/web-common";
 ```
 
@@ -139,7 +140,7 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 - [Breadcrumb](references/components/breadcrumb.md) - Navigation breadcrumbs
 - [Bullet list](references/components/bullet-list.md) - Styled bullet lists
 - [Buttons](references/components/buttons.md) - Buttons and navigation buttons
-- [Checkbox](references/components/checkbox.md) - Checkbox controls
+- [Checkboxes](references/components/checkboxes.md) - Checkbox item and standalone controls
 - [Chips](references/components/chips.md) - Filter and suggestion chips
 - [Divider](references/components/divider.md) - Content dividers
 - [Dropdown](references/components/dropdown.md) - Toggleable menus and overlays (draft component)
@@ -149,10 +150,10 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 - [Items](references/components/items.md) - Static/navigation card and list items (replaces Bootstrap's list-group)
 - [Links](references/components/links.md) - Link styles
 - [Password input](references/components/password-input.md) - Password field with toggle
-- [Radio button](references/components/radio-button.md) - Radio controls
+- [Radio buttons](references/components/radio-buttons.md) - Radio button item and standalone controls
 - [Select input](references/components/select-input.md) - Select inputs
 - [Skeleton](references/components/skeleton.md) - Loading placeholders
-- [Switch](references/components/switch.md) - Toggle switches
+- [Switches](references/components/switches.md) - Switch item and standalone controls
 - [Tags](references/components/tags.md) - Tag elements
 - [Table](references/components/table.md) - Opt-in table styling (draft component)
 - [Text area](references/components/text-area.md) - Multiline inputs
@@ -276,4 +277,3 @@ OUDS Web form components use `.control-item-*` classes:
 ### Reminder
 
 Layout, flexbox, spacing, sizing, and positioning almost always have a matching OUDS Web class. Grid (`.row`/`.col-*`) for page/section structure, then helpers (`d-flex`, `.vstack`/`.hstack`, `gap-*`, etc.) for alignment inside a component — see [Layout priority](#layout-priority-grid--helpers--custom-css). Reach for a class before writing a Sass rule, a `<style>` block, or an inline `style="..."` attribute.
-

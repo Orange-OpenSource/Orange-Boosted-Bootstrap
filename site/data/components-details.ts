@@ -82,6 +82,20 @@ export const componentsDetails: ComponentCardData[] = [
   },
   {
     name: 'Checkbox',
+    slug: 'checkbox',
+    link: 'checkboxes#checkbox-standalone',
+    category: 'Control',
+    snippet: `
+      <label class="checkbox-standalone">
+        <input class="control-item-indicator" type="checkbox" id="checkboxStandaloneCard" checked tabindex="-1" />
+        <span class="visually-hidden">Standalone checkbox</span>
+      </label>
+    `
+  },
+  {
+    name: 'Checkbox item',
+    slug: 'checkbox-item',
+    link: 'checkboxes#checkbox-item',
     category: 'Control',
     snippet: `
       <div class="checkbox-item" style="min-width: unset">
@@ -299,6 +313,18 @@ export const componentsDetails: ComponentCardData[] = [
   {
     name: 'Radio button',
     slug: 'radio-button',
+    link: 'radio-buttons#radio-button-standalone',
+    category: 'Control',
+    snippet: `
+      <label class="radio-button-standalone">
+        <input class="control-item-indicator" type="radio" value="" id="radioStandalone[[id_prefix]]" checked />
+        <span class="visually-hidden">Standalone radio button</span>
+      </label>`
+  },
+  {
+    name: 'Radio button item',
+    slug: 'radio-button-item',
+    link: 'radio-buttons#radio-button-item',
     category: 'Control',
     snippet: `
       <div class="radio-button-item" style="min-width: unset">
@@ -380,6 +406,19 @@ export const componentsDetails: ComponentCardData[] = [
   },
   {
     name: 'Switch',
+    slug: 'switch',
+    link: 'switches#switch-standalone',
+    category: 'Control',
+    snippet: `
+      <label class="switch-standalone">
+        <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchStandalone[[id_prefix]]" />
+        <span class="visually-hidden">Standalone switch</span>
+      </label>`
+  },
+  {
+    name: 'Switch item',
+    slug: 'switch-item',
+    link: 'switches#switch-item',
     category: 'Control',
     snippet: `
       <div class="switch-item" style="min-width: unset">

@@ -1,6 +1,6 @@
 ---
-title: Checkbox
-description: A checkbox is a UI element that enables users to select multiple options from a set of mutually non-exclusive choices.
+title: Checkboxes
+description: Checkboxes are UI elements that enable users to select multiple options from a set of mutually non-exclusive choices.
 aliases:
   - "/docs/forms/checks/"
   - "/docs/components/checks/"
@@ -8,20 +8,71 @@ aliases:
   - "/docs/components/checks-radios/"
   - "/docs/forms/checkbox/"
   - "/docs/components/checkbox/"
+  - "/docs/[[config:docs_version]]/components/checkbox/"
 toc: true
+types:
+  - Checkbox item
+  - Checkbox (standalone)
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="info" title="Design guidelines">
-  For usage guidance, please refer to the [checkbox design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox).
+  For usage guidance, please refer to the [checkbox item design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox-item) and [checkbox (standalone) design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox).
 </Callout>
 
 ## Overview
 
+### Component types
+
+<ul class="list-unstyled row row-cols-1 sm:row-cols-2 mb-medium">
+  <li class="col">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary" inert>
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
+          <div class="checkbox-item">
+            <div class="control-item-assets-container">
+              <input class="control-item-indicator" type="checkbox" id="checkboxItemCard" checked tabindex="-1" />
+            </div>
+            <div class="control-item-text-container">
+              <label class="control-item-label" for="checkboxItemCard">Checkbox item</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#checkbox-item">Checkbox item</a> is a UI element that allows users to select multiple options from a set of mutually non-exclusive choices.</div>
+    </div>
+  </li>
+  <li class="col">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary" inert>
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
+          <label class="checkbox-standalone">
+            <input class="control-item-indicator" type="checkbox" id="checkboxStandaloneCard" checked tabindex="-1" />
+            <span class="visually-hidden">Standalone checkbox</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#checkbox-standalone">Checkbox (standalone)</a> is a UI element that enables users to select multiple options from a set of mutually non-exclusive choices.</div>
+    </div>
+  </li>
+</ul>
+
+### Approach
+
+#### Control item
+
+<ControlItem />
+
+#### Control items list
+
+As checkboxes are almost always grouped in a list, they should be enclosed in a `<fieldset> ` element with a `.control-items-list` class, this will handle automatic error text display when one of the control items input is invalid; you can add a `<legend>` element as a title for the list [read more](#fieldset-legend). It is also possible to use a `<ul>` list in place of the `<fieldset>` (and `<li>`s for the items) but the error text display will be up to you [see an example](#with-ul). If the checkbox is not part of a group and you need the automatic error text display, you can enclose it inside a `.checkbox-item-container` [read more](#unique).
+
+## [[comp]] Checkbox item
+
 Checkbox item is a UI element that allows users to select multiple options from a set of mutually non-exclusive choices.
 
-Unlike the [checkbox](#standalone), the checkbox item accommodates a broader range of contexts by enabling the toggling of visibility of additional text labels and icon assets.
+Unlike the [checkbox (standalone)](#checkbox-standalone), the checkbox item accommodates a broader range of contexts by enabling the toggling of visibility of additional text labels and icon assets.
 
 They are implemented using `.checkbox-item` and `.control-item-*` classes, [see below](#control-item). Browser default checkboxes are replaced with the help of the selector `.control-item-indicator[type="checkbox"]`.
 
@@ -63,19 +114,9 @@ They are implemented using `.checkbox-item` and `.control-item-*` classes, [see 
   </div>`} />
 </BootstrapCompatibility>
 
-### Approach
+### Variants
 
-#### Control item
-
-<ControlItem />
-
-#### Control items list
-
-As checkboxes are almost always grouped in a list, they should be enclosed in a `<fieldset> ` element with a `.control-items-list` class, this will handle automatic error text display when one of the control items input is invalid; you can add a `<legend>` element as a title for the list [read more](#fieldset-legend). It is also possible to use a `<ul>` list in place of the `<fieldset>` (and `<li>`s for the items) but the error text display will be up to you [see an example](#with-ul). If the checkbox is not part of a group and you need the automatic error text display, you can enclose it inside a `.checkbox-item-container` [read more](#unique).
-
-## Variants
-
-### Divider
+#### Divider
 
 To display a divider, add `.control-item-divider` to a `.checkbox-item`.
 
@@ -101,7 +142,7 @@ To display a divider, add `.control-item-divider` to a `.checkbox-item`.
 
   </fieldset>`} />
 
-### Icon
+#### Icon
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
@@ -137,7 +178,7 @@ To display an icon, add `.control-item-assets-container` with an icon (SVG or fo
 
   </fieldset>`} />
 
-### Description text
+#### Description text
 
 To display a description text, add a `.control-item-description` as a sibling of a `.control-item-label`. Make sure the description is accessible by adding an `aria-describedby` attribute to the input.
 
@@ -165,9 +206,9 @@ To display a description text, add a `.control-item-description` as a sibling of
 
   </fieldset>`} />
 
-## States
+### States
 
-### Disabled
+#### Disabled
 
 Add the `disabled` attribute to the input, then the checkbox and the associated `<label>` are automatically styled to match with a lighter color to help indicate the input’s state.
 
@@ -226,7 +267,7 @@ Add the `disabled` attribute to the input, then the checkbox and the associated 
   </div>`} />
 </BootstrapCompatibility>
 
-### Read only
+#### Read only
 
 To create a read only checkbox, the input should be replaced by a `span` element with `role="checkbox"`, `aria-readonly="true"` and `aria-disabled="true"` attributes. The checkbox will be accessible to keyboard navigation and assistive technologies, thanks to `aria-labelledby` and `tabindex`, but other interactions will be prevented.
 
@@ -261,7 +302,7 @@ To create a read only checkbox, the input should be replaced by a `span` element
 
   </fieldset>`} />
 
-### Invalid
+#### Invalid
 
 <Callout type="info" name="input-invalid" />
 
@@ -331,7 +372,7 @@ To display an invalid checkbox, add `.is-invalid` to a `.form-check-input`.
   </div>`} />
 </BootstrapCompatibility>
 
-#### Horizontal
+##### Horizontal
 
 If the [layout is horizontal](#horizontal-1), the `<fieldset>` must enclose the flex containers so the error message is displayed under the first item.
 
@@ -363,7 +404,7 @@ If the [layout is horizontal](#horizontal-1), the `<fieldset>` must enclose the 
 
   </fieldset>`} />
 
-#### With `<ul>`
+##### With `<ul>`
 
 It is possible to use a `<ul>` instead of `<fieldset>` but you will need to handle the error message display as it will not be hidden by default. The error message must be outside of the list as it is not a list item.
 
@@ -403,7 +444,7 @@ It is possible to use a `<ul>` instead of `<fieldset>` but you will need to hand
 
   <p class="control-item-error-message" id="checkboxInvalidUlErrorText">You must choose one.</p>`} />
 
-#### Unique
+##### Unique
 
 If you have a checkbox that is not part of a group but needs validation control, you can surround it with a `.checkbox-item-container` to hide and display the error text automatically.
 
@@ -422,7 +463,7 @@ If you have a checkbox that is not part of a group but needs validation control,
 
   </div>`} />
 
-### Skeleton
+#### Skeleton
 
 <SkeletonRedirect component="checkbox item" />
 
@@ -437,9 +478,9 @@ If you have a checkbox that is not part of a group but needs validation control,
     </div>
   </div>`} />
 
-## Layout
+### Layout
 
-### Default
+#### Default
 
 It's recommended to keep checkbox label to no more than three words. When space is limited or when a long label or description text is required, the text can wrap, as this is preferable to truncation. The checkbox indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
 
@@ -498,7 +539,7 @@ It's recommended to keep checkbox label to no more than three words. When space 
     </div>
   </div>`} />
 
-### Reverse
+#### Reverse
 
 To reverse the component, simply add `.control-item-reverse` to a `.checkbox-item`.
 
@@ -555,7 +596,7 @@ Put your checkboxes on the opposite side with the `.form-check-reverse` modifier
   </div>`} />
 </BootstrapCompatibility>
 
-### Horizontal
+#### Horizontal
 
 You can align horizontally up to three checkboxes if their labels are short, add sufficient space (for example by using `.gap-small`) between the controls to ensure a clear association of each labels with their corresponding indicator.
 
@@ -594,7 +635,7 @@ You can align horizontally up to three checkboxes if their labels are short, add
 
   </fieldset>`} />
 
-### Max width
+#### Max width
 
 By default, checkboxes will span the whole width of their parent container, to limit the width of the checkbox on wider parent container, add a `.component-max-width` to the `.checkbox-item` container. More information on checkbox sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox-responsiveness).
 
@@ -622,7 +663,7 @@ By default, checkboxes will span the whole width of their parent container, to l
 
   </fieldset>`} />
 
-## Indeterminate
+### Indeterminate
 
 This is often used to indicate a partial selection within a group of choices. For instance, in a nested (hierarchical) list, a parent checkbox can be indeterminate if some, but not all, sub-options are selected. [Learn more about nesting in the design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox-indeterminate).
 
@@ -658,7 +699,7 @@ Here is the associated JavaScript to set a checkbox as indeterminate.
   </div>`} />
 </BootstrapCompatibility>
 
-## Fieldset `<legend>`
+### Fieldset `<legend>`
 
 For accessibility reasons, it is required to provide understandable checkbox labels without relying on visual context. It is also good practice to add a checkbox group title inside a `<legend>` element as the first child of the `<fieldset>` element. Screen readers will read the legend before navigating through the checkboxes; this way, keyboard navigation users have more information on what is expected with the multiple checkboxes element.
 
@@ -703,32 +744,7 @@ For accessibility reasons, it is required to provide understandable checkbox lab
     </div>
   </div>`} />
 
-## Standalone
-
-Checkbox is a UI element that enables users to select multiple options from a set of mutually non-exclusive choices.
-
-Checkbox, that lacks an additional icon asset or text label, offers greater flexibility when designing other components that incorporate a checkbox.
-
-<Callout type="warning" name="standalone-form-indicator" />
-
-For the standalone checkbox, we provide a completely different architecture to ease the integration inside your projects.
-
-<Example buttonLabel="standalone checkbox" code={`<label class="checkbox-standalone">
-    <input class="control-item-indicator" type="checkbox" value="" />
-    <span class="visually-hidden">Standalone checkbox</span>
-  </label>`} />
-
-<BootstrapCompatibility>
-<Callout type="warning">
-  Be careful when using this, as you must implement the background on hover, focus and active states.
-</Callout>
-
-<Example buttonLabel="Bootstrap compatibility: standalone checkbox" code={`<div style="position: relative">
-    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="Standalone checkbox (Bootstrap compatible)" />
-  </div>`} />
-</BootstrapCompatibility>
-
-## Mandatory field indication
+### Mandatory field indication
 
 <MandatoryFieldIndication componentName="checkbox" />
 
@@ -769,4 +785,29 @@ For the standalone checkbox, we provide a completely different architecture to e
     </div>
 
   </fieldset>`} />
+
+## [[comp]] Checkbox (standalone)
+
+Checkbox is a UI element that enables users to select multiple options from a set of mutually non-exclusive choices.
+
+Checkbox, that lacks an additional icon asset or text label, offers greater flexibility when designing other components that incorporate a checkbox.
+
+<Callout type="warning" name="standalone-form-indicator" />
+
+For the standalone checkbox, we provide a completely different architecture to ease the integration inside your projects.
+
+<Example buttonLabel="standalone checkbox" code={`<label class="checkbox-standalone">
+    <input class="control-item-indicator" type="checkbox" value="" />
+    <span class="visually-hidden">Standalone checkbox</span>
+  </label>`} />
+
+<BootstrapCompatibility>
+<Callout type="warning">
+  Be careful when using this, as you must implement the background on hover, focus and active states.
+</Callout>
+
+<Example buttonLabel="Bootstrap compatibility: standalone checkbox" code={`<div style="position: relative">
+    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="Standalone checkbox (Bootstrap compatible)" />
+  </div>`} />
+</BootstrapCompatibility>
 

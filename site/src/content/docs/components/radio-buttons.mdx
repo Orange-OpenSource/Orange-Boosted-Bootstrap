@@ -1,25 +1,75 @@
 ---
-title: Radio button
-description: A radio button is a UI element that allows the selection of a single option from a set of mutually exclusive choices.
+title: Radio buttons
+description: Radio buttons are UI elements that allow the selection of a single option from a set of mutually exclusive choices.
 aliases:
   - "/docs/forms/radio/"
   - "/docs/components/radio/"
   - "/docs/forms/radio-button/"
   - "/docs/components/radio-button/"
 toc: true
+types:
+  - Radio button item
+  - Radio button (standalone)
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="info" title="Design guidelines">
-  For usage guidance, please refer to the [radio button design guidelines](https://r.orange.fr/r/S-ouds-doc-radio-button).
+  For usage guidance, please refer to the [radio button item design guidelines](https://r.orange.fr/r/S-ouds-doc-radio-button-item) and the [radio button design guidelines](https://r.orange.fr/r/S-ouds-doc-radio-button).
 </Callout>
 
 ## Overview
 
+### Component types
+
+<ul class="list-unstyled row row-cols-1 sm:row-cols-2 mb-medium">
+  <li class="col">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary" inert>
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
+          <div class="radio-button-item">
+            <div class="control-item-assets-container">
+              <input checked class="control-item-indicator" type="radio" id="radioButtonItemCard" name="radioButtonItemCard" tabindex="-1" />
+            </div>
+            <div class="control-item-text-container">
+              <label class="control-item-label" for="radioButtonItemCard">Radio button item</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#radio-button-item">Radio button item</a> is a UI element that allows users to select a single option from a set of mutually exclusive choices.</div>
+    </div>
+  </li>
+  <li class="col">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary" inert>
+        <div class="d-flex align-items-center justify-content-center ratio-16x9">
+          <label class="radio-button-standalone">
+            <input checked class="control-item-indicator" type="radio" id="radioButtonStandaloneCard" tabindex="-1" />
+            <span class="visually-hidden">Standalone radio button</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#radio-button-standalone">Radio button</a> is a UI element that allows users to select a single option from a set of mutually exclusive choices.</div>
+    </div>
+  </li>
+</ul>
+
+### Approach
+
+#### Control item
+
+<ControlItem />
+
+#### Control items list
+
+As radio buttons are almost always grouped in a list, they should be enclosed in a `<fieldset> ` element with a `.control-items-list` class, this will handle automatic error text display when one of the control items input is invalid; you can add a `<legend>` element as a title for the list [read more](#fieldset-legend).
+
+## [[comp]] Radio button item
+
 Radio button item is a UI element that allows users to select a single option from a set of mutually exclusive choices.
 
-Unlike the [radio button](#standalone), the radio button item accommodates a broader range of contexts by enabling the toggling of visibility of additional text labels and icon assets.
+Unlike the [radio button (standalone)](#radio-button-standalone), the radio button item accommodates a broader range of contexts by enabling the toggling of visibility of additional text labels and icon assets.
 
 They are implemented using `.radio-button-item` and `.control-item-*` classes, [see below](#control-item). Browser default radio buttons are replaced with the help of the selector `.control-item-indicator[type="radio"]`.
 
@@ -61,19 +111,9 @@ They are implemented using `.radio-button-item` and `.control-item-*` classes, [
   </div>`} />
 </BootstrapCompatibility>
 
-### Approach
+### Variants
 
-#### Control item
-
-<ControlItem />
-
-#### Control items list
-
-As radio buttons are almost always grouped in a list, they should be enclosed in a `<fieldset> ` element with a `.control-items-list` class, this will handle automatic error text display when one of the control items input is invalid; you can add a `<legend>` element as a title for the list [read more](#fieldset-legend).
-
-## Variants
-
-### Divider
+#### Divider
 
 To display a divider, add `.control-item-divider` to a `.radio-button-item`.
 
@@ -99,7 +139,7 @@ To display a divider, add `.control-item-divider` to a `.radio-button-item`.
 
   </fieldset>`} />
 
-### Icon
+#### Icon
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
@@ -135,7 +175,7 @@ To display an icon, add `.control-item-assets-container` with an icon (SVG or fo
 
   </fieldset>`} />
 
-### Extra label
+#### Extra label
 
 To add critical information to some of the options, add a `.radio-button-extra-label` as a sibling of a `.control-item-label`. Make sure the extra label is accessible by adding an `aria-describedby` attribute to the input.
 
@@ -163,7 +203,7 @@ To add critical information to some of the options, add a `.radio-button-extra-l
 
   </fieldset>`} />
 
-### Description text
+#### Description text
 
 To display a description text, add a `.control-item-description` as a sibling of a `.control-item-label`. Make sure the description is accessible by adding an `aria-describedby` attribute to the input.
 
@@ -194,7 +234,7 @@ Extra label and description text can be combined, but the extra label must come 
 
   </fieldset>`} />
 
-### Outlined
+#### Outlined
 
 To display outlined radio buttons, add `.radio-button-item-outlined` to a `.radio-button-item`. If there is an outlined radio button item in a group, all its siblings should also be outlined.
 
@@ -220,14 +260,14 @@ To display outlined radio buttons, add `.radio-button-item-outlined` to a `.radi
 
   </fieldset>`} />
 
-## States
+### States
 
-### Disabled
+#### Disabled
 
 Add the `disabled` attribute to the input, then the radio button and the associated `<label>` are automatically styled to match with a lighter color to help indicate the input’s state.
 
 <Example buttonLabel="disabled radio buttons" code={`<fieldset class="control-items-list">
-  
+
     <div class="radio-button-item">
       <div class="control-item-assets-container">
         <input disabled class="control-item-indicator" type="radio" value="" id="radioDisabled" name="radioDisabled" aria-describedby="radioDisabledExtraLabel radioDisabledDescription"/>
@@ -266,7 +306,7 @@ Add the `disabled` attribute to the input, then the radio button and the associa
   </div>`} />
 </BootstrapCompatibility>
 
-### Read only
+#### Read only
 
 To create a read only radio button, the input should be replaced by a `span` element with `role="radio"` and `aria-disabled="true"` attributes. All the radio buttons in the group must be surrounded by a container with `role="radiogroup"` and `aria-readonly="true"` attributes. This is the only way to be compliant with ARIA specifications. The radio button will be accessible to keyboard navigation and assistive technologies, thanks to `aria-labelledby` and `tabindex`, but other interactions will be prevented.
 
@@ -296,7 +336,7 @@ To create a read only radio button, the input should be replaced by a `span` ele
     </div>
   </fieldset>`} />
 
-### Invalid
+#### Invalid
 
 <Callout type="info" name="input-invalid" />
 
@@ -343,7 +383,7 @@ To display an invalid radio button, add `.is-invalid` to a `.form-check-input`.
   </div>`} />
 </BootstrapCompatibility>
 
-#### Outlined
+##### Outlined
 
 This also works for outlined variant of the component.
 
@@ -371,7 +411,7 @@ This also works for outlined variant of the component.
 
   </fieldset>`} />
 
-#### Horizontal
+##### Horizontal
 
 If the [layout is horizontal](#horizontal-1), the `<fieldset>` must enclose the flex containers so the error message is displayed under the first item.
 
@@ -402,7 +442,7 @@ If the [layout is horizontal](#horizontal-1), the `<fieldset>` must enclose the 
 
   </fieldset>`} />
 
-### Skeleton
+#### Skeleton
 
 <SkeletonRedirect component="radio button item" />
 
@@ -430,9 +470,9 @@ If the [layout is horizontal](#horizontal-1), the `<fieldset>` must enclose the 
     </fieldset>
   </div>`} />
 
-## Layout
+### Layout
 
-### Default
+#### Default
 
 It's recommended to keep radio button label to no more than three words. When space is limited or when a long label, extra label or description text is required, the text can wrap, as this is preferable to truncation. The radio button indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
 
@@ -476,7 +516,7 @@ It's recommended to keep radio button label to no more than three words. When sp
     </div>
   </div>`} />
 
-### Reverse
+#### Reverse
 
 To reverse the component, simply add `.control-item-reverse` to a `.radio-button-item`.
 
@@ -539,7 +579,7 @@ Put your radio buttons on the opposite side with the `.form-check-reverse` modif
   </div>`} />
 </BootstrapCompatibility>
 
-### Horizontal
+#### Horizontal
 
 You can align horizontally up to three radio buttons if their labels are short, add sufficient space (for example by using `.gap-small`) between the controls to ensure a clear association of each labels with their corresponding indicator.
 
@@ -567,7 +607,7 @@ You can align horizontally up to three radio buttons if their labels are short, 
     </div>
   </fieldset>`} />
 
-### Max width
+#### Max width
 
 By default, radio buttons will span the whole width of their parent container, to limit the width of the radio button on wider parent container, add a `.component-max-width` to the `.radio-button-item` container. More information on radio button sizing in the [design guidelines](https://r.orange.fr/r/S-ouds-doc-radio-button-responsiveness).
 
@@ -595,7 +635,7 @@ By default, radio buttons will span the whole width of their parent container, t
 
   </fieldset>`} />
 
-## Fieldset `<legend>`
+### Fieldset `<legend>`
 
 For accessibility reasons, it is required to provide understandable radio button labels without relying on visual context. It is also good practice to add a radio button group title inside a `<legend>` element as the first child of the `<fieldset>` element. Screen readers will read the legend before navigating through the radio buttons; this way, keyboard navigation users have more information on what is expected with the multiple radio buttons element.
 
@@ -638,33 +678,7 @@ For accessibility reasons, it is required to provide understandable radio button
     </fieldset>
   </div>`} />
 
-## Standalone
-
-Radio button is a UI element that allows users to select a single option from a set of mutually exclusive choices.
-
-Radio button, that lacks an additional icon asset or text label, provides greater flexibility when designing other components that incorporate a radio button.
-
-<Callout type="warning" name="standalone-form-indicator" />
-
-For the standalone radio button, we provide a completely different architecture to ease the integration inside your projects.
-
-<Example buttonLabel="standalone radio button" code={`<label class="radio-button-standalone">
-    <input class="control-item-indicator" type="radio" value="" />
-    <span class="visually-hidden">Default standalone radio button</span>
-  </label>`} />
-
-<BootstrapCompatibility>
-<Callout type="warning">
-  Be careful when using this, as you must implement the background on hover, focus and active states.
-</Callout>
-
-<Example buttonLabel="Bootstrap compatibility: standalone radio button" code={`<div>
-    <input class="form-check-input" type="radio" value="" aria-label="Default standalone radio button (Bootstrap compatible)" />
-  </div>`} />
-</BootstrapCompatibility>
-
-
-## Mandatory field indication
+### Mandatory field indication
 
 <MandatoryFieldIndication componentName="radio button" />
 
@@ -704,3 +718,28 @@ For the standalone radio button, we provide a completely different architecture 
     </div>
 
   </fieldset>`} />
+
+## [[comp]] Radio button (standalone)
+
+Radio button is a UI element that allows users to select a single option from a set of mutually exclusive choices.
+
+Radio button, that lacks an additional icon asset or text label, provides greater flexibility when designing other components that incorporate a radio button.
+
+<Callout type="warning" name="standalone-form-indicator" />
+
+For the standalone radio button, we provide a completely different architecture to ease the integration inside your projects.
+
+<Example buttonLabel="standalone radio button" code={`<label class="radio-button-standalone">
+    <input class="control-item-indicator" type="radio" value="" />
+    <span class="visually-hidden">Default standalone radio button</span>
+  </label>`} />
+
+<BootstrapCompatibility>
+<Callout type="warning">
+  Be careful when using this, as you must implement the background on hover, focus and active states.
+</Callout>
+
+<Example buttonLabel="Bootstrap compatibility: standalone radio button" code={`<div>
+    <input class="form-check-input" type="radio" value="" aria-label="Default standalone radio button (Bootstrap compatible)" />
+  </div>`} />
+</BootstrapCompatibility>
