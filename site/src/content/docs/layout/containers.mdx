@@ -13,9 +13,9 @@ import { getTokenValue } from '@libs/sass-variables'
 
 Containers are the most basic layout element in OUDS Web and are **required when using our default grid system**. Containers are used to contain, pad, and (sometimes) center the content within them. While containers *can* be nested, most layouts do not require a nested container.
 
-OUDS Web provides a single responsive container, `.container-fluid`, which ensures a `width: 100%` at all breakpoints. To optimize its use, pair it with the `.container-max-width` class. For further details, refer to the [Fluid containers](#fluid-containers) section.
+OUDS Web provides a single responsive container, `.container-fluid`, which ensures a `width: 100%` at all breakpoints. To optimize its use, pair it with the `.container-max-width` or `.container-max-width-alt` classes. For further details, refer to the [Fluid containers](#fluid-containers) section.
 
-The table below compares `.container-fluid` `max-width` with and without `.container-max-width` across each breakpoint.
+The table below compares `.container-fluid` `max-width` with `.container-max-width` or `.container-max-width-alt` across each breakpoint.
 
 See them in action and compare them in our [Grid example]([[docsref:/examples/grid/#containers]]) and [Grid system example]([[docsref:/examples/grid-system/]]).
 
@@ -25,6 +25,7 @@ Please note that we apply an extra-padding on our containers (see [our mixin](#s
 |  | 2x-small<div class="fw-normal">&lt;{getTokenValue('$ouds-grid-xs-min-width')}</div> | X-small<div class="fw-normal">&ge;{getTokenValue('$ouds-grid-xs-min-width')}</div> | Small<div class="fw-normal">&ge;{getTokenValue('$ouds-grid-sm-min-width')}</div> | Medium<div class="fw-normal">&ge;{getTokenValue('$ouds-grid-md-min-width')}</div> | Large<div class="fw-normal">&ge;{getTokenValue('$ouds-grid-lg-min-width')}</div> | X-large<div class="fw-normal">&ge;{getTokenValue('$ouds-grid-xl-min-width')}</div> | 2x-large<div class="fw-normal">&ge;{getTokenValue('$ouds-grid-2xl-min-width')}</div> | 3x-large<div class="fw-normal">&ge;{getTokenValue('$ouds-grid-3xl-min-width')}</div> |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `.container-fluid` with `.container-max-width`  | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-2xs-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-xs-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-sm-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-md-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-lg-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-xl-margin')})</span> | {getTokenValue('$ouds-grid-2xl-max-width-alt').slice(0, -2) - 2 * getTokenValue('$ouds-grid-2xl-margin').slice(0, -2)}px | {getTokenValue('$ouds-grid-2xl-max-width-alt').slice(0, -2) - 2 * getTokenValue('$ouds-grid-2xl-margin').slice(0, -2)}px |
+| `.container-fluid` with `.container-max-width-alt`  | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-2xs-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-xs-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-sm-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-md-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-lg-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-xl-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-2xl-margin')})</span> | {getTokenValue('$ouds-grid-3xl-max-width').slice(0, -2) - 2 * getTokenValue('$ouds-grid-3xl-margin').slice(0, -2)}px |
 | `.container-fluid` | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-2xs-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-xs-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-sm-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-md-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-lg-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-xl-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-2xl-margin')})</span> | <span class="text-muted">100% -<br />(2 * {getTokenValue('$ouds-grid-3xl-margin')})</span> |
 </BsTable>
 
@@ -97,20 +98,32 @@ Use `.container-fluid` for a full width container with minimum margins, spanning
 
 ### Default max width
 
-This container should be associated by default with the class `.container-max-width`. After breakpoint `2xl`, this class:
-- limits the container width to 1680px (including margins),
-- limits container margin to 80px each side,
-- limits gutters width to 32px.
+Most of the time, this container should be associated by default with the class `.container-max-width`. After breakpoint `2xl`, this class:
+- limits the container width to {getTokenValue('$ouds-grid-2xl-max-width-alt')} (including margins),
+- limits container margin to {getTokenValue('$ouds-grid-2xl-margin')} each side,
+- limits gutters width to {getTokenValue('$ouds-grid-2xl-column-gap')}.
 
 It is defined as follows:
 
-<ScssDocs name="containers-max" file="scss/_containers.scss" buttonLabel="container max width"/>
+<ScssDocs name="containers-max-default" file="scss/_containers.scss" buttonLabel="container max width"/>
 
-Comparison between `.container-fluid` with `.container-max-width` and `.container-fluid` alone can be seen in the following table:
+### Alternative max width
+
+If you need even more space, consider using the `.container-max-width-alt` class instead. After breakpoint `3xl`, this class:
+- limits the container width to {getTokenValue('$ouds-grid-3xl-max-width')} (including margins),
+- limits container margin to {getTokenValue('$ouds-grid-3xl-margin')} each side,
+- limits gutters width to {getTokenValue('$ouds-grid-3xl-column-gap')}.
+
+<ScssDocs name="containers-max-alt" file="scss/_containers.scss" buttonLabel="container max width"/>
+
+### Comparison of fluid and max-width containers
+
+Comparison between `.container-fluid` with `.container-max-width` or `.container-max-width-alt` and `.container-fluid` alone can be seen in the following table:
 
 <BsTable class="table">
 |  | X-large<div class="fw-normal">&ge;{getTokenValue('$ouds-grid-xl-min-width')}</div> | 2x-large<div class="fw-normal">&ge;{getTokenValue('$ouds-grid-2xl-min-width')}</div> | 3x-large<div class="fw-normal">&ge;{getTokenValue('$ouds-grid-3xl-min-width')}</div> |
 | --- | --- | --- | --- |
 | `.container-fluid` with <br />`.container-max-width` | <ul class="mb-none"><li>Width <code>100% - (2 * {getTokenValue('$ouds-grid-xl-margin')})</code></li><li>Margin <code>2 * {getTokenValue('$ouds-grid-xl-margin')}</code></li><li>Gutter <code>{getTokenValue('$ouds-grid-xl-column-gap')}</code></li></ul> | <ul class="mb-none"><li>Width <code>100% - (2 * {getTokenValue('$ouds-grid-2xl-margin')})</code></li><li><b>Max-width <code>{getTokenValue('$ouds-grid-2xl-max-width-alt').slice(0, -2) - 2 * getTokenValue('$ouds-grid-2xl-margin').slice(0, -2)}px</code></b></li><li>Margin <code>2 * {getTokenValue('$ouds-grid-2xl-margin')}</code></li><li>Gutter <code>{getTokenValue('$ouds-grid-2xl-column-gap')}</code></li></ul> | <ul class="mb-none"><li><b>Width <code>{getTokenValue('$ouds-grid-2xl-max-width-alt').slice(0, -2) - 2 * getTokenValue('$ouds-grid-2xl-margin').slice(0, -2)}px</code></b></li><li><b>Margin <code>2 * {getTokenValue('$ouds-grid-2xl-margin')}</code></b></li><li><b>Gutter <code>{getTokenValue('$ouds-grid-2xl-column-gap')}</code></b></li></ul> |
+| `.container-fluid` | <ul class="mb-none"><li>Width <code>100% - (2 * {getTokenValue('$ouds-grid-xl-margin')})</code></li><li>Margin <code>2 * {getTokenValue('$ouds-grid-xl-margin')}</code></li><li>Gutter <code>{getTokenValue('$ouds-grid-xl-column-gap')}</code></li></ul> | <ul class="mb-none"><li>Width <code>100% - (2 * {getTokenValue('$ouds-grid-2xl-margin')})</code></li><li>Margin <code>2 * {getTokenValue('$ouds-grid-2xl-margin')}</code></li><li>Gutter <code>{getTokenValue('$ouds-grid-2xl-column-gap')}</code></li></ul> | <ul class="mb-none"><li>Width <code>100% - (2 * {getTokenValue('$ouds-grid-3xl-margin')})</code></li><li><b>Max-width <code>{getTokenValue('$ouds-grid-3xl-max-width').slice(0, -2) - 2 * getTokenValue('$ouds-grid-3xl-margin').slice(0, -2)}px</code></b></li><li>Margin <code>2 * {getTokenValue('$ouds-grid-3xl-margin')}</code></li><li>Gutter <code>{getTokenValue('$ouds-grid-3xl-column-gap')}</code></li></ul> |
 | `.container-fluid` | <ul class="mb-none"><li>Width <code>100% - (2 * {getTokenValue('$ouds-grid-xl-margin')})</code></li><li>Margin <code>2 * {getTokenValue('$ouds-grid-xl-margin')}</code></li><li>Gutter <code>{getTokenValue('$ouds-grid-xl-column-gap')}</code></li></ul> | <ul class="mb-none"><li>Width <code>100% - (2 * {getTokenValue('$ouds-grid-2xl-margin')})</code></li><li>Margin <code>2 * {getTokenValue('$ouds-grid-2xl-margin')}</code></li><li>Gutter <code>{getTokenValue('$ouds-grid-2xl-column-gap')}</code></li></ul> | <ul class="mb-none"><li>Width <code>100% - (2 * {getTokenValue('$ouds-grid-3xl-margin')})</code></li><li>Margin <code>2 * {getTokenValue('$ouds-grid-3xl-margin')}</code></li><li>Gutter <code>{getTokenValue('$ouds-grid-3xl-column-gap')}</code></li></ul> |
 </BsTable>
