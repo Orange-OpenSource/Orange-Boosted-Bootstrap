@@ -82,6 +82,10 @@ Use flex utilities on a wrapper inside `.control-items-list`:
 
 Add `.component-max-width` to `.checkbox-item`.
 
+## Accessibility
+
+Keep the checkbox and any meaningful icon physically adjacent to their descriptive label to maintain a clear visual hierarchy and help Assistive Technology users associate them without navigating large areas of whitespace. Use `.component-max-width` when needed to control the component width.
+
 ## Indeterminate
 
 Set via JavaScript only: `checkbox.indeterminate = true`. Styled via `:indeterminate` pseudo class.
