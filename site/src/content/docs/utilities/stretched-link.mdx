@@ -46,12 +46,13 @@ Most custom components do not have `position: relative` by default, so we need t
 
 ## Identifying the containing block
 
-If the stretched link doesn’t seem to work, the [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block) will probably be the cause. The following CSS properties will make an element the containing block:
+If the stretched link doesn’t seem to work, the [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Display/Containing_block#identifying_the_containing_block) will probably be the cause. The following CSS properties will make an element the containing block:
 
 - A `position` value other than `static`
-- A `transform` or `perspective` value other than `none`
-- A `will-change` value of `transform` or `perspective`
-- A `filter` value other than `none` or a `will-change` value of `filter` (only works on Firefox)
+- A `filter`, `backdrop-filter`, `transform`, `perspective`, `rotate`, `scale`, or `translate` value other than `none`
+- A `contain` value of `layout`, `paint`, `strict` or `content`
+- A `will-change` value containing a property for which a non-initial value would form a containing block (e.g., `filter` or `transform`)
+- A `content-visibility` value of `auto`
 
 {/* <Example buttonLabel="card with stretched links" code={`<div class="card" style="width: 18rem;">
     <Placeholder width="100%" height="180" class="card-img-top" text="false" title="Card image cap" />
