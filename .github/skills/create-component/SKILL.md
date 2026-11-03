@@ -5,6 +5,8 @@ description: 'Step-by-step workflow for creating a new SCSS and/or JavaScript co
 
 # Workflow: Create a New Component
 
+For the end-to-end human workflow, including design research, documentation updates, and review handoffs, see the [component creation guide](../../../dev-docs/component-creation.new.md).
+
 ## Before you start
 
 - Is this truly new, or a variant of an existing component?
@@ -46,7 +48,8 @@ Add to `packages/<brand>/scss/ouds-web.scss` for **all 3 brands**:
 | Toggle | `aria-expanded` + `aria-controls` |
 | Icon-only | `aria-label` + `aria-hidden` on icon |
 | Dynamic | `aria-live="polite"` / `role="status"` |
-| Disabled | `aria-disabled="true"` |
+| Disabled native control | Use the native `disabled` attribute |
+| Disabled custom control | `aria-disabled="true"` and suppress activation in code |
 | Loading | `aria-busy="true"` |
 
 ### 5. JS component (if interactive)
@@ -65,11 +68,12 @@ Register in `js/index.esm.js` and `js/index.umd.js`.
 
 ### 8. Build & verify
 
-```bash
-npm run dist && npm run lint && npm run js-test && npm run start
-```
+- Run `npm run dist` and `npm run lint` for build and lint checks.
+- For JavaScript changes, run `npm run js` followed by `npm run js-test`.
+- For CSS changes that affect snapshots, refresh them with `npm run css-snapshot-refresh`.
+- Use `npm run start` for local visual checks; it starts the brand development servers and is not a test.
 
-Check all 3 brands: light/dark, RTL, all variants.
+Check all applicable brands, themes, directions (including RTL), and variants.
 
 ---
 
