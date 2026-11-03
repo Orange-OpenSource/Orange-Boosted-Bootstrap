@@ -32,7 +32,7 @@ Bootstrap compatibility mode available via `ouds-web-bootstrap.css`.
 ## Layout
 
 - **Breakpoints changed**: `2xs` and `3xl` added, `xxl` → `2xl`, values changed
-- **Container**: `.container-xxl` → `.container-fluid.container-max-width`
+- **Container**: `.container-xxl` → `.container-fluid.container-max-width` or `.container-fluid.container-max-width-alt`
 - **Gutters**: numeric values → token names (`0` → `none`, `1` → `2xsmall`, `2` → `small`, `3` → `large`, `4` → `2xlarge`, `5` → `4xlarge`)
 - `.container` and `.container-{breakpoint}` removed (available with `$enable-bootstrap-compatibility`)
 
