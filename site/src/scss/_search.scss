@@ -174,7 +174,8 @@
   position: relative;
   z-index: 2;
 
-  button:hover {
+  button:hover,
+  button:focus-visible {
     color: var(--bs-color-action-hover);
     background: var(--bs-color-action-support-hover);
   }
