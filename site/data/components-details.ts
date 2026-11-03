@@ -87,7 +87,7 @@ export const componentsDetails: ComponentCardData[] = [
     category: 'Control',
     snippet: `
       <label class="checkbox-standalone">
-        <input class="control-item-indicator" type="checkbox" id="checkboxStandaloneCard" checked tabindex="-1" />
+        <input class="control-item-indicator" type="checkbox" id="checkboxStandalone[[id_prefix]]" checked tabindex="-1" />
         <span class="visually-hidden">Standalone checkbox</span>
       </label>
     `
@@ -100,10 +100,10 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `
       <div class="checkbox-item" style="min-width: unset">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checkbox[[id_prefix]]" checked />
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxItem[[id_prefix]]" checked />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="checkbox[[id_prefix]]">Label</label>
+          <label class="control-item-label" for="checkboxItem[[id_prefix]]">Label</label>
         </div>
       </div>`
   },
