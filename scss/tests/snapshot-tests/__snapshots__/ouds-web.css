@@ -7213,10 +7213,10 @@ ol.bullet-list > li > ol > li > ol > li::before {
   background: linear-gradient(transparent 1px, transparent 0.25rem, currentcolor 0.25rem, currentcolor calc(100% - 0.25rem), transparent calc(100% - 0.25rem), transparent calc(100% - 1px));
 }
 .btn:active + .dropdown-toggle-split, .btn-close:active + .dropdown-toggle-split, .btn.active + .dropdown-toggle-split, .active.btn-close + .dropdown-toggle-split, .dropdown-toggle-split:active + * + .btn, .dropdown-toggle-split:active + * + .btn-close, .dropdown-toggle-split.active + * + .btn, .dropdown-toggle-split.active + * + .btn-close {
-  border-color: #ff7900;
+  border-color: var(--bs-color-border-brand-primary);
 }
 .btn-group.show > .dropdown-toggle-split:not(:focus):not(:active)::before {
-  color: #ff7900;
+  color: var(--bs-color-content-brand-primary);
   background-color: currentcolor;
 }
 .dropdown-toggle-split::after, .dropup .dropdown-toggle-split::after, .dropend .dropdown-toggle-split::after {
