@@ -9175,17 +9175,17 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .badge {
   --bs-badge-size: 1rem;
-  --bs-badge-padding-x-medium-large: 3px;
-  --bs-badge-padding-y-medium-large: 3px;
+  --bs-badge-padding-x: 3px;
+  --bs-badge-padding-y: 3px;
   --bs-badge-color: var(--bs-color-content-on-status-negative-emphasized);
   --bs-badge-background-color: var(--bs-color-surface-status-negative-emphasized);
   --bs-badge-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24m5.1 17.1q-1 1.1-2.6-.5L12 14.1l-2.5 2.5q-1.6 1.5-2.6.5-1.1-1 .5-2.6L9.9 12 7.4 9.5q-1.5-1.6-.5-2.6c1-1 1.5-.6 2.6.5L12 9.9l2.5-2.5q1.6-1.6 2.6-.5 1.1 1-.5 2.6L14.1 12l2.5 2.5q1.6 1.6.5 2.6'/%3e%3c/svg%3e");
-  --bs-badge-icon-font-size: calc(var(--bs-badge-size) - (2 * var(--bs-badge-padding-x-medium-large)));
+  --bs-badge-icon-font-size: calc(var(--bs-badge-size) - (2 * var(--bs-badge-padding-x)));
   display: inline-block;
   min-width: var(--bs-badge-size);
   height: var(--bs-badge-size);
   min-height: var(--bs-badge-size);
-  padding: var(--bs-badge-padding-y-medium-large) var(--bs-badge-padding-x-medium-large);
+  padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
   margin: 0;
   font-style: normal;
   font-weight: 400;
@@ -9315,12 +9315,15 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .badge-count {
-  --bs-badge-padding-x-medium-large: 4px;
-  --bs-badge-padding-y-medium-large: 0;
+  --bs-badge-padding-x: 4px;
+  --bs-badge-padding-y: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .badge-count.badge-large {
   --bs-badge-size: 1.25rem;
-  --bs-badge-padding-x-medium-large: 6px;
+  --bs-badge-padding-x: 6px;
 }
 
 .tag {
