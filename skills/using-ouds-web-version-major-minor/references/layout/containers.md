@@ -14,10 +14,10 @@ Use `.container-fluid` with `.container-max-width`:
 </div>
 ```
 
-For layouts that need more space, use `.container-max-width-alt` instead:
+For layouts that need more space, use `.container-max-width-wide` instead:
 
 ```html
-<div class="container-fluid container-max-width-alt">
+<div class="container-fluid container-max-width-wide">
   <!-- Content here -->
 </div>
 ```
@@ -32,7 +32,7 @@ For layouts that need more space, use `.container-max-width-alt` instead:
 - Pair with `.container-fluid`
 - After `2xl` breakpoint: limits container width to 1680px (including margins), margins to 80px per side, gutters to 32px
 
-### `.container-max-width-alt`
+### `.container-max-width-wide`
 
 - Pair with `.container-fluid` instead of `.container-max-width`
 - After `3xl` breakpoint: limits container width to the `3xl` max-width (including margins), margins to the `3xl` margin per side, and gutters to the `3xl` column gap
