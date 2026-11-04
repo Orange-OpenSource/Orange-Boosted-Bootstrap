@@ -170,7 +170,6 @@ $modal-transition-dimension: -3rem !default;
 
   &.modal-small {
     --#{$prefix}modal-body-footer-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-small-mobile};
-    --#{$prefix}modal-dialog-space-padding-block-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-mobile};
     --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-mobile};
     --#{$prefix}modal-body-padding-top: #{$ouds-modal-dialog-space-padding-block-top-body-small-mobile};
     --#{$prefix}modal-footer-padding-top: #{$ouds-modal-dialog-space-padding-block-top-footer-small-mobile};
