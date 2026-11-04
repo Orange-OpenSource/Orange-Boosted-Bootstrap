@@ -12733,7 +12733,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 .modal-dialog.modal-small {
   --bs-modal-body-footer-padding-bottom: 12px;
-  --bs-modal-dialog-space-padding-block-bottom: 24px;
   --bs-modal-sticky-footer-padding-block: 20px;
   --bs-modal-body-padding-top: 16px;
   --bs-modal-footer-padding-top: 24px;
