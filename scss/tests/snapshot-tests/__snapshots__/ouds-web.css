@@ -1567,11 +1567,11 @@ dialog,
 }
 
 @media (min-width: 1880px) {
-  .container-max-width-alt {
+  .container-max-width-wide {
     --bs-container-margin-x: 112px;
     max-width: max(120rem, 1920px);
   }
-  .container-max-width-alt .row {
+  .container-max-width-wide .row {
     --bs-gutter-x: 40px;
   }
 }
