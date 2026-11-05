@@ -14471,6 +14471,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .icon-interactive,
 .icon-assistant {
   --bs-icon-color: var(--bs-color-action-enabled);
+  --bs-icon-loading-size: 81.25%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -14583,6 +14584,11 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-loading-dasharray: 96;
   --bs-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
 }
+.icon-interactive .loader,
+.icon-assistant .loader {
+  width: var(--bs-icon-loading-size);
+  height: var(--bs-icon-loading-size);
+}
 
 .icon-assistant {
   --bs-assistant-gradient-unit: 82deg;
@@ -14594,6 +14600,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
       var(--bs-color-ai-primary) calc(3 * var(--bs-assistant-gradient-unit)) calc(4 * var(--bs-assistant-gradient-unit))
     );
   --bs-assistant-gradient-unit: 72deg;
+  --bs-icon-loading-size: 43.75%;
   position: relative;
   border-radius: 2000px;
 }

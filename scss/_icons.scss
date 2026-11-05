@@ -1,6 +1,7 @@
 .icon-interactive,
 .icon-assistant {
   --#{$prefix}icon-color: #{$ouds-color-action-enabled};
+  --#{$prefix}icon-loading-size: 81.25%;
 
   display: inline-flex;
   align-items: center;
@@ -46,11 +47,16 @@
   }
 
   @include loader($loading-color: $ouds-color-action-loading, $loading-size: px-to-rem($ouds-button-size-progress-indicator-default));
+  .loader {
+    width: var(--#{$prefix}icon-loading-size);
+    height: var(--#{$prefix}icon-loading-size);
+  }
 }
 
 .icon-assistant {
   @include assistant();
   --#{$prefix}assistant-gradient-unit: 72deg;
+  --#{$prefix}icon-loading-size: 43.75%;
 
   position: relative;
   border-radius: $ouds-border-radius-pill; // stylelint-disable-line property-disallowed-list

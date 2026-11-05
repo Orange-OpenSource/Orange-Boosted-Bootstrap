@@ -182,20 +182,6 @@ You can use `.icon-assistant` class to indicate AI actions in a process or a flo
 
 <Example buttonLabel="assistant icon" class="bd-example" code={`<button class="icon-assistant" aria-label="Default assistant icon"></button>`} />
 
-<Callout type="warning" title="Transparency and older browsers">
-An assistant icon does not have a transparent background on older browsers and Firefox because [`background-clip: border-area` is not fully supported](https://caniuse.com/wf-background-clip-border-area).
-
-It's necessary to set `--bs-icon-bg` to its container background color to be compatible with most browsers. Make sure that the used variable isn't semi-transparent (ie. use background tokens instead of surface tokens).
-</Callout>
-
-If your browser is compatible, the following example will show two transparent assistant icons on a tertiary background. If not, only one non-transparent and one transparent icon.
-
-<Example buttonLabel="assistant icon simulated transparent background" class="bd-example" code={`<div class="bg-tertiary">
-    <button type="button" class="icon-assistant" aria-label="First transparent assistant icon"></button>
-
-    <button type="button" class="icon-assistant" style="--bs-icon-bg: var(--bs-color-bg-tertiary);" aria-label="Second transparent assistant icon"></button>
-  </div>`} />
-
 ### States
 
 #### Disabled
