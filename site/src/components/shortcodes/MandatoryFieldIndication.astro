@@ -16,7 +16,7 @@ const { componentName } = Astro.props
 
 const name = componentName.toLowerCase()
 
-const link = (componentName ? `https://r.orange.fr/r/S-ouds-doc-${componentName.replace(" ", "-")}` : "")
+const link = (componentName ? `https://r.orange.fr/r/S-ouds-doc-${componentName.replaceAll(" ", "-")}` : "")
 
 ---
 
