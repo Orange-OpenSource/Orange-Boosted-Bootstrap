@@ -260,8 +260,29 @@ dd {
 
 // Blockquote
 
+.blockquote, // deprecated in OUDS Web v1.6
 blockquote {
   margin: 0 0 $ouds-space-fixed-medium; // OUDS mod: instead of `0 0 1rem`
+
+  > p {
+    @include get-font-size("body-large");
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.blockquote-footer, // deprecated in OUDS Web v1.6
+blockquote + figcaption {
+  margin-top: -$ouds-space-fixed-medium;
+  margin-bottom: $ouds-space-fixed-medium;
+  @include get-font-size("body-small");
+  color: var(--#{$prefix}color-content-muted);
+
+  &::before {
+    content: "\2014\00A0"; // em dash, nbsp
+  }
 }
 
 // OUDS mod: No italic
@@ -397,7 +418,6 @@ pre {
   margin-bottom: $ouds-space-fixed-medium; // 2 // OUDS mod: instead of `1rem`
   overflow: auto; // 3
   @include get-font-size("code-medium"); // OUDS mod: instead of `font-size: $code-font-size`
-  color: $pre-color;
 
   // Account for some code outputs that place code tags in pre tags
   code {
@@ -411,7 +431,6 @@ var, // OUDS mod
 code {
   font-size: $code-font-size;
   font-style: normal; // OUDS mod: <var> is italic in all browsers
-  color: var(--#{$prefix}color-content-muted);
   word-wrap: break-word;
 }
 
