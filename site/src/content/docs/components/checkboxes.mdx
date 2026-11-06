@@ -8,6 +8,7 @@ aliases:
   - "/docs/components/checks-radios/"
   - "/docs/forms/checkbox/"
   - "/docs/components/checkboxes/"
+  - "/docs/components/checkbox/"
   - "/docs/[[config:docs_version]]/components/checkbox/"
 toc: true
 types:
@@ -665,11 +666,7 @@ By default, checkbox items will span the whole width of their parent container. 
 
 ### Indeterminate
 
-This is often used to indicate a partial selection within a group of choices. For instance, in a nested (hierarchical) list, a parent checkbox item can be indeterminate if some, but not all, sub-options are selected. [Learn more about nesting in the design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox-indeterminate).
-
-Users cannot set a checkbox item as indeterminate directly. This must be calculated by the system and set via JavaScript (there is no available HTML attribute available for specifying it). Then, checkboxes use the `:indeterminate` pseudo class for styling.
-
-Indeterminate state can be used in conjunction with all the other states.
+<CheckboxIndeterminateState />
 
 <Example buttonLabel="indeterminate checkbox item" class="bd-example-indeterminate" addStackblitzJs code={`<fieldset class="control-items-list">
 
@@ -848,11 +845,7 @@ To manually mark a checkbox as invalid, add `aria-invalid="true"` to the `.contr
 
 ### Indeterminate
 
-This is often used to indicate a partial selection within a group of choices. For instance, in a nested (hierarchical) list, a parent checkbox item can be indeterminate if some, but not all, sub-options are selected. [Learn more about nesting in the design guidelines](https://r.orange.fr/r/S-ouds-doc-checkbox-indeterminate).
-
-Users cannot set a checkbox item as indeterminate directly. This must be calculated by the system and set via JavaScript (there is no available HTML attribute available for specifying it). Then, checkboxes use the `:indeterminate` pseudo class for styling.
-
-Indeterminate state can be used in conjunction with all the other states.
+<CheckboxIndeterminateState />
 
 <Example buttonLabel="indeterminate standalone checkbox" class="bd-example-indeterminate" addStackblitzJs code={`<label class="checkbox-standalone">
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxStandaloneIndeterminate" />

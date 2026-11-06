@@ -80,7 +80,7 @@
   }
 
   // Handle invalid state
-  &:has(input:is([aria-invalid="true"], :user-invalid)):not(.checkbox-standalone, .switch-standalone, .radio-button-standalone) {
+  &:has(input:is([aria-invalid="true"], :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
 
     padding-right: #{$ouds-list-item-space-padding-inline + $ouds-list-item-size-icon + $ouds-list-item-space-column-gap};
