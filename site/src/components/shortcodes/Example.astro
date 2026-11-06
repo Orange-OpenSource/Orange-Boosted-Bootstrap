@@ -46,9 +46,14 @@ interface Props {
    * Defines label to complete 'Edit code on Stackblitz' and/or 'Copy code to clipboard' buttons aria-labels.
    */
   buttonLabel?: string
+  /**
+   * Defines if this is only a Code block without the preview.
+   * @default false
+   */
+  markupOnly?: boolean
 }
 
-const {
+let {
   addStackblitzJs = false,
   code,
   class: className,
@@ -57,6 +62,7 @@ const {
   showMarkup = true,
   showPreview = true,
   showToolbar = true,
+  markupOnly = false,
   buttonLabel
 } = Astro.props
 
@@ -75,9 +81,11 @@ const simplifiedMarkup = markup
     /<img.*class="bd-placeholder-img(?:-lg)?(?: *?bd-placeholder-img-lg)? ?(.*?)".*?>/g,
     (match, classes) => `<img src="..."${classes ? ` class="${classes}"` : ''} alt="..." />`
   )
+
+markupOnly && (showPreview = false, showToolbar = false)
 ---
 
-<div class="bd-example-snippet bd-code-snippet">
+<div class={!markupOnly ? "bd-example-snippet bd-code-snippet" : ""}>
   {
     showPreview && (
       <div id={id} class:list={['bd-example order-first m-none border-none', className, showToolbar ? '' : 'border-default border-thin border-bottom']}>
@@ -89,7 +97,7 @@ const simplifiedMarkup = markup
   {
     showMarkup && (
       <>
-        <Code code={simplifiedMarkup} lang={lang} nestedInExample={true} buttonLabel={buttonLabel} />
+        <Code code={simplifiedMarkup} lang={lang} nestedInExample={!markupOnly} buttonLabel={buttonLabel} />
         {showToolbar && (
           <div class:list={['d-flex order-first align-items-center highlight-toolbar ps-large border-top border-bottom border-thin border-default',
             (showPreview && showToolbar) ? '' : 'border-top-none']}>

@@ -58,10 +58,10 @@ Since OUDS Web is developed to be mobile first, we use a handful of [media queri
 
 OUDS Web primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
 
-```scss
+```scss markupOnly={true}
 // Source mixins
 
-// No media query necessary for 2xs breakpoint as it’s effectively `@media (min-width: 0) { ... }`
+// No media query necessary for 2xs breakpoint as it’s effectively ´@media (min-width: 0) { ... }´
 @include media-breakpoint-up(xs) { ... }
 @include media-breakpoint-up(sm) { ... }
 @include media-breakpoint-up(md) { ... }
@@ -72,7 +72,7 @@ OUDS Web primarily uses the following media query ranges—or breakpoints—in o
 
 // Usage
 
-// Example: Hide starting at `min-width: 0`, and then show at the `xs` breakpoint
+// Example: Hide starting at ´min-width: 0´, and then show at the ´xs´ breakpoint
 .custom-class {
   display: none;
 }
@@ -114,7 +114,7 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 We occasionally use media queries that go in the other direction (the given screen size _or smaller_):
 
 ```scss
-// No media query necessary for 2xs breakpoint as it’s effectively `@media (max-width: 0) { ... }`
+// No media query necessary for 2xs breakpoint as it’s effectively ´@media (max-width: 0) { ... }´
 @include media-breakpoint-down(xs) { ... }
 @include media-breakpoint-down(sm) { ... }
 @include media-breakpoint-down(md) { ... }
