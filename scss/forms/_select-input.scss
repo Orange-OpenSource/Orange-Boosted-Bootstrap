@@ -109,7 +109,8 @@
 
   // Leading icon
   > img,
-  > svg {
+  > svg,
+  > .icon {
     position: absolute;
     top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-icon-size) / 2 - var(--#{$prefix}text-input-border-width-top));
     left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left));
@@ -135,7 +136,8 @@
   }
 
   &:has(> svg:not(.loader)),
-  &:has(> img) {
+  &:has(> img),
+  &:has(> .icon) {
     > .select-input-field {
       padding-left: calc(var(--#{$prefix}text-input-icon-size) + var(--#{$prefix}text-input-column-gap) + var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left));
     }
