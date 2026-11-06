@@ -5529,7 +5529,7 @@ optgroup {
   top: 0;
   left: 0;
   z-index: 2;
-  max-width: 100%;
+  width: 100%;
   padding-top: calc(12px - var(--bs-text-input-border-width-top));
   padding-right: calc(6px + var(--bs-text-input-trailing-action-width) + var(--bs-text-input-column-gap) - var(--bs-text-input-border-width-right));
   padding-left: calc(16px - var(--bs-text-input-border-width-left));
@@ -5567,6 +5567,8 @@ optgroup {
   padding-top: calc(10px - var(--bs-text-input-border-width-top));
 }
 .text-area .text-area-container:has(.text-area-field:placeholder-shown:not([placeholder=" "]), .text-area-field[placeholder]:not(:placeholder-shown), .text-area-field:focus:not(:read-only)):not(:has(label.visually-hidden)) > label {
+  width: unset;
+  max-width: 100%;
   padding-top: calc(10px - var(--bs-text-input-border-width-top));
   white-space: nowrap;
   font-size: var(--bs-font-size-label-small);
