@@ -770,6 +770,8 @@ Radio inputs do not support the `readonly` attribute. Replace the inputs with el
 
 To manually mark a radio button as invalid, add `aria-invalid="true"` to the `.control-item-indicator` and use `aria-describedby` to associate an error message with it.
 
+<Callout type="warning" name="control-standalone-invalid-no-icon" />
+
 <Example buttonLabel="invalid standalone radio button" code={`<div>
     <label class="radio-button-standalone">
       <input class="control-item-indicator" type="radio" name="standaloneRadioInvalid" value="" aria-invalid="true" aria-describedby="radioButtonStandaloneError" />
