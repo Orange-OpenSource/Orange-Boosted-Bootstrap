@@ -29,12 +29,16 @@ import docsearch from '@docsearch/js'
 
   docsearch({
     apiKey: CONFIG.apiKey,
-    indexName: CONFIG.indexName,
     appId: CONFIG.appId,
     container: searchElement,
-    searchParameters: {
-      facetFilters: [`version:${siteDocsVersion}`]
-    },
+    indices: [
+      {
+        name: CONFIG.indexName,
+        searchParameters: {
+          facetFilters: [`version:${siteDocsVersion}`]
+        }
+      }
+    ],
     transformItems(items) {
       return items.map(item => {
         const liveUrl = 'https://web.unified-design-system.orange.com/'
