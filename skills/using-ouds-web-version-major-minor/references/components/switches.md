@@ -1,0 +1,214 @@
+# Switches
+
+> **Not Bootstrap:** OUDS Web uses `.switch-item` with `.control-item-*` classes and `role="switch"` instead of Bootstrap's `.form-check.form-switch`. Bootstrap compatibility classes still work.
+
+## Overview
+
+Switches have two component types: [Switch item](#switch-item), a row with a visible label and optional description or icon, and [Switch](#switch), a standalone control for integration inside other components.
+
+Use "switch item" for the row component and include `Item` in its example IDs and matching label/ARIA references. The switch indicator is part of the item, not a separate component type.
+
+## Switch item
+
+Use `.switch-item` with `.control-item-indicator[type="checkbox"][role="switch"]`. Group in `<ul class="control-items-list">` or `<fieldset class="control-items-list">`.
+
+```html
+<ul class="control-items-list">
+  <li class="switch-item">
+    <div class="control-item-assets-container">
+      <input
+        class="control-item-indicator"
+        type="checkbox"
+        role="switch"
+        value=""
+        id="switchItem1"
+      />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="switchItem1">Default switch item</label>
+    </div>
+  </li>
+  <li class="switch-item">
+    <div class="control-item-assets-container">
+      <input
+        checked
+        class="control-item-indicator"
+        type="checkbox"
+        role="switch"
+        value=""
+        id="switchItem2"
+      />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="switchItem2">Checked switch item</label>
+    </div>
+  </li>
+</ul>
+```
+
+### Variants
+
+#### Divider
+
+Add `.control-item-divider` to `.switch-item`.
+
+#### Icon
+
+Add a `.control-item-assets-container` with icon as the **last child** of `.switch-item` (CSS reverses flow).
+
+```html
+<li class="switch-item">
+  <div class="control-item-assets-container">
+    <input
+      class="control-item-indicator"
+      type="checkbox"
+      role="switch"
+      value=""
+      id="switchItemWithIcon"
+    />
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="switchItemWithIcon">Switch item with icon</label>
+  </div>
+  <div class="control-item-assets-container">
+    <svg aria-hidden="true">
+      <use xlink:href="/path/to/sprite.svg#heart-empty" />
+    </svg>
+  </div>
+</li>
+```
+
+#### Description text
+
+Add `.control-item-description` inside `.control-item-text-container`. Link via `aria-describedby`.
+
+### Layout
+
+#### Reverse
+
+Add `.control-item-reverse` to `.switch-item`.
+
+#### Max width
+
+Add `.component-max-width` to `.switch-item`.
+
+### States
+
+#### Disabled
+
+Add `disabled` to the input.
+
+#### Read only
+
+Replace `<input>` with `<span class="control-item-indicator" role="switch" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="...">`.
+
+#### Invalid
+
+Add `aria-invalid="true"` to `.control-item-indicator`.
+
+**Single switch item error:** Wrap in `.switch-item-container`, add `.control-item-error-message` as sibling of `.switch-item`.
+
+```html
+<div class="switch-item-container">
+  <div class="switch-item">
+    <div class="control-item-assets-container">
+      <input
+        class="control-item-indicator"
+        aria-invalid="true"
+        type="checkbox"
+        role="switch"
+        aria-describedby="switchItemError"
+        id="switchItemInvalid"
+        checked
+      />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="switchItemInvalid">Invalid switch item</label>
+    </div>
+  </div>
+  <p class="control-item-error-message" id="switchItemError">Error message.</p>
+</div>
+```
+
+**Group error:** Use `<fieldset class="control-items-list">` — error text auto-displays if any indicator is invalid.
+
+#### Skeleton
+
+Wrap in `[aria-busy="true"]` with `inert`.
+
+### Fieldset legend
+
+Add `<legend>` as first child of `<fieldset>` for screen reader context.
+
+### Mandatory field
+
+Add `.is-required` to `<label>` (single) or `<legend>` (group), and `required` to inputs.
+
+## Switch
+
+> **Use only inside other components:** Standalone switches are intended for components such as tables and rich selectors. Do not use them directly as form fields; use Switch item (`.switch-item`) instead.
+
+Use `.switch-standalone` without the item layout. Keep `role="switch"` on the checkbox input and provide a visually hidden label.
+
+```html
+<label class="switch-standalone">
+  <input
+    class="control-item-indicator"
+    type="checkbox"
+    role="switch"
+    value=""
+  />
+  <span class="visually-hidden">Switch</span>
+</label>
+```
+
+### States
+
+#### Disabled
+
+Add `disabled` to the input. This prevents interaction and removes it from the keyboard tab order.
+
+```html
+<label class="switch-standalone">
+  <input disabled class="control-item-indicator" type="checkbox" role="switch" value="" />
+  <span class="visually-hidden">Disabled switch</span>
+</label>
+```
+
+#### Read only
+
+Switch inputs do not support `readonly`. Replace the input with a focusable `span` and use a `span` wrapper instead of a `label`. Supply an accessible name and `aria-checked="false"` or `"true"`.
+
+```html
+<span class="switch-standalone">
+  <span class="control-item-indicator" role="switch" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="true" aria-label="Read only switch"></span>
+</span>
+```
+
+#### Invalid
+
+Prefer built-in form validation. To mark a switch invalid manually, add `aria-invalid="true"` to the indicator and link an error message using `aria-describedby`. Unlike switch items, standalone switches do not display an error icon automatically; provide explicit error text.
+
+```html
+<div>
+  <label class="switch-standalone">
+    <input class="control-item-indicator" type="checkbox" role="switch" value="" aria-invalid="true" aria-describedby="switchStandaloneError" />
+    <span class="visually-hidden">Switch</span>
+  </label>
+  <p id="switchStandaloneError">This setting cannot be enabled.</p>
+</div>
+```
+
+## Native switches
+
+Add `switch` attribute to input for native iOS haptic feedback (Safari 17.4+). No visual changes.
+
+```html
+<input
+  class="control-item-indicator"
+  type="checkbox"
+  role="switch"
+  value=""
+  switch
+/>
+```
