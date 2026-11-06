@@ -26,6 +26,7 @@ Key differences from standard Bootstrap:
 - **Orange-specific components**: header, footer, chips, tags, sticker, stepped-process, title-bar, skeleton, local-navigation, back-to-top, bullet-list, divider, quantity-selector, items (replaces Bootstrap's `.list-group`)
 - **Assistant button** (`.btn-assistant`, v1.5.0): AI-powered action button variant, distinct from standard/navigation buttons
 - **Modified form components**: switches, checkboxes, radio buttons, text-input, text-area, select-input, password-input use `.control-item-*` pattern
+- **Control component types**: Checkbox item, Radio button item, and Switch item provide row layouts with visible labels and optional assets. Checkbox, Radio button, and Switch are standalone controls using `.*-standalone` wrappers. All three standalone types support disabled, read-only, and invalid states; Checkbox also supports indeterminate. See their component references for markup.
 - **CSS variable prefix**: `--bs-`
 - **Container**: use `.container-fluid` (not fixed `.container`)
 - **Rounded corner buttons**: opt-in via `.use-rounded-corner-buttons` on a parent container
@@ -140,7 +141,7 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 - [Breadcrumb](references/components/breadcrumb.md) - Navigation breadcrumbs
 - [Bullet list](references/components/bullet-list.md) - Styled bullet lists
 - [Buttons](references/components/buttons.md) - Buttons and navigation buttons
-- [Checkboxes](references/components/checkboxes.md) - Checkbox item and standalone controls
+- [Checkboxes](references/components/checkboxes.md) - Checkbox item and Checkbox, states and indeterminate
 - [Chips](references/components/chips.md) - Filter and suggestion chips
 - [Divider](references/components/divider.md) - Content dividers
 - [Dropdown](references/components/dropdown.md) - Toggleable menus and overlays (draft component)
@@ -150,10 +151,10 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 - [Items](references/components/items.md) - Static/navigation card and list items (replaces Bootstrap's list-group)
 - [Links](references/components/links.md) - Link styles
 - [Password input](references/components/password-input.md) - Password field with toggle
-- [Radio buttons](references/components/radio-buttons.md) - Radio button item and standalone controls
+- [Radio buttons](references/components/radio-buttons.md) - Radio button item and Radio button, states
 - [Select input](references/components/select-input.md) - Select inputs
 - [Skeleton](references/components/skeleton.md) - Loading placeholders
-- [Switches](references/components/switches.md) - Switch item and standalone controls
+- [Switches](references/components/switches.md) - Switch item and Switch, states
 - [Tags](references/components/tags.md) - Tag elements
 - [Table](references/components/table.md) - Opt-in table styling (draft component)
 - [Text area](references/components/text-area.md) - Multiline inputs
