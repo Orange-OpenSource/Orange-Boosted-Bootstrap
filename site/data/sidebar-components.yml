@@ -2,6 +2,7 @@
   icon: component-atom
   icon_color: body-color
   pages:
+    - title: Accordions
     - title: Alerts
     - title: Badges
     - title: Breadcrumb
@@ -33,8 +34,6 @@
   icon: component-atom
   icon_color: body-color
   pages:
-    - title: Accordion
-      coming_soon: true
     - title: Back to top
       coming_soon: true
     - title: Card

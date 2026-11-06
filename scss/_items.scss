@@ -210,6 +210,7 @@
 // Interactive
 
 .item-interactive {
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
   text-decoration: none;
   pointer-events: var(--#{$prefix}list-item-disabled-interactive, auto);
 
@@ -220,7 +221,7 @@
     content: "";
   }
 
-  &:is(&, :hover, :focus-visible, :active) {
+  &:is(:hover, :focus-visible, :active) {
     color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
     outline: 0;
     box-shadow: none;
@@ -353,6 +354,7 @@
   --#{$prefix}list-item-trailing-container-size: #{px-to-rem($ouds-list-item-size-asset-small)};
   --#{$prefix}list-item-leading-container-icon-size: #{px-to-rem($ouds-size-icon-with-label-large-size-small)};
   --#{$prefix}list-item-leading-container-icon-size: #{px-to-rem($ouds-size-icon-with-label-large-size-small)};
+  --#{$prefix}accordion-content-padding-bottom: #{$ouds-accordion-space-padding-block-bottom-expand-container-small};
 }
 
 
@@ -360,6 +362,7 @@
 // Navigation specific styles
 //
 
+.item-accordion,
 .item-navigation {
   .item-container {
     position: relative;
@@ -394,7 +397,9 @@
 
 // Needed outside since the outlined could be project wide
 .item-outlined.item-navigation,
-.item-outlined .item-navigation {
+.item-outlined .item-navigation,
+.item-outlined.item-accordion,
+.item-outlined .item-accordion {
   &:has(.item-interactive:hover) {
     --#{$prefix}list-item-border-color: #{$ouds-color-action-hover};
   }
@@ -417,4 +422,40 @@
 .item-previous {
   --#{$prefix}list-item-nav-order: -1;
   --#{$prefix}list-item-nav-icon: #{$list-item-previous-icon};
+}
+
+// Accordion specific styles
+.item-accordion { // TODO: animation
+  --#{$prefix}list-item-nav-icon: #{$list-item-external-icon};
+  position: relative;
+  border-color: var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, transparent)) var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, transparent)) var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, $ouds-color-border-default));
+  border-style: solid;
+  border-width: var(--#{$prefix}list-item-border-width, 0) var(--#{$prefix}list-item-border-width, 0) var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default);
+
+  .item-container {
+    border-width: 0;
+  }
+
+  > .item-slot {
+    padding: $ouds-accordion-space-padding-block-top-expand-container $ouds-list-item-space-padding-inline var(--#{$prefix}accordion-content-padding-bottom, $ouds-accordion-space-padding-block-bottom-expand-container-default); // Handle small
+  }
+
+  &:open {
+    --#{$prefix}list-item-nav-icon: #{$list-item-previous-icon};
+  }
+}
+
+.item-reverse {
+  &.item-accordion,
+  .item-accordion {
+    --#{$prefix}list-item-nav-order: -1;
+  }
+}
+
+.item-accordion-alt {
+  --#{$prefix}list-item-nav-icon: #{$list-item-previous-icon};
+
+  &:open {
+    --#{$prefix}list-item-nav-icon: #{$list-item-next-icon};
+  }
 }

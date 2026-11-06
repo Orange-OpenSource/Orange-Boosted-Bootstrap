@@ -1,0 +1,67 @@
+---
+title: Accordion
+description: Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.
+aliases: "/docs/components/accordion/"
+toc: true
+types:
+  - Accordion card item
+  - Accordion faq
+  - Accordion list item
+---
+
+<Example class="d-flex flex-column gap-medium" code={`<details class="item item-accordion">
+    <summary class="item-container item-interactive">
+      <span class="item-content">
+        <span class="item-text-container">
+          <p class="item-overline">Overline</p>
+          <p class="item-label">Label</p>
+          <p class="item-extra-label">Extra label</p>
+          <p class="item-description">Description</p>
+        </span>
+      </span>
+    </summary>
+    <div class="item-slot">
+      test
+    </div>
+  </details>
+
+  <details class="item item-accordion">
+    <summary class="item-container item-interactive">
+      <span class="item-content">
+        <span class="item-text-container">
+          <p class="item-label">Label</p>
+        </span>
+      </span>
+    </summary>
+    <div class="item-slot">
+      test
+    </div>
+  </details>
+
+  <div class="item-list">
+    <details class="item item-accordion" name="accordion1">
+      <summary class="item-container item-interactive">
+        <span class="item-content">
+          <span class="item-text-container">
+            <p class="item-label">Label</p>
+          </span>
+        </span>
+      </summary>
+      <div class="item-slot">
+        test
+      </div>
+    </details>
+
+    <details class="item item-accordion" name="accordion1">
+      <summary class="item-container item-interactive">
+        <span class="item-content">
+          <span class="item-text-container">
+            <p class="item-label">Label</p>
+          </span>
+        </span>
+      </summary>
+      <div class="item-slot">
+        test
+      </div>
+    </details>
+  </div>`} />
