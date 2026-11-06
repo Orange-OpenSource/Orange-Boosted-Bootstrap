@@ -48,7 +48,7 @@ import { getVersionedDocsPath } from '@libs/path'
 
 ### Accessibility (semantics)
 
-<AccessibilityTagsNotice className={["icon-interactive", "icon-assistant"]} />
+<CallToActionAccessibilityMarkupNotice className={["icon-interactive", "icon-assistant"]} />
 
 In any case, do not forget to add an `aria-label` or a `<span class="visually-hidden">` since there is no discernible text for screen reader users.
 
@@ -88,7 +88,7 @@ The interactive icon can be used alone or within other components. It works well
 
 #### Disabled
 
-<DisabledState name="interactive icons">
+<CallToActionDisabledState name="interactive icons">
   <Example slot="buttonExample" buttonLabel="disabled interactive icon button" class="bd-example" code={`<button class="icon-interactive" disabled aria-label="Disabled interactive button icon">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -100,7 +100,7 @@ The interactive icon can be used alone or within other components. It works well
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </a>`} />
-</DisabledState>
+</CallToActionDisabledState>
 
 #### Loading
 
@@ -186,12 +186,12 @@ You can use `.icon-assistant` class to indicate AI actions in a process or a flo
 
 #### Disabled
 
-<DisabledState name="assistant icons">
+<CallToActionDisabledState name="assistant icons">
   <Example slot="buttonExample" buttonLabel="disabled assistant icon button" class="bd-example" code={`<button class="icon-assistant" disabled aria-label="Disabled assistant icon"></button>`} />
 
   <Example slot="anchorExample" buttonLabel="disabled assistant icon link" code={`<a class="icon-assistant" aria-disabled="true">
     <span class="visually-hidden">Disabled interactive icon link</span></a>`} />
-</DisabledState>
+</CallToActionDisabledState>
 
 #### Loading
 

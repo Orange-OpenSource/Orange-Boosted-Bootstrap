@@ -6,12 +6,13 @@
  * @see site/src/libs/astro.ts
  */
 export declare global {
-  export const AccessibilityTagsNotice: typeof import('@shortcodes/AccessibilityTagsNotice.astro').default
   export const AddedIn: typeof import('@shortcodes/AddedIn.astro').default
   export const AssetsNavTab: typeof import('@shortcodes/AssetsNavTab.astro').default
   export const AssetsTab: typeof import('@shortcodes/AssetsTab.astro').default
   export const BootstrapCompatibility: typeof import('@shortcodes/BootstrapCompatibility.astro').default
   export const BsTable: typeof import('@shortcodes/BsTable.astro').default
+  export const CallToActionAccessibilityMarkupNotice: typeof import('@shortcodes/CallToActionAccessibilityMarkupNotice.astro').default
+  export const CallToActionDisabledState: typeof import('@shortcodes/CallToActionDisabledState.astro').default
   export const Callout: typeof import('@shortcodes/Callout.astro').default
   export const CalloutSoon: typeof import('@shortcodes/CalloutSoon.astro').default
   export const Code: typeof import('@shortcodes/Code.astro').default
@@ -19,7 +20,6 @@ export declare global {
   export const ComponentCard: typeof import('@shortcodes/ComponentCard.astro').default
   export const DeprecatedIn: typeof import('@shortcodes/DeprecatedIn.astro').default
   export const Details: typeof import('@shortcodes/Details.astro').default
-  export const DisabledState: typeof import('@shortcodes/DisabledState.astro').default
   export const EnableBtnCloseTooltip: typeof import('@shortcodes/EnableBtnCloseTooltip.astro').default
   export const Example: typeof import('@shortcodes/Example.astro').default
   export const JsDismiss: typeof import('@shortcodes/JsDismiss.astro').default

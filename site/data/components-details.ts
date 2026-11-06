@@ -238,7 +238,7 @@ export const componentsDetails: ComponentCardData[] = [
     name: 'Interactive icon',
     slug: 'interactive-icon',
     category: 'Actions',
-    link: 'icons',
+    link: 'icons#interactive-icon',
     snippet: `
       <button type="button" class="icon-interactive">
         <span class="visually-hidden">Interactive icon</span>

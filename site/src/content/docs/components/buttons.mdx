@@ -85,7 +85,7 @@ For the four types of button, OUDS Web has a common base `.btn` class that sets 
 
 ### Accessibility (semantics)
 
-<AccessibilityTagsNotice
+<CallToActionAccessibilityMarkupNotice
   className="btn"
   additionalTagsText={`or <code>&lt;input&gt;</code> (with <code>[type]</code> equal to  <code>button</code>, <code>reset</code>, or <code>submit</code>)`}
   componentTypeSpecificsText={`For the <a href="#navigation-button">navigation button component</a>, we have used <code>&lt;a&gt;</code> elements in our examples, but this could be adapted to your own context.`}
@@ -378,7 +378,7 @@ In need of a button, but not the hefty background colors they bring? Replace the
 
 #### Disabled
 
-<DisabledState name="buttons">
+<CallToActionDisabledState name="buttons">
   <Example slot="buttonExample" buttonLabel="disabled buttons" class="p-none bd-btn-example" code={`<div class="p-large d-flex gap-xsmall flex-wrap">
 
       <button type="button" class="btn btn-default" disabled>Default</button>
@@ -420,7 +420,7 @@ In need of a button, but not the hefty background colors they bring? Replace the
         <a class="btn btn-strong btn-on-colored-bg" aria-disabled="true">Strong link</a>
 
       </div>
-    </div>`} /></DisabledState>
+    </div>`} /></CallToActionDisabledState>
 
 #### Loading
 
