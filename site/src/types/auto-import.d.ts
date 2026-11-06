@@ -9,6 +9,7 @@ export declare global {
   export const AddedIn: typeof import('@shortcodes/AddedIn.astro').default
   export const AssetsNavTab: typeof import('@shortcodes/AssetsNavTab.astro').default
   export const AssetsTab: typeof import('@shortcodes/AssetsTab.astro').default
+  export const BackgroundColorTable: typeof import('@shortcodes/BackgroundColorTable.astro').default
   export const BootstrapCompatibility: typeof import('@shortcodes/BootstrapCompatibility.astro').default
   export const BsTable: typeof import('@shortcodes/BsTable.astro').default
   export const Callout: typeof import('@shortcodes/Callout.astro').default
