@@ -47,6 +47,12 @@ toc: true
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> OUDS Web now supports a draft dropdown menu component. It comes from Boosted directly. It is intended as a placeholder for projects that need it urgently but be aware that it will change in the future. Read more in our [dropdown page]([[docsref:/components/dropdown]]).
 
+#### Icons
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Interactive icon has been implemented. Read more in our [icons/interactive icon paragraph]([[docsref:/components/icons#interactive-icon]]).
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Assistant icon has been implemented. Read more in our [icons/assistant icon paragraph]([[docsref:/components/icons#assistant-icon]]).
+
 #### Items
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Items components have been updated to 1.2.0. Please check that your icons and images in the leading/trailing containers keep behaving as normal. Read more in the [list item design changelog](https://r.orange.fr/r/S-ouds-doc-list-item_changelog).
@@ -58,6 +64,12 @@ toc: true
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.colored-bg` has been removed in favor of `.link-on-colored-bg` after being deprecated in v1.5.0. Read more in our [links page]([[docsref:/components/links#on-colored-background]]).
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.back` has been removed in favor of `.link-previous` after being deprecated in v1.5.0. Read more in our [links page]([[docsref:/components/links#with-chevron]]).
+
+#### Modals
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Modal dialog component has been implemented. Read more in our [modals page]([[docsref:/components/modals#modal-dialog]]).
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Fullscreen dialog component has been implemented. Read more in our [modals page]([[docsref:/components/modals#fullscreen-dialog]]).
 
 #### Tags
 
@@ -76,6 +88,12 @@ toc: true
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Label has been implemented, nothing to change on your side. Read more in our [typography/label paragraph]([[docsref:/components/typography#label]]).
 
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Code has been implemented, nothing to change on your side. Read more in our [typography/code paragraph]([[docsref:/components/typography#code]]).
+
+### Layout
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> A new `.container-max-width-wide` class has been added for projects that need a larger maximum container width. Read more in our [layout page]([[docsref:/layout/containers#alternative-max-width]]).
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> The `max-width` enforced by `.container-max-width-wide` and `.container-max-width` classes are now expressed in `rem`, so they will scale appropriately with the user zoom.
 
 ### Tools
 
@@ -101,6 +119,10 @@ toc: true
 1. Update `@ouds/web-common` and `@ouds/web-[theme]` to v1.6.0.
 2. Remove `@import "boosted/scss/dropdown";` from the Boosted custom import stack.
 3. Change `@import "@ouds/web-common/scss/type";` to `@import "@ouds/web-common/scss/typography";` in the OUDS Web custom import stack.
+4. Remove `@import "boosted/scss/modal";` from the Boosted custom import stack.
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> The modals components have a different structure and behavior compared to Boosted modals. Read more in our [migration from Boosted guide]([[docsref:/getting-started/migration-from-boosted#modal]]).
+
 
 ## v1.5.0 [[version-changelog-link]]
 

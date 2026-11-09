@@ -13,6 +13,7 @@
 
 - **Buttons**: Expand button implemented
 - **Links**: Expand link implemented
+- **Modals**: Modal dialog and Fullscreen dialog implemented
 - **Tags**: Categorical tag implemented
 - **Typography**: optional heading marker — add `.hl-marker` to a heading large (`<h2>`/`.h2`) to display a brand-colored marker below it (Orange, Orange Compact; no visible effect on Sosh).
 
