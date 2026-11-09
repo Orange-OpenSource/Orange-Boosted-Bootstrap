@@ -84,8 +84,6 @@ $modal-transition-dimension: -3rem !default;
   --#{$prefix}modal-close-button-inset: #{$ouds-fullscreen-dialog-space-inset-close-button-mobile};
   --#{$prefix}modal-border-radius: 0;
   --#{$prefix}modal-header-gap: var(--#{$prefix}space-scaled-large);
-  // the following reset will override any values from @mixin modal-dialog if applied on other breakpoints
-  --#{$prefix}modal-content-max-width: unset;
 
   transition: none; // stylelint-disable-line property-disallowed-list
 
@@ -117,7 +115,7 @@ $modal-transition-dimension: -3rem !default;
   // the following resets will override any values from @mixin fullscreen-dialog if applied on other breakpoints
   --#{$prefix}modal-footer-width: auto;
   --#{$prefix}modal-border-radius: inherit;
-  --#{$prefix}modal-content-max-width: 100%;
+  --#{$prefix}contextual-font-max-width: none;
 
   box-shadow: $ouds-elevation-emphasized;
   opacity: 0;
@@ -326,10 +324,6 @@ $modal-transition-dimension: -3rem !default;
     > :nth-last-child(2) {
       margin-block-end: var(--#{$prefix}modal-body-footer-padding-bottom);
     }
-  }
-
-  * {
-    max-width: var(--#{$prefix}modal-content-max-width, revert-rule);
   }
 }
 

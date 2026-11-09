@@ -953,7 +953,7 @@ hr {
 }
 
 h1, .h1 {
-  max-width: var(--bs-font-max-width-heading-xlarge);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-xlarge));
   font-size: var(--bs-font-size-heading-xlarge);
   line-height: var(--bs-font-line-height-heading-xlarge);
   /* rtl:remove */
@@ -961,7 +961,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  max-width: var(--bs-font-max-width-heading-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-large));
   font-size: var(--bs-font-size-heading-large);
   line-height: var(--bs-font-line-height-heading-large);
   /* rtl:remove */
@@ -969,7 +969,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  max-width: var(--bs-font-max-width-heading-medium);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-medium));
   font-size: var(--bs-font-size-heading-medium);
   line-height: var(--bs-font-line-height-heading-medium);
   /* rtl:remove */
@@ -977,7 +977,7 @@ h3, .h3 {
 }
 
 h4, .h4, .card-title {
-  max-width: var(--bs-font-max-width-heading-small);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-small));
   font-size: var(--bs-font-size-heading-small);
   line-height: var(--bs-font-line-height-heading-small);
   /* rtl:remove */
@@ -985,7 +985,7 @@ h4, .h4, .card-title {
 }
 
 h5, .h5 {
-  max-width: var(--bs-font-max-width-body-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-large));
   font-size: var(--bs-font-size-body-large);
   line-height: var(--bs-font-line-height-body-large);
   /* rtl:remove */
@@ -993,7 +993,7 @@ h5, .h5 {
 }
 
 h6, .h6, .card-subtitle {
-  max-width: var(--bs-font-max-width-body-medium);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-medium));
   font-size: var(--bs-font-size-body-medium);
   line-height: var(--bs-font-line-height-body-medium);
   /* rtl:remove */
@@ -1003,7 +1003,7 @@ h6, .h6, .card-subtitle {
 p {
   margin-top: 0;
   margin-bottom: 16px;
-  max-width: var(--bs-font-max-width-body-medium);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-medium));
   font-size: var(--bs-font-size-body-medium);
   line-height: var(--bs-font-line-height-body-medium);
   /* rtl:remove */
@@ -1090,7 +1090,7 @@ strong {
 }
 
 small, .small {
-  max-width: var(--bs-font-max-width-body-small);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-small));
   font-size: var(--bs-font-size-body-small);
   line-height: var(--bs-font-line-height-body-small);
   /* rtl:remove */
@@ -1227,7 +1227,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  max-width: var(--bs-font-max-width-heading-small);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-small));
   font-size: var(--bs-font-size-heading-small);
   line-height: var(--bs-font-line-height-heading-small);
   /* rtl:remove */
@@ -1337,7 +1337,7 @@ legend {
   padding: 0;
   margin-bottom: 0.25rem;
   font-weight: 700;
-  max-width: var(--bs-font-max-width-body-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-large));
   font-size: var(--bs-font-size-body-large);
   line-height: var(--bs-font-line-height-body-large);
   /* rtl:remove */
@@ -1434,7 +1434,7 @@ dialog,
 }
 
 .lead {
-  max-width: var(--bs-font-max-width-body-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-large));
   font-size: var(--bs-font-size-body-large);
   line-height: var(--bs-font-line-height-body-large);
   /* rtl:remove */
@@ -1444,7 +1444,7 @@ dialog,
 
 .display-large {
   font-weight: 700;
-  max-width: var(--bs-font-max-width-display-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-display-large));
   font-size: var(--bs-font-size-display-large);
   line-height: var(--bs-font-line-height-display-large);
   /* rtl:remove */
@@ -1453,7 +1453,7 @@ dialog,
 
 .display-medium {
   font-weight: 700;
-  max-width: var(--bs-font-max-width-display-medium);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-display-medium));
   font-size: var(--bs-font-size-display-medium);
   line-height: var(--bs-font-line-height-display-medium);
   /* rtl:remove */
@@ -1462,7 +1462,7 @@ dialog,
 
 .display-small {
   font-weight: 700;
-  max-width: var(--bs-font-max-width-display-small);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-display-small));
   font-size: var(--bs-font-size-display-small);
   line-height: var(--bs-font-line-height-display-small);
   /* rtl:remove */
@@ -1494,7 +1494,7 @@ dialog,
   margin-bottom: 16px;
 }
 .blockquote > p {
-  max-width: var(--bs-font-max-width-body-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-large));
   font-size: var(--bs-font-size-body-large);
   line-height: var(--bs-font-line-height-body-large);
   /* rtl:remove */
@@ -1507,7 +1507,7 @@ dialog,
 .blockquote-footer {
   margin-top: -16px;
   margin-bottom: 16px;
-  max-width: var(--bs-font-max-width-body-small);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-small));
   font-size: var(--bs-font-size-body-small);
   line-height: var(--bs-font-line-height-body-small);
   /* rtl:remove */
@@ -5926,7 +5926,7 @@ optgroup {
   padding-left: 0;
   font-weight: 700;
   list-style-type: "";
-  max-width: var(--bs-font-max-width-body-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-large));
   font-size: var(--bs-font-size-body-large);
   line-height: var(--bs-font-line-height-body-large);
   /* rtl:remove */
@@ -5937,7 +5937,7 @@ optgroup {
   --bs-bullet-list-icon-container-width: var(--bs-icon-medium-with-body-medium);
   --bs-bullet-list-icon-size: var(--bs-icon-small-with-body-medium);
   --bs-bullet-list-fixed-left-padding: calc(var(--bs-bullet-list-icon-container-width) + 8px);
-  max-width: var(--bs-font-max-width-body-medium);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-medium));
   font-size: var(--bs-font-size-body-medium);
   line-height: var(--bs-font-line-height-body-medium);
   /* rtl:remove */
@@ -6824,7 +6824,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   list-style: none;
   background-color: var(--bs-dropdown-bg);
   border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
-  max-width: var(--bs-font-max-width-label-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-label-large));
   font-size: var(--bs-font-size-label-large);
   line-height: var(--bs-font-line-height-label-large);
   /* rtl:remove */
@@ -7579,7 +7579,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .navbar-brand .title,
 .navbar-brand .two-lined {
   margin: -0.2857142857em 1rem -0.1428571429em calc(var(--bs-navbar-brand-logo-size) / 2);
-  max-width: var(--bs-font-max-width-heading-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-large));
   font-size: var(--bs-font-size-heading-large);
   line-height: var(--bs-font-line-height-heading-large);
   /* rtl:remove */
@@ -7587,7 +7587,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   line-height: 1;
 }
 .navbar-brand .two-lined {
-  max-width: var(--bs-font-max-width-heading-medium);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-medium));
   font-size: var(--bs-font-size-heading-medium);
   line-height: var(--bs-font-line-height-heading-medium);
   /* rtl:remove */
@@ -9791,7 +9791,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .alert-label {
   margin-bottom: 0;
-  max-width: var(--bs-font-max-width-label-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-label-large));
   font-size: var(--bs-font-size-label-large);
   line-height: var(--bs-font-line-height-label-large);
   /* rtl:remove */
@@ -10452,7 +10452,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-modal-close-button-inset: 16px;
   --bs-modal-border-radius: 0;
   --bs-modal-header-gap: var(--bs-space-scaled-large);
-  --bs-modal-content-max-width: unset;
   transition: none;
 }
 @media (min-width: 736px) {
@@ -10479,7 +10478,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-modal-padding-inline: 24px;
   --bs-modal-footer-width: auto;
   --bs-modal-border-radius: inherit;
-  --bs-modal-content-max-width: 100%;
+  --bs-contextual-font-max-width: none;
   box-shadow: 0 8px 8px -2px var(--bs-elevation-color-emphasized);
   opacity: 0;
   transform: translateY(-3rem);
@@ -10591,7 +10590,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   }
 }
 .modal-dialog.modal-small .modal-title {
-  max-width: var(--bs-font-max-width-heading-small);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-small));
   font-size: var(--bs-font-size-heading-small);
   line-height: var(--bs-font-line-height-heading-small);
   /* rtl:remove */
@@ -10622,7 +10621,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   gap: var(--bs-modal-title-gap);
   align-items: center;
   margin: 0;
-  max-width: var(--bs-font-max-width-heading-medium);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-medium));
   font-size: var(--bs-font-size-heading-medium);
   line-height: var(--bs-font-line-height-heading-medium);
   /* rtl:remove */
@@ -10712,9 +10711,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 .modal-body:has(.modal-footer) > :nth-last-child(2) {
   margin-block-end: var(--bs-modal-body-footer-padding-bottom);
-}
-.modal-body * {
-  max-width: var(--bs-modal-content-max-width, revert-rule);
 }
 
 .modal-footer {
@@ -12285,7 +12281,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   content: unset;
 }
 .footer > * .footer-heading {
-  max-width: var(--bs-font-max-width-body-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-large));
   font-size: var(--bs-font-size-body-large);
   line-height: var(--bs-font-line-height-body-large);
   /* rtl:remove */
@@ -16019,7 +16015,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 /* rtl:end:remove */
 .fs-lxl {
-  max-width: var(--bs-font-max-width-label-xlarge);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-label-xlarge));
   font-size: var(--bs-font-size-label-xlarge);
   line-height: var(--bs-font-line-height-label-xlarge);
   /* rtl:remove */
@@ -16027,7 +16023,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .fs-ll {
-  max-width: var(--bs-font-max-width-label-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-label-large));
   font-size: var(--bs-font-size-label-large);
   line-height: var(--bs-font-line-height-label-large);
   /* rtl:remove */
@@ -16035,7 +16031,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .fs-lm {
-  max-width: var(--bs-font-max-width-label-medium);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-label-medium));
   font-size: var(--bs-font-size-label-medium);
   line-height: var(--bs-font-line-height-label-medium);
   /* rtl:remove */
@@ -16043,7 +16039,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .fs-ls {
-  max-width: var(--bs-font-max-width-label-small);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-label-small));
   font-size: var(--bs-font-size-label-small);
   line-height: var(--bs-font-line-height-label-small);
   /* rtl:remove */
@@ -16058,7 +16054,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .fs-bs {
-  max-width: var(--bs-font-max-width-body-small);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-small));
   font-size: var(--bs-font-size-body-small);
   line-height: var(--bs-font-line-height-body-small);
   /* rtl:remove */
@@ -16066,7 +16062,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .fs-bm {
-  max-width: var(--bs-font-max-width-body-medium);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-medium));
   font-size: var(--bs-font-size-body-medium);
   line-height: var(--bs-font-line-height-body-medium);
   /* rtl:remove */
@@ -16074,7 +16070,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .fs-bl {
-  max-width: var(--bs-font-max-width-body-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-large));
   font-size: var(--bs-font-size-body-large);
   line-height: var(--bs-font-line-height-body-large);
   /* rtl:remove */
@@ -16082,7 +16078,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .fs-hs {
-  max-width: var(--bs-font-max-width-heading-small);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-small));
   font-size: var(--bs-font-size-heading-small);
   line-height: var(--bs-font-line-height-heading-small);
   /* rtl:remove */
@@ -16090,7 +16086,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .fs-hm {
-  max-width: var(--bs-font-max-width-heading-medium);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-medium));
   font-size: var(--bs-font-size-heading-medium);
   line-height: var(--bs-font-line-height-heading-medium);
   /* rtl:remove */
@@ -16098,7 +16094,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .fs-hl {
-  max-width: var(--bs-font-max-width-heading-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-large));
   font-size: var(--bs-font-size-heading-large);
   line-height: var(--bs-font-line-height-heading-large);
   /* rtl:remove */
@@ -16106,7 +16102,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .fs-hxl {
-  max-width: var(--bs-font-max-width-heading-xlarge);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-xlarge));
   font-size: var(--bs-font-size-heading-xlarge);
   line-height: var(--bs-font-line-height-heading-xlarge);
   /* rtl:remove */
@@ -16114,7 +16110,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .fs-ds {
-  max-width: var(--bs-font-max-width-display-small);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-display-small));
   font-size: var(--bs-font-size-display-small);
   line-height: var(--bs-font-line-height-display-small);
   /* rtl:remove */
@@ -16122,7 +16118,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .fs-dm {
-  max-width: var(--bs-font-max-width-display-medium);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-display-medium));
   font-size: var(--bs-font-size-display-medium);
   line-height: var(--bs-font-line-height-display-medium);
   /* rtl:remove */
@@ -16130,7 +16126,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .fs-dl {
-  max-width: var(--bs-font-max-width-display-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-display-large));
   font-size: var(--bs-font-size-display-large);
   line-height: var(--bs-font-line-height-display-large);
   /* rtl:remove */
