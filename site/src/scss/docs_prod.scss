@@ -59,7 +59,6 @@ $enable-bootstrap-compatibility: true;
 @import "../../../scss/modals"; // need this to have access to modal mixins in the next file
 @import "component-examples";
 // OUDS mod: no import "callouts";
-@import "colors";
 @import "clipboard-js";
 @import "placeholder-img";
 @import "scrolling";
