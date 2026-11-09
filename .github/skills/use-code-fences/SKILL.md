@@ -11,6 +11,7 @@ description: 'Replace astro components for examples (<Code> and <Example>) with 
 
 ## Step 1 — Find all <Code> and <Example> components in file
 
+Ignore the `<Code>` where the `filePath` argument is present, as it references an external file rather than inline code.
 
 ---
 
@@ -70,4 +71,4 @@ becomes:
 ## Step 3 — Interactive feedback
 
 - ask for confirmation for each `<Code>` changes to let the user choose the type of code fence (e.g., `sh`, `scss`)
-- for each replacements where the buttonLabel is not present in the original component, ask the user to provide a buttonLabel
+- for each replacements where the buttonLabel is not present in the original component, ask the user to provide a buttonLabel, suggest a default value based on the context of the code if possible
