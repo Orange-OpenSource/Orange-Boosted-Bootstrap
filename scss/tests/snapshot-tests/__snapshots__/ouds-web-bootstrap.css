@@ -436,15 +436,15 @@
 :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
   color-scheme: light;
   --bs-blue: #26b2ff;
-  --bs-indigo: #26b2ff;
+  --bs-indigo: #5b2f98;
   --bs-purple: #a885d8;
-  --bs-pink: #a885d8;
+  --bs-pink: #ff8081;
   --bs-red: #db0002;
-  --bs-orange: #ffd000;
+  --bs-orange: #d6aa00;
   --bs-yellow: #ffd000;
   --bs-green: #3de35a;
-  --bs-teal: #3de35a;
-  --bs-cyan: #26b2ff;
+  --bs-teal: #1ecd3c;
+  --bs-cyan: #57c3ff;
   --bs-black: #000;
   --bs-white: #fff;
   --bs-gray: #666;
