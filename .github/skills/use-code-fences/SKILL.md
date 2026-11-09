@@ -44,8 +44,6 @@ npm i package-name
 ```
 ```
 
-
-
 When the code argument is an array of strings, do the following change:
 
 ```mdx

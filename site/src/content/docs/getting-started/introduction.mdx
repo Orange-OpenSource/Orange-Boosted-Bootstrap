@@ -17,7 +17,7 @@ Get started by including OUDS Web’s production-ready CSS and JavaScript via CD
 
 1. **Create a new `index.html` file in your project root.** Include the `<meta name="viewport">` tag as well for [proper responsive behavior](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) in mobile devices.
 
-   ```html
+   ```html buttonLabel="Basic HTML structure" markupOnly={true}
    <!doctype html>
    <html lang="en">
      <head>
@@ -33,7 +33,7 @@ Get started by including OUDS Web’s production-ready CSS and JavaScript via CD
 
 2. **Include OUDS Web’s CSS and JS.** Place the `<link>` tag in the `<head>` for our CSS, and the `<script>` tag for our JavaScript bundle (including Popper for positioning dropdowns, popovers, and tooltips) before the closing `</body>`. Learn more about our [CDN links](#cdn-links).
 
-   ```html
+   ```html buttonLabel="Include OUDS Web CSS and JS" markupOnly={true}
    <!doctype html>
    <html lang="en">
      <head>
@@ -51,7 +51,7 @@ Get started by including OUDS Web’s production-ready CSS and JavaScript via CD
 
    You can also include [Popper](https://popper.js.org/docs/v2/) and our JS separately. If you don’t plan to use dropdowns, popovers, or tooltips, save some kilobytes by not including Popper.
 
-   ```html
+   ```html buttonLabel="Include Popper and JS separately" markupOnly={true}
    <script src="[[config:cdn.popper]]" integrity="[[config:cdn.popper_hash]]" crossorigin="anonymous"></script>
    <script src="[[config:cdn.js]]" integrity="[[config:cdn.js_hash]]" crossorigin="anonymous"></script>
    ```
@@ -90,7 +90,7 @@ OUDS Web ships [Agent Skills](https://www.skills.sh/) in the [`ouds-web-skills` 
 
 Install them in your project with the [`skills` CLI](https://www.skills.sh/):
 
-```sh
+```sh buttonLabel="Install OUDS Web skills" markupOnly={true}
 npx skills add Orange-OpenSource/ouds-web-skills
 ```
 
@@ -133,7 +133,7 @@ OUDS Web employs a handful of important global styles and settings, all of which
 
 OUDS Web requires the use of the HTML5 doctype. Without it, you’ll see some funky and incomplete styling.
 
-```html
+```html buttonLabel="HTML5 doctype" markupOnly={true}
 <!doctype html>
 <html lang="en">
   ...
@@ -144,7 +144,7 @@ OUDS Web requires the use of the HTML5 doctype. Without it, you’ll see some fu
 
 OUDS Web is developed *mobile first*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, add the responsive viewport meta tag to your `<head>`.
 
-```html
+```html buttonLabel="Viewport meta" markupOnly={true}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
@@ -156,7 +156,7 @@ For more straightforward sizing in CSS, we switch the global `box-sizing` value 
 
 On the rare occasion you need to override it, use something like the following:
 
-```css
+```css buttonLabel="Override box-sizing" markupOnly={true}
 .selector-for-some-widget {
   box-sizing: content-box;
 }
@@ -173,7 +173,7 @@ It should be used for critical resources only.
 
 #### `preconnect` to CDNs
 
-```html
+```html buttonLabel="Preconnect to CDN" markupOnly={true}
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
 ```
 
