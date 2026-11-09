@@ -1,14 +1,7 @@
 import fs from 'node:fs'
 import * as yaml from 'js-yaml'
 import { z } from 'zod'
-import {
-  zHexColor,
-  zNamedHexColors,
-  zPxSizeOrEmpty,
-  zVersionMajorMinor,
-  zVersionSemver,
-  zSidebar
-} from './validation'
+import { zHexColor, zNamedHexColors, zPxSizeOrEmpty, zVersionMajorMinor, zVersionSemver, zSidebar } from './validation'
 import { capitalizeFirstLetter } from './utils'
 
 // An object containing all the data types and their associated schema. The key should match the name of the data file
@@ -18,7 +11,8 @@ const dataDefinitions = {
     .object({
       name: z.string(),
       value: z.string()
-    }).array(),
+    })
+    .array(),
   breakpoints: z
     .object({
       breakpoint: z.string(),
@@ -28,7 +22,7 @@ const dataDefinitions = {
       container: zPxSizeOrEmpty
     })
     .array(),
- 'bootstrap-breakpoints': z
+  'bootstrap-breakpoints': z
     .object({
       breakpoint: z.string(),
       abbr: z.string(),

@@ -179,7 +179,7 @@ describe('Tab', () => {
       })
     })
 
-    it('should work with tab id being an int', done => {
+    it('should work with tab id being an int', async () => {
       fixtureEl.innerHTML = [
         '<div class="card-header d-block d-inline-block">',
         '  <ul class="nav nav-tabs card-header-tabs" id="page_tabs">',
@@ -210,7 +210,6 @@ describe('Tab', () => {
 
       profileTriggerEl.addEventListener('shown.bs.tab', () => {
         expect(fixtureEl.querySelector(`#${CSS.escape('2')}`)).toHaveClass('active')
-        done()
       })
 
       tab.show()
