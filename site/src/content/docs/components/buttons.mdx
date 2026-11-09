@@ -68,48 +68,36 @@ import { getMode, getTokenValue } from '@libs/sass-variables'
 
 For the four types of button, OUDS Web has a common base `.btn` class that sets up default styles such as padding and content alignment. By default, `.btn` controls have a transparent border and background color, but still defines basic focus and hover styles. The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles. The most basic button is the `.btn-default` variant.
 
-```html showToolbar={false}
-<button type="button" class="btn btn-default">Default</button>
-```
+<Example showToolbar={false} code={`<button type="button" class="btn btn-default">Default</button>`} />
 
-```html showToolbar={false}
-<button type="button" class="btn btn-next btn-default">Next</button>
-```
+<Example showToolbar={false} code={`<button type="button" class="btn btn-next btn-default">Next</button>`} />
 
-```html showToolbar={false}
-<div class="dropdown">
-  <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
-  <ul class="dropdown-menu">
-    <li><button type="button" class="dropdown-item">Action</button></li>
-    <li><button type="button" class="dropdown-item">Another action</button></li>
-    <li><button type="button" class="dropdown-item">Something else here</button></li>
-  </ul>
-</div>
-```
+<Example showToolbar={false} code={`<div class="dropdown">
+    <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+    <ul class="dropdown-menu">
+      <li><button type="button" class="dropdown-item">Action</button></li>
+      <li><button type="button" class="dropdown-item">Another action</button></li>
+      <li><button type="button" class="dropdown-item">Something else here</button></li>
+    </ul>
+  </div>`} />
 
-```html showToolbar={false}
-<button type="button" class="btn btn-assistant">Assistant</button>
-```
+<Example showToolbar={false} code={`<button type="button" class="btn btn-assistant">Assistant</button>`} />
 
 ### Accessibility (semantics)
 
-The `.btn` classes are designed to be used with the `<button>` element, but can be used on `<a>` or `<input />` elements (with `type` equal to  `button`, `reset`, or `submit`). You should use any semantic element that best fits the context to appropriately convey its purpose to assistive technologies such as screen readers.
+<CallToActionAccessibilityMarkupNotice
+  className="btn"
+  additionalTagsText={`or <code>&lt;input&gt;</code> (with <code>[type]</code> equal to  <code>button</code>, <code>reset</code>, or <code>submit</code>)`}
+  componentTypeSpecificsText={`For the <a href="#navigation-button">navigation button component</a>, we have used <code>&lt;a&gt;</code> elements in our examples, but this could be adapted to your own context.`}
+/>
 
-Use a `<button>` element for actions or for an element that triggers an in-page functionality (like collapsing content), as it is the most semantically correct and accessible choice.
+<Example buttonLabel="buttons and navigation buttons semantics" class="bd-btn-example" code={`<button type="button" class="btn btn-default">Standard button</button>
 
-Use an `<a>` element only for navigation purpose; it must include an `href` attribute to be focusable. For the [navigation button component](#navigation-button), we have used `<a>` elements in our examples, but this could be adapted to your own context.
+  <a class="btn btn-default" href="#">Button link</a>
 
-Generally speaking, you should always ask yourself which tag is appropriate for your specific context. The visual rendering will remain the same anyway:
+  <input class="btn btn-default" type="button" value="Input button" />
 
-```html buttonLabel="buttons and navigation buttons semantics" class="bd-btn-example"
-<button type="button" class="btn btn-default">Standard button</button>
-
-<a class="btn btn-default" href="#">Button link</a>
-
-<input class="btn btn-default" type="button" value="Input button" />
-
-<a class="btn btn-next btn-default" href="#">Navigation button link</a>
-```
+  <a class="btn btn-next btn-default" href="#">Navigation button link</a>`} />
 
 When navigation buttons are used for global navigation (between pages or within content), they should be wrapped in a `<nav>` tag, which must have an explicit (accessible) name defined using, for example, an `aria-label` attribute.
 
@@ -121,22 +109,20 @@ Button is a UI element that triggers an action or event, used to initiate tasks 
 
 OUDS Web includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control. Please follow the [button design specifications](https://r.orange.fr/r/S-ouds-doc-button) to choose the right button variant for the right action.
 
-```html buttonLabel="buttons variants" class="bd-btn-example"
-<button type="button" class="btn btn-default">Default</button>
+<Example buttonLabel="buttons variants" class="bd-btn-example" code={`<button type="button" class="btn btn-default">Default</button>
 
-<button type="button" class="btn btn-strong">Strong</button>
+  <button type="button" class="btn btn-strong">Strong</button>
 
-<button type="button" class="btn btn-brand">Brand</button>
+  <button type="button" class="btn btn-brand">Brand</button>
 
-<button type="button" class="btn btn-minimal">Minimal</button>
+  <button type="button" class="btn btn-minimal">Minimal</button>
 
-<button type="button" class="btn btn-negative">Negative</button>
-```
+  <button type="button" class="btn btn-negative">Negative</button>`} />
 
 <BootstrapCompatibility>
-```html buttonLabel="Bootstrap compatibility: buttons variants" class="bd-btn-example"
-${getData('theme-colors').map((themeColor) => `<button type="button" class="btn btn-${themeColor.name}">${themeColor.title}</button>`).join('\n')}
-```
+<Example buttonLabel="Bootstrap compatibility: buttons variants" class="bd-btn-example" code={[
+  ...getData('theme-colors').map((themeColor) => `<button type="button" class="btn btn-${themeColor.name}">${themeColor.title}</button>`)
+]} />
 </BootstrapCompatibility>
 
 #### Colored background
@@ -148,33 +134,31 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
   - Negative and brand buttons should never be used on colored background.
 </Callout>
 
-```html buttonLabel="buttons on colored backgrounds" class="p-none bd-btn-example bd-first-rounded"
-<div class="bg-surface-brand-primary p-large">
-  <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
+<Example buttonLabel="buttons on colored backgrounds" class="p-none bd-btn-example bd-first-rounded" code={`<div class="bg-surface-brand-primary p-large">
+    <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
 
-    <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
+      <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
 
-    <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
+      <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
 
-    <button type="button" class="btn btn-minimal btn-on-colored-bg">Minimal</button>
+      <button type="button" class="btn btn-minimal btn-on-colored-bg">Minimal</button>
 
-    <!-- BEWARE: \`.btn-negative\` and \`.btn-brand\` should never be used on colored backgrounds! -->
+      <!-- BEWARE: \`.btn-negative\` and \`.btn-brand\` should never be used on colored backgrounds! -->
+    </div>
   </div>
-</div>
 
-<div class="bg-surface-status-negative-emphasized p-large">
-  <div data-bs-theme="${getMode('modes-on-status-negative-emphasized')}" class="d-flex gap-xsmall flex-wrap">
+  <div class="bg-surface-status-negative-emphasized p-large">
+    <div data-bs-theme="${getMode('modes-on-status-negative-emphasized')}" class="d-flex gap-xsmall flex-wrap">
 
-    <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
+      <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
 
-    <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
+      <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
 
-    <button type="button" class="btn btn-minimal btn-on-colored-bg">Minimal</button>
+      <button type="button" class="btn btn-minimal btn-on-colored-bg">Minimal</button>
 
-    <!-- BEWARE: \`.btn-negative\` and \`.btn-brand\` should never be used on colored backgrounds! -->
-  </div>
-</div>
-```
+      <!-- BEWARE: \`.btn-negative\` and \`.btn-brand\` should never be used on colored backgrounds! -->
+    </div>
+  </div>`} />
 
 <ThemeSpecific theme={['orange', 'orange-compact']}>
 #### Rounded corners
@@ -189,21 +173,19 @@ Rounded corners buttons is a project-wide option therefore all your buttons shou
   We use a `<div>` as a parent container because we cannot use `<body>` in an example.
 </Callout>
 
-```html buttonLabel="rounded buttons" class="bd-btn-example"
-<div class="use-rounded-corner-buttons">
+<Example buttonLabel="rounded buttons" class="bd-btn-example" code={`<div class="use-rounded-corner-buttons">
 
-  <button type="button" class="btn btn-default">Default</button>
+    <button type="button" class="btn btn-default">Default</button>
 
-  <button type="button" class="btn btn-strong">Strong</button>
+    <button type="button" class="btn btn-strong">Strong</button>
 
-  <button type="button" class="btn btn-brand">Brand</button>
+    <button type="button" class="btn btn-brand">Brand</button>
 
-  <button type="button" class="btn btn-minimal">Minimal</button>
+    <button type="button" class="btn btn-minimal">Minimal</button>
 
-  <button type="button" class="btn btn-negative">Negative</button>
+    <button type="button" class="btn btn-negative">Negative</button>
 
-</div>
-```
+  </div>`} />
 </ThemeSpecific>
 
 #### With icon
@@ -218,84 +200,81 @@ Rounded corners buttons is a project-wide option therefore all your buttons shou
 
 You don’t need to apply any spacing utility on the icon to get consistent spacing, as the margin is already handled by OUDS Web.
 
-```html buttonLabel="text and icon buttons" class="p-none bd-btn-example"
-<div class="p-large d-flex gap-xsmall flex-wrap">
+<Example buttonLabel="text and icon buttons" class="p-none bd-btn-example" code={`<div class="p-large d-flex gap-xsmall flex-wrap">
 
-  <button type="button" class="btn btn-default">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-    Default
-  </button>
-
-  <button type="button" class="btn btn-strong">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-    Strong
-  </button>
-
-  <button type="button" class="btn btn-brand">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-    Brand
-  </button>
-
-  <button type="button" class="btn btn-minimal">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-    Minimal
-  </button>
-
-  <button type="button" class="btn btn-negative">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-    Negative
-  </button>
-
-  <button type="button" class="btn btn-default">
-    <span class="icon si si-settings" aria-hidden="true"></span>
-    Default
-  </button>
-
-</div>
-
-
-<div class="bg-surface-brand-primary p-large">
-  <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
-
-    <button type="button" class="btn btn-default btn-on-colored-bg">
+    <button type="button" class="btn btn-default">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       Default
     </button>
 
-    <button type="button" class="btn btn-strong btn-on-colored-bg">
+    <button type="button" class="btn btn-strong">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       Strong
     </button>
 
-    <button type="button" class="btn btn-minimal btn-on-colored-bg">
+    <button type="button" class="btn btn-brand">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      Brand
+    </button>
+
+    <button type="button" class="btn btn-minimal">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       Minimal
     </button>
 
-    <button type="button" class="btn btn-default btn-on-colored-bg">
+    <button type="button" class="btn btn-negative">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      Negative
+    </button>
+
+    <button type="button" class="btn btn-default">
       <span class="icon si si-settings" aria-hidden="true"></span>
       Default
     </button>
 
   </div>
-</div>
-```
+
+  <div class="bg-surface-brand-primary p-large">
+    <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
+
+      <button type="button" class="btn btn-default btn-on-colored-bg">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        Default
+      </button>
+
+      <button type="button" class="btn btn-strong btn-on-colored-bg">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        Strong
+      </button>
+
+      <button type="button" class="btn btn-minimal btn-on-colored-bg">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        Minimal
+      </button>
+
+      <button type="button" class="btn btn-default btn-on-colored-bg">
+        <span class="icon si si-settings" aria-hidden="true"></span>
+        Default
+      </button>
+
+    </div>
+  </div>`} />
 
 ##### Icon only
 
@@ -307,83 +286,81 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 
 {/* TODO: Add a paragraph about tooltip and/or title */}
 
-```html buttonLabel="icon only buttons" class="p-none bd-btn-example"
-<div class="p-large d-flex gap-xsmall flex-wrap">
+<Example buttonLabel="icon only buttons" class="p-none bd-btn-example" code={`<div class="p-large d-flex gap-xsmall flex-wrap">
 
-  <button type="button" class="btn btn-icon btn-default">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-    <span class="visually-hidden">Default</span>
-  </button>
-
-  <button type="button" class="btn btn-icon btn-strong">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-    <span class="visually-hidden">Strong</span>
-  </button>
-
-  <button type="button" class="btn btn-icon btn-brand">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-    <span class="visually-hidden">Brand</span>
-  </button>
-
-  <button type="button" class="btn btn-icon btn-minimal">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-    <span class="visually-hidden">Minimal</span>
-  </button>
-
-  <button type="button" class="btn btn-icon btn-negative">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-    <span class="visually-hidden">Negative</span>
-  </button>
-
-  <button type="button" class="btn btn-icon btn-default">
-    <span class="icon si si-settings" aria-hidden="true"></span>
-    <span class="visually-hidden">Default</span>
-  </button>
-
-</div>
-
-<div class="bg-surface-brand-primary p-large">
-  <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
-
-    <button type="button" class="btn btn-icon btn-default btn-on-colored-bg">
+    <button type="button" class="btn btn-icon btn-default">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <span class="visually-hidden">Default</span>
     </button>
 
-    <button type="button" class="btn btn-icon btn-strong btn-on-colored-bg">
+    <button type="button" class="btn btn-icon btn-strong">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <span class="visually-hidden">Strong</span>
     </button>
 
-    <button type="button" class="btn btn-icon btn-minimal btn-on-colored-bg">
+    <button type="button" class="btn btn-icon btn-brand">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <span class="visually-hidden">Brand</span>
+    </button>
+
+    <button type="button" class="btn btn-icon btn-minimal">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <span class="visually-hidden">Minimal</span>
     </button>
 
-    <button type="button" class="btn btn-icon btn-default btn-on-colored-bg">
+    <button type="button" class="btn btn-icon btn-negative">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <span class="visually-hidden">Negative</span>
+    </button>
+
+    <button type="button" class="btn btn-icon btn-default">
       <span class="icon si si-settings" aria-hidden="true"></span>
       <span class="visually-hidden">Default</span>
     </button>
 
   </div>
-</div>
-```
+
+  <div class="bg-surface-brand-primary p-large">
+    <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
+
+      <button type="button" class="btn btn-icon btn-default btn-on-colored-bg">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        <span class="visually-hidden">Default</span>
+      </button>
+
+      <button type="button" class="btn btn-icon btn-strong btn-on-colored-bg">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        <span class="visually-hidden">Strong</span>
+      </button>
+
+      <button type="button" class="btn btn-icon btn-minimal btn-on-colored-bg">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        <span class="visually-hidden">Minimal</span>
+      </button>
+
+      <button type="button" class="btn btn-icon btn-default btn-on-colored-bg">
+        <span class="icon si si-settings" aria-hidden="true"></span>
+        <span class="visually-hidden">Default</span>
+      </button>
+
+    </div>
+  </div>`} />
 
 #### Outline buttons
 
@@ -391,9 +368,9 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 
 In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
 
-```html buttonLabel="Bootstrap compatibility: outline buttons" class="bd-btn-example"
-${getData('theme-colors').map((themeColor) => `<button type="button" class="btn btn-outline-${themeColor.name}">${themeColor.title}</button>`).join('\n')}
-```
+<Example buttonLabel="Bootstrap compatibility: outline buttons" class="bd-btn-example" code={[
+  ...getData('theme-colors').map((themeColor) => `<button type="button" class="btn btn-outline-${themeColor.name}">${themeColor.title}</button>`)
+]} />
 
 </BootstrapCompatibility>
 
@@ -401,342 +378,300 @@ ${getData('theme-colors').map((themeColor) => `<button type="button" class="btn 
 
 #### Disabled
 
-Make buttons inactive by adding the `[disabled]` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
+<CallToActionDisabledState name="buttons">
+  <Example slot="buttonExample" buttonLabel="disabled buttons" class="p-none bd-btn-example" code={`<div class="p-large d-flex gap-xsmall flex-wrap">
 
-```html buttonLabel="disabled buttons" class="bd-btn-example"
-<div class="p-large d-flex gap-xsmall flex-wrap">
+      <button type="button" class="btn btn-default" disabled>Default</button>
 
-  <button type="button" class="btn btn-default" disabled>Default</button>
+      <button type="button" class="btn btn-strong" disabled>Strong</button>
 
-  <button type="button" class="btn btn-strong" disabled>Strong</button>
+      <button type="button" class="btn btn-brand" disabled>Brand</button>
 
-  <button type="button" class="btn btn-brand" disabled>Brand</button>
+      <button type="button" class="btn btn-minimal" disabled>Minimal</button>
 
-  <button type="button" class="btn btn-minimal" disabled>Minimal</button>
+      <button type="button" class="btn btn-negative" disabled>Negative</button>
 
-  <button type="button" class="btn btn-negative" disabled>Negative</button>
+    </div>
 
-</div>
+    <div class="bg-surface-brand-primary p-large">
+      <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
 
-<div class="bg-surface-brand-primary p-large">
-  <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
+        <button type="button" class="btn btn-default btn-on-colored-bg" disabled>Default</button>
 
-    <button type="button" class="btn btn-default btn-on-colored-bg" disabled>Default</button>
+        <button type="button" class="btn btn-strong btn-on-colored-bg" disabled>Strong</button>
 
-    <button type="button" class="btn btn-strong btn-on-colored-bg" disabled>Strong</button>
+        <button type="button" class="btn btn-minimal btn-on-colored-bg" disabled>Minimal</button>
 
-    <button type="button" class="btn btn-minimal btn-on-colored-bg" disabled>Minimal</button>
+      </div>
+    </div>`} />
 
-  </div>
-</div>
-```
+  <Example slot="anchorExample" buttonLabel="disabled button links" class="p-none bd-btn-example" code={`<div class="p-large d-flex gap-xsmall flex-wrap">
 
-Disabled buttons using the `<a>` element behave a bit different:
+      <a class="btn btn-default" aria-disabled="true">Default link</a>
 
-- Disabled buttons using `<a>` must include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies, to make it visually appear disabled and disable all `pointer-events`.
-- Disabled buttons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning]([[docsref:/components/links#disabled-link-accessibility-warning]]).
+      <a class="btn btn-strong" aria-disabled="true">Strong link</a>
 
-```html buttonLabel="disabled button links" class="p-none bd-btn-example"
-<div class="p-large d-flex gap-xsmall flex-wrap">
+    </div>
+    <div class="bg-surface-brand-primary p-large">
+      <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
 
-  <a class="btn btn-default" aria-disabled="true">Default link</a>
+        <a class="btn btn-default btn-on-colored-bg" aria-disabled="true">Default link</a>
 
-  <a class="btn btn-strong" aria-disabled="true">Strong link</a>
+        <a class="btn btn-strong btn-on-colored-bg" aria-disabled="true">Strong link</a>
 
-</div>
-<div class="bg-surface-brand-primary p-large">
-  <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
-
-    <a class="btn btn-default btn-on-colored-bg" aria-disabled="true">Default link</a>
-
-    <a class="btn btn-strong btn-on-colored-bg" aria-disabled="true">Strong link</a>
-
-  </div>
-</div>
-```
+      </div>
+    </div>`} /></CallToActionDisabledState>
 
 #### Loading
 
-The loading state of a button indicates that an action is currently processing or taking place. This state provides feedback to users, enhancing user experience.
-
-To make an animated loading state button, you will add in your standard button:
-- An animated `<svg>`: the animation will differ whether the loading time is known or not.
-- A status message `<span>`: the message must be updated regularly in order to be vocalized by screen readers; if the loading time is defined, you should indicate the progression.
-
-For example, before loading, your button could be like this:
-
-```html buttonLabel="loading button before loading"
-<button type="button" class="btn btn-default" id="loading-btn-0">
-  Download file
-  <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-    <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-  </svg>
-  <span role="status" id="loading-btn-msg-0" class="visually-hidden d-none"></span>
-</button>
-```
-
-When the loading starts, you will have to:
-- Add the class `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for a known loading time) to the button to provide the appropriate styles and animation.
-- For a known loading time, provide a CSS variable `--bs-btn-loading-time` to set the loading time. For example, add `style="--bs-btn-loading-time: 5s;"` to the button, for a 5 seconds loading.
-- Set the disabled state on the button to avoid any unwanted interactions (in case you use a `<a>` tag, this can be done by setting `aria-disabled="true"` and removing the `href` attribute).
-- Remove the `.d-none` from the status message `<span>`.
-- Update regularly the status message `<span>` containing the loading message.
-
-At the end of the loading, you should:
-
-- Remove the disabled state on the button to restore its interactivity.
-- Remove the class `.loading-indeterminate` or `.loading-determinate` to restore the button’s look.
-- Set a final status message in `<span>`, indicating the loading has ended (so we don’t add again `.d-none` on this status message).
-- Put the focus back on the button to ensure similar behavior across browsers and not lose the user after changes.
-
-You can see it live and find a JavaScript example on our [loading buttons live example]([[docsref:/examples/loading-buttons/]]).
-
-```html buttonLabel="loading buttons currently loading" class="p-none bd-btn-example"
-<div class="p-large d-flex gap-xsmall flex-wrap">
-
-  <button type="button" class="btn btn-default loading-indeterminate" id="loading-btn-1" disabled>
-    Download file 1
+<LoadingState name="button" loadingTimeVariable="bs-btn-loading-time">
+  <Example slot="beforeLoading" buttonLabel="loading button before loading" code={`<button type="button" class="btn btn-default" id="loading-btn-0">
+    Download file
     <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
-    <span role="status" id="loading-btn-msg-1" class="visually-hidden">Downloading file 1</span>
-  </button>
+    <span role="status" id="loading-btn-msg-0" class="visually-hidden d-none"></span>
+  </button>`} />
 
-  <button type="button" class="btn btn-strong loading-indeterminate" id="loading-btn-2" disabled>
-    Download file 2
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-2" class="visually-hidden">Downloading file 2</span>
-  </button>
+  <Example slot="loading" buttonLabel="loading buttons currently loading" class="p-none bd-btn-example" code={`<div class="p-large d-flex gap-xsmall flex-wrap">
+      <button type="button" class="btn btn-default loading-indeterminate" id="loading-btn-1" disabled>
+        Download file 1
+        <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-1" class="visually-hidden">Downloading file 1</span>
+      </button>
 
-  <button type="button" class="btn btn-brand loading-indeterminate" id="loading-btn-100" disabled>
-    Download file 100
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-100" class="visually-hidden">Downloading file 100</span>
-  </button>
+      <button type="button" class="btn btn-strong loading-indeterminate" id="loading-btn-2" disabled>
+        Download file 2
+        <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-2" class="visually-hidden">Downloading file 2</span>
+      </button>
 
-  <button type="button" class="btn btn-minimal loading-indeterminate" id="loading-btn-3" disabled>
-    Download file 3
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-3" class="visually-hidden">Downloading file 3</span>
-  </button>
+      <button type="button" class="btn btn-brand loading-indeterminate" id="loading-btn-100" disabled>
+        Download file 100
+        <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-100" class="visually-hidden">Downloading file 100</span>
+      </button>
 
-  <button type="button" class="btn btn-negative loading-indeterminate" id="loading-btn-4" disabled>
-    Download file 4
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-4" class="visually-hidden">Downloading file 4</span>
-  </button>
+      <button type="button" class="btn btn-minimal loading-indeterminate" id="loading-btn-3" disabled>
+        Download file 3
+        <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-3" class="visually-hidden">Downloading file 3</span>
+      </button>
 
-</div>
+      <button type="button" class="btn btn-negative loading-indeterminate" id="loading-btn-4" disabled>
+        Download file 4
+        <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-4" class="visually-hidden">Downloading file 4</span>
+      </button>
 
-<div class="p-large d-flex gap-xsmall flex-wrap">
+    </div>
 
-  <button type="button" class="btn btn-default loading-determinate" id="loading-btn-5" disabled style="--bs-btn-loading-time: 5s;">
-    Download file 5
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-5" class="visually-hidden">Downloading file 5: xx%</span>
-  </button>
+    <div class="p-large d-flex gap-xsmall flex-wrap">
 
-  <button type="button" class="btn btn-strong loading-determinate" id="loading-btn-6" disabled style="--bs-btn-loading-time: 5s;">
-    Download file 6
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-6" class="visually-hidden">Downloading file 6: xx%</span>
-  </button>
+      <button type="button" class="btn btn-default loading-determinate" id="loading-btn-5" disabled style="--bs-btn-loading-time: 5s;">
+        Download file 5
+        <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-5" class="visually-hidden">Downloading file 5: xx%</span>
+      </button>
 
-  <button type="button" class="btn btn-brand loading-determinate" id="loading-btn-101" disabled style="--bs-btn-loading-time: 5s;">
-    Download file 101
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-101" class="visually-hidden">Downloading file 101: xx%</span>
-  </button>
+      <button type="button" class="btn btn-strong loading-determinate" id="loading-btn-6" disabled style="--bs-btn-loading-time: 5s;">
+        Download file 6
+        <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-6" class="visually-hidden">Downloading file 6: xx%</span>
+      </button>
 
-  <button type="button" class="btn btn-minimal loading-determinate" id="loading-btn-7" disabled style="--bs-btn-loading-time: 5s;">
-    Download file 7
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-7" class="visually-hidden">Downloading file 7: xx%</span>
-  </button>
+      <button type="button" class="btn btn-brand loading-determinate" id="loading-btn-101" disabled style="--bs-btn-loading-time: 5s;">
+        Download file 101
+        <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-101" class="visually-hidden">Downloading file 101: xx%</span>
+      </button>
 
-  <button type="button" class="btn btn-negative loading-determinate" id="loading-btn-8" disabled style="--bs-btn-loading-time: 5s;">
-    Download file 8
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-8" class="visually-hidden">Downloading file 8: xx%</span>
-  </button>
+      <button type="button" class="btn btn-minimal loading-determinate" id="loading-btn-7" disabled style="--bs-btn-loading-time: 5s;">
+        Download file 7
+        <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-7" class="visually-hidden">Downloading file 7: xx%</span>
+      </button>
 
-</div>
+      <button type="button" class="btn btn-negative loading-determinate" id="loading-btn-8" disabled style="--bs-btn-loading-time: 5s;">
+        Download file 8
+        <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-8" class="visually-hidden">Downloading file 8: xx%</span>
+      </button>
 
-<div class="bg-surface-brand-primary p-large">
-  <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
+    </div>
 
-    <button type="button" class="btn btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-9" disabled>
-      Download file 9
-      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-btn-msg-9" class="visually-hidden">Downloading file 9</span>
-    </button>
+    <div class="bg-surface-brand-primary p-large">
+      <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
 
-    <button type="button" class="btn btn-strong btn-on-colored-bg loading-indeterminate" id="loading-btn-10" disabled>
-      Download file 10
-      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-btn-msg-10" class="visually-hidden">Downloading file 10</span>
-    </button>
+        <button type="button" class="btn btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-9" disabled>
+          Download file 9
+          <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+            <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+          </svg>
+          <span role="status" id="loading-btn-msg-9" class="visually-hidden">Downloading file 9</span>
+        </button>
 
-    <button type="button" class="btn btn-minimal btn-on-colored-bg loading-indeterminate" id="loading-btn-11" disabled>
-      Download file 11
-      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-btn-msg-11" class="visually-hidden">Downloading file 11</span>
-    </button>
+        <button type="button" class="btn btn-strong btn-on-colored-bg loading-indeterminate" id="loading-btn-10" disabled>
+          Download file 10
+          <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+            <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+          </svg>
+          <span role="status" id="loading-btn-msg-10" class="visually-hidden">Downloading file 10</span>
+        </button>
 
-  </div>
-</div>
+        <button type="button" class="btn btn-minimal btn-on-colored-bg loading-indeterminate" id="loading-btn-11" disabled>
+          Download file 11
+          <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+            <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+          </svg>
+          <span role="status" id="loading-btn-msg-11" class="visually-hidden">Downloading file 11</span>
+        </button>
 
-<div class="bg-surface-brand-primary p-large">
-  <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
+      </div>
+    </div>
 
-    <button type="button" class="btn btn-default btn-on-colored-bg loading-determinate" id="loading-btn-12" disabled style="--bs-btn-loading-time: 5s;">
-      Download file 12
-      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-btn-msg-12" class="visually-hidden">Downloading file 12: xx%</span>
-    </button>
+    <div class="bg-surface-brand-primary p-large">
+      <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
 
-    <button type="button" class="btn btn-strong btn-on-colored-bg loading-determinate" id="loading-btn-13" disabled style="--bs-btn-loading-time: 5s;">
-      Download file 13
-      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-btn-msg-13" class="visually-hidden">Downloading file 13: xx%</span>
-    </button>
+        <button type="button" class="btn btn-default btn-on-colored-bg loading-determinate" id="loading-btn-12" disabled style="--bs-btn-loading-time: 5s;">
+          Download file 12
+          <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+            <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+          </svg>
+          <span role="status" id="loading-btn-msg-12" class="visually-hidden">Downloading file 12: xx%</span>
+        </button>
 
-    <button type="button" class="btn btn-minimal btn-on-colored-bg loading-determinate" id="loading-btn-14" disabled style="--bs-btn-loading-time: 5s;">
-      Download file 14
-      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-btn-msg-14" class="visually-hidden">Downloading file 14: xx%</span>
-    </button>
+        <button type="button" class="btn btn-strong btn-on-colored-bg loading-determinate" id="loading-btn-13" disabled style="--bs-btn-loading-time: 5s;">
+          Download file 13
+          <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+            <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+          </svg>
+          <span role="status" id="loading-btn-msg-13" class="visually-hidden">Downloading file 13: xx%</span>
+        </button>
 
-  </div>
-</div>
-```
+        <button type="button" class="btn btn-minimal btn-on-colored-bg loading-determinate" id="loading-btn-14" disabled style="--bs-btn-loading-time: 5s;">
+          Download file 14
+          <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+            <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+          </svg>
+          <span role="status" id="loading-btn-msg-14" class="visually-hidden">Downloading file 14: xx%</span>
+        </button>
+
+      </div>
+    </div>`} />
+</LoadingState>
 
 Loading state can also be combined with all kind of buttons, including icons.
 
-```html buttonLabel="loading buttons variants" class="p-none bd-btn-example"
-<div class="p-large d-flex gap-xsmall flex-wrap">
+<Example buttonLabel="loading buttons variants" class="bd-btn-example" code={`<div class="p-large d-flex gap-xsmall flex-wrap">
 
-  <button type="button" class="btn btn-icon btn-default loading-indeterminate" id="loading-btn-15" disabled>
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
-    </svg>
-    <span class="visually-hidden">Downloading file 15</span>
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-15" class="visually-hidden">Downloading file 15</span>
-  </button>
+    <button type="button" class="btn btn-icon btn-default loading-indeterminate" id="loading-btn-15" disabled>
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
+      </svg>
+      <span class="visually-hidden">Downloading file 15</span>
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-btn-msg-15" class="visually-hidden">Downloading file 15</span>
+    </button>
 
-  <button type="button" class="btn btn-icon btn-default loading-determinate" id="loading-btn-16" disabled style="--bs-btn-loading-time: 5s;">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
-    </svg>
-    <span class="visually-hidden">Downloading file 16</span>
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-16" class="visually-hidden">Downloading file 16: xx%</span>
-  </button>
+    <button type="button" class="btn btn-icon btn-default loading-determinate" id="loading-btn-16" disabled style="--bs-btn-loading-time: 5s;">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
+      </svg>
+      <span class="visually-hidden">Downloading file 16</span>
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-btn-msg-16" class="visually-hidden">Downloading file 16: xx%</span>
+    </button>
 
-  <button type="button" class="btn btn-strong loading-indeterminate" id="loading-btn-17" disabled>
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
-    </svg>
-    Download file 17
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-17" class="visually-hidden">Downloading file 17</span>
-  </button>
+    <button type="button" class="btn btn-strong loading-indeterminate" id="loading-btn-17" disabled>
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
+      </svg>
+      Download file 17
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-btn-msg-17" class="visually-hidden">Downloading file 17</span>
+    </button>
 
-  <button type="button" class="btn btn-strong loading-determinate" id="loading-btn-18" disabled style="--bs-btn-loading-time: 5s;">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
-    </svg>
-    Download file 18
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-18" class="visually-hidden">Downloading file 18</span>
-  </button>
+    <button type="button" class="btn btn-strong loading-determinate" id="loading-btn-18" disabled style="--bs-btn-loading-time: 5s;">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
+      </svg>
+      Download file 18
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-btn-msg-18" class="visually-hidden">Downloading file 18</span>
+    </button>
 
-</div>
-```
+  </div>
+  `} />
 
 #### Skeleton
 
 <SkeletonRedirect component="button" />
 
-```html buttonLabel="button skeleton"
-<div aria-busy="true" inert>
-  <button type="button" class="btn btn-default">Default</button>
-</div>
-```
+<Example buttonLabel="button skeleton" code={`<div aria-busy="true" inert>
+    <button type="button" class="btn btn-default">Default</button>
+  </div>`} />
 
 ### Sizes
 
 Buttons are available in two sizes. Add `.btn-small` to have a smaller button.
 
-```html buttonLabel="small buttons"
-<button type="button" class="btn btn-default btn-small">Default</button>
+<Example buttonLabel="small buttons" code={`<button type="button" class="btn btn-default btn-small">Default</button>
 
-<button type="button" class="btn btn-minimal btn-small">
-  <svg aria-hidden="true">
-    <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-  </svg>
-  Minimal
-</button>
+  <button type="button" class="btn btn-minimal btn-small">
+    <svg aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+    Minimal
+  </button>
 
-<button type="button" class="btn btn-brand btn-icon btn-small">
-  <svg aria-hidden="true">
-    <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-  </svg>
-  <span class="visually-hidden">Brand</span>
-</button>
+  <button type="button" class="btn btn-brand btn-icon btn-small">
+    <svg aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+    <span class="visually-hidden">Brand</span>
+  </button>
 
-<button type="button" class="btn btn-negative btn-small">
-  <span class="icon si si-settings" aria-hidden="true"></span>
-  Negative
-</button>
+  <button type="button" class="btn btn-negative btn-small">
+    <span class="icon si si-settings" aria-hidden="true"></span>
+    Negative
+  </button>
 
-<button type="button" class="btn btn-strong loading-indeterminate btn-small" id="loading-btn-small" disabled>
-  Strong
-  <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-    <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-  </svg>
-  <span role="status" id="loading-btn-small-msg" class="visually-hidden">Downloading file 3</span>
-</button>
-```
+  <button type="button" class="btn btn-strong loading-indeterminate btn-small" id="loading-btn-small" disabled>
+    Strong
+    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-btn-small-msg" class="visually-hidden">Downloading file 3</span>
+  </button>`} />
 
 ## [[comp]] Navigation button
 
@@ -744,13 +679,11 @@ Navigation button is a UI element that enables movement between different pages 
 
 You can use `.btn-previous` and `.btn-next` classes to indicate backward and forward actions in a process or a flow. These classes will add a directional arrow to the left or right of the button text, respectively. As navigation buttons generally indicate a navigation purpose, in our examples, we have used `<a>` elements, but this could be adapted to your own context (in that case, don't forget to add an `href` attribute to make the element focusable). The visual rendering will remain the same anyway:
 
-```html buttonLabel="basic navigation buttons" class="bd-btn-example"
-<a class="btn btn-default btn-previous" href="#">Previous</a>
+<Example buttonLabel="basic navigation buttons" class="bd-btn-example" code={`<a class="btn btn-default btn-previous" href="#">Previous</a>
 
-<a class="btn btn-default btn-next" href="#">Next</a>
+  <a class="btn btn-default btn-next" href="#">Next</a>
 
-<button type="button" class="btn btn-default btn-next">Next</button>
-```
+  <button type="button" class="btn btn-default btn-next">Next</button>`} />
 
 ### Variants
 
@@ -760,39 +693,35 @@ OUDS Web includes several navigation button variants, each serving its own seman
 The button and the navigation button have the same variants except for the negative, which does not exist for the navigation button.
 </Callout>
 
-```html buttonLabel="navigation buttons variants" class="bd-btn-example"
-<a class="btn btn-previous btn-default" href="#">Default</a>
+<Example buttonLabel="navigation buttons variants" class="bd-btn-example" code={`<a class="btn btn-previous btn-default" href="#">Default</a>
 
-<a class="btn btn-previous btn-strong" href="#">Strong</a>
+  <a class="btn btn-previous btn-strong" href="#">Strong</a>
 
-<a class="btn btn-previous btn-brand" href="#">Brand</a>
+  <a class="btn btn-previous btn-brand" href="#">Brand</a>
 
-<a class="btn btn-previous btn-minimal" href="#">Minimal</a>
+  <a class="btn btn-previous btn-minimal" href="#">Minimal</a>
 
-<br/>
+  <br/>
 
-<a class="btn btn-next btn-default" href="#">Default</a>
+  <a class="btn btn-next btn-default" href="#">Default</a>
 
-<a class="btn btn-next btn-strong" href="#">Strong</a>
+  <a class="btn btn-next btn-strong" href="#">Strong</a>
 
-<a class="btn btn-next btn-brand" href="#">Brand</a>
+  <a class="btn btn-next btn-brand" href="#">Brand</a>
 
-<a class="btn btn-next btn-minimal" href="#">Minimal</a>
-```
+  <a class="btn btn-next btn-minimal" href="#">Minimal</a>`} />
 
 #### Icon only
 
 Add the class `.btn-icon` to get a squared button that only contains an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or an `aria-label` attribute.
 
-```html buttonLabel="icon only navigation buttons" class="bd-btn-example"
-<a class="btn btn-previous btn-icon btn-default" href="#"><span class="visually-hidden">Previous</span></a>
+<Example buttonLabel="icon only navigation buttons" class="bd-btn-example" code={`<a class="btn btn-previous btn-icon btn-default" href="#"><span class="visually-hidden">Previous</span></a>
 
-<a class="btn btn-previous btn-icon btn-strong" href="#"><span class="visually-hidden">Next</span></a>
+  <a class="btn btn-previous btn-icon btn-strong" href="#"><span class="visually-hidden">Next</span></a>
 
-<a class="btn btn-next btn-icon btn-brand" href="#"><span class="visually-hidden">Next</span></a>
+  <a class="btn btn-next btn-icon btn-brand" href="#"><span class="visually-hidden">Next</span></a>
 
-<a class="btn btn-next btn-icon btn-minimal" href="#" aria-label="Next"></a>
-```
+  <a class="btn btn-next btn-icon btn-minimal" href="#" aria-label="Next"></a>`} />
 
 #### Colored background
 
@@ -803,45 +732,43 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
   - Brand buttons should never be used on colored background.
 </Callout>
 
-```html buttonLabel="navigation buttons on colored backgrounds" class="p-none bd-btn-example bd-first-rounded"
-<div class="bg-surface-brand-primary p-large">
-  <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
+<Example buttonLabel="navigation buttons on colored backgrounds" class="p-none bd-btn-example bd-first-rounded" code={`<div class="bg-surface-brand-primary p-large">
+    <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
 
-    <a class="btn btn-next btn-default btn-on-colored-bg" href="#">Default</a>
+      <a class="btn btn-next btn-default btn-on-colored-bg" href="#">Default</a>
 
-    <a class="btn btn-next btn-icon btn-default btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
+      <a class="btn btn-next btn-icon btn-default btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
 
-    <a class="btn btn-next btn-strong btn-on-colored-bg" href="#">Strong</a>
+      <a class="btn btn-next btn-strong btn-on-colored-bg" href="#">Strong</a>
 
-    <a class="btn btn-next btn-icon btn-strong btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
+      <a class="btn btn-next btn-icon btn-strong btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
 
-    <a class="btn btn-next btn-minimal btn-on-colored-bg" href="#">Minimal</a>
+      <a class="btn btn-next btn-minimal btn-on-colored-bg" href="#">Minimal</a>
 
-    <a class="btn btn-next btn-icon btn-minimal btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
+      <a class="btn btn-next btn-icon btn-minimal btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
 
-    <!-- BEWARE: \`.btn-brand\` should never be used on colored backgrounds! -->
+      <!-- BEWARE: \`.btn-brand\` should never be used on colored backgrounds! -->
+    </div>
   </div>
-</div>
 
-<div class="bg-surface-status-negative-emphasized p-large">
-  <div data-bs-theme="${getMode('modes-on-status-negative-emphasized')}" class="d-flex gap-xsmall flex-wrap">
+  <div class="bg-surface-status-negative-emphasized p-large">
+    <div data-bs-theme="${getMode('modes-on-status-negative-emphasized')}" class="d-flex gap-xsmall flex-wrap">
 
-    <a class="btn btn-next btn-default btn-on-colored-bg" href="#">Default</a>
+      <a class="btn btn-next btn-default btn-on-colored-bg" href="#">Default</a>
 
-    <a class="btn btn-next btn-icon btn-default btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
+      <a class="btn btn-next btn-icon btn-default btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
 
-    <a class="btn btn-next btn-strong btn-on-colored-bg" href="#">Strong</a>
+      <a class="btn btn-next btn-strong btn-on-colored-bg" href="#">Strong</a>
 
-    <a class="btn btn-next btn-icon btn-strong btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
+      <a class="btn btn-next btn-icon btn-strong btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
 
-    <a class="btn btn-next btn-minimal btn-on-colored-bg" href="#">Minimal</a>
+      <a class="btn btn-next btn-minimal btn-on-colored-bg" href="#">Minimal</a>
 
-    <a class="btn btn-next btn-icon btn-minimal btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
+      <a class="btn btn-next btn-icon btn-minimal btn-on-colored-bg" href="#"><span class="visually-hidden">Next</span></a>
 
-    <!-- BEWARE: \`.btn-brand\` should never be used on colored backgrounds! -->
-  </div>
-</div>
-```
+      <!-- BEWARE: \`.btn-brand\` should never be used on colored backgrounds! -->
+    </div>
+  </div>`} />
 
 <ThemeSpecific theme={['orange', 'orange-compact']}>
   #### Rounded corners
@@ -856,15 +783,13 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
   We use a `<div>` as a parent container because we cannot use `<body>` in an example.
 </Callout>
 
-```html buttonLabel="rounded navigation buttons" class="bd-btn-example"
-<div class="use-rounded-corner-buttons">
+<Example buttonLabel="rounded navigation buttons" class="bd-btn-example" code={`<div class="use-rounded-corner-buttons">
 
-  <a class="btn btn-next btn-default" href="#">Next</a>
+    <a class="btn btn-next btn-default" href="#">Next</a>
 
-  <a class="btn btn-next btn-icon btn-default" href="#"><span class="visually-hidden">Next</span></a>
+    <a class="btn btn-next btn-icon btn-default" href="#"><span class="visually-hidden">Next</span></a>
 
-</div>
-```
+  </div>`} />
 </ThemeSpecific>
 
 ### States
@@ -876,63 +801,53 @@ Make navigation buttons inactive by:
 - Including the `aria-disabled="true"` attribute, to indicate the state of the element to assistive technologies, make it visually appear disabled and disable all `pointer-events`.
 - Removing the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning]([[docsref:/components/links#disabled-link-accessibility-warning]]).
 
-```html buttonLabel="disabled navigation buttons using <a> tag" class="bd-btn-example"
-<a class="btn btn-next btn-default" aria-disabled="true">Next</a>
+<Example buttonLabel="disabled navigation buttons using `<a>` tag" class="bd-btn-example" code={`<a class="btn btn-next btn-default" aria-disabled="true">Next</a>
 
-<a class="btn btn-next btn-icon btn-strong" aria-disabled="true"><span class="visually-hidden">Next</span></a>
-```
+  <a class="btn btn-next btn-icon btn-strong" aria-disabled="true"><span class="visually-hidden">Next</span></a>`} />
 
 In case you use a `<button>` element, simply add the `[disabled]` boolean attribute to it. Disabled navigation buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
-```html buttonLabel="disabled navigation buttons using <button> tag" class="bd-btn-example"
-<button type="button" class="btn btn-next btn-default" disabled>Next</button>
+<Example buttonLabel="disabled navigation buttons using `<button>` tag" class="bd-btn-example" code={`<button type="button" class="btn btn-next btn-default" disabled>Next</button>
 
-<button type="button" class="btn btn-next btn-icon btn-strong" disabled><span class="visually-hidden">Next</span></button>
-```
+  <button type="button" class="btn btn-next btn-icon btn-strong" disabled><span class="visually-hidden">Next</span></button>`} />
 
 #### Loading
 
-The loading state of a navigation button indicates that an action is currently processing or taking place. This state provides feedback to users, enhancing user experience.
+<LoadingState name="navigation button" referralVersion={true} baseComponentName="button">
+  <Example slot="loading" buttonLabel="loading navigation buttons" class="bd-btn-example" code={`<a class="btn btn-next btn-default loading-indeterminate" id="loading-nav-btn-1" aria-disabled="true">
+    Next
+    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-nav-btn-msg-1" class="visually-hidden">Loading next page</span>
+  </a>
 
-Please refer to the [loading state section of the button component](#loading) for guidelines on how to implement loading states, as well as a JavaScript example and a live demo.
+  <a class="btn btn-next btn-icon btn-default loading-determinate" id="loading-nav-btn-2" aria-disabled="true" style="--bs-btn-loading-time: 5s;">
+    <span class="visually-hidden">Next</span>
+    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-nav-btn-msg-2" class="visually-hidden">Loading next page: xx%</span>
+  </a>
 
-```html buttonLabel="loading navigation buttons" class="bd-btn-example"
-<a class="btn btn-next btn-default loading-indeterminate" id="loading-nav-btn-1" aria-disabled="true">
-  Next
-  <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-    <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-  </svg>
-  <span role="status" id="loading-nav-btn-msg-1" class="visually-hidden">Loading next page</span>
-</a>
-
-<a class="btn btn-next btn-icon btn-default loading-determinate" id="loading-nav-btn-2" aria-disabled="true" style="--bs-btn-loading-time: 5s;">
-  <span class="visually-hidden">Next</span>
-  <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-    <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-  </svg>
-  <span role="status" id="loading-nav-btn-msg-2" class="visually-hidden">Loading next page: xx%</span>
-</a>
-
-<button type="button" class="btn btn-next btn-default loading-indeterminate" id="loading-nav-btn-3" disabled>
-  Next
-  <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-    <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-  </svg>
-  <span role="status" id="loading-nav-btn-msg-3" class="visually-hidden">Loading next page</span>
-</button>
-```
+  <button type="button" class="btn btn-next btn-default loading-indeterminate" id="loading-nav-btn-3" disabled>
+    Next
+    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-nav-btn-msg-3" class="visually-hidden">Loading next page</span>
+  </button>`} />
+</LoadingState>
 
 #### Skeleton
 
 <SkeletonRedirect component="navigation button" />
 
-```html buttonLabel="navigation button skeleton"
-<div aria-busy="true" inert>
-  <button type="button" class="btn btn-default btn-next">Next</button>
+<Example buttonLabel="navigation button skeleton" code={`<div aria-busy="true" inert>
+    <button type="button" class="btn btn-default btn-next">Next</button>
 
-  <button type="button" class="btn btn-default btn-previous">Previous</button>
-</div>
-```
+    <button type="button" class="btn btn-default btn-previous">Previous</button>
+  </div>`} />
 
 ## [[comp]] Expand button
 
@@ -944,16 +859,14 @@ You can use `.btn-expand` class to indicate a [dropdown menu]([[docsref:/compone
   Be aware that the dropdown menu is not part of the expand button component and is a draft component. Please refer to the [dropdown menu documentation]([[docsref:/components/dropdown]]) for more information.
 </Callout>
 
-```html buttonLabel="basic expand button" class="bd-btn-example"
-<div class="dropdown">
-  <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
-  <ul class="dropdown-menu">
-    <li><button type="button" class="dropdown-item">Action</button></li>
-    <li><button type="button" class="dropdown-item">Another action</button></li>
-    <li><button type="button" class="dropdown-item">Something else here</button></li>
-  </ul>
-</div>
-```
+<Example buttonLabel="basic expand button" class="bd-btn-example" code={`<div class="dropdown">
+    <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+    <ul class="dropdown-menu">
+      <li><button type="button" class="dropdown-item">Action</button></li>
+      <li><button type="button" class="dropdown-item">Another action</button></li>
+      <li><button type="button" class="dropdown-item">Something else here</button></li>
+    </ul>
+  </div>`} />
 
 ### Variants
 
@@ -963,43 +876,39 @@ OUDS Web includes several expand button variants, each serving its own semantic 
   The button and the expand button have the same variants except for the negative, which does not exist for the expand button.
 </Callout>
 
-```html buttonLabel="expand buttons variants" class="bd-btn-example"
-<div class="dropdown">
-  <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+<Example buttonLabel="expand buttons variants" class="bd-btn-example" code={`<div class="dropdown">
+    <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
 
-  <button type="button" class="btn btn-strong btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+    <button type="button" class="btn btn-strong btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
 
-  <button type="button" class="btn btn-brand btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+    <button type="button" class="btn btn-brand btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
 
-  <button type="button" class="btn btn-minimal btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+    <button type="button" class="btn btn-minimal btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
 
-  <ul class="dropdown-menu">
-    <li><button type="button" class="dropdown-item">Action</button></li>
-    <li><button type="button" class="dropdown-item">Another action</button></li>
-    <li><button type="button" class="dropdown-item">Something else here</button></li>
-  </ul>
-</div>
-```
+    <ul class="dropdown-menu">
+      <li><button type="button" class="dropdown-item">Action</button></li>
+      <li><button type="button" class="dropdown-item">Another action</button></li>
+      <li><button type="button" class="dropdown-item">Something else here</button></li>
+    </ul>
+  </div>`} />
 
 #### Icon only
 
 Add the class `.btn-icon` to get a squared button that only contains an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or an `aria-label` attribute.
 
-```html buttonLabel="icon only expand button" class="bd-btn-example"
-<div class="dropdown">
-  <button type="button" class="btn btn-default btn-icon btn-expand" data-bs-toggle="dropdown" aria-expanded="false">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-    <span class="visually-hidden">Favorite playlist</span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><button type="button" class="dropdown-item">Action</button></li>
-    <li><button type="button" class="dropdown-item">Another action</button></li>
-    <li><button type="button" class="dropdown-item">Something else here</button></li>
-  </ul>
-</div>
-```
+<Example buttonLabel="icon only expand button" class="bd-btn-example" code={`<div class="dropdown">
+    <button type="button" class="btn btn-default btn-icon btn-expand" data-bs-toggle="dropdown" aria-expanded="false">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <span class="visually-hidden">Favorite playlist</span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><button type="button" class="dropdown-item">Action</button></li>
+      <li><button type="button" class="dropdown-item">Another action</button></li>
+      <li><button type="button" class="dropdown-item">Something else here</button></li>
+    </ul>
+  </div>`} />
 
 <ThemeSpecific theme={['orange', 'orange-compact']}>
   #### Rounded corners
@@ -1014,20 +923,18 @@ Add the class `.btn-icon` to get a squared button that only contains an icon. Ma
   We use a `<div>` as a parent container because we cannot use `<body>` in an example.
 </Callout>
 
-```html buttonLabel="rounded expand buttons" class="bd-btn-example"
-<div class="use-rounded-corner-buttons">
+<Example buttonLabel="rounded expand buttons" class="bd-btn-example" code={`<div class="use-rounded-corner-buttons">
 
-  <div class="dropdown">
-    <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
-    <ul class="dropdown-menu">
-      <li><button type="button" class="dropdown-item">Action</button></li>
-      <li><button type="button" class="dropdown-item">Another action</button></li>
-      <li><button type="button" class="dropdown-item">Something else here</button></li>
-    </ul>
-  </div>
+    <div class="dropdown">
+      <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+      <ul class="dropdown-menu">
+        <li><button type="button" class="dropdown-item">Action</button></li>
+        <li><button type="button" class="dropdown-item">Another action</button></li>
+        <li><button type="button" class="dropdown-item">Something else here</button></li>
+      </ul>
+    </div>
 
-</div>
-```
+  </div>`} />
 </ThemeSpecific>
 
 ### States
@@ -1036,16 +943,14 @@ Add the class `.btn-icon` to get a squared button that only contains an icon. Ma
 
 Make expand buttons inactive by adding the `[disabled]` boolean attribute to the `<button>` element. Disabled expand buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
-```html buttonLabel="disabled expand button" class="bd-btn-example"
-<div class="dropdown">
-  <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false" disabled>Expand</button>
-  <ul class="dropdown-menu">
-    <li><button type="button" class="dropdown-item">Action</button></li>
-    <li><button type="button" class="dropdown-item">Another action</button></li>
-    <li><button type="button" class="dropdown-item">Something else here</button></li>
-  </ul>
-</div>
-```
+<Example buttonLabel="disabled expand button" class="bd-btn-example" code={`<div class="dropdown">
+    <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false" disabled>Expand</button>
+    <ul class="dropdown-menu">
+      <li><button type="button" class="dropdown-item">Action</button></li>
+      <li><button type="button" class="dropdown-item">Another action</button></li>
+      <li><button type="button" class="dropdown-item">Something else here</button></li>
+    </ul>
+  </div>`} />
 
 #### Loading
 
@@ -1053,39 +958,35 @@ The loading state of an expand button indicates that an action is currently proc
 
 Please refer to the [loading state section of the button component](#loading) for guidelines on how to implement loading states, as well as a JavaScript example and a live demo.
 
-```html buttonLabel="loading expand buttons" class="bd-btn-example"
-<div class="dropdown">
-  <button type="button" class="btn btn-default btn-expand loading-indeterminate" data-bs-toggle="dropdown" aria-expanded="false" disabled>
-    Expand
-    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-expand-btn-msg-1" class="visually-hidden">Loading expand</span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><button type="button" class="dropdown-item">Action</button></li>
-    <li><button type="button" class="dropdown-item">Another action</button></li>
-    <li><button type="button" class="dropdown-item">Something else here</button></li>
-  </ul>
-</div>
-```
-
-#### Skeleton
-
-<SkeletonRedirect component="expand button" />
-
-```html buttonLabel="expand button skeleton"
-<div aria-busy="true" inert>
-  <div class="dropdown">
-    <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+<Example buttonLabel="loading expand buttons" class="bd-btn-example" code={`<div class="dropdown">
+    <button type="button" class="btn btn-default btn-expand loading-indeterminate" data-bs-toggle="dropdown" aria-expanded="false" disabled>
+      Expand
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-expand-btn-msg-1" class="visually-hidden">Loading expand</span>
+    </button>
     <ul class="dropdown-menu">
       <li><button type="button" class="dropdown-item">Action</button></li>
       <li><button type="button" class="dropdown-item">Another action</button></li>
       <li><button type="button" class="dropdown-item">Something else here</button></li>
     </ul>
-  </div>
-</div>
-```
+  </div>`} />
+
+#### Skeleton
+
+<SkeletonRedirect component="expand button" />
+
+<Example buttonLabel="expand button skeleton" code={`<div aria-busy="true" inert>
+    <div class="dropdown">
+      <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">Expand</button>
+      <ul class="dropdown-menu">
+        <li><button type="button" class="dropdown-item">Action</button></li>
+        <li><button type="button" class="dropdown-item">Another action</button></li>
+        <li><button type="button" class="dropdown-item">Something else here</button></li>
+      </ul>
+    </div>
+  </div>`} />
 
 ## [[comp]] Assistant button
 
@@ -1095,11 +996,9 @@ The assistant button combines standard button functions with AI-specific visual 
 
 You can use `.btn-assistant` class to indicate AI actions in a process or a flow. This class will add an icon before the button text and a specific border color. As Assistant buttons generally indicate an AI-related action, in our examples, we have used `<button>` elements, but this could be adapted to your own context (in that case, don't forget to add an `href` attribute to make the element focusable). The visual rendering will remain the same anyway:
 
-```html buttonLabel="basic assistant buttons" class="bd-btn-example"
-<a class="btn btn-assistant" href="#">Assistant</a>
+<Example buttonLabel="basic assistant buttons" class="bd-btn-example" code={`<a class="btn btn-assistant" href="#">Assistant</a>
 
-<button type="button" class="btn btn-assistant">Assistant</button>
-```
+  <button type="button" class="btn btn-assistant">Assistant</button>`} />
 
 <Callout type="warning" title="Transparency and older browsers">
   An assistant button does not have a transparent background on older browsers and Firefox because [`background-clip: border-area` is not fully supported](https://caniuse.com/wf-background-clip-border-area).
@@ -1109,19 +1008,17 @@ You can use `.btn-assistant` class to indicate AI actions in a process or a flow
 
 If your browser is compatible, the following example will show two transparent assistant buttons on a tertiary background. If not, only one non-transparent and one transparent button.
 
-```html buttonLabel="assistant button simulated transparent background" class="bd-btn-example"
-<div class="bg-tertiary">
+<Example buttonLabel="assistant button simulated transparent background" class="bd-btn-example" code={`<div class="bg-tertiary">
 
-  <button type="button" class="btn btn-assistant">
-    Assistant
-  </button>
+    <button type="button" class="btn btn-assistant">
+      Assistant
+    </button>
 
-  <button type="button" class="btn btn-assistant" style="--bs-btn-bg: var(--bs-color-bg-tertiary);">
-    Assistant
-  </button>
+    <button type="button" class="btn btn-assistant" style="--bs-btn-bg: var(--bs-color-bg-tertiary);">
+      Assistant
+    </button>
 
-</div>
-```
+  </div>`} />
 
 ### Variants
 
@@ -1129,11 +1026,9 @@ If your browser is compatible, the following example will show two transparent a
 
 Add the class `.btn-icon` to get an icon-only assistant button. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or an `aria-label` attribute. Icon-only assistant buttons are always completely circular.
 
-```html buttonLabel="assistant button icon-only" class="bd-btn-example"
-<button type="button" class="btn btn-assistant btn-icon">
-  <span class="visually-hidden">Assistant</span>
-</button>
-```
+<Example buttonLabel="assistant button icon-only" class="bd-btn-example" code={`<button type="button" class="btn btn-assistant btn-icon">
+    <span class="visually-hidden">Assistant</span>
+  </button>`} />
 
 <ThemeSpecific theme={['orange', 'orange-compact']}>
   #### Rounded corners
@@ -1148,13 +1043,11 @@ Add the class `.btn-icon` to get an icon-only assistant button. Make sure to pro
   We use a `<div>` as a parent container because we cannot use `<body>` in an example.
 </Callout>
 
-```html buttonLabel="rounded assistant buttons" class="bd-btn-example"
-<div class="use-rounded-corner-buttons">
+<Example buttonLabel="rounded assistant buttons" class="bd-btn-example" code={`<div class="use-rounded-corner-buttons">
 
-  <button type="button" class="btn btn-assistant">Assistant</button>
+    <button type="button" class="btn btn-assistant">Assistant</button>
 
-</div>
-```
+  </div>`} />
 </ThemeSpecific>
 
 ### States
@@ -1163,58 +1056,48 @@ Add the class `.btn-icon` to get an icon-only assistant button. Make sure to pro
 
 Assistant buttons typically use the `<button>` element. To disable an assistant button, add the `[disabled]` boolean attribute. Disabled assistant buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
-```html buttonLabel="disabled assistant buttons using <button> tag" class="bd-btn-example"
-<button type="button" class="btn btn-assistant" disabled>Assistant</button>
+<Example buttonLabel="disabled assistant buttons using `<button>` tag" class="bd-btn-example" code={`<button type="button" class="btn btn-assistant" disabled>Assistant</button>
 
-<button type="button" class="btn btn-assistant btn-icon" disabled>
-  <span class="visually-hidden">Assistant</span>
-</button>
-```
+  <button type="button" class="btn btn-assistant btn-icon" disabled>
+    <span class="visually-hidden">Assistant</span>
+  </button>`} />
 
 #### Loading
 
-The loading state of an assistant button indicates that an action is currently processing or taking place. This state provides feedback to users, enhancing user experience.
+<LoadingState name="assistant button" referralVersion={true} baseComponentName="button">
+  <Example slot="loading" buttonLabel="loading assistant buttons" class="bd-btn-example" code={`<button type="button" class="btn btn-assistant loading-indeterminate" id="loading-ai-btn-1" disabled>
+    Assistant
+    <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-ai-btn-msg-1" class="visually-hidden">Loading answer</span>
+  </button>
 
-Please refer to the [loading state section of the button component](#loading) for guidelines on how to implement loading states, as well as a JavaScript example and a live demo.
-
-```html buttonLabel="loading assistant buttons" class="bd-btn-example"
-<button type="button" class="btn btn-assistant loading-indeterminate" id="loading-ai-btn-1" disabled>
-  Assistant
-  <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-    <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-  </svg>
-  <span role="status" id="loading-ai-btn-msg-1" class="visually-hidden">Loading answer</span>
-</button>
-
-<button type="button" class="btn btn-assistant btn-icon loading-indeterminate" id="loading-ai-btn-2" disabled>
-  <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-    <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-  </svg>
-  <span role="status" id="loading-ai-btn-msg-2" class="visually-hidden">Loading answer</span>
-</button>
-```
+    <button type="button" class="btn btn-assistant btn-icon loading-indeterminate" id="loading-ai-btn-2" disabled>
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-ai-btn-msg-2" class="visually-hidden">Loading answer</span>
+    </button>`} />
+</LoadingState>
 
 #### Skeleton
 
 <SkeletonRedirect component="assistant button" />
 
-```html buttonLabel="assistant button skeleton"
-<div aria-busy="true" inert>
-  <button type="button" class="btn btn-assistant">Assistant</button>
-</div>
-```
+<Example buttonLabel="assistant button skeleton" code={`<div aria-busy="true" inert>
+    <button type="button" class="btn btn-assistant">Assistant</button>
+  </div>`} />
 
 ### Sizes
 
 Assistant buttons are available in two sizes. Add `.btn-small` to have a smaller button.
 
-```html buttonLabel="small assistant buttons" class="bd-btn-example"
-<button type="button" class="btn btn-assistant btn-small">Assistant</button>
+<Example buttonLabel="small assistant buttons" class="bd-btn-example" code={`<button type="button" class="btn btn-assistant btn-small">Assistant</button>
 
-<button type="button" class="btn btn-assistant btn-icon btn-small">
-  <span class="visually-hidden">Assistant</span>
-</button>
-```
+  <button type="button" class="btn btn-assistant btn-icon btn-small">
+    <span class="visually-hidden">Assistant</span>
+  </button>`} />
 
 ## Layout
 
@@ -1222,82 +1105,72 @@ Assistant buttons are available in two sizes. Add `.btn-small` to have a smaller
 
 Button's width won't exceed <code>{(getTokenValue('$core-ouds-dimension-4000').slice(0, -2)) / 16}rem</code> and will automatically wrap if necessary. Howerver, buttons natively support `<br/>` tags to break the text into multiple lines when needed. Read more about multiline and responsiveness in a [button](https://r.orange.fr/r/S-ouds-doc-button), [navigation button](https://r.orange.fr/r/S-ouds-doc-navigation-button) and [assistant button](https://r.orange.fr/r/S-ouds-doc-assistant-button).
 
-```html buttonLabel="buttons with wrapping text" class="bd-btn-example d-flex flex-column align-items-start"
-<button type="button" class="btn btn-default">
-  A button will automatically wrap if the text is longer than the default max width
-</button>
-
-<button type="button" class="btn btn-default">
-  You can also force the text to wrap<br/>where you want
-</button>
-
-<button type="button" class="btn btn-assistant">
-  The label remains centered with the icon when it wraps
-</button>
-
-<button type="button" class="btn btn-assistant">
-  The label<br/>is centered when you force a break line too
-</button>
-
-<div class="dropdown">
-  <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">
-    The label remains centered in<br/>multiline mode with an icon
+<Example buttonLabel="buttons with wrapping text" class="bd-btn-example d-flex flex-column align-items-start" code={`<button type="button" class="btn btn-default">
+    A button will automatically wrap if the text is longer than the default max width
   </button>
 
-  <ul class="dropdown-menu">
-    <li><button type="button" class="dropdown-item">Action</button></li>
-    <li><button type="button" class="dropdown-item">Another action</button></li>
-    <li><button type="button" class="dropdown-item">Something else here</button></li>
-  </ul>
-</div>
-```
+  <button type="button" class="btn btn-default">
+    You can also force the text to wrap<br/>where you want
+  </button>
+
+  <button type="button" class="btn btn-assistant">
+    The label remains centered with the icon when it wraps
+  </button>
+
+  <button type="button" class="btn btn-assistant">
+    The label<br/>is centered when you force a break line too
+  </button>
+
+  <div class="dropdown">
+    <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">
+      The label remains centered in<br/>multiline mode with an icon
+    </button>
+
+    <ul class="dropdown-menu">
+      <li><button type="button" class="dropdown-item">Action</button></li>
+      <li><button type="button" class="dropdown-item">Another action</button></li>
+      <li><button type="button" class="dropdown-item">Something else here</button></li>
+    </ul>
+  </div>`} />
 
  ### Block buttons
 
 Create responsive stacks of "block buttons" with a mix of our display and gap utilities. By using utilities, we have great control over spacing, alignment, and responsive behaviors.
 
-```html buttonLabel="block buttons" class="bd-btn-example"
-<div class="d-grid gap-small">
+<Example buttonLabel="block buttons" class="bd-btn-example" code={`<div class="d-grid gap-small">
 
-  <button class="btn btn-default" type="button">Button</button>
+    <button class="btn btn-default" type="button">Button</button>
 
-  <button class="btn btn-default" type="button">Button</button>
+    <button class="btn btn-default" type="button">Button</button>
 
-</div>
-```
+  </div>`} />
 
 Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where `.md:d-block` replaces the `.d-grid` class, thus nullifying the `gap-small` utility. Resize your browser to see them change.
 
-```html buttonLabel="block buttons until the md breakpoint" class="bd-btn-example"
-<div class="d-grid gap-small md:d-block">
+<Example buttonLabel="block buttons until the md breakpoint" class="bd-btn-example" code={`<div class="d-grid gap-small md:d-block">
 
-  <button class="btn btn-default" type="button">Button</button>
+    <button class="btn btn-default" type="button">Button</button>
 
-  <button class="btn btn-default" type="button">Button</button>
+    <button class="btn btn-default" type="button">Button</button>
 
-</div>
-```
+  </div>`} />
 
 You can adjust the width of your block buttons with grid column width classes like `.col-3`. Center it horizontally with `.mx-auto`, too. Buttons will always be limited by their max-width, so they won't stretch too much on large screens.
 
-```html buttonLabel="half-width block buttons" class="bd-btn-example"
-<div class="d-grid gap-small col-3 md:col-8 mx-auto">
+<Example buttonLabel="half-width block buttons" class="bd-btn-example" code={`<div class="d-grid gap-small col-3 md:col-8 mx-auto">
 
-  <button class="btn btn-default" type="button">Button</button>
+    <button class="btn btn-default" type="button">Button</button>
 
-  <button class="btn btn-default" type="button">Button</button>
+    <button class="btn btn-default" type="button">Button</button>
 
-</div>
-```
+  </div>`} />
 
 Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we’ve taken our previous responsive example and added some flex utilities and a margin utility on the button to right-align the buttons when they’re no longer stacked.
 
-```html buttonLabel="right aligned inline buttons" class="bd-btn-example"
-<div class="d-grid gap-small md:d-flex md:justify-content-end">
+<Example buttonLabel="right aligned inline buttons" class="bd-btn-example" code={`<div class="d-grid gap-small md:d-flex md:justify-content-end">
 
-  <button class="btn btn-default md:me-xsmall" type="button">Button</button>
+    <button class="btn btn-default md:me-xsmall" type="button">Button</button>
 
-  <button class="btn btn-default" type="button">Button</button>
+    <button class="btn btn-default" type="button">Button</button>
 
-</div>
-```
+  </div>`} />
