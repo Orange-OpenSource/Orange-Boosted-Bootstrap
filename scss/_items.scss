@@ -426,11 +426,18 @@
 
 // Accordion specific styles
 .item-accordion { // TODO: animation
-  --#{$prefix}list-item-nav-icon: #{$list-item-external-icon};
+  --#{$prefix}list-item-nav-icon: #{$accordion-expanded-false};
   position: relative;
+  overflow: clip;
   border-color: var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, transparent)) var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, transparent)) var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, $ouds-color-border-default));
   border-style: solid;
   border-width: var(--#{$prefix}list-item-border-width, 0) var(--#{$prefix}list-item-border-width, 0) var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default);
+  interpolate-size: allow-keywords;
+
+  &::details-content {
+    block-size: 0;
+    transition: block-size .3s ease allow-discrete, padding-block .3s ease allow-discrete; // stylelint-disable-line property-disallowed-list
+  }
 
   .item-container {
     border-width: 0;
@@ -441,7 +448,11 @@
   }
 
   &:open {
-    --#{$prefix}list-item-nav-icon: #{$list-item-previous-icon};
+    --#{$prefix}list-item-nav-icon: #{$accordion-expanded-true};
+
+    &::details-content {
+      block-size: auto;
+    }
   }
 }
 
@@ -453,9 +464,9 @@
 }
 
 .item-accordion-alt {
-  --#{$prefix}list-item-nav-icon: #{$list-item-previous-icon};
+  --#{$prefix}list-item-nav-icon: #{$accordion-expanded-reverse-false};
 
   &:open {
-    --#{$prefix}list-item-nav-icon: #{$list-item-next-icon};
+    --#{$prefix}list-item-nav-icon: #{$accordion-expanded-reverse-true};
   }
 }
