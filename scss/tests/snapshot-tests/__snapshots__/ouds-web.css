@@ -1205,6 +1205,7 @@ pre {
   line-height: var(--bs-font-line-height-code-medium);
   /* rtl:remove */
   letter-spacing: var(--bs-font-letter-spacing-code-medium);
+  color: var(--bs-color-content-muted);
 }
 pre code {
   font-size: inherit;
@@ -1216,6 +1217,7 @@ var,
 code {
   font-size: 0.875em;
   font-style: normal;
+  color: var(--bs-color-content-muted);
   word-wrap: break-word;
 }
 
@@ -1462,9 +1464,9 @@ dialog,
   opacity: 0.5;
 }
 
-.h2.marker::after,
-h2.marker::after,
-.fs-hl.marker::after {
+.h2.hl-marker::after,
+h2.hl-marker::after,
+.fs-hl.hl-marker::after {
   display: block;
   width: 30px;
   height: 12px;

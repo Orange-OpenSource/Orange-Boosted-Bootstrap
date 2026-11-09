@@ -37,14 +37,14 @@ Classes `.h1` through `.h6` are also available, for when a heading needs to be s
 
 ### Heading with marker
 
-A brand-colored marker can be displayed below a heading large (`<h2>` or `.h2`) to reinforce visual emphasis and information hierarchy. Add the `.marker` class:
+A brand-colored marker can be displayed below a heading large (`<h2>` or `.h2`) to reinforce visual emphasis and information hierarchy. Add the `.hl-marker` class:
 
 ```html
-<h2 class="marker">h2. OUDS Web heading with marker</h2>
-<h3 class="h2 marker">h3 element styled like a h2, with marker</h3>
+<h2 class="hl-marker">h2. OUDS Web heading with marker</h2>
+<h3 class="h2 hl-marker">h3 element styled like a h2, with marker</h3>
 ```
 
-> **Brand-dependent:** the marker only renders if the active theme defines the `$ouds-typography-heading-large-marker` flag and a `$ouds-heading-large-marker-img` asset. It is available on Orange and Orange Compact; Sosh does not define a marker image, so `.marker` has no visible effect there.
+> **Brand-dependent:** the marker only renders if the active theme defines the `$ouds-typography-heading-large-marker` flag and a `$ouds-heading-large-marker-img` asset. It is available on Orange and Orange Compact; Sosh does not define a marker image, so `.hl-marker` has no visible effect there.
 
 ## Display
 

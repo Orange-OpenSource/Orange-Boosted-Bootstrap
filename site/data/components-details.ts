@@ -241,7 +241,7 @@ export const componentsDetails: ComponentCardData[] = [
     link: 'typography#heading',
     category: 'Content display',
     snippet: `
-      <h2 class="marker mb-none">
+      <h2 class="hl-marker mb-none">
         Heading
       </h2>`
   },

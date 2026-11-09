@@ -71,11 +71,11 @@ Code elements use the monospace stack below:
 
 ## Headings
 
-All heading elements—`<h1>`—`<h6>` have their `margin-top` removed, <code>margin-bottom: {getTokenValue('$ouds-space-fixed-medium')}</code> set, and `line-height` tightened. While headings inherit their `color` by default, you can also override it via optional CSS variable, `--bs-heading-color`. `<h1>`—`<h6>` elements are associated to [heading typography]([[docsref:/components/typography#heading]]). If you want to get rid of the `margin-bottom`, please use to use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]).
+All heading elements—`<h1>`—`<h6>` have their `margin-top` removed, <code>margin-bottom: {getTokenValue('$ouds-space-fixed-medium')}</code> set, and `line-height` tightened. While headings inherit their `color` by default, you can also override it via optional CSS variable, `--bs-heading-color`. `<h1>`—`<h6>` elements are associated to [heading typography]([[docsref:/components/typography#heading]]). If you want to get rid of the `margin-bottom`, please use our `.mb-none` [spacing utility]([[docsref:/utilities/spacing]]). If you want to get rid of the `max-width`, please use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]).
 
 ## Paragraphs
 
-All `<p>` elements have their `margin-top` removed and <code>margin-bottom: {getTokenValue('$ouds-space-fixed-medium')}</code> set for easy spacing. `<p>` uses [body medium typography]([[docsref:/components/typography#body]]). If you want to get rid of the `margin-bottom`, please use to use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]).
+All `<p>` elements have their `margin-top` removed and <code>margin-bottom: {getTokenValue('$ouds-space-fixed-medium')}</code> set for easy spacing. `<p>` uses [body medium typography]([[docsref:/components/typography#body]]). If you want to get rid of the `margin-bottom`, please use our `.mb-none` [spacing utility]([[docsref:/utilities/spacing]]). If you want to get rid of the `max-width`, please use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]).
 
 <Example buttonLabel="paragraph" code={`<p class="mw-none mb-none">This is an example paragraph which is long enough so it’s easy to see and compare the <code>max-width</code> in action and compare it to the one below.</p>
   <p>This is an example paragraph which is long enough so it’s easy to see and compare the <code>max-width</code> in action and compare it to the one above.</p>
@@ -444,7 +444,6 @@ The HTML spec requires that blockquote attribution be placed outside the `<block
   </figure>`} />
 
 ### Alignment
-{/* TODO See if we keep it: its just some tips to use our utilities, I don't think this is very useful here */}
 
 Use text and spacing utilities as needed to change the alignment of your blockquote.
 

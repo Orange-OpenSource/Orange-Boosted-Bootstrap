@@ -14,7 +14,7 @@
 - **Buttons**: Expand button implemented
 - **Links**: Expand link implemented
 - **Tags**: Categorical tag implemented
-- **Typography**: optional heading marker — add `.marker` to a heading large (`<h2>`/`.h2`) to display a brand-colored marker below it (Orange, Orange Compact; no visible effect on Sosh).
+- **Typography**: optional heading marker — add `.hl-marker` to a heading large (`<h2>`/`.h2`) to display a brand-colored marker below it (Orange, Orange Compact; no visible effect on Sosh).
 
 ### Components
 

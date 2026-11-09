@@ -26,9 +26,9 @@
 }
 
 @if ($ouds-typography-heading-large-marker and $ouds-heading-large-marker-img) {
-  .h2.marker::after,
-  h2.marker::after, // stylelint-disable-line selector-no-qualifying-type
-  .fs-hl.marker::after { // TODO not sure of this one because `.fs-hl` is not completely an equivalent of h2 (it is not bold)
+  .h2.hl-marker::after,
+  h2.hl-marker::after, // stylelint-disable-line selector-no-qualifying-type
+  .fs-hl.hl-marker::after { // TODO not sure of this one because `.fs-hl` is not completely an equivalent of h2 (it is not bold)
     display: block;
     width: $ouds-heading-large-marker-width;
     height: $ouds-heading-large-marker-height;
