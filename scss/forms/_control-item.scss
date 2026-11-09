@@ -65,6 +65,10 @@
 
     * {
       color: $ouds-color-action-disabled;
+
+      &::after {
+        color: currentcolor;
+      }
     }
   }
 

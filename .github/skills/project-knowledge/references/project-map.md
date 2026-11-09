@@ -46,12 +46,12 @@ Orange-Boosted-Bootstrap/
 
 ## `skills/` folder (distributed to library consumers)
 
-The root-level `skills/` directory is **not** for contributors to this repo — it ships [Agent Skills](https://www.skills.sh/) to give AI coding agents (Claude Code, Cursor, GitHub Copilot, and others) procedural knowledge of the **OUDS Web library itself**, for use in projects that *consume* OUDS Web.
+The root-level `skills/` directory is **not** for contributors to this repo — it stores [Agent Skills](https://www.skills.sh/) to give AI coding agents (Claude Code, Cursor, GitHub Copilot, and others) procedural knowledge of the **OUDS Web library itself**, for use in projects that *consume* OUDS Web.
 
 Distribution mechanism: these skills are **not published as an npm package**. They are installed via the `skills` CLI:
 
 ```sh
-npx skills add Orange-OpenSource/Orange-Boosted-Bootstrap/skills
+npx skills add Orange-OpenSource/ouds-web-skills
 ```
 
 See README.md ("AI agent skills" section) for the consumer-facing documentation.
@@ -60,7 +60,7 @@ Contents:
 
 | Skill | Purpose |
 |---|---|
-| `using-ouds-web/` | Comprehensive reference of OUDS Web components, layout, utilities, and design tokens — used when an agent generates OUDS Web markup or code |
+| `using-ouds-web-version-<major>-<minor>/` | Comprehensive reference of OUDS Web components, layout, utilities, and design tokens — used when an agent generates OUDS Web markup or code |
 | `migrate-to-ouds-web/` | Step-by-step workflow to migrate a project from Boosted, OB1, or an older OUDS Web version to the latest OUDS Web |
 
 **Do not confuse with `.github/skills/`**, which contains skills for agents *contributing to this repository* (SCSS/JS conventions, token system, accessibility, etc.) — the two serve different audiences.
@@ -75,7 +75,7 @@ Contents:
 |---|---|---|
 | `npm run dist` | Build all CSS (3 brands) + JS | ~30s |
 | `npm run lint` | ESLint + Stylelint | ~15s |
-| `npm run js-test` | Karma + Jasmine unit tests | ~20s |
+| `npm run js-test` | Vitest/Playwright unit tests with coverage + JS integration tests | ~20s |
 | `npm run test` | Full suite (lint + dist + tests + docs) | ~2min |
 | `npm run start` | Start 3 brand dev servers (9001/9002/9003) | ongoing |
 | `npm run clean` | Remove build artifacts | instant |
@@ -130,7 +130,7 @@ js/src/  →  Rollup  →  4 variants:
 |---|---|---|
 | `lint.yml` | Every push | ESLint + Stylelint + lockfile-lint |
 | `css.yml` | Every push | CSS build succeeds; no `/* stylelint */` in dist |
-| `js.yml` | Every push | JS unit tests (Karma + jQuery compat) |
+| `js.yml` | Every push | JS unit tests (Vitest + Playwright) and integration builds |
 | `pa11y.yml` | PRs to main | Pa11y-CI accessibility |
 | `vnu.yml` | PRs to main | VNU HTML validation |
 | `bundlewatch.yml` | PRs | Bundle size limits |
@@ -145,7 +145,7 @@ js/src/  →  Rollup  →  4 variants:
 | `.eslintrc.json` | ESLint rules (extends xo + unicorn) |
 | `rollup.config.mjs` | JS bundling configuration |
 | `package.json` | Workspaces, scripts, dependencies |
-| `karma.conf.cjs` | Test runner config |
+| `vitest.config.mjs` | JavaScript unit test and coverage config |
 | `.browserslistrc` | Browser support targets |
 
 ---

@@ -26,7 +26,7 @@ description: 'OUDS Web project knowledge base: glossary of 154 terms, build pipe
 |---|---|
 | `npm run dist` | Build all CSS (3 brands) + JS |
 | `npm run lint` | ESLint + Stylelint |
-| `npm run js-test` | Karma + Jasmine unit tests |
+| `npm run js-test` | Vitest/Playwright unit tests with coverage + JS integration tests |
 | `npm run test` | Full suite (lint + dist + tests) |
 | `npm run start` | Dev servers (:9001/:9002/:9003) |
 | `npm run clean` | Remove build artifacts |

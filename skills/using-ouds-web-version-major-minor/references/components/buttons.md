@@ -1,6 +1,6 @@
 # Buttons
 
-Three types: **Button**, **Navigation button**, and **Assistant button**. All use base class `.btn`.
+Four types: **Button**, **Navigation button**, **Expand button**, and **Assistant button**. All use base class `.btn`.
 
 ## Button
 
@@ -153,6 +153,23 @@ Add `.btn-icon`:
 
 Same as button — add `.btn-on-colored-bg`. No `.btn-brand` on colored backgrounds.
 
+## Expand button
+
+Add `.btn-expand` to a button variant to show a chevron that indicates whether associated content is expanded. Set `aria-expanded` to `false` when collapsed and `true` when expanded. The chevron updates from this attribute.
+
+```html
+<div class="dropdown">
+  <button type="button" class="btn btn-default btn-expand" data-bs-toggle="dropdown" aria-expanded="false">
+    Expand
+  </button>
+  <ul class="dropdown-menu">
+    <li><button type="button" class="dropdown-item">Action</button></li>
+  </ul>
+</div>
+```
+
+Use a `<button>` for actions that expand or collapse content. When controlling a disclosure, also use `aria-controls` to reference the controlled element. `.btn-expand` can be combined with the standard button variants and `.btn-icon`.
+
 ## Layout
 
 ### Block buttons
@@ -169,4 +186,4 @@ Use `.d-grid` and `.gap-small` for full-width stacked buttons.
 - Wrap navigation buttons in `<nav>` with `aria-label` when used for page navigation
 - Always provide accessible name for icon-only buttons
 
-> **Not Bootstrap:** Variants are `.btn-default`, `.btn-strong`, `.btn-brand`, `.btn-minimal`, `.btn-negative` (not `.btn-primary`, `.btn-secondary`, etc.). Navigation buttons (`.btn-previous`, `.btn-next`) and the Assistant button (`.btn-assistant`, AI-related actions) are OUDS Web-specific. Loading states use `.loading-indeterminate`/`.loading-determinate` with SVG loader. Colored background support via `.btn-on-colored-bg`.
+> **Not Bootstrap:** Variants are `.btn-default`, `.btn-strong`, `.btn-brand`, `.btn-minimal`, `.btn-negative` (not `.btn-primary`, `.btn-secondary`, etc.). Navigation buttons (`.btn-previous`, `.btn-next`), expand buttons (`.btn-expand`), and the Assistant button (`.btn-assistant`, AI-related actions) are OUDS Web-specific. Loading states use `.loading-indeterminate`/`.loading-determinate` with SVG loader. Colored background support via `.btn-on-colored-bg`.

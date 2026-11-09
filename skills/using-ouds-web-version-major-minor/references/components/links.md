@@ -2,7 +2,11 @@
 
 > **Not Bootstrap:** OUDS Web uses a dedicated `.link` class for standalone links with specific padding, alignment, focus/hover/active styles, and size/density variants. Bootstrap has no equivalent standalone link component class, and the Bootstrap `.link-*` colored link helpers (`.link-primary`, `.link-secondary`, etc.) should **not** be used in OUDS Web — colored links are not part of the design system.
 
-## Overview
+Two types: **Link** and **Expand link**. Both use the base class `.link`.
+
+## Link
+
+### Overview
 
 Use `.link` on `<a>` for standalone links (not inline within a sentence). For inline links, use a plain `<a>` tag as per the reboot page.
 
@@ -20,9 +24,9 @@ Use `.link` on `<button>` elements too:
 <button class="link" type="submit">Button link</button>
 ```
 
-## Variants
+### Variants
 
-### On colored background
+#### On colored background
 
 Add `.link-on-colored-bg` along with the appropriate `data-bs-theme` on a parent. Use on colored backgrounds for accessible readability.
 
@@ -34,7 +38,7 @@ Add `.link-on-colored-bg` along with the appropriate `data-bs-theme` on a parent
 </div>
 ```
 
-### With chevron
+#### With chevron
 
 Add `.link-chevron` for a right-side chevron. Add `.link-previous` (combined with `.link-chevron`) for a left-side chevron.
 
@@ -43,7 +47,7 @@ Add `.link-chevron` for a right-side chevron. Add `.link-previous` (combined wit
 <a class="link link-chevron link-previous" href="#">Link with previous chevron</a>
 ```
 
-### With external icon
+#### With external icon
 
 Add `.link-external` for a right-side external-link icon. Add visually hidden text to indicate the link opens an external resource.
 
@@ -53,7 +57,7 @@ Add `.link-external` for a right-side external-link icon. Add visually hidden te
 >
 ```
 
-### With icon
+#### With icon
 
 Use `.icon-link` with an icon before the text. Icons auto-size to `1em`. For font icons, add `.icon` class.
 
@@ -66,9 +70,9 @@ Use `.icon-link` with an icon before the text. Icons auto-size to `1em`. For fon
 </a>
 ```
 
-## States
+### States
 
-### Disabled
+#### Disabled
 
 Add `aria-disabled="true"` to `<a>`. Remove `href` when possible. Uses `pointer-events: none`.
 
@@ -85,7 +89,7 @@ If `href` must be kept and the link conveys no useful info, also add `tabindex="
 <a href="#" class="link" aria-disabled="true">Focusable disabled link</a>
 ```
 
-### Skeleton
+#### Skeleton
 
 Wrap in `[aria-busy="true"]` with `inert`:
 
@@ -95,7 +99,7 @@ Wrap in `[aria-busy="true"]` with `inert`:
 </div>
 ```
 
-## Sizes
+### Sizes
 
 Links are available in two sizes and two densities, combinable:
 
@@ -110,3 +114,18 @@ Links are available in two sizes and two densities, combinable:
 ```
 
 > **Accessibility:** compact and small sizes are not recommended for accessibility reasons (reduced interactive area). Per WCAG 2.5.5 (target size enhanced), a link plus its surrounding space should total at least `44px x 44px`; space compact links apart accordingly.
+
+## Expand link
+
+An expand link reveals or hides additional content. Add `.link-expand` to a `<button>` styled as a link. Its chevron reflects `aria-expanded`, which must be updated when the state changes. When controlling a disclosure, also set `aria-controls` to the controlled element's ID.
+
+```html
+<div class="dropdown">
+  <button type="button" class="link link-expand" data-bs-toggle="dropdown" aria-expanded="false">
+    Expand
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+  </ul>
+</div>
+```

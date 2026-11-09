@@ -1,5 +1,5 @@
 ---
-name: 'using-ouds-web'
+name: 'using-ouds-web-version-major-minor'
 description: 'Provides comprehensive knowledge of the OUDS Web library (Orange Unified Design System for Web), a Bootstrap-based CSS/JS framework for building Orange-branded web interfaces. This skill should be used when generating HTML markup, CSS classes, or JavaScript code that uses OUDS Web components, utilities, layout system, or design tokens. Also use during migrations from Boosted, OB1, or older OUDS Web versions to look up correct OUDS Web component structure as replacement markup. It covers components (buttons, alerts, chips, forms, navigation), layout (grid, breakpoints, containers), utilities (spacing, colors, display, flex), and foundation (typography, color modes, CSS variables, Sass customization).'
 ---
 
@@ -24,6 +24,7 @@ Key differences from standard Bootstrap:
 - **4 color modes**: `light`, `dark`, `root`, `root-inverted` (set via `data-bs-theme`)
 - **Orange-specific components**: header, footer, chips, tags, sticker, stepped-process, title-bar, skeleton, local-navigation, back-to-top, bullet-list, divider, quantity-selector, items (replaces Bootstrap's `.list-group`)
 - **Assistant button** (`.btn-assistant`, v1.5.0): AI-powered action button variant, distinct from standard/navigation buttons
+- **Interactive icon** (`.icon-interactive`) and **assistant icon** (`.icon-assistant`): icon-only interactive elements, distinct from `.btn-icon` and `.btn-assistant`
 - **Modified form components**: switch, checkbox, radio-button, text-input, text-area, select-input, password-input use `.control-item-*` pattern
 - **CSS variable prefix**: `--bs-`
 - **Container**: use `.container-fluid` (not fixed `.container`)
@@ -104,7 +105,7 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 - [Accessibility](references/getting-started/accessibility.md) - Accessibility guidelines
 - [Browsers & devices](references/getting-started/browsers-devices.md) - Supported browsers
 - [Component versioning](references/getting-started/component-versioning.md) - Version tracking
-- [Migration](references/getting-started/migration.md) - Migration from previous versions
+- [Update guide](references/getting-started/update-guide.md) - Update from previous versions
 - [Migration from Boosted](references/getting-started/migration-from-boosted.md) - Boosted to OUDS Web
 
 ### Foundation
@@ -142,9 +143,12 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 - [Checkbox](references/components/checkbox.md) - Checkbox controls
 - [Chips](references/components/chips.md) - Filter and suggestion chips
 - [Divider](references/components/divider.md) - Content dividers
+- [Dropdown](references/components/dropdown.md) - Toggleable menus and overlays (draft component)
 - [Footer](references/components/footer.md) - Page footer
 - [Header](references/components/header.md) - Responsive page header
 - [Icon](references/components/icon.md) - SVG icon system
+- [Interactive icon](references/components/interactive-icon.md) - Icon-only interactive element (`.icon-interactive`)
+- [Assistant icon](references/components/assistant-icon.md) - AI-powered icon-only element (`.icon-assistant`)
 - [Items](references/components/items.md) - Static/navigation card and list items (replaces Bootstrap's list-group)
 - [Links](references/components/links.md) - Link styles
 - [Password input](references/components/password-input.md) - Password field with toggle
@@ -159,7 +163,7 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 
 ### Not yet documented (do not invent markup)
 
-The OUDS Web documentation site has placeholder ("Coming soon") pages for the following components — **no OUDS Web-specific markup, classes, or design guidance exists for them yet**: `accordion`, `back-to-top`, `card`, `carousel`, `close-button`, `collapse`, `dropdown`, `local-navigation`, `modal`, `nav-tab`, `navbar`, `offcanvas`, `pagination`, `popover`, `progress`, `quantity-selector`, `range`, `scrollspy`, `spinner`, `stepped-process`, `sticker`, `title-bar`, `toast`, `tooltip`.
+The OUDS Web documentation site has placeholder ("Coming soon") pages for the following components — **no OUDS Web-specific markup, classes, or design guidance exists for them yet**: `accordion`, `back-to-top`, `card`, `carousel`, `close-button`, `collapse`, `local-navigation`, `modal`, `nav-tab`, `navbar`, `offcanvas`, `pagination`, `popover`, `progress`, `quantity-selector`, `range`, `scrollspy`, `spinner`, `stepped-process`, `sticker`, `title-bar`, `toast`, `tooltip`.
 
 If a task requires one of these, **tell the user it isn't documented in OUDS Web yet** instead of guessing markup or falling back to plain Bootstrap classes (OUDS Web's class names, tokens, and structure regularly diverge from Bootstrap, so a Bootstrap fallback would likely be wrong).
 
