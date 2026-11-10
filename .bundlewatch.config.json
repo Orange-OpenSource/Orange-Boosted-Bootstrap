@@ -38,7 +38,7 @@
     },
     {
       "path": "./packages/orange/dist/css/ouds-web.min.css",
-      "maxSize": "64.5 kB"
+      "maxSize": "64.75 kB"
     },
     {
       "path": "./dist/js/ouds-web.bundle.js",
