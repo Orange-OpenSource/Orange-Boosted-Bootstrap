@@ -35,7 +35,7 @@ CSS variables factorize repeated SVG data URIs to decrease file size:
   --bs-chevron-icon: url("data:image/svg+xml,...");
 }
 
-.back-to-top-link::after {
+.link-chevron::after {
   background-image: var(--bs-chevron-icon);
 }
 ```

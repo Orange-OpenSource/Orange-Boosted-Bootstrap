@@ -38,8 +38,6 @@
   pages:
     - title: Accordion
       coming_soon: true
-    - title: Back to top
-      coming_soon: true
     - title: Card
       coming_soon: true
     - title: Carousel

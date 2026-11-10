@@ -976,7 +976,6 @@ $form-validation-states: (
 $zindex-dropdown:                   1000 !default;
 $zindex-sticky:                     1020 !default;
 $zindex-fixed:                      1030 !default;
-$zindex-back-to-top:                1035 !default; // OUDS mod
 $zindex-offcanvas-backdrop:         1040 !default;
 $zindex-offcanvas:                  1045 !default;
 $zindex-modal-backdrop:             1050 !default;
@@ -1713,26 +1712,6 @@ $pre-color:                         var(--#{$prefix}color-content-muted) !defaul
 
 //// Scroll margin
 $scroll-offset-top:              $spacer * 6 !default; // Matching .navbar computed height
-
-//// Back to top
-// scss-docs-start back-to-top
-$back-to-top-display-threshold:  100vh !default;
-$back-to-top-target-id:          "top" !default;
-$back-to-top-target-offset-top:  $scroll-offset-top !default;
-$back-to-top-offset:             $spacer * 1.5 !default;
-$back-to-top-offset-right:       $back-to-top-offset !default;
-$back-to-top-offset-bottom:      $back-to-top-offset !default;
-$back-to-top-link-offset-top:    calc(100vh - $back-to-top-offset * 4) !default;
-$back-to-top-link-offset-top-xl: calc(100vh - $spacer * 5) !default;
-$back-to-top-title-offset-right: calc(100% + var(--#{$prefix}border-width)) !default;
-$back-to-top-title-padding:      calc($btn-padding-y - 1px) $btn-padding-x calc($btn-padding-y + 1px) !default;
-$back-to-top-title-color:        var(--#{$prefix}body-color) !default;
-$back-to-top-title-bg-color:     var(--#{$prefix}body-bg) !default;
-$back-to-top-bg:                 var(--#{$prefix}highlight-color) !default;
-$back-to-top-icon:               var(--#{$prefix}chevron-icon) !default;
-$back-to-top-icon-width:         calc(.5rem + 1px) !default;
-$back-to-top-icon-height:        calc(1rem - 1px) !default;
-// scss-docs-end back-to-top
 
 //// Stepped process
 // scss-docs-start stepped-process
