@@ -57,6 +57,15 @@ export const componentsDetails: ComponentCardData[] = [
       </p>`
   },
   {
+    name: 'Body',
+    link: 'typography#body',
+    category: 'Content display',
+    snippet: `
+      <p class="mb-none">
+        Body
+      </p>`
+  },
+  {
     name: 'Breadcrumb',
     category: 'Navigation',
     snippet: `
@@ -99,6 +108,24 @@ export const componentsDetails: ComponentCardData[] = [
           <label class="control-item-label" for="checkbox[[id_prefix]]">Label</label>
         </div>
       </div>`
+  },
+  {
+    name: 'Code',
+    link: 'typography#code',
+    category: 'Content display',
+    snippet: `
+      <code>
+        Code
+      </code>`
+  },
+  {
+    name: 'Display',
+    link: 'typography#display',
+    category: 'Content display',
+    snippet: `
+      <h1 class="display-small mb-none">
+        Display
+      </h1>`
   },
   {
     name: 'Divider',
@@ -188,6 +215,21 @@ export const componentsDetails: ComponentCardData[] = [
       </footer>`
   },
   {
+    name: 'Fullscreen dialog',
+    slug: 'fullscreen-dialog-web',
+    link: 'modals#fullscreen-dialog',
+    category: 'Dialog',
+    snippet: `
+      <dialog class="modal-base modal-fullscreen-dialog position-relative h-100 w-100" open style="transition: unset">
+        <div class="modal-header 2xl:ps-xlarge">
+          <h3 class="modal-title">Title</h3>
+          <button type="button" class="btn btn-close">
+            <span class="visually-hidden">Close</span>
+          </button>
+        </div>
+      </dialog>`
+  },
+  {
     name: 'Header',
     category: 'Navigation',
     snippet: `
@@ -215,6 +257,15 @@ export const componentsDetails: ComponentCardData[] = [
           </div>
         </nav>
       </header>`
+  },
+  {
+    name: 'Heading',
+    link: 'typography#heading',
+    category: 'Content display',
+    snippet: `
+      <h2 class="hl-marker mb-none">
+        Heading
+      </h2>`
   },
   {
     name: 'Inline alert',
@@ -248,10 +299,34 @@ export const componentsDetails: ComponentCardData[] = [
       </button>`
   },
   {
+    name: 'Label',
+    link: 'typography#label',
+    category: 'Content display',
+    snippet: `
+      <p class="label-large mb-none">
+        Label
+      </p>`
+  },
+  {
     name: 'Link',
     link: 'links',
     category: 'Navigation',
     snippet: `<a class="link" href="#">Label</a>`
+  },
+  {
+    name: 'Modal dialog',
+    slug: 'modal-dialog-web',
+    link: 'modals#modal-dialog',
+    category: 'Dialog',
+    snippet: `
+      <dialog class="modal-base modal-dialog w-75 h-75 position-relative" open style="transition: unset">
+        <div class="modal-header 2xl:ps-large">
+          <h3 class="modal-title">Title</h3>
+          <button type="button" class="btn btn-close">
+            <span class="visually-hidden">Close</span>
+          </button>
+        </div>
+      </dialog>`
   },
   {
     name: 'Navigation card item',

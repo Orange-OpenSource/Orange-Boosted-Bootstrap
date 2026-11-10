@@ -450,9 +450,9 @@ $ouds-list-item-space-row-gap: $ouds-space-row-gap-none !default;
 // scss-docs-start ouds-component-modal
 $ouds-modal-dialog-border-radius-default: $ouds-border-radius-default !default;
 $ouds-modal-dialog-border-radius-rounded: $ouds-border-radius-large !default;
-$ouds-modal-dialog-space-column-gap-previous-title-desktop: $ouds-space-column-gap-2xlarge !default;
-$ouds-modal-dialog-space-column-gap-previous-title-mobile: $ouds-space-column-gap-large !default;
-$ouds-modal-dialog-space-column-gap-previous-title-tablet: $ouds-space-column-gap-xlarge !default;
+$ouds-modal-dialog-space-column-gap-previous-title-desktop: $ouds-space-column-gap-2xlarge !default; // deprecated
+$ouds-modal-dialog-space-column-gap-previous-title-mobile: $ouds-space-column-gap-large !default; // deprecated
+$ouds-modal-dialog-space-column-gap-previous-title-tablet: $ouds-space-column-gap-xlarge !default; // deprecated
 $ouds-modal-dialog-space-inset-close-button-default-desktop: $ouds-space-inset-xlarge !default;
 $ouds-modal-dialog-space-inset-close-button-default-tablet: $ouds-space-inset-large !default;
 $ouds-modal-dialog-space-inset-close-button-mobile: $ouds-space-inset-medium !default;

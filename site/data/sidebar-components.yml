@@ -19,6 +19,7 @@
     - title: Icons
     - title: Items
     - title: Links
+    - title: Modals
     - title: Password input
     - title: Radio button
     - title: Select input
@@ -29,6 +30,7 @@
     - title: Tags
     - title: Text area
     - title: Text input
+    - title: Typography
 
 - title: Coming soon
   icon: component-atom
@@ -47,8 +49,6 @@
     - title: Collapse
       coming_soon: true
     - title: Local navigation
-      coming_soon: true
-    - title: Modal
       coming_soon: true
     - title: Navbar
       coming_soon: true

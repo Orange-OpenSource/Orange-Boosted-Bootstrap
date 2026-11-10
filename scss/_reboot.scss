@@ -260,8 +260,29 @@ dd {
 
 // Blockquote
 
+.blockquote, // deprecated in OUDS Web v1.6
 blockquote {
   margin: 0 0 $ouds-space-fixed-medium; // OUDS mod: instead of `0 0 1rem`
+
+  > p {
+    @include get-font-size("body-large");
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.blockquote-footer, // deprecated in OUDS Web v1.6
+blockquote + figcaption {
+  margin-top: -$ouds-space-fixed-medium;
+  margin-bottom: $ouds-space-fixed-medium;
+  @include get-font-size("body-small");
+  color: var(--#{$prefix}color-content-muted);
+
+  &::before {
+    content: "\2014\00A0"; // em dash, nbsp
+  }
 }
 
 // OUDS mod: No italic
@@ -767,13 +788,12 @@ progress {
 dialog,
 [popover] {
   padding: 0;
-  overflow: visible;
   background: unset;
   border: 0;
 }
 
 :not([popover])::backdrop {
-  background-color: $modal-backdrop-bg;
-  opacity: $modal-backdrop-opacity;
+  // custom prop fallback to mitigate Safari < 17.4 bug where the actual value is not applied correctly
+  background-color: var(--#{$prefix}color-overlay-backdrop, $ouds-color-overlay-backdrop-light);
 }
 // End mod

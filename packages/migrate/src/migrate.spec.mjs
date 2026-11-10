@@ -77,7 +77,7 @@ describe('Migrate', () => {
     })
 
     expect(getReplacementsWarnings()).toEqual([
-      'initialism class is deprecated in tests/source-boosted.html. See: https://web.unified-design-system.orange.com/docs/foundation/typography',
+      'initialism class is deprecated in tests/source-boosted.html. See: https://web.unified-design-system.orange.com/docs/foundation/reboot',
       'container class is deprecated in tests/source-boosted.html. See: https://web.unified-design-system.orange.com/docs/layout/containers',
       'container-md class is deprecated in tests/source-boosted.html. See: https://web.unified-design-system.orange.com/docs/layout/containers',
       'bg-supporting-purple class is deprecated in tests/source-boosted.html. See: https://web.unified-design-system.orange.com/docs/utilities/background',
