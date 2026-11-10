@@ -909,7 +909,6 @@
 }
 
 :root > * {
-  position: relative;
   margin: 0;
   font-family: var(--bs-body-font-family);
   font-synthesis: none;
