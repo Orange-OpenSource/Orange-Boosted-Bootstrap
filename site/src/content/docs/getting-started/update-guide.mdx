@@ -51,6 +51,12 @@ toc: true
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> OUDS Web now supports a draft dropdown menu component. It comes from Boosted directly. It is intended as a placeholder for projects that need it urgently but be aware that it will change in the future. Read more in our [dropdown page]([[docsref:/components/dropdown]]).
 
+#### Icons
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Interactive icon has been implemented. Read more in our [icons/interactive icon paragraph]([[docsref:/components/icons#interactive-icon]]).
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Assistant icon has been implemented. Read more in our [icons/assistant icon paragraph]([[docsref:/components/icons#assistant-icon]]).
+
 #### Items
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Items components have been updated to 1.2.0. Please check that your icons and images in the leading/trailing containers keep behaving as normal. Read more in the [list item design changelog](https://r.orange.fr/r/S-ouds-doc-list-item_changelog).
@@ -63,9 +69,35 @@ toc: true
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `.back` has been removed in favor of `.link-previous` after being deprecated in v1.5.0. Read more in our [links page]([[docsref:/components/links#with-chevron]]).
 
+#### Modals
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Modal dialog component has been implemented. Read more in our [modals page]([[docsref:/components/modals#modal-dialog]]).
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Fullscreen dialog component has been implemented. Read more in our [modals page]([[docsref:/components/modals#fullscreen-dialog]]).
+
 #### Tags
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Categorical tag has been implemented. Read more in our [tags page]([[docsref:/components/tags#categorical-tag]]).
+
+#### Typography
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `.hl-marker` class has been added for 'orange' and 'orange-compact' themes, to be placed on heading large. Read more in our [typography/heading paragraph]([[docsref:/components/typography#heading]]).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Heading has been implemented, nothing to change on your side. Read more in our [typography/heading paragraph]([[docsref:/components/typography#heading]]).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Display has been implemented, nothing to change on your side. Read more in our [typography/display paragraph]([[docsref:/components/typography#display]]).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Body has been implemented, nothing to change on your side. Read more in our [typography/body paragraph]([[docsref:/components/typography#body]]).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Label has been implemented, nothing to change on your side. Read more in our [typography/label paragraph]([[docsref:/components/typography#label]]).
+
+- <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Code has been implemented, nothing to change on your side. Read more in our [typography/code paragraph]([[docsref:/components/typography#code]]).
+
+### Layout
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> A new `.container-max-width-wide` class has been added for projects that need a larger maximum container width. Read more in our [layout page]([[docsref:/layout/containers#alternative-max-width]]).
+
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> The `max-width` enforced by `.container-max-width-wide` and `.container-max-width` classes are now expressed in `rem`, so they will scale appropriately with the user zoom.
 
 ### Tools
 
@@ -78,10 +110,23 @@ toc: true
   - version 2.7.0 of [the components design tokens](https://r.orange.fr/r/S-ouds-doc-token-component-changelog)
   - version 2.7.0 of [the semantic design tokens](https://r.orange.fr/r/S-ouds-doc-token-semantic-changelog)
 
+### Sass
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `_type.scss` has been renamed to `_typography.scss` for more consistency. You will need to change this name if you create your own custom import.
+
+### Reboot
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.blockquote` and `.blockquote-footer` class have been deprecated, you can use `<blockquote>` and `<figcaption>` instead. Read more in our [reboot page, blockquote section]([[docsref:/foundation/reboot#blockquote]]).
+
 ### Dual mode
 
-1. Update `@ouds/web-common` and `@ouds/web-[theme]` to v1.5.0.
+1. Update `@ouds/web-common` and `@ouds/web-[theme]` to v1.6.0.
 2. Remove `@import "boosted/scss/dropdown";` from the Boosted custom import stack.
+3. Change `@import "@ouds/web-common/scss/type";` to `@import "@ouds/web-common/scss/typography";` in the OUDS Web custom import stack.
+4. Remove `@import "boosted/scss/modal";` from the Boosted custom import stack.
+
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> The modals components have a different structure and behavior compared to Boosted modals. Read more in our [migration from Boosted guide]([[docsref:/getting-started/migration-from-boosted#modal]]).
+
 
 ## v1.5.0 [[version-changelog-link]]
 
@@ -217,7 +262,7 @@ toc: true
 
 #### Text
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Labels have been added to font size text utilities : `.fs-lxl`, `.fs-ll`, `.fs-lm`, `.fs-ls` are now available. Read more in our [typography page]([[docsref:foundation/typography#regular-texts]]).
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Labels have been added to font size text utilities: `.fs-lxl`, `.fs-ll`, `.fs-lm`, `.fs-ls` are now available. Read more in our [text utilities page]([[docsref:utilities/text#font-size]]).
 
 ### CSS and Sass variables
 
@@ -2578,7 +2623,7 @@ toc: true
 
 ### Sass mixins
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]([[docsref:/foundation/typography#sass-mixins]]) for more details.
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]([[docsref:/utilities/text]]) for more details. {/* TODO text to adapt and link to change */ }
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> `color-mode({mode}, {root}, {inverted-mode})` mixin.
 
