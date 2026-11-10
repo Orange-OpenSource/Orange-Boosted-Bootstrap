@@ -66,7 +66,7 @@ Read more about the [font stack]([[docsref:/foundation/reboot#font-stack]]) for 
 
 ### Typography
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Body fonts’ sizes are now responsive and can change depending on the screen size. See [Typography]([[docsref:/foundation/typography]]) for more details.
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> Body fonts’ sizes are now responsive and can change depending on the screen size. See [Typography]([[docsref:/components/typography]]) for more details.
 
 - <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> A `max-width` has been added on all font references for readability reasons. If you want to get rid of the `max-width`, please use our `.mw-none` width utility.
 
@@ -76,6 +76,8 @@ Read more about the [font stack]([[docsref:/foundation/reboot#font-stack]]) for 
 
 - <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Abbreviation class `.initialism` has been removed.
 
+- <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `.blockquote` and `.blockquote-footer` class have been deprecated, you can use `<blockquote>` and `<figcaption>` instead. Read more in our [reboot page, blockquote section]([[docsref:/foundation/reboot#blockquote]]).
+
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Default spacing values now use `px`s instead of `em`s for fixed component spacing, to keep as much space as possible for meaningful content on zoom.
 
 ## Layout
@@ -84,7 +86,7 @@ Read more about the [font stack]([[docsref:/foundation/reboot#font-stack]]) for 
   - `2xs` and `3xl` have been added.
   - `xxl` has been renamed to `2xl`.
   - The breakpoints values have changed. Please refer to the [breakpoints’ documentation]([[docsref:/layout/breakpoints]]).
-  - The default container to use is now `.container-fluid` associated to `.container-max-width` instead of `.container-xxl`. Please refer to the [fluid containers’ documentation]([[docsref:/layout/containers#fluid-containers]]).
+  - The default container to use is now `.container-fluid` associated to `.container-max-width` or `.container-max-width-wide` instead of `.container-xxl`. Please refer to the [fluid containers’ documentation]([[docsref:/layout/containers#fluid-containers]]).
   - Default gutter inside grid has been changed to have a fully responsive behavior. It should be a transparent change for you.
   - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|3xsmall|2xsmall|xsmall|small|medium|large|xlarge|2xlarge|3xlarge|4xlarge|5xlarge`. Proportional equivalence between `0` → `none`, `1` → `2xsmall`, `2` → `small`, `3` → `large`, `4` → `2xlarge`, `5` → `4xlarge`.
 
@@ -969,6 +971,8 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `scss/_color-palette.scss` doesn’t exist anymore. If you were importing it in your project, please make sure to remove it.
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `scss/mixins/_alert.scss` doesn’t exist anymore. If you were importing it in your project, please make sure to remove it.
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> `scss/_type.scss` has been renamed to `scss/_typography.scss`. If you were importing it in your project, please make sure to update it accordingly.
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `scss/vendor/_rfs.scss` has been removed. It was deprecated and should not have been used.
 
@@ -2413,9 +2417,11 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
     <summary><span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> Dropped Sass variables:</summary>
     <ul>
       <li><code>$blockquote-font-size</code></li>
+      <li><code>$blockquote-footer-color</code></li>
       <li><code>$blockquote-footer-font-size</code></li>
       <li><code>$blockquote-line-height</code></li>
       <li><code>$blockquote-letter-spacing</code></li>
+      <li><code>$blockquote-margin-y</code></li>
       <li><code>$boosted-prefix</code></li>
       <li><code>$boosted-variable-prefix</code></li>
       <li><code>$border-color-subtle</code></li>
@@ -2775,7 +2781,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
 
 ## Sass
 
-- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]([[docsref:/foundation/typography#sass-mixins]]) for more details.
+- <span class="tag tag-small tag-positive"><span class="tag-status-icon"></span>New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]([[docsref:/utilities/text]]) for more details. {/* TODO text to adapt and link to change */ }
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> `color-mode({mode}, {root}, {inverted-mode})` mixin signature has changed. We now provide an `$inverted-mode` parameter that is set by default to `light` or `dark` depending on the `$mode`. It allows you to precise another mode to be the inverse of a certain mode.
 

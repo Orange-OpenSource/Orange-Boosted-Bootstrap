@@ -84,8 +84,6 @@ $modal-transition-dimension: -3rem !default;
   --#{$prefix}modal-close-button-inset: #{$ouds-fullscreen-dialog-space-inset-close-button-mobile};
   --#{$prefix}modal-border-radius: 0;
   --#{$prefix}modal-header-gap: var(--#{$prefix}space-scaled-large);
-  // the following reset will override any values from @mixin modal-dialog if applied on other breakpoints
-  --#{$prefix}modal-content-max-width: unset;
 
   transition: none; // stylelint-disable-line property-disallowed-list
 
@@ -117,7 +115,7 @@ $modal-transition-dimension: -3rem !default;
   // the following resets will override any values from @mixin fullscreen-dialog if applied on other breakpoints
   --#{$prefix}modal-footer-width: auto;
   --#{$prefix}modal-border-radius: inherit;
-  --#{$prefix}modal-content-max-width: 100%;
+  --#{$prefix}contextual-font-max-width: none;
 
   box-shadow: $ouds-elevation-emphasized;
   opacity: 0;
@@ -152,7 +150,7 @@ $modal-transition-dimension: -3rem !default;
     --#{$prefix}modal-column-count: 10;
     --#{$prefix}modal-max-height: 90dvh;
     --#{$prefix}modal-margin: auto;
-    --#{$prefix}modal-width: calc(min(100dvw, #{$ouds-grid-3xl-max-width}) * var(--#{$prefix}modal-column-count) / 12);
+    --#{$prefix}modal-width: calc((min(100dvw, #{$ouds-grid-2xl-max-width-alt}) - 2 * var(--#{$prefix}grid-margin) - (11 * var(--#{$prefix}grid-gap))) * var(--#{$prefix}modal-column-count) / 12 + (var(--#{$prefix}grid-gap) * (var(--#{$prefix}modal-column-count) - 1)));
   }
 
   @include media-breakpoint-up(md) {
@@ -170,7 +168,6 @@ $modal-transition-dimension: -3rem !default;
 
   &.modal-small {
     --#{$prefix}modal-body-footer-padding-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-body-footer-small-mobile};
-    --#{$prefix}modal-dialog-space-padding-block-bottom: #{$ouds-modal-dialog-space-padding-block-bottom-mobile};
     --#{$prefix}modal-sticky-footer-padding-block: #{$ouds-modal-dialog-space-padding-block-footer-sticky-mobile};
     --#{$prefix}modal-body-padding-top: #{$ouds-modal-dialog-space-padding-block-top-body-small-mobile};
     --#{$prefix}modal-footer-padding-top: #{$ouds-modal-dialog-space-padding-block-top-footer-small-mobile};
@@ -328,10 +325,6 @@ $modal-transition-dimension: -3rem !default;
       margin-block-end: var(--#{$prefix}modal-body-footer-padding-bottom);
     }
   }
-
-  * {
-    max-width: var(--#{$prefix}modal-content-max-width, revert-rule);
-  }
 }
 
 .modal-footer {
@@ -355,6 +348,17 @@ $modal-transition-dimension: -3rem !default;
 
     > * {
       width: 100%; // make buttons full width on small screens
+    }
+  }
+
+  &.modal-footer-horizontal {
+    @include media-breakpoint-down(sm) {
+      flex-direction: row-reverse; // force horizontal alignment
+
+      > * {
+        flex-grow: 1; // allow buttons to grow and fill available space
+        width: 25%; // reset width for horizontal layout
+      }
     }
   }
 }

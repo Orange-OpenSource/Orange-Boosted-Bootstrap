@@ -1,6 +1,6 @@
 ---
 title: Modals
-description: Use native HTML dialog with invoker commands to display focused modal interactions.
+description: Modals are UI elements that interrupt the current page or task to focus the user's attention on a specific action, decision, or piece of information.
 aliases:
   - "/docs/components/modal/"
   - "/docs/components/modals/"
@@ -39,7 +39,7 @@ import { getVersionedDocsPath } from '@libs/path'
           </dialog>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#modal-dialog">Modal dialog</a> temporary surface that interrupts the current page or task to focus the user's attention</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#modal-dialog">Modal dialog</a> is a temporary, surface-like UI element that interrupts the current page or task to focus the user's attention on a specific action, decision, or piece of information.</div>
     </div>
   </li>
   <li class="g-col-12 sm:g-col-6">
@@ -59,7 +59,7 @@ import { getVersionedDocsPath } from '@libs/path'
           </dialog>
         </div>
       </div>
-      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#fullscreen-dialog">Fullscreen dialog</a> is a dialog that occupies the entire viewport and does not use a backdrop.</div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#fullscreen-dialog">Fullscreen dialog</a> is a UI element that covers the entire viewport, interrupting the current page or task to focus the user's attention on a specific action, decision, or piece of information.</div>
     </div>
   </li>
 </ul>
@@ -86,7 +86,7 @@ As we use the native `<dialog>` element, we benefit from built-in accessibility 
 Some things to keep in mind while using modals include:
 - Ensure that the dialog has a meaningful and descriptive title, use the `[aria-labelledby]` attribute to reference the title element.
 - Choose the most appropriate initial focus when the dialog opens. By default, focus moves to the first focusable element; use `[autofocus]` when another element, such as the close button or an input, should receive focus.
-- Always provide an explicit and accessible way to close the dialog, such as a close, cancel, or confirmation button. Modal dialogs should also preserve the default `Escape` key behavior.
+- Always provide an explicit and accessible way to close the dialog, such as a close, cancel, or confirmation button. Modal dialogs should also preserve the default <kbd>Esc</kbd> key behavior.
 - Open modal dialogs [with `showModal()`](#javascript) or the [`show-modal` invoker command](#invoker-commands) so that the rest of the page is made inert and the dialog is exposed with modal semantics.
 - Adapt the title level to the context of the page, ensuring proper heading hierarchy.
 - Do not add `[tabindex]` to the `<dialog>` element.
@@ -97,7 +97,11 @@ Some things to keep in mind while using modals include:
 
 ## [[comp]] Modal dialog
 
-Modal dialog is used for focused tasks that should stay visually separated from the page without taking the full viewport.
+A modal dialog is a temporary, surface-like UI element that interrupts the current page or task to focus the user's attention on a specific action, decision, or piece of information.
+
+The modal dialog appears over a backdrop that visually separates it from the underlying content and blocks interaction with that content.
+
+See the [approach](#approach) section to get an overview of the modal dialog structure and classes.
 
 <Example buttonLabel="basic modal dialog" code={`<dialog id="modalDialog" class="modal-base modal-dialog" aria-labelledby="modalDialogTitle" closedby="any">
     <div class="modal-header">
@@ -248,9 +252,13 @@ Add `.modal-small` to switch to a small modal dialog. Use it when the dialog req
 
 ## [[comp]] Fullscreen dialog
 
-Fullscreen dialog uses the same native `<dialog>` element and internal structure as modal dialog, but takes all the available viewport. Use `.modal-fullscreen-dialog` on `<dialog>` to make it a fullscreen dialog.
+A fullscreen dialog is a UI element that covers the entire viewport, interrupting the current page or task to focus the user's attention on a specific action, decision, or piece of information.
 
-Only the [common variants](#common-variants) are available for this kind of dialog.
+The fullscreen dialog layout mirrors the structure and behavior of a standard page and lacks a backdrop, making it ideal for complex tasks or content needing more space and interaction.
+
+Fullscreen dialog uses the same native `<dialog>` element and internal structure as modal dialog, use `.modal-fullscreen-dialog` on `<dialog>` to make it a fullscreen dialog. See the [approach](#approach) section to get an overview of the fullscreen dialog structure and classes.
+
+Only the [common variants](#common-variants) are available for this kind of modal.
 
 <Example buttonLabel="fullscreen dialog" code={`<dialog id="demoFullscreenDialog" class="modal-base modal-fullscreen-dialog" aria-labelledby="demoFullscreenDialogTitle" closedby="any">
     <div class="modal-header">
@@ -272,6 +280,58 @@ Only the [common variants](#common-variants) are available for this kind of dial
 
   <button type="button" class="btn btn-default" commandfor="demoFullscreenDialog" command="show-modal">
     Open fullscreen dialog
+  </button>`} />
+
+### Using the grid
+
+Use the OUDS Web grid system within a modal by adding `.container-fluid` and `.container-max-width` on `.modal-header`, `.modal-body`, and, if using [sticky actions](#sticky-actions), `.modal-footer`. Then, use the normal grid system classes as you would anywhere else.
+
+<Callout type="info">
+  In this example the `.col-*` classes are highlighted with a background color, as a result their padding is visible and it seems the alignment is off. In reality their content are properly aligned within the grid system.
+</Callout>
+
+<Example class="bd-example-row" buttonLabel="fullscreen dialog using grid" code={`<dialog id="demoFullscreenDialogGrid" class="modal-base modal-fullscreen-dialog" aria-labelledby="demoFullscreenDialogGridTitle" closedby="any">
+    <div class="modal-header container-fluid container-max-width">
+      <h3 id="demoFullscreenDialogGridTitle" class="modal-title">Fullscreen dialog title</h3>
+      <button type="button" class="btn btn-close" commandfor="demoFullscreenDialogGrid" command="close">
+        <span class="visually-hidden">Close</span>
+      </button>
+    </div>
+    <div class="modal-body container-fluid container-max-width">
+      <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 ms-auto">.col-md-3 .ms-auto</div>
+        <div class="col-md-2 ms-auto">.col-md-2 .ms-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 ms-auto">.col-md-6 .ms-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-9">
+          Level 1: .col-sm-9
+          <div class="row">
+            <div class="col-8 col-sm-6">
+              Level 2: .col-8 .col-sm-6
+            </div>
+            <div class="col-4 col-sm-6">
+              Level 2: .col-4 .col-sm-6
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-strong" commandfor="demoFullscreenDialogGrid" command="close">Confirm</button>
+        <button type="button" class="btn btn-default" commandfor="demoFullscreenDialogGrid" command="close">Cancel</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="btn btn-default" commandfor="demoFullscreenDialogGrid" command="show-modal">
+    Open fullscreen dialog using grid
   </button>`} />
 
 ## Switching types on breakpoints
@@ -403,7 +463,7 @@ You can implement functional modal dialogs using the functional variants `.modal
     <div class="modal-body">
       <p>Sportsman do offending supported extremity breakfast by listening.</p>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" commandfor="modalDialogSuccess" command="close">Ok</button>
+        <button type="button" class="btn btn-strong" commandfor="modalDialogSuccess" command="close">Ok</button>
       </div>
     </div>
   </dialog>
@@ -425,7 +485,7 @@ You can implement functional modal dialogs using the functional variants `.modal
     <div class="modal-body">
       <p>Sportsman do offending supported extremity breakfast by listening.</p>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" commandfor="modalDialogInfo" command="close">Ok</button>
+        <button type="button" class="btn btn-strong" commandfor="modalDialogInfo" command="close">Ok</button>
       </div>
     </div>
   </dialog>
@@ -447,7 +507,7 @@ You can implement functional modal dialogs using the functional variants `.modal
     <div class="modal-body">
       <p>Sportsman do offending supported extremity breakfast by listening.</p>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" commandfor="modalDialogWarning" command="close">Ok</button>
+        <button type="button" class="btn btn-strong" commandfor="modalDialogWarning" command="close">Ok</button>
       </div>
     </div>
   </dialog>
@@ -487,7 +547,7 @@ Add a `.link-previous` anchor before the modal title to display a navigation lin
 
 <Example buttonLabel="modal dialog previous link" code={`<dialog id="modalDialogPreviousLink" class="modal-base modal-fullscreen-dialog" aria-labelledby="modalDialogPreviousLinkTitle" closedby="any">
     <div class="modal-header">
-      <a href="#" class="link link-chevron link-previous">Previous</a>
+      <a href="#" class="link link-chevron link-previous link-compact">Previous</a>
       <h3 id="modalDialogPreviousLinkTitle" class="modal-title">Modal title</h3>
       <button type="button" class="btn btn-close" commandfor="modalDialogPreviousLink" command="close">
         <span class="visually-hidden">Close</span>
@@ -506,7 +566,7 @@ Add a `.link-previous` anchor before the modal title to display a navigation lin
     Open modal with previous link
   </button>`} />
 
-### Description
+### Without description
 
 The description option displays supporting text below the title. It provides additional context, instructions, or information required to understand the purpose or outcome of the modal. The description may be omitted when the title alone provides sufficient context and the message is short and immediately understandable.
 
@@ -674,7 +734,7 @@ By default the action buttons are full-width on smaller screens. You can deactiv
 
 #### Horizontal alignment
 
-By default the action buttons will stack vertically on smaller screens and align horizontally on larger screens. You can deactivate the vertical stacking using `.flex-row-reverse` on the `.modal-footer` container, use it in conjunction with [non full-width buttons](#no-full-width-buttons) to obtain the horizontal alignment. This is only advisable for smaller buttons labels.
+By default the action buttons will stack vertically on smaller screens and align horizontally on larger screens. You can deactivate the vertical stacking by adding `.modal-footer-horizontal` to the `.modal-footer`. This is only advisable for smaller buttons labels.
 
 <Example buttonLabel="modal dialog alignment" code={`<dialog id="modalDialogAlignment" class="modal-base modal-dialog" aria-labelledby="modalDialogAlignmentTitle" closedby="any">
     <div class="modal-header">
@@ -685,9 +745,9 @@ By default the action buttons will stack vertically on smaller screens and align
     </div>
     <div class="modal-body">
       <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met.</p>
-      <div class="modal-footer flex-row-reverse">
-        <button type="button" class="btn btn-strong w-auto" commandfor="modalDialogAlignment" command="close">Ok</button>
-        <button type="button" class="btn btn-minimal w-auto" commandfor="modalDialogAlignment" command="close">Abort</button>
+      <div class="modal-footer modal-footer-horizontal">
+        <button type="button" class="btn btn-strong" commandfor="modalDialogAlignment" command="close">Ok</button>
+        <button type="button" class="btn btn-minimal" commandfor="modalDialogAlignment" command="close">Abort</button>
       </div>
     </div>
   </dialog>

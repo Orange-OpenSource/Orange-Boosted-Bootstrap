@@ -24,6 +24,7 @@ Key differences from standard Bootstrap:
 - **4 color modes**: `light`, `dark`, `root`, `root-inverted` (set via `data-bs-theme`)
 - **Orange-specific components**: header, footer, chips, tags, sticker, stepped-process, title-bar, skeleton, local-navigation, back-to-top, bullet-list, divider, quantity-selector, items (replaces Bootstrap's `.list-group`)
 - **Assistant button** (`.btn-assistant`, v1.5.0): AI-powered action button variant, distinct from standard/navigation buttons
+- **Interactive icon** (`.icon-interactive`) and **assistant icon** (`.icon-assistant`): icon-only interactive elements, distinct from `.btn-icon` and `.btn-assistant`
 - **Modified form components**: switch, checkbox, radio-button, text-input, text-area, select-input, password-input use `.control-item-*` pattern
 - **CSS variable prefix**: `--bs-`
 - **Container**: use `.container-fluid` (not fixed `.container`)
@@ -110,7 +111,6 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 ### Foundation
 
 - [Approach](references/foundation/approach.md) - Design principles
-- [Typography](references/foundation/typography.md) - Headings, body text, display, font mixins
 - [Colors](references/foundation/colors.md) - Available raw colors
 - [Color modes](references/foundation/color-modes.md) - Light/dark/root/root-inverted themes
 - [Tokens](references/foundation/tokens.md) - Raw/semantic/composite/component token architecture
@@ -146,6 +146,8 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 - [Footer](references/components/footer.md) - Page footer
 - [Header](references/components/header.md) - Responsive page header
 - [Icon](references/components/icon.md) - SVG icon system
+- [Interactive icon](references/components/interactive-icon.md) - Icon-only interactive element (`.icon-interactive`)
+- [Assistant icon](references/components/assistant-icon.md) - AI-powered icon-only element (`.icon-assistant`)
 - [Items](references/components/items.md) - Static/navigation card and list items (replaces Bootstrap's list-group)
 - [Links](references/components/links.md) - Link styles
 - [Modals](references/components/modals.md) - Native dialog modal and fullscreen dialog
@@ -158,6 +160,7 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 - [Table](references/components/table.md) - Opt-in table styling (draft component)
 - [Text area](references/components/text-area.md) - Multiline inputs
 - [Text input](references/components/text-input.md) - Single-line inputs
+- [Typography](references/components/typography.md) - Headings (+ heading marker), display, body, label, code
 
 ### Not yet documented (do not invent markup)
 

@@ -9,8 +9,11 @@ export declare global {
   export const AddedIn: typeof import('@shortcodes/AddedIn.astro').default
   export const AssetsNavTab: typeof import('@shortcodes/AssetsNavTab.astro').default
   export const AssetsTab: typeof import('@shortcodes/AssetsTab.astro').default
+  export const BackgroundColorTable: typeof import('@shortcodes/BackgroundColorTable.astro').default
   export const BootstrapCompatibility: typeof import('@shortcodes/BootstrapCompatibility.astro').default
   export const BsTable: typeof import('@shortcodes/BsTable.astro').default
+  export const CallToActionAccessibilityMarkupNotice: typeof import('@shortcodes/CallToActionAccessibilityMarkupNotice.astro').default
+  export const CallToActionDisabledState: typeof import('@shortcodes/CallToActionDisabledState.astro').default
   export const Callout: typeof import('@shortcodes/Callout.astro').default
   export const CalloutSoon: typeof import('@shortcodes/CalloutSoon.astro').default
   export const Code: typeof import('@shortcodes/Code.astro').default
@@ -22,6 +25,8 @@ export declare global {
   export const Example: typeof import('@shortcodes/Example.astro').default
   export const JsDismiss: typeof import('@shortcodes/JsDismiss.astro').default
   export const JsDocs: typeof import('@shortcodes/JsDocs.astro').default
+  export const LoadingState: typeof import('@shortcodes/LoadingState.astro').default
+  export const LoadingStateIntro: typeof import('@shortcodes/LoadingStateIntro.astro').default
   export const MandatoryFieldIndication: typeof import('@shortcodes/MandatoryFieldIndication.astro').default
   export const Placeholder: typeof import('@shortcodes/Placeholder.astro').default
   export const ScssDocs: typeof import('@shortcodes/ScssDocs.astro').default

@@ -75,7 +75,7 @@ Contents:
 |---|---|---|
 | `npm run dist` | Build all CSS (3 brands) + JS | ~30s |
 | `npm run lint` | ESLint + Stylelint | ~15s |
-| `npm run js-test` | Karma + Jasmine unit tests | ~20s |
+| `npm run js-test` | Vitest/Playwright unit tests with coverage + JS integration tests | ~20s |
 | `npm run test` | Full suite (lint + dist + tests + docs) | ~2min |
 | `npm run start` | Start 3 brand dev servers (9001/9002/9003) | ongoing |
 | `npm run clean` | Remove build artifacts | instant |
@@ -130,7 +130,7 @@ js/src/  →  Rollup  →  4 variants:
 |---|---|---|
 | `lint.yml` | Every push | ESLint + Stylelint + lockfile-lint |
 | `css.yml` | Every push | CSS build succeeds; no `/* stylelint */` in dist |
-| `js.yml` | Every push | JS unit tests (Karma + jQuery compat) |
+| `js.yml` | Every push | JS unit tests (Vitest + Playwright) and integration builds |
 | `pa11y.yml` | PRs to main | Pa11y-CI accessibility |
 | `vnu.yml` | PRs to main | VNU HTML validation |
 | `bundlewatch.yml` | PRs | Bundle size limits |
@@ -145,7 +145,7 @@ js/src/  →  Rollup  →  4 variants:
 | `.eslintrc.json` | ESLint rules (extends xo + unicorn) |
 | `rollup.config.mjs` | JS bundling configuration |
 | `package.json` | Workspaces, scripts, dependencies |
-| `karma.conf.cjs` | Test runner config |
+| `vitest.config.mjs` | JavaScript unit test and coverage config |
 | `.browserslistrc` | Browser support targets |
 
 ---

@@ -136,7 +136,7 @@ Add `.w-auto` to action buttons to disable their default full-width behavior on 
 
 #### Horizontal alignment
 
-Add `.flex-row-reverse` to `.modal-footer` to disable vertical stacking on small screens. Use it with `.w-auto`; this is best for short button labels.
+Add `.modal-footer-horizontal` to `.modal-footer` to disable vertical stacking on small screens; this is best for short button labels.
 
 #### Complex layouts
 
