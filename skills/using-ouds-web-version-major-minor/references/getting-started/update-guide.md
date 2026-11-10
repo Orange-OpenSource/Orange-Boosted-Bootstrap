@@ -7,6 +7,7 @@
 ### Breaking changes
 
 - **Alerts**: action links placed inside `.alert-container`, after `.alert-text-container`, must use the compact link variant: `.link.link-compact`. Action links placed inside `.alert-action-container`, beside the close button, continue to use the regular `.link`.
+- **Blockquotes**: `.blockquote` and `.blockquote-footer` classes deprecated (still working) - use the `<blockquote>` element directly, followed by a plain `<figcaption>` immediately after it (`blockquote + figcaption`), inside a `<figure>`.
 
 ### New
 
@@ -14,6 +15,11 @@
 - **Links**: Expand link implemented
 - **Modals**: Modal dialog and Fullscreen dialog implemented
 - **Tags**: Categorical tag implemented
+- **Typography**: optional heading marker — add `.hl-marker` to a heading large (`<h2>`/`.h2`) to display a brand-colored marker below it (Orange, Orange Compact; no visible effect on Sosh).
+
+### Components
+
+- `<code>` and `<pre>` no longer force a muted text color by default; they now inherit the surrounding text color.
 
 ## v1.5.0
 

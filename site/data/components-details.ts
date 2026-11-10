@@ -57,6 +57,15 @@ export const componentsDetails: ComponentCardData[] = [
       </p>`
   },
   {
+    name: 'Body',
+    link: 'typography#body',
+    category: 'Content display',
+    snippet: `
+      <p class="mb-none">
+        Body
+      </p>`
+  },
+  {
     name: 'Breadcrumb',
     category: 'Navigation',
     snippet: `
@@ -99,6 +108,24 @@ export const componentsDetails: ComponentCardData[] = [
           <label class="control-item-label" for="checkbox[[id_prefix]]">Label</label>
         </div>
       </div>`
+  },
+  {
+    name: 'Code',
+    link: 'typography#code',
+    category: 'Content display',
+    snippet: `
+      <code>
+        Code
+      </code>`
+  },
+  {
+    name: 'Display',
+    link: 'typography#display',
+    category: 'Content display',
+    snippet: `
+      <h1 class="display-small mb-none">
+        Display
+      </h1>`
   },
   {
     name: 'Divider',
@@ -232,6 +259,15 @@ export const componentsDetails: ComponentCardData[] = [
       </header>`
   },
   {
+    name: 'Heading',
+    link: 'typography#heading',
+    category: 'Content display',
+    snippet: `
+      <h2 class="hl-marker mb-none">
+        Heading
+      </h2>`
+  },
+  {
     name: 'Inline alert',
     slug: 'inline-alert',
     link: 'alerts#inline-alert',
@@ -261,6 +297,15 @@ export const componentsDetails: ComponentCardData[] = [
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
       </button>`
+  },
+  {
+    name: 'Label',
+    link: 'typography#label',
+    category: 'Content display',
+    snippet: `
+      <p class="label-large mb-none">
+        Label
+      </p>`
   },
   {
     name: 'Link',
