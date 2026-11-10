@@ -67,6 +67,7 @@ becomes:
 - The code fence metadata must not include backticks, remove them
 - buttonLabel value should never have a capital letter
 - When `showMarkup={false}` is used, the buttonLabel can be omitted safely.
+- Content of the code fence should not have backticks (`), replace them with quotes (")
 
 ---
 

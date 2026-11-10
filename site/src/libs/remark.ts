@@ -2,12 +2,12 @@ import type { Root, RootContent } from 'mdast'
 import type { MdxJsxAttribute, MdxJsxExpressionAttribute } from 'mdast-util-mdx-jsx'
 import type { Plugin } from 'unified'
 import { visit } from 'unist-util-visit'
-import { getConfig } from './config'
-import { getVersionedDocsPath } from './path'
-import { getComponentSVG, getVersionLink } from './utils'
 import { fromMarkdown } from 'mdast-util-from-markdown'
 import { mdxFromMarkdown } from 'mdast-util-mdx'
 import { mdxjs } from 'micromark-extension-mdxjs'
+import { getConfig } from './config'
+import { getVersionedDocsPath } from './path'
+import { getComponentSVG, getVersionLink } from './utils'
 
 // [[config:foo]]
 // [[config:foo.bar]]

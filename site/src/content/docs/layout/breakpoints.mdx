@@ -61,7 +61,7 @@ OUDS Web primarily uses the following media query ranges—or breakpoints—in o
 ```scss buttonLabel="media queries example" markupOnly
 // Source mixins
 
-// No media query necessary for 2xs breakpoint as it’s effectively ´@media (min-width: 0) { ... }´
+// No media query necessary for 2xs breakpoint as it’s effectively "@media (min-width: 0) { ... }"
 @include media-breakpoint-up(xs) { ... }
 @include media-breakpoint-up(sm) { ... }
 @include media-breakpoint-up(md) { ... }
@@ -72,7 +72,7 @@ OUDS Web primarily uses the following media query ranges—or breakpoints—in o
 
 // Usage
 
-// Example: Hide starting at ´min-width: 0´, and then show at the ´xs´ breakpoint
+// Example: Hide starting at "min-width: 0", and then show at the "xs" breakpoint
 .custom-class {
   display: none;
 }
@@ -87,7 +87,7 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 
 ```scss buttonLabel="media queries example css result" markupOnly
 // 2x-small devices (portrait phones, less than ${getTokenValue('$ouds-grid-xs-min-width')})
-// No media query for \`2xs\` since this is the default in OUDS Web
+// No media query for "2xs" since this is the default in OUDS Web
 
 // X-small devices (portrait phones, ${getTokenValue('$ouds-grid-xs-min-width')} and up)
 @media (min-width: ${getTokenValue('$ouds-grid-xs-min-width')}) { ... }
@@ -116,7 +116,7 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 We occasionally use media queries that go in the other direction (the given screen size _or smaller_):
 
 ```scss buttonLabel="media queries max-width smaller direction example" markupOnly
-// No media query necessary for 2xs breakpoint as it’s effectively ´@media (max-width: 0) { ... }´
+// No media query necessary for 2xs breakpoint as it’s effectively "@media (max-width: 0) { ... }"
 @include media-breakpoint-down(xs) { ... }
 @include media-breakpoint-down(sm) { ... }
 @include media-breakpoint-down(md) { ... }
@@ -135,28 +135,28 @@ We occasionally use media queries that go in the other direction (the given scre
 
 These mixins take those declared breakpoints, subtract `.02px` from them, and use them as our `max-width` values. For example:
 
-```scss buttonLabel="max-width smaller direction example css result"
-// \`2xs\` returns only a ruleset and no media query
+```scss buttonLabel="max-width smaller direction example css result" markupOnly
+// "2xs" returns only a ruleset and no media query
 // ... { ... }
-// \`xs\` applies to 2x-small devices (portrait phones, less than ${getTokenValue('$ouds-grid-xs-min-width')})
+// "xs" applies to 2x-small devices (portrait phones, less than ${getTokenValue('$ouds-grid-xs-min-width')})
 @media (max-width: ${getTokenValue('$ouds-grid-xs-min-width').slice(0, -2) - 0.02}px) { ... }
 
-// \`sm\` applies to x-small devices (portrait phones, less than ${getTokenValue('$ouds-grid-sm-min-width')})
+// "sm" applies to x-small devices (portrait phones, less than ${getTokenValue('$ouds-grid-sm-min-width')})
 @media (max-width: ${getTokenValue('$ouds-grid-sm-min-width').slice(0, -2) - 0.02}px) { ... }
 
-// \`md\` applies to small devices (landscape phones, less than ${getTokenValue('$ouds-grid-md-min-width')})
+// "md" applies to small devices (landscape phones, less than ${getTokenValue('$ouds-grid-md-min-width')})
 @media (max-width: ${getTokenValue('$ouds-grid-md-min-width').slice(0, -2) - 0.02}px) { ... }
 
-// \`lg\` applies to medium devices (portrait tablets, less than ${getTokenValue('$ouds-grid-lg-min-width')})
+// "lg" applies to medium devices (portrait tablets, less than ${getTokenValue('$ouds-grid-lg-min-width')})
 @media (max-width: ${getTokenValue('$ouds-grid-lg-min-width').slice(0, -2) - 0.02}px) { ... }
 
-// \`xl\` applies to large devices (landscape tablets, less than ${getTokenValue('$ouds-grid-xl-min-width')})
+// "xl" applies to large devices (landscape tablets, less than ${getTokenValue('$ouds-grid-xl-min-width')})
 @media (max-width: ${getTokenValue('$ouds-grid-xl-min-width').slice(0, -2) - 0.02}px) { ... }
 
-// \`2xl\` applies to x-large devices (desktops, less than ${getTokenValue('$ouds-grid-2xl-min-width')})
+// "2xl" applies to x-large devices (desktops, less than ${getTokenValue('$ouds-grid-2xl-min-width')})
 @media (max-width: ${getTokenValue('$ouds-grid-2xl-min-width').slice(0, -2) - 0.02}px) { ... }
 
-// \`3xl\` applies to 2x-large devices (large desktops, less than ${getTokenValue('$ouds-grid-3xl-min-width')})
+// "3xl" applies to 2x-large devices (large desktops, less than ${getTokenValue('$ouds-grid-3xl-min-width')})
 @media (max-width: ${getTokenValue('$ouds-grid-3xl-min-width').slice(0, -2) - .02}px) { ... }
 ```
 
