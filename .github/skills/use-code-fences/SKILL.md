@@ -31,7 +31,7 @@ should become:
 ```
 ```
 
-`<Code>` should be replaced with a code fence with `markupOnly={true}`.
+`<Code>` should be replaced with a code fence with `markupOnly`.
 
 ```mdx
 <Code buttonLabel="code example" code={`npm i package-name`} />
@@ -40,7 +40,7 @@ should become:
 should become:
 
 ```mdx
-```sh markupOnly={true} buttonLabel="code example"
+```sh buttonLabel="code example" markupOnly
 npm i package-name
 ```
 ```
@@ -65,10 +65,12 @@ becomes:
 - Be careful with indentation, the code fence content should have one indentation less than the original code argument on every line.
 - The `slot` argument can be safely used in the metadata of the code fence, just like any other JSX argument.
 - The code fence metadata must not include backticks, remove them
+- buttonLabel value should never have a capital letter
+- When `showMarkup={false}` is used, the buttonLabel can be omitted safely.
 
 ---
 
 ## Step 3 — Interactive feedback
 
 - ask for confirmation for each `<Code>` changes to let the user choose the type of code fence (e.g., `sh`, `scss`)
-- for each replacements where the buttonLabel is not present in the original component, ask the user to provide a buttonLabel, suggest a default value based on the context of the code if possible
+- for each replacements where the buttonLabel is not present in the original component (except when showMarkup={false}), ask the user to provide a buttonLabel, suggest a default value based on the context of the code if possible

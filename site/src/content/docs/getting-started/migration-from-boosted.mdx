@@ -13,7 +13,7 @@ This guide provides information on how to migrate from Boosted (latest release) 
 <Callout type="info">
   The [`@ouds/web-migrate`](https://www.npmjs.com/package/@ouds/web-migrate) CLI can help migrate from Boosted to OUDS Web. Run it against your project files and review the diff afterward:
 
-  ```bash buttonLabel="Run migration CLI" markupOnly={true}
+  ```bash buttonLabel="Run migration CLI" markupOnly
   npx @ouds/web-migrate --from=boosted "src/**/*.{css,scss,html}"
   ```
 </Callout>
@@ -166,7 +166,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 For example, if you used to write:
 
-```html buttonLabel="Old button example" markupOnly={true}
+```html buttonLabel="Old button example" markupOnly
 <button class="btn btn-secondary" type="button" disabled>
   <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
   <span class="visually-hidden" role="status">Loading...</span>
@@ -174,7 +174,7 @@ For example, if you used to write:
 ```
 Now you should write:
 
-```html buttonLabel="New button example" markupOnly={true}
+```html buttonLabel="New button example" markupOnly
 <button type="button" class="btn btn-default loading-indeterminate" id="loading-btn-1" disabled>
   Download file 1
   <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -214,7 +214,7 @@ You will have to make some extra JavaScript to change the styles and update the 
 <div class="ps-xlarge">
 For example, if you used to write:
 
-```html buttonLabel="Old list group example" markupOnly={true}
+```html buttonLabel="Old list group example" markupOnly
 <a href="#" class="list-group-item list-group-item-action list-group-item-danger">A simple Danger list group item</a>
 
 <!-- or -->
@@ -238,7 +238,7 @@ For example, if you used to write:
 ```
 Now you should write:
 
-```html buttonLabel="New list group example" markupOnly={true}
+```html buttonLabel="New list group example" markupOnly
 <div class="item item-navigation">
   <a href="#" class="item-container item-interactive">
     <div class="item-content">
@@ -317,7 +317,7 @@ Now you should write:
 <div class="ps-xlarge">
 For example, if you used to write:
 
-```html buttonLabel="Old checkbox example" markupOnly={true}
+```html buttonLabel="Old checkbox example" markupOnly
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="checkboxDefault" />
   <label class="form-check-label" for="checkboxDefault">
@@ -327,7 +327,7 @@ For example, if you used to write:
 ```
 Now you should write:
 
-```html buttonLabel="New checkbox example" markupOnly={true}
+```html buttonLabel="New checkbox example" markupOnly
 <div class="checkbox-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault" />
@@ -348,7 +348,7 @@ See [our new Checkbox page]([[docsref:/components/checkbox]]) for more informati
 <div class="ps-xlarge">
 For example, if you used to write:
 
-```html buttonLabel="Old placeholder example" markupOnly={true}
+```html buttonLabel="Old placeholder example" markupOnly
 <p class="placeholder-wave">
   <span class="placeholder col-12"></span>
 </p>
@@ -356,7 +356,7 @@ For example, if you used to write:
 
 Now you should write:
 
-```html buttonLabel="New placeholder example" markupOnly={true}
+```html buttonLabel="New placeholder example" markupOnly
 <span class="skeleton col-12"></span>
 ```
 See [our new Skeleton page]([[docsref:/components/skeleton]]) for more information.
@@ -372,7 +372,7 @@ See [our new Skeleton page]([[docsref:/components/skeleton]]) for more informati
 <div class="ps-xlarge">
 For example, if you used to write:
 
-```html buttonLabel="Old radio button example" markupOnly={true}
+```html buttonLabel="Old radio button example" markupOnly
 <div class="form-check">
   <input class="form-check-input" type="radio" value="" id="radioDefault" />
   <label class="form-check-label" for="radioDefault">
@@ -382,7 +382,7 @@ For example, if you used to write:
 ```
 Now you should write:
 
-```html buttonLabel="New radio button example" markupOnly={true}
+```html buttonLabel="New radio button example" markupOnly
 <div class="radio-button-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="radio" value="" id="radioButtonDefault" />
@@ -407,7 +407,7 @@ See [our new Radio button page]([[docsref:/components/radio-button]]) for more i
 <div class="ps-xlarge">
 For example, if you used to write:
 
-```html buttonLabel="Old select example" markupOnly={true}
+```html buttonLabel="Old select example" markupOnly
 <select class="form-select" aria-label="Default select example">
   <option selected>Open this select menu</option>
   <option value="1">One</option>
@@ -417,7 +417,7 @@ For example, if you used to write:
 ```
 Now you should write:
 
-```html buttonLabel="New select example" markupOnly={true}
+```html buttonLabel="New select example" markupOnly
 <div class="select-input">
   <div class="select-input-container">
     <label for="exampleSelect">Default select example</label>
@@ -441,7 +441,7 @@ See [our new Select Input page]([[docsref:/components/select-input]]) for more i
 <div class="ps-xlarge">
 For example, if you used to write:
 
-```html buttonLabel="Old switch example" markupOnly={true}
+```html buttonLabel="Old switch example" markupOnly
 <div class="form-check form-switch">
   <input class="form-check-input" type="checkbox" role="switch" value="" id="switchDefault" />
   <label class="form-check-label" for="switchDefault">
@@ -451,7 +451,7 @@ For example, if you used to write:
 ```
 Now you should write:
 
-```html buttonLabel="New switch example" markupOnly={true}
+```html buttonLabel="New switch example" markupOnly
 <div class="switch-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDefault" />
@@ -476,7 +476,7 @@ See [our new Switch page]([[docsref:/components/switch]]) for more information.
 <div class="ps-xlarge">
 For example, if you used to write:
 
-```html buttonLabel="Old text input example" markupOnly={true}
+```html buttonLabel="Old text input example" markupOnly
 <div class="mb-3">
   <label for="exampleFormControlInput" class="form-label">Email address</label>
   <input type="email" class="form-control" id="exampleFormControlInput" placeholder="name@example.com">
@@ -484,7 +484,7 @@ For example, if you used to write:
 ```
 Now you should write:
 
-```html buttonLabel="New text input example" markupOnly={true}
+```html buttonLabel="New text input example" markupOnly
 <div class="text-input mb-medium">
   <div class="text-input-container">
     <label for="exampleTextInput">Email address</label>
@@ -503,7 +503,7 @@ See [our new Text Input page]([[docsref:/components/text-input]]) for more infor
 <div class="ps-xlarge">
 For example, if you used to write:
 
-```html buttonLabel="Old text area example" markupOnly={true}
+```html buttonLabel="Old text area example" markupOnly
 <div class="mb-3">
   <label for="exampleFormControlTextarea" class="form-label">Example textarea</label>
   <textarea class="form-control" id="exampleFormControlTextarea" rows="3"></textarea>
@@ -511,7 +511,7 @@ For example, if you used to write:
 ```
 Now you should write:
 
-```html buttonLabel="New text area example" markupOnly={true}
+```html buttonLabel="New text area example" markupOnly
 <div class="text-area">
   <div class="text-area-container">
     <label for="exampleTextArea">Example textarea</label>
@@ -913,7 +913,7 @@ See [our new Text Area page]([[docsref:/components/text-area]]) for more informa
   <details class="mb-large">
   <summary>See the new import stack</summary>
 
-  ```diff buttonLabel="New import stack" markupOnly={true}
+  ```diff buttonLabel="New import stack" markupOnly
   + @import "config";
     @import "functions";
   + @import "tokens/raw";

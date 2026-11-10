@@ -22,7 +22,7 @@ Classes for the value of `object-fit` are named using the format `.object-fit-{v
 
 Add the `object-fit-{value}` class to the [replaced element](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element):
 
-```html class="d-flex overflow-auto" buttonLabel="object-fit examples on <img> element"
+```html buttonLabel="object-fit examples on <img> element" class="d-flex overflow-auto"
 <Placeholder width="140" height="120" class="object-fit-contain border" text="Object fit contain" markup="img" color="#333" background="#bbb" />
 <Placeholder width="140" height="120" class="object-fit-cover border" text="Object fit cover" markup="img" color="#333" background="#bbb" />
 <Placeholder width="140" height="120" class="object-fit-fill border" text="Object fit fill" markup="img" color="#333" background="#bbb" />
@@ -34,7 +34,7 @@ Add the `object-fit-{value}` class to the [replaced element](https://developer.m
 
 Responsive variations also exist for each `object-fit` value using the format `.{breakpoint}:object-fit-{value}`, for the following breakpoint abbreviations: `xs`, `sm`, `md`, `lg`, `xl`, `2xl` and `3xl`. Classes can be combined for various effects as you need.
 
-```html class="d-flex overflow-auto" buttonLabel="Responsive object-fit examples on <img> element"
+```html buttonLabel="Responsive object-fit examples on <img> element" class="d-flex overflow-auto"
 <Placeholder width="140" height="80" class="xs:object-fit-contain border" text="Contain on xs" markup="img" color="#333" background="#bbb" />
 <Placeholder width="140" height="80" class="sm:object-fit-contain border" text="Contain on sm" markup="img" color="#333" background="#bbb" />
 <Placeholder width="140" height="80" class="md:object-fit-contain border" text="Contain on md" markup="img" color="#333" background="#bbb" />
@@ -46,7 +46,7 @@ Responsive variations also exist for each `object-fit` value using the format `.
 
 
 <BootstrapCompatibility>
-```html class="d-flex overflow-auto" buttonLabel="Bootstrap style responsive object-fit examples"
+```html buttonLabel="Bootstrap style responsive object-fit examples" class="d-flex overflow-auto"
 <Placeholder width="140" height="80" class="object-fit-xs-contain border" text="Contain on xs" markup="img" color="#333" background="#bbb" />
 <Placeholder width="140" height="80" class="object-fit-sm-contain border" text="Contain on sm" markup="img" color="#333" background="#bbb" />
 <Placeholder width="140" height="80" class="object-fit-md-contain border" text="Contain on md" markup="img" color="#333" background="#bbb" />
@@ -61,7 +61,7 @@ Responsive variations also exist for each `object-fit` value using the format `.
 
 The `.object-fit-{value}` and responsive `.{breakpoint}:object-fit-{value}` utilities also work on `<video>` elements.
 
-```html buttonLabel="object-fit examples on <video> element" markupOnly={true}
+```html buttonLabel="object-fit examples on <video> element" markupOnly
 <video src="..." class="object-fit-contain" autoplay></video>
 <video src="..." class="object-fit-cover" autoplay></video>
 <video src="..." class="object-fit-fill" autoplay></video>

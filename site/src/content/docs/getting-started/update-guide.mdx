@@ -16,7 +16,7 @@ toc: true
 <Callout type="info">
   The [`@ouds/web-migrate`](https://www.npmjs.com/package/@ouds/web-migrate) CLI can help update to the latest version. Run it against your project files and review the diff afterward:
 
-  ```bash
+  ```bash buttonLabel="run OUDS Web migration" markupOnly
   npx @ouds/web-migrate "src/**/*.{css,scss,html}"
   ```
 </Callout>
@@ -691,7 +691,7 @@ toc: true
   <details class="mb-large">
     <summary>See the new import stack</summary>
 
-    ```diff
+    ```diff buttonLabel="updated import stack diff" markupOnly
       @import "tokens/semantic-colors-custom-props";
       @import "tokens/composite";
     + @import "tokens/component-colors-custom-props";
@@ -1207,7 +1207,7 @@ toc: true
   <details class="mb-large">
     <summary>See the new import stack</summary>
 
-    ```diff
+    ```diff buttonLabel="new import stack diff" markupOnly
     + @import "config";
       @import "functions";
       @import "tokens/raw";
@@ -2608,7 +2608,7 @@ From now on, by default, OUDS Web won’t embed Bootstrap elements (like helpers
   <details class="mb-large">
   <summary>See the new import stack</summary>
 
-  ```diff
+  ```diff buttonLabel="new import stack diff" markupOnly
     @import "functions";
   + @import "tokens/raw";
   + @import "tokens/semantic";

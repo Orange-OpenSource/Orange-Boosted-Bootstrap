@@ -190,7 +190,7 @@ Here are some examples of how to use the different `[data-bs-theme]` attribute o
 
 Enable the built in dark color mode across your entire project by adding the `[data-bs-theme="dark"]` attribute to the `<html>` element. This will apply the dark color mode to all components and elements, other than those with a specific `[data-bs-theme]` attribute applied. Building on the [quick start template]([[docsref:/getting-started/introduction#quick-start]]):
 
-```html buttonLabel="Enable dark mode example" markupOnly={true}
+```html buttonLabel="Enable dark mode example" markupOnly
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
   <head>
@@ -224,7 +224,7 @@ We use a custom Sass mixin, `color-mode()`, to help you control _how_ color mode
 
 In case you want to use media queries and only make color modes automatic, you can change the mixin’s default type via Sass variable. Consider the following snippet and its compiled CSS output.
 
-```scss buttonLabel="Sass color mode example" markupOnly={true}
+```scss buttonLabel="Sass color mode example" markupOnly
 $color-mode-type: data;
 
 @include color-mode(dark) {
@@ -237,7 +237,7 @@ $color-mode-type: data;
 
 Outputs to:
 
-```css buttonLabel="Compiled CSS output for data attribute color mode" markupOnly={true}
+```css buttonLabel="Compiled CSS output for data attribute color mode" markupOnly
 [data-bs-theme=dark] .element {
   color: var(--bs-color-content-on-status-info-muted);
   background-color: var(--bs-color-surface-status-info-muted);
@@ -246,7 +246,7 @@ Outputs to:
 
 And when setting to `media-query`:
 
-```scss buttonLabel="Sass color mode example with media query" markupOnly={true}
+```scss buttonLabel="Sass color mode example with media query" markupOnly
 $color-mode-type: media-query;
 
 @include color-mode(dark) {
@@ -259,7 +259,7 @@ $color-mode-type: media-query;
 
 Outputs to:
 
-```css buttonLabel="Compiled CSS output for media query color mode" markupOnly={true}
+```css buttonLabel="Compiled CSS output for media query color mode" markupOnly
 @media (prefers-color-scheme: dark) {
   .element {
     color: var(--bs-color-content-on-status-info-muted);
@@ -272,7 +272,7 @@ Outputs to:
 
 You can also change the root selector from where the mode variables are set. By default, it’s set to `:root`, but you can change it to any other selector. This is useful if you want to apply the mode to another element, for instance in Angular where you can’t access easily the `<html>` element.
 
-```scss buttonLabel="Sass root selector example" markupOnly={true}
+```scss buttonLabel="Sass root selector example" markupOnly
 $ouds-root-selector: "#app";
 
 @import "@ouds/web-[[config:brand]]/scss/ouds-web";
@@ -280,7 +280,7 @@ $ouds-root-selector: "#app";
 
 Outputs to:
 
-```css buttonLabel="Compiled CSS output for root selector change" markupOnly={true}
+```css buttonLabel="Compiled CSS output for root selector change" markupOnly
 #app,
 [data-bs-theme="light"],
 #app[data-bs-theme="light"] [data-bs-theme="root"],

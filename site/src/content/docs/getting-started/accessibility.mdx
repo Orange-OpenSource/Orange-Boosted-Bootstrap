@@ -34,7 +34,7 @@ OUDS Web **contrasts aren’t locked, please make sure they meet [WCAG 2.2 acces
 
 Content which should be visually hidden, but remain accessible to assistive technologies such as screen readers, can be styled using the `.visually-hidden` class. This can be useful in situations where additional visual information or cues (such as meaning denoted through the use of color) need to also be conveyed to non-visual users.
 
-```html
+```html buttonLabel="visually hidden icon description"
 <p>
   <svg width="1.5em" height="1.5em" class="text-status-negative" aria-hidden="true">
     <use xlink:href="/orange/docs/[[config:docs_version]]/assets/img/ouds-web-sprite.svg#functional-status-negative"/>
@@ -46,7 +46,7 @@ Content which should be visually hidden, but remain accessible to assistive tech
 
 For visually hidden interactive controls, such as traditional "skip" links, use the `.visually-hidden-focusable` class. This will ensure that the control becomes visible once focused (for sighted keyboard users). **Watch out, `.visually-hidden-focusable` is a standalone class, and must not be used in combination with the `.visually-hidden` class.**
 
-```html
+```html buttonLabel="visually hidden focusable link" markupOnly
 <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
 ```
 
@@ -62,15 +62,15 @@ On browsers that support `prefers-reduced-motion`, and where the user has *not* 
 
 OUDS Web provides `focus-visible()` mixin to ensure a proper visible focus state:
 
-<ScssDocs name="focus-visible" file="scss/mixins/_focus.scss" />
+<ScssDocs name="focus-visible" file="scss/mixins/_focus.scss" buttonLabel="focus-visible mixin" />
 
 This mixin is applied by default on every `:focus-visible` element.
 
-<ScssDocs name="focus-visibility" file="scss/_reboot.scss" />
+<ScssDocs name="focus-visibility" file="scss/_reboot.scss" buttonLabel=":focus-visible declaration" />
 
 This visible focus state is defined by an outer outline and an inner box shadow. Colors are switched in a dark context. Here are the basic variables that define this visible focus:
 
-<ScssDocs name="focus-visible-variables" file="scss/_variables.scss" />
+<ScssDocs name="focus-visible-variables" file="scss/_variables.scss" buttonLabel="focus-visible variables" />
 
 {/* Each component then specifies its own visible focus style when needed, for example [carousels]([[docsref:/components/carousel#with-indicators]]).
 
@@ -89,7 +89,7 @@ When using a fixed (or sticky) header, tabbing backward often hides focused elem
 
 OUDS Web provides `target-size()` mixin to ensure a minimum target size, adding a centered pseudo-element with a minimum size —defaulting to `44px` to pass [WCAG 2.2 "Target Size" Success Criterion (2.5.8)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)— alongside a few arguments to fit specific needs (e.g. different width and height, using `::after` instead of `::before`, etc.).
 
-<ScssDocs name="target-size" file="scss/mixins/_target-size.scss" />
+<ScssDocs name="target-size" file="scss/mixins/_target-size.scss" buttonLabel="target size mixin" />
 
 ### Maximum line length
 

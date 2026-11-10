@@ -11,7 +11,7 @@ toc: true
 
 Quick positioning classes are available, though they are not responsive.
 
-```html
+```html buttonLabel="position values example" markupOnly
 <div class="position-static">...</div>
 <div class="position-relative">...</div>
 <div class="position-absolute">...</div>
@@ -38,14 +38,16 @@ Where *position* is one of:
 
 (You can add more position values by adding entries to the `$position-values` Sass map variable.)
 
-<Example class="bd-example-position-utils" code={`<div class="position-relative">
-    <div class="position-absolute top-0 start-0"></div>
-    <div class="position-absolute top-0 end-0"></div>
-    <div class="position-absolute top-50 start-50"></div>
-    <div class="position-absolute bottom-50 end-50"></div>
-    <div class="position-absolute bottom-0 start-0"></div>
-    <div class="position-absolute bottom-0 end-0"></div>
-  </div>`} />
+```html buttonLabel="arrange elements example" class="bd-example-position-utils"
+<div class="position-relative">
+  <div class="position-absolute top-0 start-0"></div>
+  <div class="position-absolute top-0 end-0"></div>
+  <div class="position-absolute top-50 start-50"></div>
+  <div class="position-absolute bottom-50 end-50"></div>
+  <div class="position-absolute bottom-0 start-0"></div>
+  <div class="position-absolute bottom-0 end-0"></div>
+</div>
+```
 
 ## Center elements
 
@@ -53,96 +55,116 @@ In addition, you can also center the elements with the transform utility class `
 
 This class applies the transformations `translateX(-50%)` and `translateY(-50%)` to the element which, in combination with the edge positioning utilities, allows you to absolute center an element.
 
-<Example class="bd-example-position-utils" code={`<div class="position-relative">
-    <div class="position-absolute top-0 start-0 translate-middle"></div>
-    <div class="position-absolute top-0 start-50 translate-middle"></div>
-    <div class="position-absolute top-0 start-100 translate-middle"></div>
-    <div class="position-absolute top-50 start-0 translate-middle"></div>
-    <div class="position-absolute top-50 start-50 translate-middle"></div>
-    <div class="position-absolute top-50 start-100 translate-middle"></div>
-    <div class="position-absolute top-100 start-0 translate-middle"></div>
-    <div class="position-absolute top-100 start-50 translate-middle"></div>
-    <div class="position-absolute top-100 start-100 translate-middle"></div>
-  </div>`} />
+```html buttonLabel="center elements example" class="bd-example-position-utils"
+<div class="position-relative">
+  <div class="position-absolute top-0 start-0 translate-middle"></div>
+  <div class="position-absolute top-0 start-50 translate-middle"></div>
+  <div class="position-absolute top-0 start-100 translate-middle"></div>
+  <div class="position-absolute top-50 start-0 translate-middle"></div>
+  <div class="position-absolute top-50 start-50 translate-middle"></div>
+  <div class="position-absolute top-50 start-100 translate-middle"></div>
+  <div class="position-absolute top-100 start-0 translate-middle"></div>
+  <div class="position-absolute top-100 start-50 translate-middle"></div>
+  <div class="position-absolute top-100 start-100 translate-middle"></div>
+</div>
+```
 
 By adding `.translate-middle-x` or `.translate-middle-y` classes, elements can be positioned only in horizontal or vertical direction.
 
-<Example class="bd-example-position-utils" code={`<div class="position-relative">
-    <div class="position-absolute top-0 start-0"></div>
-    <div class="position-absolute top-0 start-50 translate-middle-x"></div>
-    <div class="position-absolute top-0 end-0"></div>
-    <div class="position-absolute top-50 start-0 translate-middle-y"></div>
-    <div class="position-absolute top-50 start-50 translate-middle"></div>
-    <div class="position-absolute top-50 end-0 translate-middle-y"></div>
-    <div class="position-absolute bottom-0 start-0"></div>
-    <div class="position-absolute bottom-0 start-50 translate-middle-x"></div>
-    <div class="position-absolute bottom-0 end-0"></div>
-  </div>`} />
+```html buttonLabel="center elements along one axis" class="bd-example-position-utils"
+<div class="position-relative">
+  <div class="position-absolute top-0 start-0"></div>
+  <div class="position-absolute top-0 start-50 translate-middle-x"></div>
+  <div class="position-absolute top-0 end-0"></div>
+  <div class="position-absolute top-50 start-0 translate-middle-y"></div>
+  <div class="position-absolute top-50 start-50 translate-middle"></div>
+  <div class="position-absolute top-50 end-0 translate-middle-y"></div>
+  <div class="position-absolute bottom-0 start-0"></div>
+  <div class="position-absolute bottom-0 start-50 translate-middle-x"></div>
+  <div class="position-absolute bottom-0 end-0"></div>
+</div>
+```
 
 ## Fixed top
 
 Position an element at the top of the viewport, from edge to edge. Be sure you understand the ramifications of fixed position in your project; you may need to add additional CSS.
 
-<Code lang="html" buttonLabel="fixed top" code={`<div class="fixed-top">...</div>`} />
+```html buttonLabel="fixed top" markupOnly
+<div class="fixed-top">...</div>
+```
 
 ## Fixed bottom
 
 Position an element at the bottom of the viewport, from edge to edge. Be sure you understand the ramifications of fixed position in your project; you may need to add additional CSS.
 
-<Code lang="html" buttonLabel="fixed bottom" code={`<div class="fixed-bottom">...</div>`} />
+```html buttonLabel="fixed bottom" markupOnly
+<div class="fixed-bottom">...</div>
+```
 
 ## Sticky top
 
 Position an element at the top of the viewport, from edge to edge, but only after you scroll past it.
 
-<Code lang="html" buttonLabel="sticky top" code={`<div class="sticky-top">...</div>`} />
+```html buttonLabel="sticky top" markupOnly
+<div class="sticky-top">...</div>
+```
 
 ## Responsive sticky top
 
 Responsive variations also exist for `.sticky-top` utility.
 
-<Code lang="html" buttonLabel="responsive sticky top" code={`<div class="xs:sticky-top">Stick to the top on viewports sized XS (x-small) or wider</div>
-  <div class="sm:sticky-top">Stick to the top on viewports sized SM (small) or wider</div>
-  <div class="md:sticky-top">Stick to the top on viewports sized MD (medium) or wider</div>
-  <div class="lg:sticky-top">Stick to the top on viewports sized LG (large) or wider</div>
-  <div class="xl:sticky-top">Stick to the top on viewports sized XL (x-large) or wider</div>
-  <div class="2xl:sticky-top">Stick to the top on viewports sized 2XL (2x-large) or wider</div>
-  <div class="3xl:sticky-top">Stick to the top on viewports sized 3XL (3x-large) or wider</div>`} />
+```html buttonLabel="responsive sticky top" markupOnly
+<div class="xs:sticky-top">Stick to the top on viewports sized XS (x-small) or wider</div>
+<div class="sm:sticky-top">Stick to the top on viewports sized SM (small) or wider</div>
+<div class="md:sticky-top">Stick to the top on viewports sized MD (medium) or wider</div>
+<div class="lg:sticky-top">Stick to the top on viewports sized LG (large) or wider</div>
+<div class="xl:sticky-top">Stick to the top on viewports sized XL (x-large) or wider</div>
+<div class="2xl:sticky-top">Stick to the top on viewports sized 2XL (2x-large) or wider</div>
+<div class="3xl:sticky-top">Stick to the top on viewports sized 3XL (3x-large) or wider</div>
+```
 
 <BootstrapCompatibility>
-<Code lang="html" buttonLabel="responsive sticky top" code={`<div class="sticky-xs-top">Stick to the top on viewports sized XS (x-small) or wider</div>
-  <div class="sticky-sm-top">Stick to the top on viewports sized SM (small) or wider</div>
-  <div class="sticky-md-top">Stick to the top on viewports sized MD (medium) or wider</div>
-  <div class="sticky-lg-top">Stick to the top on viewports sized LG (large) or wider</div>
-  <div class="sticky-xl-top">Stick to the top on viewports sized XL (x-large) or wider</div>
-  <div class="sticky-xxl-top">Stick to the top on viewports sized XXL (xx-large) or wider</div>
-  <div class="sticky-3xl-top">Stick to the top on viewports sized 3XL (3x-large) or wider</div>`} />
+```html buttonLabel="responsive sticky top" markupOnly
+<div class="sticky-xs-top">Stick to the top on viewports sized XS (x-small) or wider</div>
+<div class="sticky-sm-top">Stick to the top on viewports sized SM (small) or wider</div>
+<div class="sticky-md-top">Stick to the top on viewports sized MD (medium) or wider</div>
+<div class="sticky-lg-top">Stick to the top on viewports sized LG (large) or wider</div>
+<div class="sticky-xl-top">Stick to the top on viewports sized XL (x-large) or wider</div>
+<div class="sticky-xxl-top">Stick to the top on viewports sized XXL (xx-large) or wider</div>
+<div class="sticky-3xl-top">Stick to the top on viewports sized 3XL (3x-large) or wider</div>
+```
 </BootstrapCompatibility>
 
 ## Sticky bottom
 
 Position an element at the bottom of the viewport, from edge to edge, but only after you scroll past it.
 
-<Code lang="html" buttonLabel="sticky bottom" code={`<div class="sticky-bottom">...</div>`} />
+```html buttonLabel="sticky bottom" markupOnly
+<div class="sticky-bottom">...</div>
+```
 
 ## Responsive sticky bottom
 
 Responsive variations also exist for `.sticky-bottom` utility.
 
-<Code lang="html" buttonLabel="responsive sticky bottom" code={`<div class="xs:sticky-bottom">Stick to the bottom on viewports sized XS (x-small) or wider</div>
-  <div class="sm:sticky-bottom">Stick to the bottom on viewports sized SM (small) or wider</div>
-  <div class="md:sticky-bottom">Stick to the bottom on viewports sized MD (medium) or wider</div>
-  <div class="lg:sticky-bottom">Stick to the bottom on viewports sized LG (large) or wider</div>
-  <div class="xl:sticky-bottom">Stick to the bottom on viewports sized XL (x-large) or wider</div>
-  <div class="2xl:sticky-bottom">Stick to the bottom on viewports sized 2XL (2x-large) or wider</div>
-  <div class="3xl:sticky-bottom">Stick to the bottom on viewports sized 3XL (3x-large) or wider</div>`} />
+```html buttonLabel="responsive sticky bottom" markupOnly
+<div class="xs:sticky-bottom">Stick to the bottom on viewports sized XS (x-small) or wider</div>
+<div class="sm:sticky-bottom">Stick to the bottom on viewports sized SM (small) or wider</div>
+<div class="md:sticky-bottom">Stick to the bottom on viewports sized MD (medium) or wider</div>
+<div class="lg:sticky-bottom">Stick to the bottom on viewports sized LG (large) or wider</div>
+<div class="xl:sticky-bottom">Stick to the bottom on viewports sized XL (x-large) or wider</div>
+<div class="2xl:sticky-bottom">Stick to the bottom on viewports sized 2XL (2x-large) or wider</div>
+<div class="3xl:sticky-bottom">Stick to the bottom on viewports sized 3XL (3x-large) or wider</div>
+```
 
 <BootstrapCompatibility>
-<Code lang="html" buttonLabel="responsive sticky bottom" code={`<div class="sticky-xs-bottom">Stick to the bottom on viewports sized XS (x-small) or wider</div>
-  <div class="sticky-sm-bottom">Stick to the bottom on viewports sized SM (small) or wider</div>
-  <div class="sticky-md-bottom">Stick to the bottom on viewports sized MD (medium) or wider</div>
-  <div class="sticky-lg-bottom">Stick to the bottom on viewports sized LG (large) or wider</div>
-  <div class="sticky-xl-bottom">Stick to the bottom on viewports sized XL (x-large) or wider</div>
-  <div class="sticky-xxl-bottom">Stick to the bottom on viewports sized XXL (xx-large) or wider</div>
-  <div class="sticky-3xl-bottom">Stick to the bottom on viewports sized 3XL (3x-large) or wider</div>`} />
+```html buttonLabel="responsive sticky bottom" markupOnly
+<div class="sticky-xs-bottom">Stick to the bottom on viewports sized XS (x-small) or wider</div>
+<div class="sticky-sm-bottom">Stick to the bottom on viewports sized SM (small) or wider</div>
+<div class="sticky-md-bottom">Stick to the bottom on viewports sized MD (medium) or wider</div>
+<div class="sticky-lg-bottom">Stick to the bottom on viewports sized LG (large) or wider</div>
+<div class="sticky-xl-bottom">Stick to the bottom on viewports sized XL (x-large) or wider</div>
+<div class="sticky-xxl-bottom">Stick to the bottom on viewports sized XXL (xx-large) or wider</div>
+<div class="sticky-3xl-bottom">Stick to the bottom on viewports sized 3XL (3x-large) or wider</div>
+```
 </BootstrapCompatibility>

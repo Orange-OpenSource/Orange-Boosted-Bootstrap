@@ -67,14 +67,14 @@ This is the preferred scenario and will help you implement the basic concepts of
 In this scenario, you will have access to all the components available in OUDS Web, the grid, the utilities, the helpers, and fill the missing parts using Boosted and custom CSS.
 
 1. Make sure to install `sass`, and `boosted`. You’ll also need a theme, in this tutorial we assume it will be the Orange theme.
-    ```sh markupOnly={true} buttonLabel="install dependencies"
+    ```sh buttonLabel="install dependencies" markupOnly
     npm i sass @ouds/web-common @ouds/web-orange boosted
     ```
 
 2. Replace your Boosted import file by copy pasting this code in the main style file of your project:
     <details class="mb-medium">
       <summary>See the main style file example</summary>
-      ```scss markupOnly={true} buttonLabel="granular boosted imports example scss"
+      ```scss buttonLabel="granular boosted imports example scss" markupOnly
       // 1. Import all OUDS Web or make your own build in a different file to avoid variables conflicts.
       @import "@ouds/web-orange/dist/css/ouds-web";
 
@@ -381,14 +381,14 @@ In this scenario, you will have access to all the components available in OUDS W
 In this scenario, you will have access to OUDS Web on the root, but once a Boosted element is encountered, it will be Boosted. It means that once you’ve set `.boosted` on an element, you’ll have access to Boosted only on its children.
 
 1. Make sure to install `sass`, and `boosted`. You’ll also need a theme, in this tutorial we assume it will be the Orange theme.
-    ```sh markupOnly={true} buttonLabel="install dependencies"
+    ```sh buttonLabel="install dependencies" markupOnly
     npm i sass @ouds/web-common @ouds/web-orange boosted
     ```
 
 2. Replace your Boosted import file by copy pasting this code in the main style file of your project:
     <details class="mb-medium">
       <summary>See the main style file example</summary>
-      ```scss markupOnly={true} buttonLabel="full boosted imports example scss"
+      ```scss buttonLabel="full boosted imports example scss" markupOnly
       // 1. Import all OUDS Web
       @import "@ouds/web-orange/dist/css/ouds-web";
 
@@ -421,14 +421,14 @@ In this scenario, you will have access to OUDS Web on the root, but once a Boost
 In this scenario, you will have access to OUDS Web on defined elements and children. It means that once you’ve set `.ouds-web` on an element, you’ll have access to OUDS Web.
 
 1. Make sure to install `sass`, `@ouds/web-common`, and `boosted`. You’ll also need a theme, in this tutorial we assume it will be the Orange theme.
-    ```sh markupOnly={true} buttonLabel="install dependencies"
+    ```sh buttonLabel="install dependencies" markupOnly
     npm i sass @ouds/web-common @ouds/web-orange boosted
     ```
 
 2. Replace your Boosted import file by copy pasting this code in the main style file of your project:
     <details class="mb-medium">
       <summary>See the main style file example</summary>
-      ```scss markupOnly={true} buttonLabel="Boosted as the main framework example scss"
+      ```scss buttonLabel="Boosted as the main framework example scss" markupOnly
       // 1. Import all Boosted or make your own build in a different file to avoid variables conflicts
       @import "boosted/dist/css/boosted";
 

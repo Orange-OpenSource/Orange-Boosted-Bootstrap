@@ -29,7 +29,7 @@ The `$utilities` map contains all our utilities and is later merged with your cu
 
 All utility variables are added to the `$utilities` variable within our `_utilities.scss` stylesheet. Each group of utilities looks something like this:
 
-```scss
+```scss buttonLabel="opacity values inside the utilities map" markupOnly
 $utilities: (
   "opacity": (
     property: opacity,
@@ -46,7 +46,7 @@ $utilities: (
 
 Which outputs the following:
 
-```css
+```css buttonLabel="opacity class utilities css output" markupOnly
 .opacity-0 { opacity: 0; }
 .opacity-25 { opacity: .25; }
 .opacity-50 { opacity: .5; }
@@ -58,7 +58,7 @@ Which outputs the following:
 
 The required `property` key must be set for any utility, and it must contain a valid CSS property. This property is used in the generated utility’s ruleset. When the `class` key is omitted, it also serves as the default class name. Consider the `text-decoration` utility:
 
-```scss
+```scss buttonLabel="text-decoration utility inside the utilities map" markupOnly
 $utilities: (
   "text-decoration": (
     property: text-decoration,
@@ -69,7 +69,7 @@ $utilities: (
 
 Output:
 
-```css
+```css buttonLabel="text-decoration class utilities css output" markupOnly
 .text-decoration-none { text-decoration: none !important; }
 .text-decoration-underline { text-decoration: underline !important; }
 .text-decoration-line-through { text-decoration: line-through !important; }
@@ -81,13 +81,13 @@ Use the `values` key to specify which values for the specified `property` should
 
 As a list, like with [`text-decoration` utilities]([[docsref:/utilities/text#text-decoration]]):
 
-```scss
+```scss buttonLabel="text-decoration values list" markupOnly
 values: none underline line-through
 ```
 
 As a map, like with [`opacity` Bootstrap utilities]([[docsref:/utilities/opacity]]):
 
-```scss
+```scss buttonLabel="opacity values maps" markupOnly
 values: (
   0: 0,
   25: .25,
@@ -99,7 +99,7 @@ values: (
 
 As a Sass variable that sets the list or map, as in our [`position` utilities]([[docsref:/utilities/position]]):
 
-```scss
+```scss buttonLabel="position values variable" markupOnly
 values: $position-values
 ```
 
@@ -107,7 +107,7 @@ values: $position-values
 
 Use the `class` option to change the class prefix used in the compiled CSS. For example, to change from `.opacity-*` to `.o-*`:
 
-```scss
+```scss  buttonLabel="class parameter example" markupOnly
 $utilities: (
   "opacity": (
     property: opacity,
@@ -125,7 +125,7 @@ $utilities: (
 
 Output:
 
-```css
+```css buttonLabel="class parameter example css output" markupOnly
 .o-0 { opacity: 0 !important; }
 .o-25 { opacity: .25 !important; }
 .o-50 { opacity: .5 !important; }
@@ -135,7 +135,7 @@ Output:
 
 If `class: null`, generates classes for each of the `values` keys:
 
-```scss
+```scss buttonLabel="class parameter null example" markupOnly
 $utilities: (
   "visibility": (
     property: visibility,
@@ -150,7 +150,7 @@ $utilities: (
 
 Output:
 
-```css
+```css buttonLabel="class parameter null example css output" markupOnly
 .visible { visibility: visible !important; }
 .invisible { visibility: hidden !important; }
 ```
@@ -161,7 +161,7 @@ Set the `css-var` boolean option to `true` and the API will generate local CSS v
 
 Consider a `.text-opacity-*` utilities. If we add the `css-variable-name` option, we’ll get a custom output.
 
-```scss
+```scss buttonLabel="css variable utilities example" markupOnly
 $utilities: (
   "text-opacity": (
     css-var: true,
@@ -179,7 +179,7 @@ $utilities: (
 
 Output:
 
-```css
+```css buttonLabel="css variable utilities example css output" markupOnly
 .text-opacity-25 { --bs-text-alpha: .25; }
 .text-opacity-50 { --bs-text-alpha: .5; }
 .text-opacity-75 { --bs-text-alpha: .75; }
@@ -190,7 +190,7 @@ Output:
 
 Use the `local-vars` option to specify a Sass map that will generate local CSS variables within the utility class’s ruleset. Please note that it may require additional work to consume those local CSS variables in the generated CSS rules. For example, consider our `.bg-*` utilities:
 
-```scss
+```scss buttonLabel="local css variables example" markupOnly
 $utilities: (
   "background-color": (
     property: background-color,
@@ -212,7 +212,7 @@ $utilities: (
 
 Output:
 
-```css
+```css buttonLabel="local css variables example css output" markupOnly
 .bg-primary {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
@@ -230,7 +230,7 @@ Use the `state` option to generate pseudo-class variations. Example pseudo-class
 
 Need multiple pseudo-classes? Use a space-separated list of states: `state: hover focus`.
 
-```scss
+```scss buttonLabel="state utilities example" markupOnly
 $utilities: (
   "opacity": (
     property: opacity,
@@ -249,7 +249,7 @@ $utilities: (
 
 Output:
 
-```css
+```css buttonLabel="state utilities example css output" markupOnly
 .opacity-0-hover:hover { opacity: 0 !important; }
 .opacity-25-hover:hover { opacity: .25 !important; }
 .opacity-50-hover:hover { opacity: .5 !important; }
@@ -261,7 +261,7 @@ Output:
 
 Add the `responsive` boolean to generate responsive utilities (e.g., `.md:opacity-25`) across [all breakpoints]([[docsref:/layout/breakpoints]]).
 
-```scss
+```scss buttonLabel="responsive utilities example" markupOnly
 $utilities: (
   "opacity": (
     property: opacity,
@@ -283,7 +283,7 @@ Output:
   The backslash (`\`) is used to escape the colon (`:`) in class names for responsive utilities.
 </Callout>
 
-```css
+```css buttonLabel="responsive utilities example css output" markupOnly
 .opacity-0 { opacity: 0 !important; }
 .opacity-25 { opacity: .25 !important; }
 .opacity-50 { opacity: .5 !important; }
@@ -351,7 +351,7 @@ Output:
 
 Enabling the `print` option will **also** generate utility classes for print, which are only applied within the `@media print { ... }` media query.
 
-```scss
+```scss buttonLabel="print utilities example" markupOnly
 $utilities: (
   "opacity": (
     property: opacity,
@@ -373,7 +373,7 @@ Output:
   The backslash (`\`) is used to escape the colon (`:`) in class names for print utilities.
 </Callout>
 
-```css
+```css buttonLabel="print utilities example css output" markupOnly
 .opacity-0 { opacity: 0 !important; }
 .opacity-25 { opacity: .25 !important; }
 .opacity-50 { opacity: .5 !important; }
@@ -401,7 +401,7 @@ Now that you’re familiar with how the utilities API works, learn how to add yo
 
 Override existing utilities by using the same key. For example, if you want additional responsive overflow utility classes, you can do this:
 
-```scss
+```scss buttonLabel="override utilities example" markupOnly
 $utilities: (
   "overflow": (
     responsive: true,
@@ -415,7 +415,7 @@ $utilities: (
 
 New utilities can be added to the default `$utilities` map with a `map-merge`. Make sure our required Sass files and `_utilities.scss` are imported first, then use the `map-merge` to add your additional utilities. For example, here’s how to add a responsive `cursor` utility with three values.
 
-```scss
+```scss buttonLabel="add utilities in SCSS example" markupOnly
 @import "@ouds/web/scss/config";
 @import "@ouds/web/scss/functions";
 @import "@ouds/web/scss/tokens/raw";
@@ -449,7 +449,7 @@ $utilities: map-merge(
 
 Modify existing utilities in the default `$utilities` map with `map-get` and `map-merge` functions. In the example below, we’re adding an additional value to the `width` utilities. Start with an initial `map-merge` and then specify which utility you want to modify. From there, fetch the nested `"width"` map with `map-get` to access and modify the utility’s options and values.
 
-```scss
+```scss buttonLabel="modify utilities example" markupOnly
 @import "@ouds/web/scss/config";
 @import "@ouds/web/scss/functions";
 @import "@ouds/web/scss/tokens/raw";
@@ -486,7 +486,7 @@ $utilities: map-merge(
 
 You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example, to make the `border` classes responsive:
 
-```scss
+```scss buttonLabel="enable responsive for an utility example" markupOnly
 @import "@ouds/web/scss/config";
 @import "@ouds/web/scss/functions";
 @import "@ouds/web/scss/tokens/raw";
@@ -520,7 +520,7 @@ This will now generate responsive variations of `.border` and `.border-none` for
   The backslash (`\`) is used to escape the colon (`:`) in class names for responsive utilities.
 </Callout>
 
-```css
+```css buttonLabel="enable responsive for an utility example css output" markupOnly
 .border { ... }
 .border-none { ... }
 
@@ -557,7 +557,7 @@ This will now generate responsive variations of `.border` and `.border-none` for
 
 Used to another naming convention? The utilities API can be used to override the resulting `class` of a given utility—for example, to rename `.ms-*` utilities to `.ml-*`:
 
-```scss
+```scss buttonLabel="rename utilities example" markupOnly
 @import "@ouds/web/scss/config";
 @import "@ouds/web/scss/functions";
 @import "@ouds/web/scss/tokens/raw";
@@ -589,7 +589,7 @@ $utilities: map-merge(
 
 Remove any of the default utilities with the [`map-remove()` Sass function](https://sass-lang.com/documentation/modules/map/#remove).
 
-```scss
+```scss buttonLabel="remove utilities example" markupOnly
 @import "@ouds/web/scss/config";
 @import "@ouds/web/scss/functions";
 @import "@ouds/web/scss/tokens/raw";
@@ -612,7 +612,7 @@ $utilities: map-remove($utilities, "width", "float");
 
 You can also use the [`map-merge()` Sass function](https://sass-lang.com/documentation/modules/map/#merge) and set the group key to `null` to remove the utility.
 
-```scss
+```scss buttonLabel="remove utilities with map-merge example" markupOnly
 @import "@ouds/web/scss/config";
 @import "@ouds/web/scss/functions";
 @import "@ouds/web/scss/tokens/raw";
@@ -641,7 +641,7 @@ $utilities: map-merge(
 
 You can add, remove, and modify many utilities all at once with the [`map-merge()` Sass function](https://sass-lang.com/documentation/modules/map/#merge). Here’s how you can combine the previous examples into one larger map.
 
-```scss
+```scss buttonLabel="add, remove, modify utilities example" markupOnly
 @import "@ouds/web/scss/config";
 @import "@ouds/web/scss/functions";
 @import "@ouds/web/scss/tokens/raw";
@@ -683,7 +683,7 @@ $utilities: map-merge(
 
 Some edge cases make [RTL styling difficult](https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl), such as line breaks in Arabic. Thus utilities can be dropped from RTL output by setting the `rtl` option to `false`:
 
-```scss
+```scss buttonLabel="remove RTL from utilities example" markupOnly
 $utilities: (
   "word-wrap": (
     property: word-wrap word-break,
@@ -696,7 +696,7 @@ $utilities: (
 
 Output:
 
-```css
+```css buttonLabel="remove RTL from utilities example css output" markupOnly
 /* rtl:begin:remove */
 .text-break {
   word-wrap: break-word !important;
