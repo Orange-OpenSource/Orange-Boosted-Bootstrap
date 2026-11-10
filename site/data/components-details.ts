@@ -26,6 +26,13 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `<button type="button" class="btn btn-assistant">Label</button>`
   },
   {
+    name: 'Assistant icon',
+    category: 'Assistant',
+    slug: 'assistant-icon',
+    link: 'icons#assistant-icon',
+    snippet: `<button type="button" class="icon-assistant"><span class="visually-hidden">Assistant icon</span></button>`
+  },
+  {
     name: 'Badge',
     link: 'badges#badge',
     category: 'Indicator',
@@ -47,6 +54,15 @@ export const componentsDetails: ComponentCardData[] = [
       <p class="badge">
         <span class="badge-status-icon"></span>
         <span class="visually-hidden">Beware</span>
+      </p>`
+  },
+  {
+    name: 'Body',
+    link: 'typography#body',
+    category: 'Content display',
+    snippet: `
+      <p class="mb-none">
+        Body
       </p>`
   },
   {
@@ -106,6 +122,24 @@ export const componentsDetails: ComponentCardData[] = [
           <label class="control-item-label" for="checkboxItem[[id_prefix]]">Label</label>
         </div>
       </div>`
+  },
+  {
+    name: 'Code',
+    link: 'typography#code',
+    category: 'Content display',
+    snippet: `
+      <code>
+        Code
+      </code>`
+  },
+  {
+    name: 'Display',
+    link: 'typography#display',
+    category: 'Content display',
+    snippet: `
+      <h1 class="display-small mb-none">
+        Display
+      </h1>`
   },
   {
     name: 'Divider',
@@ -195,6 +229,21 @@ export const componentsDetails: ComponentCardData[] = [
       </footer>`
   },
   {
+    name: 'Fullscreen dialog',
+    slug: 'fullscreen-dialog-web',
+    link: 'modals#fullscreen-dialog',
+    category: 'Dialog',
+    snippet: `
+      <dialog class="modal-base modal-fullscreen-dialog position-relative h-100 w-100" open style="transition: unset">
+        <div class="modal-header 2xl:ps-xlarge">
+          <h3 class="modal-title">Title</h3>
+          <button type="button" class="btn btn-close">
+            <span class="visually-hidden">Close</span>
+          </button>
+        </div>
+      </dialog>`
+  },
+  {
     name: 'Header',
     category: 'Navigation',
     snippet: `
@@ -224,6 +273,15 @@ export const componentsDetails: ComponentCardData[] = [
       </header>`
   },
   {
+    name: 'Heading',
+    link: 'typography#heading',
+    category: 'Content display',
+    snippet: `
+      <h2 class="hl-marker mb-none">
+        Heading
+      </h2>`
+  },
+  {
     name: 'Inline alert',
     slug: 'inline-alert',
     link: 'alerts#inline-alert',
@@ -242,10 +300,47 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `<button type="button" class="tag tag-input">Label</button>`
   },
   {
+    name: 'Interactive icon',
+    slug: 'interactive-icon',
+    category: 'Actions',
+    link: 'icons#interactive-icon',
+    snippet: `
+      <button type="button" class="icon-interactive">
+        <span class="visually-hidden">Interactive icon</span>
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+      </button>`
+  },
+  {
+    name: 'Label',
+    link: 'typography#label',
+    category: 'Content display',
+    snippet: `
+      <p class="label-large mb-none">
+        Label
+      </p>`
+  },
+  {
     name: 'Link',
     link: 'links',
     category: 'Navigation',
     snippet: `<a class="link" href="#">Label</a>`
+  },
+  {
+    name: 'Modal dialog',
+    slug: 'modal-dialog-web',
+    link: 'modals#modal-dialog',
+    category: 'Dialog',
+    snippet: `
+      <dialog class="modal-base modal-dialog w-75 h-75 position-relative" open style="transition: unset">
+        <div class="modal-header 2xl:ps-large">
+          <h3 class="modal-title">Title</h3>
+          <button type="button" class="btn btn-close">
+            <span class="visually-hidden">Close</span>
+          </button>
+        </div>
+      </dialog>`
   },
   {
     name: 'Navigation card item',

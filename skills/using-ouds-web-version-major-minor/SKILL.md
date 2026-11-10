@@ -25,6 +25,7 @@ Key differences from standard Bootstrap:
 - **4 color modes**: `light`, `dark`, `root`, `root-inverted` (set via `data-bs-theme`)
 - **Orange-specific components**: header, footer, chips, tags, sticker, stepped-process, title-bar, skeleton, local-navigation, back-to-top, bullet-list, divider, quantity-selector, items (replaces Bootstrap's `.list-group`)
 - **Assistant button** (`.btn-assistant`, v1.5.0): AI-powered action button variant, distinct from standard/navigation buttons
+- **Interactive icon** (`.icon-interactive`) and **assistant icon** (`.icon-assistant`): icon-only interactive elements, distinct from `.btn-icon` and `.btn-assistant`
 - **Modified form components**: switches, checkboxes, radio buttons, text-input, text-area, select-input, password-input use `.control-item-*` pattern
 - **Control component types**: Checkbox item, Radio button item, and Switch item provide row layouts with visible labels and optional assets. Checkbox, Radio button, and Switch are standalone controls using `.*-standalone` wrappers. All three standalone types support disabled, read-only, and invalid states; Checkbox also supports indeterminate. See their component references for markup.
 - **CSS variable prefix**: `--bs-`
@@ -112,7 +113,6 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 ### Foundation
 
 - [Approach](references/foundation/approach.md) - Design principles
-- [Typography](references/foundation/typography.md) - Headings, body text, display, font mixins
 - [Colors](references/foundation/colors.md) - Available raw colors
 - [Color modes](references/foundation/color-modes.md) - Light/dark/root/root-inverted themes
 - [Tokens](references/foundation/tokens.md) - Raw/semantic/composite/component token architecture
@@ -148,8 +148,11 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 - [Footer](references/components/footer.md) - Page footer
 - [Header](references/components/header.md) - Responsive page header
 - [Icon](references/components/icon.md) - SVG icon system
+- [Interactive icon](references/components/interactive-icon.md) - Icon-only interactive element (`.icon-interactive`)
+- [Assistant icon](references/components/assistant-icon.md) - AI-powered icon-only element (`.icon-assistant`)
 - [Items](references/components/items.md) - Static/navigation card and list items (replaces Bootstrap's list-group)
 - [Links](references/components/links.md) - Link styles
+- [Modals](references/components/modals.md) - Native dialog modal and fullscreen dialog
 - [Password input](references/components/password-input.md) - Password field with toggle
 - [Radio buttons](references/components/radio-buttons.md) - Radio button item and Radio button, states
 - [Select input](references/components/select-input.md) - Select inputs
@@ -159,10 +162,11 @@ Always pin `<version>` to a specific release (e.g. `1.4.0`) rather than leaving 
 - [Table](references/components/table.md) - Opt-in table styling (draft component)
 - [Text area](references/components/text-area.md) - Multiline inputs
 - [Text input](references/components/text-input.md) - Single-line inputs
+- [Typography](references/components/typography.md) - Headings (+ heading marker), display, body, label, code
 
 ### Not yet documented (do not invent markup)
 
-The OUDS Web documentation site has placeholder ("Coming soon") pages for the following components — **no OUDS Web-specific markup, classes, or design guidance exists for them yet**: `accordion`, `back-to-top`, `card`, `carousel`, `close-button`, `collapse`, `local-navigation`, `modal`, `nav-tab`, `navbar`, `offcanvas`, `pagination`, `popover`, `progress`, `quantity-selector`, `range`, `scrollspy`, `spinner`, `stepped-process`, `sticker`, `title-bar`, `toast`, `tooltip`.
+The OUDS Web documentation site has placeholder ("Coming soon") pages for the following components — **no OUDS Web-specific markup, classes, or design guidance exists for them yet**: `accordion`, `back-to-top`, `card`, `carousel`, `close-button`, `collapse`, `local-navigation`, `nav-tab`, `navbar`, `offcanvas`, `pagination`, `popover`, `progress`, `quantity-selector`, `range`, `scrollspy`, `spinner`, `stepped-process`, `sticker`, `title-bar`, `toast`, `tooltip`.
 
 If a task requires one of these, **tell the user it isn't documented in OUDS Web yet** instead of guessing markup or falling back to plain Bootstrap classes (OUDS Web's class names, tokens, and structure regularly diverge from Bootstrap, so a Bootstrap fallback would likely be wrong).
 

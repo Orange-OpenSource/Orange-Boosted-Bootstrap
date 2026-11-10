@@ -118,6 +118,10 @@ Wrap `<input>` in `.input-container` with `data-bs-prefix` and/or `data-bs-suffi
 
 Add `.component-max-width` to `.text-input`.
 
+## Accessibility
+
+Keep text inputs and meaningful icons physically adjacent to their descriptive labels to maintain a clear visual hierarchy and help Assistive Technology users understand their relationship without navigating large areas of whitespace. Use `.component-max-width` when needed to control the component width.
+
 ## States
 
 ### Disabled
