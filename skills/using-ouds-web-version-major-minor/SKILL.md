@@ -5,6 +5,31 @@ description: "Provides comprehensive knowledge of the OUDS Web library (Orange U
 
 # OUDS Web Library Reference
 
+## Version check (do this first)
+
+This skill is versioned: its published name is `using-ouds-web-version-<major>-<minor>` (e.g. `using-ouds-web-version-1-5` for OUDS Web 1.5.x). Patch versions share the same skill. Before using anything below, make sure this skill matches the OUDS Web version **actually installed** in the project, and that it is the only copy installed.
+
+1. **Find the installed `@ouds/web-common` version.** Use the version really resolved on disk, never the range declared in `package.json` (`"^1.5.0"` may resolve to 1.6.0). In order of preference:
+   - `npm ls @ouds/web-common` (or `yarn why` / `pnpm why` / `bun pm ls`)
+   - the `version` field of `node_modules/@ouds/web-common/package.json`
+   - the resolved version in the lockfile (`package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`, `bun.lock`)
+   - the version pinned in the CDN URL, if there is no npm install
+2. **Read this skill's version from its name** (`using-ouds-web-version-1-5` → `1.5`). Only `major.minor` is compared; the patch version is ignored.
+3. **Compare.** The skill is wrong if its name still contains `major-minor` (unversioned source copy), or if its `major.minor` differs from the installed `@ouds/web-common` `major.minor`.
+4. **Check for duplicate or outdated installs.** Only one copy of this skill may be installed, and it must be the one matching the installed version. Look in every skills directory the agent uses (project and user level, e.g. `.agents/skills/`, `.claude/skills/`, `.cursor/skills/`, `~/.claude/skills/`, `~/.agents/skills/`) for copies of this skill. A copy is recognizable by its `SKILL.md` titled "OUDS Web Library Reference" or by one of these names:
+   - `using-ouds-web` (legacy, unversioned),
+   - `using-ouds-web-version-major-minor` (unversioned source),
+   - `using-ouds-web-version-<major>-<minor>` (any version).
+
+   The title only identifies this skill; the version is read from the name only. A copy is correct only if its name is exactly `using-ouds-web-version-<major>-<minor>` and matches the installed version. Any other copy must be replaced, and if several copies exist (even with the same version), keep only one.
+5. **If the skill is wrong or duplicated, fix it before doing anything else:**
+   1. Tell the user which copies were found (exact paths) and why they must be replaced (wrong version, unversioned name, duplicate), then **ask for confirmation** before deleting anything. Skip the confirmation only if the user already explicitly asked to update the skill.
+   2. After approval, delete those copies. Never delete the `migrate-to-ouds-web` skill.
+   3. Run `npx skills add Orange-OpenSource/ouds-web-skills` and select the skill `using-ouds-web-version-<major>-<minor>` matching the installed version (e.g. `using-ouds-web-version-1-6` for 1.6.2).
+   4. Check that only that single copy remains, then use the newly installed skill instead of this one.
+   5. If the user declines, or if no skill exists for the installed version, continue the task but warn that this skill may be outdated and its guidance unreliable. Do not fall back to another version silently.
+6. If `@ouds/web-common` is not installed (new project), skip the version comparison, tell the user, and recommend installing the skill matching the version they are about to install. The duplicate check still applies.
+
 ## Overview
 
 OUDS Web is Orange's web implementation of the Orange Unified Design System. It is a fork of Bootstrap with significant modifications for Orange branding and accessibility.
