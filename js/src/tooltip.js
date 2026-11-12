@@ -23,13 +23,13 @@ const NAME = 'tooltip'
 const DISALLOWED_ATTRIBUTES = new Set(['sanitize', 'allowList', 'sanitizeFn'])
 
 const CLASS_NAME_FADE = 'fade'
-const CLASS_NAME_MODAL = 'modal'
+const CLASS_NAME_MODAL = 'modal-base'
 const CLASS_NAME_SHOW = 'show'
 
 const SELECTOR_TOOLTIP_INNER = '.tooltip-inner'
 const SELECTOR_MODAL = `.${CLASS_NAME_MODAL}`
 
-const EVENT_MODAL_HIDE = 'hide.bs.modal'
+const EVENT_MODAL_HIDE = 'close'
 
 const TRIGGER_HOVER = 'hover'
 const TRIGGER_FOCUS = 'focus'

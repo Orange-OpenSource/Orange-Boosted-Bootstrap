@@ -21,7 +21,7 @@ Read all 3 files and extract `$ouds-*` definitions:
 
 ## Step 2 — Identify component SCSS files
 
-All `scss/_*.scss` + `scss/forms/_*.scss`, excluding: `_variables.scss`, `_config.scss`, `_functions.scss`, `_mixins.scss`, `_maps.scss`, `_root.scss`, `_reboot.scss`, `_utilities.scss`, `_helpers.scss`, `_grid.scss`, `_containers.scss`, `_images.scss`, `_type.scss`, `_transitions.scss`, `_forms.scss`, `_variables-dark.scss`
+All `scss/_*.scss` + `scss/forms/_*.scss`, excluding: `_variables.scss`, `_config.scss`, `_functions.scss`, `_mixins.scss`, `_maps.scss`, `_root.scss`, `_reboot.scss`, `_utilities.scss`, `_helpers.scss`, `_grid.scss`, `_containers.scss`, `_images.scss`, `_transitions.scss`, `_forms.scss`, `_variables-dark.scss`
 
 ---
 

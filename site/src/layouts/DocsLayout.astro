@@ -39,9 +39,9 @@ if(frontmatter.types) {
 }
 let componentsVersions: {name: string, version: string}[] = [];
 currentComponentsTypesNames.forEach((name) => {
+  const slug =  name.toLowerCase().split(' ').filter((part) => part !== '-').join('-');
   getData('_components-versions').every((component) => {
-    const slug =  name.toLowerCase().split(' ').filter((part) => part !== '-').join('-');
-    if(component.name === slug) {
+    if(component.name === slug || component.name === `${slug}-web`) {
       componentsVersions.push({name, version: component.value})
       return false
     }
@@ -56,7 +56,7 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
   <div slot="main" class="container-fluid container-max-width bd-gutter mt-large md:my-2xlarge bd-layout">
     <aside class="bd-sidebar">
       <h1 id="docs-nav" class="visually-hidden">Docs navigation</h1>
-      <div class="lg:offcanvas offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
+      <div class="lg:offcanvas offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel" role="dialog">
         <div class="offcanvas-header border-bottom">
           <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Browse docs</h5>
           <button
