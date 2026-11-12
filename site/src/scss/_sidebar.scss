@@ -34,10 +34,10 @@
   @include get-font-size("body-medium"); // OUDS mod: instead of media query
 
   li {
-    min-height: 30px;  
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 30px;
   }
 
   @include media-breakpoint-between(xs, lg) {
