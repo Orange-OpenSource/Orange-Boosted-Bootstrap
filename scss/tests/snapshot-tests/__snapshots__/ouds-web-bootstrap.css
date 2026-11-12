@@ -5873,8 +5873,7 @@ textarea.form-control-lg {
   letter-spacing: var(--bs-font-letter-spacing-label-medium);
 }
 
-.form-check, .switch-item,
-.form-switch, .radio-button-item, .checkbox-item, .switch-standalone, .radio-button-standalone, .checkbox-standalone {
+.form-check, .switch-item, .form-switch, .radio-button-item, .checkbox-item, .switch-standalone, .radio-button-standalone, .checkbox-standalone {
   --bs-control-item-label-color: var(--bs-color-content-default);
   --bs-control-item-error-icon-offset: 18px;
   --bs-control-item-error-icon-offset-right: var(--bs-control-item-error-icon-offset);
@@ -5887,72 +5886,54 @@ textarea.form-control-lg {
   padding: 12px 16px;
   border-radius: 0px;
 }
-.component-max-width.form-check, .component-max-width.switch-item,
-.component-max-width.form-switch, .component-max-width.radio-button-item, .component-max-width.checkbox-item, .component-max-width.switch-standalone, .component-max-width.radio-button-standalone, .component-max-width.checkbox-standalone {
+.component-max-width.form-check, .component-max-width.switch-item, .component-max-width.form-switch, .component-max-width.radio-button-item, .component-max-width.checkbox-item, .component-max-width.switch-standalone, .component-max-width.radio-button-standalone, .component-max-width.checkbox-standalone {
   max-width: 30rem;
 }
-.form-check:has(:focus-visible), .switch-item:has(:focus-visible),
-.form-switch:has(:focus-visible), .radio-button-item:has(:focus-visible), .checkbox-item:has(:focus-visible), .switch-standalone:has(:focus-visible), .radio-button-standalone:has(:focus-visible), .checkbox-standalone:has(:focus-visible) {
+.form-check:has(:focus-visible), .switch-item:has(:focus-visible), .form-switch:has(:focus-visible), .radio-button-item:has(:focus-visible), .checkbox-item:has(:focus-visible), .switch-standalone:has(:focus-visible), .radio-button-standalone:has(:focus-visible), .checkbox-standalone:has(:focus-visible) {
   isolation: isolate;
   outline: 3px solid var(--bs-color-border-focus);
   outline-offset: 2px;
   box-shadow: 0 0 0 2px var(--bs-color-border-focus-inset);
 }
-.form-check .control-item-indicator, .form-check .form-check-input, .switch-item .control-item-indicator, .switch-item .form-check-input,
-.form-switch .control-item-indicator,
-.form-switch .form-check-input, .radio-button-item .control-item-indicator, .radio-button-item .form-check-input, .checkbox-item .control-item-indicator, .checkbox-item .form-check-input, .switch-standalone .control-item-indicator, .switch-standalone .form-check-input, .radio-button-standalone .control-item-indicator, .radio-button-standalone .form-check-input, .checkbox-standalone .control-item-indicator, .checkbox-standalone .form-check-input {
+.form-check .control-item-indicator, .form-check .form-check-input, .switch-item .control-item-indicator, .form-switch .control-item-indicator, .switch-item .form-check-input, .form-switch .form-check-input, .radio-button-item .control-item-indicator, .radio-button-item .form-check-input, .checkbox-item .control-item-indicator, .checkbox-item .form-check-input, .switch-standalone .control-item-indicator, .switch-standalone .form-check-input, .radio-button-standalone .control-item-indicator, .radio-button-standalone .form-check-input, .checkbox-standalone .control-item-indicator, .checkbox-standalone .form-check-input {
   outline: 0;
   box-shadow: none;
 }
-.form-check:has([aria-readonly=true]), .switch-item:has([aria-readonly=true]),
-.form-switch:has([aria-readonly=true]), .radio-button-item:has([aria-readonly=true]), .checkbox-item:has([aria-readonly=true]), .switch-standalone:has([aria-readonly=true]), .radio-button-standalone:has([aria-readonly=true]), .checkbox-standalone:has([aria-readonly=true]) {
+.form-check:has([aria-readonly=true]), .switch-item:has([aria-readonly=true]), .form-switch:has([aria-readonly=true]), .radio-button-item:has([aria-readonly=true]), .checkbox-item:has([aria-readonly=true]), .switch-standalone:has([aria-readonly=true]), .radio-button-standalone:has([aria-readonly=true]), .checkbox-standalone:has([aria-readonly=true]) {
   pointer-events: none;
 }
-.form-check:has(input:disabled), .switch-item:has(input:disabled),
-.form-switch:has(input:disabled), .radio-button-item:has(input:disabled), .checkbox-item:has(input:disabled), .switch-standalone:has(input:disabled), .radio-button-standalone:has(input:disabled), .checkbox-standalone:has(input:disabled) {
+.form-check:has(input:disabled), .switch-item:has(input:disabled), .form-switch:has(input:disabled), .radio-button-item:has(input:disabled), .checkbox-item:has(input:disabled), .switch-standalone:has(input:disabled), .radio-button-standalone:has(input:disabled), .checkbox-standalone:has(input:disabled) {
   pointer-events: none;
 }
-.form-check:has(input:disabled) *, .switch-item:has(input:disabled) *,
-.form-switch:has(input:disabled) *, .radio-button-item:has(input:disabled) *, .checkbox-item:has(input:disabled) *, .switch-standalone:has(input:disabled) *, .radio-button-standalone:has(input:disabled) *, .checkbox-standalone:has(input:disabled) * {
+.form-check:has(input:disabled) *, .switch-item:has(input:disabled) *, .form-switch:has(input:disabled) *, .radio-button-item:has(input:disabled) *, .checkbox-item:has(input:disabled) *, .switch-standalone:has(input:disabled) *, .radio-button-standalone:has(input:disabled) *, .checkbox-standalone:has(input:disabled) * {
   color: var(--bs-color-action-disabled);
 }
-.form-check:has(input:disabled) *::after, .switch-item:has(input:disabled) *::after,
-.form-switch:has(input:disabled) *::after, .radio-button-item:has(input:disabled) *::after, .checkbox-item:has(input:disabled) *::after, .switch-standalone:has(input:disabled) *::after, .radio-button-standalone:has(input:disabled) *::after, .checkbox-standalone:has(input:disabled) *::after {
+.form-check:has(input:disabled) *::after, .switch-item:has(input:disabled) *::after, .form-switch:has(input:disabled) *::after, .radio-button-item:has(input:disabled) *::after, .checkbox-item:has(input:disabled) *::after, .switch-standalone:has(input:disabled) *::after, .radio-button-standalone:has(input:disabled) *::after, .checkbox-standalone:has(input:disabled) *::after {
   color: currentcolor;
 }
-.form-check:has(input:hover), .switch-item:has(input:hover),
-.form-switch:has(input:hover), .radio-button-item:has(input:hover), .checkbox-item:has(input:hover), .switch-standalone:has(input:hover), .radio-button-standalone:has(input:hover), .checkbox-standalone:has(input:hover), .form-check:has(input:focus-visible), .switch-item:has(input:focus-visible),
-.form-switch:has(input:focus-visible), .radio-button-item:has(input:focus-visible), .checkbox-item:has(input:focus-visible), .switch-standalone:has(input:focus-visible), .radio-button-standalone:has(input:focus-visible), .checkbox-standalone:has(input:focus-visible), .form-check:has(input:active), .switch-item:has(input:active),
-.form-switch:has(input:active), .radio-button-item:has(input:active), .checkbox-item:has(input:active), .switch-standalone:has(input:active), .radio-button-standalone:has(input:active), .checkbox-standalone:has(input:active) {
+.form-check:has(input:hover), .switch-item:has(input:hover), .form-switch:has(input:hover), .radio-button-item:has(input:hover), .checkbox-item:has(input:hover), .switch-standalone:has(input:hover), .radio-button-standalone:has(input:hover), .checkbox-standalone:has(input:hover), .form-check:has(input:focus-visible), .switch-item:has(input:focus-visible), .form-switch:has(input:focus-visible), .radio-button-item:has(input:focus-visible), .checkbox-item:has(input:focus-visible), .switch-standalone:has(input:focus-visible), .radio-button-standalone:has(input:focus-visible), .checkbox-standalone:has(input:focus-visible), .form-check:has(input:active), .switch-item:has(input:active), .form-switch:has(input:active), .radio-button-item:has(input:active), .checkbox-item:has(input:active), .switch-standalone:has(input:active), .radio-button-standalone:has(input:active), .checkbox-standalone:has(input:active) {
   background-color: var(--bs-list-item-color-bg-hover);
 }
-.form-check:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .switch-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)),
-.form-switch:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .radio-button-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .checkbox-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .switch-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .radio-button-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .checkbox-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) {
+.form-check:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)), .switch-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)), .form-switch:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)), .radio-button-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)), .checkbox-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)), .switch-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)), .radio-button-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)), .checkbox-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)) {
   --bs-control-item-label-color: var(--bs-color-action-negative-enabled);
   padding-right: 56px;
 }
-.form-check:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) .control-item-assets-container:last-child, .switch-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) .control-item-assets-container:last-child,
-.form-switch:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) .control-item-assets-container:last-child, .radio-button-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) .control-item-assets-container:last-child, .checkbox-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) .control-item-assets-container:last-child, .switch-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) .control-item-assets-container:last-child, .radio-button-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) .control-item-assets-container:last-child, .checkbox-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) .control-item-assets-container:last-child {
+.form-check:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)) .control-item-assets-container:last-child, .switch-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)) .control-item-assets-container:last-child, .form-switch:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)) .control-item-assets-container:last-child, .radio-button-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)) .control-item-assets-container:last-child, .checkbox-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)) .control-item-assets-container:last-child, .switch-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)) .control-item-assets-container:last-child, .radio-button-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)) .control-item-assets-container:last-child, .checkbox-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)) .control-item-assets-container:last-child {
   display: none;
 }
-.form-check:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid))::after, .switch-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid))::after,
-.form-switch:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid))::after, .radio-button-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid))::after, .checkbox-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid))::after, .switch-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid))::after, .radio-button-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid))::after, .checkbox-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid))::after {
+.form-check:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone))::after, .switch-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone))::after, .form-switch:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone))::after, .radio-button-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone))::after, .checkbox-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone))::after, .switch-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone))::after, .radio-button-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone))::after, .checkbox-standalone:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone))::after {
   content: "";
 }
-.form-check:has(input:hover:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .switch-item:has(input:hover:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)),
-.form-switch:has(input:hover:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .radio-button-item:has(input:hover:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .checkbox-item:has(input:hover:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .switch-standalone:has(input:hover:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .radio-button-standalone:has(input:hover:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .checkbox-standalone:has(input:hover:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) {
+.form-check:has(input:hover:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .switch-item:has(input:hover:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .form-switch:has(input:hover:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .radio-button-item:has(input:hover:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .checkbox-item:has(input:hover:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .switch-standalone:has(input:hover:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .radio-button-standalone:has(input:hover:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .checkbox-standalone:has(input:hover:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) {
   --bs-control-item-label-color: var(--bs-color-action-negative-hover);
 }
-.form-check:has(input:focus-visible:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .switch-item:has(input:focus-visible:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)),
-.form-switch:has(input:focus-visible:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .radio-button-item:has(input:focus-visible:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .checkbox-item:has(input:focus-visible:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .switch-standalone:has(input:focus-visible:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .radio-button-standalone:has(input:focus-visible:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .checkbox-standalone:has(input:focus-visible:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) {
+.form-check:has(input:focus-visible:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .switch-item:has(input:focus-visible:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .form-switch:has(input:focus-visible:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .radio-button-item:has(input:focus-visible:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .checkbox-item:has(input:focus-visible:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .switch-standalone:has(input:focus-visible:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .radio-button-standalone:has(input:focus-visible:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .checkbox-standalone:has(input:focus-visible:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) {
   --bs-control-item-label-color: var(--bs-color-action-negative-focus);
 }
-.form-check:has(input:active:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .switch-item:has(input:active:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)),
-.form-switch:has(input:active:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .radio-button-item:has(input:active:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .checkbox-item:has(input:active:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .switch-standalone:has(input:active:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .radio-button-standalone:has(input:active:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .checkbox-standalone:has(input:active:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) {
+.form-check:has(input:active:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .switch-item:has(input:active:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .form-switch:has(input:active:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .radio-button-item:has(input:active:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .checkbox-item:has(input:active:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .switch-standalone:has(input:active:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .radio-button-standalone:has(input:active:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .checkbox-standalone:has(input:active:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) {
   --bs-control-item-label-color: var(--bs-color-action-negative-pressed);
 }
-.form-check::after, .switch-item::after,
-.form-switch::after, .radio-button-item::after, .checkbox-item::after, .switch-standalone::after, .radio-button-standalone::after, .checkbox-standalone::after {
+.form-check::after, .switch-item::after, .form-switch::after, .radio-button-item::after, .checkbox-item::after, .switch-standalone::after, .radio-button-standalone::after, .checkbox-standalone::after {
   position: absolute;
   top: 12px;
   right: var(--bs-control-item-error-icon-offset-right);
@@ -6362,25 +6343,19 @@ textarea.form-control-lg {
   border-width: 0;
 }
 
-.switch-item,
-.form-switch {
+.switch-item, .form-switch {
   flex-direction: row-reverse;
 }
-.switch-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)),
-.form-switch:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) {
+.switch-item:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .form-switch:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) {
   --bs-control-item-error-icon-offset-right: unset;
   --bs-control-item-error-icon-offset-left: var(--bs-control-item-error-icon-offset);
   padding-right: 16px;
   padding-left: 56px;
 }
-.switch-item.control-item-reverse, .switch-item.form-check-reverse,
-.form-switch.control-item-reverse,
-.form-switch.form-check-reverse {
+.switch-item.control-item-reverse, .control-item-reverse.form-switch, .switch-item.form-check-reverse, .form-check-reverse.form-switch {
   flex-direction: initial;
 }
-.switch-item.control-item-reverse:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .switch-item.form-check-reverse:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)),
-.form-switch.control-item-reverse:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)),
-.form-switch.form-check-reverse:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) {
+.switch-item.control-item-reverse:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .control-item-reverse.form-switch:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .switch-item.form-check-reverse:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)), .form-check-reverse.form-switch:has(input:is([aria-invalid=true], .form-check-input.is-invalid, :user-invalid)) {
   --bs-control-item-error-icon-offset-right: var(--bs-control-item-error-icon-offset);
   --bs-control-item-error-icon-offset-left: unset;
   padding-right: 56px;
@@ -14412,7 +14387,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
     transform: translate3d(100%, 0, 0);
   }
 }
-.skeleton, .placeholder, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .item), [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .icon-interactive, .icon-assistant, .link, .link-chevron,
+.skeleton, .placeholder, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .form-switch, .item), [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .icon-interactive, .icon-assistant, .link, .link-chevron,
 .link-external,
 .link-expand, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input) {
   position: relative;
@@ -14422,14 +14397,14 @@ ol.bullet-list > li > ol > li > ol > li::before {
   background-color: transparent;
   border: 0;
 }
-.skeleton > *, .placeholder > *, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .item) > *, [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .icon-interactive, .icon-assistant, .link, .link-chevron,
+.skeleton > *, .placeholder > *, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .form-switch, .item) > *, [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .icon-interactive, .icon-assistant, .link, .link-chevron,
 .link-external,
 .link-expand, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input) > * {
   visibility: hidden;
 }
-.skeleton::before, .placeholder::before, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .item)::before, [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .icon-interactive, .icon-assistant, .link, .link-chevron,
+.skeleton::before, .placeholder::before, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .form-switch, .item)::before, [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .icon-interactive, .icon-assistant, .link, .link-chevron,
 .link-external,
-.link-expand, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input)::before, .skeleton::after, .placeholder::after, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .item)::after, [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .icon-interactive, .icon-assistant, .link, .link-chevron,
+.link-expand, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input)::before, .skeleton::after, .placeholder::after, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .form-switch, .item)::after, [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .icon-interactive, .icon-assistant, .link, .link-chevron,
 .link-external,
 .link-expand, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input)::after {
   all: unset;
@@ -14439,7 +14414,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   display: block;
   content: "";
 }
-.skeleton::before, .placeholder::before, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .item)::before, [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .icon-interactive, .icon-assistant, .link, .link-chevron,
+.skeleton::before, .placeholder::before, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .form-switch, .item)::before, [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .icon-interactive, .icon-assistant, .link, .link-chevron,
 .link-external,
 .link-expand, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input)::before {
   width: unset !important;
@@ -14448,7 +14423,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   -webkit-mask: unset !important;
   mask: unset !important;
 }
-.skeleton::after, .placeholder::after, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .item)::after, [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .icon-interactive, .icon-assistant, .link, .link-chevron,
+.skeleton::after, .placeholder::after, [aria-busy=true] :is(.bullet-list > li, .checkbox-item, .radio-button-item, .switch-item, .form-switch, .item)::after, [aria-busy=true] :is(.alert, .btn, .btn-close, .checkbox-standalone, .chip-interactive, .icon-interactive, .icon-assistant, .link, .link-chevron,
 .link-external,
 .link-expand, .icon-link, .radio-button-standalone, .select-input, .form-select, .switch-standalone > .control-item-indicator, .switch-standalone > .form-check-input, .tag, .text-area, .text-input)::after {
   background: linear-gradient(270deg, var(--bs-color-opacity-transparent) 3%, var(--bs-color-opacity-lower) 47%, var(--bs-color-opacity-transparent) 97%);
