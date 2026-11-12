@@ -80,7 +80,8 @@ if(slug && sidebars.includes(slug as typeof sidebars[number])) {
                             'column-gap-2xsmall',
                             'align-items-center',
                             { active },
-                            { 'text-decoration-line-through': page.coming_soon }
+                            { 'text-decoration-line-through': page.coming_soon },
+                            { 'external': page.direct_url }
                           ]}
                           aria-current={active ? 'page' : undefined}
                           title={page.draft ? 'draft component' : page.coming_soon ? 'page is not yet available' : null}

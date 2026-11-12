@@ -59,4 +59,20 @@
   &.active {
     font-weight: $ouds-font-weight-system-web-strong;
   }
+
+  &.external {
+    display: inline-block;
+
+    &::after {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-left: 10px;
+      vertical-align: text-bottom;
+      content: "";
+      background-color: var(--bs-link-chevron-color, $ouds-link-color-chevron-enabled);
+      mask: $link-external-icon center no-repeat;
+      mask-size: 24px;
+    }
+  }
 }
