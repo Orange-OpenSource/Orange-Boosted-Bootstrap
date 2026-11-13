@@ -75,7 +75,6 @@ const simplifiedMarkup = markup
     /<img.*class="bd-placeholder-img(?:-lg)?(?: *?bd-placeholder-img-lg)? ?(.*?)".*?>/g,
     (match, classes) => `<img src="..."${classes ? ` class="${classes}"` : ''} alt="..." />`
   )
-
 ---
 
 <div class="bd-example-snippet bd-code-snippet">
