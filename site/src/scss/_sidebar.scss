@@ -72,14 +72,21 @@
 
     &::after {
       display: inline-block;
-      width: 24px;
-      height: 24px;
-      margin-left: 10px;
+      width: px-to-rem($ouds-link-size-icon-default);
+      height: px-to-rem($ouds-link-size-icon-default);
+      margin-left: $ouds-link-space-column-gap-chevron-default;
       vertical-align: text-bottom;
       content: "";
-      background-color: var(--bs-link-chevron-color, $ouds-link-color-chevron-enabled);
+      background-color: $ouds-link-color-chevron-enabled;
       mask: $link-external-icon center no-repeat;
-      mask-size: 24px;
+      mask-size: px-to-rem($ouds-link-size-icon-default);
+    }
+
+    &:hover {
+      text-decoration: underline;
+      &::after {
+        background-color: $ouds-link-color-content-hover;
+      }
     }
   }
 }

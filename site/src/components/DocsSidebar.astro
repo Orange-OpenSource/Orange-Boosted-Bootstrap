@@ -81,7 +81,7 @@ if(slug && sidebars.includes(slug as typeof sidebars[number])) {
                             'align-items-center',
                             { active },
                             { 'text-decoration-line-through': page.coming_soon },
-                            { 'external': page.direct_url }
+                            { 'external': page.direct_url && page.direct_url.includes('http') }
                           ]}
                           aria-current={active ? 'page' : undefined}
                           title={page.draft ? 'draft component' : page.coming_soon ? 'page is not yet available' : null}

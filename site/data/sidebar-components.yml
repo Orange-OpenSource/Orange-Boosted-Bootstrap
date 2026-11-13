@@ -1,5 +1,5 @@
 - title: Components
-  icon: component-atom
+  icon: module-molecule
   icon_color: body-color
   pages:
     - title: All components
@@ -34,8 +34,8 @@
     - title: Typography
 
 - title: Coming soon
-  icon: component-atom
+  icon: calendar-months
   icon_color: body-color
   pages:
-    - title: Open the roadmap
+    - title: Component roadmap
       direct_url: 'https://unified-design-system.orange.com/472794e18/p/73c701-components/b/7771da'
