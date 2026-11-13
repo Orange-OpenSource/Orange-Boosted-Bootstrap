@@ -34,7 +34,7 @@
     - title: Typography
 
 - title: Coming soon
-  icon: calendar-months
+  icon: calendar-month
   icon_color: body-color
   pages:
     - title: Component roadmap
