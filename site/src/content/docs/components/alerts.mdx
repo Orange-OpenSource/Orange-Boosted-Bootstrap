@@ -321,6 +321,18 @@ In any case, the icon will be colorized automatically via the `color` attribute.
         <p class="alert-label">Your data plan includes free calls on weekends.</p>
       </div>
     </div>
+  </div>
+
+  <div class="alert alert-message">
+    <div class="alert-icon">
+      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+      <p class="visually-hidden">Emphasized content</p>
+    </div>
+    <div class="alert-container">
+      <div class="alert-text-container">
+        <p class="alert-label">Your data plan includes free calls on weekends.</p>
+      </div>
+    </div>
   </div>`} />
 
 Optionally, for the [non-functional alert message](#non-functional), you can remove the `.alert-icon` container.
@@ -827,6 +839,14 @@ In any case, the icon will be colorized automatically via the `color` attribute.
   <div class="alert">
     <div class="alert-icon">
       <span class="icon si si-settings" aria-hidden="true"></span>
+      <p class="visually-hidden">Emphasized content</p>
+    </div>
+    <p class="alert-label">Your data plan includes free calls on weekends.</p>
+  </div>
+
+  <div class="alert">
+    <div class="alert-icon">
+      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
       <p class="visually-hidden">Emphasized content</p>
     </div>
     <p class="alert-label">Your data plan includes free calls on weekends.</p>

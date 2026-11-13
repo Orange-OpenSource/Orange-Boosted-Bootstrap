@@ -210,6 +210,14 @@ To display an icon add the icon as the last child of the `.chip-interactive`.
       </label>
     </li>
 
+    <li class="chip chip-filter">
+      <input type="checkbox" id="filterWithIcon3" checked />
+      <label class="chip-interactive" for="filterWithIcon3">
+        Another filter with image
+        <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+      </label>
+    </li>
+
   </ul>`} />
 
 #### Icon only
@@ -237,6 +245,14 @@ Make sure to provide an accessible text for each chip.
       <label class="chip-interactive chip-icon" for="filterIconOnly2">
         <span class="icon si si-settings" aria-hidden="true"></span>
         <span class="visually-hidden">Technical</span>
+      </label>
+    </li>
+
+    <li class="chip chip-filter">
+      <input type="checkbox" id="filterIconOnly3" />
+      <label class="chip-interactive chip-icon" for="filterIconOnly3">
+        <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+        <span class="visually-hidden">Delivery</span>
       </label>
     </li>
 
@@ -375,14 +391,21 @@ To display an icon, add the icon as the first child of the `.chip-interactive`.
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
-        Suggestion with icon 1
+        Suggestion with sprite icon
       </button>
     </li>
 
     <li class="chip chip-suggestion">
       <button class="chip-interactive" type="button">
         <span class="si-settings decorative-2xsmall-icon" aria-hidden="true"></span>
-        Suggestion with icon 2
+        Suggestion with font icon
+      </button>
+    </li>
+
+    <li class="chip chip-suggestion">
+      <button class="chip-interactive" type="button">
+        <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+        Suggestion with image
       </button>
     </li>
 
@@ -411,6 +434,13 @@ Make sure to provide an accessible text for each chip.
       <button class="chip-interactive chip-icon" type="button">
         <span class="icon si si-settings" aria-hidden="true"></span>
         <span class="visually-hidden">Go to parameters.</span>
+      </button>
+    </li>
+
+    <li class="chip chip-suggestion">
+      <button class="chip-interactive chip-icon" type="button">
+        <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+        <span class="visually-hidden">Delivered.</span>
       </button>
     </li>
 

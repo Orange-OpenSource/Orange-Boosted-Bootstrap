@@ -130,6 +130,8 @@
   flex: 1 0 0;
   align-items: center;
   justify-content: center;
+  width: 1em;
+  height: 1em;
   aspect-ratio: 1/1;
   font-size: var(--#{$prefix}badge-icon-font-size);
 }

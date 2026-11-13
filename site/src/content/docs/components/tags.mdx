@@ -175,6 +175,14 @@ To display a colored icon in non-functional tags, add the icon inside the tag, w
       </svg>
       Accent emphasized
     </li>
+    <li class="tag">
+      <span class="si-settings tag-icon" aria-hidden="true"></span>
+      Settings
+    </li>
+    <li class="tag">
+      <img src=${getVersionedDocsPath(`assets/img/parcel.png`)} class="tag-icon" alt="" loading="lazy">
+      Delivery
+    </li>
   </ul>
 
   <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium mb-medium" aria-label="Non-functional muted icons">
@@ -190,12 +198,7 @@ To display a colored icon in non-functional tags, add the icon inside the tag, w
       </svg>
       Accent muted
     </li>
-  </ul>
-
-  <p class="tag">
-    <span class="si-settings tag-icon" aria-hidden="true"></span>
-    Settings
-  </p>`} />
+  </ul>`} />
 
 ##### Functional
 
@@ -390,21 +393,31 @@ You can see a similar live example with buttons with the full JavaScript code on
 To display a small tag, add the class `.tag-small` to the tag.
 
 <Example buttonLabel="small tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Mobile coverage">
+
     <li class="tag tag-small">Small neutral</li>
+
     <li class="tag tag-small">
       <span class="tag-bullet"></span>
       Roaming
     </li>
+
     <li class="tag tag-small">
       <svg aria-hidden="true" class="tag-icon">
         <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
       </svg>
       5G Ready
     </li>
+
     <li class="tag tag-small">
-        <span class="si-settings tag-icon" aria-hidden="true"></span>
-        Settings
+      <span class="si-settings tag-icon" aria-hidden="true"></span>
+      Settings
     </li>
+
+    <li class="tag tag-small">
+      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" class="tag-icon" alt="" loading="lazy">
+       Delivery
+    </li>
+
     <li class="tag tag-accent tag-small loading">
       <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="tag-loader" aria-hidden="true">
         <circle class="tag-loader-inner" cx="20" cy="20" r="15"></circle>
@@ -412,6 +425,7 @@ To display a small tag, add the class `.tag-small` to the tag.
       <span role="status" class="visually-hidden">Loading</span>
       ...
     </li>
+
   </ul>`} />
 
 ### Layout
@@ -503,6 +517,11 @@ To display an icon in categorical tags, add the icon inside the categorical tag,
     <li class="tag tag-categorical-1">
       <span class="si-settings tag-icon" aria-hidden="true"></span>
       Settings
+    </li>
+
+    <li class="tag tag-categorical-1">
+      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" class="tag-icon" alt="" loading="lazy">
+      Delivery
     </li>
 
   </ul>`} />
@@ -606,6 +625,11 @@ To display a small categorical tag, add the class `.tag-small` to the tag.
     <li class="tag tag-categorical-4 tag-small">
         <span class="si-settings tag-icon" aria-hidden="true"></span>
         Work
+    </li>
+
+    <li class="tag tag-categorical-4 tag-small">
+        <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" class="tag-icon" alt="" loading="lazy">
+        Delivery
     </li>
 
     <li class="tag tag-categorical-5 tag-small loading">

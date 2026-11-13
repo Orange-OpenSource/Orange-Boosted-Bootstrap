@@ -244,6 +244,11 @@ You don’t need to apply any spacing utility on the icon to get consistent spac
       Default
     </button>
 
+    <button type="button" class="btn btn-default">
+      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+      Default
+    </button>
+
   </div>
 
   <div class="bg-surface-brand-primary p-large">
@@ -272,6 +277,11 @@ You don’t need to apply any spacing utility on the icon to get consistent spac
 
       <button type="button" class="btn btn-default btn-on-colored-bg">
         <span class="icon si si-settings" aria-hidden="true"></span>
+        Default
+      </button>
+
+      <button type="button" class="btn btn-default btn-on-colored-bg">
+        <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
         Default
       </button>
 
@@ -330,6 +340,11 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
       <span class="visually-hidden">Default</span>
     </button>
 
+    <button type="button" class="btn btn-icon btn-default">
+      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+      <span class="visually-hidden">Default</span>
+    </button>
+
   </div>
 
   <div class="bg-surface-brand-primary p-large">
@@ -360,6 +375,11 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
         <span class="icon si si-settings" aria-hidden="true"></span>
         <span class="visually-hidden">Default</span>
       </button>
+
+    <button type="button" class="btn btn-icon btn-default btn-on-colored-bg">
+      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+      <span class="visually-hidden">Default</span>
+    </button>
 
     </div>
   </div>`} />
@@ -702,6 +722,11 @@ Buttons are available in two sizes. Add `.btn-small` to have a smaller button.
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="loading-btn-small-msg" class="visually-hidden">Downloading file 3</span>
+  </button>
+
+  <button type="button" class="btn btn-icon btn-negative btn-small">
+    <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+    <span class="visually-hidden">Delivery</span>
   </button>`} />
 
 ## [[comp]] Navigation button
@@ -936,6 +961,17 @@ Add the class `.btn-icon` to get a squared button that only contains an icon. Ma
       </svg>
       <span class="visually-hidden">Favorite playlist</span>
     </button>
+
+    <button type="button" class="btn btn-default btn-icon btn-expand" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="icon si si-settings" aria-hidden="true"></span>
+      <span class="visually-hidden">Favorite playlist</span>
+    </button>
+
+    <button type="button" class="btn btn-default btn-icon btn-expand" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+      <span class="visually-hidden">Favorite playlist</span>
+    </button>
+
     <ul class="dropdown-menu">
       <li><button type="button" class="dropdown-item">Action</button></li>
       <li><button type="button" class="dropdown-item">Another action</button></li>
