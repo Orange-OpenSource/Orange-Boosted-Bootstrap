@@ -19,23 +19,25 @@ Many of OUDS Web’s components are built with a base-modifier class approach. T
 
 You can also generate responsive variations from Sass loops. Take for example the `$grid-breakpoints` Sass map loop with a media query include.
 
-<ScssDocs name="grid-breakpoints" file="scss/_variables.scss" />
+<ScssDocs name="grid-breakpoints" file="scss/_variables.scss" buttonLabel="grid breakpoints" />
 
 ## Creating your own
 
 We encourage you to adopt these guidelines when building with OUDS Web to create your own components. We’ve extended this approach ourselves to the custom components in our documentation and examples. Components like our callouts are built just like our provided components with base and modifier classes.
 
-<Example showMarkup={false} code={`<div class="bd-callout my-0">
-    <strong>This is a callout.</strong> We built it custom for our docs so our messages to you stand out. It has three variants via modifier classes.
-  </div>`} />
+```html showMarkup={false}
+<div class="bd-callout my-0">
+  <strong>This is a callout.</strong> We built it custom for our docs so our messages to you stand out. It has three variants via modifier classes.
+</div>
+```
 
-```html
+```html buttonLabel="callout component" markupOnly
 <div class="callout">...</div>
 ```
 
 In your CSS, you’d have something like the following where the bulk of the styling is done via `.callout`. Then, the unique styles between each variant is controlled via modifier class.
 
-```scss
+```scss buttonLabel="callout component css" markupOnly
 // Base class
 .callout {}
 
@@ -45,7 +47,7 @@ In your CSS, you’d have something like the following where the bulk of the sty
 .callout-negative {}
 ```
 
-For the callouts, that unique styling is just a `border-left-color`. When you combine that base class with one of those modifier classes, you get your complete component family:
+When you combine that base class with one of those modifier classes, you get your complete component family:
 
 <Callout type="info">
 **This is an info callout.** Example text to show it in action.

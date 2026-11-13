@@ -13,12 +13,15 @@ import { getSequence } from '@libs/utils'
 
 Apply `display` utilities to create a flexbox container and transform **direct children elements** into flex items. Flex containers and items are able to be modified further with additional flex properties.
 
-<Example class="bd-example-flex" code={`<div class="d-flex p-small">I’m a flexbox container!</div>`} />
+```html buttonLabel="flex container" class="bd-example-flex"
+<div class="d-flex p-small">I’m a flexbox container!</div>
+```
 
-<Example class="bd-example-flex" code={`<div class="d-inline-flex p-small">I’m an inline flexbox container!</div>`} />
+```html buttonLabel="inline flex container" class="bd-example-flex"
+<div class="d-inline-flex p-small">I’m an inline flexbox container!</div>
+```
 
 Responsive variations also exist for `.d-flex` and `.d-inline-flex`.
-
 
 <ul>
   {getData('breakpoints').map((breakpoint) => {
@@ -50,29 +53,33 @@ Set the direction of flex items in a flex container with direction utilities. In
 
 Use `.flex-row` to set a horizontal direction (the browser default), or `.flex-row-reverse` to start the horizontal direction from the opposite side.
 
-<Example class="bd-example-flex" code={`<div class="d-flex flex-row mb-large">
-    <div class="p-small">Flex item 1</div>
-    <div class="p-small">Flex item 2</div>
-    <div class="p-small">Flex item 3</div>
-  </div>
-  <div class="d-flex flex-row-reverse">
-    <div class="p-small">Flex item 1</div>
-    <div class="p-small">Flex item 2</div>
-    <div class="p-small">Flex item 3</div>
-  </div>`} />
+```html buttonLabel="flex row direction" class="bd-example-flex"
+<div class="d-flex flex-row mb-large">
+  <div class="p-small">Flex item 1</div>
+  <div class="p-small">Flex item 2</div>
+  <div class="p-small">Flex item 3</div>
+</div>
+<div class="d-flex flex-row-reverse">
+  <div class="p-small">Flex item 1</div>
+  <div class="p-small">Flex item 2</div>
+  <div class="p-small">Flex item 3</div>
+</div>
+```
 
 Use `.flex-column` to set a vertical direction, or `.flex-column-reverse`  to start the vertical direction from the opposite side.
 
-<Example class="bd-example-flex" code={`<div class="d-flex flex-column mb-large">
-    <div class="p-small">Flex item 1</div>
-    <div class="p-small">Flex item 2</div>
-    <div class="p-small">Flex item 3</div>
-  </div>
-  <div class="d-flex flex-column-reverse">
-    <div class="p-small">Flex item 1</div>
-    <div class="p-small">Flex item 2</div>
-    <div class="p-small">Flex item 3</div>
-  </div>`} />
+```html buttonLabel="flex column direction" class="bd-example-flex"
+<div class="d-flex flex-column mb-large">
+  <div class="p-small">Flex item 1</div>
+  <div class="p-small">Flex item 2</div>
+  <div class="p-small">Flex item 3</div>
+</div>
+<div class="d-flex flex-column-reverse">
+  <div class="p-small">Flex item 1</div>
+  <div class="p-small">Flex item 2</div>
+  <div class="p-small">Flex item 3</div>
+</div>
+```
 
 Responsive variations also exist for `flex-direction`.
 
@@ -108,38 +115,40 @@ Responsive variations also exist for `flex-direction`.
 
 Use `justify-content` utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start, y-axis if `flex-direction: column`). Choose from `start` (browser default), `end`, `center`, `between`, `around`, or `evenly`.
 
-<Example showMarkup={false} class="bd-example-flex" code={`<div class="d-flex justify-content-start mb-large">
-    <div class="p-small bd-highlight">Justify</div>
-    <div class="p-small bd-highlight">Content</div>
-    <div class="p-small bd-highlight">Start</div>
-  </div>
-  <div class="d-flex justify-content-end mb-large">
-    <div class="p-small bd-highlight">Justify</div>
-    <div class="p-small bd-highlight">Content</div>
-    <div class="p-small bd-highlight">End</div>
-  </div>
-  <div class="d-flex justify-content-center mb-large">
-    <div class="p-small bd-highlight">Justify</div>
-    <div class="p-small bd-highlight">Content</div>
-    <div class="p-small bd-highlight">Center</div>
-  </div>
-  <div class="d-flex justify-content-between mb-large">
-    <div class="p-small bd-highlight">Justify</div>
-    <div class="p-small bd-highlight">Content</div>
-    <div class="p-small bd-highlight">Between</div>
-  </div>
-  <div class="d-flex justify-content-around mb-large">
-    <div class="p-small bd-highlight">Justify</div>
-    <div class="p-small bd-highlight">Content</div>
-    <div class="p-small bd-highlight">Around</div>
-  </div>
-  <div class="d-flex justify-content-evenly">
-    <div class="p-small bd-highlight">Justify</div>
-    <div class="p-small bd-highlight">Content</div>
-    <div class="p-small bd-highlight">Evenly</div>
-  </div>`} />
+```html buttonLabel="justify-content utilities" class="bd-example-flex" showMarkup={false}
+<div class="d-flex justify-content-start mb-large">
+  <div class="p-small bd-highlight">Justify</div>
+  <div class="p-small bd-highlight">Content</div>
+  <div class="p-small bd-highlight">Start</div>
+</div>
+<div class="d-flex justify-content-end mb-large">
+  <div class="p-small bd-highlight">Justify</div>
+  <div class="p-small bd-highlight">Content</div>
+  <div class="p-small bd-highlight">End</div>
+</div>
+<div class="d-flex justify-content-center mb-large">
+  <div class="p-small bd-highlight">Justify</div>
+  <div class="p-small bd-highlight">Content</div>
+  <div class="p-small bd-highlight">Center</div>
+</div>
+<div class="d-flex justify-content-between mb-large">
+  <div class="p-small bd-highlight">Justify</div>
+  <div class="p-small bd-highlight">Content</div>
+  <div class="p-small bd-highlight">Between</div>
+</div>
+<div class="d-flex justify-content-around mb-large">
+  <div class="p-small bd-highlight">Justify</div>
+  <div class="p-small bd-highlight">Content</div>
+  <div class="p-small bd-highlight">Around</div>
+</div>
+<div class="d-flex justify-content-evenly">
+  <div class="p-small bd-highlight">Justify</div>
+  <div class="p-small bd-highlight">Content</div>
+  <div class="p-small bd-highlight">Evenly</div>
+</div>
+```
 
-```html
+```html buttonLabel="justify-content utilities" markupOnly
 <div class="d-flex justify-content-start">...</div>
 <div class="d-flex justify-content-end">...</div>
 <div class="d-flex justify-content-center">...</div>
@@ -186,33 +195,35 @@ Responsive variations also exist for `justify-content`.
 
 Use `align-items` utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to start, x-axis if `flex-direction: column`). Choose from `start`, `end`, `center`, `baseline`, or `stretch` (browser default).
 
-<Example showMarkup={false} class="bd-example-flex" code={`<div class="d-flex align-items-start mb-large" style="height: 100px">
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>
-  <div class="d-flex align-items-end mb-large" style="height: 100px">
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>
-  <div class="d-flex align-items-center mb-large" style="height: 100px">
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>
-  <div class="d-flex align-items-baseline mb-large" style="height: 100px">
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>
-  <div class="d-flex align-items-stretch" style="height: 100px">
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>`} />
+```html buttonLabel="align-items utilities" class="bd-example-flex" showMarkup={false}
+<div class="d-flex align-items-start mb-large" style="height: 100px">
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+<div class="d-flex align-items-end mb-large" style="height: 100px">
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+<div class="d-flex align-items-center mb-large" style="height: 100px">
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+<div class="d-flex align-items-baseline mb-large" style="height: 100px">
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+<div class="d-flex align-items-stretch" style="height: 100px">
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+```
 
-```html
+```html buttonLabel="align-items utilities" markupOnly
 <div class="d-flex align-items-start">...</div>
 <div class="d-flex align-items-end">...</div>
 <div class="d-flex align-items-center">...</div>
@@ -256,33 +267,35 @@ Responsive variations also exist for `align-items`.
 
 Use `align-self` utilities on flexbox items to individually change their alignment on the cross axis (the y-axis to start, x-axis if `flex-direction: column`). Choose from the same options as `align-items`: `start`, `end`, `center`, `baseline`, or `stretch` (browser default).
 
-<Example showMarkup={false} class="bd-example-flex" code={`<div class="d-flex mb-large" style="height: 100px">
-    <div class="p-small">Flex item</div>
-    <div class="align-self-start p-small">Aligned flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>
-  <div class="d-flex mb-large" style="height: 100px">
-    <div class="p-small">Flex item</div>
-    <div class="align-self-end p-small">Aligned flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>
-  <div class="d-flex mb-large" style="height: 100px">
-    <div class="p-small">Flex item</div>
-    <div class="align-self-center p-small">Aligned flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>
-  <div class="d-flex mb-large" style="height: 100px">
-    <div class="p-small">Flex item</div>
-    <div class="align-self-baseline p-small">Aligned flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>
-  <div class="d-flex" style="height: 100px">
-    <div class="p-small">Flex item</div>
-    <div class="align-self-stretch p-small">Aligned flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>`} />
+```html class="bd-example-flex" showMarkup={false}
+<div class="d-flex mb-large" style="height: 100px">
+  <div class="p-small">Flex item</div>
+  <div class="align-self-start p-small">Aligned flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+<div class="d-flex mb-large" style="height: 100px">
+  <div class="p-small">Flex item</div>
+  <div class="align-self-end p-small">Aligned flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+<div class="d-flex mb-large" style="height: 100px">
+  <div class="p-small">Flex item</div>
+  <div class="align-self-center p-small">Aligned flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+<div class="d-flex mb-large" style="height: 100px">
+  <div class="p-small">Flex item</div>
+  <div class="align-self-baseline p-small">Aligned flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+<div class="d-flex" style="height: 100px">
+  <div class="p-small">Flex item</div>
+  <div class="align-self-stretch p-small">Aligned flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+```
 
-```html
+```html buttonLabel="align-self utilities" markupOnly
 <div class="align-self-start">Aligned flex item</div>
 <div class="align-self-end">Aligned flex item</div>
 <div class="align-self-center">Aligned flex item</div>
@@ -327,11 +340,13 @@ Responsive variations also exist for `align-self`.
 
 Use the `.flex-fill` class on a series of sibling elements to force them into widths equal to their content (or equal widths if their content does not surpass their border-boxes) while taking up all available horizontal space.
 
-<Example class="bd-example-flex" code={`<div class="d-flex">
-    <div class="p-small flex-fill">Flex item with a lot of content</div>
-    <div class="p-small flex-fill">Flex item</div>
-    <div class="p-small flex-fill">Flex item</div>
-  </div>`} />
+```html buttonLabel="flex-fill utility" class="bd-example-flex"
+<div class="d-flex">
+  <div class="p-small flex-fill">Flex item with a lot of content</div>
+  <div class="p-small flex-fill">Flex item</div>
+  <div class="p-small flex-fill">Flex item</div>
+</div>
+```
 
 Responsive variations also exist for `flex-fill`.
 
@@ -361,18 +376,22 @@ Responsive variations also exist for `flex-fill`.
 
 Use `.flex-grow-*` utilities to toggle a flex item’s ability to grow to fill available space. In the example below, the `.flex-grow-1` elements uses all available space it can, while allowing the remaining two flex items their necessary space.
 
-<Example class="bd-example-flex" code={`<div class="d-flex">
+```html buttonLabel="flex-grow utility" class="bd-example-flex"
+<div class="d-flex">
   <div class="p-small flex-grow-1">Flex item</div>
   <div class="p-small">Flex item</div>
   <div class="p-small">Third flex item</div>
-</div>`} />
+</div>
+```
 
 Use `.flex-shrink-*` utilities to toggle a flex item’s ability to shrink if necessary. In the example below, the second flex item with `.flex-shrink-1` is forced to wrap its contents to a new line, "shrinking" to allow more space for the previous flex item with `.w-100`.
 
-<Example class="bd-example-flex" code={`<div class="d-flex">
+```html buttonLabel="flex-shrink utility" class="bd-example-flex"
+<div class="d-flex">
   <div class="p-small w-100">Flex item</div>
   <div class="p-small flex-shrink-1">Flex item</div>
-</div>`} />
+</div>
+```
 
 Responsive variations also exist for `flex-grow` and `flex-shrink`.
 
@@ -404,99 +423,109 @@ Responsive variations also exist for `flex-grow` and `flex-shrink`.
 
 Flexbox can do some pretty awesome things when you mix flex alignments with auto margins. Shown below are three examples of controlling flex items via auto margins: default (no auto margin), pushing two items to the right (`.me-auto`), and pushing two items to the left (`.ms-auto`).
 
-<Example class="bd-example-flex" code={`<div class="d-flex mb-large">
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>
+```html buttonLabel="auto margins" class="bd-example-flex"
+<div class="d-flex mb-large">
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
 
-  <div class="d-flex mb-large">
-    <div class="me-auto p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>
+<div class="d-flex mb-large">
+  <div class="me-auto p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
 
-  <div class="d-flex mb-large">
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="ms-auto p-small">Flex item</div>
-  </div>`} />
+<div class="d-flex mb-large">
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="ms-auto p-small">Flex item</div>
+</div>
+```
 
 ### With align-items
 
 Vertically move one flex item to the top or bottom of a container by mixing `align-items`, `flex-direction: column`, and `margin-top: auto` or `margin-bottom: auto`.
 
-<Example class="bd-example-flex" code={`<div class="d-flex align-items-start flex-column mb-large" style="height: 200px;">
-    <div class="mb-auto p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>
+```html buttonLabel="auto margins with align-items" class="bd-example-flex"
+<div class="d-flex align-items-start flex-column mb-large" style="height: 200px;">
+  <div class="mb-auto p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
 
-  <div class="d-flex align-items-end flex-column mb-large" style="height: 200px;">
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="mt-auto p-small">Flex item</div>
-  </div>`} />
+<div class="d-flex align-items-end flex-column mb-large" style="height: 200px;">
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="mt-auto p-small">Flex item</div>
+</div>
+```
 
 ## Wrap
 
 Change how flex items wrap in a flex container. Choose from no wrapping at all (the browser default) with `.flex-nowrap`, wrapping with `.flex-wrap`, or reverse wrapping with `.flex-wrap-reverse`.
 
-<Example showMarkup={false} class="bd-example-flex" code={`<div class="d-flex flex-nowrap" style="width: 8rem;">
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>`} />
+```html class="bd-example-flex" showMarkup={false}
+<div class="d-flex flex-nowrap" style="width: 8rem;">
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+```
 
-```html
+```html buttonLabel="flex-nowrap utility" markupOnly
 <div class="d-flex flex-nowrap">
   ...
 </div>
 ```
 
-<Example showMarkup={false} class="bd-example-flex" code={`<div class="d-flex flex-wrap">
-    <div class="p-small">Flex item 1</div>
-    <div class="p-small">Flex item 2</div>
-    <div class="p-small">Flex item 3</div>
-    <div class="p-small">Flex item 4</div>
-    <div class="p-small">Flex item 5</div>
-    <div class="p-small">Flex item 6</div>
-    <div class="p-small">Flex item 7</div>
-    <div class="p-small">Flex item 8</div>
-    <div class="p-small">Flex item 9</div>
-    <div class="p-small">Flex item 10</div>
-    <div class="p-small">Flex item 11</div>
-    <div class="p-small">Flex item 12</div>
-    <div class="p-small">Flex item 13</div>
-    <div class="p-small">Flex item 14</div>
-  </div>`} />
+```html class="bd-example-flex" showMarkup={false}
+<div class="d-flex flex-wrap">
+  <div class="p-small">Flex item 1</div>
+  <div class="p-small">Flex item 2</div>
+  <div class="p-small">Flex item 3</div>
+  <div class="p-small">Flex item 4</div>
+  <div class="p-small">Flex item 5</div>
+  <div class="p-small">Flex item 6</div>
+  <div class="p-small">Flex item 7</div>
+  <div class="p-small">Flex item 8</div>
+  <div class="p-small">Flex item 9</div>
+  <div class="p-small">Flex item 10</div>
+  <div class="p-small">Flex item 11</div>
+  <div class="p-small">Flex item 12</div>
+  <div class="p-small">Flex item 13</div>
+  <div class="p-small">Flex item 14</div>
+</div>
+```
 
-```html
+```html buttonLabel="flex-wrap utility" markupOnly
 <div class="d-flex flex-wrap">
   ...
 </div>
 ```
 
-<Example showMarkup={false} class="bd-example-flex" code={`<div class="d-flex flex-wrap-reverse">
-    <div class="p-small">Flex item 1</div>
-    <div class="p-small">Flex item 2</div>
-    <div class="p-small">Flex item 3</div>
-    <div class="p-small">Flex item 4</div>
-    <div class="p-small">Flex item 5</div>
-    <div class="p-small">Flex item 6</div>
-    <div class="p-small">Flex item 7</div>
-    <div class="p-small">Flex item 8</div>
-    <div class="p-small">Flex item 9</div>
-    <div class="p-small">Flex item 10</div>
-    <div class="p-small">Flex item 11</div>
-    <div class="p-small">Flex item 12</div>
-    <div class="p-small">Flex item 13</div>
-    <div class="p-small">Flex item 14</div>
-  </div>`} />
+```html class="bd-example-flex" showMarkup={false}
+<div class="d-flex flex-wrap-reverse">
+  <div class="p-small">Flex item 1</div>
+  <div class="p-small">Flex item 2</div>
+  <div class="p-small">Flex item 3</div>
+  <div class="p-small">Flex item 4</div>
+  <div class="p-small">Flex item 5</div>
+  <div class="p-small">Flex item 6</div>
+  <div class="p-small">Flex item 7</div>
+  <div class="p-small">Flex item 8</div>
+  <div class="p-small">Flex item 9</div>
+  <div class="p-small">Flex item 10</div>
+  <div class="p-small">Flex item 11</div>
+  <div class="p-small">Flex item 12</div>
+  <div class="p-small">Flex item 13</div>
+  <div class="p-small">Flex item 14</div>
+</div>
+```
 
-```html
+```html buttonLabel="flex-wrap-reverse utility" markupOnly
 <div class="d-flex flex-wrap-reverse">
   ...
 </div>
@@ -535,11 +564,13 @@ Responsive variations also exist for `flex-wrap`.
 
 Change the _visual_ order of specific flex items with a handful of `order` utilities. We only provide options for making an item first or last, as well as a reset to use the DOM order. As `order` takes any integer value from 0 to 5, add custom CSS for any additional values needed.
 
-<Example class="bd-example-flex" code={`<div class="d-flex flex-nowrap">
+```html buttonLabel="flex order example" class="bd-example-flex"
+<div class="d-flex flex-nowrap">
   <div class="order-3 p-small">First flex item</div>
   <div class="order-2 p-small">Second flex item</div>
   <div class="order-1 p-small">Third flex item</div>
-</div>`} />
+</div>
+```
 
 Responsive variations also exist for `order`.
 
@@ -587,137 +618,149 @@ Use `align-content` utilities on flexbox containers to align flex items _togethe
 
 **Heads up!** This property has no effect on single rows of flex items.
 
-<Example showMarkup={false} class="bd-example-flex" code={`<div class="d-flex align-content-start flex-wrap mb-large" style="height: 200px">
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>`} />
+```html class="bd-example-flex" showMarkup={false}
+<div class="d-flex align-content-start flex-wrap mb-large" style="height: 200px">
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+```
 
-```html
+```html buttonLabel="align-content start example" markupOnly
 <div class="d-flex align-content-start flex-wrap">
   ...
 </div>
 ```
 
-<Example showMarkup={false} class="bd-example-flex" code={`<div class="d-flex align-content-end flex-wrap mb-large" style="height: 200px">
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>`} />
+```html class="bd-example-flex" showMarkup={false}
+<div class="d-flex align-content-end flex-wrap mb-large" style="height: 200px">
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+```
 
-```html
+```html buttonLabel="align-content end example" markupOnly
 <div class="d-flex align-content-end flex-wrap">...</div>
 ```
 
-<Example showMarkup={false} class="bd-example-flex" code={`<div class="d-flex align-content-center flex-wrap mb-large" style="height: 200px">
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>`} />
+```html class="bd-example-flex" showMarkup={false}
+<div class="d-flex align-content-center flex-wrap mb-large" style="height: 200px">
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+```
 
-```html
+```html buttonLabel="align-content center example" markupOnly
 <div class="d-flex align-content-center flex-wrap">...</div>
 ```
 
-<Example showMarkup={false} class="bd-example-flex" code={`<div class="d-flex align-content-between flex-wrap mb-large" style="height: 200px">
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>`} />
+```html class="bd-example-flex" showMarkup={false}
+<div class="d-flex align-content-between flex-wrap mb-large" style="height: 200px">
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+```
 
-```html
+```html buttonLabel="align-content between example" markupOnly
 <div class="d-flex align-content-between flex-wrap">...</div>
 ```
 
-<Example showMarkup={false} class="bd-example-flex" code={`<div class="d-flex align-content-around flex-wrap mb-large" style="height: 200px">
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>`} />
+```html class="bd-example-flex" showMarkup={false}
+<div class="d-flex align-content-around flex-wrap mb-large" style="height: 200px">
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+```
 
-```html
+```html buttonLabel="align-content around example" markupOnly
 <div class="d-flex align-content-around flex-wrap">...</div>
 ```
 
-<Example showMarkup={false} class="bd-example-flex" code={`<div class="d-flex align-content-stretch flex-wrap mb-large" style="height: 200px">
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-    <div class="p-small">Flex item</div>
-  </div>`} />
+```html class="bd-example-flex" showMarkup={false}
+<div class="d-flex align-content-stretch flex-wrap mb-large" style="height: 200px">
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+  <div class="p-small">Flex item</div>
+</div>
+```
 
-```html
+```html buttonLabel="align-content stretch example" markupOnly
 <div class="d-flex align-content-stretch flex-wrap">...</div>
 ```
 

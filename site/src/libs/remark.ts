@@ -1,7 +1,10 @@
-import type { Root } from 'mdast'
+import type { Root, RootContent } from 'mdast'
 import type { MdxJsxAttribute, MdxJsxExpressionAttribute } from 'mdast-util-mdx-jsx'
 import type { Plugin } from 'unified'
 import { visit } from 'unist-util-visit'
+import { fromMarkdown } from 'mdast-util-from-markdown'
+import { mdxFromMarkdown } from 'mdast-util-mdx'
+import { mdxjs } from 'micromark-extension-mdxjs'
 import { getConfig } from './config'
 import { getVersionedDocsPath } from './path'
 import { getComponentSVG, getVersionLink } from './utils'
@@ -135,6 +138,31 @@ export const remarkBsVersionLink: Plugin<[], Root> = function () {
               }
             ]
             node.value = replaceRegexInText(node.value, versionLinkRegExp)
+          }
+          break
+        }
+      }
+    })
+  }
+}
+
+// A remark plugin to transform code blocks into Example or Code components.
+export const remarkCodeBlockToExample: Plugin<[], Root> = function () {
+  return (ast) => {
+    // https://github.com/syntax-tree/mdast#nodes
+    // https://github.com/syntax-tree/mdast-util-mdx-jsx#nodes
+    visit(ast, ['code'], (node, index, parent) => {
+      switch (node.type) {
+        case 'code': {
+          const type = (node.meta?.includes('markupOnly')) ? 'Code' : 'Example';
+          const replacement = fromMarkdown(`<${type} ${node.meta} code={\`${node.value}\`} lang="${node.lang}" />`, {
+            extensions: [mdxjs()],
+            mdastExtensions: [mdxFromMarkdown()]
+          }).children[0]
+          replacement.position = node.position
+
+          if(parent) {
+            parent.children[(parent.children as RootContent[]).indexOf(node)] = replacement
           }
           break
         }
