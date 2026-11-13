@@ -1,7 +1,8 @@
 - title: Components
-  icon: component-atom
+  icon: module-molecule
   icon_color: body-color
   pages:
+    - title: All components
     - title: Alerts
     - title: Badges
     - title: Breadcrumb
@@ -33,50 +34,8 @@
     - title: Typography
 
 - title: Coming soon
-  icon: component-atom
+  icon: calendar-month
   icon_color: body-color
   pages:
-    - title: Accordion
-      coming_soon: true
-    - title: Back to top
-      coming_soon: true
-    - title: Card
-      coming_soon: true
-    - title: Carousel
-      coming_soon: true
-    - title: Close button
-      coming_soon: true
-    - title: Collapse
-      coming_soon: true
-    - title: Local navigation
-      coming_soon: true
-    - title: Navbar
-      coming_soon: true
-    - title: Nav & tab
-      coming_soon: true
-    - title: Offcanvas
-      coming_soon: true
-    - title: Pagination
-      coming_soon: true
-    - title: Popover
-      coming_soon: true
-    - title: Progress
-      coming_soon: true
-    - title: Quantity selector
-      coming_soon: true
-    - title: Range
-      coming_soon: true
-    - title: Scrollspy
-      coming_soon: true
-    - title: Spinner
-      coming_soon: true
-    - title: Stepped process
-      coming_soon: true
-    - title: Sticker
-      coming_soon: true
-    - title: Title bar
-      coming_soon: true
-    - title: Toast
-      coming_soon: true
-    - title: Tooltip
-      coming_soon: true
+    - title: Component roadmap
+      direct_url: 'https://unified-design-system.orange.com/472794e18/p/73c701-components/b/7771da'

@@ -80,7 +80,8 @@ if(slug && sidebars.includes(slug as typeof sidebars[number])) {
                             'column-gap-2xsmall',
                             'align-items-center',
                             { active },
-                            { 'text-decoration-line-through': page.coming_soon }
+                            { 'text-decoration-line-through': page.coming_soon },
+                            { 'external': page.direct_url && page.direct_url.includes('http') }
                           ]}
                           aria-current={active ? 'page' : undefined}
                           title={page.draft ? 'draft component' : page.coming_soon ? 'page is not yet available' : null}
@@ -88,6 +89,9 @@ if(slug && sidebars.includes(slug as typeof sidebars[number])) {
                           {page.title}
                           {page.draft && (
                             <span class="tag tag-negative tag-muted tag-small ms-auto">draft</span>
+                          )}
+                          {page.direct_url && page.direct_url.includes('http') && (
+                            <span class="visually-hidden">(external link)</span>
                           )}
                         </a>
                       </li>

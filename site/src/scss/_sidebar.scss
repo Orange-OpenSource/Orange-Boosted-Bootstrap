@@ -66,4 +66,27 @@
   &.active {
     font-weight: $ouds-font-weight-system-web-strong;
   }
+
+  &.external {
+    display: inline-block;
+
+    &::after {
+      display: inline-block;
+      width: px-to-rem($ouds-link-size-icon-default);
+      height: px-to-rem($ouds-link-size-icon-default);
+      margin-left: $ouds-link-space-column-gap-chevron-default;
+      vertical-align: text-bottom;
+      content: "";
+      background-color: $ouds-link-color-chevron-enabled;
+      mask: $link-external-icon center no-repeat;
+      mask-size: px-to-rem($ouds-link-size-icon-default);
+    }
+
+    &:hover {
+      text-decoration: underline;
+      &::after {
+        background-color: $ouds-link-color-content-hover;
+      }
+    }
+  }
 }
