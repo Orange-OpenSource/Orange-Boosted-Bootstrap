@@ -1,7 +1,9 @@
 ---
-title: Accordion
-description: Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.
-aliases: "/docs/components/accordion/"
+title: Accordions
+description: An accordion item is a UI element that reveals or hides related content within the current context.
+aliases:
+  - "/docs/components/accordion/"
+  - "/docs/components/accordions/"
 toc: true
 types:
   - Accordion card item
@@ -9,14 +11,27 @@ types:
   - Accordion list item
 ---
 
+import { getVersionedDocsPath } from '@libs/path'
+import { getTokenValue } from '@libs/sass-variables'
+
+<Callout type="info" title="Design guidelines">
+  For usage guidance, please refer to the [accordion card item guidelines](https://r.orange.fr/r/S-ouds-doc-accordion-card-item), and the [accordion list item guidelines](https://r.orange.fr/r/S-ouds-doc-accordion-list-item).
+</Callout>
+
 <Example class="d-flex flex-column gap-medium" code={`<details class="item item-accordion">
     <summary class="item-container item-interactive">
       <span class="item-content">
+        <span class="item-leading-container item-slot item-slot-focusable">
+          <button class="btn btn-strong">Slot</button>
+        </span>
         <span class="item-text-container">
           <p class="item-overline">Overline</p>
           <p class="item-label">Label</p>
           <p class="item-extra-label">Extra label</p>
           <p class="item-description">Description</p>
+        </span>
+        <span class="item-trailing-container item-slot item-slot-focusable">
+          <button class="btn btn-strong">Slot</button>
         </span>
       </span>
     </summary>
@@ -78,3 +93,233 @@ types:
       </div>
     </details>
   </div>`} />
+
+## Overview
+
+### Component types
+
+<ul class="list-unstyled grid gap-medium mb-medium">
+  <li class="g-col-6">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
+          <details class="item item-accordion w-75">
+            <summary class="item-container item-interactive">
+              <span class="item-content">
+                <span class="item-text-container">
+                  <p class="item-label">Label</p>
+                </span>
+              </span>
+            </summary>
+          </details>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#accordion-card-item">Accordion card item</a> is a UI element shaped like a self-contained card that reveals or hides related content within the current context.</div>
+    </div>
+  </li>
+  <li class="g-col-6">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
+          <div class="item-list w-75">
+            <details class="item item-accordion">
+              <summary class="item-container item-interactive">
+                <span class="item-content">
+                  <span class="item-text-container">
+                    <p class="item-label">Label</p>
+                  </span>
+                </span>
+              </summary>
+            </details>
+          </div>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#accordion-list-item">Accordion list item</a> is a UI element shaped like a row, that reveals or hides related content within the current context.</div>
+    </div>
+  </li>
+</ul>
+
+{/* Extra label, alignment et size pour le faq */}
+
+Our accordions are based on our [items]([[docsref:/components/items]]). This is why they share the same structure, classes, and variants as items, with the addition of the interactive summary and expandable content specific to accordions.
+
+### Approach
+
+Accordions use native HTML `<details>` and `<summary>` elements. Activating the summary opens or closes the content without requiring the Collapse JavaScript plugin.
+
+The basic structure includes:
+
+* `.item` and `.item-accordion` on the `<details>` element.
+* `.item-container` and `.item-interactive` on the `<summary>` element.
+* `.item-content` as the container for the summary content.
+* `.item-text-container` as the container for the summary text.
+* `.item-slot` as a direct child of `<details>` for the expandable content.
+
+### Accessibility
+
+Use a clear, descriptive label in the `<summary>` so users can understand what content will be revealed. Native `<details>` and `<summary>` provide keyboard interaction and communicate the expanded or collapsed state without additional ARIA attributes.
+
+## [[comp]] Accordion card item
+
+An accordion card item is a UI element shaped like a self-contained card that reveals or hides related content within the current context.
+
+The accordion card item is used when a more prominent visual grouping is needed compared to an accordion list item. The card can be displayed on its own or as part of a card-based accordion collection, and may feature a distinct background, outline, or rounded corners.
+
+Add `.item-accordion` to the `.item` `<details>` element and `.item-interactive` to its `<summary>` element. The available options are described in the [common variants section](#common-variants).
+
+<Example buttonLabel="accordion card item" code={`<details class="item item-accordion">
+    <summary class="item-container item-interactive">
+      <span class="item-content">
+        <span class="item-text-container">
+          <p class="item-label">Label</p>
+        </span>
+      </span>
+    </summary>
+    <div class="item-slot">
+      test
+    </div>
+  </details>`} />
+
+{/* ## [[comp]] Accordion faq
+
+An accordion faq presents a question in the summary and reveals its answer when expanded. It helps users scan a set of questions and open the answers they need.
+
+<Example buttonLabel="accordion faq" code={``} /> */}
+
+## [[comp]] Accordion list item
+
+An accordion list item is a UI element shaped like a row, that reveals or hides related content within the current context.
+
+Accordion items are typically stacked vertically, allowing users to scan sections and expand only the information they need.
+
+Use `.item-list` as the surrounding container and `.item-accordion` on each expandable item. The available options are described in the [common variants section](#common-variants).
+
+<Example buttonLabel="accordion list item" code={`<div class="item-list">
+    <details class="item item-accordion" name="accordion1">
+      <summary class="item-container item-interactive">
+        <span class="item-content">
+          <span class="item-text-container">
+            <p class="item-label">Label</p>
+          </span>
+        </span>
+      </summary>
+      <div class="item-slot">
+        test
+      </div>
+    </details>
+
+    <details class="item item-accordion" name="accordion1">
+      <summary class="item-container item-interactive">
+        <span class="item-content">
+          <span class="item-text-container">
+            <p class="item-label">Label</p>
+          </span>
+        </span>
+      </summary>
+      <div class="item-slot">
+        test
+      </div>
+    </details>
+  </div>`} />
+
+## Common variants
+
+Accordions share item styles and can use the following options where appropriate for their content and context.
+
+### With asset
+
+The summary's `.item-content` can contain an optional leading container, a text container, and an optional trailing container, in that order. The expanding indicator is displayed separately from these containers.
+
+#### Leading container
+
+Use `.item-leading-container` to add content before the summary text, such as an icon or image.
+
+<Example buttonLabel="accordions with leading content" code={``} />
+
+#### Text container
+
+Use `.item-text-container` for the summary text. It can contain an optional `.item-overline`, the `.item-label`, an optional `.item-extra-label`, and an optional `.item-description`, in that order.
+
+<Example buttonLabel="accordions with text content" code={``} />
+
+#### Trailing container
+
+Use `.item-trailing-container` to add supporting content after the summary text, such as a tag or badge.
+
+<Example buttonLabel="accordions with trailing content" code={``} />
+
+#### Slots
+
+Use `.item-slot` for custom content not covered by the other item elements. A direct child `.item-slot` of the accordion contains the expandable content.
+
+Slots can also be used within the summary's item containers, but interactive controls should be placed in the expandable content rather than inside the summary.
+
+<Example buttonLabel="accordions with slots" code={``} />
+
+### Background
+
+As with items, use `.item-no-bg` or `.item-bg` on the `.item` or `.item-list` container to change the default background of the summary.
+
+<Example buttonLabel="accordions with background" code={``} />
+
+### Divider
+
+Use `.item-no-divider` on the `.item` or `.item-list` container to remove the divider.
+
+<Example buttonLabel="accordions with divider" code={``} />
+
+### Outlined
+
+Use `.item-outlined` on the `.item` element or an ancestor to display an outline. As with items, this variant is intended for standalone card items rather than adjacent list items.
+
+<Example buttonLabel="outlined accordions" code={``} />
+
+### Rounded corners
+
+For Orange and Orange Compact, add `.use-rounded-corner-items` to a parent container to enable rounded corners for items. Items within a list remain square.
+
+<Example buttonLabel="accordions with rounded corners" code={``} />
+
+### States
+
+The summary reflects the accordion's current state and can be activated to reveal or hide its content.
+
+#### Expanded
+
+Add the `open` attribute to `<details>` to display the expandable content initially. The browser updates this attribute as the user opens or closes the accordion.
+
+<Example buttonLabel="expanded accordions" code={``} />
+
+#### Skeleton
+
+While content is loading, a skeleton can represent the accordion's layout. As with item skeletons, mark the loading container with `aria-busy="true"` and `inert` so its contents cannot be interacted with until they are ready.
+
+<Example buttonLabel="accordion skeleton" code={``} />
+
+### Sizes
+
+Use `.item-small` on the `.item` or `.item-list` element for the small size. As with small items, avoid slots and asset size classes in the summary, and limit its text container to a label and/or description.
+
+<Example buttonLabel="accordion sizes" code={``} />
+
+### Layout
+
+Accordion layout follows the same alignment and width options as items.
+
+#### Alignment
+
+Summary content is vertically centered by default. Add `.item-top` to the `.item` or `.item-list` to align the content to the top.
+
+<Example buttonLabel="accordion alignment" code={``} />
+
+#### Max width
+
+Accordions span the width of their parent container by default. Add `.component-max-width` to the `.item` or `.item-list` to limit their width.
+
+<Example buttonLabel="accordion max width" code={``} />
+
+## Grouping
+
+By default, each accordion can be opened or closed independently. Give related `<details>` elements the same `name` attribute to create an exclusive group: opening one closes the others. Use a distinct name for each separate group.
+
+<Example buttonLabel="grouped accordions" code={``} />

@@ -362,8 +362,7 @@
 // Navigation specific styles
 //
 
-.item-accordion,
-.item-navigation {
+:is(.item-accordion, .item-navigation) {
   .item-container {
     position: relative;
   }
@@ -379,36 +378,34 @@
     mask: var(--#{$prefix}list-item-nav-icon, $list-item-next-icon) center / contain no-repeat;
   }
 
-  &:has(.item-interactive:hover) {
+  &:has(.item-interactive:hover):not(:has(.item-slot:hover)) {
     --#{$prefix}list-item-chevron-color: #{$ouds-color-action-hover};
     --#{$prefix}list-item-bg: #{$ouds-color-action-support-hover};
   }
 
-  &:has(.item-interactive:focus-visible) {
+  &:has(.item-interactive:focus-visible):not(:has(.item-slot:focus-visible)) {
     --#{$prefix}list-item-chevron-color: #{$ouds-color-action-focus};
     --#{$prefix}list-item-bg: #{$ouds-color-action-support-focus};
   }
 
-  &:has(.item-interactive:active) {
+  &:has(.item-interactive:active):not(:has(.item-slot:active)) {
     --#{$prefix}list-item-chevron-color: #{$ouds-color-action-pressed};
     --#{$prefix}list-item-bg: #{$ouds-color-action-support-pressed};
   }
 }
 
 // Needed outside since the outlined could be project wide
-.item-outlined.item-navigation,
-.item-outlined .item-navigation,
-.item-outlined.item-accordion,
-.item-outlined .item-accordion {
-  &:has(.item-interactive:hover) {
+.item-outlined:is(.item-navigation, .item-accordion),
+.item-outlined :is(.item-accordion, .item-navigation) {
+  &:has(.item-interactive:hover):not(:has(.item-slot:hover)) {
     --#{$prefix}list-item-border-color: #{$ouds-color-action-hover};
   }
 
-  &:has(.item-interactive:focus-visible) {
+  &:has(.item-interactive:focus-visible):not(:has(.item-slot:focus-visible)) {
     --#{$prefix}list-item-border-color: #{$ouds-color-action-focus};
   }
 
-  &:has(.item-interactive:active) {
+  &:has(.item-interactive:active):not(:has(.item-slot:active)) {
     --#{$prefix}list-item-border-color: #{$ouds-color-action-pressed};
   }
 }
@@ -425,10 +422,9 @@
 }
 
 // Accordion specific styles
-.item-accordion { // TODO: animation
+.item-accordion {
   --#{$prefix}list-item-nav-icon: #{$accordion-expanded-false};
   position: relative;
-  overflow: clip;
   border-color: var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, transparent)) var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, transparent)) var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, $ouds-color-border-default));
   border-style: solid;
   border-width: var(--#{$prefix}list-item-border-width, 0) var(--#{$prefix}list-item-border-width, 0) var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default);
@@ -436,7 +432,8 @@
 
   &::details-content {
     block-size: 0;
-    transition: block-size .3s ease allow-discrete, padding-block .3s ease allow-discrete; // stylelint-disable-line property-disallowed-list
+    overflow: hidden;
+    transition: block-size .3s ease-in-out, content-visibility .3s ease-in-out allow-discrete; // stylelint-disable-line property-disallowed-list
   }
 
   .item-container {
