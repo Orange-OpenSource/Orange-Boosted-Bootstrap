@@ -5150,7 +5150,6 @@ optgroup {
   --bs-text-input-border-width-right: 0px;
   --bs-text-input-border-width-bottom: 1px;
   --bs-text-input-border-width-left: 0px;
-  --bs-text-input-border-width-focus: 0px;
   --bs-text-input-padding-x: 16px;
   --bs-text-input-padding-y: 6px;
   --bs-text-input-icon-size: 24px;
@@ -6063,7 +6062,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .btn, .btn-close {
   --bs-btn-padding-y: 12px;
-  --bs-btn-font-weight: 700;
   --bs-btn-color: var(--bs-color-action-enabled);
   --bs-btn-bg: transparent;
   --bs-btn-border-width: 1px;
@@ -6088,7 +6086,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   max-width: 30rem;
   min-height: var(--bs-btn-min-height);
   padding: calc(var(--bs-btn-padding-y) - var(--bs-btn-border-width)) calc(var(--bs-btn-padding-end) - var(--bs-btn-border-width)) calc(var(--bs-btn-padding-y) - var(--bs-btn-border-width)) calc(var(--bs-btn-padding-start) - var(--bs-btn-border-width));
-  font-weight: var(--bs-btn-font-weight);
+  font-weight: 700;
   color: var(--bs-btn-color);
   text-align: center;
   text-decoration: none;
@@ -8929,8 +8927,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .breadcrumb {
-  --bs-breadcrumb-divider-color: var(--bs-color-content-default);
-  --bs-breadcrumb-divider: var(--bs-breadcrumb-divider-icon) /* rtl: var(--bs-breadcrumb-divider-icon) */;
   --bs-breadcrumb-item-gap: 4px;
   max-width: initial;
   padding-left: 0;
@@ -8955,11 +8951,11 @@ ol.bullet-list > li > ol > li > ol > li::before {
   width: 16px;
   height: 16px;
   margin-left: var(--bs-breadcrumb-item-gap);
-  color: var(--bs-breadcrumb-divider-color);
+  color: var(--bs-color-content-default);
   content: "";
   background-color: currentcolor;
-  -webkit-mask-image: var(--bs-breadcrumb-divider);
-  mask-image: var(--bs-breadcrumb-divider);
+  -webkit-mask-image: var(--bs-breadcrumb-divider-icon);
+  mask-image: var(--bs-breadcrumb-divider-icon);
   /* rtl:raw:
   transform: scaleX(-1);
   */
@@ -9355,13 +9351,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-tag-border-width: 0px;
   --bs-tag-background-color: var(--bs-color-surface-inverse-high);
   --bs-tag-asset-color: currentcolor;
-  --bs-tag-loading-dasharray: 92;
-  --bs-tag-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
-  --bs-tag-positive-icon: var(--bs-alert-success-icon);
-  --bs-tag-info-icon: var(--bs-alert-info-icon);
   --bs-tag-warning-external-icon: var(--bs-alert-warning-icon);
-  --bs-tag-warning-internal-icon: var(--bs-alert-warning-internal-icon);
-  --bs-tag-negative-icon: var(--bs-alert-error-icon);
   position: relative;
   display: inline-flex;
   gap: var(--bs-tag-asset-gap);
@@ -9468,12 +9458,12 @@ ol.bullet-list > li > ol > li > ol > li::before {
   border-radius: 2000px;
 }
 .tag.tag-positive .tag-status-icon {
-  -webkit-mask-image: var(--bs-tag-positive-icon);
-  mask-image: var(--bs-tag-positive-icon);
+  -webkit-mask-image: var(--bs-alert-success-icon);
+  mask-image: var(--bs-alert-success-icon);
 }
 .tag.tag-info .tag-status-icon {
-  -webkit-mask-image: var(--bs-tag-info-icon);
-  mask-image: var(--bs-tag-info-icon);
+  -webkit-mask-image: var(--bs-alert-info-icon);
+  mask-image: var(--bs-alert-info-icon);
 }
 .tag.tag-warning:not(.tag-muted) .tag-status-icon {
   -webkit-mask-image: var(--bs-tag-warning-external-icon);
@@ -9501,12 +9491,12 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 .tag.tag-warning.tag-muted .tag-status-icon::after {
   background-color: var(--bs-icon-color-content-status-warning-internal-shape);
-  -webkit-mask-image: var(--bs-tag-warning-internal-icon);
-  mask-image: var(--bs-tag-warning-internal-icon);
+  -webkit-mask-image: var(--bs-alert-warning-internal-icon);
+  mask-image: var(--bs-alert-warning-internal-icon);
 }
 .tag.tag-negative .tag-status-icon {
-  -webkit-mask-image: var(--bs-tag-negative-icon);
-  mask-image: var(--bs-tag-negative-icon);
+  -webkit-mask-image: var(--bs-alert-error-icon);
+  mask-image: var(--bs-alert-error-icon);
 }
 .tag:not(.loading) .tag-loader {
   display: none;
@@ -9528,10 +9518,10 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .tag .tag-loader > .tag-loader-inner {
   fill: none;
   stroke: var(--bs-tag-asset-color);
-  stroke-dasharray: var(--bs-tag-loading-dasharray);
+  stroke-dasharray: 92;
   stroke-width: 8;
   transform-origin: center;
-  animation: var(--bs-tag-loading-animation);
+  animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
 }
 
 [aria-disabled=true] .tag,
@@ -9712,9 +9702,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
   mask-image: var(--bs-alert-icon);
 }
 .alert-icon:where(:not(:has(svg, img, .icon)))::after {
-  background-color: var(--bs-alert-icon-internal-color);
-  -webkit-mask-image: var(--bs-alert-icon-internal);
-  mask-image: var(--bs-alert-icon-internal);
+  background-color: var(--bs-icon-color-content-status-warning-internal-shape);
+  -webkit-mask-image: var(--bs-alert-warning-internal-icon);
+  mask-image: var(--bs-alert-warning-internal-icon);
 }
 .alert-icon svg,
 .alert-icon img,
@@ -9862,8 +9852,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-alert-text-color: var(--bs-color-content-status-warning);
   --bs-alert-icon: var(--bs-alert-warning-icon);
   --bs-alert-icon-color: var(--bs-icon-color-content-status-warning-external-shape);
-  --bs-alert-icon-internal: var(--bs-alert-warning-internal-icon);
-  --bs-alert-icon-internal-color: var(--bs-icon-color-content-status-warning-internal-shape);
   --bs-alert-bg: var(--bs-color-surface-status-warning-muted);
   --bs-alert-border-color: var(--bs-color-border-status-warning);
 }
