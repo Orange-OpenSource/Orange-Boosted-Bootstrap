@@ -49,7 +49,7 @@
   --#{$prefix}btn-min-width: #{$ouds-button-size-min-width-default};
   --#{$prefix}btn-min-height: #{$ouds-button-size-min-height-default};
   --#{$prefix}btn-interaction-border-width: #{$btn-border-width};
-  --#{$prefix}btn-icon-size: #{$ouds-button-size-icon-default};
+  --#{$prefix}icon-size: #{$ouds-button-size-icon-default};
   --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon-default};
   --#{$prefix}btn-focus-border-color: var(--#{$prefix}btn-hover-border-color);
   --#{$prefix}btn-loading-size: #{px-to-rem($ouds-button-size-progress-indicator-default)};
@@ -182,19 +182,17 @@
   }
 
   // OUDS mod: buttons with icon and text
-  svg,
-  img,
-  .icon { // TODO: Any way to make it from an a11y pov, like `img[alt]` or `svg[aria-hidden]` ?
-    flex-shrink: 0;
-    width: 1em;
-    height: 1em;
-    overflow: hidden;
-    font-size: var(--#{$prefix}btn-icon-size);
-    line-height: 1;
-  }
+  //svg,
+  //img,
+  //.icon { // TODO: Any way to make it from an a11y pov, like `img[alt]` or `svg[aria-hidden]` ?
+  //  flex-shrink: 0;
+  //  width: 1em;
+  //  height: 1em;
+  //  overflow: hidden;
+  //  font-size: var(--#{$prefix}icon-size);
+  //  line-height: 1;
+  //}
 
-  &:has(svg:not(.loader)),
-  &:has(img:not(.loader)),
   &:has(.icon:not(.loader)) {
     --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start-default};
     --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end-default};
@@ -205,7 +203,7 @@
     --#{$prefix}btn-padding-start: #{$ouds-button-space-inset-icon-only-default};
     --#{$prefix}btn-padding-end: #{$ouds-button-space-inset-icon-only-default};
     --#{$prefix}btn-padding-y: #{$ouds-button-space-inset-icon-only-default};
-    --#{$prefix}btn-icon-size: #{px-to-rem($ouds-button-size-icon-only-default)};
+    --#{$prefix}icon-size: #{px-to-rem($ouds-button-size-icon-only-default)};
 
     max-height: $ouds-button-size-max-size-icon-only-default;
   }
@@ -217,7 +215,7 @@
     --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-none-small};
     --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-icon-none-small};
     --#{$prefix}btn-padding-y: #{$ouds-button-space-padding-block-small};
-    --#{$prefix}btn-icon-size: #{$ouds-button-size-icon-small};
+    --#{$prefix}icon-size: #{$ouds-button-size-icon-small};
     --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon-small};
     --#{$prefix}btn-loading-size: #{px-to-rem($ouds-button-size-progress-indicator-small)};
 
@@ -234,7 +232,7 @@
       --#{$prefix}btn-padding-start: #{$ouds-button-space-inset-icon-only-small};
       --#{$prefix}btn-padding-end: #{$ouds-button-space-inset-icon-only-small};
       --#{$prefix}btn-padding-y: #{$ouds-button-space-inset-icon-only-small};
-      --#{$prefix}btn-icon-size: #{px-to-rem($ouds-button-size-icon-only-small)};
+      --#{$prefix}icon-size: #{px-to-rem($ouds-button-size-icon-only-small)};
 
       max-height: $ouds-button-size-max-size-icon-only-small;
     }
@@ -466,8 +464,8 @@
   @extend .btn-icon;
 
   &:where(:not(:has(svg, img, .icon)))::before {
-    width: var(--#{$prefix}btn-icon-size);
-    height: var(--#{$prefix}btn-icon-size);
+    width: var(--#{$prefix}icon-size);
+    height: var(--#{$prefix}icon-size);
     content: "";
     background-color: currentcolor;
     mask-image: $btn-expurge-icon;
@@ -548,7 +546,7 @@
 }
 
 .btn-expand::after {
-  --#{$prefix}btn-icon-size: #{px-to-rem($ouds-button-size-icon-default)};
+  --#{$prefix}icon-size: #{px-to-rem($ouds-button-size-icon-default)};
   mask-image: $btn-expanded-false-icon;
 }
 
@@ -560,7 +558,7 @@
 .btn-next::after,
 .btn-expand::after {
   flex-shrink: 0;
-  width: var(--#{$prefix}btn-icon-size);
-  height: var(--#{$prefix}btn-icon-size);
+  width: var(--#{$prefix}icon-size);
+  height: var(--#{$prefix}icon-size);
   background-color: currentcolor;
 }

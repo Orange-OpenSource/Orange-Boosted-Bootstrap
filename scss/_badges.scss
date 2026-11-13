@@ -6,7 +6,7 @@
   --#{$prefix}badge-color: #{$ouds-color-content-on-status-negative-emphasized};
   --#{$prefix}badge-background-color: #{$ouds-color-surface-status-negative-emphasized};
   --#{$prefix}badge-icon: #{escape-svg($badge-icon-negative)};
-  --#{$prefix}badge-icon-font-size: calc(var(--#{$prefix}badge-size) - (2 * var(--#{$prefix}badge-padding-x-medium-large)));
+  --#{$prefix}icon-size: calc(var(--#{$prefix}badge-size) - (2 * var(--#{$prefix}badge-padding-x-medium-large)));
   // scss-docs-end badge-css-vars
 
   display: inline-block;
@@ -62,13 +62,13 @@
 
 .badge-xsmall:not(.badge-count) {
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-xsmall)};
-  --#{$prefix}badge-icon-font-size: calc(#{$ouds-badge-size-xsmall} - (2 * #{$ouds-badge-space-inset-xsmall}));
+  --#{$prefix}icon-size: calc(#{$ouds-badge-size-xsmall} - (2 * #{$ouds-badge-space-inset-xsmall}));
   padding: #{$ouds-badge-space-inset-xsmall};
 }
 
 .badge-small:not(.badge-count) {
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-small)};
-  --#{$prefix}badge-icon-font-size: calc(#{$ouds-badge-size-small} - (2 * #{$ouds-badge-space-inset-small}));
+  --#{$prefix}icon-size: calc(#{$ouds-badge-size-small} - (2 * #{$ouds-badge-space-inset-small}));
   padding: #{$ouds-badge-space-inset-small};
 }
 
@@ -125,16 +125,20 @@
   }
 }
 
-.badge-icon {
+.icon {
   display: flex;
-  flex: 1 0 0;
-  align-items: center;
-  justify-content: center;
-  width: 1em;
-  height: 1em;
-  aspect-ratio: 1/1;
-  font-size: var(--#{$prefix}badge-icon-font-size);
 }
+
+//.badge-icon {
+//  display: flex;
+//  flex: 1 0 0;
+//  align-items: center;
+//  justify-content: center;
+//  width: 1em;
+//  height: 1em;
+//  aspect-ratio: 1/1;
+//  font-size: var(--#{$prefix}icon-size);
+//}
 
 //
 // Disabled state

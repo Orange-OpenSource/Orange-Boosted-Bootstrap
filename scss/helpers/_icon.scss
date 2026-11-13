@@ -20,6 +20,12 @@
   }
 }
 
+.icon {
+  @extend %icon-size;
+  overflow: hidden;
+  font-size: var(--#{$prefix}icon-size);
+}
+
 .decorative-4xsmall-icon {
   @extend %icon-size;
   font-size: $ouds-size-icon-decorative-4xsmall if($enable-important-utilities, !important, null);
