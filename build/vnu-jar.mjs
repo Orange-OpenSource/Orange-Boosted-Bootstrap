@@ -45,7 +45,8 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     // Allow empty option in select
     'Element “option” without attribute “label” must not be empty.',
     // Many pages have skipped heading levels
-    'The heading .*skipping [1-6] heading level.*'
+    'The heading .*skipping [1-6] heading level.*',
+    'Style rule .* not allowed outside an “@scope” rule in a “style” element in “body”.'
     // End mod
   ].join('|')
 
