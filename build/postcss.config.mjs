@@ -11,7 +11,8 @@ export default context => {
       autoprefixer: {
         cascade: false
       },
-      rtlcss: context.env === 'RTL'
+      rtlcss: context.env === 'RTL',
+      cssnano: context.env === 'MINIFY' ? { preset: 'default' } : false
     }
   }
 }
