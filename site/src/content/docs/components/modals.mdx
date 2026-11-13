@@ -239,7 +239,7 @@ By default the modal dialog backdrop is blurred to visually separate the modal f
 
 Add `.modal-small` to switch to a small modal dialog. Use it when the dialog requires less space and the user can complete the task with minimal information or interaction.
 
-```html buttonLabel="modal-dialog dialog small"
+```html buttonLabel="modal dialog small"
 <dialog id="modalDialogSmall" class="modal-base modal-dialog modal-small" aria-labelledby="modalDialogSmallTitle" closedby="any">
   <div class="modal-header">
     <h3 id="modalDialogSmallTitle" class="modal-title">Small modal title</h3>
@@ -569,7 +569,7 @@ The close button may be hidden when the modal has a clear, visible alternative w
 
 Add a `.link-previous` anchor before the modal title to display a navigation link above it, aligned to the leading edge of the modal. It is intended for multi-step flows where users can navigate back to a previous step without dismissing the entire modal.
 
-```html buttonLabel="modal dialog previous link"
+```html buttonLabel="fullscreen dialog previous link"
 <dialog id="modalDialogPreviousLink" class="modal-base modal-fullscreen-dialog" aria-labelledby="modalDialogPreviousLinkTitle" closedby="any">
   <div class="modal-header">
     <a href="#" class="link link-chevron link-previous link-compact">Previous</a>
@@ -858,7 +858,7 @@ Then create a `<dialog>` element with the corresponding ID that matches the `[co
 
 <Callout type="warning" name="closedby-not-supported" />
 
-```html buttonLabel="modal dialog" markupOnly
+```html buttonLabel="modal dialog with invoker command" markupOnly
 <dialog id="modalDialogInvokerCommand" class="modal-base modal-dialog" aria-labelledby="modalDialogInvokerCommandTitle" closedby="any">
   <h3 id="modalDialogInvokerCommandTitle" class="modal-title">Invoker modal dialog</h3>
   <!-- modal dialog content -->
@@ -904,7 +904,7 @@ JavaScript can be used to display and close the `<dialog>` element. You can use 
 
 <JsDocs name="modal-js" file="site/src/assets/partials/snippets.js" />
 
-```html buttonLabel="modal dialog full"
+```html buttonLabel="modal dialog JavaScript"
 <dialog id="modalDialogJs" class="modal-base modal-dialog" aria-labelledby="demoJSModalTitle">
   <div class="modal-header">
     <h3 id="demoJSModalTitle" class="modal-title">Modal title</h3>

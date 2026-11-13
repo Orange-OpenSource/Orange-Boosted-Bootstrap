@@ -219,7 +219,7 @@ You will have to make some extra JavaScript to change the styles and update the 
 
 For example, Boosted markup:
 
-```html
+```html buttonLabel="Boosted modal example" markupOnly
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Open modal
 </button>
@@ -243,7 +243,7 @@ For example, Boosted markup:
 
 Now use OUDS Web markup:
 
-```html
+```html buttonLabel="OUDS Web modal example" markupOnly
 <button type="button" class="btn btn-default" commandfor="exampleDialog" command="show-modal">
   Open modal
 </button>
@@ -268,7 +268,7 @@ Now use OUDS Web markup:
 
 For [programmatic usage]([[docsref:/components/modals#javascript]]), replace the Boosted plugin instance:
 
-```js
+```js buttonLabel="OUDS Web modal programmatic usage" markupOnly
 const dialog = document.querySelector('#exampleDialog')
 
 dialog.showModal()
