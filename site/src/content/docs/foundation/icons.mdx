@@ -28,16 +28,16 @@ While OUDS Web doesn’t include an icon set by default, Orange does have its ow
 
 Icons are designed within a square layout to preserve consistency. Within this square, there exists a designated safety zone to guarantee that icons can be used in various sizes and contexts while maintaining alignment as intended by the designers. The dimensions of the icons encompass this safety zone, ensuring adaptability and consistency across diverse applications.
 
-<svg class="bg-opacity-lowest decorative-2xlarge-icon" aria-hidden="true">
+<svg class="bg-opacity-lowest decorative-2xlarge-icon" aria-hidden="true" class="icon">
   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
 </svg>
-<svg class="bg-opacity-lowest decorative-2xlarge-icon" aria-hidden="true">
+<svg class="bg-opacity-lowest decorative-2xlarge-icon" aria-hidden="true" class="icon">
   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}/>
 </svg>
-<svg class="bg-opacity-lowest decorative-2xlarge-icon" aria-hidden="true">
+<svg class="bg-opacity-lowest decorative-2xlarge-icon" aria-hidden="true" class="icon">
   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}/>
 </svg>
-<svg class="bg-opacity-lowest decorative-2xlarge-icon" aria-hidden="true">
+<svg class="bg-opacity-lowest decorative-2xlarge-icon" aria-hidden="true" class="icon">
   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}/>
 </svg>
 
@@ -80,10 +80,10 @@ Please note that if you experience a problem with a cropped SVG, we recommend us
 
 SVG sprite usage:
 
-<Example buttonLabel="SVG sprite file usage" code={`<svg class="decorative-large-icon" aria-hidden="true">
+<Example buttonLabel="SVG sprite file usage" code={`<svg class="decorative-large-icon" aria-hidden="true" class="icon">
     <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#settings')}" />
   </svg>
-  <svg class="decorative-large-icon" aria-hidden="true">
+  <svg class="decorative-large-icon" aria-hidden="true" class="icon">
     <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}" />
   </svg>`} />
 
@@ -165,13 +165,13 @@ You should set informative icon sizes in `rem` so they scale with text zoom.
 
 {/* todo add tooltip on buttons and explanation when available */}
 <Example buttonLabel="informative icons" class="mt-none bd-btn-example" code={`<button type="button" class="btn btn-icon btn-default">
-    <svg aria-hidden="true">
+    <svg aria-hidden="true" class="icon">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}" />
     </svg>
     <span class="visually-hidden">Delete</span>
   </button>
   <button type="button" class="btn btn-icon btn-default" aria-label="Delete">
-    <svg aria-hidden="true">
+    <svg aria-hidden="true" class="icon">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}" />
     </svg>
   </button>
@@ -183,7 +183,7 @@ You should set informative icon sizes in `rem` so they scale with text zoom.
     <span class="icon si si-settings" aria-hidden="true"></span>
   </button>
   <div class="d-inline-block bg-always-white">
-    <img src="${getVersionedDocsPath('/assets/img/heart-empty.svg')}" alt="Favorite" class="bl-large-icon" />
+    <img src="${getVersionedDocsPath('/assets/img/heart-empty.svg')}" alt="Favorite" class="bl-large-icon icon" />
   </div>`} />
 
 ## Colors

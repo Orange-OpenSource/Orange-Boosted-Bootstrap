@@ -15,8 +15,8 @@
 
   &::before {
     flex-shrink: 0;
-    width: var(--#{$prefix}btn-icon-size);
-    height: var(--#{$prefix}btn-icon-size);
+    width: var(--#{$prefix}icon-size);
+    height: var(--#{$prefix}icon-size);
     content: "";
     background-color: currentcolor;
     mask: $btn-assistant-icon center;

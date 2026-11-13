@@ -45,28 +45,28 @@ const { theme = 'orange' } = Astro.props
       <div class="col-12 d-flex justify-content-between flex-wrap gap-xsmall">
         <button type="button" class="btn btn-default">Default</button>
         <button type="button" class="btn btn-brand">
-          <svg aria-hidden="true">
+          <svg aria-hidden="true" class="icon">
             <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
             ></use>
           </svg>
           Brand
         </button>
         <button type="button" class="btn btn-icon btn-strong">
-          <svg aria-hidden="true">
+          <svg aria-hidden="true" class="icon">
             <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
             ></use>
           </svg>
           <span class="visually-hidden">Brand</span>
         </button>
         <button type="button" class="btn btn-icon btn-negative">
-          <svg aria-hidden="true">
+          <svg aria-hidden="true" class="icon">
             <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
             ></use>
           </svg>
           <span class="visually-hidden">Brand</span>
         </button>
         <button type="button" class="btn btn-icon btn-minimal">
-          <svg aria-hidden="true">
+          <svg aria-hidden="true" class="icon">
             <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
             ></use>
           </svg>
@@ -156,7 +156,7 @@ const { theme = 'orange' } = Astro.props
             <label class="control-item-label" for={`switch-${theme}`}>Switch with icon</label>
           </div>
           <div class="control-item-assets-container">
-            <svg aria-hidden="true">
+            <svg aria-hidden="true" class="icon">
               <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
               ></use>
             </svg>
@@ -165,7 +165,7 @@ const { theme = 'orange' } = Astro.props
         <div class="d-flex gap-scaled-medium">
           <a class="link link-chevron" href="#">Link with chevron</a>
           <a class="link icon-link" href="#">
-            <svg aria-hidden="true">
+            <svg aria-hidden="true" class="icon">
               <use xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-empty`}
               ></use>
             </svg>
@@ -204,7 +204,7 @@ const { theme = 'orange' } = Astro.props
             <label for={`pwd-${theme}`}>Password</label>
             <input type="password" id={`pwd-${theme}`} class="text-input-field" placeholder=" " />
             <button class="btn btn-minimal btn-icon" aria-pressed="false" type="button">
-              <svg aria-hidden="true">
+              <svg aria-hidden="true" class="icon">
                 <use
                   xlink:href={`/${theme}/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#accessibility-vision`}
                 ></use>

@@ -205,35 +205,35 @@ You don’t need to apply any spacing utility on the icon to get consistent spac
 <Example buttonLabel="text and icon buttons" class="p-none bd-btn-example" code={`<div class="p-large d-flex gap-xsmall flex-wrap">
 
     <button type="button" class="btn btn-default">
-      <svg aria-hidden="true">
+      <svg aria-hidden="true" class="icon">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       Default
     </button>
 
     <button type="button" class="btn btn-strong">
-      <svg aria-hidden="true">
+      <svg aria-hidden="true" class="icon">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       Strong
     </button>
 
     <button type="button" class="btn btn-brand">
-      <svg aria-hidden="true">
+      <svg aria-hidden="true" class="icon">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       Brand
     </button>
 
     <button type="button" class="btn btn-minimal">
-      <svg aria-hidden="true">
+      <svg aria-hidden="true" class="icon">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       Minimal
     </button>
 
     <button type="button" class="btn btn-negative">
-      <svg aria-hidden="true">
+      <svg aria-hidden="true" class="icon">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       Negative
@@ -245,7 +245,7 @@ You don’t need to apply any spacing utility on the icon to get consistent spac
     </button>
 
     <button type="button" class="btn btn-default">
-      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" class="icon" alt="" loading="lazy">
       Default
     </button>
 
@@ -255,21 +255,21 @@ You don’t need to apply any spacing utility on the icon to get consistent spac
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
 
       <button type="button" class="btn btn-default btn-on-colored-bg">
-        <svg aria-hidden="true">
+        <svg aria-hidden="true" class="icon">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
         Default
       </button>
 
       <button type="button" class="btn btn-strong btn-on-colored-bg">
-        <svg aria-hidden="true">
+        <svg aria-hidden="true" class="icon">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
         Strong
       </button>
 
       <button type="button" class="btn btn-minimal btn-on-colored-bg">
-        <svg aria-hidden="true">
+        <svg aria-hidden="true" class="icon">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
         Minimal
@@ -281,7 +281,7 @@ You don’t need to apply any spacing utility on the icon to get consistent spac
       </button>
 
       <button type="button" class="btn btn-default btn-on-colored-bg">
-        <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+        <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" class="icon" alt="" loading="lazy">
         Default
       </button>
 
@@ -301,35 +301,35 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 <Example buttonLabel="icon only buttons" class="p-none bd-btn-example" code={`<div class="p-large d-flex gap-xsmall flex-wrap">
 
     <button type="button" class="btn btn-icon btn-default">
-      <svg aria-hidden="true">
+      <svg aria-hidden="true" class="icon">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <span class="visually-hidden">Default</span>
     </button>
 
     <button type="button" class="btn btn-icon btn-strong">
-      <svg aria-hidden="true">
+      <svg aria-hidden="true" class="icon">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <span class="visually-hidden">Strong</span>
     </button>
 
     <button type="button" class="btn btn-icon btn-brand">
-      <svg aria-hidden="true">
+      <svg aria-hidden="true" class="icon">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <span class="visually-hidden">Brand</span>
     </button>
 
     <button type="button" class="btn btn-icon btn-minimal">
-      <svg aria-hidden="true">
+      <svg aria-hidden="true" class="icon">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <span class="visually-hidden">Minimal</span>
     </button>
 
     <button type="button" class="btn btn-icon btn-negative">
-      <svg aria-hidden="true">
+      <svg aria-hidden="true" class="icon">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <span class="visually-hidden">Negative</span>
@@ -341,7 +341,7 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
     </button>
 
     <button type="button" class="btn btn-icon btn-default">
-      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" class="icon" alt="" loading="lazy">
       <span class="visually-hidden">Default</span>
     </button>
 
@@ -351,21 +351,21 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
 
       <button type="button" class="btn btn-icon btn-default btn-on-colored-bg">
-        <svg aria-hidden="true">
+        <svg aria-hidden="true" class="icon">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
         <span class="visually-hidden">Default</span>
       </button>
 
       <button type="button" class="btn btn-icon btn-strong btn-on-colored-bg">
-        <svg aria-hidden="true">
+        <svg aria-hidden="true" class="icon">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
         <span class="visually-hidden">Strong</span>
       </button>
 
       <button type="button" class="btn btn-icon btn-minimal btn-on-colored-bg">
-        <svg aria-hidden="true">
+        <svg aria-hidden="true" class="icon">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
         <span class="visually-hidden">Minimal</span>
@@ -377,7 +377,7 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
       </button>
 
     <button type="button" class="btn btn-icon btn-default btn-on-colored-bg">
-      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" class="icon" alt="" loading="lazy">
       <span class="visually-hidden">Default</span>
     </button>
 
@@ -637,7 +637,7 @@ Loading state can also be combined with all kind of buttons, including icons.
 <Example buttonLabel="loading buttons variants" class="bd-btn-example" code={`<div class="p-large d-flex gap-xsmall flex-wrap">
 
     <button type="button" class="btn btn-icon btn-default loading-indeterminate" id="loading-btn-15" disabled>
-      <svg aria-hidden="true">
+      <svg aria-hidden="true" class="icon">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
       </svg>
       <span class="visually-hidden">Downloading file 15</span>
@@ -648,7 +648,7 @@ Loading state can also be combined with all kind of buttons, including icons.
     </button>
 
     <button type="button" class="btn btn-icon btn-default loading-determinate" id="loading-btn-16" disabled style="--bs-btn-loading-time: 5s;">
-      <svg aria-hidden="true">
+      <svg aria-hidden="true" class="icon">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
       </svg>
       <span class="visually-hidden">Downloading file 16</span>
@@ -659,7 +659,7 @@ Loading state can also be combined with all kind of buttons, including icons.
     </button>
 
     <button type="button" class="btn btn-strong loading-indeterminate" id="loading-btn-17" disabled>
-      <svg aria-hidden="true">
+      <svg aria-hidden="true" class="icon">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
       </svg>
       Download file 17
@@ -670,7 +670,7 @@ Loading state can also be combined with all kind of buttons, including icons.
     </button>
 
     <button type="button" class="btn btn-strong loading-determinate" id="loading-btn-18" disabled style="--bs-btn-loading-time: 5s;">
-      <svg aria-hidden="true">
+      <svg aria-hidden="true" class="icon">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
       </svg>
       Download file 18
@@ -698,14 +698,14 @@ Buttons are available in two sizes. Add `.btn-small` to have a smaller button.
 <Example buttonLabel="small buttons" code={`<button type="button" class="btn btn-default btn-small">Default</button>
 
   <button type="button" class="btn btn-minimal btn-small">
-    <svg aria-hidden="true">
+    <svg aria-hidden="true" class="icon">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     Minimal
   </button>
 
   <button type="button" class="btn btn-brand btn-icon btn-small">
-    <svg aria-hidden="true">
+    <svg aria-hidden="true" class="icon">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <span class="visually-hidden">Brand</span>
@@ -725,7 +725,7 @@ Buttons are available in two sizes. Add `.btn-small` to have a smaller button.
   </button>
 
   <button type="button" class="btn btn-icon btn-negative btn-small">
-    <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+    <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" class="icon" alt="" loading="lazy">
     <span class="visually-hidden">Delivery</span>
   </button>`} />
 
@@ -956,7 +956,7 @@ Add the class `.btn-icon` to get a squared button that only contains an icon. Ma
 
 <Example buttonLabel="icon only expand button" class="bd-btn-example" code={`<div class="dropdown">
     <button type="button" class="btn btn-default btn-icon btn-expand" data-bs-toggle="dropdown" aria-expanded="false">
-      <svg aria-hidden="true">
+      <svg aria-hidden="true" class="icon">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <span class="visually-hidden">Favorite playlist</span>
@@ -968,7 +968,7 @@ Add the class `.btn-icon` to get a squared button that only contains an icon. Ma
     </button>
 
     <button type="button" class="btn btn-default btn-icon btn-expand" data-bs-toggle="dropdown" aria-expanded="false">
-      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" class="icon" alt="" loading="lazy">
       <span class="visually-hidden">Favorite playlist</span>
     </button>
 
