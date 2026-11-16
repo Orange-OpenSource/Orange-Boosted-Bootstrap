@@ -43,9 +43,10 @@
 }
 
 .item-container > .item-slot {
-  width: calc(100% - $ouds-list-item-space-padding-inline * 2);
+  display: block;
+  width: 100%;
   min-height: $ouds-list-item-size-asset-medium;
-  margin: 0 calc($ouds-list-item-space-padding-inline - var(--#{$prefix}list-item-border-width, 0px)) calc($ouds-list-item-space-padding-block-bottom-slot-list-item-container - var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default));
+  padding: 0 calc($ouds-list-item-space-padding-inline - var(--#{$prefix}list-item-border-width, 0px)) calc($ouds-list-item-space-padding-block-bottom-slot-list-item-container - var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default));
 }
 
 .item-container:has(> .item-slot) .item-content {
@@ -187,6 +188,7 @@
 
 .item-icon {
   position: relative;
+  display: block;
   width: 100%;
   height: 100%;
 
@@ -429,6 +431,7 @@
   border-style: solid;
   border-width: var(--#{$prefix}list-item-border-width, 0) var(--#{$prefix}list-item-border-width, 0) var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default);
   interpolate-size: allow-keywords;
+  @include border-radius(var(--#{$prefix}list-item-border-radius, $ouds-list-item-border-radius-default), var(--#{$prefix}list-item-border-radius, $ouds-list-item-border-radius-default));
 
   &::details-content {
     block-size: 0;
@@ -440,10 +443,6 @@
     border-width: 0;
   }
 
-  > .item-slot {
-    padding: $ouds-accordion-space-padding-block-top-expand-container $ouds-list-item-space-padding-inline var(--#{$prefix}accordion-content-padding-bottom, $ouds-accordion-space-padding-block-bottom-expand-container-default); // Handle small
-  }
-
   &:open {
     --#{$prefix}list-item-nav-icon: #{$accordion-expanded-true};
 
@@ -451,6 +450,10 @@
       block-size: auto;
     }
   }
+}
+
+.item-accordion-body {
+  padding: $ouds-accordion-space-padding-block-top-expand-container $ouds-list-item-space-padding-inline var(--#{$prefix}accordion-content-padding-bottom, $ouds-accordion-space-padding-block-bottom-expand-container-default); // Handle small
 }
 
 .item-reverse {
