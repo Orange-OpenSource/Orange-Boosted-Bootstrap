@@ -1,0 +1,21 @@
+{
+  "name": "ouds-figma-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plugin Figma : le markup OUDS Web officiel de la variante sélectionnée.",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "watch": "node tools/build.mjs --watch",
+    "components": "node tools/generate-components.mjs",
+    "verify": "node tools/verify.mjs",
+    "typecheck": "tsc --noEmit",
+    "release": "node tools/release.mjs"
+  },
+  "//": "esbuild sert aussi à verify.mjs, qui transpile les fichiers template",
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.100.2",
+    "esbuild": "^0.23.0",
+    "typescript": "^5.5.0",
+    "yaml": "^2.5.0"
+  }
+}

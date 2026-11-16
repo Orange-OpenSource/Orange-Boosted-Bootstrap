@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__TITLE__</title>
+<style>
+  :root{--bg:#f6f6f6;--panel:#fff;--ink:#1b1b1b;--muted:#6e6e6e;--line:#dcdcdc;--accent:#ff7900;
+        --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0}
+  body{font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);
+       color:var(--ink);display:flex;flex-direction:column}
+  header{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:9px 16px;
+         background:var(--panel);border-bottom:1px solid var(--line)}
+  header h1{font-size:14px;margin:0;font-weight:600;white-space:nowrap}
+  header h1 em{font-style:normal;color:var(--accent)}
+  .spacer{flex:1}
+  .field{display:flex;flex-direction:column;gap:4px}
+  .field>span{font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+  input[type=text],input[type=number],select,textarea{font:inherit;padding:6px 8px;border:1px solid var(--line);
+       border-radius:6px;background:#fff;color:var(--ink);width:100%}
+  select{cursor:pointer}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:-1px}
+  textarea{min-height:64px;resize:vertical;font-family:var(--mono);font-size:11.5px;line-height:1.45}
+  .inline{display:flex;align-items:center;gap:7px;font-size:13px;cursor:pointer}
+  button.ui{font:inherit;padding:6px 11px;border:1px solid var(--line);border-radius:6px;
+       background:#fff;color:var(--ink);cursor:pointer;white-space:nowrap}
+  button.ui:hover{border-color:var(--accent)}
+  main{flex:1;display:grid;grid-template-columns:350px 1fr;min-height:0}
+  @media (max-width:900px){main{grid-template-columns:1fr;grid-template-rows:auto 1fr}}
+  aside{background:var(--panel);border-right:1px solid var(--line);padding:16px;
+        display:flex;flex-direction:column;gap:14px;overflow:auto}
+  aside h2{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0}
+  .right{display:grid;grid-template-rows:1fr auto;min-height:0}
+  .pane{display:flex;flex-direction:column;min-height:0}
+  .bar{padding:7px 14px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+       color:var(--muted);background:var(--panel);border-bottom:1px solid var(--line);
+       display:flex;align-items:center;gap:12px}
+  .bar button.ui{padding:3px 9px;font-size:11px;letter-spacing:0;text-transform:none;font-weight:400}
+  iframe{flex:1;width:100%;border:0;background:#fff;min-height:200px}
+  pre{margin:0;padding:14px;font-family:var(--mono);font-size:12.5px;line-height:1.65;
+      background:#1f1f1f;color:#e6e6e6;overflow:auto;max-height:34vh;white-space:pre-wrap}
+  .tag{color:#7ec9ff}.attr{color:#ffc46b}.val{color:#9ee493}.com{color:#8c8c8c;font-style:italic}
+  .note{font-size:11.5px;color:var(--muted);line-height:1.45}
+  .desc{font-size:11px;color:var(--muted);line-height:1.4}
+  .desc code{font-family:var(--mono);font-size:10.5px;background:#f0f0f0;padding:0 3px;border-radius:3px}
+  .argkey{font-family:var(--mono);font-size:10px;font-weight:400;text-transform:none;letter-spacing:0;opacity:.6;margin-left:6px}
+  .row[hidden]{display:none}
+  a{color:var(--accent)}
+</style>
+</head>
+<body>
+
+<header>
+  <h1><em>OUDS</em> __TITLE__</h1>
+  <label class="field" id="componentField"><span>Component</span>
+    <select id="component" style="width:auto;min-width:200px"></select>
+  </label>
+  <label class="field"><span>Theme</span>
+    <select id="theme" style="width:auto">
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </label>
+  <div class="spacer"></div>
+  <a id="doclink" class="note" href="#" target="_blank" rel="noopener">Component docs &#8599;</a>
+  <button class="ui" id="reset">Reset</button>
+</header>
+
+<main>
+  <aside>
+    <h2>Controls</h2>
+    <div id="controls" style="display:flex;flex-direction:column;gap:14px"></div>
+  </aside>
+  <div class="right">
+    <div class="pane">
+      <div class="bar">Canvas<div class="spacer"></div><span id="status" class="note"></span></div>
+      <iframe id="out" title="Component preview"></iframe>
+    </div>
+    <div class="pane">
+      <div class="bar">Code<div class="spacer"></div><button class="ui" id="copy">Copy</button></div>
+      <pre id="code"></pre>
+    </div>
+  </div>
+</main>
+
+<script>
+const CSS_HREF = __CSS__;
+const JS_BUNDLE = __JS_BUNDLE__;
+const SPRITE = __SPRITE__;
+
+const STORIES = {};
+const ORDER = [];
+function REGISTER(entry) { STORIES[entry.key] = entry; ORDER.push(entry.key); }
+</script>
+
+<script>
+__STORIES__
+</script>
+
+<script>
+const el = (id) => document.getElementById(id);
+const ui = { component: el('component'), controls: el('controls'), out: el('out'), code: el('code'),
+             theme: el('theme'), status: el('status'), doclink: el('doclink') };
+
+let currentKey = null;
+let currentArgs = {};
+const rows = {};
+
+/* --- control kinds ------------------------------------------------------ */
+
+const kindOf = (spec) => (spec.control && spec.control.type) || spec.control || 'text';
+
+/* A control may be conditioned on another one. Storybook's own `if` grammar is
+   truthy / eq / neq / exists, and nothing else — an operator it does not know
+   falls back silently on a truthiness test of the arg, so the control shows
+   whenever that arg is set. `gte` and `oneOf` are ours: this preview honours
+   them exactly and Storybook approximates them, which is a divergence the
+   control's `description` has to admit. See conventions.md §8. */
+const visible = (spec) => {
+  const rule = spec.if;
+  if (!rule) { return true; }
+  const value = currentArgs[rule.arg];
+  if ('truthy' in rule) { return rule.truthy ? Boolean(value) : !value; }
+  if ('exists' in rule) { return rule.exists === (value !== undefined); }
+  if ('eq' in rule) { return value === rule.eq; }
+  if ('neq' in rule) { return value !== rule.neq; }
+  if ('gte' in rule) { return Number(value) >= Number(rule.gte); }
+  if ('oneOf' in rule) { return rule.oneOf.indexOf(value) >= 0; }
+  if ('notOneOf' in rule) { return rule.notOneOf.indexOf(value) < 0; }
+  return true;
+};
+
+const escapeHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+/* Descriptions are written in Markdown-ish prose with `code` spans, the way
+   Storybook renders them — worth keeping, they carry the design reasoning. */
+const describe = (text) => escapeHtml(text).replace(/`([^`]+)`/g, '<code>$1</code>');
+
+const widgets = {
+  select: (arg, spec) => {
+    const options = spec.options || [];
+    return '<select data-arg="' + arg + '">' + options.map((o) =>
+      '<option value="' + escapeHtml(o) + '"' + (currentArgs[arg] === o ? ' selected' : '') + '>' +
+      escapeHtml(o) + '</option>').join('') + '</select>';
+  },
+  boolean: (arg) => '<input type="checkbox" data-arg="' + arg + '"' + (currentArgs[arg] ? ' checked' : '') + '>',
+  number: (arg, spec) => {
+    const c = spec.control || {};
+    return '<input type="number" data-arg="' + arg + '"' +
+      (c.min !== undefined ? ' min="' + c.min + '"' : '') +
+      (c.max !== undefined ? ' max="' + c.max + '"' : '') +
+      (c.step !== undefined ? ' step="' + c.step + '"' : '') +
+      ' value="' + escapeHtml(currentArgs[arg] === undefined ? '' : currentArgs[arg]) + '">';
+  },
+  object: (arg) => '<textarea data-arg="' + arg + '" rows="6">' +
+    escapeHtml(JSON.stringify(currentArgs[arg], null, 1)) + '</textarea>',
+  text: (arg) => {
+    const value = String(currentArgs[arg] === undefined ? '' : currentArgs[arg]);
+    return value.length > 60 || value.indexOf('<') >= 0
+      ? '<textarea data-arg="' + arg + '">' + escapeHtml(value) + '</textarea>'
+      : '<input type="text" data-arg="' + arg + '" value="' + escapeHtml(value) + '">';
+  }
+};
+
+function buildControls() {
+  const argTypes = STORIES[currentKey].meta.argTypes || {};
+  ui.controls.innerHTML = '';
+  Object.keys(rows).forEach((k) => delete rows[k]);
+
+  Object.entries(argTypes).forEach(([arg, spec]) => {
+    const kind = kindOf(spec);
+    const label = escapeHtml(spec.name || arg) + '<span class="argkey">' + arg + '</span>';
+    const widget = (widgets[kind] || widgets.text)(arg, spec);
+    const help = spec.description ? '<p class="desc">' + describe(spec.description) + '</p>' : '';
+
+    const row = document.createElement('div');
+    row.className = 'row';
+    row.innerHTML = kind === 'boolean'
+      ? '<label class="inline">' + widget + '<span>' + label + '</span></label>' + help
+      : '<label class="field"><span>' + label + '</span>' + widget + '</label>' + help;
+    ui.controls.appendChild(row);
+    rows[arg] = { row: row, spec: spec };
+  });
+  applyVisibility();
+}
+
+function applyVisibility() {
+  Object.values(rows).forEach(({ row, spec }) => { row.hidden = !visible(spec); });
+}
+
+ui.controls.addEventListener('input', onEdit);
+ui.controls.addEventListener('change', onEdit);
+
+function onEdit(event) {
+  const field = event.target;
+  const arg = field.dataset && field.dataset.arg;
+  if (!arg) { return; }
+  const kind = kindOf(STORIES[currentKey].meta.argTypes[arg]);
+
+  if (kind === 'boolean') { currentArgs[arg] = field.checked; }
+  else if (kind === 'number') { currentArgs[arg] = Number(field.value); }
+  else if (kind === 'object') {
+    try { currentArgs[arg] = JSON.parse(field.value); } catch (e) { return; }
+  } else { currentArgs[arg] = field.value; }
+
+  applyVisibility();
+  update();
+}
+
+/* --- canvas and code ---------------------------------------------------- */
+
+const safely = (fn) => { try { return fn(); } catch (e) { return '<!-- ' + e.message + ' -->'; } };
+
+const OPEN = '\u0001', CLOSE = '\u0002';
+const highlight = (src) => escapeHtml(src)
+  .replace(/(&lt;!--[\s\S]*?--&gt;)/g, (m, c) => OPEN + 'com' + OPEN + c + CLOSE)
+  .replace(/(&lt;\/?)([a-zA-Z][\w-]*)/g, (m, lt, name) => lt + OPEN + 'tag' + OPEN + name + CLOSE)
+  .replace(/([a-zA-Z-]+)="([^"]*)"/g, (m, a, v) =>
+    OPEN + 'attr' + OPEN + a + CLOSE + '=' + OPEN + 'val' + OPEN + '"' + v + '"' + CLOSE)
+  .replace(/\u0001(\w+)\u0001/g, '<span class="$1">')
+  .split(CLOSE).join('</span>');
+
+/* A `<use>` pointing at another file does not cross origins and does not
+   resolve from a `file://` page. The sprite being present in the canvas
+   document, those references are rewritten to local ones and the icon shows —
+   without touching what the Code panel prints. */
+const localSprite = (markup) => markup.replace(/(xlink:href|href)="[^"#]*ouds-web-sprite\.svg#/g, '$1="#');
+
+let frameReady = false, pendingMarkup = '';
+
+const buildShell = () =>
+  '<!doctype html><html lang="en" data-bs-theme="' + ui.theme.value + '"><head><meta charset="utf-8">'
+  + '<meta name="viewport" content="width=device-width, initial-scale=1">'
+  + '<link rel="stylesheet" href="' + CSS_HREF + '" crossorigin="anonymous"'
+  + ' onerror="document.documentElement.classList.add(\'no-ds-css\')">'
+  + '<style>body{margin:0;padding:32px}.no-ds-css svg{width:1.5rem;height:1.5rem}</style>'
+  + '</head><body><div hidden>' + SPRITE + '</div><div id="root"></div>'
+  + '<script src="' + JS_BUNDLE + '" crossorigin="anonymous" defer><\/script>'
+  + '</body></html>';
+
+function mountFrame() {
+  frameReady = false;
+  ui.status.textContent = 'loading the stylesheet…';
+  ui.out.onload = function () {
+    frameReady = true;
+    ui.status.textContent = '';
+    paint(pendingMarkup);
+  };
+  ui.out.srcdoc = buildShell();
+}
+
+/* A story may ship a `<script>` — `indeterminate` is a DOM property, no
+   attribute carries it. innerHTML never runs one, so each is replaced by a
+   fresh node, which does run. */
+function runScripts(root, doc) {
+  Array.prototype.slice.call(root.querySelectorAll('script')).forEach(function (old) {
+    const fresh = doc.createElement('script');
+    fresh.textContent = old.textContent;
+    old.parentNode.replaceChild(fresh, old);
+  });
+}
+
+function paint(markup) {
+  pendingMarkup = markup;
+  if (!frameReady) { return; }
+  const doc = ui.out.contentDocument;
+  doc.documentElement.setAttribute('data-bs-theme', ui.theme.value);
+  const root = doc.getElementById('root');
+  if (!root) { return; }
+  root.innerHTML = localSprite(markup);
+  runScripts(root, doc);
+}
+
+function update() {
+  const story = STORIES[currentKey].story;
+  const args = Object.assign({}, currentArgs);
+  paint(safely(() => story.render(args)));
+  ui.code.innerHTML = highlight(safely(() => story.parameters.docs.source.transform('', { args: args })));
+}
+
+function select(key) {
+  currentKey = key;
+  currentArgs = Object.assign({}, STORIES[key].story.args);
+  ui.doclink.href = STORIES[key].docs || '#';
+  ui.doclink.hidden = !STORIES[key].docs;
+  buildControls();
+  update();
+}
+
+/* --- wiring ------------------------------------------------------------- */
+
+ORDER.forEach((key) => {
+  const option = document.createElement('option');
+  option.value = key;
+  option.textContent = STORIES[key].meta.title.replace(/^Playground\//, '');
+  ui.component.appendChild(option);
+});
+el('componentField').hidden = ORDER.length < 2;
+
+ui.component.addEventListener('change', () => select(ui.component.value));
+ui.theme.addEventListener('change', () => paint(pendingMarkup));
+el('reset').addEventListener('click', () => select(currentKey));
+el('copy').addEventListener('click', () => {
+  navigator.clipboard.writeText(ui.code.textContent).then(() => {
+    const b = el('copy'), t = b.textContent;
+    b.textContent = 'Copied';
+    setTimeout(() => { b.textContent = t; }, 1200);
+  });
+});
+
+mountFrame();
+select(ORDER[0]);
+</script>
+</body>
+</html>
