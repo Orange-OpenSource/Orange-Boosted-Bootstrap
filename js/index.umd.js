@@ -10,7 +10,6 @@ import Button from './src/button.js'
 import Carousel from './src/carousel.js'
 import Collapse from './src/collapse.js'
 import Dropdown from './src/dropdown.js'
-import Modal from './src/modal.js'
 import Offcanvas from './src/offcanvas.js'
 import OrangeNavbar from './src/orange-navbar.js' // OUDS mod
 import Popover from './src/popover.js'
@@ -26,7 +25,6 @@ export default {
   Carousel,
   Collapse,
   Dropdown,
-  Modal,
   Offcanvas,
   OrangeNavbar, // OUDS mod
   Popover,

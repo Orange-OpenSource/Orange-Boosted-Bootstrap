@@ -80,7 +80,7 @@
   }
 
   // Handle invalid state
-  &:has(input:is([aria-invalid="true"], :user-invalid)) {
+  &:has(input:is([aria-invalid="true"], :user-invalid)):where(:not(.checkbox-standalone, .switch-standalone, .radio-button-standalone)) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
 
     padding-right: #{$ouds-list-item-space-padding-inline + $ouds-list-item-size-icon + $ouds-list-item-space-column-gap};
@@ -646,8 +646,7 @@
 // Switch
 //
 
-.switch-item,
-.form-switch {
+.switch-item {
   @extend %control-item;
   flex-direction: row-reverse;
 
@@ -718,5 +717,9 @@
     .form-check-label {
       margin-right: auto;
     }
+  }
+
+  .form-switch {
+    @extend .switch-item;
   }
 }

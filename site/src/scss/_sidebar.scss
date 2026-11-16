@@ -33,6 +33,13 @@
 .bd-links-nav {
   @include get-font-size("body-medium"); // OUDS mod: instead of media query
 
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 30px;
+  }
+
   @include media-breakpoint-between(xs, lg) {
     column-count: 2;
     column-gap: 1.5rem;
