@@ -61,13 +61,17 @@ const resolveIconValue = (rawValue: string | null): string => {
   return ''
 }
 
+// Sass encodes `#` as `%23` when compiling data-URIs; since we bypass Sass, a raw `#` (eg. `url(#a)`) would be
+// interpreted as a URL fragment and truncate the SVG.
+const encodeFragments = (value: string): string => value.replace(/#/g, '%23')
+
 interface CompositeIcon {
   name: string
   value: string
 }
 
 const compositeIcons: CompositeIcon[] = compositeIconNames
-  .map((name) => ({ name, value: resolveIconValue(getScssVariableValue(compositeScssContent, name)) }))
+  .map((name) => ({ name, value: encodeFragments(resolveIconValue(getScssVariableValue(compositeScssContent, name))) }))
   .filter((icon) => icon.value)
 
 // *** Sprite icons (documentation sample SVG sprite, used with `<use xlink:href="...svg#id">`) ***
