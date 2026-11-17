@@ -17,6 +17,7 @@
     - [ ] Update the home news for the next release
   - check wrong matches in `CHANGELOG.md`, and maybe `site/content/docs/<version>/update-guide.md`
   - :warning: check the `package-lock.json` and `package.json` content, only "@ouds/web" should have its version changed!
+- [ ] `npm run css-snapshot-refresh` to bump version number in CSS snapshots
 - [ ] if the year changed recently, happy new year :tada: but please change © year in `.scss` main files (reboot, grid, utilities, and main file) as well as in `NOTICE.txt`.
 - [ ] `npm run release` to compile dist, build Storybook, update SRI hashes in doc, and package the release
 - [ ] Prepare changelog:
