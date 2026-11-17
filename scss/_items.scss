@@ -427,6 +427,8 @@
 .item-accordion {
   --#{$prefix}list-item-nav-icon: #{$accordion-expanded-false};
   position: relative;
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
+  background-color: var(--#{$prefix}list-item-outlined-bg, var(--#{$prefix}list-item-disabled-bg, $ouds-color-action-support-enabled));
   border-color: var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, transparent)) var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, transparent)) var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, $ouds-color-border-default));
   border-style: solid;
   border-width: var(--#{$prefix}list-item-border-width, 0) var(--#{$prefix}list-item-border-width, 0) var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default);
@@ -439,8 +441,14 @@
     transition: block-size .3s ease-in-out, content-visibility .3s ease-in-out allow-discrete; // stylelint-disable-line property-disallowed-list
   }
 
-  .item-container {
+  .item-interactive {
+    margin: calc(-1 * var(--#{$prefix}list-item-border-width, 0)) calc(-1 * var(--#{$prefix}list-item-border-width, 0)) 0;
+    background-color: transparent;
     border-width: 0;
+
+    &:is(:hover, :focus-visible, :active) {
+      background-color: var(--#{$prefix}list-item-outlined-bg, var(--#{$prefix}list-item-bg, $ouds-color-action-support-enabled));
+    }
   }
 
   &:open {
@@ -451,6 +459,12 @@
     }
   }
 }
+
+.item-list:not(.item-bg) .item-accordion:not(.item-bg),
+.item-accordion.item-no-bg {
+  background-color: var(--#{$prefix}list-item-outlined-bg, var(--#{$prefix}list-item-disabled-bg, transparent));
+}
+
 
 .item-accordion-body {
   padding: $ouds-accordion-space-padding-block-top-expand-container $ouds-list-item-space-padding-inline var(--#{$prefix}accordion-content-padding-bottom, $ouds-accordion-space-padding-block-bottom-expand-container-default); // Handle small

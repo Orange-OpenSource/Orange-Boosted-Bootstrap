@@ -12,10 +12,10 @@ export declare global {
   export const BackgroundColorTable: typeof import('@shortcodes/BackgroundColorTable.astro').default
   export const BootstrapCompatibility: typeof import('@shortcodes/BootstrapCompatibility.astro').default
   export const BsTable: typeof import('@shortcodes/BsTable.astro').default
-  export const CallToActionAccessibilityMarkupNotice: typeof import('@shortcodes/CallToActionAccessibilityMarkupNotice.astro').default
-  export const CallToActionDisabledState: typeof import('@shortcodes/CallToActionDisabledState.astro').default
   export const Callout: typeof import('@shortcodes/Callout.astro').default
   export const CalloutSoon: typeof import('@shortcodes/CalloutSoon.astro').default
+  export const CallToActionAccessibilityMarkupNotice: typeof import('@shortcodes/CallToActionAccessibilityMarkupNotice.astro').default
+  export const CallToActionDisabledState: typeof import('@shortcodes/CallToActionDisabledState.astro').default
   export const Code: typeof import('@shortcodes/Code.astro').default
   export const ColorTable: typeof import('@shortcodes/ColorTable.astro').default
   export const ComponentCard: typeof import('@shortcodes/ComponentCard.astro').default

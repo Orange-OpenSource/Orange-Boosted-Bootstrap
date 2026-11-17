@@ -55,6 +55,15 @@ import { getTokenValue } from '@libs/sass-variables'
                 </span>
               </summary>
             </details>
+            <details class="item item-accordion">
+              <summary class="item-container item-interactive">
+                <span class="item-content">
+                  <span class="item-text-container">
+                    <span class="item-label">Label</span>
+                  </span>
+                </span>
+              </summary>
+            </details>
           </div>
         </div>
       </div>
@@ -65,7 +74,6 @@ import { getTokenValue } from '@libs/sass-variables'
 
 {/* Extra label, alignment et size pour le faq */}
 {/* Voir pour polyfill du name */}
-{/* Renommer la classe de content de l'accordion */}
 {/* Mettre de la sémantique dans le accordion content */}
 {/* Voir comment réagit NVDA, savoir si ul li est obligatoire */}
 {/* Comment gérer le disabled correctement */}
@@ -88,17 +96,18 @@ The accordions are based on our [items]([[docsref:/components/items]]) and follo
   Our accordion items are based on a future proof architecture. For now it's missing:
   * some animations for the expand and collapse transitions on some browsers.
   * icons don't change when the accordion is expanded or collapsed on some browsers.
+  * the grouping doesn't work properly on the older browsers.
 </Callout>
 
 ### Accessibility
 
 Use a clear, descriptive label in the `<summary>` so users can understand what content will be revealed. Native `<details>` and `<summary>` provide keyboard interaction and communicate the expanded or collapsed state without additional ARIA attributes.
 
-{/* TODO: Add the callout about distance */}
+Semantic tags must be used inside the accordion content to ensure proper structure and accessibility.
+
+<Callout type="info" name="distance-in-components" />
 
 ## [[comp]] Accordion card item
-
-{/* TODO: Handle background in accordion card items */}
 
 An accordion card item is a UI element shaped like a self-contained card that reveals or hides related content within the current context.
 
@@ -784,6 +793,8 @@ Use `.item-no-divider` on the `.item` or `.item-list` container to remove the di
   </div>`} />
 
 ### Outlined
+
+{/* TODO: Handle outlined in accordion card items */}
 
 <Callout type="warning" title="Accordion card item only" action="Accordion card item" actionHref="#accordion-card-item">
   Since the [accordion list items](#accordion-list-item) are sticked, this variant should only be used on [accordion card items](#accordion-card-item).
