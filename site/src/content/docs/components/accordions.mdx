@@ -73,8 +73,6 @@ import { getTokenValue } from '@libs/sass-variables'
 </ul>
 
 {/* Extra label, alignment et size pour le faq */}
-{/* Voir pour polyfill du name */}
-{/* Mettre de la sémantique dans le accordion content */}
 {/* Voir comment réagit NVDA, savoir si ul li est obligatoire */}
 {/* Comment gérer le disabled correctement */}
 
@@ -90,7 +88,7 @@ The accordions are based on our [items]([[docsref:/components/items]]) and follo
 * `.item-container` and `.item-interactive` on the `<summary>` element.
 * `.item-content` as the container for the summary content.
 * `.item-text-container` as the container for the summary text.
-* `.item-slot` as a direct child of `<details>` for the expandable content.
+* `.item-accordion-body` as a direct child of `<details>` for the expandable content. This is a slot where everything can be set as needed.
 
 <Callout type="info">
   Our accordion items are based on a future proof architecture. For now it's missing:
@@ -103,7 +101,9 @@ The accordions are based on our [items]([[docsref:/components/items]]) and follo
 
 Use a clear, descriptive label in the `<summary>` so users can understand what content will be revealed. Native `<details>` and `<summary>` provide keyboard interaction and communicate the expanded or collapsed state without additional ARIA attributes.
 
-Semantic tags must be used inside the accordion content to ensure proper structure and accessibility.
+<Callout type="info">
+  Semantic tags must be used inside the `.item-accordion-body` to ensure proper structure and accessibility.
+</Callout>
 
 <Callout type="info" name="distance-in-components" />
 
@@ -124,7 +124,7 @@ Add `.item-accordion` to the `.item` `<details>` element and `.item-interactive`
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p> <!-- TODO: Or maybe it should be <p class="item-accordion-body"> ? Knowing that the slot must be <div> -->
     </div>
   </details>`} />
 
@@ -152,7 +152,7 @@ Use `.item-list` as the surrounding container and `.item-accordion` on each expa
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
 
@@ -165,10 +165,74 @@ Use `.item-list` as the surrounding container and `.item-accordion` on each expa
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
-  </div>`} />
+  </div>
+
+  <ul class="item-list">
+    <li class="item item-accordion">
+      <details name="accordion10">
+        <summary class="item-container item-interactive">
+          <span class="item-content">
+            <span class="item-text-container">
+              <span class="item-label">Label</span>
+            </span>
+          </span>
+        </summary>
+        <div class="item-accordion-body">
+          <p class="mb-none">Accordion content</p>
+        </div>
+      </details>
+    </li>
+
+    <li class="item item-accordion">
+      <details name="accordion10">
+        <summary class="item-container item-interactive">
+          <span class="item-content">
+            <span class="item-text-container">
+              <span class="item-label">Label</span>
+            </span>
+          </span>
+        </summary>
+        <div class="item-accordion-body">
+          <p class="mb-none">Accordion content</p>
+        </div>
+      </details>
+    </li>
+  </ul>
+
+  <ul class="item-list">
+    <li>
+      <details class="item item-accordion" name="accordion11">
+        <summary class="item-container item-interactive">
+          <span class="item-content">
+            <span class="item-text-container">
+              <span class="item-label">Label</span>
+            </span>
+          </span>
+        </summary>
+        <div class="item-accordion-body">
+          <p class="mb-none">Accordion content</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="item item-accordion" name="accordion11">
+        <summary class="item-container item-interactive">
+          <span class="item-content">
+            <span class="item-text-container">
+              <span class="item-label">Label</span>
+            </span>
+          </span>
+        </summary>
+        <div class="item-accordion-body">
+          <p class="mb-none">Accordion content</p>
+        </div>
+      </details>
+    </li>
+  </ul>`} />
 
 ## Common variants
 
@@ -215,7 +279,7 @@ Use `.item-leading-container` to add content before the summary text, such as an
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
@@ -231,7 +295,7 @@ Use `.item-leading-container` to add content before the summary text, such as an
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
@@ -247,7 +311,7 @@ Use `.item-leading-container` to add content before the summary text, such as an
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>`} />
   </AssetsTab>
@@ -273,7 +337,7 @@ Use `.item-leading-container` to add content before the summary text, such as an
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>`} />
   </AssetsTab>
@@ -304,7 +368,7 @@ Use `.item-leading-container` to add content before the summary text, such as an
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>`} />
   </AssetsTab>
@@ -338,7 +402,7 @@ Optionally, a slot can be added at the end of the text container using `.item-sl
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
@@ -355,7 +419,7 @@ Optionally, a slot can be added at the end of the text container using `.item-sl
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
@@ -372,7 +436,7 @@ Optionally, a slot can be added at the end of the text container using `.item-sl
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
@@ -390,7 +454,7 @@ Optionally, a slot can be added at the end of the text container using `.item-sl
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>`} />
 
@@ -425,7 +489,7 @@ You can navigate through the different assets using the tabs below.
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
@@ -441,7 +505,7 @@ You can navigate through the different assets using the tabs below.
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
@@ -457,7 +521,7 @@ You can navigate through the different assets using the tabs below.
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>`} />
   </AssetsTab>
@@ -479,7 +543,7 @@ You can navigate through the different assets using the tabs below.
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
@@ -495,7 +559,7 @@ You can navigate through the different assets using the tabs below.
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>`} />
   </AssetsTab>
@@ -516,7 +580,7 @@ You can navigate through the different assets using the tabs below.
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>`} />
   </AssetsTab>
@@ -545,7 +609,7 @@ You can navigate through the different assets using the tabs below.
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
@@ -561,7 +625,7 @@ You can navigate through the different assets using the tabs below.
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
@@ -577,7 +641,7 @@ You can navigate through the different assets using the tabs below.
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>`} />
   </AssetsTab>
@@ -602,7 +666,7 @@ You can navigate through the different assets using the tabs below.
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>`} />
   </AssetsTab>
@@ -632,7 +696,7 @@ You can navigate through the different assets using the tabs below.
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>`} />
   </AssetsTab>
@@ -673,7 +737,7 @@ Here is a small summary of the slots that can be used in an accordion item:
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>`} />
 
@@ -690,7 +754,7 @@ Use `.item-accordion-alt` on the `.item` to replace the default accordion icon w
     </span>
   </summary>
   <div class="item-accordion-body">
-    Accordion content
+    <p class="mb-none">Accordion content</p>
   </div>
 </details>`} />
 
@@ -708,14 +772,14 @@ By default, [accordion card items](#accordion-card-item) have a background-color
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
   <!-- List -->
   <div class="item-list item-bg">
 
-    <details class="item item-accordion" name="accordion1">
+    <details class="item item-accordion" name="accordion2">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -724,11 +788,11 @@ By default, [accordion card items](#accordion-card-item) have a background-color
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
 
-    <details class="item item-accordion" name="accordion1">
+    <details class="item item-accordion" name="accordion2">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -737,7 +801,7 @@ By default, [accordion card items](#accordion-card-item) have a background-color
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
 
@@ -757,14 +821,14 @@ Use `.item-no-divider` on the `.item` or `.item-list` container to remove the di
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
   <!-- List -->
   <div class="item-list item-no-divider">
 
-    <details class="item item-accordion" name="accordion1">
+    <details class="item item-accordion" name="accordion3">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -773,11 +837,11 @@ Use `.item-no-divider` on the `.item` or `.item-list` container to remove the di
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
 
-    <details class="item item-accordion" name="accordion1">
+    <details class="item item-accordion" name="accordion3">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -786,15 +850,13 @@ Use `.item-no-divider` on the `.item` or `.item-list` container to remove the di
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
 
   </div>`} />
 
 ### Outlined
-
-{/* TODO: Handle outlined in accordion card items */}
 
 <Callout type="warning" title="Accordion card item only" action="Accordion card item" actionHref="#accordion-card-item">
   Since the [accordion list items](#accordion-list-item) are sticked, this variant should only be used on [accordion card items](#accordion-card-item).
@@ -811,7 +873,7 @@ By default every accordion item comes with a divider. The divider may be removed
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
@@ -824,7 +886,7 @@ By default every accordion item comes with a divider. The divider may be removed
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>`} />
 
@@ -857,14 +919,14 @@ Rounded corners items is a project-wide option therefore all your items should e
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
 
     <!-- List -->
     <div class="item-list">
 
-      <details class="item item-accordion" name="accordion1">
+      <details class="item item-accordion" name="accordion4">
         <summary class="item-container item-interactive">
           <span class="item-content">
             <span class="item-text-container">
@@ -873,11 +935,11 @@ Rounded corners items is a project-wide option therefore all your items should e
           </span>
         </summary>
         <div class="item-accordion-body">
-          Accordion content
+          <p class="mb-none">Accordion content</p>
         </div>
       </details>
 
-      <details class="item item-accordion" name="accordion1">
+      <details class="item item-accordion" name="accordion4">
         <summary class="item-container item-interactive">
           <span class="item-content">
             <span class="item-text-container">
@@ -886,7 +948,7 @@ Rounded corners items is a project-wide option therefore all your items should e
           </span>
         </summary>
         <div class="item-accordion-body">
-          Accordion content
+          <p class="mb-none">Accordion content</p>
         </div>
       </details>
 
@@ -911,14 +973,14 @@ Add the `open` attribute to `<details>` to display the expandable content initia
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
   <!-- List -->
   <div class="item-list">
 
-    <details class="item item-accordion" name="accordion1">
+    <details class="item item-accordion" name="accordion5">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -927,11 +989,11 @@ Add the `open` attribute to `<details>` to display the expandable content initia
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
 
-    <details class="item item-accordion" name="accordion1" open>
+    <details class="item item-accordion" name="accordion5" open>
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -940,7 +1002,7 @@ Add the `open` attribute to `<details>` to display the expandable content initia
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
 
@@ -967,7 +1029,7 @@ You may handle on your own the [slots](#slots) regarding accessibility and desig
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>`} />
 
@@ -985,7 +1047,7 @@ You may handle on your own the [slots](#slots) regarding accessibility and desig
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
   </div>`} />
@@ -1012,7 +1074,7 @@ By default every accordion item comes with a default size. The size can be adapt
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
@@ -1029,7 +1091,7 @@ By default every accordion item comes with a default size. The size can be adapt
           </span>
         </summary>
         <div class="item-accordion-body">
-          Accordion content
+          <p class="mb-none">Accordion content</p>
         </div>
       </details>
     </li>
@@ -1044,7 +1106,7 @@ By default every accordion item comes with a default size. The size can be adapt
           </span>
         </summary>
         <div class="item-accordion-body">
-          Accordion content
+          <p class="mb-none">Accordion content</p>
         </div>
       </details>
     </li>
@@ -1068,7 +1130,7 @@ Use `.item-reverse` on the `.item` container to have the accordion icon before t
     </span>
   </summary>
   <div class="item-accordion-body">
-    Accordion content
+    <p class="mb-none">Accordion content</p>
   </div>
 </details>`} />
 
@@ -1086,14 +1148,14 @@ By default all summary items are vertically centered. You can change the alignme
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
   <!-- List -->
   <div class="item-list item-top">
 
-    <details class="item item-accordion" name="accordion1">
+    <details class="item item-accordion" name="accordion6">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -1102,11 +1164,11 @@ By default all summary items are vertically centered. You can change the alignme
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
 
-    <details class="item item-accordion" name="accordion1">
+    <details class="item item-accordion" name="accordion6">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-leading-container">
@@ -1123,7 +1185,7 @@ By default all summary items are vertically centered. You can change the alignme
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
 
@@ -1143,14 +1205,14 @@ By default, items will span the whole width of their parent container, to limit 
       </span>
     </summary>
     <div class="item-accordion-body">
-      Accordion content
+      <p class="mb-none">Accordion content</p>
     </div>
   </details>
 
   <!-- List -->
   <div class="item-list component-max-width">
 
-    <details class="item item-accordion" name="accordion1">
+    <details class="item item-accordion" name="accordion7">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -1159,11 +1221,11 @@ By default, items will span the whole width of their parent container, to limit 
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
 
-    <details class="item item-accordion" name="accordion1">
+    <details class="item item-accordion" name="accordion7">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -1172,7 +1234,7 @@ By default, items will span the whole width of their parent container, to limit 
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
 
@@ -1184,7 +1246,7 @@ By default, each accordion can be opened or closed independently. Give related `
 
 <Example buttonLabel="grouped accordion items" class="d-flex flex-column gap-medium" code={`<div class="item-list">
 
-    <details class="item item-accordion" name="accordion1">
+    <details class="item item-accordion" name="accordion8">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -1193,11 +1255,11 @@ By default, each accordion can be opened or closed independently. Give related `
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
 
-    <details class="item item-accordion" name="accordion1">
+    <details class="item item-accordion" name="accordion8">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -1206,7 +1268,7 @@ By default, each accordion can be opened or closed independently. Give related `
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
 
@@ -1214,7 +1276,7 @@ By default, each accordion can be opened or closed independently. Give related `
 
   <div class="item-list">
 
-    <details class="item item-accordion" name="accordion1">
+    <details class="item item-accordion" name="accordion9">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -1223,11 +1285,11 @@ By default, each accordion can be opened or closed independently. Give related `
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
 
-    <details class="item item-accordion" name="accordion1">
+    <details class="item item-accordion" name="accordion9">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -1236,7 +1298,7 @@ By default, each accordion can be opened or closed independently. Give related `
         </span>
       </summary>
       <div class="item-accordion-body">
-        Accordion content
+        <p class="mb-none">Accordion content</p>
       </div>
     </details>
 
@@ -1244,6 +1306,6 @@ By default, each accordion can be opened or closed independently. Give related `
 
 ### Using a polyfill
 
-## Controlled accordions
+## Javascript
 
 {/* TODO See https://getbootstrap.com/docs/6.0/components/accordion/#events and take what can be taken */}
