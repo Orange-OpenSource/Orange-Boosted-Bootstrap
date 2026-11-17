@@ -1,8 +1,14 @@
-# Radio Button
+# Radio buttons
 
 > **Not Bootstrap:** OUDS Web replaces Bootstrap's `.form-check` / `.form-check-input` with a control-item architecture: `.radio-button-item`, `.control-item-indicator`, `.control-item-label`, etc. Bootstrap compatibility classes still work but lack OUDS features.
 
 ## Overview
+
+Radio buttons have two component types: [Radio button item](#radio-button-item), a row with a visible label and optional extra label, description, or icon, and [Radio button](#radio-button), a standalone control for integration inside other components.
+
+Use "radio button item" for the row component and include `Item` in its example IDs and matching label/ARIA references. Keep "radio button indicator" when referring to the indicator within an item.
+
+## Radio button item
 
 Use `.radio-button-item` with `.control-item-*` classes. Browser default radios are replaced via `.control-item-indicator[type="radio"]`. Group radios in `<fieldset class="control-items-list">`.
 
@@ -14,12 +20,12 @@ Use `.radio-button-item` with `.control-item-*` classes. Browser default radios 
         class="control-item-indicator"
         type="radio"
         value=""
-        id="radio1"
+        id="radioButtonItem1"
         name="group"
       />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radio1">Option 1</label>
+      <label class="control-item-label" for="radioButtonItem1">Option 1</label>
     </div>
   </div>
   <div class="radio-button-item">
@@ -29,24 +35,24 @@ Use `.radio-button-item` with `.control-item-*` classes. Browser default radios 
         class="control-item-indicator"
         type="radio"
         value=""
-        id="radio2"
+        id="radioButtonItem2"
         name="group"
       />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radio2">Option 2</label>
+      <label class="control-item-label" for="radioButtonItem2">Option 2</label>
     </div>
   </div>
 </fieldset>
 ```
 
-## Variants
+### Variants
 
-### Divider
+#### Divider
 
 Add `.control-item-divider` to `.radio-button-item`.
 
-### Icon
+#### Icon
 
 Add a second `.control-item-assets-container` with an icon as a child of `.radio-button-item` (after the text container):
 
@@ -58,32 +64,32 @@ Add a second `.control-item-assets-container` with an icon as a child of `.radio
 </div>
 ```
 
-### Extra label
+#### Extra label
 
 Add `.radio-button-extra-label` inside `.control-item-text-container`. Link via `aria-describedby`.
 
 ```html
 <div class="control-item-text-container">
-  <label class="control-item-label" for="radio1">Label</label>
-  <p class="radio-button-extra-label" id="extraLabel">Extra label</p>
+  <label class="control-item-label" for="radioButtonItem1">Label</label>
+  <p class="radio-button-extra-label" id="radioButtonItemExtraLabel">Extra label</p>
 </div>
 ```
 
-### Description text
+#### Description text
 
 Add `.control-item-description` inside `.control-item-text-container`. Link via `aria-describedby`. Can combine with extra label (extra label first).
 
-### Outlined
+#### Outlined
 
 Add `.radio-button-item-outlined` to `.radio-button-item`. All siblings should also be outlined.
 
-## Layout
+### Layout
 
-### Reverse
+#### Reverse
 
 Add `.control-item-reverse` to `.radio-button-item`.
 
-### Horizontal
+#### Horizontal
 
 Use flex utilities on a container inside the fieldset. Limit to 3 items with short labels.
 
@@ -94,7 +100,7 @@ Use flex utilities on a container inside the fieldset. Limit to 3 items with sho
 </div>
 ```
 
-### Max width
+#### Max width
 
 Add `.component-max-width` to `.radio-button-item`.
 
@@ -102,33 +108,39 @@ Add `.component-max-width` to `.radio-button-item`.
 
 Keep radio buttons and meaningful icons physically adjacent to their descriptive labels to maintain a clear visual hierarchy and help Assistive Technology users understand their relationship without navigating large areas of whitespace. Use `.component-max-width` when needed to control the component width.
 
-## States
+### States
 
-### Disabled
+#### Disabled
 
 Add `disabled` attribute to the input.
 
-### Read only
+#### Read only
 
 Replace `<input>` with `<span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="...">`. Wrap group in `<div role="radiogroup" aria-readonly="true">`.
 
-### Invalid
+#### Invalid
 
 Add `aria-invalid="true"` to `.control-item-indicator`. Add `.control-item-error-message` inside the fieldset. Link error text via `aria-describedby`.
 
 ```html
-<p class="control-item-error-message" id="errorText">There is an error.</p>
+<p class="control-item-error-message" id="radioButtonItemError">There is an error.</p>
 ```
 
-### Skeleton
+#### Skeleton
 
 Wrap in `[aria-busy="true"]` with `inert`.
 
-## Fieldset legend
+### Fieldset legend
 
 Add `<legend>` as the first child of `<fieldset>` for screen reader context.
 
-## Standalone
+### Mandatory field
+
+Add `.is-required` to `<label>` (single radio button item) or `<legend>` (group), and `required` to inputs.
+
+## Radio button
+
+> **Use only inside other components:** Standalone radio buttons are intended for components such as tables and rich selectors. Do not use them directly as form fields; use Radio button item (`.radio-button-item`) instead.
 
 For integration inside other components, use `.radio-button-standalone`:
 
@@ -139,6 +151,39 @@ For integration inside other components, use `.radio-button-standalone`:
 </label>
 ```
 
-## Mandatory field
+### States
 
-Add `.is-required` to `<label>` (single radio) or `<legend>` (group), and `required` to inputs.
+#### Disabled
+
+Add `disabled` to the input. This prevents interaction and removes it from the keyboard tab order.
+
+```html
+<label class="radio-button-standalone">
+  <input disabled class="control-item-indicator" type="radio" name="standaloneRadioDisabled" value="" />
+  <span class="visually-hidden">Disabled radio button</span>
+</label>
+```
+
+#### Read only
+
+Radio inputs do not support `readonly`. Replace inputs with focusable `span` elements with `role="radio"`, `aria-disabled="true"`, `aria-checked`, and an accessible name. Put them inside a named `radiogroup` with `aria-readonly="true"`; do not put `aria-readonly` on individual radios.
+
+```html
+<div class="radio-button-standalone" role="radiogroup" aria-readonly="true" aria-label="Read only radio button group">
+  <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="true" aria-label="Selected option"></span>
+</div>
+```
+
+#### Invalid
+
+Prefer built-in form validation. To mark a radio button invalid manually, add `aria-invalid="true"` to the indicator and link an error message using `aria-describedby`. Unlike radio button items, standalone radio buttons do not display an error icon automatically; provide explicit error text.
+
+```html
+<div>
+  <label class="radio-button-standalone">
+    <input class="control-item-indicator" type="radio" name="standaloneRadioInvalid" value="" aria-invalid="true" aria-describedby="radioButtonStandaloneError" />
+    <span class="visually-hidden">Radio button</span>
+  </label>
+  <p id="radioButtonStandaloneError">Choose an available option.</p>
+</div>
+```

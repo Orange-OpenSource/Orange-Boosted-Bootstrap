@@ -98,14 +98,28 @@ export const componentsDetails: ComponentCardData[] = [
   },
   {
     name: 'Checkbox',
+    slug: 'checkbox',
+    link: 'checkboxes#checkbox',
+    category: 'Control',
+    snippet: `
+      <label class="checkbox-standalone">
+        <input class="control-item-indicator" type="checkbox" id="checkbox[[id_prefix]]" checked tabindex="-1" />
+        <span class="visually-hidden">Checkbox</span>
+      </label>
+    `
+  },
+  {
+    name: 'Checkbox item',
+    slug: 'checkbox-item',
+    link: 'checkboxes#checkbox-item',
     category: 'Control',
     snippet: `
       <div class="checkbox-item" style="min-width: unset">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checkbox[[id_prefix]]" checked />
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxItem[[id_prefix]]" checked />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="checkbox[[id_prefix]]">Label</label>
+          <label class="control-item-label" for="checkboxItem[[id_prefix]]">Label</label>
         </div>
       </div>`
   },
@@ -394,14 +408,26 @@ export const componentsDetails: ComponentCardData[] = [
   {
     name: 'Radio button',
     slug: 'radio-button',
+    link: 'radio-buttons#radio-button',
+    category: 'Control',
+    snippet: `
+      <label class="radio-button-standalone">
+        <input class="control-item-indicator" type="radio" value="" id="radio[[id_prefix]]" checked />
+        <span class="visually-hidden">Radio button</span>
+      </label>`
+  },
+  {
+    name: 'Radio button item',
+    slug: 'radio-button-item',
+    link: 'radio-buttons#radio-button-item',
     category: 'Control',
     snippet: `
       <div class="radio-button-item" style="min-width: unset">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" id="radio[[id_prefix]]" name="radio[[id_prefix]]" checked />
+          <input class="control-item-indicator" type="radio" value="" id="radioItem[[id_prefix]]" name="radio[[id_prefix]]" checked />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="radio[[id_prefix]]">Label</label>
+          <label class="control-item-label" for="radioItem[[id_prefix]]">Label</label>
         </div>
       </div>`
   },
@@ -475,14 +501,27 @@ export const componentsDetails: ComponentCardData[] = [
   },
   {
     name: 'Switch',
+    slug: 'switch',
+    link: 'switches#switch',
+    category: 'Control',
+    snippet: `
+      <label class="switch-standalone">
+        <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switch[[id_prefix]]" />
+        <span class="visually-hidden">Switch</span>
+      </label>`
+  },
+  {
+    name: 'Switch item',
+    slug: 'switch-item',
+    link: 'switches#switch-item',
     category: 'Control',
     snippet: `
       <div class="switch-item" style="min-width: unset">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switch[[id_prefix]]" checked />
+          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchItem[[id_prefix]]" checked />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="switch[[id_prefix]]">Label</label>
+          <label class="control-item-label" for="switchItem[[id_prefix]]">Label</label>
         </div>
       </div>`
   },
