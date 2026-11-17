@@ -62,7 +62,6 @@
 
 // scss-docs-start reboot-body-rules
 #{$ouds-root-selector} > * { // OUDS mod: instead of `body`
-  position: relative; // OUDS mod: required for back-to-top component
   margin: 0; // 1
   font-family: var(--#{$prefix}body-font-family);
   font-synthesis: none; // OUDS mod // 5

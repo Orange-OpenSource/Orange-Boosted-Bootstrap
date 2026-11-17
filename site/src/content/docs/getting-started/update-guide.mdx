@@ -33,6 +33,10 @@ toc: true
 
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Alert message component has been updated to 1.2.0. Read more in the [alert message design changelog](https://r.orange.fr/r/S-ouds-doc-alert-message_changelog).
 
+#### Back to top
+
+- <span class="tag tag-small tag-negative"><span class="tag-status-icon"></span>Breaking</span> Back to top component has been removed from our library. It was previously provided as a Boosted component but should not have been used. Please check that your custom SCSS files do not import it. If you need this component please use the Boosted version in [dual mode]([[docsref:/dual-mode]]).
+
 #### Buttons
 
 - <span class="tag tag-small tag-info"><span class="tag-status-icon"></span>Info</span> Assistant button component has been updated to 1.1.0 with no changes to the HTML. Read more in our [button design changelog](https://r.orange.fr/r/S-ouds-doc-button_changelog).
@@ -120,6 +124,7 @@ toc: true
 2. Remove `@import "boosted/scss/dropdown";` from the Boosted custom import stack.
 3. Change `@import "@ouds/web-common/scss/type";` to `@import "@ouds/web-common/scss/typography";` in the OUDS Web custom import stack.
 4. Remove `@import "boosted/scss/modal";` from the Boosted custom import stack.
+5. Use `@import "boosted/scss/back-to-top";` if you need this component.
 
 - <span class="tag tag-small tag-warning"><span class="tag-status-icon"></span>Warning</span> The modals components have a different structure and behavior compared to Boosted modals. Read more in our [migration from Boosted guide]([[docsref:/getting-started/migration-from-boosted#modal]]).
 
