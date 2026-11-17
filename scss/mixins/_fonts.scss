@@ -4,7 +4,7 @@
 @mixin get-font-size($font-size-ref: "display-large", $label-with-max-width: false) {
   @if str-slice($font-size-ref, 1, 4) != "code" {
     @if str-slice($font-size-ref, 1, 5) != "label" or $label-with-max-width == true {
-      max-width: var(--#{$prefix}font-max-width-#{$font-size-ref});
+      max-width: var(--#{$prefix}contextual-font-max-width, var(--#{$prefix}font-max-width-#{$font-size-ref}));
     }
   }
   font-size: var(--#{$prefix}font-size-#{$font-size-ref});

@@ -71,6 +71,10 @@ Use `<optgroup label="...">` to group options.
 
 Add `.component-max-width` to `.select-input`.
 
+## Accessibility
+
+Keep select controls and meaningful icons physically adjacent to their descriptive labels to maintain a clear visual hierarchy and help Assistive Technology users understand their relationship without navigating large areas of whitespace. Use `.component-max-width` when needed to control the component width.
+
 ## States
 
 ### Disabled

@@ -21,8 +21,8 @@ $bd-gutter-x: .625rem; // OUDS mod
   --bd-primary-light-rgb: #{to-rgb($bd-primary-light)}; // OUDS mod
   // OUDS mod: no --bd-violet-rgb
   // OUDS mod: no --bd-accent-rgb
-  --bd-pink-rgb: #{to-rgb($pink-500)};
-  --bd-teal-rgb: #{to-rgb($teal-500)};
+  // OUDS mod: no --bd-pink-rgb
+  // OUDS mod: no --bd-teal-rgb
   --bd-violet-bg: var(--bd-violet);
   --bd-toc-color: var(--bs-emphasis-color); // OUDS mod: instead of `var(--bd-violet)`
   // OUDS mod: no --bd-sidebar-link-bg
