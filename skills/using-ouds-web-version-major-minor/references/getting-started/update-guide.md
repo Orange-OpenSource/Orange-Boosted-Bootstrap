@@ -6,20 +6,31 @@
 
 ### Breaking changes
 
-- **Alerts**: action links placed inside `.alert-container`, after `.alert-text-container`, must use the compact link variant: `.link.link-compact`. Action links placed inside `.alert-action-container`, beside the close button, continue to use the regular `.link`.
-- **Blockquotes**: `.blockquote` and `.blockquote-footer` classes deprecated (still working) - use the `<blockquote>` element directly, followed by a plain `<figcaption>` immediately after it (`blockquote + figcaption`), inside a `<figure>`.
+- **Alerts**: action links at the bottom of the message, inside `.alert-container` after `.alert-text-container`, must use `.link.link-compact`. Links inside `.alert-action-container`, beside the close button, continue to use the regular `.link`.
+- **Back to top**: component removed. Remove any custom SCSS import; if needed, use the Boosted version in dual mode.
+- **Links**: `.colored-bg` removed after deprecation in v1.5.0; use `.link-on-colored-bg`. `.back` removed after deprecation in v1.5.0; use `.link-previous`.
+- **Sass**: `_type.scss` renamed to `_typography.scss`; update custom imports.
+
+### Warnings
+
+- **Blockquotes**: `.blockquote` and `.blockquote-footer` are deprecated. Use `<blockquote>` followed immediately by `<figcaption>` inside a `<figure>`.
+- **Dropdown**: draft component brought over from Boosted; it is a placeholder and may change.
+- **Items**: component updated to 1.2.0; check that icons and images in leading/trailing containers still behave as expected.
+- **Modals**: OUDS Web modal structure and behavior differ from Boosted modals.
 
 ### New
 
-- **Buttons**: Expand button implemented
-- **Links**: Expand link implemented
-- **Modals**: Modal dialog and Fullscreen dialog implemented
-- **Tags**: Categorical tag implemented
-- **Typography**: optional heading marker — add `.hl-marker` to a heading large (`<h2>`/`.h2`) to display a brand-colored marker below it (Orange, Orange Compact; no visible effect on Sosh).
+- **Buttons**: Expand button implemented.
+- **Icons**: Interactive icon and Assistant icon implemented.
+- **Links**: Expand link implemented.
+- **Modals**: Modal dialog and Fullscreen dialog implemented.
+- **Tags**: Categorical tag implemented.
+- **Typography**: add optional `.hl-marker` to a heading large (`<h2>`/`.h2`) to display a brand-colored marker below it (Orange and Orange Compact; no visible effect on Sosh).
+- **Layout**: `.container-max-width-wide` added for a wider maximum container width.
 
-### Components
+### Skills
 
-- `<code>` and `<pre>` no longer force a muted text color by default; they now inherit the surrounding text color.
+- OUDS Web agent skills are maintained in [Orange-OpenSource/ouds-web-skills](https://github.com/Orange-OpenSource/ouds-web-skills). Install or update them with `npx skills add Orange-OpenSource/ouds-web-skills`.
 
 ## v1.5.0
 
