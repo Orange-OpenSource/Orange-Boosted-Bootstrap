@@ -1,7 +1,7 @@
 <h1 align="center">OUDS Web</h1>
 
 <p align="center">
-  OUDS Web is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
+  OUDS Web is a fork of Bootstrap to integrate the Orange Unified Design System components, modules and guidelines to easily create Websites with the Orange Brands through dedicated Themes and Modes (Light or Dark). Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
   <br />
   <a href="https://web.unified-design-system.orange.com"><strong>Visit OUDS Web</strong></a>
   <br />
@@ -10,6 +10,7 @@
   ·
   <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=&labels=feature&template=feature_request.yml">Request feature</a>
 </p>
+
 
 ## Table of contents
 
@@ -24,6 +25,7 @@
 - [Creators](#creators)
 - [Thanks](#thanks)
 - [Copyright and license](#copyright-and-license)
+
 
 ## Quick start
 
@@ -44,6 +46,7 @@ Several quick start options are available:
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package ouds-web-common ouds-web-orange` Sass: `Install-Package ouds-web-common.sass ouds-web-orange.sass`
 
 Read the [Getting started page](https://web.unified-design-system.orange.com/docs/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
+
 
 ## AI agent skills
 
@@ -78,6 +81,7 @@ This downloads the skills and configures them for use with your AI agent. The `u
 > [!IMPORTANT]
 > Whenever you update OUDS Web in your project, update the skill too: run `npx skills add Orange-OpenSource/ouds-web-skills` again and use the skill matching your new library version. Remove the previous versioned skill to avoid conflicting guidance.
 
+
 ## Status
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/Orange-OpenSource/Orange-Boosted-Bootstrap/js.yml?branch=main&label=JS%20Tests&logo=github)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions/workflows/js.yml?query=workflow%3AJS+branch%3Aouds%2Fmain)
@@ -98,68 +102,67 @@ Within the download you’ll find the following directories and files, logically
 <details>
   <summary>Download contents</summary>
 
-```text
-@ouds/
-├── web-orange/
-│   └── dist/
-│       └── css/
-│           ├── ouds-web-bootstrap.css
-│           ├── ouds-web-bootstrap.css.map
-│           ├── ouds-web-bootstrap.min.css
-│           ├── ouds-web-bootstrap.min.css.map
-│           ├── ouds-web-bootstrap.rtl.css
-│           ├── ouds-web-bootstrap.rtl.css.map
-│           ├── ouds-web-bootstrap.rtl.min.css
-│           ├── ouds-web-bootstrap.rtl.min.css.map
-│           ├── ouds-web-grid.css
-│           ├── ouds-web-grid.css.map
-│           ├── ouds-web-grid.min.css
-│           ├── ouds-web-grid.min.css.map
-│           ├── ouds-web-grid.rtl.css
-│           ├── ouds-web-grid.rtl.css.map
-│           ├── ouds-web-grid.rtl.min.css
-│           ├── ouds-web-grid.rtl.min.css.map
-│           ├── ouds-web-reboot.css
-│           ├── ouds-web-reboot.css.map
-│           ├── ouds-web-reboot.min.css
-│           ├── ouds-web-reboot.min.css.map
-│           ├── ouds-web-reboot.rtl.css
-│           ├── ouds-web-reboot.rtl.css.map
-│           ├── ouds-web-reboot.rtl.min.css
-│           ├── ouds-web-reboot.rtl.min.css.map
-│           ├── ouds-web-utilities.css
-│           ├── ouds-web-utilities.css.map
-│           ├── ouds-web-utilities.min.css
-│           ├── ouds-web-utilities.min.css.map
-│           ├── ouds-web-utilities.rtl.css
-│           ├── ouds-web-utilities.rtl.css.map
-│           ├── ouds-web-utilities.rtl.min.css
-│           ├── ouds-web-utilities.rtl.min.css.map
-│           ├── ouds-web.css
-│           ├── ouds-web.css.map
-│           ├── ouds-web.min.css
-│           ├── ouds-web.min.css.map
-│           ├── ouds-web.rtl.css
-│           ├── ouds-web.rtl.css.map
-│           ├── ouds-web.rtl.min.css
-│           └── ouds-web.rtl.min.css.map
-└── web-common/
-    └── dist/
-        └── js/
-            ├── ouds-web.bundle.js
-            ├── ouds-web.bundle.js.map
-            ├── ouds-web.bundle.min.js
-            ├── ouds-web.bundle.min.js.map
-            ├── ouds-web.esm.js
-            ├── ouds-web.esm.js.map
-            ├── ouds-web.esm.min.js
-            ├── ouds-web.esm.min.js.map
-            ├── ouds-web.js
-            ├── ouds-web.js.map
-            ├── ouds-web.min.js
-            └── ouds-web.min.js.map
-```
-
+  ```text
+  @ouds/
+  ├── web-orange/
+  │   └── dist/
+  │       └── css/
+  │           ├── ouds-web-bootstrap.css
+  │           ├── ouds-web-bootstrap.css.map
+  │           ├── ouds-web-bootstrap.min.css
+  │           ├── ouds-web-bootstrap.min.css.map
+  │           ├── ouds-web-bootstrap.rtl.css
+  │           ├── ouds-web-bootstrap.rtl.css.map
+  │           ├── ouds-web-bootstrap.rtl.min.css
+  │           ├── ouds-web-bootstrap.rtl.min.css.map
+  │           ├── ouds-web-grid.css
+  │           ├── ouds-web-grid.css.map
+  │           ├── ouds-web-grid.min.css
+  │           ├── ouds-web-grid.min.css.map
+  │           ├── ouds-web-grid.rtl.css
+  │           ├── ouds-web-grid.rtl.css.map
+  │           ├── ouds-web-grid.rtl.min.css
+  │           ├── ouds-web-grid.rtl.min.css.map
+  │           ├── ouds-web-reboot.css
+  │           ├── ouds-web-reboot.css.map
+  │           ├── ouds-web-reboot.min.css
+  │           ├── ouds-web-reboot.min.css.map
+  │           ├── ouds-web-reboot.rtl.css
+  │           ├── ouds-web-reboot.rtl.css.map
+  │           ├── ouds-web-reboot.rtl.min.css
+  │           ├── ouds-web-reboot.rtl.min.css.map
+  │           ├── ouds-web-utilities.css
+  │           ├── ouds-web-utilities.css.map
+  │           ├── ouds-web-utilities.min.css
+  │           ├── ouds-web-utilities.min.css.map
+  │           ├── ouds-web-utilities.rtl.css
+  │           ├── ouds-web-utilities.rtl.css.map
+  │           ├── ouds-web-utilities.rtl.min.css
+  │           ├── ouds-web-utilities.rtl.min.css.map
+  │           ├── ouds-web.css
+  │           ├── ouds-web.css.map
+  │           ├── ouds-web.min.css
+  │           ├── ouds-web.min.css.map
+  │           ├── ouds-web.rtl.css
+  │           ├── ouds-web.rtl.css.map
+  │           ├── ouds-web.rtl.min.css
+  │           └── ouds-web.rtl.min.css.map
+  └── web-common/
+      └── dist/
+          └── js/
+              ├── ouds-web.bundle.js
+              ├── ouds-web.bundle.js.map
+              ├── ouds-web.bundle.min.js
+              ├── ouds-web.bundle.min.js.map
+              ├── ouds-web.esm.js
+              ├── ouds-web.esm.js.map
+              ├── ouds-web.esm.min.js
+              ├── ouds-web.esm.min.js.map
+              ├── ouds-web.js
+              ├── ouds-web.js.map
+              ├── ouds-web.min.js
+              └── ouds-web.min.js.map
+  ```
 </details>
 
 We provide compiled CSS and JS (`ouds-web.*`), as well as compiled and minified CSS and JS (`ouds-web.min.*`). [Source maps](https://web.dev/articles/source-maps) (`ouds-web.*.map`) are available for use with certain browsers’ developer tools. Bundled JS files (`ouds-web.bundle.js` and minified `ouds-web.bundle.min.js`) include [Popper](https://popper.js.org/docs/v2/).
@@ -169,6 +172,7 @@ We also provide a compiled and minified CSS (`ouds-web-bootstrap.*` and `ouds-we
 ## Bugs and feature requests
 
 Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new/choose).
+
 
 ## Documentation
 
@@ -191,6 +195,7 @@ You can find all our previous releases docs on <https://web.unified-design-syste
 
 [Previous releases](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) and their documentation are also available for download.
 
+
 ## Contributing
 
 Please read through our [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
@@ -199,6 +204,7 @@ Moreover, if your pull request contains JavaScript patches or features, you must
 
 Editor preferences are available in the [editor config](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
 
+
 ## Versioning
 
 For transparency into our release cycle and in striving to maintain backward compatibility, OUDS Web is maintained under [the Semantic Versioning guidelines](https://semver.org/). Sometimes we screw up, but we adhere to those rules whenever possible.
@@ -206,6 +212,7 @@ For transparency into our release cycle and in striving to maintain backward com
 See [the Releases section of our GitHub project](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) for changelogs for each release version of OUDS Web.
 
 Our default branch is for development of our OUDS Web release.
+
 
 ## Creators
 
@@ -240,3 +247,4 @@ Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previ
 Code and documentation copyright 2011-2026 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors). Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 
 OUDS Web code and documentation copyright 2015-2026 the [OUDS Web Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA](https://orange.com). Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+
