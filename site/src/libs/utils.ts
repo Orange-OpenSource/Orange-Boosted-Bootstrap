@@ -32,7 +32,7 @@ export function getSlug(str: string) {
 }
 
 export function getHeadingSlug(str: string) {
-  return str.replace(/-------full-changelog---------------------/g, '')
+  return str.replace(/-+full-changelog-+/g, '')
 }
 
 export function trimLeadingAndTrailingSlashes(str: string) {
