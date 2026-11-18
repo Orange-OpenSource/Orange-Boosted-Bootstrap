@@ -1,12 +1,14 @@
-# Prettier is only used for the website
+# Add files here to ignore them from prettier formatting
+/dist
+/dist-saas
+/coverage
+/tmp
+/.nx/cache
+/.nx/workspace-data
+package-lock.json
+/**/*.md
+/**/*.yml
 
-site/.astro
-site/dist
-site/public
-site/src/assets
-site/src/scss
-site/src/pages/**/*.md
-site/src/pages/**/*.mdx
-site/src/content/**/*.mdx
-site/src/layouts/RedirectLayout.astro
-site/static
+# OUDS Web keeps its Bootstrap/XO code style (enforced by ESLint) and formats its
+# docs site with its own config (npm run docs-prettier-format).
+/libs/web

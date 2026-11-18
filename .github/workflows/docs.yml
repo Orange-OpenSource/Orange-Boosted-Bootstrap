@@ -4,9 +4,9 @@ on:
     branches:
       - main
     paths:
-      - 'js/**'
-      - 'scss/**'
-      - 'site/**'
+      - 'libs/web/js/**'
+      - 'libs/web/scss/**'
+      - 'libs/web/site/**'
   pull_request:
     types: [opened, reopened, synchronize]
   workflow_dispatch:
@@ -52,7 +52,7 @@ jobs:
       - name: Run linkinator
         uses: JustinBeckwith/linkinator-action@12f7a61a56e5e75d659f0dfd6357e2d852ede281 # v2.5.0
         with:
-          paths: _site
+          paths: libs/web/_site
           recurse: true
           verbosity: error
           skip: "^http://localhost"

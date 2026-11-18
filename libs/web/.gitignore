@@ -1,0 +1,21 @@
+# Ignore docs files
+/_site/
+
+# Folders to ignore
+/dist-sass/
+/js/coverage/
+/.pa11y/
+/packages/*/dist/
+
+# Storybook
+/stories/auto
+*storybook.log
+
+# Site
+/site/dist
+/site/node_modules
+/site/.astro
+/site/public
+
+# OUDS migrate
+/packages/migrate/node_modules

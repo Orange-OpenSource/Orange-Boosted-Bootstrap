@@ -158,12 +158,12 @@
   "language": "en-US",
   "ignorePaths": [
     ".cspell.json",
-    "dist/",
-    "packages/**/dist/",
+    "libs/web/dist/",
+    "libs/web/packages/**/dist/",
     "*.min.*",
     "**/*rtl*",
     "**/tests/**",
-    "CHANGELOG.md"
+    "libs/web/CHANGELOG.md"
   ],
   "useGitignore": true
 }
