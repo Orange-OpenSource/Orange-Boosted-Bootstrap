@@ -3,7 +3,7 @@
 ### Bug Fixes
 
 * **docs:** Split the icon page between Foundation and Utilities ([#3792](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3792)) ([dfd5c2b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dfd5c2b582efe5f697f21a20136e800f1bccaa70))
-* **docs:** Themes page enhancements and clarification ([#3723](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3723)) ([dfd5c2b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dfd5c2b582efe5f697f21a20136e800f1bccaa70))
+* **docs:** Themes page enhancements and clarification ([#3723](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3723)) ([d5f4f8f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d5f4f8f3e0fd74079bc7e3d85db73283d6d717eb))
 * **docs:** add design spec links on Items ([#3912](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3912)) ([8ba45d4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8ba45d45059a0c155fef8ee31e88ea23dc44f9c1))
 * **docs:** add margin bottom on list-unstyled where necessary ([#3920](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3920)) ([8d4af00](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8d4af001e6d05d2327002c701f8129f803891ca7))
 * **docs:** github shortcuts were wrong ([#3958](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3958)) ([80021b5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/80021b54bd0bae56badfdccb21d2f559de0ad67c))
