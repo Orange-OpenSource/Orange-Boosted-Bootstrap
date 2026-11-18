@@ -59,7 +59,7 @@
     "astro-dev": "cross-env BRAND=sosh astro dev --root ../../site --port 9002",
     "astro-build": "cross-env BRAND=sosh astro build --root ../../site && cd ../../site/dist && node ../../build/merge-sitemap.mjs ./sitemap-0.xml ../../_site/sitemap-0.xml && cp -r . ../../_site",
     "astro-preview": "cross-env BRAND=sosh astro preview --root ../../site --port 9002",
-    "release-zip": "cd ../../.. && cross-env-shell \"rm -rf /ouds-web-sosh-$npm_package_version-dist ouds-web-sosh-$npm_package_version-dist.zip && cp -r dist/ ouds-web-sosh-$npm_package_version-dist && cp -r packages/sosh/dist/ ouds-web-sosh-$npm_package_version-dist/ && zip -qr9 ouds-web-sosh-$npm_package_version-dist.zip ouds-web-sosh-$npm_package_version-dist && rm -rf ouds-web-sosh-$npm_package_version-dist\""
+    "release-zip": "cd ../.. && cross-env-shell \"rm -rf /ouds-web-sosh-$npm_package_version-dist ouds-web-sosh-$npm_package_version-dist.zip && cp -r dist/ ouds-web-sosh-$npm_package_version-dist && cp -r packages/sosh/dist/ ouds-web-sosh-$npm_package_version-dist/ && zip -qr9 ouds-web-sosh-$npm_package_version-dist.zip ouds-web-sosh-$npm_package_version-dist && rm -rf ouds-web-sosh-$npm_package_version-dist\""
   },
   "license": "MIT"
 }
