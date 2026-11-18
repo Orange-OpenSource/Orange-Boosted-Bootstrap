@@ -45,6 +45,35 @@ import { getTokenValue } from '@libs/sass-variables'
     <div class="card position-relative h-100">
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
+          <div class="item-list item-accordion-faq w-75">
+            <details class="item item-accordion">
+              <summary class="item-container item-interactive">
+                <span class="item-content">
+                  <span class="item-text-container">
+                    <span class="item-label">Label</span>
+                  </span>
+                </span>
+              </summary>
+            </details>
+            <details class="item item-accordion">
+              <summary class="item-container item-interactive">
+                <span class="item-content">
+                  <span class="item-text-container">
+                    <span class="item-label">Label</span>
+                  </span>
+                </span>
+              </summary>
+            </details>
+          </div>
+        </div>
+      </div>
+      <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#accordion-faq">Accordion faq</a> is a UI element designed as a row that accommodates a question-and-answer format, used to reveal or hide an answer within the current context.</div>
+    </div>
+  </li>
+  <li class="g-col-6">
+    <div class="card position-relative h-100">
+      <div class="card-top bg-secondary">
+        <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
           <div class="item-list w-75">
             <details class="item item-accordion">
               <summary class="item-container item-interactive">
@@ -72,9 +101,7 @@ import { getTokenValue } from '@libs/sass-variables'
   </li>
 </ul>
 
-{/* Extra label, alignment et size pour le faq */}
-{/* Voir comment réagit NVDA, savoir si ul li est obligatoire */}
-{/* Comment gérer le disabled correctement */}
+{/* Extra label, alignment et tokens et size pour le faq */}
 
 Our accordions are based on our [items]([[docsref:/components/items]]). This is why they share the same structure, classes, and variants as items, with the addition of the interactive summary and expandable content specific to accordions.
 
@@ -107,6 +134,10 @@ Use a clear, descriptive label in the `<summary>` so users can understand what c
 
 <Callout type="info" name="distance-in-components" />
 
+<Callout type="danger" title="Interactive elements inside summary">
+  Even if `<button>` or `<a>` or any interactive element is valid HTML inside `<details>`, it must not be used as child of `<summary>`. It's not valid from a functional point of view.
+</Callout>
+
 ## [[comp]] Accordion card item
 
 An accordion card item is a UI element shaped like a self-contained card that reveals or hides related content within the current context.
@@ -128,11 +159,49 @@ Add `.item-accordion` to the `.item` `<details>` element and `.item-interactive`
     </div>
   </details>`} />
 
-{/* ## [[comp]] Accordion faq
+## [[comp]] Accordion faq
 
-An accordion faq presents a question in the summary and reveals its answer when expanded. It helps users scan a set of questions and open the answers they need.
+An accordion faq is a UI element designed as a row that accommodates a question-and-answer format, used to reveal or hide an answer within the current context.
 
-<Example buttonLabel="accordion faq" code={``} /> */}
+Accordion faq are used to organize frequently asked questions into a compact, easy-to-scan list where users can open only the information they need. The question serves as the accordion trigger, and the related answer appears directly below when expanded.
+
+Use `.item-list.item-accordion-faq` as the surrounding container and `.item-accordion` on each expandable item. The available options are described in the [common variants section](#common-variants).
+
+<Callout type="info" title="Restricted options">
+  Please note that the following options aren't suitable for [accordion faq](#accordion-faq):
+  * Only the [leading icon](#icon) without size is allowed. It's the only option suitable for the leading container.
+  * The [extra label](#text-container) and the [slot - label](#text-container) shouldn't be used in this context.
+  * Only the [trailing text](#text) is allowed. It's the only option suitable for the trailing container.
+  * [Outlined](#outlined) and [Rounded corners](#rounded-corners) shouldn't be used since the faq is considered to be always a list.
+  * The [small size](#sizes) isn't suitable in this context.
+</Callout>
+
+<Example buttonLabel="accordion faq" code={`<div class="item-list item-accordion-faq">
+    <details class="item item-accordion">
+      <summary class="item-container item-interactive">
+        <span class="item-content">
+          <span class="item-text-container">
+            <span class="item-label">Label</span>
+          </span>
+        </span>
+      </summary>
+      <div class="item-accordion-body">
+        <p class="mb-none">Accordion content</p>
+      </div>
+    </details>
+    <details class="item item-accordion">
+      <summary class="item-container item-interactive">
+        <span class="item-content">
+          <span class="item-text-container">
+            <span class="item-label">Label</span>
+          </span>
+        </span>
+      </summary>
+      <div class="item-accordion-body">
+        <p class="mb-none">Accordion content</p>
+      </div>
+    </details>
+  </div>`} />
 
 ## [[comp]] Accordion list item
 
@@ -143,7 +212,7 @@ Accordion items are typically stacked vertically, allowing users to scan section
 Use `.item-list` as the surrounding container and `.item-accordion` on each expandable item. The available options are described in the [common variants section](#common-variants).
 
 <Example buttonLabel="accordion list item" code={`<div class="item-list">
-    <details class="item item-accordion" name="accordion1">
+    <details class="item item-accordion">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -156,7 +225,7 @@ Use `.item-list` as the surrounding container and `.item-accordion` on each expa
       </div>
     </details>
 
-    <details class="item item-accordion" name="accordion1">
+    <details class="item item-accordion">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -168,71 +237,7 @@ Use `.item-list` as the surrounding container and `.item-accordion` on each expa
         <p class="mb-none">Accordion content</p>
       </div>
     </details>
-  </div>
-
-  <ul class="item-list">
-    <li class="item item-accordion">
-      <details name="accordion10">
-        <summary class="item-container item-interactive">
-          <span class="item-content">
-            <span class="item-text-container">
-              <span class="item-label">Label</span>
-            </span>
-          </span>
-        </summary>
-        <div class="item-accordion-body">
-          <p class="mb-none">Accordion content</p>
-        </div>
-      </details>
-    </li>
-
-    <li class="item item-accordion">
-      <details name="accordion10">
-        <summary class="item-container item-interactive">
-          <span class="item-content">
-            <span class="item-text-container">
-              <span class="item-label">Label</span>
-            </span>
-          </span>
-        </summary>
-        <div class="item-accordion-body">
-          <p class="mb-none">Accordion content</p>
-        </div>
-      </details>
-    </li>
-  </ul>
-
-  <ul class="item-list">
-    <li>
-      <details class="item item-accordion" name="accordion11">
-        <summary class="item-container item-interactive">
-          <span class="item-content">
-            <span class="item-text-container">
-              <span class="item-label">Label</span>
-            </span>
-          </span>
-        </summary>
-        <div class="item-accordion-body">
-          <p class="mb-none">Accordion content</p>
-        </div>
-      </details>
-    </li>
-
-    <li>
-      <details class="item item-accordion" name="accordion11">
-        <summary class="item-container item-interactive">
-          <span class="item-content">
-            <span class="item-text-container">
-              <span class="item-label">Label</span>
-            </span>
-          </span>
-        </summary>
-        <div class="item-accordion-body">
-          <p class="mb-none">Accordion content</p>
-        </div>
-      </details>
-    </li>
-  </ul>`} />
+  </div>`} />
 
 ## Common variants
 
@@ -250,14 +255,14 @@ The main container `.item-content` of an accordion item can contain up to 3 elem
 Use `.item-leading-container` to add content before the summary text, such as an icon or image.
 
 <Callout type="warning" title="Small item">
-  Please note that the sizes below shouldn't be used in a [small accordion item](#sizes), only the assets without sizing class should be used in small accordion items. The slot shouldn't be used as well in this size.
+  Please note that the sizes below shouldn't be used in a [small accordion item](#sizes) or in an [accordion faq](#accordion-faq), only the assets without sizing class should be used in small accordion items. The slot shouldn't be used as well in this size.
 </Callout>
 
 <AssetsNavTab id="leading">
   <AssetsTab name="Icon" active="true">
     ##### Icon
 
-    Icons can be sized with `item-leading-large` (only if not [small item](#sizes)).
+    Icons can be sized with `item-leading-large` (only if not [small accordion item](#sizes), or [accordion faq](#accordion-faq)).
 
     For status icons, add `.item-icon` with one of these classes: `.item-status-positive`, `.item-status-warning`, `.item-status-info`, or `.item-status-negative`.
 
@@ -319,6 +324,10 @@ Use `.item-leading-container` to add content before the summary text, such as an
   <AssetsTab name="Image">
     ##### Image
 
+    <Callout type="warning">
+      Image shouldn't be used in the [accordion faq](#accordion-faq).
+    </Callout>
+
     Images can be sized with `item-leading-large` (only if not [small accordion item](#sizes)) or `item-leading-xlarge` (only if not [small accordion item](#sizes)).
 
     [Ratio utilities]([[docsref:/utilities/aspect-ratio]]) may also be used along with `.item-leading-rounded`.
@@ -345,8 +354,8 @@ Use `.item-leading-container` to add content before the summary text, such as an
   <AssetsTab name="Slot">
     ##### Slot
 
-    <Callout type="warning" title="Small accordion item">
-      The slot shouldn't be used in a [small accordion item](#sizes).
+    <Callout type="warning">
+      The slot shouldn't be used in a [small accordion item](#sizes) or in an [accordion faq](#accordion-faq).
     </Callout>
 
     To add a slot, `item-slot` must be combined with `.item-leading-container`.
@@ -379,12 +388,12 @@ Use `.item-leading-container` to add content before the summary text, such as an
 There are 4 text elements that are meant to be used in the `.item-text-container`.
 
 They always appear in the following order:
-1. Overline (optional) using `.item-overline` (only if not [small item](#sizes))
+1. Overline (optional) using `.item-overline` (only if not [small accordion item](#sizes))
 2. Label (required) using `.item-label`, that can optionally be bold (using `.fw-bold`)
-3. Extra label (optional) using `.item-extra-label` (only if not [small item](#sizes))
+3. Extra label (optional) using `.item-extra-label` (only if not [small accordion item](#sizes) or [accordion faq](#accordion-faq))
 4. Description using (optional) `.item-description`
 
-Optionally, a slot can be added at the end of the text container using `.item-slot` and/or in place of the `.item-label` if it replaces it.
+Optionally, a slot can be added at the end of the text container using `.item-slot` and/or in place of the `.item-label` (only if not in an [accordion faq](#accordion-faq)) if it replaces it.
 
 <Callout type="info">
   Please note that you might want to apply one of our [color utility]([[docsref:/utilities/color]]) to the text elements (except the `.item-label`), to match the badge for example. Be sure not to convey information only through color.
@@ -470,6 +479,10 @@ You can navigate through the different assets using the tabs below.
   Please note that the sizes below shouldn't be used in a [small accordion item](#sizes). The slot shouldn't be used as well in this size.
 </Callout>
 
+<Callout type="warning" title="Accordion faq">
+  Please note that only the [trailing text](#text) is allowed in an [accordion faq](#accordion-faq).
+</Callout>
+
 <AssetsNavTab id="trailing">
   <AssetsTab name="Text" active="true">
     ##### Text
@@ -531,6 +544,10 @@ You can navigate through the different assets using the tabs below.
 
     All variants of [Badge]([[docsref:/components/badge#badge]]) and [Badge - count]([[docsref:/components/badge#badge---count]]) are allowed.
 
+    <Callout type="warning" title="Accordion faq">
+      Please note that only the [trailing text](#text) is allowed in an [accordion faq](#accordion-faq).
+    </Callout>
+
     <Example buttonLabel="accordion items with trailing badge" class="d-flex flex-column gap-medium" code={`<details class="item item-accordion">
     <summary class="item-container item-interactive">
       <span class="item-content">
@@ -568,6 +585,10 @@ You can navigate through the different assets using the tabs below.
 
     All variants of [tags]([[docsref:/components/tag#tag]]) are allowed.
 
+    <Callout type="warning" title="Accordion faq">
+      Please note that only the [trailing text](#text) is allowed in an [accordion faq](#accordion-faq).
+    </Callout>
+
     <Example buttonLabel="accordion items with trailing tag" class="d-flex flex-column gap-medium" code={`<details class="item item-accordion">
     <summary class="item-container item-interactive">
       <span class="item-content">
@@ -593,6 +614,10 @@ You can navigate through the different assets using the tabs below.
 
     <Callout type="info">
   Please note that even if it's not recommended, we can have an image which is an icon, but it requires `.icon` class on it to behave correctly.
+    </Callout>
+
+    <Callout type="warning" title="Accordion faq">
+      Please note that only the [trailing text](#text) is allowed in an [accordion faq](#accordion-faq).
     </Callout>
 
     <Example buttonLabel="accordion items with trailing icon" class="d-flex flex-column gap-medium" code={`<details class="item item-accordion">
@@ -654,6 +679,10 @@ You can navigate through the different assets using the tabs below.
 
     All these classes can be combined as needed and placed on `.item-trailing-container`.
 
+    <Callout type="warning" title="Accordion faq">
+      Please note that only the [trailing text](#text) is allowed in an [accordion faq](#accordion-faq).
+    </Callout>
+
     <Example buttonLabel="accordion items with trailing image" class="d-flex flex-column gap-medium" code={`<details class="item item-accordion">
     <summary class="item-container item-interactive">
       <span class="item-content">
@@ -679,6 +708,10 @@ You can navigate through the different assets using the tabs below.
 
     <Callout type="warning" title="Slot">
       The slot shouldn't contain any interactive element, since the `<summary>` itself is interactive.
+    </Callout>
+
+    <Callout type="warning" title="Accordion faq">
+      Please note that only the [trailing text](#text) is allowed in an [accordion faq](#accordion-faq).
     </Callout>
 
     <Example buttonLabel="accordion item with trailing slot" class="d-flex flex-column gap-medium" code={`<details class="item item-accordion">
@@ -708,6 +741,10 @@ All the slots are optional, but if one is used, it should be indicated via `.ite
 
 This component can contain many slots that can be used to add custom content. The main slots are located in the [leading container](#leading-container), the [text container](#text-container), and the [trailing container](#trailing-container). The slots are intended to be used for custom content that is not covered by the other elements of the component. We can add another slot outside of the `.item-content` container as well.
 
+<Callout type="warning" title="Slot">
+  The slot shouldn't contain any interactive element, since the `<summary>` itself is interactive.
+</Callout>
+
 <Callout type="warning" title="Small item">
   The slots shouldn't be used in a [small accordion item](#sizes).
 </Callout>
@@ -730,7 +767,7 @@ Here is a small summary of the slots that can be used in an accordion item:
           <span class="alert-icon"><span class="visually-hidden">Negative alert</span></span>
           <span class="alert-container">
             <span class="alert-text-container">
-              <h3 class="alert-label">Alert message</h3>
+              <span class="alert-label">Alert message</span>
             </span>
           </span>
         </span>
@@ -779,7 +816,7 @@ By default, [accordion card items](#accordion-card-item) have a background-color
   <!-- List -->
   <div class="item-list item-bg">
 
-    <details class="item item-accordion" name="accordion2">
+    <details class="item item-accordion">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -792,7 +829,7 @@ By default, [accordion card items](#accordion-card-item) have a background-color
       </div>
     </details>
 
-    <details class="item item-accordion" name="accordion2">
+    <details class="item item-accordion">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -828,7 +865,7 @@ Use `.item-no-divider` on the `.item` or `.item-list` container to remove the di
   <!-- List -->
   <div class="item-list item-no-divider">
 
-    <details class="item item-accordion" name="accordion3">
+    <details class="item item-accordion">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -841,7 +878,7 @@ Use `.item-no-divider` on the `.item` or `.item-list` container to remove the di
       </div>
     </details>
 
-    <details class="item item-accordion" name="accordion3">
+    <details class="item item-accordion">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -926,7 +963,7 @@ Rounded corners items is a project-wide option therefore all your items should e
     <!-- List -->
     <div class="item-list">
 
-      <details class="item item-accordion" name="accordion4">
+      <details class="item item-accordion">
         <summary class="item-container item-interactive">
           <span class="item-content">
             <span class="item-text-container">
@@ -939,7 +976,7 @@ Rounded corners items is a project-wide option therefore all your items should e
         </div>
       </details>
 
-      <details class="item item-accordion" name="accordion4">
+      <details class="item item-accordion">
         <summary class="item-container item-interactive">
           <span class="item-content">
             <span class="item-text-container">
@@ -980,7 +1017,7 @@ Add the `open` attribute to `<details>` to display the expandable content initia
   <!-- List -->
   <div class="item-list">
 
-    <details class="item item-accordion" name="accordion5">
+    <details class="item item-accordion">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -993,7 +1030,7 @@ Add the `open` attribute to `<details>` to display the expandable content initia
       </div>
     </details>
 
-    <details class="item item-accordion" name="accordion5" open>
+    <details class="item item-accordion" open>
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -1062,6 +1099,10 @@ By default every accordion item comes with a default size. The size can be adapt
   * The assets within the [leading container](#leading-container) and the [trailing container](#trailing-container) apart tags and badges mustn't use any size classes
   * There mustn't be any [slot](#slots) in the accordion item
   * The [text container](#text-container) must only have the label, and/or description inside and not the overline, or extra label
+</Callout>
+
+<Callout type="warning" title="Accordion faq">
+  The small size isn't suitable for [accordion faq](#accordion-faq).
 </Callout>
 
 <Example buttonLabel="accordion sizes" class="d-flex flex-column gap-medium" code={`<!-- Card -->
@@ -1155,7 +1196,7 @@ By default all summary items are vertically centered. You can change the alignme
   <!-- List -->
   <div class="item-list item-top">
 
-    <details class="item item-accordion" name="accordion6">
+    <details class="item item-accordion">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -1168,7 +1209,7 @@ By default all summary items are vertically centered. You can change the alignme
       </div>
     </details>
 
-    <details class="item item-accordion" name="accordion6">
+    <details class="item item-accordion">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-leading-container">
@@ -1212,7 +1253,7 @@ By default, items will span the whole width of their parent container, to limit 
   <!-- List -->
   <div class="item-list component-max-width">
 
-    <details class="item item-accordion" name="accordion7">
+    <details class="item item-accordion">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -1225,7 +1266,7 @@ By default, items will span the whole width of their parent container, to limit 
       </div>
     </details>
 
-    <details class="item item-accordion" name="accordion7">
+    <details class="item item-accordion">
       <summary class="item-container item-interactive">
         <span class="item-content">
           <span class="item-text-container">
@@ -1242,70 +1283,145 @@ By default, items will span the whole width of their parent container, to limit 
 
 ## Grouping
 
-By default, each accordion can be opened or closed independently. Give related `<details>` elements the same `name` attribute to create an exclusive group: opening one closes the others. Use a distinct name for each separate group.
+By default, each accordion can be opened or closed independently. Give related `<details>` elements the same `[name]` attribute to create an exclusive group: opening one closes the others. Use a distinct name for each separate group.
 
-<Example buttonLabel="grouped accordion items" class="d-flex flex-column gap-medium" code={`<div class="item-list">
+You also may regroup them inside `<ul><li>` elements instead of using separate `<div>` containers.
 
-    <details class="item item-accordion" name="accordion8">
-      <summary class="item-container item-interactive">
-        <span class="item-content">
-          <span class="item-text-container">
-            <span class="item-label">Label</span>
+<Example buttonLabel="grouped accordion items" class="d-flex flex-column gap-medium" code={`<ul class="item-list">
+    <li>
+
+      <details class="item item-accordion" name="accordion1">
+        <summary class="item-container item-interactive">
+          <span class="item-content">
+            <span class="item-text-container">
+              <span class="item-label">Label</span>
+            </span>
           </span>
-        </span>
-      </summary>
-      <div class="item-accordion-body">
-        <p class="mb-none">Accordion content</p>
-      </div>
-    </details>
+        </summary>
+        <div class="item-accordion-body">
+          <p class="mb-none">Accordion content</p>
+        </div>
+      </details>
 
-    <details class="item item-accordion" name="accordion8">
-      <summary class="item-container item-interactive">
-        <span class="item-content">
-          <span class="item-text-container">
-            <span class="item-label">Label</span>
+    </li>
+    <li>
+
+      <details class="item item-accordion" name="accordion1">
+        <summary class="item-container item-interactive">
+          <span class="item-content">
+            <span class="item-text-container">
+              <span class="item-label">Label</span>
+            </span>
           </span>
-        </span>
-      </summary>
-      <div class="item-accordion-body">
-        <p class="mb-none">Accordion content</p>
-      </div>
-    </details>
+        </summary>
+        <div class="item-accordion-body">
+          <p class="mb-none">Accordion content</p>
+        </div>
+      </details>
 
-  </div>
+    </li>
+  </ul>
 
-  <div class="item-list">
+  <ul class="item-list">
+    <li>
 
-    <details class="item item-accordion" name="accordion9">
-      <summary class="item-container item-interactive">
-        <span class="item-content">
-          <span class="item-text-container">
-            <span class="item-label">Label</span>
+      <details class="item item-accordion" name="accordion2">
+        <summary class="item-container item-interactive">
+          <span class="item-content">
+            <span class="item-text-container">
+              <span class="item-label">Label</span>
+            </span>
           </span>
-        </span>
-      </summary>
-      <div class="item-accordion-body">
-        <p class="mb-none">Accordion content</p>
-      </div>
-    </details>
+        </summary>
+        <div class="item-accordion-body">
+          <p class="mb-none">Accordion content</p>
+        </div>
+      </details>
 
-    <details class="item item-accordion" name="accordion9">
-      <summary class="item-container item-interactive">
-        <span class="item-content">
-          <span class="item-text-container">
-            <span class="item-label">Label</span>
+    </li>
+    <li>
+
+      <details class="item item-accordion" name="accordion2">
+        <summary class="item-container item-interactive">
+          <span class="item-content">
+            <span class="item-text-container">
+              <span class="item-label">Label</span>
+            </span>
           </span>
-        </span>
-      </summary>
-      <div class="item-accordion-body">
-        <p class="mb-none">Accordion content</p>
-      </div>
-    </details>
+        </summary>
+        <div class="item-accordion-body">
+          <p class="mb-none">Accordion content</p>
+        </div>
+      </details>
 
-  </div>`} />
+    </li>
+  </ul>`} />
 
 ### Using a polyfill
 
+If you need to support older browsers that do not natively support the `name` attribute on `<details>` elements for accordion-like behavior, you can add the following code in your JavaScript:
+
+<JsDocs name="accordion-name-polyfill" file="site/src/assets/partials/snippets.js" />
+
 ## Javascript
 
-{/* TODO See https://getbootstrap.com/docs/6.0/components/accordion/#events and take what can be taken */}
+### Events
+
+You can listen for the `toggle` event on each `<details>` element to detect when an accordion is opened or closed.
+
+```js
+const accordionItem = document.querySelector('.accordion-item')
+accordionItem.addEventListener('toggle', event => {
+  if (event.target.open) {
+    console.log('Accordion opened')
+  } else {
+    console.log('Accordion closed')
+  }
+})
+```
+
+### Programmatic control
+
+Toggle accordion items programmatically using the `open` property:
+
+```js
+const accordionItem = document.querySelector('.accordion-item')
+
+// Open the accordion
+accordionItem.open = true
+
+// Close the accordion
+accordionItem.open = false
+
+// Toggle the accordion
+accordionItem.open = !accordionItem.open
+```
+
+For example, you can programmatically open all the accordion items in a group:
+
+```js
+const accordion = document.getElementById('accordionExpandCollapse')
+const toggleBtn = document.getElementById('btnAccordionToggleAll')
+
+if (accordion && toggleBtn) {
+  const items = accordion.querySelectorAll('.accordion-item')
+  const groupName = 'accordionExpandCollapse'
+
+  toggleBtn.addEventListener('click', () => {
+    const expand = toggleBtn.getAttribute('aria-expanded') !== 'true'
+
+    for (const item of items) {
+      if (expand) {
+        item.removeAttribute('name')
+        item.open = true
+      } else {
+        item.open = false
+        item.setAttribute('name', groupName)
+      }
+    }
+
+    toggleBtn.setAttribute('aria-expanded', String(expand))
+    toggleBtn.textContent = expand ? 'Collapse all' : 'Expand all'
+  })
+}
+```
