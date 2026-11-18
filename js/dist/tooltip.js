@@ -1,10 +1,10 @@
 /*!
-  * OUDS Web v1.5.0 (https://web.unified-design-system.orange.com/)
+  * OUDS Web v1.6.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2015-2026 The OUDS Web Authors
   * Copyright 2015-2026 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap tooltip.js v1.5.0 (https://web.unified-design-system.orange.com/)
+  * Bootstrap tooltip.js v1.6.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2011-2026 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -48,11 +48,11 @@
   const NAME = 'tooltip';
   const DISALLOWED_ATTRIBUTES = new Set(['sanitize', 'allowList', 'sanitizeFn']);
   const CLASS_NAME_FADE = 'fade';
-  const CLASS_NAME_MODAL = 'modal';
+  const CLASS_NAME_MODAL = 'modal-base';
   const CLASS_NAME_SHOW = 'show';
   const SELECTOR_TOOLTIP_INNER = '.tooltip-inner';
   const SELECTOR_MODAL = `.${CLASS_NAME_MODAL}`;
-  const EVENT_MODAL_HIDE = 'hide.bs.modal';
+  const EVENT_MODAL_HIDE = 'close';
   const TRIGGER_HOVER = 'hover';
   const TRIGGER_FOCUS = 'focus';
   const TRIGGER_CLICK = 'click';

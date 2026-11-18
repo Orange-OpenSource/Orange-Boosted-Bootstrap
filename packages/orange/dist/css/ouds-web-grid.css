@@ -1,5 +1,5 @@
 /*!
- * OUDS Web Grid v1.5.0 (https://web.unified-design-system.orange.com/)
+ * OUDS Web Grid v1.6.0 (https://web.unified-design-system.orange.com/)
  * Copyright 2014-2026 The OUDS Web Authors
  * Copyright 2014-2026 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
@@ -55,7 +55,7 @@
   --bs-color-border-minimal: rgba(0, 0, 0, 0.04);
   --bs-color-border-muted: rgba(0, 0, 0, 0.12);
   --bs-color-border-on-brand-primary: #000;
-  --bs-color-border-status-accent: #ff7900;
+  --bs-color-border-status-accent: #f15e00;
   --bs-color-border-status-info: #0073b2;
   --bs-color-border-status-negative: #db0002;
   --bs-color-border-status-positive: #138126;
@@ -84,7 +84,7 @@
   --bs-color-content-on-status-positive-muted: #000;
   --bs-color-content-on-status-warning-emphasized: #000;
   --bs-color-content-on-status-warning-muted: #000;
-  --bs-color-content-status-accent: #ff7900;
+  --bs-color-content-status-accent: #f15e00;
   --bs-color-content-status-info: #0073b2;
   --bs-color-content-status-inverse-info: #8ad5ff;
   --bs-color-content-status-inverse-negative: #ff8081;
@@ -108,7 +108,7 @@
   --bs-color-surface-inverse-low: #272727;
   --bs-color-surface-primary: #fff;
   --bs-color-surface-secondary: rgba(0, 0, 0, 0.04);
-  --bs-color-surface-status-accent-emphasized: #ff7900;
+  --bs-color-surface-status-accent-emphasized: #f15e00;
   --bs-color-surface-status-accent-muted: rgba(189, 121, 60, 0.08);
   --bs-color-surface-status-info-emphasized: #0073b2;
   --bs-color-surface-status-info-muted: rgba(38, 178, 255, 0.08);
@@ -292,6 +292,10 @@
   --bs-switch-color-track-selected-interaction: #138126;
   --bs-switch-color-track-unselected: rgba(0, 0, 0, 0.44);
   --bs-switch-color-track-unselected-interaction: rgba(0, 0, 0, 0.52);
+  --bs-categorical-tag-color-bg-category-1: #50be87;
+  --bs-categorical-tag-color-bg-category-2: #4ab4e6;
+  --bs-categorical-tag-color-bg-category-3: #ffb400;
+  --bs-categorical-tag-color-bg-category-4: #a885d8;
   --bs-progress-indicator-color-content-track: #ccc;
   --bs-progress-indicator-mono-color-content-track: #ccc;
   --bs-progress-indicator-mono-color-content-indicator: #000;
@@ -361,6 +365,10 @@
   --bs-switch-color-track-selected-interaction: #94f0a4;
   --bs-switch-color-track-unselected: rgba(255, 255, 255, 0.64);
   --bs-switch-color-track-unselected-interaction: rgba(255, 255, 255, 0.8);
+  --bs-categorical-tag-color-bg-category-1: #75cca1;
+  --bs-categorical-tag-color-bg-category-2: #79c7ec;
+  --bs-categorical-tag-color-bg-category-3: #ffd266;
+  --bs-categorical-tag-color-bg-category-4: #c5ade6;
   --bs-progress-indicator-color-content-track: #444;
   --bs-progress-indicator-mono-color-content-track: #444;
   --bs-progress-indicator-mono-color-content-indicator: #fff;
@@ -391,10 +399,20 @@
 @media (min-width: 1640px) {
   .container-max-width {
     --bs-container-margin-x: 80px;
-    max-width: 1680px;
+    max-width: max(105rem, 1680px);
   }
   .container-max-width .row {
     --bs-gutter-x: 32px;
+  }
+}
+
+@media (min-width: 1880px) {
+  .container-max-width-wide {
+    --bs-container-margin-x: 112px;
+    max-width: max(120rem, 1920px);
+  }
+  .container-max-width-wide .row {
+    --bs-gutter-x: 40px;
   }
 }
 
