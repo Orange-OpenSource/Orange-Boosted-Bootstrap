@@ -21,10 +21,10 @@ export function getStaticPaths() {
     <p class="mb-scaled-medium d-inline-flex flex-column md:flex-row align-items-start md:align-items-center">
       <span class="tag me-medium">New in v{getConfig().docs_version}</span>
       <span class="lead mt-scaled-small md:m-none">
-        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/components/items`}>Items</a>,
-        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/components/buttons#assistant-button`}>Assistant button</a>,
-        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/components/buttons#sizes`}>Small buttons</a>, and
-        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/update-guide#v${getConfig().current_version}`}>much more</a>
+        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/components/modals`}>Modals</a>,
+        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/components/icons`}>Interactive icons</a>,
+        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/components/tags#categorical-tag`}>Categorical tags</a> and
+        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/update-guide#v${getConfig().current_version.replaceAll('.', '')}`}>much more</a>
       </span>
     </p>
     <GetStarted />
