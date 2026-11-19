@@ -18,13 +18,15 @@ export function getStaticPaths() {
 <BaseLayout>
   <MastHead />
   <div class="container-fluid container-max-width pt-scaled-medium pb-scaled-3xlarge bd-masthead-followup">
-    <p class="mb-scaled-medium d-inline-flex flex-column md:flex-row align-items-start md:align-items-center">
-      <span class="tag me-medium">New in v{getConfig().docs_version}</span>
-      <span class="lead mt-scaled-small md:m-none">
-        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/components/items`}>Items</a>,
-        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/components/buttons#assistant-button`}>Assistant button</a>,
-        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/components/buttons#sizes`}>Small buttons</a>, and
-        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/update-guide#v1.5.0`}>much more</a>
+    <p class="mb-scaled-medium d-inline-flex flex-column md:flex-row align-items-start md:align-items-center mw-none">
+      <span class="tag me-medium flex-shrink-0">New in v{getConfig().docs_version}</span>
+      <span class="lead mt-scaled-small md:m-none mw-none">
+        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/components/modals`}>Modals</a>,
+        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/components/icons`}>interactive icons</a>,
+        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/components/buttons#expand-button`}>expand button</a>,
+        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/components/links#expand-link`}>expand link</a>,
+        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/components/tags#categorical-tag`}>categorical tag</a> and
+        <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/update-guide#v${getConfig().current_version.replaceAll('.', '')}`}>much more</a>
       </span>
     </p>
     <GetStarted />
