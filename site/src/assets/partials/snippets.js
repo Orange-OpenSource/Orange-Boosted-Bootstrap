@@ -252,6 +252,27 @@ export default () => {
     // js-docs-end skeleton-second-example
   }
 
+  // Polyfill for accordion name attribute support
+
+  // js-docs-start accordion-name-polyfill
+  // It supports the `name` attribute on HTMLDetailsElement for accordion-like behavior
+  if (!('name' in HTMLDetailsElement.prototype)) {
+    document.addEventListener('toggle', event => {
+      const { target } = event
+      if (!(target instanceof HTMLDetailsElement) || !target.open || !target.getAttribute('name')) {
+        return
+      }
+
+      const name = target.getAttribute('name')
+      for (const other of document.querySelectorAll(`details[name="${CSS.escape(name)}"][open]`)) {
+        if (other !== target) {
+          other.open = false
+        }
+      }
+    }, true)
+  }
+  // js-docs-end accordion-name-polyfill
+
   // -------------------------------
   // Show password live example
   // -------------------------------

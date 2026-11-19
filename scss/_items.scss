@@ -25,7 +25,7 @@
 
 .item-content {
   display: flex;
-  column-gap: $ouds-list-item-space-column-gap;
+  column-gap: var(--#{$prefix}list-item-column-gap, $ouds-list-item-space-column-gap);
   align-items: var(--#{$prefix}list-item-align-items, center);
   min-height: calc(var(--#{$prefix}list-item-min-height, $ouds-list-item-size-min-height-default) - 2 * var(--#{$prefix}list-item-border-width, calc($ouds-list-item-border-width-default / 2)));
   padding: calc(var(--#{$prefix}list-item-padding-top, $ouds-list-item-space-padding-block-default) - var(--#{$prefix}list-item-border-width, 0px)) calc($ouds-list-item-space-padding-inline - var(--#{$prefix}list-item-border-width, 0px)) calc(var(--#{$prefix}list-item-padding-bottom, $ouds-list-item-space-padding-block-default) - var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default));
@@ -43,9 +43,10 @@
 }
 
 .item-container > .item-slot {
-  width: calc(100% - $ouds-list-item-space-padding-inline * 2);
+  display: block;
+  width: 100%;
   min-height: $ouds-list-item-size-asset-medium;
-  margin: 0 calc($ouds-list-item-space-padding-inline - var(--#{$prefix}list-item-border-width, 0px)) calc($ouds-list-item-space-padding-block-bottom-slot-list-item-container - var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default));
+  padding: 0 calc($ouds-list-item-space-padding-inline - var(--#{$prefix}list-item-border-width, 0px)) calc(var(--#{$prefix}list-item-bottom-slot-pb, $ouds-list-item-space-padding-block-bottom-slot-list-item-container) - var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default));
 }
 
 .item-container:has(> .item-slot) .item-content {
@@ -187,6 +188,7 @@
 
 .item-icon {
   position: relative;
+  display: block;
   width: 100%;
   height: 100%;
 
@@ -210,6 +212,7 @@
 // Interactive
 
 .item-interactive {
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
   text-decoration: none;
   pointer-events: var(--#{$prefix}list-item-disabled-interactive, auto);
 
@@ -220,7 +223,7 @@
     content: "";
   }
 
-  &:is(&, :hover, :focus-visible, :active) {
+  &:is(:hover, :focus-visible, :active) {
     color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
     outline: 0;
     box-shadow: none;
@@ -255,6 +258,7 @@
 .item-list { // Needs to be after .use-rounded-corner-items to override the variable
   --#{$prefix}list-item-border-radius: #{$ouds-border-radius-none};
   --#{$prefix}list-item-bg: transparent;
+  --#{$prefix}list-item-accordion-bg: transparent;
 
   @include list-unstyled();
   box-sizing: content-box;
@@ -268,20 +272,24 @@
 
 .item-bg { // Needs to be after .item-list to override the variable
   --#{$prefix}list-item-bg: #{$ouds-color-action-support-enabled};
+  --#{$prefix}list-item-accordion-bg: #{$ouds-color-action-support-enabled};
 }
 
 .item-no-bg { // Needs to be after .item-list to override the variable
   --#{$prefix}list-item-bg: transparent;
+  --#{$prefix}list-item-accordion-bg: transparent;
 }
 
 .item-outlined {
   --#{$prefix}list-item-outlined-bg: transparent;
   --#{$prefix}list-item-border-width: #{$ouds-list-item-border-width-default};
   --#{$prefix}list-item-border-color: #{$ouds-color-border-default};
+  --#{$prefix}list-item-accordion-border-color: #{$ouds-color-border-muted};
 }
 
 .item-no-divider { // Needs to be after .item-outlined to override the variable
   --#{$prefix}list-item-border-color: transparent;
+  --#{$prefix}list-item-accordion-border-color: transparent;
 }
 
 .item-top {
@@ -352,7 +360,8 @@
   --#{$prefix}list-item-leading-container-size: #{px-to-rem($ouds-list-item-size-asset-small)};
   --#{$prefix}list-item-trailing-container-size: #{px-to-rem($ouds-list-item-size-asset-small)};
   --#{$prefix}list-item-leading-container-icon-size: #{px-to-rem($ouds-size-icon-with-label-large-size-small)};
-  --#{$prefix}list-item-leading-container-icon-size: #{px-to-rem($ouds-size-icon-with-label-large-size-small)};
+  --#{$prefix}list-item-trailing-container-icon-size: #{px-to-rem($ouds-size-icon-with-label-large-size-small)};
+  --#{$prefix}accordion-content-padding-bottom: #{$ouds-accordion-space-padding-block-bottom-expand-container-small};
 }
 
 
@@ -360,7 +369,7 @@
 // Navigation specific styles
 //
 
-.item-navigation {
+:is(.item-accordion, .item-navigation) {
   .item-container {
     position: relative;
   }
@@ -369,41 +378,41 @@
     display: flex;
     flex-shrink: 0;
     order: var(--#{$prefix}list-item-nav-order, 1);
-    width: px-to-rem($ouds-list-item-size-asset-small);
+    width: var(--#{$prefix}list-item-indicator-size, px-to-rem($ouds-list-item-size-asset-small));
     min-height: px-to-rem($ouds-list-item-size-asset-medium);
     content: "";
     background-color: var(--#{$prefix}list-item-disabled-icon-color, var(--#{$prefix}list-item-chevron-color, $ouds-link-color-chevron-enabled));
     mask: var(--#{$prefix}list-item-nav-icon, $list-item-next-icon) center / contain no-repeat;
   }
 
-  &:has(.item-interactive:hover) {
+  &:has(.item-interactive:hover):not(:has(.item-slot:hover)) {
     --#{$prefix}list-item-chevron-color: #{$ouds-color-action-hover};
     --#{$prefix}list-item-bg: #{$ouds-color-action-support-hover};
   }
 
-  &:has(.item-interactive:focus-visible) {
+  &:has(.item-interactive:focus-visible):not(:has(.item-slot:focus-visible)) {
     --#{$prefix}list-item-chevron-color: #{$ouds-color-action-focus};
     --#{$prefix}list-item-bg: #{$ouds-color-action-support-focus};
   }
 
-  &:has(.item-interactive:active) {
+  &:has(.item-interactive:active):not(:has(.item-slot:active)) {
     --#{$prefix}list-item-chevron-color: #{$ouds-color-action-pressed};
     --#{$prefix}list-item-bg: #{$ouds-color-action-support-pressed};
   }
 }
 
 // Needed outside since the outlined could be project wide
-.item-outlined.item-navigation,
-.item-outlined .item-navigation {
-  &:has(.item-interactive:hover) {
+.item-outlined:is(.item-navigation, .item-accordion),
+.item-outlined :is(.item-accordion, .item-navigation) {
+  &:has(.item-interactive:hover):not(:has(.item-slot:hover)) {
     --#{$prefix}list-item-border-color: #{$ouds-color-action-hover};
   }
 
-  &:has(.item-interactive:focus-visible) {
+  &:has(.item-interactive:focus-visible):not(:has(.item-slot:focus-visible)) {
     --#{$prefix}list-item-border-color: #{$ouds-color-action-focus};
   }
 
-  &:has(.item-interactive:active) {
+  &:has(.item-interactive:active):not(:has(.item-slot:active)) {
     --#{$prefix}list-item-border-color: #{$ouds-color-action-pressed};
   }
 }
@@ -417,4 +426,113 @@
 .item-previous {
   --#{$prefix}list-item-nav-order: -1;
   --#{$prefix}list-item-nav-icon: #{$list-item-previous-icon};
+}
+
+// Accordion specific styles
+.item-accordion {
+  --#{$prefix}list-item-nav-icon: #{$accordion-expanded-false};
+  position: relative;
+  color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
+  background-color: var(--#{$prefix}list-item-outlined-bg, var(--#{$prefix}list-item-disabled-bg, var(--#{$prefix}list-item-accordion-bg, $ouds-color-action-support-enabled)));
+  border-color: var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, transparent)) var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, transparent)) var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, $ouds-color-border-muted));
+  border-style: solid;
+  border-width: var(--#{$prefix}list-item-border-width, 0) var(--#{$prefix}list-item-border-width, 0) var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default);
+  interpolate-size: allow-keywords;
+  @include border-radius(var(--#{$prefix}list-item-border-radius, $ouds-list-item-border-radius-default), var(--#{$prefix}list-item-border-radius, $ouds-list-item-border-radius-default));
+
+  &::details-content {
+    block-size: 0;
+    overflow: hidden;
+    transition: block-size .3s ease-in-out, content-visibility .3s ease-in-out allow-discrete; // stylelint-disable-line property-disallowed-list
+  }
+
+  .item-interactive {
+    background-color: transparent;
+    border-color: transparent;
+
+    &:is(:hover, :focus-visible, :active) {
+      background-color: var(--#{$prefix}list-item-outlined-bg, var(--#{$prefix}list-item-bg, $ouds-color-action-support-enabled));
+    }
+  }
+
+  &:open {
+    --#{$prefix}list-item-nav-icon: #{$accordion-expanded-true};
+
+    &::details-content {
+      block-size: auto;
+    }
+  }
+
+  ::-webkit-details-marker {
+    display: none;
+  }
+}
+
+:is(.item-outlined .item-accordion, .item-outlined.item-accordion) {
+  border-color: var(--#{$prefix}list-item-accordion-border-color, $ouds-color-border-muted);
+
+  .item-interactive {
+    margin: calc(-1 * var(--#{$prefix}list-item-border-width, 0));
+
+    &:is(:hover, :focus-visible, :active) {
+      border-color: var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, transparent)) var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, transparent)) var(--#{$prefix}list-item-disabled-border-color, var(--#{$prefix}list-item-border-color, $ouds-color-border-default));
+    }
+  }
+}
+
+
+.item-accordion-body {
+  padding: calc($ouds-accordion-space-padding-block-top-expand-container + var(--#{$prefix}list-item-border-width, 0px)) calc($ouds-list-item-space-padding-inline - var(--#{$prefix}list-item-border-width, 0px)) calc(var(--#{$prefix}accordion-content-padding-bottom, $ouds-accordion-space-padding-block-bottom-expand-container-default) - var(--#{$prefix}list-item-border-width, $ouds-list-item-border-width-default));
+  @include get-font-size("label-medium");
+}
+
+.item-reverse {
+  &.item-accordion,
+  .item-accordion {
+    --#{$prefix}list-item-nav-order: -1;
+  }
+}
+
+.item-accordion-alt {
+  --#{$prefix}list-item-nav-icon: #{$accordion-expanded-reverse-false};
+
+  &:open {
+    --#{$prefix}list-item-nav-icon: #{$accordion-expanded-reverse-true};
+  }
+}
+
+.item-accordion-faq {
+  --#{$prefix}list-item-min-height: #{$ouds-accordion-faq-size-min-height-mobile};
+  --#{$prefix}list-item-padding-top: #{$ouds-accordion-faq-space-padding-block-mobile};
+  --#{$prefix}list-item-padding-bottom: #{$ouds-accordion-faq-space-padding-block-mobile};
+  --#{$prefix}list-item-column-gap: #{$ouds-accordion-faq-space-column-gap-mobile};
+  --#{$prefix}list-item-bottom-slot-pb: #{$ouds-accordion-faq-space-padding-block-bottom-slot-container-mobile};
+  --#{$prefix}list-item-leading-container-icon-size: #{px-to-rem($ouds-accordion-faq-size-icon-mobile)};
+  --#{$prefix}list-item-trailing-container-icon-size: #{px-to-rem($ouds-accordion-faq-size-icon-mobile)};
+  --#{$prefix}list-item-indicator-size: #{px-to-rem($ouds-accordion-faq-size-expanding-indicator-mobile)};
+  --#{$prefix}accordion-content-padding-bottom: #{$ouds-accordion-faq-space-padding-block-bottom-expand-container-mobile};
+
+  @include media-breakpoint-up(md) {
+    --#{$prefix}list-item-min-height: #{$ouds-accordion-faq-size-min-height-tablet};
+    --#{$prefix}list-item-padding-top: #{$ouds-accordion-faq-space-padding-block-tablet};
+    --#{$prefix}list-item-padding-bottom: #{$ouds-accordion-faq-space-padding-block-tablet};
+    --#{$prefix}list-item-bottom-slot-pb: #{$ouds-accordion-faq-space-padding-block-bottom-slot-container-tablet};
+    --#{$prefix}list-item-leading-container-icon-size: #{px-to-rem($ouds-accordion-faq-size-icon-tablet)};
+    --#{$prefix}list-item-trailing-container-icon-size: #{px-to-rem($ouds-accordion-faq-size-icon-tablet)};
+    --#{$prefix}list-item-column-gap: #{$ouds-accordion-faq-space-column-gap-tablet};
+    --#{$prefix}list-item-indicator-size: #{px-to-rem($ouds-accordion-faq-size-expanding-indicator-tablet)};
+    --#{$prefix}accordion-content-padding-bottom: #{$ouds-accordion-faq-space-padding-block-bottom-expand-container-tablet};
+  }
+
+  @include media-breakpoint-up(xl) {
+    --#{$prefix}list-item-min-height: #{$ouds-accordion-faq-size-min-height-desktop};
+    --#{$prefix}list-item-padding-top: #{$ouds-accordion-faq-space-padding-block-desktop};
+    --#{$prefix}list-item-padding-bottom: #{$ouds-accordion-faq-space-padding-block-desktop};
+    --#{$prefix}list-item-bottom-slot-pb: #{$ouds-accordion-faq-space-padding-block-bottom-slot-container-desktop};
+    --#{$prefix}list-item-leading-container-icon-size: #{px-to-rem($ouds-accordion-faq-size-icon-desktop)};
+    --#{$prefix}list-item-trailing-container-icon-size: #{px-to-rem($ouds-accordion-faq-size-icon-desktop)};
+    --#{$prefix}list-item-column-gap: #{$ouds-accordion-faq-space-column-gap-desktop};
+    --#{$prefix}list-item-indicator-size: #{px-to-rem($ouds-accordion-faq-size-expanding-indicator-desktop)};
+    --#{$prefix}accordion-content-padding-bottom: #{$ouds-accordion-faq-space-padding-block-bottom-expand-container-desktop};
+  }
 }

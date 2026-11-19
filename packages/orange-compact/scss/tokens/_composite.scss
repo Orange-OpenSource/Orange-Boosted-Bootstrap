@@ -73,9 +73,19 @@ $ouds-heading-large-marker-height: 12px !default;
 
 //// ****** ICONS as data URIs ******
 
-/// *** OUDS components icons v2.1
+/// *** OUDS components icons v2.4
 /// For each new version of the icon pack, these icons should be updated using the script update-composite-icons.mjs
 // /!\ convention: the var name must start by the component name
+
+// * Accordion *
+// orange/Component/list-item/expanded-false v2.4
+$accordion-expanded-false: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m5.9 10 6.1 6.3 6.1-6.2-1.7-1.8-4.4 4.5-4.4-4.5z'/></svg>") !default;
+// orange/Component/list-item/expanded-true v2.4
+$accordion-expanded-true: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M18.1 13.5 12 7.3l-6.1 6.2 1.7 1.8L12 11l4.4 4.4z'/></svg>") !default;
+// orange/Component/list-item/expanded-reverse-false v2.4
+$accordion-expanded-reverse-false: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19.5 13.3v-2.6h-6.2V4.6h-2.6v6.3H4.6v2.4h6.3v6.3h2.4v-6.2z'/></svg>") !default;
+// orange/Component/list-item/expanded-reverse-true v2.4
+$accordion-expanded-reverse-true: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19.5 13.1V11h-15v2z'/></svg>") !default;
 
 // * Alert *
 // orange/Component/alert/tick-confirmation-fill v2.4
