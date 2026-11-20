@@ -82,6 +82,32 @@
   video {
     opacity: var(--#{$prefix}list-item-disabled-opacity, 1);
   }
+
+
+  // Icon
+  .icon {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &:not(svg):not(img):not(.si) {
+      &::before {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background-color: var(--#{$prefix}list-item-disabled-icon-color, var(--#{$prefix}list-item-icon-color));
+        mask: var(--#{$prefix}list-item-icon) center / contain no-repeat;
+      }
+
+      &::after {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background-color: var(--#{$prefix}list-item-disabled-icon-color-internal, var(--#{$prefix}list-item-icon-color-internal));
+        mask: var(--#{$prefix}list-item-icon-internal) center / contain no-repeat;
+      }
+    }
+  }
 }
 
 // Containers
@@ -94,7 +120,7 @@
   color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-default);
   @include border-radius(var(--#{$prefix}list-item-leading-container-border-radius, $ouds-list-item-border-radius-media), var(--#{$prefix}list-item-leading-container-border-radius, $ouds-list-item-border-radius-media));
 
-  &:has(svg, .icon, .item-icon, video) {
+  &:has(.icon:not(.si), video) {
     height: var(--#{$prefix}list-item-leading-container-icon-size, px-to-rem($ouds-size-icon-with-label-large-size-medium));
   }
 }
@@ -126,7 +152,7 @@
     aspect-ratio: 1;
   }
 
-  &:has(svg, .icon, .item-icon, video) {
+  &:has(.icon, video) {
     height: var(--#{$prefix}list-item-trailing-container-icon-size, px-to-rem($ouds-size-icon-with-label-large-size-medium));
     aspect-ratio: 1;
   }
@@ -181,30 +207,6 @@
   @include get-font-size("label-medium");
   font-weight: $ouds-font-weight-web-label-default;
   color: var(--#{$prefix}list-item-disabled-color, $ouds-color-content-muted);
-}
-
-// Icon
-
-.item-icon {
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  &::before {
-    position: absolute;
-    inset: 0;
-    content: "";
-    background-color: var(--#{$prefix}list-item-disabled-icon-color, var(--#{$prefix}list-item-icon-color));
-    mask: var(--#{$prefix}list-item-icon) center / contain no-repeat;
-  }
-
-  &::after {
-    position: absolute;
-    inset: 0;
-    content: "";
-    background-color: var(--#{$prefix}list-item-disabled-icon-color-internal, var(--#{$prefix}list-item-icon-color-internal));
-    mask: var(--#{$prefix}list-item-icon-internal) center / contain no-repeat;
-  }
 }
 
 // Interactive
