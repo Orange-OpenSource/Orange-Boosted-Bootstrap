@@ -22,6 +22,7 @@
 
 .bd-links-heading {
   color: var(--bs-emphasis-color);
+  word-break: break-all;
 
   // OUDS mod
   svg {
@@ -55,9 +56,9 @@
 }
 
 .bd-links-link {
-  padding: .1875rem .5rem;
+  padding: .1875rem 4px;
   margin-top: .125rem;
-  margin-left: 1.375rem; // OUDS mod: changed value
+  margin-left: 24px; // OUDS mod: changed value
   @include get-font-size("body-medium"); // OUDS mod: instead of `1rem`
   font-weight: $ouds-font-weight-web-body-default; // OUDS mod: no 'bold' for the sidebar links
   // OUDS mod: no `color`
