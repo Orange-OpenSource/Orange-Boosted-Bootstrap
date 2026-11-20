@@ -4988,7 +4988,8 @@ textarea.form-control-lg {
   transform: translate(0, -50%);
 }
 .select-input-container > img,
-.select-input-container > svg {
+.select-input-container > svg,
+.select-input-container > .icon {
   position: absolute;
   top: calc(var(--bs-text-input-min-height) / 2 - var(--bs-text-input-icon-size) / 2 - var(--bs-text-input-border-width-top));
   left: calc(var(--bs-text-input-padding-x) - var(--bs-text-input-border-width-left));
@@ -5016,10 +5017,10 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.select-input-container:has(> svg:not(.loader)) > .select-input-field, .select-input-container:has(> img) > .select-input-field {
+.select-input-container:has(> svg:not(.loader)) > .select-input-field, .select-input-container:has(> img) > .select-input-field, .select-input-container:has(> .icon) > .select-input-field {
   padding-left: calc(var(--bs-text-input-icon-size) + var(--bs-text-input-column-gap) + var(--bs-text-input-padding-x) - var(--bs-text-input-border-width-left));
 }
-.select-input-container:has(> svg:not(.loader)) > label, .select-input-container:has(> img) > label {
+.select-input-container:has(> svg:not(.loader)) > label, .select-input-container:has(> img) > label, .select-input-container:has(> .icon) > label {
   padding-left: calc(var(--bs-text-input-icon-size) + var(--bs-text-input-column-gap));
 }
 .select-input-container:has(:open)::after {
@@ -6102,7 +6103,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-btn-min-width: 48px;
   --bs-btn-min-height: 48px;
   --bs-btn-interaction-border-width: 1px;
-  --bs-btn-icon-size: 20px;
+  --bs-icon-size: 20px;
   --bs-btn-icon-gap: 8px;
   --bs-btn-focus-border-color: var(--bs-btn-hover-border-color);
   --bs-btn-loading-size: 1.25rem;
@@ -6189,19 +6190,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-btn-loading-dasharray: 107;
   --bs-btn-loading-animation: var(--bs-btn-loading-time) infinite linear rotate-determinate;
 }
-.btn svg, .btn-close svg,
-.btn img,
-.btn-close img,
-.btn .icon,
-.btn-close .icon {
-  flex-shrink: 0;
-  width: 1em;
-  height: 1em;
-  overflow: hidden;
-  font-size: var(--bs-btn-icon-size);
-  line-height: 1;
-}
-.btn:has(svg:not(.loader)), .btn-close:has(svg:not(.loader)), .btn:has(img:not(.loader)), .btn-close:has(img:not(.loader)), .btn:has(.icon:not(.loader)), .btn-close:has(.icon:not(.loader)) {
+.btn:has(.icon:not(.loader)), .btn-close:has(.icon:not(.loader)) {
   --bs-btn-padding-start: 20px;
   --bs-btn-padding-end: 28px;
 }
@@ -6209,7 +6198,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-btn-padding-start: 12px;
   --bs-btn-padding-end: 12px;
   --bs-btn-padding-y: 12px;
-  --bs-btn-icon-size: 1.5rem;
+  --bs-icon-size: 1.5rem;
   max-height: 48px;
 }
 .btn.btn-small, .btn-small.btn-close {
@@ -6218,7 +6207,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-btn-padding-start: 24px;
   --bs-btn-padding-end: 24px;
   --bs-btn-padding-y: 10px;
-  --bs-btn-icon-size: 16px;
+  --bs-icon-size: 16px;
   --bs-btn-icon-gap: 6px;
   --bs-btn-loading-size: 1rem;
   font-size: var(--bs-font-size-label-medium);
@@ -6226,7 +6215,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   /* rtl:remove */
   letter-spacing: var(--bs-font-letter-spacing-label-medium);
 }
-.btn.btn-small:has(svg:not(.loader)), .btn-small.btn-close:has(svg:not(.loader)), .btn.btn-small:has(img:not(.loader)), .btn-small.btn-close:has(img:not(.loader)), .btn.btn-small:has(.icon:not(.loader)), .btn-small.btn-close:has(.icon:not(.loader)) {
+.btn.btn-small:has(.icon:not(.loader)), .btn-small.btn-close:has(.icon:not(.loader)) {
   --bs-btn-padding-start: 16px;
   --bs-btn-padding-end: 24px;
 }
@@ -6234,7 +6223,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-btn-padding-start: 10px;
   --bs-btn-padding-end: 10px;
   --bs-btn-padding-y: 10px;
-  --bs-btn-icon-size: 1.25rem;
+  --bs-icon-size: 1.25rem;
   max-height: 40px;
 }
 
@@ -6426,9 +6415,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-btn-loading-border-color: var(--bs-color-opacity-transparent);
 }
 
-.btn-close:where(:not(:has(svg, img, .icon)))::before {
-  width: var(--bs-btn-icon-size);
-  height: var(--bs-btn-icon-size);
+.btn-close:where(:not(:has(.icon)))::before {
+  width: var(--bs-icon-size);
+  height: var(--bs-icon-size);
   content: "";
   background-color: currentcolor;
   -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m18.8 7.2-2-2-4.8 4.9-4.8-4.8-2 1.9 4.9 4.8-4.8 4.8 1.9 2 4.8-4.9 4.8 4.9 2-2-4.9-4.8z'/></svg>");
@@ -6464,7 +6453,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 
 .btn-expand::after {
-  --bs-btn-icon-size: 1.25rem;
+  --bs-icon-size: 1.25rem;
   -webkit-mask-image: var(--bs-btn-expanded-false-icon);
   mask-image: var(--bs-btn-expanded-false-icon);
 }
@@ -6478,8 +6467,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .btn-next::after,
 .btn-expand::after {
   flex-shrink: 0;
-  width: var(--bs-btn-icon-size);
-  height: var(--bs-btn-icon-size);
+  width: var(--bs-icon-size);
+  height: var(--bs-icon-size);
   background-color: currentcolor;
 }
 
@@ -6499,8 +6488,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
 }
 .btn-assistant::before {
   flex-shrink: 0;
-  width: var(--bs-btn-icon-size);
-  height: var(--bs-btn-icon-size);
+  width: var(--bs-icon-size);
+  height: var(--bs-icon-size);
   content: "";
   background-color: currentcolor;
   -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M11.5 4.6c.1-.5.9-.5 1 0l.8 2.3a7 7 0 0 0 4.8 4.5l2.5.7c.5.2.5.8 0 1l-2.5.7a7 7 0 0 0-4.8 4.5l-.8 2.3c-.1.5-.9.5-1 0l-.8-2.3a7 7 0 0 0-4.8-4.5l-2.5-.7a.5.5 0 0 1 0-1l2.5-.7a7 7 0 0 0 4.8-4.5zM5 4.9q.1-.1.2 0l.2.6q.3.9 1.1 1l.6.3q.1.1 0 .2l-.6.2a2 2 0 0 0-1 1.1l-.3.6q-.1.2-.2 0l-.2-.6a2 2 0 0 0-1.1-1L3 7q-.2-.1 0-.2l.6-.2a2 2 0 0 0 1-1.1zM17.9 3h.3l.3.8Q18.9 5 20 5.4l.9.3V6l-.9.3a2 2 0 0 0-1.5 1.5l-.3.8h-.3l-.3-.8A2 2 0 0 0 16 6.3l-.8-.3v-.3l.8-.3A2 2 0 0 0 17.6 4z'/></svg>") center;
@@ -9180,7 +9169,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-badge-color: var(--bs-color-content-on-status-negative-emphasized);
   --bs-badge-background-color: var(--bs-color-surface-status-negative-emphasized);
   --bs-badge-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24m5.1 17.1q-1 1.1-2.6-.5L12 14.1l-2.5 2.5q-1.6 1.5-2.6.5-1.1-1 .5-2.6L9.9 12 7.4 9.5q-1.5-1.6-.5-2.6c1-1 1.5-.6 2.6.5L12 9.9l2.5-2.5q1.6-1.6 2.6-.5 1.1 1-.5 2.6L14.1 12l2.5 2.5q1.6 1.6.5 2.6'/%3e%3c/svg%3e");
-  --bs-badge-icon-font-size: calc(var(--bs-badge-size) - (2 * var(--bs-badge-padding-x-medium-large)));
+  --bs-icon-size: calc(var(--bs-badge-size) - (2 * var(--bs-badge-padding-x-medium-large)));
   display: inline-block;
   min-width: var(--bs-badge-size);
   height: var(--bs-badge-size);
@@ -9229,13 +9218,13 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .badge-xsmall:not(.badge-count) {
   --bs-badge-size: 0.5rem;
-  --bs-badge-icon-font-size: calc(8px - (2 * 1px));
+  --bs-icon-size: calc(8px - (2 * 1px));
   padding: 1px;
 }
 
 .badge-small:not(.badge-count) {
   --bs-badge-size: 0.75rem;
-  --bs-badge-icon-font-size: calc(12px - (2 * 2px));
+  --bs-icon-size: calc(12px - (2 * 2px));
   padding: 2px;
 }
 
@@ -9284,13 +9273,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
   mask-image: var(--bs-badge-icon);
 }
 
-.badge-icon {
+.icon {
   display: flex;
-  flex: 1 0 0;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1/1;
-  font-size: var(--bs-badge-icon-font-size);
 }
 
 .badge.disabled,
@@ -9647,6 +9631,33 @@ ol.bullet-list > li > ol > li > ol > li::before {
   color: var(--bs-alert-text-color);
   border-radius: var(--bs-alert-border-radius);
 }
+.alert .icon-container {
+  position: relative;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--bs-alert-icon-color);
+}
+.alert .icon-container:where(:not(:has(.icon)))::before, .alert .icon-container:where(:not(:has(.icon)))::after {
+  position: absolute;
+  inset: 0;
+  display: block;
+  content: "";
+}
+.alert .icon-container:where(:not(:has(.icon)))::before {
+  background-color: currentcolor;
+  -webkit-mask-image: var(--bs-alert-icon);
+  mask-image: var(--bs-alert-icon);
+}
+.alert .icon-container:where(:not(:has(.icon)))::after {
+  background-color: var(--bs-alert-icon-internal-color);
+  -webkit-mask-image: var(--bs-alert-icon-internal);
+  mask-image: var(--bs-alert-icon-internal);
+}
+.alert .icon-container .icon {
+  --bs-icon-size: 24px;
+  vertical-align: baseline;
+}
 
 .alert-message {
   min-width: 160px;
@@ -9666,7 +9677,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .alert-message .btn-close {
   border-top-right-radius: var(--bs-alert-border-radius);
 }
-.alert-message .alert-icon {
+.alert-message .icon-container {
   margin-top: 12px;
 }
 .alert-message .alert-label {
@@ -9676,40 +9687,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   .alert-message:not(:has(.alert-text-container p:not(.alert-label), .alert-text-container ul, .alert-container .link)) .btn-close {
     border-bottom-right-radius: var(--bs-alert-border-radius);
   }
-}
-
-.alert-icon {
-  position: relative;
-  display: block;
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 1.5rem;
-  color: var(--bs-alert-icon-color);
-}
-.alert-icon:where(:not(:has(svg, img, .icon)))::before, .alert-icon:where(:not(:has(svg, img, .icon)))::after {
-  position: absolute;
-  inset: 0;
-  display: block;
-  content: "";
-}
-.alert-icon:where(:not(:has(svg, img, .icon)))::before {
-  background-color: currentcolor;
-  -webkit-mask-image: var(--bs-alert-icon);
-  mask-image: var(--bs-alert-icon);
-}
-.alert-icon:where(:not(:has(svg, img, .icon)))::after {
-  background-color: var(--bs-alert-icon-internal-color);
-  -webkit-mask-image: var(--bs-alert-icon-internal);
-  mask-image: var(--bs-alert-icon-internal);
-}
-.alert-icon svg,
-.alert-icon img,
-.alert-icon .icon {
-  width: 100%;
-  height: 100%;
-  font-size: 24px;
-  line-height: 1;
-  vertical-align: baseline;
 }
 
 .alert-container {
@@ -12868,7 +12845,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   box-shadow: var(--bs-focus-ring-x, 0) var(--bs-focus-ring-y, 0) var(--bs-focus-ring-blur, 0) var(--bs-focus-ring-width) var(--bs-focus-ring-color);
 }
 
-.decorative-2xlarge-icon, .decorative-xlarge-icon, .decorative-large-icon, .decorative-medium-icon, .decorative-small-icon, .decorative-xsmall-icon, .decorative-2xsmall-icon, .decorative-3xsmall-icon, .decorative-4xsmall-icon, .dl-large-icon, .dl-medium-icon, .dl-small-icon, .dm-large-icon, .dm-medium-icon, .dm-small-icon, .ds-large-icon, .ds-medium-icon, .ds-small-icon, .hxl-large-icon, .hxl-medium-icon, .hxl-small-icon, .hl-large-icon, .hl-medium-icon, .hl-small-icon, .hm-large-icon, .hm-medium-icon, .hm-small-icon, .hs-large-icon, .hs-medium-icon, .hs-small-icon, .bl-large-icon, .bl-medium-icon, .bl-small-icon, .bm-large-icon, .bm-medium-icon, .bm-small-icon, .bs-large-icon, .bs-medium-icon, .bs-small-icon, .ls-large-icon, .ls-medium-icon, .ls-small-icon, .lm-large-icon, .lm-medium-icon, .lm-small-icon, .ll-large-icon, .ll-medium-icon, .ll-small-icon, .lxl-large-icon, .lxl-medium-icon, .lxl-small-icon {
+.decorative-2xlarge-icon, .decorative-xlarge-icon, .decorative-large-icon, .decorative-medium-icon, .decorative-small-icon, .decorative-xsmall-icon, .decorative-2xsmall-icon, .decorative-3xsmall-icon, .decorative-4xsmall-icon, .icon, .dl-large-icon, .dl-medium-icon, .dl-small-icon, .dm-large-icon, .dm-medium-icon, .dm-small-icon, .ds-large-icon, .ds-medium-icon, .ds-small-icon, .hxl-large-icon, .hxl-medium-icon, .hxl-small-icon, .hl-large-icon, .hl-medium-icon, .hl-small-icon, .hm-large-icon, .hm-medium-icon, .hm-small-icon, .hs-large-icon, .hs-medium-icon, .hs-small-icon, .bl-large-icon, .bl-medium-icon, .bl-small-icon, .bm-large-icon, .bm-medium-icon, .bm-small-icon, .bs-large-icon, .bs-medium-icon, .bs-small-icon, .ls-large-icon, .ls-medium-icon, .ls-small-icon, .lm-large-icon, .lm-medium-icon, .lm-small-icon, .ll-large-icon, .ll-medium-icon, .ll-small-icon, .lxl-large-icon, .lxl-medium-icon, .lxl-small-icon {
   display: inline-block;
   flex-shrink: 0;
   width: 1em;
@@ -13043,6 +13020,11 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .dl-large-icon {
   font-size: var(--bs-icon-large-with-display-large) !important;
+}
+
+.icon {
+  overflow: hidden;
+  font-size: var(--bs-icon-size);
 }
 
 .decorative-4xsmall-icon {
