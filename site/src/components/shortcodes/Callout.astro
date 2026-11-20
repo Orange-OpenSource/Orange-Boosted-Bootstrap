@@ -84,7 +84,7 @@ titleLevel && (titleTag = `h${titleLevel}`)
 ---
 
 <div class={`alert alert-message alert-${type} ${className ? className : 'my-medium'}`}>
-  <div class="alert-icon">{!!title && <p class="visually-hidden">{titleToDisplay}</p>}</div>
+  <div class="icon-container">{!!title && <p class="visually-hidden">{titleToDisplay}</p>}</div>
   <div class="alert-container">
     <div class="alert-text-container">
       <Fragment set:html={`<${titleTag} class="alert-label">${title || titleToDisplay}</${titleTag}>`} />

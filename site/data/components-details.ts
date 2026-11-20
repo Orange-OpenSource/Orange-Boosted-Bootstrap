@@ -10,7 +10,7 @@ export const componentsDetails: ComponentCardData[] = [
     category: 'Dialog',
     snippet: `
       <div class="alert alert-message alert-negative w-75">
-        <div class="alert-icon"></div>
+        <div class="icon-container"></div>
         <div class="alert-container">
           <div class="alert-text-container">
             <p class="alert-label">Label</p>
@@ -216,7 +216,7 @@ export const componentsDetails: ComponentCardData[] = [
     category: 'Dialog',
     snippet: `
       <div class="alert alert-info">
-        <div class="alert-icon"></div>
+        <div class="icon-container"></div>
         <p class="alert-label">Label</p>
       </div>`
   },
@@ -287,7 +287,7 @@ export const componentsDetails: ComponentCardData[] = [
               <input type="password" id="passwordInput[[id_prefix]]" class="text-input-field" placeholder=" " value="xxxxxx">
             </div>
             <button class="btn btn-minimal btn-icon" type="button" aria-pressed="false">
-              <svg aria-hidden="true">
+              <svg class="icon" aria-hidden="true">
                 <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}"/>
               </svg>
               <span class="visually-hidden">Show password</span>

@@ -29,7 +29,7 @@ import { getConfig } from '@libs/config'
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9">
           <div class="alert alert-message alert-negative">
-            <div class="alert-icon"><p class="visually-hidden">Negative alert</p></div>
+            <div class="icon-container"><p class="visually-hidden">Negative alert</p></div>
             <div class="alert-container">
               <div class="alert-text-container">
                 <h3 class="alert-label">Alert message</h3>
@@ -48,7 +48,7 @@ import { getConfig } from '@libs/config'
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9">
           <div class="alert alert-info">
-            <div class="alert-icon"><p class="visually-hidden">Info alert</p></div>
+            <div class="icon-container"><p class="visually-hidden">Info alert</p></div>
             <p class="alert-label">Label</p>
           </div>
         </div>
@@ -64,7 +64,7 @@ import { getConfig } from '@libs/config'
 For both types of alert, OUDS Web has a common basic `.alert` class that sets up default styles.
 
 <Example showToolbar={false} code={`<div class="alert alert-message alert-negative">
-    <div class="alert-icon"><p class="visually-hidden">Negative alert</p></div>
+    <div class="icon-container"><p class="visually-hidden">Negative alert</p></div>
     <div class="alert-container">
       <div class="alert-text-container">
         <h3 class="alert-label">Alert message</h3>
@@ -73,7 +73,7 @@ For both types of alert, OUDS Web has a common basic `.alert` class that sets up
   </div>`} />
 
 <Example showToolbar={false} code={`<div class="alert alert-info">
-    <div class="alert-icon"><p class="visually-hidden">Positive alert</p></div>
+    <div class="icon-container"><p class="visually-hidden">Positive alert</p></div>
     <p class="alert-label">Label</p>
   </div>`} />
 
@@ -83,7 +83,9 @@ Alerts are built on `.alert` class. They contain texts such as label, icons, and
 
 `.alert-label` is used to display the title in all alerts. Note that this one is **mandatory**.
 
-`.alert-icon` is used to display the icon in all alerts.
+`.icon-container` is used to display the icon in all alerts.
+
+`.icon` is used to style the icon inside the `.icon-container`. It must not be provided for functional variants.
 
 Alert messages come with additional layout classes such as `.alert-container`, `.alert-text-container` and `.alert-action-container` to help building some alerts’ variants.
 
@@ -156,7 +158,7 @@ Please note that you shouldn’t add any icon in those alert messages.
 The variants `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-warning` are considered as functional.
 
 <Example buttonLabel="functional alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-negative">
-    <div class="alert-icon"><p class="visually-hidden">Error</p></div>
+    <div class="icon-container"><p class="visually-hidden">Error</p></div>
     <div class="alert-container">
       <div class="alert-text-container">
         <p class="alert-label">Connection failed.</p>
@@ -165,7 +167,7 @@ The variants `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-war
   </div>
 
   <div class="alert alert-message alert-positive">
-    <div class="alert-icon"></div>
+    <div class="icon-container"></div>
     <div class="alert-container">
       <div class="alert-text-container">
         <p class="alert-label">Your payment has been successfully received.</p>
@@ -174,7 +176,7 @@ The variants `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-war
   </div>
 
   <div class="alert alert-message alert-info">
-    <div class="alert-icon"></div>
+    <div class="icon-container"></div>
     <div class="alert-container">
       <div class="alert-text-container">
         <p class="alert-label">We’re processing your request.</p>
@@ -183,7 +185,7 @@ The variants `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-war
   </div>
 
   <div class="alert alert-message alert-warning">
-    <div class="alert-icon"><p class="visually-hidden">Be careful, </p></div>
+    <div class="icon-container"><p class="visually-hidden">Be careful, </p></div>
     <div class="alert-container">
       <div class="alert-text-container">
         <p class="alert-label">Your data allowance is running low.</p>
@@ -230,8 +232,8 @@ Non-functional alerts are informative or decorative. They provide context or hig
 The variants alert neutral (default) and `.alert-accent` are considered as non-functional.
 
 <Example buttonLabel="non-functional alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message">
-    <div class="alert-icon">
-      <svg aria-hidden="true">
+    <div class="icon-container">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <p class="visually-hidden">Emphasized content</p>
@@ -244,8 +246,8 @@ The variants alert neutral (default) and `.alert-accent` are considered as non-f
   </div>
 
   <div class="alert alert-message alert-accent">
-    <div class="alert-icon">
-      <svg aria-hidden="true">
+    <div class="icon-container">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <p class="visually-hidden">Emphasized content</p>
@@ -277,8 +279,8 @@ The variants alert neutral (default) and `.alert-accent` are considered as non-f
 For [non-functional alert messages](#non-functional), the displayed icon can be customized.
 
 This can be achieved by using one of the following solutions:
-* adding a `<svg>`, `<img>` or an `.icon` inside the `.alert-icon` container.
-* applying a `mask-image` on `.alert-icon` with a class or an inline `style` attribute.
+* adding a `<svg>`, `<img>` or an `.icon` inside the `.icon` container.
+* applying a `mask-image` on `.icon` with a class or an inline `style` attribute.
 * setting the custom property `--bs-alert-icon` inside the `.alert`.
 
 In any case, the icon will be colorized automatically via the `color` attribute.
@@ -286,8 +288,8 @@ In any case, the icon will be colorized automatically via the `color` attribute.
 <Callout type="info" name="info-icons-svg-sprite" />
 
 <Example buttonLabel="custom icon alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message">
-    <div class="alert-icon">
-      <svg aria-hidden="true">
+    <div class="icon-container">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <p class="visually-hidden">Emphasized content</p>
@@ -303,7 +305,7 @@ In any case, the icon will be colorized automatically via the `color` attribute.
         ? `url(&#34;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill-rule='evenodd' d='M15.474 9.514 10 15.577 4.526 9.514l-.002-.003A2.868 2.868 0 0 1 8.69 5.572l.838.796.472.455.472-.455.838-.796.008-.008a2.868 2.868 0 0 1 4.159 3.947l-.003.003Zm1.251-5.302A4.78 4.78 0 0 0 10 4.18a4.78 4.78 0 0 0-6.815 6.7L10 18.393l6.815-7.514a4.78 4.78 0 0 0-.09-6.667Z'/></svg>&#34;)`
         : `url(&#34;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 20a.63.63 0 0 1-.462-.2l-8.16-8.754A5.427 5.427 0 0 1 2 7.436C2 4.439 4.449 2 7.46 2c1.846 0 3.543.938 4.54 2.428A5.476 5.476 0 0 1 16.54 2c.349 0 .63.28.63.627a.629.629 0 0 1-.63.627 4.205 4.205 0 0 0-3.947 2.77.63.63 0 0 1-1.186 0 4.205 4.205 0 0 0-3.948-2.77c-2.316 0-4.2 1.876-4.2 4.182 0 1.02.374 2.003 1.052 2.768L12 18.451l7.699-8.258a4.174 4.174 0 0 0 .058-5.446.626.626 0 0 1 .077-.884.632.632 0 0 1 .887.076 5.418 5.418 0 0 1-.088 7.095L12.462 19.8A.63.63 0 0 1 12 20Z'/><path d='M5.274 8.512a.472.472 0 0 1-.465-.394 3.078 3.078 0 0 1 3.04-3.571c.073 0 .145.006.217.014l.054.005a.47.47 0 0 1 .429.51.475.475 0 0 1-.512.427l-.066-.006c-.04-.004-.081-.01-.123-.01a2.134 2.134 0 0 0-2.107 2.478.47.47 0 0 1-.467.547Z'/></svg>&#34;)`
       }">
-    <div class="alert-icon"><p class="visually-hidden">Emphasized content</p></div>
+    <div class="icon-container"><p class="visually-hidden">Emphasized content</p></div>
     <div class="alert-container">
       <div class="alert-text-container">
         <p class="alert-label">Upgrade your plan and get a free device.</p>
@@ -312,7 +314,7 @@ In any case, the icon will be colorized automatically via the `color` attribute.
   </div>
 
   <div class="alert alert-message">
-    <div class="alert-icon">
+    <div class="icon-container">
       <span class="icon si si-settings" aria-hidden="true"></span>
       <p class="visually-hidden">Emphasized content</p>
     </div>
@@ -324,8 +326,8 @@ In any case, the icon will be colorized automatically via the `color` attribute.
   </div>
 
   <div class="alert alert-message">
-    <div class="alert-icon">
-      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+    <div class="icon-container">
+      <img class="icon" src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
       <p class="visually-hidden">Emphasized content</p>
     </div>
     <div class="alert-container">
@@ -335,7 +337,7 @@ In any case, the icon will be colorized automatically via the `color` attribute.
     </div>
   </div>`} />
 
-Optionally, for the [non-functional alert message](#non-functional), you can remove the `.alert-icon` container.
+Optionally, for the [non-functional alert message](#non-functional), you can remove the `.icon` container.
 
 <Callout type="warning" name="warning-color-assistive-technologies" />
 
@@ -371,8 +373,8 @@ Rounded corners alerts is a project-wide option therefore all your alerts should
 <Example buttonLabel="rounded alert message" code={`<div class="use-rounded-corner-alert">
 
     <div class="alert alert-message mb-medium">
-      <div class="alert-icon">
-        <svg aria-hidden="true">
+      <div class="icon-container">
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
         <p class="visually-hidden">Emphasized content</p>
@@ -385,7 +387,7 @@ Rounded corners alerts is a project-wide option therefore all your alerts should
     </div>
 
     <div class="alert alert-message alert-positive">
-      <div class="alert-icon"></div>
+      <div class="icon-container"></div>
       <div class="alert-container">
         <div class="alert-text-container">
           <p class="alert-label">Your payment has been successfully received.</p>
@@ -413,8 +415,8 @@ If the alert can be removed when its content is acknowledged, add a close button
 </Callout>
 
 <Example buttonLabel="closable alert message" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-accent">
-    <div class="alert-icon">
-      <svg aria-hidden="true">
+    <div class="icon-container">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
     </div>
@@ -433,7 +435,7 @@ If the alert can be removed when its content is acknowledged, add a close button
   </div>
 
   <div class="alert alert-message alert-info">
-    <div class="alert-icon"><p class="visually-hidden">Info alert</p></div>
+    <div class="icon-container"><p class="visually-hidden">Info alert</p></div>
     <div class="alert-container">
       <div class="alert-text-container">
         <p class="alert-label">Info alert</p>
@@ -458,7 +460,7 @@ You can add an action [link]([[docsref:/components/links]]) (`<a>` or `<button` 
 </Callout>
 
 <Example buttonLabel="alert message with alternate action" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-info">
-    <div class="alert-icon"><p class="visually-hidden">Info alert</p></div>
+    <div class="icon-container"><p class="visually-hidden">Info alert</p></div>
     <div class="alert-container">
       <div class="alert-text-container">
         <p class="alert-label">Info alert</p>
@@ -473,7 +475,7 @@ You can add an action [link]([[docsref:/components/links]]) (`<a>` or `<button` 
   </div>
 
   <div class="alert alert-message alert-info">
-    <div class="alert-icon"><p class="visually-hidden">Info alert</p></div>
+    <div class="icon-container"><p class="visually-hidden">Info alert</p></div>
     <div class="alert-container">
       <div class="alert-text-container">
         <p class="alert-label">Info alert</p>
@@ -490,7 +492,7 @@ You can add an action [link]([[docsref:/components/links]]) (`<a>` or `<button` 
   </div>
 
   <div class="alert alert-message alert-info">
-    <div class="alert-icon"><p class="visually-hidden">Info alert</p></div>
+    <div class="icon-container"><p class="visually-hidden">Info alert</p></div>
     <div class="alert-container">
       <div class="alert-text-container">
         <p class="alert-label">Info alert</p>
@@ -505,7 +507,7 @@ You can add an action [link]([[docsref:/components/links]]) (`<a>` or `<button` 
   </div>
 
   <div class="alert alert-message alert-info">
-    <div class="alert-icon"><p class="visually-hidden">Info alert</p></div>
+    <div class="icon-container"><p class="visually-hidden">Info alert</p></div>
     <div class="alert-container">
       <div class="alert-text-container">
         <p class="alert-label">Info alert</p>
@@ -526,8 +528,8 @@ You can add an action [link]([[docsref:/components/links]]) (`<a>` or `<button` 
 To display a description text below the alert label, add a `<p>` after `.alert-label`.
 
 <Example buttonLabel="alert message with description" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message">
-    <div class="alert-icon">
-      <svg aria-hidden="true">
+    <div class="icon-container">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
     </div>
@@ -544,8 +546,8 @@ To display a description text below the alert label, add a `<p>` after `.alert-l
 To display a bullet list below the alert label, add an `<ul>` after `.alert-label`.
 
 <Example buttonLabel="alert message with bullet list" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message">
-    <div class="alert-icon">
-      <svg aria-hidden="true">
+    <div class="icon-container">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
     </div>
@@ -569,7 +571,7 @@ To display a bullet list below the alert label, add an `<ul>` after `.alert-labe
 
 <Example buttonLabel="alert message skeleton" code={`<div aria-busy="true" inert>
     <div class="alert alert-info alert-message">
-      <div class="alert-icon"><p class="visually-hidden">Info alert</p></div>
+      <div class="icon-container"><p class="visually-hidden">Info alert</p></div>
       <div class="alert-container">
         <div class="alert-text-container">
           <p class="alert-label">Label</p>
@@ -583,7 +585,7 @@ To display a bullet list below the alert label, add an `<ul>` after `.alert-labe
 Here are some examples with everything activated and some long texts to see how it should behave. Please note that a `max-width` limit is applied on the texts.
 
 <Example buttonLabel="alert message with much text" class="d-flex flex-column gap-medium" code={`<div class="alert alert-message alert-warning">
-    <div class="alert-icon"><p class="visually-hidden">Warning alert</p></div>
+    <div class="icon-container"><p class="visually-hidden">Warning alert</p></div>
     <div class="alert-container">
       <div class="alert-text-container">
         <h4 class="alert-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem.</h4>
@@ -603,7 +605,7 @@ Here are some examples with everything activated and some long texts to see how 
   </div>
 
   <div class="alert alert-message alert-positive">
-    <div class="alert-icon"><p class="visually-hidden">Positive alert</p></div>
+    <div class="icon-container"><p class="visually-hidden">Positive alert</p></div>
     <div class="alert-container">
       <div class="alert-text-container">
         <h4 class="alert-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus et risus consectetur dignissim volutpat ut lorem.</h4>
@@ -643,7 +645,7 @@ Click the button below to show an alert (hidden with inline styles to start), th
 <Example buttonLabel="alert message with live behavior" addStackblitzJs code={`<div id="liveAlertPlaceholder" role="status" class="${getConfig().brand === 'orange' ? 'use-rounded-corner-alert ' : '' }d-flex flex-column gap-medium mb-medium">
 
     <div class="alert alert-message alert-positive">
-      <div class="alert-icon"></div>
+      <div class="icon-container"></div>
       <div class="alert-container">
         <div class="alert-text-container">
           <p class="alert-label">Your payment has been successfully received.</p>
@@ -758,22 +760,22 @@ Please note that you shouldn’t add any icon in those inline alerts.
 The variants `.alert-negative`, `.alert-positive`, `.alert-info` and `.alert-warning` are considered as functional.
 
 <Example buttonLabel="functional inline alert" class="d-flex flex-column gap-medium" code={`<div class="alert alert-negative">
-    <div class="alert-icon"><p class="visually-hidden">Error</p></div>
+    <div class="icon-container"><p class="visually-hidden">Error</p></div>
     <p class="alert-label">Connection failed.</p>
   </div>
 
   <div class="alert alert-positive">
-    <div class="alert-icon"></div>
+    <div class="icon-container"></div>
     <p class="alert-label">Your payment has been successfully received.</p>
   </div>
 
   <div class="alert alert-info">
-    <div class="alert-icon"></div>
+    <div class="icon-container"></div>
     <p class="alert-label">We’re processing your request.</p>
   </div>
 
   <div class="alert alert-warning">
-    <div class="alert-icon"></div>
+    <div class="icon-container"></div>
     <p class="alert-label"><span class="visually-hidden">Be careful, </span>Your data allowance is running low.</p>
   </div>`} />
 
@@ -786,8 +788,8 @@ The variants alert neutral (default) and `.alert-accent` are considered as non-f
 <Callout type="info" title="Please note that this variant of alert needs an icon specified." />
 
 <Example buttonLabel="non-functional inline alert" class="d-flex flex-column gap-medium" code={`<div class="alert">
-    <div class="alert-icon">
-      <svg aria-hidden="true">
+    <div class="icon-container">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <p class="visually-hidden">Emphasized content</p>
@@ -796,8 +798,8 @@ The variants alert neutral (default) and `.alert-accent` are considered as non-f
   </div>
 
   <div class="alert alert-accent">
-    <div class="alert-icon">
-      <svg aria-hidden="true">
+    <div class="icon-container">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <p class="visually-hidden">Emphasized content</p>
@@ -810,8 +812,8 @@ The variants alert neutral (default) and `.alert-accent` are considered as non-f
 For [non-functional alert messages](#non-functional), the displayed icon can be customized.
 
 This can be achieved by using one of the following solutions:
-* adding a `<svg>`, `<img>` or an `.icon` inside the `.alert-icon` container.
-* applying a `mask-image` on `.alert-icon` with a class or an inline `style` attribute.
+* adding a `<svg>`, `<img>` or an `.icon` inside the `.icon` container.
+* applying a `mask-image` on `.icon` with a class or an inline `style` attribute.
 * setting the custom property `--bs-alert-icon` inside the `.alert`.
 
 In any case, the icon will be colorized automatically via the `color` attribute.
@@ -819,8 +821,8 @@ In any case, the icon will be colorized automatically via the `color` attribute.
 <Callout type="info" name="info-icons-svg-sprite" />
 
 <Example buttonLabel="changed icon inline alert" class="d-flex flex-column gap-medium" code={`<div class="alert">
-    <div class="alert-icon">
-      <svg aria-hidden="true">
+    <div class="icon-container">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <p class="visually-hidden">Emphasized content</p>
@@ -832,12 +834,12 @@ In any case, the icon will be colorized automatically via the `color` attribute.
         ? `url(&#34;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill-rule='evenodd' d='M15.474 9.514 10 15.577 4.526 9.514l-.002-.003A2.868 2.868 0 0 1 8.69 5.572l.838.796.472.455.472-.455.838-.796.008-.008a2.868 2.868 0 0 1 4.159 3.947l-.003.003Zm1.251-5.302A4.78 4.78 0 0 0 10 4.18a4.78 4.78 0 0 0-6.815 6.7L10 18.393l6.815-7.514a4.78 4.78 0 0 0-.09-6.667Z'/></svg>&#34;)`
         : `url(&#34;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 20a.63.63 0 0 1-.462-.2l-8.16-8.754A5.427 5.427 0 0 1 2 7.436C2 4.439 4.449 2 7.46 2c1.846 0 3.543.938 4.54 2.428A5.476 5.476 0 0 1 16.54 2c.349 0 .63.28.63.627a.629.629 0 0 1-.63.627 4.205 4.205 0 0 0-3.947 2.77.63.63 0 0 1-1.186 0 4.205 4.205 0 0 0-3.948-2.77c-2.316 0-4.2 1.876-4.2 4.182 0 1.02.374 2.003 1.052 2.768L12 18.451l7.699-8.258a4.174 4.174 0 0 0 .058-5.446.626.626 0 0 1 .077-.884.632.632 0 0 1 .887.076 5.418 5.418 0 0 1-.088 7.095L12.462 19.8A.63.63 0 0 1 12 20Z'/><path d='M5.274 8.512a.472.472 0 0 1-.465-.394 3.078 3.078 0 0 1 3.04-3.571c.073 0 .145.006.217.014l.054.005a.47.47 0 0 1 .429.51.475.475 0 0 1-.512.427l-.066-.006c-.04-.004-.081-.01-.123-.01a2.134 2.134 0 0 0-2.107 2.478.47.47 0 0 1-.467.547Z'/></svg>&#34;)`
       }">
-    <div class="alert-icon"><p class="visually-hidden">Emphasized content</p></div>
+    <div class="icon-container"><p class="visually-hidden">Emphasized content</p></div>
     <p class="alert-label">Upgrade your plan and get a free device.</p>
   </div>
 
   <div class="alert">
-    <div class="alert-icon">
+    <div class="icon-container">
       <span class="icon si si-settings" aria-hidden="true"></span>
       <p class="visually-hidden">Emphasized content</p>
     </div>
@@ -845,8 +847,8 @@ In any case, the icon will be colorized automatically via the `color` attribute.
   </div>
 
   <div class="alert">
-    <div class="alert-icon">
-      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+    <div class="icon-container">
+      <img class="icon" src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
       <p class="visually-hidden">Emphasized content</p>
     </div>
     <p class="alert-label">Your data plan includes free calls on weekends.</p>
@@ -860,7 +862,7 @@ In any case, the icon will be colorized automatically via the `color` attribute.
 
 <Example buttonLabel="alert message skeleton" code={`<div aria-busy="true" inert>
     <div class="alert alert-info">
-      <div class="alert-icon"><p class="visually-hidden">Info alert</p></div>
+      <div class="icon-container"><p class="visually-hidden">Info alert</p></div>
       <p class="alert-label">Label</p>
     </div>
   </div>`} />
