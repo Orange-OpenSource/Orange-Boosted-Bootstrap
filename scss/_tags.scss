@@ -16,13 +16,7 @@
   --#{$prefix}tag-border-width: 0px;
   --#{$prefix}tag-background-color: #{$ouds-color-surface-inverse-high};
   --#{$prefix}tag-asset-color: currentcolor;
-  --#{$prefix}tag-loading-dasharray: 92;
-  --#{$prefix}tag-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
-  --#{$prefix}tag-positive-icon: var(--#{$prefix}alert-success-icon);
-  --#{$prefix}tag-info-icon: var(--#{$prefix}alert-info-icon);
   --#{$prefix}tag-warning-external-icon: var(--#{$prefix}alert-warning-icon);
-  --#{$prefix}tag-warning-internal-icon: var(--#{$prefix}alert-warning-internal-icon);
-  --#{$prefix}tag-negative-icon: var(--#{$prefix}alert-error-icon);
 
   position: relative;
   display: inline-flex;
@@ -146,11 +140,11 @@
   }
 
   &.tag-positive .tag-status-icon {
-    mask-image: escape-svg(var(--#{$prefix}tag-positive-icon));
+    mask-image: escape-svg(var(--#{$prefix}alert-success-icon));
   }
 
   &.tag-info .tag-status-icon {
-    mask-image: escape-svg(var(--#{$prefix}tag-info-icon));
+    mask-image: escape-svg(var(--#{$prefix}alert-info-icon));
   }
 
   &.tag-warning:not(.tag-muted) .tag-status-icon {
@@ -181,12 +175,12 @@
 
     &::after {
       background-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
-      mask-image: escape-svg(var(--#{$prefix}tag-warning-internal-icon));
+      mask-image: escape-svg(var(--#{$prefix}alert-warning-internal-icon));
     }
   }
 
   &.tag-negative .tag-status-icon {
-    mask-image: escape-svg(var(--#{$prefix}tag-negative-icon));
+    mask-image: escape-svg(var(--#{$prefix}alert-error-icon));
   }
 
   &:not(.loading) .tag-loader {
@@ -211,10 +205,10 @@
     > .tag-loader-inner {
       fill: none;
       stroke: var(--#{$prefix}tag-asset-color);
-      stroke-dasharray: var(--#{$prefix}tag-loading-dasharray);
+      stroke-dasharray: 92;
       stroke-width: 8;
       transform-origin: center;
-      animation: var(--#{$prefix}tag-loading-animation);
+      animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
     }
   }
 }
