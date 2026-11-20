@@ -134,14 +134,8 @@
   align-items: center;
   max-height: px-to-rem($ouds-list-item-size-max-height-assets-container);
 
-  svg,
-  img,
   .icon {
-    width: 1em;
-    height: 1em;
-    overflow: hidden;
-    font-size: $ouds-list-item-size-icon;
-    line-height: 1;
+    --#{$prefix}icon-size: #{$ouds-list-item-size-icon};
   }
 }
 

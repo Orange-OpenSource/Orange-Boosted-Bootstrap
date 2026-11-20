@@ -4054,14 +4054,8 @@ textarea.form-control-lg {
   align-items: center;
   max-height: 6rem;
 }
-.control-item-assets-container svg,
-.control-item-assets-container img,
 .control-item-assets-container .icon {
-  width: 1em;
-  height: 1em;
-  overflow: hidden;
-  font-size: 28px;
-  line-height: 1;
+  --bs-icon-size: 28px;
 }
 
 .control-item-text-container {
