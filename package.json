@@ -128,7 +128,7 @@
     "cssnano": "^9.9.0",
     "cross-env": "^10.0.0",
     "dialog-closedby-polyfill": "^1.4.0",
-    "eslint": "8.57.1",
+    "eslint": "10.15.0",
     "eslint-config-xo": "0.45.0",
     "eslint-plugin-html": "^8.2.0",
     "eslint-plugin-import": "^2.32.0",
