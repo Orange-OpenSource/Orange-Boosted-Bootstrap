@@ -147,11 +147,11 @@ If really needed, you can use a font icon associated to the `.icon` class to set
   When icons are purely decorative, they should be hidden from assistive technologies using `aria-hidden="true"`, as we’ve done in our links examples. See [icons accessibility]([[docsref:/foundation/icons#accessibility]]) for more info.
 </Callout>
 
-Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left of your link text. The icon is automatically sized, placed, and colored.
+Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left of your link text with the `.icon` class. The icon is automatically sized, placed, and colored.
 
 <Example buttonLabel="links with icon" code={`<div>
     <a class="link icon-link" href="#">
-      <svg aria-hidden="true">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty"/>')}
       </svg>
       This is an example of a link with an SVG icon
@@ -167,7 +167,7 @@ Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left o
 
   <div>
     <a class="link icon-link" href="#">
-      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+      <img class="icon" src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
       This is an example of a link with an image
     </a>
   </div>`} />
@@ -195,7 +195,7 @@ Disabled links using `<a>` *should not* include the `href` attribute. In case yo
 
   <div>
     <a class="link icon-link" aria-disabled="true">
-      <svg aria-hidden="true">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty"/>')}
       </svg>
       This is an example of a link with an icon

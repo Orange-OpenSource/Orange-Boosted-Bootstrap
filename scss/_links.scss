@@ -21,20 +21,13 @@
   background: transparent;
   border: 0;
 
-  &:has(svg, img, .icon):not(:hover, :active, :focus-visible) {
+  &:has(.icon):not(:hover, :active, :focus-visible) {
     text-decoration: none;
   }
 
-  svg,
-  img,
   .icon {
-    flex-shrink: 0;
-    width: 1em;
-    height: 1em;
+    --#{$prefix}icon-size: var(--#{$prefix}link-icon-size);
     margin-right: var(--#{$prefix}link-icon-gap);
-    overflow: hidden;
-    font-size: var(--#{$prefix}link-icon-size);
-    line-height: 1;
   }
 }
 

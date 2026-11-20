@@ -5728,29 +5728,16 @@ optgroup {
   background: transparent;
   border: 0;
 }
-.link:has(svg, img, .icon):not(:hover, :active, :focus-visible), .link-chevron:has(svg, img, .icon):not(:hover, :active, :focus-visible),
-.link-external:has(svg, img, .icon):not(:hover, :active, :focus-visible),
-.link-expand:has(svg, img, .icon):not(:hover, :active, :focus-visible) {
+.link:has(.icon):not(:hover, :active, :focus-visible), .link-chevron:has(.icon):not(:hover, :active, :focus-visible),
+.link-external:has(.icon):not(:hover, :active, :focus-visible),
+.link-expand:has(.icon):not(:hover, :active, :focus-visible) {
   text-decoration: none;
 }
-.link svg, .link-chevron svg,
-.link-external svg,
-.link-expand svg,
-.link img,
-.link-chevron img,
-.link-external img,
-.link-expand img,
-.link .icon,
-.link-chevron .icon,
+.link .icon, .link-chevron .icon,
 .link-external .icon,
 .link-expand .icon {
-  flex-shrink: 0;
-  width: 1em;
-  height: 1em;
+  --bs-icon-size: var(--bs-link-icon-size);
   margin-right: var(--bs-link-icon-gap);
-  overflow: hidden;
-  font-size: var(--bs-link-icon-size);
-  line-height: 1;
 }
 
 .link-chevron,
