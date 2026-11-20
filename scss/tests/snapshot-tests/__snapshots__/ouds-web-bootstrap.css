@@ -8618,21 +8618,15 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-chip-color: var(--bs-color-action-disabled);
   pointer-events: none;
 }
-.chip-interactive svg,
-.chip-interactive img,
 .chip-interactive .icon {
-  width: 16px;
-  height: 16px;
-  overflow: hidden;
-  font-size: 16px;
-  line-height: 1;
+  --bs-icon-size: 1rem;
 }
 
-.chip-suggestion .chip-interactive:where(:has(svg, img, .icon)):where(:has(svg)), .chip-suggestion .chip-interactive:where(:has(svg, img, .icon)):where(:has(img)), .chip-suggestion .chip-interactive:where(:has(svg, img, .icon)):where(:has(.icon)) {
+.chip-suggestion .chip-interactive:where(:has(.icon)):where(:has(.icon)) {
   --bs-chip-padding-start: 10px;
 }
 
-.chip-filter .chip-interactive:where(:has(svg, img, .icon)) {
+.chip-filter .chip-interactive:where(:has(.icon)) {
   --bs-chip-padding-end: 10px;
 }
 .chip-filter input:focus-visible ~ .chip-interactive,
@@ -8720,13 +8714,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-chip-padding-block: 8px;
   --bs-chip-padding-end: 10px;
   --bs-chip-padding-start: 10px;
-}
-.chip .chip-icon svg,
-.chip .chip-icon img,
-.chip .chip-icon .icon {
-  width: 1rem;
-  height: 1rem;
-  font-size: 1rem;
 }
 
 .fade {
