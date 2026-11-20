@@ -4981,8 +4981,6 @@ textarea.form-control-lg {
   mask: var(--bs-btn-expanded-false-icon) no-repeat 50%/1.5rem;
   transform: translate(0, -50%);
 }
-.select-input-container > img,
-.select-input-container > svg,
 .select-input-container > .icon {
   position: absolute;
   top: calc(var(--bs-text-input-min-height) / 2 - var(--bs-text-input-icon-size) / 2 - var(--bs-text-input-border-width-top));
@@ -5011,10 +5009,10 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.select-input-container:has(> svg:not(.loader)) > .select-input-field, .select-input-container:has(> img) > .select-input-field, .select-input-container:has(> .icon) > .select-input-field {
+.select-input-container:has(> .icon:not(.loader)) > .select-input-field {
   padding-left: calc(var(--bs-text-input-icon-size) + var(--bs-text-input-column-gap) + var(--bs-text-input-padding-x) - var(--bs-text-input-border-width-left));
 }
-.select-input-container:has(> svg:not(.loader)) > label, .select-input-container:has(> img) > label, .select-input-container:has(> .icon) > label {
+.select-input-container:has(> .icon:not(.loader)) > label {
   padding-left: calc(var(--bs-text-input-icon-size) + var(--bs-text-input-column-gap));
 }
 .select-input-container:has(:open)::after {

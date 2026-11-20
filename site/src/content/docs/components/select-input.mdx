@@ -128,7 +128,7 @@ Add an icon to help indicate the purpose of the input by placing an `<svg>`, `<i
 <Example buttonLabel="select inputs with leading icon" code={`
   <div class="select-input mb-medium">
     <div class="select-input-container">
-      <svg aria-hidden="true">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <label for="exampleLeadingSelect">Select example with leading icon</label>
@@ -156,7 +156,7 @@ Add an icon to help indicate the purpose of the input by placing an `<svg>`, `<i
 
   <div class="select-input">
     <div class="select-input-container select-input-container-outlined">
-      <img src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+      <img class="icon" src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
       <label for="imgExampleLeadingOutlinedSelect">Outlined select example with leading icon</label>
       <select class="select-input-field" id="imgExampleLeadingOutlinedSelect">
         <option value="" disabled selected></option>
@@ -348,7 +348,7 @@ To manually mark a select as invalid, add `aria-invalid="true"` to a `.select-in
 
   <div class="select-input mb-medium">
     <div class="select-input-container">
-      <svg aria-hidden="true">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <label id="labelErrorSelect3" for="exampleErrorSelect3">Select example with error and icon</label>
@@ -395,7 +395,7 @@ In case of an invalid select, you may remove the invalid state before the loadin
 
 <Example buttonLabel="loading select inputs" code={`<div class="select-input mb-medium">
     <div class="select-input-container">
-      <svg aria-hidden="true">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <label for="exampleDisabledLoadingSelect">Disabled loading select example</label>
@@ -430,7 +430,7 @@ In case of an invalid select, you may remove the invalid state before the loadin
 
   <div class="select-input">
     <div class="select-input-container">
-      <svg aria-hidden="true">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <label for="exampleIndeterminateLoadingSelect">Indeterminate loading select example</label>

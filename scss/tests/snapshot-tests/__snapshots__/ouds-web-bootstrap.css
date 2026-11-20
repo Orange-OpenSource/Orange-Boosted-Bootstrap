@@ -6981,11 +6981,7 @@ textarea.form-control-lg {
   mask: var(--bs-btn-expanded-false-icon) no-repeat 50%/1.5rem;
   transform: translate(0, -50%);
 }
-.select-input-container > img, .form-select > img,
-.select-input-container > svg,
-.form-select > svg,
-.select-input-container > .icon,
-.form-select > .icon {
+.select-input-container > .icon, .form-select > .icon {
   position: absolute;
   top: calc(var(--bs-text-input-min-height) / 2 - var(--bs-text-input-icon-size) / 2 - var(--bs-text-input-border-width-top));
   left: calc(var(--bs-text-input-padding-x) - var(--bs-text-input-border-width-left));
@@ -7013,10 +7009,10 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.select-input-container:has(> svg:not(.loader)) > .select-input-field, .select-input-container:has(> svg:not(.loader)) > .form-select, .form-select:has(> svg:not(.loader)) > .select-input-field, .form-select:has(> svg:not(.loader)) > .form-select, .select-input-container:has(> img) > .select-input-field, .select-input-container:has(> img) > .form-select, .form-select:has(> img) > .select-input-field, .form-select:has(> img) > .form-select, .select-input-container:has(> .icon) > .select-input-field, .select-input-container:has(> .icon) > .form-select, .form-select:has(> .icon) > .select-input-field, .form-select:has(> .icon) > .form-select {
+.select-input-container:has(> .icon:not(.loader)) > .select-input-field, .select-input-container:has(> .icon:not(.loader)) > .form-select, .form-select:has(> .icon:not(.loader)) > .select-input-field, .form-select:has(> .icon:not(.loader)) > .form-select {
   padding-left: calc(var(--bs-text-input-icon-size) + var(--bs-text-input-column-gap) + var(--bs-text-input-padding-x) - var(--bs-text-input-border-width-left));
 }
-.select-input-container:has(> svg:not(.loader)) > label, .form-select:has(> svg:not(.loader)) > label, .select-input-container:has(> img) > label, .form-select:has(> img) > label, .select-input-container:has(> .icon) > label, .form-select:has(> .icon) > label {
+.select-input-container:has(> .icon:not(.loader)) > label, .form-select:has(> .icon:not(.loader)) > label {
   padding-left: calc(var(--bs-text-input-icon-size) + var(--bs-text-input-column-gap));
 }
 .select-input-container:has(:open)::after, .form-select:has(:open)::after {
