@@ -18,7 +18,7 @@
 - `.pointer-events-auto` — restores pointer interactions (default)
 
 ```html
-<a href="#" class="pointer-events-none" tabindex="-1" aria-disabled="true"
+<a href="#" class="pointer-events-none" tabindex="-1" role="link" aria-disabled="true"
   >Non-clickable link</a
 >
 <a href="#" class="pointer-events-auto">Clickable link</a>

@@ -77,16 +77,16 @@ Use `.icon-link` with an icon before the text. Icons auto-size to `1em`. For fon
 Add `aria-disabled="true"` to `<a>`. Remove `href` when possible. Uses `pointer-events: none`.
 
 ```html
-<a class="link" aria-disabled="true">Disabled link</a>
+<a class="link" role="link" aria-disabled="true">Disabled link</a>
 ```
 
 If `href` must be kept and the link conveys no useful info, also add `tabindex="-1"` and disable via JS. If it conveys useful info, keep it keyboard-focusable (do not add `tabindex="-1"`).
 
 ```html
-<a href="#" class="link" tabindex="-1" aria-disabled="true"
+<a href="#" class="link" tabindex="-1" role="link" aria-disabled="true"
   >Non-focusable disabled link</a
 >
-<a href="#" class="link" aria-disabled="true">Focusable disabled link</a>
+<a href="#" class="link" role="link" aria-disabled="true">Focusable disabled link</a>
 ```
 
 #### Skeleton

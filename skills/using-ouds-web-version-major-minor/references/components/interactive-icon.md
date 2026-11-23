@@ -55,7 +55,7 @@ Add `disabled` on `<button>`. For `<a>`, use `aria-disabled="true"` instead (lin
   </svg>
 </button>
 
-<a class="icon-interactive" aria-disabled="true">
+<a class="icon-interactive" role="link" aria-disabled="true">
   <span class="visually-hidden">Disabled interactive icon link</span>
   <svg aria-hidden="true">
     <use xlink:href="/path/to/sprite.svg#heart-empty" />

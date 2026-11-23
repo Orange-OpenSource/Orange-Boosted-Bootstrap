@@ -438,7 +438,7 @@
   }
 }
 
-.control-item-indicator[role="switch"] {
+.control-item-indicator[role="switch"]:not([type="radio"]) {
   --#{$prefix}switch-track-color: #{$ouds-switch-color-track-unselected};
 
   forced-color-adjust: none;

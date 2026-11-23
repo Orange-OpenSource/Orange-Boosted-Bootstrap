@@ -94,7 +94,7 @@ The interactive icon can be used alone or within other components. It works well
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </button>`} />
-  <Example slot="anchorExample" buttonLabel="disabled interactive icon link" code={`<a class="icon-interactive" aria-disabled="true">
+  <Example slot="anchorExample" buttonLabel="disabled interactive icon link" code={`<a class="icon-interactive" role="link" aria-disabled="true">
     <span class="visually-hidden">Disabled interactive icon link</span>
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -189,7 +189,7 @@ You can use `.icon-assistant` class to indicate AI actions in a process or a flo
 <CallToActionDisabledState name="assistant icons">
   <Example slot="buttonExample" buttonLabel="disabled assistant icon button" class="bd-example" code={`<button class="icon-assistant" disabled aria-label="Disabled assistant icon"></button>`} />
 
-  <Example slot="anchorExample" buttonLabel="disabled assistant icon link" code={`<a class="icon-assistant" aria-disabled="true">
+  <Example slot="anchorExample" buttonLabel="disabled assistant icon link" code={`<a class="icon-assistant" role="link" aria-disabled="true">
     <span class="visually-hidden">Disabled interactive icon link</span></a>`} />
 </CallToActionDisabledState>
 

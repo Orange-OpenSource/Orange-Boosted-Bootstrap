@@ -49,7 +49,7 @@ Add `disabled` on `<button>`. For `<a>`, use `aria-disabled="true"` instead.
 ```html
 <button class="icon-assistant" disabled aria-label="Disabled assistant icon"></button>
 
-<a class="icon-assistant" aria-disabled="true">
+<a class="icon-assistant" role="link" aria-disabled="true">
   <span class="visually-hidden">Disabled interactive icon link</span>
 </a>
 ```
