@@ -4,6 +4,49 @@ import { getVersionedDocsPath } from '@libs/path'
 
 export const componentsDetails: ComponentCardData[] = [
   {
+    name: 'Accordion card item',
+    slug: 'accordion-card-item',
+    link: 'accordions#accordion-card-item',
+    category: 'Content display',
+    snippet: `
+      <details class="item item-accordion w-75">
+        <summary class="item-container item-interactive">
+          <span class="item-content">
+            <span class="item-text-container">
+              <span class="item-label">Label</span>
+            </span>
+          </span>
+        </summary>
+      </details>`
+  },
+  {
+    name: 'Accordion list item',
+    slug: 'accordion-list-item',
+    link: 'accordions#accordion-list-item',
+    category: 'Content display',
+    snippet: `
+      <div class="item-list w-75">
+        <details class="item item-accordion" name="accordionExample">
+          <summary class="item-container item-interactive">
+            <span class="item-content">
+              <span class="item-text-container">
+                <span class="item-label">Label</span>
+              </span>
+            </span>
+          </summary>
+        </details>
+        <details class="item item-accordion" name="accordionExample">
+          <summary class="item-container item-interactive">
+            <span class="item-content">
+              <span class="item-text-container">
+                <span class="item-label">Label</span>
+              </span>
+            </span>
+          </summary>
+        </details>
+      </div>`
+  },
+  {
     name: 'Alert message',
     slug: 'alert-message',
     link: 'alerts#alert-message',

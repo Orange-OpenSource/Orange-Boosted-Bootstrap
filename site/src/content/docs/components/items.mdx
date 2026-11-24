@@ -352,7 +352,7 @@ You can navigate through the different assets using the tabs below.
     <div class="item-container">
       <div class="item-content">
         <div class="item-leading-container">
-          <div class="item-icon item-status-positive"></div>
+          <p class="item-icon item-status-positive"><span class="visually-hidden">Success</span></p>
         </div>
         <div class="item-text-container">
           <p class="item-label">Label</p>
@@ -439,7 +439,7 @@ Optionally, a slot can be added at the end of the text container using `.item-sl
   Please note that you might want to apply one of our [color utility]([[docsref:/utilities/color]]) to the text elements (except the `.item-label`), to match the badge for example. Be sure not to convey information only through color.
 </Callout>
 
-<Example buttonLabel="item text" class="d-flex flex-column gap-medium" code={`<div class="item">
+<Example buttonLabel="items with text" class="d-flex flex-column gap-medium" code={`<div class="item">
     <div class="item-container">
       <div class="item-content">
         <div class="item-text-container">
@@ -579,7 +579,7 @@ You can navigate through the different assets using the tabs below.
           <p class="item-label">Label</p>
         </div>
         <div class="item-trailing-container">
-          <span class="badge badge-large"></span>
+          <p class="badge badge-large"></p>
         </div>
       </div>
     </div>
@@ -636,7 +636,7 @@ You can navigate through the different assets using the tabs below.
           <p class="item-label">Label</p>
         </div>
         <div class="item-trailing-container">
-          <div class="item-icon item-status-warning"></div>
+          <div class="item-icon item-status-warning"><span class="visually-hidden">Warning</span></div>
         </div>
       </div>
     </div>
@@ -894,7 +894,7 @@ Rounded corners items is a project-wide option therefore all your items should e
   [Items in a list](#list-items) won't have rounded corners even using this class.
 </Callout>
 
-<Example buttonLabel="rounded items" class="bd-btn-example" code={`<div class="use-rounded-corner-items">
+<Example buttonLabel="rounded items" class="d-flex flex-column gap-medium" code={`<div class="use-rounded-corner-items">
 
     <!-- Card -->
     <div class="item mb-medium">
@@ -986,7 +986,7 @@ You may handle on your own the [slots](#slots) regarding accessibility and desig
 
 <SkeletonRedirect component="item" />
 
-<Example buttonLabel="item skeleton" class="d-flex flex-column gap-medium" code={`<div aria-busy="true" inert>
+<Example buttonLabel="item skeleton" code={`<div aria-busy="true" inert>
     <div class="item">
       <div class="item-container">
         <div class="item-content">

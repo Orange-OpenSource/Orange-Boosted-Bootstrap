@@ -3,6 +3,7 @@
   icon_color: body-color
   pages:
     - title: All components
+    - title: Accordions
     - title: Alerts
     - title: Badges
     - title: Breadcrumb
