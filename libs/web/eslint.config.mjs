@@ -203,9 +203,11 @@ export default [
     files: [
       'site/src/assets/application.js',
       'site/src/assets/color.js',
+      'site/src/assets/copy.js',
       'site/src/assets/partials/*.js',
       'site/src/assets/search.js',
       'site/src/assets/snippets.js',
+      'site/src/assets/snippetButtonTooltip.js',
       'site/src/assets/stackblitz.js',
       'site/src/plugins/*.js'
     ],

@@ -175,7 +175,7 @@
     "terser": "^5.51.2",
     "unist-util-visit": "^5.2.0",
     "vitest": "^5.0.4",
-    "vnu-jar": "^26.11.9",
+    "vnu-jar": "26.11.9",
     "zod": "^4.6.5"
   },
   "files": [
