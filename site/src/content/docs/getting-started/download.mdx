@@ -16,7 +16,7 @@ Pull in OUDS Web’s **source files** into nearly any project with some of the m
 
 Install OUDS Web in your Node.js powered apps with [the npm package](https://www.npmjs.com/package/@ouds/web):
 
-```sh
+```sh buttonLabel="npm install OUDS Web" markupOnly
 npm install @ouds/web-common@[[config:current_version]] @ouds/web-[[config:brand]]@[[config:current_version]]
 ```
 
@@ -34,7 +34,7 @@ OUDS Web {getConfig().display_brand}’s `package.json` contains some additional
 
 Install OUDS Web in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/@ouds/web):
 
-```sh
+```sh buttonLabel="yarn add OUDS Web" markupOnly
 yarn add @ouds/web-common@[[config:current_version]] @ouds/web-[[config:brand]]@[[config:current_version]]
 ```
 
@@ -52,7 +52,7 @@ yarn add @ouds/web-common@[[config:current_version]] @ouds/web-[[config:brand]]@
 
 Install OUDS Web in your Bun or Node.js powered apps with [the Bun CLI](https://bun.sh/):
 
-```sh
+```sh buttonLabel="bun add OUDS Web" markupOnly
 bun add @ouds/web-common@[[config:current_version]] @ouds/web-[[config:brand]]@[[config:current_version]]
 ```
 
@@ -62,11 +62,11 @@ If you develop in .NET Framework, you can also install and manage OUDS Web’s [
 
 {/* TODO: Determine the names of the nuget packages */}
 
-```powershell
+```powershell buttonLabel="install OUDS Web via NuGet" markupOnly
 Install-Package ouds-web
 ```
 
-```powershell
+```powershell buttonLabel="install OUDS Web Sass via NuGet" markupOnly
 Install-Package ouds-web.sass
 ```
 
@@ -78,7 +78,7 @@ Install-Package ouds-web.sass
 
 We recommend [jsDelivr](https://www.jsdelivr.com/package/npm/@ouds/web/) as a CDN, and use it ourselves in our documentation to skip the download and deliver cached version of OUDS Web’s compiled CSS and JS to your project.
 
-```html
+```html buttonLabel="include OUDS Web via jsDelivr" markupOnly
 <link href="https://cdn.jsdelivr.net" rel="preconnect" crossorigin="anonymous" />
 <link href="[[config:cdn.css]]" rel="stylesheet" integrity="[[config:cdn.css_hash]]" crossorigin="anonymous" />
 <script src="[[config:cdn.js_bundle]]" integrity="[[config:cdn.js_bundle_hash]]" crossorigin="anonymous"></script>
@@ -86,7 +86,7 @@ We recommend [jsDelivr](https://www.jsdelivr.com/package/npm/@ouds/web/) as a CD
 
 If you’re using our compiled JavaScript and prefer to include Popper separately, add Popper before our JS, via a CDN preferably.
 
-```html
+```html buttonLabel="include Popper and OUDS Web via jsDelivr" markupOnly
 <script src="[[config:cdn.popper]]" integrity="[[config:cdn.popper_hash]]" crossorigin="anonymous"></script>
 <script src="[[config:cdn.js]]" integrity="[[config:cdn.js_hash]]" crossorigin="anonymous"></script>
 ```
@@ -106,7 +106,7 @@ In some cases—like in some specific countries or environments—you may need t
 Note that you should compare same length hashes, e.g. `sha384` with `sha384`, otherwise it’s expected for them to be different.
 As such, you can use an online tool like [SRI Hash Generator](https://www.srihash.org/) to make sure that the hashes are the same for a given file. Alternatively, assuming you have OpenSSL installed, you can achieve the same from the CLI, for example:
 
-```sh
+```sh buttonLabel="generate SRI hash for OUDS Web JS" markupOnly
 openssl dgst -sha384 -binary ouds-web.min.js | openssl base64 -A
 ```
 

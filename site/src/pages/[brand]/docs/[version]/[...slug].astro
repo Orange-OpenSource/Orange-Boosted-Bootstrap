@@ -4,7 +4,6 @@ import { render } from 'astro:content'
 import DocsLayout from '@layouts/DocsLayout.astro'
 import { getConfig } from '@libs/config'
 import { docsPages, getDocsPageSlug } from '@libs/content'
-import Code from '@shortcodes/Code.astro'
 
 export async function getStaticPaths() {
   return docsPages.map((docsPage) => {
@@ -22,5 +21,5 @@ const { Content, headings, remarkPluginFrontmatter } = await render(Astro.props)
 ---
 
 <DocsLayout frontmatter={remarkPluginFrontmatter as typeof data} headings={headings} id={id}>
-  <Content components={{ pre: Code }} />
+  <Content />
 </DocsLayout>

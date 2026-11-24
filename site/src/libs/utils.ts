@@ -1,6 +1,6 @@
 import { slug } from 'github-slugger'
-import fromMarkdown from 'mdast-util-from-markdown'
-import toString from 'mdast-util-to-string'
+import { fromMarkdown } from 'mdast-util-from-markdown'
+import { toString } from 'mdast-util-to-string'
 import { remark } from 'remark'
 import remarkHtml from 'remark-html'
 import { getVersionedDocsPath } from './path'

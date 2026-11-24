@@ -21,13 +21,13 @@ Here are the variables we include (note that the `:root` is required) that can b
 
 These CSS variables are available everywhere, regardless of color mode.
 
-<Code lang="css" filePath={`packages/${getConfig().brand}/dist/css/ouds-web.css`} fileMatch="(:root,\n\[data-bs-theme=light\],\n:root\[data-bs-theme=light\] \[data-bs-theme=root\],\n:root\[data-bs-theme=dark\] \[data-bs-theme=root-inverted\] {[^}]*})" />
+<Code lang="css" filePath={`packages/${getConfig().brand}/dist/css/ouds-web.css`} fileMatch="(:root,\n\[data-bs-theme=light\],\n:root\[data-bs-theme=light\] \[data-bs-theme=root\],\n:root\[data-bs-theme=dark\] \[data-bs-theme=root-inverted\] {[^}]*})" buttonLabel="default root variables" />
 
 ### Dark mode
 
 These variables are scoped to our built-in dark mode.
 
-<Code lang="css" filePath={`packages/${getConfig().brand}/dist/css/ouds-web.css`} fileMatch="(\[data-bs-theme=dark\],\n:root\[data-bs-theme=dark\],\n:root\[data-bs-theme=dark\] \[data-bs-theme=root\],\n:root\[data-bs-theme=light\] \[data-bs-theme=root-inverted\] {[^}]*})" />
+<Code lang="css" filePath={`packages/${getConfig().brand}/dist/css/ouds-web.css`} fileMatch="(\[data-bs-theme=dark\],\n:root\[data-bs-theme=dark\],\n:root\[data-bs-theme=dark\] \[data-bs-theme=root\],\n:root\[data-bs-theme=light\] \[data-bs-theme=root-inverted\] {[^}]*})" buttonLabel="dark mode root variables" />
 
 ## Component variables
 
@@ -44,12 +44,11 @@ Most CSS variables use a prefix to avoid collisions with your own codebase. This
 
 Customize the prefix via the `$prefix` Sass variable. By default, it’s set to `bs-` (note the trailing dash).
 
-{/* OUDS Web mod */}
 ## Deduping embedded SVGs
 
 OUDS Web uses embedded SVGs as data URIs in the wild, which means extremely long strings in CSS. When one of them is used several times in the stylesheet, CSS custom properties allow to factorize its string—thus decreasing the output file size.
 
-```css
+```css buttonLabel="chevron icon as custom property" markupOnly
 :root {
   --bs-chevron-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'%3e%3cpath d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/%3e%3c/svg%3e");
 }
@@ -62,13 +61,12 @@ OUDS Web uses embedded SVGs as data URIs in the wild, which means extremely long
   background-image: var(--bs-chevron-icon);
 }
 ```
-{/* End mod */}
 
 ## Examples
 
 CSS variables offer similar flexibility to Sass’s variables, but without the need for compilation before being served to the browser. For example, here we’re resetting our page’s font and link styles with CSS variables.
 
-```css
+```css buttonLabel="reset font and link styles" markupOnly
 body {
   font: 1rem/1.5 var(--bs-font-body-family);
 }
@@ -81,7 +79,7 @@ a {
 
 OUDS Web provides custom `:focus-visible` (which is supported by OUDS Web) styles using a combination of Sass and CSS variables that can be optionally added to specific components and elements. This focus is removed for form elements.
 
-<ScssDocs name="focus-visible" file="scss/mixins/_focus.scss" />
+<ScssDocs name="focus-visible" file="scss/mixins/_focus.scss" buttonLabel="focus-visible mixin" />
 
 To completely remove this style, add `outline: 0;` and `box-shadow: none;`.
 
