@@ -24,6 +24,9 @@
 //
 // Output: a detailed report (identical / missing / replaced / skipped)
 // per brand, followed by a summary with counts.
+//
+// After running, check the result visually on the /examples/icons page of the
+// documentation (dev server).
 
 import fs from 'node:fs/promises'
 import path from 'node:path'
@@ -562,6 +565,10 @@ function writeReport(reports) {
       ` | Skipped: ${report.skipped.length}\n`
     )
   }
+
+  process.stdout.write(
+    '\nNext step: start the docs dev server and check the sprite icons at /examples/icons.\n'
+  )
 }
 
 // ---------------------------------------------------------------------------

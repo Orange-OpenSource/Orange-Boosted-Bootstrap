@@ -34,6 +34,9 @@
 // → v2.1) or can be set explicitly with --version.
 //
 // Output: the full icon map for each brand, followed by a summary with counts.
+//
+// After running, check the result visually on the /examples/icons page of the
+// documentation (dev server).
 
 import fs from 'node:fs/promises'
 import path from 'node:path'
@@ -688,6 +691,10 @@ function writeReport(reports) {
       `Deduplicated: ${report.deduplicated.length}\n`
     )
   }
+
+  process.stdout.write(
+    '\nNext step: start the docs dev server and check the composite icons at /examples/icons.\n'
+  )
 }
 
 // --- Entry point ---
