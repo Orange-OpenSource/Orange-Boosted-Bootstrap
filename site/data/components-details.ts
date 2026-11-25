@@ -52,7 +52,7 @@ export const componentsDetails: ComponentCardData[] = [
     category: 'Indicator',
     snippet: `
       <p class="badge">
-        <span class="badge-status-icon"></span>
+        <span class="status-icon"></span>
         <span class="visually-hidden">Beware</span>
       </p>`
   },

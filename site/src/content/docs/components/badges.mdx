@@ -51,7 +51,7 @@ import { getVersionedDocsPath } from '@libs/path'
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9">
           <p class="badge">
-            <span class="badge-status-icon"></span>
+            <span class="status-icon"></span>
             <span class="visually-hidden">Beware</span>
           </p>
         </div>
@@ -68,7 +68,7 @@ For the three types of badge, OUDS Web has a common basic `.badge` class that se
 <Example showToolbar={false} code={`<p class="badge badge-count">1<span class="visually-hidden">error</span></p>`} />
 
 <Example showToolbar={false} code={`<p class="badge">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Beware</span>
   </p>`} />
 
@@ -283,7 +283,7 @@ Badge - icon is presented as a coloured shape that displays an icon, and its sel
 </Callout>
 
 <Example buttonLabel="badges icon" class="d-flex align-items-center gap-large" code={`<p class="badge">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Beware</span>
   </p>
 
@@ -345,22 +345,22 @@ Functional badges - icon carry a clear meaning related to the status of an objec
 </Callout>
 
 <Example buttonLabel="functional badges icon" class="d-flex gap-large" code={`<p class="badge badge-positive">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Success</span>
   </p>
 
   <p class="badge badge-info">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Info</span>
   </p>
 
   <p class="badge badge-warning">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Warning</span>
   </p>
 
   <p class="badge">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Beware</span>
   </p>`} />
 
@@ -371,22 +371,22 @@ Functional badges - icon carry a clear meaning related to the status of an objec
 The disabled state of a badge - icon appears visually muted to signal that it is not currently active or relevant. To make a disabled badge - icon, simply add the `.disabled` class. Depending on the use case, the `.visually-hidden` text may be unnecessary or require adaptation.
 
 <Example buttonLabel="disabled badges icon" class="d-flex gap-large" code={`<p class="badge disabled">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Error</span>
   </p>
 
   <p class="badge badge-positive disabled">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Success</span>
   </p>
 
   <p class="badge badge-info disabled">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Info</span>
   </p>
 
   <p class="badge badge-warning disabled">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Warning</span>
   </p>
 
@@ -408,7 +408,7 @@ If the badge is in a disabled context (for example, inside a disabled button), t
   <button type="button" class="tag tag-input" disabled>
     5G Ready
     <span class="badge badge-info badge-small">
-      <span class="badge-status-icon"></span>
+      <span class="status-icon"></span>
       <span class="visually-hidden">Info</span>
     </span>
     <span class="visually-hidden">Remove this tag</span>
@@ -419,42 +419,42 @@ If the badge is in a disabled context (for example, inside a disabled button), t
 Badges - icon are available in four sizes. Add `.badge-xsmall`, `.badge-small`, or `.badge-large` to have the size you want. Default size is medium.
 
 <Example buttonLabel="badges icon sizes" class="sm:d-flex align-items-center column-gap-scaled-xsmall" code={`<p class="badge badge-xsmall">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Error</span>
   </p>
 
   <p class="badge badge-small">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Error</span>
   </p>
 
   <p class="badge">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Error</span>
   </p>
 
   <p class="badge badge-large">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Error</span>
   </p>
 
   <p class="badge badge-xsmall badge-warning">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Warning</span>
   </p>
 
   <p class="badge badge-small badge-warning">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Warning</span>
   </p>
 
   <p class="badge badge-warning">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Warning</span>
   </p>
 
   <p class="badge badge-large badge-warning">
-    <span class="badge-status-icon"></span>
+    <span class="status-icon"></span>
     <span class="visually-hidden">Warning</span>
   </p>
 

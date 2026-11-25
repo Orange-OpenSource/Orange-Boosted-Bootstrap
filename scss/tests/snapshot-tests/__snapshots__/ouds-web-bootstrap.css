@@ -11363,7 +11363,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   letter-spacing: var(--bs-font-letter-spacing-label-medium);
 }
 
-.badge:has(.badge-status-icon) {
+.badge:has(.status-icon) {
   --bs-badge-color: var(--bs-color-surface-status-negative-emphasized);
   --bs-badge-background-color: transparent;
   position: relative;
@@ -11372,29 +11372,29 @@ ol.bullet-list > li > ol > li > ol > li::before {
   height: var(--bs-badge-size);
   padding: 0;
 }
-.badge:has(.badge-status-icon).badge-warning {
+.badge:has(.status-icon).badge-warning {
   --bs-badge-color: var(--bs-color-surface-status-warning-emphasized);
 }
-.badge:has(.badge-status-icon).badge-warning .badge-status-icon::after {
+.badge:has(.status-icon).badge-warning .status-icon::after {
   background-color: var(--bs-icon-color-content-status-warning-internal-shape);
   -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M10.5 7q0-2.2 1.5-2.2c1.5 0 1.5.8 1.5 2.2v5.7q0 2.2-1.5 2.2t-1.5-2.2zM12 19.7q-1.6-.2-1.7-1.8c-.2-1.6.7-1.7 1.7-1.7s1.7.8 1.7 1.7q-.2 1.7-1.7 1.8'/%3e%3c/svg%3e");
   mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M10.5 7q0-2.2 1.5-2.2c1.5 0 1.5.8 1.5 2.2v5.7q0 2.2-1.5 2.2t-1.5-2.2zM12 19.7q-1.6-.2-1.7-1.8c-.2-1.6.7-1.7 1.7-1.7s1.7.8 1.7 1.7q-.2 1.7-1.7 1.8'/%3e%3c/svg%3e");
 }
-.badge:has(.badge-status-icon).badge-info {
+.badge:has(.status-icon).badge-info {
   --bs-badge-color: var(--bs-color-surface-status-info-emphasized);
 }
-.badge:has(.badge-status-icon).badge-positive {
+.badge:has(.status-icon).badge-positive {
   --bs-badge-color: var(--bs-color-surface-status-positive-emphasized);
 }
 
-.badge-status-icon::before, .badge-status-icon::after {
+.status-icon::before, .status-icon::after {
   position: absolute;
   inset: 0;
   content: "";
   -webkit-mask: no-repeat center/contain;
   mask: no-repeat center/contain;
 }
-.badge-status-icon::before {
+.status-icon::before {
   background-color: currentcolor;
   -webkit-mask-image: var(--bs-badge-icon);
   mask-image: var(--bs-badge-icon);
@@ -11411,17 +11411,17 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-badge-color: var(--bs-color-content-on-action-disabled);
   --bs-badge-background-color: var(--bs-color-action-disabled);
 }
-.badge.disabled:has(.badge-status-icon),
-.disabled .badge:has(.badge-status-icon),
-[disabled] .badge:has(.badge-status-icon),
-[aria-disabled=true] .badge:has(.badge-status-icon) {
+.badge.disabled:has(.status-icon),
+.disabled .badge:has(.status-icon),
+[disabled] .badge:has(.status-icon),
+[aria-disabled=true] .badge:has(.status-icon) {
   --bs-badge-color: var(--bs-color-action-disabled);
   --bs-badge-background-color: transparent;
 }
-.badge.disabled:has(.badge-status-icon).badge-warning .badge-status-icon::after,
-.disabled .badge:has(.badge-status-icon).badge-warning .badge-status-icon::after,
-[disabled] .badge:has(.badge-status-icon).badge-warning .badge-status-icon::after,
-[aria-disabled=true] .badge:has(.badge-status-icon).badge-warning .badge-status-icon::after {
+.badge.disabled:has(.status-icon).badge-warning .status-icon::after,
+.disabled .badge:has(.status-icon).badge-warning .status-icon::after,
+[disabled] .badge:has(.status-icon).badge-warning .status-icon::after,
+[aria-disabled=true] .badge:has(.status-icon).badge-warning .status-icon::after {
   background-color: transparent;
 }
 

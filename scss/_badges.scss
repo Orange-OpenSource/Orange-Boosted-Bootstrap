@@ -82,7 +82,7 @@
 // Badge - icon
 //
 
-.badge:has(.badge-status-icon) {
+.badge:has(.status-icon) {
   // status icons have a transparent sign so the badge color is applied to what appears to be the icon background
   --#{$prefix}badge-color: #{$ouds-color-surface-status-negative-emphasized};
   --#{$prefix}badge-background-color: transparent;
@@ -95,7 +95,7 @@
   &.badge-warning {
     --#{$prefix}badge-color: #{$ouds-color-surface-status-warning-emphasized};
 
-    .badge-status-icon::after {
+    .status-icon::after {
       background-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
       mask-image: escape-svg($badge-icon-warning-internal);
     }
@@ -110,7 +110,7 @@
   }
 }
 
-.badge-status-icon {
+.status-icon {
   &::before,
   &::after {
     position: absolute;
@@ -140,12 +140,12 @@
   --#{$prefix}badge-color: #{$ouds-color-content-on-action-disabled};
   --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
 
-  &:has(.badge-status-icon) {
+  &:has(.status-icon) {
     --#{$prefix}badge-color: #{$ouds-color-action-disabled};
     --#{$prefix}badge-background-color: transparent;
 
     &.badge-warning {
-      .badge-status-icon::after {
+      .status-icon::after {
         background-color: transparent;
       }
     }
