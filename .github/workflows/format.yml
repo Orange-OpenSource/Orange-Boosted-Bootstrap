@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - 'libs/core/**'
+      - 'libs/icons/**'
       - 'libs/angular/**'
       - 'libs/react/**'
       - 'libs/vue/**'

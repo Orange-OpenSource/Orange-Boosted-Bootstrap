@@ -8,6 +8,7 @@ on:
       - 'libs/web/scss/**'
       - 'libs/web/packages/**/scss/**'
       - 'libs/core/**'
+      - 'libs/icons/**'
       - 'libs/angular/**'
       - 'libs/react/**'
       - 'libs/vue/**'

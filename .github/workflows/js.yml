@@ -5,8 +5,9 @@ on:
       - main
     paths:
       - 'libs/web/js/**'
+      - 'package.json'
+      - 'package-lock.json'
       - 'libs/web/package.json'
-      - 'libs/web/package-lock.json'
       - 'libs/web/vitest.config.mjs'
       - '.github/workflows/js.yml'
   pull_request:
