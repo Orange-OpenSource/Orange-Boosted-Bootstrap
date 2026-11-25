@@ -274,16 +274,12 @@
         --#{$prefix}text-input-background-color: var(--#{$prefix}color-action-support-disabled);
       }
 
-      > img,
-      > svg,
       > .icon {
         color: $ouds-color-content-disabled;
       }
     }
 
     // Leading icon
-    > img,
-    > svg,
     > .icon {
       position: absolute;
       top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-icon-size) / 2 - var(--#{$prefix}text-input-border-width-top));
@@ -295,7 +291,7 @@
       color: $ouds-color-content-muted;
     }
 
-    &:has(> svg:not(.loader), > img, > .icon) {
+    &:has(> .icon:not(.loader)) {
       > .text-input-field,
       > .input-container,
       > label {
