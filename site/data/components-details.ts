@@ -418,7 +418,7 @@ export const componentsDetails: ComponentCardData[] = [
     category: 'Indicator',
     snippet: `
       <p class="tag tag-info">
-        <span class="tag-status-icon"></span>
+        <span class="status-icon"></span>
         Label
       </p>`
   },

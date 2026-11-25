@@ -11524,11 +11524,11 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-tag-background-color: var(--bs-color-surface-status-negative-muted);
   --bs-tag-asset-color: var(--bs-color-content-status-negative);
 }
-.tag:has(.tag-icon), .tag:has(.tag-status-icon), .tag:has(.tag-bullet), .tag.loading:has(.tag-loader) {
+.tag:has(.icon), .tag:has(.status-icon), .tag:has(.tag-bullet), .tag.loading:has(.tag-loader) {
   padding-left: calc(var(--bs-tag-padding-asset) - var(--bs-tag-border-width));
 }
-.tag .tag-icon,
-.tag .tag-status-icon,
+.tag .icon,
+.tag .status-icon,
 .tag .tag-bullet,
 .tag .tag-loader {
   display: flex;
@@ -11540,13 +11540,13 @@ ol.bullet-list > li > ol > li > ol > li::before {
   line-height: 1;
   color: var(--bs-tag-asset-color);
 }
-.tag .tag-icon {
+.tag .icon {
+  --bs-icon-size: var(--bs-tag-font-size-icon);
   width: var(--bs-tag-size-decorative-asset);
   height: var(--bs-tag-size-decorative-asset);
   padding: var(--bs-tag-icon-padding);
-  font-size: var(--bs-tag-font-size-icon);
 }
-.tag .tag-status-icon {
+.tag .status-icon {
   width: calc(var(--bs-tag-size-asset) - 2 * var(--bs-tag-icon-padding));
   height: calc(var(--bs-tag-size-asset) - 2 * var(--bs-tag-icon-padding));
   margin: var(--bs-tag-icon-padding);
@@ -11561,23 +11561,23 @@ ol.bullet-list > li > ol > li > ol > li::before {
   background-color: var(--bs-tag-asset-color);
   border-radius: 2000px;
 }
-.tag.tag-positive .tag-status-icon {
+.tag.tag-positive .status-icon {
   -webkit-mask-image: var(--bs-tag-positive-icon);
   mask-image: var(--bs-tag-positive-icon);
 }
-.tag.tag-info .tag-status-icon {
+.tag.tag-info .status-icon {
   -webkit-mask-image: var(--bs-tag-info-icon);
   mask-image: var(--bs-tag-info-icon);
 }
-.tag.tag-warning:not(.tag-muted) .tag-status-icon {
+.tag.tag-warning:not(.tag-muted) .status-icon {
   -webkit-mask-image: var(--bs-tag-warning-external-icon);
   mask-image: var(--bs-tag-warning-external-icon);
 }
-.tag.tag-warning.tag-muted .tag-status-icon {
+.tag.tag-warning.tag-muted .status-icon {
   position: relative;
   background-color: transparent;
 }
-.tag.tag-warning.tag-muted .tag-status-icon::before, .tag.tag-warning.tag-muted .tag-status-icon::after {
+.tag.tag-warning.tag-muted .status-icon::before, .tag.tag-warning.tag-muted .status-icon::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -11588,17 +11588,17 @@ ol.bullet-list > li > ol > li > ol > li::before {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.tag.tag-warning.tag-muted .tag-status-icon::before {
+.tag.tag-warning.tag-muted .status-icon::before {
   background-color: var(--bs-icon-color-content-status-warning-external-shape);
   -webkit-mask-image: var(--bs-tag-warning-external-icon);
   mask-image: var(--bs-tag-warning-external-icon);
 }
-.tag.tag-warning.tag-muted .tag-status-icon::after {
+.tag.tag-warning.tag-muted .status-icon::after {
   background-color: var(--bs-icon-color-content-status-warning-internal-shape);
   -webkit-mask-image: var(--bs-tag-warning-internal-icon);
   mask-image: var(--bs-tag-warning-internal-icon);
 }
-.tag.tag-negative .tag-status-icon {
+.tag.tag-negative .status-icon {
   -webkit-mask-image: var(--bs-tag-negative-icon);
   mask-image: var(--bs-tag-negative-icon);
 }
