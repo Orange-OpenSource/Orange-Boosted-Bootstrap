@@ -32,7 +32,7 @@ export function getSlug(str: string) {
 }
 
 export function getHeadingSlug(str: string) {
-  return str.replace(/-------full-changelog---------------------/g, '')
+  return str.replace(/-+full-changelog-+/g, '')
 }
 
 export function trimLeadingAndTrailingSlashes(str: string) {
@@ -50,7 +50,7 @@ export function processMarkdownToHtml(markdown: string): string {
 }
 
 export function getComponentSVG(className: string): string {
-  return `<svg class="${className}" width="1rem" height="1rem" aria-label=" - component type - "><use xlink:href="${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#component-atom')}" /></svg>`
+  return `<svg class="${className}" width="1rem" height="1rem" aria-label=" - component type - "><use xlink:href="${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#module-molecule')}" /></svg>`
 }
 
 export function getVersionLink(version: string): string {

@@ -77,7 +77,7 @@ describe('Migrate', () => {
     })
 
     expect(getReplacementsWarnings()).toEqual([
-      'initialism class is deprecated in tests/source-boosted.html. See: https://web.unified-design-system.orange.com/docs/foundation/typography',
+      'initialism class is deprecated in tests/source-boosted.html. See: https://web.unified-design-system.orange.com/docs/foundation/reboot',
       'container class is deprecated in tests/source-boosted.html. See: https://web.unified-design-system.orange.com/docs/layout/containers',
       'container-md class is deprecated in tests/source-boosted.html. See: https://web.unified-design-system.orange.com/docs/layout/containers',
       'bg-supporting-purple class is deprecated in tests/source-boosted.html. See: https://web.unified-design-system.orange.com/docs/utilities/background',
@@ -99,6 +99,7 @@ describe('Migrate', () => {
       'btn-social class is deprecated in tests/source-boosted.html. See: https://web.unified-design-system.orange.com/docs/components/buttons#button',
       'placeholder-glow class is deprecated in tests/source-boosted.html. See: https://web.unified-design-system.orange.com/docs/components/skeleton',
       'The tag component using class \'tag\' in tests/source-boosted.html needs to be updated to use the new component DOM. See: https://web.unified-design-system.orange.com/docs/components/tags#tag',
+      'The back-to-top button in tests/source-boosted.html must use dual-mode as it is not supported in OUDS Web.',
       'ratio class is deprecated in tests/source-boosted.html.',
       'The form using class \'was-validated\' in tests/source-boosted.html needs to be updated to use the new form validation style.'
     ])
