@@ -25,7 +25,7 @@ import { getVersionedDocsPath } from '@libs/path'
       <div class="card-top bg-secondary">
         <div class="d-flex align-items-center justify-content-center ratio-16x9" inert>
           <button class="icon-interactive" aria-label="Default icon">
-            <svg aria-hidden="true">
+            <svg class="icon" aria-hidden="true">
               <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
             </svg>
           </button>
@@ -53,14 +53,14 @@ import { getVersionedDocsPath } from '@libs/path'
 In any case, do not forget to add an `aria-label` or a `<span class="visually-hidden">` since there is no discernible text for screen reader users.
 
 <Example buttonLabel="icons semantics" code={`<button class="icon-interactive" aria-label="Button icon">
-    <svg aria-hidden="true">
+    <svg class="icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </button>
 
   <a class="icon-interactive" href="#">
     <span class="visually-hidden">Link icon</span>
-    <svg aria-hidden="true">
+    <svg class="icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </a>`} />
@@ -74,7 +74,7 @@ The interactive icon can be used alone or within other components. It works well
 <Callout type="info" name="info-icons-svg-sprite" />
 
 <Example buttonLabel="interactive icon" class="bd-example" code={`<button class="icon-interactive" aria-label="Default interactive icon">
-    <svg aria-hidden="true">
+    <svg class="icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </button>
@@ -90,13 +90,13 @@ The interactive icon can be used alone or within other components. It works well
 
 <CallToActionDisabledState name="interactive icons">
   <Example slot="buttonExample" buttonLabel="disabled interactive icon button" class="bd-example" code={`<button class="icon-interactive" disabled aria-label="Disabled interactive button icon">
-    <svg aria-hidden="true">
+    <svg class="icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </button>`} />
   <Example slot="anchorExample" buttonLabel="disabled interactive icon link" code={`<a class="icon-interactive" aria-disabled="true">
     <span class="visually-hidden">Disabled interactive icon link</span>
-    <svg aria-hidden="true">
+    <svg class="icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </a>`} />
@@ -106,7 +106,7 @@ The interactive icon can be used alone or within other components. It works well
 
 <LoadingState name="interactive icon" loadingTimeVariable="bs-loading-time">
   <Example slot="beforeLoading" buttonLabel="loading interactive icon before loading" class="bd-example" code={`<button class="icon-interactive" aria-label="Before loading interactive icon">
-    <svg aria-hidden="true">
+    <svg class="icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -115,7 +115,7 @@ The interactive icon can be used alone or within other components. It works well
     <span role="status" id="loading-icon-msg-0" class="visually-hidden d-none"></span>
   </button>`} />
   <Example slot="loading" buttonLabel="loading interactive icon currently loading" class="bd-example" code={`<button class="icon-interactive loading-indeterminate" disabled aria-label="Indeterminate loading interactive icon">
-    <svg aria-hidden="true">
+    <svg class="icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -125,7 +125,7 @@ The interactive icon can be used alone or within other components. It works well
   </button>
 
   <button class="icon-interactive loading-determinate" style="--bs-loading-time: 5s;" disabled aria-label="Determinate loading interactive icon">
-    <svg aria-hidden="true">
+    <svg class="icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -142,7 +142,7 @@ The interactive icon can be used alone or within other components. It works well
 
 <Example buttonLabel="skeleton interactive icon" class="bd-example" code={`<div aria-busy="${true}" inert>
     <button class="icon-interactive" aria-label="Skeleton interactive icon">
-      <svg aria-hidden="true">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
     </button>
@@ -155,19 +155,19 @@ Interactive icons are designed with maximum and minimum width and height, which 
 They can be dimensioned using `.decorative-*-icon` classes on `svg` elements.
 
 <Example buttonLabel="multiple sizes icon" class="bd-example" code={`<button class="icon-interactive" aria-label="Inline style interactive icon" style="width: 2.375rem; height: 2.375rem;">
-    <svg aria-hidden="true">
+    <svg class="icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </button>
 
   <button class="icon-interactive" aria-label="Small interactive icon">
-    <svg class="decorative-small-icon" aria-hidden="true">
+    <svg class="icon decorative-small-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </button>
 
   <button class="icon-interactive" aria-label="Large interactive icon">
-    <svg class="decorative-large-icon" aria-hidden="true">
+    <svg class="icon decorative-large-icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
   </button>`} />

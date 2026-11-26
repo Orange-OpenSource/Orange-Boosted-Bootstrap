@@ -11400,7 +11400,7 @@ ol.bullet-list > li > ol > li > ol > li::before {
   mask-image: var(--bs-badge-icon);
 }
 
-.icon {
+.badge .icon {
   display: flex;
 }
 
@@ -12730,6 +12730,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
 .modal-header .link-previous {
   margin-bottom: var(--bs-modal-header-gap);
 }
+.modal-header .icon {
+  --bs-icon-size: var(--bs-modal-icon-size);
+}
 
 .modal-title {
   display: flex;
@@ -12745,11 +12748,6 @@ ol.bullet-list > li > ol > li > ol > li::before {
 
 .modal-subtitle {
   margin-block-end: 0;
-}
-
-.modal-icon {
-  width: var(--bs-modal-icon-size);
-  height: var(--bs-modal-icon-size);
 }
 
 .modal-icon-positive,
@@ -14386,14 +14384,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
   background: none;
   border: 0;
 }
-.icon-interactive svg:not(.loader),
-.icon-interactive .icon,
-.icon-assistant svg:not(.loader),
-.icon-assistant .icon {
+.icon-interactive .icon:not(.loader),
+.icon-assistant .icon:not(.loader) {
   flex-shrink: 1;
-  width: 1em;
-  height: 1em;
-  overflow: hidden;
   font-size: 1.5rem;
   line-height: 0;
 }

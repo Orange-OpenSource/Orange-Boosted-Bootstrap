@@ -18,12 +18,8 @@
   background: none;
   border: 0;
 
-  svg:not(.loader),
-  .icon {
+  .icon:not(.loader) {
     flex-shrink: 1;
-    width: 1em;
-    height: 1em;
-    overflow: hidden;
     font-size: 1.5rem;
     line-height: 0;
   }
