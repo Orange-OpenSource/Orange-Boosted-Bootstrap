@@ -9232,14 +9232,14 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-badge-color: var(--bs-color-surface-status-positive-emphasized);
 }
 
-.status-icon::before, .status-icon::after {
+.badge .status-icon::before, .badge .status-icon::after {
   position: absolute;
   inset: 0;
   content: "";
   -webkit-mask: no-repeat center/contain;
   mask: no-repeat center/contain;
 }
-.status-icon::before {
+.badge .status-icon::before {
   background-color: currentcolor;
   -webkit-mask-image: var(--bs-badge-icon);
   mask-image: var(--bs-badge-icon);
