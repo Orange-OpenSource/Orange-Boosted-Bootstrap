@@ -8,9 +8,9 @@ Closes #
 
 ### Checklists
 
-- [ ] I have read the [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/.github/CONTRIBUTING.md)
+- [ ] I have read the [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md)
 - [ ] My change follows the [developer guide](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/wiki/Developer-guide)
-- [ ] My change follows the page structure defined in (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/dev-docs/component-doc-template.md)
+- [ ] My change follows the page structure defined in (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dev-docs/component-doc-template.md)
 - [ ] Title and DOM structure is correct
 - [ ] Links have been updated (title change impacts links for example)
 
