@@ -42,9 +42,15 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.',
     // Allow `switch` attribute.
     'Attribute “switch” not allowed on element “input” at this point.',
-    'Element “style” not allowed as child of element “div” in this context.*',
     // Allow empty option in select
-    'Element “option” without attribute “label” must not be empty.'
+    'Element “option” without attribute “label” must not be empty.',
+    // Many pages have skipped heading levels
+    'The heading .*skipping [1-6] heading level.*',
+    'Style rule .* not allowed outside an “@scope” rule in a “style” element in “body”.',
+    'The “aria-invalid” attribute should not be used on element “input”, since its implicit role is “radio”.',
+    'The “aria-disabled” attribute should not be used on element “div”, since its implicit role is “generic”.',
+    'The “aria-disabled” attribute should not be used on element “li”, since its implicit role is “listitem”.',
+    'The “aria-disabled” attribute should not be used on element “a”, since its implicit role is “generic”.'
     // End mod
   ].join('|')
 

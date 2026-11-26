@@ -1,5 +1,5 @@
 /*!
- * OUDS Web Utilities v1.5.0 (https://web.unified-design-system.orange.com/)
+ * OUDS Web Utilities v1.6.0 (https://web.unified-design-system.orange.com/)
  * Copyright 2014-2026 The OUDS Web Authors
  * Copyright 2014-2026 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
@@ -413,6 +413,10 @@
   src: url("https://assets.orange.com/pm_12751_481_481815-qd9nelrt7o--Sosh-Bold.woff2?a=1") format("woff2");
   font-display: swap;
 }
+:root {
+  --bs-theme-name: sosh;
+  --bs-theme-version: 1.6.0;
+}
 :root::after {
   position: fixed;
   top: 0;
@@ -421,7 +425,7 @@
   height: 1px;
   pointer-events: none;
   content: "";
-  background-image: url("https://assets.orange.com/pm_12751_542_542931-ew23c26ecu-ouds-px.png?a=1&b=ssh&lib=ouds-web&v=1.5.0");
+  background-image: url("https://assets.orange.com/pm_12751_542_542931-ew23c26ecu-ouds-px.png?a=1&b=ssh&lib=ouds-web&v=1.6.0");
   opacity: 0;
 }
 
@@ -442,6 +446,8 @@
   --bs-alert-warning-internal-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M10.8 7.5q.2-1 1.2-1t1.2 1l-.2 7.1h-2zm2 10.6-.8.4-.8-.4-.4-.8q0-.5.4-.9.3-.3.8-.3t.9.3.3.9-.3.8'/%3e%3c/svg%3e");
   --bs-alert-error-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M12 2.4a9.6 9.6 0 1 1 0 19.2 9.6 9.6 0 0 1 0-19.2m0 13.2q-.5 0-.8.4t-.4.8.4.8.8.4.9-.4l.3-.8q0-.5-.3-.8a1 1 0 0 0-.9-.4M12 6q-1 .1-1.2 1l.2 7.2h2l.2-7.2Q13 6.1 12 6'/%3e%3c/svg%3e");
   --bs-btn-previous-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M15.7 16.8 10 12l5.6-4.8q.8-1 0-2-1-.6-2 .1L6.8 11q-.7.9 0 1.8l6.7 5.9q1.3 1 2 .1 1.1-1.1 0-2'/%3e%3c/svg%3e");
+  --bs-btn-expanded-false-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M16.8 8.3 12 14 7.1 8.3q-1-.8-2 0-.6 1 .1 2l5.8 6.8q.9.8 1.8 0l5.9-6.7q1-1.2.1-2-1.1-1.2-2 0'/%3e%3c/svg%3e");
+  --bs-btn-expanded-true-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M7.2 15.7 12 10l4.8 5.6q1 .8 2 0 .6-1-.1-2L13 6.8q-.9-.7-1.8 0l-6 6.7q-.8 1.3 0 2 1 1.1 2 0'/%3e%3c/svg%3e");
   --bs-link-external-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M11 5.6A.7.7 0 0 1 11 7H5.4a.7.7 0 0 0-.8.8v11.6h11.8a1 1 0 0 0 .7-.8v-5.8a.7.7 0 1 1 1.4 0v5.8a2 2 0 0 1-2.1 2.2H4.2a1 1 0 0 1-1-1v-12a2 2 0 0 1 2.2-2.2zm9-2.4h.2l.1.1.2.1v.1l.1.2v.1h.1V4l-.3 5-.2.6-.6.2A1 1 0 0 1 19 9l.1-3-5.8 5.6a1 1 0 0 1-1 0 1 1 0 0 1 0-1L18 4.7 15 5a1 1 0 0 1-.8-.7 1 1 0 0 1 .7-.8z'/%3e%3c/svg%3e");
   --bs-font-sans-serif: "Sosh", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: Consolas, "SFMono-Regular", "Roboto Mono", "Liberation Mono", Menlo, monospace;
@@ -505,6 +511,7 @@
   --bs-font-max-width-label-medium: 40rem;
   --bs-font-max-width-label-large: 40rem;
   --bs-font-max-width-label-xlarge: 40rem;
+  --bs-font-max-width-boxed-text: 45rem;
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: var(--bs-font-size-body-medium);
   --bs-body-font-weight: 500;
@@ -547,7 +554,7 @@
   --bs-icon-large-with-body-small: 1.25rem;
   --bs-focus-ring-width: 0.25rem;
   --bs-focus-ring-opacity: 0.25;
-  --bs-focus-ring-color: rgba(241, 94, 0, 0.25);
+  --bs-focus-ring-color: rgba(222, 3, 75, 0.25);
   --bs-form-color-disabled-filter: brightness(0) invert(1) brightness(0.8);
   --bs-form-select-indicator: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath d='M7 7 0 0h14L7 7z'/%3e%3c/svg%3e");
   --bs-form-select-disabled-indicator: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath fill='%23333' d='M7 7 0 0h14L7 7z'/%3e%3c/svg%3e");
@@ -606,6 +613,7 @@
     --bs-font-max-width-label-medium: 40rem;
     --bs-font-max-width-label-large: 40rem;
     --bs-font-max-width-label-xlarge: 40rem;
+    --bs-font-max-width-boxed-text: 50rem;
   }
 }
 @media (min-width: 1320px) {
@@ -657,6 +665,7 @@
     --bs-font-max-width-label-medium: 40rem;
     --bs-font-max-width-label-large: 45rem;
     --bs-font-max-width-label-xlarge: 45rem;
+    --bs-font-max-width-boxed-text: 55rem;
   }
 }
 @media (min-width: 736px) {
@@ -685,7 +694,7 @@
     --bs-space-scaled-3xsmall: 4px;
     --bs-space-scaled-2xsmall: 8px;
     --bs-space-scaled-xsmall: 16px;
-    --bs-space-scaled-small: 24px;
+    --bs-space-scaled-small: 20px;
     --bs-space-scaled-medium: 32px;
     --bs-space-scaled-large: 40px;
     --bs-space-scaled-xlarge: 48px;
@@ -869,7 +878,7 @@
   color-scheme: dark;
   --bs-heading-color: inherit;
   --bs-border-color: #e9eef1;
-  --bs-focus-ring-color: rgba(255, 121, 0, 0.25);
+  --bs-focus-ring-color: rgba(252, 105, 153, 0.25);
   --bs-form-select-indicator: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath fill='%23fff' d='M7 7 0 0h14L7 7z'/%3e%3c/svg%3e");
   --bs-form-select-disabled-indicator: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath fill='%23666' d='M7 7 0 0h14L7 7z'/%3e%3c/svg%3e");
   --bs-form-color-disabled-filter: brightness(0) invert(1) brightness(0.4);
@@ -1015,7 +1024,6 @@
 }
 
 .decorative-2xlarge-icon, .decorative-xlarge-icon, .decorative-large-icon, .decorative-medium-icon, .decorative-small-icon, .decorative-xsmall-icon, .decorative-2xsmall-icon, .decorative-3xsmall-icon, .decorative-4xsmall-icon, .dl-large-icon, .dl-medium-icon, .dl-small-icon, .dm-large-icon, .dm-medium-icon, .dm-small-icon, .ds-large-icon, .ds-medium-icon, .ds-small-icon, .hxl-large-icon, .hxl-medium-icon, .hxl-small-icon, .hl-large-icon, .hl-medium-icon, .hl-small-icon, .hm-large-icon, .hm-medium-icon, .hm-small-icon, .hs-large-icon, .hs-medium-icon, .hs-small-icon, .bl-large-icon, .bl-medium-icon, .bl-small-icon, .bm-large-icon, .bm-medium-icon, .bm-small-icon, .bs-large-icon, .bs-medium-icon, .bs-small-icon, .ls-large-icon, .ls-medium-icon, .ls-small-icon, .lm-large-icon, .lm-medium-icon, .lm-small-icon, .ll-large-icon, .ll-medium-icon, .ll-small-icon, .lxl-large-icon, .lxl-medium-icon, .lxl-small-icon {
-  display: inline-block;
   flex-shrink: 0;
   width: 1em;
   height: 1em;
@@ -4168,7 +4176,7 @@
 
 /* rtl:end:remove */
 .fs-lxl {
-  max-width: var(--bs-font-max-width-label-xlarge);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-label-xlarge));
   font-size: var(--bs-font-size-label-xlarge);
   line-height: var(--bs-font-line-height-label-xlarge);
   /* rtl:remove */
@@ -4176,7 +4184,7 @@
 }
 
 .fs-ll {
-  max-width: var(--bs-font-max-width-label-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-label-large));
   font-size: var(--bs-font-size-label-large);
   line-height: var(--bs-font-line-height-label-large);
   /* rtl:remove */
@@ -4184,7 +4192,7 @@
 }
 
 .fs-lm {
-  max-width: var(--bs-font-max-width-label-medium);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-label-medium));
   font-size: var(--bs-font-size-label-medium);
   line-height: var(--bs-font-line-height-label-medium);
   /* rtl:remove */
@@ -4192,7 +4200,7 @@
 }
 
 .fs-ls {
-  max-width: var(--bs-font-max-width-label-small);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-label-small));
   font-size: var(--bs-font-size-label-small);
   line-height: var(--bs-font-line-height-label-small);
   /* rtl:remove */
@@ -4207,7 +4215,7 @@
 }
 
 .fs-bs {
-  max-width: var(--bs-font-max-width-body-small);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-small));
   font-size: var(--bs-font-size-body-small);
   line-height: var(--bs-font-line-height-body-small);
   /* rtl:remove */
@@ -4215,7 +4223,7 @@
 }
 
 .fs-bm {
-  max-width: var(--bs-font-max-width-body-medium);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-medium));
   font-size: var(--bs-font-size-body-medium);
   line-height: var(--bs-font-line-height-body-medium);
   /* rtl:remove */
@@ -4223,7 +4231,7 @@
 }
 
 .fs-bl {
-  max-width: var(--bs-font-max-width-body-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-body-large));
   font-size: var(--bs-font-size-body-large);
   line-height: var(--bs-font-line-height-body-large);
   /* rtl:remove */
@@ -4231,7 +4239,7 @@
 }
 
 .fs-hs {
-  max-width: var(--bs-font-max-width-heading-small);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-small));
   font-size: var(--bs-font-size-heading-small);
   line-height: var(--bs-font-line-height-heading-small);
   /* rtl:remove */
@@ -4239,7 +4247,7 @@
 }
 
 .fs-hm {
-  max-width: var(--bs-font-max-width-heading-medium);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-medium));
   font-size: var(--bs-font-size-heading-medium);
   line-height: var(--bs-font-line-height-heading-medium);
   /* rtl:remove */
@@ -4247,7 +4255,7 @@
 }
 
 .fs-hl {
-  max-width: var(--bs-font-max-width-heading-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-large));
   font-size: var(--bs-font-size-heading-large);
   line-height: var(--bs-font-line-height-heading-large);
   /* rtl:remove */
@@ -4255,7 +4263,7 @@
 }
 
 .fs-hxl {
-  max-width: var(--bs-font-max-width-heading-xlarge);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-heading-xlarge));
   font-size: var(--bs-font-size-heading-xlarge);
   line-height: var(--bs-font-line-height-heading-xlarge);
   /* rtl:remove */
@@ -4263,7 +4271,7 @@
 }
 
 .fs-ds {
-  max-width: var(--bs-font-max-width-display-small);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-display-small));
   font-size: var(--bs-font-size-display-small);
   line-height: var(--bs-font-line-height-display-small);
   /* rtl:remove */
@@ -4271,7 +4279,7 @@
 }
 
 .fs-dm {
-  max-width: var(--bs-font-max-width-display-medium);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-display-medium));
   font-size: var(--bs-font-size-display-medium);
   line-height: var(--bs-font-line-height-display-medium);
   /* rtl:remove */
@@ -4279,7 +4287,7 @@
 }
 
 .fs-dl {
-  max-width: var(--bs-font-max-width-display-large);
+  max-width: var(--bs-contextual-font-max-width, var(--bs-font-max-width-display-large));
   font-size: var(--bs-font-size-display-large);
   line-height: var(--bs-font-line-height-display-large);
   /* rtl:remove */

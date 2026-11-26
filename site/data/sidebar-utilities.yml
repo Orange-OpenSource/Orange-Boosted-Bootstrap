@@ -2,6 +2,7 @@
   icon: multi-tool-repair
   icon_color: body-color
   pages:
+    - title: Introduction
     - title: API
     - title: Aspect ratio
     - title: Background

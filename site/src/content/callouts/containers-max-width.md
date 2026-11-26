@@ -1,0 +1,1 @@
+The pixel limits listed below for `.container-max-width` and `.container-max-width-wide` apply when the root font size is 16px or smaller. With a larger root font size, both maximum widths grow proportionally using `rem`; reducing the root font size never lowers these maximums below their token values.
