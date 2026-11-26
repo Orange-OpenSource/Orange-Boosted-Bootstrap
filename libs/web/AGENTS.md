@@ -59,7 +59,7 @@ Root scripts delegate to Nx (`npx nx run @ouds/web-common:<script>`); you can al
 
 - Tags: `lib:web-common`, `lib:web-orange`, `lib:web-orange-compact`, `lib:web-sosh`, `lib:web-migrate`. Brand packages may depend only on `lib:web-common`; `web-common` and `web-migrate` depend on nothing.
 - Brand packages declare `"nx": { "projectType": "library" }`; keep it, otherwise Nx treats them as apps and `@ouds/core` / the Storybook apps can no longer import them.
-- `depConstraints` are duplicated in `eslint.config.mjs` (this project), the root `eslint.config.mjs`, and `oxlint.base.json`. Keep the three in sync.
+- `depConstraints` are duplicated in `eslint.config.mjs` (this project), the root `eslint.config.mjs`, and `oxlint.base.jsonc`. Keep the three in sync.
 - Nothing in `libs/web` may import from `@ouds/core`, `@ouds/react`, `@ouds/vue`, or `@ouds/angular`. The framework libraries consume OUDS Web through published packages, not sources.
 
 ## Known issues

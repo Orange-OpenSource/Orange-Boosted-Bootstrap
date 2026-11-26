@@ -57,7 +57,7 @@ The components only emit OUDS Web class names (`btn`, `btn-<variant>`, …). `Ou
 
 This package lives in the [Orange-Boosted-Bootstrap](../../) Nx monorepo. From the repository root:
 
-- `npm run react:lint` — lint via [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) (`.oxlintrc.json` extends root `oxlint.base.json`)
+- `npm run react:lint` — lint via [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) (`.oxlintrc.json` extends root `oxlint.base.jsonc`)
 - `npm run react:test` — run unit/component tests via [Vitest](https://vitest.dev/) 5 with V8 coverage (reports in `coverage/libs/react`)
 - `npm run react:build` — build the package via Vite
 - `npm run storybook:react:serve` — browse the stories in [`apps/react-storybook`](../../apps/react-storybook/AGENTS.md) (port 4400)

@@ -63,10 +63,10 @@ CI runs `lint:all`, `test:all`, and `build:all`; the OUDS Web suites run in thei
 | --------------------------- | ----------------------------------------------- | --------------------------------------- | ----------------------- |
 | `libs/web` (`@ouds/web-*`)  | ESLint 9 (`libs/web/eslint.config.mjs`), Stylelint | Prettier (docs site)                    | Karma/Jasmine, Vitest 4 |
 | `libs/angular`              | ESLint 9 (extends root `eslint.config.mjs`)     | —                                       | Jest (100% coverage)    |
-| `libs/core`, `libs/icons`, `libs/react`, `libs/vue` | Oxlint via `@nx/oxlint` (extends `oxlint.base.json`) | —                                  | Vitest 5 + V8 coverage (100% threshold for react and vue) |
-| `apps/*-storybook`          | Oxlint via `@nx/oxlint` (extends `oxlint.base.json`) | —                                  | —                       |
+| `libs/core`, `libs/icons`, `libs/react`, `libs/vue` | Oxlint via `@nx/oxlint` (extends `oxlint.base.jsonc`) | —                                  | Vitest 5 + V8 coverage (100% threshold for react and vue) |
+| `apps/*-storybook`          | Oxlint via `@nx/oxlint` (extends `oxlint.base.jsonc`) | —                                  | —                       |
 
-`libs/angular` stays on ESLint because Oxlint has no parser for Angular templates, HTML, or JSON rules; `apps/angular-storybook` holds no templates, so it uses Oxlint. Module-boundary `depConstraints` are duplicated in `oxlint.base.json`, `eslint.config.mjs`, and `libs/web/eslint.config.mjs`; keep them in sync.
+`libs/angular` stays on ESLint because Oxlint has no parser for Angular templates, HTML, or JSON rules; `apps/angular-storybook` holds no templates, so it uses Oxlint. Module-boundary `depConstraints` are duplicated in `oxlint.base.jsonc`, `eslint.config.mjs`, and `libs/web/eslint.config.mjs`; keep them in sync.
 
 ## Task orchestration
 

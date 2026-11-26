@@ -8,7 +8,7 @@ Scope: everything under `libs/react/`. The root [`AGENTS.md`](../../AGENTS.md) s
 - `src/components/index.ts` → `src/index.ts` — barrel files and the package's only public API. Re-export every new component and its model (`export * from './<name>/<name>.component'` and `'./<name>/<name>.model'`) through them. `src/index.ts` also re-exports the `Brand` and `Theme` types from `@ouds/core`, which the Storybook preview uses.
 - `vite.config.ts` — Vite library build (ESM + CJS + `.d.ts` via `vite-plugin-dts`), `resolve.tsconfigPaths: true` (resolves the `@ouds/*` paths of `tsconfig.base.json`, so tests and the Storybook app read `@ouds/core` from its sources), and the Vitest `test` block, including coverage.
 - `tsconfig.lib.json` excludes the stories, so `tsconfig.spec.json` includes `*.stories.ts(x)` as well: Vite's `resolve.tsconfigPaths` only applies the `@ouds/*` paths to files covered by a tsconfig, and a story that imports `@ouds/icons` would not build in Storybook otherwise.
-- `.oxlintrc.json` — Oxlint config for this lib; extends the root `oxlint.base.json`.
+- `.oxlintrc.json` — Oxlint config for this lib; extends the root `oxlint.base.jsonc`.
 - `project.json` — Nx targets `build` and `test`; `lint` is inferred by `@nx/oxlint` and intentionally not declared.
 
 ## Commands (run from the repository root)
@@ -36,7 +36,7 @@ Scope: everything under `libs/react/`. The root [`AGENTS.md`](../../AGENTS.md) s
 
 - Tag `lib:react`. `@nx/enforce-module-boundaries` (via `@nx/oxlint/boundaries-plugin`) forbids imports from `@ouds/web-*`, `@ouds/vue`, and `@ouds/angular`.
 - The brand CSS is loaded at runtime from the CDN through `@ouds/core`'s `loadBrandCSS` (called by `OudsProvider`). Any future build-time dependency on OUDS Web must be a **published** package, not `libs/web` sources (see `ARCHITECTURE.md`).
-- If you change `depConstraints` in `oxlint.base.json`, mirror the change in the root `eslint.config.mjs` and `libs/web/eslint.config.mjs`.
+- If you change `depConstraints` in `oxlint.base.jsonc`, mirror the change in the root `eslint.config.mjs` and `libs/web/eslint.config.mjs`.
 
 ## Related
 

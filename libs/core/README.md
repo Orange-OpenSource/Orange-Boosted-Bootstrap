@@ -31,7 +31,7 @@ loadBrandCSS(brand)
 
 This package lives in the [Orange-Boosted-Bootstrap](../../) Nx monorepo. From the repository root:
 
-- `npm run core:lint` — lint via [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) (`.oxlintrc.json` extends root `oxlint.base.json`)
+- `npm run core:lint` — lint via [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) (`.oxlintrc.json` extends root `oxlint.base.jsonc`)
 - `npm run core:test` — unit tests via [Vitest](https://vitest.dev/) 5 (jsdom) with V8 coverage (reports in `coverage/libs/core`)
 - `npm run core:build` — Vite library build (ESM `index.js` + CJS `index.cjs` + type declarations) into `dist/libs/core`
 - `npm run lint:all` / `test:all` / `build:all` — run the same target across the projects listed in the root `package.json` (`test:all` covers `@ouds/core` and the three framework libraries; `lint:all` and `build:all` also include `@ouds/web-common` and the Storybook apps)

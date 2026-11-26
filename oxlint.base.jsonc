@@ -1,8 +1,9 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  // Shared Oxlint base config for @ouds/react and @ouds/vue.
-  // Named oxlint.base.json (not .oxlintrc.json) so @nx/oxlint does not infer
-  // a lint target for ESLint-linted projects (@ouds/angular, @ouds/web-*).
+  // Shared Oxlint base config for @ouds/core, @ouds/icons, @ouds/react, @ouds/vue,
+  // and the three Storybook apps (each extends it from its .oxlintrc.json).
+  // Named oxlint.base.jsonc (not .oxlintrc.json/.oxlintrc.jsonc) so @nx/oxlint does not
+  // infer a lint target for ESLint-linted projects (@ouds/angular, @ouds/web-*).
   "plugins": ["typescript", "unicorn", "oxc"],
   "jsPlugins": ["@nx/oxlint/boundaries-plugin"],
   "categories": {

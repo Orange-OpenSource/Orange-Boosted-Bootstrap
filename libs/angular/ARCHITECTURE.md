@@ -38,7 +38,7 @@ No OUDS Web package is a dependency of this library yet. Add one as a `peerDepen
 
 ### Why ESLint instead of Oxlint
 
-`@ouds/core`, `@ouds/react`, and `@ouds/vue` use Oxlint (`@nx/oxlint`, shared root `oxlint.base.json`), but Oxlint has no parser for Angular templates, HTML, or JSON, so the `@angular-eslint` rules can only run on ESLint. This library stays on ESLint until Oxlint covers Angular. It deliberately has no `.oxlintrc.json`, which would make `@nx/oxlint` infer a second lint target. The module-boundary `depConstraints` therefore live in the root `eslint.config.mjs` (this library), `oxlint.base.json` (core, React, Vue, and the Storybook apps), and `libs/web/eslint.config.mjs` (OUDS Web). Keep them in sync.
+`@ouds/core`, `@ouds/react`, and `@ouds/vue` use Oxlint (`@nx/oxlint`, shared root `oxlint.base.jsonc`), but Oxlint has no parser for Angular templates, HTML, or JSON, so the `@angular-eslint` rules can only run on ESLint. This library stays on ESLint until Oxlint covers Angular. It deliberately has no `.oxlintrc.json`, which would make `@nx/oxlint` infer a second lint target. The module-boundary `depConstraints` therefore live in the root `eslint.config.mjs` (this library), `oxlint.base.jsonc` (core, React, Vue, and the Storybook apps), and `libs/web/eslint.config.mjs` (OUDS Web). Keep them in sync.
 
 ### Why Jest instead of Vitest
 

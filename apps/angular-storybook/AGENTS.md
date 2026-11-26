@@ -10,7 +10,7 @@ Scope: everything under `apps/angular-storybook/`. The root [`AGENTS.md`](../../
 - `.storybook/storybook.css` — Storybook-only styles.
 - `.storybook/toolbar-addon.ts` — manager addon registered from `manager.ts` (same structure in the three apps). It adds a read-only toolbar label with the versions of the library, `@ouds/web-orange`, and Angular, read from their `package.json` files. It is not a global type; to change the label, edit the `labels` array.
 - `src/typings.d.ts` — ambient type declarations for the Storybook build.
-- `.oxlintrc.json` — extends the root `oxlint.base.json` and adds `import`.
+- `.oxlintrc.json` — extends the root `oxlint.base.jsonc` and adds `import`.
 - `project.json` — `build-angular` (`@angular-devkit/build-angular:browser`, the Angular build Storybook delegates to), `serve`/`storybook` (`@storybook/angular:start-storybook`, port 4400), `build` (`@storybook/angular:build-storybook` into `dist/apps/angular-storybook`), and `static`. `lint` is inferred by `@nx/oxlint` and is not declared. Global CSS (`@ouds/web-orange` + `storybook.css`) is injected through the `styles` option of these targets.
 
 ## Commands (run from the repository root)

@@ -45,7 +45,7 @@ This library stays on ESLint on purpose: Oxlint has no parser for Angular templa
 
 - Tag `lib:angular`. `@nx/enforce-module-boundaries` (root `eslint.config.mjs`) forbids imports from `@ouds/web-*`, `@ouds/react`, and `@ouds/vue`.
 - The brand CSS is loaded at runtime from the CDN through `@ouds/core`'s `loadBrandCSS` (called by `OudsProviderComponent`). Any future build-time dependency on OUDS Web must be a **published** package, not `libs/web` sources (see `ARCHITECTURE.md`).
-- If you change `depConstraints` in the root `eslint.config.mjs`, mirror the change in `oxlint.base.json` and `libs/web/eslint.config.mjs`.
+- If you change `depConstraints` in the root `eslint.config.mjs`, mirror the change in `oxlint.base.jsonc` and `libs/web/eslint.config.mjs`.
 
 ## Related
 

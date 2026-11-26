@@ -16,7 +16,7 @@ on:
       - '.prettierrc'
       - 'package-lock.json'
       - 'tsconfig.base.json'
-      - 'oxlint.base.json'
+      - 'oxlint.base.jsonc'
       - 'eslint.config.mjs'
   pull_request:
     types: [opened, reopened, synchronize]

@@ -12,7 +12,7 @@ Framework-agnostic code shared by `@ouds/react`, `@ouds/vue`, and `@ouds/angular
 - `src/utils/<area>/<area>.util.ts` + co-located `<area>.util.spec.ts` — utilities (today `brand/brand.util.ts`, which exports `loadBrandCSS`, and `icon/icon.util.ts`, which exports `getIconPaths` and `getIconSizeClass`).
 - `src/index.ts` → `src/types/index.ts`, `src/utils/index.ts` — barrel files and the only public API. Re-export every new type or utility through them.
 - `vite.config.ts` — Vite library build (ESM + CJS, `.d.ts` via `vite-plugin-dts`) and the Vitest `test` block, including V8 coverage (reports only; unlike the framework libraries, no threshold is enforced).
-- `.oxlintrc.json` — Oxlint config; extends the root `oxlint.base.json` and adds `import`.
+- `.oxlintrc.json` — Oxlint config; extends the root `oxlint.base.jsonc` and adds `import`.
 - `project.json` — `build` (`@nx/vite:build`), `test` (`vitest run --coverage`), `nx-release-publish`; `lint` is inferred by `@nx/oxlint`.
 
 ## Commands (run from the repository root)
@@ -35,12 +35,12 @@ Framework-agnostic code shared by `@ouds/react`, `@ouds/vue`, and `@ouds/angular
 
 - The CDN URL is pinned to the brand versions present when `@ouds/core` was built. Rebuild and release core to pick up a new OUDS Web release.
 - Always use named `{ version }` imports. A default import inlines the whole `package.json` (≈10 kB).
-- These three `package.json` paths are listed in `allow` of `@nx/enforce-module-boundaries` (root `oxlint.base.json` and `eslint.config.mjs`), because the brand packages have no build target and the rule otherwise forbids buildable libraries from importing them.
+- These three `package.json` paths are listed in `allow` of `@nx/enforce-module-boundaries` (root `oxlint.base.jsonc` and `eslint.config.mjs`), because the brand packages have no build target and the rule otherwise forbids buildable libraries from importing them.
 
 ## Boundaries
 
 - Tag `lib:core`. It may import only `lib:web-orange`, `lib:web-orange-compact`, and `lib:web-sosh` (the `package.json` version imports above). `lib:react`, `lib:vue`, and `lib:angular` may import `lib:core`.
-- Keep `depConstraints` and `allow` identical in `oxlint.base.json` and `eslint.config.mjs`.
+- Keep `depConstraints` and `allow` identical in `oxlint.base.jsonc` and `eslint.config.mjs`.
 
 ## Releases
 

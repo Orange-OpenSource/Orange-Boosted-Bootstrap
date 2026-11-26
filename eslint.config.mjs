@@ -10,7 +10,7 @@ export default [
     {
         files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
         rules: {
-            // Keep depConstraints in sync with oxlint.base.json (used by @ouds/react and @ouds/vue).
+            // Keep depConstraints in sync with oxlint.base.jsonc (used by the Oxlint projects).
             '@nx/enforce-module-boundaries': [
                 'error',
                 {
