@@ -55,11 +55,11 @@ Add `.use-rounded-corner-inputs` on a parent container (e.g. `<body>`). Project-
 
 ### Leading icon
 
-Place `<svg>` inside `.text-input-container` before the label:
+Place `<svg>`, `<img>` or `<span>` with `.icon` class inside `.text-input-container` before the label:
 
 ```html
 <div class="text-input-container">
-  <svg aria-hidden="true">
+  <svg class="icon" aria-hidden="true">
     <use xlink:href="/path/to/sprite.svg#heart-empty" />
   </svg>
   <label for="input">Label</label>
@@ -76,7 +76,7 @@ Place a minimal icon button (`.btn .btn-minimal .btn-icon`) after the input insi
   <label for="input">Label</label>
   <input type="text" class="text-input-field" id="input" placeholder=" " />
   <button type="button" class="btn btn-minimal btn-icon">
-    <svg aria-hidden="true">
+    <svg class="icon" aria-hidden="true">
       <use xlink:href="/path/to/sprite.svg#heart-empty" />
     </svg>
     <span class="visually-hidden">Action</span>

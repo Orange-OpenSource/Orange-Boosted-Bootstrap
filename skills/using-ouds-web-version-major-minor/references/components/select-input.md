@@ -35,11 +35,11 @@ Add `.use-rounded-corner-inputs` on a parent container (e.g. `<body>`). Affects 
 
 ### Leading icon
 
-Place `<svg>` or `<img>` inside `.select-input-container` before the label:
+Place `<svg>`, `<img>` or `<span>` with `.icon` class inside `.select-input-container` before the label:
 
 ```html
 <div class="select-input-container">
-  <svg aria-hidden="true">
+  <svg class="icon" aria-hidden="true">
     <use xlink:href="/path/to/sprite.svg#heart-empty" />
   </svg>
   <label for="mySelect">Label</label>

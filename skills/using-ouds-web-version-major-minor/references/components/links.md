@@ -59,11 +59,11 @@ Add `.link-external` for a right-side external-link icon. Add visually hidden te
 
 #### With icon
 
-Use `.icon-link` with an icon before the text. Icons auto-size to `1em`. For font icons, add `.icon` class.
+Use `.icon-link` with an icon before the text. Icons must use `.icon` class. They auto-size to `1em`.
 
 ```html
 <a class="link icon-link" href="#">
-  <svg aria-hidden="true">
+  <svg class="icon" aria-hidden="true">
     <use xlink:href="/path/to/sprite.svg#heart-empty" />
   </svg>
   Link with icon

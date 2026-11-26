@@ -40,26 +40,26 @@ Add `.tag-muted` for secondary/muted appearance:
 
 ### Icon (non-functional)
 
-Add icon with `.tag-icon` class inside the tag. Always `aria-hidden="true"`.
+Add icon with `.icon` class inside the tag. Always `aria-hidden="true"`.
 
 ```html
 <li class="tag">
-  <svg aria-hidden="true" class="tag-icon">
+  <svg aria-hidden="true" class="icon">
     <use xlink:href="/path/to/sprite.svg#heart-empty" />
   </svg>
   Label
 </li>
 ```
 
-Font icon variant: `<span class="si-settings tag-icon" aria-hidden="true"></span>`
+Font icon variant: `<span class="si-settings icon" aria-hidden="true"></span>`
 
 ### Status icon (functional)
 
-Add `<span class="tag-status-icon"></span>` — each functional status has a dedicated icon. Do not use other icons.
+Add `<span class="status-icon"></span>` — each functional status has a dedicated icon. Do not use other icons.
 
 ```html
 <li class="tag tag-positive">
-  <span class="tag-status-icon"></span>
+  <span class="status-icon"></span>
   Activated
 </li>
 ```
@@ -125,7 +125,7 @@ Use `.align-middle` when placing tags next to text: `<h2>Title <span class="tag 
 
 Non-interactive tag for non-functional categories (promotions, events, benefits...). Add `.tag-categorical-1` to `.tag-categorical-5` to the `.tag` (no unnumbered class). Numbers are colour slots whose actual colour depends on theme, product or market: they never mean success, warning, error, priority or severity (use a standard functional tag for that). Keep the same colour/category association within a context. Emphasized only (no `.tag-muted`).
 
-Bullet (`.tag-bullet`), icon (`.tag-icon`), `.tag-small`, `.rounded-none`, `.loading`, `.disabled` and skeleton work like on a standard tag. Do not use `.tag-status-icon`.
+Bullet (`.tag-bullet`), icon (`.icon`), `.tag-small`, `.rounded-none`, `.loading`, `.disabled` and skeleton work like on a standard tag. Do not use `.status-icon`.
 
 ```html
 <li class="tag tag-categorical-1">

@@ -26,11 +26,11 @@ Add `.use-rounded-corner-buttons` on a top container (e.g. `<body>`).
 
 ### With icon (text + icon)
 
-Place SVG or font-icon inside the button. Mark icon `aria-hidden="true"`. Spacing is handled automatically.
+Place `<svg>`, `<img>` or font-icon inside the button with `.icon`. Mark icon `aria-hidden="true"`. Spacing is handled automatically.
 
 ```html
 <button type="button" class="btn btn-default">
-  <svg aria-hidden="true">
+  <svg class="icon" aria-hidden="true">
     <use xlink:href="path/to/ouds-web-sprite.svg#heart-empty" />
   </svg>
   Default
@@ -43,7 +43,7 @@ Add `.btn-icon`. Provide accessible name via `.visually-hidden` or `aria-label`.
 
 ```html
 <button type="button" class="btn btn-icon btn-default">
-  <svg aria-hidden="true">
+  <svg class="icon" aria-hidden="true">
     <use xlink:href="path/to/ouds-web-sprite.svg#heart-empty" />
   </svg>
   <span class="visually-hidden">Favourite</span>
@@ -57,14 +57,14 @@ Add `.btn-icon`. Provide accessible name via `.visually-hidden` or `aria-label`.
 
 ### Loading
 
-Add `.loading-indeterminate` or `.loading-determinate` to the button. Include a loader SVG and a `<span role="status">` for screen readers. Set `disabled` while loading.
+Add `.loading-indeterminate` or `.loading-determinate` to the button. Include a loader SVG with `.icon` and a `<span role="status">` for screen readers. Set `disabled` while loading.
 
 For determinate loading, set `--bs-btn-loading-time` CSS variable (e.g. `style="--bs-btn-loading-time: 5s;"`).
 
 ```html
 <button type="button" class="btn btn-default loading-indeterminate" disabled>
   Download file
-  <svg viewBox="0 0 40 40" class="loader" aria-hidden="true">
+  <svg viewBox="0 0 40 40" class="icon loader" aria-hidden="true">
     <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
   </svg>
   <span role="status" class="visually-hidden">Downloading file</span>

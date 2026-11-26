@@ -6,7 +6,7 @@ Two types: **alert message** (`.alert-message`) and **inline alert** (`.alert` a
 
 - Base class: `.alert` on a `<div>`
 - `.alert-label` — mandatory title element
-- `.alert-icon` — icon container
+- `.icon-container` — icon container
 
 ## Alert message
 
@@ -19,7 +19,7 @@ Add `.alert-message` to `.alert`. Uses extra layout classes:
 
 ```html
 <div class="alert alert-message alert-negative">
-  <div class="alert-icon"><p class="visually-hidden">Error</p></div>
+  <div class="icon-container"><p class="visually-hidden">Error</p></div>
   <div class="alert-container">
     <div class="alert-text-container">
       <p class="alert-label">Connection failed.</p>
@@ -34,13 +34,13 @@ Add `.alert-message` to `.alert`. Uses extra layout classes:
 
 ### Non-functional variants
 
-Default (no modifier) and `.alert-accent` — require a custom icon in `.alert-icon` (SVG, `<img>`, or `.icon`). Icon can be removed entirely for non-functional alerts (add `.visually-hidden` context in label).
+Default (no modifier) and `.alert-accent` — require a custom icon in `.icon-container` (SVG, `<img>`, or `<span>` with `.icon`). Icon can be removed entirely for non-functional alerts (add `.visually-hidden` context in label).
 
 ### Custom icon (non-functional only)
 
-- Place `<svg>`, `<img>`, or `.icon` inside `.alert-icon`
+- Place `<svg>`, `<img>`, or `<span>` with `.icon` inside `.icon-container`
 - Or set CSS custom property `--bs-alert-icon` on the `.alert`
-- Or apply `mask-image` on `.alert-icon`
+- Or apply `mask-image` on `.icon-container`
 
 ### Close button
 
@@ -77,12 +77,12 @@ Use `.alert` without `.alert-message`. Simpler structure — no `.alert-containe
 
 ```html
 <div class="alert alert-info">
-  <div class="alert-icon"></div>
+  <div class="icon-container"></div>
   <p class="alert-label">We're processing your request.</p>
 </div>
 ```
 
-Non-functional inline alerts require a custom icon specified in `.alert-icon`.
+Non-functional inline alerts require a custom icon specified in `.icon-container`.
 
 ## Skeleton
 
@@ -91,7 +91,7 @@ Wrap in `<div aria-busy="true" inert>`.
 ## Accessibility
 
 - Wrap text in semantic elements (`<p>`, `<hn>`)
-- Add `.visually-hidden` text in `.alert-icon` when title is not self-explanatory
+- Add `.visually-hidden` text in `.icon-container` when title is not self-explanatory
 - Label close buttons via `aria-labelledby`, `aria-label`, or `.visually-hidden` content
 - For dynamic alerts: use `role="status"` (informational) or `role="alert"` (urgent action required)
 
@@ -102,4 +102,4 @@ Wrap in `<div aria-busy="true" inert>`.
 - Methods: `close`, `dispose`, `getInstance`, `getOrCreateInstance`
 - Events: `close.bs.alert`, `closed.bs.alert`
 
-> **Not Bootstrap:** Alert variants are `.alert-negative`, `.alert-positive`, `.alert-info`, `.alert-warning`, `.alert-accent` (not `.alert-danger`, `.alert-success`, `.alert-primary`). Structure uses `.alert-message`, `.alert-container`, `.alert-text-container`, `.alert-action-container` layout classes. Icons are handled via `.alert-icon` container, not inline SVGs.
+> **Not Bootstrap:** Alert variants are `.alert-negative`, `.alert-positive`, `.alert-info`, `.alert-warning`, `.alert-accent` (not `.alert-danger`, `.alert-success`, `.alert-primary`). Structure uses `.alert-message`, `.alert-container`, `.alert-text-container`, `.alert-action-container` layout classes. Icons are handled via `.icon-container` container, not inline SVGs.

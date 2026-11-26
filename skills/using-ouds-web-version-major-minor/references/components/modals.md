@@ -86,11 +86,11 @@ Add `<p class="modal-subtitle">` above `.modal-title` inside `.modal-header` to 
 
 ### Title icon
 
-Add an icon element with `.modal-icon` inside `.modal-title`. Use `aria-hidden="true"` for a decorative icon. For status icons, use one of the functional variants below and include a visually hidden text label inside the icon.
+Add an icon element with `.icon` inside `.modal-title`. Use `aria-hidden="true"` for a decorative icon. For status icons, use one of the functional variants below and include a visually hidden text label inside the icon.
 
 ### Functional modals
 
-Apply one of these classes to `.modal-icon` to indicate the dialog status: `.modal-icon-negative`, `.modal-icon-positive`, `.modal-icon-info`, or `.modal-icon-warning`. Include a `.visually-hidden` label that communicates the status (for example, “Warning” or “Success”).
+Apply one of these classes to `.icon` to indicate the dialog status: `.modal-icon-negative`, `.modal-icon-positive`, `.modal-icon-info`, or `.modal-icon-warning`. Include a `.visually-hidden` label that communicates the status (for example, “Warning” or “Success”).
 
 ### Without close button
 
