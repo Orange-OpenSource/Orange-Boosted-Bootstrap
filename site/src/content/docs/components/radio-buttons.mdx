@@ -149,7 +149,7 @@ To display a divider, add `.control-item-divider` to a `.radio-button-item`.
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
-To display an icon, add `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside, as a child of a `.radio-button-item`.
+To display an icon, add `.control-item-assets-container` and an `<svg>`, `<img>` or `<span>` element with a `.icon` class inside, as a child of a `.radio-button-item`.
 
 <Example buttonLabel="radio button items with icon" code={`<fieldset class="control-items-list">
 
@@ -161,7 +161,7 @@ To display an icon, add `.control-item-assets-container` with an icon (SVG or fo
         <label class="control-item-label" for="radioButtonItemWithSVG">Default radio button item with an SVG icon</label>
       </div>
       <div class="control-item-assets-container">
-        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+        <svg class="icon" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
       </div>
@@ -176,6 +176,18 @@ To display an icon, add `.control-item-assets-container` with an icon (SVG or fo
       </div>
       <div class="control-item-assets-container">
         <span class="icon si si-settings" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="radio-button-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="radio" value="" id="radioWithImage" name="radioIcon" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="radioWithImage">Default radio button with an image</label>
+      </div>
+      <div class="control-item-assets-container">
+        <img class="icon" src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
       </div>
     </div>
 
@@ -496,7 +508,7 @@ It's recommended to keep radio button item labels to no more than three words. W
             <p class="control-item-description" id="radioButtonItemLayout1Description">Description text</p>
           </div>
           <div class="control-item-assets-container">
-            <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+              <svg class="icon" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
               <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
             </svg>
           </div>
@@ -512,7 +524,7 @@ It's recommended to keep radio button item labels to no more than three words. W
             <p class="control-item-description" id="radioButtonItemLayout2Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
           </div>
           <div class="control-item-assets-container">
-            <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+            <svg class="icon" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
               <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
             </svg>
           </div>
@@ -540,7 +552,7 @@ To reverse the radio button item, simply add `.control-item-reverse` to a `.radi
             <p class="control-item-description" id="radioButtonItemLayoutRev1Description">Description text</p>
           </div>
           <div class="control-item-assets-container">
-            <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+            <svg class="icon" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
               <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
             </svg>
           </div>
@@ -556,7 +568,7 @@ To reverse the radio button item, simply add `.control-item-reverse` to a `.radi
             <p class="control-item-description" id="radioButtonItemLayoutRev2Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
           </div>
           <div class="control-item-assets-container">
-            <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+            <svg class="icon" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
               <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
             </svg>
           </div>
@@ -659,7 +671,7 @@ For accessibility reasons, it is required to provide understandable radio button
           <p class="control-item-description" id="radioButtonItemGroup1Description">Description text</p>
         </div>
         <div class="control-item-assets-container">
-          <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <svg class="icon" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
             <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
           </svg>
         </div>
@@ -675,7 +687,7 @@ For accessibility reasons, it is required to provide understandable radio button
           <p class="control-item-description" id="radioButtonItemGroup2Description">Description text</p>
         </div>
         <div class="control-item-assets-container">
-          <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <svg class="icon" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
             <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
           </svg>
         </div>

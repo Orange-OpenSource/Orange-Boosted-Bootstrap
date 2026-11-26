@@ -54,7 +54,7 @@ Add `.control-item-divider` to `.switch-item`.
 
 #### Icon
 
-Add a `.control-item-assets-container` with icon as the **last child** of `.switch-item` (CSS reverses flow).
+Add a `.control-item-assets-container` with icon (with `.icon` class) as the **last child** of `.switch-item` (CSS reverses flow).
 
 ```html
 <li class="switch-item">
@@ -71,7 +71,7 @@ Add a `.control-item-assets-container` with icon as the **last child** of `.swit
     <label class="control-item-label" for="switchItemWithIcon">Switch item with icon</label>
   </div>
   <div class="control-item-assets-container">
-    <svg aria-hidden="true">
+    <svg class="icon" aria-hidden="true">
       <use xlink:href="/path/to/sprite.svg#heart-empty" />
     </svg>
   </div>

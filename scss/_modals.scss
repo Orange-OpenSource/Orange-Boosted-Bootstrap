@@ -238,6 +238,10 @@ $modal-transition-dimension: -3rem !default;
   .link-previous {
     margin-bottom: var(--#{$prefix}modal-header-gap);
   }
+
+  .icon {
+    --#{$prefix}icon-size: var(--#{$prefix}modal-icon-size);
+  }
 }
 
 .modal-title {
@@ -250,11 +254,6 @@ $modal-transition-dimension: -3rem !default;
 
 .modal-subtitle {
   margin-block-end: 0;
-}
-
-.modal-icon {
-  width: var(--#{$prefix}modal-icon-size);
-  height: var(--#{$prefix}modal-icon-size);
 }
 
 .modal-icon-positive,

@@ -54,11 +54,11 @@ Add `.control-item-divider` to `.radio-button-item`.
 
 #### Icon
 
-Add a second `.control-item-assets-container` with an icon as a child of `.radio-button-item` (after the text container):
+Add a second `.control-item-assets-container` with an icon (with `.icon` class) as a child of `.radio-button-item` (after the text container):
 
 ```html
 <div class="control-item-assets-container">
-  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="icon" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/path/to/sprite.svg#heart-empty" />
   </svg>
 </div>

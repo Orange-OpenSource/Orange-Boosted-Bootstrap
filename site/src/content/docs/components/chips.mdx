@@ -59,6 +59,8 @@ Chip components are always displayed in a containing `<ul>` list with a `.chips-
 
 `.chip-interactive` is the element that carries the interactive part of the component.
 
+`.icon` is used to style the chip variants with an icon.
+
 ### Accessibility
 
 #### Semantics
@@ -186,7 +188,7 @@ Use our [button JS plugin](#javascript) through `data-bs-toggle="button"` attrib
 
 #### Text and icon
 
-To display an icon add the icon as the last child of the `.chip-interactive`.
+To display an icon, add the icon as the last child of the `.chip-interactive`.
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
@@ -196,7 +198,7 @@ To display an icon add the icon as the last child of the `.chip-interactive`.
       <input type="checkbox" id="filterWithIcon" />
       <label class="chip-interactive" for="filterWithIcon">
         Filter with icon
-        <svg aria-hidden="true">
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
       </label>
@@ -205,10 +207,16 @@ To display an icon add the icon as the last child of the `.chip-interactive`.
     <li class="chip chip-filter">
       <input type="checkbox" id="filterWithIcon2" checked />
       <label class="chip-interactive" for="filterWithIcon2">
-        Another filter with icon
-        <svg aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-        </svg>
+        Another filter with font icon
+        <span class="icon si-settings decorative-2xsmall-icon" aria-hidden="true"></span>
+      </label>
+    </li>
+
+    <li class="chip chip-filter">
+      <input type="checkbox" id="filterWithIcon3" checked />
+      <label class="chip-interactive" for="filterWithIcon3">
+        Another filter with image
+        <img class="icon" src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
       </label>
     </li>
 
@@ -227,7 +235,7 @@ Make sure to provide an accessible text for each chip.
     <li class="chip chip-filter">
       <input type="checkbox" id="filterIconOnly1" />
       <label class="chip-interactive chip-icon" for="filterIconOnly1">
-        <svg aria-hidden="true">
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
         <span class="visually-hidden">Favorites</span>
@@ -239,6 +247,14 @@ Make sure to provide an accessible text for each chip.
       <label class="chip-interactive chip-icon" for="filterIconOnly2">
         <span class="icon si si-settings" aria-hidden="true"></span>
         <span class="visually-hidden">Technical</span>
+      </label>
+    </li>
+
+    <li class="chip chip-filter">
+      <input type="checkbox" id="filterIconOnly3" />
+      <label class="chip-interactive chip-icon" for="filterIconOnly3">
+        <img class="icon" src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+        <span class="visually-hidden">Delivery</span>
       </label>
     </li>
 
@@ -258,7 +274,7 @@ The following example shows every possible renderings depending on the filter ch
       <input type="checkbox" id="disabledFilter" checked disabled />
       <label class="chip-interactive" for="disabledFilter">
         Disabled checked filter
-        <svg aria-hidden="true">
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
       </label>
@@ -267,7 +283,7 @@ The following example shows every possible renderings depending on the filter ch
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button" aria-pressed="false" disabled type="button">
         Disabled unchecked filter
-        <svg aria-hidden="true">
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
       </button>
@@ -374,19 +390,24 @@ To display an icon, add the icon as the first child of the `.chip-interactive`.
 
     <li class="chip chip-suggestion">
       <button class="chip-interactive" type="button">
-        <svg aria-hidden="true">
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
-        Suggestion with icon 1
+        Suggestion with sprite icon
       </button>
     </li>
 
     <li class="chip chip-suggestion">
       <button class="chip-interactive" type="button">
-        <svg aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-        </svg>
-        Suggestion with icon 2
+        <span class="icon si-settings decorative-2xsmall-icon" aria-hidden="true"></span>
+        Suggestion with font icon
+      </button>
+    </li>
+
+    <li class="chip chip-suggestion">
+      <button class="chip-interactive" type="button">
+        <img class="icon" src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+        Suggestion with image
       </button>
     </li>
 
@@ -404,7 +425,7 @@ Make sure to provide an accessible text for each chip.
 
     <li class="chip chip-suggestion">
       <button class="chip-interactive chip-icon" type="button">
-        <svg aria-hidden="true">
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
         <span class="visually-hidden">I love it.</span>
@@ -415,6 +436,13 @@ Make sure to provide an accessible text for each chip.
       <button class="chip-interactive chip-icon" type="button">
         <span class="icon si si-settings" aria-hidden="true"></span>
         <span class="visually-hidden">Go to parameters.</span>
+      </button>
+    </li>
+
+    <li class="chip chip-suggestion">
+      <button class="chip-interactive chip-icon" type="button">
+        <img class="icon" src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
+        <span class="visually-hidden">Delivered.</span>
       </button>
     </li>
 
@@ -438,7 +466,7 @@ The following example shows every possible renderings depending on the suggestio
 
     <li class="chip chip-suggestion">
       <button class="chip-interactive" disabled type="button">
-        <svg aria-hidden="true">
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
         Suggestion with icon 1
@@ -713,7 +741,7 @@ A chip's text should not exceed one line. When needed, it also supports `<br/>` 
     <label class="chip-interactive" for="wrappingChip">
       Filter chip<br/>
       with a very long label
-      <svg aria-hidden="true">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
       </svg>
     </label>
@@ -721,7 +749,7 @@ A chip's text should not exceed one line. When needed, it also supports `<br/>` 
 
   <div class="chip chip-suggestion">
     <button class="chip-interactive" type="button">
-      <svg aria-hidden="true">
+      <svg class="icon" aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
       </svg>
       Suggestion chip<br/>

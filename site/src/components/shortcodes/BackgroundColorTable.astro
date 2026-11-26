@@ -130,7 +130,7 @@ if (basicClasses.length) {
           <th class="w-50" scope="row">
             <var>{ getUsage(token.colorName, colorPrefix) }</var>
             <button data-clipboard-text={getUsage(token.colorName, colorPrefix).replaceAll('.', '')} type="button" class="btn btn-minimal btn-icon btn-clipboard m-3xsmall">
-              <svg aria-hidden="true">
+              <svg aria-hidden="true" class="icon">
                 <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use>
               </svg>
             </button>
@@ -158,7 +158,7 @@ if (basicClasses.length) {
           <td class="w-25">
             <var>{getRecommendedThemeFor(token) ?? '—'}</var>
             { getRecommendedThemeFor(token) && (<button data-clipboard-text={`data-bs-theme="${getRecommendedThemeFor(token)}"`} data-bs-title="Copy class to clipboard" type="button" class="btn btn-minimal btn-icon btn-clipboard m-3xsmall">
-              <svg aria-hidden="true">
+              <svg aria-hidden="true" class="icon">
                 <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use>
               </svg>
             </button>)}

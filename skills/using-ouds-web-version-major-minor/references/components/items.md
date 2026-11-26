@@ -92,7 +92,7 @@ Wrap items in `<ul class="item-list">`, one `<li class="item">` per row.
 
 Supported assets, applied on `.item-leading-container` / `.item-trailing-container`:
 
-- **Icon**: sizeable with `.item-leading-large` / `.item-trailing-large`. For status icons use `.item-icon` + one of `.item-status-positive`, `.item-status-warning`, `.item-status-info`, `.item-status-negative`.
+- **Icon**: add `.icon` on icon element, sizeable with `.item-leading-large` / `.item-trailing-large`. For status icons use `.icon` + one of `.item-status-positive`, `.item-status-warning`, `.item-status-info`, `.item-status-negative`.
 - **Image**: sizeable with `.item-leading-large`/`.item-leading-xlarge` (or trailing equivalents), combine with [aspect ratio utilities](../utilities/aspect-ratio.md) and `.item-leading-rounded` / `.item-trailing-rounded`.
 - **Slot** (leading/trailing only): add `.item-slot` on the container. Max size `$ouds-dimension-8xlarge`. Can be rounded with `.item-leading-rounded` / `.item-trailing-rounded`.
 - **Trailing-only extras**: text (`.item-label`, optionally `.item-extra-label`, `.text-muted`, `.fw-bold`), badge (any [badge](badges.md) variant), tag (any tag variant).
@@ -102,7 +102,7 @@ Supported assets, applied on `.item-leading-container` / `.item-trailing-contain
   <div class="item-container">
     <div class="item-content">
       <div class="item-leading-container item-leading-large">
-        <svg class="w-100 h-100" aria-hidden="true"><use xlink:href="path/to/ouds-web-sprite.svg#heart-empty"/></svg>
+        <svg class="icon w-100 h-100" aria-hidden="true"><use xlink:href="path/to/ouds-web-sprite.svg#heart-empty"/></svg>
       </div>
       <div class="item-text-container">
         <p class="item-label">Label</p>

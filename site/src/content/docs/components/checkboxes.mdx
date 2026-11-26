@@ -151,7 +151,7 @@ To display a divider, add `.control-item-divider` to a `.checkbox-item`.
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
-To display an icon, add `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside, as a child of a `.checkbox-item`.
+To display an icon, add `.control-item-assets-container` and an icon (SVG or font-icon most likely) with the `.icon` class inside, as a child of a `.checkbox-item`.
 
 <Example buttonLabel="checkbox items with icon" code={`<fieldset class="control-items-list">
 
@@ -163,7 +163,7 @@ To display an icon, add `.control-item-assets-container` with an icon (SVG or fo
         <label class="control-item-label" for="checkboxItemWithSVG">Default checkbox item with an SVG icon</label>
       </div>
       <div class="control-item-assets-container">
-        <svg aria-hidden="true">
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
       </div>
@@ -178,6 +178,18 @@ To display an icon, add `.control-item-assets-container` with an icon (SVG or fo
       </div>
       <div class="control-item-assets-container">
         <span class="icon si si-settings" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxWithIconFont" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxWithIconFont">Checked checkbox with an image</label>
+      </div>
+      <div class="control-item-assets-container">
+        <img class="icon" src="${getVersionedDocsPath(`assets/img/parcel.png`)}" alt="" loading="lazy">
       </div>
     </div>
 
@@ -326,7 +338,7 @@ To manually mark a checkbox item as invalid, add `aria-invalid="true"` to a `.co
         <p class="control-item-description" id="checkboxItemInvalidDescription">Description text</p>
       </div>
       <div class="control-item-assets-container">
-        <svg aria-hidden="true">
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
       </div>
@@ -341,7 +353,7 @@ To manually mark a checkbox item as invalid, add `aria-invalid="true"` to a `.co
         <p class="control-item-description" id="checkboxItemInvalid2Description">Description text</p>
       </div>
       <div class="control-item-assets-container">
-        <svg aria-hidden="true">
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
       </div>
@@ -356,7 +368,7 @@ To manually mark a checkbox item as invalid, add `aria-invalid="true"` to a `.co
         <p class="control-item-description" id="checkboxItemInvalidIndeterminateDescription">Description text</p>
       </div>
       <div class="control-item-assets-container">
-        <svg aria-hidden="true">
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
       </div>
@@ -424,7 +436,7 @@ It is possible to use a `<ul>` instead of `<fieldset>` but you will need to hand
         <p class="control-item-description" id="checkboxItemInvalidUlDescription">Description text</p>
       </div>
       <div class="control-item-assets-container">
-        <svg aria-hidden="true">
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
       </div>
@@ -439,7 +451,7 @@ It is possible to use a `<ul>` instead of `<fieldset>` but you will need to hand
         <p class="control-item-description" id="checkboxItemInvalidUl2Description">Description text</p>
       </div>
       <div class="control-item-assets-container">
-        <svg aria-hidden="true">
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
       </div>
@@ -503,7 +515,7 @@ It's recommended to keep checkbox item labels to no more than three words. When 
             <p class="control-item-description" id="checkboxItemLayout1Description">Description text</p>
           </div>
           <div class="control-item-assets-container">
-            <svg aria-hidden="true">
+            <svg class="icon" aria-hidden="true">
               <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
             </svg>
           </div>
@@ -518,7 +530,7 @@ It's recommended to keep checkbox item labels to no more than three words. When 
             <p class="control-item-description" id="checkboxItemLayout2Description">A longer description text that can wrap to another line to show the behaviour</p>
           </div>
           <div class="control-item-assets-container">
-            <svg aria-hidden="true">
+            <svg class="icon" aria-hidden="true">
               <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
             </svg>
           </div>
@@ -533,7 +545,7 @@ It's recommended to keep checkbox item labels to no more than three words. When 
             <p class="control-item-description" id="checkboxItemLayout3Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
           </div>
           <div class="control-item-assets-container">
-            <svg aria-hidden="true">
+            <svg class="icon" aria-hidden="true">
               <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
             </svg>
           </div>
@@ -562,7 +574,7 @@ To reverse the checkbox item, simply add `.control-item-reverse` to a `.checkbox
             <p class="control-item-description" id="checkboxItemLayoutRev1Description">Description text</p>
           </div>
           <div class="control-item-assets-container">
-            <svg aria-hidden="true">
+            <svg class="icon" aria-hidden="true">
               <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
             </svg>
           </div>
@@ -577,7 +589,7 @@ To reverse the checkbox item, simply add `.control-item-reverse` to a `.checkbox
             <p class="control-item-description" id="checkboxItemLayoutRev2Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
           </div>
           <div class="control-item-assets-container">
-            <svg aria-hidden="true">
+            <svg class="icon" aria-hidden="true">
               <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
             </svg>
           </div>
@@ -719,7 +731,7 @@ For accessibility reasons, it is required to provide understandable checkbox ite
             <p class="control-item-description" id="checkboxItemGroup1Description">Description text</p>
           </div>
           <div class="control-item-assets-container">
-            <svg aria-hidden="true">
+            <svg class="icon" aria-hidden="true">
               <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
             </svg>
           </div>
@@ -734,7 +746,7 @@ For accessibility reasons, it is required to provide understandable checkbox ite
             <p class="control-item-description" id="checkboxItemGroup2Description">Description text</p>
           </div>
           <div class="control-item-assets-container">
-            <svg aria-hidden="true">
+            <svg class="icon" aria-hidden="true">
               <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
             </svg>
           </div>

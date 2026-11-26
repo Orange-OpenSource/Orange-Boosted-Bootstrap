@@ -41,12 +41,12 @@ Use `<button>` with `data-bs-toggle="button"`. Style applies on `[aria-pressed="
 
 ### Text and icon
 
-Add icon as last child of `.chip-interactive`:
+Add icon as last child of `.chip-interactive` with `.icon`:
 
 ```html
 <label class="chip-interactive" for="filter1">
   Label
-  <svg aria-hidden="true"><use xlink:href="...#heart-empty" /></svg>
+  <svg class="icon" aria-hidden="true"><use xlink:href="...#heart-empty" /></svg>
 </label>
 ```
 
@@ -75,7 +75,7 @@ Add `.chip-suggestion` to `.chip`. Uses `<button>` elements.
 
 ### Text and icon
 
-Add icon as first child of `.chip-interactive`.
+Add icon as first child of `.chip-interactive` with `.icon`.
 
 ### Icon only
 

@@ -325,19 +325,21 @@ You can navigate through the different assets using the tabs below.
   <AssetsTab name="Icon" active="true">
     ##### Icon
 
-    Icons can be sized with `item-leading-large` (only if not [small item](#sizes)).
+    Icons can be sized with `item-leading-large` (only if not [small item](#sizes)) and must have the `.icon` class.
 
-    For status icons, add `.item-icon` with one of these classes: `.item-status-positive`, `.item-status-warning`, `.item-status-info`, or `.item-status-negative`.
+    For status icons, add `.icon` with one of these classes: `.item-status-positive`, `.item-status-warning`, `.item-status-info`, or `.item-status-negative`.
 
     <Callout type="info">
   Please note that even if it's not recommended, we can have an image which is an icon, but it requires `.icon` class on it to behave correctly.
     </Callout>
 
+    <Callout type="info" name="info-icons-svg-sprite" />
+
     <Example buttonLabel="items with leading icon" class="d-flex flex-column gap-medium" code={`<div class="item">
     <div class="item-container">
       <div class="item-content">
         <div class="item-leading-container item-leading-large">
-          <svg class="w-100 h-100" aria-hidden="true">
+          <svg class="icon" aria-hidden="true">
             <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
           </svg>
         </div>
@@ -352,7 +354,7 @@ You can navigate through the different assets using the tabs below.
     <div class="item-container">
       <div class="item-content">
         <div class="item-leading-container">
-          <div class="item-icon item-status-positive"></div>
+          <div class="icon item-status-positive"></div>
         </div>
         <div class="item-text-container">
           <p class="item-label">Label</p>
@@ -364,8 +366,21 @@ You can navigate through the different assets using the tabs below.
   <div class="item item-small">
     <div class="item-container">
       <div class="item-content">
+        <div class="item-leading-container decorative-small-icon">
+          <span class="icon si si-settings decorative-small-icon" aria-hidden="true"></span>
+        </div>
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-container">
+      <div class="item-content">
         <div class="item-leading-container">
-          <img alt="" src="${getVersionedDocsPath('/assets/img/parcel.png')}" class="w-100 icon" />
+          <div class="icon item-status-positive"></div>
         </div>
         <div class="item-text-container">
           <p class="item-label">Label</p>
@@ -606,13 +621,15 @@ You can navigate through the different assets using the tabs below.
   <AssetsTab name="Icon">
     ##### Icon
 
-    Icons can be sized with `item-trailing-large` (only if not [small item](#sizes)).
+    Icons can be sized with `item-trailing-large` (only if not [small item](#sizes)) and must have the `.icon` class.
 
-    For status icons, add `.item-icon` with one of these classes: `.item-status-positive`, `.item-status-warning`, `.item-status-info`, or `.item-status-negative`.
+    For status icons, add `.icon` with one of these classes: `.item-status-positive`, `.item-status-warning`, `.item-status-info`, or `.item-status-negative`.
 
     <Callout type="info">
   Please note that even if it's not recommended, we can have an image which is an icon, but it requires `.icon` class on it to behave correctly.
     </Callout>
+
+    <Callout type="info" name="info-icons-svg-sprite" />
 
     <Example buttonLabel="items with trailing icon" class="d-flex flex-column gap-medium" code={`<div class="item">
     <div class="item-container">
@@ -621,7 +638,7 @@ You can navigate through the different assets using the tabs below.
           <p class="item-label">Label</p>
         </div>
         <div class="item-trailing-container item-trailing-large">
-          <svg class="w-100 h-100" aria-hidden="true">
+          <svg class="icon" aria-hidden="true">
             <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
           </svg>
         </div>
@@ -636,7 +653,7 @@ You can navigate through the different assets using the tabs below.
           <p class="item-label">Label</p>
         </div>
         <div class="item-trailing-container">
-          <div class="item-icon item-status-warning"></div>
+          <div class="icon item-status-warning"></div>
         </div>
       </div>
     </div>
@@ -649,7 +666,20 @@ You can navigate through the different assets using the tabs below.
           <p class="item-label">Label</p>
         </div>
         <div class="item-trailing-container">
-          <img alt="" src="${getVersionedDocsPath('/assets/img/parcel.png')}" class="w-100 icon" />
+          <img alt="" src="${getVersionedDocsPath('/assets/img/parcel.png')}" class="icon" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-container">
+      <div class="item-content">
+        <div class="item-text-container">
+          <p class="item-label">Label</p>
+        </div>
+        <div class="item-trailing-container item-trailing-large decorative-small-icon">
+          <span class="icon si si-settings" aria-hidden="true"></span>
         </div>
       </div>
     </div>
@@ -726,7 +756,7 @@ Optionally, if the item is a navigation item and a slot is mandatory and also in
       </div>
       <div class="item-slot">
         <div class="alert alert-message alert-negative">
-          <div class="alert-icon"><p class="visually-hidden">Negative alert</p></div>
+          <div class="icon-container"><p class="visually-hidden">Negative alert</p></div>
           <div class="alert-container">
             <div class="alert-text-container">
               <h3 class="alert-label">Alert message</h3>
@@ -951,7 +981,7 @@ You may handle on your own the [slots](#slots) regarding accessibility and desig
       <a class="item-container item-interactive">
         <div class="item-content">
           <div class="item-leading-container item-status-warning">
-            <div class="item-icon"></div>
+            <div class="icon"></div>
           </div>
           <div class="item-text-container">
             <span class="item-label">Label</span>
@@ -1072,7 +1102,7 @@ By default all items are vertically centered. You can change the alignment of th
       </div>
       <div class="item-slot item-slot-focusable">
         <div class="alert alert-message alert-negative">
-          <div class="alert-icon"><p class="visually-hidden">Negative alert</p></div>
+          <div class="icon-container"><p class="visually-hidden">Negative alert</p></div>
           <div class="alert-container">
             <div class="alert-text-container">
               <p class="alert-label">You currently have no plan for your favorite networks</p>
@@ -1103,7 +1133,7 @@ By default all items are vertically centered. You can change the alignment of th
       </div>
       <div class="item-slot">
         <div class="alert alert-message alert-negative">
-          <div class="alert-icon"><p class="visually-hidden">Negative alert</p></div>
+          <div class="icon-container"><p class="visually-hidden">Negative alert</p></div>
           <div class="alert-container">
             <div class="alert-text-container">
               <h3 class="alert-label">You currently have no plan for your favorite networks</h3>
@@ -1245,7 +1275,7 @@ Optionally, the `<a>` element can wrap the entire `.item-container` instead of j
       </div>
       <div class="item-slot item-slot-focusable">
         <div class="alert alert-message alert-negative">
-          <div class="alert-icon"><p class="visually-hidden">Negative alert</p></div>
+          <div class="icon-container"><p class="visually-hidden">Negative alert</p></div>
           <div class="alert-container">
             <div class="alert-text-container">
               <h3 class="alert-label">You currently have no plan for your favorite networks</h3>

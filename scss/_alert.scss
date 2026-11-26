@@ -20,6 +20,39 @@
   align-items: flex-start;
   color: var(--#{$prefix}alert-text-color);
   @include border-radius(var(--#{$prefix}alert-border-radius));
+
+  .icon-container {
+    position: relative;
+    display: block;
+    width: px-to-rem($ouds-alert-size-asset);
+    height: px-to-rem($ouds-alert-size-asset);
+    color: var(--#{$prefix}alert-icon-color);
+
+    &:where(:not(:has(.icon))) {
+      &::before,
+      &::after {
+        position: absolute;
+        inset: 0;
+        display: block;
+        content: "";
+      }
+
+      &::before {
+        background-color: currentcolor;
+        mask-image: escape-svg(var(--#{$prefix}alert-icon));
+      }
+
+      &::after {
+        background-color: var(--#{$prefix}alert-icon-internal-color);
+        mask-image: escape-svg(var(--#{$prefix}alert-icon-internal));
+      }
+    }
+
+    .icon {
+      --#{$prefix}icon-size: #{$ouds-alert-size-asset};
+      vertical-align: baseline; // Remove some weird stuff on zoom // TODO: For reboot maybe ?
+    }
+  }
 }
 
 .alert-message {
@@ -42,7 +75,7 @@
     @include border-top-end-radius(var(--#{$prefix}alert-border-radius));
   }
 
-  .alert-icon {
+  .icon-container {
     margin-top: $ouds-alert-space-padding-block;
   }
 
@@ -54,45 +87,6 @@
     &:not(:has(.alert-text-container p:not(.alert-label), .alert-text-container ul, .alert-container .link)) .btn-close {
       @include border-bottom-end-radius(var(--#{$prefix}alert-border-radius));
     }
-  }
-}
-
-.alert-icon {
-  position: relative;
-  display: block;
-  flex-shrink: 0;
-  width: px-to-rem($ouds-alert-size-asset);
-  height: px-to-rem($ouds-alert-size-asset);
-  color: var(--#{$prefix}alert-icon-color);
-
-  &:where(:not(:has(svg, img, .icon))) {
-    &::before,
-    &::after {
-      position: absolute;
-      inset: 0;
-      display: block;
-      content: "";
-    }
-
-    &::before {
-      background-color: currentcolor;
-      mask-image: escape-svg(var(--#{$prefix}alert-icon));
-    }
-
-    &::after {
-      background-color: var(--#{$prefix}alert-icon-internal-color);
-      mask-image: escape-svg(var(--#{$prefix}alert-icon-internal));
-    }
-  }
-
-  svg,
-  img,
-  .icon {
-    width: 100%;
-    height: 100%;
-    font-size: $ouds-alert-size-asset;
-    line-height: 1;
-    vertical-align: baseline; // Remove some weird stuff on zoom // TODO: For reboot maybe ?
   }
 }
 
@@ -247,13 +241,8 @@
 
 // Bootstrap compatibility
 @if $enable-bootstrap-compatibility {
-  .alert {
-    > svg,
-    > img,
-    > .icon {
-      @extend .alert-icon;
-      fill: currentcolor;
-    }
+  .alert > .icon {
+    fill: currentcolor;
   }
 
   .alert-danger {

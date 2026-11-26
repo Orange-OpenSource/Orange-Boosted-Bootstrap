@@ -85,21 +85,13 @@
     pointer-events: none;
   }
 
-  svg,
-  img,
   .icon {
-    width: $ouds-chip-size-icon;
-    height: $ouds-chip-size-icon;
-    overflow: hidden;
-    font-size: $ouds-chip-size-icon;
-    line-height: 1;
+    --#{$prefix}icon-size: #{px-to-rem($ouds-chip-size-icon)};
   }
 }
 
 // Suggestion chip specific style
-.chip-suggestion .chip-interactive:where(:has(svg, img, .icon)) {
-  &:where(:has(svg)),
-  &:where(:has(img)),
+.chip-suggestion .chip-interactive:where(:has(.icon)) {
   &:where(:has(.icon)) {
     --#{$prefix}chip-padding-start: #{$ouds-chip-space-padding-inline-icon};
   }
@@ -107,7 +99,7 @@
 
 // Filter chip specific style that handles images, focus-visible and disabled states
 .chip-filter {
-  .chip-interactive:where(:has(svg, img, .icon)) {
+  .chip-interactive:where(:has(.icon)) {
     --#{$prefix}chip-padding-end: #{$ouds-chip-space-padding-inline-icon};
   }
 
@@ -195,12 +187,4 @@
   --#{$prefix}chip-padding-block: #{$ouds-chip-space-padding-block-icon-only};
   --#{$prefix}chip-padding-end: #{$ouds-chip-space-padding-inline-icon};
   --#{$prefix}chip-padding-start: #{$ouds-chip-space-padding-inline-icon};
-
-  svg,
-  img,
-  .icon {
-    width: px-to-rem($ouds-chip-size-icon);
-    height: px-to-rem($ouds-chip-size-icon);
-    font-size: px-to-rem($ouds-chip-size-icon);
-  }
 }

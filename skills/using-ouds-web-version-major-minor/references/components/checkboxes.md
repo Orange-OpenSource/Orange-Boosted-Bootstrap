@@ -42,7 +42,7 @@ Add `.control-item-divider` to `.checkbox-item`.
 
 #### Icon
 
-Add a second `.control-item-assets-container` with an SVG or font-icon:
+Add a second `.control-item-assets-container` with an `<svg>`, `<img>` or font-icon with `.icon`:
 
 ```html
 <div class="checkbox-item">
@@ -53,7 +53,7 @@ Add a second `.control-item-assets-container` with an SVG or font-icon:
     <label class="control-item-label" for="checkboxItem2">With icon</label>
   </div>
   <div class="control-item-assets-container">
-    <svg aria-hidden="true"><use xlink:href="...#heart-empty" /></svg>
+    <svg class="icon" aria-hidden="true"><use xlink:href="...#heart-empty" /></svg>
   </div>
 </div>
 ```

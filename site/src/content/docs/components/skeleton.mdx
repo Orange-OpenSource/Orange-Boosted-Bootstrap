@@ -125,7 +125,7 @@ To set components in skeleton state, you can wrap any of them in an `[aria-busy=
 <Example buttonLabel="all components in skeleton state" code={`<div aria-busy="true" inert>
     <!-- Alert -->
     <div class="alert alert-message alert-negative mb-medium">
-      <div class="alert-icon"></div>
+      <div class="icon-container"></div>
       <div class="alert-container">
         <div class="alert-text-container">
           <p class="alert-label">Label</p>
@@ -170,7 +170,7 @@ To set components in skeleton state, you can wrap any of them in an `[aria-busy=
 
     <!-- Inline alert -->
     <div class="alert alert-info mb-medium">
-      <div class="alert-icon"></div>
+      <div class="icon-container"></div>
       <p class="alert-label">Label</p>
     </div>
 
@@ -208,7 +208,7 @@ To set components in skeleton state, you can wrap any of them in an `[aria-busy=
     <!-- Text input with icon -->
     <div class="text-input mb-medium">
       <div class="text-input-container text-input-container-outlined">
-        <svg aria-hidden="true">
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#lock-closed')}"/>
         </svg>
         <label for="inputPasswordPrefix">Password</label>
@@ -216,7 +216,7 @@ To set components in skeleton state, you can wrap any of them in an `[aria-busy=
           <input type="password" id="inputPasswordPrefix" class="text-input-field" placeholder=" ">
         </div>
         <button class="btn btn-minimal btn-icon" aria-pressed="false" type="button">
-          <svg aria-hidden="true">
+          <svg class="icon" aria-hidden="true">
             <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#accessibility-vision')}"/>
           </svg>
           <span class="visually-hidden">Show password</span>
