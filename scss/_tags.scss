@@ -1,4 +1,6 @@
 .tag {
+  $tag-loading-dasharray: 92;
+  $tag-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
   --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-default};
   --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-default};
   --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-default};
@@ -205,10 +207,10 @@
     > .tag-loader-inner {
       fill: none;
       stroke: var(--#{$prefix}tag-asset-color);
-      stroke-dasharray: 92;
+      stroke-dasharray: $tag-loading-dasharray;
       stroke-width: 8;
       transform-origin: center;
-      animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
+      animation: $tag-loading-animation;
     }
   }
 }

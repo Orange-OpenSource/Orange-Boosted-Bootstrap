@@ -9701,9 +9701,9 @@ ol.bullet-list > li > ol > li > ol > li::before {
   mask-image: var(--bs-alert-icon);
 }
 .alert-icon:where(:not(:has(svg, img, .icon)))::after {
-  background-color: var(--bs-icon-color-content-status-warning-internal-shape);
-  -webkit-mask-image: var(--bs-alert-warning-internal-icon);
-  mask-image: var(--bs-alert-warning-internal-icon);
+  background-color: var(--bs-alert-icon-internal-color);
+  -webkit-mask-image: var(--bs-alert-icon-internal);
+  mask-image: var(--bs-alert-icon-internal);
 }
 .alert-icon svg,
 .alert-icon img,

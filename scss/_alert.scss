@@ -80,8 +80,8 @@
     }
 
     &::after {
-      background-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
-      mask-image: escape-svg(var(--#{$prefix}alert-warning-internal-icon));
+      background-color: var(--#{$prefix}alert-icon-internal-color);
+      mask-image: escape-svg(var(--#{$prefix}alert-icon-internal));
     }
   }
 
