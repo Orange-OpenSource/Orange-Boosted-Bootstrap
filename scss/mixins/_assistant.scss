@@ -1,0 +1,10 @@
+@mixin assistant {
+  --#{$prefix}assistant-gradient-unit: 82deg;
+  --#{$prefix}assistant-border-gradient:
+    conic-gradient(
+      #{$ouds-color-ai-secondary} 0 var(--#{$prefix}assistant-gradient-unit),
+      #{$ouds-color-ai-tertiary} var(--#{$prefix}assistant-gradient-unit) calc(2 * var(--#{$prefix}assistant-gradient-unit)),
+      #{$ouds-color-ai-quaternary} calc(2 * var(--#{$prefix}assistant-gradient-unit)) calc(3 * var(--#{$prefix}assistant-gradient-unit)),
+      #{$ouds-color-ai-primary} calc(3 * var(--#{$prefix}assistant-gradient-unit)) calc(4 * var(--#{$prefix}assistant-gradient-unit))
+    );
+}

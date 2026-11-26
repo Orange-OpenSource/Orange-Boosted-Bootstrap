@@ -26,6 +26,13 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `<button type="button" class="btn btn-assistant">Label</button>`
   },
   {
+    name: 'Assistant icon',
+    category: 'Assistant',
+    slug: 'assistant-icon',
+    link: 'icons#assistant-icon',
+    snippet: `<button type="button" class="icon-assistant"><span class="visually-hidden">Assistant icon</span></button>`
+  },
+  {
     name: 'Badge',
     link: 'badges#badge',
     category: 'Indicator',
@@ -47,6 +54,15 @@ export const componentsDetails: ComponentCardData[] = [
       <p class="badge">
         <span class="badge-status-icon"></span>
         <span class="visually-hidden">Beware</span>
+      </p>`
+  },
+  {
+    name: 'Body',
+    link: 'typography#body',
+    category: 'Content display',
+    snippet: `
+      <p class="mb-none">
+        Body
       </p>`
   },
   {
@@ -82,16 +98,48 @@ export const componentsDetails: ComponentCardData[] = [
   },
   {
     name: 'Checkbox',
+    slug: 'checkbox',
+    link: 'checkboxes#checkbox',
+    category: 'Control',
+    snippet: `
+      <label class="checkbox-standalone">
+        <input class="control-item-indicator" type="checkbox" id="checkbox[[id_prefix]]" checked tabindex="-1" />
+        <span class="visually-hidden">Checkbox</span>
+      </label>
+    `
+  },
+  {
+    name: 'Checkbox item',
+    slug: 'checkbox-item',
+    link: 'checkboxes#checkbox-item',
     category: 'Control',
     snippet: `
       <div class="checkbox-item" style="min-width: unset">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checkbox[[id_prefix]]" checked />
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxItem[[id_prefix]]" checked />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="checkbox[[id_prefix]]">Label</label>
+          <label class="control-item-label" for="checkboxItem[[id_prefix]]">Label</label>
         </div>
       </div>`
+  },
+  {
+    name: 'Code',
+    link: 'typography#code',
+    category: 'Content display',
+    snippet: `
+      <code>
+        Code
+      </code>`
+  },
+  {
+    name: 'Display',
+    link: 'typography#display',
+    category: 'Content display',
+    snippet: `
+      <h1 class="display-small mb-none">
+        Display
+      </h1>`
   },
   {
     name: 'Divider',
@@ -181,6 +229,21 @@ export const componentsDetails: ComponentCardData[] = [
       </footer>`
   },
   {
+    name: 'Fullscreen dialog',
+    slug: 'fullscreen-dialog-web',
+    link: 'modals#fullscreen-dialog',
+    category: 'Dialog',
+    snippet: `
+      <dialog class="modal-base modal-fullscreen-dialog position-relative h-100 w-100" open style="transition: unset">
+        <div class="modal-header 2xl:ps-xlarge">
+          <h3 class="modal-title">Title</h3>
+          <button type="button" class="btn btn-close">
+            <span class="visually-hidden">Close</span>
+          </button>
+        </div>
+      </dialog>`
+  },
+  {
     name: 'Header',
     category: 'Navigation',
     snippet: `
@@ -210,6 +273,15 @@ export const componentsDetails: ComponentCardData[] = [
       </header>`
   },
   {
+    name: 'Heading',
+    link: 'typography#heading',
+    category: 'Content display',
+    snippet: `
+      <h2 class="hl-marker mb-none">
+        Heading
+      </h2>`
+  },
+  {
     name: 'Inline alert',
     slug: 'inline-alert',
     link: 'alerts#inline-alert',
@@ -228,10 +300,47 @@ export const componentsDetails: ComponentCardData[] = [
     snippet: `<button type="button" class="tag tag-input">Label</button>`
   },
   {
+    name: 'Interactive icon',
+    slug: 'interactive-icon',
+    category: 'Actions',
+    link: 'icons#interactive-icon',
+    snippet: `
+      <button type="button" class="icon-interactive">
+        <span class="visually-hidden">Interactive icon</span>
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+      </button>`
+  },
+  {
+    name: 'Label',
+    link: 'typography#label',
+    category: 'Content display',
+    snippet: `
+      <p class="label-large mb-none">
+        Label
+      </p>`
+  },
+  {
     name: 'Link',
     link: 'links',
     category: 'Navigation',
     snippet: `<a class="link" href="#">Label</a>`
+  },
+  {
+    name: 'Modal dialog',
+    slug: 'modal-dialog-web',
+    link: 'modals#modal-dialog',
+    category: 'Dialog',
+    snippet: `
+      <dialog class="modal-base modal-dialog w-75 h-75 position-relative" open style="transition: unset">
+        <div class="modal-header 2xl:ps-large">
+          <h3 class="modal-title">Title</h3>
+          <button type="button" class="btn btn-close">
+            <span class="visually-hidden">Close</span>
+          </button>
+        </div>
+      </dialog>`
   },
   {
     name: 'Navigation card item',
@@ -299,14 +408,26 @@ export const componentsDetails: ComponentCardData[] = [
   {
     name: 'Radio button',
     slug: 'radio-button',
+    link: 'radio-buttons#radio-button',
+    category: 'Control',
+    snippet: `
+      <label class="radio-button-standalone">
+        <input class="control-item-indicator" type="radio" value="" id="radio[[id_prefix]]" checked />
+        <span class="visually-hidden">Radio button</span>
+      </label>`
+  },
+  {
+    name: 'Radio button item',
+    slug: 'radio-button-item',
+    link: 'radio-buttons#radio-button-item',
     category: 'Control',
     snippet: `
       <div class="radio-button-item" style="min-width: unset">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" id="radio[[id_prefix]]" name="radio[[id_prefix]]" checked />
+          <input class="control-item-indicator" type="radio" value="" id="radioItem[[id_prefix]]" name="radio[[id_prefix]]" checked />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="radio[[id_prefix]]">Label</label>
+          <label class="control-item-label" for="radioItem[[id_prefix]]">Label</label>
         </div>
       </div>`
   },
@@ -380,14 +501,27 @@ export const componentsDetails: ComponentCardData[] = [
   },
   {
     name: 'Switch',
+    slug: 'switch',
+    link: 'switches#switch',
+    category: 'Control',
+    snippet: `
+      <label class="switch-standalone">
+        <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switch[[id_prefix]]" />
+        <span class="visually-hidden">Switch</span>
+      </label>`
+  },
+  {
+    name: 'Switch item',
+    slug: 'switch-item',
+    link: 'switches#switch-item',
     category: 'Control',
     snippet: `
       <div class="switch-item" style="min-width: unset">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switch[[id_prefix]]" checked />
+          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchItem[[id_prefix]]" checked />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="switch[[id_prefix]]">Label</label>
+          <label class="control-item-label" for="switchItem[[id_prefix]]">Label</label>
         </div>
       </div>`
   },

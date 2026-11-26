@@ -62,6 +62,13 @@ export const boostedReplacements = [
   ],
   ['tag-sm', 'tag-small'],
 
+  // Back to top
+  [
+    ...warnForClass('back-to-top', {
+      message: 'The back-to-top button in {file} must use dual-mode as it is not supported in OUDS Web.'
+    })
+  ],
+
   // OUDS updates
   ...oudsReplacements,
   ['xxl:([^ "]*)', '2xl:$1'] // replace xxl breakpoints everywhere

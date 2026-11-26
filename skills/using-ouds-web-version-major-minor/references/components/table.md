@@ -8,7 +8,9 @@ Tables are **opt-in**: add `.table` to any `<table>` to apply OUDS Web table sty
 
 ```html
 <table class="table">
-  <caption class="visually-hidden">Basic table</caption>
+  <caption class="visually-hidden">
+    Basic table
+  </caption>
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -55,7 +57,9 @@ Wrap `<table class="table">` in `<div class="table-responsive">` for horizontal 
 
 ```html
 <div class="table-responsive">
-  <table class="table">...</table>
+  <table class="table">
+    ...
+  </table>
 </div>
 ```
 
@@ -65,7 +69,7 @@ Wrap `<table class="table">` in `<div class="table-responsive">` for horizontal 
 
 ### With checkboxes
 
-Use [standalone checkboxes](checkbox.md) with `.visually-hidden` labels. Header's first cell holds a "select all" checkbox (indeterminate state when only some rows are selected). Selected rows get `data-bs-theme="dark"` (via JS) — or manually via `.table-active` + `data-bs-theme="dark"` on `<tr>`/`<td>`.
+Use [standalone checkboxes](checkboxes.md) with `.visually-hidden` labels. Header's first cell holds a "select all" checkbox (indeterminate state when only some rows are selected). Selected rows get `data-bs-theme="dark"` (via JS) — or manually via `.table-active` + `data-bs-theme="dark"` on `<tr>`/`<td>`.
 
 ```html
 <tr data-bs-theme="dark">
@@ -81,7 +85,7 @@ Use [standalone checkboxes](checkbox.md) with `.visually-hidden` labels. Header'
 
 ### With radio buttons
 
-Same pattern as checkboxes using [standalone radio buttons](radio-button.md), without a "select all" option.
+Same pattern as checkboxes using [standalone radio buttons](radio-buttons.md), without a "select all" option.
 
 ## Rich content tables
 

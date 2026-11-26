@@ -20,7 +20,7 @@ export const commonReplacements = [
   ['display-4', 'h1'],
   ['display-5', 'h2'],
   ['display-6', 'h3'],
-  [...warnForClass('initialism', { link: 'https://web.unified-design-system.orange.com/docs/foundation/typography' })],
+  [...warnForClass('initialism', { link: 'https://web.unified-design-system.orange.com/docs/foundation/reboot' })],
 
   // Layout
   [...warnForClass('container', { link: 'https://web.unified-design-system.orange.com/docs/layout/containers' })],

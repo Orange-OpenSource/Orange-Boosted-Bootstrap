@@ -1,5 +1,5 @@
 /*!
- * OUDS Web Grid v1.5.0 (https://web.unified-design-system.orange.com/)
+ * OUDS Web Grid v1.6.0 (https://web.unified-design-system.orange.com/)
  * Copyright 2014-2026 The OUDS Web Authors
  * Copyright 2014-2026 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
@@ -411,10 +411,20 @@
 @media (min-width: 1640px) {
   .container-max-width {
     --bs-container-margin-x: 80px;
-    max-width: 1680px;
+    max-width: max(105rem, 1680px);
   }
   .container-max-width .row {
     --bs-gutter-x: 32px;
+  }
+}
+
+@media (min-width: 1880px) {
+  .container-max-width-wide {
+    --bs-container-margin-x: 112px;
+    max-width: max(120rem, 1920px);
+  }
+  .container-max-width-wide .row {
+    --bs-gutter-x: 40px;
   }
 }
 

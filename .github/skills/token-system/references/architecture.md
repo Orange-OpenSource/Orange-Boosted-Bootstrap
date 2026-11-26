@@ -34,6 +34,7 @@ Figma (design decisions)
 - Font-family stack strings
 - Embedded SVG icon data URIs
 - Sass maps
+- Heading marker SVG and dimensions (`$ouds-heading-large-marker-img/-width/-height`, set to `null` for a brand without a marker)
 
 ---
 
