@@ -4,9 +4,9 @@ on:
     branches:
       - main
     paths:
-      - 'js/**'
-      - 'scss/**'
-      - 'site/**'
+      - 'libs/web/js/**'
+      - 'libs/web/scss/**'
+      - 'libs/web/site/**'
   pull_request:
     types: [opened, reopened, synchronize]
   workflow_dispatch:
@@ -53,7 +53,7 @@ jobs:
         run: npm run release-sri
 
       - name: Test docs
-        run: rm -rf _site && npm run dist && npm run release-sri && npm run astro-build -w packages/orange
+        run: rm -rf libs/web/_site && npm run dist && npm run release-sri && npm run astro-build -w libs/web/packages/orange
 
       - name: Run accessibility tests
         run: npm run docs-accessibility
@@ -63,4 +63,4 @@ jobs:
         if: failure()
         with:
           name: pa11y-ci-results
-          path: .pa11y/
+          path: libs/web/.pa11y/
