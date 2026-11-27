@@ -12029,6 +12029,8 @@ ol.bullet-list > li > ol > li > ol > li::before {
   --bs-alert-text-color: var(--bs-color-content-status-warning);
   --bs-alert-icon: var(--bs-alert-warning-icon);
   --bs-alert-icon-color: var(--bs-icon-color-content-status-warning-external-shape);
+  --bs-alert-icon-internal: var(--bs-alert-warning-internal-icon);
+  --bs-alert-icon-internal-color: var(--bs-icon-color-content-status-warning-internal-shape);
   --bs-alert-bg: var(--bs-color-surface-status-warning-muted);
   --bs-alert-border-color: var(--bs-color-border-status-warning);
 }
