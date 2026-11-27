@@ -112,9 +112,6 @@
     "storybook:angular:build": "npx nx run @ouds/angular-storybook:build",
     "storybook:angular:lint": "npx nx run @ouds/angular-storybook:lint"
   },
-  "dependencies": {
-    "classnames": "2.5.1"
-  },
   "overrides": {
     "@nx/vue": {
       "vue-tsc": "$vue-tsc"
