@@ -1,7 +1,7 @@
-<h1 align="center">OUDS Monorepo</h1>
+<h1 align="center">OUDS Web Monorepo</h1>
 
 <p align="center">
-  OUDS Web is a fork of Bootstrap to integrate the Orange Unified Design System components, modules and guidelines to easily create Websites with the Orange Brands through dedicated Themes and Modes (Light or Dark). Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
+  This monorepo hosts the web libraries of the Orange Unified Design System (OUDS), used to easily create websites and web applications with the Orange Brands through dedicated Themes and Modes (Light or Dark). OUDS Web is a fork of Bootstrap, a sleek, intuitive, and powerful front-end framework, that integrates the OUDS components, modules, and guidelines. The React, Angular, and Vue ("RAV") libraries (<code>@ouds/react</code>, <code>@ouds/angular</code>, <code>@ouds/vue</code>) wrap the same components for each framework, following the OUDS Web markup and styles, with shared types, utilities, and icons.
   <br />
   <a href="https://web.unified-design-system.orange.com"><strong>Visit OUDS Web</strong></a>
 </p>
