@@ -235,6 +235,8 @@
   --#{$prefix}alert-text-color: #{$ouds-color-content-status-warning};
   --#{$prefix}alert-icon: var(--#{$prefix}alert-warning-icon);
   --#{$prefix}alert-icon-color: var(--#{$prefix}icon-color-content-status-warning-external-shape);
+  --#{$prefix}alert-icon-internal: var(--#{$prefix}alert-warning-internal-icon);
+  --#{$prefix}alert-icon-internal-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
   --#{$prefix}alert-bg: #{$ouds-color-surface-status-warning-muted};
   --#{$prefix}alert-border-color: #{$ouds-color-border-status-warning};
 
