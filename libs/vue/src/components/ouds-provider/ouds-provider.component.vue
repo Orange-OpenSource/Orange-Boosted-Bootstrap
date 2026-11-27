@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { loadBrandCSS } from '@ouds/core';
+import { loadBrandCSS } from '@ouds/ts-core';
 import { computed, provide, reactive, watch } from 'vue';
 
 import {

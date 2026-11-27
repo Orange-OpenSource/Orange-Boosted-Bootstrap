@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import type { OudsIcon } from '@ouds/core';
+import type { OudsIcon } from '@ouds/ts-core';
 import { functionalStatusWarning } from '@ouds/icons';
 
 import { OUDS_CONFIG } from '../ouds-provider/ouds.service';

@@ -78,7 +78,7 @@
       },
       "dependsOn": [
         {
-          "projects": ["@ouds/core", "@ouds/angular"],
+          "projects": ["@ouds/ts-core", "@ouds/angular"],
           "target": "build"
         }
       ]

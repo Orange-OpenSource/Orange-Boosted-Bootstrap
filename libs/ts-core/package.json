@@ -1,5 +1,5 @@
 {
-  "name": "@ouds/core",
+  "name": "@ouds/ts-core",
   "version": "0.0.1",
   "description": "Framework-agnostic types and utilities shared by @ouds/react, @ouds/vue, and @ouds/angular.",
   "license": "MIT",

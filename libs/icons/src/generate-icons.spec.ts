@@ -104,7 +104,9 @@ describe('iconToSource', () => {
         });
 
         expect(source).toContain('export const myIcon: OudsIcon = {');
-        expect(source).toContain("import type { OudsIcon } from '@ouds/core';");
+        expect(source).toContain(
+            "import type { OudsIcon } from '@ouds/ts-core';",
+        );
         expect(source).toContain("d: 'M0 0 \\'a\\'\\\\'");
         expect(source).toContain("fill: 'red'");
         expect(source).toContain("fillRule: 'evenodd'");

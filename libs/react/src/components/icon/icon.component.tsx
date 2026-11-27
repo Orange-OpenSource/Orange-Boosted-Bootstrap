@@ -1,4 +1,4 @@
-import { getIconPaths, getIconSizeClass } from '@ouds/core';
+import { getIconPaths, getIconSizeClass } from '@ouds/ts-core';
 import cx from 'classnames';
 
 import { useOuds } from '../ouds-provider/ouds-provider.component';

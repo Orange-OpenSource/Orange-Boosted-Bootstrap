@@ -29,7 +29,7 @@ import { functionalStatusWarning } from '@ouds/icons';
 <Icon icon={functionalStatusWarning} size='bm-medium' label='Warning' />;
 ```
 
-Each export is an `OudsIcon` (see `@ouds/core`): `name`, `viewBox`, and `brands`, the paths to draw for each brand. Orange Compact reuses the Orange drawing, so it only appears when it differs.
+Each export is an `OudsIcon` (see `@ouds/ts-core`): `name`, `viewBox`, and `brands`, the paths to draw for each brand. Orange Compact reuses the Orange drawing, so it only appears when it differs.
 
 ## License
 

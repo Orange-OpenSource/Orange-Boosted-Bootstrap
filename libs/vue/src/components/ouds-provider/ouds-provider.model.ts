@@ -1,4 +1,4 @@
-import type { Brand, Theme } from '@ouds/core';
+import type { Brand, Theme } from '@ouds/ts-core';
 import type { InjectionKey } from 'vue';
 
 /**

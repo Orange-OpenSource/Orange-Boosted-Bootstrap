@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getIconPaths, getIconSizeClass } from '@ouds/core';
+import { getIconPaths, getIconSizeClass } from '@ouds/ts-core';
 import { computed } from 'vue';
 
 import { useOuds } from '../ouds-provider/use-ouds';

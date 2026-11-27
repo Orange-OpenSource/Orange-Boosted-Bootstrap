@@ -6,8 +6,8 @@ import {
     OnChanges,
     OnInit,
 } from '@angular/core';
-import { loadBrandCSS } from '@ouds/core';
-import type { Theme, Brand } from '@ouds/core';
+import { loadBrandCSS } from '@ouds/ts-core';
+import type { Theme, Brand } from '@ouds/ts-core';
 
 import { OudsService } from './ouds.service';
 

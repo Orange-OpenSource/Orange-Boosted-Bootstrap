@@ -1,4 +1,4 @@
-import { CoreButtonProps } from '@ouds/core';
+import { CoreButtonProps } from '@ouds/ts-core';
 
 export type ButtonProps = CoreButtonProps & {
     onClick?: () => void;

@@ -1,4 +1,4 @@
-import { getIconPaths } from '@ouds/core';
+import { getIconPaths } from '@ouds/ts-core';
 import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';

@@ -11,4 +11,4 @@ export type {
     OudsProviderProps,
 } from './components/ouds-provider/ouds-provider.model';
 export { useOuds } from './components/ouds-provider/use-ouds';
-export type { Brand, Theme } from '@ouds/core';
+export type { Brand, Theme } from '@ouds/ts-core';

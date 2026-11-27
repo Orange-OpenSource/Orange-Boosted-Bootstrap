@@ -1,2 +1,2 @@
 export * from './components';
-export type { Brand, Theme } from '@ouds/core';
+export type { Brand, Theme } from '@ouds/ts-core';

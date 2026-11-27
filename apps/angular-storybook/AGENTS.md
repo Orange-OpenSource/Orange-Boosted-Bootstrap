@@ -39,6 +39,6 @@ This app contains only TypeScript Storybook config (no Angular templates or HTML
 
 ## Known issues
 
-- `build` depends on `@ouds/core:build` and `@ouds/angular:build` (they must exist in `dist/` because webpack resolves `@ouds/angular` from `node_modules`, whose `exports` point at build output). `serve` has no such `dependsOn`: run `npm run angular:build` first.
+- `build` depends on `@ouds/ts-core:build` and `@ouds/angular:build` (they must exist in `dist/` because webpack resolves `@ouds/angular` from `node_modules`, whose `exports` point at build output). `serve` has no such `dependsOn`: run `npm run angular:build` first.
 - All three Storybook apps use port 4400; pass `--port` to run more than one at a time.
 - `npm run storybook:angular:build:dev` calls `build:development`, but `build` only defines a `ci` configuration, so that script fails until a `development` configuration is added.

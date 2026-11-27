@@ -3,7 +3,7 @@ import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
 
 import { IconComponent } from '../icon/icon.component';
 import { ButtonComponent } from './button.component';
-import { Variant } from '@ouds/core';
+import { Variant } from '@ouds/ts-core';
 import { functionalStatusWarning } from '@ouds/icons';
 
 type StoryArgs = {

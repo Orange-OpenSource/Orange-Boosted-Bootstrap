@@ -4,8 +4,8 @@ import {
     inject,
     Input,
 } from '@angular/core';
-import { getIconPaths, getIconSizeClass } from '@ouds/core';
-import type { IconPath, IconSize, OudsIcon } from '@ouds/core';
+import { getIconPaths, getIconSizeClass } from '@ouds/ts-core';
+import type { IconPath, IconSize, OudsIcon } from '@ouds/ts-core';
 
 import { OudsService } from '../ouds-provider/ouds.service';
 

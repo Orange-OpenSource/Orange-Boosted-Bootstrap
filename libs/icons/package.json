@@ -6,7 +6,7 @@
   "type": "module",
   "sideEffects": false,
   "dependencies": {
-    "@ouds/core": "^0.0.1"
+    "@ouds/ts-core": "^0.0.1"
   },
   "main": "./index.cjs",
   "module": "./index.js",

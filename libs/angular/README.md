@@ -9,7 +9,7 @@ Angular component library for OUDS Web (Orange Unified Design System), part of t
 ## Requirements
 
 - `@angular/core` and `@angular/common` `^22.0.0` (peer dependencies).
-- `@ouds/core`, `@ouds/icons` (and `tslib`) are regular dependencies and are installed with the package.
+- `@ouds/ts-core`, `@ouds/icons` (and `tslib`) are regular dependencies and are installed with the package.
 
 ## Installation
 
@@ -69,7 +69,7 @@ This package lives in the [Orange-Boosted-Bootstrap](../../) Nx monorepo. From t
 - `npm run angular:test` — run unit tests via [Jest](https://jestjs.io/) (`jest-preset-angular`)
 - `npm run angular:build` — build the package via [ng-packagr](https://github.com/ng-packagr/ng-packagr)
 - `npm run storybook:angular:serve` — browse the stories in [`apps/angular-storybook`](../../apps/angular-storybook/AGENTS.md) (port 4400; run `npm run angular:build` first)
-- `npm run rav:lint` / `rav:test` — run the target across `@ouds/core`, `@ouds/angular`, `@ouds/react`, and `@ouds/vue`; `rav:build` — across `@ouds/angular`, `@ouds/react`, and `@ouds/vue`; `lint:all` / `test:all` / `build:all` cover more projects (see the root [README](../../README.md))
+- `npm run rav:lint` / `rav:test` — run the target across `@ouds/ts-core`, `@ouds/angular`, `@ouds/react`, and `@ouds/vue`; `rav:build` — across `@ouds/angular`, `@ouds/react`, and `@ouds/vue`; `lint:all` / `test:all` / `build:all` cover more projects (see the root [README](../../README.md))
 
 See [ARCHITECTURE.md](./ARCHITECTURE.md) for component, testing, and export conventions (including why this library uses ESLint instead of Oxlint and Jest instead of Vitest), [AGENTS.md](./AGENTS.md) for coding-agent guidelines, and [CHANGELOG.md](./CHANGELOG.md) for release history.
 

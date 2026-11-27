@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths:
-      - 'libs/core/**'
+      - 'libs/ts-core/**'
       - 'libs/icons/**'
       - 'libs/angular/**'
       - 'libs/react/**'

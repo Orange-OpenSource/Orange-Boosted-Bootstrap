@@ -1,10 +1,10 @@
-import { loadBrandCSS } from '@ouds/core';
+import { loadBrandCSS } from '@ouds/ts-core';
 import { render, screen } from '@testing-library/react';
 
 import { OudsProvider, useOuds } from './ouds-provider.component';
 
-vi.mock('@ouds/core', async (importOriginal) => ({
-    ...(await importOriginal<typeof import('@ouds/core')>()),
+vi.mock('@ouds/ts-core', async (importOriginal) => ({
+    ...(await importOriginal<typeof import('@ouds/ts-core')>()),
     loadBrandCSS: vi.fn(),
 }));
 

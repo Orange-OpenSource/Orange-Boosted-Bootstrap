@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import type { Brand, Theme } from '@ouds/core';
+import type { Brand, Theme } from '@ouds/ts-core';
 
 import { OudsProviderComponent } from './ouds-provider.component';
 import { OudsService } from './ouds.service';

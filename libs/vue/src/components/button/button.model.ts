@@ -4,7 +4,7 @@
  * @module button
  *
  */
-import { CoreButtonProps } from '@ouds/core';
+import { CoreButtonProps } from '@ouds/ts-core';
 
 /**
  * Defines valid properties in Button component.

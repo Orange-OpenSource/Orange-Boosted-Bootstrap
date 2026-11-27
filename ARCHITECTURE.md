@@ -7,7 +7,7 @@ This document is the big picture of the repository: what the Nx projects are, ho
 The repository hosts the Orange Unified Design System (OUDS) implementations for the web, in two families that share a repository but not a release cycle:
 
 - **OUDS Web** (`libs/web`): a fork of Bootstrap that ships CSS and JavaScript, one theme package per brand (Orange, Orange Compact, Sosh).
-- **The RAV libraries** (`libs/react`, `libs/vue`, `libs/angular`): React, Vue 3, and Angular component libraries, with a shared framework-agnostic package (`libs/core`). They are versioned and published independently of OUDS Web. They are at an early stage: each ships a `Button`, an `Icon`, and an `OudsProvider` (theme, brand, and rounded-corner settings) on top of `@ouds/core`, with the icon data in `@ouds/icons`, with build, lint, and test pipelines at a 100% coverage threshold.
+- **The RAV libraries** (`libs/react`, `libs/vue`, `libs/angular`): React, Vue 3, and Angular component libraries, with a shared framework-agnostic package (`libs/ts-core`). They are versioned and published independently of OUDS Web. They are at an early stage: each ships a `Button`, an `Icon`, and an `OudsProvider` (theme, brand, and rounded-corner settings) on top of `@ouds/ts-core`, with the icon data in `@ouds/icons`, with build, lint, and test pipelines at a 100% coverage threshold.
 
 An npm-workspace monorepo hosts them, and [Nx](https://nx.dev) orchestrates tasks, caching, and import boundaries. Root `npm run` scripts delegate to `npx nx run <project>:<target>`.
 
@@ -22,7 +22,7 @@ An npm-workspace monorepo hosts them, and [Nx](https://nx.dev) orchestrates task
 | `@ouds/web-orange-compact` | `libs/web/packages/orange-compact/` | `lib:web-orange-compact` | Orange Compact tokens and CSS                              |
 | `@ouds/web-sosh`           | `libs/web/packages/sosh/`           | `lib:web-sosh`           | Sosh tokens and CSS                                        |
 | `@ouds/web-migrate`        | `libs/web/packages/migrate/`        | `lib:web-migrate`        | Migration CLI                                              |
-| `@ouds/core`               | `libs/core/`                        | `lib:core`               | Framework-agnostic types and utilities                     |
+| `@ouds/ts-core`               | `libs/ts-core/`                        | `lib:ts-core`               | Framework-agnostic types and utilities                     |
 | `@ouds/icons`              | `libs/icons/`                       | `lib:icons`              | Icon data (typed, per brand), generated from the sprites   |
 | `@ouds/react`              | `libs/react/`                       | `lib:react`              | React components                                           |
 | `@ouds/vue`                | `libs/vue/`                         | `lib:vue`                | Vue 3 components                                           |
@@ -35,17 +35,17 @@ An npm-workspace monorepo hosts them, and [Nx](https://nx.dev) orchestrates task
 @ouds/web-common ◀── @ouds/web-orange | @ouds/web-orange-compact | @ouds/web-sosh
 @ouds/web-migrate                                   (isolated)
 
-@ouds/core ──(brand package.json files, versions only)──▶ @ouds/web-orange | -compact | -sosh
-@ouds/icons ──▶ @ouds/core          (types only; generated from the OUDS Web sprites)
+@ouds/ts-core ──(brand package.json files, versions only)──▶ @ouds/web-orange | -compact | -sosh
+@ouds/icons ──▶ @ouds/ts-core          (types only; generated from the OUDS Web sprites)
 
-@ouds/react   ──▶ @ouds/core        @ouds/react-storybook   ──▶ @ouds/react   + @ouds/web-orange
-@ouds/vue     ──▶ @ouds/core        @ouds/vue-storybook     ──▶ @ouds/vue     + @ouds/web-orange
-@ouds/angular ──▶ @ouds/core        @ouds/angular-storybook ──▶ @ouds/angular + @ouds/web-orange
+@ouds/react   ──▶ @ouds/ts-core        @ouds/react-storybook   ──▶ @ouds/react   + @ouds/web-orange
+@ouds/vue     ──▶ @ouds/ts-core        @ouds/vue-storybook     ──▶ @ouds/vue     + @ouds/web-orange
+@ouds/angular ──▶ @ouds/ts-core        @ouds/angular-storybook ──▶ @ouds/angular + @ouds/web-orange
 
 Specs and stories of @ouds/react | vue | angular ──▶ @ouds/icons   (they render icon data; the apps pass it in)
 ```
 
-Package-level dependencies and Nx-level imports are not the same thing. The framework libraries depend on `@ouds/core` at runtime. `@ouds/core` reads the brand `package.json` files only to inline version numbers at build time. The framework libraries have no package dependency on OUDS Web's CSS: `OudsProvider` calls `@ouds/core`'s `loadBrandCSS`, which injects a `<link>` to the brand stylesheet on the jsDelivr CDN at runtime. If they start to depend on OUDS Web directly, they will use a published npm dependency, not the monorepo sources (see [`libs/react/ARCHITECTURE.md`](libs/react/ARCHITECTURE.md) for the reasoning). The Storybook apps read the `@ouds/web-orange` version for their toolbar label, and the Angular one also injects its built CSS as a global style.
+Package-level dependencies and Nx-level imports are not the same thing. The framework libraries depend on `@ouds/ts-core` at runtime. `@ouds/ts-core` reads the brand `package.json` files only to inline version numbers at build time. The framework libraries have no package dependency on OUDS Web's CSS: `OudsProvider` calls `@ouds/ts-core`'s `loadBrandCSS`, which injects a `<link>` to the brand stylesheet on the jsDelivr CDN at runtime. If they start to depend on OUDS Web directly, they will use a published npm dependency, not the monorepo sources (see [`libs/react/ARCHITECTURE.md`](libs/react/ARCHITECTURE.md) for the reasoning). The Storybook apps read the `@ouds/web-orange` version for their toolbar label, and the Angular one also injects its built CSS as a global style.
 
 ## Dependency rules
 
@@ -55,22 +55,22 @@ Package-level dependencies and Nx-level imports are not the same thing. The fram
 | ---------------------------------------------------------- | ---------------------------------------------------- |
 | `lib:web-common`, `lib:web-migrate`                        | nothing (isolated)                                   |
 | `lib:web-orange`, `lib:web-orange-compact`, `lib:web-sosh` | `lib:web-common`                                     |
-| `lib:core`                                                 | the brand packages (their `package.json` files only) |
-| `lib:icons`                                                | itself and `lib:core`                                |
-| `lib:react`, `lib:vue`, `lib:angular`                      | itself, `lib:core`, and `lib:icons`                  |
+| `lib:ts-core`                                                 | the brand packages (their `package.json` files only) |
+| `lib:icons`                                                | itself and `lib:ts-core`                                |
+| `lib:react`, `lib:vue`, `lib:angular`                      | itself, `lib:ts-core`, and `lib:icons`                  |
 | `app:react`, `app:vue`, `app:angular`                      | its own framework library and `lib:web-orange`       |
 
 Consequences:
 
 - A framework library never imports another framework library or OUDS Web's sources. This keeps each one independently buildable and publishable.
-- `@ouds/core` must stay free of React, Vue, and Angular.
+- `@ouds/ts-core` must stay free of React, Vue, and Angular.
 - `@ouds/icons` is data only: the framework libraries list it in `dependencies` so it is installed with them, but their source never imports it (only their specs and stories do): they render whatever icon data the application passes to `Icon`, so the icons an app does not import stay out of its bundle. An application that imports `@ouds/icons` directly should also declare it, because pnpm (strict mode) and Yarn PnP do not expose transitive dependencies. Its files under `src/icons/` are generated from the OUDS Web sprites (`npm run icons:generate`), and a spec fails when they drift.
 - The brand packages declare `"nx": { "projectType": "library" }` in their `package.json`. Without it Nx treats them as apps and the rule forbids importing them.
 - The relative import of a library's `package.json` from a Storybook app (to display its version) is allowed by an inline `eslint-disable-next-line @nx/enforce-module-boundaries` comment.
 
 The `depConstraints` are duplicated in three configs because three linters run in the repo. Keep them in sync:
 
-- `oxlint.base.jsonc`: `@ouds/core`, `@ouds/icons`, `@ouds/react`, `@ouds/vue`, and the Storybook apps.
+- `oxlint.base.jsonc`: `@ouds/ts-core`, `@ouds/icons`, `@ouds/react`, `@ouds/vue`, and the Storybook apps.
 - `eslint.config.mjs`: `@ouds/angular`.
 - `libs/web/eslint.config.mjs`: `@ouds/web-*`.
 
@@ -78,7 +78,7 @@ The `depConstraints` are duplicated in three configs because three linters run i
 
 | Area                                                               | Linter                                                        | Why                                                                                                                  |
 | ------------------------------------------------------------------ | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `@ouds/core`, `@ouds/icons`, `@ouds/react`, `@ouds/vue`, the three Storybook apps | Oxlint through `@nx/oxlint`                                   | Fast; the `lint` target is inferred. Each project's `.oxlintrc.json` extends `oxlint.base.jsonc` and adds its plugins. `@ouds/vue` adds a `lint-templates` target (ESLint + `eslint-plugin-vuejs-accessibility`) because Oxlint cannot read `<template>` |
+| `@ouds/ts-core`, `@ouds/icons`, `@ouds/react`, `@ouds/vue`, the three Storybook apps | Oxlint through `@nx/oxlint`                                   | Fast; the `lint` target is inferred. Each project's `.oxlintrc.json` extends `oxlint.base.jsonc` and adds its plugins. `@ouds/vue` adds a `lint-templates` target (ESLint + `eslint-plugin-vuejs-accessibility`) because Oxlint cannot read `<template>` |
 | `@ouds/angular`                                                    | ESLint 9 (flat config extending the root one)                 | Oxlint cannot parse Angular templates, HTML, or JSON rules                                                           |
 | `@ouds/web-*`                                                      | ESLint 9 (standalone `libs/web/eslint.config.mjs`), Stylelint | Keeps Bootstrap's XO/unicorn/import rule set and lints `<script>` blocks in HTML and JS blocks in Markdown           |
 
@@ -97,16 +97,16 @@ Nx task defaults are in `nx.json` (`lint` and `test` are cached; `css`, `js`, an
 
 **Framework libraries** ([React](libs/react/ARCHITECTURE.md), [Vue](libs/vue/ARCHITECTURE.md), [Angular](libs/angular/ARCHITECTURE.md))
 
-- `@ouds/core`, `@ouds/icons`, `@ouds/react`, and `@ouds/vue` build with Vite library mode (`@nx/vite:build`) into `dist/libs/<lib>`, producing ESM, CJS, and type declarations.
+- `@ouds/ts-core`, `@ouds/icons`, `@ouds/react`, and `@ouds/vue` build with Vite library mode (`@nx/vite:build`) into `dist/libs/<lib>`, producing ESM, CJS, and type declarations.
 - `@ouds/angular` builds with ng-packagr (`@nx/angular:package`).
-- `@ouds/react`, `@ouds/vue`, and `@ouds/angular` declare `build` with `dependsOn: ["^build"]`, so `@ouds/core` is built first. React and Vue need it because their type declarations resolve against the built `@ouds/core` output rather than its sources. `@ouds/angular-storybook` additionally lists `@ouds/core` and `@ouds/angular` in its own `dependsOn`, because webpack resolves `@ouds/angular` from `node_modules`, whose `exports` point at build output.
+- `@ouds/react`, `@ouds/vue`, and `@ouds/angular` declare `build` with `dependsOn: ["^build"]`, so `@ouds/ts-core` is built first. React and Vue need it because their type declarations resolve against the built `@ouds/ts-core` output rather than its sources. `@ouds/angular-storybook` additionally lists `@ouds/ts-core` and `@ouds/angular` in its own `dependsOn`, because webpack resolves `@ouds/angular` from `node_modules`, whose `exports` point at build output.
 
 **Storybook apps** (one `AGENTS.md` per app)
 
-- Storybook 10, one app per framework, rendering the stories that live next to each component in `libs/<framework>/`. Each app's `build` target depends on its library's `build` (Angular also on `@ouds/core`), so a clean checkout builds in one command.
+- Storybook 10, one app per framework, rendering the stories that live next to each component in `libs/<framework>/`. Each app's `build` target depends on its library's `build` (Angular also on `@ouds/ts-core`), so a clean checkout builds in one command.
 - Each app's `.storybook/manager.ts` sets the shared OUDS theme (`@ouds/storybook-theme`) and imports `.storybook/toolbar-addon.ts`, a manager addon that adds a read-only toolbar label with the library, `@ouds/web-orange`, and framework versions. The versions are read from `package.json` files in the manager bundle; they do not come from the preview's `globalTypes`.
 - The preview (`.storybook/preview.*`) holds the decorators and the theme, brand, and rounded-corners toolbar selectors.
-- **Deployment:** the docs site and the Storybooks are one Netlify site. `npm run netlify` builds the docs and the OUDS Web Storybook into `libs/web/_site` (`/storybook`), then `storybook:rav:build` builds the three RAV Storybooks and `storybook:rav:copy` copies them into `libs/web/_site/<app-name>` (`react-storybook`, `vue-storybook`, `angular-storybook`). `rav:test` then runs the tests of `@ouds/core`, `@ouds/angular`, `@ouds/react`, and `@ouds/vue` (so a failing test or a missed 100% threshold fails the deploy), and `rav:test:copy` copies the HTML reports from `coverage/libs/<lib>` into `libs/web/_site/coverage/<angular|core|react|vue>` (without the `lcov` files). The copies must run last, because `docs-build` starts with `rm -rf _site`. The root `netlify.toml` publishes `libs/web/_site`.
+- **Deployment:** the docs site and the Storybooks are one Netlify site. `npm run netlify` builds the docs and the OUDS Web Storybook into `libs/web/_site` (`/storybook`), then `storybook:rav:build` builds the three RAV Storybooks and `storybook:rav:copy` copies them into `libs/web/_site/<app-name>` (`react-storybook`, `vue-storybook`, `angular-storybook`). `rav:test` then runs the tests of `@ouds/ts-core`, `@ouds/angular`, `@ouds/react`, and `@ouds/vue` (so a failing test or a missed 100% threshold fails the deploy), and `rav:test:copy` copies the HTML reports from `coverage/libs/<lib>` into `libs/web/_site/coverage/<angular|icons|react|ts-core|vue>` (without the `lcov` files). The copies must run last, because `docs-build` starts with `rm -rf _site`. The root `netlify.toml` publishes `libs/web/_site`.
 - `libs/web` has its own Storybook (`@storybook/html-vite`) generated from the built docs; it is separate from these apps.
 
 ## Testing
@@ -116,7 +116,7 @@ Nx task defaults are in `nx.json` (`lint` and `test` are cached; `css`, `js`, an
 | `libs/web` JavaScript                    | Jasmine through Karma (Chrome, Chromium, or Firefox); coverage thresholds enforced                                                       |
 | `libs/web` Sass                          | Sass True/Jasmine `*.test.scss`, plus Vitest CSS snapshots                                                                               |
 | `@ouds/web-migrate`                      | Vitest                                                                                                                                   |
-| `@ouds/core`, `@ouds/icons`, `@ouds/react`, `@ouds/vue` | Vitest 5 (jsdom) with V8 coverage in `coverage/libs/<lib>`                                                                               |
+| `@ouds/ts-core`, `@ouds/icons`, `@ouds/react`, `@ouds/vue` | Vitest 5 (jsdom) with V8 coverage in `coverage/libs/<lib>`                                                                               |
 | `@ouds/angular`                          | Jest through `jest-preset-angular` (Angular's Vitest runner needs an application `buildTarget`, which doesn't fit an ng-packagr library) |
 | Storybook apps                           | No tests                                                                                                                                 |
 
@@ -127,7 +127,7 @@ Nx task defaults are in `nx.json` (`lint` and `test` are cached; `css`, `js`, an
 ## Versioning and releases
 
 - **OUDS Web**: all five `@ouds/web-*` packages share one version, bumped together by `npm run release-version`.
-- **RAV libraries and `@ouds/core`**: each is versioned independently. `@ouds/core`, `@ouds/icons`, `@ouds/react`, and `@ouds/angular` configure Nx release in `project.json` (`git-tag` version resolver, `disk` fallback) and publish through `nx-release-publish` from `dist/libs/<lib>`. `@ouds/vue` does not have that configuration yet (no `release` block or `packageRoot` override in its `project.json`); add it before the first release. `@ouds/react`, `@ouds/vue`, and `@ouds/angular` record changes in their own `CHANGELOG.md`; `@ouds/core` has none yet.
+- **RAV libraries and `@ouds/ts-core`**: each is versioned independently. `@ouds/ts-core`, `@ouds/icons`, `@ouds/react`, and `@ouds/angular` configure Nx release in `project.json` (`git-tag` version resolver, `disk` fallback) and publish through `nx-release-publish` from `dist/libs/<lib>`. `@ouds/vue` does not have that configuration yet (no `release` block or `packageRoot` override in its `project.json`); add it before the first release. `@ouds/react`, `@ouds/vue`, and `@ouds/angular` record changes in their own `CHANGELOG.md`; `@ouds/ts-core` has none yet.
 - The Storybook apps are not published.
 
 ## Where to look next
@@ -136,7 +136,7 @@ Nx task defaults are in `nx.json` (`lint` and `test` are cached; `css`, `js`, an
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | Commands, code style, commit and PR rules | [`AGENTS.md`](AGENTS.md)                                                                           |
 | OUDS Web internals                        | [`libs/web/ARCHITECTURE.md`](libs/web/ARCHITECTURE.md), [`libs/web/AGENTS.md`](libs/web/AGENTS.md) |
-| Shared types and utilities                | [`libs/core/AGENTS.md`](libs/core/AGENTS.md)                                                       |
+| Shared types and utilities                | [`libs/ts-core/AGENTS.md`](libs/ts-core/AGENTS.md)                                                       |
 | A framework library                       | `libs/<react\|vue\|angular>/ARCHITECTURE.md` and `AGENTS.md`                                       |
 | A Storybook app                           | `apps/<react\|vue\|angular>-storybook/AGENTS.md`                                                   |
 | Agent workflow skills                     | `.github/skills/` (OUDS Web only), listed in [`AGENTS.md`](AGENTS.md#agent-assets)                 |

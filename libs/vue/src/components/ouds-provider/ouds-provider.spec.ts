@@ -1,12 +1,12 @@
-import { loadBrandCSS } from '@ouds/core';
+import { loadBrandCSS } from '@ouds/ts-core';
 import { mount } from '@vue/test-utils';
 import { defineComponent, h, nextTick } from 'vue';
 
 import OudsProvider from './ouds-provider.component.vue';
 import { useOuds } from './use-ouds';
 
-vi.mock('@ouds/core', async (importOriginal) => ({
-    ...(await importOriginal<typeof import('@ouds/core')>()),
+vi.mock('@ouds/ts-core', async (importOriginal) => ({
+    ...(await importOriginal<typeof import('@ouds/ts-core')>()),
     loadBrandCSS: vi.fn(),
 }));
 

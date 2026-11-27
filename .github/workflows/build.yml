@@ -7,7 +7,7 @@ on:
       - 'libs/web/js/**'
       - 'libs/web/scss/**'
       - 'libs/web/packages/**/scss/**'
-      - 'libs/core/**'
+      - 'libs/ts-core/**'
       - 'libs/icons/**'
       - 'libs/angular/**'
       - 'libs/react/**'

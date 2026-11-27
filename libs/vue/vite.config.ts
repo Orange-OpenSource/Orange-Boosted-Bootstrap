@@ -11,16 +11,19 @@ export default defineConfig(() => ({
         dts({
             entryRoot: 'src',
             tsconfigPath: resolve(__dirname, 'tsconfig.lib.json'),
-            // Type-check against the built @ouds/core declarations (not its sources) and keep
-            // `@ouds/core` as a bare import in the emitted .d.ts files.
+            // Type-check against the built @ouds/ts-core declarations (not its sources) and keep
+            // `@ouds/ts-core` as a bare import in the emitted .d.ts files.
             compilerOptions: {
                 paths: {
-                    '@ouds/core': [
-                        resolve(__dirname, '../../dist/libs/core/index.d.ts'),
+                    '@ouds/ts-core': [
+                        resolve(
+                            __dirname,
+                            '../../dist/libs/ts-core/index.d.ts',
+                        ),
                     ],
                 },
             },
-            aliasesExclude: [/^@ouds\/core/],
+            aliasesExclude: [/^@ouds\/ts-core/],
         }),
     ],
     resolve: {
@@ -36,11 +39,11 @@ export default defineConfig(() => ({
             formats: ['es' as const, 'cjs' as const],
         },
         rollupOptions: {
-            external: ['vue', /^@ouds\/core/],
+            external: ['vue', /^@ouds\/ts-core/],
             output: {
                 globals: {
                     'vue': 'Vue',
-                    '@ouds/core': 'OudsCore',
+                    '@ouds/ts-core': 'OudsCore',
                 },
             },
         },

@@ -1,4 +1,4 @@
-import type { CoreIconProps } from '@ouds/core';
+import type { CoreIconProps } from '@ouds/ts-core';
 
 export type IconProps = CoreIconProps & {
     /**

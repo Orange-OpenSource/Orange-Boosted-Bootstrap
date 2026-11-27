@@ -5,7 +5,7 @@ import {
     inject,
     Provider,
 } from '@angular/core';
-import type { Theme, Brand } from '@ouds/core';
+import type { Theme, Brand } from '@ouds/ts-core';
 
 export interface OudsConfig {
     theme?: Theme;

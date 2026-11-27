@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import type { Variant } from '@ouds/core';
+import type { Variant } from '@ouds/ts-core';
 import {
     ChangeDetectionStrategy,
     Component,

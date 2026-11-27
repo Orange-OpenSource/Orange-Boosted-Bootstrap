@@ -15,7 +15,7 @@ export default [
                 'error',
                 {
                     enforceBuildableLibDependency: true,
-                    // @ouds/core inlines only the brand versions from these files at build time.
+                    // @ouds/ts-core inlines only the brand versions from these files at build time.
                     allow: [
                         '@ouds/web-orange/package.json',
                         '@ouds/web-orange-compact/package.json',
@@ -46,7 +46,7 @@ export default [
                             sourceTag: 'lib:react',
                             onlyDependOnLibsWithTags: [
                                 'lib:react',
-                                'lib:core',
+                                'lib:ts-core',
                                 'lib:icons',
                             ],
                         },
@@ -54,7 +54,7 @@ export default [
                             sourceTag: 'lib:vue',
                             onlyDependOnLibsWithTags: [
                                 'lib:vue',
-                                'lib:core',
+                                'lib:ts-core',
                                 'lib:icons',
                             ],
                         },
@@ -62,16 +62,19 @@ export default [
                             sourceTag: 'lib:angular',
                             onlyDependOnLibsWithTags: [
                                 'lib:angular',
-                                'lib:core',
+                                'lib:ts-core',
                                 'lib:icons',
                             ],
                         },
                         {
                             sourceTag: 'lib:icons',
-                            onlyDependOnLibsWithTags: ['lib:icons', 'lib:core'],
+                            onlyDependOnLibsWithTags: [
+                                'lib:icons',
+                                'lib:ts-core',
+                            ],
                         },
                         {
-                            sourceTag: 'lib:core',
+                            sourceTag: 'lib:ts-core',
                             onlyDependOnLibsWithTags: [
                                 'lib:web-orange',
                                 'lib:web-orange-compact',

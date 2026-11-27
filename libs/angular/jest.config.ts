@@ -12,9 +12,9 @@ export default {
             },
         ],
     },
-    // Resolve @ouds/core from its sources so tests don't depend on a prior build.
+    // Resolve @ouds/ts-core from its sources so tests don't depend on a prior build.
     moduleNameMapper: {
-        '^@ouds/core$': '<rootDir>/../core/src/index.ts',
+        '^@ouds/ts-core$': '<rootDir>/../ts-core/src/index.ts',
         '^@ouds/icons$': '<rootDir>/../icons/src/index.ts',
     },
     transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$)'],

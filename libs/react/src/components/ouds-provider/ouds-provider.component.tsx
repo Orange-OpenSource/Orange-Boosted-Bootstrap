@@ -1,5 +1,5 @@
-import { loadBrandCSS } from '@ouds/core';
-import type { Theme, Brand } from '@ouds/core';
+import { loadBrandCSS } from '@ouds/ts-core';
+import type { Theme, Brand } from '@ouds/ts-core';
 import React, { createContext, useContext, useEffect } from 'react';
 
 export type OudsProviderProps = {

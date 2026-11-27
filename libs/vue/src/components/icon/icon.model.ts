@@ -1,4 +1,4 @@
-import type { CoreIconProps } from '@ouds/core';
+import type { CoreIconProps } from '@ouds/ts-core';
 
 /**
  * Defines valid properties in Icon component.

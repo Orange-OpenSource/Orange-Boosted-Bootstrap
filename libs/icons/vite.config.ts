@@ -10,16 +10,19 @@ export default defineConfig(() => ({
         dts({
             entryRoot: 'src',
             tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
-            // Type-check against the built @ouds/core declarations (not its sources) and keep
-            // `@ouds/core` as a bare import in the emitted .d.ts files.
+            // Type-check against the built @ouds/ts-core declarations (not its sources) and keep
+            // `@ouds/ts-core` as a bare import in the emitted .d.ts files.
             compilerOptions: {
                 paths: {
-                    '@ouds/core': [
-                        path.join(__dirname, '../../dist/libs/core/index.d.ts'),
+                    '@ouds/ts-core': [
+                        path.join(
+                            __dirname,
+                            '../../dist/libs/ts-core/index.d.ts',
+                        ),
                     ],
                 },
             },
-            aliasesExclude: [/^@ouds\/core/],
+            aliasesExclude: [/^@ouds\/ts-core/],
         }),
     ],
     resolve: {
@@ -36,7 +39,7 @@ export default defineConfig(() => ({
             formats: ['es' as const, 'cjs' as const],
         },
         rollupOptions: {
-            external: [/^@ouds\/core/],
+            external: [/^@ouds\/ts-core/],
         },
     },
     test: {

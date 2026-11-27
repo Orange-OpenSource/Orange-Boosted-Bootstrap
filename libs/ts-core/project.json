@@ -1,15 +1,15 @@
 {
-  "name": "@ouds/core",
+  "name": "@ouds/ts-core",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/core/src",
+  "sourceRoot": "libs/ts-core/src",
   "projectType": "library",
-  "tags": ["lib:core"],
+  "tags": ["lib:ts-core"],
   "targets": {
     "build": {
       "executor": "@nx/vite:build",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "outputPath": "dist/libs/core"
+        "outputPath": "dist/libs/ts-core"
       }
     },
     "test": {
@@ -17,7 +17,7 @@
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "command": "vitest run --coverage",
-        "cwd": "libs/core"
+        "cwd": "libs/ts-core"
       }
     },
     "nx-release-publish": {

@@ -151,7 +151,7 @@ export const iconToSource = (name, viewBox, pathsByBrand) => {
         )
         .join(', ');
 
-    return `${HEADER}import type { OudsIcon } from '@ouds/core';
+    return `${HEADER}import type { OudsIcon } from '@ouds/ts-core';
 
 export const ${toExportName(name)}: OudsIcon = {
   name: ${quote(name)},
@@ -216,7 +216,7 @@ export const generate = async ({
             }
 
             // Brands that share the drawing of the first brand (Orange Compact reuses Orange) are not
-            // stored; `getIconPaths` of @ouds/core falls back to it.
+            // stored; `getIconPaths` of @ouds/ts-core falls back to it.
             const reference = pathsByBrand[referenceBrand];
 
             if (

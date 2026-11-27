@@ -1,12 +1,12 @@
-import type { OudsIcon } from '@ouds/core';
+import type { OudsIcon } from '@ouds/ts-core';
 import { functionalStatusWarning } from '@ouds/icons';
 import { render, screen } from '@testing-library/react';
 
 import { OudsProvider } from '../ouds-provider/ouds-provider.component';
 import { Icon } from './icon.component';
 
-vi.mock('@ouds/core', async (importOriginal) => ({
-    ...(await importOriginal<typeof import('@ouds/core')>()),
+vi.mock('@ouds/ts-core', async (importOriginal) => ({
+    ...(await importOriginal<typeof import('@ouds/ts-core')>()),
     loadBrandCSS: vi.fn(),
 }));
 

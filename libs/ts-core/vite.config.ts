@@ -5,7 +5,7 @@ import dts from 'vite-plugin-dts';
 
 export default defineConfig(() => ({
     root: __dirname,
-    cacheDir: '../../node_modules/.vite/libs/core',
+    cacheDir: '../../node_modules/.vite/libs/ts-core',
     plugins: [
         dts({
             entryRoot: 'src',
@@ -16,12 +16,12 @@ export default defineConfig(() => ({
         tsconfigPaths: true,
     },
     build: {
-        outDir: '../../dist/libs/core',
+        outDir: '../../dist/libs/ts-core',
         emptyOutDir: true,
         reportCompressedSize: true,
         lib: {
             entry: 'src/index.ts',
-            name: '@ouds/core',
+            name: '@ouds/ts-core',
             fileName: 'index',
             formats: ['es' as const, 'cjs' as const],
         },
@@ -35,7 +35,7 @@ export default defineConfig(() => ({
         reporters: ['default'],
         coverage: {
             provider: 'v8' as const,
-            reportsDirectory: '../../coverage/libs/core',
+            reportsDirectory: '../../coverage/libs/ts-core',
             include: ['src/**/*.ts'],
             exclude: ['src/**/*.{test,spec}.ts'],
             reporter: ['text', 'html', 'lcov'],
