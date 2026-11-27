@@ -9,3 +9,13 @@ indent_size = 2
 indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
+
+# Code formatted by Prettier (see .prettierrc, tabWidth 4). OUDS Web (libs/web) keeps 2 spaces.
+[/*.{js,mjs,cjs,ts,mts}]
+indent_size = 4
+
+[apps/**.{js,mjs,cjs,ts,mts,tsx,jsx,vue,html,css,scss,less}]
+indent_size = 4
+
+[libs/{core,angular,react,vue}/**.{js,mjs,cjs,ts,mts,tsx,jsx,vue,html,css,scss,less}]
+indent_size = 4

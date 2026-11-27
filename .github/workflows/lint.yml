@@ -4,9 +4,22 @@ on:
     branches:
       - main
     paths:
-      - 'js/**'
-      - 'scss/**'
-      - 'packages/**/scss/**'
+      - 'libs/web/js/**'
+      - 'libs/web/scss/**'
+      - 'libs/web/packages/**/scss/**'
+      - 'libs/ts-core/**'
+      - 'libs/icons/**'
+      - 'libs/angular/**'
+      - 'libs/react/**'
+      - 'libs/vue/**'
+      - 'apps/**'
+      - 'tools/**'
+      - 'nx.json'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig.base.json'
+      - 'oxlint.base.jsonc'
+      - 'eslint.config.mjs'
   pull_request:
     types: [opened, reopened, synchronize]
   workflow_dispatch:
@@ -39,4 +52,4 @@ jobs:
         run: npm ci
 
       - name: Lint
-        run: npm run lint
+        run: npm run lint:all
